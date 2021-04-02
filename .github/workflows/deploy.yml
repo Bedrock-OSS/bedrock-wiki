@@ -1,6 +1,9 @@
 name: Deploy
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   deploy:
@@ -11,5 +14,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 15
-      - name: Deploy
-        run: ./deploy.sh
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: docs/.vitepress/dist
