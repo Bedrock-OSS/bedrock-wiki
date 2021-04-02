@@ -6,14 +6,7 @@ parent: Documentation
 
 # Projectiles
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 This page intends to document all different fields you can use inside `minecraft:projectile` entity behavior component. 
 

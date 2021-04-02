@@ -8,14 +8,7 @@ badge_color: yellow
 
 # Entity Based 3D Item Models
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 Expert
 {: .label .label-red }

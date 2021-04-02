@@ -6,14 +6,7 @@ parent: Concepts
 
 # Understanding .lang 
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 Bedrock Minecraft allows us to write the text in our addons as codes: For example `action.hint.exit.pig`. Then in the language files, we define these codes: `action.hint.exit.pig=Tap sneak to dismount`.
 

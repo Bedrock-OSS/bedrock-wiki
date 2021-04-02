@@ -6,14 +6,7 @@ parent: Documentation
 
 # Dummy Components
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 Dummy components are useless components that are only used for data storage. Dummy components don't **do** anything on their own. They need to be paired with secondary mechanics to have any function. Dummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
 

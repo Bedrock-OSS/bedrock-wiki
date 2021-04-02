@@ -6,14 +6,7 @@ parent: Concepts
 
 # Namespaces
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 Namespaces are identifiers that marks content ownership. You can think of them as folders. Namespaces are useful, because they keep naming conflicts from happening.
 

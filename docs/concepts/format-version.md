@@ -6,14 +6,7 @@ parent: Concepts
 
 # Format Versions
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 Most Addon files contain a `format_version` field, often in the description. Here is an example:
 

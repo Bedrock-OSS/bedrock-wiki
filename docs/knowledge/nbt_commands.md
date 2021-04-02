@@ -6,14 +6,7 @@ parent: Knowledge
 
 # NBT Commands
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 NBT data for Bedrock edition is very limited. Four of the only values we have access to are `CanPlaceOn`,`CanDestroy`, `KeepOnDeath`, and `ItemLock`. These are used as part of a `/give` or `replaceitem` command, and can edit specific properties of the items with said NBT.
 

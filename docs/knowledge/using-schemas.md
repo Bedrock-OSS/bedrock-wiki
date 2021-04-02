@@ -6,14 +6,7 @@ parent: Knowledge
 
 # What's a Schema?
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 A JSON schema gives you two things: validation to be sure that your JSON has the correct structure, and (depending on editor support) intellisense to help you write your JSON correctly to begin with. Schemas are nice because they give you instant feedback when you screw something up, but they can't catch everything.
 

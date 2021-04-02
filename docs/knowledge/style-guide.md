@@ -6,14 +6,7 @@ parent: Knowledge
 
 # Style Guide
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 This document will present the officially supported Bedrock-Wiki style-guide for addon-creation. The goal of this guide is to promote best-practices while creating addons, and create a consistent format for everyone to follow.
 

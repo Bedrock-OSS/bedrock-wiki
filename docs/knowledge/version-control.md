@@ -8,14 +8,7 @@ badge_color: blue
 
 # What is Version Control?
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 Version control is the concept of backing up your code iteratively, so you can roll-back to specific versions as needed. At the most basic level, version control could be achieved by taking a `.zip` of your addon every day, and uploading it to google drive. This isn't unreasonable, but it has three major difficulties, that proper VCS (version control systems) fix:
 

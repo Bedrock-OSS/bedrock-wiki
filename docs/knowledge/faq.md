@@ -6,14 +6,7 @@ parent: Knowledge
 
 # FAQ
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 This page contains a list of frequently asked questions in the technical-bedrock community that do not deserve a long-form wiki entry. Please contribute your own questions/answers, so we can grow this resource!
 

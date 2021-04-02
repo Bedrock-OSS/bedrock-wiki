@@ -10,14 +10,7 @@ nav_order: 2
 
 # Project Setup
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 ## Manifests
 A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.

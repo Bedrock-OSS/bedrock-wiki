@@ -6,14 +6,7 @@ parent: Documentation
 
 # Runtime Identifiers
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
 It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.

@@ -7,14 +7,7 @@ parent: Scripting
 # Hello World Tutorial
 
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 This tutorial will teach you how to get up and running as a Minecraft Bedrock Edition (Windows 10) script modder!
 

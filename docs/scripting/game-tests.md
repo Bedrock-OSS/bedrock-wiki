@@ -18,14 +18,7 @@ It is recommended that your GameTests go in the `BP/scripts/gametests` directory
 
 [Type declaration files for the GameTest API](https://github.com/bridge-core/editor/tree/dev/data/types/gameTest)
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 ## Using GameTests
 

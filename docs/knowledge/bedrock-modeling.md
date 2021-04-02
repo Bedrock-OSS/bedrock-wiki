@@ -6,14 +6,7 @@ parent: Knowledge
 
 # Bedrock Modeling Introduction 
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 This will be a guide with tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.
 

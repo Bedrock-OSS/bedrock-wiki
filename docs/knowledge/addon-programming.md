@@ -6,14 +6,7 @@ parent: Knowledge
 
 # Creating addons with Programming
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 Addons in Bedrock Edition (with the exception of scripts) are completely written using json-config files. Often, these files can, and should be written by hand. Possibly with the help of a dedicated editor like [bridge.](https://bridge-core.github.io/).
 

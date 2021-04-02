@@ -4,14 +4,7 @@ title: Building and Editing JSON with jq
 parent: Knowledge
 ---
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 # Building and Editing JSON with jq
 

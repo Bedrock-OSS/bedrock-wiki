@@ -8,14 +8,7 @@ badge_color: red
 
 # Items [BETA]
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+
 
 Better documentation on the new item format introduced in the 1.16.100.56 Minecraft beta
 ## Item Events
