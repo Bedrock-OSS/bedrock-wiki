@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const matter = require('gray-matter');
 
 let formatLinkSync = function (path) {
   return path.split("\\").join("/").replace(".md", "");
@@ -14,15 +15,21 @@ String.prototype.toProperCase = function () {
 let generateSidebar = function (base, dir, data) {
   let files = fs.readdirSync(dir);
   files.forEach(function (file) {
-    if (fs.statSync(path.join(dir, file)).isDirectory()) {
+    let joinedPath = path.join(dir, file);
+    let stats = fs.statSync(joinedPath);
+    if (stats.isDirectory() && fs.existsSync(path.join(joinedPath, "index.md"))) {
+      const str = fs.readFileSync(path.join(joinedPath, "index.md"), 'utf8');
+      let frontMatter = matter(str);
       data.push({
-        text: file.toString().replace(".md", "").toProperCase(),
-        children: generateSidebar(base, path.join(dir, file), []),
+        text: frontMatter.data.title,
+        children: generateSidebar(base, joinedPath, []),
       });
-    } else {
+    } else if (stats.isFile()) {
+      const str = fs.readFileSync(joinedPath, 'utf8');
+      let frontMatter = matter(str);
       data.push({
-        text: file.toString().replace(".md", "").toProperCase(),
-        link: formatLinkSync(path.join(dir, file).toString().replace(base, "")),
+        text: frontMatter.data.title,
+        link: formatLinkSync(joinedPath.toString().replace(base, "")),
       });
     }
   });

@@ -4,6 +4,7 @@
     "main": "index.js",
     "license": "MIT",
     "devDependencies": {
+        "gray-matter": "^4.0.2",
         "vitepress": "^0.12.2"
     },
     "scripts": {
