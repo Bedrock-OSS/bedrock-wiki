@@ -161,7 +161,7 @@ An example:
 
 Many components can trigger events. Particularly, components like the [environment sensor](/vanilla-usage/components.html#minecraftenvironment_sensor) or [timer](/vanilla-usage/components.html#minecrafttimer).
 
-`Note:` You can also use the /event <target> <prefix:event_name> to trigger an event directly off an entity. In the below example we run the "minecraft:become_charged" event to turn all creepers in loaded chunks into charged creepers.
+`Note:` You can also use the `/event <target> <prefix:event_name>` to trigger an event directly off an entity. In the below example we run the "minecraft:become_charged" event to turn all creepers in loaded chunks into charged creepers.
 
 An example.
 ```json
