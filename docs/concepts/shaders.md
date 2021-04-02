@@ -1,0 +1,150 @@
+---
+layout: page
+title: Shaders
+parent: Concepts
+---
+
+# Shaders
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+## Disclaimer
+
+The way to create shaders described in this page is not working on consoles (PS4, Xbox, Switch) and in new rendering 
+engine (renderdragon, which is in the newest Windows version beta). 
+
+## Overview
+
+Shaders are divided into 2 folders: glsl and hlsl. For shaders to work on every device, 
+you need to code shaders in both languages. For testing on Windows, hlsl is enough. 
+When rewriting shaders from one language to another, there are few things to change, 
+like HLSL `float3` is `vec3` in GLSL. [Mapping between those languages can be found here](https://anteru.net/blog/2016/mapping-between-HLSL-and-GLSL/)
+
+## Materials
+
+Vertex, fragment and sometimes geometry shaders are combined with some options 
+as materials and are required for custom shaders. To create new material, 
+you need to create file, which matches the name of .material file in vanilla resource pack.
+For example: `materials/particles.material`. Materials support inheritance by adding parent 
+material after colon. For example: `entity_alpha:entity_base` 
+
+### Common material definition fields
+
+| **Field name**   | **Description**                                                       | **Example value**                                        | **Notes**                                                                                                                                         |
+|------------------|-----------------------------------------------------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| `vertexShader`   | Path to the shader relative to hlsl/glsl folder                       |                                                          | For HLSL shader, `.hlsl` suffix is added.                                                                                                         |
+| `fragmentShader` | Path to the shader relative to hlsl/glsl folder                       |                                                          | For HLSL shader, `.hlsl` suffix is added.                                                                                                         |
+| `vertexFields`   | An array of fields passed to vertex shader                            |                                                          | It's better to copy this field from vanilla material.                                                                                             |
+| `variants`       | An array of objects, which define variants of the material            |                                                          | It's better to copy this field from vanilla material.                                                                                             |
+| `+defines`       | An array of `#define` directives to add to the shader source          |                                                          | Useful for reusing shader, but changing some minor setting.                                                                                       |
+| `+states`        | An array of states to enable                                          | `["Blending", "DisableAlphaWrite", "DisableDepthWrite"]` | For OpenGL implementation, this is equivalent to [glEnable](https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEnable.xml) call.      |
+| `-defines`       | An array of `#defines` directives to remove from inherited `+defines` |                                                          |                                                                                                                                                   |
+| `+samplerStates` | An array of objects, defining how texture at certain index is treated | `{ "samplerIndex": 0, "textureFilter": "Point" }`        | `textureFilter` specifies how to sample the texture and `textureWrap` specifies the behavior, when accessing outside of the texture dimensions.   |
+| `msaaSupport`    | Multisample anti-aliasing support                                     | `Both`                                                   |                                                                                                                                                   |
+| `blendSrc`       | Specifies how the color source blending factors are computed          | `One`                                                    | For OpenGL implementation, this is equivalent to [glBlendFunc](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml) call. |
+| `blendDst`       | Specifies how the color destination blending factors are computed     | `One`                                                    | For OpenGL implementation, this is equivalent to [glBlendFunc](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml) call. |
+
+Example:
+```json
+{
+  "materials": {
+    "version": "1.0.0",
+    "particle_debug": {
+      "vertexShader": "shaders/particle_generic.vertex",
+      "fragmentShader": "shaders/particle_debug.fragment",
+
+      "vertexFields": [
+        { "field": "Position" },
+        { "field": "Color" },
+        { "field": "UV0" }
+      ],
+
+      "+samplerStates": [
+        {
+          "samplerIndex": 0,
+          "textureFilter": "Point"
+        }
+      ],
+
+      "msaaSupport": "Both"
+    }
+  }
+}
+```
+
+For all the details about material file and possible field values, check [material file json schema](https://github.com/stirante/bedrock-shader-schema/blob/master/materials.schema.json).
+
+## Troubleshooting
+
+### Shader doesn’t change
+
+Every time there is a change in the shader, you need to completely restart Minecraft to recompile the shader.
+
+### Compilation error
+
+When there is a shader compilation error, usually there is a line number specified, where the error occurred. You need to check few lines above the one specified in error, because before compilation, Minecraft adds `#define` directives
+
+### Couldn’t find constant buffer named: $Globals
+
+I couldn’t accurately find the actual cause of this error, but it seems to be somehow connected to global variables. Removing them (initializing them in `main` function or changing them to `#define` directives) seems to fix the problem.
+
+## Tips and tricks
+
+### Passing variables to shader
+
+You can pass variables to the shader from a particle, or an entity by changing entity color.
+Input color is clamped to `<0.0, 1.0>`. To pass bigger values, you need to divide by max value (or at least by some big number).
+
+### Using time in shader
+
+`TIME` variable is number of seconds as `float` and is global for all shaders. For time based on particle lifetime, you need to pass this:
+
+```json
+"minecraft:particle_appearance_tinting": {
+    "color": ["variable.particle_age/variable.particle_lifetime", 0, 0, 1]
+}
+```
+
+Then in shader, use `PSInput.color.r` as time, where `0.0` is particle birth and `1.0` is particle death.
+
+### Camera direction towards the entity
+
+For entity shaders, you can make the shader dependent on camera direction towards the entity.
+
+* Add to `PS_Input` in vertex and fragment shader new field
+```
+float3 viewDir: POSITION;
+```
+* After that, add to vertex shader this line
+```
+PSInput.viewDir = normalize((mul(WORLD, mul(BONES[VSInput.boneId], float4(VSInput.position, 1)))).xyz);
+```
+* In fragment shader use `PSInput.viewDir` to make changes depending on camera rotation
+
+### Debugging values
+
+The easiest way to debug a value is to turn it into color and render it like this
+
+```
+PSOutput.color = float4(PSInput.uv, 0., 1.);
+```
+
+This should create a red-green gradient, showing that the values of `uv` are between `<0, 0>` and `<1, 1>`.
+
+For more advanced debugging, you can use the debug shader I wrote [based on this shader](http://mew.cx/drawtext/drawtext.html).
+Right now this shader will display values of the color passed to the shader. To display another value, change line 70 in hlsl shader to
+```
+int ascii = getFloatCharacter( cellIndex, <float4 vector here> );
+```
+GLSL version of debug shader may crash Minecraft, use only for debugging.
+
+[Download debug shader](http://files.stirante.com/debugShader.zip)
+
+![](/assets/images/knowledge/shaders/debugShader.gif)
