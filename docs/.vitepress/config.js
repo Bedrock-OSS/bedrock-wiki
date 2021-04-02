@@ -1,54 +1,79 @@
+const fs = require("fs");
+const path = require("path");
+
+var formatLinkSync = function (path) {
+  return path.split("\\").join("/").replace(".md", "");
+};
+
+String.prototype.toProperCase = function () {
+  return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
+
+var generateSidebar = function (base, dir, data) {
+files = fs.readdirSync(dir);
+files.forEach(function (file) {
+  if (fs.statSync(path.join(dir, file)).isDirectory()) {
+    data.push({
+      text: file.toString().replace(".md", "").toProperCase(),
+      children: generateSidebar(base, path.join(dir, file), []),
+    });
+  } else {
+    data.push({
+      text: file.toString().replace(".md", "").toProperCase(),
+      link: formatLinkSync(path.join(dir, file).toString().replace(base, "")),
+    });
+  }
+});
+return data;
+};
+
+var getSidebar = function ()
+{
+  var docsPath = path.join(process.cwd(), "docs");
+  return generateSidebar(docsPath, docsPath, [])
+}
+
 module.exports = {
-    lang: 'en-US',
-    title: 'VitePress',
-    description: 'Vite & Vue powered static site generator.',
-  
-    themeConfig: {
-      repo: 'vuejs/vitepress',
-      docsDir: 'docs',
-  
-      editLinks: true,
-      editLinkText: 'Edit this page on GitHub',
-      lastUpdated: 'Last Updated',
-  
-      algolia: {
-        apiKey: 'c57105e511faa5558547599f120ceeba',
-        indexName: 'vitepress'
+  lang: "en-US",
+  title: "VitePress",
+  description: "Vite & Vue powered static site generator.",
+
+  themeConfig: {
+    repo: "vuejs/vitepress",
+    docsDir: "docs",
+
+    editLinks: true,
+    editLinkText: "Edit this page on GitHub",
+    lastUpdated: "Last Updated",
+
+    algolia: {
+      apiKey: "c57105e511faa5558547599f120ceeba",
+      indexName: "vitepress",
+    },
+
+    carbonAds: {
+      carbon: "CEBDT27Y",
+      custom: "CKYD62QM",
+      placement: "vuejsorg",
+    },
+
+    nav: [
+      { text: "Guide", link: "/", activeMatch: "^/$|^/guide/" },
+      {
+        text: "Config Reference",
+        link: "/config/basics",
+        activeMatch: "^/config/",
       },
-  
-      carbonAds: {
-        carbon: 'CEBDT27Y',
-        custom: 'CKYD62QM',
-        placement: 'vuejsorg'
+      {
+        text: "Release Notes",
+        link: "https://github.com/vuejs/vitepress/releases",
       },
-  
-      nav: [
-        { text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
-        {
-          text: 'Config Reference',
-          link: '/config/basics',
-          activeMatch: '^/config/'
-        },
-        {
-          text: 'Release Notes',
-          link: 'https://github.com/vuejs/vitepress/releases'
-        }
-      ],
-  
-      sidebar: {
-        '/': getSidebar()
-      }
+    ],
+
+    sidebar: {
+      "/": getSidebar()
     }
   }
-  
-  function getSidebar() {
-    return [
-      {
-        text: 'Introduction',
-        children: [
-          { text: 'Biome Tags', link: '/documentation/biome-tags' }
-        ]
-      }
-    ]
-  }
-  
+};
+
+console.log(JSON.stringify(getSidebar(), null, 1))
