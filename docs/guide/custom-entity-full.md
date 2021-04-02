@@ -28,7 +28,7 @@ Resource definition is done client-side to define texture, animation and model s
 ## .entity File
 
 `RP/entity/skele_yaklin.entity.json`
-```jsonc
+```json
 {
     "format_version": "1.10.0",
     "minecraft:client_entity": {
@@ -95,7 +95,7 @@ This is a client entity file;
 
 - "spawn_egg" automatically creates the spawn egg item (which will be found in the creative inventory). You can either set the two colors to different hex codes or set "spawn_egg">"texture" to an item texture's shortname. - For example, the creeper's spawn egg "base_color" is set to green, and it's "overlay_color is set to black.
 
-```jsonc
+```json
 "spawn_egg": {
     "texture": "itemTextureShortname"
 }
@@ -104,7 +104,7 @@ This is a client entity file;
 ## Render Controller
 
 `RP/render_controllers/skele_yaklin/render_controller.json`
-```jsonc
+```json
 {
   "format_version": "1.8.0",
   "render_controllers": {
@@ -159,9 +159,9 @@ Let's fill "components" first with some behaviors the entity will have by defaul
 
 Add all of these into the "components" object. I commented with // about what they do, but you're welcome to look yourself in [bedrock.dev/r/Entities](https://bedrock.dev/r/Entities).
 
-*Note that in order for json comments (// or /* */ not to be displayed as errors, you have to switch your language from json to jsonc in the bottom left corner.*
+*Note that in order for json comments (// or /* */ not to be displayed as errors, you have to switch your language from json to json in the bottom left corner.*
 
-```jsonc
+```json
 //the family type for filters
 "minecraft:type_family": {
     "family": [
@@ -237,7 +237,7 @@ Now let's take care of the "component_groups" object. We want the entity to be t
 *Component group syntax:*
 `"namespace:id" : { //behaviors and attributes go here }`
 
-```jsonc
+```json
   "tut:baby": {
     "minecraft:is_baby": {},
     //the baby entity is smaller then normal
@@ -391,7 +391,7 @@ namespace:id: {
 }
 ```
 
-```jsonc
+```json
   //This events gets applied whenever a new entity is added.
   "minecraft:entity_spawned": {
     //either the adult or the baby variant gets randomly chosen, along with the "wild" variation
@@ -512,7 +512,7 @@ ___
   </summary>
 
 `BP/entities/skele_yaklin.json`
-```jsonc
+```json
 {
     "format_version": "1.14.0",
     "minecraft:entity": {

@@ -47,7 +47,7 @@ Let's go through the states themselves.
 `RP//animation_controllers/skele_yaklin.controller.animation.json`
 
 {% include filepath.html path="RP/animation_controllers/skele_yaklin.ac.json"%}
-```jsonc
+```json
 {
     "format_version": "1.10.0",
     "animation_controllers": {
@@ -99,7 +99,7 @@ The showcased animation controller is a great example of a resource animation co
 ## Resource and Behavior file edits
 
 {% include filepath.html path="RP/entity/skele_yaklin.entity.json" local_path="minecraft:client_entity/description"%}
-```jsonc
+```json
 "animations": {
     "walk": "animation.skele_yaklin.walk",
     "attack": "animation.skele_yaklin.attack",
@@ -121,7 +121,7 @@ The showcased animation controller is a great example of a resource animation co
 Now, let's define the animation controller and the attack animation in the .entity file. The animation controller shortname should be included in "scripts/animate", so it's active all the time.
 
 {% include filepath.html path="BP/entities/skele_yaklin.json" local_path="minecraft:entity/components"%}
-```jsonc
+```json
   //make the entity attack back
   "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -201,7 +201,7 @@ Behavior animations are able to execute slash(/) commands and to trigger events 
 Here's an example of a Behavior Animation that executes multiple slash commands on an entity.
 
 {% include filepath.html path="BP/animations/misc.animation.json"%}
-```jsonc
+```json
 {
   "format_version": "1.8.0",
   "animations": {
@@ -237,7 +237,7 @@ This animation file includes two animations: "animation.grufallo.revenge" and "a
 Here's an example  that can be used to track AFK players. (You can scroll the code box for better readability)
 
 {% include filepath.html path="BP/animation_controllers/afk_controller.ac.json"%}
-```jsonc
+```json
 {
     "format_version": "1.10.0",
     "animation_controllers": {
@@ -298,7 +298,7 @@ Just like resource animations and animation controllers, Behavior animations and
 Here's an example:
 
 {% include filepath.html path="BP/entities/grufallo.json" local_path="minecraft:client_entity"%}
-```jsonc
+```json
 "description": {
     "identifier": "jdot:grufallo",
     "is_spawnable": true,

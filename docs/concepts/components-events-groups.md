@@ -32,7 +32,7 @@ All components are formatted like `"minecraft:<name>": { <setting> }`. Every com
 Here is an example of a few components, inside an entity:
 
 {% include filepath.html path="BP/entities/example.json" local_path="minecraft:entity"%}
-```jsonc
+```json
 "components": {
     "minecraft:type_family": {
         "family": [
@@ -56,7 +56,7 @@ Component groups are "folders" for components. They group components together, a
 Here is an example:
 
 {% include filepath.html path="BP/entities/example.json" local_path="minecraft:entity"%}
-```jsonc
+```json
 "component_groups": {
 
     //the name of the component group

@@ -35,7 +35,7 @@ In `_ui_defs.json` you add all the files that will be used on the UI.
 Imagine I created the files `RP/ui/button.json` and `RP/my_ui/main_menu.json`:
 
 {% include filepath.html path="RP/ui/_ui_defs.json"%}
-```jsonc
+```json
 {
   "ui_defs": [
     "ui/button.json",
@@ -57,14 +57,14 @@ If you use the same value in multiple files instead of repeatedly writing `"colo
 Another good advantage of doing that is you only need to change in one place and all the elements that use the variable will have the value updated.
 
 {% include filepath.html path="RP/ui/_global_variables.json"%}
-```jsonc
+```json
 {
  "$info_text_color": [0.8, 0.8, 0.8]
 }
 ```
 
 {% include filepath.html path="RP/my_ui/file1.json"%}
-```jsonc
+```json
 {
   "some_info": {
     ...
@@ -75,7 +75,7 @@ Another good advantage of doing that is you only need to change in one place and
 ```
 
 {% include filepath.html path="RP/my_ui/file2.json"%}
-```jsonc
+```json
 {
   "info": {
     ...
@@ -91,7 +91,7 @@ They must be unique and short if possible because you may use it a lot of times.
 
 An example:
 {% include filepath.html path="RP/ui/file_a.json"%}
-```jsonc
+```json
 {
   "namespace":"stuff",
   ...
@@ -100,7 +100,7 @@ An example:
 ```
 
 {% include filepath.html path="RP/ui/file_b.json"%}
-```jsonc
+```json
 {
   "fizzbuzz@stuff.foobar": {...} 
   // "fizzbuzz" extends "foobar" from "stuff" namespace
@@ -122,7 +122,7 @@ All the elements must have the `type` property because its value will define wha
 Here's an example:
 
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   ...
   "example_element": {
@@ -144,7 +144,7 @@ Everything that has `$` as the first letter of its name is a variable.
 Variables can store numbers, booleans, strings and arrays.
 
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "cool_element": {
     ...
@@ -167,7 +167,7 @@ Variables can store numbers, booleans, strings and arrays.
 To derive some element from another you should use `new@super` notation. An example:
 
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "foobar": {
     ...
@@ -192,7 +192,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ## Animations
 `offset` animation example.
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -212,7 +212,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 
 `Wait` animation example. It's used when you want no animation between two other animtions.
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -247,7 +247,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 
 `flip_book` animation example.
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -269,7 +269,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 
 Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, you can reference the animations that will be applied to the element using the `anims` property.
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -322,7 +322,7 @@ Here's an example of an label using a hardcoded text.
 The `text` property value is `#hardtext`. By using `bindings` I can get the value of the hardcoded variable `#hardtext` so it can be used by the `text` property.
 Here it's directly assigning the `#hardtext` value to the `text` property.
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "label": {
     "type": "label",
@@ -337,7 +337,7 @@ Here it's directly assigning the `#hardtext` value to the `text` property.
 ```
 
 Talking more about the `label` example, it can also appear in another way. Let's see:
-```jsonc
+```json
 {
   "label": {
     "type": "label",
@@ -354,7 +354,7 @@ Talking more about the `label` example, it can also appear in another way. Let's
 In this case the value of `#hardtext` is assigned to the `#text` binding property name that will then be assigned to the `text` property.
 
 This happens a lot with the `visible` and `enabled` properties. Here's an example with both of them:
-```jsonc
+```json
 {
   "send_button": {
     "bindings": [
@@ -381,7 +381,7 @@ And `#play_button_enabled` will override the `#enabled` binding property value w
 
 Let's say you want to show a panel with some content when a specific toggle is selected/checked. You'll need a different type of binding structure.
 We have to tell what's the source element where the value will come from, tell which property of that source element we want to get the value from and which property we want to override its value.
-```jsonc
+```json
 {
   "panel": {
     ...

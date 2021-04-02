@@ -31,7 +31,7 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
   </summary>
 
 
-  ```jsonc
+  ```json
   //BP/loot_tables/entities/ghast/json
 
   {
@@ -91,7 +91,7 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
       ]
   }
   ```
-  ```jsonc
+  ```json
   //BP/loot_tables/chests/equipment.low_tier_items.json
 
   {
@@ -138,7 +138,7 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
   }
   ```
 
-  ```jsonc
+  ```json
   //BP/loot_tables/chests/village/village_cartographer.json
 
   {
@@ -219,7 +219,7 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
     ]
   }
   ```
-  ```jsonc
+  ```json
   //BP/loot_tables/gameplay/fishing/treasure.json
 
   {
@@ -318,7 +318,7 @@ You can also use `loot_tables.empty.json` for no loot.
 
 Let's break up the Loot table structure somewhat. I took a simple zombie loot table as an example.
 
-```jsonc
+```json
 {
     "pools": [
         {
@@ -412,7 +412,7 @@ Let's look through some recipe-specific syntax next.
 
 ### Smelting recipe example
 
-```jsonc
+```json
 {
   "format_version": "1.12",
   "minecraft:recipe_furnace": {
@@ -439,7 +439,7 @@ Let's look through some recipe-specific syntax next.
 
 
 ### Shaped recipe example
-```jsonc
+```json
 {
 "format_version": "1.12",
 "minecraft:recipe_shaped": {
@@ -475,7 +475,7 @@ Let's look through some recipe-specific syntax next.
 
 Let's also look into a recipe that gives you more than one item as a result. 
 
-```jsonc
+```json
 {
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
@@ -506,7 +506,7 @@ Let's also look into a recipe that gives you more than one item as a result.
 
 ### Shapeless recipe example
 
-```jsonc
+```json
 {
 "format_version": "1.12",
 "minecraft:recipe_shapeless": {
@@ -527,7 +527,7 @@ Let's also look into a recipe that gives you more than one item as a result.
 }
 ```
 
-```jsonc
+```json
 {
     "format_version": "1.12",
     "minecraft:crafting_shapeless": {
@@ -563,7 +563,7 @@ ___
 # Spawn Rules
 Spawn rules define how vanilla Entities and custom entities spawn. In the next chapter we'll be creating a custom entity, so make sure to prepare a custom spawn rule for it! Check out the vanilla example files for more information. ;)
 
-```jsonc
+```json
 //BP/spawn_rules/zombie.json
 
 {
@@ -622,7 +622,7 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 - And, lastly, "`minecraft:biome_filter`" tests for certain biome tags. Look up the filter syntax and list of biome tags in the documentation or search examples in the vanilla Example pack.
 
 
-```jsonc
+```json
 "minecraft:herd": {
           "min_size": 1,
           "max_size": 2,

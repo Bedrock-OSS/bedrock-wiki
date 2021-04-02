@@ -26,7 +26,7 @@ Make the size of the collision component very, very small (does 0, 0 work?) this
 
 But you can also add the custom hit test component, to at least make it possible to hit the entity, you will not be abble to interact wih it, but at least you can hit it.
 
-```jsonc
+```json
 "minecraft:custom_hit_test": {
     "hitboxes": [
         {

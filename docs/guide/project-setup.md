@@ -37,7 +37,7 @@ ___
 Let's create our Resource Pack manifest first by copying the code below into `RP/manifest.json` (*In other words, in a `manifest.json` file in your resource pack folder, which is located in `development_resource_packs`*).
 
 {% include filepath.html path="RP/manifest.json"%}
-```jsonc
+```json
 {
     "format_version": 2,
     "header": {
@@ -93,7 +93,7 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
 *Remember that same UUIDs cannot be used twice, which means that you have to generate NEW ones for the behavior manifest, and not use the ones already used in the resource manifest.*
 
 {% include filepath.html path="BP/manifest.json"%}
-```jsonc
+```json
 {
     "format_version": 2,
     "header": {

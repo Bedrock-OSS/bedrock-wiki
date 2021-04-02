@@ -31,7 +31,7 @@ For a simple trading UI, `trade_table` + `trade_with_player` components should d
 1. Add `"minecraft:behavior.trade_with_player": {}` to your entity's components.
 2. Copy the following code into a component group of your entity. I'll call mine `"tut:trader"`;
 
-```jsonc
+```json
 "minecraft:trade_table": {
   "display_name": "Trading Entity", //String can be replaced with any text to be displayed.
   "table": "trading/trading_entity_trades.json", //path to the Trade Table file
@@ -95,7 +95,7 @@ Finally, we'll look through the trade object itself. It's quite self-explanatory
 - "`reward_exp`" is a random hard-coded quantity of xp the player will egt from the trade (unless it's set to false).
 
 ___
-```jsonc
+```json
 //Example trade table.
 {
   "tiers": [

@@ -99,7 +99,7 @@ To register the subpacks in the manifest you need to add `subpacks` and this con
 Example:
 
 {% include filepath.html path="RP/manifest.json" %}
-```jsonc
+```json
 {
      "format_version": 2,
      "header": {

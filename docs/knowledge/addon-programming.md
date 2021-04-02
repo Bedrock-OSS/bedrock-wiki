@@ -49,7 +49,7 @@ Other good automation topic could be:
 
 The first thing you need to do is inspect the format of the file you want to create. Here is a simple `sound_definitions.json` file:
 
-```jsonc
+```json
 {
 	"dragon.roar": {
 		"category": "ui",
@@ -68,7 +68,7 @@ The first thing you need to do is inspect the format of the file you want to cre
 
 The next step, is to look at the file, and select a *chunk*. Our goal will be to generate this chunk programmatically, based on some *input*. In this case, our chunk is a single sound_definition:
 
-```jsonc
+```json
 "$folder.$sound:": {
     "category": "$category",
     "sounds": [

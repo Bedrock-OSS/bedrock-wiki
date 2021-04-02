@@ -29,7 +29,7 @@ In short, animation controllers allow us to trigger events from behavior packs.
  - Entity Events (such as `namespace:my_event`)
 
 Here is an example animation controller:
-```jsonc
+```json
 {
     "format_version": "1.10.0",
     "animation_controllers": {
@@ -68,7 +68,7 @@ If you need to stop this from happening, you need to add additional queries, suc
 # Using Animation Controllers
 To add this animation controller to our entity, we can use the following code in the entity definition description:
 
-```jsonc
+```json
 "description": {
     "identifier": "sirlich:entity_commands",
     "scripts": {
@@ -91,7 +91,7 @@ I personally like using [skin_id](/vanilla-usage/components-1.13.html#minecrafts
 
 We can update our animation controller to trigger based on `skin_id`:
 
-```jsonc
+```json
 {
     "format_version": "1.10.0",
     "animation_controllers": {
@@ -147,14 +147,14 @@ The syntax is `@s` followed by the name of an entity event. This allows us to ad
 Back in our entity file, we can set the `skin_id` using the `skin_id` component.
 
 The `skin_id` component looks like this:
-```jsonc
+```json
 "minecraft:skin_id": {
     "value": 1
 }
 ```
 
 We can add component groups that contains skin_ids:
-```jsonc
+```json
 "component_groups": {
     "execute_no_commands": {
         "minecraft:skin_id": {
@@ -178,7 +178,7 @@ We can add component groups that contains skin_ids:
 
 Now lets create events so we can easily add these groups:
 
-```jsonc
+```json
 "events": {
     "minecraft:entity_spawned": {
         "add": {
@@ -218,7 +218,7 @@ There are loads of ways to trigger events in Minecraft. Lets look at two specifi
 ## Interact Component:
 
 This component will spawn zombies whenever you click on him.
-```jsonc
+```json
 "minecraft:interact": {
     "interactions": [{
         "on_interact": {
@@ -239,7 +239,7 @@ This component will spawn zombies whenever you click on him.
 ## Timer
 
 This component will trigger the example command every 10 seconds:
-```jsonc
+```json
 "minecraft:timer": {
         "looping": true,
         "time": 1,

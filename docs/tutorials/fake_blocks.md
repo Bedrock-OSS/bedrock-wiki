@@ -26,7 +26,7 @@ Here is a tutorial of how to make a solid Hitbox in four different ways, with `r
 
 Those components below are required to make the entity act like a block, and also don't add the `"minecraft:physics": {}` component in there, because this will make your entity fall or have collision with some blocks like water or lava.
 
-```jsonc
+```json
 {
     "minecraft:knockback_resistance": {//Knockback resistance is needed to make it not be Knocked off by an entity.
         "value": 1
@@ -53,7 +53,7 @@ Those components below are required to make the entity act like a block, and als
 
 To align your entity in rotation, you will need some Math.
 
-```jsonc
+```json
 "rotation": [ 0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0 ]
 ```
 
@@ -74,7 +74,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 {% include filepath.html path="BP/entities/your_entity.json" local_path="minecraft:entity/events"%}
 
-```jsonc
+```json
 "minecraft:entity_spawned": {//Event in the original entity.
    "add": {
       "components_groups": [
@@ -91,7 +91,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 {% include filepath.html path="BP/entities/your_entity.json" local_path="minecraft:entity/component_groups"%}
 
-```jsonc
+```json
 "component_groups": {//Component Group in the original entity.
    "despawn": {
       "minecraft:despawn": {}
@@ -101,7 +101,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 {% include filepath.html path="BP/blocks/your_dummy_block.json"%}
 
-```jsonc
+```json
 {
     "format_version": "1.16.100",
     "minecraft:block": {
@@ -146,7 +146,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 {% include filepath.html path="BP/entities/your_dummy_entity.json"%}
 
-```jsonc
+```json
 {
     "format_version": "1.13.0",
     "minecraft:entity": {
@@ -198,7 +198,7 @@ Vanilla blocks have a cracking-texture that appears when you break them. Here i 
 
 First we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
 
-```jsonc
+```json
 "textures": {
     "default": "textures/entity/your_texture",
     "destroy_stage_0": "textures/environment/destroy_stage_0",
@@ -216,7 +216,7 @@ First we have to add some textures to your .entity file, make sure that you are 
 
 And add a geometry that has inflate 0.1 in all their cubes, this to avoid Z-Fighting.
 
-```jsonc
+```json
 "geometry": {
     "default": "geometry.your_geometry",
     "broken": "geometry.broken"
@@ -225,7 +225,7 @@ And add a geometry that has inflate 0.1 in all their cubes, this to avoid Z-Figh
 
 And now we have to add a new render controller. This is going to select different textures between the destroys stages.(Remember to not replace your actual controller, you need two controllers, the first one is just the one that adds model, textures and material to your normal entity, and the second one is this one, that defines the cracking texture)
 
-```jsonc
+```json
 "controller.render.broken": {
     "arrays": {
         "textures": {

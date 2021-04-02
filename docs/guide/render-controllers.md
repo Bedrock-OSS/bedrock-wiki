@@ -24,7 +24,7 @@ ___
 A render controller is a file that controls what is rendered in-game. They define the material, the texture and the model to be used on the entity. Render Controller files are located in `RP/render_controllers` (the `render_controllers` folder in your resource pack). Let's look at a simple render controller's structure.
 
 `RP/render_contollers/skeleton.render_controllers.json`
-```jsonc
+```json
 {
   "format_version": "1.8.0",
   "render_controllers": {
@@ -54,7 +54,7 @@ To better understand this, let's add a texture variant to our custom entity
 
 *Note: even though we'll be using the fox as an example here, I removed some of the fox-specific parameters from the code. In order to view the full fox code, simply open your Example Vanilla packs. The code showcased here can be used to give any entity skin or model variants, but make sure you've completed [Custom entity](/guide/custom-entity-full.html) page in order to understand what's going on.*
 
-```jsonc
+```json
 {
   "format_version": "1.8.0",
   "render_controllers": {
@@ -77,7 +77,7 @@ To better understand this, let's add a texture variant to our custom entity
 
 As you can see, we have a new "arrays" object in place. Let's add two texture variants,  their shortnames (red" and "arctic") to be " defined in the .entity file like this:
 
-```jsonc
+```json
   "textures": {
     "red": "textures/entity/skele_yaklin",
     "arctic": "textures/entity/skele_yaklin_arctic"
@@ -98,7 +98,7 @@ If you have some programming basics, you'll know that you can get an element fro
 *Note 2: You can do the same with geometries in `Array.geos`. Check `RP/render_contrllers.sheep.render_controllers.json` for more details on how that would work.*
 
 
-```jsonc
+```json
   "tut:red": {
     "minecraft:variant": {
       "value": 0
@@ -115,7 +115,7 @@ Add these two component groups into "component_groups" of the entity behavior's 
 
 "minecraft:variant" is a component created specifically for interacting with render and animation controllers - you can set it's "value" for anything and then test for it when controlling something with `query.variant`. "minecraft:mark_variant" and "minecraft:skin_id" can be used likewise.
 
-```jsonc
+```json
   "minecraft:entity_spawned": {
     "sequence": [
       {
@@ -160,7 +160,7 @@ Now that you've updated your render controller, your .entity file(with the new t
 # Part Visibility of bones
 
 `RP/render_controllers/fox.render_controllers.json`
-```jsonc
+```json
 {
   "format_version": "1.8.0",
   "render_controllers": {
@@ -192,13 +192,13 @@ With render controllers, you can hide certain bones in the "part_visibility" arr
 
 Let's analyze "part_visibility" in this fox's render_controller:
 
-```jsonc
+```json
 { "leg*": "!query.is_sleeping" }
 ```
 
 All bones that start with "leg" will visible when !query.is_sleeping returns true (the `!` reverts the value: when `query.is_sleeping` is **true**, `!query.is_sleeping` is **false**), or, in other words, the fox isn't sleeping. When the fox IS sleeping, the !query will return false and legs won't be visible.
 
-```jsonc
+```json
 {"head_sleeping": "query.is_sleeping"}
 ```
 
@@ -207,13 +207,13 @@ If the fox IS sleeping, the query will turn to true and the bone named "head_sle
 
 If you wanted the "arctic" variant to be headless, you could include this in "part_visibility":
 
-```jsonc
+```json
 { "head": "!query.variant == 1"}
 ```
 
 which would do practically the same as:
 
-```jsonc
+```json
 { "head": "query.variant == 0"}
 ```
 

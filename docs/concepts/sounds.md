@@ -230,13 +230,13 @@ Sounds played in animations function based off of `short-name` definitions in th
 This example shows playing a wing-flap sound, synced with an animation.
 
 {% include filepath.html path="RP/entities/dragon.json" local_path="minecraft:client_entity/description"%}
-```jsonc
+```json
 "sound_effects": {
     "wing_flap": "wiki.dragon.wing_flap" //where wiki.dragon.roar is a sound definited in sound_definitions
 }
 ```
 {% include filepath.html path="RP/animations/dragon.json" local_path="animations/animation.dragon.flying"%}
-```jsonc
+```json
 "sound_effects": {
     "3.16": {
         "effect": "wing_flap"
@@ -251,13 +251,13 @@ You can play sounds within animation controllers in a similar way that animation
 This example shows playing an explosion sound, synced using an animation controller.
 
 {% include filepath.html path="RP/entities/custom_tnt.json" local_path="minecraft:client_entity/description"%}
-```jsonc
+```json
 "sound_effects": {
     "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound definited in sound_definitions just like animation sounds.
 }
 ```
 {% include filepath.html path="RP/animation_controllers/custom_tnt.animation_controllers.json" local_path="animation_controllers/custom_tnt.animation_controllers.json"%}
-```jsonc
+```json
 "states": {
   "default": {
     "transitions": [

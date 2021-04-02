@@ -85,7 +85,7 @@ Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model
 `RP/models/entity/skele_yaklin.geo.json`
 
 {% include filepath.html path="RP/models/entity/skele_yaklin.geo.json"%}
-```jsonc
+```json
 {
   "format_version": "1.12.0",
   "minecraft:geometry": [
@@ -176,7 +176,7 @@ Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model
 ```
 
 {% include filepath.html path="RP/animations/skele_yaklin.animations.json"%}
-```jsonc
+```json
 {
   "format_version": "1.8.0",
   "animations": {

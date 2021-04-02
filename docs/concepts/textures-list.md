@@ -27,7 +27,7 @@ Any texture! Any and all textures can and *should* be used in the textures_list.
 The structure is simple, the file itself is in `RP/textures` and is named `textures_list.json`. The file just includes the filepath to every texture you want in the file:
 
 {% include filepath.html path="RP/textures/textures_list.json"%}
-```jsonc
+```json
 [
     "textures/blocks/foo",
     "textures/blocks/bar",

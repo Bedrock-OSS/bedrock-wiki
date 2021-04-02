@@ -113,7 +113,7 @@ When we make short-names of this form, we can use a generic "sit" animation cont
 ## Group animations files when possible
 
 Example:
-```jsonc
+```json
 {
 	"format_version": "1.8.0",
 	"animations": {

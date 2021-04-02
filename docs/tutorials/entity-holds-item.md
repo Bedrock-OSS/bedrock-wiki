@@ -59,7 +59,7 @@ Finally, add the loot table for the entity. It needs to be in `loot_tables/entit
 To have the entity always spawn with the same item, add the following loot table:
 
 {% include filepath.html path="BP/loot_tables/entities/gear/mandolorian.json"%}
-```jsonc
+```json
 {
   "pools": [
     {

@@ -22,7 +22,7 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 ### Using Events
 
-```jsonc
+```json
 {
     "format_version": "1.16.100",
     "minecraft:item": {
@@ -58,7 +58,7 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 ### Event Functions
 
 #### swing
-```jsonc
+```json
 {
     "example:swing_event": {
         "swing": {}
@@ -68,7 +68,7 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 #### shoot
 Shoots a projectile when triggered
-```jsonc
+```json
 {
     "example:shoot_event": {
         "shoot": {
@@ -81,7 +81,7 @@ Shoots a projectile when triggered
 ```
 
 #### damage
-```jsonc
+```json
 {
     "example:damage_event": {
         "damage": {
@@ -94,7 +94,7 @@ Shoots a projectile when triggered
 
 #### decrement_stack
 Decrements the stack
-```jsonc
+```json
 {
 	"example:remove_one": {
 		"decrement_stack": {}
@@ -104,7 +104,7 @@ Decrements the stack
 
 #### add_mob_effect
 Adds a mob effect when triggered
-```jsonc
+```json
 {
     "example:effect_event": {
         "add_mob_effect": {
@@ -119,7 +119,7 @@ Adds a mob effect when triggered
 
 #### remove_mob_effect
 Removes a mob effect when triggered
-```jsonc
+```json
 {
     "example:remove_effect_event": {
         "remove_mob_effect": {
@@ -132,7 +132,7 @@ Removes a mob effect when triggered
 
 #### transform_item
 Transforms the item into the item specified
-```jsonc
+```json
 {
     "example:transform_event": {
         "transform_item": {
@@ -144,7 +144,7 @@ Transforms the item into the item specified
 
 #### teleport
 Teleports the target to a random location in the specified range
-```jsonc
+```json
 {
     "example:teleport_event": {
         "teleport": {
@@ -157,7 +157,7 @@ Teleports the target to a random location in the specified range
 
 #### sequence
 Used to sequence event functions
-```jsonc
+```json
 {
 	"example:sequence_event": {
 		"sequence": [
@@ -181,7 +181,7 @@ Used to sequence event functions
 
 #### randomize
 Used to randomize event functions
-```jsonc
+```json
 {
    "example:randomize_events": {
         "randomize": [
@@ -207,7 +207,7 @@ Used to randomize event functions
 
 #### run_command
 Used to execute commands
-```jsonc
+```json
 {
     "example:execute_command_event": {
         "run_command": {
@@ -223,35 +223,35 @@ Used to execute commands
 List of all new block components, with usage examples
 
 - minecraft:ignores_permission
-```jsonc
+```json
 {
     "minecraft:ignores_permission": true
 }
 ```
 
 - minecraft:mining_speed
-```jsonc
+```json
 {
     "minecraft:mining_speed": 1
 }
 ```
 
 - minecraft:damage
-```jsonc
+```json
 {
     "minecraft:damage": 5
 }
 ```
 
 - minecraft:can_destroy_in_creative
-```jsonc
+```json
 {
     "minecraft:can_destroy_in_creative": true
 }
 ```
 
 - minecraft:dye_powder
-```jsonc
+```json
 {
     "minecraft:dye_powder": {
         "color": 4
@@ -260,42 +260,42 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:mirrored_art
-```jsonc
+```json
 {
     "minecraft:mirrord_art": true
 }
 ```
 
 - minecraft:explodable
-```jsonc
+```json
 {
     "minecraft:explodable": true
 }
 ```
 
 - minecraft:should_despawn
-```jsonc
+```json
 {
     "minecraft:should_despawn": true
 }
 ```
 
 - minecraft:liquid_clipped
-```jsonc
+```json
 {
     "minecraft:liquid_clipped": true
 }
 ```
 
 - minecraft:allow_off_hand
-```jsonc
+```json
 {
     "minecraft:allow_off_hand": true
 }
 ```
 
 - minecraft:projectile
-```jsonc
+```json
 {
     "minecraft:projectile": {
         "projectile_entity": "minecraft:arrow",
@@ -305,7 +305,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:block_placer
-```jsonc
+```json
 {
     "minecraft:block_placer": {
       "block": "minecraft:grass",
@@ -315,7 +315,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:entity_placer
-```jsonc
+```json
 {
     "minecraft:entity_placer": {
       "entity": "minecraft:zombie",
@@ -332,7 +332,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_use_on
-```jsonc
+```json
 {
     "minecraft:on_use_on": {
         "on_use_on": {
@@ -344,7 +344,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_use
-```jsonc
+```json
 {
     "minecraft:on_use": {
         "on_use": {
@@ -356,7 +356,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:knockback_resistance
-```jsonc
+```json
 {
     "minecraft:knockback_resistance": {
       "protection": 0.4
@@ -365,7 +365,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:enchantable
-```jsonc
+```json
 {
     "minecraft:enchantable": {
       "slot": "bow",     // Can be any of the enchant slot listed below
@@ -395,7 +395,7 @@ List of all new block components, with usage examples
 | cosmetic_head |
 
 - minecraft:shooter
-```jsonc
+```json
 {
     "minecraft:shooter": {
         "max_draw_duration": 1,
@@ -414,7 +414,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:durability
-```jsonc
+```json
 {
     "minecraft:durability": {
         "max_durability": 100,
@@ -427,7 +427,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:armor
-```jsonc
+```json
 {
     "minecraft:armor": {
         "protection": 4
@@ -436,7 +436,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:wearable
-```jsonc
+```json
 {
     "minecraft:wearable": {
         "slot": "slot.armor.feet"
@@ -445,7 +445,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:weapon
-```jsonc
+```json
 {
     "minecraft:weapon": {
         "on_hurt_entity": {
@@ -457,7 +457,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:record
-```jsonc
+```json
 {
     "minecraft:record": {
         "sound_event": "cat",
@@ -468,7 +468,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:repairable
-```jsonc
+```json
 {
     "minecraft:repairable": {
         "repair_items": [
@@ -489,7 +489,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:cooldown
-```jsonc
+```json
 {
     "minecraft:cooldown": {
         "category": "ender_pearl",
@@ -499,7 +499,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:digger
-```jsonc
+```json
 {
     "minecraft:digger": {
         "use_efficiency": true,
@@ -516,7 +516,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:fertilizer
-```jsonc
+```json
 {
     "minecraft:fertilizer": {
         "type": "bonemeal" // Can also be "rapid"
@@ -525,7 +525,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:fuel
-```jsonc
+```json
 {
     "minecraft:fuel": {
         "duration": 20
@@ -534,7 +534,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:throwable
-```jsonc
+```json
 {
     "minecraft:throwable": {
         "do_swing_animation": true,
@@ -545,7 +545,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:creative_category
-```jsonc
+```json
 {
     "minecraft:creative_category": {
         "parent": "itemGroup.name.nature"
@@ -555,7 +555,7 @@ List of all new block components, with usage examples
 
 - minecraft:food
 _New Syntax_
-```jsonc
+```json
 {
     "minecraft:food": {
         "on_consume": {
@@ -571,7 +571,7 @@ _New Syntax_
 ```
 
 - minecraft:use_animation
-```jsonc
+```json
 {
     "minecraft:use_animation": "eat" // Adds the animation and sound when eating a food item. Can also be changed to "drink".
 }
@@ -579,7 +579,7 @@ _New Syntax_
 
 - minecraft:render_offsets
 _New Syntax_
-```jsonc
+```json
 {
     "minecraft:render_offsets": {
         "main_hand": {
@@ -613,7 +613,7 @@ _New Syntax_
 ## Item Tags
 
 Item tags work the same as block tags and can be applied like this:
-```jsonc
+```json
 {
   	"format_version": "1.16.100",
   	"minecraft:item": {
@@ -639,7 +639,7 @@ If your item isn't showing up in the beta, these changes might have broken your 
 
 - Item behavior files now require a "category" to show up in the /give command and creative inventory.
 Example:
-```jsonc
+```json
 {
     "format_version": "1.16.100",
     "minecraft:item": {

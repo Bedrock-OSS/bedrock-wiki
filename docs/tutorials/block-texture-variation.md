@@ -27,7 +27,7 @@ To enable texture variations you create a terrain_texture.json file in the textu
 This is an example on how to create texture variations for the dirt block with three images:
 - Create a `textures/terrain_texture.json` file in the resource pack
 - in the json file you need to define the blocks that have variation as shown below
-```jsonc
+```json
 {
    "num_mip_levels" : 0,
    "padding" : 0,
@@ -53,7 +53,7 @@ This is an example on how to create texture variations for the dirt block with t
 ## Example of weighted dirt amounts
 
 After you have comleted the example above if you want to adjust the weights, simply edit the terrain_textures.json to include a weight field as shown below.
-```jsonc
+```json
 {
    "num_mip_levels" : 0,
    "padding" : 0,

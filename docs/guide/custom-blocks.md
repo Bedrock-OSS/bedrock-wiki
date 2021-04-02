@@ -26,7 +26,7 @@ Bedrock Minecraft allows us to add custom blocks into our world, with various va
 Block behaviors are structured similarly to entities: They contain description, as well as a list of components that describes the blocks behavior.
 
 {% include filepath.html path="BP/blocks/blockname.json"%}
-```jsonc
+```json
 {
     "format_version": "1.12.0",
     "minecraft:block": {
@@ -74,7 +74,7 @@ You can play around with changing the component values for each of these. Now le
 The resource definition for blocks differs from entities/items, because all the definitions appear in a single file.
 
 {% include filepath.html path="RP/blocks.json"%}
-```jsonc
+```json
 {
     "format_version": [
         1,
@@ -141,7 +141,7 @@ These "gorgeous" textures are the ones I'm going to use for my example blocks. T
 All textures need to be defines a **shortname**, (and we'll do it the same way as we defined item texture shortnames in `RP/textures/item_texture.json`), but this time in `RP/textures/terrain_texture.json`
 
 {% include filepath.html path="RP/textures/terrain_texture.json"%}
-```jsonc
+```json
 {
   "resource_pack_name": "tut",
   "texture_name": "atlas.terrain",
@@ -193,7 +193,7 @@ But, we still have to define the `tut:flashing`'s texture(third from the left), 
 As you might have already guessed, flipbook texture shortnames are defined in a different place then `RP/textures/terrain_texture.json`. Let's create another file, `RP/textures/flipbook_textures.json`.
 
 {% include filepath.html path="RP/textures/flipbook_textures.json"%}
-```jsonc
+```json
 [
   {
     "flipbook_texture": "textures/blocks/flashing_flipbook",

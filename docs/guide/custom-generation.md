@@ -44,7 +44,7 @@ However, Bridge is not required.
 # Custom Biomes
 
 BP/biomes/cold_biome.json
-```jsonc
+```json
 {
   "format_version": "1.13.0",
   "minecraft:biome": {
@@ -165,7 +165,7 @@ Features are located in `BP/features` and are basically a group of blocks stored
 You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev/r/Features)
 
 `BP/features/blocky_ore_feature.json`
-```jsonc
+```json
 {
 	"format_version": "1.13.0",
 	"minecraft:ore_feature": {
@@ -234,7 +234,7 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
 
 `BP/feature_rules/overworld_underground_blocky_ore_feature.json`
 
-```jsonc
+```json
 {
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
@@ -324,7 +324,7 @@ Now that you have your `.mcstructure`, time to write your `feature` and `feature
 
 Here's an code example from the [Features Documentation](https://bedrock.dev/r/Features#minecraft:structure_template_feature):
 
-```jsonc
+```json
 {
   "format_version": 1.13.0,
   "minecraft:structure_template_feature": {

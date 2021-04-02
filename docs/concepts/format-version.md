@@ -18,7 +18,7 @@ parent: Concepts
 Most Addon files contain a `format_version` field, often in the description. Here is an example:
 
 {% include filepath.html path="BP/entities/dragon.json" %}
-```jsonc
+```json
 {
   "format_version": "1.13.0",
   "minecraft:entity": {

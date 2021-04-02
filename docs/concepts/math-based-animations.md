@@ -65,7 +65,7 @@ By using queries, you can avoid the need to create animation controllers. If the
 
 A specific example is using animations to drive the wheels of a car based on the `modified_distance_moved`:
 
-```jsonc
+```json
 {
 	"format_version": "1.12.0",
 	"animations": {

@@ -65,7 +65,7 @@ This key-value syntax looks like this: `"key": <any structure>`. Notice the quot
 
 Here is an example of an object, which contains a few *key-value-pairs*.
 
-```jsonc
+```json
 {
     "a_list_of_integers": [1, 2, 3],
     "is_json_cool": true

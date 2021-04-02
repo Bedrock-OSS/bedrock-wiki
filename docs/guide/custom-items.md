@@ -28,7 +28,7 @@ Let's start off by creating our simple item's behavior file: `BP/items/gem.item.
 ## Gem Behavior Code (BP)
 
 {% include filepath.html path="BP/items/gem.item.json" id="bp_gem_item" %}
-```jsonc
+```json
 {
 	"format_version": "1.10",
 	"minecraft:item": {
@@ -63,7 +63,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 ## Gem Resource Code (RP)
 
 {% include filepath.html path="RP/items/gem.item.json" id="rp_gem_item" %}
-```jsonc
+```json
 {
 	"format_version": "1.10",
 	"minecraft:item": {
@@ -94,7 +94,7 @@ In order to define your item texture's shortname (to be able to use the texture 
 Now let's create the file where texture short names will be defined: `RP/textures/item_texture.json`, and copy this code into it:
 
 {% include filepath.html path="RP/textures/item_texture.json" %}
-```jsonc
+```json
 {
 	"resource_pack_name": "tut",
 	"texture_name": "atlas.items",
@@ -122,7 +122,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 ## Meal BP Code
 
 {% include filepath.html path="BP/items/meal.item.json" id="bp_meal_item" %}
-```jsonc
+```json
 {
 	"format_version": "1.12.0",
 	"minecraft:item": {
@@ -169,7 +169,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 ## Meal RP Code
 
 {% include filepath.html path="RP/items/meal.item.json" id="rp_meal_item" %}
-```jsonc
+```json
 {
 	"format_version": "1.10",
 	"minecraft:item": {
@@ -193,7 +193,7 @@ The preceding code goes in `RP/items/meal.item.json`, similarly to the Gem.
 ## Meal Textures and Shortnames
 
 {% include filepath.html path="RP/textures/item_texture.json" %}
-```jsonc
+```json
 {
 	"resource_pack_name": "tut",
 	"texture_name": "atlas.items",

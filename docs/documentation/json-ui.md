@@ -80,7 +80,7 @@ Specific properties:
 
 Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "label": {
     ...
@@ -435,7 +435,7 @@ Specific properties:
 
 For `focus_container_custom_*`
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 ...
 {
   "other_panel": {
@@ -511,7 +511,7 @@ Button mappings can be applied to any kind of input elements (`button`, `toggle`
 
 If you only have one variable to use, you should just use `"variables": {}`
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "element": {
     ...
@@ -527,7 +527,7 @@ If you only have one variable to use, you should just use `"variables": {}`
 
 If you have multiple variables use `"variables": [{}]`
 {% include filepath.html path="RP/ui/example_file.json"%}
-```jsonc
+```json
 {
   "element": {
     ...
