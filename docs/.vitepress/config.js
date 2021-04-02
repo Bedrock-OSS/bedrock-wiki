@@ -1,35 +1,36 @@
 const fs = require("fs");
 const path = require("path");
 
-var formatLinkSync = function (path) {
+let formatLinkSync = function (path) {
   return path.split("\\").join("/").replace(".md", "");
 };
 
 String.prototype.toProperCase = function () {
-  return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+  return this.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
 };
 
-var generateSidebar = function (base, dir, data) {
-files = fs.readdirSync(dir);
-files.forEach(function (file) {
-  if (fs.statSync(path.join(dir, file)).isDirectory()) {
-    data.push({
-      text: file.toString().replace(".md", "").toProperCase(),
-      children: generateSidebar(base, path.join(dir, file), []),
-    });
-  } else {
-    data.push({
-      text: file.toString().replace(".md", "").toProperCase(),
-      link: formatLinkSync(path.join(dir, file).toString().replace(base, "")),
-    });
-  }
-});
-return data;
+let generateSidebar = function (base, dir, data) {
+  let files = fs.readdirSync(dir);
+  files.forEach(function (file) {
+    if (fs.statSync(path.join(dir, file)).isDirectory()) {
+      data.push({
+        text: file.toString().replace(".md", "").toProperCase(),
+        children: generateSidebar(base, path.join(dir, file), []),
+      });
+    } else {
+      data.push({
+        text: file.toString().replace(".md", "").toProperCase(),
+        link: formatLinkSync(path.join(dir, file).toString().replace(base, "")),
+      });
+    }
+  });
+  return data;
 };
 
-var getSidebar = function ()
-{
-  var docsPath = path.join(process.cwd(), "docs");
+let getSidebar = function () {
+  let docsPath = path.join(process.cwd(), "docs");
   return generateSidebar(docsPath, docsPath, [])
 }
 
@@ -37,6 +38,7 @@ module.exports = {
   lang: "en-US",
   title: "VitePress",
   description: "Vite & Vue powered static site generator.",
+  base: "/bedrock-wiki-vite/",
 
   themeConfig: {
     repo: "vuejs/vitepress",
@@ -58,7 +60,7 @@ module.exports = {
     },
 
     nav: [
-      { text: "Guide", link: "/", activeMatch: "^/$|^/guide/" },
+      {text: "Guide", link: "/", activeMatch: "^/$|^/guide/"},
       {
         text: "Config Reference",
         link: "/config/basics",
