@@ -77,5 +77,3 @@ module.exports = {
     }
   }
 };
-
-console.log(JSON.stringify(getSidebar(), null, 1))
