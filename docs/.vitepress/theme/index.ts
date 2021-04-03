@@ -6,13 +6,15 @@ import { Theme } from 'vitepress'
 import { Component, watchEffect } from 'vue'
 import 'virtual:windi.css'
 import './Styles/main.css'
+import './Styles/light.css'
+import './Styles/dark.css'
 import './Styles/panels.css'
 
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [
 	['FilePath', FilePath],
 	['Label', Label],
-	['YouTubeEmbed', YouTubeEmbed]
+	['YouTubeEmbed', YouTubeEmbed],
 ]
 
 const theme: Theme = {

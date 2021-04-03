@@ -1,0 +1,17 @@
+/* Global */
+.icon {
+	fill: black;
+}
+
+/* Tables */
+th,
+td {
+	border-color: black;
+}
+
+th {
+	background-color: #a5f1b2;
+}
+td {
+	background-color: #ddfbdd;
+}

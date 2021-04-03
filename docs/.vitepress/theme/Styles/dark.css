@@ -1,0 +1,25 @@
+/* Global */
+
+.dark body {
+	@apply bg-true-gray-800 text-white;
+}
+
+.dark select {
+	@apply bg-true-gray-800;
+}
+
+.dark .icon {
+	fill: white;
+}
+
+/* Tables */
+.dark th td {
+	border-color: white;
+}
+
+.dark th {
+	background-color: rgb(0, 80, 53);
+}
+.dark td {
+	background-color: rgb(0, 170, 170);
+}

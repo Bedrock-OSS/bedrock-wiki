@@ -1,13 +1,19 @@
-.dark body {
-	@apply bg-true-gray-800 text-white;
-}
-.dark select {
-	@apply bg-true-gray-800;
+/* Table */
+
+table {
+	border-collapse: collapse;
 }
 
-.icon {
-	fill: black;
+table {
+	display: block;
+	width: auto !important;
+	max-width: 100%;
+	overflow-x: auto;
 }
-.dark .icon {
-	fill: white;
+
+th,
+td {
+	border-style: solid;
+	border-width: 1px;
+	padding: 6px;
 }
