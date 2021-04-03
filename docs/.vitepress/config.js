@@ -59,7 +59,7 @@ module.exports = {
 	base: baseUrl,
 
 	themeConfig: {
-		repo: 'vuejs/vitepress',
+		repo: 'bedrock-oss/bedrock-wiki-vite',
 		docsDir: 'docs',
 
 		editLinks: true,
