@@ -17,6 +17,7 @@ The website is still in progress, but you can [view it here](https://bedrock-oss
 -   [x] **CSS:** Code blocks
 -   [ ] **CSS:** TOC
 -   [x] **CSS:** Headers
+-   [ ] **CSS:** Links
 -   [ ] **Vue Component:** DropDown
 -   [ ] **Vue Component:** Button
 -   [ ] **Vue Component:** Sidebar Tag

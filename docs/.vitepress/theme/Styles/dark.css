@@ -23,3 +23,7 @@
 .dark td {
 	background-color: rgb(0, 170, 170);
 }
+
+.dark main a {
+	@apply text-purple-500 underline;
+}
