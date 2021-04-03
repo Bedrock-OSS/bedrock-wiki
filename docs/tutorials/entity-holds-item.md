@@ -27,7 +27,7 @@ This section covers the main features of entities for them to spawn with an item
 
 First of all, you'll need to have a model in Blockbench that has a map called 'rightArm'. Within this map, there needs to be a submap called 'rightItem'. Position the pivot point of this submap so it sits in the place you want the entity to hold the item at.
 
-![](/assets/images/tutorials/blockbench.png)
+![](/assets/images/tutorials/entity-holds-item/blockbench.png)
 
 ## Setting up behaviorpack-side entity
 

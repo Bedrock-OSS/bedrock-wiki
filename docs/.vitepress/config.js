@@ -24,6 +24,7 @@ let generateSidebar = function (base, dir, data) {
       let frontMatter = matter(str);
       data.push({
         text: frontMatter.data.title,
+        data: frontMatter.data,
         children: generateSidebar(base, joinedPath, []),
       });
     } else if (stats.isFile()) {
@@ -31,6 +32,7 @@ let generateSidebar = function (base, dir, data) {
       let frontMatter = matter(str);
       data.push({
         text: frontMatter.data.title,
+        data: frontMatter.data,
         link: formatLinkSync(joinedPath.toString().replace(base, "")),
       });
     }
