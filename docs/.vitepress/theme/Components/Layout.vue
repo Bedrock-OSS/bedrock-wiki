@@ -3,7 +3,7 @@
 	<Sidebar />
 	<Content
 		:class="{
-			'ml-96': isVisible,
+			'ml-80': isVisible,
 			'ml-8': !isVisible,
 			'min-h-screen': true,
 		}"
