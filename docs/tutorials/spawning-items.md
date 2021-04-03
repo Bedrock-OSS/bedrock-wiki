@@ -6,10 +6,7 @@ parent: Tutorials
 
 # Spawning Items
 
-
-
-Intermediate
-{: .label .label-yellow }
+<Label color="yellow">Intermediate</Label>
 
 It is often desired to be able to spawn items in their dropped form in a number of scenarios. Here we will examine how to accomplish this through entity deaths, interactions, and an all-purpose method.
 

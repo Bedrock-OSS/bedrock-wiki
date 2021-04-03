@@ -6,10 +6,7 @@ parent: Tutorials
 
 # Solid Entities
 
-
-
-Intermediate
-{: .label .label-yellow }
+<Label color="yellow">Intermediate</Label>
 
 Solid entities are entities that the player can bump into, step on, or otherwise physically interact with, without passing through. Entities like this have many uses, such as emulating blocks.
 

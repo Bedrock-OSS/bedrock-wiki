@@ -6,10 +6,7 @@ parent: Tutorials
 
 # Removing Entity Shadows
 
-
-
-Intermediate
-{: .label .label-yellow }
+<Label color="yellow">Intermediate</Label>
 
 There are quite a few ways to remove shadows from entities. This document will cover some of the best ways.
 
@@ -41,9 +38,7 @@ Some entities don't have shadows. By using the runtime identifier of these entit
 
 ## Remove Entity Shadows for ALL Entities
 
-{% include info.html
-  contents='Can crash your game, or get you rejected on Marketplace!'
-%}
+<Panel type="info">Can crash your game, or get you rejected on Marketplace!</Panel>
 
 Change these lines in the `shadows.material` file under the Resource Pack / materials folder. 
 

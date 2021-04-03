@@ -6,10 +6,7 @@ parent: Concepts
 
 # Sounds
 
-
-
-Intermediate
-{: .label .label-yellow }
+<Label color="yellow">Intermediate</Label>
 
 In bedrock, we have the ability to add custom sounds, without overwriting any vanilla sounds. This is done by adding files to the resource pack. 
 

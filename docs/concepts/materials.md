@@ -6,10 +6,7 @@ parent: Concepts
 
 # Materials
 
-
-
-Expert
-{: .label .label-red }
+<Label color="red">Expert</Label>
 
 ## Overview
 

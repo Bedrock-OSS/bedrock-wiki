@@ -8,14 +8,9 @@ badge_color: yellow
 
 # Entity Based 3D Item Models
 
+<Label color="red">Expert</Label>
 
-
-Expert
-{: .label .label-red }
-
-{% include notice.html
-  contents='This tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the [render controller tutorial](/concepts/render-controller) before starting this tutorial.'
-%}
+<Panel type="notice">This tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the <a href="/concepts/render-controller">render controller tutorial</a> before starting this tutorial.</Panel>
 
 ## Concept & Idea
 
@@ -586,9 +581,7 @@ Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItem
 
 # Attachable Based 3D Item Models
 
-{% include notice.html
-contents='Attachable Based 3D Item Models works only in **Minecraft 1.16.210.59 beta or above**'
-%}
+<Panel type="notice">Attachable Based 3D Item Models works only in <b>Minecraft 1.16.210.59 beta or above</b></Panel>
 
 ## Concept & Idea
 

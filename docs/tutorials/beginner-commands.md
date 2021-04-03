@@ -16,8 +16,7 @@ parent: Tutorials
 {:toc}
 </details>
 
-Beginner
-{: .label .label-green }
+<Label color="green">Beginner</Label>
 
 Written by VideoCarp<br>
 

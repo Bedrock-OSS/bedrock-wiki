@@ -6,10 +6,7 @@ parent: Tutorials
 
 # Fake Blocks
 
-
-
-Intermediate
-{: .label .label-yellow }
+<Label color="yellow">Intermediate</Label>
 
 ## Creating the Hitbox
 

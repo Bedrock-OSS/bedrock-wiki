@@ -10,9 +10,7 @@ badge_justification: left
 
 # Download Example Packs
 
-{% include info.html 
-    contents='This is an appendix page. You can start the guide from the beginning [here](/guide/).'
-%}
+<Panel type="info">This is an appendix page. You can start the guide from the beginning <a href="/guide/">here</a>.</Panel>
 
 To get the most out of the guide, you should always attempt all guide-exercises yourself! However if you get very stuck, the example packs should give you some valuable reference material.
 

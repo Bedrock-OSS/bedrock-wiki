@@ -1,0 +1,3 @@
+.dark body {
+	@apply bg-true-gray-800 text-white;
+}
