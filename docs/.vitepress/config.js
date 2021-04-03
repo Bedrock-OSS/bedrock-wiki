@@ -67,15 +67,9 @@ module.exports = {
 		lastUpdated: 'Last Updated',
 
 		nav: [
-			{ text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
 			{
-				text: 'Config Reference',
-				link: '/config/basics',
-				activeMatch: '^/config/',
-			},
-			{
-				text: 'Release Notes',
-				link: 'https://github.com/vuejs/vitepress/releases',
+				text: 'bedrock.dev',
+				link: 'https://bedrock.dev',
 			},
 		],
 
