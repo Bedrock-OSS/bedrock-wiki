@@ -1,6 +1,14 @@
 <template>
 	<!-- Volar complains here but everything is working fine -->
-	<a class="item flex px-2" v-bind="linkProps">
+	<a
+		:class="{
+			item: true,
+			flex: true,
+			'px-2': true,
+			'rounded-lg': true,
+		}"
+		v-bind="linkProps"
+	>
 		{{ props.item.text }}
 		<ExternalIcon v-if="isExternal" />
 	</a>
@@ -28,14 +36,22 @@ const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
 	margin-left: 4px;
 }
 .item {
-	@apply transition-colors;
+	@apply transition-colors px-2 py-1 m-1;
 }
 .item:hover,
 .item.active {
-	@apply text-purple-600;
-	@apply underline;
+	@apply bg-true-gray-200;
 }
-.item.external:hover {
-	@apply underline;
+
+.item.active {
+	@apply text-purple-800;
+}
+.dark .item.active {
+	@apply text-purple-300;
+}
+
+.dark .item:hover,
+.dark .item.active {
+	@apply bg-true-gray-700;
 }
 </style>

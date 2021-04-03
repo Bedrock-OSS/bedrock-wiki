@@ -35,6 +35,8 @@ function generateSidebar(base, dir, data) {
 			const str = fs.readFileSync(joinedPath, 'utf8')
 			let frontMatter = matter(str)
 			const link = formatLink(joinedPath.toString().replace(base, ''))
+			// This is the root index.md file. Should not get included in sidebar
+			if (link === '/index') return
 
 			data.push({
 				text: frontMatter.data.title,
