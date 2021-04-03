@@ -75,9 +75,24 @@ module.exports = {
 
 		nav: [
 			{
+				text: 'Discord',
+				link: '/discord',
+				activeMatch: '^/discord',
+			},
+			{
 				text: 'bedrock.dev',
 				link: 'https://bedrock.dev',
 			},
+			{
+				text: 'Contribute',
+				link: '/contribute',
+				activeMatch: '^/contribute',
+			},
+			// {
+			// 	text: 'News',
+			// 	link: '/news',
+			// 	activeMatch: '^/news',
+			// },
 		],
 
 		sidebar: {
