@@ -1,5 +1,8 @@
 .header-anchor {
-	@apply text-purple-800 opacity-0 transition-all;
+	@apply text-purple-600 opacity-0 transition-opacity;
+}
+.dark .header-anchor {
+	@apply text-purple-700;
 }
 h1,
 h2,
@@ -7,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-	@apply cursor-pointer relative right-0;
+	@apply cursor-pointer relative flex;
 }
 
 h1:hover,
