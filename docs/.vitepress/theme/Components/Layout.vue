@@ -1,13 +1,16 @@
 <template>
 	<NavBar />
 	<Sidebar />
-	<Content
-		:class="{
-			'm-8': true,
-			'ml-80': isVisible,
-			'min-h-screen': true,
-		}"
-	/>
+
+	<main>
+		<Content
+			:class="{
+				'm-8': true,
+				'ml-80': isVisible,
+				'min-h-screen': true,
+			}"
+		/>
+	</main>
 </template>
 
 <script setup lang="ts">
