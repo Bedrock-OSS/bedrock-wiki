@@ -15,12 +15,13 @@
 	</div>
 </template>
 
-<script>
-export default {
-	props: {
-		type: String, // 'info' | 'warning' | 'error' | 'notice'
-	},
-}
+<script setup lang="ts">
+import { defineProps, toRef } from 'vue'
+
+const props = defineProps<{
+	type: 'info' | 'warning' | 'error' | 'notice'
+}>()
+const type = toRef(props, 'type')
 </script>
 
 <style scoped>
