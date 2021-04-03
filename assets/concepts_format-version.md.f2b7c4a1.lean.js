@@ -1,0 +1,1 @@
+import{o as n,c as s,a}from"./app.8214062c.js";const t='{"title":"Format Versions","description":"","frontmatter":{"layout":"page","title":"Format Versions","parent":"Concepts"},"relativePath":"concepts/format-version.md","lastUpdated":1617465101133}',o={},e=a('',6);o.render=function(a,t,o,p,r,i){return n(),s("div",null,[e])};export default o;export{t as __pageData};
