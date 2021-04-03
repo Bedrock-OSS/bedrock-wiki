@@ -15,6 +15,7 @@
 		<div>
 			<NavLink
 				v-for="item in props.item.children"
+				@change="(val) => (val ? (isOpen = true) : undefined)"
 				class="block"
 				:key="item.link"
 				:item="item"

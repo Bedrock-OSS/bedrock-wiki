@@ -16,8 +16,10 @@
 
 <script setup lang="ts">
 import ExternalIcon from '../Icons/ExternalIcon.vue'
-import { computed, defineProps, toRefs } from 'vue'
+import { defineEmit, defineProps, toRefs, watchEffect } from 'vue'
 import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navLink'
+
+const emit = defineEmit(['change'])
 
 const props = defineProps<{
 	item: {
@@ -28,6 +30,9 @@ const props = defineProps<{
 const propsRefs = toRefs(props)
 
 const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
+watchEffect(() => {
+	emit('change', linkProps.value.class.active)
+})
 </script>
 
 <style scoped>
