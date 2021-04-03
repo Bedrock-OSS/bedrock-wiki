@@ -4,17 +4,13 @@ const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
 
-let formatLinkSync = function (path) {
-	return path.split('\\').join('/').replace('.md', '')
+const baseUrl = '/bedrock-wiki-vite/'
+
+function formatLink(path) {
+	return path.split(/\\|\//g).join('/').replace('.md', '')
 }
 
-String.prototype.toProperCase = function () {
-	return this.replace(/\w\S*/g, function (txt) {
-		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
-	})
-}
-
-let generateSidebar = function (base, dir, data) {
+function generateSidebar(base, dir, data) {
 	let files = fs.readdirSync(dir)
 	files.forEach(function (file) {
 		let joinedPath = path.join(dir, file)
@@ -34,19 +30,24 @@ let generateSidebar = function (base, dir, data) {
 				children: generateSidebar(base, joinedPath, []),
 			})
 		} else if (stats.isFile()) {
+			if (!file.endsWith('.md')) return
+
 			const str = fs.readFileSync(joinedPath, 'utf8')
 			let frontMatter = matter(str)
+			const link = formatLink(joinedPath.toString().replace(base, ''))
+
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
-				link: formatLinkSync(joinedPath.toString().replace(base, '')),
+				link,
+				activeMatch: `^${link}`,
 			})
 		}
 	})
 	return data
 }
 
-let getSidebar = function () {
+function getSidebar() {
 	let docsPath = path.join(process.cwd(), 'docs')
 	return generateSidebar(docsPath, docsPath, [])
 }
@@ -55,7 +56,7 @@ module.exports = {
 	lang: 'en-US',
 	title: 'Bedrock Wiki',
 	description: 'Technical bedrock knowledge-sharing wiki.',
-	base: '/bedrock-wiki-vite/',
+	base: baseUrl,
 
 	themeConfig: {
 		repo: 'vuejs/vitepress',
@@ -66,15 +67,9 @@ module.exports = {
 		lastUpdated: 'Last Updated',
 
 		nav: [
-			{ text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
 			{
-				text: 'Config Reference',
-				link: '/config/basics',
-				activeMatch: '^/config/',
-			},
-			{
-				text: 'Release Notes',
-				link: 'https://github.com/vuejs/vitepress/releases',
+				text: 'bedrock.dev',
+				link: 'https://bedrock.dev',
 			},
 		],
 
