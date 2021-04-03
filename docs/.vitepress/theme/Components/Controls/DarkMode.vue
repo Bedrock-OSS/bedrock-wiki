@@ -7,6 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue'
-import { themeId } from '../../Composables/theme'
+import { useTheme } from '../../Composables/theme'
+
+const { themeId } = useTheme()
 </script>

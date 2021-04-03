@@ -1,22 +1,36 @@
-import { useMediaQuery, useStorage, useToggle } from '@vueuse/core'
-import { computed, watchEffect } from 'vue'
+import { usePreferredDark, useStorage } from '@vueuse/core'
+import { computed, ref, watchEffect } from 'vue'
+import { useMediaQuery } from './mediaQuery'
 
-export const themeId = useStorage<'system' | 'dark' | 'light'>(
-	'docTheme',
-	'system'
-)
-const preferredColorScheme = useMediaQuery('(prefers-color-scheme: dark)')
-export const currentTheme = computed(() => {
-	console.log('UPDATE')
-	if (themeId.value === 'system')
-		return preferredColorScheme.value ? 'dark' : 'light'
-	return themeId.value
-})
+export type TThemeOptions = 'system' | 'dark' | 'light'
+export function useTheme() {
+	const storedThemeId = useStorage<TThemeOptions>('docTheme', 'system')
+	const themeId = ref<TThemeOptions>(storedThemeId.value)
 
-// Update the theme
-watchEffect(() => {
-	console.log('UPDATE')
-	if (currentTheme.value === 'dark') document.body.classList.add('dark')
-	else if (currentTheme.value === 'light')
-		document.body.classList.remove('dark')
-})
+	watchEffect(() => {
+		storedThemeId.value = themeId.value
+	})
+
+	const isPreferredDark = useMediaQuery('(prefers-color-scheme: dark)')
+
+	watchEffect(() => console.log(isPreferredDark.value))
+	const currentTheme = computed(() => {
+		if (themeId.value === 'system')
+			return isPreferredDark.value ? 'dark' : 'light'
+		return themeId.value
+	})
+
+	// Update the theme
+	watchEffect(() => {
+		console.log('UPDATE')
+		if (currentTheme.value === 'dark')
+			document.querySelector('html')?.classList.add('dark')
+		else if (currentTheme.value === 'light')
+			document.querySelector('html')?.classList.remove('dark')
+	})
+
+	return {
+		themeId,
+		currentTheme,
+	}
+}

@@ -1,3 +1,3 @@
-body.dark {
+.dark body {
 	@apply bg-gray-900 text-white;
 }

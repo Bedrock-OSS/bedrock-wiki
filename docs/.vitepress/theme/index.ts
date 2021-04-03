@@ -5,7 +5,6 @@ import { Theme } from 'vitepress'
 import { Component, watchEffect } from 'vue'
 import 'virtual:windi.css'
 import './Styles/main.css'
-import { currentTheme } from './Composables/theme'
 
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [
@@ -22,12 +21,5 @@ const theme: Theme = {
 		}
 	},
 }
-
-// Update the theme
-watchEffect(() => {
-	if (currentTheme.value === 'dark') document.body.classList.add('dark')
-	else if (currentTheme.value === 'light')
-		document.body.classList.remove('dark')
-})
 
 export default theme
