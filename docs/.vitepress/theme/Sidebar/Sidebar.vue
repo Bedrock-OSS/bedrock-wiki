@@ -1,5 +1,7 @@
 <template>
-	<div class="flex-none w-72">
+	<div
+		class="float-left sticky top-14 min-h-screen w-72 border-r-1 border-gray-200 select-none"
+	>
 		<Navigation :items="navLinks" />
 	</div>
 </template>

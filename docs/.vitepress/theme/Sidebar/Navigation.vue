@@ -7,10 +7,10 @@
 			:item="item"
 		/>
 
-		<div v-else class="pl-4">
-			{{ item.text }}
+		<details v-else class="cursor-pointer pl-4">
+			<summary>{{ item.text }}</summary>
 			<Navigation :items="item.children" />
-		</div>
+		</details>
 	</template>
 </template>
 
