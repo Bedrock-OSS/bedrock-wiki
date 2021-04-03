@@ -34,9 +34,9 @@ Let's get started.
 
 1. Now you are ready to create your own model! For more in-depth tutorials on modeling please check out the videos by Everbloom Studio below.
 
-{% include youtube_embed.html id="XqzxL_-XjA0" %}
+<YouTubeEmbed id="XqzxL_-XjA0" />
 
-{% include youtube_embed.html id="j7ISUImhgpc" %}
+<YouTubeEmbed id="j7ISUImhgpc" />
 
 # Texturing
 
