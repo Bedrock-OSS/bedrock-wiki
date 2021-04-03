@@ -13,7 +13,6 @@ export function useTheme() {
 
 	const isPreferredDark = useMediaQuery('(prefers-color-scheme: dark)')
 
-	watchEffect(() => console.log(isPreferredDark.value))
 	const currentTheme = computed(() => {
 		if (themeId.value === 'system')
 			return isPreferredDark.value ? 'dark' : 'light'
@@ -22,7 +21,8 @@ export function useTheme() {
 
 	// Update the theme
 	watchEffect(() => {
-		console.log('UPDATE')
+		if (import.meta.env.SSR) return
+
 		if (currentTheme.value === 'dark')
 			document.querySelector('html')?.classList.add('dark')
 		else if (currentTheme.value === 'light')

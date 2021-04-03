@@ -2,6 +2,8 @@ import { tryOnUnmounted } from '@vueuse/shared'
 import { ref } from 'vue'
 
 export function useMediaQuery(query: string) {
+	if (import.meta.env.SSR) return ref(false)
+
 	const mediaQuery = matchMedia(query)
 	const matches = ref(mediaQuery.matches)
 
