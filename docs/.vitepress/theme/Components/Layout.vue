@@ -7,6 +7,7 @@
 			:class="{
 				'm-8': true,
 				'ml-80': isVisible,
+				'mt-0': true,
 				'min-h-screen': true,
 			}"
 		/>
