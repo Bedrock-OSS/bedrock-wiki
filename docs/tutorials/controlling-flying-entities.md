@@ -6,10 +6,7 @@ parent: Tutorials
 
 # Controlling Flying Entities
 
-
-
-Intermediate
-{: .label .label-yellow }
+<Label color="yellow">Intermediate</Label>
 
 Whether making a plane or a dragon, adding controllability to flying entities will probably be a challenge to most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 3 main workaround ways you can use to achieve this.
 

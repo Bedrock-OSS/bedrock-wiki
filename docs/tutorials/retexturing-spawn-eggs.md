@@ -6,10 +6,7 @@ parent: Tutorials
 
 # Retexturing Spawn Eggs
 
-
-
-Beginner
-{: .label .label-green }
+<Label color="green">Beginner</Label>
 
 Custom entities will automatically be given a spawn egg. This spawn egg can be found inside of the creative menu, with a name like `item.spawn_egg.entity.sirlich:my_entity.name`. If you want to rename your spawn egg as well as set a texture, you can do so in the lang files. 
 

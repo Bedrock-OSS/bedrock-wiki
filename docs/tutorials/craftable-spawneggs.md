@@ -6,10 +6,7 @@ parent: Tutorials
  
 # Using MoLang to create craftable spawn-eggs
  
-
-
-Beginner
-{: .label .label-green }
+<Label color="green">Beginner</Label>
 
 Minecraft Bedrock 1.16 introduced the ability to use MoLang expressions in the `data` field of recipe results. We can use the `query.get_actor_info_id` function to get the runtime integer ID of a given entity.
 

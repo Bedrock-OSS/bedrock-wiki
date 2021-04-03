@@ -6,10 +6,7 @@ parent: Tutorials
 
 # Invulnerable Entities
 
-
-
-Beginner
-{: .label .label-green }
+<Label color="green">Beginner</Label>
 
 ## Using Damage Sensor
 The best and most flexible way of disabling damage for entities is using the `minecraft:damage_sensor` component. The component allows us to use `filters` to determine which damage sources are allowed to damage our entity.

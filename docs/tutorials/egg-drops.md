@@ -6,10 +6,7 @@ parent: Tutorials
 
 # Egg Drops in loot tables
 
-
-
-Beginner
-{: .label .label-green }
+<Label color="green">Beginner</Label>
 
 Here is how to make entities drop their own eggs when killed:
 

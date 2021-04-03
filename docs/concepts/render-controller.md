@@ -6,10 +6,7 @@ parent: Concepts
 
 # Render Controllers
 
-
-
-Beginner
-{: .label .label-green }
+<Label color="green">Beginner</Label>
 
 Render controllers are an often-misunderstood part of the `Resource Pack`. But you don't need to be afraid! You should think of render-controllers as logic packs that take `short-name` definitions from the RP Entity File, and determine how they will be combined/layered/rendered in-game.
 

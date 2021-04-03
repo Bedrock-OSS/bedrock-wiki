@@ -8,10 +8,7 @@ badge_color: yellow
 
 # Entity Based 3D Item Models
 
-
-
-Expert
-{: .label .label-red }
+<Label color="red">Expert</Label>
 
 <Panel type="notice">This tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the <a href="/concepts/render-controller">render controller tutorial</a> before starting this tutorial.</Panel>
 
