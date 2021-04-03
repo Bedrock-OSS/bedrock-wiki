@@ -1,39 +1,18 @@
 <template>
-	<template v-for="item in props.items">
-		<NavLink
-			class="block"
-			v-if="item.link !== undefined"
-			:key="item.link"
-			:item="item"
-		/>
-
-		<details
-			v-else
-			class="navigation-category cursor-pointer p-2 pl-4 border-b-1 border-true-gray-200 dark:border-true-gray-600"
-		>
-			<summary class="list-none">
-				<span>{{ item.text }}</span>
-
-				<ChevronLeftIcon />
-			</summary>
-			<Navigation :items="item.children" />
-		</details>
-	</template>
+	<div>
+		<template v-for="item in props.items">
+			<Category :item="item" />
+		</template>
+	</div>
 </template>
 
 <script setup lang="ts">
-import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
-import NavLink from '../Navigation/NavLink.vue'
-import { defineProps } from 'vue'
-
-interface INavElement {
-	text: string
-	link: string
-	children?: INavElement[]
-}
+import type { INavCategory } from './Structure'
+import Category from './Category.vue'
+import { defineProps, ref } from 'vue'
 
 const props = defineProps<{
-	items: INavElement[]
+	items: INavCategory[]
 }>()
 </script>
 

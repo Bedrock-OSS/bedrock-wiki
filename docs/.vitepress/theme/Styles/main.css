@@ -17,3 +17,12 @@ td {
 	border-width: 1px;
 	padding: 6px;
 }
+
+main img {
+	max-width: 100%;
+}
+
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
