@@ -38,7 +38,9 @@ Some entities don't have shadows. By using the runtime identifier of these entit
 
 ## Remove Entity Shadows for ALL Entities
 
-<Panel type="info">Can crash your game, or get you rejected on Marketplace!</Panel>
+::: tip
+Can crash your game, or get you rejected on Marketplace!
+:::
 
 Change these lines in the `shadows.material` file under the Resource Pack / materials folder. 
 

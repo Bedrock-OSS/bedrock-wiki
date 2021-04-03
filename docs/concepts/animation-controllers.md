@@ -128,4 +128,6 @@ When an entity loads into the world, it will *enter* the default animation contr
 
 Because of the way animation controllers are setup, it will only move from state to state at a MAXIMUM of once per tick. 
 
-<Panel type="warning">Animation Controllers "reset" when an entity reloads (player join/leave, chunk reload, etc). This means that it will "jump" back to the default state. You should always have logic in your default state that can handle restarting any critical animations.</Panel>
+::: warning
+Animation Controllers "reset" when an entity reloads (player join/leave, chunk reload, etc). This means that it will "jump" back to the default state. You should always have logic in your default state that can handle restarting any critical animations.
+:::

@@ -6,8 +6,9 @@ parent: Knowledge
 
 # Optimizing Addon Performance
 
-<Panel type="warning">This page was compiled primarily using community feedback from multiple sources. As a result, some information may be generalized, subjective, or conflicting. Always use your own best judgement when optimizing your addons. This page is not a substitute for testing your addon on a wide range of devices.</Panel>
-
+::: warning
+This page was compiled primarily using community feedback from multiple sources. As a result, some information may be generalized, subjective, or conflicting. Always use your own best judgement when optimizing your addons. This page is not a substitute for testing your addon on a wide range of devices.
+:::
 
 
 Performance in addons is particularly important, as the most technically impressive addon is largely useless if the majority of the player base cannot experience it. When developing addons, it should always be considered that many Bedrock players will be experiencing your addon on a significantly lower power device than you are developing on. This is especially true for mobile users. Therefore, addons should be developed with performance in mind, and tested for performance on lower end devices when possible.
