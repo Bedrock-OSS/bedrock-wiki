@@ -9,6 +9,7 @@ import './Styles/main.css'
 import './Styles/light.css'
 import './Styles/dark.css'
 import './Styles/panels.css'
+import './Styles/code.css'
 
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [

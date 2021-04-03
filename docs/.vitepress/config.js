@@ -61,6 +61,10 @@ module.exports = {
 	description: 'Technical bedrock knowledge-sharing wiki.',
 	base: baseUrl,
 
+	markdown: {
+		lineNumbers: true,
+	},
+
 	themeConfig: {
 		repo: 'bedrock-oss/bedrock-wiki-vite',
 		docsDir: 'docs',

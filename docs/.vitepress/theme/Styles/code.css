@@ -1,0 +1,244 @@
+code {
+	@apply rounded-lg m-0  bg-true-gray-100 p-1;
+	font-size: 0.85em;
+}
+.dark code {
+	@apply bg-true-gray-900;
+}
+
+div[class*='language-'] {
+	@apply relative rounded-lg overflow-x-auto bg-true-gray-50 my-3;
+}
+
+.dark div[class*='language-'] {
+	@apply bg-true-gray-900;
+}
+
+[class*='language-'] pre,
+[class*='language-'] code {
+	@apply bg-transparent;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	tab-size: 4;
+	hyphens: none;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+[class*='language-'] pre {
+	@apply relative m-0 overflow-x-auto;
+	padding: 1.25rem 1.5rem;
+}
+
+[class*='language-'] code {
+	@apply p-0;
+}
+
+/* Line highlighting */
+
+.highlight-lines {
+	@apply absolute top-0 bottom-0 left-0 w-full select-none overflow-hidden;
+	padding: 1.25rem 0;
+}
+
+.highlight-lines .highlighted {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark .highlight-lines .highlighted {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Line numbers mode */
+
+div[class*='language-'].line-numbers-mode {
+	padding-left: 3.5rem;
+}
+
+.line-numbers-wrapper {
+	@apply absolute top-0 bottom-0 left-0 w-12 text-center opacity-50 border-r-1 border-true-gray-300;
+	padding: 1.25rem 0;
+}
+
+.dark .line-numbers-wrapper {
+	@apply border-r-1 border-true-gray-700;
+}
+
+/* Language marker */
+[class*='language-']:before {
+	@apply absolute opacity-90;
+	top: 0.6em;
+	right: 1em;
+	font-size: 0.8rem;
+}
+
+[class~='language-html']:before,
+[class~='language-markup']:before {
+	content: 'html';
+}
+
+[class~='language-md']:before,
+[class~='language-markdown']:before {
+	content: 'md';
+}
+
+[class~='language-css']:before {
+	content: 'css';
+}
+
+[class~='language-sass']:before {
+	content: 'sass';
+}
+
+[class~='language-scss']:before {
+	content: 'scss';
+}
+
+[class~='language-less']:before {
+	content: 'less';
+}
+
+[class~='language-stylus']:before {
+	content: 'styl';
+}
+
+[class~='language-js']:before,
+[class~='language-javascript']:before {
+	content: 'js';
+}
+
+[class~='language-ts']:before,
+[class~='language-typescript']:before {
+	content: 'ts';
+}
+
+[class~='language-json']:before {
+	content: 'json';
+}
+
+[class~='language-rb']:before,
+[class~='language-ruby']:before {
+	content: 'rb';
+}
+
+[class~='language-py']:before,
+[class~='language-python']:before {
+	content: 'py';
+}
+
+[class~='language-sh']:before,
+[class~='language-bash']:before {
+	content: 'sh';
+}
+
+[class~='language-php']:before {
+	content: 'php';
+}
+
+[class~='language-go']:before {
+	content: 'go';
+}
+
+[class~='language-rust']:before {
+	content: 'rust';
+}
+
+[class~='language-java']:before {
+	content: 'java';
+}
+
+[class~='language-c']:before {
+	content: 'c';
+}
+
+[class~='language-yaml']:before {
+	content: 'yaml';
+}
+
+[class~='language-dockerfile']:before {
+	content: 'dockerfile';
+}
+
+/**
+   * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML.
+   * Based on https://github.com/chriskempson/tomorrow-theme
+   *
+   * @author Rose Pritchard
+   */
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
