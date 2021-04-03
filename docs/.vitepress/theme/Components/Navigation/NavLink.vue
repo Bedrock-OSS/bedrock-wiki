@@ -20,7 +20,6 @@ const props = defineProps<{
 const propsRefs = toRefs(props)
 
 const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
-console.log(props.item.text, linkProps.value.class.active)
 </script>
 
 <style scoped>
