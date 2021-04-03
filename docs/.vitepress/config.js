@@ -71,12 +71,12 @@ module.exports = {
 		// 		href: '/manifest.webmanifest',
 		// 	},
 		// ],
-		[
-			'script',
-			{
-				src: '/registerSW.js',
-			},
-		],
+		// [
+		// 	'script',
+		// 	{
+		// 		src: '/registerSW.js',
+		// 	},
+		// ],
 	],
 
 	markdown: {
