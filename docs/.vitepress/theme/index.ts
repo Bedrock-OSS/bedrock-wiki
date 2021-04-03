@@ -1,8 +1,10 @@
-import Layout from './Layout.vue'
-import FilePath from './Content/FilePath.vue'
+import Layout from './Components/Layout.vue'
+import FilePath from './Components/Content/FilePath.vue'
 import { Theme } from 'vitepress'
-import { Component } from 'vue'
+import { Component, watchEffect } from 'vue'
 import 'virtual:windi.css'
+import './Styles/main.css'
+import { currentTheme } from './Composables/theme'
 
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [['FilePath', FilePath]]
@@ -11,13 +13,17 @@ const theme: Theme = {
 	Layout,
 	NotFound: Layout, //Custom 404
 	enhanceApp({ app, router, siteData }) {
-		// app is the Vue 3 app instance from `createApp()`. router is VitePress'
-		// custom router. `siteData`` is a `ref`` of current site-level metadata.
-
 		for (const [componentName, globalComponent] of globalComponents) {
 			app.component(componentName, globalComponent)
 		}
 	},
 }
+
+// Update the theme
+watchEffect(() => {
+	if (currentTheme.value === 'dark') document.body.classList.add('dark')
+	else if (currentTheme.value === 'light')
+		document.body.classList.remove('dark')
+})
 
 export default theme
