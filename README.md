@@ -12,7 +12,7 @@ Welcome! You've found the rewrite of the Bedrock Wiki!
 -   [x] **CSS:** Tables
 -   [x] **CSS:** Code blocks
 -   [ ] **CSS:** TOC
--   [ ] **CSS:** Headers
+-   [x] **CSS:** Headers
 -   [ ] **Vue Component:** DropDown
 -   [ ] **Vue Component:** Button
 -   [ ] **Vue Component:** Sidebar Tag
