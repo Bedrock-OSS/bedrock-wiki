@@ -1,5 +1,12 @@
 # bedrock-wiki-vite
 
+Welcome! You've found the rewrite of the Bedrock Wiki!
+
+## How to run:
+
+-   `npm install`
+-   `npm run dev`
+
 ## To-dos:
 
 -   [x] **CSS:** Tables
