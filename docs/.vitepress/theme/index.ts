@@ -9,6 +9,8 @@ import './Styles/main.css'
 import './Styles/light.css'
 import './Styles/dark.css'
 import './Styles/panels.css'
+import './Styles/code.css'
+import './Styles/header.css'
 
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [
@@ -19,7 +21,8 @@ const globalComponents: [string, Component][] = [
 
 const theme: Theme = {
 	Layout,
-	NotFound: Layout, //Custom 404
+	// @ts-ignore
+	NotFound: () => '404', //Custom 404
 	enhanceApp({ app, router, siteData }) {
 		for (const [componentName, globalComponent] of globalComponents) {
 			app.component(componentName, globalComponent)

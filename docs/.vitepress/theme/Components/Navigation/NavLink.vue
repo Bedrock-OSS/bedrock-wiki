@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import ExternalIcon from '../Icons/ExternalIcon.vue'
-import { computed, defineProps, toRefs } from 'vue'
+import { computed, defineEmit, defineProps, toRefs, watchEffect } from 'vue'
 import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navLink'
 import type { Badge } from '../Sidebar/Structure'
 
@@ -32,6 +32,8 @@ const badgeClass = {
 	"flex-initial": true,
 	"py-1": true,
 }
+
+const emit = defineEmit(['change'])
 
 const props = defineProps<{
 	item: {
@@ -83,6 +85,9 @@ const badgeColorClass = computed(() => {
 	}
 })
 
+watchEffect(() => {
+	emit('change', linkProps.value.class.active)
+})
 </script>
 
 <style scoped>

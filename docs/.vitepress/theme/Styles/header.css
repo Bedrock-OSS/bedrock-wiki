@@ -1,0 +1,32 @@
+.header-anchor {
+	@apply text-purple-600 opacity-0 transition-opacity ml-2 order-2;
+}
+.dark .header-anchor {
+	@apply text-purple-700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply cursor-pointer relative flex;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+	@apply right-0;
+}
+
+h1:hover .header-anchor,
+h2:hover .header-anchor,
+h3:hover .header-anchor,
+h4:hover .header-anchor,
+h5:hover .header-anchor,
+h6:hover .header-anchor {
+	@apply opacity-100;
+}

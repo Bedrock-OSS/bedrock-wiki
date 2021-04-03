@@ -71,6 +71,28 @@ module.exports = {
 	description: 'Technical bedrock knowledge-sharing wiki.',
 	base: baseUrl,
 
+	head: [
+		// Enable to make the bedrock wiki installable
+		// [
+		// 	'link',
+		// 	{
+		// 		rel: 'manifest',
+		// 		type: 'application/json',
+		// 		href: '/manifest.webmanifest',
+		// 	},
+		// ],
+		// [
+		// 	'script',
+		// 	{
+		// 		src: '/registerSW.js',
+		// 	},
+		// ],
+	],
+
+	markdown: {
+		lineNumbers: true,
+	},
+
 	themeConfig: {
 		repo: 'bedrock-oss/bedrock-wiki-vite',
 		docsDir: 'docs',
@@ -81,9 +103,24 @@ module.exports = {
 
 		nav: [
 			{
+				text: 'Discord',
+				link: '/discord',
+				activeMatch: '^/discord',
+			},
+			{
 				text: 'bedrock.dev',
 				link: 'https://bedrock.dev',
 			},
+			{
+				text: 'Contribute',
+				link: '/contribute',
+				activeMatch: '^/contribute',
+			},
+			// {
+			// 	text: 'News',
+			// 	link: '/news',
+			// 	activeMatch: '^/news',
+			// },
 		],
 
 		sidebar: {

@@ -2,6 +2,10 @@
 
 Welcome! You've found the rewrite of the Bedrock Wiki!
 
+## View Website
+
+The website is still in progress, but you can [view it here](https://bedrock-oss.github.io/bedrock-wiki-vite/)
+
 ## How to run:
 
 -   `npm install`
@@ -12,7 +16,8 @@ Welcome! You've found the rewrite of the Bedrock Wiki!
 -   [x] **CSS:** Tables
 -   [x] **CSS:** Code blocks
 -   [ ] **CSS:** TOC
--   [ ] **CSS:** Headers
+-   [x] **CSS:** Headers
+-   [ ] **CSS:** Links
 -   [ ] **Vue Component:** DropDown
 -   [ ] **Vue Component:** Button
 -   [ ] **Vue Component:** Sidebar Tag

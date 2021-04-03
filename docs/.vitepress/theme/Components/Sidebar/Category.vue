@@ -1,6 +1,6 @@
 <template>
 	<details
-		class="navigation-category p-2 cursor-pointer border-b-1 border-true-gray-200 dark:border-true-gray-600"
+		class="navigation-category p-2 pl-4 cursor-pointer border-b-1 border-true-gray-200 dark:border-true-gray-600"
 		:open="isOpen"
 	>
 		<summary
@@ -15,6 +15,7 @@
 		<div>
 			<NavLink
 				v-for="item in props.item.children"
+				@change="(val) => (val ? (isOpen = true) : undefined)"
 				class="block"
 				:key="item.link"
 				:item="item"
