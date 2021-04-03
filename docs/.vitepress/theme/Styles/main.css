@@ -11,3 +11,7 @@
 .dark .icon {
 	fill: white;
 }
+
+.min-h-screen img {
+	max-width: 100%;
+}
