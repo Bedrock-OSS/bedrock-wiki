@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="float-left sticky top-14 min-h-screen w-72 border-r-1 border-gray-200 select-none"
+		class="float-left fixed pt-16 top-0 min-h-screen w-72 border-r-1 border-gray-200 select-none"
 	>
 		<Navigation :items="navLinks" />
 	</div>
