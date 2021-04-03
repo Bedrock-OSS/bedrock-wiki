@@ -163,11 +163,7 @@ There will be instructions for creating custom emoji at the bottom.
 
 # Custom Emoji
 
-```
-{% include warning.html
-  contents='This method is not officially supported. Use with caution on the Marketplace!'
-%}
-```
+<Panel type="warning">This method is not officially supported. Use with caution on the Marketplace!</Panel>
 
 To make a custom emoji, we use a very similar method to the pre-built emoji, except instead of using the Microsoft sprite-sheets, we overwrite them with our own! Some *character-slots* are already used up with the emoji above, but there are blank slots we can use.
 

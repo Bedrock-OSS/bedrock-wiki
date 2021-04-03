@@ -6,9 +6,7 @@ parent: Knowledge
 
 # Optimizing Addon Performance
 
-{% include warning.html 
-    contents='This page was compiled primarily using community feedback from multiple sources. As a result, some information may be generalized, subjective, or conflicting. Always use your own best judgement when optimizing your addons. This page is not a substitute for testing your addon on a wide range of devices.'
-%}
+<Panel type="warning">This page was compiled primarily using community feedback from multiple sources. As a result, some information may be generalized, subjective, or conflicting. Always use your own best judgement when optimizing your addons. This page is not a substitute for testing your addon on a wide range of devices.</Panel>
 
 
 

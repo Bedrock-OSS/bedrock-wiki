@@ -21,9 +21,7 @@ ___
 
 # Understanding JSON
 
-{% include info.html 
-    contents='This is an appendix page. You can start the guide from the beginning [here](/guide/).'
-%}
+<Panel type="info">This is an appendix page. You can start the guide from the beginning <a href="/guide/">here</a>.</Panel>
 
 JSON is a simple "language" that is used for lots of things in Computer Science... including making Minecraft Bedrock Addons! If you have never heard of JSON before, you are encouraged to read through [this tutorial](https://www.digitalocean.com/community/tutorials/an-introduction-to-json). It will teach you everything you need to know about writing valid JSON files.
 

@@ -8,9 +8,7 @@ badge_color: red
 
 # Game Tests
 
-{% include notice.html 
-    contents='The GameTest framework requires you to activate **"Enable GameTest Framework"** in your world settings and you must be using **Minecraft 1.16.210.60 beta or above**'
-%}
+<Panel type="notice">The GameTest framework requires you to activate <b>"Enable GameTest Framework"</b> in your world settings and you must be using <b>Minecraft 1.16.210.60 beta or above</b></Panel>
 
 GameTests are a new feature which allow developers to create unit tests to make it easier to test if game mechanics work. They are created with javascript files in the behavior pack folder and each file can register multiple GameTests. Each GameTest must also have an .mcstructure file in the `BP/structures` folder.
 
