@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Bedrock Wiki
 
 This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.
