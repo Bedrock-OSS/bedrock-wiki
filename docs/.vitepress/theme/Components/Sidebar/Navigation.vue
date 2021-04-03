@@ -12,7 +12,8 @@
 			class="navigation-category cursor-pointer p-2 pl-4 border-b-1 border-true-gray-200 dark:border-true-gray-600"
 		>
 			<summary class="list-none">
-				{{ item.text }}
+				<span>{{ item.text }}</span>
+
 				<ChevronLeftIcon />
 			</summary>
 			<Navigation :items="item.children" />
@@ -38,8 +39,8 @@ const props = defineProps<{
 
 <style scoped>
 .navigation-category summary svg {
+	@apply transition-transform;
 	float: right;
-	transition: all 0.1s ease-in-out;
 }
 .navigation-category[open] summary svg {
 	transform: rotate(-90deg);
