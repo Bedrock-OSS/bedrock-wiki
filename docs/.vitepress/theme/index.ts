@@ -1,11 +1,15 @@
 import Layout from './Layout.vue'
 import FilePath from './Content/FilePath.vue'
+import Panel from './Content/Panel.vue'
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import 'virtual:windi.css'
 
 // Add global components to this array to register them automatically
-const globalComponents: [string, Component][] = [['FilePath', FilePath]]
+const globalComponents: [string, Component][] = [
+	['FilePath', FilePath],
+	['Panel', Panel],
+]
 
 const theme: Theme = {
 	Layout,

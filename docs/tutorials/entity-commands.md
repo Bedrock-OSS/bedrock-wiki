@@ -50,11 +50,7 @@ This animation controller will run the command `/say I have been summoned` as so
 
 In short, there are `states`, which can trigger events in their `on_entry` clause. We use queries to move between different states. By default, entities will be inside of the `default` state.
 
-```
-{% include warning.html
-  contents='Queries are re-run when the world/chunk reloads. This means the line `"/say I have been summoned"` will actually run each time the entity "loads" -not only when it is summoned.'
-%}
-```
+<Panel type="warning">Queries are re-run when the world/chunk reloads. This means the line <code>"/say I have been summoned"</code> will actually run each time the entity "loads" -not only when it is summoned.</Panel>
 
 If you need to stop this from happening, you need to add additional queries, such as a `skin_id` query. The first time the entity spawns, check for `skin_id = 0`, and then *also* add some higher `skin_id`, such as `skin_id = 1`. Then, when the entity reloads, it won't be able to run those commands. This is shown further down in the document.
 
