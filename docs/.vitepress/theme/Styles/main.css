@@ -1,3 +1,6 @@
 .dark body {
 	@apply bg-true-gray-800 text-white;
 }
+.dark select {
+	@apply bg-true-gray-800;
+}
