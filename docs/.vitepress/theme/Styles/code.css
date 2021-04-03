@@ -1,5 +1,5 @@
 code {
-	@apply rounded-lg m-0  bg-true-gray-100 p-1;
+	@apply rounded-lg m-0 bg-true-gray-100 p-1;
 	font-size: 0.85em;
 }
 .dark code {
@@ -7,7 +7,7 @@ code {
 }
 
 div[class*='language-'] {
-	@apply relative rounded-lg overflow-x-auto bg-true-gray-50 my-3;
+	@apply relative rounded-lg overflow-x-auto bg-true-gray-50 my-3 -z-index-1;
 }
 
 .dark div[class*='language-'] {

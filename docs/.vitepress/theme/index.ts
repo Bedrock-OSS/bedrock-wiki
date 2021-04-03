@@ -11,6 +11,7 @@ import './Styles/dark.css'
 import './Styles/panels.css'
 import './Styles/code.css'
 import './Styles/header.css'
+import './Styles/tile.css'
 
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [
