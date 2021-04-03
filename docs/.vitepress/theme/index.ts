@@ -6,6 +6,7 @@ import { Theme } from 'vitepress'
 import { Component, watchEffect } from 'vue'
 import 'virtual:windi.css'
 import './Styles/main.css'
+import './Styles/panels.css'
 
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [
