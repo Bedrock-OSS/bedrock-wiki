@@ -12,7 +12,7 @@ import './Styles/panels.css'
 const globalComponents: [string, Component][] = [
 	['FilePath', FilePath],
 	['Label', Label],
-	['YouTubeEmbed', YouTubeEmbed]
+	['YouTubeEmbed', YouTubeEmbed],
 ]
 
 const theme: Theme = {

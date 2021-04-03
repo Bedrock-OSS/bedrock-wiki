@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="flex items-center justify-items-center sticky z-50 top-0 p-4 bg-true-gray-50 border-b-1 border-true-gray-200 dark:border-true-gray-600 dark:bg-true-gray-900 select-none"
+		class="nav-bar flex items-center justify-items-center sticky z-50 top-0 p-4 bg-true-gray-50 border-b-1 border-true-gray-200 dark:border-true-gray-600 dark:bg-true-gray-900 select-none"
 	>
 		<component
 			:is="isVisible ? MenuOpenIcon : MenuIcon"
