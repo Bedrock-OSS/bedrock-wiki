@@ -1,1 +1,0 @@
-import{o as n,c as s,d as a}from"./app.5b64b048.js";const p='{"title":"Player Geometry","description":"","frontmatter":{"layout":"page","title":"Player Geometry","parent":"Tutorials"},"relativePath":"tutorials/player-geometry.md","lastUpdated":1617397832420}',t={},o=a('',18);t.render=function(a,p,t,e,u,c){return n(),s("div",null,[o])};export default t;export{p as __pageData};
