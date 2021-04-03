@@ -1,15 +1,6 @@
 <template>
 	<div class="panel-container">
-		<p v-if="type == 'info'" class="panel-info">
-			<slot />
-		</p>
-		<p v-if="type == 'warning'" class="panel-warning">
-			<slot />
-		</p>
-		<p v-if="type == 'error'" class="panel-error">
-			<slot />
-		</p>
-		<p v-if="type == 'notice'" class="panel-notice">
+		<p :class="`panel-${type}`">
 			<slot />
 		</p>
 	</div>
