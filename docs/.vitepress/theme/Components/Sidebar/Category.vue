@@ -1,6 +1,6 @@
 <template>
 	<details
-		class="navigation-category p-2 cursor-pointer border-b-1 border-true-gray-200 dark:border-true-gray-600"
+		class="navigation-category p-2 pl-4 cursor-pointer border-b-1 border-true-gray-200 dark:border-true-gray-600"
 		:open="isOpen"
 	>
 		<summary
