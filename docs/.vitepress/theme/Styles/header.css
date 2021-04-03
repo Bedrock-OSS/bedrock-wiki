@@ -1,5 +1,5 @@
 .header-anchor {
-	@apply text-purple-600 opacity-0 transition-opacity;
+	@apply text-purple-600 opacity-0 transition-opacity ml-2 order-2;
 }
 .dark .header-anchor {
 	@apply text-purple-700;
