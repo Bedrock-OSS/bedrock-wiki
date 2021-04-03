@@ -8,21 +8,14 @@ badge_color: red
 
 # Items
 
-<details id="toc" class="top-level" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+[[TOC]]
 
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
-
-
 # minecraft:allow_off_hand
+
 ### firework_rocket
+
 ```json
 "minecraft:allow_off_hand": true
 ```
@@ -92,48 +85,59 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### nautilus_shell
+
 ```json
 "minecraft:allow_off_hand": true
 ```
 
 ### shield
+
 ```json
 "minecraft:allow_off_hand": true
 ```
 
 ### totem_of_undying
+
 ```json
 "minecraft:allow_off_hand": true
 ```
 
 # minecraft:animates_in_toolbar
+
 ### bow
+
 ```json
 "minecraft:animates_in_toolbar": true
 ```
 
 ### clock
+
 ```json
 "minecraft:animates_in_toolbar": true
 ```
 
 ### compass
+
 ```json
 "minecraft:animates_in_toolbar": true
 ```
 
 ### crossbow
+
 ```json
 "minecraft:animates_in_toolbar": true
 ```
 
 ### lodestone_compass
+
 ```json
 "minecraft:animates_in_toolbar": true
 ```
 
 # minecraft:armor
+
 ### chainmail_boots
+
 ```json
 "minecraft:armor": {
     "protection": 1,
@@ -142,6 +146,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_boots
+
 ```json
 "minecraft:armor": {
     "protection": 3,
@@ -150,6 +155,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_boots
+
 ```json
 "minecraft:armor": {
     "protection": 1,
@@ -158,6 +164,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_boots
+
 ```json
 "minecraft:armor": {
     "protection": 2,
@@ -166,6 +173,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_boots
+
 ```json
 "minecraft:armor": {
     "protection": 1,
@@ -174,6 +182,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_boots
+
 ```json
 "minecraft:armor": {
     "protection": 3,
@@ -182,6 +191,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_chestplate
+
 ```json
 "minecraft:armor": {
     "protection": 5,
@@ -190,6 +200,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_chestplate
+
 ```json
 "minecraft:armor": {
     "protection": 8,
@@ -198,6 +209,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_chestplate
+
 ```json
 "minecraft:armor": {
     "protection": 5,
@@ -206,6 +218,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_chestplate
+
 ```json
 "minecraft:armor": {
     "protection": 6,
@@ -214,6 +227,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_chestplate
+
 ```json
 "minecraft:armor": {
     "protection": 3,
@@ -222,6 +236,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_chestplate
+
 ```json
 "minecraft:armor": {
     "protection": 8,
@@ -230,6 +245,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elytra
+
 ```json
 "minecraft:armor": {
     "texture_type": "elytra"
@@ -237,6 +253,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_helmet
+
 ```json
 "minecraft:armor": {
     "protection": 2,
@@ -245,6 +262,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_helmet
+
 ```json
 "minecraft:armor": {
     "protection": 3,
@@ -253,6 +271,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_helmet
+
 ```json
 "minecraft:armor": {
     "protection": 2,
@@ -261,6 +280,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_helmet
+
 ```json
 "minecraft:armor": {
     "protection": 2,
@@ -269,6 +289,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_helmet
+
 ```json
 "minecraft:armor": {
     "protection": 1,
@@ -277,6 +298,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_helmet
+
 ```json
 "minecraft:armor": {
     "protection": 3,
@@ -285,6 +307,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_horse_armor
+
 ```json
 "minecraft:armor": {
     "protection": 11,
@@ -293,6 +316,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_horse_armor
+
 ```json
 "minecraft:armor": {
     "protection": 7,
@@ -301,6 +325,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_horse_armor
+
 ```json
 "minecraft:armor": {
     "protection": 5,
@@ -309,6 +334,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_horse_armor
+
 ```json
 "minecraft:armor": {
     "protection": 3,
@@ -317,6 +343,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_leggings
+
 ```json
 "minecraft:armor": {
     "protection": 4,
@@ -325,6 +352,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_leggings
+
 ```json
 "minecraft:armor": {
     "protection": 6,
@@ -333,6 +361,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_leggings
+
 ```json
 "minecraft:armor": {
     "protection": 3,
@@ -341,6 +370,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_leggings
+
 ```json
 "minecraft:armor": {
     "protection": 5,
@@ -349,6 +379,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_leggings
+
 ```json
 "minecraft:armor": {
     "protection": 2,
@@ -357,6 +388,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_leggings
+
 ```json
 "minecraft:armor": {
     "protection": 6,
@@ -365,6 +397,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle_helmet
+
 ```json
 "minecraft:armor": {
     "protection": 2,
@@ -373,7 +406,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:block_placer
+
 ### brewing_stand
+
 ```json
 "minecraft:block_placer": {
     "block": "brewing_stand"
@@ -381,6 +416,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cake
+
 ```json
 "minecraft:block_placer": {
     "block": "cake"
@@ -388,6 +424,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### campfire
+
 ```json
 "minecraft:block_placer": {
     "block": "campfire"
@@ -395,6 +432,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### soul_campfire
+
 ```json
 "minecraft:block_placer": {
     "block": "soul_campfire"
@@ -402,6 +440,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### carrot
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:carrots"
@@ -409,6 +448,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cauldron
+
 ```json
 "minecraft:block_placer": {
     "block": "cauldron"
@@ -416,6 +456,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chain
+
 ```json
 "minecraft:block_placer": {
     "block": "chain"
@@ -423,6 +464,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cocoa_beans
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:cocoa",
@@ -435,6 +477,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### flower_pot
+
 ```json
 "minecraft:block_placer": {
     "block": "flower_pot"
@@ -442,6 +485,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hopper
+
 ```json
 "minecraft:block_placer": {
     "block": "hopper"
@@ -449,6 +493,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### item_frame
+
 ```json
 "minecraft:block_placer": {
     "block": "frame"
@@ -456,6 +501,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### kelp
+
 ```json
 "minecraft:block_placer": {
     "block": "kelp"
@@ -463,6 +509,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### nether_sprouts
+
 ```json
 "minecraft:block_placer": {
     "block": "nether_sprouts"
@@ -470,6 +517,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### nether_wart
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:nether_wart"
@@ -477,6 +525,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### potato
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:potatoes"
@@ -484,6 +533,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### redstone
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:redstone_wire"
@@ -491,6 +541,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### comparator
+
 ```json
 "minecraft:block_placer": {
     "block": "unpowered_comparator"
@@ -498,6 +549,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### repeater
+
 ```json
 "minecraft:block_placer": {
     "block": "unpowered_repeater"
@@ -505,6 +557,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wheat_seeds
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:wheat"
@@ -512,6 +565,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### beetroot_seeds
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:beetroot"
@@ -519,6 +573,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### melon_seeds
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:melon_stem"
@@ -526,6 +581,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pumpkin_seeds
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:pumpkin_stem"
@@ -533,6 +589,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### string
+
 ```json
 "minecraft:block_placer": {
     "block": "tripWire"
@@ -540,6 +597,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sugar_cane
+
 ```json
 "minecraft:block_placer": {
     "block": "reeds"
@@ -547,6 +605,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sweet_berries
+
 ```json
 "minecraft:block_placer": {
     "block": "minecraft:sweet_berry_bush"
@@ -554,61 +613,77 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:bucket
+
 ### bucket
+
 ```json
 "minecraft:bucket": {}
 ```
 
 # minecraft:can_destroy_in_creative
+
 ### diamond_sword
+
 ```json
 "minecraft:can_destroy_in_creative": false
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:can_destroy_in_creative": false
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:can_destroy_in_creative": false
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:can_destroy_in_creative": false
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:can_destroy_in_creative": false
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:can_destroy_in_creative": false
 ```
 
 ### trident
+
 ```json
 "minecraft:can_destroy_in_creative": false
 ```
 
 # minecraft:carrot_on_a_stick
+
 ### carrot_on_a_stick
+
 ```json
 "minecraft:carrot_on_a_stick": {}
 ```
 
 # minecraft:coal
+
 ### coal
+
 ```json
 "minecraft:coal": {}
 ```
 
 # minecraft:cooldown
+
 ### chorus_fruit
+
 ```json
 "minecraft:cooldown": {
     "category": "chorusfruit",
@@ -617,6 +692,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_pearl
+
 ```json
 "minecraft:cooldown": {
     "category": "ender_pearl",
@@ -625,163 +701,197 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:damage
+
 ### diamond_axe
+
 ```json
 "minecraft:damage": 6
 ```
 
 ### golden_axe
+
 ```json
 "minecraft:damage": 3
 ```
 
 ### iron_axe
+
 ```json
 "minecraft:damage": 5
 ```
 
 ### netherite_axe
+
 ```json
 "minecraft:damage": 7
 ```
 
 ### stone_axe
+
 ```json
 "minecraft:damage": 4
 ```
 
 ### wooden_axe
+
 ```json
 "minecraft:damage": 3
 ```
 
 ### diamond_hoe
+
 ```json
 "minecraft:damage": 5
 ```
 
 ### golden_hoe
+
 ```json
 "minecraft:damage": 2
 ```
 
 ### iron_hoe
+
 ```json
 "minecraft:damage": 4
 ```
 
 ### netherite_hoe
+
 ```json
 "minecraft:damage": 6
 ```
 
 ### stone_hoe
+
 ```json
 "minecraft:damage": 3
 ```
 
 ### wooden_hoe
+
 ```json
 "minecraft:damage": 2
 ```
 
 ### diamond_pickaxe
+
 ```json
 "minecraft:damage": 5
 ```
 
 ### golden_pickaxe
+
 ```json
 "minecraft:damage": 2
 ```
 
 ### iron_pickaxe
+
 ```json
 "minecraft:damage": 4
 ```
 
 ### netherite_pickaxe
+
 ```json
 "minecraft:damage": 6
 ```
 
 ### stone_pickaxe
+
 ```json
 "minecraft:damage": 3
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:damage": 2
 ```
 
 ### diamond_shovel
+
 ```json
 "minecraft:damage": 4
 ```
 
 ### golden_shovel
+
 ```json
 "minecraft:damage": 1
 ```
 
 ### iron_shovel
+
 ```json
 "minecraft:damage": 3
 ```
 
 ### netherite_shovel
+
 ```json
 "minecraft:damage": 5
 ```
 
 ### stone_shovel
+
 ```json
 "minecraft:damage": 2
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:damage": 1
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:damage": 7
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:damage": 4
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:damage": 6
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:damage": 8
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:damage": 5
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:damage": 4
 ```
 
 ### trident
+
 ```json
 "minecraft:damage": 8
 ```
 
 # minecraft:digger
+
 ### diamond_axe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -809,6 +919,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_axe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -836,6 +947,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_axe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -863,6 +975,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_axe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -890,6 +1003,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_axe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -917,6 +1031,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_axe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -944,6 +1059,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_pickaxe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -971,6 +1087,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_pickaxe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -998,6 +1115,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_pickaxe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1025,6 +1143,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_pickaxe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1051,6 +1170,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_pickaxe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1078,6 +1198,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1105,6 +1226,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_shovel
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1126,6 +1248,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_shovel
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1147,6 +1270,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_shovel
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1168,6 +1292,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_shovel
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1189,6 +1314,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_shovel
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1210,6 +1336,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1231,6 +1358,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:digger": {
     "use_efficiency": false,
@@ -1248,6 +1376,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1265,6 +1394,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1282,6 +1412,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1299,6 +1430,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1316,6 +1448,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -1333,7 +1466,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:durability
+
 ### diamond_axe
+
 ```json
 "minecraft:durability": {
     "max_durability": 1561
@@ -1341,6 +1476,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_axe
+
 ```json
 "minecraft:durability": {
     "max_durability": 32
@@ -1348,6 +1484,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_axe
+
 ```json
 "minecraft:durability": {
     "max_durability": 250
@@ -1355,6 +1492,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_axe
+
 ```json
 "minecraft:durability": {
     "max_durability": 2031
@@ -1362,6 +1500,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_axe
+
 ```json
 "minecraft:durability": {
     "max_durability": 131
@@ -1369,6 +1508,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_axe
+
 ```json
 "minecraft:durability": {
     "max_durability": 59
@@ -1376,6 +1516,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_boots
+
 ```json
 "minecraft:durability": {
     "max_durability": 195,
@@ -1387,6 +1528,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_boots
+
 ```json
 "minecraft:durability": {
     "max_durability": 429,
@@ -1398,6 +1540,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_boots
+
 ```json
 "minecraft:durability": {
     "max_durability": 91,
@@ -1409,6 +1552,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_boots
+
 ```json
 "minecraft:durability": {
     "max_durability": 195,
@@ -1420,6 +1564,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_boots
+
 ```json
 "minecraft:durability": {
     "max_durability": 65,
@@ -1431,6 +1576,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_boots
+
 ```json
 "minecraft:durability": {
     "max_durability": 481,
@@ -1442,6 +1588,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bow
+
 ```json
 "minecraft:durability": {
     "max_durability": 384
@@ -1449,6 +1596,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### carrot_on_a_stick
+
 ```json
 "minecraft:durability": {
     "max_durability": 25
@@ -1456,6 +1604,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_chestplate
+
 ```json
 "minecraft:durability": {
     "max_durability": 240,
@@ -1467,6 +1616,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_chestplate
+
 ```json
 "minecraft:durability": {
     "max_durability": 528,
@@ -1478,6 +1628,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_chestplate
+
 ```json
 "minecraft:durability": {
     "max_durability": 112,
@@ -1489,6 +1640,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_chestplate
+
 ```json
 "minecraft:durability": {
     "max_durability": 240,
@@ -1500,6 +1652,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_chestplate
+
 ```json
 "minecraft:durability": {
     "max_durability": 80,
@@ -1511,6 +1664,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_chestplate
+
 ```json
 "minecraft:durability": {
     "max_durability": 592,
@@ -1522,6 +1676,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### crossbow
+
 ```json
 "minecraft:durability": {
     "max_durability": 464
@@ -1529,6 +1684,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elytra
+
 ```json
 "minecraft:durability": {
     "max_durability": 432
@@ -1536,6 +1692,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_helmet
+
 ```json
 "minecraft:durability": {
     "max_durability": 165,
@@ -1547,6 +1704,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_helmet
+
 ```json
 "minecraft:durability": {
     "max_durability": 363,
@@ -1558,6 +1716,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_helmet
+
 ```json
 "minecraft:durability": {
     "max_durability": 77,
@@ -1569,6 +1728,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_helmet
+
 ```json
 "minecraft:durability": {
     "max_durability": 165,
@@ -1580,6 +1740,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_helmet
+
 ```json
 "minecraft:durability": {
     "max_durability": 55,
@@ -1591,6 +1752,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_helmet
+
 ```json
 "minecraft:durability": {
     "max_durability": 407,
@@ -1602,6 +1764,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_hoe
+
 ```json
 "minecraft:durability": {
     "max_durability": 1561
@@ -1609,6 +1772,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_hoe
+
 ```json
 "minecraft:durability": {
     "max_durability": 32
@@ -1616,6 +1780,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_hoe
+
 ```json
 "minecraft:durability": {
     "max_durability": 250
@@ -1623,6 +1788,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_hoe
+
 ```json
 "minecraft:durability": {
     "max_durability": 2031
@@ -1630,6 +1796,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_hoe
+
 ```json
 "minecraft:durability": {
     "max_durability": 131
@@ -1637,6 +1804,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_hoe
+
 ```json
 "minecraft:durability": {
     "max_durability": 59
@@ -1644,6 +1812,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_leggings
+
 ```json
 "minecraft:durability": {
     "max_durability": 225,
@@ -1655,6 +1824,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_leggings
+
 ```json
 "minecraft:durability": {
     "max_durability": 495,
@@ -1666,6 +1836,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_leggings
+
 ```json
 "minecraft:durability": {
     "max_durability": 105,
@@ -1677,6 +1848,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_leggings
+
 ```json
 "minecraft:durability": {
     "max_durability": 225,
@@ -1688,6 +1860,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_leggings
+
 ```json
 "minecraft:durability": {
     "max_durability": 75,
@@ -1699,6 +1872,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_leggings
+
 ```json
 "minecraft:durability": {
     "max_durability": 555,
@@ -1710,6 +1884,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_pickaxe
+
 ```json
 "minecraft:durability": {
     "max_durability": 1561
@@ -1717,6 +1892,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_pickaxe
+
 ```json
 "minecraft:durability": {
     "max_durability": 32
@@ -1724,6 +1900,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_pickaxe
+
 ```json
 "minecraft:durability": {
     "max_durability": 250
@@ -1731,6 +1908,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_pickaxe
+
 ```json
 "minecraft:durability": {
     "max_durability": 2031
@@ -1738,6 +1916,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_pickaxe
+
 ```json
 "minecraft:durability": {
     "max_durability": 131
@@ -1745,6 +1924,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:durability": {
     "max_durability": 59
@@ -1752,6 +1932,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shears
+
 ```json
 "minecraft:durability": {
     "max_durability": 238
@@ -1759,6 +1940,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shield
+
 ```json
 "minecraft:durability": {
     "max_durability": 336
@@ -1766,6 +1948,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_shovel
+
 ```json
 "minecraft:durability": {
     "max_durability": 1561
@@ -1773,6 +1956,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_shovel
+
 ```json
 "minecraft:durability": {
     "max_durability": 32
@@ -1780,6 +1964,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_shovel
+
 ```json
 "minecraft:durability": {
     "max_durability": 250
@@ -1787,6 +1972,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_shovel
+
 ```json
 "minecraft:durability": {
     "max_durability": 2031
@@ -1794,6 +1980,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_shovel
+
 ```json
 "minecraft:durability": {
     "max_durability": 131
@@ -1801,6 +1988,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:durability": {
     "max_durability": 59
@@ -1808,6 +1996,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:durability": {
     "max_durability": 1561
@@ -1815,6 +2004,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:durability": {
     "max_durability": 32
@@ -1822,6 +2012,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:durability": {
     "max_durability": 250
@@ -1829,6 +2020,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:durability": {
     "max_durability": 2031
@@ -1836,6 +2028,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:durability": {
     "max_durability": 131
@@ -1843,6 +2036,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:durability": {
     "max_durability": 59
@@ -1850,6 +2044,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### trident
+
 ```json
 "minecraft:durability": {
     "max_durability": 250
@@ -1857,6 +2052,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle_helmet
+
 ```json
 "minecraft:durability": {
     "max_durability": 275,
@@ -1868,6 +2064,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### warped_fungus_on_a_stick
+
 ```json
 "minecraft:durability": {
     "max_durability": 100
@@ -1875,7 +2072,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:dye_powder
+
 ### bone_meal
+
 ```json
 "minecraft:dye_powder": {
     "color": "white"
@@ -1883,6 +2082,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cocoa_beans
+
 ```json
 "minecraft:dye_powder": {
     "color": "brown"
@@ -1890,6 +2090,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### black_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "black"
@@ -1897,6 +2098,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blue_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "blue"
@@ -1904,6 +2106,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### brown_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "brown"
@@ -1911,6 +2114,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cyan_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "cyan"
@@ -1918,6 +2122,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### gray_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "gray"
@@ -1925,6 +2130,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### green_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "green"
@@ -1932,6 +2138,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### light_blue_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "lightblue"
@@ -1939,6 +2146,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### light_gray_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "silver"
@@ -1946,6 +2154,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lime_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "lime"
@@ -1953,6 +2162,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magenta_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "magenta"
@@ -1960,6 +2170,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### orange_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "orange"
@@ -1967,6 +2178,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pink_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "pink"
@@ -1974,6 +2186,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### purple_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "purple"
@@ -1981,6 +2194,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### red_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "red"
@@ -1988,6 +2202,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### white_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "white"
@@ -1995,6 +2210,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### yellow_dye
+
 ```json
 "minecraft:dye_powder": {
     "color": "yellow"
@@ -2002,6 +2218,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ink_sac
+
 ```json
 "minecraft:dye_powder": {
     "color": "black"
@@ -2009,6 +2226,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lapis_lazuli
+
 ```json
 "minecraft:dye_powder": {
     "color": "blue"
@@ -2016,7 +2234,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:dyeable
+
 ### leather_boots
+
 ```json
 "minecraft:dyeable": {
     "default_color": "FFA06540"
@@ -2024,6 +2244,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_chestplate
+
 ```json
 "minecraft:dyeable": {
     "default_color": "FFA06540"
@@ -2031,6 +2252,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### firework_star
+
 ```json
 "minecraft:dyeable": {
     "default_color": "FF1D1D21"
@@ -2128,6 +2350,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_helmet
+
 ```json
 "minecraft:dyeable": {
     "default_color": "FFA06540"
@@ -2135,6 +2358,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_horse_armor
+
 ```json
 "minecraft:dyeable": {
     "default_color": "FFA06540"
@@ -2142,6 +2366,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_leggings
+
 ```json
 "minecraft:dyeable": {
     "default_color": "FFA06540"
@@ -2149,7 +2374,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:enchantable
+
 ### diamond_axe
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2158,6 +2385,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_axe
+
 ```json
 "minecraft:enchantable": {
     "value": 22,
@@ -2166,6 +2394,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_axe
+
 ```json
 "minecraft:enchantable": {
     "value": 14,
@@ -2174,6 +2403,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_axe
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2182,6 +2412,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_axe
+
 ```json
 "minecraft:enchantable": {
     "value": 5,
@@ -2190,6 +2421,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_axe
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2198,6 +2430,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### book
+
 ```json
 "minecraft:enchantable": {
     "value": 1,
@@ -2206,6 +2439,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_boots
+
 ```json
 "minecraft:enchantable": {
     "value": 12,
@@ -2214,6 +2448,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_boots
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2222,6 +2457,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_boots
+
 ```json
 "minecraft:enchantable": {
     "value": 25,
@@ -2230,6 +2466,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_boots
+
 ```json
 "minecraft:enchantable": {
     "value": 9,
@@ -2238,6 +2475,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_boots
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2246,6 +2484,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_boots
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2254,6 +2493,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bow
+
 ```json
 "minecraft:enchantable": {
     "value": 1,
@@ -2262,6 +2502,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### carrot_on_a_stick
+
 ```json
 "minecraft:enchantable": {
     "value": 1,
@@ -2270,6 +2511,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_chestplate
+
 ```json
 "minecraft:enchantable": {
     "value": 12,
@@ -2278,6 +2520,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_chestplate
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2286,6 +2529,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_chestplate
+
 ```json
 "minecraft:enchantable": {
     "value": 25,
@@ -2294,6 +2538,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_chestplate
+
 ```json
 "minecraft:enchantable": {
     "value": 9,
@@ -2302,6 +2547,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_chestplate
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2310,6 +2556,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_chestplate
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2318,6 +2565,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### compass
+
 ```json
 "minecraft:enchantable": {
     "value": 0,
@@ -2326,6 +2574,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### crossbow
+
 ```json
 "minecraft:enchantable": {
     "value": 1,
@@ -2334,6 +2583,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elytra
+
 ```json
 "minecraft:enchantable": {
     "value": 0,
@@ -2342,6 +2592,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_helmet
+
 ```json
 "minecraft:enchantable": {
     "value": 12,
@@ -2350,6 +2601,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_helmet
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2358,6 +2610,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_helmet
+
 ```json
 "minecraft:enchantable": {
     "value": 25,
@@ -2366,6 +2619,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_helmet
+
 ```json
 "minecraft:enchantable": {
     "value": 9,
@@ -2374,6 +2628,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_helmet
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2382,6 +2637,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_helmet
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2390,6 +2646,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_hoe
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2398,6 +2655,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_hoe
+
 ```json
 "minecraft:enchantable": {
     "value": 22,
@@ -2406,6 +2664,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_hoe
+
 ```json
 "minecraft:enchantable": {
     "value": 14,
@@ -2414,6 +2673,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_hoe
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2422,6 +2682,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_hoe
+
 ```json
 "minecraft:enchantable": {
     "value": 5,
@@ -2430,6 +2691,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_hoe
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2438,6 +2700,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_leggings
+
 ```json
 "minecraft:enchantable": {
     "value": 12,
@@ -2446,6 +2709,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_leggings
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2454,6 +2718,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_leggings
+
 ```json
 "minecraft:enchantable": {
     "value": 25,
@@ -2462,6 +2727,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_leggings
+
 ```json
 "minecraft:enchantable": {
     "value": 9,
@@ -2470,6 +2736,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_leggings
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2478,6 +2745,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_leggings
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2486,6 +2754,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lodestone_compass
+
 ```json
 "minecraft:enchantable": {
     "value": 0,
@@ -2494,6 +2763,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_pickaxe
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2502,6 +2772,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_pickaxe
+
 ```json
 "minecraft:enchantable": {
     "value": 22,
@@ -2510,6 +2781,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_pickaxe
+
 ```json
 "minecraft:enchantable": {
     "value": 14,
@@ -2518,6 +2790,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_pickaxe
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2526,6 +2799,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_pickaxe
+
 ```json
 "minecraft:enchantable": {
     "value": 5,
@@ -2534,6 +2808,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2542,6 +2817,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shears
+
 ```json
 "minecraft:enchantable": {
     "value": 0,
@@ -2550,6 +2826,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shield
+
 ```json
 "minecraft:enchantable": {
     "value": 0,
@@ -2558,6 +2835,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_shovel
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2566,6 +2844,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_shovel
+
 ```json
 "minecraft:enchantable": {
     "value": 22,
@@ -2574,6 +2853,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_shovel
+
 ```json
 "minecraft:enchantable": {
     "value": 14,
@@ -2582,6 +2862,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_shovel
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2590,6 +2871,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_shovel
+
 ```json
 "minecraft:enchantable": {
     "value": 5,
@@ -2598,6 +2880,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2606,6 +2889,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:enchantable": {
     "value": 10,
@@ -2614,6 +2898,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:enchantable": {
     "value": 22,
@@ -2622,6 +2907,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:enchantable": {
     "value": 14,
@@ -2630,6 +2916,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2638,6 +2925,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:enchantable": {
     "value": 5,
@@ -2646,6 +2934,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:enchantable": {
     "value": 15,
@@ -2654,6 +2943,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### trident
+
 ```json
 "minecraft:enchantable": {
     "value": 1,
@@ -2662,6 +2952,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle_helmet
+
 ```json
 "minecraft:enchantable": {
     "value": 9,
@@ -2670,6 +2961,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### warped_fungus_on_a_stick
+
 ```json
 "minecraft:enchantable": {
     "value": 1,
@@ -2678,7 +2970,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:entity_placer
+
 ### acacia_boat
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:acacia_boat",
@@ -2689,6 +2983,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### birch_boat
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:birch_boat",
@@ -2699,6 +2994,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dark_oak_boat
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:dark_oak_boat",
@@ -2709,6 +3005,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### jungle_boat
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:jungle_boat",
@@ -2719,6 +3016,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### oak_boat
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:oak_boat",
@@ -2729,6 +3027,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spruce_boat
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:spruce_boat",
@@ -2739,6 +3038,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### minecart
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:minecart",
@@ -2752,6 +3052,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chest_minecart
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:chest_minecart",
@@ -2765,6 +3066,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hopper_minecart
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:hopper_minecart",
@@ -2778,6 +3080,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt_minecart
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:tnt_minecart",
@@ -2791,6 +3094,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bat_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:bat"
@@ -2798,6 +3102,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:bee"
@@ -2805,6 +3110,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:blaze"
@@ -2812,6 +3118,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:cat"
@@ -2819,6 +3126,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:cave_spider"
@@ -2826,6 +3134,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:chicken"
@@ -2833,6 +3142,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cod_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:cod"
@@ -2840,6 +3150,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:cow"
@@ -2847,6 +3158,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:creeper"
@@ -2854,6 +3166,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:dolphin"
@@ -2861,6 +3174,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:donkey"
@@ -2868,6 +3182,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:drowned"
@@ -2875,6 +3190,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:elder_guardian"
@@ -2882,6 +3198,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:enderman"
@@ -2889,6 +3206,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:endermite"
@@ -2896,6 +3214,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evoker_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:evocation_illager"
@@ -2903,6 +3222,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:fox"
@@ -2910,6 +3230,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:ghast"
@@ -2917,6 +3238,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:guardian"
@@ -2924,6 +3246,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:hoglin"
@@ -2931,6 +3254,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:horse"
@@ -2938,6 +3262,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:husk"
@@ -2945,6 +3270,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:llama"
@@ -2952,6 +3278,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:magma_cube"
@@ -2959,6 +3286,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:mooshroom"
@@ -2966,6 +3294,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:mule"
@@ -2973,6 +3302,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:ocelot"
@@ -2980,6 +3310,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:panda"
@@ -2987,6 +3318,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:parrot"
@@ -2994,6 +3326,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:phantom"
@@ -3001,6 +3334,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:pig"
@@ -3008,6 +3342,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:piglin"
@@ -3015,6 +3350,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:piglin_brute"
@@ -3022,6 +3358,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:pillager"
@@ -3029,6 +3366,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:polar_bear"
@@ -3036,6 +3374,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:pufferfish"
@@ -3043,6 +3382,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:rabbit"
@@ -3050,6 +3390,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:ravager"
@@ -3057,6 +3398,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:salmon"
@@ -3064,6 +3406,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:turtle"
@@ -3071,6 +3414,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:sheep"
@@ -3078,6 +3422,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:shulker"
@@ -3085,6 +3430,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:silverfish"
@@ -3092,6 +3438,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:skeleton"
@@ -3099,6 +3446,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:skeleton_horse"
@@ -3106,6 +3454,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:slime"
@@ -3113,6 +3462,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:spider"
@@ -3120,6 +3470,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:squid"
@@ -3127,6 +3478,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:stray"
@@ -3134,6 +3486,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:strider"
@@ -3141,6 +3494,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropical_fish_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:tropicalfish"
@@ -3148,6 +3502,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:vex"
@@ -3155,6 +3510,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:villager_v2"
@@ -3162,6 +3518,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:vindicator"
@@ -3169,6 +3526,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:wandering_trader"
@@ -3176,6 +3534,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:witch"
@@ -3183,6 +3542,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:wither_skeleton"
@@ -3190,6 +3550,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:wolf"
@@ -3197,6 +3558,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:zoglin"
@@ -3204,6 +3566,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:zombie"
@@ -3211,6 +3574,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:zombie_horse"
@@ -3218,6 +3582,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:zombie_villager_v2"
@@ -3225,6 +3590,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombified_piglin_spawn_egg
+
 ```json
 "minecraft:entity_placer": {
     "entity": "minecraft:zombie_pigman"
@@ -3232,39 +3598,49 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:explodable
+
 ### nether_star
+
 ```json
 "minecraft:explodable": false
 ```
 
 # minecraft:foil
+
 ### enchanted_golden_apple
+
 ```json
 "minecraft:foil": true
 ```
 
 ### experience_bottle
+
 ```json
 "minecraft:foil": true
 ```
 
 ### end_crystal
+
 ```json
 "minecraft:foil": true
 ```
 
 ### lodestone_compass
+
 ```json
 "minecraft:foil": true
 ```
 
 ### nether_star
+
 ```json
 "minecraft:foil": true
 ```
 
 # minecraft:food
+
 ### apple
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -3273,6 +3649,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enchanted_golden_apple
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -3286,6 +3663,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_apple
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -3299,6 +3677,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_beef
+
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -3307,6 +3686,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### beef
+
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -3315,6 +3695,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### beetroot
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -3323,6 +3704,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### beetroot_soup
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -3332,6 +3714,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bread
+
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -3340,6 +3723,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### carrot
+
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -3348,6 +3732,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_carrot
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -3356,6 +3741,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_chicken
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -3364,6 +3750,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3376,6 +3763,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chorus_fruit
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -3392,6 +3780,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_cod
+
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -3400,6 +3789,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cod
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3408,6 +3798,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cookie
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3416,6 +3807,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dried_kelp
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -3424,6 +3816,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### honey_bottle
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -3438,6 +3831,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### melon_slice
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3446,6 +3840,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mushroom_stew
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -3455,6 +3850,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_mutton
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -3463,6 +3859,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mutton
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3471,6 +3868,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_porkchop
+
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -3479,6 +3877,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### porkchop
+
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -3487,6 +3886,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### potato
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -3495,6 +3895,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### baked_potato
+
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -3503,6 +3904,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### poisonous_potato
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3515,6 +3917,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -3527,6 +3930,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pumpkin_pie
+
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -3535,6 +3939,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_rabbit
+
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -3543,6 +3948,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -3551,6 +3957,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit_stew
+
 ```json
 "minecraft:food": {
     "nutrition": 10,
@@ -3560,6 +3967,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rotten_flesh
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -3572,6 +3980,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_salmon
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -3580,6 +3989,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3588,6 +3998,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider_eye
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3600,6 +4011,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sweet_berries
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -3608,6 +4020,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropical_fish
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -3616,33 +4029,41 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:frame_count
+
 ### bow
+
 ```json
 "minecraft:frame_count": 3
 ```
 
 ### clock
+
 ```json
 "minecraft:frame_count": 64
 ```
 
 ### compass
+
 ```json
 "minecraft:frame_count": 32
 ```
 
 ### crossbow
+
 ```json
 "minecraft:frame_count": 5
 ```
 
 ### lodestone_compass
+
 ```json
 "minecraft:frame_count": 32
 ```
 
 # minecraft:fuel
+
 ### wooden_axe
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3650,6 +4071,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze_rod
+
 ```json
 "minecraft:fuel": {
     "duration": 120.0
@@ -3657,6 +4079,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### acacia_boat
+
 ```json
 "minecraft:fuel": {
     "duration": 60.0
@@ -3664,6 +4087,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### birch_boat
+
 ```json
 "minecraft:fuel": {
     "duration": 60.0
@@ -3671,6 +4095,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dark_oak_boat
+
 ```json
 "minecraft:fuel": {
     "duration": 60.0
@@ -3678,6 +4103,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### jungle_boat
+
 ```json
 "minecraft:fuel": {
     "duration": 60.0
@@ -3685,6 +4111,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### oak_boat
+
 ```json
 "minecraft:fuel": {
     "duration": 60.0
@@ -3692,6 +4119,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spruce_boat
+
 ```json
 "minecraft:fuel": {
     "duration": 60.0
@@ -3699,6 +4127,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bow
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3706,6 +4135,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bowl
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3713,6 +4143,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lava_bucket
+
 ```json
 "minecraft:fuel": {
     "duration": 1000.0
@@ -3720,6 +4151,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### charcoal
+
 ```json
 "minecraft:fuel": {
     "duration": 80.0
@@ -3727,6 +4159,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### coal
+
 ```json
 "minecraft:fuel": {
     "duration": 80.0
@@ -3734,6 +4167,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### crossbow
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3741,6 +4175,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### acacia_door
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3748,6 +4183,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### birch_door
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3755,6 +4191,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dark_oak_door
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3762,6 +4199,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### jungle_door
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3769,6 +4207,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_door
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3776,6 +4215,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spruce_door
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3783,6 +4223,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_hoe
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3790,6 +4231,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherbrick
+
 ```json
 "minecraft:fuel": {
     "duration": 1.0
@@ -3797,6 +4239,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### gold_nugget
+
 ```json
 "minecraft:fuel": {
     "duration": 1.0
@@ -3804,6 +4247,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_nugget
+
 ```json
 "minecraft:fuel": {
     "duration": 1.0
@@ -3811,6 +4255,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3818,6 +4263,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3825,6 +4271,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### acacia_sign
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3832,6 +4279,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### birch_sign
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3839,6 +4287,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dark_oak_sign
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3846,6 +4295,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### jungle_sign
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3853,6 +4303,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### oak_sign
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3860,6 +4311,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spruce_sign
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3867,6 +4319,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stick
+
 ```json
 "minecraft:fuel": {
     "duration": 5.0
@@ -3874,6 +4327,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:fuel": {
     "duration": 10.0
@@ -3881,369 +4335,445 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:hand_equipped
+
 ### armor_stand
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### diamond_axe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### golden_axe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### iron_axe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### netherite_axe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### stone_axe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### wooden_axe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### blaze_rod
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### bone
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### bow
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### carrot_on_a_stick
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### crossbow
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### diamond_hoe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### golden_hoe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### iron_hoe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### netherite_hoe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### stone_hoe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### wooden_hoe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### diamond_pickaxe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### golden_pickaxe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### iron_pickaxe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### netherite_pickaxe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### stone_pickaxe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### shield
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### diamond_shovel
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### golden_shovel
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### iron_shovel
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### netherite_shovel
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### stone_shovel
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### stick
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 ### warped_fungus_on_a_stick
+
 ```json
 "minecraft:hand_equipped": true
 ```
 
 # minecraft:ignores_permission
+
 ### acacia_boat
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### birch_boat
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### dark_oak_boat
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### jungle_boat
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### oak_boat
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### spruce_boat
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### bone_meal
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### cocoa_beans
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### black_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### blue_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### brown_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### cyan_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### gray_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### green_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### light_blue_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### light_gray_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### lime_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### magenta_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### orange_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### pink_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### purple_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### red_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### white_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### yellow_dye
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### end_crystal
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### glass_bottle
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### ink_sac
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### lapis_lazuli
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### lead
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### minecart
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### chest_minecart
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### hopper_minecart
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 ### tnt_minecart
+
 ```json
 "minecraft:ignores_permission": true
 ```
 
 # minecraft:knockback_resistance
+
 ### netherite_boots
+
 ```json
 "minecraft:knockback_resistance": {
     "protection": 0.2249999940395355
@@ -4251,6 +4781,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_chestplate
+
 ```json
 "minecraft:knockback_resistance": {
     "protection": 0.2249999940395355
@@ -4258,6 +4789,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_helmet
+
 ```json
 "minecraft:knockback_resistance": {
     "protection": 0.2249999940395355
@@ -4265,6 +4797,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_leggings
+
 ```json
 "minecraft:knockback_resistance": {
     "protection": 0.2249999940395355
@@ -4272,383 +4805,461 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:liquid_clipped
+
 ### acacia_boat
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### birch_boat
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### dark_oak_boat
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### jungle_boat
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### oak_boat
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### spruce_boat
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### bucket
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### cod_bucket
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### pufferfish_bucket
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### salmon_bucket
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### tropical_fish_bucket
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### glass_bottle
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### bat_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### bee_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### blaze_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### cat_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### cave_spider_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### chicken_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### cod_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### cow_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### creeper_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### dolphin_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### donkey_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### drowned_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### elder_guardian_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### enderman_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### endermite_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### evoker_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### fox_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### ghast_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### guardian_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### hoglin_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### horse_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### husk_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### llama_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### magma_cube_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### mooshroom_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### mule_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### ocelot_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### panda_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### parrot_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### phantom_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### pig_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### piglin_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### piglin_brute_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### pillager_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### polar_bear_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### pufferfish_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### rabbit_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### ravager_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### salmon_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### turtle_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### sheep_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### shulker_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### silverfish_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### skeleton_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### skeleton_horse_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### slime_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### spider_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### squid_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### stray_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### strider_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### tropical_fish_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### vex_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### villager_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### vindicator_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### wandering_trader_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### witch_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### wither_skeleton_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### wolf_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### zoglin_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### zombie_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### zombie_horse_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### zombie_villager_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 ### zombified_piglin_spawn_egg
+
 ```json
 "minecraft:liquid_clipped": true
 ```
 
 # minecraft:map
+
 ### locator_map
+
 ```json
 "minecraft:map": {
     "empty": true
@@ -4656,6 +5267,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### map
+
 ```json
 "minecraft:map": {
     "empty": true
@@ -4663,810 +5275,975 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:max_stack_size
+
 ### diamond_axe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_axe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_axe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_axe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### stone_axe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### wooden_axe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### beetroot_soup
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### acacia_boat
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### birch_boat
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### dark_oak_boat
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### jungle_boat
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### oak_boat
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### spruce_boat
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### writable_book
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### chainmail_boots
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### diamond_boots
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_boots
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_boots
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### leather_boots
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_boots
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### bow
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### bucket
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### cod_bucket
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### lava_bucket
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### milk_bucket
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### pufferfish_bucket
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### salmon_bucket
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### tropical_fish_bucket
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### water_bucket
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### cake
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### campfire
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### soul_campfire
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### carrot_on_a_stick
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### chainmail_chestplate
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### diamond_chestplate
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_chestplate
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_chestplate
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### leather_chestplate
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_chestplate
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### crossbow
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### egg
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### elytra
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### ender_pearl
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### chainmail_helmet
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### diamond_helmet
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_helmet
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_helmet
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### leather_helmet
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_helmet
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### diamond_hoe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_hoe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_hoe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_hoe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### stone_hoe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### wooden_hoe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### honey_bottle
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### diamond_horse_armor
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_horse_armor
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_horse_armor
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### leather_horse_armor
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_13
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_cat
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_11
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_wait
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_pigstep
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### creeper_banner_pattern
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### skull_banner_pattern
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### flower_banner_pattern
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### mojang_banner_pattern
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### field_masoned_banner_pattern
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### bordure_indented_banner_pattern
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### piglin_banner_pattern
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_blocks
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_chirp
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_far
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_mall
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_mellohi
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_stal
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_strad
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### music_disc_ward
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### chainmail_leggings
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### diamond_leggings
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_leggings
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_leggings
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### leather_leggings
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_leggings
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### lodestone_compass
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### minecart
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### chest_minecart
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### hopper_minecart
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### tnt_minecart
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### mushroom_stew
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### diamond_pickaxe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_pickaxe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_pickaxe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_pickaxe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### stone_pickaxe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### rabbit_stew
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### saddle
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### shears
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### shield
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### diamond_shovel
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_shovel
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_shovel
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_shovel
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### stone_shovel
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### acacia_sign
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### birch_sign
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### crimson_sign
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### dark_oak_sign
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### jungle_sign
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### oak_sign
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### spruce_sign
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### warped_sign
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### snowball
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### totem_of_undying
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### trident
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### turtle_helmet
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### warped_fungus_on_a_stick
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 # minecraft:mining_speed
+
 ### diamond_axe
+
 ```json
 "minecraft:mining_speed": 8.0
 ```
 
 ### golden_axe
+
 ```json
 "minecraft:mining_speed": 12.0
 ```
 
 ### iron_axe
+
 ```json
 "minecraft:mining_speed": 6.0
 ```
 
 ### netherite_axe
+
 ```json
 "minecraft:mining_speed": 9.0
 ```
 
 ### stone_axe
+
 ```json
 "minecraft:mining_speed": 4.0
 ```
 
 ### wooden_axe
+
 ```json
 "minecraft:mining_speed": 2.0
 ```
 
 ### diamond_hoe
+
 ```json
 "minecraft:mining_speed": 8.0
 ```
 
 ### golden_hoe
+
 ```json
 "minecraft:mining_speed": 12.0
 ```
 
 ### iron_hoe
+
 ```json
 "minecraft:mining_speed": 6.0
 ```
 
 ### netherite_hoe
+
 ```json
 "minecraft:mining_speed": 9.0
 ```
 
 ### stone_hoe
+
 ```json
 "minecraft:mining_speed": 4.0
 ```
 
 ### wooden_hoe
+
 ```json
 "minecraft:mining_speed": 2.0
 ```
 
 ### diamond_pickaxe
+
 ```json
 "minecraft:mining_speed": 8.0
 ```
 
 ### golden_pickaxe
+
 ```json
 "minecraft:mining_speed": 12.0
 ```
 
 ### iron_pickaxe
+
 ```json
 "minecraft:mining_speed": 6.0
 ```
 
 ### netherite_pickaxe
+
 ```json
 "minecraft:mining_speed": 9.0
 ```
 
 ### stone_pickaxe
+
 ```json
 "minecraft:mining_speed": 4.0
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:mining_speed": 2.0
 ```
 
 ### shears
+
 ```json
 "minecraft:mining_speed": 1.5
 ```
 
 ### diamond_shovel
+
 ```json
 "minecraft:mining_speed": 8.0
 ```
 
 ### golden_shovel
+
 ```json
 "minecraft:mining_speed": 12.0
 ```
 
 ### iron_shovel
+
 ```json
 "minecraft:mining_speed": 6.0
 ```
 
 ### netherite_shovel
+
 ```json
 "minecraft:mining_speed": 9.0
 ```
 
 ### stone_shovel
+
 ```json
 "minecraft:mining_speed": 4.0
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:mining_speed": 2.0
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:mining_speed": 1.5
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:mining_speed": 1.5
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:mining_speed": 1.5
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:mining_speed": 1.5
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:mining_speed": 1.5
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:mining_speed": 1.5
 ```
 
 # minecraft:mirrored_art
+
 ### carrot_on_a_stick
+
 ```json
 "minecraft:mirrored_art": true
 ```
 
 ### warped_fungus_on_a_stick
+
 ```json
 "minecraft:mirrored_art": true
 ```
 
 # minecraft:mob_spawner_placer
+
 ### bat_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:bat",
@@ -5479,6 +6256,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:bee",
@@ -5491,6 +6269,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:blaze",
@@ -5503,6 +6282,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:cat",
@@ -5515,6 +6295,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:cave_spider",
@@ -5527,6 +6308,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:chicken",
@@ -5539,6 +6321,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cod_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:cod",
@@ -5551,6 +6334,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:cow",
@@ -5563,6 +6347,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:creeper",
@@ -5575,6 +6360,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:dolphin",
@@ -5587,6 +6373,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:donkey",
@@ -5599,6 +6386,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:drowned",
@@ -5611,6 +6399,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:elder_guardian",
@@ -5623,6 +6412,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:enderman",
@@ -5635,6 +6425,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:endermite",
@@ -5647,6 +6438,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evoker_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:evocation_illager",
@@ -5659,6 +6451,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:fox",
@@ -5671,6 +6464,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:ghast",
@@ -5683,6 +6477,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:guardian",
@@ -5695,6 +6490,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:hoglin",
@@ -5707,6 +6503,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:horse",
@@ -5719,6 +6516,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:husk",
@@ -5731,6 +6529,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:llama",
@@ -5743,6 +6542,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:magma_cube",
@@ -5755,6 +6555,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:mooshroom",
@@ -5767,6 +6568,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:mule",
@@ -5779,6 +6581,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:ocelot",
@@ -5791,6 +6594,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:panda",
@@ -5803,6 +6607,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:parrot",
@@ -5815,6 +6620,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:phantom",
@@ -5827,6 +6633,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:pig",
@@ -5839,6 +6646,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:piglin",
@@ -5851,6 +6659,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:piglin_brute",
@@ -5863,6 +6672,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:pillager",
@@ -5875,6 +6685,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:polar_bear",
@@ -5887,6 +6698,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:pufferfish",
@@ -5899,6 +6711,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:rabbit",
@@ -5911,6 +6724,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:ravager",
@@ -5923,6 +6737,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:salmon",
@@ -5935,6 +6750,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:turtle",
@@ -5947,6 +6763,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:sheep",
@@ -5959,6 +6776,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:shulker",
@@ -5971,6 +6789,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:silverfish",
@@ -5983,6 +6802,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:skeleton",
@@ -5995,6 +6815,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:skeleton_horse",
@@ -6007,6 +6828,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:slime",
@@ -6019,6 +6841,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:spider",
@@ -6031,6 +6854,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:squid",
@@ -6043,6 +6867,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:stray",
@@ -6055,6 +6880,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:strider",
@@ -6067,6 +6893,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropical_fish_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:tropicalfish",
@@ -6079,6 +6906,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:vex",
@@ -6091,6 +6919,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:villager_v2",
@@ -6103,6 +6932,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:vindicator",
@@ -6115,6 +6945,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:wandering_trader",
@@ -6127,6 +6958,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:witch",
@@ -6139,6 +6971,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:wither_skeleton",
@@ -6151,6 +6984,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:wolf",
@@ -6163,6 +6997,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:zoglin",
@@ -6175,6 +7010,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:zombie",
@@ -6187,6 +7023,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:zombie_horse",
@@ -6199,6 +7036,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:zombie_villager_v2",
@@ -6211,6 +7049,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombified_piglin_spawn_egg
+
 ```json
 "minecraft:mob_spawner_placer": {
     "entity": "minecraft:zombie_pigman",
@@ -6223,7 +7062,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_use_on
+
 ### bone_meal
+
 ```json
 "minecraft:on_use_on": {
     "on_use_on": {
@@ -6234,7 +7075,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:projectile
+
 ### experience_bottle
+
 ```json
 "minecraft:projectile": {
     "projectile_entity": "minecraft:xp_bottle"
@@ -6242,6 +7085,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### egg
+
 ```json
 "minecraft:projectile": {
     "projectile_entity": "minecraft:egg"
@@ -6249,6 +7093,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_pearl
+
 ```json
 "minecraft:projectile": {
     "projectile_entity": "minecraft:ender_pearl"
@@ -6256,6 +7101,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_eye
+
 ```json
 "minecraft:projectile": {
     "projectile_entity": "minecraft:ender_eye"
@@ -6263,6 +7109,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### firework_rocket
+
 ```json
 "minecraft:projectile": {
     "projectile_entity": "minecraft:fireworks_rocket"
@@ -6366,6 +7213,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fire_charge
+
 ```json
 "minecraft:projectile": {
     "projectile_entity": "minecraft:small_fireball"
@@ -6373,6 +7221,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snowball
+
 ```json
 "minecraft:projectile": {
     "projectile_entity": "minecraft:snowball"
@@ -6380,6 +7229,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### trident
+
 ```json
 "minecraft:projectile": {
     "projectile_entity": "minecraft:thrown_trident",
@@ -6388,7 +7238,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:record
+
 ### music_disc_13
+
 ```json
 "minecraft:record": {
     "sound_event": "13",
@@ -6398,6 +7250,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_cat
+
 ```json
 "minecraft:record": {
     "sound_event": "cat",
@@ -6407,6 +7260,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_11
+
 ```json
 "minecraft:record": {
     "sound_event": "11",
@@ -6416,6 +7270,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_wait
+
 ```json
 "minecraft:record": {
     "sound_event": "wait",
@@ -6425,6 +7280,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_pigstep
+
 ```json
 "minecraft:record": {
     "sound_event": "pigstep",
@@ -6434,6 +7290,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_blocks
+
 ```json
 "minecraft:record": {
     "sound_event": "blocks",
@@ -6443,6 +7300,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_chirp
+
 ```json
 "minecraft:record": {
     "sound_event": "chirp",
@@ -6452,6 +7310,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_far
+
 ```json
 "minecraft:record": {
     "sound_event": "far",
@@ -6461,6 +7320,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_mall
+
 ```json
 "minecraft:record": {
     "sound_event": "mall",
@@ -6470,6 +7330,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_mellohi
+
 ```json
 "minecraft:record": {
     "sound_event": "mellohi",
@@ -6479,6 +7340,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_stal
+
 ```json
 "minecraft:record": {
     "sound_event": "stal",
@@ -6488,6 +7350,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_strad
+
 ```json
 "minecraft:record": {
     "sound_event": "strad",
@@ -6497,6 +7360,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### music_disc_ward
+
 ```json
 "minecraft:record": {
     "sound_event": "ward",
@@ -6506,7 +7370,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:repairable
+
 ### diamond_axe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6527,6 +7393,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_axe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6547,6 +7414,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_axe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6567,6 +7435,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_axe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6587,6 +7456,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_axe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6607,6 +7477,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_axe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6627,6 +7498,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_boots
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6647,6 +7519,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_boots
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6667,6 +7540,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_boots
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6687,6 +7561,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_boots
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6707,6 +7582,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_boots
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6727,6 +7603,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_boots
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6747,6 +7624,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bow
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6761,6 +7639,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_chestplate
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6781,6 +7660,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_chestplate
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6801,6 +7681,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_chestplate
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6821,6 +7702,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_chestplate
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6841,6 +7723,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_chestplate
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6861,6 +7744,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_chestplate
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6881,6 +7765,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### crossbow
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6895,6 +7780,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elytra
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6915,6 +7801,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_helmet
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6935,6 +7822,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_helmet
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6955,6 +7843,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_helmet
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6975,6 +7864,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_helmet
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -6995,6 +7885,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_helmet
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7015,6 +7906,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_helmet
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7035,6 +7927,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_hoe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7055,6 +7948,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_hoe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7075,6 +7969,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_hoe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7095,6 +7990,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_hoe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7115,6 +8011,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_hoe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7135,6 +8032,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_hoe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7155,6 +8053,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_leggings
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7175,6 +8074,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_leggings
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7195,6 +8095,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_leggings
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7215,6 +8116,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_leggings
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7235,6 +8137,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_leggings
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7255,6 +8158,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_leggings
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7275,6 +8179,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_pickaxe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7295,6 +8200,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_pickaxe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7315,6 +8221,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_pickaxe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7335,6 +8242,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_pickaxe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7355,6 +8263,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_pickaxe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7375,6 +8284,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_pickaxe
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7395,6 +8305,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shears
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7409,6 +8320,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shield
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7429,6 +8341,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_shovel
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7449,6 +8362,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_shovel
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7469,6 +8383,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_shovel
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7489,6 +8404,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_shovel
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7509,6 +8425,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_shovel
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7529,6 +8446,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_shovel
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7549,6 +8467,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7569,6 +8488,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7589,6 +8509,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7609,6 +8530,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7629,6 +8551,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7649,6 +8572,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7669,6 +8593,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### trident
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7683,6 +8608,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle_helmet
+
 ```json
 "minecraft:repairable": {
     "repair_items": [
@@ -7703,33 +8629,41 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:requires_interact
+
 ### writable_book
+
 ```json
 "minecraft:requires_interact": true
 ```
 
 ### carrot_on_a_stick
+
 ```json
 "minecraft:requires_interact": true
 ```
 
 ### locator_map
+
 ```json
 "minecraft:requires_interact": true
 ```
 
 ### map
+
 ```json
 "minecraft:requires_interact": true
 ```
 
 ### warped_fungus_on_a_stick
+
 ```json
 "minecraft:requires_interact": true
 ```
 
 # minecraft:seed
+
 ### carrot
+
 ```json
 "minecraft:seed": {
     "plant_at": [
@@ -7740,6 +8674,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### nether_wart
+
 ```json
 "minecraft:seed": {
     "plant_at": [
@@ -7750,6 +8685,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### potato
+
 ```json
 "minecraft:seed": {
     "plant_at": [
@@ -7760,6 +8696,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wheat_seeds
+
 ```json
 "minecraft:seed": {
     "plant_at": [
@@ -7770,6 +8707,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### beetroot_seeds
+
 ```json
 "minecraft:seed": {
     "plant_at": [
@@ -7780,6 +8718,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### melon_seeds
+
 ```json
 "minecraft:seed": {
     "plant_at": [
@@ -7790,6 +8729,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pumpkin_seeds
+
 ```json
 "minecraft:seed": {
     "plant_at": [
@@ -7800,6 +8740,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sweet_berries
+
 ```json
 "minecraft:seed": {
     "plant_at": [
@@ -7812,13 +8753,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:shears
+
 ### shears
+
 ```json
 "minecraft:shears": {}
 ```
 
 # minecraft:shooter
+
 ### bow
+
 ```json
 "minecraft:shooter": {
     "ammunition": [
@@ -7835,6 +8780,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### crossbow
+
 ```json
 "minecraft:shooter": {
     "ammunition": [
@@ -7855,564 +8801,679 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:should_despawn
+
 ### nether_star
+
 ```json
 "minecraft:should_despawn": false
 ```
 
 # minecraft:stacked_by_data
+
 ### enchanted_golden_apple
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### golden_apple
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### acacia_boat
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### birch_boat
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### dark_oak_boat
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### jungle_boat
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### oak_boat
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### spruce_boat
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### bone_meal
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### bucket
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cod_bucket
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### lava_bucket
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### milk_bucket
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### pufferfish_bucket
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### salmon_bucket
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### tropical_fish_bucket
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### water_bucket
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cauldron
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### charcoal
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### coal
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cocoa_beans
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cooked_cod
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cod
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### black_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### blue_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### brown_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cyan_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### gray_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### green_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### light_blue_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### light_gray_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### lime_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### magenta_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### orange_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### pink_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### purple_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### red_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### white_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### yellow_dye
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### locator_map
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### map
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### ink_sac
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### lapis_lazuli
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cooked_salmon
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### salmon
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### bat_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### bee_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### blaze_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cat_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cave_spider_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### chicken_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cod_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cow_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### creeper_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### dolphin_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### donkey_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### drowned_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### elder_guardian_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### enderman_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### endermite_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### evoker_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### fox_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### ghast_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### guardian_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### hoglin_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### horse_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### husk_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### llama_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### magma_cube_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### mooshroom_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### mule_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### ocelot_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### panda_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### parrot_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### phantom_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### pig_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### piglin_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### piglin_brute_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### pillager_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### polar_bear_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### pufferfish_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### rabbit_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### ravager_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### salmon_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### turtle_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### sheep_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### shulker_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### silverfish_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### skeleton_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### skeleton_horse_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### slime_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### spider_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### squid_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### stray_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### strider_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### tropical_fish_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### vex_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### villager_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### vindicator_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### wandering_trader_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### witch_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### wither_skeleton_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### wolf_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### zoglin_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### zombie_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### zombie_horse_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### zombie_villager_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### zombified_piglin_spawn_egg
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### tropical_fish
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 # minecraft:throwable
+
 ### experience_bottle
+
 ```json
 "minecraft:throwable": {
     "do_swing_animation": true
@@ -8420,6 +9481,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### egg
+
 ```json
 "minecraft:throwable": {
     "do_swing_animation": true
@@ -8427,6 +9489,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_pearl
+
 ```json
 "minecraft:throwable": {
     "do_swing_animation": true
@@ -8434,6 +9497,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_eye
+
 ```json
 "minecraft:throwable": {
     "do_swing_animation": true
@@ -8441,6 +9505,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snowball
+
 ```json
 "minecraft:throwable": {
     "do_swing_animation": true
@@ -8448,6 +9513,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### trident
+
 ```json
 "minecraft:throwable": {
     "min_draw_duration": 0.5,
@@ -8457,283 +9523,341 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:use_duration
+
 ### apple
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### enchanted_golden_apple
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### golden_apple
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_beef
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### beef
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### beetroot
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### beetroot_soup
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### bow
+
 ```json
 "minecraft:use_duration": 72000
 ```
 
 ### bread
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### bucket
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cod_bucket
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### lava_bucket
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### milk_bucket
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### pufferfish_bucket
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### salmon_bucket
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### tropical_fish_bucket
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### water_bucket
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### carrot
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### golden_carrot
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_chicken
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### chicken
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### chorus_fruit
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_cod
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cod
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cookie
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### crossbow
+
 ```json
 "minecraft:use_duration": 25
 ```
 
 ### dried_kelp
+
 ```json
 "minecraft:use_duration": 16
 ```
 
 ### honey_bottle
+
 ```json
 "minecraft:use_duration": 40
 ```
 
 ### melon_slice
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### mushroom_stew
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_mutton
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### mutton
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_porkchop
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### porkchop
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### potato
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### baked_potato
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### poisonous_potato
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### pumpkin_pie
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_rabbit
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### rabbit
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### rabbit_stew
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### rotten_flesh
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_salmon
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### salmon
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### spider_eye
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### sweet_berries
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### diamond_sword
+
 ```json
 "minecraft:use_duration": 72000
 ```
 
 ### golden_sword
+
 ```json
 "minecraft:use_duration": 72000
 ```
 
 ### iron_sword
+
 ```json
 "minecraft:use_duration": 72000
 ```
 
 ### netherite_sword
+
 ```json
 "minecraft:use_duration": 72000
 ```
 
 ### stone_sword
+
 ```json
 "minecraft:use_duration": 72000
 ```
 
 ### wooden_sword
+
 ```json
 "minecraft:use_duration": 72000
 ```
 
 ### trident
+
 ```json
 "minecraft:use_duration": 72000
 ```
 
 ### tropical_fish
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 # minecraft:wearable
+
 ### chainmail_boots
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.feet"
@@ -8741,6 +9865,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_boots
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.feet"
@@ -8748,6 +9873,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_boots
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.feet"
@@ -8755,6 +9881,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_boots
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.feet"
@@ -8762,6 +9889,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_boots
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.feet"
@@ -8769,6 +9897,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_boots
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.feet"
@@ -8776,6 +9905,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_chestplate
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.chest"
@@ -8783,6 +9913,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_chestplate
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.chest"
@@ -8790,6 +9921,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_chestplate
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.chest"
@@ -8797,6 +9929,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_chestplate
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.chest"
@@ -8804,6 +9937,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_chestplate
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.chest"
@@ -8811,6 +9945,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_chestplate
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.chest"
@@ -8818,6 +9953,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elytra
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.chest"
@@ -8825,6 +9961,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### firework_rocket
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.weapon.offhand"
@@ -8928,6 +10065,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_helmet
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.head"
@@ -8935,6 +10073,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_helmet
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.head"
@@ -8942,6 +10081,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_helmet
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.head"
@@ -8949,6 +10089,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_helmet
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.head"
@@ -8956,6 +10097,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_helmet
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.head"
@@ -8963,6 +10105,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_helmet
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.head"
@@ -8970,6 +10113,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chainmail_leggings
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.legs"
@@ -8977,6 +10121,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### diamond_leggings
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.legs"
@@ -8984,6 +10129,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_leggings
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.legs"
@@ -8991,6 +10137,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_leggings
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.legs"
@@ -8998,6 +10145,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### leather_leggings
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.legs"
@@ -9005,6 +10153,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### netherite_leggings
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.legs"
@@ -9012,6 +10161,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### nautilus_shell
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.weapon.offhand"
@@ -9019,6 +10169,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shield
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.weapon.offhand"
@@ -9026,6 +10177,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### totem_of_undying
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.weapon.offhand"
@@ -9033,6 +10185,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle_helmet
+
 ```json
 "minecraft:wearable": {
     "slot": "slot.armor.head"
@@ -9040,1666 +10193,2021 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # tag:minecraft:boat
+
 ### acacia_boat
+
 ```json
 "tag:minecraft:boat": {}
 ```
 
 ### birch_boat
+
 ```json
 "tag:minecraft:boat": {}
 ```
 
 ### dark_oak_boat
+
 ```json
 "tag:minecraft:boat": {}
 ```
 
 ### jungle_boat
+
 ```json
 "tag:minecraft:boat": {}
 ```
 
 ### oak_boat
+
 ```json
 "tag:minecraft:boat": {}
 ```
 
 ### spruce_boat
+
 ```json
 "tag:minecraft:boat": {}
 ```
 
 # tag:minecraft:chainmail_tier
+
 ### chainmail_boots
+
 ```json
 "tag:minecraft:chainmail_tier": {}
 ```
 
 ### chainmail_chestplate
+
 ```json
 "tag:minecraft:chainmail_tier": {}
 ```
 
 ### chainmail_helmet
+
 ```json
 "tag:minecraft:chainmail_tier": {}
 ```
 
 ### chainmail_leggings
+
 ```json
 "tag:minecraft:chainmail_tier": {}
 ```
 
 # tag:minecraft:diamond_tier
+
 ### diamond_axe
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 ### diamond_boots
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 ### diamond_chestplate
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 ### diamond_helmet
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 ### diamond_hoe
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 ### diamond_leggings
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 ### diamond_pickaxe
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 ### diamond_shovel
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 ### diamond_sword
+
 ```json
 "tag:minecraft:diamond_tier": {}
 ```
 
 # tag:minecraft:digger
+
 ### diamond_axe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### golden_axe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### iron_axe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### netherite_axe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### stone_axe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### wooden_axe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### diamond_hoe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### golden_hoe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### iron_hoe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### netherite_hoe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### stone_hoe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### wooden_hoe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### diamond_pickaxe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### golden_pickaxe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### iron_pickaxe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### netherite_pickaxe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### stone_pickaxe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### wooden_pickaxe
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### diamond_shovel
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### golden_shovel
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### iron_shovel
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### netherite_shovel
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### stone_shovel
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 ### wooden_shovel
+
 ```json
 "tag:minecraft:digger": {}
 ```
 
 # tag:minecraft:door
+
 ### acacia_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 ### birch_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 ### crimson_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 ### dark_oak_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 ### iron_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 ### jungle_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 ### wooden_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 ### spruce_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 ### warped_door
+
 ```json
 "tag:minecraft:door": {}
 ```
 
 # tag:minecraft:golden_tier
+
 ### golden_axe
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 ### golden_boots
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 ### golden_chestplate
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 ### golden_helmet
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 ### golden_hoe
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 ### golden_leggings
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 ### golden_pickaxe
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 ### golden_shovel
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 ### golden_sword
+
 ```json
 "tag:minecraft:golden_tier": {}
 ```
 
 # tag:minecraft:hanging_actor
+
 ### painting
+
 ```json
 "tag:minecraft:hanging_actor": {}
 ```
 
 # tag:minecraft:horse_armor
+
 ### diamond_horse_armor
+
 ```json
 "tag:minecraft:horse_armor": {}
 ```
 
 ### golden_horse_armor
+
 ```json
 "tag:minecraft:horse_armor": {}
 ```
 
 ### iron_horse_armor
+
 ```json
 "tag:minecraft:horse_armor": {}
 ```
 
 ### leather_horse_armor
+
 ```json
 "tag:minecraft:horse_armor": {}
 ```
 
 # tag:minecraft:iron_tier
+
 ### iron_axe
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 ### iron_boots
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 ### iron_chestplate
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 ### iron_helmet
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 ### iron_hoe
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 ### iron_leggings
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 ### iron_pickaxe
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 ### iron_shovel
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 ### iron_sword
+
 ```json
 "tag:minecraft:iron_tier": {}
 ```
 
 # tag:minecraft:is_armor
+
 ### chainmail_boots
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### diamond_boots
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### golden_boots
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### iron_boots
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### leather_boots
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### netherite_boots
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### chainmail_chestplate
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### diamond_chestplate
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### golden_chestplate
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### iron_chestplate
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### leather_chestplate
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### netherite_chestplate
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### elytra
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### chainmail_helmet
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### diamond_helmet
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### golden_helmet
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### iron_helmet
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### leather_helmet
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### netherite_helmet
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### chainmail_leggings
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### diamond_leggings
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### golden_leggings
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### iron_leggings
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### leather_leggings
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### netherite_leggings
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 ### turtle_helmet
+
 ```json
 "tag:minecraft:is_armor": {}
 ```
 
 # tag:minecraft:is_axe
+
 ### diamond_axe
+
 ```json
 "tag:minecraft:is_axe": {}
 ```
 
 ### golden_axe
+
 ```json
 "tag:minecraft:is_axe": {}
 ```
 
 ### iron_axe
+
 ```json
 "tag:minecraft:is_axe": {}
 ```
 
 ### netherite_axe
+
 ```json
 "tag:minecraft:is_axe": {}
 ```
 
 ### stone_axe
+
 ```json
 "tag:minecraft:is_axe": {}
 ```
 
 ### wooden_axe
+
 ```json
 "tag:minecraft:is_axe": {}
 ```
 
 # tag:minecraft:is_cooked
+
 ### cooked_beef
+
 ```json
 "tag:minecraft:is_cooked": {}
 ```
 
 ### cooked_chicken
+
 ```json
 "tag:minecraft:is_cooked": {}
 ```
 
 ### cooked_cod
+
 ```json
 "tag:minecraft:is_cooked": {}
 ```
 
 ### cooked_mutton
+
 ```json
 "tag:minecraft:is_cooked": {}
 ```
 
 ### cooked_porkchop
+
 ```json
 "tag:minecraft:is_cooked": {}
 ```
 
 ### cooked_rabbit
+
 ```json
 "tag:minecraft:is_cooked": {}
 ```
 
 ### rabbit_stew
+
 ```json
 "tag:minecraft:is_cooked": {}
 ```
 
 ### cooked_salmon
+
 ```json
 "tag:minecraft:is_cooked": {}
 ```
 
 # tag:minecraft:is_fish
+
 ### cooked_cod
+
 ```json
 "tag:minecraft:is_fish": {}
 ```
 
 ### cod
+
 ```json
 "tag:minecraft:is_fish": {}
 ```
 
 ### pufferfish
+
 ```json
 "tag:minecraft:is_fish": {}
 ```
 
 ### cooked_salmon
+
 ```json
 "tag:minecraft:is_fish": {}
 ```
 
 ### salmon
+
 ```json
 "tag:minecraft:is_fish": {}
 ```
 
 ### tropical_fish
+
 ```json
 "tag:minecraft:is_fish": {}
 ```
 
 # tag:minecraft:is_food
+
 ### apple
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### enchanted_golden_apple
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### golden_apple
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### cooked_beef
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### beef
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### beetroot
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### beetroot_soup
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### bread
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### carrot
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### golden_carrot
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### cooked_chicken
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### chicken
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### cookie
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### dried_kelp
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### melon_slice
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### mushroom_stew
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### cooked_mutton
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### mutton
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### cooked_porkchop
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### porkchop
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### potato
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### baked_potato
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### pumpkin_pie
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### cooked_rabbit
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### rabbit
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### rabbit_stew
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### rotten_flesh
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 ### sweet_berries
+
 ```json
 "tag:minecraft:is_food": {}
 ```
 
 # tag:minecraft:is_hoe
+
 ### diamond_hoe
+
 ```json
 "tag:minecraft:is_hoe": {}
 ```
 
 ### golden_hoe
+
 ```json
 "tag:minecraft:is_hoe": {}
 ```
 
 ### iron_hoe
+
 ```json
 "tag:minecraft:is_hoe": {}
 ```
 
 ### netherite_hoe
+
 ```json
 "tag:minecraft:is_hoe": {}
 ```
 
 ### stone_hoe
+
 ```json
 "tag:minecraft:is_hoe": {}
 ```
 
 ### wooden_hoe
+
 ```json
 "tag:minecraft:is_hoe": {}
 ```
 
 # tag:minecraft:is_meat
+
 ### cooked_beef
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### beef
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### cooked_chicken
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### chicken
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### cooked_mutton
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### mutton
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### cooked_porkchop
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### porkchop
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### cooked_rabbit
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### rabbit
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### rabbit_stew
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 ### rotten_flesh
+
 ```json
 "tag:minecraft:is_meat": {}
 ```
 
 # tag:minecraft:is_minecart
+
 ### minecart
+
 ```json
 "tag:minecraft:is_minecart": {}
 ```
 
 ### chest_minecart
+
 ```json
 "tag:minecraft:is_minecart": {}
 ```
 
 ### hopper_minecart
+
 ```json
 "tag:minecraft:is_minecart": {}
 ```
 
 ### tnt_minecart
+
 ```json
 "tag:minecraft:is_minecart": {}
 ```
 
 # tag:minecraft:is_pickaxe
+
 ### diamond_pickaxe
+
 ```json
 "tag:minecraft:is_pickaxe": {}
 ```
 
 ### golden_pickaxe
+
 ```json
 "tag:minecraft:is_pickaxe": {}
 ```
 
 ### iron_pickaxe
+
 ```json
 "tag:minecraft:is_pickaxe": {}
 ```
 
 ### netherite_pickaxe
+
 ```json
 "tag:minecraft:is_pickaxe": {}
 ```
 
 ### stone_pickaxe
+
 ```json
 "tag:minecraft:is_pickaxe": {}
 ```
 
 ### wooden_pickaxe
+
 ```json
 "tag:minecraft:is_pickaxe": {}
 ```
 
 # tag:minecraft:is_shovel
+
 ### diamond_shovel
+
 ```json
 "tag:minecraft:is_shovel": {}
 ```
 
 ### golden_shovel
+
 ```json
 "tag:minecraft:is_shovel": {}
 ```
 
 ### iron_shovel
+
 ```json
 "tag:minecraft:is_shovel": {}
 ```
 
 ### netherite_shovel
+
 ```json
 "tag:minecraft:is_shovel": {}
 ```
 
 ### stone_shovel
+
 ```json
 "tag:minecraft:is_shovel": {}
 ```
 
 ### wooden_shovel
+
 ```json
 "tag:minecraft:is_shovel": {}
 ```
 
 # tag:minecraft:is_sword
+
 ### diamond_sword
+
 ```json
 "tag:minecraft:is_sword": {}
 ```
 
 ### golden_sword
+
 ```json
 "tag:minecraft:is_sword": {}
 ```
 
 ### iron_sword
+
 ```json
 "tag:minecraft:is_sword": {}
 ```
 
 ### netherite_sword
+
 ```json
 "tag:minecraft:is_sword": {}
 ```
 
 ### stone_sword
+
 ```json
 "tag:minecraft:is_sword": {}
 ```
 
 ### wooden_sword
+
 ```json
 "tag:minecraft:is_sword": {}
 ```
 
 # tag:minecraft:is_tool
+
 ### diamond_axe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### golden_axe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### iron_axe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### netherite_axe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### stone_axe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### wooden_axe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### diamond_hoe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### golden_hoe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### iron_hoe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### netherite_hoe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### stone_hoe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### wooden_hoe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### diamond_pickaxe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### golden_pickaxe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### iron_pickaxe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### netherite_pickaxe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### stone_pickaxe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### wooden_pickaxe
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### diamond_shovel
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### golden_shovel
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### iron_shovel
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### netherite_shovel
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### stone_shovel
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### wooden_shovel
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### diamond_sword
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### golden_sword
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### iron_sword
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### netherite_sword
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### stone_sword
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 ### wooden_sword
+
 ```json
 "tag:minecraft:is_tool": {}
 ```
 
 # tag:minecraft:leather_tier
+
 ### leather_boots
+
 ```json
 "tag:minecraft:leather_tier": {}
 ```
 
 ### leather_chestplate
+
 ```json
 "tag:minecraft:leather_tier": {}
 ```
 
 ### leather_helmet
+
 ```json
 "tag:minecraft:leather_tier": {}
 ```
 
 ### leather_leggings
+
 ```json
 "tag:minecraft:leather_tier": {}
 ```
 
 # tag:minecraft:lectern_books
+
 ### writable_book
+
 ```json
 "tag:minecraft:lectern_books": {}
 ```
 
 # tag:minecraft:music_disc
+
 ### music_disc_13
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_cat
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_11
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_wait
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_pigstep
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_blocks
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_chirp
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_far
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_mall
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_mellohi
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_stal
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_strad
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 ### music_disc_ward
+
 ```json
 "tag:minecraft:music_disc": {}
 ```
 
 # tag:minecraft:netherite_tier
+
 ### netherite_axe
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 ### netherite_boots
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 ### netherite_chestplate
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 ### netherite_helmet
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 ### netherite_hoe
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 ### netherite_leggings
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 ### netherite_pickaxe
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 ### netherite_shovel
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 ### netherite_sword
+
 ```json
 "tag:minecraft:netherite_tier": {}
 ```
 
 # tag:minecraft:sign
+
 ### acacia_sign
+
 ```json
 "tag:minecraft:sign": {}
 ```
 
 ### birch_sign
+
 ```json
 "tag:minecraft:sign": {}
 ```
 
 ### crimson_sign
+
 ```json
 "tag:minecraft:sign": {}
 ```
 
 ### dark_oak_sign
+
 ```json
 "tag:minecraft:sign": {}
 ```
 
 ### jungle_sign
+
 ```json
 "tag:minecraft:sign": {}
 ```
 
 ### oak_sign
+
 ```json
 "tag:minecraft:sign": {}
 ```
 
 ### spruce_sign
+
 ```json
 "tag:minecraft:sign": {}
 ```
 
 ### warped_sign
+
 ```json
 "tag:minecraft:sign": {}
 ```
 
 # tag:minecraft:spawn_egg
+
 ### bat_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### bee_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### blaze_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### cat_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### cave_spider_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### chicken_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### cod_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### cow_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### creeper_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### dolphin_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### donkey_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### drowned_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### elder_guardian_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### enderman_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### endermite_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### evoker_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### fox_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### ghast_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### guardian_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### hoglin_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### horse_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### husk_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### llama_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### magma_cube_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### mooshroom_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### mule_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### ocelot_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### panda_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### parrot_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### phantom_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### pig_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### piglin_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### piglin_brute_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### pillager_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### polar_bear_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### pufferfish_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### rabbit_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### ravager_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### salmon_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### turtle_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### sheep_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### shulker_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### silverfish_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### skeleton_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### skeleton_horse_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### slime_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### spider_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### squid_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### stray_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### strider_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### tropical_fish_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### vex_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### villager_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### vindicator_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### wandering_trader_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### witch_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### wither_skeleton_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### wolf_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### zoglin_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### zombie_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### zombie_horse_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### zombie_villager_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 ### zombified_piglin_spawn_egg
+
 ```json
 "tag:minecraft:spawn_egg": {}
 ```
 
 # tag:minecraft:stone_tier
+
 ### stone_axe
+
 ```json
 "tag:minecraft:stone_tier": {}
 ```
 
 ### stone_hoe
+
 ```json
 "tag:minecraft:stone_tier": {}
 ```
 
 ### stone_pickaxe
+
 ```json
 "tag:minecraft:stone_tier": {}
 ```
 
 ### stone_shovel
+
 ```json
 "tag:minecraft:stone_tier": {}
 ```
 
 ### stone_sword
+
 ```json
 "tag:minecraft:stone_tier": {}
 ```
 
 # tag:minecraft:wooden_tier
+
 ### wooden_axe
+
 ```json
 "tag:minecraft:wooden_tier": {}
 ```
 
 ### wooden_hoe
+
 ```json
 "tag:minecraft:wooden_tier": {}
 ```
 
 ### wooden_pickaxe
+
 ```json
 "tag:minecraft:wooden_tier": {}
 ```
 
 ### wooden_shovel
+
 ```json
 "tag:minecraft:wooden_tier": {}
 ```
 
 ### wooden_sword
+
 ```json
 "tag:minecraft:wooden_tier": {}
 ```
-
