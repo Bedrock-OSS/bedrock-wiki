@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - master
+      - wiki
 
 jobs:
   deploy:
@@ -21,5 +21,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          branch: gh-pages
+          branch: generated
           folder: docs/.vitepress/dist
