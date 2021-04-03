@@ -27,4 +27,5 @@ The website is still in progress, but you can [view it here](https://bedrock-oss
 -   [ ] **Vue Component:** Edit page link
 -   [ ] **Sidebar:** Add slot "bottom" to e.g. display the theme picker
 -   [ ] **Sidebar:** Add slot "top" to e.g. display link filtering options
+-   [ ] **Sidebar:** Sorting
 -   [ ] **Markdown:** Use new `<FilePath>RP/entity/test.json</FilePath>` instead of the jekyll include
