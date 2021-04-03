@@ -61,6 +61,24 @@ module.exports = {
 	description: 'Technical bedrock knowledge-sharing wiki.',
 	base: baseUrl,
 
+	head: [
+		// Enable to make the bedrock wiki installable
+		// [
+		// 	'link',
+		// 	{
+		// 		rel: 'manifest',
+		// 		type: 'application/json',
+		// 		href: '/manifest.webmanifest',
+		// 	},
+		// ],
+		[
+			'script',
+			{
+				src: '/registerSW.js',
+			},
+		],
+	],
+
 	markdown: {
 		lineNumbers: true,
 	},
