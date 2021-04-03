@@ -53,8 +53,8 @@ let getSidebar = function () {
 
 module.exports = {
 	lang: 'en-US',
-	title: 'VitePress',
-	description: 'Vite & Vue powered static site generator.',
+	title: 'Bedrock Wiki',
+	description: 'Technical bedrock knowledge-sharing wiki.',
 	base: '/bedrock-wiki-vite/',
 
 	themeConfig: {
