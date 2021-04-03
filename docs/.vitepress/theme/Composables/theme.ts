@@ -1,4 +1,4 @@
-import { usePreferredDark, useStorage } from '@vueuse/core'
+import { useStorage } from '@vueuse/core'
 import { computed, ref, watchEffect } from 'vue'
 import { useMediaQuery } from './mediaQuery'
 
