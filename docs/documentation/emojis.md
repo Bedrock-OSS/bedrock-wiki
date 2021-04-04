@@ -159,9 +159,9 @@ Please note that the following files have been annotated with slot information: 
 
 To get started, you should copy the sprite-sheets into these locations:
 
-{% include filepath.html path="RP/font/glyph_E0.png" img="/assets/images/documentation/emojis/custom/glyph_E0.png" %}
+<FilePath>RP/font/glyph_E0.png" img="/assets/images/documentation/emojis/custom/glyph_E0.png</FilePath>
 
-{% include filepath.html path="RP/font/glyph_E0.png" img="/assets/images/documentation/emojis/custom/glyph_E1.png" %}
+<FilePath>RP/font/glyph_E0.png" img="/assets/images/documentation/emojis/custom/glyph_E1.png</FilePath>
 
 Your filepath should look like this:
 

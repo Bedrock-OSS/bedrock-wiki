@@ -6,9 +6,7 @@ parent: Concepts
 
 # Component Groups Vs. Components Vs. Events
 
-
-
-Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means, and how to use them. 
+Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means, and how to use them.
 
 Confusing component groups with components is a very common source of errors. Pay attention closely to understand the difference.
 
@@ -16,15 +14,16 @@ Confusing component groups with components is a very common source of errors. Pa
 
 Components are logical building blocks that make up Minecraft-entities. All components are written by Mojang, and provided to us for use. Components can do all sorts of things, like set the size of an entity, or give it the ability to swim. The [full list of components can be found here](https://bedrock.dev/docs/stable/Entities).
 
-It is *impossible* to create your own components. The entire list of components is hard-coded and provided by Microsoft. 
+It is _impossible_ to create your own components. The entire list of components is hard-coded and provided by Microsoft.
 
-When you want to add behavior to your entity, you do so by adding `components` into the `components` object of `minecraft:entity`. For example, if we want to give the entity the ability to climb, we can do so by adding this component: `"minecraft:can_climb": {}`. 
+When you want to add behavior to your entity, you do so by adding `components` into the `components` object of `minecraft:entity`. For example, if we want to give the entity the ability to climb, we can do so by adding this component: `"minecraft:can_climb": {}`.
 
 All components are formatted like `"minecraft:<name>": { <setting> }`. Every component takes different kinds of settings.
 
 Here is an example of a few components, inside an entity:
 
-{% include filepath.html path="BP/entities/example.json" local_path="minecraft:entity"%}
+<FilePath>BP/entities/example.json#minecraft:entity</FilePath>
+
 ```json
 "components": {
     "minecraft:type_family": {
@@ -40,7 +39,7 @@ Here is an example of a few components, inside an entity:
 }
 ```
 
-Notice how the `components` list *only* contains components. 
+Notice how the `components` list _only_ contains components.
 
 # Component groups
 
@@ -48,15 +47,16 @@ Component groups are "folders" for components. They group components together, a
 
 Here is an example:
 
-{% include filepath.html path="BP/entities/example.json" local_path="minecraft:entity"%}
+<FilePath>BP/entities/example.json#minecraft:entity</FilePath>
+
 ```json
 "component_groups": {
 
     //the name of the component group
-    "minecraft:cat_persian": { 
+    "minecraft:cat_persian": {
 
         //A list of valid components. Add as many as you like.
-        "minecraft:variant": { 
+        "minecraft:variant": {
             "value": 6
         },
         "minecraft:physics": {}
@@ -75,17 +75,16 @@ Here is an example:
 
 All component groups are custom-created. You cannot use component groups from other entities in your entity.
 
-In vanilla minecraft entities, component groups are namespaced with `minecraft:` -like `minecraft:cat_persian` above. But it is important to remember that they are *not components*. When you create your own component groups, you can use whatever name/namespace:name combination you want. For example `wiki:example_group` above. [Here's more info on namespaces](/knowledge/namespaces).
+In vanilla minecraft entities, component groups are namespaced with `minecraft:` -like `minecraft:cat_persian` above. But it is important to remember that they are _not components_. When you create your own component groups, you can use whatever name/namespace:name combination you want. For example `wiki:example_group` above. [Here's more info on namespaces](/knowledge/namespaces).
 
-When a component is placed into a group, is it *not* automatically added to your entity. In fact, it won't do anything at all until the group is added. When the group is added, the component will become active, and start effecting the behavior of your entity.
-
+When a component is placed into a group, is it _not_ automatically added to your entity. In fact, it won't do anything at all until the group is added. When the group is added, the component will become active, and start effecting the behavior of your entity.
 
 # Events
 
 Events are a special syntax for adding and removing component-groups. By adding/removing groups, we can create dynamic behavior for our entities.
 
-
 An example:
+
 ```json
 "minecraft:ageable_grow_up": { //Name of the event
     "remove": { //list of component groups to remove
@@ -103,7 +102,7 @@ An example:
 
 Like component-groups, events are 100% custom created inside each entity. You cannot use events from other entities on your own. Do not be tempted to use `"minecraft:ageable_grow_up"` in your own entity. If you want grow-up functionality, you need to define the component-groups and events yourself.
 
-The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible. 
+The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible.
 
 <Label color="yellow">Advanced</Label>
 
@@ -113,6 +112,7 @@ Conditional events are events using "filters" to return a component group depend
 We are testing if a tag exists and if it doesn't return the "prefix:is_false" component but if it does exist return "prefix:is_true".
 
 An example:
+
 ```json
       "prefix:event_name": {//Name of the event
         "sequence": [//Sequence 1 >>> 2 >>> 3 this follows top to bottom order.
@@ -163,22 +163,22 @@ Many components can trigger events. Particularly, components like the [environme
 `Note:` You can also use the `/event <target> <prefix:event_name>` to trigger an event directly off an entity. In the below example we run the "minecraft:become_charged" event to turn all creepers in loaded chunks into charged creepers.
 
 An example.
+
 ```json
         //Command usage to send an event to all creepers.
         /event entity @e[type=creeper] minecraft:become_charged
 ```
 
 The flow is:
- - Add the component to the entity
- - Component triggers event or /event triggers event
- - Which adds component group
- - Which adds the component
- - Which affects the entity in some form or another.
+
+-   Add the component to the entity
+-   Component triggers event or /event triggers event
+-   Which adds component group
+-   Which adds the component
+-   Which affects the entity in some form or another.
 
 # Uses in vanilla
 
 Component groups and events are the main tools that vanilla entities use to create custom and adaptable behavior. For a specific example, look at the zombie.
 
 The zombie is programmed to turn into a `drowned` if it spends too long in the water. Look at the component-groups and events, and see if you can work out how this is done!
-
-

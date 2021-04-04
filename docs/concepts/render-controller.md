@@ -16,36 +16,36 @@ Render controllers work based on the short-name definitions of the RP entity fil
 
 Lets look at a simplified version of the spider RP entity file:
 
-{% include filepath.html path="RP/entity/spider.json" %}
+<FilePath>RP/entity/spider.json</FilePath>
+
 ```json
 {
-    "format_version": "1.8.0",
-    "minecraft:client_entity": {
-        "description": {
-            "identifier": "minecraft:cave_spider",
-            "materials": {
-                "default": "spider",
-                "invisible": "spider_invisible"
-            },
-            "textures": {
-                "default": "textures/entity/spider/cave_spider"
-            },
-            "geometry": {
-                "default": "geometry.spider.v1.8"
-            },
-            "render_controllers": [
-                "controller.render.spider"
-            ]
-        }
-    }
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:cave_spider",
+			"materials": {
+				"default": "spider",
+				"invisible": "spider_invisible"
+			},
+			"textures": {
+				"default": "textures/entity/spider/cave_spider"
+			},
+			"geometry": {
+				"default": "geometry.spider.v1.8"
+			},
+			"render_controllers": ["controller.render.spider"]
+		}
+	}
 }
 ```
 
 In this case, four short-name definitions have been created:
- - `default`, in the materials array
- - `invisible`, in the materials array
- - `default`, in the textures array
- - `default`, in the geometry array
+
+-   `default`, in the materials array
+-   `invisible`, in the materials array
+-   `default`, in the textures array
+-   `default`, in the geometry array
 
 You can define multiple short-names in each array, such as in the `materials` example above.
 
@@ -55,23 +55,22 @@ You should think of short-name definitions as `importing` the assets you want. A
 
 A simple render controller looks like this:
 
-{% include filepath.html path="RP/render_controllers/cow.render.json" %}
+<FilePath>RP/render_controllers/cow.render.json</FilePath>
+
 ```json
 {
-    "format_version": "1.8.0",
-    "render_controllers": {
-        "controller.render.cow": {
-            "geometry": "Geometry.default",
-            "materials": [
-                {
-                    "*": "Material.default"
-                }
-            ],
-            "textures": [
-                "Texture.default"
-            ]
-        }
-    }
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.cow": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": ["Texture.default"]
+		}
+	}
 }
 ```
 
@@ -92,12 +91,13 @@ For example, the render controller above is used for the `minecraft:cow` entity.
 
 # Creating custom render controllers
 
- Often we want more power over the rendering of our entities, such as rendering layered textures, multiple geometries, or applying different materials to different bones. To create a custom render controller, simply copy and paste a vanilla render controller into the `render_controllers` folder, and edit to your liking!
+Often we want more power over the rendering of our entities, such as rendering layered textures, multiple geometries, or applying different materials to different bones. To create a custom render controller, simply copy and paste a vanilla render controller into the `render_controllers` folder, and edit to your liking!
 
 # Texture layering
+
 sometimes, it is useful to create layered textures for custom entities. Layered in this context simply means multiple textures overlayed on top of each other, where the top texture has alpha pixels, and allows the bottom texture to show through.
 
-As a very simple example, imagine a **painting** entity. The frame of the painting is always the same, but the picture itself can change. While you *could* duplicate the frame 10 times, and paint in 10 paintings, you now created a problem: What if you want to change the frame? Now you need to edit 10 textures.
+As a very simple example, imagine a **painting** entity. The frame of the painting is always the same, but the picture itself can change. While you _could_ duplicate the frame 10 times, and paint in 10 paintings, you now created a problem: What if you want to change the frame? Now you need to edit 10 textures.
 
 This can be solved by layering textures. Simply place the frame texture on first, and then add the different paintings on top. You can now edit the frame in one, simple location.
 
@@ -110,30 +110,32 @@ Texture layering is achieved through the use of render controllers. If you aren'
 ## Texture Layering
 
 ### Render Controller
+
 ```json
 {
-  "format_version": "1.10.0",
-  "render_controllers": {
-    "controller.render.texture_layering": {
-      "geometry": "Geometry.default",
-      "materials": [
-        {
-          "*": "Material.default"
-        }
-      ],
-      "textures": [
-        //You can add as many layers as you like. Layers are added top to bottom.
-        "Texture.bottom_layer",
-        "Texture.top_layer"
-      ]
-    }
-  }
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.texture_layering": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				//You can add as many layers as you like. Layers are added top to bottom.
+				"Texture.bottom_layer",
+				"Texture.top_layer"
+			]
+		}
+	}
 }
 ```
 
 ### Entity
 
 You need to define all textures in the entity, and also use `villager_v2_masked` material.
+
 ```json
 "materials": {
   "default": "villager_v2_masked"
@@ -166,30 +168,30 @@ Set multiple top textures, which we will index into later.
 
 ```json
 {
-  "format_version": "1.10.0",
-  "render_controllers": {
-    "controller.render.wool_only": {
-      "arrays": {
-        "textures": {
-          "Array.top": [
-            "Texture.top_1",
-            "Texture.top_2",
-            "Texture.top_3"
-          ]
-        }
-      },
-      "geometry": "Geometry.default",
-      "materials": [
-        {
-          "*": "Material.default"
-        }
-      ],
-      "textures": [
-        "Texture.bottom", //static bottom texture
-        "Array.top[query.variant]" //pick top texture based on entity variant.
-      ]
-    }
-  }
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.wool_only": {
+			"arrays": {
+				"textures": {
+					"Array.top": [
+						"Texture.top_1",
+						"Texture.top_2",
+						"Texture.top_3"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.bottom", //static bottom texture
+				"Array.top[query.variant]" //pick top texture based on entity variant.
+			]
+		}
+	}
 }
 ```
 
