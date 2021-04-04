@@ -29,3 +29,4 @@ The website is still in progress, but you can [view it here](https://bedrock-oss
 -   [ ] **Sidebar:** Add slot "top" to e.g. display link filtering options
 -   [x] **Sidebar:** Sorting
 -   [x] **Markdown:** Use new `<FilePath>RP/entity/test.json</FilePath>` instead of the jekyll include
+-   [ ] **Code Blocks** Fix code blocks without a language set (E.g. https://bedrock-oss.github.io/bedrock-wiki-vite/concepts/mcfunction.html)
