@@ -30,3 +30,7 @@ pre {
 main a {
 	@apply text-purple-800 underline;
 }
+
+.list-none {
+	outline: none;
+}
