@@ -10,7 +10,8 @@ function formatLink(path) {
 	return path.split(/\\|\//g).join('/').replace('.md', '')
 }
 
-function generateSidebar(base, dir, data) {
+function generateSidebar(base, dir) {
+	let data = []
 	let files = fs.readdirSync(dir)
 	files.forEach(function (file) {
 		let joinedPath = path.join(dir, file)
@@ -27,7 +28,7 @@ function generateSidebar(base, dir, data) {
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
-				children: generateSidebar(base, joinedPath, []),
+				children: generateSidebar(base, joinedPath),
 			})
 		} else if (stats.isFile()) {
 			if (!file.endsWith('.md')) return
@@ -39,9 +40,9 @@ function generateSidebar(base, dir, data) {
 			// Don't include hidden pages (ignores children)
 			if (frontMatter.data.hidden == true) return
 
-			let badge = null;
+			let badge = null
 
-			if (frontMatter.data.badge != null && frontMatter.badge != "") {
+			if (frontMatter.data.badge != null && frontMatter.badge != '') {
 				badge = {
 					text: frontMatter.data.badge,
 					color: frontMatter.data.badge_color,
@@ -57,12 +58,21 @@ function generateSidebar(base, dir, data) {
 			})
 		}
 	})
-	return data
+
+	return data.sort(
+		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
+			if (!dataA.nav_order && dataB.nav_order) return -1
+			if (dataA.nav_order && !dataB.nav_order) return 1
+			if (dataA.nav_order && dataB.nav_order)
+				return dataA.nav_order - dataB.nav_order
+			return textA.localeCompare(textB)
+		}
+	)
 }
 
 function getSidebar() {
 	let docsPath = path.join(process.cwd(), 'docs')
-	return generateSidebar(docsPath, docsPath, [])
+	return generateSidebar(docsPath, docsPath)
 }
 
 module.exports = {
