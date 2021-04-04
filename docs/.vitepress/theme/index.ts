@@ -4,14 +4,7 @@ import Label from './Components/Content/Label.vue'
 import YouTubeEmbed from './Components/Content/YouTubeEmbed.vue'
 import { Theme } from 'vitepress'
 import { Component, watchEffect } from 'vue'
-import 'virtual:windi.css'
-import './Styles/main.css'
-import './Styles/light.css'
-import './Styles/dark.css'
-import './Styles/panels.css'
-import './Styles/code.css'
-import './Styles/header.css'
-import './Styles/tile.css'
+import './Styles/styles'
 
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [
