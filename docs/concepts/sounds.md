@@ -8,11 +8,12 @@ parent: Concepts
 
 <Label color="yellow">Intermediate</Label>
 
-In bedrock, we have the ability to add custom sounds, without overwriting any vanilla sounds. This is done by adding files to the resource pack. 
+In bedrock, we have the ability to add custom sounds, without overwriting any vanilla sounds. This is done by adding files to the resource pack.
 
 `protip:` The best way to learn about sounds is downloading and playing around with the default resource pack.
 
 ## Folder Structure
+
 There are two main files that we edit when we want to add sounds. Note how `sound_definition` is nested inside `sounds`.
 
 ```
@@ -25,10 +26,11 @@ There are two main files that we edit when we want to add sounds. Note how `soun
 ## Sound Formats
 
 The following sound formats are accepted:
- - .ogg (reccomended)
- - .wav
- - .mp3 (Not executable with ```/music```!)
- - .fsb (difficult to work with)
+
+-   .ogg (reccomended)
+-   .wav
+-   .mp3 (Not executable with `/music`!)
+-   .fsb (difficult to work with)
 
 # sound_definitions.json
 
@@ -36,19 +38,17 @@ The following sound formats are accepted:
 
 ```json
 {
-    "format_version": "1.14.0",
-    "sound_definitions": {
-        "example.toot": {
-            "category": "neutral",
-            "sounds": [
-                "sounds/trumpet"
-            ]
-        }
-    }
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"example.toot": {
+			"category": "neutral",
+			"sounds": ["sounds/trumpet"]
+		}
+	}
 }
 ```
 
-Sounds added in this way can be triggered using `/playsound`. Please note that `playsound` does not auto-correct, so you will need to be careful in your typing. 
+Sounds added in this way can be triggered using `/playsound`. Please note that `playsound` does not auto-correct, so you will need to be careful in your typing.
 
 `note:` New files that are referenced by file path, such as sounds, DO need a full client restart in order to load. This means that if sounds don't work, you should restart your entire MC client, rather than just reloading the world.
 
@@ -58,10 +58,10 @@ In the example above, I showed two `top-level` fields: `category`, and `sounds`.
 
 ### Categories
 
-Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get different effects. 
+Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get different effects.
 
 | Category | Note                                            |
-|----------|-------------------------------------------------|
+| -------- | ----------------------------------------------- |
 | weather  |                                                 |
 | block    |                                                 |
 | bucket   |                                                 |
@@ -84,6 +84,7 @@ WIP
 ## Sound definitions
 
 In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds, but does not have much power. For starts, I can add multiple sounds into the list. These sounds will be randomized when played:
+
 ```json
 "sounds": [
     "sounds/trumpet",
@@ -117,6 +118,7 @@ The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (nor
 ## Example
 
 Here is a more realistic example containing these options:
+
 ```json
 "block.beehive.drip": {
     "category": "block",
@@ -132,6 +134,7 @@ Here is a more realistic example containing these options:
     ]
 }
 ```
+
 # sounds.json
 
 If we want our sounds to run automatically, we can add them into the `sounds.json` file. This will tie the sound definitions directly to game events, and cause them to play, without needing to trigger with `/playsound`.
@@ -139,12 +142,11 @@ If we want our sounds to run automatically, we can add them into the `sounds.jso
 Sounds can be added into various categories:
 
 | Category                | Note                                                                            |
-|-------------------------|---------------------------------------------------------------------------------|
+| ----------------------- | ------------------------------------------------------------------------------- |
 | individual_event_sounds | Contains sounds like beacon activation, chest-close, or explode                 |
 | block_sounds            | Contains hit, step, and break sounds for blocks                                 |
 | entity_sounds           | Contains death, ambient, hurt, etc sounds for entities (Including custom ones!) |
 | interactive_sounds      | WIP                                                                             |
-
 
 ## Adding Entity Sounds
 
@@ -153,7 +155,7 @@ I assume that sounds can be added in other categories, but I personally only hav
 Common events:
 
 | Events     | Note                                                     |
-|------------|----------------------------------------------------------|
+| ---------- | -------------------------------------------------------- |
 | ambient    | Played randomly, such as grunts, clucks, or ghast noises |
 | hurt       | Played when damaged                                      |
 | death      | Played when it dies                                      |
@@ -164,10 +166,10 @@ Common events:
 | attack     | For melee attacking                                      |
 | shoot      | For shooting projectiles                                 |
 
-There are also many sound events, which *most likely* trigger automatically, but which I don't have details for, such as:
+There are also many sound events, which _most likely_ trigger automatically, but which I don't have details for, such as:
 
 | Unknown Categories |
-|--------------------|
+| ------------------ |
 | breathe            |
 | splash             |
 | swim               |
@@ -188,44 +190,45 @@ There are also many sound events, which *most likely* trigger automatically, but
 
 ```json
 {
-    "entity_sounds": {
-        "entities": {
-            "sirlich:elephant": {
-                "volume": 1,
-                "pitch": [
-                    0.9,
-                    1.0
-                ],
-                "events": {
-                    "step": {
-                        "sound": "elephant.step",
-                        "volume": 0.18,
-                        "pitch": 1.1
-                    },
-                    "ambient": {
-                        "sound": "elephant.trumpet",
-                        "volume": 0.11,
-                        "pitch": 0.9
-                    }
-                }
-            }
-        }
-    }
+	"entity_sounds": {
+		"entities": {
+			"sirlich:elephant": {
+				"volume": 1,
+				"pitch": [0.9, 1.0],
+				"events": {
+					"step": {
+						"sound": "elephant.step",
+						"volume": 0.18,
+						"pitch": 1.1
+					},
+					"ambient": {
+						"sound": "elephant.trumpet",
+						"volume": 0.11,
+						"pitch": 0.9
+					}
+				}
+			}
+		}
+	}
 }
 ```
+
 # Adding sounds to Animations
 
 Sounds played in animations function based off of `short-name` definitions in the RP entity file.
 
 This example shows playing a wing-flap sound, synced with an animation.
 
-{% include filepath.html path="RP/entities/dragon.json" local_path="minecraft:client_entity/description"%}
+<FilePath>RP/entities/dragon.json#minecraft:client_entity/description</FilePath>
+
 ```json
 "sound_effects": {
     "wing_flap": "wiki.dragon.wing_flap" //where wiki.dragon.roar is a sound definited in sound_definitions
 }
 ```
-{% include filepath.html path="RP/animations/dragon.json" local_path="animations/animation.dragon.flying"%}
+
+<FilePath>RP/animations/dragon.json#animations/animation.dragon.flying</FilePath>
+
 ```json
 "sound_effects": {
     "3.16": {
@@ -240,13 +243,16 @@ You can play sounds within animation controllers in a similar way that animation
 
 This example shows playing an explosion sound, synced using an animation controller.
 
-{% include filepath.html path="RP/entities/custom_tnt.json" local_path="minecraft:client_entity/description"%}
+<FilePath>RP/entities/custom_tnt.json#minecraft:client_entity/description</FilePath>
+
 ```json
 "sound_effects": {
     "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound definited in sound_definitions just like animation sounds.
 }
 ```
-{% include filepath.html path="RP/animation_controllers/custom_tnt.animation_controllers.json" local_path="animation_controllers/custom_tnt.animation_controllers.json"%}
+
+<FilePath>RP/animation_controllers/custom_tnt.animation_controllers.json#animation_controllers/custom_tnt.animation_controllers.json</FilePath>
+
 ```json
 "states": {
   "default": {
@@ -270,4 +276,3 @@ This example shows playing an explosion sound, synced using an animation control
   }
 }
 ```
-

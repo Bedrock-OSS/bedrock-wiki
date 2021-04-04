@@ -32,7 +32,8 @@ Now you'll need to add a `minecraft:equipment` component in the component list f
 
 In our example it will look like this:
 
-{% include filepath.html path="BP/entity/mandolorian.json"%}
+<FilePath>BP/entity/mandolorian.json</FilePath>
+
 ```json
 "components": {
     "minecraft:equipment": {
@@ -43,26 +44,27 @@ In our example it will look like this:
 
 ## Setting up the loot table
 
-Finally, add the loot table for the entity. It needs to be in `loot_tables/entities/<your_loot_table_name>.json` in the behavior pack. In our case, it's called `mandolorian.json`. 
+Finally, add the loot table for the entity. It needs to be in `loot_tables/entities/<your_loot_table_name>.json` in the behavior pack. In our case, it's called `mandolorian.json`.
 
 `Warning:` This isn' the same loot table as what it drops on death. So make sure it has a different name.
 To have the entity always spawn with the same item, add the following loot table:
 
-{% include filepath.html path="BP/loot_tables/entities/gear/mandolorian.json"%}
+<FilePath>BP/loot_tables/entities/gear/mandolorian.json</FilePath>
+
 ```json
 {
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "dd:hammer", // Custom item named 'hammer' with the identifier 'dd'.
-          "weight": 1
-        }
-      ]
-    }
-  ]
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "dd:hammer", // Custom item named 'hammer' with the identifier 'dd'.
+					"weight": 1
+				}
+			]
+		}
+	]
 }
 ```
 

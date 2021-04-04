@@ -9,13 +9,15 @@ parent: Tutorials
 <Label color="green">Beginner</Label>
 
 ## Using Damage Sensor
+
 The best and most flexible way of disabling damage for entities is using the `minecraft:damage_sensor` component. The component allows us to use `filters` to determine which damage sources are allowed to damage our entity.
 
 The best way to learn about this component is by using the [vanilla examples for damage sensor.](https://sirlich.github.io/technical-bedrock/vanilla-usage/components-1.14.html#minecraftdamage_sensor)
 
 ### Completely Invulnerable Entity
 
-{% include filepath.html path="BP/entities/entity.json" local_path="minecraft:entity/components"%}
+<FilePath>BP/entities/entity.json#minecraft:entity/components</FilePath>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -27,7 +29,8 @@ The best way to learn about this component is by using the [vanilla examples for
 
 ### Disable Damage from Player
 
-{% include filepath.html path="BP/entities/entity.json" local_path="minecraft:entity/components"%}
+<FilePath>BP/entities/entity.json#minecraft:entity/components</FilePath>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -45,11 +48,12 @@ The best way to learn about this component is by using the [vanilla examples for
 
 ## Min Health
 
-The `min` property in the `minecraft:health` component allows us to make invincible entities that cannot die. This includes when using `./kill @e`. This is not considered a good solution, because entities like this are hard to get rid of. 
+The `min` property in the `minecraft:health` component allows us to make invincible entities that cannot die. This includes when using `./kill @e`. This is not considered a good solution, because entities like this are hard to get rid of.
 
 If you do choose to use this component, please make sure you have another method for killing the entity. Triggering `minecraft:instant_despawn` from something like an environment sensor, a timer, or an interact is a good solution.
 
-{% include filepath.html path="BP/entities/entity.json" local_path="minecraft:entity/components"%}
+<FilePath>BP/entities/entity.json#minecraft:entity/components</FilePath>
+
 ```json
 "minecraft:health": {
     "value": 1,
