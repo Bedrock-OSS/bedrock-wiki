@@ -7,7 +7,7 @@ hidden: true
 
 ## Contributions are welcome!
 
-[GitHub](https://github.com/SirLich/bedrock-wiki){: .btn .btn-blue }
+<Button color="blue" link="https://github.com/Bedrock-OSS/bedrock-wiki">GitHub</Button>
 
 If you are familiar with GitHub, the Wiki accepts pull requests. Website is located on the `gh-pages` branch.
 

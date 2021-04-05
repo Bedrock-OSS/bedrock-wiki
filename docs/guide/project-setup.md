@@ -23,7 +23,7 @@ Like all other code files in your pack, it's written in [JSON](https://www.json.
 -   **Square brackets hold arrays;**
 -   **Every `{` must be closed by `}`, every `[` with `]`, same with `{}`, `[]`, `""`, `''`, etc.**
 
-[Learn more about JSON](https://www.w3schools.com/whatis/whatis_json.asp){: .btn .btn-blue }
+<Button color="blue" link="https://www.w3schools.com/whatis/whatis_json.asp">Learn more about JSON</Button>
 
 ---
 

@@ -2,6 +2,7 @@ import Layout from './Components/Layout.vue'
 import FilePath from './Components/Content/FilePath.vue'
 import Label from './Components/Content/Label.vue'
 import YouTubeEmbed from './Components/Content/YouTubeEmbed.vue'
+import Button from './Components/Content/Button.vue'
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import Component404 from '../../404.md'
@@ -12,6 +13,7 @@ const globalComponents: [string, Component][] = [
 	['FilePath', FilePath],
 	['Label', Label],
 	['YouTubeEmbed', YouTubeEmbed],
+	['Button', Button],
 ]
 
 const theme: Theme = {

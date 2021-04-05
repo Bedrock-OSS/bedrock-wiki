@@ -11,6 +11,6 @@ We use discord as the hub for all our communication. You can join the following 
 
 ## Join us!
 
-[Bedrock Addons](https://discord.gg/46JUdQb){: .btn .btn-blue }
-[Bedrock OSS](https://discord.gg/XjV87YN){: .btn .btn-blue }
-[More Discord Servers](/knowledge/useful-links.html#discord-links){: .btn .btn-blue }
+<Button color="blue" link="https://discord.gg/46JUdQb">Bedrock Addons</Button>
+<Button color="blue" link="https://discord.gg/XjV87YN">Bedrock OSS</Button>
+<Button color="blue" link="/knowledge/useful-links.html#discord-links">More Discord Servers</Button>

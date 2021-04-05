@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, toRef } from 'vue'
+import { defineProps } from 'vue'
 
 const props = defineProps<{
 	color: 'red' | 'yellow' | 'green'
