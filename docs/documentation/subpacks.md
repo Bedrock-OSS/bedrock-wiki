@@ -32,8 +32,9 @@ Subpacks are what cause the gear icon to appear on packs. They are intended for 
 </div>
 
 -   Inside each of these folders you can add the content of each subpack.
-This can be anything that normally goes in your behavior or resource pack.
-e.g.
+    This can be anything that normally goes in your behavior or resource pack.
+    e.g.
+
 <div markdown="0" class="folder-structure">
     <ul>
         <li><span class="folder">RP</span>

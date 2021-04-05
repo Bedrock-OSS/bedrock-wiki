@@ -1,0 +1,66 @@
+/* Directory structure */
+
+.folder-structure ul {
+	list-style: none;
+	margin-top: 0;
+	padding-left: 0;
+}
+
+.folder-structure li {
+	padding-left: 20px;
+	position: relative;
+	line-height: 2em;
+	margin: 0;
+}
+
+.folder-structure li:before {
+	position: absolute;
+	left: 5px;
+	top: -2px;
+	content: '' !important;
+	display: block;
+	height: 1em;
+	border-bottom: 1px solid #bbb;
+	width: 10px;
+	margin-left: 0 !important;
+}
+
+.folder-structure li:last-child:after {
+	position: absolute;
+	left: 5px;
+	top: 0;
+	content: '';
+	display: block;
+	border-left: 1px solid #bbb;
+	height: 48%;
+}
+
+.folder-structure li:not(:last-child):after {
+	position: absolute;
+	left: 5px;
+	bottom: 0;
+	content: '';
+	display: block;
+	border-left: 1px solid #bbb;
+	height: 100%;
+}
+
+.folder-structure > ul > li:after {
+	height: 0 !important;
+}
+
+.folder-structure > ul > li:before {
+	border-color: transparent;
+}
+
+.file::before {
+	content: '📝';
+}
+
+.folder::before {
+	content: '📁';
+}
+
+.image::before {
+	content: '🖼️';
+}
