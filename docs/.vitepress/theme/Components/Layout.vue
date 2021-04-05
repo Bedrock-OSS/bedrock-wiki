@@ -11,7 +11,7 @@
 				'min-h-screen': true,
 			}"
 		/>
-    <Contributors/>
+<!--    <Contributors/>-->
 	</main>
 </template>
 
