@@ -11,6 +11,7 @@
 				'min-h-screen': true,
 			}"
 		/>
+    <Contributors/>
 	</main>
 </template>
 
@@ -18,6 +19,6 @@
 import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
-
+import Contributors from "./Content/Contributors.vue";
 const { isVisible } = useSidebarState()
 </script>
