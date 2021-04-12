@@ -19,6 +19,7 @@ The website is still in progress, but you can [view it here](https://bedrock-oss
 -   [x] **CSS:** Headers
 -   [x] **CSS:** Links
 -   [x] **CSS:** Extract file imports into dedicated file
+-   [ ] **CSS:** Cannot scroll in code blocks
 -   [ ] **Vue Component:** DropDown
 -   [ ] **Vue Component:** Button
 -   [x] **Vue Component:** Sidebar Tag
@@ -30,3 +31,4 @@ The website is still in progress, but you can [view it here](https://bedrock-oss
 -   [x] **Sidebar:** Sorting
 -   [x] **Markdown:** Use new `<FilePath>RP/entity/test.json</FilePath>` instead of the jekyll include
 -   [ ] **Code Blocks** Fix code blocks without a language set (E.g. https://bedrock-oss.github.io/bedrock-wiki-vite/concepts/mcfunction.html)
+-   [ ] Mobile layout
