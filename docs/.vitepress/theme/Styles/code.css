@@ -28,6 +28,10 @@ div[class*='language-'] {
 	line-height: 24px;
 }
 
+/* Line numbers mode */
+div[class*='language-'] {
+	padding-left: 3.5rem;
+}
 [class*='language-'] pre {
 	@apply relative m-0 overflow-x-auto;
 	padding: 1.25rem 1.5rem;
@@ -50,12 +54,6 @@ div[class*='language-'] {
 
 .dark .highlight-lines .highlighted {
 	background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* Line numbers mode */
-
-div[class*='language-'].line-numbers-mode {
-	padding-left: 3.5rem;
 }
 
 .line-numbers-wrapper {
