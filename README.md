@@ -21,7 +21,7 @@ The website is still in progress, but you can [view it here](https://bedrock-oss
 -   [x] **CSS:** Extract file imports into dedicated file
 -   [ ] **Vue Component:** DropDown
 -   [ ] **Vue Component:** Button
--   [ ] **Vue Component:** Sidebar Tag
+-   [x] **Vue Component:** Sidebar Tag
 -   [ ] **Vue Component:** Search
 -   [ ] **Vue Component:** Show contributors of a page
 -   [ ] **Vue Component:** Edit page link
