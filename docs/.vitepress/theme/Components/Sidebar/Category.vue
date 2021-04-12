@@ -5,7 +5,7 @@
 	>
 		<summary
 			@click.prevent.exact="isOpen = !isOpen"
-			:class="{ 'list-none': true }"
+			:class="{ 'list-none outline-none': true }"
 		>
 			<span>{{ props.item.text }}</span>
 
