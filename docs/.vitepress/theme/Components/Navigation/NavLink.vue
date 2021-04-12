@@ -14,7 +14,9 @@
 	>
 		<div :class="{ 'flex-1': true }">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
-		<span v-if="props.item.badge" :class="[badgeClass, badgeColorClass]">{{ props.item.badge.text }}</span>
+		<span v-if="props.item.badge" :class="[badgeClass, badgeColorClass]">{{
+			props.item.badge.text
+		}}</span>
 	</a>
 </template>
 
@@ -25,12 +27,12 @@ import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navL
 import type { Badge } from '../Sidebar/Structure'
 
 const badgeClass = {
-	"text-xs": true,
-	"pl-2": true,
-	"pr-2": true,
-	"rounded-sm": true,
-	"flex-initial": true,
-	"py-1": true,
+	'text-xs': true,
+	'pl-2': true,
+	'pr-2': true,
+	'rounded-lg': true,
+	'flex-initial': true,
+	'py-1': true,
 }
 
 const emit = defineEmit(['change'])
@@ -47,39 +49,39 @@ const propsRefs = toRefs(props)
 const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
 
 const badgeColorClass = computed(() => {
-	if (props.item.badge == null ) {
+	if (props.item.badge == null) {
 		return {}
 	} else {
-		switch(props.item.badge.color) {
-			case "red":
+		switch (props.item.badge.color) {
+			case 'red':
 				return {
-					"bg-red-500": true,
-					"text-white": true,
+					'bg-red-500': true,
+					'text-white': true,
 				}
-			case "blue":
+			case 'blue':
 				return {
-					"bg-blue-300": true,
-					"text-white": true,
+					'bg-blue-600': true,
+					'text-white': true,
 				}
-			case "yellow":
+			case 'yellow':
 				return {
-					"bg-yellow-300": true,
-					"text-black": true,
+					'bg-yellow-500': true,
+					'text-white': true,
 				}
-			case "green":
+			case 'green':
 				return {
-					"bg-green-300": true,
-					"text-black": true,
+					'bg-green-300': true,
+					'text-black': true,
 				}
-			case "guide":
+			case 'guide':
 				return {
-					"bg-gray-900": true,
-					"text-white": true,
+					'bg-gray-900': true,
+					'text-white': true,
 				}
 			default:
 				return {
-					"bg-blue-300": true,
-					"text-black": true,
+					'bg-blue-600': true,
+					'text-black': true,
 				}
 		}
 	}
