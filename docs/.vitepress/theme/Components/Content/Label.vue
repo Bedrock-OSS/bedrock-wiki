@@ -1,34 +1,22 @@
 <template>
-	<p :class="`label ${color}`"><slot /></p>
+	<p
+		:class="{
+			...cssClasses,
+			'rounded-lg mb-2 mt-4 py-1 px-2 inline-block uppercase': true,
+		}"
+	>
+		<slot />
+	</p>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, toRefs } from 'vue'
+import { useBadgeColor } from '../../Composables/useBadgeColor'
 
 const props = defineProps<{
 	color: 'red' | 'yellow' | 'green'
 }>()
+const { color } = toRefs(props)
+
+const cssClasses = useBadgeColor(color)
 </script>
-
-<style scoped>
-.label {
-	display: inline-block;
-	padding: 0.55em 0.6em;
-	margin: 1rem 0.5rem 0.5rem 0.5rem;
-	text-transform: uppercase;
-	vertical-align: middle;
-	font-size: 12px !important;
-	border-radius: 12px;
-}
-
-.red {
-	background-color: #e94c4c;
-}
-.yellow {
-	background-color: #f7d12e;
-	color: #44434d;
-}
-.green {
-	background-color: #009c7b;
-}
-</style>
