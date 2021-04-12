@@ -4,13 +4,18 @@
 .dark .header-anchor {
 	@apply text-purple-700;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	@apply cursor-pointer relative flex mb-3 mt-6;
+	@apply cursor-pointer relative flex m-0;
+}
+h1,
+h2 {
+	@apply mb-3 mt-6;
 }
 
 h1:hover,
