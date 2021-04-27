@@ -14,23 +14,33 @@
 	>
 		<div :class="{ 'flex-1': true }">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
-		<span v-if="props.item.badge" :class="[badgeClass, badgeColorClass]">{{ props.item.badge.text }}</span>
+		<span v-if="props.item.badge" :class="[badgeClass, badgeColorClass]">{{
+			props.item.badge.text
+		}}</span>
 	</a>
 </template>
 
 <script setup lang="ts">
 import ExternalIcon from '../Icons/ExternalIcon.vue'
-import { computed, defineEmit, defineProps, toRefs, watchEffect } from 'vue'
+import {
+	computed,
+	defineEmit,
+	defineProps,
+	reactive,
+	toRefs,
+	watchEffect,
+} from 'vue'
 import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navLink'
 import type { Badge } from '../Sidebar/Structure'
+import { useBadgeColor } from '../../Composables/useBadgeColor'
 
 const badgeClass = {
-	"text-xs": true,
-	"pl-2": true,
-	"pr-2": true,
-	"rounded-sm": true,
-	"flex-initial": true,
-	"py-1": true,
+	'text-xs': true,
+	'pl-2': true,
+	'pr-2': true,
+	'rounded-lg': true,
+	'flex-initial': true,
+	'py-1': true,
 }
 
 const emit = defineEmit(['change'])
@@ -43,45 +53,15 @@ const props = defineProps<{
 	}
 }>()
 const propsRefs = toRefs(props)
+const { color } = toRefs(props.item.badge ?? reactive({ color: 'default' }))
 
 const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
 
 const badgeColorClass = computed(() => {
-	if (props.item.badge == null ) {
+	if (props.item.badge == null) {
 		return {}
 	} else {
-		switch(props.item.badge.color) {
-			case "red":
-				return {
-					"bg-red-500": true,
-					"text-white": true,
-				}
-			case "blue":
-				return {
-					"bg-blue-300": true,
-					"text-white": true,
-				}
-			case "yellow":
-				return {
-					"bg-yellow-300": true,
-					"text-black": true,
-				}
-			case "green":
-				return {
-					"bg-green-300": true,
-					"text-black": true,
-				}
-			case "guide":
-				return {
-					"bg-gray-900": true,
-					"text-white": true,
-				}
-			default:
-				return {
-					"bg-blue-300": true,
-					"text-black": true,
-				}
-		}
+		return useBadgeColor(color).value
 	}
 })
 
