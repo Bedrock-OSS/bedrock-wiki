@@ -1,7 +1,9 @@
 import { useToggle } from '@vueuse/core'
 import { ref } from 'vue'
 
-const isVisible = ref(true)
+const isMobile = window.matchMedia('(max-width: 768px)').matches
+
+const isVisible = ref(!isMobile)
 export function useSidebarState() {
 	return {
 		isVisible,

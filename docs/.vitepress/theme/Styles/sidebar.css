@@ -1,0 +1,7 @@
+.sidebar {
+	@apply bg-white;
+}
+
+.dark .sidebar {
+	@apply bg-true-gray-800 text-white;
+}

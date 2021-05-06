@@ -6,12 +6,12 @@
 		<Content
 			:class="{
 				'm-8': true,
-				'ml-80': isVisible,
+				'md:ml-80': isVisible,
 				'mt-0': true,
 				'min-h-screen': true,
 			}"
 		/>
-<!--    <Contributors/>-->
+		<!--    <Contributors/>-->
 	</main>
 </template>
 
@@ -19,6 +19,6 @@
 import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
-import Contributors from "./Content/Contributors.vue";
+import Contributors from './Content/Contributors.vue'
 const { isVisible } = useSidebarState()
 </script>
