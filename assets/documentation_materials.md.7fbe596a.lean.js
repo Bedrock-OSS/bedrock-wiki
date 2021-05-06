@@ -1,0 +1,1 @@
+import{o as t,c as d,d as r}from"./404.md.615c37ee.js";const e='{"title":"Materials","description":"","frontmatter":{"layout":"page","title":"Materials","parent":"Documentation"},"relativePath":"documentation/materials.md","lastUpdated":1620330890254}',a={},_=r('',4);a.render=function(r,e,a,i,n,l){return t(),d("div",null,[_])};export default a;export{e as __pageData};
