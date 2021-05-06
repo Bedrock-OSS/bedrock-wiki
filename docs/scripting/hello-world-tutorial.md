@@ -6,9 +6,6 @@ parent: Scripting
 
 # Hello World Tutorial
 
-
-
-
 This tutorial will teach you how to get up and running as a Minecraft Bedrock Edition (Windows 10) script modder!
 
 ## Prerequisites
@@ -29,17 +26,17 @@ You should probably make a shortcut to this directory as it'll make development 
 
 The sub-folders that we are most interested in are:
 
-- `development_behavior_packs`
-- `development_resource_packs`
-- `development_skin_packs`
+-   `development_behavior_packs`
+-   `development_resource_packs`
+-   `development_skin_packs`
 
 These are the folders that our packs will exist in during development.
 Behavior packs hold server code, resource packs hold client code, and skin packs hold skins for your in-game character.
 You might have noticed that there are some other folders that are named something very similar:
 
-- `behavior_packs`
-- `resource_packs`
-- `skin_packs`
+-   `behavior_packs`
+-   `resource_packs`
+-   `skin_packs`
 
 These folders are where completed Minecraft Bedrock Edition packs go.
 For the purposes of this tutorial we will only be focusing on the creation of a behavior pack (not a resource or skin pack).
@@ -67,9 +64,10 @@ Similarly, create a file called `clientScript.js` inside of the `client` folder.
 
 Last but not least, download this image and place it in the `HelloWorld` folder:
 
-![](/assets/images/scripting/hello-world-tutorial/pack_icon.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/pack_icon.png)
 
 Your folder structure should now look like this:
+
 ```
 /development_behavior_packs
     /HelloWorld
@@ -83,14 +81,15 @@ Your folder structure should now look like this:
 ```
 
 Here is what each file does:
-- `manifest.json`
-  - The manifest JSON file contains metadata that describes your behavior pack and how its resources are connected together.
-- `pack_icon.png`
-  - This image will be shown next to your pack's listing on the Create New World screen.
-- `serverScript.js`
-  - This Javascript file will be where you write all the code that should be ran on the server side.
-- `clientScript`
-  - This Javascript file will be where you write all the code that should be ran on the client side.
+
+-   `manifest.json`
+    -   The manifest JSON file contains metadata that describes your behavior pack and how its resources are connected together.
+-   `pack_icon.png`
+    -   This image will be shown next to your pack's listing on the Create New World screen.
+-   `serverScript.js`
+    -   This Javascript file will be where you write all the code that should be ran on the server side.
+-   `clientScript`
+    -   This Javascript file will be where you write all the code that should be ran on the client side.
 
 ### What's the difference between 'server-side' and 'client-side'?
 
@@ -101,14 +100,14 @@ Easy, right?
 As it turns out, there can be some ambiguity even with two such terms.
 Here we disambiguate the four possible meanings of “client” and “server”:
 
-- physical client
-  - The physical client is the entire program that runs whenever you launch [Minecraft from the Windows 10 store](https://www.minecraft.net/en-us/store/minecraft-windows10). All threads, processes, and services that run during the game’s graphical, interactable lifetime are part of the physical client.
-- physical server
-  - Often known as the dedicated server, the physical server is the entire program that runs whenever you launch any sort of [bedrock_server.exe](https://www.minecraft.net/en-us/download/server/bedrock) that does not bring up a playable GUI.
-- logical server
-  - The logical server is what runs game logic: mob spawning, weather, updating inventories, health, AI, and all other game mechanics. The logical server is present within the physical server, but is also can run inside a physical client together with a logical client, as a single player world. The logical server always runs in a thread named the Server Thread.
-- logical client
-  - The logical client is what accepts input from the player and relays it to the logical server. In addition, it also receives information from the logical server and makes it available graphically to the player. The logical client runs in the Client Thread, though often several other threads are spawned to handle things like audio and chunk render batching.
+-   physical client
+    -   The physical client is the entire program that runs whenever you launch [Minecraft from the Windows 10 store](https://www.minecraft.net/en-us/store/minecraft-windows10). All threads, processes, and services that run during the game’s graphical, interactable lifetime are part of the physical client.
+-   physical server
+    -   Often known as the dedicated server, the physical server is the entire program that runs whenever you launch any sort of [bedrock_server.exe](https://www.minecraft.net/en-us/download/server/bedrock) that does not bring up a playable GUI.
+-   logical server
+    -   The logical server is what runs game logic: mob spawning, weather, updating inventories, health, AI, and all other game mechanics. The logical server is present within the physical server, but is also can run inside a physical client together with a logical client, as a single player world. The logical server always runs in a thread named the Server Thread.
+-   logical client
+    -   The logical client is what accepts input from the player and relays it to the logical server. In addition, it also receives information from the logical server and makes it available graphically to the player. The logical client runs in the Client Thread, though often several other threads are spawned to handle things like audio and chunk render batching.
 
 Our `clientScript.js` will run within the logical client and will handle most things that interact with the visual world that a player may see through their physical client.
 Our `serverScript.js` will run within the logical server and do most of the heavy lifting for your larger packs.
@@ -125,44 +124,43 @@ Copy/paste this into your `manifest.json`:
 
 ```json
 {
-    "format_version": 2,
-    "metadata": {
-        "authors": [
-            "<your-name>"
-        ],
-        "url": "<your-github-repo-url>",
-        "license": "TBD"
-    },
-    "header": {
-        "name": "Hello World",
-        "description": "Hello World scripting tutorial addon!",
-        "uuid": "<uuid-1>",
-        "version": [0, 0, 1],
-        "min_engine_version": [1, 14, 0]
-    },
-    "modules": [
-        {
-            "description": "Hello World behavior pack module",
-            "type": "data",
-            "uuid": "<uuid-2>",
-            "version": [0, 0, 1]
-        },
-        {
-            "description": "Hello World client scripts module",
-            "type": "client_data",
-            "uuid": "<uuid-3>",
-            "version": [0, 0, 1]
-        }
-    ],
-    "dependencies": []
+	"format_version": 2,
+	"metadata": {
+		"authors": ["<your-name>"],
+		"url": "<your-github-repo-url>",
+		"license": "TBD"
+	},
+	"header": {
+		"name": "Hello World",
+		"description": "Hello World scripting tutorial addon!",
+		"uuid": "<uuid-1>",
+		"version": [0, 0, 1],
+		"min_engine_version": [1, 14, 0]
+	},
+	"modules": [
+		{
+			"description": "Hello World behavior pack module",
+			"type": "data",
+			"uuid": "<uuid-2>",
+			"version": [0, 0, 1]
+		},
+		{
+			"description": "Hello World client scripts module",
+			"type": "client_data",
+			"uuid": "<uuid-3>",
+			"version": [0, 0, 1]
+		}
+	],
+	"dependencies": []
 }
 ```
 
 Replace:
-- `<your-name>`
-  - with your name
-- `<your-github-repo-url>`
-  - with the URL of the GitHub/GitLab/etc repository that you're pushing your code to
+
+-   `<your-name>`
+    -   with your name
+-   `<your-github-repo-url>`
+    -   with the URL of the GitHub/GitLab/etc repository that you're pushing your code to
 
 But what about `<uuid-1>`, `<uuid-2>`, and `<uuid-3>`?
 What even are UUIDs?
@@ -214,44 +212,44 @@ Let's open Minecraft Bedrock Edition and see what happens.
 
 Go to "Create New World" and click on the "Behavior Packs" button in the lower-left "Add-Ons" sub-menu.
 
-![](/assets/images/scripting/hello-world-tutorial/addons-menu.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addons-menu.png)
 
 Your Hello World addon should show up in the list of behavior packs!
 
 Clicking on your addon should bring up a button titled "Activate". Click it.
 
-![](/assets/images/scripting/hello-world-tutorial/load-pack-menu-activate.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/load-pack-menu-activate.png)
 
 After clicking "Activate", a pop-up should appear titled "Turn Off Achievements?".
 For obvious reasons achievement getting has to be turned off when addons are loaded as they could potentially make it easier to achieve them.
 
-![](/assets/images/scripting/hello-world-tutorial/turn-off-achievements-popup.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/turn-off-achievements-popup.png)
 
 After clicking "Continue", your behavior pack should have been moved to the "Active" section!
 
-![](/assets/images/scripting/hello-world-tutorial/active-hello-world-addon.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/active-hello-world-addon.png)
 
 The next most important part is to enable "Additional Modding Capabilities" under "Experiments".
 If you don't enable this then none of your scripts will work at all!
 Scroll down until you see this toggle button and turn it on.
 
-![](/assets/images/scripting/hello-world-tutorial/additional-modding-capabilities-toggle.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/additional-modding-capabilities-toggle.png)
 
 After turning it on you will see a pop-up titled "Activate Experimental Gameplay?".
 Select "Continue".
 
-![](/assets/images/scripting/hello-world-tutorial/activate-experimental-gameplay-popup.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/activate-experimental-gameplay-popup.png)
 
 While you're down here, you can toggle any other options that will make development easier.
 Here are some that I prefer to have on.
 
 World Options:
 
-![](/assets/images/scripting/hello-world-tutorial/world-options.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/world-options.png)
 
 World Cheats:
 
-![](/assets/images/scripting/hello-world-tutorial/world-cheats.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/world-cheats.png)
 
 That should be it!
 
@@ -261,11 +259,11 @@ The first thing that you should see when your world is loading is another pop-up
 This appears so that everyone knows for a fact that some non-official code will be ran when they join your world.
 This is helpful to prepare other players for random bugs that could appear due to a random addon, or just any other hijinks that you as a mod-maker will put them through :)
 
-![](/assets/images/scripting/hello-world-tutorial/enable-scripts-popup.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/enable-scripts-popup.png)
 
 After selecting "Enter World", you will finally join with your new Minecraft Bedrock Edition world with your new behavior pack installed and ........ nothing happens lol
 
-![](/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-off.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-off.png)
 
 That's because we haven't actually written code yet! I guess we should do that now - on to the fun part!
 
@@ -275,67 +273,71 @@ Copy and paste this into your `serverScript.js` file.
 
 ```js
 // this signs-up this script to run on the server-side of the Minecraft Bedrock Edition engine
-const systemServer = server.registerSystem(0, 0);
+const systemServer = server.registerSystem(0, 0)
 
 // the server runs this as soon as the scripts are all fully loaded
-systemServer.initialize = function() {
-    // turn on logging of information, warnings, and errors
-    const scriptLoggerConfig = this.createEventData("minecraft:script_logger_config");
-    scriptLoggerConfig.data.log_errors = true;
-    scriptLoggerConfig.data.log_information = true;
-    scriptLoggerConfig.data.log_warnings = true;
-    this.broadcastEvent("minecraft:script_logger_config", scriptLoggerConfig);
+systemServer.initialize = function () {
+	// turn on logging of information, warnings, and errors
+	const scriptLoggerConfig = this.createEventData(
+		'minecraft:script_logger_config'
+	)
+	scriptLoggerConfig.data.log_errors = true
+	scriptLoggerConfig.data.log_information = true
+	scriptLoggerConfig.data.log_warnings = true
+	this.broadcastEvent('minecraft:script_logger_config', scriptLoggerConfig)
 
-    // register event data, register components, register queries, listen for events, . . .
+	// register event data, register components, register queries, listen for events, . . .
 
-    this.counter = 0;
-};
+	this.counter = 0
+}
 
 // the server runs this update function 20 times per second
-systemServer.update = function() {
-    // print hello world to the world's chat once per second
-    this.counter++;
-    if (this.counter === 20) {
-        this.log("Server!");
-        this.counter = 0;
-    }
+systemServer.update = function () {
+	// print hello world to the world's chat once per second
+	this.counter++
+	if (this.counter === 20) {
+		this.log('Server!')
+		this.counter = 0
+	}
 
-    // update other stuff . . .
-};
+	// update other stuff . . .
+}
 
 // the server only runs this when the world is shutting down
-systemServer.shutdown = function() {
-    // clean up stuff . . .
-};
+systemServer.shutdown = function () {
+	// clean up stuff . . .
+}
 
 // This is just a helper function that simplifies logging data to the console.
-systemServer.log = function(...items) {
-    // Convert every parameter into a legible string and collect them into an array.
-	const toString = item => {
-		switch(Object.prototype.toString.call(item)) {
+systemServer.log = function (...items) {
+	// Convert every parameter into a legible string and collect them into an array.
+	const toString = (item) => {
+		switch (Object.prototype.toString.call(item)) {
 			case '[object Undefined]':
-				return 'undefined';
+				return 'undefined'
 			case '[object Null]':
-				return 'null';
+				return 'null'
 			case '[object String]':
-				return `"${item}"`;
+				return `"${item}"`
 			case '[object Array]':
-				const array = item.map(toString);
-				return `[${array.join(', ')}]`;
+				const array = item.map(toString)
+				return `[${array.join(', ')}]`
 			case '[object Object]':
-				const object = Object.keys(item).map(key => `${key}: ${toString(item[key])}`);
-				return `{${object.join(', ')}}`;
+				const object = Object.keys(item).map(
+					(key) => `${key}: ${toString(item[key])}`
+				)
+				return `{${object.join(', ')}}`
 			case '[object Function]':
-				return item.toString();
+				return item.toString()
 			default:
-				return item;
+				return item
 		}
-    }
-    
-    // Join the string array items into a single string and print it to the world's chat.
-    const chatEvent = this.createEventData("minecraft:display_chat_event");
-    chatEvent.data.message = items.map(toString).join(' ');
-    this.broadcastEvent("minecraft:display_chat_event", chatEvent);
+	}
+
+	// Join the string array items into a single string and print it to the world's chat.
+	const chatEvent = this.createEventData('minecraft:display_chat_event')
+	chatEvent.data.message = items.map(toString).join(' ')
+	this.broadcastEvent('minecraft:display_chat_event', chatEvent)
 }
 ```
 
@@ -388,7 +390,7 @@ We never use the `.shutdown()` method because nothing we used needs to be cleane
 Now that we know everything about this script, let's test it out!
 Load up the Minecraft world you created earlier!
 
-![](/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-server-only.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-server-only.png)
 
 You should end up seeing something like this!
 
@@ -400,80 +402,84 @@ Copy and paste this into your `clientScript.js` file. I will delve into its cont
 
 ```js
 // this signs-up this script to run on the client-side of the Minecraft Bedrock Edition engine
-const systemClient = client.registerSystem(0, 0);
+const systemClient = client.registerSystem(0, 0)
 
 // the client runs this as soon as the scripts are all fully loaded
-systemClient.initialize = function() {
-    // turn on logging of information, warnings, and errors
-    const scriptLoggerConfig = this.createEventData("minecraft:script_logger_config");
-    scriptLoggerConfig.data.log_errors = true;
-    scriptLoggerConfig.data.log_information = true;
-    scriptLoggerConfig.data.log_warnings = true;
-    this.broadcastEvent("minecraft:script_logger_config", scriptLoggerConfig);
+systemClient.initialize = function () {
+	// turn on logging of information, warnings, and errors
+	const scriptLoggerConfig = this.createEventData(
+		'minecraft:script_logger_config'
+	)
+	scriptLoggerConfig.data.log_errors = true
+	scriptLoggerConfig.data.log_information = true
+	scriptLoggerConfig.data.log_warnings = true
+	this.broadcastEvent('minecraft:script_logger_config', scriptLoggerConfig)
 
-    // register event data, register components, register queries, listen for events, . . .
+	// register event data, register components, register queries, listen for events, . . .
 
-    this.counter = 0;
-};
+	this.counter = 0
+}
 
 // the client runs this update function 20 times per second
-systemClient.update = function() {
-    // print hello world to the world's chat once per second
-    this.counter++;
-    if (this.counter === 20) {
-        this.log("Client!");
-        this.counter = 0;
-    }
+systemClient.update = function () {
+	// print hello world to the world's chat once per second
+	this.counter++
+	if (this.counter === 20) {
+		this.log('Client!')
+		this.counter = 0
+	}
 
-    // update other stuff . . .
-};
+	// update other stuff . . .
+}
 
 // the client only runs this when the world is shutting down
-systemClient.shutdown = function() {
-    // clean up stuff . . .
-};
+systemClient.shutdown = function () {
+	// clean up stuff . . .
+}
 
 // This is just a helper function that simplifies logging data to the console.
-systemClient.log = function(...items) {
-    // Convert every parameter into a legible string and collect them into an array.
-	const toString = item => {
-		switch(Object.prototype.toString.call(item)) {
+systemClient.log = function (...items) {
+	// Convert every parameter into a legible string and collect them into an array.
+	const toString = (item) => {
+		switch (Object.prototype.toString.call(item)) {
 			case '[object Undefined]':
-				return 'undefined';
+				return 'undefined'
 			case '[object Null]':
-				return 'null';
+				return 'null'
 			case '[object String]':
-				return `"${item}"`;
+				return `"${item}"`
 			case '[object Array]':
-				const array = item.map(toString);
-				return `[${array.join(', ')}]`;
+				const array = item.map(toString)
+				return `[${array.join(', ')}]`
 			case '[object Object]':
-				const object = Object.keys(item).map(key => `${key}: ${toString(item[key])}`);
-				return `{${object.join(', ')}}`;
+				const object = Object.keys(item).map(
+					(key) => `${key}: ${toString(item[key])}`
+				)
+				return `{${object.join(', ')}}`
 			case '[object Function]':
-				return item.toString();
+				return item.toString()
 			default:
-				return item;
+				return item
 		}
-    }
-    
-    // Join the string array items into a single string and print it to the world's chat.
-    const chatEvent = this.createEventData("minecraft:display_chat_event");
-    chatEvent.data.message = items.map(toString).join(' ');
-    this.broadcastEvent("minecraft:display_chat_event", chatEvent);
+	}
+
+	// Join the string array items into a single string and print it to the world's chat.
+	const chatEvent = this.createEventData('minecraft:display_chat_event')
+	chatEvent.data.message = items.map(toString).join(' ')
+	this.broadcastEvent('minecraft:display_chat_event', chatEvent)
 }
 ```
 
 You should see many similarities between the `clientScript.js` and the `serverScript.js`.
 The only difference between them is wherever you see the word `server`, we switched it to `client`.
 
-- `systemServer` becomes `systemClient`
-- `this.log("Server!");` becomes `this.log("Client!");`
+-   `systemServer` becomes `systemClient`
+-   `this.log("Server!");` becomes `this.log("Client!");`
 
 That should be it!
 Load back up your Minecraft world.
 
-![](/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-both.png)
+![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-both.png)
 
 You should see something like this!
 
@@ -501,4 +507,4 @@ When a user double-clicks on the file, it'll be automatically opened by, and imp
 If you made it this far - congrats!
 You're now an official Minecraft Bedrock Edition modder!
 
-If you want the source code from this tutorial, you can download the pack [here](/assets/packs/scripting/hello-world-tutorial/HelloWorld.mcpack).
+If you want the source code from this tutorial, you can download the pack [here](https://wiki.bedrock.dev/assets/packs/scripting/hello-world-tutorial/HelloWorld.mcpack).

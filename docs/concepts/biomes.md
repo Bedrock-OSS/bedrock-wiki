@@ -14,7 +14,7 @@ _Last updated for 1.16.210_
 
 > Biome customization is _experimental_. An experimental gameplay toggle must be enabled for each world that uses behavior packs containing biome definitions. What is currently available works well if declared correctly; however, incorrectly declared components and properties may result in crashing as opposed to just logged errors. Furthermore, due to issues caused by the [inheritance model](#inheritance), the schema used for custom biomes is currently not well constructed.
 
-Behavior packs allow for the customization of biomes. A behavior pack can either create entirely new **custom biomes** or [**overrides** for previously declared biomes](#inheritance), such as the vanilla biomes. Biomes hook into critical gameplay features, such as mob spawning, data-driven gameplay, and presentation of custom blocks. Biomes also enable a powerful system for adding decorations like flowers and trees, or even structures like towers and houses; these decorations and structures are together known as [features](/concepts/features/), which are crucial to world generation but (generally) separate in scope and construction from biomes.
+Behavior packs allow for the customization of biomes. A behavior pack can either create entirely new **custom biomes** or [**overrides** for previously declared biomes](#inheritance), such as the vanilla biomes. Biomes hook into critical gameplay features, such as mob spawning, data-driven gameplay, and presentation of custom blocks. Biomes also enable a powerful system for adding decorations like flowers and trees, or even structures like towers and houses; these decorations and structures are together known as [features](#/concepts/features/), which are crucial to world generation but (generally) separate in scope and construction from biomes.
 
 While both overrides and custom biomes provide generally the same power, custom biomes are the recommended means for creating entirely new gameplay experiences. Overrides should retain the original biome’s identity and intentions and should only be reserved for:
 
@@ -1389,7 +1389,7 @@ Features are mostly outside the scope of biomes, but the two components within a
 }
 ```
 
-The `"minecraft:forced_features"` component can be used to force a feature to generate within a biome without using [feature rules](/concepts/features/).
+The `"minecraft:forced_features"` component can be used to force a feature to generate within a biome without using [feature rules](#/concepts/features/).
 
 Forced features are placed in array order for each pass. When overriding a previously provided array of feature attachments for a placement pass, the previous feature attachments will be completely ignored by the override; only the new attachments will be used. To use the old attachments with the new ones, they must be redeclared within the override.
 

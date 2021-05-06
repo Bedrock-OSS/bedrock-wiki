@@ -75,7 +75,7 @@ Here is an example:
 
 All component groups are custom-created. You cannot use component groups from other entities in your entity.
 
-In vanilla minecraft entities, component groups are namespaced with `minecraft:` -like `minecraft:cat_persian` above. But it is important to remember that they are _not components_. When you create your own component groups, you can use whatever name/namespace:name combination you want. For example `wiki:example_group` above. [Here's more info on namespaces](/knowledge/namespaces).
+In vanilla minecraft entities, component groups are namespaced with `minecraft:` -like `minecraft:cat_persian` above. But it is important to remember that they are _not components_. When you create your own component groups, you can use whatever name/namespace:name combination you want. For example `wiki:example_group` above. [Here's more info on namespaces](/concepts/namespaces).
 
 When a component is placed into a group, is it _not_ automatically added to your entity. In fact, it won't do anything at all until the group is added. When the group is added, the component will become active, and start effecting the behavior of your entity.
 
