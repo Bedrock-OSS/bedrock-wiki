@@ -1,11 +1,12 @@
 import { useToggle } from '@vueuse/core'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
+const isVisible = ref(true)
 export function useSidebarState() {
-	if (import.meta.env.SSR) return ref(true)
-
-	const query = window.matchMedia('(max-width: 768px)')
-	const isVisible = ref(!query.matches)
+	onMounted(() => {
+		const query = window.matchMedia('(max-width: 768px)')
+		isVisible.value = !query.matches
+	})
 
 	return {
 		isVisible,
