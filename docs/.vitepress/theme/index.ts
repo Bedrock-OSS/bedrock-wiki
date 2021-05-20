@@ -4,6 +4,7 @@ import Label from './Components/Content/Label.vue'
 import YouTubeEmbed from './Components/Content/YouTubeEmbed.vue'
 import Button from './Components/Content/Button.vue'
 import JQEmbed from './Components/Content/JQEmbed.vue'
+import WikiImage from './Components/Content/WikiImage.vue'
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import Component404 from '../../404.md'
@@ -16,6 +17,7 @@ const globalComponents: [string, Component][] = [
 	['YouTubeEmbed', YouTubeEmbed],
 	['JQEmbed', JQEmbed],
 	['Button', Button],
+	['WikiImage', WikiImage],
 ]
 
 const theme: Theme = {

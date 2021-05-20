@@ -13,15 +13,15 @@ nav_order: 2
 ## Preparation
 
 First of all, you will need to create the right folders in the right locations and set up your workspace.
-*The remainder of this Guide assumes you are using VSCode. You may also follow along in other editors.*
+_The remainder of this Guide assumes you are using VSCode. You may also follow along in other editors._
 
 Let's create your first addon workspace in Visual Studio Code now.
 
 1. Locate the com.mojang folder. Click [here](https://wiki.bedrock.dev/guide/software-preparation#the-commojang-folder) to find out how to get there.
 2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP` from now on**, in accordance with the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
 3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP` from now on**.
-4. Open VSCode (*Visual Studio Code, the code editor*)
-5. Go to `File > Add folder to workspace...`  and choose `BP`. Do the same with `RP`.
+4. Open VSCode (_Visual Studio Code, the code editor_)
+5. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
 6. Press `File > Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
 
 ## Manifests
@@ -61,6 +61,7 @@ First, create a new file in your BP folder by right clicking on the folder and s
 	]
 }
 ```
+
 Let's break up the code now.
 
 -   "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version, use it.
@@ -75,7 +76,7 @@ So, to make sure your add-on will work correctly. Generate 3 new UUID's which yo
 
 -   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your addon.
 
--   In "`modules`", the "`type`" is defined to be "`data`". This makes your pack a *Behavior Pack*.
+-   In "`modules`", the "`type`" is defined to be "`data`". This makes your pack a _Behavior Pack_.
 
 `Note:` if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
 
@@ -105,9 +106,10 @@ Copy the code below into your newly created `manifest.json`.
 	]
 }
 ```
+
 Now, we can add a little trick to creating add-ons. If you look at the UUID's I put in both the BP and RP you'll notice the UUID in the `dependecies` of the BP is the same as the UUID from the RP. This makes it so that if both the RP and BP are on your device you will only need to assign the BP to your world and the RP will get applied automatically too!
 
-*Now, make sure you replaced all the UUID's with NEW ones **and** that the UUID from the RP is the exact same as the one in the `dependecies` of the BP.*
+_Now, make sure you replaced all the UUID's with NEW ones **and** that the UUID from the RP is the exact same as the one in the `dependecies` of the BP._
 
 #
 
@@ -115,8 +117,7 @@ The last thing to do is to add your `pack_icon.png` file to both the BP and RP f
 
 I'm going to use this image here for both the BP and RP:
 TODO Add new pack_icon
-![Pack icon](/assets/images/guide/pack_icon_BP.png){: .pixelated}
-
+<WikiImage src="/assets/images/guide/pack_icon_BP.png" alt="Pack Icon" pixelated/>
 
 If you have done everything correctly, your packs should show up in Minecraft now!
 TODO Replace this image

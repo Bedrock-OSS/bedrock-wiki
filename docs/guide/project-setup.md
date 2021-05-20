@@ -104,10 +104,10 @@ _Remember that same UUIDs cannot be used twice, which means that you have to gen
 The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders.
 
 I'm going to use this image here for the BP:
-![Pack icon](/assets/images/guide/pack_icon_BP.png){: .pixelated}
+<WikiImage src="/assets/images/guide/pack_icon_BP.png" alt="Pack Icon" pixelated/>
 
 And this one for the RP:
-![Pack icon](/assets/images/guide/pack_icon_RP.png){: .pixelated}
+<WikiImage src="/assets/images/guide/pack_icon_RP.png" alt="Pack Icon" pixelated/>
 
 If you have done everything correctly, your packs should show up in Minecraft now!
 ![](/assets/images/guide/behavior_pack_existing.jpg)

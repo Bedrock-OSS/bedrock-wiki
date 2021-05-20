@@ -116,18 +116,18 @@ These "gorgeous" textures are the ones I'm going to use for my example blocks. T
 
 _Left to right: `blocky.png`, `sapp_log_side.png`, `side_block_top.png`, `sb_up.png`, `sb_down.png`, `sb_north.png`, `sb_south.png`, `sb_west.png`, `sb_east.png`_
 
-![](/assets/images/guide/tut_blocky_texture.png){: .pixelated}
+<WikiImage src="/assets/images/guide/tut_blocky_texture.png" pixelated/>
 
-![](/assets/images/guide/tut_log_side_texture.png){: .pixelated}
-![](/assets/images/guide/tut_log_top_texture.png){: .pixelated}
+<WikiImage src="/assets/images/guide/tut_log_side_texture.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_log_top_texture.png" pixelated/>
 
-![](/assets/images/guide/tut_sb_up.png){: .pixelated}
-![](/assets/images/guide/tut_sb_down.png){: .pixelated}
+<WikiImage src="/assets/images/guide/tut_sb_up.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_down.png" pixelated/>
 
-![](/assets/images/guide/tut_sb_north.png){: .pixelated}
-![](/assets/images/guide/tut_sb_south.png){: .pixelated}
-![](/assets/images/guide/tut_sb_west.png){: .pixelated}
-![](/assets/images/guide/tut_sb_east.png){: .pixelated}
+<WikiImage src="/assets/images/guide/tut_sb_north.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_south.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_west.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_east.png" pixelated/>
 
 All textures need to be defines a **shortname**, (and we'll do it the same way as we defined item texture shortnames in `RP/textures/item_texture.json`), but this time in `RP/textures/terrain_texture.json`
 
