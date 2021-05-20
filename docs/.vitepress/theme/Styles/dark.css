@@ -13,15 +13,21 @@
 }
 
 /* Tables */
-.dark th td {
-	border-color: white;
+.dark tbody,
+.dark td,
+.dark th {
+	border-color: rgb(75, 76, 78);
 }
 
 .dark th {
-	background-color: rgb(0, 80, 53);
+	background-color: rgb(36, 37, 38);
 }
 .dark td {
-	background-color: rgb(0, 170, 170);
+	background-color: rgb(45, 46, 47);
+}
+
+.dark tr:nth-child(2n + 1) td {
+	background-color: rgb(58, 59, 60);
 }
 
 .dark main a {
