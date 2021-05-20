@@ -196,8 +196,8 @@ Additionally, you can use the one below.
 
 <div markdown="0">
 <form>
-<input id="hexValue" placeholder="Hex value" />
-<input id="result" placeholder="Result" readonly />
-<p><a onclick="document.getElementById('result').value = String.fromCodePoint(parseInt(document.getElementById('hexValue').value, 16))" class="btn btn-blue">Convert</a></p>
+<input id="hexValue" placeholder="Hex value" style="padding: 1em;margin: 0.5em;border-radius: 0.2rem; border: solid 1px rgb(38, 38, 38); outline: none;"/>
+<input id="result" placeholder="Result" readonly  style="padding: 1em;margin: 0.5em;border-radius: 0.2rem; border: solid 1px rgb(38, 38, 38); outline: none;"/>
+<a onclick="document.getElementById('result').value = String.fromCodePoint(parseInt(document.getElementById('hexValue').value, 16))" style="text-decoration: none; color: white; background: rgb(91, 33, 182); padding: 0.5em; border-radius: 0.2em; cursor: pointer;">Convert</a>
 </form>
 </div>
