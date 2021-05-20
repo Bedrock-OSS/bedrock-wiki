@@ -37,20 +37,20 @@ h6:hover .header-anchor {
 }
 
 h1 {
-	@apply text-5xl;
+	@apply text-3xl lg:text-4xl;
 }
 h2 {
-	@apply text-3xl;
+	@apply text-2xl lg:text-3xl;
 }
 h3 {
-	@apply text-2xl;
+	@apply text-xl lg:2xl;
 }
 h4 {
-	@apply text-xl;
+	@apply text-lg font-bold lg:text-xl lg:font-normal;
 }
 h5 {
-	@apply text-lg;
+	@apply text-base font-bold lg:text-lg lg:font-normal;
 }
 h6 {
-	@apply text-lg font-bold;
+	@apply text-base lg:text-base lg:font-bold;
 }
