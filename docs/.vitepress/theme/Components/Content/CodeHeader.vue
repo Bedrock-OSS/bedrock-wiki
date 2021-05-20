@@ -1,5 +1,5 @@
 <template>
-	<div ref="codeHeader" class="tile flex mt-8 p-4">
+	<div ref="codeHeader" class="tile flex mt-8 p-4 overflow-hidden">
 		<FileIcon class="mr-2" /> <span class="opacity-50"><slot /></span>
 
 		<span @click="copyCodeSnippet" class="flex ml-auto cursor-pointer">
