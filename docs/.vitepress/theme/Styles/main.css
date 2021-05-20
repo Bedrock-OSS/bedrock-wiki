@@ -5,6 +5,7 @@ table {
 }
 
 table {
+	@apply mt-4;
 	display: block;
 	width: auto !important;
 	max-width: 100%;
@@ -20,7 +21,7 @@ td {
 
 main img {
 	max-width: 100%;
-	display:inline-block;
+	display: inline-block;
 }
 
 pre {

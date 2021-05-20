@@ -43,7 +43,7 @@ h2 {
 	@apply text-2xl lg:text-3xl;
 }
 h3 {
-	@apply text-xl lg:2xl;
+	@apply mt-5 text-xl lg:2xl;
 }
 h4 {
 	@apply text-lg font-bold lg:text-xl lg:font-normal;
