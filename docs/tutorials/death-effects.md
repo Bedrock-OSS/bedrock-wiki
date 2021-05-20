@@ -21,7 +21,7 @@ Simply create an animation controller with a transition based on `is_alive`. The
 
 Here is a sample animation controller:
 
-<FilePath>BP/animation_controllers/death.json</FilePath>
+<CodeHeader>BP/animation_controllers/death.json</CodeHeader>
 
 ```json
 {
@@ -49,7 +49,7 @@ Here is a sample animation controller:
 
 In the case of player entities, an additional transition must be added to the second animation state in order to ensure the state resets between deaths:
 
-<FilePath>BP/animation_controllers/death.json</FilePath>
+<CodeHeader>BP/animation_controllers/death.json</CodeHeader>
 
 ```json
 {

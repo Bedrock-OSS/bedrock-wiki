@@ -35,7 +35,7 @@ Let's go through the states themselves.
 
 `RP//animation_controllers/skele_yaklin.controller.animation.json`
 
-<FilePath>RP/animation_controllers/skele_yaklin.ac.json</FilePath>
+<CodeHeader>RP/animation_controllers/skele_yaklin.ac.json</CodeHeader>
 
 ```json
 {
@@ -87,7 +87,7 @@ _(You can see more about queries [here](/guide/custom-entity-full.html), in the 
 
 ## Resource and Behavior file edits
 
-<FilePath>RP/entity/skele_yaklin.entity.json#minecraft:client_entity/description</FilePath>
+<CodeHeader>RP/entity/skele_yaklin.entity.json#minecraft:client_entity/description</CodeHeader>
 
 ```json
 "animations": {
@@ -110,7 +110,7 @@ _(You can see more about queries [here](/guide/custom-entity-full.html), in the 
 
 Now, let's define the animation controller and the attack animation in the .entity file. The animation controller shortname should be included in "scripts/animate", so it's active all the time.
 
-<FilePath>BP/entities/skele_yaklin.json#minecraft:entity/components</FilePath>
+<CodeHeader>BP/entities/skele_yaklin.json#minecraft:entity/components</CodeHeader>
 
 ```json
   //make the entity attack back
@@ -192,7 +192,7 @@ Behavior animations are able to execute slash(/) commands and to trigger events 
 
 Here's an example of a Behavior Animation that executes multiple slash commands on an entity.
 
-<FilePath>BP/animations/misc.animation.json</FilePath>
+<CodeHeader>BP/animations/misc.animation.json</CodeHeader>
 
 ```json
 {
@@ -226,7 +226,7 @@ This animation file includes two animations: "animation.grufallo.revenge" and "a
 
 Here's an example that can be used to track AFK players. (You can scroll the code box for better readability)
 
-<FilePath>BP/animation_controllers/afk_controller.ac.json</FilePath>
+<CodeHeader>BP/animation_controllers/afk_controller.ac.json</CodeHeader>
 
 ```json
 {
@@ -280,7 +280,7 @@ Just like resource animations and animation controllers, Behavior animations and
 
 Here's an example:
 
-<FilePath>BP/entities/grufallo.json#minecraft:client_entity</FilePath>
+<CodeHeader>BP/entities/grufallo.json#minecraft:client_entity</CodeHeader>
 
 ```json
 "description": {

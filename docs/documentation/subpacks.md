@@ -90,7 +90,7 @@ To register the subpacks in the manifest you need to add `subpacks` and this con
 
 Example:
 
-<FilePath>RP/manifest.json</FilePath>
+<CodeHeader>RP/manifest.json</CodeHeader>
 
 ```json
 {

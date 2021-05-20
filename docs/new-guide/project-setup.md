@@ -34,7 +34,7 @@ Like all other code files in your pack, it's written in [JSON](https://www.json.
 Let's create our Behavior Pack manifest first by creating a new file in VSCode and copying the code below into that.
 First, create a new file in your BP folder by right clicking on the folder and selecting `New File`. Then name that file `manifest.json`
 
-<FilePath>BP/manifest.json</FilePath>
+<CodeHeader>BP/manifest.json</CodeHeader>
 
 ```json
 {
@@ -85,7 +85,7 @@ So, to make sure your add-on will work correctly. Generate 3 new UUID's which yo
 The next step is, naturally, creating your `RP/manifest.json`. it is very much like a Behavior Pack manifest, except the "`type`" is "`resources`".
 Copy the code below into your newly created `manifest.json`.
 
-<FilePath>RP/manifest.json</FilePath>
+<CodeHeader>RP/manifest.json</CodeHeader>
 
 ```json
 {

@@ -16,7 +16,7 @@ Render controllers work based on the short-name definitions of the RP entity fil
 
 Lets look at a simplified version of the spider RP entity file:
 
-<FilePath>RP/entity/spider.json</FilePath>
+<CodeHeader>RP/entity/spider.json</CodeHeader>
 
 ```json
 {
@@ -55,7 +55,7 @@ You should think of short-name definitions as `importing` the assets you want. A
 
 A simple render controller looks like this:
 
-<FilePath>RP/render_controllers/cow.render.json</FilePath>
+<CodeHeader>RP/render_controllers/cow.render.json</CodeHeader>
 
 ```json
 {

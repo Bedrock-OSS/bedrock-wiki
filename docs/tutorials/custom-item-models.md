@@ -645,7 +645,7 @@ Attachable Based 3D Item Models works only in **Minecraft 1.16.210.59 beta or ab
 
 The item in this case is actually a custom block. We'll define this in our behavior pack. Note that this concept can be applied to vanilla items as well, you'll just need to define your attachable to utilize the vanilla item. We'll construct the block definition in the blocks folder of our behavior pack as follows:
 
-<FilePath>BP/blocks/_your_item_.json</FilePath>
+<CodeHeader>BP/blocks/_your_item_.json</CodeHeader>
 
 ```json
 {
@@ -685,7 +685,7 @@ In the above example, we define our block, texture, render method, and geometry.
 
 Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheless, there are still some special notes to allow this to work properly. First, take careful note that we are utilizing the 1.16.0 geometry format. This is important, as it will allow us to define a binding expression with a Molang query. This will effectively treat our model as though it is parented to a given bone in the entity to which it is attached. We will define our geometry in the following form:
 
-<FilePath>RP/models/blocks/_your_item_.geo.json</FilePath>
+<CodeHeader>RP/models/blocks/_your_item_.geo.json</CodeHeader>
 
 ```json
 {
@@ -737,7 +737,7 @@ In the above geometry, you'll notice we've added special bones for the x, y, and
 
 Next, we'll define our attachable. This can be done as follows:
 
-<FilePath>RP/attachables/_your_item_.json</FilePath>
+<CodeHeader>RP/attachables/_your_item_.json</CodeHeader>
 
 ```json
 {
@@ -821,7 +821,7 @@ There's a bit to unpack here. Firstly, it's important to note that we must use t
 
 For animations, we'll be defining a separate animation for each pseudo-display setting. Here's an example:
 
-<FilePath>RP/animations/_your_item_.animation.json</FilePath>
+<CodeHeader>RP/animations/_your_item_.animation.json</CodeHeader>
 
 ```json
 {
@@ -922,7 +922,7 @@ Above, we are essentially defining display settings as we would on Java. However
 
 In order to ensure our attachable does not display in the first person, we will apply a disabling animation. This can simply take the following form:
 
-<FilePath>RP/animations/disable.animation.json</FilePath>
+<CodeHeader>RP/animations/disable.animation.json</CodeHeader>
 
 ```json
 {
@@ -945,7 +945,7 @@ In order to ensure our attachable does not display in the first person, we will 
 
 We will also apply a simple lang file to allow our item to be displayed with a properly formatted name. Simply follow the format:
 
-<FilePath>RP/texts/_country_\__language_.lang</FilePath>
+<CodeHeader>RP/texts/_country_\__language_.lang</CodeHeader>
 
 ```
 tile.<your_namespace>:<your_item>.name=Your Displayed Name
@@ -957,7 +957,7 @@ This assumes you utilized blocks. If you utilize items instead, simply use "item
 
 There are no special requirements in regard to the construction of our texture, beyond it being a single texture. We need only define a shortname for it in `terrain_texture.json` so that our defined block may access the full texture through the shortname. We do so as follows:
 
-<FilePath>RP/textures/terrain_texture.json</FilePath>
+<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
 ```json
 {

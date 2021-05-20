@@ -27,7 +27,7 @@ In `_ui_defs.json` you add all the files that will be used on the UI.
 
 Imagine I created the files `RP/ui/button.json` and `RP/my_ui/main_menu.json`:
 
-<FilePath>RP/ui/\_ui_defs.json</FilePath>
+<CodeHeader>RP/ui/\_ui_defs.json</CodeHeader>
 
 ```json
 {
@@ -49,7 +49,7 @@ Let's say you have a variable `"$info_text_color": [0.8, 0.8, 0.8]` that stores 
 If you use the same value in multiple files instead of repeatedly writing `"color": [0.8, 0.8, 0.8]` you can just reference the variable (`"color": "$info_text_color"`) and put the variable on the `_global_variables.json` file.
 Another good advantage of doing that is you only need to change in one place and all the elements that use the variable will have the value updated.
 
-<FilePath>RP/ui/\_global_variables.json</FilePath>
+<CodeHeader>RP/ui/\_global_variables.json</CodeHeader>
 
 ```json
 {
@@ -57,7 +57,7 @@ Another good advantage of doing that is you only need to change in one place and
 }
 ```
 
-<FilePath>RP/my_ui/file1.json</FilePath>
+<CodeHeader>RP/my_ui/file1.json</CodeHeader>
 
 ```json
 {
@@ -69,7 +69,7 @@ Another good advantage of doing that is you only need to change in one place and
 }
 ```
 
-<FilePath>RP/my_ui/file2.json</FilePath>
+<CodeHeader>RP/my_ui/file2.json</CodeHeader>
 
 ```json
 {
@@ -87,7 +87,7 @@ Namespaces are identifiers for the UI files. They are used to access elements in
 They must be unique and short if possible because you may use it a lot of times.
 
 An example:
-<FilePath>RP/ui/file_a.json</FilePath>
+<CodeHeader>RP/ui/file_a.json</CodeHeader>
 
 ```json
 {
@@ -97,7 +97,7 @@ An example:
 }
 ```
 
-<FilePath>RP/ui/file_b.json</FilePath>
+<CodeHeader>RP/ui/file_b.json</CodeHeader>
 
 ```json
 {
@@ -122,7 +122,7 @@ All the elements must have the `type` property because its value will define wha
 
 Here's an example:
 
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -147,7 +147,7 @@ So, what are variables and how can elements derive from others?
 Everything that has `$` as the first letter of its name is a variable.
 Variables can store numbers, booleans, strings and arrays.
 
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -172,7 +172,7 @@ Variables can store numbers, booleans, strings and arrays.
 
 To derive some element from another you should use `new@super` notation. An example:
 
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -199,7 +199,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ## Animations
 
 `offset` animation example.
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -220,7 +220,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ```
 
 `Wait` animation example. It's used when you want no animation between two other animtions.
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -256,7 +256,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ```
 
 `flip_book` animation example.
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -279,7 +279,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ```
 
 Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, you can reference the animations that will be applied to the element using the `anims` property.
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -334,7 +334,7 @@ Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, 
 Here's an example of an label using a hardcoded text.
 The `text` property value is `#hardtext`. By using `bindings` I can get the value of the hardcoded variable `#hardtext` so it can be used by the `text` property.
 Here it's directly assigning the `#hardtext` value to the `text` property.
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {

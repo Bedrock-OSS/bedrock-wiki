@@ -159,9 +159,9 @@ Please note that the following files have been annotated with slot information: 
 
 To get started, you should copy the sprite-sheets into these locations:
 
-<FilePath>RP/font/glyph_E0.png" img="/assets/images/documentation/emojis/custom/glyph_E0.png</FilePath>
+<CodeHeader>RP/font/glyph_E0.png" img="/assets/images/documentation/emojis/custom/glyph_E0.png</CodeHeader>
 
-<FilePath>RP/font/glyph_E0.png" img="/assets/images/documentation/emojis/custom/glyph_E1.png</FilePath>
+<CodeHeader>RP/font/glyph_E0.png" img="/assets/images/documentation/emojis/custom/glyph_E1.png</CodeHeader>
 
 Your filepath should look like this:
 

@@ -29,7 +29,7 @@ Like all other code files in your pack, it's written in [JSON](https://www.json.
 
 Let's create our Resource Pack manifest first by copying the code below into `RP/manifest.json` (_In other words, in a `manifest.json` file in your resource pack folder, which is located in `development_resource_packs`_).
 
-<FilePath>RP/manifest.json</FilePath>
+<CodeHeader>RP/manifest.json</CodeHeader>
 
 ```json
 {
@@ -73,7 +73,7 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
 
 _Remember that same UUIDs cannot be used twice, which means that you have to generate NEW ones for the behavior manifest, and not use the ones already used in the resource manifest._
 
-<FilePath>BP/manifest.json</FilePath>
+<CodeHeader>BP/manifest.json</CodeHeader>
 
 ```json
 {

@@ -18,7 +18,7 @@ Let's start off by creating our simple item's behavior file: `BP/items/gem.item.
 
 ## Gem Behavior Code (BP)
 
-<FilePath>BP/items/gem.item.json" id="bp_gem_item</FilePath>
+<CodeHeader>BP/items/gem.item.json</CodeHeader>
 
 ```json
 {
@@ -54,7 +54,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 ## Gem Resource Code (RP)
 
-<FilePath>RP/items/gem.item.json" id="rp_gem_item</FilePath>
+<CodeHeader>RP/items/gem.item.json"</CodeHeader>
 
 ```json
 {
@@ -86,7 +86,7 @@ In order to define your item texture's shortname (to be able to use the texture 
 
 Now let's create the file where texture short names will be defined: `RP/textures/item_texture.json`, and copy this code into it:
 
-<FilePath>RP/textures/item_texture.json</FilePath>
+<CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
 {
@@ -115,7 +115,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal BP Code
 
-<FilePath>BP/items/meal.item.json" id="bp_meal_item</FilePath>
+<CodeHeader>BP/items/meal.item.json" id="bp_meal_item</CodeHeader>
 
 ```json
 {
@@ -164,7 +164,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal RP Code
 
-<FilePath>RP/items/meal.item.json" id="rp_meal_item</FilePath>
+<CodeHeader>RP/items/meal.item.json" id="rp_meal_item</CodeHeader>
 
 ```json
 {
@@ -189,7 +189,7 @@ The preceding code goes in `RP/items/meal.item.json`, similarly to the Gem.
 
 ## Meal Textures and Shortnames
 
-<FilePath>RP/textures/item_texture.json</FilePath>
+<CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
 {
@@ -214,7 +214,7 @@ Make sure to check out the current Item documentation for even more components o
 
 Your items should now show up in game, but they have weird names, which consist of their identifiers. For example, `tut:gem` shows up as `item.tut:gem.name`. To fix this, we need a `.lang` file in `RP/texts`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`. You can find file names for other languages in the example resource pack's texts folder. Paste the following "code" into res/texts/en_US.lang. Now your items will have the correct names:
 
-<FilePath>RP/texts/en_US.lang</FilePath>
+<CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
 ```
 item.tut:gem.name=Gem

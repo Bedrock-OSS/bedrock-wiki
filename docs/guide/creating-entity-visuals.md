@@ -69,7 +69,7 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 
 `RP/models/entity/skele_yaklin.geo.json`
 
-<FilePath>RP/models/entity/skele_yaklin.geo.json</FilePath>
+<CodeHeader>RP/models/entity/skele_yaklin.geo.json</CodeHeader>
 
 ```json
 {
@@ -274,7 +274,7 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 }
 ```
 
-<FilePath>RP/animations/skele_yaklin.animations.json</FilePath>
+<CodeHeader>RP/animations/skele_yaklin.animations.json</CodeHeader>
 
 ```json
 {

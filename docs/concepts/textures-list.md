@@ -8,7 +8,7 @@ parent: Concepts
 
 ## General Overview
 
-The textures_list file is Minecraft's way of _caching_ each texture so that it can retrieve it faster than looking through each image in your textures folder. This is especially important when you have an abundance of textures, where Minecraft could potentially mess up and swap textures, or even not load them at all. Minecraft tends to throw a content log _warning_ if you don't have the textures listed in the file. You can just ignore it if you have a small amount, but it is recommended that you list the textures anyway.
+The textures*list file is Minecraft's way of \_caching* each texture so that it can retrieve it faster than looking through each image in your textures folder. This is especially important when you have an abundance of textures, where Minecraft could potentially mess up and swap textures, or even not load them at all. Minecraft tends to throw a content log _warning_ if you don't have the textures listed in the file. You can just ignore it if you have a small amount, but it is recommended that you list the textures anyway.
 
 ## What textures can be used in the file?
 
@@ -18,7 +18,7 @@ Any texture! Any and all textures can and _should_ be used in the textures_list.
 
 The structure is simple, the file itself is in `RP/textures` and is named `textures_list.json`. The file just includes the filepath to every texture you want in the file:
 
-<FilePath>RP/textures/textures_list.json</FilePath>
+<CodeHeader>RP/textures/textures_list.json</CodeHeader>
 
 ```json
 [

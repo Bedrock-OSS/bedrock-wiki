@@ -63,7 +63,7 @@ To align the position of the entity, this will be more tricky.
 
 First, in the `minecraft:entity_spawned` event, make it places a custom block with a run_command, and make a new dummy-entity with a transformation event, to transform the dummy entity to the original entity so we avoid triggering the `minecraft:entity_spawned` again.
 
-<FilePath>BP/entities/your_entity.json#minecraft:entity/events</FilePath>
+<CodeHeader>BP/entities/your_entity.json#minecraft:entity/events</CodeHeader>
 
 ```json
 "minecraft:entity_spawned": {//Event in the original entity.
@@ -80,7 +80,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 }
 ```
 
-<FilePath>BP/entities/your_entity.json#minecraft:entity/component_groups</FilePath>
+<CodeHeader>BP/entities/your_entity.json#minecraft:entity/component_groups</CodeHeader>
 
 ```json
 "component_groups": {//Component Group in the original entity.
@@ -90,7 +90,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 }
 ```
 
-<FilePath>BP/blocks/your_dummy_block.json</FilePath>
+<CodeHeader>BP/blocks/your_dummy_block.json</CodeHeader>
 
 ```json
 {
@@ -135,7 +135,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 }
 ```
 
-<FilePath>BP/entities/your_dummy_entity.json</FilePath>
+<CodeHeader>BP/entities/your_dummy_entity.json</CodeHeader>
 
 ```json
 {

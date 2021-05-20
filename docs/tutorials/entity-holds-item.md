@@ -32,7 +32,7 @@ Now you'll need to add a `minecraft:equipment` component in the component list f
 
 In our example it will look like this:
 
-<FilePath>BP/entity/mandolorian.json</FilePath>
+<CodeHeader>BP/entity/mandolorian.json</CodeHeader>
 
 ```json
 "components": {
@@ -49,7 +49,7 @@ Finally, add the loot table for the entity. It needs to be in `loot_tables/entit
 `Warning:` This isn' the same loot table as what it drops on death. So make sure it has a different name.
 To have the entity always spawn with the same item, add the following loot table:
 
-<FilePath>BP/loot_tables/entities/gear/mandolorian.json</FilePath>
+<CodeHeader>BP/loot_tables/entities/gear/mandolorian.json</CodeHeader>
 
 ```json
 {

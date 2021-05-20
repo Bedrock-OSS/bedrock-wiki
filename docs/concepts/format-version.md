@@ -8,7 +8,7 @@ parent: Concepts
 
 Most Addon files contain a `format_version` field, often in the description. Here is an example:
 
-<FilePath>BP/entities/dragon.json</FilePath>
+<CodeHeader>BP/entities/dragon.json</CodeHeader>
 
 ```json
 {

@@ -22,7 +22,7 @@ It is recommended that your GameTests go in the `BP/scripts/gametests` directory
 
 In the behavior pack manifest you need to add a `plugin` module where you set an `entry` point for your GameTests.
 
-<FilePath>BP/manifest.json</FilePath>
+<CodeHeader>BP/manifest.json</CodeHeader>
 
 ```json
 {
@@ -54,7 +54,7 @@ In the behavior pack manifest you need to add a `plugin` module where you set an
 
 The entry point should link to a file containing imports to your GameTest files.
 
-<FilePath>BP/scripts/gametests/Main.js</FilePath>
+<CodeHeader>BP/scripts/gametests/Main.js</CodeHeader>
 
 ```js
 import 'scripts/gametests/MyGameTest.js'

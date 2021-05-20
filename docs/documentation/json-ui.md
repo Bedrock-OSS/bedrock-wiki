@@ -75,7 +75,7 @@ Specific properties:
 | `notify_on_ellipses`      |      array      | Name of the objects it will receive #using_ellipses when the text has '...'                                                                             |
 
 Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -446,7 +446,7 @@ Specific properties:
 | `focus_container_custom_right` |  array  |                                                                                                                              |
 
 For `focus_container_custom_*`
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 ...
@@ -524,7 +524,7 @@ Button mappings can be applied to any kind of input elements (`button`, `toggle`
 | `requires` | string | condition   |
 
 If you only have one variable to use, you should just use `"variables": {}`
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -541,7 +541,7 @@ If you only have one variable to use, you should just use `"variables": {}`
 ```
 
 If you have multiple variables use `"variables": [{}]`
-<FilePath>RP/ui/example_file.json</FilePath>
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {

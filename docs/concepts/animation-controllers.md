@@ -51,7 +51,7 @@ As you can see, states can go to more than one state at once. States can also be
 
 Animation controllers go under the `animation_controllers` folder, in either the RP, or the BP. Lets look at a sample render controller for our State Machine from above:
 
-<FilePath>RP/animation_controllers/helicopter.ac.json</FilePath>
+<CodeHeader>RP/animation_controllers/helicopter.ac.json</CodeHeader>
 
 ```json
 {
@@ -92,7 +92,7 @@ So this particular example contains two states:
 
 The reason we use `default` instead of `ground` is that Animation Controllers need a `default` state. That is to say, the default the state they will start in when they load into the world. While it is possible to define a particular state as the default, I think it is clearer and more consistent to use `default`. By default, the `default` state will run first.
 
-<FilePath>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</FilePath>
+<CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</CodeHeader>
 
 ```json
 "default": {
@@ -106,7 +106,7 @@ The reason we use `default` instead of `ground` is that Animation Controllers ne
 
 The `default` state contains a list of _transitions_, which is how we get to other states. In this example, the default state is saying: _Move to the `flying` state when `query.is_on_ground` is NOT true_. In other words -start the flying animation when we fly into the air!
 
-<FilePath>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</FilePath>
+<CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</CodeHeader>
 
 ```json
 "flying": {

@@ -22,7 +22,7 @@ All components are formatted like `"minecraft:<name>": { <setting> }`. Every com
 
 Here is an example of a few components, inside an entity:
 
-<FilePath>BP/entities/example.json#minecraft:entity</FilePath>
+<CodeHeader>BP/entities/example.json#minecraft:entity</CodeHeader>
 
 ```json
 "components": {
@@ -47,7 +47,7 @@ Component groups are "folders" for components. They group components together, a
 
 Here is an example:
 
-<FilePath>BP/entities/example.json#minecraft:entity</FilePath>
+<CodeHeader>BP/entities/example.json#minecraft:entity</CodeHeader>
 
 ```json
 "component_groups": {

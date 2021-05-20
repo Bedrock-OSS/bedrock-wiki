@@ -283,7 +283,7 @@ The variants of these biomes, such as Shattered Savannas and Flower Forests, als
 
 Unlike [region slots](#regions), biomes can be registered for multiple climates. This can, for example, be used to spread a biome across different climates if it would be appropriate. An example is the Plains biome, which is spread across 3 climates:
 
-<FilePath>biomes/plains.json</FilePath>
+<CodeHeader>biomes/plains.json</CodeHeader>
 
 ```json
 "generate_for_climates": [
@@ -410,7 +410,7 @@ Biomes slotted into the deep ocean region use the `deep` tag in addition to the 
 
 ###### Islands
 
-<FilePath>biomes/ocean.json</FilePath>
+<CodeHeader>biomes/ocean.json</CodeHeader>
 
 ```json
 "minecraft:overworld_generation_rules": {
@@ -422,7 +422,7 @@ Conceptually, islands are no different from sub-biomes in the land region. The i
 
 > While these islands do not technically form a slot and are instead sub-biomes, due to what is either a bug or an oversight, they are noted as a slot due to how they must be declared. Islands are never declared for a custom ocean biome and can only be separately grouped by ocean depth. Islands are declared using either the `hills_transformation` or `mutate_transformation` properties in the `minecraft:overworld_generation_rules` component _only_ in override definitions for the `ocean` and `deep_ocean` biomes (even if these vanilla oceans have been [de-weighted](#climates)). Islands can also be declared as [mutated hills](#mutated-hills) if rarity is desired. Islands in vanilla only generate using hills sub-biomes and only in Deep Oceans; vanilla islands can therefore entirely be disabled by pointing the `hills_transformation` in an override for Deep Oceans to the Deep Ocean biome itself:
 
-<FilePath>biomes/deep_ocean.json</FilePath>
+<CodeHeader>biomes/deep_ocean.json</CodeHeader>
 
 ```json
 "minecraft:overworld_generation_rules": {
@@ -543,13 +543,13 @@ Mutated sub-biomes are large, rare subsets of a base biome that are typically us
 
 ###### Mutated Hills
 
-<FilePath>biomes/mangrove_forest.json</FilePath>
+<CodeHeader>biomes/mangrove_forest.json</CodeHeader>
 
 ```json
 "hills_transformation": "mangrove_forest_hills"
 ```
 
-<FilePath>biomes/mangrove_forest_hills.json</FilePath>
+<CodeHeader>biomes/mangrove_forest_hills.json</CodeHeader>
 
 ```json
 "mutate_transformation": "mangrove_forest_hills_mutated"
@@ -569,7 +569,7 @@ Rivers exist in dedicated spaces fixed to the seed of a world and are unchangeab
 
 By default, Minecraft uses the River biome if the `"river_transformation"` property is not declared as part of the `"minecraft:overworld_generation_rules"` component or if this component is not declared at all. To effectively remove rivers from a biome, the `"river_transformation"` property can point to the declaring biome itself via its identifier:
 
-<FilePath>biomes/ivory_shallows.json</FilePath>
+<CodeHeader>biomes/ivory_shallows.json</CodeHeader>
 
 ```json
 {
@@ -607,7 +607,7 @@ Shores are special stretches of land designated to generate between a land biome
 
 Like rivers, shores are declared as part of a land biome, this time using `"shore_transformation"`. The shores that generate between land and ocean biomes are _always_ selected from the land biome; adding shores to oceans has no effect on generation. [Slotting tag](#overworld-generation-aspects) additions have no effect on shores. Shores default to Beaches and can again be effectively removed by referencing the declaring biome:
 
-<FilePath>biomes/lava_fields.json</FilePath>
+<CodeHeader>biomes/lava_fields.json</CodeHeader>
 
 ```json
 {
@@ -1151,7 +1151,7 @@ Using integers directly will create boring layers of adjustments. However, unlik
 
 Surface adjustments from earlier definitions of a biome can be removed by matching the definitions from the biome’s [surface builder](#surface-builders) across the relevant conditions. Take, for example, the vanilla surface adjustments made to the Shattered Savanna:
 
-<FilePath>biomes/savanna_mutated.json</FilePath>
+<CodeHeader>biomes/savanna_mutated.json</CodeHeader>
 
 ```json
 "minecraft:surface_parameters": {
@@ -1449,7 +1449,7 @@ Tags power much of what brings a biome to life in Minecraft, including entity sp
 
 No tags are implied based on the nature of a biome. For example, if a biome is set to generate in the Overworld, the `"overworld"` tag used on such biomes will need to be manually added to opt-in to the consequences of that tag. Another notable implication is that designated sub-biomes of a custom biome will need to redeclare the tags relevant to that biome cluster. As an example, imagine a base biome and its wooded mutated sub-biome. Regardless of the mutation, both biomes should have tall grass, which will be placed in these biomes using the `"highlands"` tag. For the base biome:
 
-<FilePath>biomes/highlands.json</FilePath>
+<CodeHeader>biomes/highlands.json</CodeHeader>
 
 ```json
 {
@@ -1483,7 +1483,7 @@ No tags are implied based on the nature of a biome. For example, if a biome is s
 
 The sub-biome _must_ redeclare the `"highlands"` tag to opt in to its functionality — in this case, the addition of scattered tall grass across the surface:
 
-<FilePath>biomes/highlands_forest.json</FilePath>
+<CodeHeader>biomes/highlands_forest.json</CodeHeader>
 
 ```json
 {
