@@ -3,6 +3,10 @@
 	fill: black;
 }
 
+body {
+	@apply bg-true-gray-50 text-black;
+}
+
 /* Tables */
 tbody,
 th,
