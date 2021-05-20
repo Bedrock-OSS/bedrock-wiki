@@ -12,27 +12,27 @@ nav_order: 2
 
 ## Preparation
 
-First of all, you will need to create the right folders in the right locations and set up your workspace.
-_The remainder of this Guide assumes you are using VSCode. You may also follow along in other editors._
+First of all, you will need to create the proper folders in suitable locations and set up your workspace.
+_The remainder of this guide assumes you are using VSCode. You may also follow along with other editors._
 
-Let's create your first addon workspace in Visual Studio Code now.
+Let's create your first add-on workspace in Visual Studio Code now.
 
 1. Locate the com.mojang folder. Click [here](https://wiki.bedrock.dev/guide/software-preparation#the-commojang-folder) to find out how to get there.
-2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP` from now on**, in accordance with the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
+2. Create a folder named "`your_pack_name_RP`" in  `development_resource_packs`. **I'll refer to this folder as `RP` from now on**, following the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
 3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP` from now on**.
 4. Open VSCode (_Visual Studio Code, the code editor_)
 5. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
-6. Press `File > Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
+6. Press `File > Save Workpsace As...` to save the workspace file to your Desktop. Whenever you're working on your add-on, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
 
 ## Manifests
 
-A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
+A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack. 
 Like all other code files in your pack, it's written in [JSON](https://www.json.org/json-en.html).
 
 ---
 
 Let's create our Behavior Pack manifest first by creating a new file in VSCode and copying the code below into that.
-First, create a new file in your BP folder by right clicking on the folder and selecting `New File`. Then name that file `manifest.json`
+First, create a new file in your BP folder by right-clicking on the folder and selecting `New File`. Then name that file `manifest.json`
 
 <CodeHeader>BP/manifest.json</CodeHeader>
 
@@ -64,25 +64,25 @@ First, create a new file in your BP folder by right clicking on the folder and s
 
 Let's break up the code now.
 
--   "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version, use it.
+-   "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version; use it.
 
 -   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game.
 
--   The "`uuid`" field is a **very important** one. A UUID (_Universally Unique Identifier_) identifies your pack for other programs (in this case, Minecraft) to read. **NEVER USE THE SAME UUID TWICE.** You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like _Bridge_, _AJG_ and _CoreCoder_ generate UUIDS automatically. Every manifest file uses 2 different UUIDs.
+-   The "`UUID`" field is an **essential** one. A UUID (_Universally Unique Identifier_) identifies your pack for other programs (in this case, Minecraft) to read. **NEVER USE THE SAME UUID TWICE.** You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like _Bridge_, _AJG_ and _CoreCoder_ generate UUIDS automatically. Every manifest file uses two different UUIDs.
 
-So, to make sure your add-on will work correctly. Generate 3 new UUID's which you will paste into the BP manifest.json file.
+So, to make sure your add-on will work correctly. Generate three new UUID's which you will paste into the BP manifest.json file.
 
--   "`version`" defines the version of your addon. When you import an addon with a newer version on a device where an older version was installed, the newer version will overwrite the older one. You don't need to change the version if you have the addon in `development_*_packs` folders and only use them on private worlds.
+-   "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device where an older version was installed, the more recent version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
 
--   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your addon.
+-   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on.
 
 -   In "`modules`", the "`type`" is defined to be "`data`". This makes your pack a _Behavior Pack_.
 
-`Note:` if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
+`Note:` if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can stay unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
 
 #
 
-The next step is, naturally, creating your `RP/manifest.json`. it is very much like a Behavior Pack manifest, except the "`type`" is "`resources`".
+The next step is, naturally, creating your `RP/manifest.json`. It is very much like a Behavior Pack manifest, except the "`type`" is "`resources`".
 Copy the code below into your newly created `manifest.json`.
 
 <CodeHeader>RP/manifest.json</CodeHeader>
@@ -107,9 +107,9 @@ Copy the code below into your newly created `manifest.json`.
 }
 ```
 
-Now, we can add a little trick to creating add-ons. If you look at the UUID's I put in both the BP and RP you'll notice the UUID in the `dependecies` of the BP is the same as the UUID from the RP. This makes it so that if both the RP and BP are on your device you will only need to assign the BP to your world and the RP will get applied automatically too!
+Now, we can add a little trick to creating add-ons. If you look at the UUIDs I put in both the BP and RP, you'll notice the UUID in the `dependencies` of the BP is the same as the UUID from the RP. This makes it so that if both the RP and BP are on your device, you will only need to assign the BP to your world, and the RP will get applied automatically too!
 
-_Now, make sure you replaced all the UUID's with NEW ones **and** that the UUID from the RP is the exact same as the one in the `dependecies` of the BP._
+_Now, make sure you replaced all the UUIDs with NEW ones **and** that the UUID from the RP is the exact same as the one in the `dependencies` of the BP._
 
 #
 
@@ -131,14 +131,14 @@ Now to create a testing world to test your new addon!
 
 1. Click "**Create new world**";
 
-2. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your addon when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
+2. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
 
 TODO Replace these images
 ![](/assets/images/guide/world_params_1.jpg)
 ![](/assets/images/guide/world_params_2.jpg)
 ![](/assets/images/guide/world_params_3.jpg)
 
-Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too, otherwise, it'll be applied automatically). Now click '**Create**'. You might need a separate '_Infinite_' world to test entity spawning too.
+Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too. Otherwise, it'll be applied automatically). Now click '**Create**'. You might need a separate '_Infinite_' world to test entity spawning too. 
 ![](/assets/images/guide/behavior_pack_applied.png)
 
 ---
@@ -152,4 +152,4 @@ Now activate your behavior pack. If you haven't set up dependencies in the manif
 **What are you to do next:**
 
 -   [ ] Learn to create custom items;
--   [ ] Learn to define texture short-names;
+-   [ ] Learn to define texture short names;
