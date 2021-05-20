@@ -22,3 +22,9 @@ import { useSidebarState } from '../Composables/sidebar'
 import Contributors from './Content/Contributors.vue'
 const { isVisible } = useSidebarState()
 </script>
+
+<style>
+details summary::-webkit-details-marker {
+	display: none;
+}
+</style>
