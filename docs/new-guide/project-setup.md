@@ -22,7 +22,7 @@ Let's create your first add-on workspace in Visual Studio Code now.
 3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP` from now on**.
 4. Open VSCode (_Visual Studio Code, the code editor_)
 5. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
-6. Press `File > Save Workpsace As...` to save the workspace file to your Desktop. Whenever you're working on your add-on, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
+6. Press `File > Save Workspace As...` to save the workspace file to your Desktop. Whenever you're working on your add-on, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
 
 ## Manifests
 
@@ -68,7 +68,7 @@ Let's break up the code now.
 
 -   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game.
 
--   The "`UUID`" field is an **essential** one. A UUID (_Universally Unique Identifier_) identifies your pack for other programs (in this case, Minecraft) to read. **NEVER USE THE SAME UUID TWICE.** You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like _Bridge_, _AJG_ and _CoreCoder_ generate UUIDS automatically. Every manifest file uses two different UUIDs.
+-   The "`UUID`" field is an **essential** one. A UUID (_Universally Unique Identifier_) identifies your pack for other programs (in this case, Minecraft) to read. **NEVER USE THE SAME UUID TWICE.** You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like _Bridge_, _AJG_, and _CoreCoder_ generate UUIDS automatically. Every manifest file uses two different UUIDs.
 
 So, to make sure your add-on will work correctly. Generate three new UUID's which you will paste into the BP manifest.json file.
 
@@ -127,7 +127,7 @@ TODO Replace this image
 
 ## Creating your testing world
 
-Now to create a testing world to test your new addon!
+Now to create a testing world to test your new add-on!
 
 1. Click "**Create new world**";
 
