@@ -52,7 +52,7 @@ watch(isVisible, () => {
 		dispose?.()
 	} else {
 		setTimeout(() => {
-			dispose = onClickOutside(sidebarElement, (event) => {
+			dispose = onClickOutside(sidebarElement, () => {
 				if (isMobile.value && isVisible.value) toggle()
 			})
 		}, 100)

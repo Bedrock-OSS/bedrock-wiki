@@ -1,8 +1,15 @@
 <template>
-	<div ref="codeHeader" class="tile flex mt-8 p-4 overflow-hidden">
-		<FileIcon class="mr-2" /> <span class="opacity-50"><slot /></span>
+	<div ref="codeHeader" class="tile flex mt-8 p-4 overflow-auto">
+		<span class="flex">
+			<FileIcon class="mr-2" />
+			<span class="opacity-50"><slot /></span>
+		</span>
 
-		<span @click="copyCodeSnippet" class="flex ml-auto cursor-pointer">
+		<span
+			v-if="!isMobile"
+			@click="copyCodeSnippet"
+			class="flex ml-auto cursor-pointer"
+		>
 			<span class="opacity-50 mr-1">Copy</span>
 
 			<CopyIcon class="inline-block opacity-60" title="Copy Snippet" />
@@ -14,10 +21,12 @@
 import { ref } from 'vue'
 import FileIcon from '../Icons/FileIcon.vue'
 import CopyIcon from '../Icons/CopyIcon.vue'
+import { useIsMobile } from '../../Composables/isMobile'
 
 const codeHeader = ref<HTMLDivElement | null>(null)
+const { isMobile } = useIsMobile()
 
-function copyCodeSnippet(event: Event) {
+function copyCodeSnippet() {
 	if (!codeHeader.value || !codeHeader.value.nextSibling) return
 
 	// Find the next code block & get the code from it
