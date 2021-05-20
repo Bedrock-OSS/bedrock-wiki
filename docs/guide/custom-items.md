@@ -115,7 +115,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal BP Code
 
-<CodeHeader>BP/items/meal.item.json" id="bp_meal_item</CodeHeader>
+<CodeHeader>BP/items/meal.item.json</CodeHeader>
 
 ```json
 {
@@ -164,7 +164,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal RP Code
 
-<CodeHeader>RP/items/meal.item.json" id="rp_meal_item</CodeHeader>
+<CodeHeader>RP/items/meal.item.json</CodeHeader>
 
 ```json
 {
