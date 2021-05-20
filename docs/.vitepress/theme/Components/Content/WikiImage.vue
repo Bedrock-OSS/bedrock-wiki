@@ -12,7 +12,7 @@ import { defineProps, toRefs } from 'vue'
 const props =
 	defineProps<{
 		src: string
-		alt: string
+		alt?: string
 		pixelated?: boolean
 	}>()
 </script>
