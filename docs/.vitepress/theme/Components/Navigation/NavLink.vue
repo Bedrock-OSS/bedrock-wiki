@@ -1,5 +1,5 @@
+<!--Volar complains here but everything is working fine-->
 <template>
-	<!-- Volar complains here but everything is working fine -->
 	<a
 		:class="{
 			item: true,
