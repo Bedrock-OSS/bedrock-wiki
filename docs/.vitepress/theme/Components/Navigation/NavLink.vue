@@ -11,6 +11,7 @@
 			'rounded-lg': true,
 		}"
 		v-bind="linkProps"
+		@click="onNavigation"
 	>
 		<div :class="{ 'flex-1': true }">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
@@ -33,6 +34,8 @@ import {
 import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navLink'
 import type { Badge } from '../Sidebar/Structure'
 import { useBadgeColor } from '../../Composables/useBadgeColor'
+import { useIsMobile } from '../../Composables/isMobile'
+import { useSidebarState } from '../../Composables/sidebar'
 
 const badgeClass = {
 	'text-xs': true,
@@ -45,13 +48,14 @@ const badgeClass = {
 
 const emit = defineEmit(['change'])
 
-const props = defineProps<{
-	item: {
-		text: string
-		link: string
-		badge?: Badge
-	}
-}>()
+const props =
+	defineProps<{
+		item: {
+			text: string
+			link: string
+			badge?: Badge
+		}
+	}>()
 const propsRefs = toRefs(props)
 const { color } = toRefs(props.item.badge ?? reactive({ color: 'default' }))
 
@@ -64,6 +68,14 @@ const badgeColorClass = computed(() => {
 		return useBadgeColor(color).value
 	}
 })
+
+const { isMobile } = useIsMobile()
+const { toggle } = useSidebarState()
+function onNavigation() {
+	if (isMobile.value) {
+		toggle()
+	}
+}
 
 watchEffect(() => {
 	emit('change', linkProps.value.class.active)
