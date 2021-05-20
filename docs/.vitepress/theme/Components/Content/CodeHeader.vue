@@ -18,7 +18,6 @@ import CopyIcon from '../Icons/CopyIcon.vue'
 const codeHeader = ref<HTMLDivElement | null>(null)
 
 function copyCodeSnippet(event: Event) {
-	console.log(event.target, codeHeader)
 	if (!codeHeader.value || !codeHeader.value.nextSibling) return
 
 	// Find the next code block & get the code from it
