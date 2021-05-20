@@ -1,6 +1,13 @@
 <template>
 	<details
-		class="navigation-category p-2 pl-4 cursor-pointer border-b-1 border-true-gray-200 dark:border-true-gray-600"
+		class="
+			navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600
+		"
 		:open="isOpen"
 	>
 		<summary
@@ -30,9 +37,10 @@ import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
 import NavLink from '../Navigation/NavLink.vue'
 import { defineProps, ref } from 'vue'
 
-const props = defineProps<{
-	item: INavCategory
-}>()
+const props =
+	defineProps<{
+		item: INavCategory
+	}>()
 
 const isOpen = ref(false)
 </script>

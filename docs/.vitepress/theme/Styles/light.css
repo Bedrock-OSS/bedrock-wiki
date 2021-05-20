@@ -4,9 +4,10 @@
 }
 
 /* Tables */
+tbody,
 th,
 td {
-	border-color: black;
+	border-color: #656e73;
 }
 
 th {
