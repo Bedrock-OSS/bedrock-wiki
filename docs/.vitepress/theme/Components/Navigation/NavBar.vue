@@ -19,7 +19,7 @@
 		<component
 			:is="isVisible ? MenuOpenIcon : MenuIcon"
 			class="mr-3 cursor-pointer"
-			@click.prevent="toggle"
+			@pointerdown.prevent="toggle"
 		/>
 
 		<a :href="site.base">
