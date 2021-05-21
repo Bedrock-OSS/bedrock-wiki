@@ -15,6 +15,7 @@
 				leading-4
 				rounded-md
 				border-1 border-gray-200
+				dark:border-true-gray-600
 				focus:border-blue-300
 				focus:ring focus:ring-blue-200 focus:ring-opacity-50
 				dark:bg-dark-gray-900
