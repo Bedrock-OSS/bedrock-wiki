@@ -2,10 +2,10 @@
 layout: guide
 title: Project Setup
 parent: Beginners Guide
-badge: 2
+badge: 1
 badge_color: guide
 badge_justification: left
-nav_order: 2
+nav_order: 1
 ---
 
 # Project Setup
@@ -147,9 +147,9 @@ Now activate your behavior pack. If you haven't set up dependencies in the manif
 
 **What you've done:**
 
--   [x] Created the manifest and pack_icon files;
+-   [x] Setup your pack;
 
 **What are you to do next:**
 
--   [ ] Learn to create custom items;
--   [ ] Learn to define texture short names;
+-   [ ] Create a custom item;
+-   [ ] Create a custom entity;
