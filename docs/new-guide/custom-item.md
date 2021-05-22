@@ -83,9 +83,9 @@ The component's value. `"wiki.ectoplasm` is the item texture's _shortname_, whic
 
 Navigate to `RP/textures/items/`, creating subdirectories as needed: this is where your item textures will be stored. It's best to name your texture image files with the items' _id_, which is why the texture of Ectoplasm is simply called `ectoplasm.png`.
 
-<CodeHeader>RP/textures/items/ectoplasm.png</CodeHeader>
+`RP/textures/items/ectoplasm.png`
 
-![](https://github.com/Bedrock-OSS/wiki-addon/blob/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png)
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png)
 
 ### Shortnames
 
