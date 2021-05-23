@@ -40,9 +40,8 @@ Let's start by setting up your tools, which you will use throughout the developm
 
 <Button color="green">Project Setup</Button>
 
-## Simple Custom Item
 
-<!-- a simple introduction to addon syntax and so on-->
+## Simple Custom Item
 
 Now that your workspace is ready to go, we can start creating a fully custom Item, that our entity will drop.
 
@@ -54,7 +53,11 @@ Finally, it's time to create the mob that drops our custom item: A hostile Ghost
 
 <Button color="green">Custom Entity</Button>
 
-Now, your first addon is complete! To dive into the other aspects of adding onto MCBE, you can use the other sections' subguides, listed in the [Appendix](/guide/appendix.html). This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. The sections also provide more techichal in-depth tutorials and documents for each relevant topic.
+# What to do after finishing the Guide
+Now, your first addon is complete! To further expand you knowledge, consider doing these:
+
+- Start your own project!
+- To dive into the other aspects of adding onto MCBE, you can use the other sections' subguides, listed in the [Appendix](/guide/appendix.html). This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. There are also sections that provide more techichal in-depth tutorials and documents for each relevant topic.
 
 <Button color="green">Appendix: further features</Button>
 
