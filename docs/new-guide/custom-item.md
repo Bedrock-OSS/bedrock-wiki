@@ -160,3 +160,4 @@ If you're having some trouble, check the [Troubleshooting page](https://wiki.bed
 **What are you to do next:**
 
 -   [ ] Create a custom entity;
+-   [ ] Create the entity's loot, spawn rules and a custom recipe;

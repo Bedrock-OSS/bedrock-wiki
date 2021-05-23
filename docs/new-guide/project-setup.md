@@ -113,11 +113,20 @@ _Now, make sure you replaced all the UUIDs with NEW ones **and** that the UUID f
 
 #
 
-The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders.
+Next, add your `pack_icon.png` file to both the BP and RP folders.
 
 I'm going to use this image here for both the BP and RP:
 TODO Add new pack_icon
 <WikiImage src="/assets/images/guide/pack_icon_BP.png" alt="Pack Icon" pixelated/>
+
+The last thing to do is to validate he text in your packs for other languages. For this, create a file called `en_US.lang` in `RP/texts/` and copy these lines into it, defining your packs' name and desciprions for the mentioned language:
+
+<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+
+```json
+pack.name=Ghostly Guide
+pack.description=Bedrock OSS Organization
+```
 
 If you have done everything correctly, your packs should show up in Minecraft now!
 TODO Replace this image
@@ -153,3 +162,4 @@ Now activate your behavior pack. If you haven't set up dependencies in the manif
 
 -   [ ] Create a custom item;
 -   [ ] Create a custom entity;
+-   [ ] Create the entity's loot, spawn rules and a custom recipe;

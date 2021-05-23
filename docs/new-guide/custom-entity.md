@@ -15,8 +15,9 @@ Last time you created a custom item for this custom entity to drop. This time yo
 ## Behavior code
 
 Just like with items, the main files of a custom entity are its RP and BP files. We'll start with the latter in the `BP/entities/` folder:
+(the `.e` suffix after the entity's name specifies the fact that this JSON is an entity file. Recommended in the [Style Guide]().
 
-<CodeHeader>BP/entities/ghost.json</CodeHeader>
+<CodeHeader>BP/entities/ghost.e.json</CodeHeader>
 
 ```json
 {
@@ -136,6 +137,11 @@ Just like with items, the main files of a custom entity are its RP and BP files.
                     "test": "is_family",
                     "subject": "other",
                     "value": "player"
+                },
+                {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "villager"
                 }
             ]
     ```
@@ -145,4 +151,402 @@ Just like with items, the main files of a custom entity are its RP and BP files.
 
 ## Resource code
 
-## Model, Texture and Animations
+Again, just like with the item, a custom entity needs a resource file listing its model, texture and animation names.
+
+<CodeHeader>RP/entity/ghost.e.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/ghost"
+            },
+            "geometry": {
+                "default": "geometry.ghost"
+            },
+            "scripts": {
+                "animate": [
+                    "walk_controller",
+                    "attack_controller"
+                ]
+            },
+            "animations": {
+                "walk_controller": "controller.animation.ghost.walk",
+                "attack_controller": "controller.animation.ghost.attack",
+                "attack": "animation.ghost.attack",
+                "idle": "animation.ghost.idle",
+                "move": "animation.ghost.move"
+            },
+            "spawn_egg": {
+                "overlay_color": "#bdd1d1",
+                "base_color": "#9fb3b3"
+            },
+            "render_controllers": [
+                "controller.render.ghost"
+            ]
+        }
+    }
+}
+```
+
+Let's go over every single object in `"description"` , as usual:
+ - `"identifier"` is, of course, the entity's `namespace:id`. This is what tells the game that this file belongs to the same entity as the one defined in `BP/entities/ghost.e.json`.
+ - `"materials"` tell the game how to *render* our entity. Depending on which material you choose, the translucent pixels on the texture might glow, be transparent or have no effect. We assigned `entity_alphatest` the shortname `default` (exactly like with item textures) to allow partly transparent textures, which makes sense for a ghost. Custom materials are also possible, but they're more complicated. (You can learn more about materials in general [here]()).
+ - `"textures"/"default"` is the path (relative to the RP folder) to the entity's texture. Like in `item_textures.json`, the `.png` extension can be ignored. Again, the texture path is assigned to the shortname `"default"`. In some cases, like the Villager mob, you'd want to have multiple textures for the entity to switch between.
+ - `"geometry"` takes the model's identifier as its value; Note it for yourself, since we'll create the model itself in a moment. Again, `"default"` is the shortname for that.
+ - `"scripts"/"animate"` and `"animations"` control when animations are to be played with the help of _animation controllers_ and list them under their _shortnames_ respectively. Again, we'll come back to this once we have the animations ready.
+ - `"spawn_egg"` automatically creates an item that will spawn the custom entity on use. It can look in two different ways: one of them can be seen here: both the `"overlay"_color"` and `"base_color"` are simply defined with [hex codes](https://www.w3schools.com/colors/colors_picker.asp) in form of text. The other way would be changing the whole thing to 
+```json
+ "spawn_egg": {
+    "texture": "wiki.ectoplasm"
+}
+``` 
+You can probably remember that `"wiki.ectoplasm"` is the shortname to our custom item's texture. If you use this code snippet, the egg will use the same texture as the item, instead of a procedurally generated traditional spawn egg one.
+- And, finally, `"render_controllers"` lists one or more identifiers of render controllers, which control materials. 
+
+Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same, the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn morw about that [here](link/to/rc/page).
+
+<CodeHeader>RP/render_controllers/entity/ghost.rc.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.ghost": {
+			"geometry": "Geometry.default",
+			"materials": [{"*": "Material.default"}],
+			"textures": [	"Texture.default"]
+		}
+	}
+}
+```
+
+The id of the only render controllers in this file is `"controller.render.ghost"`, which was referenced in the RP entity folder of the ghost (`RP/entity/ghost.e.json/"render_controllers"`). The code inside simply tells the game that the "Geometry
+
+
+## Visuals
+
+
+Now it's time to actually create the entity's visuals. An exmaple model, texture, and animation are all already provided with this Guide, but you can learn how to create your own ones using _Blockbench_ [here]().
+
+### Texture
+
+Like items, the entity textures are simply `.png` files in `RP/textures/entity/`. However, unlike these, entity textures don't need a file equivalent to `item_textures.json`. Instead, their shortnames are defined in the entity's RP file (`RP/entity/ghost.e.json` in our case). Usually, the shortname for an entity's texture is set to `default`, just like in our example.
+
+`RP/textures/entity/ghost.png`
+![Ghost_texture](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png)
+
+### Model
+
+'Model' means 'shape' or 'geometry'. Entity model JSON files are located in `RP/models/entity/` and, according to the [Style guide](), use the suffix `.geo`.
+Before you take a look at a models code, which holds data about the size, rotation and position of every single _cube_ and _bone_, remember that there's no need to learn its syntax by hard: as mentioned above, model and animation files are all automatically generated by a dedicated 3D editor called [Blockbench]().
+
+<CodeHeader>RP/models/entity/ghost.geo.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ghost",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 3, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 4.625, 0],
+					"cubes": [
+						{"origin": [-4, 3, -4], "size": [8, 13, 8], "uv": [0, 20]}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [4.6, 15.5, 0.5],
+					"cubes": [
+						{"origin": [4.1, 7, -1], "size": [3, 9, 3], "uv": [32, 32]}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-4.5, 15.5, 0.5],
+					"cubes": [
+						{"origin": [-7.1, 7, -1], "size": [3, 9, 3], "uv": [32, 20]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 16, 0],
+					"cubes": [
+						{"origin": [-5, 16, -5], "size": [10, 10, 10], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}
+```
+
+The only important thing, pretty much, is the value of `"identifier"`, which is `"geometry.ghost"`. As you might remember, this same identifier is refernced in the Ghost's RP entity file, under `"geometry"`.
+
+### Animations
+
+Most of what was said for models, is also true for animations. Here's the code you ought to copy to `RP/animations/ghost.a.json`. The suffix for resource animation files is `.a`.
+
+<CodeHeader>RP/animations/ghost.a.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ghost.idle": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [10, 0, 0],
+						"3.0": [10, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.5": [0, 1, 0],
+						"3.0": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"1.5": [-5, 0, 0],
+						"3.0": [-10, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"1.5": [-5, 0, 0],
+						"3.0": [-10, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [-7.5, 0, 0],
+						"1.5": [-2.5, 0, 0],
+						"3.0": [-7.5, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.ghost.attack": {
+			"animation_length": 0.75,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [10, 0, 0],
+						"0.2917": [10, 15, 0],
+						"0.5": [22.5, -12.5, 0],
+						"0.75": [10, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2917": [0, 0, 3],
+						"0.5": [0, 0, -3],
+						"0.75": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"0.75": [-10, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"0.2083": [-10, 0, 0],
+						"0.2917": [-10, 62.5, 117.5],
+						"0.5": [-80, -17.5, 22.5],
+						"0.75": [-10, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [-7.5, 0, 0],
+						"0.75": [-7.5, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.ghost.move": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.25": [15, -2.5, 0],
+						"0.5": [15, 0, 0],
+						"0.75": [15, 2.5, 0],
+						"1.0": [15, 0, 0]
+					},
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.5": [20, 0, 0],
+						"1.0": [15, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.5": [20, 0, 0],
+						"1.0": [15, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [-12.5, 0, 0],
+						"0.5": [-15, 0, 0],
+						"1.0": [-12.5, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}
+```
+
+Unlike the model's file, this one contains three animations for the ghost, which are `"animation.ghost.idle"` (which is an animation playing from time to time), `"animation.ghost.attack"` and `"animation.ghost.move"` (quite self-explanatory). Their shortnames, as defined in the Ghost's RP entity file, are `"idle"`, `"attack"` and `"move"` respectively.
+Of course feel free to open the files and check how the visuals look using Blockbench.
+
+### Animation Controller
+ 
+Approaching the end, we'll create our Animation Controller file, which will _control_ how the animations are played, as expected.
+
+<CodeHeader>RP/animation_controllers/ghost.ac.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.12.0",
+    "animation_controllers": {
+        "controller.animation.ghost.attack": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "attacking": "query.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "attacking": {
+                    "blend_transition": 0.2,
+                    "animations": [
+                        "attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_delayed_attacking"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.ghost.walk": {
+            "initial_state": "standing",
+            "states": {
+                "standing": {
+                    "blend_transition": 0.2,
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "moving": "query.modified_move_speed > 0.1"
+                        }
+                    ]
+                },
+                "moving": {
+                    "blend_transition": 0.2,
+                    "animations": [
+                        "move"
+                    ],
+                    "transitions": [
+                        {
+                            "standing": "query.modified_move_speed < 0.1"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
+
+Two animation controllers are listed in this file: `"controller.animation.ghost.walk"` and `"controller.animation.ghost.attack"`. 
+
+TODO: Details of each NEED to be explained better
+
+Let's take a look at the ghost's RP file: just like the _animations_, the _animation controllers_ get assigned to their shortnames (`walk_controller` and `attack_controller` respectively) under `"animations"`. Now, since the controllers control the animations, they have to always run, which is why we put their shortnames in the array of `"scripts"/"animate"`. 
+(For example, if you put the shortname `"move"` there, the entity would constantly play the moving animation, even when staying in place. The controller only launches the relevant animation when the entity is doing a certain action, for example `is_walking`.)
+
+`from RP/entity/ghost.e.json`
+```json
+"scripts": {
+    "animate": [
+        "walk_controller",
+        "attack_controller"
+    ]
+},
+"animations": {
+    "walk_controller": "controller.animation.ghost.walk",
+    "attack_controller": "controller.animation.ghost.attack",
+    "attack": "animation.ghost.attack",
+    "idle": "animation.ghost.idle",
+    "move": "animation.ghost.move"
+}
+```
+
+### Entity name
+
+And finally, we have to define the entity's and its spawn egg's in-game names in `en_US.lang` by adding these lines:
+
+`RP/texts/en_US.lang`
+```json
+entity.wiki:ghost.name=Ghost
+item.spawn_egg.entity.wiki:ghost.name=Ghost
+```.
+
+Done! Your entity should now show up in Minecraft, complete with all behaviors and visuals, including animations!
+
+## Your progress so far:
+
+**What you've done:**
+
+-   [x] Setup your pack;
+-   [x] Create a custom item;
+-   [x] Create a custom entity;
+
+**What are you to do next:**
+
+-   [ ] Create the entity's loot, spawn rules and a custom recipe;
