@@ -31,7 +31,8 @@ function generateSidebar(base, dir) {
 				children: generateSidebar(base, joinedPath),
 			})
 		} else if (stats.isFile()) {
-			if (!file.endsWith('.md')) return
+			// Don't include non-markdown files, or the index page itself
+			if (!file.endsWith('.md') || file.endsWith('index.md')) return
 
 			const str = fs.readFileSync(joinedPath, 'utf8')
 			let frontMatter = matter(str)
@@ -61,8 +62,8 @@ function generateSidebar(base, dir) {
 
 	return data.sort(
 		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
-			if (!dataA.nav_order && dataB.nav_order) return -1
-			if (dataA.nav_order && !dataB.nav_order) return 1
+			if (!dataA.nav_order && dataB.nav_order) return 1
+			if (dataA.nav_order && !dataB.nav_order) return -1
 			if (dataA.nav_order && dataB.nav_order)
 				return dataA.nav_order - dataB.nav_order
 			return textA.localeCompare(textB)

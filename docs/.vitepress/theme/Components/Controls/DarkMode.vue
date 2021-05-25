@@ -31,7 +31,15 @@
 			<option value="system">System</option>
 		</select>
 		<ChevronLeftIcon
-			class="absolute opacity-70 top-1 right-1 transform -rotate-90"
+			class="
+				absolute
+				opacity-70
+				top-1
+				right-1
+				transform
+				-rotate-90
+				pointer-events-none
+			"
 		/>
 	</div>
 </template>
