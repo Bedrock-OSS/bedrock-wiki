@@ -1,10 +1,12 @@
-
+---
+layout: guide
+title: Loot and Spawn Recipes
+has_children: true
 ---
 
 # Getting started with Blockbench & Modelling
 
 Blockbench is a free software, designed to make Minecraft modelling, texturing, and animating possible. It is available for mobile browsers, Windowns 10 and MacOS. Please install it at [blockbench.net/](https://blockbench.net/)
-
 
 Let's get started.
 
@@ -25,7 +27,6 @@ Let's get started.
 # Texturing
 
 Now that you have your model in place, let's start texturing!
-
 
 1. On left-bottom panel click "Create Texture"
 1. Write down your image file name under "Name:". Mine will export as `ghost.png`. Check "Template:" in order to make a template texture - it'll be easier to work with.
@@ -85,7 +86,11 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 					"parent": "root",
 					"pivot": [0, 4.625, 0],
 					"cubes": [
-						{"origin": [-4, 3, -4], "size": [8, 13, 8], "uv": [0, 20]}
+						{
+							"origin": [-4, 3, -4],
+							"size": [8, 13, 8],
+							"uv": [0, 20]
+						}
 					]
 				},
 				{
@@ -93,7 +98,11 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 					"parent": "body",
 					"pivot": [4.6, 15.5, 0.5],
 					"cubes": [
-						{"origin": [4.1, 7, -1], "size": [3, 9, 3], "uv": [32, 32]}
+						{
+							"origin": [4.1, 7, -1],
+							"size": [3, 9, 3],
+							"uv": [32, 32]
+						}
 					]
 				},
 				{
@@ -101,7 +110,11 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 					"parent": "body",
 					"pivot": [-4.5, 15.5, 0.5],
 					"cubes": [
-						{"origin": [-7.1, 7, -1], "size": [3, 9, 3], "uv": [32, 20]}
+						{
+							"origin": [-7.1, 7, -1],
+							"size": [3, 9, 3],
+							"uv": [32, 20]
+						}
 					]
 				},
 				{
@@ -109,7 +122,11 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 					"parent": "body",
 					"pivot": [0, 16, 0],
 					"cubes": [
-						{"origin": [-5, 16, -5], "size": [10, 10, 10], "uv": [0, 0]}
+						{
+							"origin": [-5, 16, -5],
+							"size": [10, 10, 10],
+							"uv": [0, 0]
+						}
 					]
 				}
 			]
