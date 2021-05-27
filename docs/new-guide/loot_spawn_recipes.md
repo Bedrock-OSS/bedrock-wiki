@@ -60,4 +60,4 @@ And finally, as an introduction to recipes, we'll make the Ectoplasm craftable i
 -   [x] Create the entity's loot, spawn rules and a custom recipe;
 
 **What are you to do next:**
-Congratyulations! you have finished the Guide and created your first Add-on. [What to do next?](new-guide/what_to_do_next)
+Congratyulations! you have finished the Guide and created your first Add-on.

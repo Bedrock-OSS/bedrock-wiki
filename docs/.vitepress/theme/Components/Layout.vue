@@ -11,13 +11,13 @@
 		}"
 	>
 		<Content />
+		<h2>Contributors</h2>
 		<Suspense>
 			<template #default>
 				<Contributors />
 			</template>
 			<template #fallback>
 				<div>
-					<h1>Contributors</h1>
 					<span> Loading contributors... </span>
 				</div>
 			</template>

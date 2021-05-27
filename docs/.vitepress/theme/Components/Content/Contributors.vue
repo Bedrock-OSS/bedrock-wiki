@@ -1,7 +1,5 @@
 <template>
 	<div v-if="contributors && contributors.length > 0">
-		<h1>Contributors</h1>
-
 		<div class="ml-4">
 			<a
 				v-for="c in contributors"
