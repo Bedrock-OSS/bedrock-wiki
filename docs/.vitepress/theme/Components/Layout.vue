@@ -2,16 +2,26 @@
 	<NavBar />
 	<Sidebar />
 
-	<main>
-		<Content
-			:class="{
-				'm-8': true,
-				'md:ml-80': isVisible,
-				'mt-0': true,
-				'min-h-screen': true,
-			}"
-		/>
-		<!--    <Contributors/>-->
+	<main
+		:class="{
+			'm-8': true,
+			'md:ml-80': isVisible,
+			'mt-0': true,
+			'min-h-screen': true,
+		}"
+	>
+		<Content />
+		<Suspense>
+			<template #default>
+				<Contributors />
+			</template>
+			<template #fallback>
+				<div>
+					<h1>Contributors</h1>
+					<span> Loading contributors... </span>
+				</div>
+			</template>
+		</Suspense>
 	</main>
 </template>
 
