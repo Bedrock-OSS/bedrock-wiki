@@ -1,4 +1,4 @@
-import 'virtual:windi.css'
+import 'windi.css'
 import './main.css'
 import './light.css'
 import './dark.css'

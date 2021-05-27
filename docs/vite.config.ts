@@ -1,4 +1,4 @@
-import windicss from 'vite-plugin-windicss'
+import WindiCSS from 'vite-plugin-windicss'
 import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vite'
 
@@ -10,10 +10,6 @@ export default defineConfig({
 				name: 'Bedrock Wiki',
 			},
 		}),
-		windicss({
-			scan: {
-				dirs: ['.vitepress/theme'],
-			},
-		}),
+		WindiCSS(),
 	],
 })

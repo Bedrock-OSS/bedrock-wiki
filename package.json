@@ -1,5 +1,5 @@
 {
-	"name": "vitepress-wiki",
+	"name": "bedrock-wiki",
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
@@ -9,9 +9,9 @@
 		"molangjs": "^1.3.1",
 		"node-fetch": "^2.6.1",
 		"vite-plugin-pwa": "^0.7.3",
-		"vite-plugin-windicss": "^0.16.0-beta.13",
+		"vite-plugin-windicss": "^0.16.5",
 		"vitepress": "^0.13.2",
-		"windicss": "^3.0.0-beta.6"
+		"windicss": "^3.0.12"
 	},
 	"scripts": {
 		"dev": "vitepress dev docs",
