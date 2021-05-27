@@ -33,6 +33,7 @@
 			:item="item"
 			:key="item.link"
 		/>
+		<AlgoliaSearchBox v-if="!!algoliaConfig" :options="algoliaConfig" />
 	</header>
 </template>
 
@@ -42,14 +43,22 @@ import MenuOpenIcon from '../Icons/MenuOpenIcon.vue'
 import NavLink from './NavLink.vue'
 import DarkMode from '../Controls/DarkMode.vue'
 import WikiLogo from '../Content/WikiLogo.vue'
-import { computed } from 'vue'
+import { computed, defineAsyncComponent } from 'vue'
 import { useSiteDataByRoute } from 'vitepress'
 import { useSidebarState } from '../../Composables/sidebar'
 import { useIsMobile } from '../../Composables/isMobile'
 
+const AlgoliaSearchBox = defineAsyncComponent(
+	() =>
+		import(
+			'vitepress/dist/client/theme-default/components/AlgoliaSearchBox.vue'
+		)
+)
+
 const { toggle, isVisible } = useSidebarState()
 const site = useSiteDataByRoute()
 const navLinks = computed(() => site.value.themeConfig.nav)
+const algoliaConfig = computed(() => site.value.themeConfig.algolia)
 
 const { isMobile } = useIsMobile()
 </script>
