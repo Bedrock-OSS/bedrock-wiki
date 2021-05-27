@@ -18,7 +18,7 @@ _The remainder of this guide assumes you are using VSCode. You may also follow a
 Let's create your first add-on workspace in Visual Studio Code now.
 
 1. Locate the com.mojang folder. Click [here](https://wiki.bedrock.dev/guide/software-preparation#the-commojang-folder) to find out how to get there.
-2. Create a folder named "`your_pack_name_RP`" in  `development_resource_packs`. **I'll refer to this folder as `RP` from now on**, following the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
+2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP` from now on**, following the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
 3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP` from now on**.
 4. Open VSCode (_Visual Studio Code, the code editor_)
 5. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
@@ -26,7 +26,7 @@ Let's create your first add-on workspace in Visual Studio Code now.
 
 ## Manifests
 
-A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack. 
+A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
 Like all other code files in your pack, it's written in [JSON](https://www.json.org/json-en.html).
 
 ---
@@ -147,7 +147,7 @@ TODO Replace these images
 ![](/assets/images/guide/world_params_2.jpg)
 ![](/assets/images/guide/world_params_3.jpg)
 
-Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too. Otherwise, it'll be applied automatically). Now click '**Create**'. You might need a separate '_Infinite_' world to test entity spawning too. 
+Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too. Otherwise, it'll be applied automatically). Now click '**Create**'. You might need a separate '_Infinite_' world to test entity spawning too.
 ![](/assets/images/guide/behavior_pack_applied.png)
 
 ---
