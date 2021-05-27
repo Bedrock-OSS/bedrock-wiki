@@ -11,9 +11,10 @@ import type { INavCategory } from './Structure'
 import Category from './Category.vue'
 import { defineProps, ref } from 'vue'
 
-const props = defineProps<{
-	items: INavCategory[]
-}>()
+const props =
+	defineProps<{
+		items: INavCategory[]
+	}>()
 </script>
 
 <style scoped>
