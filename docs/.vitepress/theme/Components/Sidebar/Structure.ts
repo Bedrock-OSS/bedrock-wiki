@@ -6,9 +6,10 @@ export interface INavLink {
 	text: string
 	link: string
 	badge?: Badge
+	tags?: Array<string>
 }
 
 export type Badge = {
-  text: string;
-  color: string;
-};
+	text: string
+	color: string
+}

@@ -2,6 +2,9 @@
 layout: page
 title: Biomes
 parent: Concepts
+tags:
+    - guide
+    - recipe
 ---
 
 # Biomes

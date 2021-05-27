@@ -15,6 +15,12 @@
 	>
 		<div :class="{ 'flex-1': true }">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
+
+		<span v-for="tag in props.item.tags">
+			<GuideIcon v-if="tag == 'guide'" />
+			<RecipeIcon v-if="tag == 'recipe'" />
+		</span>
+
 		<span v-if="props.item.badge" :class="[badgeClass, badgeColorClass]">{{
 			props.item.badge.text
 		}}</span>
@@ -23,6 +29,9 @@
 
 <script setup lang="ts">
 import ExternalIcon from '../Icons/ExternalIcon.vue'
+import GuideIcon from '../Icons/GuideIcon.vue'
+import RecipeIcon from '../Icons/RecipeIcon.vue'
+
 import {
 	computed,
 	defineEmit,
@@ -54,6 +63,7 @@ const props =
 			text: string
 			link: string
 			badge?: Badge
+			tags?: Array<string>
 		}
 	}>()
 const propsRefs = toRefs(props)
