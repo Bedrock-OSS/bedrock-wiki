@@ -1,0 +1,1 @@
+import{o as e,c as t}from"./404.md.dbb3bc14.js";const d='{"title":"Knowledge","description":"","frontmatter":{"layout":"page","title":"Knowledge","has_children":true},"relativePath":"knowledge/index.md","lastUpdated":1622151447295}',r={};r.render=function(d,r,o,n,a,i){return e(),t("div")};export default r;export{d as __pageData};
