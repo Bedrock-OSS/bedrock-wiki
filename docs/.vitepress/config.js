@@ -50,10 +50,17 @@ function generateSidebar(base, dir) {
 				}
 			}
 
+			let tags = null
+
+			if (frontMatter.data.tags != null) {
+				tags = frontMatter.data.tags
+			}
+
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
 				badge: badge,
+				tags: tags,
 				link,
 				activeMatch: `^${link}`,
 			})

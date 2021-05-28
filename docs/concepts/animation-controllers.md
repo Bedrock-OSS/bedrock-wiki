@@ -2,6 +2,9 @@
 layout: page
 title: Animation Controllers
 parent: Concepts
+tags:
+    - guide
+    - ben
 ---
 
 # Animation Controllers
