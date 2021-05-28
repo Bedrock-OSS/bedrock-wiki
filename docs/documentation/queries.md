@@ -6,7 +6,14 @@ parent: Documentation
 
 # Molang
 
-[[TOC]]
+<details id="toc" class="top-level" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
 
@@ -46,10 +53,10 @@ Where `x` and `y` are both integer arguments, from the following table:
 | Argument | Type                  |
 | -------- | --------------------- |
 | -1       | none                  |
-| 0        | Chain armor piece     |
-| 1        | Iron armor piece      |
-| 2        | Diamond armor piece   |
-| 3        | Boots of any type     |
+| 0        | Leather armor piece   |
+| 1        | Chain armor piece     |
+| 2        | Iron armor piece      |
+| 3        | Diamond armor piece   |
 | 4        | Gold armor piece      |
 | 5        | Elytra                |
 | 6        | Turtle helmet         |
@@ -236,3 +243,17 @@ Returns the offset factor for the player's rightarm bone compared to the default
 # variable.short_arm_offset_left
 
 Identical behavior to `variable.short_arm_offset_right` except it references the player leftarm bone.
+
+# query.movement_direction
+
+Essentially, returns the ratio between speed in the specified argument, over the total speeds in all 3 axis combined. For example, you are moving 5 blocks/second in the x-axis, 0 blocks/second in the y-axis, and 3 blocks/second in the z-axis -> `5 / ( 5 + 0 + 3 ) = 0.625`.
+
+| Argument | Axis |
+| -------- | ---- |
+| 0        | X    |
+| 1        | Y    |
+| 2        | Z    |
+
+If stationary, the values will return as `0`. When you are moving along the positive X/Y/Z axis, the returned value is positive. If you are moving in the opposite direction, the returned value is negative. The return value should never exceed `1` or `-1`.
+
+It's worth noting that the `Y` axis may not work as expected. When you stay in the same spot, and are not hovering, the query returns `-1`. When you stay on the same X and Z coordinates and move downwards on the Y axis, the query also returns `-1`. If you are hovering on a constant Y coordinate, it returns `0`.
