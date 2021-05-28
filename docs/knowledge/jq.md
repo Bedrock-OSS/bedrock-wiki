@@ -126,7 +126,7 @@ In jq, one can easily define custom functions with the syntax `def function_name
 
 When invoked from the command line, jq takes the form `jq '[filter]' input.json`. This will only display the output in the terminal. For bash-based systems, simply use the arrow operator, `jq '[filter]' input.json > output.json` to write an output file. If you wish to overwrite the input file on the fly, this method will not work. You will either need to generate a temp file, or use a utility like Sponge from [moreutils](https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package/). Then, you may simply `jq '[filter]' input.json | sponge input.json`. For large filters, it's generally easier to employ a shell or bash script. You may use the -n flag if you wish to construct a JSON file from scratch rather than specify an input. Finally, you may pass terminal variables to be used in your jq filters as follows:
 
-```sh
+```
 jq -n --arg jqvar1 $var1 --arg jqvar2 $var2 '
 {
 "var1": $jqvar1,

@@ -4,12 +4,12 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
 	plugins: [
-		VitePWA({
-			registerType: 'autoUpdate',
-			manifest: {
-				name: 'Bedrock Wiki',
-			},
-		}),
+		// VitePWA({
+		// 	registerType: 'autoUpdate',
+		// 	manifest: {
+		// 		name: 'Bedrock Wiki',
+		// 	},
+		// }),
 		WindiCSS(),
 	],
 })
