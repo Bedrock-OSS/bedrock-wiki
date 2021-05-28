@@ -1,1 +1,0 @@
-import{o as t,c as r}from"./404.md.f64d30d9.js";const e='{"title":"Tutorials","description":"","frontmatter":{"layout":"page","title":"Tutorials","has_children":true,"nav_order":0},"relativePath":"tutorials/index.md","lastUpdated":1622231743327}',a={};a.render=function(e,a,o,d,i,l){return t(),r("div")};export default a;export{e as __pageData};
