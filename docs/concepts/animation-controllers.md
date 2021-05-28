@@ -9,6 +9,14 @@ tags:
 
 # Animation Controllers
 
+<Spoiler title="My spoiler">
+   <ul>
+      <li>001</li>
+      <li>002</li>
+      <li>003</li>
+   </ul>
+</Spoiler>
+
 Animation controllers (AC) are state-machines that can be used in both the resource pack, and the behavior pack. In the resource pack, animation controllers (RPAC) are used to play animations, and in the behavior pack (BPAC), they are used to play commands, and command "animations".
 
 ## What are State Machines?

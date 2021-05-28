@@ -1,5 +1,6 @@
 import Layout from './Components/Layout.vue'
 import CodeHeader from './Components/Content/CodeHeader.vue'
+import Spoiler from './Components/Content/Spoiler.vue'
 import Label from './Components/Content/Label.vue'
 import YouTubeEmbed from './Components/Content/YouTubeEmbed.vue'
 import Button from './Components/Content/Button.vue'
@@ -13,6 +14,7 @@ import './Styles/styles'
 // Add global components to this array to register them automatically
 const globalComponents: [string, Component][] = [
 	['CodeHeader', CodeHeader],
+	['Spoiler', Spoiler],
 	['Label', Label],
 	['YouTubeEmbed', YouTubeEmbed],
 	['JQEmbed', JQEmbed],
