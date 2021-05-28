@@ -6,15 +6,6 @@ parent: Concepts
 
 # JSON UI
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
 ## Introduction
 
 All editable vanilla UI files are stored in `RP/ui/` in `.json` files.

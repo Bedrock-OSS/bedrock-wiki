@@ -8,21 +8,9 @@ badge_color: red
 
 # Custom Armor
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
-Intermediate
-{: .label .label-yellow }
-
-{% include notice.html
-  contents='It is highly recommended that you look over [the BlockBench modelling and texturing](https://wiki.bedrock.dev/guide/creating-entity-visuals) section in the beginners guides before tackling these sections.'
-%}
+::: tip
+contents='It is highly recommended that you look over [the BlockBench modelling and texturing](https://wiki.bedrock.dev/guide/creating-entity-visuals) section in the beginners guides before tackling these sections.'
+:::
 
 Making custom armors is surprisingly easy to do, you need to do a bit of fiddling around as there are a few files that need to be added and there can be a little bit of texturing involved but you can do as much or as little as you want here.
 
@@ -62,7 +50,7 @@ Lets dive right into it and make sure our manifests are using the beta version.
 
 Once done we can get on with creating our actual armor item piece like so.
 
-{% include filepath.html path="BP/items/my_chest.json"%}
+<CodeHeader>BP/items/my_chest.json</CodeHeader>
 
 ```json
 {
@@ -130,7 +118,7 @@ At this point your item would appear in game and would be wearable but it would 
 
 To start with you need to create an `attachables` folder in your RP (you may already have one).
 
-{% include filepath.html path="RP/attachables/my_chest.json"%}
+<CodeHeader>RP/attachables/my_chest.json</CodeHeader>
 
 ```json
 {
@@ -183,7 +171,7 @@ If you do not feel creative we have provided a recoloured diamond armour skin fo
 
 So while the chest piece alone is great, you probably want a whole set, so from here if you make another item json for the boots like so.
 
-{% include filepath.html path="BP/items/my_leggings.json"%}
+<CodeHeader>BP/items/my_leggings.json</CodeHeader>
 
 ```json
 {
@@ -241,7 +229,7 @@ This is great and like before you will need to add your own item texture, althou
 
 Once we are done here we need to create the attachables file like this.
 
-{% include filepath.html path="RP/attachables/my_leggings.json"%}
+<CodeHeader>RP/attachables/my_leggings.json</CodeHeader>
 
 ```json
 {
@@ -281,7 +269,7 @@ Given that we have already put in the textures needed we can run it and see our 
 
 This is just like the chest piece, just we change some of the categories and slots like so.
 
-{% include filepath.html path="BP/items/my_helm.json"%}
+<CodeHeader>BP/items/my_helm.json</CodeHeader>
 
 ```json
 {
@@ -336,7 +324,7 @@ As you can see not much has changed, we just update the categories/slots to the 
 
 ![](/assets/images/tutorials/custom-armor/custom_helmet.png)
 
-{% include filepath.html path="RP/attachables/my_helm.json"%}
+<CodeHeader>RP/attachables/my_helm.json</CodeHeader>
 
 ```json
 {
@@ -373,7 +361,7 @@ There you go, you now have 3/4 of a complete set, we may as well go through the 
 
 You already know the pattern so lets make the item and attachable json files.
 
-{% include filepath.html path="BP/items/my_boots.json"%}
+<CodeHeader>BP/items/my_boots.json</CodeHeader>
 
 ```json
 {
@@ -428,7 +416,7 @@ The custom boots texture if you need it.
 
 ![](/assets/images/tutorials/custom-armor/custom_boots.png)
 
-{% include filepath.html path="RP/attachables/my_boots.json"%}
+<CodeHeader>RP/attachables/my_boots.json</CodeHeader>
 
 ```json
 {
@@ -479,7 +467,7 @@ So rather than include the whole `player.json` I will just include the parts you
 > If you have no idea what the `player.json` is then look in the vanilla behavior pack and look for it and just copy it over into your project.
 > So first of all lets put in the damage sensor component (which goes in your component section) which listens for when you take damage and lets you raise an event from it.
 
-{% include filepath.html path="BP/entities/player.json"%}
+<CodeHeader>BP/entities/player.json</CodeHeader>
 
 ```json
 {
