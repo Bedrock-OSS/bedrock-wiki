@@ -38,7 +38,7 @@ Imagine I created the files `RP/ui/button.json` and `RP/my_ui/main_menu.json`:
 
 <CodeHeader>RP/ui/\_ui_defs.json</CodeHeader>
 
-```jsonc
+```json
 {
 	"ui_defs": ["ui/button.json", "my_ui/main_menu.json"]
 }
@@ -60,7 +60,7 @@ Another good advantage of doing that is you only need to change in one place and
 
 <CodeHeader>RP/ui/\_global_variables.json</CodeHeader>
 
-```jsonc
+```json
 {
 	"$info_text_color": [0.8, 0.8, 0.8]
 }
@@ -68,7 +68,7 @@ Another good advantage of doing that is you only need to change in one place and
 
 <CodeHeader>vanilla/my_ui/file1.json</CodeHeader>
 
-```jsonc
+```json
 {
   "some_info": {
     ...
@@ -80,7 +80,7 @@ Another good advantage of doing that is you only need to change in one place and
 
 <CodeHeader>vanilla/my_ui/file2.json</CodeHeader>
 
-```jsonc
+```json
 {
   "info": {
     ...
@@ -98,7 +98,7 @@ They must be unique and short if possible because you may use it a lot of times.
 An example:
 <CodeHeader>vanilla/ui/file_a.json</CodeHeader>
 
-```jsonc
+```json
 {
   "namespace":"stuff",
   ...
@@ -108,7 +108,7 @@ An example:
 
 <CodeHeader>vanilla/ui/file_b.json</CodeHeader>
 
-```jsonc
+```json
 {
   "fizzbuzz@stuff.foobar": {...}
   // "fizzbuzz" extends "foobar" from "stuff" namespace
@@ -133,7 +133,7 @@ Here's an example:
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   ...
   "example_element": {
@@ -158,7 +158,7 @@ Variables can store numbers, booleans, strings and arrays.
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "cool_element": {
     ...
@@ -183,7 +183,7 @@ To derive some element from another you should use `new@super` notation. An exam
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "foobar": {
     ...
@@ -210,7 +210,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 `offset` animation example.
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -231,7 +231,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 `Wait` animation example. It's used when you want no animation between two other animtions.
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -267,7 +267,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 `flip_book` animation example.
 {% include filepath.html path="RP/ui/example_file.json"%}
 
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -290,7 +290,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, you can reference the animations that will be applied to the element using the `anims` property.
 {% include filepath.html path="RP/ui/example_file.json"%}
 
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -345,7 +345,7 @@ The `text` property value is `#hardtext`. By using `bindings` I can get the valu
 Here it's directly assigning the `#hardtext` value to the `text` property.
 {% include filepath.html path="RP/ui/example_file.json"%}
 
-```jsonc
+```json
 {
 	"label": {
 		"type": "label",
@@ -361,7 +361,7 @@ Here it's directly assigning the `#hardtext` value to the `text` property.
 
 Talking more about the `label` example, it can also appear in another way. Let's see:
 
-```jsonc
+```json
 {
 	"label": {
 		"type": "label",
@@ -380,7 +380,7 @@ In this case the value of `#hardtext` is assigned to the `#text` binding propert
 
 This happens a lot with the `visible` and `enabled` properties. Here's an example with both of them:
 
-```jsonc
+```json
 {
   "send_button": {
     "bindings": [
@@ -409,7 +409,7 @@ And `#play_button_enabled` will override the `#enabled` binding property value w
 Let's say you want to show a panel with some content when a specific toggle is selected/checked. You'll need a different type of binding structure.
 We have to tell what's the source element where the value will come from, tell which property of that source element we want to get the value from and which property we want to override its value.
 
-```jsonc
+```json
 {
   "panel": {
     ...
@@ -441,7 +441,7 @@ Variables can be used to conditionally render UI controls. Recall that UI variab
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 ...
   "hud_actionbar_text": {
@@ -473,7 +473,7 @@ The `ignored` property is used to conditionally render a UI control when working
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 ...
   "hud_actionbar_text": {
@@ -505,7 +505,7 @@ The `ignored` property is used to conditionally render a UI control when working
 Modifying the above JSON into an unintrusive UI file used in a resource pack should look identical to this:
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 	"hud_actionbar_text/actionbar_message": {
 		"ignored": "($actionbar_text = 'hello world')"
@@ -519,7 +519,7 @@ Here's a more complicated example of conditional rendering with variables. In th
 
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 	"black_conditional_image": {
 		"type": "image",
@@ -561,7 +561,7 @@ Following the above example with the actionbar, you might logically assume that 
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 ...
   "hud_title_text": {
@@ -630,7 +630,7 @@ You will need to add another binding object to the text to control its visibilit
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 ...
   "hud_title_text": {
@@ -703,7 +703,7 @@ You will need to add another binding object to the text to control its visibilit
 Modifying the above JSON into an unintrusive UI file used in a resource pack should look identical to this:
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 	"hud_title_text/title_frame/title": {
 		"modifications": [
@@ -725,7 +725,7 @@ Like before, here's a more complicated example of conditional rendering with bin
 
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 	"black_conditional_image": {
 		"type": "image",

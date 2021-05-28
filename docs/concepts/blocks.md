@@ -450,7 +450,7 @@ List of all new block components, with usage examples
 
 -   minecraft:material_instances
 
-```jsonc
+```json
 {
 	"minecraft:material_instances": {
 		// Can also be a specific material instance for a specific face mapped in the geometry

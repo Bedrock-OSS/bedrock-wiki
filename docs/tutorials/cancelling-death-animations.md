@@ -196,7 +196,7 @@ Heres an example file in the BP
 Note: You can also spawn custom spawn egg items using the **minecraft:spawn_entity** component by setting "spawn_item":
 to be your entity's id and an affix of **\_spawn_egg** and it will look something like this.
 
-```jsonc
+```json
 {
 	"minecraft:spawn_entity": [
 		{
