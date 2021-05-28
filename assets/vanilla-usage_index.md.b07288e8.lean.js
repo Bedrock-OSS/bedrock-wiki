@@ -1,1 +1,0 @@
-import{o as e,c as t}from"./404.md.2eb8c6c0.js";const a='{"title":"Vanilla Usage","description":"","frontmatter":{"layout":"page","title":"Vanilla Usage","has_children":true},"relativePath":"vanilla-usage/index.md","lastUpdated":1622219092617}',r={};r.render=function(a,r,i,l,n,d){return e(),t("div")};export default r;export{a as __pageData};
