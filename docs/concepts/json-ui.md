@@ -256,7 +256,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ```
 
 `flip_book` animation example.
-{% include filepath.html path="RP/ui/example_file.json"%}
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -279,7 +279,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ```
 
 Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, you can reference the animations that will be applied to the element using the `anims` property.
-{% include filepath.html path="RP/ui/example_file.json"%}
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
@@ -334,7 +334,7 @@ Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, 
 Here's an example of an label using a hardcoded text.
 The `text` property value is `#hardtext`. By using `bindings` I can get the value of the hardcoded variable `#hardtext` so it can be used by the `text` property.
 Here it's directly assigning the `#hardtext` value to the `text` property.
-{% include filepath.html path="RP/ui/example_file.json"%}
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {

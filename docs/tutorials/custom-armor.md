@@ -18,7 +18,7 @@ Making custom armors is surprisingly easy to do, you need to do a bit of fiddlin
 
 Lets dive right into it and make sure our manifests are using the beta version.
 
-{% include filepath.html path="BP/manifest.json"%}
+<CodeHeader>BP/manifest.json</CodeHeader>
 
 ```json
 {
@@ -531,7 +531,8 @@ As you can see from the comments, there is a lot there but really all we are doi
 
 > The event can be called anything but it is often better to have it more specific, incase you end up having multiple similar events etc, also it can help finding if you have multiple sections to it, i.e I could search on "armour_sets" and find all events related to it.
 > Then once you are done, in the same file we decide what we want to do with the event, which we put into our `events` section.
-> {% include filepath.html path="BP/entities/player.json"%}
+
+<CodeHeader>BP/entities/player.json</CodeHeader>
 
 ```json
 {
