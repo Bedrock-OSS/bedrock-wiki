@@ -8,15 +8,6 @@ parent: Documentation
 
 # Block Tags
 
-<details id="toc" open markdown="block">
-  <summary>
-    Block Tags Type
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
 Tags are used for various block properties. Block tags can be called when testing for block arguments in commands.
 Some tags are prefixed with can_be, or can_hurt, one would expect these to have a boolan response.
 
