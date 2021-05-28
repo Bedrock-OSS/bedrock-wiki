@@ -6,6 +6,15 @@ parent: Concepts
 
 # JSON UI
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ## Introduction
 
 All editable vanilla UI files are stored in `RP/ui/` in `.json` files.
@@ -29,7 +38,7 @@ Imagine I created the files `RP/ui/button.json` and `RP/my_ui/main_menu.json`:
 
 <CodeHeader>RP/ui/\_ui_defs.json</CodeHeader>
 
-```json
+```jsonc
 {
 	"ui_defs": ["ui/button.json", "my_ui/main_menu.json"]
 }
@@ -51,15 +60,15 @@ Another good advantage of doing that is you only need to change in one place and
 
 <CodeHeader>RP/ui/\_global_variables.json</CodeHeader>
 
-```json
+```jsonc
 {
 	"$info_text_color": [0.8, 0.8, 0.8]
 }
 ```
 
-<CodeHeader>RP/my_ui/file1.json</CodeHeader>
+<CodeHeader>vanilla/my_ui/file1.json</CodeHeader>
 
-```json
+```jsonc
 {
   "some_info": {
     ...
@@ -69,9 +78,9 @@ Another good advantage of doing that is you only need to change in one place and
 }
 ```
 
-<CodeHeader>RP/my_ui/file2.json</CodeHeader>
+<CodeHeader>vanilla/my_ui/file2.json</CodeHeader>
 
-```json
+```jsonc
 {
   "info": {
     ...
@@ -87,9 +96,9 @@ Namespaces are identifiers for the UI files. They are used to access elements in
 They must be unique and short if possible because you may use it a lot of times.
 
 An example:
-<CodeHeader>RP/ui/file_a.json</CodeHeader>
+<CodeHeader>vanilla/ui/file_a.json</CodeHeader>
 
-```json
+```jsonc
 {
   "namespace":"stuff",
   ...
@@ -97,9 +106,9 @@ An example:
 }
 ```
 
-<CodeHeader>RP/ui/file_b.json</CodeHeader>
+<CodeHeader>vanilla/ui/file_b.json</CodeHeader>
 
-```json
+```jsonc
 {
   "fizzbuzz@stuff.foobar": {...}
   // "fizzbuzz" extends "foobar" from "stuff" namespace
@@ -122,9 +131,9 @@ All the elements must have the `type` property because its value will define wha
 
 Here's an example:
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```json
+```jsonc
 {
   ...
   "example_element": {
@@ -147,9 +156,9 @@ So, what are variables and how can elements derive from others?
 Everything that has `$` as the first letter of its name is a variable.
 Variables can store numbers, booleans, strings and arrays.
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```json
+```jsonc
 {
   "cool_element": {
     ...
@@ -172,9 +181,9 @@ Variables can store numbers, booleans, strings and arrays.
 
 To derive some element from another you should use `new@super` notation. An example:
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```json
+```jsonc
 {
   "foobar": {
     ...
@@ -199,9 +208,9 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ## Animations
 
 `offset` animation example.
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```json
+```jsonc
 {
   "namespace": "example_nm",
 
@@ -220,9 +229,9 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ```
 
 `Wait` animation example. It's used when you want no animation between two other animtions.
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```json
+```jsonc
 {
   "namespace": "example_nm",
 
@@ -256,9 +265,9 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ```
 
 `flip_book` animation example.
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+{% include filepath.html path="RP/ui/example_file.json"%}
 
-```json
+```jsonc
 {
   "namespace": "example_nm",
 
@@ -279,9 +288,9 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 ```
 
 Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, you can reference the animations that will be applied to the element using the `anims` property.
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+{% include filepath.html path="RP/ui/example_file.json"%}
 
-```json
+```jsonc
 {
   "namespace": "example_nm",
 
@@ -334,9 +343,9 @@ Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, 
 Here's an example of an label using a hardcoded text.
 The `text` property value is `#hardtext`. By using `bindings` I can get the value of the hardcoded variable `#hardtext` so it can be used by the `text` property.
 Here it's directly assigning the `#hardtext` value to the `text` property.
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+{% include filepath.html path="RP/ui/example_file.json"%}
 
-```json
+```jsonc
 {
 	"label": {
 		"type": "label",
@@ -352,7 +361,7 @@ Here it's directly assigning the `#hardtext` value to the `text` property.
 
 Talking more about the `label` example, it can also appear in another way. Let's see:
 
-```json
+```jsonc
 {
 	"label": {
 		"type": "label",
@@ -371,7 +380,7 @@ In this case the value of `#hardtext` is assigned to the `#text` binding propert
 
 This happens a lot with the `visible` and `enabled` properties. Here's an example with both of them:
 
-```json
+```jsonc
 {
   "send_button": {
     "bindings": [
@@ -400,7 +409,7 @@ And `#play_button_enabled` will override the `#enabled` binding property value w
 Let's say you want to show a panel with some content when a specific toggle is selected/checked. You'll need a different type of binding structure.
 We have to tell what's the source element where the value will come from, tell which property of that source element we want to get the value from and which property we want to override its value.
 
-```json
+```jsonc
 {
   "panel": {
     ...
@@ -421,6 +430,343 @@ We have to tell what's the source element where the value will come from, tell w
 ```
 
 When the toggle is checked the `#toggle_state` will be checked (`1` or `true`) and it will override the `visible` property value of the element to true. When you uncheck it will be unchecked (`0` or `false`) and once again override the `visible` value.
+
+## Conditional Rendering
+
+Within Bedrock's current UI system, it is particularly difficult to manipulate when things are visible on screen using standard properties. Variables and bindings, however, are special in JSON UI because they contain data coming directly from the Bedrock Engine. Using a couple of clever UI techniques, it is possible to have complete control over the conditions which a UI control is rendered. The techniques are split into two categories: conditional rendering with variables and conditional rendering with bindings.
+
+### Conditional Rendering with Variables
+
+Variables can be used to conditionally render UI controls. Recall that UI variables are properties with `$` in front of them. An example of a variable that carries engine data in `hud_screen.json` is `$actionbar_text`. Looking at `hud_actionbar_text`, we can see that `$actionbar_text` is used to display the actionbar text.
+
+<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+
+```jsonc
+{
+...
+  "hud_actionbar_text": {
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 5px" ],
+    "offset": [ 0, "50%-68px" ],
+    "texture": "textures/ui/hud_tip_text_background",
+    "alpha": "@hud.anim_actionbar_text_background_alpha_out",
+    "controls": [
+      {
+        "actionbar_message": {
+          "type": "label",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "color": "$tool_tip_text",
+          "layer": 1,
+          "text": "$actionbar_text",
+          "localize": false,
+          "alpha": "@hud.anim_actionbar_text_alpha_out"
+        }
+      }
+    ]
+  }
+...
+}
+```
+
+The `ignored` property is used to conditionally render a UI control when working with variables that carry bedrock engine data. Consider the below example. The `ignored` property added is the same as saying "ignore the text label if the actionbar text is equal to `hello world`".
+
+<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+
+```jsonc
+{
+...
+  "hud_actionbar_text": {
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 5px" ],
+    "offset": [ 0, "50%-68px" ],
+    "texture": "textures/ui/hud_tip_text_background",
+    "alpha": "@hud.anim_actionbar_text_background_alpha_out",
+    "controls": [
+      {
+        "actionbar_message": {
+          "type": "label",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "color": "$tool_tip_text",
+          "layer": 1,
+          "text": "$actionbar_text",
+          "localize": false,
+          "alpha": "@hud.anim_actionbar_text_alpha_out",
+          "ignored": "($actionbar_text = 'hello world')" // ignore the text label if the actionbar text is equal to "hello world"
+        }
+      }
+    ]
+  }
+...
+}
+```
+
+Modifying the above JSON into an unintrusive UI file used in a resource pack should look identical to this:
+<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+
+```jsonc
+{
+	"hud_actionbar_text/actionbar_message": {
+		"ignored": "($actionbar_text = 'hello world')"
+	}
+}
+```
+
+When you log into a world with the resource pack enabled, try executing `/title @s actionbar hello world`. You should notice that no message appears! Executing any other actionbar title should show the other messages.
+
+Here's a more complicated example of conditional rendering with variables. In this case it is necessary to use the actionbar factory as it turns out the `$actionbar_text` data is only accessible in the factory controls.
+
+<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+
+```jsonc
+{
+	"black_conditional_image": {
+		"type": "image",
+		"texture": "textures/ui/Black",
+		"size": [16, 16],
+		"layer": 10,
+		"ignored": "(not ($actionbar_text = 'hello world'))"
+	},
+
+	"black_conditional_image_factory": {
+		"type": "panel",
+		"factory": {
+			"name": "hud_actionbar_text_factory",
+			"control_ids": {
+				"hud_actionbar_text": "black_conditional_image@hud.black_conditional_image"
+			}
+		}
+	},
+
+	"root_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": {
+					"black_conditional_image_factory@hud.black_conditional_image_factory": {}
+				}
+			}
+		]
+	}
+}
+```
+
+The above example shows a 16x16 black squre on the HUD screen when the actionbar text string is equal to `hello world`. You may also apply animations to your image to make it more dynamic. Conditional rendering with variables is not limited to images and labels, you may use any object type in conditional rendering with variables. You can imagine pairing your UI code with the actionbar text allows for a high degree of manipulation of JSON UI (at least in `hud_screen.json`). The `ignored` property has support for UI operators so you have even more control. Anywhere where there is a variable that carries bedrock engine data allows for conditional rendering with variables.
+
+### Conditional Rendering with Bindings
+
+Following the above example with the actionbar, you might logically assume that the title also uses variables. This is not the case. The title uses bindings for its data as shown below.
+
+<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+
+```jsonc
+{
+...
+  "hud_title_text": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "offset": [ 0, -19 ],
+    "layer": 1,
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "title_frame": {
+          "type": "panel",
+          "size": [ "100%", "100%cm" ],
+          "controls": [
+            {
+              "title_background": {
+                "type": "image",
+                "size": [ "100%sm + 30px", "100%sm + 6px" ],
+                "texture": "textures/ui/hud_tip_text_background",
+                "alpha": "@hud.anim_title_background_alpha_in"
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 1,
+                "localize": false,
+                "font_size": "extra_large",
+                "variables": [
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "text_alignment": "center",
+                "offset": [ 0, 6 ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+...
+}
+```
+
+You will need to add another binding object to the text to control its visibility. Recall that `#visible` controls visiblity of the object directly through bindings. The following example will not render the title string `hello world` but will render all other strings. Try typing `/title @s title hello world` to see it in-game.
+
+<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+
+```jsonc
+{
+...
+  "hud_title_text": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "offset": [ 0, -19 ],
+    "layer": 1,
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "title_frame": {
+          "type": "panel",
+          "size": [ "100%", "100%cm" ],
+          "controls": [
+            {
+              "title_background": {
+                "type": "image",
+                "size": [ "100%sm + 30px", "100%sm + 6px" ],
+                "texture": "textures/ui/hud_tip_text_background",
+                "alpha": "@hud.anim_title_background_alpha_in"
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 1,
+                "localize": false,
+                "font_size": "extra_large",
+                "variables": [
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "text_alignment": "center",
+                "offset": [ 0, 6 ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view", // make this a viewing binding
+                    "source_property_name": "(not (#text = 'hello world'))", // detect when the title text string is not equal to "hello world"
+                    "target_property_name": "#visible" // override the #visibility property depending on if "source_property_name" is true or false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+...
+}
+```
+
+Modifying the above JSON into an unintrusive UI file used in a resource pack should look identical to this:
+<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+
+```jsonc
+{
+	"hud_title_text/title_frame/title": {
+		"modifications": [
+			{
+				"array_name": "bindings",
+				"operation": "insert_back",
+				"value": {
+					"binding_type": "view",
+					"source_property_name": "(not (#text = 'hello world'))",
+					"target_property_name": "#visible"
+				}
+			}
+		]
+	}
+}
+```
+
+Like before, here's a more complicated example of conditional rendering with bindings below. In this case, the 16x16 black image will only render when the title text string is equal to `hello world`. While you don't need to use the title factory in this case, you should if you are going to use UI animations.
+
+<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+
+```jsonc
+{
+	"black_conditional_image": {
+		"type": "image",
+		"texture": "textures/ui/Black",
+		"size": [16, 16],
+		"layer": 10,
+		"bindings": [
+			{
+				"binding_name": "#hud_title_text_string"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(#hud_title_text_string = 'hello world')",
+				"target_property_name": "#visible"
+			}
+		]
+	},
+
+	"black_conditional_image_factory": {
+		"type": "panel",
+		"factory": {
+			"name": "hud_title_text_factory",
+			"control_ids": {
+				"hud_title_text": "black_conditional_image@hud.black_conditional_image"
+			}
+		}
+	},
+
+	"root_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": {
+					"black_conditional_image_factory@hud.black_conditional_image_factory": {}
+				}
+			}
+		]
+	}
+}
+```
 
 ## Button Mappings
 
