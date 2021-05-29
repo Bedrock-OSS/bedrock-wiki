@@ -18,7 +18,7 @@ Here is an example:
 },
 ```
 
-As you can see, Math-based animations are complicated, and hard to understand. For this reason, they should be treated as a *specialized-alternative* to key-frames -not a full replacement.
+As you can see, Math-based animations are complicated, and hard to understand. For this reason, they should be treated as a _specialized-alternative_ to key-frames -not a full replacement.
 
 # Writing math-animations
 
@@ -37,15 +37,16 @@ For example, adding `query.modified_distance_moved = time*8` simulates the modif
 
 # Using queries
 
-The biggest tool you have access to when writing math-based animations, is using `queries`. Queries can be used to add outside-information into your math expression. 
+The biggest tool you have access to when writing math-based animations, is using `queries`. Queries can be used to add outside-information into your math expression.
 
 Common ones include:
- - `query.modified_distance_moved`
- - `query.modified_move_speed`
- - `query.anim_time`
- - `query.life_time`
 
- The reason we want to use queries is it allows us to directly drive animations from gameplay. Things like the attack time, or distance moved, allows us to drive gameplay directly, and allows animations to match the speed of the action.
+-   `query.modified_distance_moved`
+-   `query.modified_move_speed`
+-   `query.anim_time`
+-   `query.life_time`
+
+The reason we want to use queries is it allows us to directly drive animations from gameplay. Things like the attack time, or distance moved, allows us to drive gameplay directly, and allows animations to match the speed of the action.
 
 ### Avoiding animation controllers
 
@@ -64,10 +65,10 @@ A specific example is using animations to drive the wheels of a car based on the
 			"animation_length": 1.0,
 			"bones": {
 				"front_wheels": {
-					"rotation": [ "query.modified_distance_moved * -30", 0, 0  ]
+					"rotation": ["query.modified_distance_moved * -30", 0, 0]
 				},
 				"back_wheels": {
-					"rotation": [ "query.modified_distance_moved * -30", 0, 0  ]
+					"rotation": ["query.modified_distance_moved * -30", 0, 0]
 				}
 			}
 		}
@@ -78,10 +79,6 @@ A specific example is using animations to drive the wheels of a car based on the
 In this example, the bones/groups `front_wheels` and `back_wheels` are rotated based on the `query.modified_distance_moved`, multiplied by some 30.
 
 This means
- - A car at rests will not spin
- - A car that is driving will spin proportionally fast to the speed of the car
- 
-  
 
-
-
+-   A car at rests will not spin
+-   A car that is driving will spin proportionally fast to the speed of the car
