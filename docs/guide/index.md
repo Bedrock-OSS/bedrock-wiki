@@ -1,6 +1,10 @@
 ---
 layout: guide
 title: Beginners Guide
+has_children: true
+sitemap:
+    priority: 0.73
+    changefreq: 'weekly'
 ---
 
 # Beginners Guide
