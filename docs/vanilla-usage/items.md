@@ -5,27 +5,32 @@ parent: Vanilla Usage
 ---
 
 # Items
+
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
- - [minecraft:block](#minecraftblock)
- - [minecraft:camera](#minecraftcamera)
- - [minecraft:foil](#minecraftfoil)
- - [minecraft:food](#minecraftfood)
- - [minecraft:hand_equipped](#minecrafthand_equipped)
- - [minecraft:max_damage](#minecraftmax_damage)
- - [minecraft:max_stack_size](#minecraftmax_stack_size)
- - [minecraft:seed](#minecraftseed)
- - [minecraft:stacked_by_data](#minecraftstacked_by_data)
- - [minecraft:use_duration](#minecraftuse_duration)
+
+-   [minecraft:block](#minecraftblock)
+-   [minecraft:camera](#minecraftcamera)
+-   [minecraft:foil](#minecraftfoil)
+-   [minecraft:food](#minecraftfood)
+-   [minecraft:hand_equipped](#minecrafthand_equipped)
+-   [minecraft:max_damage](#minecraftmax_damage)
+-   [minecraft:max_stack_size](#minecraftmax_stack_size)
+-   [minecraft:seed](#minecraftseed)
+-   [minecraft:stacked_by_data](#minecraftstacked_by_data)
+-   [minecraft:use_duration](#minecraftuse_duration)
 
 # minecraft:block
+
 ### camera
+
 ```json
 "minecraft:block": "minecraft:camera"
 ```
 
 # minecraft:camera
+
 ```json
 "minecraft:camera": {
     "black_bars_duration": 0.2,
@@ -37,18 +42,23 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:foil
+
 ### appleEnchanted
+
 ```json
 "minecraft:foil": true
 ```
 
 ### golden_apple
+
 ```json
 "minecraft:foil": false
 ```
 
 # minecraft:food
+
 ### apple
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -57,6 +67,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### appleEnchanted
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -92,6 +103,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### baked_potato
+
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -100,6 +112,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### beef
+
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -108,6 +121,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### beetroot
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -116,6 +130,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### beetroot_soup
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -125,6 +140,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bread
+
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -133,6 +149,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### carrot
+
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -141,6 +158,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -157,6 +175,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chorus_fruit
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -174,6 +193,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### clownfish
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -182,6 +202,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_beef
+
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -190,6 +211,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_chicken
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -198,6 +220,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_fish
+
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -206,6 +229,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_porkchop
+
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -214,6 +238,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_rabbit
+
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -222,6 +247,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cooked_salmon
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -230,6 +256,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cookie
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -238,6 +265,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dried_kelp
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -246,6 +274,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -254,6 +283,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_apple
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -277,6 +307,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### golden_carrot
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -285,6 +316,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### honey_bottle
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -298,6 +330,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### melon
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -306,6 +339,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mushroom_stew
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -315,6 +349,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### muttonCooked
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -323,6 +358,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### muttonRaw
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -331,6 +367,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### poisonous_potato
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -347,6 +384,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### porkchop
+
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -355,6 +393,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### potato
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -363,6 +402,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -388,6 +428,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pumpkin_pie
+
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -396,6 +437,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -404,6 +446,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit_stew
+
 ```json
 "minecraft:food": {
     "nutrition": 10,
@@ -413,6 +456,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rotten_flesh
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -429,6 +473,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -437,6 +482,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider_eye
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -453,6 +499,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### suspicious_stew
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -463,6 +510,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sweet_berries
+
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -472,70 +520,87 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:hand_equipped
+
 ### appleEnchanted
+
 ```json
 "minecraft:hand_equipped": false
 ```
 
 # minecraft:max_damage
+
 ### clownfish
+
 ```json
 "minecraft:max_damage": 0
 ```
 
 ### cooked_fish
+
 ```json
 "minecraft:max_damage": 0
 ```
 
 ### cooked_salmon
+
 ```json
 "minecraft:max_damage": 0
 ```
 
 ### fish
+
 ```json
 "minecraft:max_damage": 0
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:max_damage": 0
 ```
 
 ### salmon
+
 ```json
 "minecraft:max_damage": 0
 ```
 
 # minecraft:max_stack_size
+
 ### beetroot_soup
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### honey_bottle
+
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 ### mushroom_stew
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### rabbit_stew
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 ### suspicious_stew
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 # minecraft:seed
+
 ### beetroot_seeds
+
 ```json
 "minecraft:seed": {
     "crop_result": "beetroot"
@@ -543,6 +608,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### carrot
+
 ```json
 "minecraft:seed": {
     "crop_result": "carrots"
@@ -550,6 +616,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### melon_seeds
+
 ```json
 "minecraft:seed": {
     "crop_result": "melon_stem"
@@ -557,6 +624,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### nether_wart
+
 ```json
 "minecraft:seed": {
     "plant_at": "soul_sand",
@@ -565,6 +633,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### potato
+
 ```json
 "minecraft:seed": {
     "crop_result": "potatoes"
@@ -572,6 +641,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pumpkin_seeds
+
 ```json
 "minecraft:seed": {
     "crop_result": "pumpkin_stem"
@@ -579,6 +649,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sweet_berries
+
 ```json
 "minecraft:seed": {
     "crop_result": "sweet_berry_bush",
@@ -591,6 +662,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wheat_seeds
+
 ```json
 "minecraft:seed": {
     "crop_result": "wheat"
@@ -598,244 +670,293 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:stacked_by_data
+
 ### appleEnchanted
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### clownfish
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cooked_fish
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### cooked_salmon
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### fish
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### golden_apple
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 ### salmon
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 # minecraft:use_duration
+
 ### apple
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### appleEnchanted
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### baked_potato
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### beef
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### beetroot
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### beetroot_soup
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### bread
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### camera
+
 ```json
 "minecraft:use_duration": 100000
 ```
 
 ### carrot
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### chicken
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### chorus_fruit
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### clownfish
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_beef
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_chicken
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_fish
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_porkchop
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_rabbit
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cooked_salmon
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### cookie
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### dried_kelp
+
 ```json
 "minecraft:use_duration": 16
 ```
 
 ### fish
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### golden_apple
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### golden_carrot
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### honey_bottle
+
 ```json
 "minecraft:use_duration": 40
 ```
 
 ### melon
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### mushroom_stew
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### muttonCooked
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### muttonRaw
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### poisonous_potato
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### porkchop
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### potato
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### pumpkin_pie
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### rabbit
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### rabbit_stew
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### rotten_flesh
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### salmon
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### spider_eye
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### suspicious_stew
+
 ```json
 "minecraft:use_duration": 32
 ```
 
 ### sweet_berries
+
 ```json
 "minecraft:use_duration": 32
 ```
-

@@ -12,7 +12,7 @@ Entity events are one of the fundamental building blocks of behavior alongside c
 
 # Basic Usage
 
-This section covers the main feature of events and how to call them inside an entity. 
+This section covers the main feature of events and how to call them inside an entity.
 
 ## Adding/Removing Component Groups
 
@@ -28,11 +28,13 @@ The most essential and common use of events is directly adding and/or removing c
   }
 }
 ```
+
 ## Calling Events
 
 Following are examples of calling an event on an entity using a component, an animation, an animation controller, and another event. Note that certain components can be used to call events on entities other than the entity within which the component exists, and this will be shown in the Advanced Usage section.
 
 The `minecraft:environment_sensor` component is used in the zombie to call the event `minecraft:start_transforming` when the entity is underwater.
+
 ```json
 "minecraft:environment_sensor": {
   "triggers": {
@@ -45,7 +47,9 @@ The `minecraft:environment_sensor` component is used in the zombie to call the e
   }
 }
 ```
+
 This behavior-based animation is used to call the event `shanewolf:start_pouncing` after 10 seconds.
+
 ```json
 "animation.entity.pounce_timer": {
   "timeline": {
@@ -54,7 +58,9 @@ This behavior-based animation is used to call the event `shanewolf:start_pouncin
   "animation_length": 15.0
 }
 ```
+
 This behavior-based animation controller is used to call the event `shanewolf:running` upon transition to the state "run".
+
 ```json
 "controller.animation.entity.movement": {
   "initial_state": "walk",
@@ -69,7 +75,9 @@ This behavior-based animation controller is used to call the event `shanewolf:ru
   }
 }
 ```
+
 This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`. This particular example does not showcase the most practical usage, but there will be better examples shown in the following section.
+
 ```json
 "minecraft:entity_born": {
   "trigger": "spawn_baby"
@@ -85,6 +93,7 @@ More complex and powerful usage of entity events consists of the `sequence` and 
 Some components, such as the damage sensor, can target entities other than "self" when calling events. One component in particular is specifically designed to call events in other entities: `minecraft:behavior.send_event`. Examples of each are shown below.
 
 The component `minecraft:damage_sensor` inside the pillager calls the event `minecraft:gain_bad_omen` on the player which kills it. Note how the target of the event is set to "other".
+
 ```json
 "minecraft:damage_sensor": {
   "triggers": {
@@ -108,7 +117,9 @@ The component `minecraft:damage_sensor` inside the pillager calls the event `min
   }
 }
 ```
+
 The `minecraft:behavior.send_event` component is used inside the evoker to call an event named `wololo` inside any blue sheep within its activation range.
+
 ```json
 "minecraft:behavior.send_event": {
   "priority": 3,
@@ -120,11 +131,11 @@ The `minecraft:behavior.send_event` component is used inside the evoker to call 
       "cast_duration": 3.0,
       "particle_color": "#FFB38033",
       "weight": 3,
-      "filters": { 
+      "filters": {
         "all_of": [
           { "test" :  "is_family", "subject" : "other", "value" :  "sheep"},
           { "test" :  "is_color", "subject" : "other", "value" :  "blue"}
-        ] 
+        ]
       },
       "start_sound_event": "cast.spell",
       "sequence": [
@@ -144,6 +155,7 @@ The `minecraft:behavior.send_event` component is used inside the evoker to call 
 Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. This is a very useful tool when different component groups should be dependent on varying conditions.
 
 The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
+
 ```json
 "minecraft:convert_to_drowned": {
   "sequence": [
@@ -160,7 +172,9 @@ The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` p
   ]
 }
 ```
+
 In this particular case, it may be noted that both entries in the sequence remove the same component group. In practice, a more useful way to write this event may appear as follows:
+
 ```json
 "minecraft:convert_to_drowned": {
   "sequence": [
@@ -186,6 +200,7 @@ Note: Entries in a sequence are not exclusive; if a filter in one of them passes
 Randomize is a parameter which can be used inside of an entity event to add or remove component groups based off weighted randomization. This is a very useful tool when different component groups should be added based on random chance.
 
 The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95% chance of the cow spawning as an adult and a 5% chance of spawning as a baby (component groups "minecraft:cow_adult" and "minecraft:cow_baby").
+
 ```json
 "minecraft:entity_spawned": {
   "randomize": [
@@ -206,6 +221,7 @@ The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95%
 The sequence and randomize parameters can be combined for more complex behavior inside an event. Below is an example which aims to be exhaustive in showing how these parameters can be combined and utilized.
 
 This event is run when the entity is hit by a player or projectile. There is a 60% chance nothing will happen and a 40% chance an attack sequence will activate. This attack sequence chooses a random attack with weights determined both by the entity's current health (stronger attacks are given a higher chance when the entity is below half health) and the distance to the nearest player (ranged attacks have higher priority when the player is further away).
+
 ```json
 "shanewolf:on_hit": {
   "randomize": [
@@ -219,7 +235,7 @@ This event is run when the entity is hit by a player or projectile. There is a 6
       "sequence": [
         //runs separate event required for all attacks
         {
-          "trigger": "attack_event" 
+          "trigger": "attack_event"
         },
         //runs if entity is not sheared (entity becomes sheared if under half health)
         {

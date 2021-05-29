@@ -7,7 +7,7 @@ parent: Documentation
 # Color Codes
 
 | Color                       | Code |
-|-----------------------------|------|
+| --------------------------- | ---- |
 | Dark Red (dark_red)         | §4   |
 | Red (red)                   | §c   |
 | Gold (gold)                 | §6   |
@@ -29,7 +29,7 @@ parent: Documentation
 ## Format Codes
 
 | Effect                  | Code |
-|-------------------------|------|
+| ----------------------- | ---- |
 | Obfuscated              | §k   |
 | Bold                    | §l   |
 | Strikethrough           | §m   |
