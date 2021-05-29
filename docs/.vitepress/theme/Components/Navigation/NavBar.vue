@@ -26,13 +26,13 @@
 			<WikiLogo class="mr-1 inline" /> <span>Bedrock Wiki</span>
 		</a>
 		<span class="flex-grow"></span>
-		<DarkMode v-if="!isMobile" />
 		<NavLink
 			v-if="!isMobile"
 			v-for="item in navLinks"
 			:item="item"
 			:key="item.link"
 		/>
+		<DarkMode />
 		<AlgoliaSearchBox v-if="!!algoliaConfig" :options="algoliaConfig" />
 	</header>
 </template>

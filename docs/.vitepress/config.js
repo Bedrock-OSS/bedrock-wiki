@@ -132,13 +132,13 @@ module.exports = {
 				activeMatch: '^/discord',
 			},
 			{
-				text: 'bedrock.dev',
-				link: 'https://bedrock.dev',
-			},
-			{
 				text: 'Contribute',
 				link: '/contribute',
 				activeMatch: '^/contribute',
+			},
+			{
+				text: 'bedrock.dev',
+				link: 'https://bedrock.dev',
 			},
 			// {
 			// 	text: 'News',
