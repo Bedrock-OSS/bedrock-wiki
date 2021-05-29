@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Knowledge
+title: [old] Documentation
 has_children: true
 ---

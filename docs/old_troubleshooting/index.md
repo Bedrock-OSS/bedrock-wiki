@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Tutorials
+title: [old] Troubleshooting
 has_children: true
-nav_order: 0
 ---
