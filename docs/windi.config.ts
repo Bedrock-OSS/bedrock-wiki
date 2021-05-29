@@ -9,5 +9,13 @@ export default defineConfig({
 		exclude: ['**/*.md'],
 	},
 
+	theme: {
+		extend: {
+			transitionProperty: {
+				spacing: 'margin, padding',
+			},
+		},
+	},
+
 	darkMode: 'class',
 })

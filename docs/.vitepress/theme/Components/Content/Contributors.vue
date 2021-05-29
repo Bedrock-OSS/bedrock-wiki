@@ -1,16 +1,17 @@
 <template>
-	<div v-if="contributors && contributors.length > 0">
-		<div class="ml-4">
+	<div v-if="contributors && contributors.length > 0" class="inline-block">
+		<div class="space-x-2 md:-space-x-2 md:hover:space-x-2">
 			<a
 				v-for="c in contributors"
 				:key="c.login"
 				:href="c.html_url"
 				:alt="c.login"
 				target="_blank"
+				class="h-8 w-8 transition-spacing ease-in-out duration-150"
 			>
 				<img
 					:src="c.avatar_url"
-					class="h-8 rounded-full -ml-2"
+					class="h-8 w-8 rounded-full border-2 border-white bg-white"
 					:alt="c.login"
 					:title="c.login"
 				/>
