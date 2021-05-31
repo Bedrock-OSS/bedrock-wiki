@@ -19,7 +19,6 @@ In general, you can think of _mods_ as _modifying_ the game, and _addons_ as _ad
 
 This guide is a beginner tutorial, created to make it possible for more people to start 'modding' Minecraft Bedrock Edition. The guide will walk you through the creation of your very own fully-functional custom Entity (Ghost), that drops a custom item, Ectoplasm. By the end of the Guide you will have coded an add-on containing them, and be ready to continue onto your personal ones. Good luck!
 
-
 ## **What do I need to create Addons?**
 
 This guide be focused on creating addons on a Windows 10 PC for any Bedrock platform. However, the process is much the same when working on Android or iOS, although it is significantly more tedious. If something works differently on a mobile device, a note will state that.
@@ -40,7 +39,6 @@ Let's start by setting up your tools, which you will use throughout the developm
 
 <Button color="green">Project Setup</Button>
 
-
 ## Simple Custom Item
 
 Now that your workspace is ready to go, we can start creating a fully custom Item, that our entity will drop.
@@ -54,10 +52,11 @@ Finally, it's time to create the mob that drops our custom item: A hostile Ghost
 <Button color="green">Custom Entity</Button>
 
 # What to do after finishing the Guide
+
 Now, your first addon is complete! To further expand you knowledge, consider doing these:
 
-- Start your own project!
-- To dive into the other aspects of adding onto MCBE, you can use the other sections' subguides, listed in the [Appendix](/guide/appendix.html). This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. There are also sections that provide more techichal in-depth tutorials and documents for each relevant topic.
+-   Start your own project!
+-   To dive into the other aspects of adding onto MCBE, you can use the other sections' subguides, listed in the [Appendix](/guide/appendix). This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. There are also sections that provide more techichal in-depth tutorials and documents for each relevant topic.
 
 <Button color="green">Appendix: further features</Button>
 

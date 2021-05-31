@@ -10,7 +10,6 @@
 			pt-1
 			z-10
 			top-0
-			h-screen
 			w-72
 			border-r-1 border-gray-200
 			dark:border-true-gray-600
@@ -23,6 +22,7 @@
 			duration-150
 			ease-in-out
 		"
+		:style="{ height: 'calc(100% - 57px)' }"
 		:class="{
 			'-translate-x-full': !isVisible,
 			'translate-x-0': isVisible,

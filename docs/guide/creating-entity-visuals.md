@@ -12,7 +12,7 @@ badge_justification: left
 
 # Getting started with Blockbench & Modelling
 
-Blockbench is a free software, designed to make Minecraft modelling, texturing, and animating possible. You already installed it in [Tools and Software](/guide/software-preparation.html);
+Blockbench is a free software, designed to make Minecraft modelling, texturing, and animating possible. You already installed it in [Tools and Software](/guide/software-preparation);
 
 Let's get started.
 

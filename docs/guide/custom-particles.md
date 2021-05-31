@@ -64,7 +64,7 @@ File structure:
 
 ![](/assets/images/guide/custom_particles_5.png){:height="100px" width="100px" .pixelated}
 
-That is the texture I'm going to use, it's size is `16x16`. (`RP/particles/tut_particles.png`). As you can see, it has 4 different textures in it, each of them being a `8x8`. The upper row (_starting/top left corner at at 0, 0_) is the flipbook texture for "tut:curvy_particle" and the bottom row (_top left corner at/starting at 0, 8_). We'll define this in the "billboard_texture" component.
+That is the texture I'm going to use, it's size is `16x16`. (`RP/particles/tut_particles.png`). As you can see, it has 4 different textures in it, each of them being a `8x8`. The upper row (_starting/top left corner at at 0, 0_) is the flipbook texture for "tut:curvy*particle" and the bottom row (\_top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
 
 `RP/particles/curvy_particle.json`
 
@@ -229,7 +229,7 @@ It's rather tiresome to create particles that way, comparable to creating models
 
 # Defining Custom Sounds
 
-_You can find a more in-depth tutorial on custom sounds on [wiki.bedrock.dev](https://wiki.bedrock.dev/concepts/sounds.html)._
+_You can find a more in-depth tutorial on custom sounds on [wiki.bedrock.dev](https://wiki.bedrock.dev/concepts/sounds)._
 
 Minecraft can read sound files in the `.ogg` (recommended) or `.wav` format. (You can look up an .mp3 to .ogg converter online). Personally, I usually get my sound effects from ZapSplat.com.
 

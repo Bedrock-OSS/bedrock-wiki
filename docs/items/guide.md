@@ -104,7 +104,7 @@ Now let's create the file where texture short names will be defined: `RP/texture
 
 ## Your gem is finished!
 
-Done! If you did everything correctly, your gem can now be obtainable by `/give` in-game. If you're having trouble, watch your [Content Log](https://wiki.bedrock.dev/knowledge/troubleshooting.html#content-log). If the item still malfunctions, check out the example files.
+Done! If you did everything correctly, your gem can now be obtainable by `/give` in-game. If you're having trouble, watch your [Content Log](https://wiki.bedrock.dev/knowledge/troubleshooting#content-log). If the item still malfunctions, check out the example files.
 
 # Custom food item: - creating an eatable 'Meal'
 
@@ -151,7 +151,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 }
 ```
 
--   A new item needs a new `identifier`, but the same [namespace](https://wiki.bedrock.dev/concepts/namespaces.html).
+-   A new item needs a new `identifier`, but the same [namespace](https://wiki.bedrock.dev/concepts/namespaces).
 -   `minecraft:use_duration` defines how long the player will need to hold the 'use' button in order to consume the food
 -   `minecraft:food` is the component that makes the item a food item. Let's break it up:
     -   `nutrition` means hunger points to be added when the player consumes the food.
@@ -218,7 +218,7 @@ item.tut:gem.name=Gem
 item.tut:meal.name=Meal
 ```
 
-[You can learn more about .lang here](https://wiki.bedrock.dev/concepts/lang.html)
+[You can learn more about .lang here](https://wiki.bedrock.dev/concepts/lang)
 
 <div markdown="0" class="folder-structure">
     <ul>
