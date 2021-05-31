@@ -4,7 +4,7 @@
 			<a
 				v-for="c in contributors"
 				:key="c.login"
-				:href="c.html_url"
+				:href="c_url"
 				:alt="c.login"
 				target="_blank"
 			>

@@ -74,7 +74,7 @@ The "default_state":
 -   The "animations" array includes all animations the same way as "scripts/animate" in the .entity file. If you put an animation shortname like this "walk", the animation will play all the time during which the state is applied. Here we moved `{ "walk": "query.modified_move_speed" }` from ".entity/scripts/animate", which means that if the state is currently applied AND the entity is moving, the walk animation will play.
 -   The "transitions" array controls in which state the current state can transit in. For example, in this scenario, if `variable.attack_time > 0` turns true, the state will change from "default_state" to "attack_state".
 
-_(You can see more about queries [here](/guide/custom-entity-full.html), in the Resource Entity Definitions tutorial.)_
+_(You can see more about queries [here](/guide/custom-entity-full), in the Resource Entity Definitions tutorial.)_
 
 -   `"blend_transition": 0.1` means that the states will transit between each other smoothly, resulting in a smooth visual blend.
 -   "attack_state" is very similar, with the exception that the animation, "attack", is run all the time the state is applied. The state transits back to default when attack time is 0 again, or, in other words, the entity no longer attacks.
@@ -256,13 +256,13 @@ Here's an example that can be used to track AFK players. (You can scroll the cod
 
 -   "controller.animation.player.afk" is, of course, the identifier.
 -   If the [Molang](https://bedrock.dev/r/MoLang) query `!query.is_moving` returns false (the player isn't moving), the state transits to the "stand_still" state.
-    (You can see more about queries [here](/guide/custom-entity-full.html), in the Resource Entity Definitions tutorial.)
+    (You can see more about queries [here](/guide/custom-entity-full), in the Resource Entity Definitions tutorial.)
 -   When the state gets entered, "on_entry" gets triggered, which runs the following slash commands.
 -   "animations" includes the Behavior Animation's shortname that is to be ran during the whole time the state is active, just like in [Resource Animation Controllers](#animation-controller).
 -   If the player is moving again, the state will transit to "default" again.
     The commands "on_exit" will be executed.
 
-You can also trigger a behavior event _(defined in the entity behavior file>"events": {})_ on the entity which runs the command. Here, on the "0.2" keyframe, the entity runs the `/tag` command and then runs the `"jdot:tagged_alt"` event, which removes or adds some component groups. For more info see the [behavior events definitions page](/guide/custom-entity-full.html).
+You can also trigger a behavior event _(defined in the entity behavior file>"events": {})_ on the entity which runs the command. Here, on the "0.2" keyframe, the entity runs the `/tag` command and then runs the `"jdot:tagged_alt"` event, which removes or adds some component groups. For more info see the [behavior events definitions page](/guide/custom-entity-full).
 
 ```
 "0.2": [
@@ -273,7 +273,7 @@ You can also trigger a behavior event _(defined in the entity behavior file>"eve
 
 ## Defining behavior animation _Shortnames_ in the Behavior file
 
-Just like resource animations and animation controllers, Behavior animations and animation controllers need to be assigned a shortname and called in "scripts>animate". For resource ones, it's done in the _.entity_ file `RP/entity/entityname.entity.json`, but for behavior ones it's done directly in the entity behavior file: `BP/entities/entityname.json/"description: {}`. (For more information on the behavior file and the "description" object see the [Entity behavior definition page](/guide/custom-entity-full.html).
+Just like resource animations and animation controllers, Behavior animations and animation controllers need to be assigned a shortname and called in "scripts>animate". For resource ones, it's done in the _.entity_ file `RP/entity/entityname.entity.json`, but for behavior ones it's done directly in the entity behavior file: `BP/entities/entityname.json/"description: {}`. (For more information on the behavior file and the "description" object see the [Entity behavior definition page](/guide/custom-entity-full).
 
 Here's an example:
 
@@ -301,14 +301,14 @@ Here's an example:
 The "description" object in a behavior file is where the entity's identifier and some configurations are stored. After the "is_experimental" config we added "animations" and `"scripts"/"animate", exactly like in an .entity file.
 
 -   "revenge" is the shortname for the animation with the id "animation.grufallo.revenge".
--   The animation with the shortname "revenge" gets ran if the entity isn't alive in scripts>animate, or, in other words, when the entity is dying, or, in other other words, when the query returns true. _( You can see more about queries in the [Resource Entity Definitions tutorial](/guide/custom-entity-full.html) )_
+-   The animation with the shortname "revenge" gets ran if the entity isn't alive in scripts>animate, or, in other words, when the entity is dying, or, in other other words, when the query returns true. _( You can see more about queries in the [Resource Entity Definitions tutorial](/guide/custom-entity-full) )_
 -   Animation controllers can be ran the same way as in the .entity resource file.
 
 You can find out more about animation controllers by checking out these guides:
 
 1. [bedrock.dev Entity Events](https://bedrock.dev/r/Entity%20Events) documentation - this one is written in a tutorial form
 1. Other documentations related with animations: [bedrock.dev/r/MoLang](https://bedrock.dev/r/MoLang), [bedrock.dev/r/Animations](https://bedrock.dev/r/Animations).
-1. [SirLich's Entity Commands Tutorial](/tutorials/entity-commands.html)
+1. [SirLich's Entity Commands Tutorial](/tutorials/entity-commands)
 
 ---
 

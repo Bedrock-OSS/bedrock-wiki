@@ -270,7 +270,7 @@ It's a good idea to proceed checking out other feature and feature_rule vanilla 
 # Custom Structures
 
 As of MCBE v1.16.20, **Custom Generated structures are possible**.
-A simple way to generate Structures is [this](https://machine-builder.itch.io/frg-v2) auto generator by MACHINE_BUILDER, mentioned earlier. It generates all three of the required files for your structure: `feature_rules/mystructure.feature_rule.json`, `feature_rules/mystructure.feature.json` and `structures/mystructure.mcstructure.` You can learn more about defining `.mcstructures` with Structure Blocks in Minecraft itself [here](https://wiki.bedrock.dev/guide/manifest-function-extension.html#mcstructure).
+A simple way to generate Structures is [this](https://machine-builder.itch.io/frg-v2) auto generator by MACHINE_BUILDER, mentioned earlier. It generates all three of the required files for your structure: `feature_rules/mystructure.feature_rule.json`, `feature_rules/mystructure.feature.json` and `structures/mystructure.mcstructure.` You can learn more about defining `.mcstructures` with Structure Blocks in Minecraft itself [here](https://wiki.bedrock.dev/guide/manifest-function-extension#mcstructure).
 
 ---
 

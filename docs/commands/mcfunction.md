@@ -2,6 +2,8 @@
 title: .mcfunction
 ---
 
+<Button link="/commands/beginner-commands">Test</Button>
+
 # Understanding .mcfunction
 
 `mcfunction` files are stored in your BP as `BP/functions/my_function.mcfunction`. You can add as many functions as you like.

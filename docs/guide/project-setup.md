@@ -13,7 +13,7 @@ nav_order: 2
 ## Manifests
 
 A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
-Like all other code files in your pack, it's written in [JSON](https://www.json.org/json-en.html).
+Like all other code files in your pack, it's written in [JSON](https://www.json.org/json-en).
 
 ### **JSON Syntax Rules**
 

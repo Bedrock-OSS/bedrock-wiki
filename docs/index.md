@@ -18,4 +18,4 @@ This wiki is a knowledge-sharing website for Technical Bedrock, containing docum
 ## Contributing:
 
 **Contributions are welcome!**
-If you feel you can help the Bedrock Add-Ons community or improve this Wiki with your knowledge, feel free to contribute! [Here's how](/contribute.html).
+If you feel you can help the Bedrock Add-Ons community or improve this Wiki with your knowledge, feel free to contribute! [Here's how](/contribute).

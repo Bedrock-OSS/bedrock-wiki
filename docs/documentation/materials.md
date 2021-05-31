@@ -3,12 +3,13 @@ layout: page
 title: Materials
 parent: Documentation
 ---
+
 # Materials
 
-You can [learn more about materials here](/concepts/materials.html).
+You can [learn more about materials here](/concepts/materials).
 
 | Material                                  | Note                            |
-|-------------------------------------------|---------------------------------|
+| ----------------------------------------- | ------------------------------- |
 | alpha_block                               |                                 |
 | alpha_block_color                         |                                 |
 | banner                                    |                                 |
@@ -67,4 +68,4 @@ You can [learn more about materials here](/concepts/materials.html).
 | opaque_block_color                        |                                 |
 | opaque_block_color_uv2                    |                                 |
 
-[Original Credit](http://tokamcwin10.blog.jp/archives/40825563.html)
+[Original Credit](http://tokamcwin10.blog.jp/archives/40825563)

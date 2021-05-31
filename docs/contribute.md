@@ -15,7 +15,7 @@ If you aren't comfortable with Git, you can submit your article via [Discord](ht
 
 ## Rules:
 
--   All articles must follow the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
+-   All articles must follow the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide).
 -   Guide
     -   All articles must be relevant in the currently latest stable version. No Beta-relying subGuides!
     -   Before a new subguide is added, a potentially better place for it on the WIki should be discussed.
