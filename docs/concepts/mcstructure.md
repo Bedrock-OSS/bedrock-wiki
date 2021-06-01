@@ -12,7 +12,7 @@ parent: Concepts
 # Bedrock `.mcstructure` files
 
 ### Saving and Loading
-`mcstructure` files are created by the **Export** button in a structure block. To load them in game with a load structure block, the files must be placed in a behavior pack. The path determines the structure identifier, which is typed into the structure block to load the structure.
+The **Export** button creates ' mcstructure` files in a structure block. The files must be placed in a behavior pack to load them in-game with a load structure block. The path determines the structure identifier, which is typed into the structure block to load the structure.
 
 **Examples:**  
 `myBP/structures/house.mcstructure` → `mystructure:house`  
@@ -23,7 +23,7 @@ The first subfolder defines the namespace, and subsequent folders define the pat
 
 Note that any files directly in the `structures` folder are given the `mystructure` namespace. If a structure exists in the `structures` folder and shares a name with a structure in an explicit `mystructure` folder, the game produces the following content log warning:
 ```
-[Structure][warning]-There was a conflict loading a structure in the default namespace. A structure with name <name> was found in both in the root directory and the mystructure directory.
+[structure][warning]-There was a conflict loading a structure in the default namespace. A structure with the name <name> was found both in the root directory and the mystructure directory.
 ```
 In this case, the file in the `mystructure` folder is the one that "wins," resulting in the file directly in the `structures` folder being ignored.
 
@@ -43,7 +43,7 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 > >
 > > ![List][list] of ![Compound][compound] `entities`: List of entities as NBT, stored exactly the same as entities in the world file itself. Tags like `Pos` and `UniqueID` are saved, but replaced upon loading.
 > >
-> > ![Compound][compound] `palette`: Contains multiple named palettes, presumably to support multiple variants of the same structure. However, currently only `default` is saved and loaded.
+> > ![Compound][compound] `palette`: Contains multiple named palettes, presumably to support multiple variants of the same structure. However, currently, only `default` is saved and loaded.
 > > > ![Compound][compound] A single palette (currently only named `default`).
 > > > > ![List][list] `block_palette`: List of block states. This list contains the ordered entries that the block indices are referring to.
 > > > > > ![Compound][compound] A single block state.
@@ -53,9 +53,9 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 > > > >
 > > > > ![Compound][compound] `block_position_data`: Contains additional data for individual blocks in the structure. Each key is an integer index into the flattened list of blocks inside of `block_indices`. Layer is unspecified as it is irrelevant.
 > > > > > ![Compound][compound] `<index>`: A single piece of additional block data, applied to the block at its index position.
-> > > > > > ![Compound][compound] `block_entity_data`: Block entity data as NBT, stored exactly the same as block entities in the world file itself. Position tags are saved, but replaced  upon loading. No other objects seem to exist adjacent to this one at this time.
+> > > > > > ![Compound][compound] `block_entity_data`: Block entity data as NBT, stored the same as block entities in the world file itself. Position tags are saved, but replaced  upon loading. No other objects seem to exist adjacent to this one at this time.
 >
-> ![List][list] `structure_world_origin`: List of three integers describing where in the world the structure was originally saved. Equal to the position of the saving structure block, plus its offset settings. This is used to determine where entities should be placed when loading. An entity's new absolute position is equal to its old position, minus these values, plus the origin of the structure's loading position.
+> ![List][list] `structure_world_origin`: List of three integers describing where in the world the structure was initially saved. Equal to the position of the saving structure block, plus its offset settings. This is used to determine where entities should be placed when loading. An entity's new absolute position is equal to its old position, minus these values, plus the origin of the structure's loading position.
 > > ![Integer][int] Structure origin X position.  
 > > ![Integer][int] Structure origin Y position.  
 > > ![Integer][int] Structure origin Z position.
@@ -63,9 +63,9 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 ### What Happens If...
 Results from testing to see what happens when modified structure files are loaded:
 
-* If the dimensions in `size` exceed the vanilla save limit of `64*256*64`, the structure can still be loaded just as expected.
+* If the dimensions in `size` exceed the vanilla save the limit of `64*256*64`, the structure can still be loaded just as expected.
 * If the values in the block layer lists are not int tags, all values are treated as `0`.
-* If a value in the block layer list is equal to or larger than the palette size, or less than `-1`, an air block is placed.
+* If a value in the block layer list is equal to or larger than the palette size or less than `-1`, an air block is placed.
 * If the `default` palette is not present, loading the structure results in no blocks being placed.
 * If any of the tags that have constant names are unspecified or are the wrong tag type, the structure fails to load with the following content log error:
 ```
@@ -75,7 +75,7 @@ Results from testing to see what happens when modified structure files are loade
 ```
 [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | The "block_indices" field should be an array with 2 arrays and instead we have <count> arrays.
 ```
-* If the values inside of `block_indices` are not list tags, the structure fails to load with the following content log error:
+* If the values inside of `block_indices` do not list tags, the structure fails to load with the following content log error:
 ```
 [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | The "block_indices" field's first array is either missing or not a list.
 ```

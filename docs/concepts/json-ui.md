@@ -31,7 +31,7 @@ Imagine I created the files `RP/ui/button.json` and `RP/my_ui/main_menu.json`:
 
 ```json
 {
-	"ui_defs": ["ui/button.json", "my_ui/main_menu.json"]
+  "ui_defs": ["ui/button.json", "my_ui/main_menu.json"]
 }
 ```
 
@@ -41,19 +41,19 @@ Three things to notice:
 -   You can have files wherever you want. Even `RP/textures/folder_1/papers/sound/scrollpane.json`
 -   The `_ui_defs.json` in your RP doesn't need to have the vanilla files because all related UI files will not be replaced. Only overwritten.
 
-Apart: the files can have any extension since the will always be read as if they were a JSON file.
+The files can have any extension since they will always be read as JSON files.
 
 ## Global Variables
 
 Let's say you have a variable `"$info_text_color": [0.8, 0.8, 0.8]` that stores a color for the information texts.
-If you use the same value in multiple files instead of repeatedly writing `"color": [0.8, 0.8, 0.8]` you can just reference the variable (`"color": "$info_text_color"`) and put the variable on the `_global_variables.json` file.
-Another good advantage of doing that is you only need to change in one place and all the elements that use the variable will have the value updated.
+If you use the same value in multiple files instead of repeatedly writing `"color": [0.8, 0.8, 0.8]`, you can just reference the variable (`"color": "$info_text_color"`) and put the variable on the `_global_variables.json` file.
+Another good advantage of doing that is you only need to change in one place, and all the elements that use the variable will have the value updated.
 
 <CodeHeader>RP/ui/\_global_variables.json</CodeHeader>
 
 ```json
 {
-	"$info_text_color": [0.8, 0.8, 0.8]
+  "$info_text_color": [0.8, 0.8, 0.8]
 }
 ```
 
@@ -83,8 +83,8 @@ Another good advantage of doing that is you only need to change in one place and
 
 ## Namespaces
 
-Namespaces are identifiers for the UI files. They are used to access elements in some file across all other files.
-They must be unique and short if possible because you may use it a lot of times.
+Namespaces are identifiers for the UI files. They are used to access elements in some files across all other files.
+They must be unique and short if possible because you may use them a lot of times.
 
 An example:
 <CodeHeader>vanilla/ui/file_a.json</CodeHeader>
@@ -111,10 +111,10 @@ An example:
 Screen files contain UIs which are shown in appropriate situations:
 
 -   `hud_screen` is used in HUD
--   `inventory_screen` is used in Inventory screen
+-   `inventory_screen` is used in the Inventory screen
 -   etc.
 
-All files are pretty self-explanatory. An important thing to notice is that **different screens can access different variables**. More about that later.
+All files are pretty self-explanatory. An important thing to notice is that **different screens can access other variables**. More about that later.
 
 ## UI Elements
 
@@ -140,12 +140,12 @@ Here the element is `type` `label`. So it will render a text.
 
 ## Notations
 
-So, what are variables and how can elements derive from others?
+So, what are variables, and how can elements derive from others?
 
 ### Variables
 
 Everything that has `$` as the first letter of its name is a variable.
-Variables can store numbers, booleans, strings and arrays.
+Variables can store numbers, booleans, strings, and arrays.
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
@@ -193,8 +193,8 @@ To derive some element from another you should use `new@super` notation. An exam
 }
 ```
 
-Any property you add to the derive element will completely replace the superior one.
-Also you can use a string variable after `@`, its value will be interpreted as a superior element name. You may use it before `@` as well, its value will become the derived element name.
+Any property you add to the derived element will completely replace the superior one.
+Also, you can use a string variable after `@`. Its value will be interpreted as a superior element name. You may use it before `@` as well. Its value will become the derived element name.
 
 ## Animations
 
@@ -219,7 +219,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 }
 ```
 
-`Wait` animation example. It's used when you want no animation between two other animtions.
+`Wait` animation example. It's used when you want no animation between two other animations.
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
 ```json
@@ -278,7 +278,7 @@ Also you can use a string variable after `@`, its value will be interpreted as a
 }
 ```
 
-Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, you can reference the animations that will be applied to the element using the `anims` property.
+Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc., you can reference the animations that will be applied to the element using the `anims` property.
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
@@ -331,22 +331,22 @@ Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, 
 
 `bindings` is used to bind a hardcoded value to the element and use it for conditions, for example.
 
-Here's an example of an label using a hardcoded text.
-The `text` property value is `#hardtext`. By using `bindings` I can get the value of the hardcoded variable `#hardtext` so it can be used by the `text` property.
+Here's an example of a label using a hardcoded text.
+The `text` property value is `#hardtext`. By using `bindings`, I can get the value of the hardcoded variable `#hardtext` so the `text` property can use it.
 Here it's directly assigning the `#hardtext` value to the `text` property.
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
 {
-	"label": {
-		"type": "label",
-		"text": "#hardtext",
-		"bindings": [
-			{
-				"binding_name": "#hardtext"
-			}
-		]
-	}
+  "label": {
+    "type": "label",
+    "text": "#hardtext",
+    "bindings": [
+      {
+        "binding_name": "#hardtext"
+      }
+    ]
+  }
 }
 ```
 
@@ -354,20 +354,20 @@ Talking more about the `label` example, it can also appear in another way. Let's
 
 ```json
 {
-	"label": {
-		"type": "label",
-		"text": "#text",
-		"bindings": [
-			{
-				"binding_name": "#hardtext",
-				"binding_name_override": "#text"
-			}
-		]
-	}
+  "label": {
+    "type": "label",
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#hardtext",
+        "binding_name_override": "#text"
+      }
+    ]
+  }
 }
 ```
 
-In this case the value of `#hardtext` is assigned to the `#text` binding property name that will then be assigned to the `text` property.
+In this case, the `#hardtext` value is assigned to the `#text` binding property name that will then be assigned to the `text` property.
 
 This happens a lot with the `visible` and `enabled` properties. Here's an example with both of them:
 
@@ -393,12 +393,12 @@ This happens a lot with the `visible` and `enabled` properties. Here's an exampl
 }
 ```
 
-`#using_touch` and `#play_button_enabled` in this case store boolean values. If you're playing in a touch device `#using_touch` will be `true` else `false`. `#play_button_enabled` is used in `Add External Server` screen. So in this case it will be `true` if all text fields (`server name`, `server ip` and `server_port`) have text inside them. <br>
-So the `#using_touch` value will override the `#visible` binding property value which, in this case, is also a property (`#visible` is used inside `property_bag` which would be the same as setting `visible` to something).
-And `#play_button_enabled` will override the `#enabled` binding property value which will then set its value to `enabled` property.
+`#using_touch` and `#play_button_enabled` in this case store boolean values. If you're playing on a touch device, `#using_touch` will be `true` else `false.` `#play_button_enabled` is used in the `Add External Server` screen. So, in this case, it will be `true` if all text fields (`server name`, `server ip` and `server_port`) have text inside them. <br>
+So the `#using_touch` value will override the `#visible` binding property value, which, in this case, is also a property (`#visible` is used inside `property_bag`, which would be the same as setting `visible` to something).
+And `#play_button_enabled` will override the `#enabled` binding property value, which will then set its value to `enabled` property.
 
 Let's say you want to show a panel with some content when a specific toggle is selected/checked. You'll need a different type of binding structure.
-We have to tell what's the source element where the value will come from, tell which property of that source element we want to get the value from and which property we want to override its value.
+We have to tell the source element where the value will come from, tell which property of that source element we want to get the value from and which property we want to override its value.
 
 ```json
 {
@@ -420,15 +420,15 @@ We have to tell what's the source element where the value will come from, tell w
 }
 ```
 
-When the toggle is checked the `#toggle_state` will be checked (`1` or `true`) and it will override the `visible` property value of the element to true. When you uncheck it will be unchecked (`0` or `false`) and once again override the `visible` value.
+When the toggle is checked, the `#toggle_state` will be checked (`1` or `true`), and it will override the `visible` property value of the element to true. When you uncheck, it will be unchecked (`0` or `false`) and once again override the `visible` value.
 
 ## Conditional Rendering
 
-Within Bedrock's current UI system, it is particularly difficult to manipulate when things are visible on screen using standard properties. Variables and bindings, however, are special in JSON UI because they contain data coming directly from the Bedrock Engine. Using a couple of clever UI techniques, it is possible to have complete control over the conditions which a UI control is rendered. The techniques are split into two categories: conditional rendering with variables and conditional rendering with bindings.
+It is challenging to manipulate Bedrock's current UI system when things are visible on-screen using standard properties. However, variables and bindings are exceptional in JSON UI because they contain data coming directly from the Bedrock Engine. Using a couple of clever UI techniques, it is possible to have complete control over the conditions in which a UI control is rendered. The methods are split into two categories: conditional rendering with variables and conditional rendering with bindings.
 
 ### Conditional Rendering with Variables
 
-Variables can be used to conditionally render UI controls. Recall that UI variables are properties with `$` in front of them. An example of a variable that carries engine data in `hud_screen.json` is `$actionbar_text`. Looking at `hud_actionbar_text`, we can see that `$actionbar_text` is used to display the actionbar text.
+Variables can be used to render UI controls conditionally. Recall that UI variables are properties with `$` in front of them. An example of a variable that carries engine data in `hud_screen.json` is `$actionbar_text`. Looking at `hud_actionbar_text`, we can see that `$actionbar_text` is used to display the actionbar text.
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
@@ -498,57 +498,57 @@ Modifying the above JSON into an unintrusive UI file used in a resource pack sho
 
 ```json
 {
-	"hud_actionbar_text/actionbar_message": {
-		"ignored": "($actionbar_text = 'hello world')"
-	}
+  "hud_actionbar_text/actionbar_message": {
+    "ignored": "($actionbar_text = 'hello world')"
+  }
 }
 ```
 
-When you log into a world with the resource pack enabled, try executing `/title @s actionbar hello world`. You should notice that no message appears! Executing any other actionbar title should show the other messages.
+When you log into a world with the resource pack enabled, try executing `/title @s actionbar hello world`. You should notice that no message appears! Running any other actionbar title should show the other messages.
 
-Here's a more complicated example of conditional rendering with variables. In this case it is necessary to use the actionbar factory as it turns out the `$actionbar_text` data is only accessible in the factory controls.
+Here's a more complicated example of conditional rendering with variables. In this case, it is necessary to use the actionbar factory as it turns out the `$actionbar_text` data is only accessible in the factory controls.
 
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
 ```json
 {
-	"black_conditional_image": {
-		"type": "image",
-		"texture": "textures/ui/Black",
-		"size": [16, 16],
-		"layer": 10,
-		"ignored": "(not ($actionbar_text = 'hello world'))"
-	},
+  "black_conditional_image": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "size": [16, 16],
+    "layer": 10,
+    "ignored": "(not ($actionbar_text = 'hello world'))"
+  },
 
-	"black_conditional_image_factory": {
-		"type": "panel",
-		"factory": {
-			"name": "hud_actionbar_text_factory",
-			"control_ids": {
-				"hud_actionbar_text": "black_conditional_image@hud.black_conditional_image"
-			}
-		}
-	},
+  "black_conditional_image_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "black_conditional_image@hud.black_conditional_image"
+      }
+    }
+  },
 
-	"root_panel": {
-		"modifications": [
-			{
-				"array_name": "controls",
-				"operation": "insert_front",
-				"value": {
-					"black_conditional_image_factory@hud.black_conditional_image_factory": {}
-				}
-			}
-		]
-	}
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "black_conditional_image_factory@hud.black_conditional_image_factory": {}
+        }
+      }
+    ]
+  }
 }
 ```
 
-The above example shows a 16x16 black squre on the HUD screen when the actionbar text string is equal to `hello world`. You may also apply animations to your image to make it more dynamic. Conditional rendering with variables is not limited to images and labels, you may use any object type in conditional rendering with variables. You can imagine pairing your UI code with the actionbar text allows for a high degree of manipulation of JSON UI (at least in `hud_screen.json`). The `ignored` property has support for UI operators so you have even more control. Anywhere where there is a variable that carries bedrock engine data allows for conditional rendering with variables.
+The above example shows a 16x16 black square on the HUD screen when the actionbar text string is equal to `hello world`. You may also apply animations to your image to make it more dynamic. Conditional rendering with variables is not limited to images and labels. You may use any object type in conditional rendering with variables. You can imagine pairing your UI code with the actionbar text allows for a high degree of manipulation of JSON UI (at least in `hud_screen.json`). The `ignored` property has support for UI operators, so you have even more control. Anywhere where there is a variable that carries bedrock engine data allows for conditional rendering with variables.
 
 ### Conditional Rendering with Bindings
 
-Following the above example with the actionbar, you might logically assume that the title also uses variables. This is not the case. The title uses bindings for its data as shown below.
+Following the above example with the actionbar, you might logically assume that the title also uses variables. This is not the case. The title uses bindings for its data, as shown below.
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
@@ -617,7 +617,7 @@ Following the above example with the actionbar, you might logically assume that 
 }
 ```
 
-You will need to add another binding object to the text to control its visibility. Recall that `#visible` controls visiblity of the object directly through bindings. The following example will not render the title string `hello world` but will render all other strings. Try typing `/title @s title hello world` to see it in-game.
+You will need to add another binding object to the text to control its visibility. Recall that `#visible` contains the visibility of the thing directly through bindings. The following example will not render the title string `hello world` but will render all other strings. Try typing `/title @s title hello world` to see it in-game.
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
@@ -696,66 +696,66 @@ Modifying the above JSON into an unintrusive UI file used in a resource pack sho
 
 ```json
 {
-	"hud_title_text/title_frame/title": {
-		"modifications": [
-			{
-				"array_name": "bindings",
-				"operation": "insert_back",
-				"value": {
-					"binding_type": "view",
-					"source_property_name": "(not (#text = 'hello world'))",
-					"target_property_name": "#visible"
-				}
-			}
-		]
-	}
+  "hud_title_text/title_frame/title": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": {
+          "binding_type": "view",
+          "source_property_name": "(not (#text = 'hello world'))",
+          "target_property_name": "#visible"
+        }
+      }
+    ]
+  }
 }
 ```
 
-Like before, here's a more complicated example of conditional rendering with bindings below. In this case, the 16x16 black image will only render when the title text string is equal to `hello world`. While you don't need to use the title factory in this case, you should if you are going to use UI animations.
+Like before, here's a more complicated example of conditional rendering with bindings below. In this case, the 16x16 black image will only render when the title text string equals `hello world`. While you don't need to use the title factory in this case, you should if you are going to use UI animations.
 
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
 ```json
 {
-	"black_conditional_image": {
-		"type": "image",
-		"texture": "textures/ui/Black",
-		"size": [16, 16],
-		"layer": 10,
-		"bindings": [
-			{
-				"binding_name": "#hud_title_text_string"
-			},
-			{
-				"binding_type": "view",
-				"source_property_name": "(#hud_title_text_string = 'hello world')",
-				"target_property_name": "#visible"
-			}
-		]
-	},
+  "black_conditional_image": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "size": [16, 16],
+    "layer": 10,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hud_title_text_string = 'hello world')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
 
-	"black_conditional_image_factory": {
-		"type": "panel",
-		"factory": {
-			"name": "hud_title_text_factory",
-			"control_ids": {
-				"hud_title_text": "black_conditional_image@hud.black_conditional_image"
-			}
-		}
-	},
+  "black_conditional_image_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "black_conditional_image@hud.black_conditional_image"
+      }
+    }
+  },
 
-	"root_panel": {
-		"modifications": [
-			{
-				"array_name": "controls",
-				"operation": "insert_front",
-				"value": {
-					"black_conditional_image_factory@hud.black_conditional_image_factory": {}
-				}
-			}
-		]
-	}
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "black_conditional_image_factory@hud.black_conditional_image_factory": {}
+        }
+      }
+    ]
+  }
 }
 ```
 

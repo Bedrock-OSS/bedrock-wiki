@@ -8,8 +8,8 @@ badge_color: red
 
 # Entity Properties [BETA]
 
--   Documentation on the new Entity Properties, also known as Actor Properties introduced in the 1.16.230.52 Minecraft: Bedrock Edition beta version.
--   Entity Properties were implemented to save data, or store values on entities efficiently without needing the use of components, or attributes (For example "minecraft:variant") in server-side of the entity (Behavior Pack), similar to Block Properties.
+-   Documentation on the new Entity Properties, also known as Actor Properties, introduced in the 1.16.230.52 Minecraft: Bedrock Edition beta version.
+-   Entity Properties were implemented to save data or store values on entities efficiently without needing the use of components or attributes (For example, "minecraft:variant") in server-side of the entity (Behavior Pack), similar to Block Properties.
 
 ---
 
@@ -21,28 +21,28 @@ badge_color: red
 
 ```json
 {
-	"minecraft:entity": {
-		"description": {
-			"identifier": "entity:properties_example",
-			"properties": {
-				"property:number_range_example": {
-					"values": {
-						"min": 0,
-						"max": 100
-					}
-				},
-				"property:number_enum_example": {
-					"values": [1, 2]
-				},
-				"property:string_enum_example": {
-					"values": ["first", "second", "third"]
-				},
-				"property:boolean_enum_example": {
-					"values": [true, false]
-				}
-			}
-		}
-	}
+    "minecraft:entity": {
+        "description": {
+            "identifier": "entity:properties_example",
+            "properties": {
+                "property:number_range_example": {
+                    "values": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "property:number_enum_example": {
+                    "values": [1, 2]
+                },
+                "property:string_enum_example": {
+                    "values": ["first", "second", "third"]
+                },
+                "property:boolean_enum_example": {
+                    "values": [true, false]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -52,7 +52,7 @@ badge_color: red
 
 #### `values`
 
--   `values` property is required, and omitting this field may cause error and fail to register the property.
+-   `values` property is required, and omitting this field may cause errors and failure to register the property.
 -   `values` field can be evaluated as an array of enum values, or a range of minimum and maximum values (Note that integer, float, and boolean enum values currently supports only two values):
 
 ```json
@@ -103,7 +103,7 @@ badge_color: red
 
 ### Manipulating and Accessing Entity Properties
 
--   You can access entity properties though MoLang Entity Queries (Note, these MoLang Entity Queries are a part of Experimental features):
+-   You can access entity properties through MoLang Entity Queries (Note, these MoLang Entity Queries are a part of Experimental features):
 
     -   `query.actor_property`
     -   `query.has_actor_property`
@@ -131,34 +131,34 @@ badge_color: red
 
 ```json
 {
-	"format_version": "1.16.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "entity:properties_example",
-			"is_spawnable": true,
-			"is_summonable": true,
-			"is_experimental": false,
-			"properties": {
-				"property:property_index": {
-					"client_sync": true,
-					"values": {
-						"min": 0,
-						"max": 2
-					},
-					"default": 0
-				}
-			},
-			"aliases": {
-				"entity:default_alias": {},
-				"entity:first_alias": {
-					"property:property_index": 1
-				},
-				"entity:second_alias": {
-					"property:property_index": 2
-				}
-			}
-		}
-	}
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "entity:properties_example",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false,
+            "properties": {
+                "property:property_index": {
+                    "client_sync": true,
+                    "values": {
+                        "min": 0,
+                        "max": 2
+                    },
+                    "default": 0
+                }
+            },
+            "aliases": {
+                "entity:default_alias": {},
+                "entity:first_alias": {
+                    "property:property_index": 1
+                },
+                "entity:second_alias": {
+                    "property:property_index": 2
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -169,8 +169,8 @@ badge_color: red
 
 ## Entity Permutations
 
--   Entity Permutations are implemented to apply a set of components every tick if the condition met.
--   `permutations` array is inserted in the `minecraft:entity` object, the same level as `components` object:
+-   Entity Permutations are implemented to apply a set of components every tick if the condition is met.
+-   `permutations` array is inserted in the `minecraft:entity` object, the same level as the `components` object:
 
 ```json
 "permutations": [
@@ -201,4 +201,4 @@ badge_color: red
 ]
 ```
 
--   As we observed, if the entity property "`property:string_enum_example`" value is "`first`", then the "`minecraft:scale`" entity component with a scale of 1 is applied on the entity. Otherwise, if the entity property "`property:string_enum_example`" value is "`second`", the entity's scale is twice as it was. Then, it is similar to how it goes for the `third` value, with three times from the original scale.
+-   As we observed, if the entity property "`property:string_enum_example`" value is "`first`", then the "`minecraft:scale`" entity component with a scale of 1 is applied to the entity. Otherwise, if the entity property "`property:string_enum_example`" value is "`second`", the entity's scale is twice as it was. Then, it is similar to how it goes for the `third` value, with three times from the original scale.
