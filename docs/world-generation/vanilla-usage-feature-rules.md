@@ -4,14 +4,19 @@ title: Feature Rules
 parent: Vanilla Usage
 ---
 
-# Vanilla Feature Rules
+# Vanilla Usage Feature Rules
+
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
- - [minecraft:biome_filter](#minecraft:biome_filter)
- - [placement_pass](#placement_pass)
+
+-   [minecraft:biome_filter](#minecraft:biome_filter)
+-   [placement_pass](#placement_pass)
+
 # minecraft:biome_filter
+
 ### bamboo_jungle_after_surface_bamboo_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -28,6 +33,7 @@ minecraft:biome_filter: [
 ```
 
 ### bamboo_jungle_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -44,6 +50,7 @@ minecraft:biome_filter: [
 ```
 
 ### bamboo_jungle_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -60,6 +67,7 @@ minecraft:biome_filter: [
 ```
 
 ### basalt_columns_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -71,6 +79,7 @@ minecraft:biome_filter: [
 ```
 
 ### basalt_pillar_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -82,6 +91,7 @@ minecraft:biome_filter: [
 ```
 
 ### birch_forest_mutated_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -107,6 +117,7 @@ minecraft:biome_filter: [
 ```
 
 ### birch_forest_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -132,6 +143,7 @@ minecraft:biome_filter: [
 ```
 
 ### cold_taiga_first_sweet_berry_bush_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -153,6 +165,7 @@ minecraft:biome_filter: [
 ```
 
 ### crimson_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -164,6 +177,7 @@ minecraft:biome_filter: [
 ```
 
 ### crimson_roots_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -179,6 +193,7 @@ minecraft:biome_filter: [
 ```
 
 ### crimson_roots_soul_sand_valley_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -194,6 +209,7 @@ minecraft:biome_filter: [
 ```
 
 ### delta_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -205,6 +221,7 @@ minecraft:biome_filter: [
 ```
 
 ### desert_after_surface_desert_well_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -216,6 +233,7 @@ minecraft:biome_filter: [
 ```
 
 ### desert_or_swamp_after_surface_fossil_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -236,6 +254,7 @@ minecraft:biome_filter: [
 ```
 
 ### desert_surface_cactus_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -247,6 +266,7 @@ minecraft:biome_filter: [
 ```
 
 ### desert_surface_dead_bush_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -258,6 +278,7 @@ minecraft:biome_filter: [
 ```
 
 ### desert_surface_reeds_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -269,6 +290,7 @@ minecraft:biome_filter: [
 ```
 
 ### extreme_hills_after_surface_emerald_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -280,6 +302,7 @@ minecraft:biome_filter: [
 ```
 
 ### extreme_hills_after_surface_silverfish_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -291,6 +314,7 @@ minecraft:biome_filter: [
 ```
 
 ### extreme_hills_plus_trees_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -316,6 +340,7 @@ minecraft:biome_filter: [
 ```
 
 ### flower_forest_first_foliage_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -327,6 +352,7 @@ minecraft:biome_filter: [
 ```
 
 ### flower_forest_surface_flowers_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -338,6 +364,7 @@ minecraft:biome_filter: [
 ```
 
 ### flower_forest_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -349,6 +376,7 @@ minecraft:biome_filter: [
 ```
 
 ### forest_first_foliage_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -384,6 +412,7 @@ minecraft:biome_filter: [
 ```
 
 ### forest_surface_flowers_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -414,6 +443,7 @@ minecraft:biome_filter: [
 ```
 
 ### forest_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -454,6 +484,7 @@ minecraft:biome_filter: [
 ```
 
 ### frozen_ocean_after_surface_ice_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -475,6 +506,7 @@ minecraft:biome_filter: [
 ```
 
 ### huge_crimson_fungus_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -486,6 +518,7 @@ minecraft:biome_filter: [
 ```
 
 ### huge_warped_fungus_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -497,6 +530,7 @@ minecraft:biome_filter: [
 ```
 
 ### ice_plains_spikes_first_ice_patch_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -513,6 +547,7 @@ minecraft:biome_filter: [
 ```
 
 ### ice_plains_spikes_first_ice_spike_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -529,6 +564,7 @@ minecraft:biome_filter: [
 ```
 
 ### ice_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -545,6 +581,7 @@ minecraft:biome_filter: [
 ```
 
 ### jungle_after_surface_bamboo_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -561,6 +598,7 @@ minecraft:biome_filter: [
 ```
 
 ### jungle_after_surface_melon_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -572,6 +610,7 @@ minecraft:biome_filter: [
 ```
 
 ### jungle_after_surface_vines_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -583,6 +622,7 @@ minecraft:biome_filter: [
 ```
 
 ### jungle_edge_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -604,6 +644,7 @@ minecraft:biome_filter: [
 ```
 
 ### jungle_surface_flowers_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -615,6 +656,7 @@ minecraft:biome_filter: [
 ```
 
 ### jungle_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -631,6 +673,7 @@ minecraft:biome_filter: [
 ```
 
 ### jungle_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -652,6 +695,7 @@ minecraft:biome_filter: [
 ```
 
 ### mega_taiga_first_forest_rock_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -668,6 +712,7 @@ minecraft:biome_filter: [
 ```
 
 ### mega_taiga_surface_dead_bush_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -684,6 +729,7 @@ minecraft:biome_filter: [
 ```
 
 ### mega_taiga_surface_mushrooms_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -700,6 +746,7 @@ minecraft:biome_filter: [
 ```
 
 ### mega_taiga_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -716,6 +763,7 @@ minecraft:biome_filter: [
 ```
 
 ### mega_taiga_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -737,6 +785,7 @@ minecraft:biome_filter: [
 ```
 
 ### mesa_before_surface_gold_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -748,6 +797,7 @@ minecraft:biome_filter: [
 ```
 
 ### mesa_plateau_stone_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -764,6 +814,7 @@ minecraft:biome_filter: [
 ```
 
 ### mesa_surface_cactus_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -775,6 +826,7 @@ minecraft:biome_filter: [
 ```
 
 ### mesa_surface_dead_bush_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -786,6 +838,7 @@ minecraft:biome_filter: [
 ```
 
 ### mesa_surface_reeds_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -797,6 +850,7 @@ minecraft:biome_filter: [
 ```
 
 ### mushroom_island_surface_huge_mushroom_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -808,6 +862,7 @@ minecraft:biome_filter: [
 ```
 
 ### mushroom_island_surface_mushrooms_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -819,6 +874,7 @@ minecraft:biome_filter: [
 ```
 
 ### netherwart_forest_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -830,6 +886,7 @@ minecraft:biome_filter: [
 ```
 
 ### nether_soul_sand_underground_feature_rules.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -845,6 +902,7 @@ minecraft:biome_filter: [
 ```
 
 ### nether_sprouts_feature_rules.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -860,6 +918,7 @@ minecraft:biome_filter: [
 ```
 
 ### ocean_surface_kelp_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -890,6 +949,7 @@ minecraft:biome_filter: [
 ```
 
 ### ocean_surface_seagrass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -901,6 +961,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_clay_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -921,6 +982,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_extra_brown_mushroom_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -941,6 +1003,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_extra_red_mushroom_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -961,6 +1024,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_flowers_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1053,6 +1117,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_gravel_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1078,6 +1143,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_kelp_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1143,6 +1209,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_pumpkin_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1163,6 +1230,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_reeds_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1183,6 +1251,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_sand_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1208,6 +1277,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_springs_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1228,6 +1298,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1296,6 +1367,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_andesite_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1316,6 +1388,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_coal_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1336,6 +1409,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_diamond_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1356,6 +1430,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_diorite_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1376,6 +1451,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_dirt_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1396,6 +1472,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_extra_gravel_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1416,6 +1493,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_gold_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1436,6 +1514,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_granite_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1456,6 +1535,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_gravel_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1476,6 +1556,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_iron_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1496,6 +1577,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_lapis_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1516,6 +1598,7 @@ minecraft:biome_filter: [
 ```
 
 ### overworld_underground_redstone_ore_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1536,6 +1619,7 @@ minecraft:biome_filter: [
 ```
 
 ### plains_first_double_plant_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1547,6 +1631,7 @@ minecraft:biome_filter: [
 ```
 
 ### plains_first_double_plant_sunflower_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1563,6 +1648,7 @@ minecraft:biome_filter: [
 ```
 
 ### plains_surface_flowers_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1574,6 +1660,7 @@ minecraft:biome_filter: [
 ```
 
 ### plains_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1585,6 +1672,7 @@ minecraft:biome_filter: [
 ```
 
 ### plains_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1596,6 +1684,7 @@ minecraft:biome_filter: [
 ```
 
 ### redwood_taiga_hills_mutated_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1622,6 +1711,7 @@ minecraft:biome_filter: [
 ```
 
 ### redwood_taiga_mutated_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1648,6 +1738,7 @@ minecraft:biome_filter: [
 ```
 
 ### river_surface_seagrass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1659,6 +1750,7 @@ minecraft:biome_filter: [
 ```
 
 ### roofed_forest_first_foliage_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1675,6 +1767,7 @@ minecraft:biome_filter: [
 ```
 
 ### savanna_first_double_plant_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1686,6 +1779,7 @@ minecraft:biome_filter: [
 ```
 
 ### savanna_mutated_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1702,6 +1796,7 @@ minecraft:biome_filter: [
 ```
 
 ### savanna_mutated_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1718,6 +1813,7 @@ minecraft:biome_filter: [
 ```
 
 ### savanna_surface_flowers_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1734,6 +1830,7 @@ minecraft:biome_filter: [
 ```
 
 ### savanna_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1750,6 +1847,7 @@ minecraft:biome_filter: [
 ```
 
 ### savanna_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1766,6 +1864,7 @@ minecraft:biome_filter: [
 ```
 
 ### soulsand_valley_fossil_surface_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1777,6 +1876,7 @@ minecraft:biome_filter: [
 ```
 
 ### swamp_surface_dead_bush_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1788,6 +1888,7 @@ minecraft:biome_filter: [
 ```
 
 ### swamp_surface_flowers_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1799,6 +1900,7 @@ minecraft:biome_filter: [
 ```
 
 ### swamp_surface_mushrooms_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1810,6 +1912,7 @@ minecraft:biome_filter: [
 ```
 
 ### swamp_surface_reeds_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1821,6 +1924,7 @@ minecraft:biome_filter: [
 ```
 
 ### swamp_surface_swamp_foliage_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1832,6 +1936,7 @@ minecraft:biome_filter: [
 ```
 
 ### swamp_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1843,6 +1948,7 @@ minecraft:biome_filter: [
 ```
 
 ### swamp_surface_waterlily_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1854,6 +1960,7 @@ minecraft:biome_filter: [
 ```
 
 ### taiga_first_double_plant_fern_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1865,6 +1972,7 @@ minecraft:biome_filter: [
 ```
 
 ### taiga_first_sweet_berry_bush_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1886,6 +1994,7 @@ minecraft:biome_filter: [
 ```
 
 ### taiga_surface_mushrooms_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1902,6 +2011,7 @@ minecraft:biome_filter: [
 ```
 
 ### taiga_surface_tall_grass_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1918,6 +2028,7 @@ minecraft:biome_filter: [
 ```
 
 ### taiga_surface_trees_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1934,6 +2045,7 @@ minecraft:biome_filter: [
 ```
 
 ### twisting_vines_cluster_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1945,6 +2057,7 @@ minecraft:biome_filter: [
 ```
 
 ### warm_ocean_after_surface_coral_crust_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1961,6 +2074,7 @@ minecraft:biome_filter: [
 ```
 
 ### warm_ocean_after_surface_coral_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1977,6 +2091,7 @@ minecraft:biome_filter: [
 ```
 
 ### warm_ocean_after_surface_coral_hang_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -1993,6 +2108,7 @@ minecraft:biome_filter: [
 ```
 
 ### warm_ocean_after_surface_pickle_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -2009,6 +2125,7 @@ minecraft:biome_filter: [
 ```
 
 ### warm_ocean_after_surface_sea_anemone_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -2025,6 +2142,7 @@ minecraft:biome_filter: [
 ```
 
 ### warped_fungus_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -2036,6 +2154,7 @@ minecraft:biome_filter: [
 ```
 
 ### warped_roots_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -2047,6 +2166,7 @@ minecraft:biome_filter: [
 ```
 
 ### weeping_vines_cluster_feature.json
+
 ```JSON
 minecraft:biome_filter: [
     {
@@ -2058,583 +2178,699 @@ minecraft:biome_filter: [
 ```
 
 # placement_pass
+
 ### bamboo_jungle_after_surface_bamboo_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### bamboo_jungle_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### bamboo_jungle_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### basalt_columns_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### basalt_pillar_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### birch_forest_mutated_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### birch_forest_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### cold_taiga_first_sweet_berry_bush_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### crimson_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### crimson_roots_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### crimson_roots_soul_sand_valley_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### delta_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### desert_after_surface_desert_well_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### desert_or_swamp_after_surface_fossil_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### desert_surface_cactus_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### desert_surface_dead_bush_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### desert_surface_reeds_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### extreme_hills_after_surface_emerald_ore_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### extreme_hills_after_surface_silverfish_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### extreme_hills_plus_trees_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### flower_forest_first_foliage_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### flower_forest_surface_flowers_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### flower_forest_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### forest_first_foliage_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### forest_surface_flowers_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### forest_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### frozen_ocean_after_surface_ice_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### huge_crimson_fungus_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### huge_warped_fungus_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### ice_plains_spikes_first_ice_patch_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### ice_plains_spikes_first_ice_spike_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### ice_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### jungle_after_surface_bamboo_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### jungle_after_surface_melon_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### jungle_after_surface_vines_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### jungle_edge_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### jungle_surface_flowers_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### jungle_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### jungle_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mega_taiga_first_forest_rock_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### mega_taiga_surface_dead_bush_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mega_taiga_surface_mushrooms_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mega_taiga_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mega_taiga_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mesa_before_surface_gold_ore_feature.json
+
 ```JSON
 placement_pass: "before_surface_pass"
 ```
 
 ### mesa_plateau_stone_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mesa_surface_cactus_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mesa_surface_dead_bush_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mesa_surface_reeds_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mushroom_island_surface_huge_mushroom_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### mushroom_island_surface_mushrooms_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### netherwart_forest_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### nether_soul_sand_underground_feature_rules.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### nether_sprouts_feature_rules.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### ocean_surface_kelp_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### ocean_surface_seagrass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_clay_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_extra_brown_mushroom_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_extra_red_mushroom_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_flowers_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_gravel_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_kelp_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_pumpkin_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_reeds_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_sand_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_springs_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### overworld_underground_andesite_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_coal_ore_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_diamond_ore_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_diorite_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_dirt_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_extra_gravel_ore_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_gold_ore_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_granite_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_gravel_ore_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_iron_ore_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_lapis_ore_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### overworld_underground_redstone_ore_feature.json
+
 ```JSON
 placement_pass: "underground_pass"
 ```
 
 ### plains_first_double_plant_grass_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### plains_first_double_plant_sunflower_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### plains_surface_flowers_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### plains_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### plains_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### redwood_taiga_hills_mutated_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### redwood_taiga_mutated_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### river_surface_seagrass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### roofed_forest_first_foliage_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### savanna_first_double_plant_grass_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### savanna_mutated_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### savanna_mutated_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### savanna_surface_flowers_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### savanna_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### savanna_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### soulsand_valley_fossil_surface_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### swamp_surface_dead_bush_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### swamp_surface_flowers_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### swamp_surface_mushrooms_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### swamp_surface_reeds_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### swamp_surface_swamp_foliage_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### swamp_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### swamp_surface_waterlily_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### taiga_first_double_plant_fern_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### taiga_first_sweet_berry_bush_feature.json
+
 ```JSON
 placement_pass: "first_pass"
 ```
 
 ### taiga_surface_mushrooms_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### taiga_surface_tall_grass_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### taiga_surface_trees_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### twisting_vines_cluster_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### warm_ocean_after_surface_coral_crust_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### warm_ocean_after_surface_coral_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### warm_ocean_after_surface_coral_hang_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### warm_ocean_after_surface_pickle_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### warm_ocean_after_surface_sea_anemone_feature.json
+
 ```JSON
 placement_pass: "after_surface_pass"
 ```
 
 ### warped_fungus_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### warped_roots_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
 
 ### weeping_vines_cluster_feature.json
+
 ```JSON
 placement_pass: "surface_pass"
 ```
-

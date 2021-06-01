@@ -1,7 +1,7 @@
 ---
-layout: page
 title: Pathfinding
-parent: Tutorials
+tags:
+    - recipe
 ---
 
 # Pathfinding

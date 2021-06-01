@@ -1,36 +1,38 @@
 ---
-layout: page
 title: Spawn Rules
-parent: Vanilla Usage
 ---
 
-# Spawn Rules
+# Vanilla Usage Spawn Rules
+
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
- - [minecraft:biome_filter](#minecraftbiome_filter)
- - [minecraft:brightness_filter](#minecraftbrightness_filter)
- - [minecraft:delay_filter](#minecraftdelay_filter)
- - [minecraft:density_limit](#minecraftdensity_limit)
- - [minecraft:difficulty_filter](#minecraftdifficulty_filter)
- - [minecraft:distance_filter](#minecraftdistance_filter)
- - [minecraft:height_filter](#minecraftheight_filter)
- - [minecraft:herd](#minecraftherd)
- - [minecraft:mob_event_filter](#minecraftmob_event_filter)
- - [minecraft:permute_type](#minecraftpermute_type)
- - [minecraft:player_in_village_filter](#minecraftplayer_in_village_filter)
- - [minecraft:spawn_event](#minecraftspawn_event)
- - [minecraft:spawns_lava](#minecraftspawns_lava)
- - [minecraft:spawns_on_block_filter](#minecraftspawns_on_block_filter)
- - [minecraft:spawns_on_block_prevented_filter](#minecraftspawns_on_block_prevented_filter)
- - [minecraft:spawns_on_surface](#minecraftspawns_on_surface)
- - [minecraft:spawns_underground](#minecraftspawns_underground)
- - [minecraft:spawns_underwater](#minecraftspawns_underwater)
- - [minecraft:weight](#minecraftweight)
- - [minecraft:world_age_filter](#minecraftworld_age_filter)
+
+-   [minecraft:biome_filter](#minecraftbiome_filter)
+-   [minecraft:brightness_filter](#minecraftbrightness_filter)
+-   [minecraft:delay_filter](#minecraftdelay_filter)
+-   [minecraft:density_limit](#minecraftdensity_limit)
+-   [minecraft:difficulty_filter](#minecraftdifficulty_filter)
+-   [minecraft:distance_filter](#minecraftdistance_filter)
+-   [minecraft:height_filter](#minecraftheight_filter)
+-   [minecraft:herd](#minecraftherd)
+-   [minecraft:mob_event_filter](#minecraftmob_event_filter)
+-   [minecraft:permute_type](#minecraftpermute_type)
+-   [minecraft:player_in_village_filter](#minecraftplayer_in_village_filter)
+-   [minecraft:spawn_event](#minecraftspawn_event)
+-   [minecraft:spawns_lava](#minecraftspawns_lava)
+-   [minecraft:spawns_on_block_filter](#minecraftspawns_on_block_filter)
+-   [minecraft:spawns_on_block_prevented_filter](#minecraftspawns_on_block_prevented_filter)
+-   [minecraft:spawns_on_surface](#minecraftspawns_on_surface)
+-   [minecraft:spawns_underground](#minecraftspawns_underground)
+-   [minecraft:spawns_underwater](#minecraftspawns_underwater)
+-   [minecraft:weight](#minecraftweight)
+-   [minecraft:world_age_filter](#minecraftworld_age_filter)
 
 # minecraft:biome_filter
+
 ### bat
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -40,6 +42,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -61,6 +64,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -70,6 +74,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cod
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -86,6 +91,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -95,6 +101,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -104,6 +111,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -120,6 +128,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -129,6 +138,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -146,6 +156,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -190,6 +201,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -199,6 +211,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 ```json
 "minecraft:biome_filter": {
     "all_of": [
@@ -217,6 +230,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -226,6 +240,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -243,6 +258,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -252,6 +268,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -269,6 +286,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -286,6 +304,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -295,6 +314,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -304,6 +324,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -328,6 +349,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -337,6 +359,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -346,6 +369,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -355,6 +379,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -372,6 +397,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager_patrol
+
 ```json
 "minecraft:biome_filter": {
     "all_of": [
@@ -439,6 +465,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -470,6 +497,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -486,6 +514,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 ```json
 "minecraft:biome_filter": {
     "any_of": [
@@ -526,6 +555,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -552,6 +582,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -561,6 +592,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 ```json
 "minecraft:biome_filter": {
     "any_of": [
@@ -588,6 +620,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -605,6 +638,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -614,6 +648,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -635,6 +670,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -666,6 +702,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -675,6 +712,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -706,6 +744,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -722,6 +761,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -731,6 +771,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -772,6 +813,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -781,6 +823,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -798,7 +841,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:brightness_filter
+
 ### bat
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -808,6 +853,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -817,6 +863,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -826,6 +873,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -835,6 +883,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -844,6 +893,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -853,6 +903,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -870,6 +921,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -887,6 +939,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -896,6 +949,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -913,6 +967,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -922,6 +977,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -939,6 +995,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 ```json
 "minecraft:brightness_filter": {
     "min": 9,
@@ -948,6 +1005,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -957,6 +1015,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -974,6 +1033,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -983,6 +1043,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -992,6 +1053,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1001,6 +1063,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager_patrol
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1026,6 +1089,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1043,6 +1107,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1060,6 +1125,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1069,6 +1135,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1078,6 +1145,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1087,6 +1155,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1104,6 +1173,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1113,6 +1183,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1122,6 +1193,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1139,6 +1211,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1148,7 +1221,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:delay_filter
+
 ### pillager_patrol
+
 ```json
 "minecraft:delay_filter": {
     "min": 600,
@@ -1177,7 +1252,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:density_limit
+
 ### bat
+
 ```json
 "minecraft:density_limit": {
     "surface": 5
@@ -1185,6 +1262,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cod
+
 ```json
 "minecraft:density_limit": {
     "surface": 20
@@ -1192,6 +1270,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 ```json
 "minecraft:density_limit": {
     "surface": 5
@@ -1199,6 +1278,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 ```json
 "minecraft:density_limit": {
     "surface": 5,
@@ -1207,6 +1287,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 ```json
 "minecraft:density_limit": {
     "surface": 5
@@ -1220,6 +1301,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 ```json
 "minecraft:density_limit": {
     "surface": 0,
@@ -1228,6 +1310,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 ```json
 "minecraft:density_limit": {
     "surface": 5
@@ -1235,6 +1318,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:density_limit": {
     "surface": 3
@@ -1242,6 +1326,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 ```json
 "minecraft:density_limit": {
     "surface": 10
@@ -1255,6 +1340,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 ```json
 "minecraft:density_limit": {
     "surface": 4
@@ -1268,6 +1354,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 ```json
 "minecraft:density_limit": {
     "surface": 3
@@ -1275,6 +1362,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 ```json
 "minecraft:density_limit": {
     "surface": 20
@@ -1288,7 +1376,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:difficulty_filter
+
 ### creeper
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1297,6 +1387,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1312,6 +1403,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1334,6 +1426,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1342,6 +1435,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "peaceful",
@@ -1350,6 +1444,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1358,6 +1453,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1373,6 +1469,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1381,6 +1478,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1396,6 +1494,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager_patrol
+
 ```json
 "minecraft:difficulty_filter": {
     "max": "easy"
@@ -1416,6 +1515,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1424,6 +1524,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1439,6 +1540,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1447,6 +1549,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1462,6 +1565,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "peaceful",
@@ -1470,6 +1574,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1478,6 +1583,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1486,6 +1592,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1501,7 +1608,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:distance_filter
+
 ### cod
+
 ```json
 "minecraft:distance_filter": {
     "min": 12,
@@ -1510,6 +1619,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager_patrol
+
 ```json
 "minecraft:distance_filter": {
     "min": 24,
@@ -1532,6 +1642,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:distance_filter": {
     "min": 12,
@@ -1540,6 +1651,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 ```json
 "minecraft:distance_filter": {
     "min": 12,
@@ -1555,6 +1667,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 ```json
 "minecraft:distance_filter": {
     "min": 12,
@@ -1570,7 +1683,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:height_filter
+
 ### bat
+
 ```json
 "minecraft:height_filter": {
     "min": 0,
@@ -1579,6 +1694,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 ```json
 "minecraft:height_filter": {
     "min": 60,
@@ -1587,6 +1703,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 ```json
 "minecraft:height_filter": {
     "min": 60,
@@ -1595,7 +1712,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:herd
+
 ### bat
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1604,6 +1723,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1612,6 +1732,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1620,6 +1741,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cod
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
@@ -1628,6 +1750,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1636,6 +1759,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 ```json
 "minecraft:herd": {
     "min_size": 3,
@@ -1644,6 +1768,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1652,6 +1777,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1667,6 +1793,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1696,6 +1823,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1706,6 +1834,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
@@ -1714,6 +1843,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 ```json
 "minecraft:herd": [
     {
@@ -1795,6 +1925,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1803,6 +1934,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
@@ -1818,6 +1950,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1833,6 +1966,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
@@ -1841,6 +1975,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1849,6 +1984,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1864,6 +2000,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1872,6 +2009,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1880,6 +2018,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1895,6 +2034,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager_patrol
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1929,6 +2069,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1948,6 +2089,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:herd": {
     "min_size": 3,
@@ -1956,6 +2098,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1971,6 +2114,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 ```json
 "minecraft:herd": {
     "min_size": 3,
@@ -1986,6 +2130,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1994,6 +2139,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -2002,6 +2148,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -2017,6 +2164,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -2032,6 +2180,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -2040,6 +2189,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 ```json
 "minecraft:herd": [
     {
@@ -2163,6 +2313,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -2171,6 +2322,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
@@ -2186,6 +2338,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -2194,6 +2347,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -2209,7 +2363,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:mob_event_filter
+
 ### pillager_patrol
+
 ```json
 "minecraft:mob_event_filter": {
     "event": "minecraft:pillager_patrols_event"
@@ -2229,6 +2385,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:permute_type
+
 ```json
 "minecraft:permute_type": [
     {
@@ -2261,6 +2418,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 ```json
 "minecraft:permute_type": [
     {
@@ -2274,7 +2432,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:player_in_village_filter
+
 ### pillager_patrol
+
 ```json
 "minecraft:player_in_village_filter": {
     "distance": 48,
@@ -2297,7 +2457,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spawn_event
+
 ### stray
+
 ```json
 "minecraft:spawn_event": {
     "event": "change_to_skeleton"
@@ -2311,28 +2473,35 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spawns_lava
+
 ### strider
+
 ```json
 "minecraft:spawns_lava": {}
 ```
 
 # minecraft:spawns_on_block_filter
+
 ### chicken
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### cow
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### donkey
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### horse
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2342,6 +2511,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2351,11 +2521,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### panda
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2365,16 +2537,19 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### pig
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### polar_bear
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:ice"
 ```
@@ -2384,6 +2559,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 ```json
 "minecraft:spawns_on_block_filter": [
     "minecraft:grass",
@@ -2401,16 +2577,19 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### turtle
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:sand"
 ```
 
 ### wolf
+
 ```json
 "minecraft:spawns_on_block_filter": [
     "minecraft:grass",
@@ -2424,7 +2603,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spawns_on_block_prevented_filter
+
 ### hoglin
+
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
@@ -2433,6 +2614,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
@@ -2448,6 +2630,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
@@ -2463,6 +2646,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
@@ -2471,6 +2655,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
@@ -2486,42 +2671,51 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spawns_on_surface
+
 ### bee
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### chicken
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### cod
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### cow
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### creeper
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### dolphin
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### donkey
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### drowned
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2531,6 +2725,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2540,11 +2735,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### horse
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2554,11 +2751,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### llama
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2568,16 +2767,19 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### ocelot
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### panda
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2587,21 +2789,25 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### phantom
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### pig
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### pillager_patrol
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2615,6 +2821,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2624,11 +2831,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### rabbit
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2638,6 +2847,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2647,16 +2857,19 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### skeleton
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### slime
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2666,11 +2879,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### squid
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2680,6 +2895,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2689,6 +2905,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2698,16 +2915,19 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### witch
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 ### wolf
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2717,22 +2937,27 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
 
 # minecraft:spawns_underground
+
 ### bat
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### creeper
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### enderman
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2746,16 +2971,19 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### hoglin
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### magma_cube
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2765,6 +2993,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2774,11 +3003,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### slime
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2788,26 +3019,31 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### stray
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### strider
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### witch
+
 ```json
 "minecraft:spawns_underground": {}
 ```
 
 ### zombie_pigman
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2817,17 +3053,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spawns_underwater
+
 ### cod
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
 
 ### dolphin
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
 
 ### drowned
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -2837,16 +3077,19 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
 
 ### salmon
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -2856,6 +3099,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -2865,6 +3109,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -2874,7 +3119,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:weight
+
 ### bat
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -2882,6 +3129,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -2889,6 +3137,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -2896,6 +3145,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cod
+
 ```json
 "minecraft:weight": {
     "default": 75
@@ -2903,6 +3153,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -2910,6 +3161,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -2917,6 +3169,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 ```json
 "minecraft:weight": {
     "default": 7
@@ -2924,6 +3177,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 ```json
 "minecraft:weight": {
     "default": 1
@@ -2931,6 +3185,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -2944,6 +3199,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -2969,6 +3225,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -2976,6 +3233,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 ```json
 "minecraft:weight": {
     "default": 40
@@ -2983,6 +3241,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 ```json
 "minecraft:weight": {
     "default": 20
@@ -2990,6 +3249,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 ```json
 "minecraft:weight": {
     "default": 4
@@ -3003,6 +3263,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 ```json
 "minecraft:weight": {
     "default": 240
@@ -3010,6 +3271,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 ```json
 "minecraft:weight": {
     "default": 5
@@ -3023,6 +3285,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -3036,6 +3299,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3043,6 +3307,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 ```json
 "minecraft:weight": {
     "default": 30
@@ -3050,6 +3315,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -3063,6 +3329,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 ```json
 "minecraft:weight": {
     "default": 40
@@ -3070,6 +3337,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -3077,6 +3345,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -3084,6 +3353,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 ```json
 "minecraft:weight": {
     "default": 5
@@ -3097,6 +3367,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 ```json
 "minecraft:weight": {
     "default": 1
@@ -3110,6 +3381,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 ```json
 "minecraft:weight": {
     "default": 25
@@ -3117,6 +3389,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 ```json
 "minecraft:weight": {
     "default": 4
@@ -3130,6 +3403,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 ```json
 "minecraft:weight": {
     "default": 26
@@ -3143,6 +3417,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 ```json
 "minecraft:weight": {
     "default": 12
@@ -3150,6 +3425,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 ```json
 "minecraft:weight": {
     "default": 80
@@ -3157,6 +3433,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -3170,6 +3447,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -3177,6 +3455,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3190,6 +3469,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 ```json
 "minecraft:weight": {
     "default": 120
@@ -3203,6 +3483,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 ```json
 "minecraft:weight": {
     "default": 20
@@ -3210,6 +3491,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 ```json
 "minecraft:weight": {
     "default": 75
@@ -3223,6 +3505,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3230,6 +3513,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 ```json
 "minecraft:weight": {
     "default": 5
@@ -3237,6 +3521,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3250,6 +3535,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -3257,6 +3543,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -3270,12 +3557,8 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:world_age_filter
+
 ### pillager_patrol
-```json
-"minecraft:world_age_filter": {
-    "min": 6000
-}
-```
 
 ```json
 "minecraft:world_age_filter": {
@@ -3289,3 +3572,8 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+```json
+"minecraft:world_age_filter": {
+    "min": 6000
+}
+```

@@ -4,7 +4,7 @@ title: Components
 parent: Vanilla Usage
 ---
 
-# Components
+# Vanilla Usage Components
 
 [[TOC]]
 
@@ -13,8 +13,11 @@ parent: Vanilla Usage
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # minecraft:addrider
+
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton"
@@ -34,7 +37,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:pillager"
@@ -76,7 +81,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton"
@@ -96,7 +103,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:zombie_pigman",
@@ -112,8 +121,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:admire_item
+
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:admire_item": {
     "duration": 8,
@@ -122,8 +134,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:ageable
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -144,7 +159,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -160,7 +177,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -178,7 +197,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -191,7 +212,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -207,7 +230,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -249,7 +274,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -262,7 +289,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -277,7 +306,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -319,7 +350,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -341,7 +374,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -354,7 +389,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -396,7 +433,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -412,7 +451,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -425,7 +466,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -442,7 +485,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -454,7 +499,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -471,7 +518,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -484,7 +533,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -496,7 +547,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -511,7 +564,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -529,7 +584,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -541,7 +598,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -553,7 +612,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -578,7 +639,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -590,8 +653,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:ambient_sound_interval
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:ambient_sound_interval": {
     "event_name": "ambient.pollinate",
@@ -609,7 +675,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
@@ -619,7 +687,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:ambient_sound_interval": {
     "event_name": "ambient"
@@ -641,7 +711,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
@@ -651,7 +723,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 4.0,
@@ -661,7 +735,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
@@ -671,7 +747,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
@@ -681,8 +759,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:angry
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -701,7 +782,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 10,
@@ -714,7 +797,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -728,7 +813,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -740,7 +827,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 10,
@@ -759,7 +848,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 4,
@@ -793,7 +884,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 500,
@@ -829,7 +922,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 30,
@@ -869,7 +964,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 30,
@@ -903,7 +1000,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 1,
@@ -929,7 +1028,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": -1,
@@ -943,7 +1044,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 10,
@@ -956,7 +1059,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": -1,
@@ -969,7 +1074,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 5,
@@ -991,7 +1098,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -1005,7 +1114,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -1019,20 +1130,27 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:annotation.break_door
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:annotation.break_door": {
     "break_time": 30,
@@ -1041,51 +1159,69 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
 # minecraft:annotation.open_door
+
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:annotation.open_door": {}
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:annotation.open_door": {}
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:annotation.open_door": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:annotation.open_door": {}
 ```
 
 # minecraft:area_attack
+
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:area_attack": {
     "damage_range": 0.2,
@@ -1109,8 +1245,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:attack
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 2
@@ -1134,7 +1273,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 6
@@ -1142,7 +1283,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 2,
@@ -1168,7 +1311,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1176,7 +1321,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1184,7 +1331,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1192,7 +1341,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 5
@@ -1200,7 +1351,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 7
@@ -1208,7 +1361,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 2
@@ -1216,7 +1371,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1224,7 +1381,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 2
@@ -1232,7 +1391,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 5
@@ -1240,7 +1401,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 1.0
@@ -1257,7 +1420,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3,
@@ -1267,7 +1432,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": {
@@ -1278,7 +1445,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 6
@@ -1298,7 +1467,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 2.0
@@ -1312,7 +1483,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 6
@@ -1320,7 +1493,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 5
@@ -1328,7 +1503,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 7
@@ -1336,7 +1513,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1344,7 +1523,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 1
@@ -1352,7 +1533,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 6.0
@@ -1360,7 +1543,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 12.0
@@ -1368,7 +1553,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 1
@@ -1376,7 +1563,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1384,7 +1573,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 4
@@ -1404,7 +1595,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 2
@@ -1412,7 +1605,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1420,7 +1615,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3,
@@ -1430,7 +1627,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1438,7 +1637,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 8
@@ -1446,7 +1647,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 4,
@@ -1456,7 +1659,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1470,7 +1675,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 1
@@ -1487,7 +1694,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1495,7 +1704,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 5
@@ -1503,7 +1714,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1511,7 +1724,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1519,8 +1734,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:attack_cooldown
+
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:attack_cooldown": {
     "attack_cooldown_time": [
@@ -1535,7 +1753,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:attack_cooldown": {
     "attack_cooldown_time": [
@@ -1550,8 +1770,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:attack_damage
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:attack_damage": {
     "value": 4
@@ -1559,7 +1782,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:attack_damage": {
     "value": 4
@@ -1567,8 +1792,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:balloonable
+
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:balloonable": {
     "mass": 0.5
@@ -1576,19 +1804,25 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:balloonable": {
     "mass": 0.6
@@ -1596,13 +1830,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:balloonable": {
     "mass": 2.0
@@ -1610,25 +1848,33 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:balloonable": {
     "mass": 1.5
@@ -1636,7 +1882,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:balloonable": {
     "mass": 0.75
@@ -1644,7 +1892,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:balloonable": {
     "mass": 0.4
@@ -1652,7 +1902,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:balloonable": {
     "mass": 0.75
@@ -1660,26 +1912,35 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:balloonable": {}
 ```
 
 # minecraft:barter
+
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:barter": {
     "barter_table": "loot_tables/entities/piglin_barter.json",
@@ -1688,6 +1949,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.admire_item
+
 ```json
 "minecraft:behavior.admire_item": {
     "priority": 2,
@@ -1708,8 +1970,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.avoid_block
+
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.avoid_block": {
     "priority": 1,
@@ -1739,7 +2004,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.avoid_block": {
     "priority": 9,
@@ -1763,8 +2030,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.avoid_mob_type
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 6,
@@ -1784,7 +2054,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
@@ -1812,7 +2084,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 2,
@@ -1842,7 +2116,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
@@ -1862,7 +2138,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
@@ -1882,7 +2160,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
@@ -1932,7 +2212,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
@@ -1952,7 +2234,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 0,
@@ -1987,7 +2271,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
@@ -2007,7 +2293,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
@@ -2029,7 +2317,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 0,
@@ -2058,7 +2348,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -2120,7 +2412,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -2160,7 +2454,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
@@ -2181,7 +2477,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -2201,7 +2499,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -2221,7 +2521,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
@@ -2241,7 +2543,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
@@ -2285,7 +2589,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -2329,7 +2635,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 2,
@@ -2373,7 +2681,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
@@ -2394,8 +2704,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.barter
+
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.barter": {
     "priority": 3
@@ -2403,8 +2716,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.beg
+
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.beg": {
     "priority": 9,
@@ -2431,8 +2747,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.breed
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 4,
@@ -2441,7 +2760,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2450,7 +2771,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2459,7 +2782,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2468,7 +2793,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2477,7 +2804,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2486,7 +2815,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2495,7 +2826,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2504,7 +2837,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 4,
@@ -2513,7 +2848,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2522,7 +2859,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2531,7 +2870,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2540,7 +2881,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 4,
@@ -2549,7 +2892,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2565,7 +2910,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2574,7 +2921,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 4,
@@ -2583,7 +2932,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2592,7 +2943,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2601,8 +2954,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.celebrate
+
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2624,7 +2980,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2646,7 +3004,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2668,7 +3028,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2690,7 +3052,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2712,8 +3076,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.charge_attack
+
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:behavior.charge_attack": {
     "priority": 4
@@ -2721,8 +3088,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.charge_held_item
+
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.charge_held_item": {
     "priority": 3,
@@ -2733,7 +3103,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.charge_held_item": {
     "priority": 3,
@@ -2744,8 +3116,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.circle_around_anchor
+
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:behavior.circle_around_anchor": {
     "priority": 3,
@@ -2770,8 +3145,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.controlled_by_player
+
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.controlled_by_player": {
     "priority": 0
@@ -2779,7 +3157,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.controlled_by_player": {
     "priority": 0,
@@ -2788,8 +3168,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.defend_trusted_target
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.defend_trusted_target": {
     "priority": 0,
@@ -2805,8 +3188,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.defend_village_target
+
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.defend_village_target": {
     "priority": 1,
@@ -2832,8 +3218,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.delayed_attack
+
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.delayed_attack": {
     "priority": 4,
@@ -2849,8 +3238,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragonchargeplayer
+
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:behavior.dragonchargeplayer": {
     "priority": 1
@@ -2858,6 +3250,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragondeath
+
 ```json
 "minecraft:behavior.dragondeath": {
     "priority": 0
@@ -2865,6 +3258,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragonflaming
+
 ```json
 "minecraft:behavior.dragonflaming": {
     "priority": 1
@@ -2872,6 +3266,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragonholdingpattern
+
 ```json
 "minecraft:behavior.dragonholdingpattern": {
     "priority": 3
@@ -2879,6 +3274,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragonlanding
+
 ```json
 "minecraft:behavior.dragonlanding": {
     "priority": 0
@@ -2886,6 +3282,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragonscanning
+
 ```json
 "minecraft:behavior.dragonscanning": {
     "priority": 2
@@ -2893,6 +3290,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragonstrafeplayer
+
 ```json
 "minecraft:behavior.dragonstrafeplayer": {
     "priority": 2
@@ -2900,6 +3298,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragontakeoff
+
 ```json
 "minecraft:behavior.dragontakeoff": {
     "priority": 0
@@ -2907,8 +3306,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.drink_potion
+
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.drink_potion": {
     "priority": 1,
@@ -3007,8 +3409,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.drop_item_for
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.drop_item_for": {
     "priority": 1,
@@ -3056,8 +3461,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.eat_block
+
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.eat_block": {
     "priority": 6,
@@ -3081,8 +3489,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.eat_carried_item
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.eat_carried_item": {
     "priority": 12,
@@ -3091,8 +3502,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.enderman_leave_block
+
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:behavior.enderman_leave_block": {
     "priority": 10
@@ -3100,6 +3514,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.enderman_take_block
+
 ```json
 "minecraft:behavior.enderman_take_block": {
     "priority": 11
@@ -3107,8 +3522,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.equip_item
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -3116,7 +3534,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 2
@@ -3124,7 +3544,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 2
@@ -3132,7 +3554,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 5
@@ -3140,7 +3564,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -3148,7 +3574,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -3156,7 +3584,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -3164,7 +3594,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -3172,7 +3604,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 2
@@ -3180,7 +3614,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -3188,7 +3624,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -3196,7 +3634,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -3204,8 +3644,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.explore_outskirts
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.explore_outskirts": {}
 ```
@@ -3232,8 +3675,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.find_cover
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.find_cover": {
     "priority": 0,
@@ -3251,8 +3697,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.find_mount
+
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3261,7 +3710,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 3,
@@ -3274,7 +3725,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3285,7 +3738,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3296,7 +3751,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3305,7 +3762,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3314,8 +3773,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.find_underwater_treasure
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.find_underwater_treasure": {
     "priority": 2,
@@ -3326,8 +3788,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.flee_sun
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
@@ -3336,7 +3801,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
@@ -3345,7 +3812,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
@@ -3354,7 +3823,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 4,
@@ -3363,7 +3834,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 4,
@@ -3372,8 +3845,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.float
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3381,7 +3857,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 19
@@ -3389,7 +3867,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3397,7 +3877,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3405,7 +3887,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 1
@@ -3413,7 +3897,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3421,7 +3907,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3429,7 +3917,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3437,7 +3927,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3445,7 +3937,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3453,7 +3947,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3461,7 +3957,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3469,7 +3967,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3477,7 +3977,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3485,7 +3987,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3493,7 +3997,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3501,7 +4007,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3509,7 +4017,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3517,7 +4027,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3525,7 +4037,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3533,7 +4047,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3541,7 +4057,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 2
@@ -3549,7 +4067,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3557,7 +4077,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3565,7 +4087,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3573,7 +4097,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3581,7 +4107,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3589,7 +4117,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 1
@@ -3597,7 +4127,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 1
@@ -3605,7 +4137,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3613,7 +4147,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3621,7 +4157,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3629,7 +4167,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3637,7 +4177,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3645,7 +4187,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 1
@@ -3653,7 +4197,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 1
@@ -3661,7 +4207,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3669,8 +4217,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.float_wander
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:behavior.float_wander": {
     "xz_dist": 10,
@@ -3685,7 +4236,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:behavior.float_wander": {
     "priority": 2,
@@ -3694,8 +4247,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_caravan
+
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.follow_caravan": {
     "priority": 3,
@@ -3712,8 +4268,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_mob
+
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:behavior.follow_mob": {
     "priority": 3,
@@ -3724,8 +4283,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_owner
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.follow_owner": {
     "priority": 4,
@@ -3736,7 +4298,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.follow_owner": {
     "priority": 4,
@@ -3747,7 +4311,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:behavior.follow_owner": {
     "priority": 2,
@@ -3758,7 +4324,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.follow_owner": {
     "priority": 6,
@@ -3769,8 +4337,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_parent
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 11,
@@ -3779,7 +4350,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3788,7 +4361,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3804,7 +4379,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3813,7 +4390,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3822,7 +4401,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 9,
@@ -3831,7 +4412,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
@@ -3840,7 +4423,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3849,7 +4434,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3858,7 +4445,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3874,7 +4463,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3883,7 +4474,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 13,
@@ -3892,7 +4485,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
@@ -3901,7 +4496,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3910,7 +4507,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
@@ -3919,7 +4518,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3935,7 +4536,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3944,7 +4547,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
@@ -3953,7 +4558,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3962,8 +4569,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_target_captain
+
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.follow_target_captain": {
     "priority": 5,
@@ -3974,7 +4584,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.follow_target_captain": {
     "priority": 5,
@@ -3985,8 +4597,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.go_home
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.go_home": {
     "priority": 4,
@@ -4041,7 +4656,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:behavior.go_home": {
     "priority": 6,
@@ -4056,7 +4673,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.go_home": {
     "priority": 1,
@@ -4071,8 +4690,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.guardian_attack
+
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:behavior.guardian_attack": {
     "priority": 4
@@ -4080,7 +4702,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:behavior.guardian_attack": {
     "priority": 4
@@ -4088,8 +4712,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.harvest_farm_block
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.harvest_farm_block": {
     "priority": 9,
@@ -4098,7 +4725,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.harvest_farm_block": {}
 ```
@@ -4114,6 +4743,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.hide
+
 ```json
 "minecraft:behavior.hide": {
     "priority": 0,
@@ -4124,8 +4754,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.hold_ground
+
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.hold_ground": {
     "priority": 5,
@@ -4153,8 +4786,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.hurt_by_target
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4162,7 +4798,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4170,7 +4808,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4178,7 +4818,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
@@ -4186,7 +4828,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4194,7 +4838,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4202,7 +4848,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 3
@@ -4210,7 +4858,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4218,7 +4868,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4226,7 +4878,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
@@ -4234,7 +4888,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4242,7 +4898,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2,
@@ -4282,7 +4940,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
@@ -4291,7 +4951,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4299,7 +4961,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4307,7 +4971,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4315,7 +4981,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
@@ -4332,7 +5000,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4340,7 +5010,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2,
@@ -4357,7 +5029,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
@@ -4365,7 +5039,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
@@ -4374,7 +5050,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4382,7 +5060,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4390,7 +5070,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4398,7 +5080,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4406,7 +5090,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4414,7 +5100,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4422,7 +5110,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4430,7 +5120,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
@@ -4438,7 +5130,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4446,7 +5140,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 3
@@ -4454,7 +5150,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4462,7 +5160,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4470,7 +5170,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4478,7 +5180,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4486,7 +5190,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4494,8 +5200,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.inspect_bookshelf
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.inspect_bookshelf": {}
 ```
@@ -4512,8 +5221,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.knockback_roar
+
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.knockback_roar": {
     "priority": 1,
@@ -4542,8 +5254,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.lay_down
+
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.lay_down": {
     "priority": 5,
@@ -4553,8 +5268,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.lay_egg
+
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.lay_egg": {
     "priority": 1,
@@ -4570,8 +5288,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.leap_at_target
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 3,
@@ -4580,7 +5301,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
@@ -4590,7 +5313,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 3,
@@ -4599,7 +5324,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
@@ -4609,7 +5336,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
@@ -4618,8 +5347,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.look_at_entity
+
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.look_at_entity": {
     "priority": 10,
@@ -4633,7 +5365,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.look_at_entity": {
     "priority": 10,
@@ -4648,7 +5382,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:behavior.look_at_entity": {
     "priority": 9,
@@ -4663,8 +5399,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.look_at_player
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9
@@ -4672,7 +5411,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4682,7 +5423,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4692,7 +5435,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4702,7 +5447,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
@@ -4711,7 +5458,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4720,7 +5469,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4730,7 +5481,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4740,7 +5493,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4750,7 +5505,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4760,7 +5517,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
@@ -4770,7 +5529,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 14,
@@ -4780,7 +5541,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4790,7 +5553,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4800,7 +5565,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4810,7 +5577,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4820,7 +5589,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4830,7 +5601,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4840,7 +5613,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4850,7 +5625,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4860,7 +5637,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 0,
@@ -4870,7 +5649,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9
@@ -4878,7 +5659,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4888,7 +5671,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 1,
@@ -4897,7 +5682,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4907,7 +5694,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 11,
@@ -4916,7 +5705,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4925,7 +5716,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
@@ -4934,7 +5727,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
@@ -4944,7 +5739,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 11
@@ -4952,7 +5749,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4963,7 +5762,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4973,7 +5774,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 1,
@@ -4983,7 +5786,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4992,7 +5797,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -5002,7 +5809,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 3,
@@ -5011,7 +5820,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -5021,7 +5832,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -5030,7 +5843,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
@@ -5040,7 +5855,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -5050,7 +5867,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
@@ -5060,7 +5879,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 12,
@@ -5070,7 +5891,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -5080,7 +5903,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 10,
@@ -5090,7 +5915,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -5100,7 +5927,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 5,
@@ -5109,7 +5938,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
@@ -5118,7 +5949,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -5127,7 +5960,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
@@ -5137,7 +5972,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -5147,7 +5984,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -5157,7 +5996,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -5167,7 +6008,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -5177,7 +6020,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 10,
@@ -5187,7 +6032,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 10,
@@ -5197,8 +6044,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.look_at_target
+
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:behavior.look_at_target": {
     "priority": 5
@@ -5206,8 +6056,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.look_at_trading_player
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 2
@@ -5215,7 +6068,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 7
@@ -5223,7 +6078,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 4
@@ -5231,8 +6088,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.make_love
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.make_love": {
     "priority": 6
@@ -5240,7 +6100,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.make_love": {
     "priority": 5
@@ -5248,8 +6110,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.melee_attack
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
@@ -5263,7 +6128,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3
@@ -5271,7 +6138,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -5290,7 +6159,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5301,7 +6172,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
@@ -5310,7 +6183,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -5321,7 +6196,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 2
@@ -5329,7 +6206,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -5338,7 +6217,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 10,
@@ -5358,7 +6239,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5380,7 +6263,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3
@@ -5388,7 +6273,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 1,
@@ -5397,7 +6284,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
@@ -5416,7 +6305,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 8,
@@ -5426,7 +6317,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5436,7 +6329,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5445,7 +6340,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5454,7 +6351,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5464,7 +6363,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -5474,7 +6375,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5484,7 +6387,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3
@@ -5492,7 +6397,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5502,7 +6409,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 5
@@ -5510,7 +6419,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5520,7 +6431,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3
@@ -5528,7 +6441,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5537,7 +6452,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 6
@@ -5545,7 +6462,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 6
@@ -5553,8 +6472,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.mingle
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.mingle": {}
 ```
@@ -5571,8 +6493,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.mount_pathing
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5583,7 +6508,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5594,7 +6521,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5605,7 +6534,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5616,7 +6547,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5627,7 +6560,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5638,7 +6573,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5649,7 +6586,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5660,7 +6599,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5671,7 +6612,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5682,7 +6625,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5693,7 +6638,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5704,7 +6651,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5715,7 +6664,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5726,7 +6677,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5737,7 +6690,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5748,7 +6703,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5759,7 +6716,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5770,7 +6729,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5781,7 +6742,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5792,7 +6755,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5803,7 +6768,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5814,7 +6781,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5825,8 +6794,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_indoors
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.move_indoors": {
     "priority": 4,
@@ -5835,7 +6807,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.move_indoors": {
     "priority": 6,
@@ -5845,8 +6819,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_through_village
+
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.move_through_village": {
     "priority": 3,
@@ -5856,8 +6833,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_block
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.move_to_block": {
     "priority": 10,
@@ -5913,8 +6893,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_land
+
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.move_to_land": {
     "priority": 6,
@@ -5925,8 +6908,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_liquid
+
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.move_to_liquid": {
     "priority": 7,
@@ -5939,8 +6925,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_random_block
+
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.move_to_random_block": {
     "priority": 6,
@@ -5951,7 +6940,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.move_to_random_block": {
     "priority": 5,
@@ -5962,8 +6953,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_village
+
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 6,
@@ -5972,7 +6966,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 5,
@@ -5982,7 +6978,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 5,
@@ -5992,7 +6990,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 4,
@@ -6002,7 +7002,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 3,
@@ -6012,8 +7014,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_water
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.move_to_water": {
     "priority": 1,
@@ -6023,7 +7028,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.move_to_water": {
     "priority": 4,
@@ -6043,8 +7050,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_towards_dwelling_restriction
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.move_towards_dwelling_restriction": {
     "priority": 7
@@ -6052,7 +7062,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.move_towards_dwelling_restriction": {
     "priority": 4,
@@ -6061,7 +7073,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.move_towards_dwelling_restriction": {
     "priority": 10,
@@ -6070,8 +7084,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_towards_home_restriction
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.move_towards_home_restriction": {
     "priority": 9
@@ -6079,7 +7096,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:behavior.move_towards_home_restriction": {
     "priority": 5,
@@ -6088,7 +7107,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:behavior.move_towards_home_restriction": {
     "priority": 5,
@@ -6097,8 +7118,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_towards_target
+
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.move_towards_target": {
     "priority": 2,
@@ -6108,8 +7132,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.nap
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.nap": {
     "priority": 8,
@@ -6171,8 +7198,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.nearest_attackable_target
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6190,7 +7220,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6209,7 +7241,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6247,7 +7281,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6313,7 +7349,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6333,7 +7371,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6440,7 +7480,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6469,7 +7511,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 5,
@@ -6489,7 +7533,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 5,
@@ -6518,7 +7564,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6574,7 +7622,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6593,7 +7643,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6622,7 +7674,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
@@ -6652,7 +7706,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6723,7 +7779,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -6787,7 +7845,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6818,7 +7878,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6837,7 +7899,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6874,7 +7938,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6897,7 +7963,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 7,
@@ -7020,7 +8088,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -7038,7 +8108,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7091,7 +8163,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
@@ -7126,7 +8200,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -7173,7 +8249,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -7190,7 +8268,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7223,7 +8303,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7269,7 +8351,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7302,7 +8386,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -7320,7 +8406,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7354,7 +8442,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7400,7 +8490,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -7451,7 +8543,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7533,7 +8627,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7566,7 +8662,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -7604,7 +8702,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7667,7 +8767,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
@@ -7759,7 +8861,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -7790,7 +8894,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7862,7 +8968,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7932,7 +9040,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7994,8 +9104,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.nearest_prioritized_attackable_target
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.nearest_prioritized_attackable_target": {
     "priority": 6,
@@ -8147,7 +9260,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:behavior.nearest_prioritized_attackable_target": {
     "priority": 3,
@@ -8178,8 +9293,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.ocelot_sit_on_block
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.ocelot_sit_on_block": {
     "priority": 7,
@@ -8188,7 +9306,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.ocelot_sit_on_block": {
     "priority": 6,
@@ -8197,8 +9317,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.ocelotattack
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.ocelotattack": {
     "priority": 4,
@@ -8216,7 +9339,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.ocelotattack": {
     "priority": 4,
@@ -8234,8 +9359,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.offer_flower
+
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.offer_flower": {
     "priority": 5
@@ -8243,8 +9371,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.open_door
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.open_door": {
     "priority": 6,
@@ -8253,7 +9384,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.open_door": {
     "priority": 6,
@@ -8262,8 +9395,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.owner_hurt_by_target
+
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.owner_hurt_by_target": {
     "priority": 1
@@ -8271,6 +9407,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.owner_hurt_target
+
 ```json
 "minecraft:behavior.owner_hurt_target": {
     "priority": 2
@@ -8278,8 +9415,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.panic
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8289,7 +9429,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8298,7 +9440,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8307,7 +9451,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8316,7 +9462,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8325,7 +9473,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8334,7 +9484,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8350,7 +9502,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8359,7 +9513,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 3,
@@ -8368,7 +9524,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 4,
@@ -8377,7 +9535,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8386,7 +9546,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8395,7 +9557,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8404,7 +9568,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8428,7 +9594,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 0,
@@ -8437,7 +9605,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 3,
@@ -8446,7 +9616,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8455,7 +9627,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 2,
@@ -8464,7 +9638,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8473,7 +9649,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8482,7 +9660,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8491,7 +9671,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 3,
@@ -8505,7 +9687,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 0,
@@ -8515,7 +9699,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 3,
@@ -8524,7 +9710,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8533,7 +9721,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8542,7 +9732,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8551,8 +9743,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.pet_sleep_with_owner
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.pet_sleep_with_owner": {
     "priority": 2,
@@ -8564,8 +9759,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.pickup_items
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -8578,7 +9776,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 11,
@@ -8589,7 +9789,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -8602,7 +9804,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -8616,7 +9820,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 7,
@@ -8627,7 +9833,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 5,
@@ -8640,7 +9848,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 5,
@@ -8653,7 +9863,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 9,
@@ -8665,7 +9877,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 4,
@@ -8677,7 +9891,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 5,
@@ -8689,7 +9905,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -8702,7 +9920,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -8715,7 +9935,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 8,
@@ -8728,7 +9950,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 8,
@@ -8741,8 +9965,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.play
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.play": {
     "priority": 8,
@@ -8751,7 +9978,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.play": {
     "priority": 8,
@@ -8760,39 +9989,53 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.player_ride_tamed
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 # minecraft:behavior.raid_garden
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.raid_garden": {
     "priority": 12,
@@ -8809,7 +10052,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.raid_garden": {
     "priority": 5,
@@ -8822,8 +10067,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_breach
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.random_breach": {
     "priority": 6,
@@ -8834,8 +10082,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_fly
+
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:behavior.random_fly": {
     "priority": 2,
@@ -8849,8 +10100,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_hover
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.random_hover": {
     "priority": 12,
@@ -8866,8 +10120,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_look_around
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 5
@@ -8875,7 +10132,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
@@ -8883,7 +10142,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -8891,7 +10152,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -8899,7 +10162,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 6
@@ -8907,7 +10172,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
@@ -8915,7 +10182,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -8923,7 +10192,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -8931,7 +10202,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -8939,7 +10212,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -8947,7 +10222,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 15
@@ -8955,7 +10232,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -8963,7 +10242,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -8971,7 +10252,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -8979,7 +10262,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -8987,7 +10272,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -8995,7 +10282,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -9003,7 +10292,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9011,7 +10302,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -9019,7 +10312,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9027,7 +10322,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9035,7 +10332,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 12
@@ -9043,7 +10342,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9051,7 +10352,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 10
@@ -9059,7 +10362,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
@@ -9067,7 +10372,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9075,7 +10382,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -9083,7 +10392,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -9091,7 +10402,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -9099,7 +10412,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 4
@@ -9107,7 +10422,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
@@ -9115,7 +10432,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -9123,7 +10442,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 10
@@ -9131,7 +10452,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9139,7 +10462,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 5,
@@ -9148,7 +10473,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
@@ -9156,7 +10483,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -9164,7 +10493,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9172,7 +10503,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9180,7 +10513,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
@@ -9188,7 +10523,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
@@ -9196,7 +10533,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 11
@@ -9204,7 +10543,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 11
@@ -9212,8 +10553,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_look_around_and_sit
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.random_look_around_and_sit": {
     "priority": 12,
@@ -9226,8 +10570,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_sitting
+
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.random_sitting": {
     "priority": 5,
@@ -9249,8 +10596,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_stroll
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 4,
@@ -9259,7 +10609,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -9268,7 +10620,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9277,7 +10631,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9286,7 +10642,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9295,7 +10653,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
@@ -9304,7 +10664,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9313,7 +10675,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9322,7 +10686,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9331,7 +10697,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9340,7 +10708,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -9349,7 +10719,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 13,
@@ -9358,7 +10730,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9367,7 +10741,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9376,7 +10752,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9385,7 +10763,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9395,7 +10775,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9404,7 +10786,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9413,7 +10797,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9422,7 +10808,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -9431,7 +10819,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 14,
@@ -9440,7 +10830,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9449,7 +10841,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 10,
@@ -9458,7 +10852,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9467,7 +10863,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -9476,7 +10874,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 5
@@ -9484,7 +10884,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9495,7 +10897,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9511,7 +10915,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9520,7 +10926,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9529,7 +10937,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9538,7 +10948,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 2,
@@ -9547,7 +10959,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9556,7 +10970,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9565,7 +10981,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -9574,7 +10992,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
@@ -9583,7 +11003,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 11,
@@ -9592,7 +11014,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 10,
@@ -9601,7 +11025,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
@@ -9610,7 +11036,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 4,
@@ -9619,7 +11047,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
@@ -9628,7 +11058,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9637,7 +11069,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -9646,7 +11080,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9655,7 +11091,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9664,7 +11102,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -9673,7 +11113,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -9682,7 +11124,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
@@ -9691,7 +11135,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
@@ -9700,8 +11146,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_swim
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 5,
@@ -9711,7 +11160,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 7,
@@ -9721,7 +11172,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
@@ -9733,7 +11186,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 7,
@@ -9744,7 +11199,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
@@ -9756,7 +11213,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:behavior.random_swim": {
     "speed_multiplier": 1.0,
@@ -9768,7 +11227,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
@@ -9780,7 +11241,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 7,
@@ -9791,8 +11254,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.ranged_attack
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 3,
@@ -9807,7 +11273,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 3,
@@ -9818,7 +11286,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 1,
@@ -9829,7 +11299,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 2,
@@ -9840,7 +11312,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 8,
@@ -9854,7 +11328,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 4,
@@ -9865,7 +11341,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "attack_interval_min": 1,
@@ -9875,7 +11353,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 0,
@@ -9886,7 +11366,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 1,
@@ -9897,7 +11379,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 0,
@@ -9908,7 +11392,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 2,
@@ -9920,8 +11406,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.receive_love
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.receive_love": {
     "priority": 7
@@ -9929,7 +11418,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.receive_love": {
     "priority": 6
@@ -9937,8 +11428,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.restrict_open_door
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.restrict_open_door": {
     "priority": 5
@@ -9946,7 +11440,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.restrict_open_door": {
     "priority": 5
@@ -9954,8 +11450,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.rise_to_liquid_level
+
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.rise_to_liquid_level": {
     "priority": 0,
@@ -9966,8 +11465,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.roll
+
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.roll": {
     "priority": 12,
@@ -9983,8 +11485,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.run_around_like_crazy
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
@@ -9993,7 +11498,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
@@ -10002,7 +11509,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
@@ -10011,7 +11520,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
@@ -10020,8 +11531,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.scared
+
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.scared": {
     "priority": 1,
@@ -10030,8 +11544,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.send_event
+
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.send_event": {
     "priority": 3,
@@ -10071,8 +11588,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.share_items
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.share_items": {
     "priority": 8,
@@ -10092,7 +11612,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.share_items": {
     "priority": 9,
@@ -10112,8 +11634,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.silverfish_merge_with_stone
+
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:behavior.silverfish_merge_with_stone": {
     "priority": 5
@@ -10121,6 +11646,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.silverfish_wake_up_friends
+
 ```json
 "minecraft:behavior.silverfish_wake_up_friends": {
     "priority": 1
@@ -10128,8 +11654,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.skeleton_horse_trap
+
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:behavior.skeleton_horse_trap": {
     "within_radius": 10.0,
@@ -10139,8 +11668,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.sleep
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.sleep": {}
 ```
@@ -10158,8 +11690,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.slime_attack
+
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:behavior.slime_attack": {
     "priority": 3
@@ -10167,7 +11702,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:behavior.slime_attack": {
     "priority": 3
@@ -10175,8 +11712,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.slime_float
+
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:behavior.slime_float": {
     "priority": 1,
@@ -10186,7 +11726,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:behavior.slime_float": {
     "priority": 1,
@@ -10196,8 +11738,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.slime_keep_on_jumping
+
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:behavior.slime_keep_on_jumping": {
     "priority": 5,
@@ -10206,7 +11751,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:behavior.slime_keep_on_jumping": {
     "priority": 5,
@@ -10215,8 +11762,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.slime_random_direction
+
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:behavior.slime_random_direction": {
     "priority": 4,
@@ -10227,7 +11777,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:behavior.slime_random_direction": {
     "priority": 4,
@@ -10238,8 +11790,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.snacking
+
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.snacking": {
     "priority": 2,
@@ -10267,6 +11822,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.sneeze
+
 ```json
 "minecraft:behavior.sneeze": {
     "priority": 7,
@@ -10358,8 +11914,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.squid_dive
+
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:behavior.squid_dive": {
     "priority": 2
@@ -10367,6 +11926,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.squid_flee
+
 ```json
 "minecraft:behavior.squid_flee": {
     "priority": 2
@@ -10374,6 +11934,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.squid_idle
+
 ```json
 "minecraft:behavior.squid_idle": {
     "priority": 2
@@ -10381,6 +11942,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.squid_move_away_from_ground
+
 ```json
 "minecraft:behavior.squid_move_away_from_ground": {
     "priority": 1
@@ -10388,6 +11950,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.squid_out_of_water
+
 ```json
 "minecraft:behavior.squid_out_of_water": {
     "priority": 2
@@ -10395,8 +11958,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stalk_and_pounce_on_target
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.stalk_and_pounce_on_target": {
     "priority": 7,
@@ -10418,8 +11984,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stay_while_sitting
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
@@ -10427,7 +11996,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
@@ -10435,7 +12006,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 1
@@ -10443,7 +12016,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
@@ -10451,8 +12026,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stomp_attack
+
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:behavior.stomp_attack": {
     "priority": 1,
@@ -10464,8 +12042,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stomp_turtle_egg
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -10478,7 +12059,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -10491,7 +12074,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -10504,7 +12089,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 5,
@@ -10517,7 +12104,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -10530,7 +12119,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -10543,8 +12134,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stroll_towards_village
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.stroll_towards_village": {
     "priority": 11,
@@ -10557,8 +12151,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.summon_entity
+
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:behavior.summon_entity": {
     "priority": 2,
@@ -10639,8 +12236,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swell
+
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:behavior.swell": {
     "start_distance": 2.5,
@@ -10650,8 +12250,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swim_idle
+
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:behavior.swim_idle": {
     "priority": 5,
@@ -10661,7 +12264,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:behavior.swim_idle": {
     "priority": 5,
@@ -10671,7 +12276,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:behavior.swim_idle": {
     "priority": 5,
@@ -10681,8 +12288,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swim_wander
+
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
@@ -10694,7 +12304,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:behavior.swim_wander": {
     "priority": 5,
@@ -10706,7 +12318,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
@@ -10718,7 +12332,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
@@ -10730,8 +12346,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swim_with_entity
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:behavior.swim_with_entity": {
     "priority": 4,
@@ -10757,8 +12376,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swoop_attack
+
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:behavior.swoop_attack": {
     "priority": 2,
@@ -10772,8 +12394,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.take_flower
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.take_flower": {
     "priority": 7
@@ -10781,7 +12406,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.take_flower": {
     "priority": 9
@@ -10789,8 +12416,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.target_when_pushed
+
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:behavior.target_when_pushed": {
     "priority": 1,
@@ -10818,8 +12448,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.tempt
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10839,7 +12472,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10866,7 +12501,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10881,7 +12518,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10893,7 +12532,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10914,7 +12555,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 3,
@@ -10928,7 +12571,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10942,7 +12587,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10954,7 +12601,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10975,7 +12624,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -11002,7 +12653,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -11014,7 +12667,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -11029,7 +12684,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 3,
@@ -11043,7 +12700,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -11055,7 +12714,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -11074,7 +12735,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:behavior.tempt": {
     "priority": 3,
@@ -11086,8 +12749,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.trade_interest
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.trade_interest": {}
 ```
@@ -11104,7 +12770,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.trade_interest": {
     "priority": 3,
@@ -11117,8 +12785,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.trade_with_player
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:behavior.trade_with_player": {
     "priority": 1
@@ -11126,7 +12797,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.trade_with_player": {
     "priority": 2
@@ -11134,7 +12807,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:behavior.trade_with_player": {
     "priority": 1
@@ -11142,8 +12817,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.wither_random_attack_pos_goal
+
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:behavior.wither_random_attack_pos_goal": {
     "priority": 3
@@ -11151,6 +12829,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.wither_target_highest_damage
+
 ```json
 "minecraft:behavior.wither_target_highest_damage": {
     "priority": 1
@@ -11158,8 +12837,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.work
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:behavior.work": {}
 ```
@@ -11182,8 +12864,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:block_sensor
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:block_sensor": {
     "sensor_radius": 16,
@@ -11200,7 +12885,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:block_sensor": {
     "sensor_radius": 16,
@@ -11225,8 +12912,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:boostable
+
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:boostable": {
     "speed_multiplier": 2.0,
@@ -11242,7 +12932,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:boostable": {
     "speed_multiplier": 2.0,
@@ -11258,8 +12950,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:boss
+
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:boss": {
     "should_darken_sky": false,
@@ -11268,7 +12963,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:boss": {
     "should_darken_sky": true,
@@ -11277,8 +12974,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:break_blocks
+
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:break_blocks": {
     "breakable_blocks": [
@@ -11319,8 +13019,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:breathable
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11329,7 +13032,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:breathable": {
     "totalSupply": 15,
@@ -11338,7 +13043,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11347,7 +13054,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11356,7 +13065,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11365,7 +13076,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11374,7 +13087,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11383,7 +13098,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 240,
@@ -11395,7 +13112,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11404,7 +13123,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11415,7 +13136,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:breathable": {
     "breathes_water": true
@@ -11423,7 +13146,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11432,7 +13157,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11441,7 +13168,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11450,7 +13179,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11461,7 +13192,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:breathable": {
     "totalSupply": 15,
@@ -11470,7 +13203,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11479,7 +13214,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:breathable": {
     "breathes_water": true
@@ -11487,7 +13224,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11496,7 +13235,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11505,7 +13246,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11515,7 +13258,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11524,7 +13269,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11534,7 +13281,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11543,7 +13292,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11552,7 +13303,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11561,7 +13314,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11570,7 +13325,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11579,7 +13336,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11590,7 +13349,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11599,7 +13360,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11608,7 +13371,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11617,7 +13382,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11626,7 +13393,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11637,7 +13406,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11646,7 +13417,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11657,7 +13430,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11666,7 +13441,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:breathable": {
     "suffocate_time": 0,
@@ -11675,7 +13452,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11686,7 +13465,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11695,7 +13476,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11704,7 +13487,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11713,7 +13498,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11723,7 +13510,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11733,7 +13522,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11742,7 +13533,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11751,7 +13544,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11760,7 +13555,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11771,7 +13568,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11781,7 +13580,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11792,7 +13593,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11804,7 +13607,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11813,7 +13618,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11822,7 +13629,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11831,7 +13640,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11840,7 +13651,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11849,7 +13662,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11858,7 +13673,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11868,7 +13685,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11877,7 +13696,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11887,7 +13708,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11898,7 +13721,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11908,7 +13733,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11918,7 +13745,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11928,7 +13757,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11938,8 +13769,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:breedable
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11964,7 +13798,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -11986,7 +13822,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12008,7 +13846,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12025,7 +13865,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -12057,7 +13899,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12074,7 +13918,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12099,7 +13945,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -12131,7 +13979,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -12157,7 +14007,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12179,7 +14031,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12199,7 +14053,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12225,7 +14081,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12246,7 +14104,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:breedable": {
     "breed_items": [
@@ -12266,7 +14126,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12279,7 +14141,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12298,7 +14162,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -12318,7 +14184,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -12348,8 +14216,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:bribeable
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:bribeable": {
     "bribe_items": [
@@ -12360,8 +14231,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:buoyant
+
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:buoyant": {
     "base_buoyancy": 1.0,
@@ -12390,7 +14264,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### xp_orb
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_orb.json)</small>
+
 ```json
 "minecraft:buoyant": {
     "apply_gravity": false,
@@ -12402,378 +14278,507 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:burns_in_daylight
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:burns_in_daylight": false
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
 # minecraft:can_climb
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:can_climb": {}
 ```
 
 # minecraft:can_fly
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:can_fly": {}
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:can_fly": {}
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:can_fly": {}
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:can_fly": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:can_fly": {}
 ```
 
 # minecraft:can_power_jump
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:can_power_jump": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:can_power_jump": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:can_power_jump": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:can_power_jump": {}
 ```
 
 # minecraft:celebrate_hunt
+
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:celebrate_hunt": {
     "celebration_targets": {
@@ -12796,8 +14801,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:collision_box
+
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -12806,7 +14814,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### arrow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\arrow.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12815,7 +14825,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -12824,7 +14836,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.55,
@@ -12833,7 +14847,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -12842,7 +14858,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12851,7 +14869,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12860,7 +14880,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.7,
@@ -12869,7 +14891,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chest_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chest_minecart.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12878,7 +14902,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12887,7 +14913,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### command_block_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\command_block_minecart.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12896,7 +14924,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12905,7 +14935,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12914,7 +14946,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12923,7 +14957,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12932,7 +14968,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dragon_fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dragon_fireball.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.31,
@@ -12941,7 +14979,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12950,7 +14990,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### egg
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\egg.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12959,7 +15001,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.99,
@@ -12968,7 +15012,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12977,7 +15023,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -12986,7 +15034,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_crystal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_crystal.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12995,7 +15045,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 13,
@@ -13004,7 +15056,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_pearl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_pearl.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13013,7 +15067,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13022,7 +15078,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### eye_of_ender_signal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\eye_of_ender_signal.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13031,7 +15089,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireball.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.31,
@@ -13040,7 +15100,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fireworks_rocket
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireworks_rocket.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13049,7 +15111,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13058,7 +15122,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fishing_hook
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fishing_hook.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.15,
@@ -13067,7 +15133,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13076,7 +15144,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 4,
@@ -13085,7 +15155,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.85,
@@ -13094,7 +15166,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.85,
@@ -13110,7 +15184,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -13119,7 +15195,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -13128,7 +15206,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13137,7 +15217,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -13146,7 +15228,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lingering_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\lingering_potion.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13155,7 +15239,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -13164,7 +15250,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama_spit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama_spit.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.31,
@@ -13173,7 +15261,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 2.08,
@@ -13196,7 +15286,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -13205,7 +15297,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -13214,7 +15308,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -13223,7 +15319,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13232,7 +15330,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13241,7 +15341,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.7,
@@ -13250,7 +15352,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -13259,7 +15363,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -13268,7 +15374,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -13277,7 +15385,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13286,7 +15396,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13295,7 +15407,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13304,7 +15418,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13313,7 +15429,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.3,
@@ -13322,7 +15440,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.8,
@@ -13331,7 +15451,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.67,
@@ -13340,7 +15462,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "height": 1.9,
@@ -13349,7 +15473,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -13358,7 +15484,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -13367,7 +15495,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker_bullet
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker_bullet.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.625,
@@ -13376,7 +15506,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -13385,7 +15517,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13394,7 +15528,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -13403,7 +15539,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 2.08,
@@ -13426,7 +15564,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### small_fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\small_fireball.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.31,
@@ -13435,7 +15575,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snowball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snowball.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13444,7 +15586,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -13453,7 +15597,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -13462,7 +15608,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### splash_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\splash_potion.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13471,7 +15619,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.95,
@@ -13480,7 +15630,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13489,7 +15641,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -13498,7 +15652,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### thrown_trident
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\thrown_trident.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13507,7 +15663,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -13516,7 +15674,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -13525,7 +15685,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tripod_camera
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tripod_camera.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.75,
@@ -13534,7 +15696,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -13543,7 +15707,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13559,7 +15725,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -13568,7 +15736,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13577,7 +15747,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13586,7 +15758,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13595,7 +15769,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13604,7 +15780,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13613,7 +15791,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1,
@@ -13622,7 +15802,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.72,
@@ -13631,7 +15813,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.15,
@@ -13640,7 +15824,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull_dangerous
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull_dangerous.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.15,
@@ -13649,7 +15835,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13658,7 +15846,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### xp_bottle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_bottle.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13667,7 +15857,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### xp_orb
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_orb.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -13676,7 +15868,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.85,
@@ -13692,7 +15886,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13701,7 +15897,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -13710,7 +15908,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13719,7 +15919,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13728,7 +15930,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -13737,8 +15941,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:color
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:color": {
     "value": 14
@@ -13746,7 +15953,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:color": {
     "value": 0
@@ -13790,7 +15999,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:color": {
     "value": 0
@@ -13882,7 +16093,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:color": {
     "value": 14
@@ -13890,8 +16103,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:color2
+
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:color2": {
     "value": 0
@@ -13983,20 +16199,27 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:conditional_bandwidth_optimization
+
 ### area_effect_cloud
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\area_effect_cloud.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### arrow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\arrow.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14008,25 +16231,33 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14053,19 +16284,25 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### chest_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chest_minecart.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14091,13 +16328,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### command_block_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\command_block_minecart.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14123,37 +16364,49 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### egg
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\egg.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14165,13 +16418,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14183,25 +16440,33 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### ender_crystal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_crystal.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### ender_pearl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_pearl.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14213,13 +16478,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### eye_of_ender_signal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\eye_of_ender_signal.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14231,7 +16500,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireball.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14243,7 +16514,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fireworks_rocket
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireworks_rocket.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14255,13 +16528,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### fishing_hook
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fishing_hook.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14273,31 +16550,41 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14323,25 +16610,33 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### lightning_bolt
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\lightning_bolt.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14353,7 +16648,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lingering_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\lingering_potion.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14365,13 +16662,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### llama_spit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama_spit.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14383,13 +16684,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14415,115 +16720,153 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14535,7 +16878,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker_bullet
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker_bullet.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14547,31 +16892,41 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### small_fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\small_fireball.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14583,7 +16938,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snowball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snowball.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14595,19 +16952,25 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### splash_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\splash_potion.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14619,25 +16982,33 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### thrown_trident
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\thrown_trident.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14649,13 +17020,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14681,73 +17056,97 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tripod_camera
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tripod_camera.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### wither_skull
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14759,7 +17158,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull_dangerous
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull_dangerous.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14771,13 +17172,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### xp_bottle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_bottle.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14789,7 +17194,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### xp_orb
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_orb.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
@@ -14801,44 +17208,59 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
 # minecraft:custom_hit_test
+
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:custom_hit_test": {
     "hitboxes": [
@@ -14872,7 +17294,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:custom_hit_test": {
     "hitboxes": [
@@ -14906,8 +17330,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:damage_over_time
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:damage_over_time": {
     "damage_per_hurt": 1,
@@ -14916,8 +17343,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:damage_sensor
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -14928,7 +17358,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -14939,7 +17371,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -14950,7 +17384,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -14961,7 +17397,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -14972,7 +17410,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -14990,7 +17430,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15001,7 +17443,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -15020,7 +17464,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15031,7 +17477,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15042,7 +17490,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15069,7 +17519,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15080,7 +17532,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -15133,7 +17587,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15144,7 +17600,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15155,7 +17613,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15166,7 +17626,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15191,7 +17653,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15217,7 +17681,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15232,7 +17698,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15249,7 +17717,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15260,7 +17730,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15272,7 +17744,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -15317,7 +17791,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -15369,7 +17845,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15395,7 +17873,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -15425,7 +17905,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -15442,8 +17924,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:despawn
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15451,7 +17936,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15459,7 +17946,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15467,7 +17956,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15475,7 +17966,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15483,7 +17976,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15491,7 +17986,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15499,7 +17996,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15507,7 +18006,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15515,7 +18016,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15523,7 +18026,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15531,7 +18036,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15539,7 +18046,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {
@@ -15550,7 +18059,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15558,7 +18069,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15566,7 +18079,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15574,7 +18089,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15582,7 +18099,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15590,7 +18109,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15598,7 +18119,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15606,7 +18129,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15614,7 +18139,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15622,7 +18149,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15630,7 +18159,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15638,7 +18169,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15646,7 +18179,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15654,7 +18189,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15662,7 +18199,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15670,7 +18209,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15678,7 +18219,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:despawn": {
     "filters": {
@@ -15724,7 +18267,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15732,7 +18277,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15740,7 +18287,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {
@@ -15751,7 +18300,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15759,7 +18310,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15767,7 +18320,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {
@@ -15778,7 +18333,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15786,7 +18343,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15794,7 +18353,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15802,7 +18363,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15810,7 +18373,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15818,7 +18383,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15826,7 +18393,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15834,7 +18403,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15842,7 +18413,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15850,7 +18423,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {
@@ -15861,7 +18436,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15869,7 +18446,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15877,7 +18456,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:despawn": {
     "remove_child_entities": true,
@@ -15908,7 +18489,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15916,7 +18499,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15924,7 +18509,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15932,7 +18519,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:despawn": {
     "filters": {
@@ -15978,7 +18567,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15986,7 +18577,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -15994,7 +18587,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -16002,7 +18597,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -16010,7 +18607,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -16018,8 +18617,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:dweller
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -16033,7 +18635,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -16047,7 +18651,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -16061,7 +18667,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -16075,7 +18683,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -16089,7 +18699,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -16272,7 +18884,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -16286,7 +18900,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -16300,8 +18916,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:economy_trade_table
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:economy_trade_table": {}
 ```
@@ -16528,7 +19147,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.wandering_trader.name",
@@ -16538,8 +19159,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:entity_sensor
+
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:entity_sensor": {
     "sensor_range": 2.5,
@@ -16646,8 +19270,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:environment_sensor
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -16708,7 +19335,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -16736,7 +19365,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -16800,7 +19431,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -16943,7 +19576,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -16973,7 +19608,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -17019,7 +19656,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -17044,7 +19683,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -17074,7 +19715,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -17104,7 +19747,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -17134,7 +19779,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -17158,7 +19805,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -17211,7 +19860,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -17239,7 +19890,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -17292,7 +19945,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -17352,7 +20007,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -17395,81 +20052,109 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:equip_item
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:equip_item": {}
 ```
 
 # minecraft:equipment
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/drowned_ranged_equipment.json",
@@ -17495,7 +20180,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/fox_equipment.json",
@@ -17509,7 +20196,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_equipment.json"
@@ -17517,7 +20206,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/piglin_gear_ranged.json"
@@ -17531,7 +20222,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/piglin_brute_gear.json"
@@ -17539,7 +20232,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/pillager_gear.json"
@@ -17559,7 +20254,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/skeleton_gear.json"
@@ -17567,7 +20264,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/skeleton_gear.json"
@@ -17575,7 +20274,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vex_gear.json"
@@ -17583,7 +20284,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vindicator_gear.json"
@@ -17603,7 +20306,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/wither_skeleton_gear.json"
@@ -17611,7 +20316,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_equipment.json"
@@ -17619,7 +20326,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_pigman_gear.json"
@@ -17633,8 +20342,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:equippable
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:equippable": {
     "slots": [
@@ -17656,7 +20368,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:equippable": {
     "slots": [
@@ -17688,7 +20402,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:equippable": {
     "slots": [
@@ -17704,7 +20420,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:equippable": {
     "slots": [
@@ -17726,8 +20444,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:experience_reward
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17736,7 +20457,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
@@ -17744,7 +20467,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17753,7 +20478,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
@@ -17761,7 +20488,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17770,7 +20499,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17779,7 +20510,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
@@ -17787,7 +20520,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -17795,7 +20530,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17804,7 +20541,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -17818,7 +20557,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
@@ -17826,7 +20567,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
@@ -17834,7 +20577,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 3 : 0"
@@ -17842,7 +20587,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "10"
@@ -17850,7 +20597,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -17858,7 +20607,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17867,7 +20618,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -17875,7 +20628,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
@@ -17883,7 +20638,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17892,7 +20649,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17901,7 +20660,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -17915,7 +20676,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17924,7 +20687,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? query.variant : 0"
@@ -17932,7 +20697,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17941,7 +20708,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -17949,7 +20718,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17958,7 +20729,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17967,7 +20740,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -17975,7 +20750,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
@@ -17983,7 +20760,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -17992,7 +20771,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 1 + (query.equipment_count * Math.Random(1,2)) : 0"
@@ -18006,7 +20787,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 20 : 0"
@@ -18014,7 +20797,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
@@ -18022,7 +20807,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "Math.Min(query.player_level * 7, 100)"
@@ -18030,7 +20817,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -18038,7 +20827,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -18046,7 +20837,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -18055,7 +20848,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 20 : 0"
@@ -18063,7 +20858,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -18071,7 +20868,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -18080,7 +20879,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
@@ -18088,7 +20889,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
@@ -18096,7 +20899,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -18104,7 +20909,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -18112,7 +20919,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? query.variant : 0"
@@ -18120,7 +20929,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
@@ -18128,7 +20939,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "!query.is_baby && query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -18136,7 +20949,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -18144,7 +20959,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -18153,7 +20970,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -18161,7 +20980,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -18170,7 +20991,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -18178,7 +21001,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
@@ -18186,7 +21011,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
@@ -18194,7 +21021,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "50"
@@ -18202,7 +21031,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -18210,7 +21041,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -18219,7 +21052,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -18228,7 +21063,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -18242,7 +21079,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -18250,7 +21089,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -18264,7 +21105,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -18278,7 +21121,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -18292,8 +21137,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:explode
+
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:explode": {
     "fuse_length": 1.5,
@@ -18315,7 +21163,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_crystal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_crystal.json)</small>
+
 ```json
 "minecraft:explode": {
     "fuse_length": 0,
@@ -18327,7 +21177,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireball.json)</small>
+
 ```json
 "minecraft:explode": {
     "fuse_length": 0,
@@ -18340,7 +21192,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt.json)</small>
+
 ```json
 "minecraft:explode": {
     "fuse_length": 4,
@@ -18363,7 +21217,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:explode": {
     "fuse_length": 4,
@@ -18383,7 +21239,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull.json)</small>
+
 ```json
 "minecraft:explode": {
     "fuse_length": 0,
@@ -18395,7 +21253,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull_dangerous
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull_dangerous.json)</small>
+
 ```json
 "minecraft:explode": {
     "fuse_length": 0,
@@ -18408,81 +21268,109 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:fire_immune
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 ### ender_crystal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_crystal.json)</small>
+
 ```json
 "minecraft:fire_immune": true
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:fire_immune": true
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:fire_immune": true
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:fire_immune": {}
 ```
 
 # minecraft:flocking
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:flocking": {
     "in_water": false,
@@ -18507,7 +21395,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:flocking": {
     "in_water": true,
@@ -18532,7 +21422,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:flocking": {
     "in_water": true,
@@ -18557,7 +21449,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:flocking": {
     "in_water": true,
@@ -18582,7 +21476,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:flocking": {
     "in_water": true,
@@ -18607,8 +21503,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:flying_speed
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:flying_speed": {
     "value": 0.15
@@ -18616,7 +21515,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:flying_speed": {
     "value": 0.6
@@ -18624,8 +21525,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:follow_range
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 1024
@@ -18633,7 +21537,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 48,
@@ -18642,7 +21548,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 48,
@@ -18651,7 +21559,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 16,
@@ -18660,7 +21570,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 32,
@@ -18669,7 +21581,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -18677,7 +21591,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64,
@@ -18686,7 +21602,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 16,
@@ -18695,7 +21613,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -18703,7 +21623,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 40,
@@ -18712,7 +21634,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64,
@@ -18721,7 +21645,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -18729,7 +21655,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -18737,7 +21665,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -18745,7 +21675,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 48
@@ -18753,7 +21685,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -18761,7 +21695,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 1024
@@ -18769,7 +21705,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 128
@@ -18777,7 +21715,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -18785,7 +21725,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -18793,8 +21735,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:genetics
+
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:genetics": {
     "mutation_rate": 0.03125,
@@ -18861,6 +21806,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:giveable
+
 ```json
 "minecraft:giveable": {
     "triggers": {
@@ -18878,8 +21824,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:group_size
+
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:group_size": {
     "radius": 32,
@@ -18900,7 +21849,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:group_size": {
     "radius": 32,
@@ -18921,8 +21872,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:grows_crop
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:grows_crop": {
     "charges": 10,
@@ -18931,8 +21885,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:healable
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:healable": {
     "items": [
@@ -18949,7 +21906,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:healable": {
     "items": [
@@ -18986,7 +21945,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:healable": {
     "items": [
@@ -19023,7 +21984,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:healable": {
     "items": [
@@ -19040,7 +22003,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:healable": {
     "items": [
@@ -19077,7 +22042,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:healable": {
     "force_use": true,
@@ -19104,7 +22071,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:healable": {
     "items": [
@@ -19185,8 +22154,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:health
+
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 6,
@@ -19195,7 +22167,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 6,
@@ -19204,7 +22178,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19213,7 +22189,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19222,7 +22200,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19238,7 +22218,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 12,
@@ -19247,7 +22229,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 4,
@@ -19256,7 +22240,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19265,7 +22251,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19274,7 +22262,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19283,7 +22273,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:health": {
     "value": {
@@ -19294,7 +22286,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19303,7 +22297,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 80,
@@ -19312,7 +22308,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 40,
@@ -19321,7 +22319,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 8,
@@ -19330,7 +22330,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_crystal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_crystal.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 1,
@@ -19339,7 +22341,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 200,
@@ -19348,7 +22352,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 24,
@@ -19357,7 +22363,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 6,
@@ -19366,7 +22374,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19375,7 +22385,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19384,7 +22396,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 30,
@@ -19393,7 +22407,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 40,
@@ -19402,7 +22418,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:health": {
     "value": {
@@ -19413,7 +22431,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19422,7 +22442,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 100,
@@ -19431,7 +22453,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:health": {
     "value": {
@@ -19442,7 +22466,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 16,
@@ -19465,7 +22491,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19474,7 +22502,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:health": {
     "value": {
@@ -19485,7 +22515,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19501,7 +22533,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19517,7 +22551,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 6,
@@ -19526,7 +22562,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19535,7 +22573,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19544,7 +22584,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 16,
@@ -19553,7 +22595,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 50,
@@ -19562,7 +22606,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 24,
@@ -19571,7 +22617,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 30
@@ -19579,7 +22627,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 6,
@@ -19588,7 +22638,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 3,
@@ -19597,7 +22649,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:health": {
     "max": 100,
@@ -19606,7 +22660,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 6,
@@ -19615,7 +22671,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 8,
@@ -19624,7 +22682,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 30,
@@ -19633,7 +22693,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 8,
@@ -19642,7 +22704,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19651,7 +22715,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 15,
@@ -19660,7 +22726,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 16,
@@ -19683,7 +22751,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 4,
@@ -19692,7 +22762,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 16,
@@ -19701,7 +22773,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 10,
@@ -19710,7 +22784,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19719,7 +22795,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19728,7 +22806,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tripod_camera
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tripod_camera.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 4,
@@ -19737,7 +22817,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 6,
@@ -19746,7 +22828,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 30
@@ -19754,7 +22838,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 14,
@@ -19763,7 +22849,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19772,7 +22860,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19781,7 +22871,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 24,
@@ -19790,7 +22882,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19799,7 +22893,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 26,
@@ -19808,7 +22904,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 600,
@@ -19817,7 +22915,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19826,7 +22926,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 8,
@@ -19842,7 +22944,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### xp_orb
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_orb.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 5,
@@ -19851,7 +22955,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 40,
@@ -19860,7 +22966,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19869,7 +22977,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 15,
@@ -19878,7 +22988,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19887,7 +22999,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19896,7 +23010,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:health": {
     "value": 20,
@@ -19905,15 +23021,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:hide
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:hide": {}
 ```
 
 # minecraft:home
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:home": {
     "restriction_radius": 22,
@@ -19925,7 +23047,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:home": {
     "restriction_radius": 16
@@ -19933,7 +23057,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:home": {
     "restriction_radius": 16
@@ -19941,20 +23067,27 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:home": {}
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:home": {}
 ```
 
 # minecraft:horse.jump_strength
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:horse.jump_strength": {
     "value": 0.5
@@ -19962,7 +23095,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:horse.jump_strength": {
     "value": {
@@ -19973,7 +23108,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:horse.jump_strength": {
     "value": 0.5
@@ -19981,7 +23118,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:horse.jump_strength": {
     "value": {
@@ -19992,7 +23131,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:horse.jump_strength": {
     "value": {
@@ -20003,8 +23144,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:hurt_on_condition
+
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20023,7 +23167,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### arrow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\arrow.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20042,7 +23188,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20061,7 +23209,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20091,7 +23241,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20109,7 +23261,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20128,7 +23282,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20147,7 +23303,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20166,7 +23324,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20185,7 +23345,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20204,7 +23366,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20223,7 +23387,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20242,7 +23408,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20261,7 +23429,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20280,7 +23450,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20299,7 +23471,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20327,7 +23501,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20346,7 +23522,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20365,7 +23543,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20384,7 +23564,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20403,7 +23585,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20422,7 +23606,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20441,7 +23627,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20460,7 +23648,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20479,7 +23669,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20498,7 +23690,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20517,7 +23711,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20536,7 +23732,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20555,7 +23753,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20574,7 +23774,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20593,7 +23795,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20612,7 +23816,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20631,7 +23837,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20650,7 +23858,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20669,7 +23879,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20688,7 +23900,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20707,7 +23921,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20726,7 +23942,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20745,7 +23963,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20764,7 +23984,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20783,7 +24005,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20802,7 +24026,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20821,7 +24047,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20840,7 +24068,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20859,7 +24089,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20878,7 +24110,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20897,7 +24131,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20916,7 +24152,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20953,7 +24191,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20972,7 +24212,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20991,7 +24233,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21010,7 +24254,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21028,7 +24274,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tripod_camera
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tripod_camera.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21047,7 +24295,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21066,7 +24316,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21085,7 +24337,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21104,7 +24358,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21123,7 +24379,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21142,7 +24400,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21161,7 +24421,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21180,7 +24442,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21199,7 +24463,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21218,7 +24484,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21237,7 +24505,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21256,7 +24526,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -21275,33 +24547,45 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:input_ground_controlled
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
 # minecraft:inside_block_notifier
+
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:inside_block_notifier": {
     "block_list": [
@@ -21342,8 +24626,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:insomnia
+
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:insomnia": {
     "days_until_insomnia": 3
@@ -21351,8 +24638,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:interact
+
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -21384,7 +24674,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": {
@@ -21421,7 +24713,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -21454,7 +24748,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -21487,7 +24783,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22059,7 +25357,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22092,7 +25392,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22115,7 +25417,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22154,7 +25458,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22201,7 +25507,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22666,7 +25974,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22709,7 +26019,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22732,7 +26044,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -22804,7 +26118,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": {
@@ -22834,7 +26150,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:interact": {
     "interactions": {
@@ -22864,8 +26182,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:inventory
+
 ### chest_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chest_minecart.json)</small>
+
 ```json
 "minecraft:inventory": {
     "container_type": "minecart_chest",
@@ -22875,13 +26196,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### command_block_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\command_block_minecart.json)</small>
+
 ```json
 "minecraft:inventory": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:inventory": {
     "inventory_size": 16,
@@ -22890,7 +26215,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:inventory": {
     "container_type": "minecart_hopper",
@@ -22900,7 +26227,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:inventory": {
     "inventory_size": 2,
@@ -22909,7 +26238,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:inventory": {
     "inventory_size": 16,
@@ -22919,7 +26250,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:inventory": {
     "inventory_size": 16,
@@ -22928,7 +26261,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:inventory": {
     "inventory_size": 1,
@@ -22937,7 +26272,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:inventory": {
     "inventory_size": 8
@@ -22945,7 +26282,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:inventory": {
     "inventory_size": 8,
@@ -22954,7 +26293,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:inventory": {
     "inventory_size": 8,
@@ -22963,245 +26304,329 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:is_baby
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:is_baby": {}
 ```
 
 # minecraft:is_charged
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:is_charged": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:is_charged": {}
 ```
 
 # minecraft:is_chested
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:is_chested": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:is_chested": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:is_chested": {}
 ```
 
 # minecraft:is_dyeable
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
@@ -23209,7 +26634,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
@@ -23217,7 +26644,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
@@ -23225,140 +26654,191 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:is_hidden_when_invisible
+
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:is_hidden_when_invisible": {}
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:is_hidden_when_invisible": {}
 ```
 
 # minecraft:is_ignited
+
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:is_ignited": {}
 ```
 
 # minecraft:is_illager_captain
+
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:is_illager_captain": {}
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:is_illager_captain": {}
 ```
 
 # minecraft:is_saddled
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:is_saddled": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:is_saddled": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:is_saddled": {}
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:is_saddled": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:is_saddled": {}
 ```
 
 # minecraft:is_shaking
+
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:is_shaking": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:is_shaking": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:is_shaking": {}
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:is_shaking": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:is_shaking": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:is_shaking": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:is_shaking": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:is_shaking": {}
 ```
 
 # minecraft:is_sheared
+
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:is_sheared": {}
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:is_sheared": {}
 ```
 
 # minecraft:is_stackable
+
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:is_stackable": {}
 ```
 
 ### chest_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chest_minecart.json)</small>
+
 ```json
 "minecraft:is_stackable": {
     "value": true
@@ -23366,94 +26846,127 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:is_stackable": {}
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:is_stackable": {}
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:is_stackable": {}
 ```
 
 # minecraft:is_stunned
+
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:is_stunned": {}
 ```
 
 # minecraft:is_tamed
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:is_tamed": {}
 ```
 
 # minecraft:item_controllable
+
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:item_controllable": {
     "control_items": "carrotOnAStick"
@@ -23461,7 +26974,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:item_controllable": {
     "control_items": "warped_fungus_on_a_stick"
@@ -23469,70 +26984,95 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:item_hopper
+
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:item_hopper": {}
 ```
 
 # minecraft:jump.dynamic
+
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:jump.dynamic": {}
 ```
 
 # minecraft:jump.static
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:jump.static": {
     "jump_power": 0.6
@@ -23540,320 +27080,427 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:jump.static": {}
 ```
 
 # minecraft:knockback_resistance
+
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:knockback_resistance": {
     "value": 100,
@@ -23862,7 +27509,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:knockback_resistance": {
     "value": 0.5
@@ -23870,7 +27519,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:knockback_resistance": {
     "value": 1.0
@@ -23878,7 +27529,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:knockback_resistance": {
     "value": 0.5
@@ -23886,7 +27539,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:knockback_resistance": {
     "value": 0.5
@@ -23894,8 +27549,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:lava_movement
+
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:lava_movement": {
     "value": 0.32
@@ -23903,8 +27561,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:leashable
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23914,7 +27575,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23924,7 +27587,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23934,7 +27599,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23944,7 +27611,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23954,7 +27623,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23964,7 +27635,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23974,7 +27647,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23984,7 +27659,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -23994,7 +27671,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24004,7 +27683,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24014,7 +27695,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24025,7 +27708,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24035,7 +27720,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24045,7 +27732,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24063,7 +27752,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24073,7 +27764,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24083,7 +27776,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24093,7 +27788,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24103,7 +27800,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24113,7 +27812,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24123,7 +27824,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24133,7 +27836,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24143,7 +27848,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24153,7 +27860,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24171,7 +27880,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24181,7 +27892,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -24191,8 +27904,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:lookat
+
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:lookat": {
     "search_radius": 64.0,
@@ -24218,8 +27934,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:loot
+
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/armor_stand.json"
@@ -24227,7 +27946,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/blaze.json"
@@ -24235,7 +27956,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/boat.json"
@@ -24243,7 +27966,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/cat.json"
@@ -24251,7 +27976,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/spider.json"
@@ -24259,7 +27986,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/chicken.json"
@@ -24267,7 +27996,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/cow.json"
@@ -24275,7 +28006,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/creeper.json"
@@ -24283,7 +28016,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/dolphin.json"
@@ -24291,7 +28026,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
@@ -24299,7 +28036,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/drowned.json"
@@ -24307,7 +28046,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/elder_guardian.json"
@@ -24315,7 +28056,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/enderman.json"
@@ -24323,7 +28066,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/evocation_illager.json"
@@ -24331,7 +28076,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/fish.json"
@@ -24339,7 +28086,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fishing_hook
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fishing_hook.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/gameplay/fishing.json"
@@ -24353,7 +28102,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/fox.json"
@@ -24361,7 +28112,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ghast.json"
@@ -24369,7 +28122,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/guardian.json"
@@ -24377,7 +28132,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/hoglin.json"
@@ -24385,7 +28142,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
@@ -24393,7 +28152,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
@@ -24401,7 +28162,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/iron_golem.json"
@@ -24409,7 +28172,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/llama.json"
@@ -24417,7 +28182,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/magma_cube.json"
@@ -24425,7 +28192,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/mooshroom.json"
@@ -24433,7 +28202,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
@@ -24441,7 +28212,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/empty.json"
@@ -24449,7 +28222,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ocelot.json"
@@ -24457,7 +28232,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/panda.json"
@@ -24465,7 +28242,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/parrot.json"
@@ -24473,7 +28252,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/phantom.json"
@@ -24481,7 +28262,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pig.json"
@@ -24495,7 +28278,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/piglin.json"
@@ -24503,7 +28288,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/piglin.json"
@@ -24511,7 +28298,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pillager.json"
@@ -24525,7 +28314,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/empty.json"
@@ -24533,7 +28324,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/polar_bear.json"
@@ -24541,7 +28334,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pufferfish.json"
@@ -24549,7 +28344,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/rabbit.json"
@@ -24557,7 +28354,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ravager.json"
@@ -24565,7 +28364,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/salmon_normal.json"
@@ -24579,7 +28380,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/sheep_sheared.json"
@@ -24593,7 +28396,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/shulker.json"
@@ -24601,7 +28406,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/silverfish.json"
@@ -24609,7 +28416,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/skeleton.json"
@@ -24617,7 +28426,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/skeleton_horse.json"
@@ -24625,7 +28436,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/slime.json"
@@ -24633,7 +28446,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/snowman.json"
@@ -24641,7 +28456,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/spider.json"
@@ -24649,7 +28466,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/squid.json"
@@ -24657,7 +28476,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/stray.json"
@@ -24665,7 +28486,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/strider_saddled.json"
@@ -24679,7 +28502,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tripod_camera
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tripod_camera.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/empty.json"
@@ -24687,7 +28512,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/tropicalfish.json"
@@ -24695,7 +28522,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/sea_turtle.json"
@@ -24703,7 +28532,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/vindication_illager.json"
@@ -24717,7 +28548,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/witch.json"
@@ -24725,7 +28558,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wither_boss.json"
@@ -24733,7 +28568,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wither_skeleton.json"
@@ -24741,7 +28578,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wolf.json"
@@ -24749,7 +28588,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zoglin.json"
@@ -24757,7 +28598,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
@@ -24765,7 +28608,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie_horse.json"
@@ -24773,7 +28618,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie_pigman.json"
@@ -24781,7 +28628,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
@@ -24789,7 +28638,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
@@ -24797,15 +28648,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:managed_wandering_trader
+
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:managed_wandering_trader": {}
 ```
 
 # minecraft:mark_variant
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:mark_variant": {
     "value": 1
@@ -24813,7 +28670,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:mark_variant": {
     "value": 0
@@ -24845,7 +28704,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:mark_variant": {
     "value": 0
@@ -24859,7 +28720,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:mark_variant": {
     "value": -1
@@ -24927,7 +28790,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:mark_variant": {
     "value": 0
@@ -24965,7 +28830,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:mark_variant": {
     "value": 0
@@ -25009,7 +28876,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:mark_variant": {
     "value": 1
@@ -25047,8 +28916,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:mob_effect
+
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:mob_effect": {
     "effect_range": 0.2,
@@ -25072,8 +28944,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.1
@@ -25081,7 +28956,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25089,7 +28966,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.23
@@ -25097,7 +28976,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25105,7 +28986,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25113,7 +28996,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25121,7 +29006,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25129,7 +29016,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.2
@@ -25137,7 +29026,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.1
@@ -25145,7 +29036,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.175
@@ -25153,7 +29046,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.23
@@ -25167,7 +29062,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25175,7 +29072,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25189,7 +29088,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25197,7 +29098,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25205,7 +29108,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.5
@@ -25213,7 +29118,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.1
@@ -25221,7 +29128,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25229,7 +29138,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.03
@@ -25237,7 +29148,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.12
@@ -25245,7 +29158,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.36
@@ -25259,7 +29174,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": {
@@ -25270,7 +29187,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -25284,7 +29203,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25292,7 +29213,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25300,7 +29223,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.75
@@ -25320,7 +29245,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25328,7 +29255,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.175
@@ -25336,7 +29265,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.5
@@ -25344,7 +29275,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25352,7 +29285,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.15
@@ -25366,7 +29301,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.4
@@ -25374,7 +29311,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 1.8
@@ -25382,7 +29321,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25390,7 +29331,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.42
@@ -25404,7 +29347,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -25412,7 +29357,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -25420,7 +29367,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.1
@@ -25428,7 +29377,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25436,7 +29387,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.13
@@ -25444,7 +29397,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25452,7 +29407,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.0
@@ -25466,7 +29423,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.12
@@ -25474,7 +29433,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25482,7 +29443,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.0,
@@ -25491,7 +29454,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25499,7 +29464,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25507,7 +29474,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.2
@@ -25515,7 +29484,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.6
@@ -25535,7 +29506,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.2
@@ -25543,7 +29516,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25551,7 +29526,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.2
@@ -25559,7 +29536,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25567,7 +29546,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.16
@@ -25575,7 +29556,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.12
@@ -25583,7 +29566,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.1
@@ -25591,7 +29576,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 1.0
@@ -25599,7 +29586,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.5
@@ -25607,7 +29596,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.5
@@ -25615,7 +29606,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -25623,7 +29616,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.5
@@ -25631,7 +29626,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25639,7 +29636,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25647,7 +29646,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25655,7 +29656,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -25663,7 +29666,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.25
@@ -25671,7 +29676,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -25685,7 +29692,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.2
@@ -25693,7 +29702,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.23
@@ -25701,7 +29712,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -25715,7 +29728,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -25729,8 +29744,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement.amphibious
+
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:movement.amphibious": {
     "max_turn": 5.0
@@ -25738,266 +29756,355 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement.basic
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:movement.basic": {
     "max_turn": 180.0
@@ -26005,70 +30112,95 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:movement.basic": {}
 ```
 
 # minecraft:movement.fly
+
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:movement.fly": {}
 ```
 
 # minecraft:movement.generic
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:movement.generic": {}
 ```
 
 # minecraft:movement.glide
+
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:movement.glide": {
     "start_speed": 0.1,
@@ -26077,15 +30209,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement.hover
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:movement.hover": {}
 ```
 
 # minecraft:movement.jump
+
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:movement.jump": {
     "jump_delay": [
@@ -26105,7 +30243,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:movement.jump": {
     "jump_delay": [
@@ -26125,21 +30265,29 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement.skip
+
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:movement.skip": {}
 ```
 
 # minecraft:movement.sway
+
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:movement.sway": {}
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
@@ -26147,13 +30295,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:movement.sway": {}
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
@@ -26161,7 +30313,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
@@ -26169,7 +30323,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
@@ -26177,176 +30333,235 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:nameable
+
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:nameable": {
     "always_show": true,
@@ -26355,55 +30570,73 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:nameable": {
     "always_show": true,
@@ -26412,133 +30645,177 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:nameable": {
     "default_trigger": {
@@ -26558,68 +30835,91 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:nameable": {}
 ```
 
 # minecraft:navigation.climb
+
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:navigation.climb": {
     "can_path_over_water": true
@@ -26627,7 +30927,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:navigation.climb": {
     "can_path_over_water": true
@@ -26635,8 +30937,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.float
+
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:navigation.float": {
     "can_path_over_water": true
@@ -26644,7 +30949,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:navigation.float": {
     "can_path_over_water": true
@@ -26652,8 +30959,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.fly
+
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:navigation.fly": {
     "can_path_over_water": true,
@@ -26662,8 +30972,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.generic
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -26698,7 +31011,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -26722,7 +31037,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -26734,7 +31051,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
@@ -26747,7 +31066,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -26759,7 +31080,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
@@ -26772,7 +31095,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
@@ -26785,7 +31110,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
@@ -26798,7 +31125,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -26811,8 +31140,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.hover
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:navigation.hover": {
     "can_path_over_water": true,
@@ -26826,8 +31158,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.walk
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26837,7 +31172,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_float": true,
@@ -26847,7 +31184,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26856,7 +31195,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26866,7 +31207,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
@@ -26874,7 +31217,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26884,7 +31229,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": false,
@@ -26893,7 +31240,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
@@ -26901,7 +31250,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26912,7 +31263,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26922,7 +31275,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26932,7 +31287,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26942,7 +31299,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -26953,7 +31312,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": false,
@@ -26963,7 +31324,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26972,7 +31335,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26981,7 +31346,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -26991,7 +31358,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27001,7 +31370,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27011,7 +31382,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_float": true,
@@ -27021,7 +31394,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27031,7 +31406,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27040,7 +31417,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27049,7 +31428,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
@@ -27057,7 +31438,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27066,7 +31449,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27075,7 +31460,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "avoid_damage_blocks": true,
@@ -27085,7 +31472,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27094,13 +31483,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:navigation.walk": {}
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
@@ -27108,7 +31501,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27118,7 +31513,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27127,7 +31524,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27136,7 +31535,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "avoid_water": true
@@ -27144,7 +31545,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27153,7 +31556,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27163,7 +31568,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_lava": true,
@@ -27174,7 +31581,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
@@ -27182,7 +31591,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27195,7 +31606,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27206,7 +31619,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
@@ -27222,7 +31637,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27233,7 +31650,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27242,7 +31661,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27251,7 +31672,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27261,7 +31684,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -27270,7 +31695,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27281,7 +31708,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27292,7 +31721,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27301,7 +31732,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27313,7 +31746,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27334,7 +31769,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -27355,8 +31792,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:npc
+
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:npc": {
     "npc_data": {
@@ -27451,8 +31891,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_death
+
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:on_death": {
     "event": "minecraft:start_death",
@@ -27461,8 +31904,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_friendly_anger
+
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:defend_wandering_trader",
@@ -27471,7 +31917,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:on_anger",
@@ -27480,7 +31928,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:on_anger",
@@ -27489,8 +31939,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_hurt
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:on_hurt": {
     "event": "minecraft:on_hurt_event",
@@ -27499,7 +31952,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_crystal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_crystal.json)</small>
+
 ```json
 "minecraft:on_hurt": {
     "event": "minecraft:crystal_explode",
@@ -27508,7 +31963,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:on_hurt": {
     "event": "minecraft:ranged_mode",
@@ -27517,8 +31974,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_hurt_by_player
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:on_hurt_by_player": {
     "event": "minecraft:on_hurt_event",
@@ -27527,7 +31987,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:on_hurt_by_player": {
     "event": "minecraft:ranged_mode",
@@ -27536,8 +31998,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_start_landing
+
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:on_start_landing": {
     "event": "minecraft:start_land",
@@ -27546,6 +32011,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_start_takeoff
+
 ```json
 "minecraft:on_start_takeoff": {
     "event": "minecraft:start_fly",
@@ -27554,8 +32020,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_target_acquired
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "attacked",
@@ -27564,7 +32033,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry"
@@ -27572,7 +32043,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "become_angry",
@@ -27585,7 +32058,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:has_target",
@@ -27594,7 +32069,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
@@ -27603,7 +32080,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "become_angry_event",
@@ -27612,7 +32091,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "filters": {
@@ -27636,7 +32117,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggressive",
@@ -27645,7 +32128,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:on_scared",
@@ -27665,7 +32150,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "become_angry_event",
@@ -27674,7 +32161,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "become_angry_event",
@@ -27683,7 +32172,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:on_scared",
@@ -27699,7 +32190,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
@@ -27708,7 +32201,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggressive",
@@ -27717,7 +32212,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry"
@@ -27725,7 +32222,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggro",
@@ -27734,7 +32233,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {}
 ```
@@ -27747,7 +32248,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
@@ -27756,8 +32259,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_target_escape
+
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:stop_exploding",
@@ -27770,7 +32276,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "target": "self"
@@ -27778,7 +32286,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:lost_target",
@@ -27787,7 +32297,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "filters": {
@@ -27811,7 +32323,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:become_calm",
@@ -27820,7 +32334,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:on_calm",
@@ -27829,7 +32345,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:calm",
@@ -27838,7 +32356,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:become_calm",
@@ -27847,7 +32367,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:stop_aggro",
@@ -27856,8 +32378,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_wake_with_owner
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:on_wake_with_owner": {
     "event": "minecraft:pet_slept_with_owner",
@@ -27866,15 +32391,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:out_of_control
+
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:out_of_control": {}
 ```
 
 # minecraft:peek
+
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:peek": {
     "on_open": {
@@ -27890,69 +32421,93 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:persistent
+
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:persistent": {}
 ```
 
 # minecraft:physics
+
 ### area_effect_cloud
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\area_effect_cloud.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_collision": false
@@ -27960,133 +32515,177 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### arrow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\arrow.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### chest_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chest_minecart.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### command_block_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\command_block_minecart.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### egg
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\egg.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### ender_crystal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_crystal.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_gravity": false,
@@ -28095,37 +32694,49 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_pearl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_pearl.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### eye_of_ender_signal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\eye_of_ender_signal.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireball.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### fireworks_rocket
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireworks_rocket.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_gravity": false
@@ -28133,127 +32744,169 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fishing_hook
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fishing_hook.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### lingering_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\lingering_potion.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### llama_spit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama_spit.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_gravity": false
@@ -28261,43 +32914,57 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_gravity": false
@@ -28305,19 +32972,25 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_gravity": false
@@ -28325,19 +32998,25 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### shulker_bullet
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker_bullet.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_collision": false
@@ -28345,103 +33024,137 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### small_fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\small_fireball.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### snowball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snowball.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### splash_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\splash_potion.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### thrown_trident
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\thrown_trident.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### tnt
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### tripod_camera
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tripod_camera.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_gravity": false
@@ -28449,13 +33162,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:physics": {
     "has_gravity": false,
@@ -28464,116 +33181,155 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### wither_skull
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### wither_skull_dangerous
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull_dangerous.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### xp_bottle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_bottle.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### xp_orb
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_orb.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:physics": {}
 ```
 
 # minecraft:player.exhaustion
+
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:player.exhaustion": {
     "value": 0,
@@ -28582,6 +33338,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:player.experience
+
 ```json
 "minecraft:player.experience": {
     "value": 0,
@@ -28590,6 +33347,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:player.level
+
 ```json
 "minecraft:player.level": {
     "value": 0,
@@ -28598,6 +33356,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:player.saturation
+
 ```json
 "minecraft:player.saturation": {
     "value": 20
@@ -28605,8 +33364,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:preferred_path
+
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:preferred_path": {
     "max_fall_blocks": 1,
@@ -28694,7 +33456,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:preferred_path": {
     "max_fall_blocks": 1,
@@ -28868,8 +33632,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:projectile
+
 ### arrow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\arrow.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -28999,7 +33766,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dragon_fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dragon_fireball.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29036,7 +33805,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### egg
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\egg.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29068,7 +33839,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_pearl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_pearl.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29103,7 +33876,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireball.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29133,7 +33908,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fishing_hook
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fishing_hook.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29143,7 +33920,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lingering_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\lingering_potion.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29164,7 +33943,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama_spit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama_spit.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29190,7 +33971,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker_bullet
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker_bullet.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29230,7 +34013,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### small_fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\small_fireball.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29262,7 +34047,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snowball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snowball.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29292,7 +34079,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### splash_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\splash_potion.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29308,7 +34097,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### thrown_trident
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\thrown_trident.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29342,7 +34133,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29380,7 +34173,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull_dangerous
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull_dangerous.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29420,7 +34215,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### xp_bottle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_bottle.json)</small>
+
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -29438,8 +34235,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:pushable
+
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -29448,7 +34248,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### arrow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\arrow.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -29457,7 +34259,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29466,7 +34270,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29475,7 +34281,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29484,7 +34292,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29493,7 +34303,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29502,7 +34314,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chest_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chest_minecart.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29511,7 +34325,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29520,7 +34336,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### command_block_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\command_block_minecart.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29529,7 +34347,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29538,7 +34358,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29547,7 +34369,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29556,7 +34380,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29565,7 +34391,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29574,7 +34402,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### egg
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\egg.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29583,7 +34413,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29592,7 +34424,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29601,7 +34435,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29610,7 +34446,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_crystal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_crystal.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29619,7 +34457,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_pearl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_pearl.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29628,7 +34468,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29637,7 +34479,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### eye_of_ender_signal
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\eye_of_ender_signal.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29646,7 +34490,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireball.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29655,7 +34501,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fireworks_rocket
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fireworks_rocket.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29664,7 +34512,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29673,7 +34523,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fishing_hook
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fishing_hook.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -29682,7 +34534,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29691,7 +34545,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29700,7 +34556,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29709,7 +34567,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29718,7 +34578,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29727,7 +34589,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29736,7 +34600,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29745,7 +34611,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29754,7 +34622,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lingering_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\lingering_potion.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29763,7 +34633,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29772,7 +34644,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama_spit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama_spit.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29781,7 +34655,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29790,7 +34666,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29799,7 +34677,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29808,7 +34688,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29817,7 +34699,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29826,7 +34710,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29835,7 +34721,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29844,7 +34732,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29853,7 +34743,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29862,7 +34754,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29871,7 +34765,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29880,7 +34776,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29889,7 +34787,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -29898,7 +34798,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29907,7 +34809,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29916,7 +34820,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29925,7 +34831,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29934,7 +34842,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29943,7 +34853,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29952,7 +34864,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29961,7 +34875,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29970,7 +34886,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29979,7 +34897,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29988,7 +34908,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### small_fireball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\small_fireball.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -29997,7 +34919,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snowball
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snowball.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30006,7 +34930,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30015,7 +34941,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30024,7 +34952,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### splash_potion
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\splash_potion.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30033,7 +34963,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30042,7 +34974,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30051,7 +34985,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30060,7 +34996,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### thrown_trident
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\thrown_trident.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30069,7 +35007,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -30078,7 +35018,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30087,7 +35029,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30096,7 +35040,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30105,7 +35051,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30114,7 +35062,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30123,7 +35073,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30132,7 +35084,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30141,7 +35095,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30150,7 +35106,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30159,7 +35117,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30168,7 +35128,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30177,7 +35139,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skull_dangerous
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skull_dangerous.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30186,7 +35150,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30195,7 +35161,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### xp_bottle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_bottle.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30204,7 +35172,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### xp_orb
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\xp_orb.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30213,7 +35183,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30222,7 +35194,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30231,7 +35205,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30240,7 +35216,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30249,7 +35227,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30258,7 +35238,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -30267,8 +35249,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:raid_trigger
+
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:raid_trigger": {
     "triggered_event": {
@@ -30279,39 +35264,53 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:rail_movement
+
 ### chest_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chest_minecart.json)</small>
+
 ```json
 "minecraft:rail_movement": {}
 ```
 
 ### command_block_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\command_block_minecart.json)</small>
+
 ```json
 "minecraft:rail_movement": {}
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:rail_movement": {}
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:rail_movement": {}
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:rail_movement": {}
 ```
 
 # minecraft:rail_sensor
+
 ### command_block_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\command_block_minecart.json)</small>
+
 ```json
 "minecraft:rail_sensor": {
     "check_block_types": true,
@@ -30339,7 +35338,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:rail_sensor": {
     "on_activate": {
@@ -30357,7 +35358,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:rail_sensor": {
     "eject_on_activate": true
@@ -30365,7 +35368,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:rail_sensor": {}
 ```
@@ -30389,8 +35394,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:ravager_blocked
+
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:ravager_blocked": {
     "knockback_strength": 3.0,
@@ -30410,8 +35418,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:rideable
+
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 2,
@@ -30456,7 +35467,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30474,7 +35487,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30524,7 +35539,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30542,7 +35559,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30560,7 +35579,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30598,7 +35619,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 3,
@@ -30635,7 +35658,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30673,7 +35698,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30692,7 +35719,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30729,7 +35758,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30746,7 +35777,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30764,7 +35797,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30802,7 +35837,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30820,7 +35857,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30838,7 +35877,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30873,7 +35914,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 2,
@@ -30907,7 +35950,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30927,7 +35972,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30961,7 +36008,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -30986,7 +36035,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -31020,7 +36071,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:rideable": {
     "priority": 0,
@@ -31077,7 +36130,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -31095,7 +36150,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -31114,7 +36171,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -31133,7 +36192,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -31152,7 +36213,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -31170,7 +36233,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -31188,15 +36253,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:scaffolding_climber
+
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:scaffolding_climber": {}
 ```
 
 # minecraft:scale
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31204,7 +36275,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.4
@@ -31218,7 +36291,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31226,7 +36301,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31234,7 +36311,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.65
@@ -31242,7 +36321,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31250,7 +36331,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 1.0
@@ -31258,7 +36341,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31266,7 +36351,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31274,7 +36361,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.53125
@@ -31288,7 +36377,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31296,7 +36387,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31304,7 +36397,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31318,7 +36413,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 1.0
@@ -31332,7 +36429,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31340,7 +36439,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31348,7 +36449,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31356,7 +36459,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 1.2
@@ -31364,7 +36469,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.4
@@ -31378,7 +36485,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31398,7 +36507,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31406,7 +36517,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31414,7 +36527,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31422,7 +36537,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 1.3
@@ -31430,7 +36547,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.16
@@ -31438,7 +36557,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31446,7 +36567,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31454,7 +36577,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 1.2
@@ -31462,7 +36587,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31470,7 +36597,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31478,7 +36607,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31486,7 +36617,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31494,7 +36627,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31502,7 +36637,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -31510,8 +36647,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:scale_by_age
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -31520,7 +36660,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -31529,7 +36671,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -31538,7 +36682,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -31547,7 +36693,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -31556,8 +36704,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:scheduler
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
@@ -31617,7 +36768,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
@@ -32226,8 +37379,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:shareables
+
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -32452,7 +37608,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:shareables": {
     "all_items": true,
@@ -32653,7 +37811,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -32866,7 +38026,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -33213,7 +38375,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -33228,7 +38392,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -33447,7 +38613,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -33666,7 +38834,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -33749,7 +38919,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -33832,7 +39004,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -34189,7 +39363,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -34402,7 +39578,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -34615,7 +39793,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -34828,7 +40008,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:shareables": {
     "items": [
@@ -35041,8 +40223,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:shooter
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:small_fireball"
@@ -35050,7 +40235,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:thrown_trident"
@@ -35058,7 +40245,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:shooter": {
     "type": "dragonfireball",
@@ -35067,7 +40256,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:fireball"
@@ -35075,7 +40266,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:llama_spit"
@@ -35083,7 +40276,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow"
@@ -35091,7 +40286,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow"
@@ -35099,7 +40296,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:shulker_bullet"
@@ -35107,7 +40306,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow"
@@ -35115,7 +40316,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:snowball"
@@ -35123,7 +40326,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow",
@@ -35132,33 +40337,45 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:sittable
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:sittable": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:sittable": {}
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:sittable": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:sittable": {}
 ```
 
 # minecraft:skin_id
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:skin_id": {
     "value": 0
@@ -35196,7 +40413,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:skin_id": {
     "value": 0
@@ -35234,8 +40453,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spawn_entity
+
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:spawn_entity": {
     "entities": {
@@ -35254,7 +40476,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:spawn_entity": {
     "entities": [
@@ -35272,8 +40496,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spell_effects
+
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:spell_effects": {
     "add_effects": [
@@ -35297,7 +40524,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:spell_effects": {
     "add_effects": [
@@ -35315,7 +40544,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:spell_effects": {
     "add_effects": [
@@ -35333,8 +40564,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:strength
+
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:strength": {
     "value": 1,
@@ -35371,8 +40605,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:tameable
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:tameable": {
     "probability": 0.33,
@@ -35388,7 +40625,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:tameable": {
     "probability": 0.33,
@@ -35406,7 +40645,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:tameable": {
     "probability": 0.33,
@@ -35419,8 +40660,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:tamemount
+
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:tamemount": {
     "min_temper": 0,
@@ -35478,7 +40722,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:tamemount": {
     "min_temper": 0,
@@ -35536,7 +40782,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:tamemount": {
     "min_temper": 0,
@@ -35578,7 +40826,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:tamemount": {
     "min_temper": 0,
@@ -35636,8 +40886,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:target_nearby_sensor
+
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 2.0,
@@ -35655,7 +40908,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 2.5,
@@ -35681,7 +40936,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 3.0,
@@ -35698,7 +40955,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 3.0,
@@ -35711,8 +40970,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:teleport
+
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:teleport": {
     "random_teleports": true,
@@ -35729,8 +40991,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:timer
+
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35809,7 +41074,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35822,7 +41089,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35834,7 +41103,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:timer": {
     "time": [
@@ -35850,7 +41121,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35862,7 +41135,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35874,7 +41149,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35886,7 +41163,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35898,7 +41177,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:timer": {
     "time": [
@@ -35914,7 +41195,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35960,7 +41243,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35972,7 +41257,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -35994,7 +41281,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -36006,15 +41295,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:trade_resupply
+
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:trade_resupply": {}
 ```
 
 # minecraft:trade_table
+
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.farmer",
@@ -36112,8 +41407,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:trail
+
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:trail": {
     "block_type": "minecraft:snow_layer",
@@ -36126,8 +41424,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:transformation
+
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zoglin",
@@ -36137,7 +41438,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zombie<minecraft:as_adult>",
@@ -36161,7 +41464,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:cow"
@@ -36169,7 +41474,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:pig_zombie",
@@ -36178,7 +41485,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_pigman",
@@ -36190,7 +41499,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_pigman",
@@ -36201,7 +41512,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:skeleton",
@@ -36210,7 +41523,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:witch",
@@ -36232,7 +41547,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:witch",
@@ -36248,7 +41565,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:drowned<minecraft:as_adult>",
@@ -36272,7 +41591,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_villager_v2",
@@ -36299,7 +41620,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:transformation": {
     "into": "minecraft:villager_v2",
@@ -36320,15 +41643,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:trust
+
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:trust": {}
 ```
 
 # minecraft:trusting
+
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:trusting": {
     "probability": 0.33,
@@ -36344,8 +41673,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:type_family
+
 ### armor_stand
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\armor_stand.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36357,7 +41689,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bat.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36368,7 +41702,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\bee.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36391,7 +41727,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### blaze
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\blaze.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36403,7 +41741,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### boat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\boat.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36414,7 +41754,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36425,7 +41767,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cave_spider.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36438,7 +41782,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chest_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chest_minecart.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36449,7 +41795,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\chicken.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36460,7 +41808,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### command_block_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\command_block_minecart.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36471,7 +41821,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cow.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36482,7 +41834,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\creeper.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36494,7 +41848,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36505,7 +41861,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\donkey.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36516,7 +41874,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36530,7 +41890,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36542,7 +41904,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\enderman.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36554,7 +41918,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### endermite
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\endermite.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36567,7 +41933,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ender_dragon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ender_dragon.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36578,7 +41946,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### evocation_illager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\evocation_illager.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36591,7 +41961,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36602,7 +41974,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36613,7 +41987,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ghast.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36625,7 +42001,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36637,7 +42015,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hoglin.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36670,7 +42050,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### hopper_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\hopper_minecart.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36681,7 +42063,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36692,7 +42076,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36706,7 +42092,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### iron_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\iron_golem.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36717,7 +42105,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### lightning_bolt
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\lightning_bolt.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36727,7 +42117,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36738,7 +42130,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\magma_cube.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36750,7 +42144,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\minecart.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36761,7 +42157,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36772,7 +42170,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mule
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mule.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36783,7 +42183,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### npc
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\npc.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36794,7 +42196,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ocelot.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36805,7 +42209,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36825,7 +42231,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36845,7 +42253,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\phantom.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36858,7 +42268,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pig.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36869,7 +42281,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36890,7 +42304,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36903,7 +42319,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36916,7 +42334,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### player
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\player.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36926,7 +42346,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36937,7 +42359,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36948,7 +42372,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36959,7 +42385,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### ravager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\ravager.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36972,7 +42400,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36983,7 +42413,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\sheep.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -36994,7 +42426,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37006,7 +42440,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### silverfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\silverfish.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37019,7 +42455,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37032,7 +42470,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37044,7 +42484,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\slime.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37056,7 +42498,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### snow_golem
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\snow_golem.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37067,7 +42511,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\spider.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37080,7 +42526,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\squid.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37091,7 +42539,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\stray.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37105,7 +42555,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\strider.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37136,7 +42588,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37147,7 +42601,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tnt_minecart
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tnt_minecart.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37158,7 +42614,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tripod_camera
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tripod_camera.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37170,7 +42628,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37181,7 +42641,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37202,7 +42664,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vex
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vex.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37214,7 +42678,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37355,7 +42821,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37528,7 +42996,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37541,7 +43011,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wandering_trader
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wandering_trader.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37562,7 +43034,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\witch.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37574,7 +43048,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37588,7 +43064,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wither_skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wither_skeleton.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37602,7 +43080,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\wolf.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37613,7 +43093,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zoglin.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37637,7 +43119,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37650,7 +43134,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_horse.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37662,7 +43148,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_pigman.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37675,7 +43163,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -37833,7 +43323,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:type_family": {
     "family": [
@@ -38030,8 +43522,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:underwater_movement
+
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\dolphin.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.15
@@ -38039,7 +43534,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\drowned.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.06
@@ -38053,7 +43550,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### elder_guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\elder_guardian.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.3
@@ -38061,7 +43560,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fish.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.1
@@ -38069,7 +43570,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\guardian.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.12
@@ -38077,7 +43580,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.13
@@ -38085,7 +43590,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\salmon.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.12
@@ -38093,7 +43600,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### skeleton_horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\skeleton_horse.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.08
@@ -38101,7 +43610,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.12
@@ -38109,7 +43620,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:underwater_movement": {
     "value": 0.06
@@ -38123,8 +43636,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:variant
+
 ### cat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\cat.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38192,7 +43708,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\fox.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38206,7 +43724,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\horse.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38250,7 +43770,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\husk.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 2
@@ -38258,7 +43780,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\llama.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38284,7 +43808,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\mooshroom.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38298,7 +43824,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38342,7 +43870,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\parrot.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38374,7 +43904,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38388,7 +43920,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin_brute
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\piglin_brute.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 1
@@ -38396,7 +43930,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pillager.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38410,7 +43946,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\pufferfish.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38430,7 +43968,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\rabbit.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38468,7 +44008,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### shulker
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\shulker.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 5
@@ -38572,7 +44114,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\tropicalfish.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38586,7 +44130,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38618,7 +44164,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\villager_v2.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38710,7 +44258,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\vindicator.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38724,7 +44274,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38756,7 +44308,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie_villager_v2
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\zombie_villager_v2.json)</small>
+
 ```json
 "minecraft:variant": {
     "value": 0
@@ -38764,8 +44318,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:water_movement
+
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\panda.json)</small>
+
 ```json
 "minecraft:water_movement": {
     "drag_factor": 0.98
@@ -38773,7 +44330,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\polar_bear.json)</small>
+
 ```json
 "minecraft:water_movement": {
     "drag_factor": 0.98
@@ -38781,7 +44340,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities\turtle.json)</small>
+
 ```json
 "minecraft:water_movement": {
     "drag_factor": 0.9

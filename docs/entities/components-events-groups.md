@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Components/Groups/Events
-parent: Concepts
 ---
 
 # Component Groups Vs. Components Vs. Events

@@ -1,12 +1,10 @@
 ---
-layout: page
-title: Items
-parent: Vanilla Usage
-badge: BETA
-badge_color: red
+title: Vanilla Usage Items EXP
+badge: EXP
+badge_color: yellow
 ---
 
-# Items
+# Vanilla Usage Items EXP
 
 [[TOC]]
 
