@@ -8,14 +8,14 @@ parent: Knowledge
 
 
 
-A JSON schema gives you two things: validation to be sure that your JSON has the correct structure, and (depending on editor support) intellisense to help you write your JSON correctly to begin with. Schemas are nice because they give you instant feedback when you screw something up, but they can't catch everything.
+A JSON schema gives you two things: validation to be sure that your JSON has the correct structure and (depending on editor support) IntelliSense to help you write your JSON correctly, to begin with. Schemas are nice because they give you instant feedback when you screw something up, but they can't catch everything.
 
-JSON schemas are just JSON files themselves and don't do anything on their own. You can write your own or use somebody else's. There's a handful of schemas for Bedrock out there already. Since none of the schemas are "official" (that I know of), and since Bedrock is a moving target, there will probably be some inaccuracies in any schema that you find. So keep that in mind: sometimes the issue will be in your code, sometimes the schema may be wrong. If you find a wrong schema, consider improving it and giving the author a pull request, to our collective benefit.
+JSON schemas are just JSON files themselves and don't do anything on their own. You can write your own or use somebody else's. There's a handful of schemas for Bedrock out there already. Since none of the schemas are "official" (that I know of), and since Bedrock is a moving target, there will probably be some inaccuracies in any schema that you find. So keep that in mind: sometimes the issue will be in your code, sometimes the schema may be wrong. If you find a wrong schema, consider improving it and giving the author a pull request to our collective benefit.
 
 To get the validation working, you'll need a validator. You have many options here, including editor-specific options.
 # Schemas
 
-Many schemas exist, with many small differences. Try out different schemas and see which one works best for you:
+Many schemas exist, with many minor differences. Try out different schemas and see which one works best for you:
 
 | Author                                                                  | Supports                                                                                                       | Note                                             |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
@@ -40,17 +40,17 @@ It should look like something like this:
 
 If you want to utilize this schema to work with all of your files inside your Workspace, you can add it to your VS Code Workspace's settings.
 
-To do this, make sure you're in your workspace, then, press `Ctrl+Shift+P` and type and select `>Preferences: Open Workspace Settings (JSON)`. After that, add this to the root object
+To do this, make sure you're in your Workspace, then press `Ctrl+Shift+P` and type and select `>Preferences: Open Workspace Settings (JSON)`. After that, add this to the root object
 ```json
 "settings": {
-	"json.schemas": [
-		{
-			"fileMatch": [
-				"*.json"
-			],
-			"url": "https://aexer0e.github.io/bedrock-schema/"
-		}
-	]
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "*.json"
+            ],
+            "url": "https://aexer0e.github.io/bedrock-schema/"
+        }
+    ]
 }
 ```
 

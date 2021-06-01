@@ -6,7 +6,7 @@ title: Spawning Items
 
 <Label color="yellow">Intermediate</Label>
 
-It is often desired to be able to spawn items in their dropped form in a number of scenarios. Here we will examine how to accomplish this through entity deaths, interactions, and an all-purpose method.
+It is often desired to spawn items in their dropped form in several scenarios. Here we will examine how to accomplish this through entity deaths, interactions, and an all-purpose method.
 
 ## Entity Deaths
 
@@ -26,33 +26,33 @@ Behaviors:
 
 ```json
 {
-	"format_version": "1.14.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "sirlich:drop_entity",
-			"is_spawnable": true,
-			"is_summonable": true,
-			"is_experimental": false
-		},
+    "format_version": "1.14.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "sirlich:drop_entity",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
 
-		"components": {
-			//causes the entity to die when spawned
-			"minecraft:health": {
-				"value": 0
-			},
-			"minecraft:loot": {
-				"table": "loot_tables/entities/some_loot.json"
-			}
-		}
-	}
+        "components": {
+            //causes the entity to die when spawned
+            "minecraft:health": {
+                "value": 0
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/some_loot.json"
+            }
+        }
+    }
 }
 ```
 
 ## Interactions
 
-Here is an example of an entity called "box" which will drop its contents upon interaction. The table in `spawn_items` is linked to the loot table with the items desired to be dropped. In this particular case, the event `break_box` is also called when the entity is interacted with, adding a component group which destroys the box.
+Here is an example of an entity called "box" which will drop its contents upon interaction. The table in `spawn_items` is linked to the loot table with the items desired to be dropped. In this particular case, the event `break_box` is also called when the entity is interacted with, adding a component group that destroys the box.
 
-Note that if the entity is not removed upon interaction, it can be interacted with again and will spawn the items. If the entity should persist after interaction, the `cooldown` parameter may be added to the entity to prevent interaction for a specified amount of time. Alternatively, an event may be called to remove the component group containing this `minecraft:interact` component.
+Note that if the entity is not removed upon interaction, it can be interacted with again and will spawn the items. If the entity should persist after the interaction, the `cooldown` parameter may be added to the entity to prevent interaction for a specified amount of time. Alternatively, an event may be called to remove the component group containing this `minecraft:interact` component.
 
 ```json
 "minecraft:interact": {
@@ -60,8 +60,8 @@ Note that if the entity is not removed upon interaction, it can be interacted wi
     {
       "on_interact": {
         "filters": { "test": "is_family", "subject": "other", "value": "player" },
-	"event": "break_box",
-	"target": "self"
+    "event": "break_box",
+    "target": "self"
       },
       "swing": true,
       "spawn_items": {
@@ -74,15 +74,15 @@ Note that if the entity is not removed upon interaction, it can be interacted wi
 
 ## All-Purpose Method
 
-Following is a method which can be used for virtually any scenario: entity deaths, animation-based interactions, general item drops. This method was created in particular for dropping items without any death animation, sound, or particles.
+Following is a method that can be used for virtually any scenario: entity deaths, animation-based interactions, general item drops. This method was created in particular for dropping items without any death animation, sound, or particles.
 
-There are a number of parts required to set up the item dropping: a new entity with behavior, a corresponding animation controller, the resources for an invisible entity (refer to Dummy Entities tutorial), and a loot table. To spawn the items after it is set up, the entity is spawned where the items are desired to be dropped. If multiple items are desired, component groups with spawn events may be set up for each item.
+Several parts are required to set up the item dropping: a new entity with behavior, a corresponding animation controller, the resources for an invisible entity (refer to Dummy Entities tutorial), and a loot table. To spawn the items after it is set up, the entity is spawned where the items are desired to be dropped. If multiple items are desired, component groups with spawn events may be set up for each item.
 
-### Behavior
+### behavior
 
-The items are spawned using the `minecraft:behavior.drop_item_for` component in conjuction with the `minecraft:navigation.walk` component, the latter being required for the former to work. Note that the `time_of_day_range` parameter in the following is not initialized to how it is defined below despite the documentation listing it as such, and this is necessary for proper function. The parameter `max_dist` must be increased to an appropriate value if the items are desired to be dropped when the player is very far away.
+The items are spawned using the `minecraft:behavior.drop_item_for` component in conjunction with the `minecraft:navigation.walk` component, the latter being required for the former to work. Note that the `time_of_day_range` parameter in the following is not initialized to how it is defined below despite the documentation listing it as such, and this is necessary for proper function. The parameter `max_dist` must be increased to an appropriate value if the items are desired to be dropped when the player is very far away.
 
-This behavior appears to push the mob back when the items are dropped. Thus it is important to summon the entity slightly above the ground (or teleport it up in the following animation controller) to avoid the items spawning a few blocks away from the spawn location. Decreasing the size of the collision box may also help.
+This behavior appears to push the mob back when the items are dropped. Thus it is essential to summon the entity slightly above the ground (or teleport it up in the following animation controller) to avoid the items spawning a few blocks away from the spawn location. Decreasing the size of the collision box may also help.
 
 ```json
 "minecraft:navigation.walk": {
@@ -103,22 +103,22 @@ Teleporting the entity into the void causes no death animation, sound, or partic
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.drop_items.die": {
-			"initial_state": "spawn",
-			"states": {
-				"spawn": {
-					"transitions": [{ "delay": "1" }]
-				},
-				"delay": {
-					"transitions": [{ "die": "1" }]
-				},
-				"die": {
-					"on_entry": ["/tp @s ~ -200 ~"]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.drop_items.die": {
+            "initial_state": "spawn",
+            "states": {
+                "spawn": {
+                    "transitions": [{ "delay": "1" }]
+                },
+                "delay": {
+                    "transitions": [{ "die": "1" }]
+                },
+                "die": {
+                    "on_entry": ["/tp @s ~ -200 ~"]
+                }
+            }
+        }
+    }
 }
 ```

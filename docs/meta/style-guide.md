@@ -8,14 +8,14 @@ parent: Knowledge
 
 
 
-This document will present the officially supported Bedrock-Wiki style-guide for addon-creation. The goal of this guide is to promote best-practices while creating addons, and create a consistent format for everyone to follow.
+This document will present the officially supported Bedrock-Wiki style guide for addon-creation. This guide aims to promote best practices while creating addons and create a consistent format for everyone to follow.
 
-The style-guide is a living, breathing document, which will evolve as addon-creation evolves. Please get in touch if you think something needs to be updated ot changed. 
+The style guide is a living, breathing document, which will evolve as addon-creation evolves. Please get in touch if you think something needs to be updated or changed. 
 
 ## Folder Structure
  - No spaces in your file paths. `use_underscores`.
  - No `CAPITALS` in your identifiers, file names, or folder names, except at the top level.
- - The total character-length of any path must not exceed 80 characters (console limitation).
+ - The total character length of any path must not exceed 80 characters (console limitation).
  - Content folders should use consistent pluralization: Don't mix and match. 
 
 ## Identifiers
@@ -44,13 +44,13 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 
 ## Namespaces
 
-A good namespace should be completely unique to you, or your team. Something like `mob` or `cars` or `content` or `custom` would be a **bad** namespace, since another developer might come up with the same namespace as you. 
+A suitable namespace should be unique to you or your team. Something like `mob` or `cars` or `content` or `custom` would be a **bad** namespace since another developer might come up with the same namespace as you. 
 
 `minecraft` and `minecon` are reserved. Don't use these.
 
-For personal projects, use a convenient version of your player name, and for team projects, use a convenient version of your team name.
+For personal projects, use a convenient version of your player name, and for team projects, use a suitable version of your team name.
 
-When multiple developers work a project together, the namespace should always be shared. If credit is required, use sub-indexing: `sapphire.sirlich:dragon`
+When multiple developers work on a project together, the namespace should always be shared. If credit is required, use sub-indexing: `minetite.sirlich:dragon`
 
 Where to use name-spaces:
  - entities
@@ -58,8 +58,8 @@ Where to use name-spaces:
  - component-groups
  - events
 
-When not to use name-spaces:
- - do not include your name-space in any folder path or file-name
+When not to use namespaces:
+ - do not include your namespace in any folder path or file-name
 
 
 ## Sub-indexing
@@ -70,7 +70,7 @@ Sub indexing is the use of `.` to separate chained concepts. Sub-indexing should
 
 ❌ `animation.controller.dragon_take_off_flying`
 
-When using sub-indexing, use `_` as a space, not another `.`. 
+When using sub-indexing, use `_` as space, not another `.`. 
 
 ✔️ `animation.controller.dragon.flying.taking_off`
 
@@ -89,13 +89,13 @@ You can use sub-indexing in your entities:
 | sirlich:tame | ❌ sirlich:tame |
 
 ## Short-Names should be Generic
-Short-names are file-specific identifiers, which are used to map between an identifier and a pretty name. They are extremely useful, because they allow us to re-use animation controllers, and render controllers. For this reason, your short-names should be generic.
+Short-names are file-specific identifiers, which are used to map between an identifier and a pretty name. They are handy because they allow us to re-use animation controllers and render controllers. For this reason, your short-names should be generic.
 
 ✔️ `"sit": "animation.dragon.sit"`
 
 ❌ `"dragon_sitting": "animation.dragon.sit"`
 
-When we make short-names of this form, we can use a generic "sit" animation controller for all of them, since we can use the `sit` short-name to play the sit animation.
+When we make short-names of this form, we can use a generic "sit" animation controller for all of them since we can use the `sit` short-name to play the sit animation.
 
 ## Functions should be nested
 
@@ -108,11 +108,11 @@ When we make short-names of this form, we can use a generic "sit" animation cont
 Example:
 ```json
 {
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.dragon.sit": {...},
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.dragon.sit": {...},
     "animation.dragon.fly": {...},
-		"animation.dragon.roar": {...},
+        "animation.dragon.roar": {...},
   }
 }
 ```
@@ -130,11 +130,11 @@ Example:
 
 Comments intended for the localizer should always be in-line, in the following format:
 
-`the.key=The string<\t>## Comment, intended for the one localizing`
+`the.key=The string<\t>## Comment, intended for the one localizing.`
 
 `<\t>` represents a tab-character.
 
-Own-line comments can be used for organizational purposes, but should not store localization-critical information.
+Own-line comments can be used for organizational purposes but should not store localization-critical information.
 
 ## Acronyms when discussing
 

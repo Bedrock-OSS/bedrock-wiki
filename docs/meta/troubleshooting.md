@@ -6,18 +6,18 @@ has_children: true
 
 # Troubleshooting
 
-Creating Addons for Minecraft is a fairly easy process _once you get a hang of it_. The first time is usually a difficult, bug-prone process. This document contains some tips and tricks for fixing those dastardly bugs, as well as best practice information.
+Creating Addons for Minecraft is a relatively straightforward process _once you get the hang of it_. The first time is usually a complicated, bug-prone process. This document contains some tips and tricks for fixing those dastardly bugs, as well as best practice information.
 
 ## The Environment
 
-The best way to prevent _invisible entity syndrome_ and other nasty bugs is by setting yourself the correct environment. You should review [the software preparation document](/guide/software-preparation) for my editor recommendations. The most important part is getting a json-linter, ([or using an online json-linter](https://jsonlint.com/)).
+The best way to prevent _invisible entity syndrome_ and other nasty bugs are by setting yourself in the right environment. You should review [the software preparation document](/guide/software-preparation) for my editor recommendations. The most important part is getting a JSON-linter, ([or using an online json-linter](https://jsonlint.com/)).
 
 ## Content Log
 
-The next thing you should do is turn on your content log. This can be done like: `Settings > Profile > Enable Content Log GUI`. Then press `ctrl+h` in-game to see any errors or output that might pop-up. Errors in the content log will show up every time you open the world, and also during gameplay if more errors occur.
+The next thing you should do is turn on your content log. This can be done like: `Settings > Profile > Enable Content Log GUI`. Then press `ctrl+h` in-game to see any errors or output that might pop up. Errors in the content log will show up every time you open the world and also during gameplay if more errors occur.
 
 ::: tip
-Errors are not cleared between runs, so it is possible the errors you see in the content log are _old_ errors, from prior runs.
+Errors are not cleared between runs, so the errors you see in the content log may be _old_ errors from prior runs.
 :::
 
 ### Content log file

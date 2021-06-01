@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Optimizing Addon Performance
+title: Optimizing Add-on Performance
 parent: Knowledge
 ---
 
-# Optimizing Addon Performance
+# Optimizing Add-on Performance
 
 ::: warning
-This page was compiled primarily using community feedback from multiple sources. As a result, some information may be generalized, subjective, or conflicting. Always use your own best judgement when optimizing your addons. This page is not a substitute for testing your addon on a wide range of devices.
+This page was compiled primarily using community feedback from multiple sources. As a result, some information may be generalized, subjective, or conflicting. Always use your own best judgment when optimizing your addons. This page is not a substitute for testing your addon on a wide range of devices.
 :::
 
-Performance in addons is particularly important, as the most technically impressive addon is largely useless if the majority of the player base cannot experience it. When developing addons, it should always be considered that many Bedrock players will be experiencing your addon on a significantly lower power device than you are developing on. This is especially true for mobile users. Therefore, addons should be developed with performance in mind, and tested for performance on lower end devices when possible.
+Performance in addons is crucial, as the most technically fantastic addon is mainly useless if the majority of the player base cannot experience it. When developing addons, it should always be considered that many Bedrock players will be experiencing your addon on a significantly lower power device than you are developing on. This is especially true for mobile users. Therefore, addons should be developed with performance in mind and tested for performance on lower-end devices when possible.
 
-This guide is a non-exhaustive list of specific performance considerations separated by the various subsystems of Bedrock Edition. No single point should be taken as a hard and fast rule. Rather, these performance considerations should help you to recognize potential areas for improvement.
+This guide is a non-exhaustive list of specific performance considerations separated by the various subsystems of Bedrock Edition. No single point should be taken as a hard and fast rule. Instead, these performance considerations should help you to recognize potential areas for improvement.
 
 # Performance Cost by Subsystem
 
@@ -27,9 +27,9 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Features
 
 -   Biomes generally cause less lag than feature generation
--   Hundreds of iterations per chunk of a multi-block feature have been achieved at low performance cost
+-   Hundreds of iterations per chunk of a multi-block feature have been achieved at a low-performance cost
 -   Thousands of iterations per chunk of multi-block features negatively impact gameplay
--   Hundreds of thousands of iterations per chunk of a single-block feature have been achieved at low performance cost
+-   Hundreds of thousands of iterations per chunk of a single-block feature have been achieved at a low-performance cost
 
 ## Blocks
 
@@ -51,9 +51,9 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Quantity and Type
 
 -   Minimize the number of commands run per tick
-    -   /effect and /gamemode run every tick are avoidable and have a major performance impact
+    -   /effect and /gamemode run every tick are avoidable and have a significant performance impact
 -   Large clones and fills during runtime should be avoided
-    -   Breaking these larger operations into multiple commands distributed over multiple ticks will avoid lag spikes
+    -   Breaking these more extensive operations into multiple commands distributed over multiple ticks will avoid lag spikes
 
 ### Selectors
 
@@ -68,7 +68,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ## Entities
 
--   Entities generally have one of the largest performance impacts by subsystem, and thus should be minimized where possible
+-   Entities generally have one of the most significant performance impacts by subsystem and thus should be minimized where possible
 
 ### Components
 
@@ -92,7 +92,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ### Materials
 
--   The minimum material required to achieve a desired effect to should always be used
+-   The minimum material required to achieve the desired effect should always be used
 -   When in doubt, refer to the material definition files to get an idea of the costs of various materials, taking the material inheritance system into account
 
 ### Quantity
@@ -111,8 +111,8 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Sources
 
 -   Bedrock lighting is calculated dynamically, meaning different light sources have different performance costs
-    -   Light blocks are the most performant because they lack particles, rendering, and special state logic
-    -   Torches are the least performance because they emit particles, render, and have special state logic dependent on what block they connect to
+    -   Light blocks are the most performant because they lack particles, rendering, and particular state logic
+    -   Torches are a minor performance issue because they emit particles, render, and have particular state logic dependent on what block they connect to
     -   Custom light blocks with minimal components are a reasonable compromise between performance and aesthetics
 
 #### Comparison Table
@@ -134,7 +134,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Recursion
 
 -   Minimize use of recursion when possible
--   Especially deep nested loop structures will cause performance issues
+- Intense nested loop structures will cause performance issues
 -   Use break to escape loops when possible
 
 ### Structs
@@ -157,9 +157,9 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Resolution
 
 -   The maximum texture resolution is 16384x16384
--   The recommended maximum texture resolution is 4096x4096 to maintain compatibility with low end devices
--   Keep in mind that textures are atlased, and larger textures can mess with atlas generation on lower end devices
--   Only make textures as large as needed to convey the detail needed at the needed distance
+-   The recommended maximum texture resolution is 4096x4096 to maintain compatibility with low-end devices
+-   Keep in mind that textures are atlased, and larger textures can mess with atlas generation on lower-end devices
+-   Only make textures as significant as needed to convey the detail needed at the needed distance
 
 ## Sounds
 
@@ -169,7 +169,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ### Compression
 
--   Sound compression is extremely beneficial to pack size
+-   Sound compression is exceptionally beneficial to pack size
 -   This is especially noticeable on older and low power devices, such as the Switch
 -   The FMod simple API utilized by Bedrock decompresses all sounds into WAV before loading into RAM, meaning no CPU performance improvement in this respect
     -   If audio is streamed, this does not occur
@@ -182,17 +182,17 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ### Chunk Boundaries
 
--   Crossing chunk boundaries with redstone should be avoided
+-   Crossing chunk boundaries with Redstone should be avoided
 
 ### Command Blocks
 
--   When creating large command block chains, stack vertically and in a single chunk
+-   When creating large command blockchains, stack vertically and in a single chunk
 -   Minimize command block use in favor of functions and behaviors where possible
 
 ## Ticking Areas
 
--   Total chunks is of greater concern than ticking areas
+-   Total chunks are of more significant concern than ticking areas
 -   Dynamic areas should be avoided unless necessary
--   Best practice is minimizing the ticking area to one chunk if possible
-    -   All always-on redstone should fit in this ticking chunk
+-   Best practice is to minimizing the ticking area to one chunk if possible
+    -   All always-on Redstone should fit in this ticking chunk
 -   Unload ticking areas when they are no longer needed, testing via /testforblock
