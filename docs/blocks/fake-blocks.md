@@ -8,11 +8,11 @@ title: Fake Blocks
 
 ## Creating the Hitbox
 
-Here is a tutorial of how to make a solid Hitbox in four different ways, with `runtime_identifiers`, blocks and components. [Solid Entities](https://wiki.bedrock.dev/tutorials/solid-entities)
+Here is a tutorial on making a solid Hitbox in four different ways, with `runtime_identifiers`, blocks, and components. [Solid Entities](https://wiki.bedrock.dev/tutorials/solid-entities)
 
 ## Basic Components
 
-Those components below are required to make the entity act like a block, and also don't add the `"minecraft:physics": {}` component in there, because this will make your entity fall or have collision with some blocks like water or lava.
+Those components below are required to make the entity act as a block, and also don't add the `"minecraft:physics": {}` component in there, because this will make your entity fall or have a collision with some blocks like water or lava.
 
 ```json
 {
@@ -57,9 +57,9 @@ The reason why is because this will change the Target Y Rotation, causing it to 
 
 ## Aligning the Entity Position
 
-To align the position of the entity, this will be more tricky.
+To align the position of the entity this will be more tricky.
 
-First, in the `minecraft:entity_spawned` event, make it places a custom block with a run_command, and make a new dummy-entity with a transformation event, to transform the dummy entity to the original entity so we avoid triggering the `minecraft:entity_spawned` again.
+First, in the `minecraft:entity_spawned` event, make a custom block with a run_command, and make a new dummy-entity with a transformation event to transform the dummy entity to the original entity, so we avoid triggering the `minecraft:entity_spawned` again.
 
 <CodeHeader>BP/entities/your_entity.json#minecraft:entity/events</CodeHeader>
 
@@ -140,7 +140,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 	"format_version": "1.13.0",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "thing:dummy_align", //The dummy entity used to avoid triggering the entity_spawned event in the original entity.
+			"identifier": "thing:dummy_align", //The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false
@@ -181,9 +181,9 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 ## Cracking Texture
 
-Vanilla blocks have a cracking-texture that appears when you break them. Here i will show you how to add this effect to your entity.
+Vanilla blocks have a cracking texture that appears when you break them. Here I will show you how to add this effect to your entity.
 
-First we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
+First, we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
 
 ```json
 "textures": {
@@ -201,7 +201,7 @@ First we have to add some textures to your .entity file, make sure that you are 
 }
 ```
 
-And add a geometry that has inflate 0.1 in all their cubes, this to avoid Z-Fighting.
+And add a geometry that has to inflate 0.1 in all their cubes to avoid Z-Fighting.
 
 ```json
 "geometry": {
@@ -210,7 +210,7 @@ And add a geometry that has inflate 0.1 in all their cubes, this to avoid Z-Figh
 }
 ```
 
-And now we have to add a new render controller. This is going to select different textures between the destroys stages.(Remember to not replace your actual controller, you need two controllers, the first one is just the one that adds model, textures and material to your normal entity, and the second one is this one, that defines the cracking texture)
+And now we have to add a new render controller. This is going to select different textures between the destroys stages. (Remember not to replace your actual controller, you need two controllers, the first one is just the one that adds Model, textures, and material to your normal entity, and the second one is this one that defines the cracking texture)
 
 ```json
 "controller.render.broken": {
@@ -238,7 +238,7 @@ And now we have to add a new render controller. This is going to select differen
         }
     ],
     "textures": [
-        "array.broken[query.health * 1]"//Here you can caculate the health of your entity to make sure it isn't buggy, if your entity just have 10 health, leave it as it. If it has 20, it should be `[query.health * 0.5]`, if it is 40, it has to be 0.25, etc...
+        "array.broken[query.health * 1]"//Here, you can calculate the health of your entity to make sure it isn't buggy. If your entity has 10 health, leave it as it. If it has 20, it should be `[query.health * 0.5]`, if it is 40, it has to be 0.25, etc...
     ]
 }
 ```

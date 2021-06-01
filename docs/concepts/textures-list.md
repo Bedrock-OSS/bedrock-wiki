@@ -8,31 +8,31 @@ parent: Concepts
 
 ## General Overview
 
-The textures*list file is Minecraft's way of \_caching* each texture so that it can retrieve it faster than looking through each image in your textures folder. This is especially important when you have an abundance of textures, where Minecraft could potentially mess up and swap textures, or even not load them at all. Minecraft tends to throw a content log _warning_ if you don't have the textures listed in the file. You can just ignore it if you have a small amount, but it is recommended that you list the textures anyway.
+The textures*list file is Minecraft's way of \_caching* each texture so that it can retrieve it faster than looking through each image in your textures folder. This is especially important when you have an abundance of textures, where Minecraft could potentially mess up and swap textures or even not load them at all. Minecraft tends to throw a content log _warning_ if you don't have the textures listed in the file. You can ignore it if you have a small amount, but it is recommended that you list the textures anyway.
 
 ## What textures can be used in the file?
 
-Any texture! Any and all textures can and _should_ be used in the textures_list.json file for best practice and performance.
+Any texture! Any textures can and _should_ be used in the textures_list.json file for best practice and performance.
 
 ## File Structure
 
-The structure is simple, the file itself is in `RP/textures` and is named `textures_list.json`. The file just includes the filepath to every texture you want in the file:
+The structure is simple. The file itself is in `RP/textures` and is named `textures_list.json`. The file includes the file path to every texture you want in the file:
 
 <CodeHeader>RP/textures/textures_list.json</CodeHeader>
 
 ```json
 [
-	"textures/blocks/foo",
-	"textures/blocks/bar",
+    "textures/blocks/foo",
+    "textures/blocks/bar",
 
-	"textures/items/foo",
-	"textures/items/bar",
+    "textures/items/foo",
+    "textures/items/bar",
 
-	"textures/models/foo",
-	"textures/models/bar",
+    "textures/models/foo",
+    "textures/models/bar",
 
-	"textures/entity/foo",
-	"textures/entity/bar"
+    "textures/entity/foo",
+    "textures/entity/bar"
 ]
 ```
 

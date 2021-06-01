@@ -8,9 +8,9 @@ parent: Concepts
 
 <Label color="yellow">Intermediate</Label>
 
-In bedrock, we have the ability to add custom sounds, without overwriting any vanilla sounds. This is done by adding files to the resource pack.
+In bedrock, we can add custom sounds without overwriting any vanilla sounds. This is done by adding files to the resource pack.
 
-`protip:` The best way to learn about sounds is downloading and playing around with the default resource pack.
+`protip:` The best way to learn about sounds is by downloading and playing around with the default resource pack.
 
 ## Folder Structure
 
@@ -34,31 +34,31 @@ The following sound formats are accepted:
 
 # sound_definitions.json
 
-`sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example `sound_definitions.json` that adds a new trumpet sound called `example.toot`.
+`sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example, `sound_definitions.json`, that adds a new trumpet sound called `example.toot`.
 
 ```json
 {
-	"format_version": "1.14.0",
-	"sound_definitions": {
-		"example.toot": {
-			"category": "neutral",
-			"sounds": ["sounds/trumpet"]
-		}
-	}
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "example.toot": {
+      "category": "neutral",
+      "sounds": ["sounds/trumpet"]
+    }
+  }
 }
 ```
 
 Sounds added in this way can be triggered using `/playsound`. Please note that `playsound` does not auto-correct, so you will need to be careful in your typing.
 
-`note:` New files that are referenced by file path, such as sounds, DO need a full client restart in order to load. This means that if sounds don't work, you should restart your entire MC client, rather than just reloading the world.
+`note:` New files referenced by file path, such as sounds, DO need a complete client restart to load. This means that if sounds don't work, you should restart your entire MC client rather than just reloading the world.
 
 ## Top Level Keys
 
-In the example above, I showed two `top-level` fields: `category`, and `sounds`. Sounds will be discussed in further detail bellow, but the other `top-level` keys will be discussed here:
+In the example above, I showed two `top-level` fields: `category` and `sounds`. Sounds will be discussed in further detail below, but the other `top-level` keys will be discussed here:
 
 ### Categories
 
-Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get different effects.
+Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get other effects.
 
 | Category | Note                                            |
 | -------- | ----------------------------------------------- |
@@ -75,15 +75,15 @@ Categories are used internally by the engine to decide how each sound is played.
 
 ### min_distance
 
-The minimum distance **away** the source of the sound that the client needs to be within to hear. Must be a float (1.0) or the argument will be ignored.
+The minimum distance **away** the source of the sound that the client needs to be within to hear. It must be a float (1.0), or the argument will be ignored.
 
 ### max_distance
 
-The maximum distance **to** the source of the sound that the client needs to be within to hear. Must be a float (1.0) or the argument will be ignored.
+The maximum distance **to** the source of the client's sound needs to be within to hear. It must be a float (1.0), or the argument will be ignored.
 
 ## Sound definitions
 
-In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds, but does not have much power. For starts, I can add multiple sounds into the list. These sounds will be randomized when played:
+In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds but does not have much power. For starts, I can add multiple sounds to the list. These sounds will be randomized when played:
 
 ```json
 "sounds": [
@@ -93,7 +93,7 @@ In the example above, I showed `sounds` as simply a list with a single path. Thi
 ]
 ```
 
-Additionally, we can define each sound as an object, instead of a string. This allows us finer control, and unlocks some new settings. The string/object style can be mixed and matched.
+Additionally, we can define each sound as an object instead of a string. This allows us finer control and unlocks some new settings. The string/object style can be mixed and matched.
 
 ### name
 
@@ -101,19 +101,19 @@ The path to the file, such as: `"sounds/music/game/creative/creative1"`
 
 ### stream
 
-Limits the sound to only be played a limited number of instances at a time. Good for improving preformance on sound heavy worlds.
+Limits the sound only to be played a limited number of instances at a time. Good for improving performance on sound heavy worlds.
 
 ### volume
 
-How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made louder than originally encoded.
+How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made more audible than initially encoded.
 
 ### load_on_low_memory
 
-Forces the loading of the sound even when nearing low memmory. "load_on_low_memory" is now deprecated as of 1.16.0
+Forces the loading of the sound even when nearing low memory. "load_on_low_memory" is now deprecated as of 1.16.0
 
 ### pitch
 
-The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (normal), but can be higher, such as `1.48`.
+The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (standard), but can be higher, such as `1.48`.
 
 ## Example
 
@@ -137,7 +137,7 @@ Here is a more realistic example containing these options:
 
 # sounds.json
 
-If we want our sounds to run automatically, we can add them into the `sounds.json` file. This will tie the sound definitions directly to game events, and cause them to play, without needing to trigger with `/playsound`.
+If we want our sounds to run automatically, we can add them into the `sounds.json` file. This will tie the sound definitions directly to game events and cause them to play without needing to trigger with `/playsound`.
 
 Sounds can be added into various categories:
 
@@ -145,7 +145,7 @@ Sounds can be added into various categories:
 | ----------------------- | ------------------------------------------------------------------------------- |
 | individual_event_sounds | Contains sounds like beacon activation, chest-close, or explode                 |
 | block_sounds            | Contains hit, step, and break sounds for blocks                                 |
-| entity_sounds           | Contains death, ambient, hurt, etc sounds for entities (Including custom ones!) |
+| entity_sounds           | Contains death, ambient, hurt, etc. sounds for entities (Including custom ones!) |
 | interactive_sounds      | WIP                                                                             |
 
 ## Adding Entity Sounds
@@ -160,8 +160,8 @@ Common events:
 | hurt       | Played when damaged                                      |
 | death      | Played when it dies                                      |
 | step       | Played when the entity moves along the ground            |
-| fall.big   | For hitting ground form a high-height                    |
-| fall.small | For hitting ground from a low height                     |
+| fall.big   | For hitting the ground from a high height |
+| fall.small | For hitting the ground from a low height                     |
 | splash     | For splashing in the water                               |
 | attack     | For melee attacking                                      |
 | shoot      | For shooting projectiles                                 |
@@ -190,26 +190,26 @@ There are also many sound events, which _most likely_ trigger automatically, but
 
 ```json
 {
-	"entity_sounds": {
-		"entities": {
-			"sirlich:elephant": {
-				"volume": 1,
-				"pitch": [0.9, 1.0],
-				"events": {
-					"step": {
-						"sound": "elephant.step",
-						"volume": 0.18,
-						"pitch": 1.1
-					},
-					"ambient": {
-						"sound": "elephant.trumpet",
-						"volume": 0.11,
-						"pitch": 0.9
-					}
-				}
-			}
-		}
-	}
+  "entity_sounds": {
+    "entities": {
+      "sirlich:elephant": {
+        "volume": 1,
+        "pitch": [0.9, 1.0],
+        "events": {
+          "step": {
+            "sound": "elephant.step",
+            "volume": 0.18,
+            "pitch": 1.1
+          },
+          "ambient": {
+            "sound": "elephant.trumpet",
+            "volume": 0.11,
+            "pitch": 0.9
+          }
+        }
+      }
+    }
+  }
 }
 ```
 

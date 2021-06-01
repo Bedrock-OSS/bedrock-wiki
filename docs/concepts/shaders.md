@@ -8,8 +8,8 @@ parent: Concepts
 
 ## Disclaimer
 
-The way to create shaders described in this page is not working on consoles (PS4, Xbox, Switch) and in new rendering
-engine (renderdragon, which is in the newest Windows version beta).
+The way to create shaders described on this page is not working on consoles (PS4, Xbox, Switch), and in the new rendering
+engine (renderdragon, which is in the latest Windows version beta).
 
 ## Overview
 
@@ -20,11 +20,11 @@ like HLSL `float3` is `vec3` in GLSL. [Mapping between those languages can be fo
 
 ## Materials
 
-Vertex, fragment and sometimes geometry shaders are combined with some options
+Vertex, fragments, and sometimes geometry shaders are combined with some options
 as materials and are required for custom shaders. To create new material,
-you need to create file, which matches the name of .material file in vanilla resource pack.
+you need to create a file, which matches the name of the .material file in the vanilla resource pack.
 For example: `materials/particles.material`. Materials support inheritance by adding parent
-material after colon. For example: `entity_alpha:entity_base`
+material after a colon. For example: `entity_alpha:entity_base`
 
 ### Common material definition fields
 
@@ -46,57 +46,57 @@ Example:
 
 ```json
 {
-	"materials": {
-		"version": "1.0.0",
-		"particle_debug": {
-			"vertexShader": "shaders/particle_generic.vertex",
-			"fragmentShader": "shaders/particle_debug.fragment",
+    "materials": {
+        "version": "1.0.0",
+        "particle_debug": {
+            "vertexShader": "shaders/particle_generic.vertex",
+            "fragmentShader": "shaders/particle_debug.fragment",
 
-			"vertexFields": [
-				{ "field": "Position" },
-				{ "field": "Color" },
-				{ "field": "UV0" }
-			],
+            "vertexFields": [
+                { "field": "Position" },
+                { "field": "Color" },
+                { "field": "UV0" }
+            ],
 
-			"+samplerStates": [
-				{
-					"samplerIndex": 0,
-					"textureFilter": "Point"
-				}
-			],
+            "+samplerStates": [
+                {
+                    "samplerIndex": 0,
+                    "textureFilter": "Point"
+                }
+            ],
 
-			"msaaSupport": "Both"
-		}
-	}
+            "msaaSupport": "Both"
+        }
+    }
 }
 ```
 
-For all the details about material file and possible field values, check [material file json schema](https://github.com/stirante/bedrock-shader-schema/blob/master/materials.schema.json).
+For all the details about material files and possible field values, check [material file JSON schema](https://github.com/stirante/bedrock-shader-schema/blob/master/materials.schema.json).
 
 ## Troubleshooting
 
 ### Shader doesn’t change
 
-Every time there is a change in the shader, you need to completely restart Minecraft to recompile the shader.
+Every time there is a change in the shader, you need to restart Minecraft to recompile the shader completely.
 
 ### Compilation error
 
-When there is a shader compilation error, usually there is a line number specified, where the error occurred. You need to check few lines above the one specified in error, because before compilation, Minecraft adds `#define` directives
+When there is a shader compilation error, a line number is usually specified where the error occurred. You need to check a few lines above the one set in error because Minecraft adds `#define` directives before compilation.
 
 ### Couldn’t find constant buffer named: $Globals
 
-I couldn’t accurately find the actual cause of this error, but it seems to be somehow connected to global variables. Removing them (initializing them in `main` function or changing them to `#define` directives) seems to fix the problem.
+I couldn’t accurately find the actual cause of this error, but it seems to be somehow connected to global variables. Removing them (initializing them in the `main` function or changing them to `#define` directives) seems to fix the problem.
 
 ## Tips and tricks
 
-### Passing variables to shader
+### Passing variables to the shader
 
-You can pass variables to the shader from a particle, or an entity by changing entity color.
-Input color is clamped to `<0.0, 1.0>`. To pass bigger values, you need to divide by max value (or at least by some big number).
+You can pass variables to the shader from a particle or an entity by changing entity color.
+Input color is clamped to `<0.0, 1.0>`. To pass more significant values, you need to divide by max value (or at least some considerable number).
 
 ### Using time in shader
 
-`TIME` variable is number of seconds as `float` and is global for all shaders. For time based on particle lifetime, you need to pass this:
+`TIME` variable is a number of seconds as `float` and is global for all shaders. For time-based on particle lifetime, you need to pass this:
 
 ```json
 "minecraft:particle_appearance_tinting": {
@@ -104,11 +104,11 @@ Input color is clamped to `<0.0, 1.0>`. To pass bigger values, you need to divid
 }
 ```
 
-Then in shader, use `PSInput.color.r` as time, where `0.0` is particle birth and `1.0` is particle death.
+Then in the shader, use `PSInput.color.r` as time, where `0.0` is particle birth and `1.0` is particle death.
 
 ### Camera direction towards the entity
 
-For entity shaders, you can make the shader dependent on camera direction towards the entity.
+For entity shaders, you can make the shader dependent on the camera direction towards the entity.
 
 -   Add to `PS_Input` in vertex and fragment shader new field
 
@@ -122,11 +122,11 @@ float3 viewDir: POSITION;
 PSInput.viewDir = normalize((mul(WORLD, mul(BONES[VSInput.boneId], float4(VSInput.position, 1)))).xyz);
 ```
 
--   In fragment shader use `PSInput.viewDir` to make changes depending on camera rotation
+-   In the fragment shader, use `PSInput.viewDir` to make changes depending on camera rotation
 
 ### Debugging values
 
-The easiest way to debug a value is to turn it into color and render it like this
+The easiest way to debug a value is to turn it into color and render it like this.
 
 ```
 PSOutput.color = float4(PSInput.uv, 0., 1.);
@@ -134,14 +134,14 @@ PSOutput.color = float4(PSInput.uv, 0., 1.);
 
 This should create a red-green gradient, showing that the values of `uv` are between `<0, 0>` and `<1, 1>`.
 
-For more advanced debugging, you can use the debug shader I wrote [based on this shader](http://mew.cx/drawtext/drawtext).
-Right now this shader will display values of the color passed to the shader. To display another value, change line 70 in hlsl shader to
+You can use the debug shader I wrote [based on this shader](http://mew.cx/drawtext/drawtext).
+Right now, this shader will display values of the color passed to the shader. To display another value, change line 70 in hlsl shader to
 
 ```
 int ascii = getFloatCharacter( cellIndex, <float4 vector here> );
 ```
 
-GLSL version of debug shader may crash Minecraft, use only for debugging.
+GLSL version of debugging shader may crash Minecraft, use only for debugging.
 
 [Download debug shader](http://files.stirante.com/debugShader.zip)
 
