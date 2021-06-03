@@ -15,34 +15,34 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "example:food_item",
-			"category": "items"
-		},
-		"components": {
-			"minecraft:use_duration": 1.6,
-			"minecraft:food": {
-				"nutrition": 4,
-				"saturation_modifier": "low",
-				"can_always_eat": true,
-				"on_consume": {
-					"event": "on_consume",
-					"target": "self"
-				}
-			},
-			"minecraft:use_animation": "eat"
-		},
-		"events": {
-			"on_consume": {
-				"remove_mob_effect": {
-					"effect": "nausea",
-					"target": "holder"
-				}
-			}
-		}
-	}
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "example:food_item",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 1.6,
+            "minecraft:food": {
+                "nutrition": 4,
+                "saturation_modifier": "low",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "on_consume",
+                    "target": "self"
+                }
+            },
+            "minecraft:use_animation": "eat"
+        },
+        "events": {
+            "on_consume": {
+                "remove_mob_effect": {
+                    "effect": "nausea",
+                    "target": "holder"
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -52,9 +52,9 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 ```json
 {
-	"example:swing_event": {
-		"swing": {}
-	}
+    "example:swing_event": {
+        "swing": {}
+    }
 }
 ```
 
@@ -64,13 +64,13 @@ Shoots a projectile when triggered
 
 ```json
 {
-	"example:shoot_event": {
-		"shoot": {
-			"projectile": "minecraft:snowball",
-			"launch_power": 5,
-			"angle_offset": 20
-		}
-	}
+    "example:shoot_event": {
+        "shoot": {
+            "projectile": "minecraft:snowball",
+            "launch_power": 5,
+            "angle_offset": 20
+        }
+    }
 }
 ```
 
@@ -78,12 +78,12 @@ Shoots a projectile when triggered
 
 ```json
 {
-	"example:damage_event": {
-		"damage": {
-			"type": "magic",
-			"amount": 4
-		}
-	}
+    "example:damage_event": {
+        "damage": {
+            "type": "magic",
+            "amount": 4
+        }
+    }
 }
 ```
 
@@ -93,9 +93,9 @@ Decrements the stack
 
 ```json
 {
-	"example:remove_one": {
-		"decrement_stack": {}
-	}
+    "example:remove_one": {
+        "decrement_stack": {}
+    }
 }
 ```
 
@@ -105,14 +105,14 @@ Adds a mob effect when triggered
 
 ```json
 {
-	"example:effect_event": {
-		"add_mob_effect": {
-			"effect": "poison",
-			"target": "holder",
-			"duration": 8,
-			"amplifier": 3
-		}
-	}
+    "example:effect_event": {
+        "add_mob_effect": {
+            "effect": "poison",
+            "target": "holder",
+            "duration": 8,
+            "amplifier": 3
+        }
+    }
 }
 ```
 
@@ -122,12 +122,12 @@ Removes a mob effect when triggered
 
 ```json
 {
-	"example:remove_effect_event": {
-		"remove_mob_effect": {
-			"effect": "poison",
-			"target": "holder"
-		}
-	}
+    "example:remove_effect_event": {
+        "remove_mob_effect": {
+            "effect": "poison",
+            "target": "holder"
+        }
+    }
 }
 ```
 
@@ -137,11 +137,11 @@ Transforms the item into the item specified
 
 ```json
 {
-	"example:transform_event": {
-		"transform_item": {
-			"transform": "minecraft:apple"
-		}
-	}
+    "example:transform_event": {
+        "transform_item": {
+            "transform": "minecraft:apple"
+        }
+    }
 }
 ```
 
@@ -151,12 +151,12 @@ Teleports the target to a random location in the specified range
 
 ```json
 {
-	"example:teleport_event": {
-		"teleport": {
-			"target": "holder",
-			"max_range": [8, 8, 8]
-		}
-	}
+    "example:teleport_event": {
+        "teleport": {
+            "target": "holder",
+            "max_range": [8, 8, 8]
+        }
+    }
 }
 ```
 
@@ -166,23 +166,23 @@ Used to sequence event functions
 
 ```json
 {
-	"example:sequence_event": {
-		"sequence": [
-			{
-				"add_mob_effect": {
-					"effect": "poison",
-					"target": "holder",
-					"duration": 8,
-					"amplifier": 3
-				}
-			},
-			{
-				"transform_item": {
-					"transform": "minecraft:apple"
-				}
-			}
-		]
-	}
+    "example:sequence_event": {
+        "sequence": [
+            {
+                "add_mob_effect": {
+                    "effect": "poison",
+                    "target": "holder",
+                    "duration": 8,
+                    "amplifier": 3
+                }
+            },
+            {
+                "transform_item": {
+                    "transform": "minecraft:apple"
+                }
+            }
+        ]
+    }
 }
 ```
 
@@ -192,25 +192,25 @@ Used to randomize event functions
 
 ```json
 {
-	"example:randomize_events": {
-		"randomize": [
-			{
-				"weight": 1,
-				"transform_item": {
-					"transform": "minecraft:apple"
-				}
-			},
-			{
-				"weight": 2,
-				"add_mob_effect": {
-					"effect": "weakness",
-					"target": "holder",
-					"duration": 8,
-					"amplifier": 3
-				}
-			}
-		]
-	}
+    "example:randomize_events": {
+        "randomize": [
+            {
+                "weight": 1,
+                "transform_item": {
+                    "transform": "minecraft:apple"
+                }
+            },
+            {
+                "weight": 2,
+                "add_mob_effect": {
+                    "effect": "weakness",
+                    "target": "holder",
+                    "duration": 8,
+                    "amplifier": 3
+                }
+            }
+        ]
+    }
 }
 ```
 
@@ -220,12 +220,12 @@ Used to execute commands
 
 ```json
 {
-	"example:execute_command_event": {
-		"run_command": {
-			"command": ["say hi"],
-			"target": "other"
-		}
-	}
+    "example:execute_command_event": {
+        "run_command": {
+            "command": ["say hi"],
+            "target": "other"
+        }
+    }
 }
 ```
 
@@ -237,7 +237,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:ignores_permission": true
+    "minecraft:ignores_permission": true
 }
 ```
 
@@ -245,7 +245,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:mining_speed": 1
+    "minecraft:mining_speed": 1
 }
 ```
 
@@ -253,7 +253,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:damage": 5
+    "minecraft:damage": 5
 }
 ```
 
@@ -261,7 +261,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:can_destroy_in_creative": true
+    "minecraft:can_destroy_in_creative": true
 }
 ```
 
@@ -269,9 +269,9 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:dye_powder": {
-		"color": 4
-	}
+    "minecraft:dye_powder": {
+        "color": 4
+    }
 }
 ```
 
@@ -279,7 +279,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:mirrord_art": true
+    "minecraft:mirrord_art": true
 }
 ```
 
@@ -287,7 +287,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:explodable": true
+    "minecraft:explodable": true
 }
 ```
 
@@ -295,7 +295,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:should_despawn": true
+    "minecraft:should_despawn": true
 }
 ```
 
@@ -303,7 +303,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:liquid_clipped": true
+    "minecraft:liquid_clipped": true
 }
 ```
 
@@ -311,7 +311,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:allow_off_hand": true
+    "minecraft:allow_off_hand": true
 }
 ```
 
@@ -319,10 +319,10 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:projectile": {
-		"projectile_entity": "minecraft:arrow",
-		"minimum_critical_power": 0.5
-	}
+    "minecraft:projectile": {
+        "projectile_entity": "minecraft:arrow",
+        "minimum_critical_power": 0.5
+    }
 }
 ```
 
@@ -330,10 +330,10 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:block_placer": {
-		"block": "minecraft:grass",
-		"use_block_description": true
-	}
+    "minecraft:block_placer": {
+        "block": "minecraft:grass",
+        "use_block_description": true
+    }
 }
 ```
 
@@ -341,11 +341,11 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:entity_placer": {
-		"entity": "minecraft:zombie",
-		"use_on": ["minecraft:grass", "minecraft:sand"],
-		"dispense_on": ["minecraft:stone", "minecraft:gold_ore"]
-	}
+    "minecraft:entity_placer": {
+        "entity": "minecraft:zombie",
+        "use_on": ["minecraft:grass", "minecraft:sand"],
+        "dispense_on": ["minecraft:stone", "minecraft:gold_ore"]
+    }
 }
 ```
 
@@ -353,12 +353,12 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:on_use_on": {
-		"on_use_on": {
-			"event": "example:block_event",
-			"target": "block"
-		}
-	}
+    "minecraft:on_use_on": {
+        "on_use_on": {
+            "event": "example:block_event",
+            "target": "block"
+        }
+    }
 }
 ```
 
@@ -366,12 +366,12 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:on_use": {
-		"on_use": {
-			"event": "example:item_event",
-			"target": "self"
-		}
-	}
+    "minecraft:on_use": {
+        "on_use": {
+            "event": "example:item_event",
+            "target": "self"
+        }
+    }
 }
 ```
 
@@ -379,9 +379,9 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:knockback_resistance": {
-		"protection": 0.4
-	}
+    "minecraft:knockback_resistance": {
+        "protection": 0.4
+    }
 }
 ```
 
@@ -389,10 +389,10 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:enchantable": {
-		"slot": "bow", // Can be any of the enchant slot listed below
-		"value": 10
-	}
+    "minecraft:enchantable": {
+        "slot": "bow", // Can be any of the enchant slot listed below
+        "value": 10
+    }
 }
 ```
 
@@ -420,19 +420,19 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:shooter": {
-		"max_draw_duration": 1,
-		"charge_on_draw": false,
-		"scale_power_by_draw_duration": true,
-		"ammunition": [
-			{
-				"item": "minecraft:arrow",
-				"use_offhand": true,
-				"search_inventory": true,
-				"use_in_creative": true
-			}
-		]
-	}
+    "minecraft:shooter": {
+        "max_draw_duration": 1,
+        "charge_on_draw": false,
+        "scale_power_by_draw_duration": true,
+        "ammunition": [
+            {
+                "item": "minecraft:arrow",
+                "use_offhand": true,
+                "search_inventory": true,
+                "use_in_creative": true
+            }
+        ]
+    }
 }
 ```
 
@@ -440,13 +440,13 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:durability": {
-		"max_durability": 100,
-		"damage_chance": {
-			"min": 5,
-			"max": 10
-		}
-	}
+    "minecraft:durability": {
+        "max_durability": 100,
+        "damage_chance": {
+            "min": 5,
+            "max": 10
+        }
+    }
 }
 ```
 
@@ -454,9 +454,9 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:armor": {
-		"protection": 4
-	}
+    "minecraft:armor": {
+        "protection": 4
+    }
 }
 ```
 
@@ -464,9 +464,9 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:wearable": {
-		"slot": "slot.armor.feet"
-	}
+    "minecraft:wearable": {
+        "slot": "slot.armor.feet"
+    }
 }
 ```
 
@@ -474,12 +474,12 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:weapon": {
-		"on_hurt_entity": {
-			"event": "example_event",
-			"target": "holder" // Can also be 'self' to trigger an item event"
-		}
-	}
+    "minecraft:weapon": {
+        "on_hurt_entity": {
+            "event": "example_event",
+            "target": "holder" // Can also be 'self' to trigger an item event"
+        }
+    }
 }
 ```
 
@@ -487,11 +487,11 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:record": {
-		"sound_event": "cat",
-		"duration": 120,
-		"comparator_signal": 8
-	}
+    "minecraft:record": {
+        "sound_event": "cat",
+        "duration": 120,
+        "comparator_signal": 8
+    }
 }
 ```
 
@@ -499,18 +499,18 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:repairable": {
-		"repair_items": [
-			{
-				"items": ["minecraft:iron_ingot", "minecraft:gold_ingot"],
-				"repair_amount": 10, // Can also be molang expression
-				"on_repaired": {
-					"event": "example_event",
-					"target": "holder" // Can also be 'self' to trigger an item event"
-				}
-			}
-		]
-	}
+    "minecraft:repairable": {
+        "repair_items": [
+            {
+                "items": ["minecraft:iron_ingot", "minecraft:gold_ingot"],
+                "repair_amount": 10, // Can also be molang expression
+                "on_repaired": {
+                    "event": "example_event",
+                    "target": "holder" // Can also be 'self' to trigger an item event"
+                }
+            }
+        ]
+    }
 }
 ```
 
@@ -518,10 +518,10 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:cooldown": {
-		"category": "ender_pearl",
-		"duration": 1
-	}
+    "minecraft:cooldown": {
+        "category": "ender_pearl",
+        "duration": 1
+    }
 }
 ```
 
@@ -529,17 +529,17 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:digger": {
-		"use_efficiency": true,
-		"destroy_speeds": [
-			{
-				"block": {
-					"tags": "query.any_tag('stone', 'metal')"
-				},
-				"speed": 6
-			}
-		]
-	}
+    "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+            {
+                "block": {
+                    "tags": "query.any_tag('stone', 'metal')"
+                },
+                "speed": 6
+            }
+        ]
+    }
 }
 ```
 
@@ -547,9 +547,9 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:fertilizer": {
-		"type": "bonemeal" // Can also be "rapid"
-	}
+    "minecraft:fertilizer": {
+        "type": "bonemeal" // Can also be "rapid"
+    }
 }
 ```
 
@@ -557,9 +557,9 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:fuel": {
-		"duration": 20
-	}
+    "minecraft:fuel": {
+        "duration": 20
+    }
 }
 ```
 
@@ -567,11 +567,11 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:throwable": {
-		"do_swing_animation": true,
-		"max_draw_duration": 2,
-		"scale_power_by_draw_duration": true
-	}
+    "minecraft:throwable": {
+        "do_swing_animation": true,
+        "max_draw_duration": 2,
+        "scale_power_by_draw_duration": true
+    }
 }
 ```
 
@@ -579,9 +579,9 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:creative_category": {
-		"parent": "itemGroup.name.nature"
-	}
+    "minecraft:creative_category": {
+        "parent": "itemGroup.name.nature"
+    }
 }
 ```
 
@@ -590,16 +590,16 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:food": {
-		"on_consume": {
-			"event": "example_event",
-			"target": "holder" // Can also be 'self' to trigger an item event"
-		},
-		"nurtition": 3,
-		"can_always_eat": true,
-		"saturation_modifier": "normal",
-		"using_converts_to": "minecraft:apple" // Changes the food or drink into another item when consumed. Can be changed to any item.
-	}
+    "minecraft:food": {
+        "on_consume": {
+            "event": "example_event",
+            "target": "holder" // Can also be 'self' to trigger an item event"
+        },
+        "nurtition": 3,
+        "can_always_eat": true,
+        "saturation_modifier": "normal",
+        "using_converts_to": "minecraft:apple" // Changes the food or drink into another item when consumed. It can be changed to any item.
+    }
 }
 ```
 
@@ -607,7 +607,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:use_animation": "eat" // Adds the animation and sound when eating a food item. Can also be changed to "drink".
+    "minecraft:use_animation": "eat" // Adds the animation and sound when eating a food item. It can also be changed to "drink".
 }
 ```
 
@@ -616,32 +616,32 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:render_offsets": {
-		"main_hand": {
-			"first_person": {
-				"position": [1, 1, 1],
-				"rotation": [1, 1, 1],
-				"scale": [1, 1, 1]
-			},
-			"third_person": {
-				"position": [1, 1, 1],
-				"rotation": [1, 1, 1],
-				"scale": [1, 1, 1]
-			}
-		},
-		"off_hand": {
-			"first_person": {
-				"position": [1, 1, 1],
-				"rotation": [1, 1, 1],
-				"scale": [1, 1, 1]
-			},
-			"third_person": {
-				"position": [1, 1, 1],
-				"rotation": [1, 1, 1],
-				"scale": [1, 1, 1]
-			}
-		}
-	}
+    "minecraft:render_offsets": {
+        "main_hand": {
+            "first_person": {
+                "position": [1, 1, 1],
+                "rotation": [1, 1, 1],
+                "scale": [1, 1, 1]
+            },
+            "third_person": {
+                "position": [1, 1, 1],
+                "rotation": [1, 1, 1],
+                "scale": [1, 1, 1]
+            }
+        },
+        "off_hand": {
+            "first_person": {
+                "position": [1, 1, 1],
+                "rotation": [1, 1, 1],
+                "scale": [1, 1, 1]
+            },
+            "third_person": {
+                "position": [1, 1, 1],
+                "rotation": [1, 1, 1],
+                "scale": [1, 1, 1]
+            }
+        }
+    }
 }
 ```
 
@@ -651,15 +651,15 @@ Item tags work the same as block tags and can be applied like this:
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "example:my_item"
-		},
-		"components": {
-			"tag:example:my_tag": {}
-		}
-	}
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "example:my_item"
+        },
+        "components": {
+            "tag:example:my_tag": {}
+        }
+    }
 }
 ```
 

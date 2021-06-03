@@ -6,7 +6,7 @@ parent: Knowledge
 
 # Useful Links
 
-There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
+There is loads of helpful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
 
 Important links have a ⭐.
 

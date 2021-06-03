@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Entity Events
-parent: Tutorials
 ---
 
 # Entity Events

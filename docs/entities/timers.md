@@ -4,7 +4,7 @@ title: Timers
 parent: Tutorials
 ---
 
-# Timers
+# Entity Timers
 
 <Label color="yellow">Intermediate</Label>
 

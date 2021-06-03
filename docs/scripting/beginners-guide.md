@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Hello World Tutorial
-parent: Scripting
+title: Beginners Guide to Scripting
+tags:
+    - guide
 ---
 
 # Hello World Tutorial

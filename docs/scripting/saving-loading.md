@@ -1,7 +1,7 @@
 ---
-layout: page
 title: Saving and Loading Data
-parent: Scripting
+tags:
+    - recipe
 ---
 
 # Saving and Loading data
