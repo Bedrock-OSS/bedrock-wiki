@@ -38,27 +38,27 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "Wiki Tutorial",
-		"description": "Time to create your first add-on!",
-		"uuid": "86a98bd8-1859-46b4-a8d8-b242b9a9fcc8",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 14, 0]
-	},
-	"modules": [
-		{
-			"type": "data",
-			"uuid": "5c830391-0937-44d6-9774-406de66b6984",
-			"version": [1, 0, 0]
-		}
-	],
-	"dependencies": [
-		{
-			"uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
-			"version": [1, 0, 0]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "Wiki Tutorial",
+        "description": "Time to create your first add-on!",
+        "uuid": "86a98bd8-1859-46b4-a8d8-b242b9a9fcc8",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 14, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "5c830391-0937-44d6-9774-406de66b6984",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
+            "version": [1, 0, 0]
+        }
+    ]
 }
 ```
 
@@ -72,7 +72,7 @@ Let's break up the code now.
 
 So, to make sure your add-on will work correctly. Generate three new UUID's which you will paste into the BP manifest.json file.
 
--   "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device where an older version was installed, the more recent version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
+-   "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device with an older version installed, the more recent version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
 
 -   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on.
 
@@ -89,25 +89,25 @@ Copy the code below into your newly created `manifest.json`.
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "Wiki Tutorial",
-		"description": "Time to create your first add-on!",
-		"uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 16, 0]
-	},
-	"modules": [
-		{
-			"type": "resources",
-			"uuid": "a00c0603-e122-4d00-8ab8-18168bc5ca9a",
-			"version": [1, 0, 0]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "Wiki Tutorial",
+        "description": "Time to create your first add-on!",
+        "uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "a00c0603-e122-4d00-8ab8-18168bc5ca9a",
+            "version": [1, 0, 0]
+        }
+    ]
 }
 ```
 
-Now, we can add a little trick to creating add-ons. If you look at the UUIDs I put in both the BP and RP, you'll notice the UUID in the `dependencies` of the BP is the same as the UUID from the RP. This makes it so that if both the RP and BP are on your device, you will only need to assign the BP to your world, and the RP will get applied automatically too!
+Now, we can add a little trick to creating add-ons. If you look at the UUIDs I put in both the BP and RP; you'll notice the UUID in the `dependencies` of the BP is the same as the UUID from the RP. This makes it so that if both the RP and BP are on your device, you will only need to assign the BP to your world, and the RP will get applied automatically too!
 
 _Now, make sure you replaced all the UUIDs with NEW ones **and** that the UUID from the RP is the exact same as the one in the `dependencies` of the BP._
 
@@ -119,7 +119,7 @@ I'm going to use this image here for both the BP and RP:
 TODO Add new pack_icon
 <WikiImage src="/assets/images/guide/pack_icon_BP.png" alt="Pack Icon" pixelated/>
 
-The last thing to do is to validate he text in your packs for other languages. For this, create a file called `en_US.lang` in `RP/texts/` and copy these lines into it, defining your packs' name and desciprions for the mentioned language:
+The last thing to do is to validate the text in your packs for other languages. For this, create a file called `en_US.lang` in `RP/texts/` and copy these lines into it, defining your packs' name and descriptions for the mentioned language:
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 

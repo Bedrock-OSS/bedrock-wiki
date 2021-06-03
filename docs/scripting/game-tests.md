@@ -9,10 +9,10 @@ badge_color: yellow
 # Game Tests
 
 ::: tip
-contents='The GameTest framework requires you to activate **"Enable GameTest Framework"** in your world settings and you must be using **Minecraft 1.16.210.60 beta or above**'
+contents='The GameTest framework requires you to activate **"Enable GameTest Framework"** in your world settings, and you must be using **Minecraft 1.16.210.60 beta or above**'
 :::
 
-GameTests are a new feature which allow developers to create unit tests to make it easier to test if game mechanics work. They are created with javascript files in the behavior pack folder and each file can register multiple GameTests. Each GameTest must also have an .mcstructure file in the `BP/structures` folder.
+GameTests are a new feature that allows developers to create unit tests to make it easier to test if game mechanics work. They are built with javascript files in the behavior pack folder, and each file can register multiple GameTests. Each GameTest must also have a .mcstructure file in the `BP/structures` folder.
 
 It is recommended that your GameTests go in the `BP/scripts/gametests` directory.
 
@@ -20,47 +20,47 @@ It is recommended that your GameTests go in the `BP/scripts/gametests` directory
 
 ## Using GameTests
 
-In the behavior pack manifest you need to add a `javascript` module where you set an `entry` point for your GameTests.
+In the behavior pack manifest, you need to add a `javascript` module to set an `entry` point for your GameTests.
 
 <CodeHeader>BP/manifest.json</CodeHeader>
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "Pack Name",
-		"description": "Pack descripton",
-		"min_engine_version": [1, 16, 210],
-		"uuid": "604420b9-f4c3-4df2-9f09-4364486f1195",
-		"version": [1, 0, 0]
-	},
-	"modules": [
-		{
-			"description": "",
-			"type": "data",
-			"uuid": "42651ba5-6619-4547-9d48-84a5a37cf2a3",
-			"version": [1, 0, 0]
-		},
-		{
-			"description": "",
-			"uuid": "239c134f-67bf-4738-9bcc-8c69d31b1f72",
-			"version": [1, 0, 0],
-			"type": "javascript",
-			"entry": "scripts/gametests/Main.js"
-		}
-	],
-	"dependencies": [
-		{
-			// Minecraft native module - needed to use the "Minecraft" module
-			"uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
-			"version": [0, 1, 0]
-		},
-		{
-			// GameTest native module - needed to use the "GameTest" module
-			"uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
-			"version": [0, 1, 0]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "Pack Name",
+        "description": "Pack descripton",
+        "min_engine_version": [1, 16, 210],
+        "uuid": "604420b9-f4c3-4df2-9f09-4364486f1195",
+        "version": [1, 0, 0]
+    },
+    "modules": [
+        {
+            "description": "",
+            "type": "data",
+            "uuid": "42651ba5-6619-4547-9d48-84a5a37cf2a3",
+            "version": [1, 0, 0]
+        },
+        {
+            "description": "",
+            "uuid": "239c134f-67bf-4738-9bcc-8c69d31b1f72",
+            "version": [1, 0, 0],
+            "type": "javascript",
+            "entry": "scripts/gametests/Main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            // Minecraft native module - needed to use the "Minecraft" module
+            "uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
+            "version": [0, 1, 0]
+        },
+        {
+            // GameTest native module - needed to use the "GameTest" module
+            "uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
+            "version": [0, 1, 0]
+        }
+    ]
 }
 ```
 
@@ -85,7 +85,7 @@ Runs all GameTests in range.
 
 -   `/gametest pos`
 
-Tells you the relative coordinates of the nearest GameTest.
+It tells you the relative coordinates of the nearest GameTest.
 
 -   `/gametest clearall [radius: int]`
 
@@ -112,17 +112,17 @@ import * as GameTest from 'GameTest'
 import { BlockLocation } from 'Minecraft'
 
 GameTest.register('MinecartTests', 'turn', (test) => {
-	const minecartActorType = 'minecart'
+    const minecartActorType = 'minecart'
 
-	const endPos = new BlockLocation(1, 2, 2)
-	const startPos = new BlockLocation(1, 2, 0)
+    const endPos = new BlockLocation(1, 2, 2)
+    const startPos = new BlockLocation(1, 2, 0)
 
-	test.assertEntityPresent(minecartActorType, startPos)
-	test.assertEntityNotPresent(minecartActorType, endPos)
+    test.assertEntityPresent(minecartActorType, startPos)
+    test.assertEntityNotPresent(minecartActorType, endPos)
 
-	test.pressButton(new BlockLocation(0, 3, 0))
+    test.pressButton(new BlockLocation(0, 3, 0))
 
-	test.succeedWhenEntityPresent(minecartActorType, endPos)
+    test.succeedWhenEntityPresent(minecartActorType, endPos)
 }).tag(GameTest.Tags.suiteDefault)
 ```
 
@@ -133,26 +133,26 @@ import * as GameTest from 'GameTest'
 import { BlockLocation } from 'Minecraft'
 
 GameTest.register('DoorTests', 'four_villagers_one_door', (test) => {
-	const villagerActorType = 'minecraft:villager_v2'
-	const villagerActorSpawnType =
-		'minecraft:villager_v2<minecraft:spawn_farmer>' // Attempt to spawn the villagers as farmers
+    const villagerActorType = 'minecraft:villager_v2'
+    const villagerActorSpawnType =
+        'minecraft:villager_v2<minecraft:spawn_farmer>' // Attempt to spawn the villagers as farmers
 
-	test.spawn(villagerActorSpawnType, new BlockLocation(5, 2, 4))
-	test.spawn(villagerActorSpawnType, new BlockLocation(4, 2, 5))
-	test.spawn(villagerActorSpawnType, new BlockLocation(2, 2, 5))
-	test.spawn(villagerActorSpawnType, new BlockLocation(1, 2, 4))
+    test.spawn(villagerActorSpawnType, new BlockLocation(5, 2, 4))
+    test.spawn(villagerActorSpawnType, new BlockLocation(4, 2, 5))
+    test.spawn(villagerActorSpawnType, new BlockLocation(2, 2, 5))
+    test.spawn(villagerActorSpawnType, new BlockLocation(1, 2, 4))
 
-	test.succeedWhen(() => {
-		test.assertEntityPresent(villagerActorType, new BlockLocation(5, 2, 2))
-		test.assertEntityPresent(villagerActorType, new BlockLocation(5, 2, 1))
-		test.assertEntityPresent(villagerActorType, new BlockLocation(1, 2, 2))
-		test.assertEntityPresent(villagerActorType, new BlockLocation(1, 2, 1))
-	})
+    test.succeedWhen(() => {
+        test.assertEntityPresent(villagerActorType, new BlockLocation(5, 2, 2))
+        test.assertEntityPresent(villagerActorType, new BlockLocation(5, 2, 1))
+        test.assertEntityPresent(villagerActorType, new BlockLocation(1, 2, 2))
+        test.assertEntityPresent(villagerActorType, new BlockLocation(1, 2, 1))
+    })
 })
-	.tag(GameTest.Tags.suiteDefault)
-	.padding(50) // Space out villager tests to stop them from confusing each other
-	.batch('night') // This should be a constant at some point
-	.maxTicks(600)
+    .tag(GameTest.Tags.suiteDefault)
+    .padding(50) // Space out villager tests to stop them from confusing each other
+    .batch('night') // This should be a constant at some point
+    .maxTicks(600)
 ```
 
 # Modules
@@ -243,7 +243,7 @@ Registers a GameTest into Minecraft
 
 ▸ **above**(): [_BlockLocation_](#interfacesblocklocation)
 
-Returns the block position it was called on but increases the y coordinate by 1
+Returns the block position it was called on but increased the y coordinate by 1
 
 **Returns:** [_BlockLocation_](#interfacesblocklocation)
 
@@ -275,7 +275,7 @@ Creates a block position
 
 ### Methods
 
-Contains a method for every vanilla block. Every method is in camelCase. Example:
+Contains a method for every vanilla block. Every technique is in camelCase. Example:
 
 ▸ **air**(): [_Block_](#interfacesblock)
 
@@ -285,7 +285,7 @@ Contains a method for every vanilla block. Every method is in camelCase. Example
 
 ▸ **get**(`id`: _string_): [_Block_](#interfacesblock)
 
-Fetches the requested block and returns it, if the block doesn't exist, this returns null
+Fetches the requested block and returns it. If the block doesn't exist, this returns null.
 
 ##### Parameters:
 
@@ -367,7 +367,7 @@ Gets the itemStack at the given slot
 
 ▸ **relativeLocation**(`worldPosition`: [_BlockLocation_](#interfacesblocklocation)): _any_
 
-Transforms the coordinates of given world location to its corresponding GameTest location
+Transforms the coordinates of a given world location to its corresponding GameTest location
 
 ##### Parameters:
 
@@ -400,7 +400,7 @@ Adds itemStack to the container at the given slot
 
 ▸ **swapItems**(`slot`: _number_, `otherSlot`: _number_, `otherContainer`: [_Container_](#interfacescontainer)): _void_
 
-Swaps ItemStacks between slot of the container and otherSlot of otherContainer
+Swaps ItemStacks between the slot of the container and otherSlot of otherContainer
 
 ##### Parameters:
 
@@ -780,7 +780,7 @@ Gets an effect from the Entity
 
 ▸ **getName**(): _string_
 
-Returns the name of the entity (e.g. "Horse")
+Returns the name of the entity (e.g., "Horse")
 
 **Returns:** _string_
 
@@ -820,7 +820,7 @@ Kills the entity
 
 • **container**: [_Container_](#interfacescontainer)
 
-The container of this component. Can only be used on the "inventory" component
+The container of this component. It can only be used on the "inventory" component.
 
 ### Methods
 
@@ -838,7 +838,7 @@ Returns the name of the component
 
 ▸ **leash**(`entity`: [_Entity_](#interfacesentity)): _void_
 
-Leashes this entity to another given entity. This must be used on the "minecraft:leashable" component
+Leashes this entity to another given entity. This must be used on the "minecraft:leashable" component.
 
 ##### Parameters:
 
@@ -870,7 +870,7 @@ Sets the entity as tamed
 
 ▸ **unleash**(): _void_
 
-Causes this entity to detach leashes. This must be used on the "minecraft:leashable" component
+Causes this entity to detach leashes. This must be used on the "minecraft:leashable" component.
 
 **Returns:** _void_
 
@@ -902,7 +902,7 @@ Contains a method for every vanilla item. Every method is in camelCase. Example:
 
 \+ **new ItemStack**(`item`: [_Item_](#interfacesitem), `amount`: _number_, `data`: _number_): [_ItemStack_](#interfacesitemstack)
 
-Creates a an item stack
+Creates an item stack
 
 ##### Parameters:
 
@@ -924,7 +924,7 @@ Creates a an item stack
 
 ▸ **assertEntityData**(`position`: [_BlockLocation_](#interfacesblocklocation), `id`: _string_, `func`: (`entity`: [_Entity_](#interfacesentity)) => _void_): _void_
 
-Asserts that the given condition is true for all entities of the given type at the given location
+Asserts that the given condition is valid for all entities of the given type at the given location
 
 ##### Parameters:
 
@@ -1069,14 +1069,14 @@ Asserts that the entity item count in the given search area matches the expected
 
 ▸ **assertRedstonePower**(`position`: [_BlockLocation_](#interfacesblocklocation), `power`: _number_): _void_
 
-Asserts the redstone power level at the given location
+Asserts the Redstone power level at the given location
 
 ##### Parameters:
 
 | Name       | Type                                        | Description                          |
 | :--------- | :------------------------------------------ | :----------------------------------- |
 | `position` | [_BlockLocation_](#interfacesblocklocation) | Position of the block to test        |
-| `power`    | _number_                                    | The redstone power level to test for |
+| `power`    | _number_                                    | The Redstone power level to test for |
 
 **Returns:** _void_
 
@@ -1108,8 +1108,8 @@ Creates a Redstone block at the given position and destroys it after "duration" 
 
 | Name       | Type                                        | Description                                    |
 | :--------- | :------------------------------------------ | :--------------------------------------------- |
-| `position` | [_BlockLocation_](#interfacesblocklocation) | Position to place the redstone block           |
-| `duration` | _number_                                    | The time until the redstone block is destroyed |
+| `position` | [_BlockLocation_](#interfacesblocklocation) | Position to place the Redstone block           |
+| `duration` | _number_                                    | The time until the Redstone block is destroyed |
 
 **Returns:** _void_
 
@@ -1186,7 +1186,7 @@ Executes the function after the time given when called
 
 ▸ **thenIdle**(`time`: _number_): [_Sequence_](#interfacessequence)
 
-Causes the sequence to wait for the given amount of time
+It causes the sequence to wait for the given amount of time.
 
 ##### Parameters:
 
@@ -1212,7 +1212,7 @@ Causes the GameTest to succeed
 
 ▸ **thenWait**(`func`: () => _void_): [_Sequence_](#interfacessequence)
 
-Causes the sequence to wait until the function asserts an error
+It causes the sequence to wait until the function asserts an error.
 
 ##### Parameters:
 
@@ -1228,7 +1228,7 @@ Causes the sequence to wait until the function asserts an error
 
 ▸ **thenWaitWithDelay**(`delayTicks`: _number_, `func`: () => _void_): [_Sequence_](#interfacessequence)
 
-Causes the sequence to wait until the function asserts an error and the delay has passed
+It causes the sequence to wait until the function asserts an error and the delay has passed.
 
 ##### Parameters:
 
@@ -1389,7 +1389,7 @@ Throws an Error if an entity matching the given identifier does not exist in the
 
 | Name | Type     | Description                             |
 | :--- | :------- | :-------------------------------------- |
-| `id` | _string_ | The identifer of the entity to test for |
+| `id` | _string_ | The identifier of the entity to test for |
 
 **Returns:** _void_
 
@@ -1422,7 +1422,7 @@ Throws an Error if an entity matching the given identifier exists in the test re
 
 | Name | Type     | Description                             |
 | :--- | :------- | :-------------------------------------- |
-| `id` | _string_ | The identifer of the entity to test for |
+| `id` | _string_ | The identifier of the entity to test for |
 
 **Returns:** _void_
 
@@ -1484,7 +1484,7 @@ Causes the GameTest to fail
 
 ▸ **failIf**(`func`: () => _void_): _void_
 
-When the `func` parameter calls an assert function the GameTest will fail
+When the `func` parameter calls an assert function, the GameTest will fail.
 
 ##### Parameters:
 
@@ -1500,7 +1500,7 @@ When the `func` parameter calls an assert function the GameTest will fail
 
 ▸ **killAllEntities**(): _void_
 
-Kills all entities in the test
+It kills all entities in the test.
 
 **Returns:** _void_
 
@@ -1542,7 +1542,7 @@ Pulls a lever at the given coordinates if there is one there
 
 ▸ **runAfterDelay**(`ticks`: _number_, `func`: (`test`: [_Test_](#interfacestest)) => _void_): _void_
 
-Runs the a function after the set delay
+Runs the function after the set delay
 
 ##### Parameters:
 
@@ -1591,7 +1591,7 @@ Places the specified block at the specified coordinates
 
 ▸ **startSequence**(): [_Sequence_](#interfacessequence)
 
-Allows finer control over advanced test sequences
+Allows more refined control over advanced test sequences
 
 **Returns:** [_Sequence_](#interfacessequence)
 
@@ -1601,7 +1601,7 @@ Allows finer control over advanced test sequences
 
 ▸ **succeed**(): _void_
 
-When this is called, the GameTest succeeds
+When this is called, the GameTest succeeds.
 
 **Returns:** _void_
 
@@ -1611,13 +1611,13 @@ When this is called, the GameTest succeeds
 
 ▸ **succeedOnTick**(`tick`: _number_): _void_
 
-The GameTest will succeed when the given amount of ticks has passed
+The GameTest will succeed when the given amount of ticks has passed.
 
 ##### Parameters:
 
 | Name   | Type     | Description                       |
 | :----- | :------- | :-------------------------------- |
-| `tick` | _number_ | The tick to succed the test after |
+| `tick` | _number_ | The tick to succeed the test after |
 
 **Returns:** _void_
 
@@ -1627,7 +1627,7 @@ The GameTest will succeed when the given amount of ticks has passed
 
 ▸ **succeedOnTickWhen**(`tick`: _number_, `func`: () => _void_): _void_
 
-The GameTest will succeed when the given amount of ticks has passed and the `func` parameter calls an assert function
+The GameTest will succeed when the given amount of ticks has passed, and the `func` parameter calls an assert function.
 
 ##### Parameters:
 
@@ -1644,7 +1644,7 @@ The GameTest will succeed when the given amount of ticks has passed and the `fun
 
 ▸ **succeedWhen**(`func`: () => _void_): _void_
 
-When the `func` paramater calls an assert function the GameTest will succeed
+When the `func` parameter calls an assert function, the GameTest will succeed.
 
 ##### Parameters:
 
@@ -1660,7 +1660,7 @@ When the `func` paramater calls an assert function the GameTest will succeed
 
 ▸ **succeedWhenBlockPresent**(`id`: [_Block_](#interfacesblock), `position`: [_BlockLocation_](#interfacesblocklocation)): _void_
 
-The GameTest will succeed when the given block is found at the given coordinates
+The GameTest will succeed when the given block is found at the given coordinates.
 
 ##### Parameters:
 
@@ -1673,7 +1673,7 @@ The GameTest will succeed when the given block is found at the given coordinates
 
 ▸ **succeedWhenBlockPresent**(`id`: [_Block_](#interfacesblock), `position`: [_BlockLocation_](#interfacesblocklocation)): _void_
 
-The GameTest will succeed when the specified block is found at the specified coordinates
+The GameTest will succeed when the specified block is found at the specified coordinates.
 
 ##### Parameters:
 
@@ -1690,14 +1690,14 @@ The GameTest will succeed when the specified block is found at the specified coo
 
 ▸ **succeedWhenEntityHasComponent**(`id`: _string_, `component`: _string_, `position`: [_BlockLocation_](#interfacesblocklocation), `hasComponent`: _boolean_): _void_
 
-The GameTest will succeed when the given entity has the given component
+The GameTest will succeed when the given entity has the given component.
 
 ##### Parameters:
 
 | Name           | Type                                        | Description                                               |
 | :------------- | :------------------------------------------ | :-------------------------------------------------------- |
 | `id`           | _string_                                    | The entity to test for                                    |
-| `component`    | _string_                                    | The component identififer to test for                     |
+| `component`    | _string_                                    | The component identifier to test for                     |
 | `position`     | [_BlockLocation_](#interfacesblocklocation) | The position of the entity to test for                    |
 | `hasComponent` | _boolean_                                   | Whether the entity should or shouldn't have the component |
 
@@ -1709,7 +1709,7 @@ The GameTest will succeed when the given entity has the given component
 
 ▸ **succeedWhenEntityNotPresent**(`id`: _string_, `position`: [_BlockLocation_](#interfacesblocklocation)): _void_
 
-The GameTest will succeed when the given entity is not found at the given coordinates
+The GameTest will succeed when the given entity is not found at the given coordinates.
 
 ##### Parameters:
 
@@ -1726,7 +1726,7 @@ The GameTest will succeed when the given entity is not found at the given coordi
 
 ▸ **succeedWhenEntityPresent**(`id`: _string_, `position`: [_BlockLocation_](#interfacesblocklocation)): _void_
 
-The GameTest will succeed when the given entity is found at the given coordinates
+The GameTest will succeed when the given entity is found at the given coordinates.
 
 ##### Parameters:
 
@@ -1747,7 +1747,7 @@ The GameTest will succeed when the given entity is found at the given coordinate
 
 ▸ **batch**(`time`: _night_ \| _day_): [_TestRunner_](#interfacestestrunner)
 
-Sets the time of day when the GameTest is run. The time will be changed to the time set here when the GameTest is run
+Sets the time of day when the GameTest is run. The time will be changed to the time set here when the GameTest is run.
 
 ##### Parameters:
 
