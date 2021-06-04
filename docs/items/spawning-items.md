@@ -20,31 +20,31 @@ The simplest method of spawning items, and one which is often sought after, is d
 
 ## Dummy Entity Deaths
 
-We can use `minecraft:loot` on a [dummy entity](/tutorials/dummy-entities) that dies when we spawn it to create a `drop entity`. This entity can be summoned like `/summon sirlich:drop_entity` to spawn the items. This is useful for scenarios where death particles/sound is not an issue.
+We can use `minecraft:loot` on a [dummy entity](/entities/dummy-entities) that dies when we spawn it to create a `drop entity`. This entity can be summoned like `/summon sirlich:drop_entity` to spawn the items. This is useful for scenarios where death particles/sound is not an issue.
 
 Behaviors:
 
 ```json
 {
-    "format_version": "1.14.0",
-    "minecraft:entity": {
-        "description": {
-            "identifier": "sirlich:drop_entity",
-            "is_spawnable": true,
-            "is_summonable": true,
-            "is_experimental": false
-        },
+	"format_version": "1.14.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sirlich:drop_entity",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
 
-        "components": {
-            //causes the entity to die when spawned
-            "minecraft:health": {
-                "value": 0
-            },
-            "minecraft:loot": {
-                "table": "loot_tables/entities/some_loot.json"
-            }
-        }
-    }
+		"components": {
+			//causes the entity to die when spawned
+			"minecraft:health": {
+				"value": 0
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/some_loot.json"
+			}
+		}
+	}
 }
 ```
 
@@ -103,22 +103,22 @@ Teleporting the entity into the void causes no death animation, sound, or partic
 
 ```json
 {
-    "format_version": "1.10.0",
-    "animation_controllers": {
-        "controller.animation.drop_items.die": {
-            "initial_state": "spawn",
-            "states": {
-                "spawn": {
-                    "transitions": [{ "delay": "1" }]
-                },
-                "delay": {
-                    "transitions": [{ "die": "1" }]
-                },
-                "die": {
-                    "on_entry": ["/tp @s ~ -200 ~"]
-                }
-            }
-        }
-    }
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.drop_items.die": {
+			"initial_state": "spawn",
+			"states": {
+				"spawn": {
+					"transitions": [{ "delay": "1" }]
+				},
+				"delay": {
+					"transitions": [{ "die": "1" }]
+				},
+				"die": {
+					"on_entry": ["/tp @s ~ -200 ~"]
+				}
+			}
+		}
+	}
 }
 ```

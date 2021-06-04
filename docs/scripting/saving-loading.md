@@ -8,7 +8,7 @@ tags:
 
 Saving and loading data in Bedrock is tricky because scripts cannot access the local file system directly.
 
-Nonetheless, we can save data by [tagging](https://www.youtube.com/watch?v=tjragqkAlMc) a [dummy entity](https://wiki.bedrock.dev/tutorials/dummy-entities).
+Nonetheless, we can save data by [tagging](https://www.youtube.com/watch?v=tjragqkAlMc) a [dummy entity](https://wiki.bedrock.dev/entities/dummy-entities).
 
 Read about the `executeCommand` and the `broadcastEvent` functions [here](https://bedrock.dev/docs/stable/Scripting).
 
@@ -32,7 +32,7 @@ The server broadcasts an event the client listens for, so it can reply
 
 ## Saving
 
-1. Add the dummy JSON files from the [dummy entity tutorial](https://wiki.bedrock.dev/tutorials/dummy-entities) to your behavior and resource packs
+1. Add the dummy JSON files from the [dummy entity tutorial](https://wiki.bedrock.dev/entities/dummy-entities) to your behavior and resource packs
 2. Add a save function to your server script, calling `executeCommand`. This function will check if the dummy entity is created. If not, it will create it and save to it.
 3. Add a listener to your server's initialize function, which will listen to a save event broadcast by your client script. Call your save code here
 4. broadcast an event in your client to let the server know when we want to save data

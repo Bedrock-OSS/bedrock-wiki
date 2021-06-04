@@ -19,10 +19,10 @@ Let's get started.
 1. Open Blockbench.
 1. Choose _File>New>Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
 1. A screen like this will have popped up.
-   ![](/public/assets/images/guide/create_entity_project_menu.png) - "File name:" Self-explanatory. My file will generate as "skele_yaklin.geo.json"; - "Model Identifier:" This is the model identifier (namespace not required), a shortname for this ID will be defined later; - "Box UV" has to be checked on for automatic UV editing and unwrapping for texturing. - "Texture Height" and "Texture Width" define the resolution of the Model's textures;
+   ![](/assets/images/guide/create_entity_project_menu.png) - "File name:" Self-explanatory. My file will generate as "skele_yaklin.geo.json"; - "Model Identifier:" This is the model identifier (namespace not required), a shortname for this ID will be defined later; - "Box UV" has to be checked on for automatic UV editing and unwrapping for texturing. - "Texture Height" and "Texture Width" define the resolution of the Model's textures;
 
 1. Press confirm. You'll see a screen like this:
-   ![](/public/assets/images/guide/create_entity_workspace.png) - You can see many tools here: move, resize, rotate, etc. - You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own, the bones will carry everything in them along;
+   ![](/assets/images/guide/create_entity_workspace.png) - You can see many tools here: move, resize, rotate, etc. - You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own, the bones will carry everything in them along;
 
 1. Now you are ready to create your own model! For more in-depth tutorials on modeling please check out the videos by Everbloom Studio below.
 
@@ -38,9 +38,9 @@ _Note: the model and texture showcased are the courtesy of Team Adamantine Forge
 
 1. On left-bottom panel click "Create Texture"
 1. Write down your image file name under "Name:". Mine will export as `skele_yaklin.png`. Check "Template:" in order to make a template texture - it'll be easier to work with.
-   ![](/public/assets/images/guide/create_entity_texture_1.png)
+   ![](/assets/images/guide/create_entity_texture_1.png)
 1. Check everything and change your resolution to the one you set in the very first step.
-   ![](/public/assets/images/guide/create_entity_texture_2.png)
+   ![](/assets/images/guide/create_entity_texture_2.png)
 1. Go to "Paint" in the upper right corner and paint your texture.
 
 # Animating
@@ -48,16 +48,16 @@ _Note: the model and texture showcased are the courtesy of Team Adamantine Forge
 Once your model and texture are done, you can start animating. Go to "Animate" in the upper right corner.
 
 You might want to adjust one of the toolbars by adding "Export Animations" and "Import Animations" like this:
-![](/public/assets/images/guide/create_entity_animation_1.png)
+![](/assets/images/guide/create_entity_animation_1.png)
 
 1. Click "Add Animation" [the plus icon on the top right side] and name it `animation.yourModelname.walk`.
    Create the first frame of your walking animation under 0 on the timeline by moving the legs.
-   ![](/public/assets/images/guide/create_entity_animation_2.png)
+   ![](/assets/images/guide/create_entity_animation_2.png)
 1. Create the second frame under 0.5 on the timeline.
-   ![](/public/assets/images/guide/create_entity_animation_3.png)
+   ![](/assets/images/guide/create_entity_animation_3.png)
 1. Finally, copy the first frame to the third frame by placing your timeline cursor on 1.0 and selecting the first frame then ctrl+c, ctrl+v.
 1. Right click the animation and tick "Loop" in order for the animation to loop.
-   ![](/public/assets/images/guide/create_entity_animation_4.png)
+   ![](/assets/images/guide/create_entity_animation_4.png)
 
 # Saving your work
 

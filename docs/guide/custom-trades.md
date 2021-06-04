@@ -42,7 +42,7 @@ For a simple trading UI, `trade_table` + `trade_with_player` components should d
 
 The Trade Table syntax is somewhat similar to that of Loot Tables. It's located in any subfolder of BP/trades/. The trade table file name is important, since it's path is referenced/called in the behavior file. Let's break it up somewhat:
 
-![](/public/assets/images/guide/trade_table_tree_1.png)
+![](/assets/images/guide/trade_table_tree_1.png)
 
 First, the main object opens. Then comes an array under keyword _tiers_, including however many arrays needed.
 
@@ -53,11 +53,11 @@ Every tier has two keys ("parameters").
 -   "`total_exp_required`" is quite self-explanatory: the number of _xp_ the entity needs to gain while trading before the _tier_ unlocks. The first tier in the array must have this set to `0`. Typically, the higher the tier, the higher the xp number that needs to be unlocked. If this is set to `0` for all tiers, all tiers will be initially unlocked.
 
 -   "`groups`" array holds _trade groups_. They're also objects. There must be at least 1 Trade group in every groups array, otherwise an error will be returned.
-    ![](/public/assets/images/guide/trade_table_tree_2.png)
-    ![](/public/assets/images/guide/trade_table_tree_3.png)
+    ![](/assets/images/guide/trade_table_tree_2.png)
+    ![](/assets/images/guide/trade_table_tree_3.png)
 
 Lower you can see how a _group_ looks inside. As you can see, it holds "`trades`" objects in the array. The other parameter is "`num_to_select`". This number defines the number of trades from this group to be applied (randomly selected), and cannot be more then the number of defined trades. For example, here we have two *trade*s in the _trade group_ and `num_to_select` set to `1`. This means that only one trade from the two will be selected for the entity with equal chances. See Wandering Trader file for clear examples.
-![](/public/assets/images/guide/trade_table_tree_4.png)
+![](/assets/images/guide/trade_table_tree_4.png)
 
 ```json
 {
@@ -132,7 +132,7 @@ Finally, we'll look through the trade object itself. It's quite self-explanatory
 This example Trade Table has a single _tier_, which is unlocked by default, a single _group_ inside, with a single _trade_ that is always going to be selected.
 The Trade Table "_hierarchy_" should be pretty well understood by now.
 
-![](/public/assets/images/guide/trade_table_tree_5.png)
+![](/assets/images/guide/trade_table_tree_5.png)
 
 For more examples/info, I recommend checking out the Vanilla trades/villagers files in the Example behavior pack.
 

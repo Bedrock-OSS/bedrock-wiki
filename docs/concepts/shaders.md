@@ -145,4 +145,4 @@ GLSL version of debugging shader may crash Minecraft, use only for debugging.
 
 [Download debug shader](http://files.stirante.com/debugShader.zip)
 
-![](/public/assets/images/knowledge/shaders/debugShader.gif)
+![](/assets/images/knowledge/shaders/debugShader.gif)

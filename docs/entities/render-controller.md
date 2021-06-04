@@ -20,23 +20,23 @@ Lets look at a simplified version of the spider RP entity file:
 
 ```json
 {
-    "format_version": "1.8.0",
-    "minecraft:client_entity": {
-        "description": {
-            "identifier": "minecraft:cave_spider",
-            "materials": {
-                "default": "spider",
-                "invisible": "spider_invisible"
-            },
-            "textures": {
-                "default": "textures/entity/spider/cave_spider"
-            },
-            "geometry": {
-                "default": "geometry.spider.v1.8"
-            },
-            "render_controllers": ["controller.render.spider"]
-        }
-    }
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:cave_spider",
+			"materials": {
+				"default": "spider",
+				"invisible": "spider_invisible"
+			},
+			"textures": {
+				"default": "textures/entity/spider/cave_spider"
+			},
+			"geometry": {
+				"default": "geometry.spider.v1.8"
+			},
+			"render_controllers": ["controller.render.spider"]
+		}
+	}
 }
 ```
 
@@ -59,18 +59,18 @@ A simple render controller looks like this:
 
 ```json
 {
-    "format_version": "1.8.0",
-    "render_controllers": {
-        "controller.render.cow": {
-            "geometry": "Geometry.default",
-            "materials": [
-                {
-                    "*": "Material.default"
-                }
-            ],
-            "textures": ["Texture.default"]
-        }
-    }
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.cow": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": ["Texture.default"]
+		}
+	}
 }
 ```
 
@@ -113,22 +113,22 @@ Texture layering is achieved through the use of render controllers. If you aren'
 
 ```json
 {
-    "format_version": "1.10.0",
-    "render_controllers": {
-        "controller.render.texture_layering": {
-            "geometry": "Geometry.default",
-            "materials": [
-                {
-                    "*": "Material.default"
-                }
-            ],
-            "textures": [
-                //You can add as many layers as you like. Layers are added top to bottom.
-                "Texture.bottom_layer",
-                "Texture.top_layer"
-            ]
-        }
-    }
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.texture_layering": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				//You can add as many layers as you like. Layers are added top to bottom.
+				"Texture.bottom_layer",
+				"Texture.top_layer"
+			]
+		}
+	}
 }
 ```
 
@@ -168,30 +168,30 @@ Set multiple top textures, which we will index later.
 
 ```json
 {
-    "format_version": "1.10.0",
-    "render_controllers": {
-        "controller.render.wool_only": {
-            "arrays": {
-                "textures": {
-                    "Array.top": [
-                        "Texture.top_1",
-                        "Texture.top_2",
-                        "Texture.top_3"
-                    ]
-                }
-            },
-            "geometry": "Geometry.default",
-            "materials": [
-                {
-                    "*": "Material.default"
-                }
-            ],
-            "textures": [
-                "Texture.bottom", //static bottom texture
-                "Array.top[query.variant]" //pick top texture based on entity variant.
-            ]
-        }
-    }
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.wool_only": {
+			"arrays": {
+				"textures": {
+					"Array.top": [
+						"Texture.top_1",
+						"Texture.top_2",
+						"Texture.top_3"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.bottom", //static bottom texture
+				"Array.top[query.variant]" //pick top texture based on entity variant.
+			]
+		}
+	}
 }
 ```
 
@@ -215,4 +215,4 @@ If you want to change the texture of an entity during gameplay dynamically, you 
 
 ### Dynamic Layered Textures
 
-Dynamic layered textures can be achieved by adding more lists of textures and other dummy components as indexes. You can [read about dummy components here](/tutorials/dummy-entities)
+Dynamic layered textures can be achieved by adding more lists of textures and other dummy components as indexes. You can [read about dummy components here](/entities/dummy-entities)

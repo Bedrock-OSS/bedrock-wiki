@@ -130,7 +130,7 @@ pack.description=Bedrock OSS Organization
 
 If you have done everything correctly, your packs should show up in Minecraft now!
 TODO Replace this image
-![](/public/assets/images/guide/behavior_pack_existing.jpg)
+![](/assets/images/guide/behavior_pack_existing.jpg)
 
 ---
 
@@ -143,12 +143,12 @@ Now to create a testing world to test your new add-on!
 2. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
 
 TODO Replace these images
-![](/public/assets/images/guide/world_params_1.jpg)
-![](/public/assets/images/guide/world_params_2.jpg)
-![](/public/assets/images/guide/world_params_3.jpg)
+![](/assets/images/guide/world_params_1.jpg)
+![](/assets/images/guide/world_params_2.jpg)
+![](/assets/images/guide/world_params_3.jpg)
 
 Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too. Otherwise, it'll be applied automatically). Now click '**Create**'. You might need a separate '_Infinite_' world to test entity spawning too.
-![](/public/assets/images/guide/behavior_pack_applied.png)
+![](/assets/images/guide/behavior_pack_applied.png)
 
 ---
 

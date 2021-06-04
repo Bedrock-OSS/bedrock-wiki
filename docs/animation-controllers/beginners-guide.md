@@ -12,7 +12,7 @@ tags:
 First, let's create the animation itself in Blockbench. Choose _File>Open Model>yourModelFile_ and choose the _Animation_ workspace in the top right corner. Now, unlike the walk animation we already created, our attack animation will consist of a single frame, because Animation Controllers have a "transitions" feature that blends two following animations smoothly. After you're done, name your animation `animation.entityname.attack`, choose _Export Animations_ and replace your old animations file in `RP/animations`.
 _Note: you can find Animations documented on [bedrock.dev/r/MoLang](https://bedrock.dev/r/MoLang) and [bedrock.dev/r/Animations](https://bedrock.dev/r/Animations). For Behavior Animations, refer to [bedrock.dev/r/Entity Events](https://bedrock.dev/r/Entity%20Events)._
 
-![](/public/assets/images/guide/animation_controllers_1.png)
+![](/assets/images/guide/animation_controllers_1.png)
 As you see, the attack frame is created fully under the keyframe '0'.
 
 Now for the actual
@@ -21,7 +21,7 @@ Now for the actual
 
 Create `RP/animation_controllers/entityName.animation.controller.json`. Let's go over the overall structure of an animation controller.
 
-![](/public/assets/images/guide/animation_controllers_2.png)
+![](/assets/images/guide/animation_controllers_2.png)
 
 -   The animation controller's identifier is `controller.animation.skele_yaklin.attack` We'll define it in the _.entity_ file like a normal animation.
 -   Animation controllers are **State Machines**, which means they work on states. Every state is unique, but they can transition between each other.

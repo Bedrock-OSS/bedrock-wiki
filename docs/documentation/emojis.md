@@ -17,135 +17,135 @@ There will be instructions for creating custom emoji at the bottom.
 
 ## General
 
-| Name             | Letter (Copy/Paste This) | Unicode | Image                                                                        |
-| ---------------- | ------------------------ | ------- | ---------------------------------------------------------------------------- |
-| Armor            |                         | U+E101  | ![](/public/assets/images/documentation/emojis/general/armor.png)            |
-| Food             |                         | U+E100  | ![](/public/assets/images/documentation/emojis/general/food.png)             |
-| Minecoin         |                         | U+E102  | ![](/public/assets/images/documentation/emojis/general/minecoin.png)         |
-| Token            |                         | U+E105  | ![](/public/assets/images/documentation/emojis/general/token.png)            |
-| Agent            |                         | U+E103  | ![](/public/assets/images/documentation/emojis/general/agent.png)            |
-| Immersive Reader |                         | U+E104  | ![](/public/assets/images/documentation/emojis/general/immersive_reader.png) |
-| Craft Toggle On  |                         | U+E0A0  | ![](/public/assets/images/documentation/emojis/general/craft_toggle_on.png)  |
-| Craft Toggle Off |                         | U+E0A1  | ![](/public/assets/images/documentation/emojis/general/craft_toggle_off.png) |
+| Name             | Letter (Copy/Paste This) | Unicode | Image                                                                 |
+| ---------------- | ------------------------ | ------- | --------------------------------------------------------------------- |
+| Armor            |                         | U+E101  | ![](/assets/images/documentation/emojis/general/armor.png)            |
+| Food             |                         | U+E100  | ![](/assets/images/documentation/emojis/general/food.png)             |
+| Minecoin         |                         | U+E102  | ![](/assets/images/documentation/emojis/general/minecoin.png)         |
+| Token            |                         | U+E105  | ![](/assets/images/documentation/emojis/general/token.png)            |
+| Agent            |                         | U+E103  | ![](/assets/images/documentation/emojis/general/agent.png)            |
+| Immersive Reader |                         | U+E104  | ![](/assets/images/documentation/emojis/general/immersive_reader.png) |
+| Craft Toggle On  |                         | U+E0A0  | ![](/assets/images/documentation/emojis/general/craft_toggle_on.png)  |
+| Craft Toggle Off |                         | U+E0A1  | ![](/assets/images/documentation/emojis/general/craft_toggle_off.png) |
 
 ## Mobile (iOS/Android/Fire TV)
 
-| Name        | Letter (Copy/Paste This) | Unicode | Image                                                                  |
-| ----------- | ------------------------ | ------- | ---------------------------------------------------------------------- |
-| Jump        |                         | U+E084  | ![](/public/assets/images/documentation/emojis/mobile/jump.png)        |
-| Couch       |                         | U+E085  | ![](/public/assets/images/documentation/emojis/mobile/crouch.png)      |
-| Fly Up      |                         | U+E086  | ![](/public/assets/images/documentation/emojis/mobile/fly_up.png)      |
-| Fly Down    |                         | U+E087  | ![](/public/assets/images/documentation/emojis/mobile/fly_down.png)    |
-| Left Arrow  |                         | U+E081  | ![](/public/assets/images/documentation/emojis/mobile/left_arrow.png)  |
-| Right Arrow |                         | U+E083  | ![](/public/assets/images/documentation/emojis/mobile/right_arrow.png) |
-| Up Arrow    |                         | U+E080  | ![](/public/assets/images/documentation/emojis/mobile/up_arrow.png)    |
-| Down Arrow  |                         | U+E082  | ![](/public/assets/images/documentation/emojis/mobile/down_arrow.png)  |
+| Name        | Letter (Copy/Paste This) | Unicode | Image                                                           |
+| ----------- | ------------------------ | ------- | --------------------------------------------------------------- |
+| Jump        |                         | U+E084  | ![](/assets/images/documentation/emojis/mobile/jump.png)        |
+| Couch       |                         | U+E085  | ![](/assets/images/documentation/emojis/mobile/crouch.png)      |
+| Fly Up      |                         | U+E086  | ![](/assets/images/documentation/emojis/mobile/fly_up.png)      |
+| Fly Down    |                         | U+E087  | ![](/assets/images/documentation/emojis/mobile/fly_down.png)    |
+| Left Arrow  |                         | U+E081  | ![](/assets/images/documentation/emojis/mobile/left_arrow.png)  |
+| Right Arrow |                         | U+E083  | ![](/assets/images/documentation/emojis/mobile/right_arrow.png) |
+| Up Arrow    |                         | U+E080  | ![](/assets/images/documentation/emojis/mobile/up_arrow.png)    |
+| Down Arrow  |                         | U+E082  | ![](/assets/images/documentation/emojis/mobile/down_arrow.png)  |
 
 ## PC (Windows 10/MacOS/Chrome OS)
 
-| Name         | Letter (Copy/Paste This) | Unicode | Image                                                               |
-| ------------ | ------------------------ | ------- | ------------------------------------------------------------------- |
-| Left Click   |                         | U+E060  | ![](/public/assets/images/documentation/emojis/pc/left_click.png)   |
-| Right Click  |                         | U+E061  | ![](/public/assets/images/documentation/emojis/pc/right_click.png)  |
-| Middle Click |                         | U+E062  | ![](/public/assets/images/documentation/emojis/pc/middle_click.png) |
+| Name         | Letter (Copy/Paste This) | Unicode | Image                                                        |
+| ------------ | ------------------------ | ------- | ------------------------------------------------------------ |
+| Left Click   |                         | U+E060  | ![](/assets/images/documentation/emojis/pc/left_click.png)   |
+| Right Click  |                         | U+E061  | ![](/assets/images/documentation/emojis/pc/right_click.png)  |
+| Middle Click |                         | U+E062  | ![](/assets/images/documentation/emojis/pc/middle_click.png) |
 
 ## Xbox (One/Series X/Series S)
 
-| Name               | Letter (Copy/Paste This) | Unicode | Image                                                                  |
-| ------------------ | ------------------------ | ------- | ---------------------------------------------------------------------- |
-| Y                  |                         | U+E003  | ![](/public/assets/images/documentation/emojis/xbox/y_button.png)      |
-| B                  |                         | U+E001  | ![](/public/assets/images/documentation/emojis/xbox/b_button.png)      |
-| A                  |                         | U+E000  | ![](/public/assets/images/documentation/emojis/xbox/a_button.png)      |
-| X                  |                         | U+E002  | ![](/public/assets/images/documentation/emojis/xbox/x_button.png)      |
-| Back               |                         | U+E008  | ![](/public/assets/images/documentation/emojis/xbox/back.png)          |
-| Start              |                         | U+E009  | ![](/public/assets/images/documentation/emojis/xbox/start.png)         |
-| LB (Left Bumper)   |                         | U+E004  | ![](/public/assets/images/documentation/emojis/xbox/left_bumper.png)   |
-| RB (Right Bumper)  |                         | U+E005  | ![](/public/assets/images/documentation/emojis/xbox/right_bumper.png)  |
-| LT (Left Trigger)  |                         | U+E006  | ![](/public/assets/images/documentation/emojis/xbox/left_trigger.png)  |
-| RT (Right Trigger) |                         | U+E007  | ![](/public/assets/images/documentation/emojis/xbox/right_trigger.png) |
-| LS (Left Stick)    |                         | U+E00A  | ![](/public/assets/images/documentation/emojis/xbox/left_stick.png)    |
-| RS (Right Stick)   |                         | U+E00B  | ![](/public/assets/images/documentation/emojis/xbox/right_stick.png)   |
-| D-pad Up           |                         | U+E00C  | ![](/public/assets/images/documentation/emojis/xbox/dpad_up.png)       |
-| D-pad Right        |                         | U+E00F  | ![](/public/assets/images/documentation/emojis/xbox/dpad_right.png)    |
-| D-pad Down         |                         | U+E00E  | ![](/public/assets/images/documentation/emojis/xbox/dpad_down.png)     |
-| D-pad Left         |                         | U+E00D  | ![](/public/assets/images/documentation/emojis/xbox/dpad_left.png)     |
+| Name               | Letter (Copy/Paste This) | Unicode | Image                                                           |
+| ------------------ | ------------------------ | ------- | --------------------------------------------------------------- |
+| Y                  |                         | U+E003  | ![](/assets/images/documentation/emojis/xbox/y_button.png)      |
+| B                  |                         | U+E001  | ![](/assets/images/documentation/emojis/xbox/b_button.png)      |
+| A                  |                         | U+E000  | ![](/assets/images/documentation/emojis/xbox/a_button.png)      |
+| X                  |                         | U+E002  | ![](/assets/images/documentation/emojis/xbox/x_button.png)      |
+| Back               |                         | U+E008  | ![](/assets/images/documentation/emojis/xbox/back.png)          |
+| Start              |                         | U+E009  | ![](/assets/images/documentation/emojis/xbox/start.png)         |
+| LB (Left Bumper)   |                         | U+E004  | ![](/assets/images/documentation/emojis/xbox/left_bumper.png)   |
+| RB (Right Bumper)  |                         | U+E005  | ![](/assets/images/documentation/emojis/xbox/right_bumper.png)  |
+| LT (Left Trigger)  |                         | U+E006  | ![](/assets/images/documentation/emojis/xbox/left_trigger.png)  |
+| RT (Right Trigger) |                         | U+E007  | ![](/assets/images/documentation/emojis/xbox/right_trigger.png) |
+| LS (Left Stick)    |                         | U+E00A  | ![](/assets/images/documentation/emojis/xbox/left_stick.png)    |
+| RS (Right Stick)   |                         | U+E00B  | ![](/assets/images/documentation/emojis/xbox/right_stick.png)   |
+| D-pad Up           |                         | U+E00C  | ![](/assets/images/documentation/emojis/xbox/dpad_up.png)       |
+| D-pad Right        |                         | U+E00F  | ![](/assets/images/documentation/emojis/xbox/dpad_right.png)    |
+| D-pad Down         |                         | U+E00E  | ![](/assets/images/documentation/emojis/xbox/dpad_down.png)     |
+| D-pad Left         |                         | U+E00D  | ![](/assets/images/documentation/emojis/xbox/dpad_left.png)     |
 
 ## Nintendo Switch
 
-| Name               | Letter (Copy/Paste This) | Unicode | Image                                                                    |
-| ------------------ | ------------------------ | ------- | ------------------------------------------------------------------------ |
-| X                  |                         | U+E042  | ![](/public/assets/images/documentation/emojis/switch/x_button.png)      |
-| A                  |                         | U+E040  | ![](/public/assets/images/documentation/emojis/switch/a_button.png)      |
-| B                  |                         | U+E041  | ![](/public/assets/images/documentation/emojis/switch/b_button.png)      |
-| Y                  |                         | U+E043  | ![](/public/assets/images/documentation/emojis/switch/y_button.png)      |
-| +                  |                         | U+E049  | ![](/public/assets/images/documentation/emojis/switch/plus.png)          |
-| -                  |                         | U+E048  | ![](/public/assets/images/documentation/emojis/switch/minus.png)         |
-| L (Left Bumper)    |                         | U+E044  | ![](/public/assets/images/documentation/emojis/switch/left_bumper.png)   |
-| R (Right Bumper)   |                         | U+E045  | ![](/public/assets/images/documentation/emojis/switch/right_bumper.png)  |
-| ZL (Left Trigger)  |                         | U+E046  | ![](/public/assets/images/documentation/emojis/switch/left_trigger.png)  |
-| RL (Right Trigger) |                         | U+E047  | ![](/public/assets/images/documentation/emojis/switch/right_trigger.png) |
-| L (Left Stick)     |                         | U+E04A  | ![](/public/assets/images/documentation/emojis/switch/left_stick.png)    |
-| R (Right Stick)    |                         | U+E04B  | ![](/public/assets/images/documentation/emojis/switch/right_stick.png)   |
-| D-pad Up           |                         | U+E04C  | ![](/public/assets/images/documentation/emojis/switch/dpad_up.png)       |
-| D-pad Right        |                         | U+E04F  | ![](/public/assets/images/documentation/emojis/switch/dpad_right.png)    |
-| D-pad Down         |                         | U+E04E  | ![](/public/assets/images/documentation/emojis/switch/dpad_down.png)     |
-| D-pad Left         |                         | U+E04D  | ![](/public/assets/images/documentation/emojis/switch/dpad_left.png)     |
+| Name               | Letter (Copy/Paste This) | Unicode | Image                                                             |
+| ------------------ | ------------------------ | ------- | ----------------------------------------------------------------- |
+| X                  |                         | U+E042  | ![](/assets/images/documentation/emojis/switch/x_button.png)      |
+| A                  |                         | U+E040  | ![](/assets/images/documentation/emojis/switch/a_button.png)      |
+| B                  |                         | U+E041  | ![](/assets/images/documentation/emojis/switch/b_button.png)      |
+| Y                  |                         | U+E043  | ![](/assets/images/documentation/emojis/switch/y_button.png)      |
+| +                  |                         | U+E049  | ![](/assets/images/documentation/emojis/switch/plus.png)          |
+| -                  |                         | U+E048  | ![](/assets/images/documentation/emojis/switch/minus.png)         |
+| L (Left Bumper)    |                         | U+E044  | ![](/assets/images/documentation/emojis/switch/left_bumper.png)   |
+| R (Right Bumper)   |                         | U+E045  | ![](/assets/images/documentation/emojis/switch/right_bumper.png)  |
+| ZL (Left Trigger)  |                         | U+E046  | ![](/assets/images/documentation/emojis/switch/left_trigger.png)  |
+| RL (Right Trigger) |                         | U+E047  | ![](/assets/images/documentation/emojis/switch/right_trigger.png) |
+| L (Left Stick)     |                         | U+E04A  | ![](/assets/images/documentation/emojis/switch/left_stick.png)    |
+| R (Right Stick)    |                         | U+E04B  | ![](/assets/images/documentation/emojis/switch/right_stick.png)   |
+| D-pad Up           |                         | U+E04C  | ![](/assets/images/documentation/emojis/switch/dpad_up.png)       |
+| D-pad Right        |                         | U+E04F  | ![](/assets/images/documentation/emojis/switch/dpad_right.png)    |
+| D-pad Down         |                         | U+E04E  | ![](/assets/images/documentation/emojis/switch/dpad_down.png)     |
+| D-pad Left         |                         | U+E04D  | ![](/assets/images/documentation/emojis/switch/dpad_left.png)     |
 
 ## Playstation (4/5)
 
-| Name               | Letter (Copy/Paste This) | Unicode | Image                                                                         |
-| ------------------ | ------------------------ | ------- | ----------------------------------------------------------------------------- |
-| Triangle           |                         | U+E023  | ![](/public/assets/images/documentation/emojis/playstation/triangle.png)      |
-| Circle             |                         | U+E021  | ![](/public/assets/images/documentation/emojis/playstation/circle.png)        |
-| Cross              |                         | U+E020  | ![](/public/assets/images/documentation/emojis/playstation/cross.png)         |
-| Square             |                         | U+E022  | ![](/public/assets/images/documentation/emojis/playstation/square.png)        |
-| Options/Share      |                         | U+E029  | ![](/public/assets/images/documentation/emojis/playstation/options_share.png) |
-| Touch Pad          |                         | U+E028  | ![](/public/assets/images/documentation/emojis/playstation/touch_pad.png)     |
-| L1 (Left Bumper)   |                         | U+E024  | ![](/public/assets/images/documentation/emojis/playstation/left_bumper.png)   |
-| R1 (Right Bumper)  |                         | U+E025  | ![](/public/assets/images/documentation/emojis/playstation/right_bumper.png)  |
-| L2 (Left Trigger)  |                         | U+E026  | ![](/public/assets/images/documentation/emojis/playstation/left_trigger.png)  |
-| R2 (Right Trigger) |                         | U+E027  | ![](/public/assets/images/documentation/emojis/playstation/right_trigger.png) |
-| L3 (Left Stick)    |                         | U+E02A  | ![](/public/assets/images/documentation/emojis/playstation/left_stick.png)    |
-| R3 (Right Stick)   |                         | U+E02B  | ![](/public/assets/images/documentation/emojis/playstation/right_stick.png)   |
-| D-pad Up           |                         | U+E02C  | ![](/public/assets/images/documentation/emojis/playstation/dpad_up.png)       |
-| D-pad Right        |                         | U+E02F  | ![](/public/assets/images/documentation/emojis/playstation/dpad_right.png)    |
-| D-pad Down         |                         | U+E02E  | ![](/public/assets/images/documentation/emojis/playstation/dpad_down.png)     |
-| D-pad Left         |                         | U+E02D  | ![](/public/assets/images/documentation/emojis/playstation/dpad_left.png)     |
+| Name               | Letter (Copy/Paste This) | Unicode | Image                                                                  |
+| ------------------ | ------------------------ | ------- | ---------------------------------------------------------------------- |
+| Triangle           |                         | U+E023  | ![](/assets/images/documentation/emojis/playstation/triangle.png)      |
+| Circle             |                         | U+E021  | ![](/assets/images/documentation/emojis/playstation/circle.png)        |
+| Cross              |                         | U+E020  | ![](/assets/images/documentation/emojis/playstation/cross.png)         |
+| Square             |                         | U+E022  | ![](/assets/images/documentation/emojis/playstation/square.png)        |
+| Options/Share      |                         | U+E029  | ![](/assets/images/documentation/emojis/playstation/options_share.png) |
+| Touch Pad          |                         | U+E028  | ![](/assets/images/documentation/emojis/playstation/touch_pad.png)     |
+| L1 (Left Bumper)   |                         | U+E024  | ![](/assets/images/documentation/emojis/playstation/left_bumper.png)   |
+| R1 (Right Bumper)  |                         | U+E025  | ![](/assets/images/documentation/emojis/playstation/right_bumper.png)  |
+| L2 (Left Trigger)  |                         | U+E026  | ![](/assets/images/documentation/emojis/playstation/left_trigger.png)  |
+| R2 (Right Trigger) |                         | U+E027  | ![](/assets/images/documentation/emojis/playstation/right_trigger.png) |
+| L3 (Left Stick)    |                         | U+E02A  | ![](/assets/images/documentation/emojis/playstation/left_stick.png)    |
+| R3 (Right Stick)   |                         | U+E02B  | ![](/assets/images/documentation/emojis/playstation/right_stick.png)   |
+| D-pad Up           |                         | U+E02C  | ![](/assets/images/documentation/emojis/playstation/dpad_up.png)       |
+| D-pad Right        |                         | U+E02F  | ![](/assets/images/documentation/emojis/playstation/dpad_right.png)    |
+| D-pad Down         |                         | U+E02E  | ![](/assets/images/documentation/emojis/playstation/dpad_down.png)     |
+| D-pad Left         |                         | U+E02D  | ![](/assets/images/documentation/emojis/playstation/dpad_left.png)     |
 
 ## Oculus (Rift/Rift S)
 
-| Name               | Letter (Copy/Paste This) | Unicode | Image                                                                    |
-| ------------------ | ------------------------ | ------- | ------------------------------------------------------------------------ |
-| 0                  |                         | U+E0E0  | ![](/public/assets/images/documentation/emojis/oculus/0_button.png)      |
-| B                  |                         | U+E0E2  | ![](/public/assets/images/documentation/emojis/oculus/b_button.png)      |
-| A                  |                         | U+E0E1  | ![](/public/assets/images/documentation/emojis/oculus/a_button.png)      |
-| Y                  |                         | U+E0EA  | ![](/public/assets/images/documentation/emojis/oculus/y_button.png)      |
-| X                  |                         | U+E0E9  | ![](/public/assets/images/documentation/emojis/oculus/x_button.png)      |
-| LG (Left Grip)     |                         | U+E0E3  | ![](/public/assets/images/documentation/emojis/oculus/left_grip.png)     |
-| RG (Right Grip)    |                         | U+E0E4  | ![](/public/assets/images/documentation/emojis/oculus/right_grip.png)    |
-| LT (Left Trigger)  |                         | U+E0E7  | ![](/public/assets/images/documentation/emojis/oculus/left_trigger.png)  |
-| RT (Right Trigger) |                         | U+E0E8  | ![](/public/assets/images/documentation/emojis/oculus/right_trigger.png) |
-| LS (Left Stick)    |                         | U+E0E5  | ![](/public/assets/images/documentation/emojis/oculus/left_stick.png)    |
-| RS (Right Stick)   |                         | U+E0E6  | ![](/public/assets/images/documentation/emojis/oculus/right_stick.png)   |
+| Name               | Letter (Copy/Paste This) | Unicode | Image                                                             |
+| ------------------ | ------------------------ | ------- | ----------------------------------------------------------------- |
+| 0                  |                         | U+E0E0  | ![](/assets/images/documentation/emojis/oculus/0_button.png)      |
+| B                  |                         | U+E0E2  | ![](/assets/images/documentation/emojis/oculus/b_button.png)      |
+| A                  |                         | U+E0E1  | ![](/assets/images/documentation/emojis/oculus/a_button.png)      |
+| Y                  |                         | U+E0EA  | ![](/assets/images/documentation/emojis/oculus/y_button.png)      |
+| X                  |                         | U+E0E9  | ![](/assets/images/documentation/emojis/oculus/x_button.png)      |
+| LG (Left Grip)     |                         | U+E0E3  | ![](/assets/images/documentation/emojis/oculus/left_grip.png)     |
+| RG (Right Grip)    |                         | U+E0E4  | ![](/assets/images/documentation/emojis/oculus/right_grip.png)    |
+| LT (Left Trigger)  |                         | U+E0E7  | ![](/assets/images/documentation/emojis/oculus/left_trigger.png)  |
+| RT (Right Trigger) |                         | U+E0E8  | ![](/assets/images/documentation/emojis/oculus/right_trigger.png) |
+| LS (Left Stick)    |                         | U+E0E5  | ![](/assets/images/documentation/emojis/oculus/left_stick.png)    |
+| RS (Right Stick)   |                         | U+E0E6  | ![](/assets/images/documentation/emojis/oculus/right_stick.png)   |
 
 ## Windows MR (Mixed Reality)
 
-| Name                      | Letter (Copy/Paste This) | Unicode | Image                                                                                   |
-| ------------------------- | ------------------------ | ------- | --------------------------------------------------------------------------------------- |
-| Menu                      |                         | U+E0C2  | ![](/public/assets/images/documentation/emojis/windowsMR/menu.png)                      |
-| Windows                   |                         | U+E0CD  | ![](/public/assets/images/documentation/emojis/windowsMR/windows.png)                   |
-| Left Touchpad             |                         | U+E0C5  | ![](/public/assets/images/documentation/emojis/windowsMR/left_touchpad.png)             |
-| Left Horizontal Touchpad  |                         | U+E0C6  | ![](/public/assets/images/documentation/emojis/windowsMR/left_touchpad_horizontal.png)  |
-| Left Vertical Touchpad    |                         | U+E0C7  | ![](/public/assets/images/documentation/emojis/windowsMR/left_touchpad_vertical.png)    |
-| Right Touchpad            |                         | U+E0C8  | ![](/public/assets/images/documentation/emojis/windowsMR/right_touchpad.png)            |
-| Right Horizontal Touchpad |                         | U+E0C9  | ![](/public/assets/images/documentation/emojis/windowsMR/right_touchpad_horizontal.png) |
-| Right Vertical Touchpad   |                         | U+E0CA  | ![](/public/assets/images/documentation/emojis/windowsMR/right_touchpad_vertical.png)   |
-| LT (Left Trigger)         |                         | U+E0CB  | ![](/public/assets/images/documentation/emojis/windowsMR/left_trigger.png)              |
-| RT (Right Trigger)        |                         | U+E0CC  | ![](/public/assets/images/documentation/emojis/windowsMR/right_trigger.png)             |
-| LG (Left Grab)            |                         | U+E0C0  | ![](/public/assets/images/documentation/emojis/windowsMR/left_grab.png)                 |
-| RG (Right Grab)           |                         | U+E0C1  | ![](/public/assets/images/documentation/emojis/windowsMR/right_grab.png)                |
-| LS (Left Stick)           |                         | U+E0C3  | ![](/public/assets/images/documentation/emojis/windowsMR/left_stick.png)                |
-| RS (Right Stick)          |                         | U+E0C4  | ![](/public/assets/images/documentation/emojis/windowsMR/right_stick.png)               |
+| Name                      | Letter (Copy/Paste This) | Unicode | Image                                                                            |
+| ------------------------- | ------------------------ | ------- | -------------------------------------------------------------------------------- |
+| Menu                      |                         | U+E0C2  | ![](/assets/images/documentation/emojis/windowsMR/menu.png)                      |
+| Windows                   |                         | U+E0CD  | ![](/assets/images/documentation/emojis/windowsMR/windows.png)                   |
+| Left Touchpad             |                         | U+E0C5  | ![](/assets/images/documentation/emojis/windowsMR/left_touchpad.png)             |
+| Left Horizontal Touchpad  |                         | U+E0C6  | ![](/assets/images/documentation/emojis/windowsMR/left_touchpad_horizontal.png)  |
+| Left Vertical Touchpad    |                         | U+E0C7  | ![](/assets/images/documentation/emojis/windowsMR/left_touchpad_vertical.png)    |
+| Right Touchpad            |                         | U+E0C8  | ![](/assets/images/documentation/emojis/windowsMR/right_touchpad.png)            |
+| Right Horizontal Touchpad |                         | U+E0C9  | ![](/assets/images/documentation/emojis/windowsMR/right_touchpad_horizontal.png) |
+| Right Vertical Touchpad   |                         | U+E0CA  | ![](/assets/images/documentation/emojis/windowsMR/right_touchpad_vertical.png)   |
+| LT (Left Trigger)         |                         | U+E0CB  | ![](/assets/images/documentation/emojis/windowsMR/left_trigger.png)              |
+| RT (Right Trigger)        |                         | U+E0CC  | ![](/assets/images/documentation/emojis/windowsMR/right_trigger.png)             |
+| LG (Left Grab)            |                         | U+E0C0  | ![](/assets/images/documentation/emojis/windowsMR/left_grab.png)                 |
+| RG (Right Grab)           |                         | U+E0C1  | ![](/assets/images/documentation/emojis/windowsMR/right_grab.png)                |
+| LS (Left Stick)           |                         | U+E0C3  | ![](/assets/images/documentation/emojis/windowsMR/left_stick.png)                |
+| RS (Right Stick)          |                         | U+E0C4  | ![](/assets/images/documentation/emojis/windowsMR/right_stick.png)               |
 
 # Custom Emoji
 
@@ -161,11 +161,11 @@ To get started, you should copy the sprite-sheets into these locations:
 
 ### RP/font/glyph_E0.png
 
-![](/public/assets/images/documentation/emojis/custom/glyph_E0.png)
+![](/assets/images/documentation/emojis/custom/glyph_E0.png)
 
 ### RP/font/glyph_E1.png
 
-![](/public/assets/images/documentation/emojis/custom/glyph_E1.png)
+![](/assets/images/documentation/emojis/custom/glyph_E1.png)
 
 Your filepath should look like this:
 

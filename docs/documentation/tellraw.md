@@ -10,7 +10,7 @@ tellraw sends a JSON message to selected or all players being usefull for sendin
 
 **The titleraw command follows the same theme**
 
-![](/public/assets/images/documentation/tellrawshow.png)
+![](/assets/images/documentation/tellrawshow.png)
 
 # Format
 

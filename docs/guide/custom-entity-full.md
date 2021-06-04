@@ -132,7 +132,7 @@ The first line defines the entity's name, and the second one the entity's spawn 
 
 This is one of the most complicated part of creating addons - Entity behaviors. You'll often refer to [bedrock.dev/r/Entities](https://bedrock.dev/r/Entities) for what the different components do and for their parameters. All-in-all, the entity's behavior file defines what the entity does in game. Let's see the overall structure of such a file first. (Behavior files are located in BP/entities/) (The file name doesn't matter, but I recommend naming it entityName.json or entityName.behavior.json)
 
-![](/public/assets/images/guide/custom_entity_1.png)
+![](/assets/images/guide/custom_entity_1.png)
 
 -   Even though I have "1.8.0" in this particular screenshot, it's best to set "format_version" to the latest release version, currently "1.14".
 -   "identifier" should be the same as in the .entity file.
@@ -468,7 +468,7 @@ As you can see, everything that was originally in the event is located "sequence
 
 Don't worry if you didn't grasp something for the first time: coding entities is something that takes some practice to learn for everyone. We covered a lot of information, because I wanted to showcase most often used components. Again, don't stress out if you haven't remembered something - you can always come back to check this [Guide's files](https://github.com/KaiFireborn/Minecraft-Bedrock-Full-Beginner-Add-on-development-Guide-FILES), the [Vanilla Example packs](https://www.minecraft.net/en-us/addons) and the [documentation](https://bedrock.dev). When you feel stuck, feel free to seek help in the [Bedrock Scripting Discord server](https://discord.com/invite/BJkxyRM), which is full of amazing people who'll be happy to help you. In fact, the more you come back to these resources, the faster and better you will learn: there's no point forcing down all the info right now. Now, I say, congratulations for completing this entity, I can't wait to see what you come up with!
 
-![](/public/assets/images/guide/custom_entity_2.jpg)
+![](/assets/images/guide/custom_entity_2.jpg)
 
 _I'll include the full entity behavior file at the bottom of this page, for you to check whether you have written down everything correctly._
 

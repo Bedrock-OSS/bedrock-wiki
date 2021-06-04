@@ -25,7 +25,7 @@ Please note that this will remove all death effects, including sound, particles,
 
 We can also cancel the rotational value of the entity, allowing the entity to die more conventionally (particles, red-coloring, loot) without the 90-degree spin.
 
-If you need more information about triggering animations from entity death, [see this document on death effects](/tutorials/death-effects).
+If you need more information about triggering animations from entity death, [see this document on death effects](/animation-controllers/death-effects).
 
 Rotation needs to be applied to a bone parent to all other bones, with a pivot at [0,0,0], and the animation should only start when `!query.is_alive`.
 
@@ -39,29 +39,29 @@ Animation Controller: (query.all_animations_finished is only needed for respawni
 
 ```json
 {
-    "format_version": "1.10.0",
-    "animation_controllers": {
-        "controller.animation.player.cancel_death_animaton": {
-            "initial_state": "default",
-            "states": {
-                "default": {
-                    "transitions": [
-                        {
-                            "cancel_animation": "query.is_alive"
-                        }
-                    ]
-                },
-                "cancel_animation": {
-                    "animations": ["my.animation"],
-                    "transitions": [
-                        {
-                            "default": "query.is_alive && query.all_animations_finished"
-                        }
-                    ]
-                }
-            }
-        }
-    }
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.cancel_death_animaton": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cancel_animation": "query.is_alive"
+						}
+					]
+				},
+				"cancel_animation": {
+					"animations": ["my.animation"],
+					"transitions": [
+						{
+							"default": "query.is_alive && query.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -77,16 +77,16 @@ Here's the example of removing the damage and fire overlay color.
 
 ```json
 {
-    "format_version": "1.8.0",
-    "render_controllers": {
-        "controller.render.sample": {
-            "geometry": "Geometry.default",
-            "materials": [{ "*": "Material.default" }],
-            "textures": ["Texture.default"],
-            "is_hurt_color": {},
-            "on_fire_color": {}
-        }
-    }
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.sample": {
+			"geometry": "Geometry.default",
+			"materials": [{ "*": "Material.default" }],
+			"textures": ["Texture.default"],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
 }
 ```
 
@@ -97,26 +97,26 @@ Here's another example in which the damage color overlay becomes pink.
 
 ```json
 {
-    "format_version": "1.8.0",
-    "render_controllers": {
-        "controller.render.kbg": {
-            "geometry": "Geometry.default",
-            "materials": [{ "*": "Material.default" }],
-            "textures": ["Texture.default"],
-            "is_hurt_color": {
-                "r": "1.0",
-                "g": "0.4",
-                "b": "0.7",
-                "a": "0.5"
-            },
-            "on_fire_color": {
-                "r": "1.0",
-                "g": "0.4",
-                "b": "0.7",
-                "a": "0.5"
-            }
-        }
-    }
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.kbg": {
+			"geometry": "Geometry.default",
+			"materials": [{ "*": "Material.default" }],
+			"textures": ["Texture.default"],
+			"is_hurt_color": {
+				"r": "1.0",
+				"g": "0.4",
+				"b": "0.7",
+				"a": "0.5"
+			},
+			"on_fire_color": {
+				"r": "1.0",
+				"g": "0.4",
+				"b": "0.7",
+				"a": "0.5"
+			}
+		}
+	}
 }
 ```
 
@@ -130,64 +130,64 @@ Here an example file in the BP
 
 ```json
 {
-    "format_version": "1.14.0",
-    "min_engine_version": "1.16.100",
-    "minecraft:entity": {
-        "description": {
-            "identifier": "example:entity",
-            "is_spawnable": true,
-            "is_summonable": true,
-            "is_experimental": true
-        },
-        "component_groups": {
-            "beluga:despawn": {
-                "minecraft:spawn_entity": {
-                    "max_wait_time": 0,
-                    "min_wait_time": 0,
-                    "spawn_item": "egg",
-                    "single_use": true
-                },
-                "minecraft:instant_despawn": {}
-            }
-        },
-        "components": {
-            "minecraft:type_family": {
-                "family": ["cart", "inanimate"]
-            },
-            "minecraft:collision_box": {
-                "width": 0.8,
-                "height": 0.5
-            },
-            "minecraft:health": {
-                "value": 8,
-                "max": 8
-            },
-            "minecraft:physics": {},
-            "minecraft:pushable": {
-                "is_pushable": true,
-                "is_pushable_by_piston": true
-            },
-            "minecraft:damage_sensor": {
-                "triggers": {
-                    "on_damage": {
-                        "filters": {
-                            "test": "has_damage",
-                            "value": "fatal"
-                        },
-                        "event": "beluga:despawn",
-                        "target": "self"
-                    }
-                }
-            }
-        },
-        "events": {
-            "beluga:despawn": {
-                "add": {
-                    "component_groups": ["beluga:despawn"]
-                }
-            }
-        }
-    }
+	"format_version": "1.14.0",
+	"min_engine_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "example:entity",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": true
+		},
+		"component_groups": {
+			"beluga:despawn": {
+				"minecraft:spawn_entity": {
+					"max_wait_time": 0,
+					"min_wait_time": 0,
+					"spawn_item": "egg",
+					"single_use": true
+				},
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["cart", "inanimate"]
+			},
+			"minecraft:collision_box": {
+				"width": 0.8,
+				"height": 0.5
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"on_damage": {
+						"filters": {
+							"test": "has_damage",
+							"value": "fatal"
+						},
+						"event": "beluga:despawn",
+						"target": "self"
+					}
+				}
+			}
+		},
+		"events": {
+			"beluga:despawn": {
+				"add": {
+					"component_groups": ["beluga:despawn"]
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -196,13 +196,13 @@ to be your entity's id and an affix of **\_spawn_egg**, and it will look somethi
 
 ```json
 {
-    "minecraft:spawn_entity": [
-        {
-            "min_wait_time": 0,
-            "max_wait_time": 0,
-            "spawn_item": "prefix:custom_zombie_spawn_egg",
-            "single_use": true
-        }
-    ]
+	"minecraft:spawn_entity": [
+		{
+			"min_wait_time": 0,
+			"max_wait_time": 0,
+			"spawn_item": "prefix:custom_zombie_spawn_egg",
+			"single_use": true
+		}
+	]
 }
 ```
