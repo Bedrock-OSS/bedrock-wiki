@@ -32,7 +32,7 @@ We can also use `"value"` as an object to utilize the **range bar** players will
 
 Now we will give it slow falling and speed as it's falling so that it doesn't instantly fall. To do this, we will make an animation controller and give it those effects when it's not on the ground as so:
 
-(You can read a [tutorial on how to use animation controllers to execute commands here](/tutorials/entity-commands).)
+(You can read a [tutorial on how to use animation controllers to execute commands here](/animation-controllers/entity-commands).)
 
 ```json
 "controller.animation.dragon.flying": {
