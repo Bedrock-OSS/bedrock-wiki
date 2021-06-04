@@ -38,27 +38,27 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 ```json
 {
-    "format_version": 2,
-    "header": {
-        "name": "Wiki Tutorial",
-        "description": "Time to create your first add-on!",
-        "uuid": "86a98bd8-1859-46b4-a8d8-b242b9a9fcc8",
-        "version": [1, 0, 0],
-        "min_engine_version": [1, 14, 0]
-    },
-    "modules": [
-        {
-            "type": "data",
-            "uuid": "5c830391-0937-44d6-9774-406de66b6984",
-            "version": [1, 0, 0]
-        }
-    ],
-    "dependencies": [
-        {
-            "uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
-            "version": [1, 0, 0]
-        }
-    ]
+	"format_version": 2,
+	"header": {
+		"name": "Wiki Tutorial",
+		"description": "Time to create your first add-on!",
+		"uuid": "86a98bd8-1859-46b4-a8d8-b242b9a9fcc8",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 14, 0]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "5c830391-0937-44d6-9774-406de66b6984",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
+			"version": [1, 0, 0]
+		}
+	]
 }
 ```
 
@@ -89,21 +89,21 @@ Copy the code below into your newly created `manifest.json`.
 
 ```json
 {
-    "format_version": 2,
-    "header": {
-        "name": "Wiki Tutorial",
-        "description": "Time to create your first add-on!",
-        "uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
-        "version": [1, 0, 0],
-        "min_engine_version": [1, 16, 0]
-    },
-    "modules": [
-        {
-            "type": "resources",
-            "uuid": "a00c0603-e122-4d00-8ab8-18168bc5ca9a",
-            "version": [1, 0, 0]
-        }
-    ]
+	"format_version": 2,
+	"header": {
+		"name": "Wiki Tutorial",
+		"description": "Time to create your first add-on!",
+		"uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 16, 0]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "a00c0603-e122-4d00-8ab8-18168bc5ca9a",
+			"version": [1, 0, 0]
+		}
+	]
 }
 ```
 
@@ -130,7 +130,7 @@ pack.description=Bedrock OSS Organization
 
 If you have done everything correctly, your packs should show up in Minecraft now!
 TODO Replace this image
-![](/assets/images/guide/behavior_pack_existing.jpg)
+![](/public/assets/images/guide/behavior_pack_existing.jpg)
 
 ---
 
@@ -143,12 +143,12 @@ Now to create a testing world to test your new add-on!
 2. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
 
 TODO Replace these images
-![](/assets/images/guide/world_params_1.jpg)
-![](/assets/images/guide/world_params_2.jpg)
-![](/assets/images/guide/world_params_3.jpg)
+![](/public/assets/images/guide/world_params_1.jpg)
+![](/public/assets/images/guide/world_params_2.jpg)
+![](/public/assets/images/guide/world_params_3.jpg)
 
 Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too. Otherwise, it'll be applied automatically). Now click '**Create**'. You might need a separate '_Infinite_' world to test entity spawning too.
-![](/assets/images/guide/behavior_pack_applied.png)
+![](/public/assets/images/guide/behavior_pack_applied.png)
 
 ---
 

@@ -99,7 +99,7 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 -   [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile. An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop _(≈$10/m)_](https://www.adobe.com/products/photoshop) or paint.net, is recommended to be used along.
 -   You may also be recommended software such as [AJG (≈$3.50)](https://kaifireborn.itch.io/addon-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (≈$3.50)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
 
-![](/assets/images/guide/blockbench_workspace.png)
+![](/public/assets/images/guide/blockbench_workspace.png)
 
 ---
 
@@ -111,7 +111,7 @@ The com.mojang folder is the folder we're going to be working with throughout th
 
 I strongly recommend creating a shortcut to the folder on your Desktop, in order to be able to easily access it at any time.You'll find a lot of folders and files in the folder, among them: `behavior_packs`, `development_behavior_packs`, `resource_packs`, `development_resource_packs`.
 
-![com.mojang folder](/assets/images/guide/com_mojang_folder.png)
+![com.mojang folder](/public/assets/images/guide/com_mojang_folder.png)
 
 ### Windows
 

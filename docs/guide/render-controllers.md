@@ -137,7 +137,7 @@ The sequence itself is quite self-explanatory, it adds one of the two components
 
 _Note: It's not necessary to add the variant component upon spawn. You could for example, add an interact component(see cow behaviors) to launch an event which adds the arctic variant component group when the player interacted with ice in hand._
 
-![](/assets/images/guide/render_controllers_1.jpg)
+![](/public/assets/images/guide/render_controllers_1.jpg)
 
 Now that you've updated your render controller, your .entity file(with the new texture shortnames), added the new component groups and the randomizing of the skin variants, you will observe your entities sometimes spawning with the arctic texture variant!
 

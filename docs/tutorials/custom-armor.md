@@ -110,7 +110,7 @@ Once done we can get on with creating our actual armor item piece like so.
 
 At this point you could just go and add an item texture into your `RP/textures/item_texture.json` with the key `my_chest` and you are on your way. We have attached a default item texture for your armor here if you want to just follow along.
 
-![](/assets/images/tutorials/custom-armor/custom_chestplate.png)
+![](/public/assets/images/tutorials/custom-armor/custom_chestplate.png)
 
 ## Adding attachables and textures
 
@@ -158,14 +158,14 @@ At this point we need to make sure we create a texture for our model, these live
 
 If you do not feel creative we have provided a recoloured diamond armour skin for use with this tutorial. So just `Save As` and plop them in the folder.
 
-![](/assets/images/tutorials/custom-armor/custom_main.png)
-![](/assets/images/tutorials/custom-armor/custom_legs.png)
+![](/public/assets/images/tutorials/custom-armor/custom_main.png)
+![](/public/assets/images/tutorials/custom-armor/custom_legs.png)
 
 > In the real world you would probably want to use `BlockBench` or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the RP/addon.
 > If you now go into the game and check what you have produced you should be able to wear your chest piece and pat yourself on the back for a job well done.
 
-![](/assets/images/tutorials/custom-armor/armor-item-image.jpg)
-![](/assets/images/tutorials/custom-armor/armor-model-image.jpg)
+![](/public/assets/images/tutorials/custom-armor/armor-item-image.jpg)
+![](/public/assets/images/tutorials/custom-armor/armor-model-image.jpg)
 
 ## Adding leggings
 
@@ -225,7 +225,7 @@ So while the chest piece alone is great, you probably want a whole set, so from 
 
 This is great and like before you will need to add your own item texture, although here is one if you just want to continue.
 
-![](/assets/images/tutorials/custom-armor/custom_leggings.png)
+![](/public/assets/images/tutorials/custom-armor/custom_leggings.png)
 
 Once we are done here we need to create the attachables file like this.
 
@@ -322,7 +322,7 @@ This is just like the chest piece, just we change some of the categories and slo
 
 As you can see not much has changed, we just update the categories/slots to the correct ones for helms and then we add the attachables file (here is the item texture if you need it).
 
-![](/assets/images/tutorials/custom-armor/custom_helmet.png)
+![](/public/assets/images/tutorials/custom-armor/custom_helmet.png)
 
 <CodeHeader>RP/attachables/my_helm.json</CodeHeader>
 
@@ -414,7 +414,7 @@ You already know the pattern so lets make the item and attachable json files.
 
 The custom boots texture if you need it.
 
-![](/assets/images/tutorials/custom-armor/custom_boots.png)
+![](/public/assets/images/tutorials/custom-armor/custom_boots.png)
 
 <CodeHeader>RP/attachables/my_boots.json</CodeHeader>
 
@@ -452,7 +452,7 @@ Thats it, you now have a whole suit of custom armor you can swagger around in, a
 > It is worth noting that we have used 2 separate textures here, and you could potentially use a texture per attachable, but each new texture consumes memory so its best to use as few as possible.
 > So this is what you should end up with, and as a bonus there is one more section on making set effects using filters, which is a bit more advanced but its a fun thing to do.
 
-![](/assets/images/tutorials/custom-armor/custom-set-image.jpg)
+![](/public/assets/images/tutorials/custom-armor/custom-set-image.jpg)
 
 ## Bonus - Making set effects
 

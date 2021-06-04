@@ -22,7 +22,7 @@ This section covers the main features of entities for them to spawn with an item
 
 First of all, you'll need to have a model in Blockbench that has a map called 'rightArm'. Within this map, there needs to be a submap called 'rightItem'. Position the pivot point of this submap, so it sits in the place you want the entity to hold the item at.
 
-![](/assets/images/tutorials/entity-holds-item/blockbench.png)
+![](/public/assets/images/tutorials/entity-holds-item/blockbench.png)
 
 ## Setting up behavior pack-side entity
 
@@ -51,21 +51,21 @@ To have the entity always spawn with the same item, add the following loot table
 
 ```json
 {
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "dd:hammer", // Custom item named 'hammer' with the identifier 'dd'.
-                    "weight": 1
-                }
-            ]
-        }
-    ]
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "dd:hammer", // Custom item named 'hammer' with the identifier 'dd'.
+					"weight": 1
+				}
+			]
+		}
+	]
 }
 ```
 
 If everything went well, you'd have something looking like this:
 
-![](/assets/images/tutorials/entity-holds-item/finished_result.png)
+![](/public/assets/images/tutorials/entity-holds-item/finished_result.png)

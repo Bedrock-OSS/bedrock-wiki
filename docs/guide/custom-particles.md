@@ -32,21 +32,21 @@ Now for the Blockbench part.
 
 -   Right click the bone were your particle will be emitted from, and choose 'Add Locator' with the anchor icon. Name it something distinct, like 'l_expl_emitter'. Now move the emitter to the desired location.
 
-![](/assets/images/guide/custom_particles_1.png){:height="300px" width="300px"}
+![](/public/assets/images/guide/custom_particles_1.png){:height="300px" width="300px"}
 
 _Note: you can also use locators to define where a lead will leash to, if you name your locator 'lead'._
 
 -   In the 'Animate' section, choose 'Animate Effects' on your timeline, then click on the '+' icon near the 'Particle' object.
 
-![](/assets/images/guide/custom_particles_2.png)
+![](/public/assets/images/guide/custom_particles_2.png)
 
 -   You will see this menu on your left. 'Effect' asks for your particle's shortname, and 'Locator' asks for the name of your Locator/Emitter object.
 
-![](/assets/images/guide/custom_particles_3.png)
+![](/public/assets/images/guide/custom_particles_3.png)
 
 _Note: you can add sounds to animations in a similar way._
 
-![](/assets/images/guide/custom_particles_4.jpg)
+![](/public/assets/images/guide/custom_particles_4.jpg)
 
 Now you're good to go! Save the model and the animations. If you did everything correctly, the defined particle will spawn whenever the entity attacks. _Of course you could put another particle on the walking animation's timeline (for example, hooves making dust) in the same way._
 
@@ -62,7 +62,7 @@ File structure:
 -   "texture" defines the texture file. Not that a single image file can hold textures for many particles.
 -   "material" is usually set to "particles_alpha" for particles.
 
-![](/assets/images/guide/custom_particles_5.png){:height="100px" width="100px" .pixelated}
+![](/public/assets/images/guide/custom_particles_5.png){:height="100px" width="100px" .pixelated}
 
 That is the texture I'm going to use, it's size is `16x16`. (`RP/particles/tut_particles.png`). As you can see, it has 4 different textures in it, each of them being a `8x8`. The upper row (_starting/top left corner at at 0, 0_) is the flipbook texture for "tut:curvy*particle" and the bottom row (\_top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
 
@@ -219,10 +219,10 @@ Done! Now you have two custom particles that can be used in animations!
 
 It's rather tiresome to create particles that way, comparable to creating models without Blockbench. Luckily, you can use [Snowstorm](https://jannisx11.github.io/snowstorm/), a Visual Particle Generator. It's especially convenient to download the [VSC Snowstorm Extension](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm), which is going to create an interactive UI in Visual Studio Code itself for `.particle.json` files.
 
-![](/assets/images/guide/custom_particles_6.jpg)
+![](/public/assets/images/guide/custom_particles_6.jpg)
 `/particle tut:pink_hit ~ ~2 ~`
 
-![](/assets/images/guide/custom_particles_7.jpg)
+![](/public/assets/images/guide/custom_particles_7.jpg)
 `/particle tut:curvy_particle ~ ~2 ~`
 
 ---
@@ -274,7 +274,7 @@ We have 3 sound shortnames in total:
 
 Now we are about to call our sounds. We can do it either through the `/playsound <>` slash command or automatically in `RP/sounds.json`. Once again, this resembles block resource definition.
 
-![](/assets/images/guide/custom_particles_8.png)
+![](/public/assets/images/guide/custom_particles_8.png)
 
 ^ the file's structure. I recommend checking out the same file in the Example Resource Pack.
 

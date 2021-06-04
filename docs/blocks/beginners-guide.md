@@ -174,7 +174,7 @@ The only difference from `item_textures.json` is that "`atlas.items`" is now cha
 
 Next, all our texture shortnames have been defined. These shortnames were already used in `RP/blocks.json`, as you might remember. If you load the game now, you'll be able to see the 3 new custom blocks you just added, with all the texture functionality :)
 
-![](/assets/images/guide/custom_blocks_inventory.png)
+![](/public/assets/images/guide/custom_blocks_inventory.png)
 
 But, we still have to define the `tut:flashing`'s texture(third from the left), which is currently undefined. That's why it appears as a purple-and-black tiled texture right now.
 
