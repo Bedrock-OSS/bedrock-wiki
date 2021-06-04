@@ -6,18 +6,17 @@ parent: Knowledge
 
 # Creating addons with Programming
 
-
-
 Addons in Bedrock Edition (except for scripts) are entirely written using JSON-config files. Often, these files can and should be written by hand. Possibly with the help of a dedicated editor like [bridge.](https://bridge-core.github.io/).
 
-However, in some instances, writing the JSON by hand is very time-consuming. In these cases, we can consider using a programming language to do the work for us. This guide will be written for *python*, but can be extrapolated to a language you are familiar with. 
+However, in some instances, writing the JSON by hand is very time-consuming. In these cases, we can consider using a programming language to do the work for us. This guide will be written for _python_, but can be extrapolated to a language you are familiar with.
 
 ## When should you automate a task?
 
 You should consider automating a task if one (or more!) of the following conditions are met:
- - The desired output is very long
- - The task is repetitive and can be abstracted
- - The *input* often changes, requiring you to edit a single file very often
+
+-   The desired output is very long
+-   The task is repetitive and can be abstracted
+-   The _input_ often changes, requiring you to edit a single file very often
 
 ## How to get started with programming?
 
@@ -34,9 +33,10 @@ We will use automating `sound_definitions.json` as a case study for general auto
 We will be automating the creation of `sound_definitions.json`. We chose this topic because `sound_definitions.json` can be directly generated based on the paths of our sound files. As we add/remove sound files, it would be super nice if we didn't always have to edit `sound_definitions.json` by hand!
 
 Another good automation topic could be:
- - `texture_list.json`
- - creating simple RP/BP item pairs based on textures in textures/items
- - creating the `canPlaceOn` JSON for blocks that need to be placed on lots of surfaces
+
+-   `texture_list.json`
+-   creating simple RP/BP item pairs based on textures in textures/items
+-   creating the `canPlaceOn` JSON for blocks that need to be placed on lots of surfaces
 
 ## Inspect the Format
 
@@ -44,22 +44,18 @@ The first thing you need to do is inspect the format of the file you want to cre
 
 ```json
 {
-    "dragon.roar": {
-        "category": "ui",
-        "sounds": [
-            "sounds/dragon/roar"
-        ]
-    },
-    "dragon.wing_flap": {
-        "category": "ui",
-        "sounds": [
-            "sounds/dragon/wing_flap"
-        ]
-    }
+	"dragon.roar": {
+		"category": "ui",
+		"sounds": ["sounds/dragon/roar"]
+	},
+	"dragon.wing_flap": {
+		"category": "ui",
+		"sounds": ["sounds/dragon/wing_flap"]
+	}
 }
 ```
 
-The next step, is to look at the file, and select a *chunk*. Our goal will be to generate this chunk programmatically, based on some *input*. In this case, our chunk is a single sound_definition:
+The next step, is to look at the file, and select a _chunk_. Our goal will be to generate this chunk programmatically, based on some _input_. In this case, our chunk is a single sound_definition:
 
 ```json
 "$folder.$sound:": {
@@ -70,11 +66,11 @@ The next step, is to look at the file, and select a *chunk*. Our goal will be to
 }
 ```
 
-Now, we can annotate this JSON with the *variables* we want to inject. In other words, the content that we want to change programmatically. Notice how some variables are used multiple times. I'm using `$var` to annotate the JSON, but this is just for information-gathering. We will replace this with proper python soon.
+Now, we can annotate this JSON with the _variables_ we want to inject. In other words, the content that we want to change programmatically. Notice how some variables are used multiple times. I'm using `$var` to annotate the JSON, but this is just for information-gathering. We will replace this with proper python soon.
 
 ## Creating a Python Script
 
-Now is the time to create your script. I use a `projects` folder, following this [version control tutorial](/knowledge/version-control). That means I will be placing my script inside `projects/scripts`, but please place it anywhere convenient.
+Now is the time to create your script. I use a `projects` folder, following this [version control tutorial](/meta/version-control). That means I will be placing my script inside `projects/scripts`, but please place it anywhere convenient.
 
 You can test your python script by quickly adding a `hello_world` print and running it. At this point, I also paste in my prepared JSON snippet, as a comment:\
 
@@ -89,7 +85,8 @@ You can test your python script by quickly adding a `hello_world` print and runn
 
 print("Hello world!")
 ```
-## Creating a processing function  
+
+## Creating a processing function
 
 I think it is always a good idea to work with functions. Functions are a nice abstraction and allow us to break out work into meaningful chunks. Since we have three variables, let's create a function that takes three variables. For testing, we can print these variables out:
 
@@ -136,12 +133,14 @@ def create_sound_definitions(path):
 ```
 
 This code will generate a list of paths. If we pass in the sounds folder containing these files:
- - `sounds/dragon/roar.mp4`
- - `sounds/dragon/wing_flap.mp4`
+
+-   `sounds/dragon/roar.mp4`
+-   `sounds/dragon/wing_flap.mp4`
 
 The result would be:
- - `dragon/roar.mp4`
- - `dragon/wing_flap.mp4`
+
+-   `dragon/roar.mp4`
+-   `dragon/wing_flap.mp4`
 
 ## Structuring our folder
 
