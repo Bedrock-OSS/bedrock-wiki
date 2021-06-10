@@ -67,7 +67,7 @@ Important links have a ⭐.
 -   ⭐[bedrock.dev](https://bedrock.dev/)
 -   [Official Documentation](https://minecraft.gamepedia.com/Add-on)
 -   [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
--   [Component Examples](/vanilla-usage/components)
+-   [Component Examples](/entities/vanilla-usage-components)
 -   [JSON guis](https://geenium.com/bedrock/json-guis/)
 -   [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
