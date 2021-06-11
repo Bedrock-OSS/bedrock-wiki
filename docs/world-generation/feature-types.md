@@ -160,7 +160,7 @@ Each distribution type requires an **extent**, which represents the range of val
 
 **Uniform distribution** is uniformly random distribution on a half-open interval between two values. It is known as “uniform” because every value within the range has an equal chance of being selected and “half-open” because the extent minimum is a member of the range, while the extent maximum is not:
 
-$$extent_{min} <= x < extent_{max}$$
+extent_{min} <= x < extent_{max}
 
 Therefore, if an extent of `[0, 16]` were given for a uniform distribution, blocks may be placed in a range of size 16: from 0 to 15. The 1st possible position starts at 0 while the 15th possible position ends at 16, matching the extent.
 
@@ -186,7 +186,7 @@ Therefore, if an extent of `[0, 16]` were given for a uniform distribution, bloc
 
 **Grid distributions** are powerful systems for placing blocks either directly on (`"fixed_grid"`) or randomly within (`"jittered_grid"`) evenly spaced intervals along a coordinate. Unlike the other distribution types, the extent of grids forms an interval that includes the maximum extent:
 
-$$extent_{min} <= x <= extent_{max}$$
+extent_{min} <= x <= extent_{max}
 
 Two grid distribution-only properties are available for finer control over the grids used by these systems. The interval size, which defaults to 1, can be customized with the `"step_size"` property. An initial offset, defaulting to 0, can also be provided via the `"grid_offset"` property.
 
@@ -208,7 +208,7 @@ As a simple example:
 }
 ```
 
-Placements will first begin along *x*: $(0, 0)$, $(1, 0)$, etc., until reaching the end of the extent at $(15, 0)$. However, only 16 of the 21 iterations have occurred; 5 remain. Now, the *x*-coordinate wraps back around to 0, while the *z*-coordinate increments to 1: $(0, 1)$.
+Placements will first begin along *x*: (0, 0), (1, 0), etc., until reaching the end of the extent at (15, 0). However, only 16 of the 21 iterations have occurred; 5 remain. Now, the *x*-coordinate wraps back around to 0, while the *z*-coordinate increments to 1: (0, 1).
 
 This wrapping occurs in three-dimensions, too, so when a plane along the earliest evaluated coordinates would wrap (assuming a high enough iteration count), another plane will begin formation based on the final coordinate’s step size.
 
