@@ -1,6 +1,5 @@
 code {
-	@apply rounded-sm m-0 bg-true-gray-100 p-1;
-	font-size: 0.85em;
+	@apply rounded-sm m-0 bg-true-gray-200 px-1;
 }
 .dark code {
 	@apply bg-true-gray-900;
