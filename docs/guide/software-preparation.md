@@ -44,22 +44,14 @@ Editor recommendations are starred.
 
 ### Additional Notes
 
-<details> 
-   <summary>
-      Features to look for in a Code Editor
-   </summary>
-
+<Spoiler title="Features to look for in a Code Editor">
 -   **Opening Folders:** When editing addons, it is very convenient to open an entire folder as a project, instead of just individual files. This allows you to edit the files in both the Behavior Pack and Resource Pack at the same time, and quickly switch between tasks.
 -   **Json Linting/Prettify:** Linting is the ability to validate code as correct in real-time. Linting for json will mark things like missing commas, misplaced parens, or other formatting issues so that you can fix them. [Linting can also be found online](https://jsonlint.com/), but having real-time linting built directly into your editor is very much preferred.
 -   **Built in Terminal:** I find a terminal built into my editor to be very useful. I often use python scripting to supplement my workflow, and having easy access to a terminal speeds up that workflow.
 
-</details>
+</Spoiler>
 
-<details>
-
-   <summary>
-      VSCode Extensions for Addon development
-   </summary>
+<Spoiler title="VSCode Extensions for Addon development">
 
 Many packages exist for VSCode that make editing addons easier:
 
@@ -73,13 +65,9 @@ Many packages exist for VSCode that make editing addons easier:
 -   [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 -   [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
 
-</details>
+</Spoiler>
 
-<details>
-
-   <summary>
-      If you choose to use bridge.
-   </summary>
+<Spoiler title="If you choose to use bridge.">
 
 You should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
 
@@ -90,7 +78,7 @@ Due to the nature of the file versioning system, most scripts and tools will con
 
 For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev). bridge. also has an [official Discord server](https://discord.gg/wcRJZN3), with announcements, plugin discussion, addon help, and more.
 
-</details>
+</Spoiler>
 
 <br>
 

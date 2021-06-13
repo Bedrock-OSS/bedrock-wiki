@@ -12,15 +12,15 @@ Most Addon files contain a `format_version` field, often in the description. Her
 
 ```json
 {
-    "format_version": "1.13.0",
-    "minecraft:entity": {
-        "description": {
-            "identifier": "wiki:dragon",
-            "is_spawnable": false,
-            "is_summonable": true,
-            "is_experimental": false
-        }
-    }
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "wiki:dragon",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		}
+	}
 }
 ```
 

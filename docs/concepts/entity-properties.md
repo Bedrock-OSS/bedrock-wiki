@@ -4,9 +4,13 @@ title: Entity Properties
 parent: Concepts
 badge: BETA
 badge_color: red
+tags:
+    - beta
 ---
 
-# Entity Properties [BETA]
+# Entity Properties
+
+<Label color="red">Beta</Label>
 
 -   Documentation on the new Entity Properties, also known as Actor Properties, introduced in the 1.16.230.52 Minecraft: Bedrock Edition beta version.
 -   Entity Properties were implemented to save data or store values on entities efficiently without needing the use of components or attributes (For example, "minecraft:variant") in server-side of the entity (Behavior Pack), similar to Block Properties.
@@ -21,28 +25,28 @@ badge_color: red
 
 ```json
 {
-    "minecraft:entity": {
-        "description": {
-            "identifier": "entity:properties_example",
-            "properties": {
-                "property:number_range_example": {
-                    "values": {
-                        "min": 0,
-                        "max": 100
-                    }
-                },
-                "property:number_enum_example": {
-                    "values": [1, 2]
-                },
-                "property:string_enum_example": {
-                    "values": ["first", "second", "third"]
-                },
-                "property:boolean_enum_example": {
-                    "values": [true, false]
-                }
-            }
-        }
-    }
+	"minecraft:entity": {
+		"description": {
+			"identifier": "entity:properties_example",
+			"properties": {
+				"property:number_range_example": {
+					"values": {
+						"min": 0,
+						"max": 100
+					}
+				},
+				"property:number_enum_example": {
+					"values": [1, 2]
+				},
+				"property:string_enum_example": {
+					"values": ["first", "second", "third"]
+				},
+				"property:boolean_enum_example": {
+					"values": [true, false]
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -131,34 +135,34 @@ badge_color: red
 
 ```json
 {
-    "format_version": "1.16.0",
-    "minecraft:entity": {
-        "description": {
-            "identifier": "entity:properties_example",
-            "is_spawnable": true,
-            "is_summonable": true,
-            "is_experimental": false,
-            "properties": {
-                "property:property_index": {
-                    "client_sync": true,
-                    "values": {
-                        "min": 0,
-                        "max": 2
-                    },
-                    "default": 0
-                }
-            },
-            "aliases": {
-                "entity:default_alias": {},
-                "entity:first_alias": {
-                    "property:property_index": 1
-                },
-                "entity:second_alias": {
-                    "property:property_index": 2
-                }
-            }
-        }
-    }
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "entity:properties_example",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"property:property_index": {
+					"client_sync": true,
+					"values": {
+						"min": 0,
+						"max": 2
+					},
+					"default": 0
+				}
+			},
+			"aliases": {
+				"entity:default_alias": {},
+				"entity:first_alias": {
+					"property:property_index": 1
+				},
+				"entity:second_alias": {
+					"property:property_index": 2
+				}
+			}
+		}
+	}
 }
 ```
 
