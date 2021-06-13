@@ -8,7 +8,7 @@
 			'items-center': true,
 			'space-x-2': true,
 			'px-2': true,
-			'rounded-lg': true,
+			'rounded-md': true,
 		}"
 		v-bind="linkProps"
 		@click="onNavigation"
