@@ -1,0 +1,1 @@
+import{o as t,c as o,d as e}from"./404.md.5a76c261.js";const u='{"title":"NBT Commands","description":"","frontmatter":{"title":"NBT Commands"},"relativePath":"commands/nbt-commands.md","lastUpdated":1623608201261}',q={},a=e('',34);q.render=function(e,u,q,n,r,s){return t(),o("div",null,[a])};export default q;export{u as __pageData};

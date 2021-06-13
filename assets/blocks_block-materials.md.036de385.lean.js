@@ -1,1 +1,0 @@
-import{o as t,c as a,d as e}from"./404.md.11934eaa.js";const l='{"title":"Block Materials","description":"","frontmatter":{"title":"Block Materials"},"relativePath":"blocks/block-materials.md","lastUpdated":1623442926008}',o={},r=e('',2);o.render=function(e,l,o,d,s,i){return t(),a("div",null,[r])};export default o;export{l as __pageData};
