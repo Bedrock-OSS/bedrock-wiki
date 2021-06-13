@@ -1,5 +1,5 @@
 <template>
-	<div ref="codeHeader" class="tile flex mt-8 p-4 overflow-auto">
+	<div ref="codeHeader" class="tile flex mt-8 p-2 pb-1.5 overflow-auto">
 		<span class="flex">
 			<FileIcon class="mr-2" />
 			<span class="opacity-50"><slot /></span>
