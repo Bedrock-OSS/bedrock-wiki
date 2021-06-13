@@ -10,6 +10,7 @@
 			'min-h-screen': true,
 		}"
 	>
+    <TOC/>
 		<Content />
 		<h2>Contributors</h2>
 		<Suspense>
@@ -26,6 +27,7 @@
 </template>
 
 <script setup lang="ts">
+import TOC from './Content/TOC.vue'
 import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'

@@ -4,15 +4,11 @@ title: Projectiles
 parent: Documentation
 ---
 
-# Projectiles
+## Overview
 
-
-
-This page intends to document all different fields you can use inside `minecraft:projectile` entity behavior component. 
+This page intends to document all different fields you can use inside `minecraft:projectile` entity behavior component.
 
 *Disclaimer: this component has been mostly documented based on projectiles found in the game or reverse engineering the game.*
-
-## Overview
 
 | Name                      | Type             | Default Value | Description                                                                                                                                      |
 |---------------------------|------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -49,6 +45,10 @@ This page intends to document all different fields you can use inside `minecraft
 | stop_on_hurt              | Boolean          |               |                                                                                                                                                  |
 | uncertainty_base          | Decimal          | 0             | The base accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel * uncertaintyMultiplier                               |
 | uncertainty_multiplier    | Decimal          | 0             | Determines how much difficulty affects accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel * uncertaintyMultiplier |
+
+### Test level 3 header
+
+If this gets pushed, bonk stirante on the head.
 
 ## on_hit
 
