@@ -110,9 +110,9 @@ module.exports = {
 
 	markdown: {
 		lineNumbers: true,
-		config: md => {
+		config: (md) => {
 			md.use(markdownItKatex)
-		}
+		},
 	},
 
 	themeConfig: {

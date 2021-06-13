@@ -35,7 +35,7 @@ div[class*='language-'] {
 }
 [class*='language-'] pre {
 	user-select: text;
-	@apply relative m-0 overflow-x-auto;
+	@apply relative m-0 overflow-x-visible;
 	padding: 1.25rem 1.5rem;
 }
 
