@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Loot and Spawn Recipes
+title: Blockbench: Modeling, Texturing, Animating
 has_children: true
 ---
 
