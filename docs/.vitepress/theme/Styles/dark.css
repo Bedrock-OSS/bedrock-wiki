@@ -12,6 +12,16 @@
 	fill: white;
 }
 
+
+.dark div.card {
+	width: 48%;
+	background-color: #333;
+	padding: 20px;
+	margin: 10px 8px;
+	border: 1px solid #888;
+	flex: 1 1 auto;
+}
+
 /* Tables */
 .dark tbody,
 .dark td,
