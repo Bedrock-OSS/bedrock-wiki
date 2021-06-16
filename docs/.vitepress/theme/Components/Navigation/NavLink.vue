@@ -18,8 +18,8 @@
 
 		<span v-for="tag in props.item.tags">
 			<GuideIcon v-if="tag == 'guide'" />
-			<RecipeIcon v-if="tag == 'recipe'" />
-			<WarningIcon v-if="tag == 'experimental' || tag == 'beta'" />
+			<RecipeIcon v-if="tag == 'recipe' || tag == 'short'" />
+			<ChemIcon v-if="tag == 'experimental' || tag == 'beta' || tag == 'warning' || tag == 'exp'" />
 		</span>
 
 		<span v-if="props.item.badge" :class="[badgeClass, badgeColorClass]">{{
@@ -33,6 +33,7 @@ import ExternalIcon from '../Icons/ExternalIcon.vue'
 import GuideIcon from '../Icons/GuideIcon.vue'
 import WarningIcon from '../Icons/WarningIcon.vue'
 import RecipeIcon from '../Icons/RecipeIcon.vue'
+import ChemIcon from '../Icons/ChemIcon.vue'
 
 import {
 	computed,
