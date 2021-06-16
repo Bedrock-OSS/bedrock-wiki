@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Blockbench: Modeling, Texturing, Animating
+title: 'Blockbench: Modeling, Texturing, Animating'
 has_children: true
 ---
 
