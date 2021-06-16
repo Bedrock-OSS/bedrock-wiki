@@ -2,8 +2,8 @@
 layout: page
 title: Custom Armor
 parent: Tutorials
-badge: BETA
-badge_color: red
+tags:
+	- beta
 ---
 
 # Custom Armor

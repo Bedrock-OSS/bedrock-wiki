@@ -2,8 +2,6 @@
 layout: page
 title: Entity Movement
 parent: Knowledge
-badge: NEW
-badge_color: blue
 ---
 
 # Entity Movement

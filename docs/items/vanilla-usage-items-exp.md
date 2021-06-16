@@ -1,7 +1,7 @@
 ---
 title: Vanilla Usage Items EXP
-badge: EXP
-badge_color: yellow
+tags:
+    - experimental
 ---
 
 # Vanilla Usage Items EXP

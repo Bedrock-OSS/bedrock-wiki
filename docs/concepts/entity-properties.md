@@ -2,8 +2,6 @@
 layout: page
 title: Entity Properties
 parent: Concepts
-badge: BETA
-badge_color: red
 tags:
     - beta
 ---
