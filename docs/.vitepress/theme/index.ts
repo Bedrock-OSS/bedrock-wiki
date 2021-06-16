@@ -6,6 +6,8 @@ import YouTubeEmbed from './Components/Content/YouTubeEmbed.vue'
 import Button from './Components/Content/Button.vue'
 import JQEmbed from './Components/Content/JQEmbed.vue'
 import WikiImage from './Components/Content/WikiImage.vue'
+import Card from './Components/Content/Card.vue'
+import CardLink from './Components/Content/CardLink.vue'
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import Component404 from '../../404.md'
@@ -20,6 +22,8 @@ const globalComponents: [string, Component][] = [
 	['JQEmbed', JQEmbed],
 	['Button', Button],
 	['WikiImage', WikiImage],
+	['CardLink', CardLink],
+	['Card', Card],
 ]
 
 const theme: Theme = {

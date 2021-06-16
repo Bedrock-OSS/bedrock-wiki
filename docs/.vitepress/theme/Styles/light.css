@@ -3,6 +3,15 @@
 	fill: black;
 }
 
+div.card {
+	width: 48%;
+	background-color: #fff;
+	padding: 20px;
+	margin: 10px 8px;
+	border: 1px solid #ddd;
+	flex: 1 1 auto;
+}
+
 body {
 	@apply bg-true-gray-50 text-black;
 }
