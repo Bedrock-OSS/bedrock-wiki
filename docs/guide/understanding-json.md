@@ -3,8 +3,8 @@ layout: guide
 title: Understanding JSON
 parent: Beginners Guide
 nav_order: 102
-badge: b
-badge_color: green
+badge: B
+badge_color: guide
 badge_justification: left
 ---
 

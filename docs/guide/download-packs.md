@@ -3,7 +3,7 @@ layout: guide
 title: Download Example Packs
 parent: Beginners Guide
 nav_order: 101
-badge: a
+badge: A
 badge_color: guide
 badge_justification: left
 ---
