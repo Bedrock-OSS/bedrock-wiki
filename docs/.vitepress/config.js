@@ -3,7 +3,6 @@ require('molangjs/syntax/molang-prism-syntax')
 const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
-const markdownItKatex = require('markdown-it-katex')
 
 const baseUrl = '/bedrock-wiki-vite/'
 
@@ -109,10 +108,7 @@ module.exports = {
 	],
 
 	markdown: {
-		lineNumbers: true,
-		config: (md) => {
-			md.use(markdownItKatex)
-		},
+		lineNumbers: true
 	},
 
 	themeConfig: {

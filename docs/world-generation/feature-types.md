@@ -136,7 +136,7 @@ Because placement of features is so often relative to the heightmap, the incomin
 
 This means that the specified *y*-origin from the scatter feature’s parent is ignored in favor of the *y*-coordinate of the heightmap at an iteration’s *x*-*z* location ([assuming the *y*-coordinate would be evaluated after the lateral coordinates](#evaluation-order)). The `"y"` property may still be given a value that will represent the offset from the heightmap.
 
-::: tip
+::: tip Note
 Functionally, this is the same as using the MoLang expression `"query.heightmap(v.worldx, v.worldz) + *offset*"`.
 :::
 
@@ -160,7 +160,7 @@ Each distribution type requires an **extent**, which represents the range of val
 
 **Uniform distribution** is uniformly random distribution on a half-open interval between two values. It is known as “uniform” because every value within the range has an equal chance of being selected and “half-open” because the extent minimum is a member of the range, while the extent maximum is not:
 
-extent_{min} <= x < extent_{max}
+<i>minimum extent</i> <= <i>x</i> < <i>maximum extent</i>
 
 Therefore, if an extent of `[0, 16]` were given for a uniform distribution, blocks may be placed in a range of size 16: from 0 to 15. The 1st possible position starts at 0 while the 15th possible position ends at 16, matching the extent.
 
@@ -186,7 +186,7 @@ Therefore, if an extent of `[0, 16]` were given for a uniform distribution, bloc
 
 **Grid distributions** are powerful systems for placing blocks either directly on (`"fixed_grid"`) or randomly within (`"jittered_grid"`) evenly spaced intervals along a coordinate. Unlike the other distribution types, the extent of grids forms an interval that includes the maximum extent:
 
-extent_{min} <= x <= extent_{max}
+<i>minimum extent</i> <= <i>x</i> <= <i>maximum extent</i>
 
 Two grid distribution-only properties are available for finer control over the grids used by these systems. The interval size, which defaults to 1, can be customized with the `"step_size"` property. An initial offset, defaulting to 0, can also be provided via the `"grid_offset"` property.
 
