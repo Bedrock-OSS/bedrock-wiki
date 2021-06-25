@@ -15,11 +15,11 @@
 .dark div.card {
 	width: 46%;
 	flex: 1 1 auto;
-	@apply mx-3 my-2 p-6 bg-true-gray-800 border;
+	@apply mx-3 my-2 p-6 bg-true-gray-900 border;
 }
 
 .dark .homepage * {
-	border-color: rgb(75, 76, 78);
+	border-color: rgb(93, 95, 97);
 }
 
 /* Tables */
