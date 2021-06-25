@@ -4,9 +4,9 @@
 }
 
 div.card {
-	width: 46%;
+	width: 49%;
 	flex: 1 1 auto;
-	@apply mx-3 my-2 p-6 bg-white border;
+	@apply mx-0 my-2 p-6 bg-white border;
 }
 
 body {
