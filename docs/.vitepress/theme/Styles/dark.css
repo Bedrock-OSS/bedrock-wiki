@@ -13,9 +13,9 @@
 }
 
 .dark div.card {
-	width: 49%;
+	width: 46%;
 	flex: 1 1 auto;
-	@apply mx-0 my-2 p-6 bg-true-gray-900 border;
+	@apply mx-3 my-2 p-6 bg-true-gray-900 border;
 }
 
 .dark .homepage * {

@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="m-0 p-0 pb-4 w-full border-b">
-            <div class="flex flex-row flex-wrap m-0 p-0 gap-4" style="grid-template-columns: min-content min-content;">
+            <div class="flex flex-row flex-wrap m-0 p-0" style="grid-template-columns: min-content min-content;">
                 <CardLink title="Beginner's Guide" imgsrc="assets/images/homepage/wood_pick.png" link="guide/">
                 Step-by-step tutorials, intended as your first-contact with addons.
                 </CardLink>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="m-0 p-0 py-4 w-full border-b">
-            <div class="flex flex-row flex-wrap m-0 p-0 gap-4" style="grid-template-columns: min-content min-content;">
+            <div class="flex flex-row flex-wrap m-0 p-0" style="grid-template-columns: min-content min-content;">
                 <Card title="Documentation" imgsrc="assets/images/homepage/bookshelf.png">
                 <ul>
                     <li><a href="documentation/">Documentation</a>: Proper documentation, such as lists of all available sounds.</li>
