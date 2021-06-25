@@ -4,12 +4,9 @@
 }
 
 div.card {
-	width: 48%;
-	background-color: #fff;
-	padding: 20px;
-	margin: 10px 8px;
-	border: 1px solid #ddd;
+	width: 46%;
 	flex: 1 1 auto;
+	@apply mx-3 my-2 p-6 bg-white border;
 }
 
 body {
