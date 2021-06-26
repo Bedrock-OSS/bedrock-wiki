@@ -8,6 +8,12 @@ Animation controllers (AC) are state-machines that can be used in both the resou
 
 ## What are State Machines?
 
+### How
+
+#### DEp
+
+##### Does it go?
+
 State machines are a special kind of logic management, that relies on a series of states. Each state has two properties:
 
 -   What to do in the current state

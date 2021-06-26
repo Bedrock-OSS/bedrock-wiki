@@ -10,8 +10,7 @@
 			'min-h-screen': true,
 		}"
 	>
-		<h1>{{ page.title }}</h1>
-		<!-- <TOC v-if="!!page?.value?.headers" /> -->
+		<h1 id="top">{{ page.title }}</h1>
 		<TOC />
 		<Content
 			:class="{
@@ -42,7 +41,6 @@ const { isVisible } = useSidebarState()
 import { useIsReducedScreen } from '../Composables/isReducedScreen'
 const { isReducedScreen } = useIsReducedScreen()
 import { usePageData } from 'vitepress'
-import Label1 from './Content/Label.vue'
 const page = usePageData()
 </script>
 

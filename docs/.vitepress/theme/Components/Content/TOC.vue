@@ -1,20 +1,23 @@
 <template>
 	<div
-		id="toc-div"
-		class="toc"
+		class="toc-div p-4 border-l-4"
 		:class="{
 			'sidebar-toc': !isReducedScreen,
 			'reduced-toc': isReducedScreen,
 		}"
 	>
-		<h3>{{ title }}</h3>
+		<a href="#top" class="row1">{{ title }}</a>
 		<div class="pl-5">
 			<ol id="toc">
 				<li v-for="header in headers" key="header.title">
-					<a :href="'#' + header.slug">{{ header.title }}</a>
+					<a class="row2" :href="'#' + header.slug">{{
+						header.title
+					}}</a>
 					<ol>
 						<li v-for="child in header.children" key="child.title">
-							<a :href="'#' + child.slug">{{ child.title }}</a>
+							<a class="row3" :href="'#' + child.slug">{{
+								child.title
+							}}</a>
 						</li>
 					</ol>
 				</li>
@@ -62,6 +65,18 @@ watch(page, () => {
 </script>
 
 <style scoped>
+/* General */
+.sidebar-toc {
+	@apply;
+}
+a {
+	@apply text-black no-underline;
+}
+.dark a {
+	@apply text-white no-underline;
+}
+
+/* Sidebar Vs. Main */
 .sidebar-toc {
 	@apply mt-14 pb-14 pt-1 z-10 top-0 w-72 border-r-1 border-gray-200 dark:border-true-gray-600 border-gray-200;
 	position: fixed;
@@ -70,19 +85,17 @@ watch(page, () => {
 	top: 40;
 }
 
-#toc ol {
-	@apply list-none;
+/* Level-offset */
+
+.row1 {
+	font-weight: bold;
+	font-size: large;
+}
+.row2 {
 }
 
-#toc li > ol {
-	@apply ml-8;
-}
-
-#toc a {
-	@apply text-black no-underline;
-}
-
-.dark #toc a {
-	@apply text-white no-underline;
+.row3 {
+	@apply ml-6;
+	font-style: italic;
 }
 </style>
