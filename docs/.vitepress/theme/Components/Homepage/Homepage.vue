@@ -10,11 +10,11 @@
             </div>
         </div>
         <div class="flex md:hidden justify-start flex-col flex-nowrap my-6 py-0 w-full">
-            <div class="flex justify-center items-center flex-row flex-nowrap">
+            <div class="flex justify-start items-center flex-row flex-nowrap">
                 <img src="/assets/images/homepage/wiki_icon.png" class="object-contain" style="height: 64px;">
                 <h1 class="!my-0 ml-4">Bedrock Wiki</h1>
             </div>
-            <div class="mt-4 ml-4 flex justify-center flex-col flex-nowrap">
+            <div class="mt-4 flex justify-center flex-col flex-nowrap">
                 <p>This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.</p>
             </div>
         </div>
