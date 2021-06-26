@@ -1,0 +1,1 @@
+import{o as e,c as t}from"./404.md.9bcdd6c7.js";const d='{"title":"New Guide","description":"","frontmatter":{"title":"New Guide"},"relativePath":"new-guide/index.md","lastUpdated":1624745135077}',i={};i.render=function(d,i,r,n,o,a){return e(),t("div")};export default i;export{d as __pageData};
