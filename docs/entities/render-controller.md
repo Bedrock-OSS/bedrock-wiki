@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Render Controllers
-parent: Concepts
 ---
-
-# Render Controllers
 
 <Label color="green">Beginner</Label>
 

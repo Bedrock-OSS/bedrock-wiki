@@ -2,8 +2,6 @@
 title: Components/Groups/Events
 ---
 
-# Component Groups Vs. Components Vs. Events
-
 Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means and how to use them.
 
 Confusing component groups with components is a widespread source of errors. Pay attention closely to understand the difference.
