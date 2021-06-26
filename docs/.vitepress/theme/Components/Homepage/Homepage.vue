@@ -1,16 +1,25 @@
 <template>
-    <div class="homepage">
-        <div class="flex justify-start flex-row flex-nowrap my-6 py-0 w-full">
+    <div class="homepage max-w-screen-md mx-auto">
+        <div class="hidden md:flex justify-start flex-row flex-nowrap my-10 py-0 w-full">
             <div class="flex justify-center flex-col flex-nowrap">
-                <img src="/assets/images/homepage/wiki_icon.png" class="object-contain" style="max-height: 116px;">
+                <img src="/assets/images/homepage/wiki_icon.png" class="object-contain" style="max-height: 116px; min-width: 72px;">
             </div>
             <div class="ml-4 flex justify-center flex-col flex-nowrap">
                 <h1 class="mt-0">Bedrock Wiki</h1>
                 <p>This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.</p>
             </div>
         </div>
-        <div class="m-0 p-0 pb-4 w-full border-b">
-            <div class="flex flex-row flex-wrap m-0 p-0" style="grid-template-columns: min-content min-content;">
+        <div class="flex md:hidden justify-start flex-col flex-nowrap my-6 py-0 w-full">
+            <div class="flex justify-center items-center flex-row flex-nowrap">
+                <img src="/assets/images/homepage/wiki_icon.png" class="object-contain" style="height: 64px;">
+                <h1 class="!my-0 ml-4">Bedrock Wiki</h1>
+            </div>
+            <div class="mt-4 ml-4 flex justify-center flex-col flex-nowrap">
+                <p>This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.</p>
+            </div>
+        </div>
+        <div class="m-0 p-0 pb-4 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 m-0 p-0">
                 <CardLink title="Beginner's Guide" imgsrc="assets/images/homepage/wood_pick.png" link="guide/">
                 Step-by-step tutorials, intended as your first-contact with addons.
                 </CardLink>
@@ -21,10 +30,6 @@
                     <li><a href="#">Tutorials</a>: Tutorial-like write-ups, containing specific instructions and example json.</li>
                 </ul>
                 </Card>
-            </div>
-        </div>
-        <div class="m-0 p-0 py-4 w-full border-b">
-            <div class="flex flex-row flex-wrap m-0 p-0" style="grid-template-columns: min-content min-content;">
                 <Card title="Documentation" imgsrc="assets/images/homepage/bookshelf.png">
                 <ul>
                     <li><a href="documentation/">Documentation</a>: Proper documentation, such as lists of all available sounds.</li>
