@@ -6,11 +6,34 @@ title: Feature Types
 ::: warning
 Some links designed to reference external documents do not function, and will be updated at a later time to point to the correct resource.
 
-Screenshots, graphics, and potentially example packs will be provided for many feature types given here at a later time.
+Screenshots and other resources may be provided for many feature types given here at a later time.
 :::
+
+## Content Features
+
+
+### Single Block Features
+
+
+### Ore Features
+
+
+### Structure Template Features
+
+
+### Growing Plant Features
+
+
+### Tree Features
+
+
+### Multiface Features
+
 
 ## Proxy Features
 Proxy features group, arrange, or gate features, including other proxy features. Proxy features themselves are incapable of having a direct effect on world generation.
+
+All proxy features must therefore point to one or multiple **target features**: the features that are placed, rearranged, or selected by proxy features. Target features are represented as string references to the identifier of the intended feature.
 
 ### Scatter Features
 ```json
@@ -49,7 +72,7 @@ Proxy features group, arrange, or gate features, including other proxy features.
 - Act as a gate to conditionally enable a feature to be placed
 - Execute MoLang within the current [feature context](#)
 
-Scatter features attempt to place a **target feature** with each iteration:
+Scatter features attempt to place a [target feature](#proxy-features) with each iteration:
 ```json
 "places_feature": "lostlands:shimmerfields_spire"
 ```
@@ -238,3 +261,115 @@ By default, the coordinate ordering is *x* then *z* then *y*. This covers the ma
 After the coordinates for an iteration have been determined, world generation moves its focus within the target: acknowledging its restrictions, attempting its placement, evaluating its MoLang, and (if possible and relevant) continuing by placing its children and their children and so forth.
 
 When finished with the target’s feature tree, if more iterations have yet to be run from the scatter feature, focus returns to the scatter feature beginning with the first-evaluated coordinate and execution is resumed.
+
+### Conditional Lists
+```json
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "olympus:columns_selection"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "olympus:columns_unweathered",
+				"condition": "query.noise(v.originx, v.originz) < 0"
+			},
+			{
+				"places_feature": "olympus:columns_weathered",
+				"condition": "query.noise(v.originx, v.originz) >= 0"
+			}
+		],
+
+		"early_out_scheme": "placement_success"
+	}
+}
+```
+
+**Conditional lists** pick a single feature from a collection based on conditions; they are akin to if-else if blocks in programming languages. Once a condition has been evaluated as successful (as determined via [success determination](#success-determination), the conditional list will select *only that one feature* for placement.
+
+::: tip Note
+Instead, if *every* success should place a feature in the same location, use an [aggregate feature](#aggregate-features) pointing to [scatter features](#scatter-features) that proxy the target features.
+:::
+
+#### Conditions List
+```json
+"conditional_features": [
+	{
+		"places_feature": "summer_fun:beachadjustment_water",
+		"condition": "query.heightmap(v.originx, v.originz) < 63 && query.noise(v.originx, v.originz) < 0"
+	},
+	{
+		"places_feature": "summer_fun:beachadjustment_coral",
+		"condition": "query.heightmap(v.originx, v.originz) < 63 && query.noise(v.originx, v.originz) >= 0"
+	},
+	{
+		"places_feature": "summer_fun:beachadjustment_air",
+		"condition": "query.noise(v.originx, v.originz) >= 63"
+	}
+]
+```
+
+The **conditions list**, `"conditional_features"`, is an ordered array comprised of **feature entries** objects. Feature entries bind [target features](#proxy-features) to their **conditions**:
+
+```json
+{
+	"places_feature": "verona:evergreen_trees_stumps",
+	"condition": "v.evergreen_forest.type == v.evergreen_forest.types.lumberjack_ruined"
+}
+```
+
+The condition of each feature entry is evaluated by entry order in the conditions list. Once a feature entry [would succeed](#success-determination), no later-listed conditions will be evaluated.
+
+#### Success Determination
+```json
+"early_out_scheme": "placement_success"
+```
+
+Condition success is considered in light of the optional **early out scheme**. Two mechanisms are provided for controlling if a feature entry would succeed. `"condition_success"` — the default if no `"early_out_scheme"` is provided — considers a success to occur when a condition evaluates to true. `"placement_success"` goes further: a condition must evaluate to true, and its target feature’s placement must succeed.
+
+### Aggregate Features
+
+
+### Sequence Features
+
+
+### Snap-to-Surface Features
+
+
+### Search Features
+
+
+### Rect Layouts
+
+
+### Scan Surface Features
+
+
+### Weighted Random Features
+
+
+## Scene Features
+
+
+### Geode Features
+
+
+### Beards and Shavers
+
+
+### Vegetation Patches
+
+
+## Carver Features
+
+
+### Cave Carver Features
+
+
+### Hell Cave Carver Features
+
+
+### Underwater Cave Carver Features
