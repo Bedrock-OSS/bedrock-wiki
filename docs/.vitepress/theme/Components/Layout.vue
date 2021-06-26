@@ -10,7 +10,14 @@
 			'min-h-screen': true,
 		}"
 	>
-		<Content />
+		<h1>{{ page.title }}</h1>
+		<!-- <TOC v-if="!!page?.value?.headers" /> -->
+		<TOC />
+		<Content
+			:class="{
+				'toc-visible': !isReducedScreen,
+			}"
+		/>
 		<h2>Contributors</h2>
 		<Suspense>
 			<template #default>
@@ -26,14 +33,23 @@
 </template>
 
 <script setup lang="ts">
+import TOC from './Content/TOC.vue'
 import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import Contributors from './Content/Contributors.vue'
 const { isVisible } = useSidebarState()
+import { useIsReducedScreen } from '../Composables/isReducedScreen'
+const { isReducedScreen } = useIsReducedScreen()
+import { usePageData } from 'vitepress'
+import Label1 from './Content/Label.vue'
+const page = usePageData()
 </script>
 
-<style>
+<style scoped>
+.toc-visible {
+	padding-right: 300px;
+}
 details summary::-webkit-details-marker {
 	display: none;
 }
