@@ -212,6 +212,12 @@ Placements will first begin along *x*: (0, 0), (1, 0), etc., until reaching the 
 
 This wrapping occurs in three-dimensions, too, so when a plane along the earliest evaluated coordinates would wrap (assuming a high enough iteration count), another plane will begin formation based on the final coordinate’s step size.
 
+::: warning
+Grid extents behave in unexpected ways when 0 is not within the extent range. In particular, the extent will be projected into 0 by the closest bound. For example, the given extent `[-7, -2]` will be remapped as though it were `[-5, 0]`. `[13, 21]` would get remapped to `[0, 8]`. For this reason, it's recommended to just specify the extent as a length, such as using `[0, 8]` in the latter example, and proxying that scatter feature with another scatter feature that would position that coordinate using a literal `13`.
+
+When using multiple grid distributions to form a surface or volume, extents for any coordinate that would extend below `0` will only work on the first pass of that coordinate. Later passes will be restricted to non-negative values.
+:::
+
 #### Evaluation Order
 When a scatter chance is included, it is evaluated before any other properties. If the check against scatter chance fails for that instance of the scatter feature, nothing downstream within that instance is evaluated. No further MoLang is interpreted; no variables within the [feature context](#) are updated. The target feature is entirely disregarded.
 
