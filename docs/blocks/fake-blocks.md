@@ -2,8 +2,6 @@
 title: Fake Blocks
 ---
 
-# Fake Blocks
-
 <Label color="yellow">Intermediate</Label>
 
 ## Creating the Hitbox

@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Subpacks
-parent: Documentation
 ---
-
-# Subpacks
 
 ## What are subpacks?
 

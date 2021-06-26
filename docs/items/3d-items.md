@@ -2,11 +2,9 @@
 title: 3D Items
 ---
 
-# 3D Items
-
 There are two methods for making 3D items:
 
-# Entity Based 3D Item Models
+## Entity Based 3D Item Models
 
 <Label color="red">Expert</Label>
 
@@ -14,23 +12,23 @@ There are two methods for making 3D items:
 This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/concepts/render-controller) before starting this tutorial.
 :::
 
-## Concept & Idea
+### Concept & Idea
 
 Since Bedrock doesn't support custom item models out of the box, we have to get creative with their implementation. The idea behind this concept is straightforward: we overlay an entity model onto the player model with the help of a render controller and adjust the display settings with a few animations.
 
-## The Item
+### The Item
 
 First of all, we need to make sure our item is ready. You can add custom models to both custom and vanilla items. In this tutorial, we will be making an automatic drill. We won't be going in-depth on creating custom items in this tutorial, but you can use [this](https://gitwither.github.io/bedrock-item-generator/) online custom item generator. Make sure your item has got a texture and displays correctly in the player's inventory.
 
 ![](https://wiki.bedrock.dev/assets/images/tutorials/custom-item-models/drill-sprite-inventory.png)
 
-## Geometry
+### Geometry
 
 Before implementing your custom item model into the game, make sure your item geometry is ready to be used. For your item to render correctly inside a player's hand, it must contain the player's bone skeleton. This means that your item model must contain all of the bones the player model has **without their respective elements (the player's bones must be empty!)**. Export it with a unique identifier. In our case, it will be `geometry.drill`. A geometry file example is present at the end of the file.
 
 ![](https://wiki.bedrock.dev/assets/images/tutorials/custom-item-models/drill-bone-structure.png)
 
-## Client Player Definition
+### Client Player Definition
 
 This is the most crucial part. We must add it to the player entity client definition for our model to render inside a player's hand. This step consists of several parts:
 
@@ -89,7 +87,7 @@ In our case, this entry will look like the following:
 
 Note: it is essential to define this variable because checking for the item directly in the render controller can yield delays when switching between items.
 
-## Render Controller
+### Render Controller
 
 Next, let's create a render controller that will render our item. Create a new file in the `render_controllers` folder of your resource pack called `<your_item_name>.render_controllers.json`. In our case, it will be `drill.render_controllers.json`
 
@@ -154,7 +152,7 @@ In our case, it will look like this:
 ]
 ```
 
-## Animations
+### Animations
 
 This part contains an unnecessary step - creating custom animations for the item, but we will go over it anyway. Let's start with the vital part. If you load up the pack right now, you will see that your item is shifted weirdly in first-person. This is because it still renders as a third-person item. To fix this, we will create an animation that just offsets the item into the correct location. Create a new file called `<your_item>.animation.json` in your resource pack's `animations` folder.
 
@@ -264,7 +262,7 @@ In our case, it will look like this:
 
 Note: we have the decorative animation defined here as well.
 
-## Final Touches
+### Final Touches
 
 Great! Our item works, but there is a small problem: you can see that our item sprite is rendered with the 3D model in the player's hand.
 
@@ -281,7 +279,7 @@ If you have the item sprite ready in Gimp, go to the top bar and select `Colors`
 
 Gimp doesn't let you usually save the picture as a png when pressing `Ctrl+S`, so you'll have to export it. To do this, go to the top bar and select `File`. There you can either choose `Overwrite <your picture_name.png>`, which will automatically export and save it in the same name and same format (which should be `.png`) and overwrite the item sprite you imported. Or you can choose `Export as ...`, which lets you select the location you want to save it in and the name you save it as. Again, make sure it saves as a `.png` format since this format supports transparent backgrounds and translucent pixels.
 
-## The Files
+### The Files
 
 Here you can find the final `player.entity.json` file, render controllers, animations, as well as a download link to the pack.
 
@@ -631,17 +629,17 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 
 Pack download link: [Link](https://wiki.bedrock.dev/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
 
-# Attachable Based 3D Item Models
+## Attachable Based 3D Item Models
 
 ::: tip
 Attachable Based 3D Item Models works only in **Minecraft 1.16.210.59 beta or above**
 :::
 
-## Concept & Idea
+### Concept & Idea
 
 1.16.210.5 is the first release in which attachables in player hand slots work correctly. When combined with custom block geometry, we can leverage this to create a minimal-compromises 3D item. Parts of this tutorial currently require that experimental features are enabled due to the presence of custom blocks. Do note that these are entirely optional, and you may use this method to create a custom item with an item sprite, similarly to what is described in the above tutorial. However, an advantage here is that it will not be necessary to remove the alpha layer of the item texture. This will allow for the dropped item and item frame visibility.
 
-## The "Item"
+### The "Item"
 
 The item, in this case, is a custom block. We'll define this in our behavior pack. Note that this concept can be applied to vanilla items as well. You'll need to define your attachable to utilize the vanilla item. We'll construct the block definition in the blocks folder of our behavior pack as follows:
 
@@ -681,7 +679,7 @@ The item, in this case, is a custom block. We'll define this in our behavior pac
 
 In the above example, we define our block, texture, render method and geometry. We also apply a conditional placement filter to ensure our block behaves like an item and cannot be placed. If this is not desired, simply omit this component.
 
-## Geometry
+### Geometry
 
 Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheless, there are still some special notes to allow this to work properly. First, take careful note that we are utilizing the 1.16.0 geometry format. This is important as it will allow us to define a binding expression with a Molang query. This will effectively treat our model as though it is parented to a given bone in the entity to which it is attached. We will define our geometry in the following form:
 
@@ -733,7 +731,7 @@ Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheles
 
 In the above geometry, you'll notice we've added particular bones for the x, y, and z-axis. These are placed here for the animation. Having separate rotational axes will make it easier to apply animations similar to how Java Edition uses display settings. Another important note for those who utilize individual cube rotations: these are not currently supported by custom block geometry, as the pivots are not correctly applied. If you would like the block portion to render correctly, please use bones for all rotation.
 
-## Attachable Definition
+### Attachable Definition
 
 Next, we'll define our attachable. This can be done as follows:
 
@@ -815,9 +813,9 @@ Next, we'll define our attachable. This can be done as follows:
 
 There's a bit to unpack here. Firstly, it's important to note that we must use the same identifier for our attachable as our defined block. When we do this, we cause the automatically generated model that Minecraft would place in the right item/left item slot of our entity geometry to be hidden when this attachable is enabled. This is quite desirable, as previous methods of implementing custom items required removing the alpha layer of the defined item texture, which meant that the item would not have a visible sprite for item drops or in item frames. For our animation section, I've essentially set up a system to mimic Java's display settings. If this does not suit your needs, then feel free to define it however you'd like. Also, note that I'm using an animation to disable the first-person view in the player's case, as attempting to do so via render controller seemed to fail due to the pre-animation variable not being accessible.
 
-## Animations
+### Animations
 
-### Display Animations
+#### Display Animations
 
 For animations, we'll be defining a separate animation for each pseudo-display setting. Here's an example:
 
@@ -918,7 +916,7 @@ For animations, we'll be defining a separate animation for each pseudo-display s
 
 Above, we are essentially defining display settings as we would on Java. However, we must account for the translational and axial differences of bedrock. The above settings are unlikely to work for your model, as obviously the proper display settings will depend on the model. Optionally, I've written a jq filter that can effectively translate input Java display settings to a Bedrock animation. You may access it [here](https://jqterm.com/1966ea34bd01c98494579645ff4aa5d9?query=%22CHANGE_ME%22%20as%20%24model_name%20%7C%0A%0A%7B%0A%20%20%20%20%09%22format_version%22%3A%20%221.8.0%22%2C%0A%20%20%20%20%09%22animations%22%3A%20%7B%0A%20%20%20%20%09%09%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.thirdperson_main_hand%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%22root_x%22%3A%20%28if%20.display.thirdperson_righthand%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.thirdperson_righthand.rotation%20then%20%5B%28-%20.display.thirdperson_righthand.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.thirdperson_righthand.translation%20then%20%5B%28-%20.display.thirdperson_righthand.translation%5B0%5D%29%2C%20%28.display.thirdperson_righthand.translation%5B1%5D%29%2C%20%28.display.thirdperson_righthand.translation%5B2%5D%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.thirdperson_righthand.scale%20then%20%5B%28.display.thirdperson_righthand.scale%5B0%5D%29%2C%20%28.display.thirdperson_righthand.scale%5B1%5D%29%2C%20%28.display.thirdperson_righthand.scale%5B2%5D%29%5D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.thirdperson_righthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%20%22rotation%22%3A%20%28if%20.display.thirdperson_righthand.rotation%20then%20%5B0%2C%20%28-%20.display.thirdperson_righthand.rotation%5B1%5D%29%2C%200%5D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.thirdperson_righthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%20%20%20%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.thirdperson_righthand.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22rotation%22%3A%20%5B90%2C%200%2C%200%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22position%22%3A%20%5B0%2C%2013%2C%20-3%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.thirdperson_off_hand%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%22root_x%22%3A%20%28if%20.display.thirdperson_lefthand%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.thirdperson_lefthand.rotation%20then%20%5B%28-%20.display.thirdperson_lefthand.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.thirdperson_lefthand.translation%20then%20%5B%28-%20.display.thirdperson_lefthand.translation%5B0%5D%29%2C%20%28.display.thirdperson_lefthand.translation%5B1%5D%29%2C%20%28.display.thirdperson_lefthand.translation%5B2%5D%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.thirdperson_lefthand.scale%20then%20%5B%28.display.thirdperson_lefthand.scale%5B0%5D%29%2C%20%28.display.thirdperson_lefthand.scale%5B1%5D%29%2C%20%28.display.thirdperson_lefthand.scale%5B2%5D%29%5D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.thirdperson_lefthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%20%22rotation%22%3A%20%28if%20.display.thirdperson_lefthand.rotation%20then%20%5B0%2C%20%28-%20.display.thirdperson_lefthand.rotation%5B1%5D%29%2C%200%5D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.thirdperson_lefthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%20%20%20%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.thirdperson_lefthand.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22rotation%22%3A%20%5B90%2C%200%2C%200%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22position%22%3A%20%5B0%2C%2013%2C%20-3%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.head%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_x%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.head.rotation%20then%20%5B%28-%20.display.head.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.head.translation%20then%20%5B%28-%20.display.head.translation%5B0%5D%20*%200.625%29%2C%20%28.display.head.translation%5B1%5D%20*%200.625%29%2C%20%28.display.head.translation%5B2%5D%20*%200.625%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.head.scale%20then%20%28.display.head.scale%20%7C%20map%28.%20*%200.625%29%29%20else%200.625%20end%29%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.head.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%20%28-%20.display.head.rotation%5B1%5D%29%2C%200%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.head.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.head.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22position%22%3A%20%5B0%2C%2019.5%2C%200%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.firstperson_main_hand%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B90%2C%2060%2C%20-40%5D%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%5B4%2C%2010%2C%204%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%201.5%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%09%09%09%09%22root_x%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.firstperson_righthand.translation%20then%20%5B%28-%20.display.firstperson_righthand.translation%5B0%5D%29%2C%20%28.display.firstperson_righthand.translation%5B1%5D%29%2C%20%28-%20.display.firstperson_righthand.translation%5B2%5D%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.firstperson_righthand.rotation%20then%20%5B%28-%20.display.firstperson_righthand.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20%5B0.1%2C%200.1%2C%200.1%5D%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.firstperson_righthand.scale%20then%20%28.display.firstperson_righthand.scale%29%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.firstperson_righthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%20%28-%20.display.firstperson_righthand.rotation%5B1%5D%29%2C%200%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.firstperson_righthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.firstperson_righthand.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%2C%0A%20%20%20%20%09%09%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.firstperson_off_hand%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B90%2C%2060%2C%20-40%5D%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%5B4%2C%2010%2C%204%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%201.5%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%09%09%09%09%22root_x%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.firstperson_lefthand.translation%20then%20%5B%28.display.firstperson_lefthand.translation%5B0%5D%29%2C%20%28.display.firstperson_lefthand.translation%5B1%5D%29%2C%20%28-%20.display.firstperson_lefthand.translation%5B2%5D%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.firstperson_lefthand.rotation%20then%20%5B%28-%20.display.firstperson_lefthand.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20%5B0.1%2C%200.1%2C%200.1%5D%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.firstperson_lefthand.scale%20then%20%28.display.firstperson_lefthand.scale%29%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.firstperson_lefthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%20%28-%20.display.firstperson_lefthand.rotation%5B1%5D%29%2C%200%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.firstperson_lefthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.firstperson_lefthand.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%0A%20%20%20%20%09%7D%0A%20%20%20%20%7D%20%7C%20walk%28%20if%20type%20%3D%3D%20%22object%22%20then%20with_entries%28select%28.value%20!%3D%20null%29%29%20else%20.%20end%29) This filter assumes the pivot of root is `[0, 8, 0]`, and therefore is the point from which display settings will be applied.
 
-### Disabling via Animations
+#### Disabling via Animations
 
 To ensure our attachable does not display in the first person, we will apply a disabling animation. This can take the following form:
 
@@ -941,7 +939,7 @@ To ensure our attachable does not display in the first person, we will apply a d
 }
 ```
 
-## Texts
+### Texts
 
 We will also apply a simple lang file to allow our item to be displayed with a properly formatted name. Simply follow the format:
 
@@ -953,7 +951,7 @@ tile.<your_namespace>:<your_item>.name=Your Displayed Name
 
 This assumes you utilized blocks. If you utilize items instead, simply use "item" instead of "tile".
 
-## Textures
+### Textures
 
 There are no special requirements regarding the construction of our texture beyond it being a single texture. We need only define a shortname for it in `terrain_texture.json` so that our defined block may access the full texture through the shortname. We do so as follows:
 
@@ -974,7 +972,7 @@ There are no special requirements regarding the construction of our texture beyo
 }
 ```
 
-## Obtaining the Item
+### Obtaining the Item
 
 To obtain the item, simply use the give command: `/give @p <your_namespace>:<your_item>`
 In order to place the item in the head slot: `/replaceitem entity @p slot.armor.head 0 <your_namespace>:<your_item>`

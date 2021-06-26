@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Egg Drops
-parent: Tutorials
 ---
-
-# Egg Drops in loot tables
 
 <Label color="green">Beginner</Label>
 
@@ -22,28 +18,25 @@ Here is how to make entities drop their own eggs when killed:
 
 ```json
 {
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "minecraft:spawn_egg",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "set_actor_id",
-                            "id": "namespace:your_entity" // View notes below
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:spawn_egg",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_actor_id",
+							"id": "namespace:your_entity" // View notes below
+						}
+					]
+				}
+			]
+		}
+	]
 }
 ```
 
 **Notes:** Change this to match your entity, or remove it to automatically use the ID of the entity that drops this loot table.
-
-
-

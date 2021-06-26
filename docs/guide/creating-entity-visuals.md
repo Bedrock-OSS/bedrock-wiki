@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: 'Blockbench: Modeling, Texturing, Animating'
+title: 'Creating Entity Visuals'
 parent: Beginners Guide
 nav_order: 6
 badge: 6

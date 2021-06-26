@@ -2,8 +2,6 @@
 title: Item Categories
 ---
 
-# Item Categories
-
 A list of all the item categories that can be used.
 
 | Category                         | Note |

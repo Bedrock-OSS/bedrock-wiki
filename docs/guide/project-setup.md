@@ -1,14 +1,6 @@
 ---
-layout: guide
 title: Project Setup
-parent: Beginners Guide
-badge: 2
-badge_color: guide
-badge_justification: left
-nav_order: 2
 ---
-
-# Project Setup
 
 ## Manifests
 

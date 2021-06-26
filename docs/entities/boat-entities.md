@@ -4,8 +4,6 @@ tags:
     - recipe
 ---
 
-# Boat Entities
-
 <Label color="yellow">Intermediate</Label>
 
 ## Using Runtime Identifiers
@@ -20,62 +18,62 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 
 ```json
 {
-    "minecraft:entity": {
-        "format_version": "1.14.0",
-        "description": {
-            "identifier": "foo:bar",
-            "is_summonable": true,
-            "is_spawnable": true,
-            "is_experimental": false
-        },
-        "components": {
-            //This is the component that does the magic
-            "minecraft:behavior.rise_to_liquid_level": {
-                "priority": 0,
-                //This property can adjust how high your boat is above the water
-                "liquid_y_offset": 0.5,
-                //Positive vertical displacement, in other words, how much the boat will move up
-                "rise_delta": 0.05,
-                //Negative vertical displacement, in other words, how much the boat will move down
-                "sink_delta": 0.05
-                //Use rise_delta and sink_delta to simulate waves/bouncing effect
-            },
+	"minecraft:entity": {
+		"format_version": "1.14.0",
+		"description": {
+			"identifier": "foo:bar",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"is_experimental": false
+		},
+		"components": {
+			//This is the component that does the magic
+			"minecraft:behavior.rise_to_liquid_level": {
+				"priority": 0,
+				//This property can adjust how high your boat is above the water
+				"liquid_y_offset": 0.5,
+				//Positive vertical displacement, in other words, how much the boat will move up
+				"rise_delta": 0.05,
+				//Negative vertical displacement, in other words, how much the boat will move down
+				"sink_delta": 0.05
+				//Use rise_delta and sink_delta to simulate waves/bouncing effect
+			},
 
-            //Sets the boat speed in water
-            "minecraft:underwater_movement": {
-                "value": 5
-            },
-            //This component is important, without it the boat will sink
-            "minecraft:navigation.walk": {
-                "can_sink": false
-            },
-            "minecraft:rideable": {
-                "seat_count": 1,
-                "family_types": ["player"],
-                "interact_text": "action.interact.enter_boat",
-                "seats": {
-                    "position": [0, 0, 0]
-                }
-            },
-            //Add this component if you want your boat to be controlled with WASD
-            "minecraft:input_ground_controlled": {},
-            "minecraft:health": {
-                "value": 10,
-                "max": 10
-            },
-            //Sets the boat speed on the ground (set this to zero if you don't want your boats to move on the ground)
-            "minecraft:movement": {
-                "value": 3
-            },
-            //This is to prevent the boat from not stopping whenever a player exits, said the boat
-            "minecraft:movement.basic": {},
-            "minecraft:collision_box": {
-                "width": 1,
-                "height": 1
-            },
-            "minecraft:physics": {}
-        }
-    }
+			//Sets the boat speed in water
+			"minecraft:underwater_movement": {
+				"value": 5
+			},
+			//This component is important, without it the boat will sink
+			"minecraft:navigation.walk": {
+				"can_sink": false
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"family_types": ["player"],
+				"interact_text": "action.interact.enter_boat",
+				"seats": {
+					"position": [0, 0, 0]
+				}
+			},
+			//Add this component if you want your boat to be controlled with WASD
+			"minecraft:input_ground_controlled": {},
+			"minecraft:health": {
+				"value": 10,
+				"max": 10
+			},
+			//Sets the boat speed on the ground (set this to zero if you don't want your boats to move on the ground)
+			"minecraft:movement": {
+				"value": 3
+			},
+			//This is to prevent the boat from not stopping whenever a player exits, said the boat
+			"minecraft:movement.basic": {},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:physics": {}
+		}
+	}
 }
 ```
 
@@ -83,67 +81,67 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 
 ```json
 {
-    "minecraft:entity": {
-        "format_version": "1.14.0",
-        "description": {
-            "identifier": "foo:bar",
-            "is_summonable": true,
-            "is_spawnable": true,
-            "is_experimental": false
-        },
-        "components": {
-            "minecraft:buoyant": {
-                //Determines whether gravity should be taken into account (useful with waterfalls)
-                "apply_gravity": true,
-                //Range: 0-1. This controls how high the boat is above the water
-                "base_buoyancy": 1.0,
-                //A "wave" makes the entity bounce up and down. A big wave simply amplifies this effect. Note: setting simulate_waves to false won't make the effect go away completely.
-                "simulate_waves": true,
-                //How likely a "big" wave will hit this boat
-                "big_wave_probability": 0.03,
-                //How strong the "big" wave will be
-                "big_wave_speed": 10.0,
-                //How strong will the boat be dragged down in case this component is removed
-                "drag_down_on_buoyancy_removed": 0,
-                //Blocks this entity can be buoyant in. Only actual liquids are allowed: lava and water
-                "liquid_blocks": ["water"]
-            },
+	"minecraft:entity": {
+		"format_version": "1.14.0",
+		"description": {
+			"identifier": "foo:bar",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:buoyant": {
+				//Determines whether gravity should be taken into account (useful with waterfalls)
+				"apply_gravity": true,
+				//Range: 0-1. This controls how high the boat is above the water
+				"base_buoyancy": 1.0,
+				//A "wave" makes the entity bounce up and down. A big wave simply amplifies this effect. Note: setting simulate_waves to false won't make the effect go away completely.
+				"simulate_waves": true,
+				//How likely a "big" wave will hit this boat
+				"big_wave_probability": 0.03,
+				//How strong the "big" wave will be
+				"big_wave_speed": 10.0,
+				//How strong will the boat be dragged down in case this component is removed
+				"drag_down_on_buoyancy_removed": 0,
+				//Blocks this entity can be buoyant in. Only actual liquids are allowed: lava and water
+				"liquid_blocks": ["water"]
+			},
 
-            //Sets the boat speed in water
-            "minecraft:underwater_movement": {
-                "value": 5
-            },
-            //This component is important, without it the boat will sink
-            "minecraft:navigation.walk": {
-                "can_sink": false
-            },
-            "minecraft:rideable": {
-                "seat_count": 1,
-                "family_types": ["player"],
-                "interact_text": "action.interact.enter_boat",
-                "seats": {
-                    "position": [0, 0, 0]
-                }
-            },
-            //Add this component if you want your boat to be controlled with WASD
-            "minecraft:input_ground_controlled": {},
-            "minecraft:health": {
-                "value": 10,
-                "max": 10
-            },
-            //Sets the boat speed on the ground (set this to zero if you don't want your boats to move on the ground)
-            "minecraft:movement": {
-                "value": 3
-            },
-            //This is to prevent the boat from not stopping whenever a player exits the boat
-            "minecraft:movement.basic": {},
-            "minecraft:collision_box": {
-                "width": 1,
-                "height": 1
-            },
-            "minecraft:physics": {}
-        }
-    }
+			//Sets the boat speed in water
+			"minecraft:underwater_movement": {
+				"value": 5
+			},
+			//This component is important, without it the boat will sink
+			"minecraft:navigation.walk": {
+				"can_sink": false
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"family_types": ["player"],
+				"interact_text": "action.interact.enter_boat",
+				"seats": {
+					"position": [0, 0, 0]
+				}
+			},
+			//Add this component if you want your boat to be controlled with WASD
+			"minecraft:input_ground_controlled": {},
+			"minecraft:health": {
+				"value": 10,
+				"max": 10
+			},
+			//Sets the boat speed on the ground (set this to zero if you don't want your boats to move on the ground)
+			"minecraft:movement": {
+				"value": 3
+			},
+			//This is to prevent the boat from not stopping whenever a player exits the boat
+			"minecraft:movement.basic": {},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:physics": {}
+		}
+	}
 }
 ```
 

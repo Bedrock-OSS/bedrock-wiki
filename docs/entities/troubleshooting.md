@@ -2,8 +2,6 @@
 title: Entity Troubleshooting
 ---
 
-# Step-by-step Entity Debugging
-
 ---
 
 <a name="0.0.0"></a>

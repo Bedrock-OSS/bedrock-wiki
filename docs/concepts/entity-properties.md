@@ -6,8 +6,6 @@ tags:
     - beta
 ---
 
-# Entity Properties
-
 <Label color="red">Beta</Label>
 
 -   Documentation on the new Entity Properties, also known as Actor Properties, introduced in the 1.16.230.52 Minecraft: Bedrock Edition beta version.

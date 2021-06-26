@@ -2,8 +2,6 @@
 title: NBT Commands
 ---
 
-# NBT Commands
-
 NBT data for the Bedrock edition is minimal. Four of the only values we have access to are `CanPlaceOn`,`CanDestroy`, `KeepOnDeath`, and `ItemLock`. These are used as part of a `/give` or `replaceitem` command and can edit specific properties of the items with said NBT.
 
 # CanPlaceOn and CanDestroy

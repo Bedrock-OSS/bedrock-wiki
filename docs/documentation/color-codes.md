@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Color Codes
-parent: Documentation
 ---
-
-# Color Codes
 
 | Color                       | Code |
 | --------------------------- | ---- |

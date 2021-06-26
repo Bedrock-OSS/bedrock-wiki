@@ -1,14 +1,6 @@
 ---
-layout: guide
 title: Download Example Packs
-parent: Beginners Guide
-nav_order: 101
-badge: A
-badge_color: guide
-badge_justification: left
 ---
-
-# Download Example Packs
 
 ::: tip
 This is an appendix page. You can start the guide from the beginning [here](/guide/index).

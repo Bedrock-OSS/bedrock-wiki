@@ -1,12 +1,6 @@
 ---
-layout: page
-title: Emojis
-parent: Documentation
+title: Minecraft Symbols & Emojis
 ---
-
-# Minecraft Emojis
-
-[[TOC]]
 
 Minecraft has a bunch of hard-coded [Private Use Unicode symbols](https://en.wikipedia.org/wiki/Private_Use_Areas) that it automatically converts to Emoji-like symbols.
 These can be used anywhere where normal letters can - signs, books, item names, chat, etc.

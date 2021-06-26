@@ -1,4 +1,6 @@
-# Table of Contents
+---
+title: 'Blockbench: Modeling, Texturing, Animating'
+---
 
 ## Software Preparation
 

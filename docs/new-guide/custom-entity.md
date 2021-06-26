@@ -1,14 +1,6 @@
 ---
-layout: guide
-title: Custom Item
-parent: Beginners Guide
-badge: 2
-badge_color: guide
-badge_justification: left
-nav_order: 2
+title: 'Creating a custom Entity: Ghost'
 ---
-
-# Creating a custom Entity: Ghost
 
 Last time you created a custom item for this custom entity to drop. This time you will create the Ghost itself, as promised.
 
@@ -21,94 +13,95 @@ Just like with items, the main files of a custom entity are its RP and BP files.
 
 "`json
 {
-    "format_version": "1.16.0",
-    "minecraft:entity": {
-        "description": {
-            "identifier": "wiki:ghost",
-            "is_summonable": true,
-            "is_spawnable": true,
-            "is_experimental": false
-        },
-        "components": {
-            "minecraft:type_family": {
-                "family": ["ghost", "monster"]
-            },
-            "minecraft:jump.static": {},
-            "minecraft:can_climb": {},
-            "minecraft:physics": {},
-            "minecraft:movement.basic": {},
-            "minecraft:loot": {
-                "table": "loot_tables/entities/ghost.json"
-            },
-            "minecraft:health": {
-                "value": 20,
-                "max": 20
-            },
-            "minecraft:collision_box": {
-                "width": 1,
-                "height": 2
-            },
-            "minecraft:movement": {
-                "value": 0.2
-            },
-            "minecraft:behavior.delayed_attack": {
-                "priority": 0,
-                "attack_once": false,
-                "track_target": true,
-                "require_complete_path": false,
-                "random_stop_interval": 0,
-                "reach_multiplier": 1.5,
-                "speed_multiplier": 1,
-                "attack_duration": 0.75,
-                "hit_delay_pct": 0.5
-            },
-            "minecraft:navigation.walk": {
-                "can_walk": true,
-                "avoid_sun": true,
-                "can_pass_doors": true,
-                "can_open_doors": true
-            },
-            "minecraft:attack": {
-                "damage": 3
-            },
-            "minecraft:behavior.random_look_around": {
-                "priority": 7
-            },
-            "minecraft:behavior.hurt_by_target": {
-                "priority": 1
-            },
-            "minecraft:behavior.nearest_attackable_target": {
-                "priority": 2,
-                "within_radius": 25,
-                "reselect_targets": true,
-                "entity_types": [
-                    {
-                        "filters": {
-                            "any_of": [
-                                {
-                                    "test": "is_family",
-                                    "subject": "other",
-                                    "value": "player"
-                                }
-                            ]
-                        },
-                        "max_dist": 35
-                    }
-                ]
-            },
-            "minecraft:behavior.random_stroll": {
-                "priority": 6,
-                "speed_multiplier": 1
-            },
-            "minecraft:behavior.look_at_player": {
-                "priority": 7,
-                "look_distance": 6,
-                "probability": 0.02
-            }
-        }
-    }
+"format_version": "1.16.0",
+"minecraft:entity": {
+"description": {
+"identifier": "wiki:ghost",
+"is_summonable": true,
+"is_spawnable": true,
+"is_experimental": false
+},
+"components": {
+"minecraft:type_family": {
+"family": ["ghost", "monster"]
+},
+"minecraft:jump.static": {},
+"minecraft:can_climb": {},
+"minecraft:physics": {},
+"minecraft:movement.basic": {},
+"minecraft:loot": {
+"table": "loot_tables/entities/ghost.json"
+},
+"minecraft:health": {
+"value": 20,
+"max": 20
+},
+"minecraft:collision_box": {
+"width": 1,
+"height": 2
+},
+"minecraft:movement": {
+"value": 0.2
+},
+"minecraft:behavior.delayed_attack": {
+"priority": 0,
+"attack_once": false,
+"track_target": true,
+"require_complete_path": false,
+"random_stop_interval": 0,
+"reach_multiplier": 1.5,
+"speed_multiplier": 1,
+"attack_duration": 0.75,
+"hit_delay_pct": 0.5
+},
+"minecraft:navigation.walk": {
+"can_walk": true,
+"avoid_sun": true,
+"can_pass_doors": true,
+"can_open_doors": true
+},
+"minecraft:attack": {
+"damage": 3
+},
+"minecraft:behavior.random_look_around": {
+"priority": 7
+},
+"minecraft:behavior.hurt_by_target": {
+"priority": 1
+},
+"minecraft:behavior.nearest_attackable_target": {
+"priority": 2,
+"within_radius": 25,
+"reselect_targets": true,
+"entity_types": [
+{
+"filters": {
+"any_of": [
+{
+"test": "is_family",
+"subject": "other",
+"value": "player"
 }
-```
+]
+},
+"max_dist": 35
+}
+]
+},
+"minecraft:behavior.random_stroll": {
+"priority": 6,
+"speed_multiplier": 1
+},
+"minecraft:behavior.look_at_player": {
+"priority": 7,
+"look_distance": 6,
+"probability": 0.02
+}
+}
+}
+}
+
+````
 
 -   You can already recognize parts of the file syntax from the custom item creation, such as `"format_version"` and `"description"/"identifier"`. We use the same _namespace_ in all the pack files. In our example case, the namespace is `wiki`. The entity's _id_ is `ghost`.
 -   The other keys in `"description"` all take Booleans (`true` or `false`) as their values. These are: `" is_summonable"` (whether you can spawn the entity with a `/summon` command), `"is_spawnable"` (whether you can spawn one with a spawn egg or naturally), and `"is_experimental"` (whether you need to turn on [EX] (Experimental mode) in a world for this entity to exist). Set the options to `true`, `true` and `false` respectively. We do not need [EX].
@@ -186,7 +179,7 @@ Again, just like with the item, a custom entity needs a resource file listing it
         }
     }
 }
-```
+````
 
 Let's go over every single object in `"description"` , as usual:
 
@@ -213,15 +206,16 @@ Our next step is creating the mentioned _render controller_ with the id `control
 
 "`json
 {
-    "format_version": "1.10.0",
-    "render_controllers": {
-        "controller.render.ghost": {
-            "geometry": "Geometry.default",
-            "materials": [{ "*": "Material.default" }],
-            "textures": ["Texture.default"]
-        }
-    }
+"format_version": "1.10.0",
+"render_controllers": {
+"controller.render.ghost": {
+"geometry": "Geometry.default",
+"materials": [{ "*": "Material.default" }],
+"textures": ["Texture.default"]
 }
+}
+}
+
 ```
 
 The id of the only render controllers in this file is `" controller.render.ghost" `, which was referenced in the RP entity folder of the ghost (`RP/entity/ghost.e.json/"render_controllers"`). The code inside tells the game the geometry.
@@ -326,125 +320,126 @@ Most of what was said for models is also true for animations. Here's the code yo
 
 "`json
 {
-    "format_version": "1.8.0",
-    "animations": {
-        "animation.ghost.idle": {
-            "loop": true,
-            "animation_length": 3,
-            "bones": {
-                "body": {
-                    "rotation": {
-                        "0.0": [10, 0, 0],
-                        "3.0": [10, 0, 0]
-                    },
-                    "position": {
-                        "0.0": [0, 0, 0],
-                        "1.5": [0, 1, 0],
-                        "3.0": [0, 0, 0]
-                    }
-                },
-                "leftArm": {
-                    "rotation": {
-                        "0.0": [-10, 0, 0],
-                        "1.5": [-5, 0, 0],
-                        "3.0": [-10, 0, 0]
-                    }
-                },
-                "rightArm": {
-                    "rotation": {
-                        "0.0": [-10, 0, 0],
-                        "1.5": [-5, 0, 0],
-                        "3.0": [-10, 0, 0]
-                    }
-                },
-                "head": {
-                    "rotation": {
-                        "0.0": [-7.5, 0, 0],
-                        "1.5": [-2.5, 0, 0],
-                        "3.0": [-7.5, 0, 0]
-                    }
-                }
-            }
-        },
-        "animation.ghost.attack": {
-            "animation_length": 0.75,
-            "bones": {
-                "body": {
-                    "rotation": {
-                        "0.0": [10, 0, 0],
-                        "0.2917": [10, 15, 0],
-                        "0.5": [22.5, -12.5, 0],
-                        "0.75": [10, 0, 0]
-                    },
-                    "position": {
-                        "0.0": [0, 0, 0],
-                        "0.2917": [0, 0, 3],
-                        "0.5": [0, 0, -3],
-                        "0.75": [0, 0, 0]
-                    }
-                },
-                "leftArm": {
-                    "rotation": {
-                        "0.0": [-10, 0, 0],
-                        "0.75": [-10, 0, 0]
-                    }
-                },
-                "rightArm": {
-                    "rotation": {
-                        "0.0": [-10, 0, 0],
-                        "0.2083": [-10, 0, 0],
-                        "0.2917": [-10, 62.5, 117.5],
-                        "0.5": [-80, -17.5, 22.5],
-                        "0.75": [-10, 0, 0]
-                    }
-                },
-                "head": {
-                    "rotation": {
-                        "0.0": [-7.5, 0, 0],
-                        "0.75": [-7.5, 0, 0]
-                    }
-                }
-            }
-        },
-        "animation.ghost.move": {
-            "loop": true,
-            "animation_length": 1,
-            "bones": {
-                "body": {
-                    "rotation": {
-                        "0.0": [15, 0, 0],
-                        "0.25": [15, -2.5, 0],
-                        "0.5": [15, 0, 0],
-                        "0.75": [15, 2.5, 0],
-                        "1.0": [15, 0, 0]
-                    },
-                    "position": [0, 0, 0]
-                },
-                "leftArm": {
-                    "rotation": {
-                        "0.0": [15, 0, 0],
-                        "0.5": [20, 0, 0],
-                        "1.0": [15, 0, 0]
-                    }
-                },
-                "rightArm": {
-                    "rotation": {
-                        "0.0": [15, 0, 0],
-                        "0.5": [20, 0, 0],
-                        "1.0": [15, 0, 0]
-                    }
-                },
-                "head": {
-                    "rotation": {
-                        "0.0": [-12.5, 0, 0],
-                        "0.5": [-15, 0, 0],
-                        "1.0": [-12.5, 0, 0]
-                    }
-                }
-            }
-        }
-    }
+"format_version": "1.8.0",
+"animations": {
+"animation.ghost.idle": {
+"loop": true,
+"animation_length": 3,
+"bones": {
+"body": {
+"rotation": {
+"0.0": [10, 0, 0],
+"3.0": [10, 0, 0]
+},
+"position": {
+"0.0": [0, 0, 0],
+"1.5": [0, 1, 0],
+"3.0": [0, 0, 0]
 }
+},
+"leftArm": {
+"rotation": {
+"0.0": [-10, 0, 0],
+"1.5": [-5, 0, 0],
+"3.0": [-10, 0, 0]
+}
+},
+"rightArm": {
+"rotation": {
+"0.0": [-10, 0, 0],
+"1.5": [-5, 0, 0],
+"3.0": [-10, 0, 0]
+}
+},
+"head": {
+"rotation": {
+"0.0": [-7.5, 0, 0],
+"1.5": [-2.5, 0, 0],
+"3.0": [-7.5, 0, 0]
+}
+}
+}
+},
+"animation.ghost.attack": {
+"animation_length": 0.75,
+"bones": {
+"body": {
+"rotation": {
+"0.0": [10, 0, 0],
+"0.2917": [10, 15, 0],
+"0.5": [22.5, -12.5, 0],
+"0.75": [10, 0, 0]
+},
+"position": {
+"0.0": [0, 0, 0],
+"0.2917": [0, 0, 3],
+"0.5": [0, 0, -3],
+"0.75": [0, 0, 0]
+}
+},
+"leftArm": {
+"rotation": {
+"0.0": [-10, 0, 0],
+"0.75": [-10, 0, 0]
+}
+},
+"rightArm": {
+"rotation": {
+"0.0": [-10, 0, 0],
+"0.2083": [-10, 0, 0],
+"0.2917": [-10, 62.5, 117.5],
+"0.5": [-80, -17.5, 22.5],
+"0.75": [-10, 0, 0]
+}
+},
+"head": {
+"rotation": {
+"0.0": [-7.5, 0, 0],
+"0.75": [-7.5, 0, 0]
+}
+}
+}
+},
+"animation.ghost.move": {
+"loop": true,
+"animation_length": 1,
+"bones": {
+"body": {
+"rotation": {
+"0.0": [15, 0, 0],
+"0.25": [15, -2.5, 0],
+"0.5": [15, 0, 0],
+"0.75": [15, 2.5, 0],
+"1.0": [15, 0, 0]
+},
+"position": [0, 0, 0]
+},
+"leftArm": {
+"rotation": {
+"0.0": [15, 0, 0],
+"0.5": [20, 0, 0],
+"1.0": [15, 0, 0]
+}
+},
+"rightArm": {
+"rotation": {
+"0.0": [15, 0, 0],
+"0.5": [20, 0, 0],
+"1.0": [15, 0, 0]
+}
+},
+"head": {
+"rotation": {
+"0.0": [-12.5, 0, 0],
+"0.5": [-15, 0, 0],
+"1.0": [-12.5, 0, 0]
+}
+}
+}
+}
+}
+}
+
 ```
 
 Unlike the model's file, this one contains three animations for the Ghost, which are ` "animation. Ghost.idle"` (which is an animation playing from time to time), `"animation.ghost.attack" ` and `"animation.ghost.move"` (quite self-explanatory). Their shortnames, as defined in the Ghost's RP entity file, are ` "idle"`, `"attack"` and `"move"` respectively.

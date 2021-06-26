@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Discord
-parent: Home
 hidden: true
 ---
 

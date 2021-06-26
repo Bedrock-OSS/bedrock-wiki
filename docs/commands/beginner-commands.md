@@ -1,12 +1,8 @@
 ---
-title: Beginners Guide
+title: Beginners Guide to Commands
 tags:
     - guide
 ---
-
-# Beginners Guide to Commands
-
-[[TOC]]
 
 <Label color="green">Beginner</Label>
 

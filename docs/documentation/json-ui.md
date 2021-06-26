@@ -1,10 +1,6 @@
 ---
-layout: page
 title: JSON UI
-parent: Documentation
 ---
-
-# JSON UI
 
 ## Element Types
 

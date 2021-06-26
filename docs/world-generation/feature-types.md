@@ -2,7 +2,6 @@
 title: Feature Types
 ---
 
-# Feature Types
 ::: warning
 Some links designed to reference external documents do not function, and will be updated at a later time to point to the correct resource.
 
@@ -11,31 +10,26 @@ Screenshots and other resources may be provided for many feature types given her
 
 ## Content Features
 
-
 ### Single Block Features
-
 
 ### Ore Features
 
-
 ### Structure Template Features
-
 
 ### Growing Plant Features
 
-
 ### Tree Features
-
 
 ### Multiface Features
 
-
 ## Proxy Features
+
 Proxy features group, arrange, or gate features, including other proxy features. Proxy features themselves are incapable of having a direct effect on world generation.
 
 All proxy features must therefore point to one or multiple **target features**: the features that are placed, rearranged, or selected by proxy features. Target features are represented as string references to the identifier of the intended feature.
 
 ### Scatter Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -68,11 +62,13 @@ All proxy features must therefore point to one or multiple **target features**: 
 ```
 
 **Scatter features** are the most flexible and useful feature type available. Scatter features can:
-- Distribute or reposition a feature any number of times within a [chunk’s feature domain](#)
-- Act as a gate to conditionally enable a feature to be placed
-- Execute MoLang within the current [feature context](#)
+
+-   Distribute or reposition a feature any number of times within a [chunk’s feature domain](#)
+-   Act as a gate to conditionally enable a feature to be placed
+-   Execute MoLang within the current [feature context](#)
 
 Scatter features attempt to place a [target feature](#proxy-features) with each iteration:
+
 ```json
 "places_feature": "lostlands:shimmerfields_spire"
 ```
@@ -80,6 +76,7 @@ Scatter features attempt to place a [target feature](#proxy-features) with each 
 If, where, and how an instance of the target is placed depend on the [generation potential](#generation-potential), [distribution](#distribution), and the [evaluation order](#evaluation-order)
 
 #### Generation Potential
+
 ```json
 "scatter_chance": 25,
 "iterations": 12
@@ -90,6 +87,7 @@ A scatter feature will determine placement attempts of its target using the `"sc
 **Scatter chance** represents the potential for the scatter feature to succeed. It can be represented as…
 
 A numeric literal:
+
 ```json
 "scatter_chance": 12.5
 ```
@@ -99,11 +97,13 @@ The numeric literal form is considered against 100, not 1. A scatter chance of `
 :::
 
 A MoLang expression:
+
 ```json
 "scatter_chance": "1 / 8"
 ```
 
 A fraction object:
+
 ```json
 "scatter_chance": {
 	"numerator": 1,
@@ -113,10 +113,10 @@ A fraction object:
 
 All 3 examples have a 12.5% chance for success. Use whichever form feels most appropriate for your case. If scatter chance is omitted, it defaults to a 100% chance for the scatter feature to attempt to place its target.
 
-
-**Iterations** are the number of attempts a scatter feature will try to place its target. If an instance of a scatter feature would succeed (in other words, if its scatter chance check were successful), *all* of the iterations given by `"iterations"` will be attempted. Iterations may be represented as integer literals or MoLang expressions. Unlike scatter chance, iterations are required.
+**Iterations** are the number of attempts a scatter feature will try to place its target. If an instance of a scatter feature would succeed (in other words, if its scatter chance check were successful), _all_ of the iterations given by `"iterations"` will be attempted. Iterations may be represented as integer literals or MoLang expressions. Unlike scatter chance, iterations are required.
 
 #### Distribution
+
 ```json
 "x": {
 	"distribution": "fixed_grid",
@@ -132,16 +132,19 @@ All 3 examples have a 12.5% chance for success. Use whichever form feels most ap
 Distribution is predominantly handled using **coordinate properties**: `"x"`, `"z"`, and `"y"`. All these properties may be represented using…
 
 An integer literal:
+
 ```json
 "x": 0
 ```
 
 A MoLang Expression:
+
 ```json
 "x": "math.random_integer(0, v.surface_grass.spread - 1)"
 ```
 
 Or a number of object forms for conveniently distributing a coordinate:
+
 ```json
 "x": {
 	"distribution": "uniform",
@@ -151,29 +154,32 @@ Or a number of object forms for conveniently distributing a coordinate:
 
 Literals and MoLang expressions are relative to the [feature origin](#). See [Distribution Types](#distribution-types) for the available pre-constructed distribution systems.
 
-Because placement of features is so often relative to the heightmap, the incoming *y*-origin for the scatter feature may be **projected into the heightmap**:
+Because placement of features is so often relative to the heightmap, the incoming _y_-origin for the scatter feature may be **projected into the heightmap**:
 
 ```json
 "project_input_to_floor": true
 ```
 
-This means that the specified *y*-origin from the scatter feature’s parent is ignored in favor of the *y*-coordinate of the heightmap at an iteration’s *x*-*z* location ([assuming the *y*-coordinate would be evaluated after the lateral coordinates](#evaluation-order)). The `"y"` property may still be given a value that will represent the offset from the heightmap.
+This means that the specified _y_-origin from the scatter feature’s parent is ignored in favor of the _y_-coordinate of the heightmap at an iteration’s _x_-_z_ location ([assuming the _y_-coordinate would be evaluated after the lateral coordinates](#evaluation-order)). The `"y"` property may still be given a value that will represent the offset from the heightmap.
 
 ::: tip Note
 Functionally, this is the same as using the MoLang expression `"query.heightmap(v.worldx, v.worldz) + *offset*"`.
 :::
 
 ##### Distribution Types
+
 Custom distribution systems can be constructed using MoLang expressions, but scatter features come pre-equipped with a few common **distribution types** for convenient authoring:
-- Uniform
-- Gaussian
-- Inverse Gaussian
-- Fixed grid
-- Jittered grid
+
+-   Uniform
+-   Gaussian
+-   Inverse Gaussian
+-   Fixed grid
+-   Jittered grid
 
 Each distribution type requires an **extent**, which represents the range of values on which that distribution operates, from minimum to maximum. Extents, like the basic forms of coordinate declarations, are relative to the [feature origin](#).
 
 ###### Uniform Distribution
+
 ```json
 "z": {
 	"distribution": "uniform",
@@ -188,6 +194,7 @@ Each distribution type requires an **extent**, which represents the range of val
 Therefore, if an extent of `[0, 16]` were given for a uniform distribution, blocks may be placed in a range of size 16: from 0 to 15. The 1st possible position starts at 0 while the 15th possible position ends at 16, matching the extent.
 
 ###### Gaussian Distributions
+
 ```json
 "y": {
 	"distribution": "gaussian",
@@ -198,6 +205,7 @@ Therefore, if an extent of `[0, 16]` were given for a uniform distribution, bloc
 **Gaussian distribution** (`"gaussian"`) and its **inverse** (`"inverse_gaussian"`) are useful for grouping features together: toward or away from the center of the extent respectively. Gaussian distribution is so extreme that values will almost never be selected away from the center with normal Gaussian distribution or toward the center with inverse Gaussian distribution. The extents for Gaussian distribution behave the as with [uniform distribution](#uniform-distribution).
 
 ###### Grid Distributions
+
 ```json
 "x": {
 	"distribution": "jittered_grid",
@@ -218,6 +226,7 @@ If the iteration count in conjunction with the step size and offset would push a
 While grids are useful on a coordinate independently, their true power shows when in combination with grid distributions on other coordinates. Placements prioritize incrementing the earliest evaluated grid system before later systems; the later layouts are only considered when wrapping occurs in the previous grid system. When a placement in an earlier evaluated coordinate would wrap, the next evaluated grid-powered coordinate will be offset by the number of wraps that occurred.
 
 As a simple example:
+
 ```json
 "iterations": 21,
 
@@ -231,7 +240,7 @@ As a simple example:
 }
 ```
 
-Placements will first begin along *x*: (0, 0), (1, 0), etc., until reaching the end of the extent at (15, 0). However, only 16 of the 21 iterations have occurred; 5 remain. Now, the *x*-coordinate wraps back around to 0, while the *z*-coordinate increments to 1: (0, 1).
+Placements will first begin along _x_: (0, 0), (1, 0), etc., until reaching the end of the extent at (15, 0). However, only 16 of the 21 iterations have occurred; 5 remain. Now, the _x_-coordinate wraps back around to 0, while the _z_-coordinate increments to 1: (0, 1).
 
 This wrapping occurs in three-dimensions, too, so when a plane along the earliest evaluated coordinates would wrap (assuming a high enough iteration count), another plane will begin formation based on the final coordinate’s step size.
 
@@ -242,6 +251,7 @@ When using multiple grid distributions to form a surface or volume, extents for 
 :::
 
 #### Evaluation Order
+
 When a scatter chance is included, it is evaluated before any other properties. If the check against scatter chance fails for that instance of the scatter feature, nothing downstream within that instance is evaluated. No further MoLang is interpreted; no variables within the [feature context](#) are updated. The target feature is entirely disregarded.
 
 Next, the iteration count is evaluated. Similarly to scatter chance, if the iteration count were not to resolve to a positive number of placement attempts, nothing further is evaluated.
@@ -249,10 +259,10 @@ Next, the iteration count is evaluated. Similarly to scatter chance, if the iter
 Next, every iteration is attempted regardless of whether an early iteration would for some reason fail. For each iteration, each coordinate is evaluated using the same ordering across all iterations.
 
 ::: warning
-The order of coordinate evaluation is *not* dependent upon the order the coordinate properties are declared in JSON.
+The order of coordinate evaluation is _not_ dependent upon the order the coordinate properties are declared in JSON.
 :::
 
-By default, the coordinate ordering is *x* then *z* then *y*. This covers the majority of use-cases: if the coordinates aren’t independent, more than likely the vertical position depends on the lateral coordinates. However, scatter features may declare an atypical **coordinate evaluation order** for full control over coordinate dependence:
+By default, the coordinate ordering is _x_ then _z_ then _y_. This covers the majority of use-cases: if the coordinates aren’t independent, more than likely the vertical position depends on the lateral coordinates. However, scatter features may declare an atypical **coordinate evaluation order** for full control over coordinate dependence:
 
 ```json
 "coordinate_eval_order": "zyx"
@@ -263,6 +273,7 @@ After the coordinates for an iteration have been determined, world generation mo
 When finished with the target’s feature tree, if more iterations have yet to be run from the scatter feature, focus returns to the scatter feature beginning with the first-evaluated coordinate and execution is resumed.
 
 ### Conditional Lists
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -288,13 +299,14 @@ When finished with the target’s feature tree, if more iterations have yet to b
 }
 ```
 
-**Conditional lists** pick a single feature from a collection based on conditions; they are akin to if-else if blocks in programming languages. Once a condition has been evaluated as successful (as determined via [success determination](#success-determination), the conditional list will select *only that one feature* for placement.
+**Conditional lists** pick a single feature from a collection based on conditions; they are akin to if-else if blocks in programming languages. Once a condition has been evaluated as successful (as determined via [success determination](#success-determination), the conditional list will select _only that one feature_ for placement.
 
 ::: tip Note
-Instead, if *every* success should place a feature in the same location, use an [aggregate feature](#aggregate-features) pointing to [scatter features](#scatter-features) that proxy the target features.
+Instead, if _every_ success should place a feature in the same location, use an [aggregate feature](#aggregate-features) pointing to [scatter features](#scatter-features) that proxy the target features.
 :::
 
 #### Conditions List
+
 ```json
 "conditional_features": [
 	{
@@ -324,6 +336,7 @@ The **conditions list**, `"conditional_features"`, is an ordered array comprised
 The condition of each feature entry is evaluated by entry order in the conditions list. Once a feature entry [would succeed](#success-determination), no later-listed conditions will be evaluated.
 
 #### Success Determination
+
 ```json
 "early_out_scheme": "placement_success"
 ```
@@ -332,44 +345,30 @@ Condition success is considered in light of the optional **early out scheme**. T
 
 ### Aggregate Features
 
-
 ### Sequence Features
-
 
 ### Snap-to-Surface Features
 
-
 ### Search Features
-
 
 ### Rect Layouts
 
-
 ### Scan Surface Features
-
 
 ### Weighted Random Features
 
-
 ## Scene Features
-
 
 ### Geode Features
 
-
 ### Beards and Shavers
-
 
 ### Vegetation Patches
 
-
 ## Carver Features
-
 
 ### Cave Carver Features
 
-
 ### Hell Cave Carver Features
-
 
 ### Underwater Cave Carver Features

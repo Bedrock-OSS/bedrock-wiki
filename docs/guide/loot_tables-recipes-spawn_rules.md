@@ -1,14 +1,6 @@
 ---
-layout: guide
 title: Loot Tables, Recipes, Spawn Rules
-parent: Beginners Guide
-nav_order: 5
-badge: 5
-badge_color: guide
-badge_justification: left
 ---
-
-# Custom Loot Tables
 
 Loot tables are powerful tools that define what blocks drop upon destruction, what entities upon death, what equipment can entities use, what can a player fish out of a river and what loot ends up in the game's loot chests. In order to understand loot tables better, I recommend looking into the `loot_tables` folder of the Example Vanilla Behavior pack, but I'll trow in some examples from there into here nevertheless. \
 One can even make a loot that drops half-removed blocks like glowingobsidian and netherreactors!

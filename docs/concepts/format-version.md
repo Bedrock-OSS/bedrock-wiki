@@ -4,8 +4,6 @@ title: Format Versions
 parent: Concepts
 ---
 
-# Format Versions
-
 Most Addon files contain a `format_version` field, often in the description. Here is an example:
 
 <CodeHeader>BP/entities/dragon.json</CodeHeader>

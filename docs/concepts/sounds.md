@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Sounds
-parent: Concepts
 ---
-
-# Sounds
 
 <Label color="yellow">Intermediate</Label>
 
@@ -38,13 +34,13 @@ The following sound formats are accepted:
 
 ```json
 {
-  "format_version": "1.14.0",
-  "sound_definitions": {
-    "example.toot": {
-      "category": "neutral",
-      "sounds": ["sounds/trumpet"]
-    }
-  }
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"example.toot": {
+			"category": "neutral",
+			"sounds": ["sounds/trumpet"]
+		}
+	}
 }
 ```
 
@@ -141,12 +137,12 @@ If we want our sounds to run automatically, we can add them into the `sounds.jso
 
 Sounds can be added into various categories:
 
-| Category                | Note                                                                            |
-| ----------------------- | ------------------------------------------------------------------------------- |
-| individual_event_sounds | Contains sounds like beacon activation, chest-close, or explode                 |
-| block_sounds            | Contains hit, step, and break sounds for blocks                                 |
+| Category                | Note                                                                             |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| individual_event_sounds | Contains sounds like beacon activation, chest-close, or explode                  |
+| block_sounds            | Contains hit, step, and break sounds for blocks                                  |
 | entity_sounds           | Contains death, ambient, hurt, etc. sounds for entities (Including custom ones!) |
-| interactive_sounds      | WIP                                                                             |
+| interactive_sounds      | WIP                                                                              |
 
 ## Adding Entity Sounds
 
@@ -160,8 +156,8 @@ Common events:
 | hurt       | Played when damaged                                      |
 | death      | Played when it dies                                      |
 | step       | Played when the entity moves along the ground            |
-| fall.big   | For hitting the ground from a high height |
-| fall.small | For hitting the ground from a low height                     |
+| fall.big   | For hitting the ground from a high height                |
+| fall.small | For hitting the ground from a low height                 |
 | splash     | For splashing in the water                               |
 | attack     | For melee attacking                                      |
 | shoot      | For shooting projectiles                                 |
@@ -190,26 +186,26 @@ There are also many sound events, which _most likely_ trigger automatically, but
 
 ```json
 {
-  "entity_sounds": {
-    "entities": {
-      "sirlich:elephant": {
-        "volume": 1,
-        "pitch": [0.9, 1.0],
-        "events": {
-          "step": {
-            "sound": "elephant.step",
-            "volume": 0.18,
-            "pitch": 1.1
-          },
-          "ambient": {
-            "sound": "elephant.trumpet",
-            "volume": 0.11,
-            "pitch": 0.9
-          }
-        }
-      }
-    }
-  }
+	"entity_sounds": {
+		"entities": {
+			"sirlich:elephant": {
+				"volume": 1,
+				"pitch": [0.9, 1.0],
+				"events": {
+					"step": {
+						"sound": "elephant.step",
+						"volume": 0.18,
+						"pitch": 1.1
+					},
+					"ambient": {
+						"sound": "elephant.trumpet",
+						"volume": 0.11,
+						"pitch": 0.9
+					}
+				}
+			}
+		}
+	}
 }
 ```
 

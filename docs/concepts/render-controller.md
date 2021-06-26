@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Render Controllers
-parent: Concepts
 ---
-
-# Render Controllers
 
 <details id="toc" open markdown="block">
   <summary>

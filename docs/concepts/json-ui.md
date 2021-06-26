@@ -1,10 +1,6 @@
 ---
-layout: page
 title: JSON UI
-parent: Concepts
 ---
-
-# JSON UI
 
 ## Introduction
 
@@ -31,7 +27,7 @@ Imagine I created the files `RP/ui/button.json` and `RP/my_ui/main_menu.json`:
 
 ```json
 {
-  "ui_defs": ["ui/button.json", "my_ui/main_menu.json"]
+	"ui_defs": ["ui/button.json", "my_ui/main_menu.json"]
 }
 ```
 
@@ -53,7 +49,7 @@ Another good advantage of doing that is you only need to change in one place, an
 
 ```json
 {
-  "$info_text_color": [0.8, 0.8, 0.8]
+	"$info_text_color": [0.8, 0.8, 0.8]
 }
 ```
 
@@ -338,15 +334,15 @@ Here it's directly assigning the `#hardtext` value to the `text` property.
 
 ```json
 {
-  "label": {
-    "type": "label",
-    "text": "#hardtext",
-    "bindings": [
-      {
-        "binding_name": "#hardtext"
-      }
-    ]
-  }
+	"label": {
+		"type": "label",
+		"text": "#hardtext",
+		"bindings": [
+			{
+				"binding_name": "#hardtext"
+			}
+		]
+	}
 }
 ```
 
@@ -354,16 +350,16 @@ Talking more about the `label` example, it can also appear in another way. Let's
 
 ```json
 {
-  "label": {
-    "type": "label",
-    "text": "#text",
-    "bindings": [
-      {
-        "binding_name": "#hardtext",
-        "binding_name_override": "#text"
-      }
-    ]
-  }
+	"label": {
+		"type": "label",
+		"text": "#text",
+		"bindings": [
+			{
+				"binding_name": "#hardtext",
+				"binding_name_override": "#text"
+			}
+		]
+	}
 }
 ```
 
@@ -498,9 +494,9 @@ Modifying the above JSON into an unintrusive UI file used in a resource pack sho
 
 ```json
 {
-  "hud_actionbar_text/actionbar_message": {
-    "ignored": "($actionbar_text = 'hello world')"
-  }
+	"hud_actionbar_text/actionbar_message": {
+		"ignored": "($actionbar_text = 'hello world')"
+	}
 }
 ```
 
@@ -512,35 +508,35 @@ Here's a more complicated example of conditional rendering with variables. In th
 
 ```json
 {
-  "black_conditional_image": {
-    "type": "image",
-    "texture": "textures/ui/Black",
-    "size": [16, 16],
-    "layer": 10,
-    "ignored": "(not ($actionbar_text = 'hello world'))"
-  },
+	"black_conditional_image": {
+		"type": "image",
+		"texture": "textures/ui/Black",
+		"size": [16, 16],
+		"layer": 10,
+		"ignored": "(not ($actionbar_text = 'hello world'))"
+	},
 
-  "black_conditional_image_factory": {
-    "type": "panel",
-    "factory": {
-      "name": "hud_actionbar_text_factory",
-      "control_ids": {
-        "hud_actionbar_text": "black_conditional_image@hud.black_conditional_image"
-      }
-    }
-  },
+	"black_conditional_image_factory": {
+		"type": "panel",
+		"factory": {
+			"name": "hud_actionbar_text_factory",
+			"control_ids": {
+				"hud_actionbar_text": "black_conditional_image@hud.black_conditional_image"
+			}
+		}
+	},
 
-  "root_panel": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": {
-          "black_conditional_image_factory@hud.black_conditional_image_factory": {}
-        }
-      }
-    ]
-  }
+	"root_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": {
+					"black_conditional_image_factory@hud.black_conditional_image_factory": {}
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -696,19 +692,19 @@ Modifying the above JSON into an unintrusive UI file used in a resource pack sho
 
 ```json
 {
-  "hud_title_text/title_frame/title": {
-    "modifications": [
-      {
-        "array_name": "bindings",
-        "operation": "insert_back",
-        "value": {
-          "binding_type": "view",
-          "source_property_name": "(not (#text = 'hello world'))",
-          "target_property_name": "#visible"
-        }
-      }
-    ]
-  }
+	"hud_title_text/title_frame/title": {
+		"modifications": [
+			{
+				"array_name": "bindings",
+				"operation": "insert_back",
+				"value": {
+					"binding_type": "view",
+					"source_property_name": "(not (#text = 'hello world'))",
+					"target_property_name": "#visible"
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -718,44 +714,44 @@ Like before, here's a more complicated example of conditional rendering with bin
 
 ```json
 {
-  "black_conditional_image": {
-    "type": "image",
-    "texture": "textures/ui/Black",
-    "size": [16, 16],
-    "layer": 10,
-    "bindings": [
-      {
-        "binding_name": "#hud_title_text_string"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#hud_title_text_string = 'hello world')",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
+	"black_conditional_image": {
+		"type": "image",
+		"texture": "textures/ui/Black",
+		"size": [16, 16],
+		"layer": 10,
+		"bindings": [
+			{
+				"binding_name": "#hud_title_text_string"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(#hud_title_text_string = 'hello world')",
+				"target_property_name": "#visible"
+			}
+		]
+	},
 
-  "black_conditional_image_factory": {
-    "type": "panel",
-    "factory": {
-      "name": "hud_title_text_factory",
-      "control_ids": {
-        "hud_title_text": "black_conditional_image@hud.black_conditional_image"
-      }
-    }
-  },
+	"black_conditional_image_factory": {
+		"type": "panel",
+		"factory": {
+			"name": "hud_title_text_factory",
+			"control_ids": {
+				"hud_title_text": "black_conditional_image@hud.black_conditional_image"
+			}
+		}
+	},
 
-  "root_panel": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": {
-          "black_conditional_image_factory@hud.black_conditional_image_factory": {}
-        }
-      }
-    ]
-  }
+	"root_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": {
+					"black_conditional_image_factory@hud.black_conditional_image_factory": {}
+				}
+			}
+		]
+	}
 }
 ```
 

@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Materials
-parent: Concepts
 ---
-
-# Materials
 
 <Label color="red">Expert</Label>
 

@@ -4,8 +4,6 @@ tags:
     - recipe
 ---
 
-# Death Effects
-
 <Label color="yellow">Intermediate</Label>
 
 I define `Death Effects` as "Doing something when an Entity dies". There are a few wrong ways to achieve this that should be avoided, including:

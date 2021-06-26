@@ -4,8 +4,6 @@ title: Bedrock Modeling Introduction
 parent: Knowledge
 ---
 
-# Bedrock Modeling Introduction
-
 This will guide tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.
 
 ## Texture Glitch
@@ -53,7 +51,7 @@ When animating in Blockbench, you can set each keyframe by hand, or you can use 
 Here you will learn the basics.
 Let's start with this picture.
 [Example](https://cdn.discordapp.com/attachments/306562251987615744/740313755551924234/unknown.png 'https://cdn.discordapp.com/attachments/306562251987615744/740313755551924234/unknown.png')
-the name or `animation.cuack is essential. You can't have symbols or caps there, and it must start with `animation.`for the animations to work without problems. Now the function we will be using it`Base + Math.sin((query.life_time + Offset) _ Speed) _ pitch`
+the name or `animation.cuack is essential. You can't have symbols or caps there, and it must start with `animation.`for the animations to work without problems. Now the function we will be using it`Base + Math.sin((query.life*time + Offset) * Speed) \_ pitch`
 
 -   Base is the starting rotation/position the bone has
 -   Sin is the math function we all know

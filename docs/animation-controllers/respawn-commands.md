@@ -4,8 +4,6 @@ tags:
     - recipe
 ---
 
-# Respawn Commands
-
 <Label color="yellow">Intermediate</Label>
 
 This animation controller can be used to run commands, such as re-adding potion effects or giving items when the player respawns.

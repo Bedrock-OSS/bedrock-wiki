@@ -4,8 +4,6 @@ tags:
     - recipe
 ---
 
-# Entity Holds Item
-
 <Label color="yellow">Intermediate</Label>
 
 ::: tip

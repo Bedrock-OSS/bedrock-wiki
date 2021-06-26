@@ -5,8 +5,6 @@ tags:
     - guide
 ---
 
-# Animation controllers: giving our entity an attack animation
-
 ## Attack Animation
 
 First, let's create the animation itself in Blockbench. Choose _File>Open Model>yourModelFile_ and choose the _Animation_ workspace in the top right corner. Now, unlike the walk animation we already created, our attack animation will consist of a single frame, because Animation Controllers have a "transitions" feature that blends two following animations smoothly. After you're done, name your animation `animation.entityname.attack`, choose _Export Animations_ and replace your old animations file in `RP/animations`.

@@ -1,12 +1,8 @@
 ---
-layout: page
 title: Custom Armor
-parent: Tutorials
 tags:
 	- beta
 ---
-
-# Custom Armor
 
 ::: tip
 contents='It is highly recommended that you look over [the BlockBench modelling and texturing](https://wiki.bedrock.dev/guide/creating-entity-visuals) section in the beginners guides before tackling these sections.'

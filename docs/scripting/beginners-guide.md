@@ -4,8 +4,6 @@ tags:
     - guide
 ---
 
-# Hello World Tutorial
-
 This tutorial will teach you how to get up and running as a Minecraft Bedrock Edition (Windows 10) script modder!
 
 ## Prerequisites
@@ -124,34 +122,34 @@ Copy/paste this into your `manifest.json`:
 
 ```json
 {
-    "format_version": 2,
-    "metadata": {
-        "authors": ["<your-name>"],
-        "url": "<your-github-repo-url>",
-        "license": "TBD"
-    },
-    "header": {
-        "name": "Hello World",
-        "description": "Hello World scripting tutorial addon!",
-        "uuid": "<uuid-1>",
-        "version": [0, 0, 1],
-        "min_engine_version": [1, 14, 0]
-    },
-    "modules": [
-        {
-            "description": "Hello World behavior pack module",
-            "type": "data",
-            "uuid": "<uuid-2>",
-            "version": [0, 0, 1]
-        },
-        {
-            "description": "Hello World client scripts module",
-            "type": "client_data",
-            "uuid": "<uuid-3>",
-            "version": [0, 0, 1]
-        }
-    ],
-    "dependencies": []
+	"format_version": 2,
+	"metadata": {
+		"authors": ["<your-name>"],
+		"url": "<your-github-repo-url>",
+		"license": "TBD"
+	},
+	"header": {
+		"name": "Hello World",
+		"description": "Hello World scripting tutorial addon!",
+		"uuid": "<uuid-1>",
+		"version": [0, 0, 1],
+		"min_engine_version": [1, 14, 0]
+	},
+	"modules": [
+		{
+			"description": "Hello World behavior pack module",
+			"type": "data",
+			"uuid": "<uuid-2>",
+			"version": [0, 0, 1]
+		},
+		{
+			"description": "Hello World client scripts module",
+			"type": "client_data",
+			"uuid": "<uuid-3>",
+			"version": [0, 0, 1]
+		}
+	],
+	"dependencies": []
 }
 ```
 
@@ -277,67 +275,67 @@ const systemServer = server.registerSystem(0, 0)
 
 // the server runs this as soon as the scripts are all fully loaded
 systemServer.initialize = function () {
-    // turn on logging of information, warnings, and errors
-    const scriptLoggerConfig = this.createEventData(
-        'minecraft:script_logger_config'
-    )
-    scriptLoggerConfig.data.log_errors = true
-    scriptLoggerConfig.data.log_information = true
-    scriptLoggerConfig.data.log_warnings = true
-    this.broadcastEvent('minecraft:script_logger_config', scriptLoggerConfig)
+	// turn on logging of information, warnings, and errors
+	const scriptLoggerConfig = this.createEventData(
+		'minecraft:script_logger_config'
+	)
+	scriptLoggerConfig.data.log_errors = true
+	scriptLoggerConfig.data.log_information = true
+	scriptLoggerConfig.data.log_warnings = true
+	this.broadcastEvent('minecraft:script_logger_config', scriptLoggerConfig)
 
-    // register event data, register components, register queries, listen for events, . . .
+	// register event data, register components, register queries, listen for events, . . .
 
-    this.counter = 0
+	this.counter = 0
 }
 
 // the server runs this update function 20 times per second
 systemServer.update = function () {
-    // print hello world to the world's chat once per second
-    this.counter++
-    if (this.counter === 20) {
-        this.log('Server!')
-        this.counter = 0
-    }
+	// print hello world to the world's chat once per second
+	this.counter++
+	if (this.counter === 20) {
+		this.log('Server!')
+		this.counter = 0
+	}
 
-    // update other stuff . . .
+	// update other stuff . . .
 }
 
 // the server only runs this when the world is shutting down
 systemServer.shutdown = function () {
-    // clean up stuff . . .
+	// clean up stuff . . .
 }
 
 // This is just a helper function that simplifies logging data to the console.
 systemServer.log = function (...items) {
-    // Convert every parameter into a legible string and collect them into an array.
-    const toString = (item) => {
-        switch (Object.prototype.toString.call(item)) {
-            case '[object Undefined]':
-                return 'undefined'
-            case '[object Null]':
-                return 'null'
-            case '[object String]':
-                return `"${item}"`
-            case '[object Array]':
-                const array = item.map(toString)
-                return `[${array.join(', ')}]`
-            case '[object Object]':
-                const object = Object.keys(item).map(
-                    (key) => `${key}: ${toString(item[key])}`
-                )
-                return `{${object.join(', ')}}`
-            case '[object Function]':
-                return item.toString()
-            default:
-                return item
-        }
-    }
+	// Convert every parameter into a legible string and collect them into an array.
+	const toString = (item) => {
+		switch (Object.prototype.toString.call(item)) {
+			case '[object Undefined]':
+				return 'undefined'
+			case '[object Null]':
+				return 'null'
+			case '[object String]':
+				return `"${item}"`
+			case '[object Array]':
+				const array = item.map(toString)
+				return `[${array.join(', ')}]`
+			case '[object Object]':
+				const object = Object.keys(item).map(
+					(key) => `${key}: ${toString(item[key])}`
+				)
+				return `{${object.join(', ')}}`
+			case '[object Function]':
+				return item.toString()
+			default:
+				return item
+		}
+	}
 
-    // Join the string array items into a single string and print it to the world's chat.
-    const chatEvent = this.createEventData('minecraft:display_chat_event')
-    chatEvent.data.message = items.map(toString).join(' ')
-    this.broadcastEvent('minecraft:display_chat_event', chatEvent)
+	// Join the string array items into a single string and print it to the world's chat.
+	const chatEvent = this.createEventData('minecraft:display_chat_event')
+	chatEvent.data.message = items.map(toString).join(' ')
+	this.broadcastEvent('minecraft:display_chat_event', chatEvent)
 }
 ```
 
@@ -406,67 +404,67 @@ const systemClient = client.registerSystem(0, 0)
 
 // the client runs this as soon as the scripts are all fully loaded
 systemClient.initialize = function () {
-    // turn on logging of information, warnings, and errors
-    const scriptLoggerConfig = this.createEventData(
-        'minecraft:script_logger_config'
-    )
-    scriptLoggerConfig.data.log_errors = true
-    scriptLoggerConfig.data.log_information = true
-    scriptLoggerConfig.data.log_warnings = true
-    this.broadcastEvent('minecraft:script_logger_config', scriptLoggerConfig)
+	// turn on logging of information, warnings, and errors
+	const scriptLoggerConfig = this.createEventData(
+		'minecraft:script_logger_config'
+	)
+	scriptLoggerConfig.data.log_errors = true
+	scriptLoggerConfig.data.log_information = true
+	scriptLoggerConfig.data.log_warnings = true
+	this.broadcastEvent('minecraft:script_logger_config', scriptLoggerConfig)
 
-    // register event data, register components, register queries, listen for events, . . .
+	// register event data, register components, register queries, listen for events, . . .
 
-    this.counter = 0
+	this.counter = 0
 }
 
 // the client runs this update function 20 times per second
 systemClient.update = function () {
-    // print hello world to the world's chat once per second
-    this.counter++
-    if (this.counter === 20) {
-        this.log('Client!')
-        this.counter = 0
-    }
+	// print hello world to the world's chat once per second
+	this.counter++
+	if (this.counter === 20) {
+		this.log('Client!')
+		this.counter = 0
+	}
 
-    // update other stuff . . .
+	// update other stuff . . .
 }
 
 // the client only runs this when the world is shutting down
 systemClient.shutdown = function () {
-    // clean up stuff . . .
+	// clean up stuff . . .
 }
 
 // This is just a helper function that simplifies logging data to the console.
 systemClient.log = function (...items) {
-    // Convert every parameter into a legible string and collect them into an array.
-    const toString = (item) => {
-        switch (Object.prototype.toString.call(item)) {
-            case '[object Undefined]':
-                return 'undefined'
-            case '[object Null]':
-                return 'null'
-            case '[object String]':
-                return `"${item}"`
-            case '[object Array]':
-                const array = item.map(toString)
-                return `[${array.join(', ')}]`
-            case '[object Object]':
-                const object = Object.keys(item).map(
-                    (key) => `${key}: ${toString(item[key])}`
-                )
-                return `{${object.join(', ')}}`
-            case '[object Function]':
-                return item.toString()
-            default:
-                return item
-        }
-    }
+	// Convert every parameter into a legible string and collect them into an array.
+	const toString = (item) => {
+		switch (Object.prototype.toString.call(item)) {
+			case '[object Undefined]':
+				return 'undefined'
+			case '[object Null]':
+				return 'null'
+			case '[object String]':
+				return `"${item}"`
+			case '[object Array]':
+				const array = item.map(toString)
+				return `[${array.join(', ')}]`
+			case '[object Object]':
+				const object = Object.keys(item).map(
+					(key) => `${key}: ${toString(item[key])}`
+				)
+				return `{${object.join(', ')}}`
+			case '[object Function]':
+				return item.toString()
+			default:
+				return item
+		}
+	}
 
-    // Join the string array items into a single string and print it to the world's chat.
-    const chatEvent = this.createEventData('minecraft:display_chat_event')
-    chatEvent.data.message = items.map(toString).join(' ')
-    this.broadcastEvent('minecraft:display_chat_event', chatEvent)
+	// Join the string array items into a single string and print it to the world's chat.
+	const chatEvent = this.createEventData('minecraft:display_chat_event')
+	chatEvent.data.message = items.map(toString).join(' ')
+	this.broadcastEvent('minecraft:display_chat_event', chatEvent)
 }
 ```
 

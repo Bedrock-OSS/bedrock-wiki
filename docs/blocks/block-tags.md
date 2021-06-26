@@ -2,8 +2,6 @@
 title: Block Tags
 ---
 
-# Block Tags
-
 Tags are used for various block properties. Block tags can be called when testing for block arguments in commands.
 Some tags are prefixed with can_be, or can_hurt. One would expect these to have a boolean response.
 

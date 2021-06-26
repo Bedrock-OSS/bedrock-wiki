@@ -1,7 +1,5 @@
 ---
-layout: page
 title: How to Contribute
-parent: Home
 hidden: true
 ---
 

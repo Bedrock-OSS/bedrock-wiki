@@ -2,8 +2,6 @@
 title: Block Shapes
 ---
 
-# Block Shapes
-
 | ID  | Block Shape               |
 | --- | ------------------------- |
 | -1  | invisible                 |

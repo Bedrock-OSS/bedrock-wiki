@@ -1,7 +1,5 @@
 ---
-layout: guide
 title: Loot and Spawn Recipes
-has_children: true
 ---
 
 Next, we'll enhance the custom Ghost entity by adding some more basic mechanics to it:
@@ -16,27 +14,27 @@ TODO: needs to be finished
 
 ```json
 {
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "wiki:ectoplasm",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 3
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "wiki:ectoplasm",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 3
+							}
+						}
+					]
+				}
+			]
+		}
+	]
 }
 ```
 

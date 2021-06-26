@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Craftable Spawn-Eggs
-parent: Tutorials
 ---
-
-# Using MoLang to create craftable spawn-eggs
 
 <Label color="green">Beginner</Label>
 

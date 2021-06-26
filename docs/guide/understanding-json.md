@@ -1,15 +1,5 @@
 ---
-layout: guide
 title: Understanding JSON
-parent: Beginners Guide
-nav_order: 102
-badge: B
-badge_color: guide
-badge_justification: left
----
-
-[[TOC]]
-
 ---
 
 # Understanding JSON

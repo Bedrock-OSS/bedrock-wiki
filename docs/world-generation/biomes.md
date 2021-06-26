@@ -2,8 +2,6 @@
 title: Biomes
 ---
 
-# Biomes
-
 _Last updated for 1.16.210_
 
 > [Nether biome generation](#the-nether) is bugged as of version 1.16.210. Nether biomes are now customized via the `"multinoise_generation_rules"` component. Custom biomes, however, currently cannot generate with this component. Meanwhile, usage of the old `"nether_generation_rules"` component in vanilla overrides will result in no generation of that biome in the Nether.

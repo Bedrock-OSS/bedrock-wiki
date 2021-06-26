@@ -1,14 +1,6 @@
 ---
-layout: guide
 title: Software and preparation
-parent: Beginners Guide
-nav_order: 1
-badge: 1
-badge_color: guide
-badge_justification: left
 ---
-
-# Software and Preparation
 
 In order to be able to code addons you'll need a certain set of software installed. While Windows 10 offers the best development environment, and largest variety of tools, alternatives can be found on other platforms, including mobile.
 

@@ -2,8 +2,6 @@
 title: Invulnerable Entities
 ---
 
-# Invulnerable Entities
-
 <Label color="green">Beginner</Label>
 
 ## Using Damage Sensor

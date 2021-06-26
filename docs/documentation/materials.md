@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Materials
-parent: Documentation
 ---
-
-# Materials
 
 You can [learn more about materials here](/concepts/materials).
 

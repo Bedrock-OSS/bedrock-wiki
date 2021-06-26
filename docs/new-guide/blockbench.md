@@ -1,10 +1,6 @@
 ---
-layout: guide
 title: 'Blockbench: Modeling, Texturing, Animating'
-has_children: true
 ---
-
-# Getting started with Blockbench & Modelling
 
 Blockbench is a free software designed to make Minecraft modeling, texturing, and animating possible. It is available for mobile browsers, Windows 10, and macOS. Please install it at [blockbench.net/](https://blockbench.net/)
 

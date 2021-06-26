@@ -2,8 +2,6 @@
 title: Dummy Entities
 ---
 
-# Dummy Entities
-
 <Label color="green">Beginner</Label>
 
 Dummy entities are invisible entities which are used behind the scenes for game-play purposes. Dummy entities are a very useful tool, and this document will cover some of the ways they are utilized, as well as showing how to set up the resource side of things.

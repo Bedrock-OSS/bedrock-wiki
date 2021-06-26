@@ -34,19 +34,22 @@ const { isReducedScreen } = useIsReducedScreen()
 const getHeaders = function () {
 	let grouped = []
 	let lastHeader = null
-	for (const header of page.value.headers) {
-		if (header.level === 2) {
-			lastHeader = header
-			header.children = []
-			grouped.push(header)
-		} else if (header.level === 3) {
-			if (lastHeader) {
-				lastHeader.children.push(header)
-			} else {
+	if (page.value.headers) {
+		for (const header of page.value.headers) {
+			if (header.level === 2) {
+				lastHeader = header
+				header.children = []
 				grouped.push(header)
+			} else if (header.level === 3) {
+				if (lastHeader) {
+					lastHeader.children.push(header)
+				} else {
+					grouped.push(header)
+				}
 			}
 		}
 	}
+
 	return grouped
 }
 

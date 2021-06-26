@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Shaders
-parent: Concepts
 ---
-
-# Shaders
 
 ## Disclaimer
 

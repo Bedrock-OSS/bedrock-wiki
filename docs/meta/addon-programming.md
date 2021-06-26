@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Creating addons with Programming
-parent: Knowledge
 ---
-
-# Creating addons with Programming
 
 Addons in Bedrock Edition (except for scripts) are entirely written using JSON-config files. Often, these files can and should be written by hand. Possibly with the help of a dedicated editor like [bridge.](https://bridge-core.github.io/).
 

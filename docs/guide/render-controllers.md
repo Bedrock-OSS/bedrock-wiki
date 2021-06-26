@@ -1,13 +1,5 @@
 ---
-layout: guide
 title: Render controllers
-parent: Beginners Guide
-badge: 8
-badge_color: guide
-badge_justification: left
-nav_order: 8
----
-
 ---
 
 # Basic Render Controller

@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Building and Editing JSON with jq
-parent: Knowledge
 ---
-
-# Building and Editing JSON with jq
 
 ## Introduction
 

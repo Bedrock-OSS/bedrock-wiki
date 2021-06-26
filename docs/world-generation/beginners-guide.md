@@ -1,11 +1,9 @@
 ---
-title: Beginners Guide
+title: Beginners Guide to World Generation
 nav_order: 1
 tags:
     - guide
 ---
-
-# Custom Generation
 
 You can change the world's generation via Add-ons. The needed folders in the Behavior pack for these are:
 

@@ -1,14 +1,6 @@
 ---
-layout: guide
 title: Project Setup
-parent: Beginners Guide
-badge: 1
-badge_color: guide
-badge_justification: left
-nav_order: 1
 ---
-
-# Project Setup
 
 ## Preparation
 

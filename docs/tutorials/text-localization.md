@@ -1,10 +1,6 @@
 ---
-layout: page
 title: Text Localization
-parent: Tutorials
 ---
-
-# Text Localization Tips & Tricks
 
 <Label color="green">Beginner</Label>
 

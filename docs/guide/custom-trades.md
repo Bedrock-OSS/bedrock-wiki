@@ -1,13 +1,5 @@
 ---
-layout: guide
 title: Trade Tables
-parent: Beginners Guide
-nav_order: 9
-badge: 9
-badge_color: guide
-badge_justification: left
----
-
 ---
 
 A Trade Table is a file that controls an entity's trading UI and functionality. Vanilla example: Villager. As of right now, trading entities are often used to simulate UI blocks.

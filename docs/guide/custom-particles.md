@@ -1,16 +1,6 @@
 ---
-layout: guide
 title: 'Particles and Sounds'
-parent: Beginners Guide
-nav_order: 11
-badge: 11
-badge_color: guide
-badge_justification: left
 ---
-
----
-
-# Particles
 
 ## Particles in Animation
 

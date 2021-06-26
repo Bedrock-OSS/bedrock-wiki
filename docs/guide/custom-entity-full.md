@@ -1,16 +1,6 @@
 ---
-layout: guide
 title: Entities
-parent: Beginners Guide
-nav_order: 7
-badge: 7
-badge_color: guide
-badge_justification: left
 ---
-
----
-
-# Custom entity resource definition
 
 Resource definition is done client-side to define texture, animation and model shortnames, and potentially even control some animations. This type of file is typically called an _.entity_ file. It is located in `RP/entity/yourEntityname.entity.json`.
 

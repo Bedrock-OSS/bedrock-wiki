@@ -1,10 +1,6 @@
 ---
-layout: page
-title: Timers
-parent: Tutorials
+title: Entity Timers
 ---
-
-# Entity Timers
 
 <Label color="yellow">Intermediate</Label>
 

@@ -1,12 +1,8 @@
 ---
-title: Beginners Guide
+title: Beginners Guide to Items
 nav_order: 1
 tags:
     - guide
----
-
-# Simple custom Item - Creating a 'Gem'
-
 ---
 
 Every item, block, or entity requires a `Behavior` file in the BP folder (to define how the item will behave) and a Resource file in the `RP` folder (to specify what the item will look like in-game).
@@ -19,19 +15,19 @@ Let's start by creating our simple item's behavior file: `BP/items/gem.item.json
 
 ```json
 {
-    "format_version": "1.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "tut:gem"
-        },
-        "components": {
-            "minecraft:hand_equipped": false,
-            "minecraft:stacked_by_data": true,
-            "minecraft:foil": false,
-            "minecraft:max_stack_size": 64,
-            "minecraft:max_damage": 10
-        }
-    }
+	"format_version": "1.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tut:gem"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:foil": false,
+			"minecraft:max_stack_size": 64,
+			"minecraft:max_damage": 10
+		}
+	}
 }
 ```
 
@@ -55,17 +51,17 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 ```json
 {
-    "format_version": "1.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "tut:gem",
-            "category": "Nature"
-        },
-        "components": {
-            "minecraft:icon": "gem",
-            "minecraft:render_offsets": "tools"
-        }
-    }
+	"format_version": "1.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tut:gem",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:icon": "gem",
+			"minecraft:render_offsets": "tools"
+		}
+	}
 }
 ```
 
@@ -87,13 +83,13 @@ Now let's create the file where texture short names will be defined: `RP/texture
 
 ```json
 {
-    "resource_pack_name": "tut",
-    "texture_name": "atlas.items",
-    "texture_data": {
-        "gem": {
-            "textures": "textures/items/gem"
-        }
-    }
+	"resource_pack_name": "tut",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"gem": {
+			"textures": "textures/items/gem"
+		}
+	}
 }
 ```
 
@@ -116,38 +112,38 @@ Creating a food item is the same as creating a simple item, except an additional
 
 ```json
 {
-    "format_version": "1.12.0",
-    "minecraft:item": {
-        "description": {
-            "identifier": "tut:meal"
-        },
-        "components": {
-            "minecraft:hand_equipped": false,
-            "minecraft:stacked_by_data": true,
-            "minecraft:foil": false,
-            "minecraft:max_stack_size": 64,
-            "minecraft:use_duration": 32,
-            "minecraft:food": {
-                "nutrition": 4,
-                "saturation_modifier": "normal",
-                "can_always_eat": false,
-                "effects": [
-                    {
-                        "name": "regeneration",
-                        "chance": 1.0,
-                        "duration": 5,
-                        "amplifier": 1
-                    },
-                    {
-                        "name": "absorption",
-                        "chance": 1.0,
-                        "duration": 120,
-                        "amplifier": 3
-                    }
-                ]
-            }
-        }
-    }
+	"format_version": "1.12.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tut:meal"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:foil": false,
+			"minecraft:max_stack_size": 64,
+			"minecraft:use_duration": 32,
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": "normal",
+				"can_always_eat": false,
+				"effects": [
+					{
+						"name": "regeneration",
+						"chance": 1.0,
+						"duration": 5,
+						"amplifier": 1
+					},
+					{
+						"name": "absorption",
+						"chance": 1.0,
+						"duration": 120,
+						"amplifier": 3
+					}
+				]
+			}
+		}
+	}
 }
 ```
 
@@ -165,18 +161,18 @@ Creating a food item is the same as creating a simple item, except an additional
 
 ```json
 {
-    "format_version": "1.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "tut:meal",
-            "category": "Nature"
-        },
-        "components": {
-            "minecraft:icon": "meal",
-            "minecraft:use_animation": "eat",
-            "minecraft:render_offsets": "apple"
-        }
-    }
+	"format_version": "1.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tut:meal",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:icon": "meal",
+			"minecraft:use_animation": "eat",
+			"minecraft:render_offsets": "apple"
+		}
+	}
 }
 ```
 
@@ -190,16 +186,16 @@ The preceding code goes in `RP/items/meal.item.json`, similarly to the Gem.
 
 ```json
 {
-    "resource_pack_name": "tut",
-    "texture_name": "atlas.items",
-    "texture_data": {
-        "meal": {
-            "textures": "textures/items/meal"
-        },
-        "gem": {
-            "textures": "textures/items/gem"
-        }
-    }
+	"resource_pack_name": "tut",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"meal": {
+			"textures": "textures/items/meal"
+		},
+		"gem": {
+			"textures": "textures/items/gem"
+		}
+	}
 }
 ```
 

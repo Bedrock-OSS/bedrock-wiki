@@ -1,29 +1,25 @@
 ---
-layout: page
 title: .lang
-parent: Concepts
 ---
-
-# Understanding .lang 
-
-
 
 Bedrock Minecraft allows us to write the text in our addons as codes: For example, `action.hint.exit.pig`. Then in the language files, we define these codes: `action.hint.exit.pig=Tap sneak to dismount`.
 
 This workflow has two main advantages:
- - Consolidates all of your text into one location, allowing you to more easily check for spelling mistakes and change the text after the fact
- - Allows internationalization. We can provide `.lang` files for multiple languages, allowing us to translate the text in our addon.
 
-## Where can lang-codes be used? 
+-   Consolidates all of your text into one location, allowing you to more easily check for spelling mistakes and change the text after the fact
+-   Allows internationalization. We can provide `.lang` files for multiple languages, allowing us to translate the text in our addon.
+
+## Where can lang-codes be used?
 
 Lang-codes can be used in any of the following places:
- - pack name
- - pack description
- - entity name
- - item name
- - books
- - signs
- - tellraw commands
+
+-   pack name
+-   pack description
+-   entity name
+-   item name
+-   books
+-   signs
+-   tellraw commands
 
 As you can see, lang-codes can be used pretty much wherever you write text in your addon.
 
@@ -75,4 +71,4 @@ In the example above, the first `%s` is replaced by the entity's name doing the 
 
 ## Useful vanilla-overrides
 
-Remove the `[Entity Name]` from `/say` commands: `chat.type.announcement=%2` 
+Remove the `[Entity Name]` from `/say` commands: `chat.type.announcement=%2`

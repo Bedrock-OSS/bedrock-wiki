@@ -1,10 +1,6 @@
 ---
-layout: page
 title: .textures_list
-parent: Concepts
 ---
-
-# Understanding textures_list.json
 
 ## General Overview
 
@@ -22,17 +18,17 @@ The structure is simple. The file itself is in `RP/textures` and is named `textu
 
 ```json
 [
-    "textures/blocks/foo",
-    "textures/blocks/bar",
+	"textures/blocks/foo",
+	"textures/blocks/bar",
 
-    "textures/items/foo",
-    "textures/items/bar",
+	"textures/items/foo",
+	"textures/items/bar",
 
-    "textures/models/foo",
-    "textures/models/bar",
+	"textures/models/foo",
+	"textures/models/bar",
 
-    "textures/entity/foo",
-    "textures/entity/bar"
+	"textures/entity/foo",
+	"textures/entity/bar"
 ]
 ```
 

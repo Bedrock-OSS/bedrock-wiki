@@ -2,8 +2,6 @@
 title: Spawning Items
 ---
 
-# Spawning Items
-
 <Label color="yellow">Intermediate</Label>
 
 It is often desired to spawn items in their dropped form in several scenarios. Here we will examine how to accomplish this through entity deaths, interactions, and an all-purpose method.

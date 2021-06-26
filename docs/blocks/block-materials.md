@@ -4,10 +4,6 @@ tags:
     - experimental
 ---
 
-# Block Model Materials
-
-## bob
-
 <Label color="yellow">Experimental</Label>
 
 | Argument     | Slot                                                                                                                                                                                                                                                              |
