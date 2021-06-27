@@ -20,23 +20,23 @@
         </div>
         <div class="m-0 p-0 pb-4 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 m-0 p-0">
-                <CardLink title="Beginner's Guide" imgsrc="assets/images/homepage/wood_pick.png" link="guide/">
+                <CardLink title="Beginner's Guide" imgsrc="assets/images/homepage/crafting.png" link="guide/">
                 Step-by-step tutorials, intended as your first-contact with addons.
                 </CardLink>
-                <Card title="Learn" imgsrc="assets/images/homepage/agent.png">
+                <Card title="Learn" imgsrc="assets/images/homepage/makinghub.png">
                 <ul>
                     <li><a href="#">Concepts</a>: The first introduction to a concept, intended to be read in-full.</li>
                     <li><a href="#">Knowledge</a>: Top-level information, such as editor recommendations.</li>
                     <li><a href="#">Tutorials</a>: Tutorial-like write-ups, containing specific instructions and example json.</li>
                 </ul>
                 </Card>
-                <Card title="Documentation" imgsrc="assets/images/homepage/bookshelf.png">
+                <Card title="Documentation" imgsrc="assets/images/homepage/earth.png">
                 <ul>
                     <li><a href="documentation/">Documentation</a>: Proper documentation, such as lists of all available sounds.</li>
                     <li><a href="#">Vanilla Usage</a>: Vanilla examples for entities, items, etc.</li>
                 </ul>
                 </Card>
-                <CardLink title="Contribute" imgsrc="assets/images/homepage/book_quill.png" link="contribute">
+                <CardLink title="Contribute" imgsrc="assets/images/homepage/friends.png" link="contribute">
                 If you feel you can help the Bedrock addons community or improve this Wiki with your knowledge, feel free to contribute!
                 </CardLink>
             </div>
