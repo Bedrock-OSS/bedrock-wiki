@@ -1,1 +1,0 @@
-import{o as t,c as d,d as r}from"./404.md.9bcdd6c7.js";const e='{"title":"Block Shapes","description":"","frontmatter":{"title":"Block Shapes"},"relativePath":"blocks/block-shapes.md","lastUpdated":1624745135065}',o={},a=r('',2);o.render=function(r,e,o,l,c,_){return t(),d("div",null,[a])};export default o;export{e as __pageData};
