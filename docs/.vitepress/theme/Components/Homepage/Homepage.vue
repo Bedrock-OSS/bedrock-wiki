@@ -2,7 +2,7 @@
     <div class="homepage max-w-screen-md mx-auto">
         <div class="hidden md:flex justify-start flex-row flex-nowrap my-10 py-0 w-full">
             <div class="flex justify-center flex-col flex-nowrap">
-                <img src="/assets/images/homepage/wiki_icon.png" class="object-contain" style="max-height: 116px; min-width: 72px;">
+                <img src="/assets/images/homepage/wikilogo.png" class="object-contain" style="max-height: 116px; min-width: 72px;">
             </div>
             <div class="ml-4 flex justify-center flex-col flex-nowrap">
                 <h1 class="mt-0">Bedrock Wiki</h1>
@@ -11,7 +11,7 @@
         </div>
         <div class="flex md:hidden justify-start flex-col flex-nowrap my-6 py-0 w-full">
             <div class="flex justify-start items-center flex-row flex-nowrap">
-                <img src="/assets/images/homepage/wiki_icon.png" class="object-contain" style="height: 64px;">
+                <img src="/assets/images/homepage/wikilogo.png" class="object-contain" style="height: 64px;">
                 <h1 class="!my-0 ml-4">Bedrock Wiki</h1>
             </div>
             <div class="mt-4 flex justify-center flex-col flex-nowrap">
