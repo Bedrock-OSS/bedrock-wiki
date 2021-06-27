@@ -39,5 +39,5 @@
 }
 
 .dark main a {
-	@apply text-purple-500 underline;
+	@apply text-blue-500 no-underline hover:underline;
 }
