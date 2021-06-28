@@ -30,7 +30,7 @@ pre {
 }
 
 main a {
-	@apply text-blue-700 no-underline hover:underline;
+	@apply text-blue-700 !no-underline hover:underline focus:underline;
 }
 
 p + p {

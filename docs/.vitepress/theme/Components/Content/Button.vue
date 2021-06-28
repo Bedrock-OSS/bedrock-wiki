@@ -6,67 +6,32 @@
 import { defineProps } from 'vue'
 
 const props = defineProps<{
-	color: 'green' | 'blue'
+	color: '' | 'green' | 'blue' | 'red'
 	link: string
 }>()
 </script>
 
 <style scoped>
 .btn {
-	display: inline-block;
-	box-sizing: border-box;
-	padding-top: 0.3em;
-	padding-right: 1em;
-	padding-bottom: 0.3em;
-	padding-left: 1em;
-	margin: 5px;
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: 500;
 	line-height: 1.5;
-	color: #2c84fa;
-	text-decoration: none;
-	vertical-align: baseline;
-	cursor: pointer;
-	background-color: #302d36;
-	border-width: 0;
-	border-radius: 4px;
-	box-shadow: 0 1px 2px rgb(0 0 0 / 12%), 0 3px 10px rgb(0 0 0 / 8%);
-	appearance: none;
-}
-.btn:focus {
-	box-shadow: 0 0 0 3px rgb(0 0 255 / 25%);
+	@apply px-6 py-1 mx-0 my-3 bg-white rounded-md !no-underline !shadow-md !hover:shadow-sm !focus:shadow-sm !active:shadow-none border !cursor-pointer align-baseline inline-block border-box;
+	@apply text-true-gray-500 hover:text-true-gray-600 focus:text-true-gray-600 active:text-true-gray-800;
 }
 
-.blue:hover {
-	background-color: #1878fa;
-	background-image: linear-gradient(#368afa, #1878fa);
+.dark .btn {
+	@apply bg-true-gray-900;
 }
-.blue:focus {
-	background-color: #1375f9;
-	background-image: none;
-	box-shadow: inset 0 2px 4px rgb(0 0 0 / 15%);
-}
-.green:hover {
-	background-color: #0fa276;
-	background-image: linear-gradient(#12be8b, #0fa276);
-}
-.green:focus {
-	background-color: #0f9e73;
-	background-image: none;
-	box-shadow: inset 0 2px 4px rgb(0 0 0 / 15%);
-}
-
 .green {
-	color: #fff;
-	background-color: #10ac7d;
-	background-image: linear-gradient(#13cc95, #10ac7d);
-	box-shadow: 0 1px 3px rgb(0 0 0 / 25%), 0 4px 10px rgb(0 0 0 / 12%);
+	@apply text-green-500 hover:text-green-600 focus:text-green-600 active:text-green-800;
 }
 .blue {
-	color: #fff;
-	background-color: #227efa;
-	background-image: linear-gradient(#4593fb, #227efa);
-	box-shadow: 0 1px 3px rgb(0 0 0 / 25%), 0 4px 10px rgb(0 0 0 / 12%);
+	@apply text-blue-500 hover:text-blue-600 focus:text-blue-600 active:text-blue-800;
+}
+
+.red {
+	@apply text-red-500 hover:text-red-600 focus:text-red-600 active:text-red-800;
 }
 </style>
