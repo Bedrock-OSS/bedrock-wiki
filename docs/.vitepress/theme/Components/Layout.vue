@@ -11,27 +11,31 @@
 		}"
 	>
 		<h1 id="top">{{ page.title }}</h1>
-		<TOC />
+		<TOC v-if="showToc" />
 		<Content
 			:class="{
 				'toc-visible': !isReducedScreen,
 			}"
 		/>
-		<h2>Contributors</h2>
-		<Suspense>
-			<template #default>
-				<Contributors />
-			</template>
-			<template #fallback>
-				<div>
-					<span> Loading contributors... </span>
-				</div>
-			</template>
-		</Suspense>
+		<div v-if="showContributors">
+			<h2>Contributors</h2>
+			<Suspense>
+				<template #default>
+					<Contributors />
+				</template>
+				<template #fallback>
+					<div>
+						<span> Loading contributors... </span>
+					</div>
+				</template>
+			</Suspense>
+		</div>
 	</main>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+const route = useRoute()
 import TOC from './Content/TOC.vue'
 import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
@@ -40,8 +44,21 @@ import Contributors from './Content/Contributors.vue'
 const { isVisible } = useSidebarState()
 import { useIsReducedScreen } from '../Composables/isReducedScreen'
 const { isReducedScreen } = useIsReducedScreen()
-import { usePageData } from 'vitepress'
+import { usePageData, useRoute } from 'vitepress'
 const page = usePageData()
+
+// Default toc to true
+const showToc = computed(() =>
+	route.data.frontmatter.show_toc == null
+		? true
+		: !!route.data.frontmatter.show_toc
+)
+
+const showContributors = computed(() =>
+	route.data.frontmatter.show_contributors == null
+		? true
+		: !!route.data.frontmatter.show_contributors
+)
 </script>
 
 <style scoped>
