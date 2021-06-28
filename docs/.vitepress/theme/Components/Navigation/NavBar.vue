@@ -49,10 +49,7 @@ import { useSidebarState } from '../../Composables/sidebar'
 import { useIsMobile } from '../../Composables/isMobile'
 
 const AlgoliaSearchBox = defineAsyncComponent(
-	() =>
-		import(
-			'vitepress/dist/client/theme-default/components/AlgoliaSearchBox.vue'
-		)
+	() => import('./AlgoliaSearch.vue')
 )
 
 const { toggle, isVisible } = useSidebarState()
