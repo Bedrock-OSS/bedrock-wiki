@@ -1,1 +1,0 @@
-import{o as e,c as t,d as n}from"./404.md.0c2d5d9e.js";const r='{"title":"Entity Movement","description":"","frontmatter":{"title":"Entity Movement"},"relativePath":"entities/entity-movement.md","lastUpdated":1624781804437}',o={},a=n('',28);o.render=function(n,r,o,i,d,s){return e(),t("div",null,[a])};export default o;export{r as __pageData};
