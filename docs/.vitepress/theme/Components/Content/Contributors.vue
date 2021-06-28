@@ -4,14 +4,22 @@
 			<a
 				v-for="c in contributors"
 				:key="c.login"
-				:href="c_url"
+				:href="c.url"
 				:alt="c.login"
 				target="_blank"
 				class="h-8 w-8 transition-spacing ease-in-out duration-150"
 			>
 				<img
 					:src="c.avatar_url"
-					class="h-8 w-8 rounded-full border-2 border-white bg-white"
+					class="
+						h-8
+						w-8
+						rounded-full
+						border-2 border-white
+						dark:border-true-gray-600
+						bg-white
+						dark:bg-true-gray-900
+					"
 					:alt="c.login"
 					:title="c.login"
 				/>
