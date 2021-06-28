@@ -39,5 +39,5 @@
 }
 
 .dark main a {
-	@apply text-blue-500 !no-underline hover:underline focus:underline;
+	@apply text-blue-500 hover:text-blue-700 focus:text-blue-700 no-underline hover:underline focus:underline;
 }
