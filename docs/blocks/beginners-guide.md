@@ -9,7 +9,7 @@ Bedrock Minecraft allows us to add custom blocks into our world with various van
 
 [You can find the entire bedrock.dev block documentation here.](https://bedrock.dev/r/Blocks)
 
-# Block Behavior File
+## Block Behavior File
 
 Block behaviors are structured similarly to entities: They contain a description and a list of components that describe the block's behavior.
 
@@ -59,7 +59,7 @@ Let's create some more blocks in `BP/blocks`. I created these for four for the t
 -   Filename: `flashing.json`; Identifier: `tut:flashing`;
     You can play around with changing the component values for each of these. Now let's move over to the resource definition.
 
-# Block Resource File
+## Block Resource File
 
 The resource definition for blocks differs from entities/items, because all the definitions appear in a single file.
 
@@ -105,7 +105,7 @@ As you can see, every block's identifier is applied with textures and step sound
 -   "`tut:compass_block`"'s "`textures`" are broken up in even more sub-textures. Instead of "`side`"s, we have a different texture shortname set for the "`north`" side, the "`south`" side, the "`west`" side, and the "`east`" side.
 -   And, lastly, "`tut_flashing`" has "`flashing`" defined in the same way as "`tut_blocky`".
 
-## Block terrain texture definition
+### Block terrain texture definition
 
 These "gorgeous" textures are the ones I'm going to use for my example blocks. The first three are located in the `RP/textures/blocks/` folder and, the last 6 are located in the `/RP/textures/blocks/compass_block` subfolder - they show North, South, etc.
 
@@ -176,7 +176,7 @@ Next, all our texture shortnames have been defined. These shortnames were alread
 
 But, we still have to define the `tut:flashing`'s texture(third from the left), which is currently undefined. That's why it appears as a purple-and-black tiled texture right now.
 
-## Block flipbook texture definition
+### Block flipbook texture definition
 
 As you might have already guessed, flipbook texture shortnames are defined in a different place than `RP/textures/terrain_texture.json`. Let's create another file `RP/textures/flipbook_textures.json`.
 
@@ -206,7 +206,7 @@ A **flipbook texture** file is created like this:
   <source src="/assets/images/guide/custom_blocks_done.mp4" type="video/mp4">
 </video>
 
-# Setting block names
+## Setting block names
 
 And, finally, let's define our block's names in `/RP/texts/en_US.lang` as we did with items, somewhat like this:
 

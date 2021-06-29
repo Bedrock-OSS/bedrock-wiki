@@ -11,7 +11,7 @@ Entity movement is a confusing subject, with many pieces that must be done corre
 -   [Navigation Abilities](#navigation-abilities)
 -   [AI](#ai)
 
-# Movement Speed
+## Movement Speed
 
 The first thing your entity needs is a speed component. This sets how quickly your entity will move through the world.
 
@@ -25,7 +25,7 @@ You should always include `minecraft:movement`. Add the other two as needed.
 
 All vanilla swimming" entities like Dolphin include `underwater_movement`. Only some flying entities have `flying_speed`. It is not known why this is the case.
 
-# Movement Type
+## Movement Type
 
 Your entity will also need a movement type. Movement types set hard-coded behavior for _how_ your entity will move through the world.
 
@@ -42,7 +42,7 @@ You may only include one movement type in your entity. Select the component that
 | [minecraft:movement.skip](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.skip)             | This move control causes the mob to hop as it moves.                                         |
 | [minecraft:movement.sway](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.sway)             | This move control causes the mob to sway side to side, giving the impression it is swimming. |
 
-# Movement Modifiers
+## Movement Modifiers
 
 Movement modifiers provide additional information about how your entity will move through the world.
 
@@ -52,7 +52,7 @@ Movement modifiers provide additional information about how your entity will mov
 | [minecraft:rail_movement](https://bedrock.dev/docs/stable/Entities#minecraft%3Arail_movement)         | Sets that the entity can move on rails (only).     |
 | [minecraft:friction_modifier](https://bedrock.dev/docs/stable/Entities#minecraft%3Afriction_modifier) | Sets the friction the entity experiences on land.  |
 
-# Navigation
+## Navigation
 
 The next thing your entity needs is a navigation component. Navigation components have quite a few fields, like whether the entity can open doors or avoid sunlight. How you set these fields is generally more important than the navigation component you pick.
 
@@ -69,7 +69,7 @@ You can only have one navigation component at any given time.
 | [minecraft:navigation.swim](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.swim)       | Allows this entity to generate paths that include water.                                                                |
 | [minecraft:navigation.walk](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.walk)       | Allows this entity to generate paths by walking around and jumping up and down a block like regular mobs.               |
 
-# Navigation Abilities
+## Navigation Abilities
 
 On top of the movement and the navigation component, there exist many additional components to augment the abilities of your entity as they move through the world.
 
@@ -85,7 +85,7 @@ On top of the movement and the navigation component, there exist many additional
 
 There are also components like `minecraft:preferred_path`, which will modify navigation based on block-based path-cost.
 
-# AI
+## AI
 
 The navigation component tells the entity _how_ to generate paths, but it doesn't say _when_ or _where_ to generate directions. This is what the AI components are for.
 

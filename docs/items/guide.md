@@ -102,11 +102,11 @@ Now let's create the file where texture short names will be defined: `RP/texture
 
 Done! If you did everything correctly, your Gem can now be obtainable by `/give` in-game. If you're having trouble, watch your [Content Log](https://wiki.bedrock.dev/knowledge/troubleshooting#content-log). If the item still malfunctions, check out the example files.
 
-# Custom food item: - creating an eatable 'Meal'
+## Custom food item: - creating an eatable 'Meal'
 
 Creating a food item is the same as creating a simple item, except an additional component is needed in the item's behavior file. Let's get started by creating it as `BP/items/meal.item.json`. Here's the code: It looks very similar to the previous item's behaviors.
 
-## Meal BP Code
+### Meal BP Code
 
 <CodeHeader>BP/items/meal.item.json</CodeHeader>
 
@@ -155,7 +155,7 @@ Creating a food item is the same as creating a simple item, except an additional
     -   `can_always_eat` defines if the player can eat the food even if their hunger bar is full. For Golden Apples, this component is set to true. Most other vanilla food is set to false.
     -   `effects` are the status effects to be applied when the player consumes the food. It's pretty self-explanatory: when the player consumes this item, they'll get `Regeneration I` for 5 seconds and `Resistance III` for 120 seconds. This component is optional.
 
-## Meal RP Code
+### Meal RP Code
 
 <CodeHeader>RP/items/meal.item.json</CodeHeader>
 
@@ -180,7 +180,7 @@ The preceding code goes in `RP/items/meal.item.json`, similarly to the Gem.
 
 -   `minecraft:use_animation` defines what animation to use when the player is using the item (Can be set to "bow", "eat", "drink", "crossbow", "camera"). It isn't needed in simple items, only foods, and weapons.
 
-## Meal Textures and Shortnames
+### Meal Textures and Shortnames
 
 <CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
@@ -203,7 +203,7 @@ And, lastly, let's create the texture as `RP/textures/items/meal.png` and set it
 
 Make sure to check out the current Item documentation for even more components on [bedrock.dev/r/Item!](https://bedrock.dev/docs/stable/Item)
 
-# Setting Item Names
+## Setting Item Names
 
 Your items should now show up in-game, but they have weird names consisting of their identifiers. For example, `tut:gem` shows up as `item.tut:gem.name`. To fix this, we need a `.lang` file in `RP/texts`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`. You can find file names for other languages in the example resource pack's texts folder. Paste the following "code" into res/texts/en_US.lang. Now your items will have the correct names:
 
@@ -256,8 +256,6 @@ item.tut:meal.name=Meal
         </li>
     </ul>
 </div>
-
----
 
 ---
 

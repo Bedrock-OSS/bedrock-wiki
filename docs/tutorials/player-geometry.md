@@ -10,7 +10,7 @@ This tutorial is a _graphical_ tutorial. Mechanics are not covered.
 
 `Note:` This will be a very json-heavy document. The json is intended for copy-pasting.
 
-# Geometry File
+## Geometry File
 
 This json contains geometry for both the Steve and Alex versions:
 
@@ -448,7 +448,7 @@ This json contains geometry for both the Steve and Alex versions:
 }
 ```
 
-# Entity File
+## Entity File
 
 Use this entity file if you would like to have animatinos for your geometry. This file includes error-free animations for:
 
@@ -497,7 +497,7 @@ If you need a more complete set of animations, consider copying the default play
 }
 ```
 
-# Render Controller File
+## Render Controller File
 
 You can also use a vanilla render controller if you prefer.
 

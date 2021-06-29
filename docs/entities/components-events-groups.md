@@ -6,7 +6,7 @@ Three main structures make up the base of a behavior-pack entity file. This docu
 
 Confusing component groups with components is a widespread source of errors. Pay attention closely to understand the difference.
 
-# Components
+## Components
 
 Components are logical building blocks that make up Minecraft entities. All components are written by Mojang and provided to us for use. Components can do all sorts of things, like set the size of an entity or give it the ability to swim. The [complete list of components can be found here](https://bedrock.dev/docs/stable/Entities).
 
@@ -37,7 +37,7 @@ Here is an example of a few components, inside an entity:
 
 Notice how the `components` list _only_ contains components.
 
-# Component groups
+## Component groups
 
 Component groups are "folders" for components. They group components and can be added or removed using `events` to create custom game-play.
 
@@ -75,7 +75,7 @@ In vanilla Minecraft entities, component groups are namespaced with `minecraft:`
 
 When a component is placed into a group, is it _not_ automatically added to your entity. It won't do anything at all until the group is added. When the group is added, the component will become active and start affecting the behavior of your entity.
 
-# Events
+## Events
 
 Events are a special syntax for adding and removing component groups. By adding/removing groups, we can create dynamic behavior for our entities.
 
@@ -102,7 +102,7 @@ The only thing you can add/remove from an entity is `component groups`. As tempt
 
 <Label color="yellow">Advanced</Label>
 
-## Conditional Events
+### Conditional Events
 
 Conditional events are events using "filters" to return a component group depending on your filter (see the example below).
 We are testing if a tag exists and if it doesn't return the "prefix:is_false" component, but if it does exist, return "prefix:is_true".
@@ -152,7 +152,7 @@ An example:
       }
 ```
 
-## Triggering events
+### Triggering events
 
 Many components can trigger events. Particularly, components like the [environment sensor](/entities/vanilla-usage-components#minecraft-environment-sensor) or [timer](/entities/vanilla-usage-components#minecraft-timer).
 
@@ -173,7 +173,7 @@ The flow is:
 -   Which adds the component
 -   Which affects the entity in some form or another.
 
-# Uses in vanilla
+## Uses in vanilla
 
 Component groups and events are the primary tools that vanilla entities use to create custom and adaptable behavior. For a specific example, look at the zombie.
 

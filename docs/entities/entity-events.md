@@ -6,11 +6,11 @@ title: Entity Events
 
 Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This tutorial aims to cover the basics of events and their more advanced usage.
 
-# Basic Usage
+## Basic Usage
 
 This section covers the main feature of events and how to call them inside an entity.
 
-## Adding/Removing Component Groups
+### Adding/Removing Component Groups
 
 The most essential and common use of events is directly adding and/or removing component groups. The following event named `shanewolf:ranged_attacker` adds the two component groups "attacker" and "ranged" and removes the groups "standby" and "melee".
 
@@ -25,7 +25,7 @@ The most essential and common use of events is directly adding and/or removing c
 }
 ```
 
-## Calling Events
+### Calling Events
 
 Following are examples of calling an event on an entity using a component, an animation, an animation controller, and another event. Note that certain components can be used to call events on entities other than the entity within which the component exists, and this will be shown in the Advanced Usage section.
 
@@ -80,11 +80,11 @@ This event inside the piglin calls the event `spawn_baby` from the event `minecr
 }
 ```
 
-# Advanced Usage
+## Advanced Usage
 
 More complex and powerful usage of entity events consists of the `sequence` and `randomize` paramaters in addition to calling events on other entities.
 
-## Calling Events on Other Entities
+### Calling Events on Other Entities
 
 Some components, such as the damage sensor, can target entities other than "self" when calling events. One component in particular is specifically designed to call events in other entities: `minecraft:behavior.send_event`. Examples of each are shown below.
 
@@ -146,7 +146,7 @@ The `minecraft:behavior.send_event` component is used inside the evoker to call 
 }
 ```
 
-## Sequence
+### Sequence
 
 Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. This is a very useful tool when different component groups should be dependent on varying conditions.
 
@@ -191,7 +191,7 @@ In this particular case, it may be noted that both entries in the sequence remov
 
 Note: Entries in a sequence are not exclusive; if a filter in one of them passes, it does not prevent the other entries from running. In the case above, there is no filter in the first entry and so it automatically runs. This does not stop the other entries from being checked and subsequently running if valid.
 
-### Randomize
+#### Randomize
 
 Randomize is a parameter which can be used inside of an entity event to add or remove component groups based off weighted randomization. This is a very useful tool when different component groups should be added based on random chance.
 
@@ -212,7 +212,7 @@ The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95%
 }
 ```
 
-### Sequence and Randomize Combination
+#### Sequence and Randomize Combination
 
 The sequence and randomize parameters can be combined for more complex behavior inside an event. Below is an example which aims to be exhaustive in showing how these parameters can be combined and utilized.
 

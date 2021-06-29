@@ -20,11 +20,11 @@ This guide assumes you are slightly familiar with the command line and have a pr
 
 I often write python scripts alongside my `RP`/`BP` folders and then run via the command line in [VSCode](https://code.visualstudio.com/).
 
-# Creating sound_definitions.json
+## Creating sound_definitions.json
 
 We will use automating `sound_definitions.json` as a case study for general automation tasks.
 
-## Picking the Topic
+### Picking the Topic
 
 We will be automating the creation of `sound_definitions.json`. We chose this topic because `sound_definitions.json` can be directly generated based on the paths of our sound files. As we add/remove sound files, it would be super nice if we didn't always have to edit `sound_definitions.json` by hand!
 
@@ -34,7 +34,7 @@ Another good automation topic could be:
 -   creating simple RP/BP item pairs based on textures in textures/items
 -   creating the `canPlaceOn` JSON for blocks that need to be placed on lots of surfaces
 
-## Inspect the Format
+### Inspect the Format
 
 The first thing you need to do is inspect the format of the file you want to create. Here is a simple `sound_definitions.json` file:
 
@@ -64,7 +64,7 @@ The next step, is to look at the file, and select a _chunk_. Our goal will be to
 
 Now, we can annotate this JSON with the _variables_ we want to inject. In other words, the content that we want to change programmatically. Notice how some variables are used multiple times. I'm using `$var` to annotate the JSON, but this is just for information-gathering. We will replace this with proper python soon.
 
-## Creating a Python Script
+### Creating a Python Script
 
 Now is the time to create your script. I use a `projects` folder, following this [version control tutorial](/meta/version-control). That means I will be placing my script inside `projects/scripts`, but please place it anywhere convenient.
 
@@ -82,7 +82,7 @@ You can test your python script by quickly adding a `hello_world` print and runn
 print("Hello world!")
 ```
 
-## Creating a processing function
+### Creating a processing function
 
 I think it is always a good idea to work with functions. Functions are a nice abstraction and allow us to break out work into meaningful chunks. Since we have three variables, let's create a function that takes three variables. For testing, we can print these variables out:
 
@@ -95,7 +95,7 @@ def create_sound_definition(folder, sound, category):
 create_found_definition("Example Folder", "A sound for testing", "Some category :)")
 ```
 
-## Outputting proper json
+### Outputting proper json
 
 Now that we have our process function and test case, let's update the function to print actual JSON. We will be using the `.format` specifier for python strings, as well as multiline strings. These are hugely helpful for generating JSON! Please read up on these concepts if you aren't familiar.
 
@@ -115,7 +115,7 @@ create_found_definition("Example Folder", "A sound for testing", "Some category 
 
 Instead of printing nonsense, we are printing a JSON object with values where we want them!
 
-## Using create_sound_definition
+### Using create_sound_definition
 
 Our goal is to look into the file system and make calls to `create_sound_definition`. Let's make a new function, called `create_sound_definitions` which will handle this task. We will need to import some python modules.
 
@@ -138,7 +138,7 @@ The result would be:
 -   `dragon/roar.mp4`
 -   `dragon/wing_flap.mp4`
 
-## Structuring our folder
+### Structuring our folder
 
 Now, let's go into our sounds folder, and order our files so that all the information we need can be pulled from the folder directly. Let's use this format:
 
@@ -148,7 +148,7 @@ For example:
 
 `sounds/ui/dragon/roar`
 
-## String processing
+### String processing
 
 We can use string processing to gather all the information we need out of `create_sound_definitions` strings.
 
@@ -160,4 +160,4 @@ folder = split[1]
 sound = split[2]
 ```
 
-## Sorry, I will write more soon!
+### Sorry, I will write more soon!

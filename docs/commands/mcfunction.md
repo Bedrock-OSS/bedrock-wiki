@@ -20,13 +20,13 @@ Function files can be nested, for example: `BP/functions/teleport/home.mcfunctio
 
 Functions can be reloaded from the file without leaving the game with the `/reload` command.
 
-# Running functions through tick.json
+## Running functions through tick.json
 
 `tick.json` is a server-side file located as `BP/functions/tick.json` that lets you execute function files.
 
 Functions will be run for each tick as if placed in a repeating command block.
 
-## Creating tick.json
+### Creating tick.json
 
 Create a file called tick.json in your root function folder. The format is this:
 
@@ -36,6 +36,6 @@ Create a file called tick.json in your root function folder. The format is this:
 }
 ```
 
-## Known Issues
+### Known Issues
 
 While this is a valuable file when you're trying to stray away from using repeating command blocks in-game, it's known for executing function files before the world has fully loaded in. This might cause unintended command behavior and crashes, and it's recommended to wait for a more official release of this file.

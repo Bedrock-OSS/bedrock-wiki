@@ -16,7 +16,7 @@ Here is an example:
 
 As you can see, Math-based animations are complicated and hard to understand. For this reason, they should be treated as a _specialized-alternative_ to key-frames -not a complete replacement.
 
-# Writing math-animations
+## Writing math-animations
 
 ### By hand
 
@@ -31,7 +31,7 @@ Omit quotation marks around the expression. They are only required in raw JSON e
 Not all queries are supported in Blockbench due to missing context. If you want to preview an animation that uses a specific query, you can add it to the "Variable Placeholders" section right under the keyframe panel to simulate a value.
 For example, adding `query.modified_distance_moved = time*8` simulates the modified_distance_moved query with a speed of 8 blocks per second.
 
-# Using queries
+## Using queries
 
 The biggest tool you have access to when writing math-based animations is using `queries`. Queries can be used to add outside information into your math expression.
 
@@ -48,7 +48,7 @@ The reason we want to use queries is it allows us to drive animations from gamep
 
 By using queries, you can avoid the need to create animation controllers. If the entity's speed is directly related to the speed of the walk animation, then by default, an entity that isn't moving won't be animated.
 
-# Example
+## Example
 
 A specific example is using animations to drive the wheels of a car based on the `modified_distance_moved`:
 

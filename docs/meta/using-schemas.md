@@ -8,7 +8,7 @@ JSON schemas are just JSON files themselves and don't do anything on their own. 
 
 To get the validation working, you'll need a validator. You have many options here, including editor-specific options.
 
-# Schemas
+## Schemas
 
 Many schemas exist, with many minor differences. Try out different schemas and see which one works best for you:
 
@@ -19,7 +19,7 @@ Many schemas exist, with many minor differences. Try out different schemas and s
 | [Tschrock's](https://github.com/bedrock-studio/bedrock-json-schemas/)  | Manifest, Actor Animation Controller, Actor Animations, Actor Resource Definition, Render Controller, Geometry |                                                  |
 | [stirante](https://github.com/stirante/bedrock-shader-schema/)         | Shaders                                                                                                        |                                                  |
 
-# VSCode
+## VSCode
 
 To use this schema inside your JSON file in VSCode, simply add this line to your root object:
 
@@ -32,7 +32,7 @@ It should look like something like this:
 "$schema": "https://aexer0e.github.io/bedrock-schema/"
 ```
 
-## Adding Schema to Workspaces
+### Adding Schema to Workspaces
 
 If you want to utilize this schema to work with all of your files inside your Workspace, you can add it to your VS Code Workspace's settings.
 

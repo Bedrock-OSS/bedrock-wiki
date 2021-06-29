@@ -27,7 +27,7 @@ Some good examples:
 
 **DO NOT USE** `minecraft` or `minecon` as a namespace unless editing a vanilla file. Not only is it a terrible idea, but Minecraft reserves these, and it won't even work.
 
-# Where to use namespaces?
+## Where to use namespaces?
 
 In short, you should use namespaces as often as you can.
 

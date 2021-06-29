@@ -16,7 +16,7 @@ The best way to do pathfinding uses a second entity, which the first entity will
 
 The way we are going to do pathfinding is actually fairly simple: Make our entity aggressive towards our marker, and then simply place our marker where we want our entity to path to. The hard part is knowing what components to add so we get really long-range pathing.
 
-# The JSON
+## The JSON
 
 These components can be edited as needed to create good pathing. Make sure to update the `nearest_attackable_target` to point to your marker entity. This takes a `family_type`, so you should set one of those on your marker.
 
@@ -69,6 +69,6 @@ The attack radius in `ranged_attack` can be updated. This number sets how close 
 "minecraft:jump.static": {},
 ```
 
-# Detecting a reached waypoint
+## Detecting a reached waypoint
 
 You can use `minecraft:entity_sensor` to detect when you have reached the marker entity.

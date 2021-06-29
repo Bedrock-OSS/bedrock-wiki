@@ -6,20 +6,20 @@ title: Cancelling Death Animations
 
 Death animation refers to the rotation of the entity as it dies. This is accompanied by a red coloring and followed shortly after by the disappearance of the entity geometry and the appearance of the death particles.
 
-# Teleporting the Entity
+## Teleporting the Entity
 
 A fairly common way to remove entities without causing death effects is to teleport them into the void. This can be done from animation controllers like:
 `/teleport @s ~ ~-1000 ~`
 
 Please note that this will remove all death effects, including sound, particles, loot, and the visual death of the entity.
 
-# Transforming the Entity
+## Transforming the Entity
 
 Similar to teleporting, the entity is triggering an entity transform on death. Query is_alive and transform the entity to another entity if is_alive == false. The new entity can have the despawn component with no filter, causing the entity to despawn on creation immediately.
 
 Please note that this will remove all death effects, including sound, particles, loot, and the visual death of the entity.
 
-# Cancelling the Animation
+## Cancelling the Animation
 
 We can also cancel the rotational value of the entity, allowing the entity to die more conventionally (particles, red-coloring, loot) without the 90-degree spin.
 
@@ -63,7 +63,7 @@ Animation Controller: (query.all_animations_finished is only needed for respawni
 }
 ```
 
-# Changing Damage Color Overlay
+## Changing Damage Color Overlay
 
 You can also cancel the death animation of any entity by removing their damage color overlay.
 
@@ -118,7 +118,7 @@ Here's another example in which the damage color overlay becomes pink.
 }
 ```
 
-# Using Damage Sensor to Trigger Instant Despawn and One Item Drop
+## Using Damage Sensor to Trigger Instant Despawn and One Item Drop
 
 You can use the damage_sensor component to trigger an event upon fatal damage; this event adds a particular despawning component group containing the spawn_entity and instant_despawn components. Spawn_entity with 0 wait time will drop an item just before the entity is despawned. For simple entities like furniture, which only need one item, this is very convenient.
 

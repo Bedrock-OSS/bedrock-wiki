@@ -24,9 +24,9 @@ This guide is written for the most-recent _stable_ release of Minecraft Bedrock 
 
 &nbsp;
 
-# Table of Contents
+## Table of Contents
 
-## Project Setup
+### Project Setup
 
 Let's start by setting up your tools, which you will use throughout the development of your addons. This section will cover exactly what **software** is needed, where to **set up/initialize** your addons, how to create a **workspace** where you can create your addons.
 

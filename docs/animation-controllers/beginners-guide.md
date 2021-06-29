@@ -177,13 +177,13 @@ I included these attributes in the "tut:wild" component group.
 
 ---
 
-# Behavior Animations
+## Behavior Animations
 
 Animations and animation controllers are typically defined in the Resource pack. However, there's a certain type of those files that are to be located in the Behavior pack. They are thus called Behavior- (or server- ) Animations.
 
 Behavior animations are able to execute slash(/) commands and to trigger events from the entity behavior file.The syntax is similar to normal resource animations and animation controllers, which are used to run visual animations. Behavior Animations are located in `BP/animations/` and Behavior animation controllers in `BP/animation_controllers/`. The file name is not important, but the animation identifiers are.
 
-## Behavior Animation
+### Behavior Animation
 
 Here's an example of a Behavior Animation that executes multiple slash commands on an entity.
 
@@ -217,7 +217,7 @@ This animation file includes two animations: "animation.grufallo.revenge" and "a
 -   When the animation is triggered, things happen based on the timeline. After "0.0" seconds has passed, the entity will execute the `/effect` command. _Note that after every keyframe (like "0.0", "2.0", etc) either a string with a single command or an array [], including multiple strings with commands, must stand._
 -   On the first tick of the animation the entity executes a `/say` command, and another one after 1 second. Note that slash commands can only be the ones that can be executed from chat.
 
-## Behavior Animation Controller
+### Behavior Animation Controller
 
 Here's an example that can be used to track AFK players. (You can scroll the code box for better readability)
 
@@ -269,7 +269,7 @@ You can also trigger a behavior event _(defined in the entity behavior file>"eve
 ]
 ```
 
-## Defining behavior animation _Shortnames_ in the Behavior file
+### Defining behavior animation _Shortnames_ in the Behavior file
 
 Just like resource animations and animation controllers, Behavior animations and animation controllers need to be assigned a shortname and called in "scripts>animate". For resource ones, it's done in the _.entity_ file `RP/entity/entityname.entity.json`, but for behavior ones it's done directly in the entity behavior file: `BP/entities/entityname.json/"description: {}`. (For more information on the behavior file and the "description" object see the [Entity behavior definition page](/guide/custom-entity-full).
 
@@ -310,7 +310,7 @@ You can find out more about animation controllers by checking out these guides:
 
 ---
 
-# Your progress so far
+## Your progress so far
 
 **What you've done:**
 

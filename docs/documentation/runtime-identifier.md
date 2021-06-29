@@ -17,11 +17,9 @@ It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 
 It's important to remember that `runtime_identifier` will only parse the hard-coded properties of an entity. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity. Additionally, some entity runtimes may overwrite properties found in datadriven components even if they are added in the components section, such as the collision box size for the shulker entity.
 
-# Known runtime-identifier effects:
+## Known runtime-identifier effects:
 
----
-
-## minecraft:shulker
+### minecraft:shulker
 
 Perfect for imitating a block, as long as the player is in Adventure Mode.
 
@@ -33,7 +31,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-## minecraft:ender_crystal
+### minecraft:ender_crystal
 
 -   The entity will stick to the center of the block it's spawned in.
 -   Unless teleported, the entity will always maintain its positions.
@@ -44,7 +42,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-## minecraft:parrot
+### minecraft:parrot
 
 -   makes the wing flap animation able to work.
 -   makes the mob fall slowly.
@@ -52,7 +50,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-## minecraft:armor_stand
+### minecraft:armor_stand
 
 -   Disables entity shadows
 -   Punching the entity will cause it to instantly despawn
@@ -60,7 +58,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-## minecraft:iron_golem
+### minecraft:iron_golem
 
 -   Allows launching attack (attacks deal increased knockback with a vertical amplification)
 -   Speeds up arm and leg animation (can be fixed manually, ~1/4 speed)
@@ -68,7 +66,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-## minecraft:arrow
+### minecraft:arrow
 
 -   Disables death animation, sound, and particles
 -   Makes entity's shadow small, but it doesn't make it disappear
@@ -77,7 +75,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-## minecraft:thrown_trident
+### minecraft:thrown_trident
 
 -   Disables death animation, sound, and particles
 -   Makes entity's shadow small, but it doesn't make it disappear
@@ -85,19 +83,19 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 --
 
-## minecraft:piglin
+### minecraft:piglin
 
 -   Allows `minecraft:celebrate_hunt` to function (which activates query.is_celebrating)
 
 ---
 
-## minecraft:spider
+### minecraft:spider
 
 -   Allows cobwebs to not slow down entity
 
 ---
 
-## minecraft:minecart
+### minecraft:minecart
 
 -   Disables entity shadow
 -   Makes the entity drop a minecart on death
@@ -105,26 +103,26 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-## minecraft:boat
+### minecraft:boat
 
 -   Adds the pocket boat UI when ridden
 -   Prevents the entity from rotating
 
 ---
 
-## minecraft:sheep
+### minecraft:sheep
 
 -   Allows `query.is_grazing` to function with the `behavior.eat_block` component
 
 ---
 
-## minecraft:panda
+### minecraft:panda
 
 -   Allows `query.is_grazing` and `query.sit_mount` to function with the `minecraft:behavior.random_sitting` component
 
 ---
 
-## minecraft:wither_skull_dangerous
+### minecraft:wither_skull_dangerous
 
 -   Makes the entity drop a wither rose on death
 -   Any entity killed by the entity will have a wither rose placed where it dies. Strangely, zombies seem to drop the wither rose instead of having it placed at the spot they die at.
@@ -135,14 +133,14 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-## minecraft:zombie
+### minecraft:zombie
 
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect
 -   Makes the entity receive increased damage from weapons with Smite enchantment
 
 ---
 
-## minecraft:skeleton
+### minecraft:skeleton
 
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect
 -   Makes the entity receive increased damage from weapons with Smite enchantment

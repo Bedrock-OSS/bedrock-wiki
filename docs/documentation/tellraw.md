@@ -8,7 +8,7 @@ tellraw sends a JSON message to selected or all players being usefull for sendin
 
 ![](/assets/images/documentation/tellrawshow.png)
 
-# Format
+## Format
 
 this is how the tell raw command is formated
 
@@ -20,7 +20,7 @@ tellraw <target: target> <raw json message: json>
 -   `<raw json message: json>`: This is a json schema that tells how the message is structured or constructured. expressed with for example:
     `{"rawtext":[{"text":""}]}`
 
-# Examples
+## Examples
 
 This sends the words in the last set of quotes
 

@@ -9,7 +9,7 @@ Below you can find platform specific Emoji's, as well as general symbols. Copy/p
 
 There will be instructions for creating custom emoji at the bottom.
 
-## General
+### General
 
 | Name             | Letter (Copy/Paste This) | Unicode | Image                                                                 |
 | ---------------- | ------------------------ | ------- | --------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Craft Toggle On  |                         | U+E0A0  | ![](/assets/images/documentation/emojis/general/craft_toggle_on.png)  |
 | Craft Toggle Off |                         | U+E0A1  | ![](/assets/images/documentation/emojis/general/craft_toggle_off.png) |
 
-## Mobile (iOS/Android/Fire TV)
+### Mobile (iOS/Android/Fire TV)
 
 | Name        | Letter (Copy/Paste This) | Unicode | Image                                                           |
 | ----------- | ------------------------ | ------- | --------------------------------------------------------------- |
@@ -35,7 +35,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Up Arrow    |                         | U+E080  | ![](/assets/images/documentation/emojis/mobile/up_arrow.png)    |
 | Down Arrow  |                         | U+E082  | ![](/assets/images/documentation/emojis/mobile/down_arrow.png)  |
 
-## PC (Windows 10/MacOS/Chrome OS)
+### PC (Windows 10/MacOS/Chrome OS)
 
 | Name         | Letter (Copy/Paste This) | Unicode | Image                                                        |
 | ------------ | ------------------------ | ------- | ------------------------------------------------------------ |
@@ -43,7 +43,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Right Click  |                         | U+E061  | ![](/assets/images/documentation/emojis/pc/right_click.png)  |
 | Middle Click |                         | U+E062  | ![](/assets/images/documentation/emojis/pc/middle_click.png) |
 
-## Xbox (One/Series X/Series S)
+### Xbox (One/Series X/Series S)
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                           |
 | ------------------ | ------------------------ | ------- | --------------------------------------------------------------- |
@@ -64,7 +64,7 @@ There will be instructions for creating custom emoji at the bottom.
 | D-pad Down         |                         | U+E00E  | ![](/assets/images/documentation/emojis/xbox/dpad_down.png)     |
 | D-pad Left         |                         | U+E00D  | ![](/assets/images/documentation/emojis/xbox/dpad_left.png)     |
 
-## Nintendo Switch
+### Nintendo Switch
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                             |
 | ------------------ | ------------------------ | ------- | ----------------------------------------------------------------- |
@@ -85,7 +85,7 @@ There will be instructions for creating custom emoji at the bottom.
 | D-pad Down         |                         | U+E04E  | ![](/assets/images/documentation/emojis/switch/dpad_down.png)     |
 | D-pad Left         |                         | U+E04D  | ![](/assets/images/documentation/emojis/switch/dpad_left.png)     |
 
-## Playstation (4/5)
+### Playstation (4/5)
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                                  |
 | ------------------ | ------------------------ | ------- | ---------------------------------------------------------------------- |
@@ -106,7 +106,7 @@ There will be instructions for creating custom emoji at the bottom.
 | D-pad Down         |                         | U+E02E  | ![](/assets/images/documentation/emojis/playstation/dpad_down.png)     |
 | D-pad Left         |                         | U+E02D  | ![](/assets/images/documentation/emojis/playstation/dpad_left.png)     |
 
-## Oculus (Rift/Rift S)
+### Oculus (Rift/Rift S)
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                             |
 | ------------------ | ------------------------ | ------- | ----------------------------------------------------------------- |
@@ -122,7 +122,7 @@ There will be instructions for creating custom emoji at the bottom.
 | LS (Left Stick)    |                         | U+E0E5  | ![](/assets/images/documentation/emojis/oculus/left_stick.png)    |
 | RS (Right Stick)   |                         | U+E0E6  | ![](/assets/images/documentation/emojis/oculus/right_stick.png)   |
 
-## Windows MR (Mixed Reality)
+### Windows MR (Mixed Reality)
 
 | Name                      | Letter (Copy/Paste This) | Unicode | Image                                                                            |
 | ------------------------- | ------------------------ | ------- | -------------------------------------------------------------------------------- |
@@ -141,7 +141,7 @@ There will be instructions for creating custom emoji at the bottom.
 | LS (Left Stick)           |                         | U+E0C3  | ![](/assets/images/documentation/emojis/windowsMR/left_stick.png)                |
 | RS (Right Stick)          |                         | U+E0C4  | ![](/assets/images/documentation/emojis/windowsMR/right_stick.png)               |
 
-# Custom Emoji
+## Custom Emoji
 
 ::: warning
 This method is not officially supported. Use with caution on the Marketplace!

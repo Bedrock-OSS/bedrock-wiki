@@ -24,7 +24,7 @@ This guide is written for the most recent _stable_ release of Minecraft Bedrock 
 
 &nbsp;
 
-# Table of Contents
+## Table of Contents
 
 ## Project Setup
 
@@ -44,7 +44,7 @@ Finally, it's time to create the mob that drops our custom item: A hostile Ghost
 
 <Button color="green">Custom Entity</Button>
 
-# What to do after finishing the Guide
+## What to do after finishing the Guide
 
 Now, your first addon is complete! To further expand your knowledge, consider doing these:
 

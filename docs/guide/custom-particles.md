@@ -217,7 +217,7 @@ It's rather tiresome to create particles that way, comparable to creating models
 
 ---
 
-# Defining Custom Sounds
+## Defining Custom Sounds
 
 _You can find a more in-depth tutorial on custom sounds on [wiki.bedrock.dev](https://wiki.bedrock.dev/concepts/sounds)._
 
@@ -225,7 +225,7 @@ Minecraft can read sound files in the `.ogg` (recommended) or `.wav` format. (Yo
 
 Sound files are located in subfolders of the `RP/sounds/` folder. My skele_yaklin sound files are located under `RP/sounds/mob/yaklin_moo.ogg` and `RP/sounds/mob/yaklin_moo_2.ogg`. (I don't have more sound effects currently, thus I will be using same ones over and over, but ideally one would need more of those).
 
-## Sound Definition
+### Sound Definition
 
 Now to define the sound's shortnames! This process is similar to defining block texture shortnames. It's done in `RP/sounds/sound_definitions.json`.
 
@@ -260,7 +260,7 @@ We have 3 sound shortnames in total:
 1. `mob.yaklin.death` can be heard from the distance of 12 blocks: `max_distance": 12.0`.
 1. And, lastly, `mob.yaklin.hurt`.
 
-## sounds.json
+### sounds.json
 
 Now we are about to call our sounds. We can do it either through the `/playsound <>` slash command or automatically in `RP/sounds.json`. Once again, this resembles block resource definition.
 
@@ -305,7 +305,7 @@ That's it! Turn up your Sound volume in Settings>Audio, spawn in your mobs, and 
 
 ---
 
-# Your progress so far
+## Your progress so far
 
 **What you've done:**
 

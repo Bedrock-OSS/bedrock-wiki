@@ -2,8 +2,6 @@
 title: Render controllers
 ---
 
-# Basic Render Controller
-
 A render controller is a file that controls what is rendered in-game. They define the material, the texture and the model to be used on the entity. Render Controller files are located in `RP/render_controllers` (the `render_controllers` folder in your resource pack). Let's look at a simple render controller's structure.
 
 `RP/render_contollers/skeleton.render_controllers.json`
@@ -29,7 +27,7 @@ A render controller is a file that controls what is rendered in-game. They defin
 
 As you can see, the skeleton render controller simply renders all textures, materials and models with the shortnames "default". Thus it can be used in all entities that have a single model, texture, and material.
 
-# Render controller Arrays - creating an entity with texture variants
+## Render controller Arrays - creating an entity with texture variants
 
 It can be made so entities spawn with random skin (texture) or model (geometry) variants with the help of render controllers.
 
@@ -135,7 +133,7 @@ Now that you've updated your render controller, your .entity file(with the new t
 
 _If something doesn't work, watch your content log (You can enable it in Settings>Profile) or compare your files with the ones on this website [GitHub repository](https://github.com/KaiFireborn/Minecraft-Bedrock-Full-Beginner-Add-on-development-Guide-FILES)!_
 
-# Part Visibility of bones
+## Part Visibility of bones
 
 `RP/render_controllers/fox.render_controllers.json`
 
@@ -196,7 +194,7 @@ which would do practically the same as:
 
 ---
 
-# Your progress so far
+## Your progress so far
 
 **What you've done:**
 

@@ -8,7 +8,7 @@ In bedrock, we can add custom sounds without overwriting any vanilla sounds. Thi
 
 `protip:` The best way to learn about sounds is by downloading and playing around with the default resource pack.
 
-## Folder Structure
+### Folder Structure
 
 There are two main files that we edit when we want to add sounds. Note how `sound_definition` is nested inside `sounds`.
 
@@ -19,7 +19,7 @@ There are two main files that we edit when we want to add sounds. Note how `soun
             sound_definitions.json
 ```
 
-## Sound Formats
+### Sound Formats
 
 The following sound formats are accepted:
 
@@ -28,7 +28,7 @@ The following sound formats are accepted:
 -   .mp3 (Not executable with `/music`!)
 -   .fsb (difficult to work with)
 
-# sound_definitions.json
+## sound_definitions.json
 
 `sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example, `sound_definitions.json`, that adds a new trumpet sound called `example.toot`.
 
@@ -48,11 +48,11 @@ Sounds added in this way can be triggered using `/playsound`. Please note that `
 
 `note:` New files referenced by file path, such as sounds, DO need a complete client restart to load. This means that if sounds don't work, you should restart your entire MC client rather than just reloading the world.
 
-## Top Level Keys
+### Top Level Keys
 
 In the example above, I showed two `top-level` fields: `category` and `sounds`. Sounds will be discussed in further detail below, but the other `top-level` keys will be discussed here:
 
-### Categories
+#### Categories
 
 Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get other effects.
 
@@ -69,15 +69,15 @@ Categories are used internally by the engine to decide how each sound is played.
 | record   |                                                 |
 | neutral  |                                                 |
 
-### min_distance
+#### min_distance
 
 The minimum distance **away** the source of the sound that the client needs to be within to hear. It must be a float (1.0), or the argument will be ignored.
 
-### max_distance
+#### max_distance
 
 The maximum distance **to** the source of the client's sound needs to be within to hear. It must be a float (1.0), or the argument will be ignored.
 
-## Sound definitions
+### Sound definitions
 
 In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds but does not have much power. For starts, I can add multiple sounds to the list. These sounds will be randomized when played:
 
@@ -91,27 +91,27 @@ In the example above, I showed `sounds` as simply a list with a single path. Thi
 
 Additionally, we can define each sound as an object instead of a string. This allows us finer control and unlocks some new settings. The string/object style can be mixed and matched.
 
-### name
+#### name
 
 The path to the file, such as: `"sounds/music/game/creative/creative1"`
 
-### stream
+#### stream
 
 Limits the sound only to be played a limited number of instances at a time. Good for improving performance on sound heavy worlds.
 
-### volume
+#### volume
 
 How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made more audible than initially encoded.
 
-### load_on_low_memory
+#### load_on_low_memory
 
 Forces the loading of the sound even when nearing low memory. "load_on_low_memory" is now deprecated as of 1.16.0
 
-### pitch
+#### pitch
 
 The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (standard), but can be higher, such as `1.48`.
 
-## Example
+### Example
 
 Here is a more realistic example containing these options:
 
@@ -131,7 +131,7 @@ Here is a more realistic example containing these options:
 }
 ```
 
-# sounds.json
+## sounds.json
 
 If we want our sounds to run automatically, we can add them into the `sounds.json` file. This will tie the sound definitions directly to game events and cause them to play without needing to trigger with `/playsound`.
 
@@ -144,7 +144,7 @@ Sounds can be added into various categories:
 | entity_sounds           | Contains death, ambient, hurt, etc. sounds for entities (Including custom ones!) |
 | interactive_sounds      | WIP                                                                              |
 
-## Adding Entity Sounds
+### Adding Entity Sounds
 
 I assume that sounds can be added in other categories, but I personally only have experience adding sounds into the `entities` category. Entity sounds are automatically played at various points in the entities life-cycle.
 
@@ -182,7 +182,7 @@ There are also many sound events, which _most likely_ trigger automatically, but
 | warn               |
 | scream             |
 
-## Example
+### Example
 
 ```json
 {
@@ -209,7 +209,7 @@ There are also many sound events, which _most likely_ trigger automatically, but
 }
 ```
 
-# Adding sounds to Animations
+## Adding sounds to Animations
 
 Sounds played in animations function based off of `short-name` definitions in the RP entity file.
 
@@ -233,7 +233,7 @@ This example shows playing a wing-flap sound, synced with an animation.
 }
 ```
 
-# Adding sounds to Animation Controllers
+## Adding sounds to Animation Controllers
 
 You can play sounds within animation controllers in a similar way that animations can be.
 

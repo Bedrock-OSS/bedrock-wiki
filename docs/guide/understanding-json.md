@@ -2,8 +2,6 @@
 title: Understanding JSON
 ---
 
-# Understanding JSON
-
 ::: tip
 This is an appendix page. You can start the guide from the beginning [here](/guide/index).
 :::

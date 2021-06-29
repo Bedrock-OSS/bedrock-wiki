@@ -2,8 +2,6 @@
 title: Skin Packs
 ---
 
-# Skin Packs
-
 <!-- - [Skin pack Manifest](#Skin pack Manifest)
 - [skins.json](#skins.json)
 - [texts/en_US.lang](#texts/en_US.lang)

@@ -6,7 +6,7 @@ title: Dummy Entities
 
 Dummy entities are invisible entities which are used behind the scenes for game-play purposes. Dummy entities are a very useful tool, and this document will cover some of the ways they are utilized, as well as showing how to set up the resource side of things.
 
-# Using Dummies
+## Using Dummies
 
 This is a non-exhaustive list of how dummies can be used:
 
@@ -15,9 +15,9 @@ This is a non-exhaustive list of how dummies can be used:
 -   **As a location marker:** you can run `execute` commands located at a dummy to get relative coordinates at a location.
 -   **As a waypoint:** by making entities which are aggressive to your dummy, you can pathfind entities to any location by placing a dummy there.
 
-# Creating Dummies
+## Creating Dummies
 
-## Behavior Entity
+### Behavior Entity
 
 You can use whatever behaviors you like, but here is a good template. The important aspects are: no damage, and can't be pushed.
 
@@ -61,7 +61,7 @@ entities/dummy.json
 }
 ```
 
-## Resource Entity
+### Resource Entity
 
 entity/dummy.json
 
@@ -86,7 +86,7 @@ entity/dummy.json
 }
 ```
 
-## Geometry
+### Geometry
 
 models/entity/dummy.json
 
@@ -105,7 +105,7 @@ models/entity/dummy.json
 }
 ```
 
-## Render Controller (Optional)
+### Render Controller (Optional)
 
 render_controllers/dummy.json
 
@@ -126,6 +126,6 @@ render_controllers/dummy.json
 }
 ```
 
-## Texture (Optional)
+### Texture (Optional)
 
 You can either leave the texture location blank, or open the model in block-bench and create a blank texture.

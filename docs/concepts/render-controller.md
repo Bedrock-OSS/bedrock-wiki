@@ -16,7 +16,7 @@ Beginner
 
 Render controllers are an often-misunderstood part of the `Resource Pack`. But you don't need to be afraid! You should think of render-controllers as logic packs that take `short-name` definitions from the RP Entity File, and determine how they will be combined/layered/rendered in-game.
 
-# Defining short-names
+## Defining short-names
 
 Render controllers work based on the short-name definitions of the RP entity file. Short-names are local identifiers, which we define in the RP entity file, and can then use in the render controller (and other places!). Variables such as `geometry`, `materials`, and `textures` can be defined in the entity,
 
@@ -57,7 +57,7 @@ You can define multiple short-names in each array, such as in the `materials` ex
 
 You should think of short-name definitions as `importing` the assets you want. At this state, you are defining the textures, geometry, and materials that you want to use in your entity. In the render-controller stage, you won't import anything. You will simply use the assets you already imported to create the rendered entity.
 
-# Simple render-controller
+## Simple render-controller
 
 A simple render controller looks like this:
 
@@ -82,7 +82,7 @@ A simple render controller looks like this:
 
 This controller is taking the short-name definitions from the entity file, and `rendering` them. For example the line: `"textures": [ "Texture.default"]` says: "Take the default texture, and apply it to the entity". The render controller doesn't know what the default texture is, it simply applies it.
 
-# Re-using render controllers
+## Re-using render controllers
 
 Since render controllers work based on short-names, it is possible to re-use the same render controller for all of your entities. For simple entities with one material, one texture, and one geometry, custom render controllers are not necessary.
 
@@ -95,11 +95,11 @@ For example, the render controller above is used for the `minecraft:cow` entity.
     - `default` material
 </p>
 
-# Creating custom render controllers
+## Creating custom render controllers
 
 Often we want more power over the rendering of our entities, such as rendering layered textures, multiple geometries, or applying different materials to different bones. To create a custom render controller, simply copy and paste a vanilla render controller into the `render_controllers` folder, and edit to your liking!
 
-# Texture layering
+## Texture layering
 
 sometimes, it is useful to create layered textures for custom entities. Layered in this context simply means multiple textures overlayed on top of each other, where the top texture has alpha pixels, and allows the bottom texture to show through.
 
@@ -109,13 +109,13 @@ This can be solved by layering textures. Simply place the frame texture on first
 
 Or, you could even create multiple frames for each painting! This allows you to create more variety in your panting entity, since the player can independently change two textures.
 
-## Render Controllers
+### Render Controllers
 
 Texture layering is achieved through the use of render controllers. If you aren't comfortable with render controllers, you should do some looking through the vanilla usages. Entities such as the `horse`, which contain multiple textures, are especially good to look at.
 
-## Texture Layering
+### Texture Layering
 
-### Render Controller
+#### Render Controller
 
 ```json
 {
@@ -138,7 +138,7 @@ Texture layering is achieved through the use of render controllers. If you aren'
 }
 ```
 
-### Entity
+#### Entity
 
 You need to define all textures in the entity, and also use `villager_v2_masked` material.
 
@@ -153,11 +153,11 @@ You need to define all textures in the entity, and also use `villager_v2_masked`
 }
 ```
 
-## Texture Layering with Variance
+### Texture Layering with Variance
 
 While I guess hard-coding layered textures is cool, the real fun comes when you make the textures dynamic:
 
-### Entity
+#### Entity
 
 Set multiple top textures, which we will index into later.
 
@@ -170,7 +170,7 @@ Set multiple top textures, which we will index into later.
 }
 ```
 
-### Render Controller
+#### Render Controller
 
 ```json
 {
@@ -203,7 +203,7 @@ Set multiple top textures, which we will index into later.
 
 By using arrays, and then `query.variant`, we are able to select the top texture based on the `variant` of the entity.
 
-### Setting variant
+#### Setting variant
 
 Now, to select which layer will show up, we can simply set the variant component in the entity:
 
@@ -215,10 +215,10 @@ Remember that components like variant are zero-indexed, which means `0` is our f
 }
 ```
 
-### Dynamically Changing Texture
+#### Dynamically Changing Texture
 
 If you want to dynamically change the texture of an entity during gameplay, you simply need to change the `variant`. This can be done using component groups and events.
 
-### Dynamic Layered Textures
+#### Dynamic Layered Textures
 
 Dynamic layered textures can be achieved by adding more lists of textures, and other dummy components as indexes. You can [read about dummy components here](/entities/dummy-entities)

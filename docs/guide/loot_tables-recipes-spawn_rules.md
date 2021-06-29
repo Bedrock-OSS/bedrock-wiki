@@ -376,7 +376,7 @@ _Blocks do not drop loot in creative mode_
 
 ---
 
-# Custom crafting/smelting/etc Recipes
+## Custom crafting/smelting/etc Recipes
 
 Recipes can have unique identifiers like `tut:compass_from_compass_block`. They're located in `BP/recipes`.
 

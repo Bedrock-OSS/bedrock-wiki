@@ -6,7 +6,7 @@ The bedrock documentation for Molang is notoriously bad. This page will attempt 
 
 [This list is limited. The full list of queries can be found here!](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries)
 
-# query.get_equiped_item_name
+## query.get_equiped_item_name
 
 Formatted like: `query.get_equiped_item_name(hand) = 'name'`
 
@@ -20,7 +20,7 @@ Example: `"query.get_equipped_item_name == 'diamond'"`
 
 Can you test for items in the inventory? No. You can't. You can only test for the two slots defined here.
 
-# query.armor_texture_slot
+## query.armor_texture_slot
 
 Formatted like: `query.armor_texture_slot(x) = y`.
 
@@ -53,7 +53,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 
 `query.armor_texture_slot(3) == 1`: queries for Iron Boots.
 
-# query.armor_material_slot
+## query.armor_material_slot
 
 Formatted like: `query.armor_material_slot(x) = y`.
 
@@ -79,7 +79,7 @@ Unknown, possibly:
 | 2        | Leather armor material     |
 | 3        | Leather enchanted material |
 
-# query.armor_color_slot
+## query.armor_color_slot
 
 _Notice: As of version `1.16.100.51`, this query is crashing minecraft. It might be fixed in later versions._
 
@@ -109,7 +109,7 @@ Where `slot` and `channel` are both integer arguments, from the following tables
 
 Query returns color value in specified channel.
 
-# query.is_ghost
+## query.is_ghost
 
 Formatted like: `is_ghost = query.is_ghost`.
 
@@ -117,7 +117,7 @@ Return 1.0 or 0.0 based on whether the entity is a ghost.
 
 _Currently, only returns 1.0 for a guardian ghost and is used by its renderer._
 
-# query.is_grazing
+## query.is_grazing
 
 Formatted like: `is_grazing = query.is_grazing`.
 
@@ -125,7 +125,7 @@ Return 1.0 or 0.0 based on whether the entity is eating a block.
 
 _Currently, only returns 1.0 for a sheep and entities using runtime identifier of a sheep._
 
-# query.is_jumping
+## query.is_jumping
 
 Formatted like: `is_jumping = query.is_jumping`.
 
@@ -137,7 +137,7 @@ For the player, conditions for its activation are:
 -   OR auto-jump is triggered
 -   OR swimming with auto-jump
 
-# query.modified_move_speed
+## query.modified_move_speed
 
 Formatted like: `modified_move_speed = query.modified_move_speed`.
 
@@ -152,7 +152,7 @@ Value example:
 -   Player is sprinting on fire: 1.0
 -   Player is sprinting and jumping on fire: 0.525
 
-# query.on_fire_time
+## query.on_fire_time
 
 Formatted like: `on_fire_time = query.on_fire_time`.
 
@@ -169,14 +169,14 @@ Value example:
 
 Basically it's tick timer that starts after entity is first ignited and resets every time it changes from/to being on fire.
 
-# query.structural_integrity
+## query.structural_integrity
 
 Formatted like: `structural_integrity = query.structural_integrity`.
 
 Used by boats and minecarts for destroying it. It will decrease when attacking the entity and will recover with time.
 Probably unusable by anything other than boats and minecarts.
 
-# variable.attack_time
+## variable.attack_time
 
 ### Explanation
 
@@ -195,11 +195,11 @@ For the player, the variable will track whenever the arm bones are swinging, thi
 -   interacting (when swing is enabled)
 -   melee attack
 
-# query.is_roaring
+## query.is_roaring
 
 Evaluates to true when a `knockback_roar` attack is happening.
 
-# query.head_x_rotation
+## query.head_x_rotation
 
 Formatted like: `query.head_x_rotation(x)`
 
@@ -207,7 +207,7 @@ Where `x` specifies the head of the entity. It is not really relevant for any en
 
 Returns head pitch. looking up returns `-89.9`, looking all the way down returns `89.9`.
 
-# query.head_y_rotation
+## query.head_y_rotation
 
 Formatted like: `query.head_y_rotation(x)`
 
@@ -215,23 +215,23 @@ Where `x` specifies the head of the entity. It is not really relevant for any en
 
 Returns yaw of the head from `-179.9` to `179.9`. the values wrap around so like if you are at `-179.9` and you turn just a little bit, it instantly goes to `179.9`.
 
-# query.target_x_rotation and query.target_y_rotation
+## query.target_x_rotation and query.target_y_rotation
 
 Identical to the respective `query.head_*_rotation`, however has no optional argument for selecting head.
 
-# query.eye_target_x_rotation and query.eye_target_y_rotation
+## query.eye_target_x_rotation and query.eye_target_y_rotation
 
 Not valid for player. not really sure what its good for.
 
-# variable.short_arm_offset_right
+## variable.short_arm_offset_right
 
 Returns the offset factor for the player's rightarm bone compared to the default skin geometry. Slim-armed (3 pixel wide) skins will return `0.5` when equipped on the player. Normal (4 pixel wide) skins will return `0.0` when equipped on the player. Note: the player must go into 1st person perspective at least once for this variable to be initialized and usable elsewhere on the entity.
 
-# variable.short_arm_offset_left
+## variable.short_arm_offset_left
 
 Identical behavior to `variable.short_arm_offset_right` except it references the player leftarm bone.
 
-# query.movement_direction
+## query.movement_direction
 
 Essentially, returns the ratio between speed in the specified argument, over the total speeds in all 3 axis combined. For example, you are moving 5 blocks/second in the x-axis, 0 blocks/second in the y-axis, and 3 blocks/second in the z-axis -> `5 / ( 5 + 0 + 3 ) = 0.625`.
 

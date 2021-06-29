@@ -8,7 +8,7 @@ tags:
 
 Whether making a plane or a dragon, adding controllability to flying entities will probably challenge most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 3 main workaround ways you can use to achieve this.
 
-# Great Jump, Slow Fall
+## Great Jump, Slow Fall
 
 While not exactly "flying", setting the entity's jumping power high and giving it slow falling & speed effects as it falls is probably the most straightforward method.
 
@@ -73,7 +73,7 @@ We'll also need to hook it up to our entity as so:
 
 Now, we should have a mechanic at least resemblant of flying. You can change the values like jump_strength and speed, but the entity will always fall using this method.
 
-# Controlling Through Looking
+## Controlling Through Looking
 
 This is probably the most popular method of piloting flying entities, and unlike the first method, this one gives players control over the vertical movement of the entity so that you don't always have to fall every time you jump, with the downside being you can't look around freely without changing the entity's vertical trajectory.
 
@@ -176,7 +176,7 @@ execute @a[rxm=20,rx=35] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] slow_f
 execute @a[rxm=35,rx=90] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] clear
 ```
 
-# Controlling Through Jumping
+## Controlling Through Jumping
 
 A third method of controlling flying entities uses the player's jump button. The entity rises when the player is holding the jump button and falls when they release their jump button.
 

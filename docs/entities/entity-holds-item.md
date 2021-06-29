@@ -12,17 +12,17 @@ This tutorial assumes you have a basic understanding of entities, loot tables, a
 
 In this tutorial, you will learn to have an entity spawn with an item in its hand. I'll be using a custom `mandalorian_armorer' entity and a custom `hammer` item for the examples.
 
-# Basic Usage
+## Basic Usage
 
 This section covers the main features of entities for them to spawn with an item in their hand.
 
-## Setting up the model in Blockbench
+### Setting up the model in Blockbench
 
 First of all, you'll need to have a model in Blockbench that has a map called 'rightArm'. Within this map, there needs to be a submap called 'rightItem'. Position the pivot point of this submap, so it sits in the place you want the entity to hold the item at.
 
 ![](/assets/images/tutorials/entity-holds-item/blockbench.png)
 
-## Setting up behavior pack-side entity
+### Setting up behavior pack-side entity
 
 Now you'll need to add a `minecraft:equipment` component in the component list for your entity and add a loot table with the desired item.
 
@@ -38,7 +38,7 @@ In our example it will look like this:
 }
 ```
 
-## Setting up the loot table
+### Setting up the loot table
 
 Finally, add the loot table for the entity. It needs to be in `loot_tables/entities/<your_loot_table_name>.json` in the behavior pack. In our case, it's called `mandolorian.json`.
 

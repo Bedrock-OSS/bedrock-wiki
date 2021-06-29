@@ -6,7 +6,7 @@ title: Entity Commands
 
 A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad!
 
-# Animation Controllers
+## Animation Controllers
 
 To trigger slash commands, we are going to use Behavior Pack animation controllers. Animation controllers should be placed like: `animation_controllers/some_controller.json`. You can [learn more about animation controllers on the entity events section of bedrock.dev](https://bedrock.dev/docs/stable/Entity%20Events).
 
@@ -50,7 +50,7 @@ Queries are re-run when the world/chunk reloads. This means the line `"/say I ha
 
 If you need to stop this from happening, you need to add additional queries, such as a `skin_id` query. The first time the entity spawns, check for `skin_id = 0`, and then _also_ add some higher `skin_id`, such as `skin_id = 1`. Then, when the entity reloads, it won't be able to run those commands. This is shown further down in the document.
 
-# Using Animation Controllers
+## Using Animation Controllers
 
 To add this animation controller to our entity, we can use the following code in the entity definition description:
 
@@ -70,7 +70,7 @@ To add this animation controller to our entity, we can use the following code in
 
 Once again, if you are confused about any of this step, please review the Entity Events documentation.
 
-# Triggering Commands using Events:
+## Triggering Commands using Events:
 
 Animation transitions are created using queries. You can [read about queries here](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicate queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
 
@@ -127,7 +127,7 @@ This animation controller has two command states now: The first is triggered by 
 
 The syntax is `@s` followed by the name of an entity event. This allows us to add/remove components from within the animation controller.
 
-# Setting Component Groups
+## Setting Component Groups
 
 Back in our entity file, we can set the `skin_id` using the `skin_id` component.
 
@@ -161,7 +161,7 @@ We can add component groups that contains skin_ids:
 }
 ```
 
-# Adding Events
+## Adding Events
 
 Now lets create events so we can easily add these groups:
 
@@ -198,11 +198,11 @@ Now lets create events so we can easily add these groups:
 }
 ```
 
-# Triggering Events
+## Triggering Events
 
 There are loads of ways to trigger events in Minecraft. Lets look at two specific examples:
 
-## Interact Component:
+### Interact Component:
 
 This component will spawn zombies whenever you click on him.
 
@@ -224,7 +224,7 @@ This component will spawn zombies whenever you click on him.
 }
 ```
 
-## Timer
+### Timer
 
 This component will trigger the example command every 10 seconds:
 
@@ -240,7 +240,7 @@ This component will trigger the example command every 10 seconds:
 
 By adding these (and similar!) components to our entity, we can control when the `skin_id` changes, and therefor which events run.
 
-# Review:
+## Review:
 
 Here is how it all works:
 

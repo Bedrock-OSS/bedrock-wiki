@@ -18,7 +18,7 @@ However, bridge. is not required.
 
 ---
 
-# Custom Biomes
+## Custom Biomes
 
 BP/biomes/cold_biome.json
 
@@ -103,7 +103,7 @@ Your custom biome is now complete! _Note: cold_biome as well as volcanic biomes 
 
 ---
 
-# Features and Feature Rules
+## Features and Feature Rules
 
 Note: in v.1.15Beta, it is possible to use `.mcstructures` from the `structures` folder instead of `features` to generate custom structures with `feature_rules`. More on that after the update arrives.
 
@@ -265,7 +265,7 @@ It's a good idea to proceed checking out other feature and feature_rule vanilla 
 
 ---
 
-# Custom Structures
+## Custom Structures
 
 As of MCBE v1.16.20, **Custom Generated structures are possible**.
 A simple way to generate Structures is [this](https://machine-builder.itch.io/frg-v2) auto generator by MACHINE_BUILDER, mentioned earlier. It generates all three of the required files for your structure: `feature_rules/mystructure.feature_rule.json`, `feature_rules/mystructure.feature.json` and `structures/mystructure.mcstructure.` You can learn more about defining `.mcstructures` with Structure Blocks in Minecraft itself [here](https://wiki.bedrock.dev/guide/manifest-function-extension#mcstructure).
@@ -308,7 +308,7 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 
 ---
 
-# Your progress so far
+## Your progress so far
 
 **What you've done:**
 
