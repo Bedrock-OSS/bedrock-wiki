@@ -36,4 +36,12 @@ details {
 summary {
 	@apply rounded p-4 bg-true-gray-200;
 }
+
+.dark details {
+	@apply bg-true-gray-800  border-gray-700;
+}
+
+.dark summary {
+	@apply bg-true-gray-900;
+}
 </style>
