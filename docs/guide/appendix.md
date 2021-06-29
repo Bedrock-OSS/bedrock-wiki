@@ -1,5 +1,5 @@
 ---
-title: 'Blockbench: Modeling, Texturing, Animating'
+title: 'Guide Index'
 ---
 
 ## Software Preparation

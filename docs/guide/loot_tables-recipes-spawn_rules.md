@@ -528,7 +528,7 @@ Let's also look into a recipe that gives you more than one item as a result.
 
 ---
 
-# Spawn Rules
+## Spawn Rules
 
 Spawn rules define how vanilla Entities and custom entities spawn. In the next chapter we'll be creating a custom entity, so make sure to prepare a custom spawn rule for it! Check out the vanilla example files for more information. ;)
 

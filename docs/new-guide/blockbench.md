@@ -20,7 +20,7 @@ Let's get started.
 
 <YouTubeEmbed id="j7ISUImhgpc" />
 
-# Texturing
+## Texturing
 
 Now that you have your model in place let's start texturing!
 
@@ -31,7 +31,7 @@ Now that you have your model in place let's start texturing!
    ![](/assets/images/guide/create_entity_texture_2.png)
 1. Go to "Paint" in the upper right corner and paint your texture.
 
-# Animating
+## Animating
 
 Once your model and texture are done, you can start animating. Go to "Animate" in the upper right corner.
 
@@ -47,7 +47,7 @@ You might want to adjust one of the toolbars by adding "Export Animations" and "
 1. Right-click the animation and tick "Loop" for the animation to loop.
    ![](/assets/images/guide/create_entity_animation_4.png)
 
-# Saving your work
+## Saving your work
 
 Now that our model, texture, and walk animation are complete, you can save your work.
 
