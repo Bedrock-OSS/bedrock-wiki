@@ -10,11 +10,11 @@
 			'min-h-screen': true,
 		}"
 	>
-		<h1 id="top">{{ page.title }}</h1>
+		<h1 v-if="page.title != ''" id="top">{{ page.title }}</h1>
 		<TOC v-if="showToc" />
 		<Content
 			:class="{
-				'toc-visible': !isReducedScreen,
+				'toc-visible': !isReducedScreen && showToc,
 			}"
 		/>
 		<div v-if="showContributors">
