@@ -16,9 +16,6 @@
 	@apply p-6 bg-true-gray-900 rounded-lg border;
 }
 
-.dark .homepage * {
-	border-color: rgb(93, 95, 97);
-}
 
 /* Tables */
 .dark tbody,

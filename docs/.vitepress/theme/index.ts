@@ -8,7 +8,8 @@ import JQEmbed from './Components/Content/JQEmbed.vue'
 import WikiImage from './Components/Content/WikiImage.vue'
 import Card from './Components/Content/Card.vue'
 import CardLink from './Components/Content/CardLink.vue'
-import Homepage from './Components/Homepage/Homepage.vue'
+import Homepage from './Components/Pages/Homepage.vue'
+import NotFound from './Components/Pages/NotFound.vue'
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import Component404 from '../../404.md'
@@ -25,7 +26,8 @@ const globalComponents: [string, Component][] = [
 	['WikiImage', WikiImage],
 	['CardLink', CardLink],
 	['Card', Card],
-	['Homepage', Homepage]
+	['Homepage', Homepage],
+	['NotFound', NotFound]
 ]
 
 const theme: Theme = {

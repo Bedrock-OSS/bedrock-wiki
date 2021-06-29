@@ -43,3 +43,9 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+.dark .homepage * {
+	border-color: rgb(93, 95, 97);
+}
+</style>
