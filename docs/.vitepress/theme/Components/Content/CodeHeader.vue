@@ -51,3 +51,8 @@ function copyCodeSnippet() {
 	}
 }
 </script>
+<style scoped>
+.icon {
+	fill: white;
+}
+</style>

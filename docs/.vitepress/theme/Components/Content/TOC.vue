@@ -78,7 +78,7 @@ a {
 
 /* Sidebar Vs. Main */
 .sidebar-toc {
-	@apply mt-14 pb-14 pt-1 z-10 top-0 w-72 border-r-1 border-gray-200 dark:border-true-gray-600 border-gray-200;
+	@apply mt-14 pt-1 z-10 top-0 w-72 border-r-1 border-gray-200 dark:border-true-gray-600 border-gray-200;
 	position: fixed;
 	padding-right: 20px;
 	right: 0;

@@ -1,7 +1,4 @@
 .tile {
-	@apply rounded-t-md bg-true-gray-200 -mb-5 border-b-1 border-true-gray-300 relative z-index-1;
-}
-
-.dark .tile {
-	@apply bg-true-gray-900 border-true-gray-700;
+	@apply rounded-t-md bg-true-gray-900 border-true-gray-700 -mb-5 border-b-1 relative z-index-1;
+	color: white;
 }
