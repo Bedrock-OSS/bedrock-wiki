@@ -1,7 +1,7 @@
 <template>
 	<div class="relative">
 		<CurrentThemeIcon
-			class="absolute opacity-70 top-2 left-2"
+			class="absolute opacity-70 top-2 left-2 pointer-events-none"
 			width="19"
 			height="19"
 		/>
@@ -17,9 +17,10 @@
 				border-1 border-gray-200
 				dark:border-true-gray-600
 				focus:border-blue-300
-				focus:ring focus:ring-blue-200 focus:ring-opacity-50
-				dark:bg-dark-gray-900
-				dark:border-dark-gray-800
+				focus:ring
+				focus:ring-blue-200
+				focus:ring-opacity-50
+				dark:bg-dark-gray-900 dark:border-dark-gray-800
 				text-sm
 				py-2
 				px-8
