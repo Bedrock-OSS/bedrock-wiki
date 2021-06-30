@@ -1,1 +1,0 @@
-import{o as t,c as e,d as a}from"./404.md.fa5d95c5.js";const d='{"title":"Biome Tags","description":"","frontmatter":{"title":"Biome Tags"},"relativePath":"world-generation/biome-tags.md","lastUpdated":1625000967336}',r={},_=a('',4);r.render=function(a,d,r,o,l,s){return t(),e("div",null,[_])};export default r;export{d as __pageData};
