@@ -1,11 +1,5 @@
 ---
-layout: guide
 title: 'Creating Entity Visuals'
-parent: Beginners Guide
-nav_order: 6
-badge: 6
-badge_color: guide
-badge_justification: left
 ---
 
 Blockbench is a free software, designed to make Minecraft modelling, texturing, and animating possible. You already installed it in [Tools and Software](/guide/software-preparation);
