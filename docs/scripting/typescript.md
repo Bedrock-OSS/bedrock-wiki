@@ -8,15 +8,6 @@ parent: Scripting
 
 # TypeScript
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
 [TypeScript](https://www.typescriptlang.org/) is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.
 
 Typescript is very beneficial to use when developing scripts for Minecraft addons. There exist libraries to aid in the development of Minecraft addons to provide intellisense and type-safety for broadcasting and listening to events.
@@ -33,9 +24,9 @@ You do not need to know how to utilize these tools since there are already [libr
 
 ## Prerequisites
 
-1. [Hello World Prerequisites](/scripting/hello-world-tutorial#prerequisites)
+1. [Beginners Guide Prerequisites](/scripting/beginners-guide#prerequisites)
 2. [Node.js](https://nodejs.org/en/) is required for installing tooling and compiling TypeScript into JavaScript.
-3. Knowledge of TypeScript and read through the [Hello World Tutorial](/scripting/hello-world-tutorial)
+3. Knowledge of TypeScript and read through the [Beginners Guide](/scripting/beginners-guide)
 
 ## TypeScript-Supported Libraries
 
