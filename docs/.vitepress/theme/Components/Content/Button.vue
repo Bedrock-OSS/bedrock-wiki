@@ -1,14 +1,34 @@
 <template>
-	<a :class="`btn ${color}`" :href="link"><slot /></a>
+	<component :is="link ? `a` : `button`" class="btn" :class="classes" :href="link">
+		<component v-if="icon" class="btn-icon" :class="[iconColor]" :is="icon" />
+		<div>
+			<slot />
+		</div>
+		<component v-if="iconRight" class="btn-icon" :class="[iconColor]" :is="iconRight" />
+	</component>
 </template>
 
-<script setup lang="ts">
-import { defineProps } from 'vue'
+<script setup="props" lang="ts">
+import { computed, defineProps } from 'vue'
 
 const props = defineProps<{
-	color: '' | 'green' | 'blue' | 'red'
-	link: string
+	color?: '' | 'green' | 'blue' | 'red'
+	link?: string
+	text?: boolean
+	// Expecting Vue Components
+	icon?: Object
+	iconRight?: Object
+	iconColor?: string
 }>()
+
+const classes = computed(() => {
+	let classes = [];
+	if (props.color)
+		classes.push(props.color);
+	if (props.text)
+		classes.push("text");
+	return classes;
+})
 </script>
 
 <style scoped>
@@ -17,8 +37,18 @@ const props = defineProps<{
 	font-size: inherit;
 	font-weight: 500;
 	line-height: 1.5;
-	@apply px-6 py-1 mx-0 my-3 bg-white rounded-md !no-underline !shadow-md !hover:shadow-sm !focus:shadow-sm !active:shadow-none border !cursor-pointer align-baseline inline-block border-box;
+	@apply px-3 py-1 mx-1 my-2 bg-white rounded-md !no-underline !shadow-md !hover:shadow-sm !focus:shadow-sm !active:shadow-none border !cursor-pointer border-box;
 	@apply text-true-gray-500 hover:text-true-gray-600 focus:text-true-gray-600 active:text-true-gray-800;
+	@apply !inline-flex justify-center items-center;
+	@apply transition-colors;
+}
+
+.btn.text {
+	@apply !bg-transparent border-none !shadow-none !hover:shadow-none !hover:bg-light-50 !hover:bg-opacity-5 !hover:shadow-md;
+}
+
+button.btn {
+	@apply align-bottom;
 }
 
 .dark .btn {
@@ -33,5 +63,21 @@ const props = defineProps<{
 
 .red {
 	@apply text-red-500 hover:text-red-600 focus:text-red-600 active:text-red-800;
+}
+
+.white {
+	@apply text-light-500 hover:text-light-600 focus:text-light-600 active:text-light-800;
+}
+
+.btn-icon {
+	fill: currentColor !important;
+}
+
+.btn-icon:first-child {
+	@apply mr-2;
+}
+
+.btn-icon:last-child {
+	@apply ml-2;
 }
 </style>

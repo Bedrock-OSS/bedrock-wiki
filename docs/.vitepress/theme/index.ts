@@ -22,7 +22,7 @@ const globalComponents: [string, Component][] = [
 	['Label', Label],
 	['YouTubeEmbed', YouTubeEmbed],
 	['JQEmbed', JQEmbed],
-	['Button', Button],
+	['BButton', Button],
 	['WikiImage', WikiImage],
 	['CardLink', CardLink],
 	['Card', Card],
