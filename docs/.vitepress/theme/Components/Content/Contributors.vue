@@ -4,7 +4,7 @@
 			<a
 				v-for="c in contributors"
 				:key="c.login"
-				:href="c.url"
+				:href="c.html_url"
 				:alt="c.login"
 				target="_blank"
 				class="h-8 w-8 transition-spacing ease-in-out duration-150"
