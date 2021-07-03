@@ -24,9 +24,9 @@ You do not need to know how to utilize these tools since there are already [libr
 
 ## Prerequisites
 
-1. [Beginners Guide Prerequisites](/scripting/beginners-guide#prerequisites)
+1. [Beginners Guide Prerequisites](/scripting/guide#prerequisites)
 2. [Node.js](https://nodejs.org/en/) is required for installing tooling and compiling TypeScript into JavaScript.
-3. Knowledge of TypeScript and read through the [Beginners Guide](/scripting/beginners-guide)
+3. Knowledge of TypeScript and read through the [Beginners Guide](/scripting/guide)
 
 ## TypeScript-Supported Libraries
 
