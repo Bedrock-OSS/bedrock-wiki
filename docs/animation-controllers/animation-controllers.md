@@ -1,5 +1,6 @@
 ---
 title: Animation Controllers
+nav_order: 0
 tags:
     - guide
 ---
@@ -15,6 +16,8 @@ State machines are a special kind of logic management, that relies on a series o
 
 State machines are used all over the place, especially in classical programming. They aren't only found in minecraft! [You can learn more about state machines here](https://www.itemis.com/en/yakindu/state-machine/documentation/user-guide/overview_what_are_state_machines).
 
+A state machine can only be `in` one state at a time. When a state machine "runs", you can think of it as moving from state to state, executing the logic inside, and then following `transitions` to other states.
+
 ## State Machine example
 
 The reason that state-machines are useful, is they allow us to naturally break up our animations into a logical flow, where each state handles its own animations _and_ its own logic.
@@ -26,10 +29,10 @@ For example, imagine you want to animate the spinning blade of a helicopter -but
 
 We can annotate these states with the two pieces of information described above:
 
--   `ground state`
+-   `ground state`:
     -   play no animation
     -   move to `flying state` if in the air
--   `flying state`
+-   `flying state`:
     -   play flying animation
     -   move to `ground state` if on the ground
 
@@ -45,19 +48,70 @@ Flowcharts are a nice way to visualize multi-state finite-state-machines, is it 
 
 As you can see, states can go to more than one state at once. States can also be dead-ends (since the helicopter is dead, and doesn't need further animation). The branching flow of animation-controllers is a large part of what makes them powerful.
 
+## What are Animation Controllers?
+
+Animation Controllers are Minecraft state machines that allow us to play animations and run commands. Animation controllers always go under the `animation_controllers` folder, in either the RP, or the BP.
+
+### Attaching our controller to an entity
+
+Animation controller are defined in their own files, and must be "attached" to entities before they can do anything. To attach an AC into your entity, you must do two things:
+
+-   Define a short-name for the animation controller
+-   Run the animation controller via `scripts`
+
+Here is a sample `description`, which shows how the AC can first be defined in `animations`, and then played in `scripts/animate`.
+
+```json
+"description": {
+	"identifier": "wiki:helicopter",
+	"animations": {
+		"blade_controller": "controller.animation.helicopter.blade",
+	},
+	"scripts": {
+		"animate": [
+			"blade_controller"
+		]
+	}
+}
+```
+
+If you want to conditionally play an animation controller, you can supply an optional molang argument. If the argument evaluates to true, the controller will play:
+
+```json
+"scripts": {
+	"animate": [
+		{
+			// Only play the blade_controller if the helicopter has a rider.
+			"blade_controller": "query.has_rider"
+		}
+	]
+}
+```
+
+### RP Animation Controllers
+
+RP animation controllers go in the RP, and can be attached to RP entities. They allow you to play bone-animations.
+
+### BP Animation Controllers
+
+BP animation controllers go in the BP, and can be attached to BP entities. They allow you to play commands.
+
 ## Animation Controller example
 
-Animation controllers go under the `animation_controllers` folder, in either the RP, or the BP. Lets look at a sample render controller for our State Machine from above:
+Lets look at a simple animation controller from our State Machine example above:
 
 <CodeHeader>RP/animation_controllers/helicopter.ac.json</CodeHeader>
+
+### Simple Example
 
 ```json
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.helicopter": {
+			"default_state": "ground",
 			"states": {
-				"default": {
+				"ground": {
 					"transitions": [
 						{
 							"flying": "!query.is_on_ground"
@@ -68,7 +122,7 @@ Animation controllers go under the `animation_controllers` folder, in either the
 					"animations": ["flying"],
 					"transitions": [
 						{
-							"default": "query.is_on_ground"
+							"ground": "query.is_on_ground"
 						}
 					]
 				}
@@ -85,15 +139,15 @@ There is... a lot going on here. Lets break it down, step by step. As we do so, 
 
 So this particular example contains two states:
 
--   default
--   flying
+-   `ground`
+-   `flying`
 
-The reason we use `default` instead of `ground` is that Animation Controllers need a `default` state. That is to say, the default the state they will start in when they load into the world. While it is possible to define a particular state as the default, I think it is clearer and more consistent to use `default`. By default, the `default` state will run first.
+You can note that `"default_state": "ground"` means that our Animation Controller will begin in the `ground` state.
 
 <CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</CodeHeader>
 
 ```json
-"default": {
+"ground": {
     "transitions": [
         {
             "flying": "!query.is_on_ground"
@@ -102,7 +156,7 @@ The reason we use `default` instead of `ground` is that Animation Controllers ne
 }
 ```
 
-The `default` state contains a list of _transitions_, which is how we get to other states. In this example, the default state is saying: _Move to the `flying` state when `query.is_on_ground` is NOT true_. In other words -start the flying animation when we fly into the air!
+The `ground` state contains a list of _transitions_, which is how we get to other states. In this example, the default state is saying: _Move to the `flying` state when `query.is_on_ground` is NOT true_. In other words -start the flying animation when we fly into the air!
 
 <CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</CodeHeader>
 
@@ -113,7 +167,7 @@ The `default` state contains a list of _transitions_, which is how we get to oth
     ],
     "transitions": [
         {
-            "default": "query.is_on_ground"
+            "ground": "query.is_on_ground"
         }
     ]
 }
@@ -123,17 +177,109 @@ The `flying` state also contains a list of transitions. In this case it contains
 
 Alongside the `transition` list, there is also a list of `animations` to play while inside of this state. In this case, playing the `flying` animation. This animation will need to be defined in the entity definition file for this entity.
 
+### Full Example
+
+Here is the code for the second state machine from above, with three states this time. This example illustrates a few new concepts:
+
+-   States with multiple transitions
+-   States with no transitions
+
+```json
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.helicopter": {
+			"default_state": "ground",
+			"states": {
+				"ground": {
+					"transitions": [
+						{
+							"flying": "!query.is_on_ground"
+						},
+						{
+							"explode": "!query.is_alive"
+						}
+					]
+				},
+				"flying": {
+					"animations": ["flying"],
+					"transitions": [
+						{
+							"ground": "query.is_on_ground"
+						},
+						{
+							"explode": "!query.is_alive"
+						}
+					]
+				},
+				"explode": {
+					"animations": ["explode"]
+				}
+			}
+		}
+	}
+}
+```
+
+## BP Animation Controllers
+
+Behavior Pack animation controllers use the same general format as RP Animation Controllers, except instead of triggering animations, they allow you to trigger commands. In general, they introduce two new fields:
+
+-   `on_entry`: Commands to play when the state is entered
+-   `on_exit`: Commands to play when the state is exited
+
+Commands in this context mean three distinct things:
+
+-   A slash command, such as `/say Hello there!`
+-   An event trigger, on the entity, such as: `@s wiki:transform_into_plane`
+-   An arbitrary molang expression, such as `variable.tickets += 1;`
+
+Here is an example BP animation controller, which exhibits some of this behavior:
+
+```json
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.helicopter.commands": {
+			"default_state": "ground",
+			"states": {
+				"ground": {
+					"on_entry": ["/say I am now in the ground!"],
+					"transitions": [
+						{
+							"flying": "!query.is_on_ground"
+						}
+					]
+				},
+				"flying": {
+					"on_entry": ["/say I am now in the air!"],
+					"transitions": [
+						{
+							"ground": "query.is_on_ground"
+						}
+					]
+				}
+			}
+		}
+	}
+}
+```
+
 ## Animation Controller Flow
 
 Through the examples, hopefully you are starting to get some concept for how animation controller flow works. In this section, I will explain it more explicitly.
 
-When an entity loads into the world, it will _enter_ the default animation controller state, in each of its attached animation controllers. It will then do two things each tick:
+### Loading
 
-1. Run any animations in the current state (will loop if set to loop, otherwise it will just play once)
-2. Check all transitions to see if there is any valid transition. Search from the top to the bottom of the list, and move to the first valid transition.
+When an entity loads into the world, it will _enter_ the default animation controller state, in each of its attached animation controllers. If no `default_state` is defined, the state named `default` is used. If this is missing, the AC will generate a content log.
+
+When running, the AC will do the following things each tick:
+
+1. Run any animations in the current state (will loop if set to loop, otherwise it will just play once). Run any commands in `on_entry`, the state was just entered.
+2. Check all transitions to see if there is any valid transition. Search from the top to the bottom of the list, and move to the first valid transition. If a transition is found, `on_exit` commands will be played.
 
 Because of the way animation controllers are setup, it will only move from state to state at a MAXIMUM of once per tick.
 
-::: warning
+### Resetting
+
 Animation Controllers "reset" when an entity reloads (player join/leave, chunk reload, etc). This means that it will "jump" back to the default state. You should always have logic in your default state that can handle restarting any critical animations.
-:::
