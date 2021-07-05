@@ -23,7 +23,7 @@ Please note that this will remove all death effects, including sound, particles,
 
 We can also cancel the rotational value of the entity, allowing the entity to die more conventionally (particles, red-coloring, loot) without the 90-degree spin.
 
-If you need more information about triggering animations from entity death, [see this document on death effects](/animation-controllers/death-effects).
+If you need more information about triggering animations from entity death, [see this document on death effects](/animation-controllers/death-commands).
 
 Rotation needs to be applied to a bone parent to all other bones, with a pivot at [0,0,0], and the animation should only start when `!query.is_alive`.
 
