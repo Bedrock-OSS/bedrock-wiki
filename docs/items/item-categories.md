@@ -1,6 +1,10 @@
 ---
 title: Item Categories
+tags:
+    - experimental
 ---
+
+<Label color="yellow">Experimental</Label>
 
 # Application
 
