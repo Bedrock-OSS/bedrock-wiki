@@ -1,9 +1,12 @@
 ---
 title: Block Shapes
 ---
-# Application
 
-Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accesible files. They are added in the resource pack's file, `blocks.json`, using child `"blockshape"` in a block's object. This would look something like this:
+Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accesible files.
+
+## Application
+
+ They are added in the resource pack's file, `blocks.json`, using child `"blockshape"` in a block's object. This would look something like this:
 
 ```json
 
@@ -15,7 +18,7 @@ Blockshapes are essentially block geometries or models that are hard-coded into 
 
 ```
 
-# Full List of (known) Blockshapes
+## List of known Blockshapes
 
 | ID  | Block Shape               |
 | --- | ------------------------- |
