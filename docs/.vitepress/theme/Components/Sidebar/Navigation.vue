@@ -1,7 +1,11 @@
 <template>
 	<div>
-		<template v-for="item in props.items">
-			<Category :item="item" />
+		<template v-for="(item, i) in props.items">
+			<Category
+				:item="item"
+				:open="i === active || i === open"
+				@active="() => setActive(i)"
+				@click="() => setOpen(i)" />
 		</template>
 	</div>
 </template>
@@ -15,6 +19,22 @@ const props =
 	defineProps<{
 		items: INavCategory[]
 	}>()
+
+const active = ref<number>()
+const open = ref<number>()
+
+const setActive = (i: number) => {
+	active.value = i;
+}
+
+const setOpen = (i: number) => {
+	if (i === open.value) {
+		open.value = undefined;
+	}
+	else if (i !== active.value) {
+		open.value = i;
+	}
+}
 </script>
 
 <style scoped>
