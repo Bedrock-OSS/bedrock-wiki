@@ -100,9 +100,9 @@ BP animation controllers go in the BP, and can be attached to BP entities. They 
 
 Lets look at a simple animation controller from our State Machine example above:
 
-<CodeHeader>RP/animation_controllers/helicopter.ac.json</CodeHeader>
-
 ### Simple Example
+
+<CodeHeader>RP/animation_controllers/helicopter.ac.json</CodeHeader>
 
 ```json
 {
