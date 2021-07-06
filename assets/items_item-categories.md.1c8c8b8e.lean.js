@@ -1,1 +1,0 @@
-import{o as t,c as r,d}from"./404.md.23849c9b.js";const e='{"title":"Item Categories","description":"","frontmatter":{"title":"Item Categories"},"relativePath":"items/item-categories.md","lastUpdated":1625577941674}',a={},n=d('',6);a.render=function(d,e,a,o,m,i){return t(),r("div",null,[n])};export default a;export{e as __pageData};
