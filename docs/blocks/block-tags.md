@@ -3,11 +3,11 @@ title: Block Tags
 ---
 
 Tags are used for various block properties. Block tags can be called when testing for block arguments in commands.
-Some tags are prefixed with can_be, or can_hurt. One would expect these to have a boolean response.
+Some tags are prefixed with `can_be`, or `can_hurt`. One would expect these to have a boolean response.
 
 ## Vanilla Tags
 
-Vanilla tags can only be applied to blocks now, and some vanilla blocks are tagged internally. This kind of tag doesn't give blocks vanilla features. The only usage of it is to tag blocks to make them have the same tags as the vanilla blocks for queries or tests.
+Vanilla tags can can currently only be applied to custom blocks, and some vanilla blocks are tagged internally. This kind of tag doesn't give blocks vanilla features. The only usage of it is to tag blocks to make them have the same tags as the vanilla blocks for queries or tests.
 | VanillaTags | Vanilla Usage |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | wood | Oak Trapdoor, Spruce Trapdoor, Birch Trapdoor, Jungle Trapdoor, Acacia Trapdoor, Dark Oak Trapdoor, Oak Door, Spruce Door, Birch Door, Jungle Door, Acacia Door, Dark Oak Door, Oak Fence, Spruce Fence, Birch Fence, Jungle Fence, Acacia Fence, Dark Oak Fence, Oak Fence Gate, Spruce Fence Gate, Birch Fence Gate, Jungle Fence Gate, Acacia Fence Gate, Dark Oak Fence Gate, Oak Log, Spruce Log, Birch Log, Jungle Log, Acacia Log, Dark Oak Log, Oak Planks, Spruce Planks, Birch Planks, Jungle Planks, Acacia Planks, Dark Oak Planks, Oak Slab, Spruce Slab, Birch Slab, Jungle Slab, Acacia Slab, Dark Oak Slab, Oak Stairs, Spruce Stairs, Birch Stairs, Jungle Stairs, Acacia Stairs, Dark Oak Stairs, Oak Sign, Spruce Sign, Birch Sign, Jungle Sign, Acacia Sign, Dark Oak Sign, Oak Pressure Plate, Spruce Pressure Plate, Birch Pressure Plate, Jungle Pressure Plate, Acacia Pressure Plate, Dark Oak Pressure Plate, Smithing Table, Fletching Table, Barrel, Beehive, Bee Nest, Ladder |
@@ -33,7 +33,7 @@ Vanilla tags can only be applied to blocks now, and some vanilla blocks are tagg
 
 ## Vanilla Block Tags
 
-Vanilla block tags are tags built specifically for blocks. They can give some vanilla feature to the blocks which are tagged with them.
+Vanilla block tags are tags built specifically for blocks. They can give some vanilla features to the blocks which are tagged with them.
 
 | VanillaBlockTags | Vanilla Usage                                                        | Description  |
 | ---------------- | -------------------------------------------------------------------- | ------------ |
