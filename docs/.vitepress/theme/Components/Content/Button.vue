@@ -8,7 +8,7 @@
 	</component>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 import { computed, defineProps } from 'vue'
 
 const props = defineProps<{
