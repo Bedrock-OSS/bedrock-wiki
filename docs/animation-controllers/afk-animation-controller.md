@@ -6,7 +6,7 @@ tags:
 
 ### AFK Detector Animation Controller
 
-<Button color="blue" link="#animation-controllers/animation-controllers.md">Learn more about Animation Controllers</Button>
+<BButton color="blue" link="#animation-controllers/animation-controllers.md">Learn more about Animation Controllers</BButton>
 
 Here's an example that can be used to track AFK players.
 

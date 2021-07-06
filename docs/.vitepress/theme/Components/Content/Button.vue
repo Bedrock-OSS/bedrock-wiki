@@ -10,14 +10,15 @@
 
 <script setup lang="ts">
 import { computed, defineProps } from 'vue'
+import type { Component } from 'vue'
 
 const props = defineProps<{
 	color?: '' | 'green' | 'blue' | 'red'
 	link?: string
 	text?: boolean
 	// Expecting Vue Components
-	icon?: Object
-	iconRight?: Object
+	icon?: Component
+	iconRight?: Component
 	iconColor?: string
 }>()
 
