@@ -2,7 +2,22 @@
 title: Item Categories
 ---
 
-A list of all the item categories that can be used.
+# Application
+
+Item categories are categories that an item appears in inside of the creative inventory. It can be applied with the item component `creative_category`. Such would be applied like the following example:
+
+```json
+{
+
+    "minecraft:creative_category": {
+                "parent": "itemGroup.name.sword"
+    }
+
+}
+```
+*Note: This feature is currently experimental, and, as such, is currently only available for custom items.*
+
+# List of Item Categories
 
 | Category                         | Note |
 | -------------------------------- | ---- |
