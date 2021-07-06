@@ -14,6 +14,7 @@ Inter-Addon Compatibility is a necessity when working on big content packs, it a
 
 *Example: Running a Command after a Player consumes an item.*
 - With `1.16.100`:
+
 <CodeHeader>BP/Items/example_food.json</CodeHeader>
 ```json
 {
@@ -48,6 +49,7 @@ Inter-Addon Compatibility is a necessity when working on big content packs, it a
 }
 ```
 - With `1.10`:
+
 <CodeHeader>BP/items/example_food.json</CodeHeader>
 ```json
 {
