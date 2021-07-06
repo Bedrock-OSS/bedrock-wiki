@@ -78,7 +78,7 @@ Shoots a projectile when triggered
 {
 	"example:damage_event": {
 		"damage": {
-			"type": "magic",
+			"type": "magic", // Can alsp be any entity-accepted damage source
 			"amount": 4
 		}
 	}
@@ -277,7 +277,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:mirrord_art": true
+	"minecraft:mirrored_art": true
 }
 ```
 
@@ -309,7 +309,7 @@ List of all new block components, with usage examples
 
 ```json
 {
-	"minecraft:allow_off_hand": true
+	"minecraft:allow_off_hand": true // Disables most functionality
 }
 ```
 
@@ -394,7 +394,7 @@ List of all new block components, with usage examples
 }
 ```
 
-### Enchant slots
+### Enchantable Slots
 
 | Slot Name     |
 | ------------- |
@@ -463,7 +463,7 @@ List of all new block components, with usage examples
 ```json
 {
 	"minecraft:wearable": {
-		"slot": "slot.armor.feet"
+		"slot": "slot.armor.feet" // Can be slot listed in the '/replaceitem' command
 	}
 }
 ```
@@ -486,12 +486,29 @@ List of all new block components, with usage examples
 ```json
 {
 	"minecraft:record": {
-		"sound_event": "cat",
-		"duration": 120,
+		"sound_event": "cat", // Currently restricted to strings listed below
 		"comparator_signal": 8
 	}
 }
 ```
+
+### Allowed Sound Events
+
+| Slot Name |
+| --------- |
+| 11        |
+| 13        |
+| cat       |
+| chirp     |
+| blocks    |
+| far       |
+| mall      |
+| mellohi   |
+| pigstep   |
+| stall     |
+| strad     |
+| wait      |
+| ward      |
 
 -   minecraft:repairable
 
@@ -500,7 +517,7 @@ List of all new block components, with usage examples
 	"minecraft:repairable": {
 		"repair_items": [
 			{
-				"items": ["minecraft:iron_ingot", "minecraft:gold_ingot"],
+				"items": [ "minecraft:iron_ingot", "minecraft:gold_ingot" ],
 				"repair_amount": 10, // Can also be molang expression
 				"on_repaired": {
 					"event": "example_event",
@@ -517,9 +534,17 @@ List of all new block components, with usage examples
 ```json
 {
 	"minecraft:cooldown": {
-		"category": "ender_pearl",
+		"category": "ender_pearl", // May be a custom string, as to disable the large, white cooldown bar on multiple cooldown items
 		"duration": 1
 	}
+}
+```
+
+-   minecraft:use_duration
+  
+```json
+{
+    "minecraft:use_duration": 1.6, // Use duration in seconds of the item
 }
 ```
 
@@ -532,7 +557,7 @@ List of all new block components, with usage examples
 		"destroy_speeds": [
 			{
 				"block": {
-					"tags": "query.any_tag('stone', 'metal')"
+					"tags": "query.any_tag('stone', 'metal')" // Note that not all blocks have tags; listing many blocks may be necessary
 				},
 				"speed": 6
 			}
@@ -573,15 +598,26 @@ List of all new block components, with usage examples
 }
 ```
 
+-   minecraft:icon
+```json
+{
+    "minecraft:icon": {
+        "frame": 0, // Texture's array entry to use, defaults to 0
+        "texture": "tool.Kama" // Texture referenced in 'item_texture.json'
+    },
+}
+```
+
 -   minecraft:creative_category
 
 ```json
 {
 	"minecraft:creative_category": {
-		"parent": "itemGroup.name.nature"
+		"parent": "itemGroup.name.nature" // Can be any creative category
 	}
 }
 ```
+*Full list of categories can be found [here](https://bedrock-oss.github.io/bedrock-wiki-vite/items/item-categories.html)*
 
 -   minecraft:food
     _New Syntax_
@@ -591,7 +627,7 @@ List of all new block components, with usage examples
 	"minecraft:food": {
 		"on_consume": {
 			"event": "example_event",
-			"target": "holder" // Can also be 'self' to trigger an item event"
+			"target": "holder" // Can also be 'self' to trigger an item event
 		},
 		"nurtition": 3,
 		"can_always_eat": true,
@@ -690,3 +726,13 @@ If your item isn't showing up in the beta, these changes might have broken your 
 ```
 
 -   RP item files are no longer used, `minecraft:icon` and all other RP components should be used in the BP item file.
+
+## Additional Notes
+
+-   You may not override Vanilla items using the new format.
+-   `transform_item` always crashed the game.
+-   `minecraft:mining_speed` does not currently have any function.
+-   Parameter `use_efficiency` of component `"minecraft:digger"` does not currently have a function.
+-   You may not add a custom `sound_event` to component `"minecraft:record"`.
+-   Component `minecraft:shooter` is currently broken.
+-   `minecraft:on_use` will always trigger instantly, regardless of any set value of `minecraft:use_duration`
