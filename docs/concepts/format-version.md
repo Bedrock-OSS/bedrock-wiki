@@ -14,7 +14,7 @@ Inter-Addon Compatibility is a necessity when working on big content packs, it a
 
 *Example: Running a Command after a Player consumes an item.*
 - With `1.16.100`:
-<CodeHeader>BP/Items/example_food.json<\CodeHeader>
+<CodeHeader>BP/Items/example_food.json</CodeHeader>
 ```json
 {
     "format_version": "1.16.100",
@@ -48,7 +48,7 @@ Inter-Addon Compatibility is a necessity when working on big content packs, it a
 }
 ```
 - With `1.10`:
-<CodeHeader>BP/items/example_food.json<\CodeHeader>
+<CodeHeader>BP/items/example_food.json</CodeHeader>
 ```json
 {
     "format_version": "1.10.0",
@@ -68,7 +68,7 @@ Inter-Addon Compatibility is a necessity when working on big content packs, it a
 }
 ```
 With: 
-<CodeHeader>BP/animation_controllers/eating_state.json<\CodeHeader>
+<CodeHeader>BP/animation_controllers/eating_state.json</CodeHeader>
 ```json
 {
 	"format_version": "1.10",
@@ -98,7 +98,7 @@ With:
 }
 ```
 And finally, an overwrite to Player:
-<CodeHeader>BP/entities/player.json<\CodeHeader>
+<CodeHeader>BP/entities/player.json</CodeHeader>
 ```json
 {
 	"minecraft:entity": {
