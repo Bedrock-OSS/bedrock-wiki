@@ -6,8 +6,6 @@ parent: Scripting
 
 [//]: # (Documentation is heavily based on https://minecraft-addon-tools.github.io/tutorials/getting-started)
 
-# TypeScript
-
 [TypeScript](https://www.typescriptlang.org/) is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.
 
 Typescript is very beneficial to use when developing scripts for Minecraft addons. There exist libraries to aid in the development of Minecraft addons to provide intellisense and type-safety for broadcasting and listening to events.
@@ -53,9 +51,11 @@ npm install -g yeoman
 npm install -g generator-minecraft-addon
 ```
 
-{% include info.html
-  contents='If you receive an error such as "command npm not found", ensure you have Node.js installed and added to the PATH.'
-%}
+::: tip
+
+If you receive an error such as `command npm not found`, ensure you have Node.js installed and added to the PATH.
+
+:::
 
 Now the project can be initialized. The next step is to generate the project with all the information you define.
 
