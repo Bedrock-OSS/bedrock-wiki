@@ -110,4 +110,4 @@ Blockshapes are essentially block geometries or models that are hard-coded into 
 | 134 | glow_frame                |
 | 135 | glow_lichen               |
 
-[ Original Credit ] - (https://gist.github.com/toka7290/3bef704d2f57c775bb9ac84443a6df1c)
+[ Original Credit ](https://gist.github.com/toka7290/3bef704d2f57c775bb9ac84443a6df1c)
