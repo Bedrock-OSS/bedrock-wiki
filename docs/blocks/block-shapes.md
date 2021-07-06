@@ -1,6 +1,21 @@
 ---
 title: Block Shapes
 ---
+# Application
+
+Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accesible files. They are added in the resource pack's file, `blocks.json`, using child `"blockshape"` in a block's object. This would look something like this:
+
+```json
+
+    "yana:invisible_aluminium_ore": {
+        "blockshape": "invisible",
+        "sound": "stone",
+        "textures": "invisible_aluminium_ore"
+    }
+
+```
+
+# Full List of (known) Blockshapes
 
 | ID  | Block Shape               |
 | --- | ------------------------- |
@@ -92,4 +107,4 @@ title: Block Shapes
 | 134 | glow_frame                |
 | 135 | glow_lichen               |
 
-[Original Credit](https://gist.github.com/toka7290/3bef704d2f57c775bb9ac84443a6df1c)
+[ Original Credit ] - (https://gist.github.com/toka7290/3bef704d2f57c775bb9ac84443a6df1c)
