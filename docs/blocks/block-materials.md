@@ -6,6 +6,24 @@ tags:
 
 <Label color="yellow">Experimental</Label>
 
+# Application
+
+Block materials essentially control how a block is rendered in the world, much like entity materials. They can be applied with the block component, `material_instances`, with the optional parameter, `render_method`. Using this would look something like the below example, a non-full block:
+
+```json
+{
+    
+    "minecraft:material_instances": {
+		"*": {
+			"texture": "blast_vent",
+			"render_method": "alpha_test"
+		}
+	}
+}
+```
+*Note: This feature is currently experimental, and, as such, is currently only available for custom items.*
+
+# List of Materials
 | Argument     | Slot                                                                                                                                                                                                                                                              |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | opaque       | Used for a regular block texture without an alpha layer. Does not allow for transparency or translucency. This material enables AO (ambient occlusion) for the block, creating shadows around and underneath it.                                                  |
