@@ -10,7 +10,7 @@ title: Troubleshooting Entities
 
 Accept that something, somewhere, is wrong. _Nobody_ at _any_ level is immune to these mistakes, so don't get offended and think, "Of course I did that!" and skip a step!
 
-<Button color="blue" link="#1.0.0">Continue</Button>
+<BButton color="blue" link="#1.0.0">Continue</BButton>
 
 ---
 
@@ -20,7 +20,7 @@ Accept that something, somewhere, is wrong. _Nobody_ at _any_ level is immune to
 
 Make sure both the resource pack and behavior pack are active for the world (an excellent way to avoid accidentally having this issue is to set each pack as a dependency of the other in both packs' manifest.json files so that adding or removing one of the packs automatically adds/removes the other)
 
-<Button color="blue" link="#2.0.0">Continue</Button>
+<BButton color="blue" link="#2.0.0">Continue</BButton>
 
 ---
 
@@ -58,11 +58,11 @@ Make sure `is_spawnable` and `is_summonable` are set to true, and that `is_exper
 
 ### Results
 
-I don't see a spawn egg at all: <Button color="blue" link="#3.1.0">Go</Button>
+I don't see a spawn egg at all: <BButton color="blue" link="#3.1.0">Go</BButton>
 
-I see a spawn egg for my entity, but it's just black, and the entity doesn't appear when I spawn or summon it: <Button color="blue" link="#3.2.0">Go</Button>
+I see a spawn egg for my entity, but it's just black, and the entity doesn't appear when I spawn or summon it: <BButton color="blue" link="#3.2.0">Go</BButton>
 
-I see a spawn egg for my entity, and it has the colors I chose, but the entity still doesn't appear when I spawn or summon it: <Button color="blue" link="#3.3.0">Go</Button>
+I see a spawn egg for my entity, and it has the colors I chose, but the entity still doesn't appear when I spawn or summon it: <BButton color="blue" link="#3.3.0">Go</BButton>
 
 ---
 

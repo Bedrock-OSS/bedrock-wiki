@@ -5,9 +5,9 @@ hidden: true
 
 ## Contributions are welcome!
 
-<Button color="blue" link="https://github.com/Bedrock-OSS/bedrock-wiki">GitHub Old</Button>
+<BButton color="blue" link="https://github.com/Bedrock-OSS/bedrock-wiki">GitHub Old</BButton>
 <br/>
-<Button color="blue" link="https://github.com/Bedrock-OSS/bedrock-wiki-vite">GitHub Vite</Button>
+<BButton color="blue" link="https://github.com/Bedrock-OSS/bedrock-wiki-vite">GitHub Vite</BButton>
 
 If you are familiar with GitHub, the Wiki accepts pull requests. Website is located on the `gh-pages` branch.
 

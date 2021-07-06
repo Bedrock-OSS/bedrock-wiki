@@ -30,7 +30,7 @@ This guide is written for the most-recent _stable_ release of Minecraft Bedrock 
 
 Let's start by setting up your tools, which you will use throughout the development of your addons. This section will cover exactly what **software** is needed, where to **set up/initialize** your addons, how to create a **workspace** where you can create your addons.
 
-<Button color="green">Project Setup</Button>
+<BButton color="green">Project Setup</BButton>
 
 ## Simple Custom Item
 
@@ -38,16 +38,16 @@ Let's start by setting up your tools, which you will use throughout the developm
 
 Now that your workspace is ready to go, we can start creating a fully custom Item, that our entity will drop.
 
-<Button color="green">Custom Item</Button>
+<BButton color="green">Custom Item</BButton>
 
 ## Custom Entity
 
 Finally, it's time to create the mob that drops our custom item: A hostile Ghost that spawns at night.
 
-<Button color="green">Custom Entity</Button>
+<BButton color="green">Custom Entity</BButton>
 
 Now, your first addon is complete! To dive into the other aspects of adding onto MCBE, you can use the other sections' subguides, listed in the [Appendix](/guide/appendix). This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. The sections also provide more techichal in-depth tutorials and documents for each relevant topic.
 
-<Button color="green">Appendix: further features</Button>
+<BButton color="green">Appendix: further features</BButton>
 
 ---
