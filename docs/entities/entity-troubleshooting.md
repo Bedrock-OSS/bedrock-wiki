@@ -1,5 +1,5 @@
 ---
-title: Entity Troubleshooting
+title: Troubleshooting Entities
 ---
 
 ---

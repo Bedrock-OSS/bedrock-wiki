@@ -12,7 +12,7 @@
 	>
 		<summary
 			@click.prevent.exact="isOpen = !isOpen"
-			:class="{ 'list-none outline-none': true }"
+			class="list-none outline-none"
 		>
 			<span>{{ props.item.text }}</span>
 
@@ -37,15 +37,20 @@ import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
 import NavLink from '../Navigation/NavLink.vue'
 import { defineProps, ref } from 'vue'
 
-const props =
-	defineProps<{
-		item: INavCategory
-	}>()
+const props = defineProps<{
+	item: INavCategory
+}>()
 
 const isOpen = ref(false)
 </script>
 
 <style scoped>
+.navigation-category summary {
+	list-style: none;
+}
+.navigation-category summary::-webkit-details-marker {
+	display: none;
+}
 .navigation-category summary svg {
 	@apply transition-transform;
 	float: right;

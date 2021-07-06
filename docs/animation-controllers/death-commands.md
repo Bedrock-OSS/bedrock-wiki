@@ -4,7 +4,7 @@ tags:
     - recipe
 ---
 
-<Label color="yellow">Intermediate</Label>
+<Button color="blue" link="#animation-controllers/animation-controllers.md">Learn more about Animation Controllers</Button>
 
 I define `Death Effects` as "Doing something when an Entity dies". There are a few wrong ways to achieve this that should be avoided, including:
 
@@ -75,7 +75,3 @@ In the case of player entities, an additional transition must be added to the se
 	}
 }
 ```
-
-## Wait, but how do Animation Controllers work?
-
-[Learn about ACs here!](https://wiki.bedrock.dev/concepts/animation-controllers)
