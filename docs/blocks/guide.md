@@ -1,6 +1,6 @@
 ---
-title: Beginners Guide to Blocks
-nav_order: 1
+title: Intro to Blocks
+nav_order: 0
 tags:
     - guide
 ---
