@@ -4,8 +4,33 @@ tags:
     - experimental
 ---
 
-Tags are used for various block properties. Block tags can be called when testing for block arguments in commands.
+<Label color="yellow">Experimental</Label>
+
+Block Tags are used for various block properties. They can be called when testing for block arguments in commands.
 Some tags are prefixed with `can_be`, or `can_hurt`. One would expect these to have a boolean response.
+
+# Application
+
+Block tags can be applied exactly as items, as seen below:
+
+```json
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "yanasakana:tree_stump"
+        },
+        "components": {
+            "tag:wood": {},
+            "tag:yana:very_useless": {}
+        },
+        "events": {}
+    }
+}
+```
+
+
+# Lists of Block Tags
 
 ## Vanilla Tags
 
