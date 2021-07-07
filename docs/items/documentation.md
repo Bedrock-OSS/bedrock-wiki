@@ -227,7 +227,7 @@ Used to execute commands
 }
 ```
 
-## BP Item Components
+## Behaviour Item Components
 
 List of all new block components, with usage examples
 
@@ -706,7 +706,7 @@ They can then be queried with:
 
 ## Breaking changes
 
-If your item isn't showing up in the beta, these changes might have broken your item.
+If your item isn't showing up, these changes might have broken your item.
 
 -   Item behavior files now require a "category" to show up in the /give command and creative inventory.
     Example:
@@ -727,12 +727,14 @@ If your item isn't showing up in the beta, these changes might have broken your 
 
 -   RP item files are no longer used, `minecraft:icon` and all other RP components should be used in the BP item file.
 
+-	Refer to the Troubleshooting Guide for more information, found [here](...)
+
 ## Additional Notes
 
--   You may not override Vanilla items using the new format.
+-   Vanilla Items are hardcoded; you may not override or access them, using the new format.
 -   `transform_item` always crashes the game.
 -   `minecraft:mining_speed` does not currently have any function.
--   Parameter `use_efficiency` of component `"minecraft:digger"` does not currently have a function.
--   You may not add a custom `sound_event` to component `"minecraft:record"`.
+-   Parameter `use_efficiency` of component `minecraft:digger` does not currently have a function.
+-   You may not add a custom `sound_event` to component `minecraft:record`.
 -   Component `minecraft:shooter` is currently broken.
 -   `minecraft:on_use` will always trigger instantly, regardless of any set value of `minecraft:use_duration`
