@@ -244,7 +244,6 @@ Used to trigger an event, this can be a block event or an entity event.
 {
 	"example:trigger_event": {
 		"trigger": {
-			"condition": "query.block_property('example:can_trigger_event') == true",
 			"event": "example:my_event",
 			"target": "self" // If set to 'other' an entity event can be defined. It will be triggered on the entity that causes the block event.
 		}
@@ -266,10 +265,10 @@ Used to sequence event functions
 				}
 			},
 			{
+				"condition": "query.block_property('test:my_prop') == true"
 				"trigger": {
 					"event": "example:my_entity_event",
-					"target": "other",
-					"conditions": "query.block_property('test:my_prop') == true"
+					"target": "other"
 				}
 			}
 		]
