@@ -42,8 +42,6 @@ import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import Contributors from './Content/Contributors.vue'
 const { isVisible } = useSidebarState()
-import { useIsReducedScreen } from '../Composables/isReducedScreen'
-const { isReducedScreen } = useIsReducedScreen()
 import { usePageData, useRoute } from 'vitepress'
 const page = usePageData()
 
