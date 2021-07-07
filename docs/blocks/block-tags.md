@@ -1,5 +1,7 @@
 ---
 title: Block Tags
+tags:
+    - experimental
 ---
 
 Tags are used for various block properties. Block tags can be called when testing for block arguments in commands.
