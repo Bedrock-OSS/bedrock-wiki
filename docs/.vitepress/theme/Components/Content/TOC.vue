@@ -7,7 +7,9 @@
 			top-0
 			right-0
 			p-4
-			pb-6
+			xl:pb-6
+			my-2
+			xl:my-0
 			border-l-4
 			xl:mt-14 xl:pt-6
 			z-10
@@ -100,9 +102,11 @@ watch(page, () => {
 </script>
 
 <style scoped>
-.sidebar-toc {
-	/* Scroll on small height screens */
-	max-height: calc(100vh - 4.5rem);
-	overflow-y: auto;
+@screen xl {
+	.sidebar-toc {
+		/* Scroll if needed */
+		max-height: calc(100vh - 4.5rem);
+		overflow-y: auto;
+	}
 }
 </style>
