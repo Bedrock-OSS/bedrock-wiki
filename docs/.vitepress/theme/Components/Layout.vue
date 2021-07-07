@@ -14,7 +14,7 @@
 		<TOC v-if="showToc" />
 		<Content
 			:class="{
-				'toc-visible': !isReducedScreen && showToc,
+				'xl:pr-72': showToc,
 			}"
 		/>
 		<div v-if="showContributors">
@@ -62,9 +62,6 @@ const showContributors = computed(() =>
 </script>
 
 <style scoped>
-.toc-visible {
-	padding-right: 300px;
-}
 details summary::-webkit-details-marker {
 	display: none;
 }
