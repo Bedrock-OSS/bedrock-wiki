@@ -1,23 +1,60 @@
 <template>
 	<div
-		class="toc-div p-4 border-l-4"
-		:class="{
-			'sidebar-toc': !isReducedScreen,
-			'reduced-toc': isReducedScreen,
-		}"
+		class="
+			sidebar-toc
+			xl:fixed
+			flex flex-col
+			top-0
+			right-0
+			p-4
+			pb-6
+			border-l-4
+			xl:mt-14 xl:pt-6
+			z-10
+			xl:w-72 xl:border-r-1
+			border-gray-200
+			dark:border-true-gray-600
+			border-gray-200
+		"
 	>
-		<a href="#top" class="row1">{{ title }}</a>
+		<a
+			href="#top"
+			class="
+				pb-1
+				pt-0
+				text-black
+				dark:text-white
+				no-underline
+				font-bold
+				text-lg
+			"
+			>{{ title }}</a
+		>
 		<div class="pl-5">
 			<ol id="toc">
-				<li v-for="header in headers" key="header.title">
-					<a class="row2" :href="'#' + header.slug">{{
-						header.title
-					}}</a>
+				<li v-for="header in headers" key="header.title" class="py-0.5">
+					<a
+						class="text-black dark:text-white no-underline"
+						:href="'#' + header.slug"
+						>{{ header.title }}</a
+					>
 					<ol>
-						<li v-for="child in header.children" key="child.title">
-							<a class="row3" :href="'#' + child.slug">{{
-								child.title
-							}}</a>
+						<li
+							v-for="child in header.children"
+							key="child.title"
+							class="py-0.5"
+						>
+							<a
+								class="
+									text-black
+									dark:text-white
+									no-underline
+									italic
+									ml-6
+								"
+								:href="'#' + child.slug"
+								>{{ child.title }}</a
+							>
 						</li>
 					</ol>
 				</li>
@@ -31,8 +68,6 @@ import { usePageData } from 'vitepress'
 const page = usePageData()
 
 import { ref, watch } from 'vue'
-import { useIsReducedScreen } from '../../Composables/isReducedScreen'
-const { isReducedScreen } = useIsReducedScreen()
 
 const getHeaders = function () {
 	let grouped = []
@@ -65,37 +100,9 @@ watch(page, () => {
 </script>
 
 <style scoped>
-/* General */
 .sidebar-toc {
-	@apply;
-}
-a {
-	@apply text-black no-underline;
-}
-.dark a {
-	@apply text-white no-underline;
-}
-
-/* Sidebar Vs. Main */
-.sidebar-toc {
-	@apply mt-14 pt-1 z-10 top-0 w-72 border-r-1 border-gray-200 dark:border-true-gray-600 border-gray-200;
-	position: fixed;
-	padding-right: 20px;
-	right: 0;
-	top: 40;
-}
-
-/* Level-offset */
-
-.row1 {
-	font-weight: bold;
-	font-size: large;
-}
-.row2 {
-}
-
-.row3 {
-	@apply ml-6;
-	font-style: italic;
+	/* Scroll on small height screens */
+	max-height: calc(100vh - 4.5rem);
+	overflow-y: auto;
 }
 </style>

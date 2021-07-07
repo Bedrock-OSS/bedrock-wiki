@@ -14,7 +14,7 @@
 		<TOC v-if="showToc" />
 		<Content
 			:class="{
-				'toc-visible': !isReducedScreen && showToc,
+				'xl:pr-72': showToc,
 			}"
 		/>
 		<div v-if="showContributors">
@@ -42,8 +42,6 @@ import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import Contributors from './Content/Contributors.vue'
 const { isVisible } = useSidebarState()
-import { useIsReducedScreen } from '../Composables/isReducedScreen'
-const { isReducedScreen } = useIsReducedScreen()
 import { usePageData, useRoute } from 'vitepress'
 const page = usePageData()
 
@@ -62,9 +60,6 @@ const showContributors = computed(() =>
 </script>
 
 <style scoped>
-.toc-visible {
-	padding-right: 300px;
-}
 details summary::-webkit-details-marker {
 	display: none;
 }
