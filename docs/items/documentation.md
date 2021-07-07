@@ -730,7 +730,7 @@ If your item isn't showing up in the beta, these changes might have broken your 
 ## Additional Notes
 
 -   You may not override Vanilla items using the new format.
--   `transform_item` always crashed the game.
+-   `transform_item` always crashes the game.
 -   `minecraft:mining_speed` does not currently have any function.
 -   Parameter `use_efficiency` of component `"minecraft:digger"` does not currently have a function.
 -   You may not add a custom `sound_event` to component `"minecraft:record"`.
