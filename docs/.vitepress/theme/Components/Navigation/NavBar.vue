@@ -23,7 +23,7 @@
 		/>
 
 		<a :href="site.base">
-			<WikiLogo class="mr-1 inline" /> <span>Bedrock Wiki</span>
+			<WikiLogo class="mr-1 inline" /> <span class="hidden lg:inline">Bedrock </span><span>Wiki</span>
 		</a>
 		<span class="flex-grow"></span>
 		<NavLink
