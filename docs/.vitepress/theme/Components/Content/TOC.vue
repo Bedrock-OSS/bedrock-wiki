@@ -6,19 +6,35 @@
 			flex flex-col
 			top-0
 			right-0
-			p-4
-			xl:pb-6
-			my-2
-			xl:my-0
-			border-l-4
-			xl:mt-14 xl:pt-6
-			z-10
-			xl:w-72 xl:border-r-1
-			border-gray-200
-			dark:border-true-gray-600
-			border-gray-200
+			my-4
 		"
 	>
+	<details open>
+		<summary class="
+			flex justify-between align-center
+			px-4 py-3
+			bg-gray-200
+			dark:bg-true-gray-600
+			xl:hidden
+			rounded-md
+			rounded-bl-none
+			text-lg
+		">
+			<span>Table of Contents</span>
+
+			<ChevronLeftIcon class="my-auto transition-transform"/>
+		</summary>
+		<div class="
+			p-4
+			xl:pb-6
+			border-l-4 xl:pt-6
+			z-10
+			xl:w-72 xl:border-r-1
+			xl:my-0
+			xl:mt-14
+			border-gray-200
+			dark:border-true-gray-600
+		">
 		<a
 			href="#top"
 			class="
@@ -62,11 +78,14 @@
 				</li>
 			</ol>
 		</div>
+		</div>
+		</details>
 	</div>
 </template>
 
 <script setup lang="ts">
 import { usePageData } from 'vitepress'
+import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
 const page = usePageData()
 
 import { ref, watch } from 'vue'
@@ -108,5 +127,17 @@ watch(page, () => {
 		max-height: calc(100vh - 4.5rem);
 		overflow-y: auto;
 	}
+}
+
+details summary{
+	list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  	display: none;
+}
+
+details[open] summary svg {
+	transform: rotate(-90deg);
 }
 </style>
