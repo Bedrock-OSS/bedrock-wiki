@@ -1,5 +1,6 @@
 ---
 title: 3D Items
+nav_order: 4
 ---
 
 There are two methods for making 3D items:
