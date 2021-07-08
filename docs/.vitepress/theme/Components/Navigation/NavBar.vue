@@ -22,8 +22,9 @@
 			@pointerdown.prevent="toggle"
 		/>
 
-		<a :href="site.base">
-			<WikiLogo class="mr-1 inline" /> <span class="hidden lg:inline">Bedrock </span><span>Wiki</span>
+		<a :href="site.base" class="flex flex-row justify-between items-center">
+			<WikiLogo class="mr-2" /> 
+			<div class="pb-1"><span class="hidden lg:inline">Bedrock </span><span>Wiki</span></div>
 		</a>
 		<span class="flex-grow"></span>
 		<DarkMode />
