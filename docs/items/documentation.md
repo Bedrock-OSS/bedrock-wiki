@@ -732,9 +732,13 @@ If your item isn't showing up, these changes might have broken your item.
 ## Additional Notes
 
 -   Vanilla Items are hardcoded; you may not override or access them, using the new format.
--   `transform_item` always crashes the game.
--   `minecraft:mining_speed` does not currently have any function.
--   Parameter `use_efficiency` of component `minecraft:digger` does not currently have a function.
--   You may not add a custom `sound_event` to component `minecraft:record`.
--   Component `minecraft:shooter` is currently broken.
--   `minecraft:on_use` will always trigger instantly, regardless of any set value of `minecraft:use_duration`
+-   Broken/Nonfunctional Components
+    - `minecraft:mining_speed` - Currently has no function.
+    - `minecraft:digger`
+        - `use_efficiency` - Parameter currently has no function.
+    - `minecraft:shooter` - Currently broken.
+-   `transform_item` - Crashes the game.
+-   `minecraft:record`
+    - May not add a custom `sound_event`.
+-   `minecraft:on_use`
+    - Always trigger instantly, regardless of any set value of `minecraft:use_duration`.
