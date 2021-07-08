@@ -10,6 +10,7 @@ import Card from './Components/Content/Card.vue'
 import CardLink from './Components/Content/CardLink.vue'
 import Homepage from './Components/Pages/Homepage.vue'
 import NotFound from './Components/Pages/NotFound.vue'
+import Contribute from './Components/Pages/Contribute.vue'
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import Component404 from '../../404.md'
@@ -27,7 +28,8 @@ const globalComponents: [string, Component][] = [
 	['CardLink', CardLink],
 	['Card', Card],
 	['Homepage', Homepage],
-	['NotFound', NotFound]
+	['NotFound', NotFound],
+	['Contribute', Contribute],
 ]
 
 const theme: Theme = {
