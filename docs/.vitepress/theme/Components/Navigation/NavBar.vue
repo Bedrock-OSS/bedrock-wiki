@@ -26,12 +26,6 @@
 			<WikiLogo class="mr-1 inline" /> <span class="hidden lg:inline">Bedrock </span><span>Wiki</span>
 		</a>
 		<span class="flex-grow"></span>
-		<NavLink
-			v-if="!isMobile"
-			v-for="item in navLinks"
-			:item="item"
-			:key="item.link"
-		/>
 		<DarkMode />
 		<AlgoliaSearchBox v-if="!!algoliaConfig" :options="algoliaConfig" />
 	</header>
@@ -54,7 +48,6 @@ const AlgoliaSearchBox = defineAsyncComponent(
 
 const { toggle, isVisible } = useSidebarState()
 const site = useSiteDataByRoute()
-const navLinks = computed(() => site.value.themeConfig.nav)
 const algoliaConfig = computed(() => site.value.themeConfig.algolia)
 
 const { isMobile } = useIsMobile()
