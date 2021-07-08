@@ -1,5 +1,7 @@
 ---
 title: Item Categories
+
+nav_order: 3
 tags:
     - experimental
 ---
