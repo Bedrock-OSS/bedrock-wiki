@@ -7,6 +7,8 @@
 			top-0
 			right-0
 			my-4
+			outline-none
+			select-none
 		"
 	>
 	<details open>
