@@ -50,6 +50,12 @@ function generateSidebar(base, dir) {
 				}
 			}
 
+			let number = null
+
+			if (frontMatter.data.number != null) {
+				number = frontMatter.data.number
+			}
+
 			let tags = null
 
 			if (frontMatter.data.tags != null) {
@@ -61,6 +67,7 @@ function generateSidebar(base, dir) {
 				data: frontMatter.data,
 				badge: badge,
 				tags: tags,
+				number: number,
 				link,
 				activeMatch: `^${link}`,
 			})

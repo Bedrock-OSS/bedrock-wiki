@@ -13,7 +13,10 @@
 		v-bind="linkProps"
 		@click="onNavigation"
 	>
-		<div :class="{ 'flex-1': true }">{{ props.item.text }}</div>
+		
+		<span v-if="props.item.number != null" class="font-bold">{{ props.item.number }}</span>
+
+		<div class="flex-1">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
 
 		<span v-for="tag in props.item.tags">
@@ -21,10 +24,6 @@
 			<RecipeIcon v-if="tag == 'recipe' || tag == 'short'" />
 			<ChemIcon v-if="tag == 'experimental' || tag == 'beta' || tag == 'warning' || tag == 'exp'" />
 		</span>
-
-		<span v-if="props.item.badge" :class="[badgeClass, badgeColorClass]">{{
-			props.item.badge.text
-		}}</span>
 	</a>
 </template>
 
@@ -67,6 +66,7 @@ const props =
 			link: string
 			badge?: Badge
 			tags?: Array<string>
+			number?: string
 		}
 	}>()
 const propsRefs = toRefs(props)
