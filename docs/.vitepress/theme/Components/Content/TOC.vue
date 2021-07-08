@@ -7,11 +7,9 @@
 			top-0
 			right-0
 			my-4
-			outline-none
-			select-none
 		"
 	>
-	<details open>
+	<details open class="outline-none">
 		<summary class="
 			flex justify-between align-center
 			px-4 py-3
@@ -21,6 +19,8 @@
 			rounded-md
 			rounded-bl-none
 			text-lg
+			outline-none
+			select-none
 		">
 			<span>Table of Contents</span>
 
