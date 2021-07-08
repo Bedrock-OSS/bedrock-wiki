@@ -727,7 +727,7 @@ If your item isn't showing up, these changes might have broken your item.
 
 -   RP item files are no longer used, `minecraft:icon` and all other RP components should be used in the BP item file.
 
--	Refer to the Troubleshooting Guide for more information, found [here](...)
+-	Refer to the Troubleshooting Guide for more information, found [here](#)
 
 ## Additional Notes
 
