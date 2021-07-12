@@ -1,14 +1,20 @@
 <template>
-	<div ref="codeHeader" class="tile flex mt-8 p-2 pb-1.5 overflow-auto">
+	<div ref="codeHeader" class="tile flex items-center mt-8 p-2 pb-1.5 overflow-auto">
 		<span class="flex">
 			<FileIcon class="mr-2" />
 			<span class="opacity-50"><slot /></span>
 		</span>
 
-		<span @click="copyCodeSnippet" class="flex ml-auto cursor-pointer">
-			<span class="opacity-50 mr-1" v-if="!isMobile">Copy</span>
+		<span @click="copyCodeSnippet" class="
+			flex items-center cursor-pointer ml-auto py-px px-1
+			rounded-md opacity-50 bg-true-gray-400 bg-opacity-0
+			hover:opacity-75 focus:opacity-75 hover:bg-opacity-40 focus:bg-opacity-40
+			active:opacity-90 active:bg-opacity-80
+			">
+			<span class="pl-1 mr-1.5" v-if="!isMobile">Copy</span>
 
-			<CopyIcon class="inline-block opacity-60" title="Copy Snippet" />
+			<CopyIcon style="display: inline-block" title="Copy Snippet" />
+			<CheckIcon style="display: none"/>
 		</span>
 	</div>
 </template>
@@ -17,12 +23,13 @@
 import { ref } from 'vue'
 import FileIcon from '../Icons/FileIcon.vue'
 import CopyIcon from '../Icons/CopyIcon.vue'
+import CheckIcon from '../Icons/CheckIcon.vue'
 import { useIsMobile } from '../../Composables/isMobile'
 
 const codeHeader = ref<HTMLDivElement | null>(null)
 const { isMobile } = useIsMobile()
 
-function copyCodeSnippet() {
+function copyCodeSnippet(event: Event) {
 	if (!codeHeader.value || !codeHeader.value.nextSibling) return
 
 	// Find the next code block & get the code from it
@@ -49,6 +56,19 @@ function copyCodeSnippet() {
 		document.execCommand('copy')
 		document.body.removeChild(textArea)
 	}
+
+	var btnSpan = (event.currentTarget as HTMLElement).getElementsByTagName('span')[0]
+	var oldText = btnSpan?.textContent
+	if (oldText != null) btnSpan.textContent = 'Copied'
+	var btnIcon = (event.currentTarget as HTMLElement).getElementsByTagName('svg')[0]
+	btnIcon.style.setProperty('display', 'none', 'important')
+	var successIcon = (event.currentTarget as HTMLElement).getElementsByTagName('svg')[1]
+	successIcon.style.setProperty('display', 'inline-block', 'important')
+	setTimeout(() => {
+		if (oldText != null) btnSpan.textContent = oldText
+		btnIcon.style.setProperty('display', 'inline-block')
+		successIcon.style.setProperty('display', 'none')
+	}, 2000)
 }
 </script>
 <style scoped>
