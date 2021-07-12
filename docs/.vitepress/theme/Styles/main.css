@@ -37,6 +37,54 @@ p + p {
 	margin-top: 1em;
 }
 
-* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
 	margin-top: 1em !important;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h2 {
+	font-weight: 600;
+}
+
+h3 {
+	font-weight: 500;
+}
+
+/* Lists */
+li {
+	margin-top: 6px;
+}
+
+:not(li) > ul {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	list-style: disc;
+}
+
+:not(li) > ol {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	list-style: decimal;
+}
+
+ul,
+ol {
+	padding-left: 1.5em;
+	list-style-position: outside;
+}
+
+ul {
+	list-style: circle;
+}
+
+ol {
+	list-style: lower-alpha;
 }

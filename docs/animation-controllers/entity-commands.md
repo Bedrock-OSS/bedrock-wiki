@@ -1,5 +1,6 @@
 ---
 title: Entity Commands
+nav_order: 2
 ---
 
 <Label color="yellow">Intermediate</Label>
