@@ -722,10 +722,11 @@ Example:
 
 ## Additional Notes
 
--   Vanilla Blocks are hardcoded; you may not override or access them.
--   You may only have one `"minecraft:ticking"` component at any given time.
--   You may only have one `"minecraft:random_ticking"` component at any given time.
--   Using component `minecraft:display_name` is not recommended. For example, the below code:
+-   Vanilla Blocks are hardcoded. You may not override or access them.
+-   Following components may only have one at any given time:
+	-	`"minecraft:ticking"`
+	-   `"minecraft:random_ticking"`
+-   It is not recommended to use `minecraft:display_name`. Example:
 
 ```json
 {
@@ -733,12 +734,18 @@ Example:
 }
 ```
 
-Would, in-game, yield a result such as `tile.Barrel of Foxes.name`. Using `lang` files is the recommended alternative.
+In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is recommended.
 
--   There is a maximum of 16 values per `property`.
--   Components `minecraft:entity_collision` and `minecraft:pick_collision` cannot be larger than `16x16x16`.
+-   Maximum of 16 values per `property`.
+-   Following components cannot be larger than 16x16x16:
+	- `minecraft:entity_collision`
+	- `minecraft:pick_collision`
 -   Execute commands cannot be run on blocks.
 -   Custom Blocks will not be mined any faster/slower with vanilla tools.
 -   Block faces will become dark if buried in another block.
--   Blocks will always be dropped with enchantment Silk Touch.
--   Block Identifiers cannot match those Vanilla, even ignoring namespace.
+-   Blocks will always be dropped with `Silk Touch` enchantment.
+-   Block Identifiers cannot match Vanilla blocks, even ignoring namespace.
+-	Following components requires `entity_collision` to be 4 or higher on the y-axis:
+	- `on_step_on`
+	- `on_step_off`
+	- `on_fall_on`
