@@ -1,5 +1,7 @@
 ---
 title: Download Example Packs
+number: 'b.'
+nav_order: 101
 ---
 
 ::: tip

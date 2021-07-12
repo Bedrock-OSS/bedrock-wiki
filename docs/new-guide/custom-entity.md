@@ -1,5 +1,7 @@
 ---
-title: 'Creating a custom Entity: Ghost'
+title: 'Create a custom Entity'
+nav_order: 5
+number: '5.'
 ---
 
 Last time you created a custom item for this custom entity to drop. This time you will create the Ghost itself, as promised.
@@ -551,4 +553,7 @@ Done! Your entity should now show up in Minecraft, complete with all behaviors a
 **What are you to do next:**
 
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe;
-````
+
+```
+
+```
