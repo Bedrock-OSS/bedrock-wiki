@@ -1,5 +1,5 @@
 ---
-title: Block Documentation
+title: 'Blocks 1.16+'
 tags:
     - experimental
 nav_order: 2
@@ -8,6 +8,10 @@ nav_order: 2
 <Label color="yellow">Experimental</Label>
 
 Better documentation on the new block format introduced in the 1.16.100.56 Minecraft beta.
+
+:::warning
+This document covers experimental features, for the 1.16 format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
+:::
 
 ## Block Properties
 
@@ -724,8 +728,8 @@ Example:
 
 -   Vanilla Blocks are hardcoded. You may not override or access them.
 -   Following components may only have one at any given time:
-	-	`"minecraft:ticking"`
-	-   `"minecraft:random_ticking"`
+    -   `"minecraft:ticking"`
+    -   `"minecraft:random_ticking"`
 -   It is not recommended to use `minecraft:display_name`. Example:
 
 ```json
@@ -738,14 +742,14 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
 
 -   Maximum of 16 values per `property`.
 -   Following components cannot be larger than 16x16x16:
-	- `minecraft:entity_collision`
-	- `minecraft:pick_collision`
+    -   `minecraft:entity_collision`
+    -   `minecraft:pick_collision`
 -   Execute commands cannot be run on blocks.
 -   Custom Blocks will not be mined any faster/slower with vanilla tools.
 -   Block faces will become dark if buried in another block.
 -   Blocks will always be dropped with `Silk Touch` enchantment.
 -   Block Identifiers cannot match Vanilla blocks, even ignoring namespace.
--	Following components requires `entity_collision` to be 4 or higher on the y-axis:
-	- `on_step_on`
-	- `on_step_off`
-	- `on_fall_on`
+-   Following components requires `entity_collision` to be 4 or higher on the y-axis:
+    -   `on_step_on`
+    -   `on_step_off`
+    -   `on_fall_on`

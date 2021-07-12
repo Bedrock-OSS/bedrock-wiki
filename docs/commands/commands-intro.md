@@ -1,5 +1,6 @@
 ---
-title: Beginners Guide to Commands
+title: Intro to Commands
+nav_order: 1
 tags:
     - guide
 ---
