@@ -1,6 +1,6 @@
 ---
-title: Animation Controllers
-nav_order: 0
+title: Animation Controller Intro
+nav_order: 1
 tags:
     - guide
 ---

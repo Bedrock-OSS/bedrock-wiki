@@ -37,7 +37,6 @@ p + p {
 	margin-top: 1em;
 }
 
-h1,
 * + h1,
 * + h2,
 * + h3,
@@ -45,7 +44,18 @@ h1,
 * + h5,
 * + h6 {
 	margin-top: 1em !important;
-	font-weight: bold;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h2 {
+	font-weight: 600;
+}
+
+h3 {
+	font-weight: 500;
 }
 
 /* Lists */
