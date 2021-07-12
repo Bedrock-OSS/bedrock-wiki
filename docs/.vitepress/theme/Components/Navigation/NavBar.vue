@@ -29,7 +29,7 @@
 		</a>
 		<span class="flex-grow"></span>
 		<NavLink
-			v-if="!isMobile"
+			class="hidden md:flex"
 			v-for="item in navLinks"
 			:item="item"
 			:key="item.link"

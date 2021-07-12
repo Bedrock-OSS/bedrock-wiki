@@ -9,7 +9,7 @@
 			my-4
 		"
 	>
-	<details open class="outline-none">
+	<details open class="outline-none w-max">
 		<summary class="
 			flex justify-between align-center
 			px-4 py-3
