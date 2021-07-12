@@ -737,14 +737,17 @@ If your item isn't showing up, these changes might have broken your item.
 
 ## Additional Notes
 
+> Broken/Nonfunctional Features 
+
+- Components
+  - `minecraft:mining_speed` - Currently has no function.
+  - `minecraft:shooter` - Currently broken.
+  - `minecraft:digger`
+        - `use_efficiency` - Parameter currently has no function.
+- Event Functions
+  - `transform_item` - Crashes the game.
+  
+> Current Limitations
 -   Vanilla Items are hardcoded; you may not override or access them, using the new format.
--   Broken/Nonfunctional Components
-    -   `minecraft:mining_speed` - Currently has no function.
-    -   `minecraft:digger`
-        -   `use_efficiency` - Parameter currently has no function.
-    -   `minecraft:shooter` - Currently broken.
--   `transform_item` - Crashes the game.
--   `minecraft:record`
-    -   May not add a custom `sound_event`.
--   `minecraft:on_use`
-    -   Always trigger instantly, regardless of any set value of `minecraft:use_duration`.
+-   `minecraft:record` - May not add a custom `sound_event`.
+
