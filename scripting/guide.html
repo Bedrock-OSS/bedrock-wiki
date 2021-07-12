@@ -7,11 +7,11 @@
       Beginners Guide to Scripting | Bedrock Wiki
     </title>
     <meta name="description" content="Technical bedrock knowledge-sharing wiki.">
-    <link rel="stylesheet" href="/bedrock-wiki-vite/assets/style.f2adf36e.css">
-    <link rel="modulepreload" href="/bedrock-wiki-vite/assets/AlgoliaSearch.1e990bae.js">
-    <link rel="modulepreload" href="/bedrock-wiki-vite/assets/404.md.90cff0db.js">
-    <link rel="modulepreload" href="/bedrock-wiki-vite/assets/scripting_guide.md.475ab681.lean.js">
-    <link rel="modulepreload" href="/bedrock-wiki-vite/assets/404.md.90cff0db.js">
+    <link rel="stylesheet" href="/bedrock-wiki-vite/assets/style.2ea5975d.css">
+    <link rel="modulepreload" href="/bedrock-wiki-vite/assets/AlgoliaSearch.d3217163.js">
+    <link rel="modulepreload" href="/bedrock-wiki-vite/assets/404.md.3252d579.js">
+    <link rel="modulepreload" href="/bedrock-wiki-vite/assets/scripting_guide.md.20738b6c.lean.js">
+    <link rel="modulepreload" href="/bedrock-wiki-vite/assets/404.md.3252d579.js">
     
     
   </head>
@@ -132,125 +132,107 @@
 			pl-4
 			cursor-pointer
 			border-b-1 border-true-gray-200
-			dark:border-true-gray-600" data-v-4ccd8d73 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>World Generation</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/bedrock-wiki-vite/world-generation/beginners-guide" data-v-6f88f311 data-v-3bac66f8><!----><div class="flex-1" data-v-3bac66f8>Beginners Guide to World Generation</div><!----><!--[--><span data-v-3bac66f8><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" data-v-3bac66f8><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/bedrock-wiki-vite/world-generation/biome-tags" data-v-6f88f311 data-v-3bac66f8><!----><div class="flex-1" data-v-3bac66f8>Biome Tags</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/bedrock-wiki-vite/world-generation/biomes" data-v-6f88f311 data-v-3bac66f8><!----><div class="flex-1" data-v-3bac66f8>Biomes</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/bedrock-wiki-vite/world-generation/feature-types" data-v-6f88f311 data-v-3bac66f8><!----><div class="flex-1" data-v-3bac66f8>Feature Types</div><!----><!--[--><!--]--></a><!--]--></div></details><!--]--></div><!--]--></aside><main class="m-8 md:ml-80 mt-0 min-h-screen" data-v-24d8c21b><h1 id="top" data-v-24d8c21b>Beginners Guide to Scripting</h1><div class="sidebar-toc
-			xl:fixed
-			flex flex-col
-			top-0
-			right-0
-			my-4" data-v-24d8c21b data-v-45df5132><details open class="outline-none w-max" data-v-45df5132><summary class="
-			flex justify-between align-center
-			px-4 py-3
-			bg-gray-200
-			dark:bg-true-gray-600
-			xl:hidden
-			rounded-md
-			rounded-bl-none
-			text-lg
-			outline-none
-			select-none
-		" data-v-45df5132><span data-v-45df5132>Table of Contents</span><svg class="icon my-auto transition-transform" width="24" height="24" viewbox="0 0 24 24" data-v-45df5132><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div class="
-			p-4
-			xl:pb-6
-			border-l-4 xl:pt-6
-			z-10
-			xl:w-72 xl:border-r-1
-			xl:my-0
-			xl:mt-14
-			border-gray-200
-			dark:border-true-gray-600
-		" data-v-45df5132><a href="#top" class="
-				pb-1
-				pt-0
-				text-black
-				dark:text-white
-				no-underline
-				font-bold
-				text-lg
-			" data-v-45df5132>Beginners Guide to Scripting</a><div class="pl-5" data-v-45df5132><ol id="toc" data-v-45df5132><!--[--><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#prerequisites" data-v-45df5132>Prerequisites</a><ol data-v-45df5132><!--[--><!--]--></ol></li><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#setting-up-your-environment" data-v-45df5132>Setting up your environment</a><ol data-v-45df5132><!--[--><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#find-minecraft-installation-folder" data-v-45df5132>Find Minecraft installation folder</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#set-up-visual-studio-code-vscode" data-v-45df5132>Set up Visual Studio Code (VSCode)</a></li><!--]--></ol></li><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#getting-started" data-v-45df5132>Getting Started</a><ol data-v-45df5132><!--[--><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#what-s-the-difference-between-server-side-and-client-side" data-v-45df5132>What&#39;s the difference between &#39;server-side&#39; and &#39;client-side&#39;?</a></li><!--]--></ol></li><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#manifest-json" data-v-45df5132>manifest.json</a><ol data-v-45df5132><!--[--><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#the-metadata-section" data-v-45df5132>the &quot;metadata&quot; section</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#the-header-section" data-v-45df5132>the &quot;header&quot; section</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#the-modules-section" data-v-45df5132>the &quot;modules&quot; section</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#the-dependencies-section" data-v-45df5132>the &quot;dependencies&quot; section</a></li><!--]--></ol></li><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#testing-your-behavior-pack" data-v-45df5132>Testing your behavior pack</a><ol data-v-45df5132><!--[--><!--]--></ol></li><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#serverscript-js" data-v-45df5132>serverScript.js</a><ol data-v-45df5132><!--[--><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#registersystem" data-v-45df5132>.registerSystem()</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#initialize" data-v-45df5132>.initialize()</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#update" data-v-45df5132>.update()</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#shutdown" data-v-45df5132>.shutdown()</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#log" data-v-45df5132>.log()</a></li><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#testing-the-server-javascript-code" data-v-45df5132>testing the server Javascript code</a></li><!--]--></ol></li><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#clientscript-js" data-v-45df5132>clientScript.js</a><ol data-v-45df5132><!--[--><!--]--></ol></li><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#bundling-your-behavior-pack-into-an-add-on" data-v-45df5132>Bundling your behavior pack into an Add-on</a><ol data-v-45df5132><!--[--><li class="py-0.5" data-v-45df5132><a class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								" href="#mcpack" data-v-45df5132>.mcpack</a></li><!--]--></ol></li><li class="py-0.5" data-v-45df5132><a class="text-black dark:text-white no-underline" href="#the-end" data-v-45df5132>The End</a><ol data-v-45df5132><!--[--><!--]--></ol></li><!--]--></ol></div></div></details></div><div class="xl:pr-72" data-v-24d8c21b><p>This tutorial will teach you how to get up and running as a Minecraft Bedrock Edition (Windows 10) script modder!</p><h2 id="prerequisites"><a class="header-anchor" href="#prerequisites" aria-hidden="true">#</a> Prerequisites</h2><ol><li>Minecraft Bedrock Edition (Windows 10)</li><li>a code editor like <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> (although Notepad will technically be sufficient, I will be assuming the usage of VSCode going forward)</li><li>basic knowledge of Javascript (this tutorial will not be teaching you how to code in Javascript and presumes a baseline knowledge of it)</li></ol><h2 id="setting-up-your-environment"><a class="header-anchor" href="#setting-up-your-environment" aria-hidden="true">#</a> Setting up your environment</h2><h3 id="find-minecraft-installation-folder"><a class="header-anchor" href="#find-minecraft-installation-folder" aria-hidden="true">#</a> Find Minecraft installation folder</h3><p>You will need access to the Minecraft installation folder - this is where we will be doing most of our work. You can find it here (replace <code>&lt;USERNAME&gt;</code> with your Windows 10 username):</p><p><code>C:\Users\&lt;USERNAME&gt;\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang</code></p><p>You should probably make a shortcut to this directory as it&#39;ll make development quicker as time goes on.</p><p>The sub-folders that we are most interested in are:</p><ul><li><code>development_behavior_packs</code></li><li><code>development_resource_packs</code></li><li><code>development_skin_packs</code></li></ul><p>These are the folders that our packs will exist in during development. Behavior packs hold server code, resource packs have client code, and skin packs hold skins for your in-game character. You might have noticed that some other folders are named something very similar:</p><ul><li><code>behavior_packs</code></li><li><code>resource_packs</code></li><li><code>skin_packs</code></li></ul><p>These folders are where completed Minecraft Bedrock Edition packs go. For this tutorial, we will only focus on creating a behavior pack (not a resource or skin pack).</p><h3 id="set-up-visual-studio-code-vscode"><a class="header-anchor" href="#set-up-visual-studio-code-vscode" aria-hidden="true">#</a> Set up Visual Studio Code (VSCode)</h3><p>Let&#39;s get your code editor set up:</p><ol><li>Create a folder inside of <code>development_behavior_packs</code> named <code>HelloWorld</code></li><li>Open Visual Studio Code (VSCode)</li><li>Go to <code>File &gt; Add folder to workspace...</code> and select that newly created <code>HelloWorld</code> folder</li></ol><p>Sweet, everything is set up, and now we can get to work. 😎</p><h2 id="getting-started"><a class="header-anchor" href="#getting-started" aria-hidden="true">#</a> Getting Started</h2><p>From now on, the rest of our work is going to be from within the <code>HelloWorld</code> folder we created in the last section. First things first, let&#39;s create some new folders and files.</p><p>Inside of <code>HelloWorld</code>, create a file called <code>manifest.json</code>. Next, create a folder called <code>scripts</code>. Inside of that folder, create two more folders called <code>server</code> and <code>client</code>, respectively. Create a file called <code>serverScript.js</code> inside of the <code>server</code> folder. Similarly, create a file called <code>clientScript.js</code> inside of the <code>client</code> folder.</p><p>Last but not least, download this image and place it in the <code>HelloWorld</code> folder:</p><p><img src="https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/pack_icon.png" alt=""></p><p>Your folder structure should now look like this:</p><div class="language-"><pre><code>/development_behavior_packs
+			dark:border-true-gray-600" data-v-4ccd8d73 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>World Generation</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/bedrock-wiki-vite/world-generation/beginners-guide" data-v-6f88f311 data-v-3bac66f8><!----><div class="flex-1" data-v-3bac66f8>Beginners Guide to World Generation</div><!----><!--[--><span data-v-3bac66f8><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" data-v-3bac66f8><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/bedrock-wiki-vite/world-generation/biome-tags" data-v-6f88f311 data-v-3bac66f8><!----><div class="flex-1" data-v-3bac66f8>Biome Tags</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/bedrock-wiki-vite/world-generation/biomes" data-v-6f88f311 data-v-3bac66f8><!----><div class="flex-1" data-v-3bac66f8>Biomes</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/bedrock-wiki-vite/world-generation/feature-types" data-v-6f88f311 data-v-3bac66f8><!----><div class="flex-1" data-v-3bac66f8>Feature Types</div><!----><!--[--><!--]--></a><!--]--></div></details><!--]--></div><!--]--></aside><main class="m-8 md:ml-80 mt-0 min-h-screen" data-v-24d8c21b><h1 id="top" data-v-24d8c21b>Beginners Guide to Scripting</h1><div class="sidebar-toc xl:fixed flex flex-col top-0 right-0 my-4" data-v-24d8c21b data-v-7ad08890><details open class="outline-none w-max" data-v-7ad08890><summary class="
+					flex
+					justify-between
+					align-center
+					px-4
+					py-3
+					bg-gray-200
+					dark:bg-true-gray-600
+					xl:hidden
+					rounded-md rounded-bl-none
+					text-lg
+					outline-none
+					select-none
+				" data-v-7ad08890><span data-v-7ad08890>Table of Contents</span><svg class="icon my-auto transition-transform" width="24" height="24" viewbox="0 0 24 24" data-v-7ad08890><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div class="
+					p-4
+					xl:pb-6
+					border-l-4
+					xl:pt-6
+					z-10
+					xl:w-72 xl:border-r-1 xl:my-0 xl:mt-14
+					border-gray-200
+					dark:border-true-gray-600
+				" data-v-7ad08890><a href="#top" class="
+						pb-1
+						pt-0
+						text-black
+						dark:text-white
+						no-underline
+						font-bold
+						text-lg
+					" data-v-7ad08890>Beginners Guide to Scripting</a><div data-v-7ad08890><ol id="toc" data-v-7ad08890><!--[--><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#prerequisites" data-v-7ad08890>Prerequisites</a><ol data-v-7ad08890><!--[--><!--]--></ol></li><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#setting-up-your-environment" data-v-7ad08890>Setting up your environment</a><ol data-v-7ad08890><!--[--><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#find-minecraft-installation-folder" data-v-7ad08890>Find Minecraft installation folder</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#set-up-visual-studio-code-vscode" data-v-7ad08890>Set up Visual Studio Code (VSCode)</a></li><!--]--></ol></li><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#getting-started" data-v-7ad08890>Getting Started</a><ol data-v-7ad08890><!--[--><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#what-s-the-difference-between-server-side-and-client-side" data-v-7ad08890>What&#39;s the difference between &#39;server-side&#39; and &#39;client-side&#39;?</a></li><!--]--></ol></li><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#manifest-json" data-v-7ad08890>manifest.json</a><ol data-v-7ad08890><!--[--><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#the-metadata-section" data-v-7ad08890>the &quot;metadata&quot; section</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#the-header-section" data-v-7ad08890>the &quot;header&quot; section</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#the-modules-section" data-v-7ad08890>the &quot;modules&quot; section</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#the-dependencies-section" data-v-7ad08890>the &quot;dependencies&quot; section</a></li><!--]--></ol></li><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#testing-your-behavior-pack" data-v-7ad08890>Testing your behavior pack</a><ol data-v-7ad08890><!--[--><!--]--></ol></li><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#serverscript-js" data-v-7ad08890>serverScript.js</a><ol data-v-7ad08890><!--[--><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#registersystem" data-v-7ad08890>.registerSystem()</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#initialize" data-v-7ad08890>.initialize()</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#update" data-v-7ad08890>.update()</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#shutdown" data-v-7ad08890>.shutdown()</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#log" data-v-7ad08890>.log()</a></li><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#testing-the-server-javascript-code" data-v-7ad08890>testing the server Javascript code</a></li><!--]--></ol></li><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#clientscript-js" data-v-7ad08890>clientScript.js</a><ol data-v-7ad08890><!--[--><!--]--></ol></li><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#bundling-your-behavior-pack-into-an-add-on" data-v-7ad08890>Bundling your behavior pack into an Add-on</a><ol data-v-7ad08890><!--[--><li class="py-0.5" data-v-7ad08890><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#mcpack" data-v-7ad08890>.mcpack</a></li><!--]--></ol></li><li class="py-0.5" data-v-7ad08890><a class="text-black dark:text-white no-underline" href="#the-end" data-v-7ad08890>The End</a><ol data-v-7ad08890><!--[--><!--]--></ol></li><!--]--></ol></div></div></details></div><div class="xl:pr-72" data-v-24d8c21b><p>This tutorial will teach you how to get up and running as a Minecraft Bedrock Edition (Windows 10) script modder!</p><h2 id="prerequisites"><a class="header-anchor" href="#prerequisites" aria-hidden="true">#</a> Prerequisites</h2><ol><li>Minecraft Bedrock Edition (Windows 10)</li><li>a code editor like <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> (although Notepad will technically be sufficient, I will be assuming the usage of VSCode going forward)</li><li>basic knowledge of Javascript (this tutorial will not be teaching you how to code in Javascript and presumes a baseline knowledge of it)</li></ol><h2 id="setting-up-your-environment"><a class="header-anchor" href="#setting-up-your-environment" aria-hidden="true">#</a> Setting up your environment</h2><h3 id="find-minecraft-installation-folder"><a class="header-anchor" href="#find-minecraft-installation-folder" aria-hidden="true">#</a> Find Minecraft installation folder</h3><p>You will need access to the Minecraft installation folder - this is where we will be doing most of our work. You can find it here (replace <code>&lt;USERNAME&gt;</code> with your Windows 10 username):</p><p><code>C:\Users\&lt;USERNAME&gt;\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang</code></p><p>You should probably make a shortcut to this directory as it&#39;ll make development quicker as time goes on.</p><p>The sub-folders that we are most interested in are:</p><ul><li><code>development_behavior_packs</code></li><li><code>development_resource_packs</code></li><li><code>development_skin_packs</code></li></ul><p>These are the folders that our packs will exist in during development. Behavior packs hold server code, resource packs have client code, and skin packs hold skins for your in-game character. You might have noticed that some other folders are named something very similar:</p><ul><li><code>behavior_packs</code></li><li><code>resource_packs</code></li><li><code>skin_packs</code></li></ul><p>These folders are where completed Minecraft Bedrock Edition packs go. For this tutorial, we will only focus on creating a behavior pack (not a resource or skin pack).</p><h3 id="set-up-visual-studio-code-vscode"><a class="header-anchor" href="#set-up-visual-studio-code-vscode" aria-hidden="true">#</a> Set up Visual Studio Code (VSCode)</h3><p>Let&#39;s get your code editor set up:</p><ol><li>Create a folder inside of <code>development_behavior_packs</code> named <code>HelloWorld</code></li><li>Open Visual Studio Code (VSCode)</li><li>Go to <code>File &gt; Add folder to workspace...</code> and select that newly created <code>HelloWorld</code> folder</li></ol><p>Sweet, everything is set up, and now we can get to work. 😎</p><h2 id="getting-started"><a class="header-anchor" href="#getting-started" aria-hidden="true">#</a> Getting Started</h2><p>From now on, the rest of our work is going to be from within the <code>HelloWorld</code> folder we created in the last section. First things first, let&#39;s create some new folders and files.</p><p>Inside of <code>HelloWorld</code>, create a file called <code>manifest.json</code>. Next, create a folder called <code>scripts</code>. Inside of that folder, create two more folders called <code>server</code> and <code>client</code>, respectively. Create a file called <code>serverScript.js</code> inside of the <code>server</code> folder. Similarly, create a file called <code>clientScript.js</code> inside of the <code>client</code> folder.</p><p>Last but not least, download this image and place it in the <code>HelloWorld</code> folder:</p><p><img src="https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/pack_icon.png" alt=""></p><p>Your folder structure should now look like this:</p><div class="language-"><pre><code>/development_behavior_packs
     /HelloWorld
         &gt; manifest.json
         &gt; pack_icon.png
@@ -430,7 +412,7 @@ systemClient<span class="token punctuation">.</span><span class="token function-
 	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">broadcastEvent</span><span class="token punctuation">(</span><span class="token string">&#39;minecraft:display_chat_event&#39;</span><span class="token punctuation">,</span> chatEvent<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br></div></div><p>You should see many similarities between the <code>clientScript.js</code> and the <code>serverScript.js</code>. The only difference between them is that we switched it to&#39; client&#39; wherever you see the word <code>server</code>.</p><ul><li><code>systemServer</code> becomes <code>systemClient</code></li><li><code>this.log(&quot;Server!&quot;);</code> becomes <code>this.log(&quot;Client!&quot;);</code></li></ul><p>That should be it! Load backs up your Minecraft world.</p><p><img src="https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-both.png" alt=""></p><p>You should see something like this!</p><p>The game should print &quot;Server!&quot; and &quot;Client!&quot; to the chat once per second.</p><h2 id="bundling-your-behavior-pack-into-an-add-on"><a class="header-anchor" href="#bundling-your-behavior-pack-into-an-add-on" aria-hidden="true">#</a> Bundling your behavior pack into an Add-on</h2><p>So how can other people play your brand new, never before seen Minecraft Bedrock Edition add-on? Microsoft created a super simple way to bundle up your behavior pack into a single file.</p><h3 id="mcpack"><a class="header-anchor" href="#mcpack" aria-hidden="true">#</a> .mcpack</h3><p>Go into File Explorer and find your behavior pack. Remember, you can find that here (replace <code>&lt;USERNAME&gt;</code> with your Windows 10 username):</p><p><code>C:\Users\&lt;USERNAME&gt;\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang/development_behavior_packs/HelloWorld</code></p><p>Right-click the <code>HelloWorld</code> folder and and zip it (choose send to &gt; compressed(zipped) folder). Now change the extension [by renaming the file] from <code>.zip</code> to <code>.mcpack</code>.</p><p>When a user double-clicks on the file, it&#39;ll be automatically opened by, and imported to, Minecraft for them to use (it&#39;ll be located in <code>.../com.mojang/behavior_packs</code>).</p><h2 id="the-end"><a class="header-anchor" href="#the-end" aria-hidden="true">#</a> The End</h2><p>If you made it this far - congrats! You&#39;re now an official Minecraft Bedrock Edition modder!</p><p>If you want the source code from this tutorial, you can download the pack <a href="https://wiki.bedrock.dev/assets/packs/scripting/hello-world-tutorial/HelloWorld.mcpack" target="_blank" rel="noopener noreferrer">here</a>.</p></div><div data-v-24d8c21b><h2 data-v-24d8c21b>Contributors</h2><!----></div></main><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"404.md\":\"90cff0db\",\"contribute.md\":\"0f808611\",\"discord.md\":\"3c3a1c95\",\"index.md\":\"62af9953\",\"animation-controllers_afk-animation-controller.md\":\"c1d21161\",\"animation-controllers_animation-controllers.md\":\"6980bb2e\",\"animation-controllers_death-commands.md\":\"a647a776\",\"animation-controllers_entity-commands.md\":\"9d183d83\",\"animation-controllers_index.md\":\"0e8ffbdd\",\"animation-controllers_respawn-commands.md\":\"cc8b9bb3\",\"blocks_block-materials.md\":\"b8a1065c\",\"blocks_block-shapes.md\":\"781393bc\",\"blocks_block-tags.md\":\"5b3d4465\",\"blocks_block-texture-variation.md\":\"888ce81f\",\"blocks_documentation.md\":\"6f8c6032\",\"blocks_fake-blocks.md\":\"77d550b1\",\"blocks_guide.md\":\"91d8dd9c\",\"blocks_index.md\":\"aff5c92c\",\"commands_beginner-commands.md\":\"554692a0\",\"commands_index.md\":\"fac43faf\",\"commands_mcfunction.md\":\"0652101e\",\"commands_nbt-commands.md\":\"0738b480\",\"concepts_bedrock-modeling.md\":\"8296c313\",\"concepts_entity-properties.md\":\"67e606ff\",\"concepts_format-version.md\":\"e92518e0\",\"concepts_index.md\":\"18c188ac\",\"concepts_json-ui.md\":\"0038b543\",\"concepts_lang.md\":\"6a2c6146\",\"concepts_materials.md\":\"69338cd7\",\"concepts_math-based-animations.md\":\"f72324c3\",\"concepts_mcstructure.md\":\"7b7a59fa\",\"concepts_namespaces.md\":\"9d3e0934\",\"concepts_render-controller.md\":\"847b26cd\",\"concepts_shaders.md\":\"a412db81\",\"concepts_sounds.md\":\"6b74a840\",\"concepts_textures-list.md\":\"0b8372aa\",\"documentation_color-codes.md\":\"afddd985\",\"documentation_dummy-components.md\":\"9879f34b\",\"documentation_emojis.md\":\"700b0805\",\"documentation_fog-ids.md\":\"6199f22b\",\"documentation_index.md\":\"a2dc78de\",\"documentation_json-ui.md\":\"99d885d3\",\"documentation_materials.md\":\"933f36e9\",\"documentation_particles.md\":\"1b5303fd\",\"documentation_projectiles.md\":\"55ecee53\",\"documentation_queries.md\":\"0cb0b49a\",\"documentation_runtime-identifier.md\":\"c97d3f14\",\"documentation_sound-definitions.md\":\"1240355b\",\"documentation_subpacks.md\":\"48d0d266\",\"documentation_tellraw.md\":\"e24e1741\",\"entities_boat-entities.md\":\"6f044874\",\"entities_cancelling-death-animations.md\":\"efe64361\",\"entities_components-events-groups.md\":\"00b889f2\",\"entities_dummy-entities.md\":\"4f61e28d\",\"entities_entity-events.md\":\"aa54726e\",\"entities_entity-holds-item.md\":\"aa4b95b3\",\"entities_entity-movement.md\":\"0d191e3e\",\"entities_entity-troubleshooting.md\":\"e8050bd6\",\"entities_flying-entities.md\":\"6a4b0f0e\",\"entities_index.md\":\"d16d3a0e\",\"entities_invulnerable-entities.md\":\"1d6e5f6c\",\"entities_pathfinding-entities.md\":\"602e2615\",\"entities_render-controller.md\":\"b8f61a7e\",\"entities_solid-entities.md\":\"7788ebed\",\"entities_timers.md\":\"1ac19bab\",\"guide_appendix.md\":\"c56b07c0\",\"guide_creating-entity-visuals.md\":\"457c8be6\",\"guide_custom-entity-full.md\":\"4f1385d2\",\"guide_custom-particles.md\":\"3ad0f59d\",\"guide_custom-skin-packs.md\":\"3fc06193\",\"guide_custom-trades.md\":\"930ab555\",\"guide_download-packs.md\":\"592ee588\",\"guide_index.md\":\"58060650\",\"guide_loot_tables-recipes-spawn_rules.md\":\"4e33614e\",\"guide_project-setup.md\":\"530c4ff7\",\"guide_render-controllers.md\":\"01248b0e\",\"guide_software-preparation.md\":\"112e30c2\",\"guide_understanding-json.md\":\"2eadb1c9\",\"items_3d-items.md\":\"5fd83442\",\"items_documentation.md\":\"0fa41b73\",\"items_guide.md\":\"e6771d2e\",\"items_index.md\":\"f5bf8c02\",\"items_item-categories.md\":\"7c1c5288\",\"items_spawning-items.md\":\"24acb103\",\"meta_addon-performance.md\":\"017e6bb6\",\"meta_addon-programming.md\":\"d0cd694e\",\"meta_index.md\":\"de89e62f\",\"meta_jq.md\":\"d1f033bf\",\"meta_style-guide.md\":\"3284e54e\",\"meta_troubleshooting.md\":\"acfa0327\",\"meta_useful-links.md\":\"f0ea33d0\",\"meta_using-schemas.md\":\"5a499aa3\",\"meta_version-control.md\":\"26a46d17\",\"new-guide_blockbench.md\":\"a5801c19\",\"new-guide_custom-entity.md\":\"6a0142e0\",\"new-guide_custom-item.md\":\"2180893a\",\"new-guide_index.md\":\"ac6ba763\",\"new-guide_introduction.md\":\"e6e9d7c4\",\"new-guide_loot-spawn-recipes.md\":\"26f87eea\",\"new-guide_project-setup.md\":\"6fe84ac1\",\"scripting_game-tests.md\":\"822649e1\",\"scripting_guide.md\":\"475ab681\",\"scripting_index.md\":\"6edcfbe7\",\"scripting_saving-loading.md\":\"312756c7\",\"scripting_typescript.md\":\"3db43e17\",\"tutorials_craftable-spawneggs.md\":\"ed796411\",\"tutorials_custom-armor.md\":\"f8e169db\",\"tutorials_disabling-particles.md\":\"d619945a\",\"tutorials_disabling-team-damage.md\":\"bc58b061\",\"tutorials_egg-drops.md\":\"e5df9606\",\"tutorials_index.md\":\"f6e25726\",\"tutorials_player-geometry.md\":\"98478078\",\"tutorials_remove-shadows.md\":\"51b6d642\",\"tutorials_retexturing-spawn-eggs.md\":\"454f5f98\",\"tutorials_text-localization.md\":\"298a2877\",\"world-generation_beginners-guide.md\":\"c1de688e\",\"world-generation_biome-tags.md\":\"1e3c43c3\",\"world-generation_biomes.md\":\"64ab214d\",\"world-generation_feature-types.md\":\"258fab35\",\"world-generation_index.md\":\"bfa3adf0\"}")</script>
-    <script type="module" async src="/bedrock-wiki-vite/assets/404.md.90cff0db.js"></script>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"404.md\":\"3252d579\",\"contribute.md\":\"a3be2d3a\",\"discord.md\":\"cadaaaa3\",\"index.md\":\"1852c83f\",\"animation-controllers_afk-animation-controller.md\":\"3a97bf0b\",\"animation-controllers_animation-controllers.md\":\"eb89c833\",\"animation-controllers_death-commands.md\":\"90885ebc\",\"animation-controllers_entity-commands.md\":\"e0368614\",\"animation-controllers_index.md\":\"cfd27f29\",\"animation-controllers_respawn-commands.md\":\"66ce8327\",\"blocks_block-materials.md\":\"12a7a0df\",\"blocks_block-shapes.md\":\"2e109273\",\"blocks_block-tags.md\":\"206e1712\",\"blocks_block-texture-variation.md\":\"c9de62d3\",\"blocks_documentation.md\":\"b9c6c9ac\",\"blocks_fake-blocks.md\":\"57ed7d4d\",\"blocks_guide.md\":\"da7d8c2c\",\"blocks_index.md\":\"8752a40b\",\"commands_beginner-commands.md\":\"f1467382\",\"commands_index.md\":\"6ac1d8b6\",\"commands_mcfunction.md\":\"dc3f0c4e\",\"commands_nbt-commands.md\":\"043253fa\",\"concepts_bedrock-modeling.md\":\"e9f93047\",\"concepts_entity-properties.md\":\"af8e7a8f\",\"concepts_format-version.md\":\"eb169545\",\"concepts_index.md\":\"c7a3732e\",\"concepts_json-ui.md\":\"8cd3302f\",\"concepts_lang.md\":\"abfae742\",\"concepts_materials.md\":\"cd4c5cca\",\"concepts_math-based-animations.md\":\"b46aa6eb\",\"concepts_mcstructure.md\":\"b48a7f64\",\"concepts_namespaces.md\":\"dc97f11c\",\"concepts_render-controller.md\":\"9e0c039c\",\"concepts_shaders.md\":\"15140474\",\"concepts_sounds.md\":\"1b7dfc3f\",\"concepts_textures-list.md\":\"2aa0e244\",\"documentation_color-codes.md\":\"e1270d61\",\"documentation_dummy-components.md\":\"5c7572b6\",\"documentation_emojis.md\":\"71ca5fa1\",\"documentation_fog-ids.md\":\"d767e425\",\"documentation_index.md\":\"7f5121dc\",\"documentation_json-ui.md\":\"7d62cfa3\",\"documentation_materials.md\":\"7e1c1117\",\"documentation_particles.md\":\"a4df0612\",\"documentation_projectiles.md\":\"5161bcbb\",\"documentation_queries.md\":\"3636434a\",\"documentation_runtime-identifier.md\":\"be53c33b\",\"documentation_sound-definitions.md\":\"694fa35f\",\"documentation_subpacks.md\":\"495db530\",\"documentation_tellraw.md\":\"c10a8807\",\"entities_boat-entities.md\":\"00df9904\",\"entities_cancelling-death-animations.md\":\"a3d62aba\",\"entities_components-events-groups.md\":\"f55a9452\",\"entities_dummy-entities.md\":\"bffbd9ae\",\"entities_entity-events.md\":\"7ac3aa54\",\"entities_entity-holds-item.md\":\"cca9aea4\",\"entities_entity-movement.md\":\"591b950f\",\"entities_entity-troubleshooting.md\":\"4018c816\",\"entities_flying-entities.md\":\"e1108d2f\",\"entities_index.md\":\"bed0dc3f\",\"entities_invulnerable-entities.md\":\"3564d139\",\"entities_pathfinding-entities.md\":\"ee66bf08\",\"entities_render-controller.md\":\"f19ad8de\",\"entities_solid-entities.md\":\"b3a74e56\",\"entities_timers.md\":\"5d753f2c\",\"guide_appendix.md\":\"6cdf1e41\",\"guide_creating-entity-visuals.md\":\"b2aaf750\",\"guide_custom-entity-full.md\":\"be54390a\",\"guide_custom-particles.md\":\"9d6fe83b\",\"guide_custom-skin-packs.md\":\"537dca6d\",\"guide_custom-trades.md\":\"619ba5ea\",\"guide_download-packs.md\":\"700061e2\",\"guide_index.md\":\"3f717729\",\"guide_loot_tables-recipes-spawn_rules.md\":\"4d7dcf47\",\"guide_project-setup.md\":\"d506a557\",\"guide_render-controllers.md\":\"4d2feefe\",\"guide_software-preparation.md\":\"512e027b\",\"guide_understanding-json.md\":\"367235c2\",\"items_3d-items.md\":\"eb43e065\",\"items_documentation.md\":\"52228a81\",\"items_guide.md\":\"fc6d69db\",\"items_index.md\":\"7cedd9bc\",\"items_item-categories.md\":\"f74b519e\",\"items_spawning-items.md\":\"09ea9370\",\"meta_addon-performance.md\":\"4fd5efb7\",\"meta_addon-programming.md\":\"30786f31\",\"meta_index.md\":\"8cfa2a9b\",\"meta_jq.md\":\"171d1d70\",\"meta_style-guide.md\":\"52e65e9f\",\"meta_troubleshooting.md\":\"1076775a\",\"meta_useful-links.md\":\"a5ba9668\",\"meta_using-schemas.md\":\"171d8471\",\"meta_version-control.md\":\"39b2eb98\",\"new-guide_blockbench.md\":\"337e8f6b\",\"new-guide_custom-entity.md\":\"03dda236\",\"new-guide_custom-item.md\":\"ca4082c2\",\"new-guide_index.md\":\"8d76fadb\",\"new-guide_introduction.md\":\"ba0dbcca\",\"new-guide_loot-spawn-recipes.md\":\"5c7e2a99\",\"new-guide_project-setup.md\":\"ef2ccd94\",\"scripting_game-tests.md\":\"a7665d2b\",\"scripting_guide.md\":\"20738b6c\",\"scripting_index.md\":\"92a63274\",\"scripting_saving-loading.md\":\"192b5a3f\",\"scripting_typescript.md\":\"10413522\",\"tutorials_craftable-spawneggs.md\":\"a47b2dd8\",\"tutorials_custom-armor.md\":\"743b30bd\",\"tutorials_disabling-particles.md\":\"be33b5a5\",\"tutorials_disabling-team-damage.md\":\"cb8d5318\",\"tutorials_egg-drops.md\":\"5e407dc0\",\"tutorials_index.md\":\"145a0746\",\"tutorials_player-geometry.md\":\"4c57189b\",\"tutorials_remove-shadows.md\":\"f87dac34\",\"tutorials_retexturing-spawn-eggs.md\":\"4f7090d4\",\"tutorials_text-localization.md\":\"23decb1a\",\"world-generation_beginners-guide.md\":\"40a0db46\",\"world-generation_biome-tags.md\":\"a41ea07e\",\"world-generation_biomes.md\":\"2ae90552\",\"world-generation_feature-types.md\":\"321fc53f\",\"world-generation_index.md\":\"1a177643\"}")</script>
+    <script type="module" async src="/bedrock-wiki-vite/assets/404.md.3252d579.js"></script>
   </body>
 </html>
