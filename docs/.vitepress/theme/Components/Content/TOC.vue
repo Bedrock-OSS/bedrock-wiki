@@ -1,86 +1,85 @@
 <template>
-	<div
-		class="
-			sidebar-toc
-			xl:fixed
-			flex flex-col
-			top-0
-			right-0
-			my-4
-		"
-	>
-	<details open class="outline-none">
-		<summary class="
-			flex justify-between align-center
-			px-4 py-3
-			bg-gray-200
-			dark:bg-true-gray-600
-			xl:hidden
-			rounded-md
-			rounded-bl-none
-			text-lg
-			outline-none
-			select-none
-		">
-			<span>Table of Contents</span>
+	<div class="sidebar-toc xl:fixed flex flex-col top-0 right-0 my-4">
+		<details open class="outline-none">
+			<summary
+				class="
+					flex
+					justify-between
+					align-center
+					px-4
+					py-3
+					bg-gray-200
+					dark:bg-true-gray-600
+					xl:hidden
+					rounded-md rounded-bl-none
+					text-lg
+					outline-none
+					select-none
+				"
+			>
+				<span>Table of Contents</span>
 
-			<ChevronLeftIcon class="my-auto transition-transform"/>
-		</summary>
-		<div class="
-			p-4
-			xl:pb-6
-			border-l-4 xl:pt-6
-			z-10
-			xl:w-72 xl:border-r-1
-			xl:my-0
-			xl:mt-14
-			border-gray-200
-			dark:border-true-gray-600
-		">
-		<a
-			href="#top"
-			class="
-				pb-1
-				pt-0
-				text-black
-				dark:text-white
-				no-underline
-				font-bold
-				text-lg
-			"
-			>{{ title }}</a
-		>
-		<div class="pl-5">
-			<ol id="toc">
-				<li v-for="header in headers" key="header.title" class="py-0.5">
-					<a
-						class="text-black dark:text-white no-underline"
-						:href="'#' + header.slug"
-						>{{ header.title }}</a
-					>
-					<ol>
+				<ChevronLeftIcon class="my-auto transition-transform" />
+			</summary>
+			<div
+				class="
+					p-4
+					xl:pb-6
+					border-l-4
+					xl:pt-6
+					z-10
+					xl:w-72 xl:border-r-1 xl:my-0 xl:mt-14
+					border-gray-200
+					dark:border-true-gray-600
+				"
+			>
+				<a
+					href="#top"
+					class="
+						pb-1
+						pt-0
+						text-black
+						dark:text-white
+						no-underline
+						font-bold
+						text-lg
+					"
+					>{{ title }}</a
+				>
+				<div>
+					<ol id="toc">
 						<li
-							v-for="child in header.children"
-							key="child.title"
+							v-for="header in headers"
+							key="header.title"
 							class="py-0.5"
 						>
 							<a
-								class="
-									text-black
-									dark:text-white
-									no-underline
-									italic
-									ml-6
-								"
-								:href="'#' + child.slug"
-								>{{ child.title }}</a
+								class="text-black dark:text-white no-underline"
+								:href="'#' + header.slug"
+								>{{ header.title }}</a
 							>
+							<ol>
+								<li
+									v-for="child in header.children"
+									key="child.title"
+									class="py-0.5"
+								>
+									<a
+										class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										"
+										:href="'#' + child.slug"
+										>{{ child.title }}</a
+									>
+								</li>
+							</ol>
 						</li>
 					</ol>
-				</li>
-			</ol>
-		</div>
-		</div>
+				</div>
+			</div>
 		</details>
 	</div>
 </template>
@@ -123,6 +122,15 @@ watch(page, () => {
 </script>
 
 <style scoped>
+li {
+	padding: 0px;
+}
+ol,
+ul {
+	padding-top: 0;
+	list-style-type: none;
+}
+
 @screen xl {
 	.sidebar-toc {
 		/* Scroll if needed */
@@ -131,12 +139,12 @@ watch(page, () => {
 	}
 }
 
-details summary{
+details summary {
 	list-style: none;
 }
 
 details summary::-webkit-details-marker {
-  	display: none;
+	display: none;
 }
 
 details[open] summary svg {
