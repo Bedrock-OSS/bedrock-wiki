@@ -1,7 +1,7 @@
 ---
 title: Custom Armor
 tags:
-	- beta
+	- experimental
 ---
 
 ::: tip
