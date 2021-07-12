@@ -1,5 +1,8 @@
 ---
-title: Components/Groups/Events
+title: Intro to Entities
+nav_order: 1
+tags:
+    - guide
 ---
 
 Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means and how to use them.

@@ -1,5 +1,7 @@
 ---
 title: Project Setup
+nav_order: 2
+number: '2.'
 ---
 
 ## Preparation

@@ -7,6 +7,10 @@ nav_order: 2
 
 Better documentation on the new item format introduced in the 1.16.100.56 Minecraft beta
 
+:::warning
+This document covers experimental features, for 1.16 format version items. If you would like to learn about stable items, [you can do so here](/items/items-intro).
+:::
+
 ## Item Events
 
 ### Using Events
@@ -517,7 +521,7 @@ List of all new block components, with usage examples
 	"minecraft:repairable": {
 		"repair_items": [
 			{
-				"items": [ "minecraft:iron_ingot", "minecraft:gold_ingot" ],
+				"items": ["minecraft:iron_ingot", "minecraft:gold_ingot"],
 				"repair_amount": 10, // Can also be molang expression
 				"on_repaired": {
 					"event": "example_event",
@@ -541,10 +545,10 @@ List of all new block components, with usage examples
 ```
 
 -   minecraft:use_duration
-  
+
 ```json
 {
-    "minecraft:use_duration": 1.6, // Use duration in seconds of the item
+	"minecraft:use_duration": 1.6 // Use duration in seconds of the item
 }
 ```
 
@@ -599,12 +603,13 @@ List of all new block components, with usage examples
 ```
 
 -   minecraft:icon
+
 ```json
 {
-    "minecraft:icon": {
-        "frame": 0, // Texture's array entry to use, defaults to 0
-        "texture": "tool.Kama" // Texture referenced in 'item_texture.json'
-    },
+	"minecraft:icon": {
+		"frame": 0, // Texture's array entry to use, defaults to 0
+		"texture": "tool.Kama" // Texture referenced in 'item_texture.json'
+	}
 }
 ```
 
@@ -617,7 +622,8 @@ List of all new block components, with usage examples
 	}
 }
 ```
-*Full list of categories can be found [here](https://bedrock-oss.github.io/bedrock-wiki-vite/items/item-categories.html)*
+
+_Full list of categories can be found [here](https://bedrock-oss.github.io/bedrock-wiki-vite/items/item-categories.html)_
 
 -   minecraft:food
     _New Syntax_
@@ -727,18 +733,18 @@ If your item isn't showing up, these changes might have broken your item.
 
 -   RP item files are no longer used, `minecraft:icon` and all other RP components should be used in the BP item file.
 
--	Refer to the Troubleshooting Guide for more information, found [here](#)
+-   Refer to the Troubleshooting Guide for more information, found [here](#)
 
 ## Additional Notes
 
 -   Vanilla Items are hardcoded; you may not override or access them, using the new format.
 -   Broken/Nonfunctional Components
-    - `minecraft:mining_speed` - Currently has no function.
-    - `minecraft:digger`
-        - `use_efficiency` - Parameter currently has no function.
-    - `minecraft:shooter` - Currently broken.
+    -   `minecraft:mining_speed` - Currently has no function.
+    -   `minecraft:digger`
+        -   `use_efficiency` - Parameter currently has no function.
+    -   `minecraft:shooter` - Currently broken.
 -   `transform_item` - Crashes the game.
 -   `minecraft:record`
-    - May not add a custom `sound_event`.
+    -   May not add a custom `sound_event`.
 -   `minecraft:on_use`
-    - Always trigger instantly, regardless of any set value of `minecraft:use_duration`.
+    -   Always trigger instantly, regardless of any set value of `minecraft:use_duration`.

@@ -39,9 +39,11 @@ Lock in a specific slot in inventory: `/give @p apple 1 0 {"minecraft:item_lock"
 
 These two variations of ItemLock are mutually exclusive. Itemlock works in both adventure and survival.
 
-These are the lang codes if you want to change how KeepOnDeath displays.
+### Overriding how ItemLock displays
 
 The texture to overwrite is `16x16`, and is located in `RP/ui/item_lock_red.png` and `RP/ui/item_lock_yellow.png`
+
+The lang codes if you want to change how KeepOnDeath displays:
 
 ```
 item.itemLock.cantDrop=:hollow_star: Can't Drop Items can't be:

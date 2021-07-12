@@ -1,9 +1,13 @@
 ---
 title: Intro to Items
-nav_order: 0
+nav_order: 1
 tags:
     - guide
 ---
+
+:::warning
+Items on the stable version of Minecraft (1.10 format version) are missing many new features, available in experimental (1.16 format version). You can learn more about [experimental items here](/items/items-16).
+:::
 
 Every item, block, or entity requires a `Behavior` file in the BP folder (to define how the item will behave) and a Resource file in the `RP` folder (to specify what the item will look like in-game).
 

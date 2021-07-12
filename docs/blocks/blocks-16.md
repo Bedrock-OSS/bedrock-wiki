@@ -10,7 +10,7 @@ nav_order: 2
 Better documentation on the new block format introduced in the 1.16.100.56 Minecraft beta.
 
 :::warning
-This document covers experimental features, for the 1.16 format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
+This document covers experimental features, for 1.16 format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
 :::
 
 ## Block Properties
