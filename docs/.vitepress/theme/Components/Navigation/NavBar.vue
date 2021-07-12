@@ -29,7 +29,7 @@
 		</a>
 		<span class="flex-grow"></span>
 		<NavLink
-			class="hidden md:flex"
+			class="hidden lg:flex"
 			v-for="item in navLinks"
 			:item="item"
 			:key="item.link"

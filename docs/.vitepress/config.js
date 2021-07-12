@@ -147,6 +147,10 @@ module.exports = {
 				text: 'Docs',
 				link: 'https://bedrock.dev',
 			},
+			{
+				text: 'MS Docs',
+				link: 'https://docs.microsoft.com/en-us/minecraft/creator/',
+			},
 			// {
 			// 	text: 'News',
 			// 	link: '/news',

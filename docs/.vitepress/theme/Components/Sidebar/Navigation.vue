@@ -1,5 +1,5 @@
 <template>
-	<div class="md:hidden px-2 mt-3 mb-4">
+	<div class="lg:hidden px-2 mt-3 mb-4">
 		<NavLink v-for="item in navLinks" :item="item" :key="item.link" />
 	</div>
 	<div class="border-t">
