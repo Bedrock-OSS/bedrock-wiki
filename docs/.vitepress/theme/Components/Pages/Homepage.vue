@@ -1,5 +1,5 @@
 <template>
-    <div class="homepage max-w-screen-md mx-auto">
+    <div class="homepage max-w-screen-md xl:max-w-screen-lg mx-auto">
         <div class="hidden md:flex justify-start flex-row flex-nowrap my-10 py-0 w-full">
             <div class="flex justify-center flex-col flex-nowrap">
                 <img src="/assets/images/homepage/wikilogo.png" class="object-contain" style="max-height: 116px; min-width: 72px;">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="m-0 p-0 pb-4 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 m-0 p-0">
+            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 m-0 p-0">
                 <CardLink title="Beginner's Guide" imgsrc="assets/images/homepage/crafting_table_0.png" link="guide/">
                 Step-by-step tutorials, intended as your first-contact with addons.
                 </CardLink>

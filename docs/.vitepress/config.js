@@ -144,8 +144,12 @@ module.exports = {
 				activeMatch: '^/contribute',
 			},
 			{
-				text: 'bedrock.dev',
+				text: 'Docs',
 				link: 'https://bedrock.dev',
+			},
+			{
+				text: 'MS Docs',
+				link: 'https://docs.microsoft.com/en-us/minecraft/creator/',
 			},
 			// {
 			// 	text: 'News',

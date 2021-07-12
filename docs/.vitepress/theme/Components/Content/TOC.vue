@@ -1,6 +1,6 @@
 <template>
 	<div class="sidebar-toc xl:fixed flex flex-col top-0 right-0 my-4">
-		<details open class="outline-none">
+		<details open class="outline-none w-max">
 			<summary
 				class="
 					flex
