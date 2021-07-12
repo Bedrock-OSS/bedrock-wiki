@@ -533,10 +533,10 @@ And finally, we have to define the entity's and its spawn egg's in-game names in
 
 `RP/texts/en_US.lang`
 
-````json
+```json
 entity.wiki:ghost.name=Ghost
 item.spawn_egg.entity.wiki:ghost.name=Ghost
-```.
+```
 
 Done! Your entity should now show up in Minecraft, complete with all behaviors and visuals, including animations!
 
