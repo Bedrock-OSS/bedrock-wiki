@@ -1,20 +1,13 @@
 <!--Volar complains here but everything is working fine-->
 <template>
 	<a
-		:class="{
-			item: true,
-			flex: true,
-			'flex-nowrap': true,
-			'items-center': true,
-			'space-x-2': true,
-			'px-2': true,
-			'rounded-md': true,
-		}"
+		class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md"
 		v-bind="linkProps"
 		@click="onNavigation"
 	>
-		
-		<span v-if="props.item.number != null" class="font-bold">{{ props.item.number }}</span>
+		<span v-if="props.item.number != null" class="font-bold">{{
+			props.item.number
+		}}</span>
 
 		<div class="flex-1">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
@@ -22,7 +15,14 @@
 		<span v-for="tag in props.item.tags">
 			<GuideIcon v-if="tag == 'guide'" />
 			<RecipeIcon v-if="tag == 'recipe' || tag == 'short'" />
-			<ChemIcon v-if="tag == 'experimental' || tag == 'beta' || tag == 'warning' || tag == 'exp'" />
+			<ChemIcon
+				v-if="
+					tag == 'experimental' ||
+					tag == 'beta' ||
+					tag == 'warning' ||
+					tag == 'exp'
+				"
+			/>
 		</span>
 	</a>
 </template>
@@ -59,16 +59,15 @@ const badgeClass = {
 
 const emit = defineEmit(['change'])
 
-const props =
-	defineProps<{
-		item: {
-			text: string
-			link: string
-			badge?: Badge
-			tags?: Array<string>
-			number?: string
-		}
-	}>()
+const props = defineProps<{
+	item: {
+		text: string
+		link: string
+		badge?: Badge
+		tags?: Array<string>
+		number?: string
+	}
+}>()
 const propsRefs = toRefs(props)
 const { color } = toRefs(props.item.badge ?? reactive({ color: 'default' }))
 
