@@ -82,7 +82,7 @@ In block_position_data > block_entity_data of your container add a string tag
 
 Add `LootTable` and destination to your loot table
 
-![](/assets/images/tutorials/randomised-structure-loot/add_string_tag1.png)
+![](/assets/images/tutorials/randomised-structure-loot/add_string_tag2.png)
 
 Save changes (Ctrl + S)
 
