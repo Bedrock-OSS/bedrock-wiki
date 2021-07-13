@@ -1,5 +1,5 @@
 ---
-title: Beginners Guide to Scripting
+title: Intro to Scripting
 tags:
     - guide
 ---
