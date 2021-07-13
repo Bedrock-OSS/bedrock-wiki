@@ -1,5 +1,5 @@
 ---
-title: Items Documentation
+title: Items 1.16+
 nav_order: 2
 ---
 
@@ -737,8 +737,7 @@ If your item isn't showing up, these changes might have broken your item.
 
 ## Additional Notes
 
-> Broken/Nonfunctional Features 
-
+Broken/Nonfunctional Features 
 - Components
   - `minecraft:mining_speed` - Currently has no function.
   - `minecraft:shooter` - Currently broken.
@@ -747,7 +746,6 @@ If your item isn't showing up, these changes might have broken your item.
 - Event Functions
   - `transform_item` - Crashes the game.
   
-> Current Limitations
+Current Limitations
 -   Vanilla Items are hardcoded; you may not override or access them, using the new format.
 -   `minecraft:record` - May not add a custom `sound_event`.
-
