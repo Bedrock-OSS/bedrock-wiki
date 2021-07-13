@@ -5,20 +5,21 @@ title: Randomised Structure Loot
 
 Adding loot tables to containers in structure is easy, you need to have PC and NBT Studio installed.
 
-## Software Preporation
+## Software Preparation
 
-Download and launch NBT Studio:
-https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe
+Download and launch [NBT Studio](
+https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe)
 
 ## Exporting Structure
 
-Export your structure in `BP/structures`
+Export your structure into `BP/structures`
 
 ![](/assets/images/tutorials/randomised-structure-loot/export_structure.png)
 
-## Creating Loot Table
+## Creating the Loot Table
 
-To start with you need to create directory `BP/loot_tables/chests` and your loot table file here.
+Create the directory `BP/loot_tables/chests` and create your loot table file here.
+
 You can learn how to make loot tables in Beginners Guide
 
 <CodeHeader>BP/loot_tables/chests/my_structure_loot.json</CodeHeader>
@@ -66,9 +67,9 @@ You can learn how to make loot tables in Beginners Guide
 }
 ```
 
-## Adding Loot Table to Container in Structure
+## Adding the Loot Table
 
-Launch NBT Studio and open file (Ctrl + O)
+Launch NBT Studio and open file `(Ctrl + O)`
 
 ![](/assets/images/tutorials/randomised-structure-loot/open_file.png)
 
@@ -76,11 +77,11 @@ Find your container (Ctrl + F)
 
 ![](/assets/images/tutorials/randomised-structure-loot/find_container.png)
 
-In block_position_data > block_entity_data of your container add a string tag
+Navigate to your container, `block_position_data` > `block_entity_data`. Add a string tag
 
 ![](/assets/images/tutorials/randomised-structure-loot/add_string_tag1.png)
 
-Add `LootTable` and destination to your loot table
+Add `LootTable` and the file path to your loot table
 
 ![](/assets/images/tutorials/randomised-structure-loot/add_string_tag2.png)
 
@@ -88,6 +89,6 @@ Save changes (Ctrl + S)
 
 ## Testing
 
-Import new structureand open container
+Load your structure and open the container
 
 ![](/assets/images/tutorials/randomised-structure-loot/test.png)
