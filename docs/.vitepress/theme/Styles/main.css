@@ -47,15 +47,15 @@ p + p {
 }
 
 h1 {
-	font-weight: 700;
+	@apply font-bold
 }
 
 h2 {
-	font-weight: 600;
+	@apply font-semibold
 }
 
 h3 {
-	font-weight: 500;
+	@apply font-medium
 }
 
 /* Lists */

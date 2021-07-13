@@ -23,7 +23,7 @@
 
 		<a :href="site.base" class="flex flex-row justify-between items-center">
 			<WikiLogo class="mr-2" />
-			<div class="pb-0.5">
+			<div class="font-semibold text-lg pb-0.5">
 				<span class="hidden sm:inline">Bedrock </span><span>Wiki</span>
 			</div>
 		</a>
