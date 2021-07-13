@@ -1,5 +1,5 @@
 ---
-title: JSON UI
+title: JSON UI Documentation
 ---
 
 ## Element Types

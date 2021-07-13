@@ -4,8 +4,7 @@ title: Shaders
 
 ## Disclaimer
 
-The way to create shaders described on this page is not working on consoles (PS4, Xbox, Switch), and in the new rendering
-engine (renderdragon, which is in the latest Windows version beta).
+The way to create shaders described on this page **WILL NOT WORK** on (Render Dragon) Windows 10 or Console devices!
 
 ## Overview
 
