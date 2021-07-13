@@ -10,11 +10,11 @@ Adding loot tables to containers in structure is easy, you need to have PC and N
 Download and launch NBT Studio:
 https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe
 
-## Importing Structure
+## Exporting Structure
 
-Import your structure in `BP/structures`
+Export your structure in `BP/structures`
 
-![](/assets/images/tutorials/randomised-structure-loot/import_structure.png)
+![](/assets/images/tutorials/randomised-structure-loot/export_structure.png)
 
 ## Creating Loot Table
 
