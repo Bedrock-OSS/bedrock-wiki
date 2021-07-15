@@ -33,7 +33,7 @@ It can be made so entities spawn with random skin (texture) or model (geometry) 
 
 To better understand this, let's add a texture variant to our custom entity
 
-_Note: even though we'll be using the fox as an example here, I removed some of the fox-specific parameters from the code. In order to view the full fox code, simply open your Example Vanilla packs. The code showcased here can be used to give any entity skin or model variants, but make sure you've completed [Custom entity](/guide/custom-entity-full) page in order to understand what's going on._
+_Note: even though we'll be using the fox as an example here, I removed some of the fox-specific parameters from the code. In order to view the full fox code, simply open your Example Vanilla packs. The code showcased here can be used to give any entity skin or model variants, but make sure you've completed [Custom entity](/legacy-guide/custom-entity-full) page in order to understand what's going on._
 
 ```json
 {
