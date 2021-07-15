@@ -1,1 +1,0 @@
-var e="/bedrock-wiki-vite/assets/images/guide/behavior_pack_existing.jpg",i="/bedrock-wiki-vite/assets/images/guide/world_params_1.jpg",s="/bedrock-wiki-vite/assets/images/guide/world_params_2.jpg",a="/bedrock-wiki-vite/assets/images/guide/world_params_3.jpg",g="/bedrock-wiki-vite/assets/images/guide/behavior_pack_applied.png";export{e as _,i as a,s as b,a as c,g as d};
