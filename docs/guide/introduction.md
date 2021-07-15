@@ -4,19 +4,21 @@ nav_order: 1
 number: '1.'
 ---
 
-## What exactly are Addons?
+## What are Addons?
 
-An addon is the Minecraft Bedrock Edition (_Windows 10, iOS, Android, Consoles_) equivalent to Java mods. However, in contrast to Java, the Bedrock Edition API is officially maintained by Mojang instead of the community.
+An "Addon" is the Minecraft Bedrock Edition (_Windows 10, iOS, Android, Consoles_) equivalent to Java mods. However, in contrast to Java, the Bedrock Edition API is officially maintained by Mojang instead of the community.
 
 In general, you can think of _mods_ as _modifying_ the game, and _ addons_ as _adding-onto_ the game, following the development opportunities provided by Microsoft.
 
 ## What is this guide?
 
-This guide is a beginner tutorial created to make more people start 'modding' Minecraft Bedrock Edition. The guide will walk you through the creation of your very own fully-functional custom Entity (Ghost) that drops a custom item, Ectoplasm. By the end of the Guide, you will have coded an addon containing them and be ready to continue onto your ones. Good luck!
+This guide is a beginner tutorial, intended to walk you through the first stages of addon-creation. You will create your very own fully-functional Ghost entity, as well as an Ectoplasm item, and some other associated files.
+
+By the end of this guide, you will have created an entire addon all by yourself, which you can play with and modify.
 
 ## What do I need to create Addons?
 
-This guide is focused on creating addons on a Windows 10 PC for any Bedrock platform. However, the process is much the same when working on Android or iOS, although it is significantly more tedious. If something works differently on a mobile device, a note will state that.
+This guide is focused on creating addons on a Windows 10 PC for any Bedrock platform. However, the process is similar when working on Android or iOS, although it is significantly more tedious. If something works differently on a mobile device, a note will state that.
 
 ## Is the guide up to date?
 
@@ -30,7 +32,7 @@ Let's start by setting up your tools, which you will use throughout the developm
 
 <BButton color="green">Project Setup</BButton>
 
-### Simple Custom Item
+### Custom Item
 
 Now that your workspace is ready to go, we can start creating a fully custom Item that our entity will drop.
 

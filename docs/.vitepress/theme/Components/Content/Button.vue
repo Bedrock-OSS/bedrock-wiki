@@ -1,10 +1,25 @@
 <template>
-	<component :is="link ? `a` : `button`" class="btn" :class="classes" :href="link">
-		<component v-if="icon" class="btn-icon" :class="[iconColor]" :is="icon" />
+	<component
+		:is="link ? `a` : `button`"
+		class="btn"
+		:class="classes"
+		:href="link"
+	>
+		<component
+			v-if="icon"
+			class="btn-icon"
+			:class="[iconColor]"
+			:is="icon"
+		/>
 		<div>
 			<slot />
 		</div>
-		<component v-if="iconRight" class="btn-icon" :class="[iconColor]" :is="iconRight" />
+		<component
+			v-if="iconRight"
+			class="btn-icon"
+			:class="[iconColor]"
+			:is="iconRight"
+		/>
 	</component>
 </template>
 
@@ -23,12 +38,10 @@ const props = defineProps<{
 }>()
 
 const classes = computed(() => {
-	let classes = [];
-	if (props.color)
-		classes.push(props.color);
-	if (props.text)
-		classes.push("text");
-	return classes;
+	let classes = []
+	if (props.color) classes.push(props.color)
+	if (props.text) classes.push('text')
+	return classes
 })
 </script>
 
