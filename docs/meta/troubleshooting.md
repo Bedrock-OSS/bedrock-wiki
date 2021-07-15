@@ -6,7 +6,7 @@ Creating Addons for Minecraft is a relatively straightforward process _once you 
 
 ## The Environment
 
-The best way to prevent _invisible entity syndrome_ and other nasty bugs are by setting yourself in the right environment. You should review [the software preparation document](/guide/software-preparation) for my editor recommendations. The most important part is getting a JSON-linter, ([or using an online json-linter](https://jsonlint.com/)).
+The best way to prevent _invisible entity syndrome_ and other nasty bugs are by setting yourself in the right environment. You should review [the software preparation document](/legacy-guide/software-preparation) for my editor recommendations. The most important part is getting a JSON-linter, ([or using an online json-linter](https://jsonlint.com/)).
 
 ## Content Log
 
