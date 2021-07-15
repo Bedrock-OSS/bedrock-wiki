@@ -1,6 +1,5 @@
 ---
-title: Beginners Guide
-nav_order: 1
+title: Legacy Guide
 tags:
     - guide
 ---
