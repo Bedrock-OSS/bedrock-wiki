@@ -76,9 +76,9 @@ function generateSidebar(base, dir) {
 
 	return data.sort(
 		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
-			if (dataA.nav_order==null && dataB.nav_order!=null) return 1
-			if (dataA.nav_order!=null && dataB.nav_order==null) return -1
-			if (dataA.nav_order!=null && dataB.nav_order!=null)
+			if (dataA.nav_order == null && dataB.nav_order != null) return 1
+			if (dataA.nav_order != null && dataB.nav_order == null) return -1
+			if (dataA.nav_order != null && dataB.nav_order != null)
 				return dataA.nav_order - dataB.nav_order
 			return textA.localeCompare(textB)
 		}
@@ -115,7 +115,7 @@ module.exports = {
 	],
 
 	markdown: {
-		lineNumbers: true
+		lineNumbers: true,
 	},
 
 	themeConfig: {

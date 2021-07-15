@@ -1,5 +1,8 @@
 ---
 title: Beginners Guide
+nav_order: 1
+tags:
+    - guide
 ---
 
 ## **What is this guide?**
