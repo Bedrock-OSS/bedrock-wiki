@@ -19,6 +19,7 @@ Important links have a ⭐.
 -   [Minecraft Map Testing](https://discord.gg/QRE99eS)
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
 -   [MCPECore](https://discord.gg/Zgu3qt4)
+-   [Bedrock Commands](https://discord.gg/bedrockcommands)
 
 ## Software
 
@@ -50,7 +51,7 @@ Important links have a ⭐.
 -   [controller-builder (beta)](https://stirante.com/controller/index)
 -   [.lang](https://solveddev.github.io/AnyLanguage/)
 
-### Tools
+## Tools
 
 -   [Java to Bedrock Texture converter](https://ozelot379.github.io/ConvertJavaTextureToBedrock/)
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)

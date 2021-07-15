@@ -1,5 +1,5 @@
 ---
-title: Optimizing Add-on Performance
+title: Addon Performance
 ---
 
 ::: warning
