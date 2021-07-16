@@ -48,7 +48,7 @@ Finally, it's time to create the mob that drops our custom item: A hostile Ghost
 
 <BButton color="green">Custom Entity</BButton>
 
-Now, your first addon is complete! To dive into the other aspects of adding onto MCBE, you can use the other sections' subguides, listed in the [Appendix](/guide/appendix). This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. The sections also provide more techichal in-depth tutorials and documents for each relevant topic.
+Now, your first addon is complete! To dive into the other aspects of adding onto MCBE, you can use the other sections' subguides, listed in the [Appendix](/legacy-guide/appendix). This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. The sections also provide more techichal in-depth tutorials and documents for each relevant topic.
 
 <BButton color="green">Appendix: further features</BButton>
 

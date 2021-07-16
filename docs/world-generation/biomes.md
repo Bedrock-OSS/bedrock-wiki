@@ -6,8 +6,6 @@ _Last updated for 1.16.210_
 
 > [Nether biome generation](#the-nether) is bugged as of version 1.16.210. Nether biomes are now customized via the `"multinoise_generation_rules"` component. Custom biomes, however, currently cannot generate with this component. Meanwhile, usage of the old `"nether_generation_rules"` component in vanilla overrides will result in no generation of that biome in the Nether.
 
-> [Climate particle effects](#particle-decorations) are bugged as of version 1.16.210. These particles, such as red spores, cannot currently be used in custom Overworld biomes.
-
 > Biome customization is _experimental_. An experimental gameplay toggle must be enabled for each world that uses behavior packs containing biome definitions. What is currently available works well if declared correctly; however, incorrectly declared components and properties may result in crashing as opposed to just logged errors. Furthermore, due to issues caused by the [inheritance model](#inheritance), the schema used for custom biomes is currently not well constructed.
 
 Behavior packs allow for the customization of biomes. A behavior pack can either create entirely new **custom biomes** or [**overrides** for previously declared biomes](#inheritance), such as the vanilla biomes. Biomes hook into critical gameplay features, such as mob spawning, data-driven gameplay, and presentation of custom blocks. Biomes also enable a powerful system for adding decorations like flowers and trees, or even structures like towers and houses; these decorations and structures are together known as [features](#/concepts/features/), which are crucial to world generation but (generally) separate in scope and construction from biomes.

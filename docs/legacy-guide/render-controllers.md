@@ -121,7 +121,7 @@ Add these two component groups into "component_groups" of the entity behavior's 
 
 Now you have to make sure the entity gets one of the "variant" component groups randomly upon spawn.
 
-Put this in your "entity_spawned" event's sequence.. A sequence is an array [] that contains multiple objects {} which contain what normally would be in an event. If this is a bit confusing, check [Entity behavior definitions: Events](/guide/custom-entity-full) again and/or the guide [GitHub repository](https://github.com/KaiFireborn/Minecraft-Bedrock-Full-Beginner-Add-on-development-Guide-FILES).
+Put this in your "entity_spawned" event's sequence.. A sequence is an array [] that contains multiple objects {} which contain what normally would be in an event. If this is a bit confusing, check [Entity behavior definitions: Events](/legacy-guide/custom-entity-full) again and/or the guide [GitHub repository](https://github.com/KaiFireborn/Minecraft-Bedrock-Full-Beginner-Add-on-development-Guide-FILES).
 
 The sequence itself is quite self-explanatory, it adds one of the two components. "red" will be added more often, as it's weight is higher.
 

@@ -21,7 +21,7 @@
 			<h2>Contributors</h2>
 			<Suspense>
 				<template #default>
-					<Contributors />
+					<Contributors :mentioned="mentionedContributors" />
 				</template>
 				<template #fallback>
 					<div>
@@ -41,7 +41,7 @@ import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import Contributors from './Content/Contributors.vue'
-const { isVisible } = useSidebarState()
+const { toggle, isVisible } = useSidebarState()
 import { usePageData, useRoute } from 'vitepress'
 const page = usePageData()
 
@@ -56,6 +56,12 @@ const showContributors = computed(() =>
 	route.data.frontmatter.show_contributors == null
 		? true
 		: !!route.data.frontmatter.show_contributors
+)
+
+const mentionedContributors = computed(() =>
+	route.data.frontmatter.mention == null
+		? []
+		: route.data.frontmatter.mention
 )
 </script>
 
