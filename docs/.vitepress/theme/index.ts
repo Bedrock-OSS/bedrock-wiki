@@ -14,6 +14,7 @@ import Contribute from './Components/Pages/Contribute.vue'
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import Component404 from '../../404.md'
+import Vue3TouchEvents from 'vue3-touch-events';
 import './Styles/styles'
 
 // Add global components to this array to register them automatically
@@ -40,6 +41,7 @@ const theme: Theme = {
 		for (const [componentName, globalComponent] of globalComponents) {
 			app.component(componentName, globalComponent)
 		}
+		app.use(Vue3TouchEvents)
 	},
 }
 
