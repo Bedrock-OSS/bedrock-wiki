@@ -40,7 +40,6 @@ const theme: Theme = {
 		for (const [componentName, globalComponent] of globalComponents) {
 			app.component(componentName, globalComponent)
 		}
-		app.use(Vue3TouchEvents)
 	},
 }
 
