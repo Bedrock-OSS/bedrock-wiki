@@ -17,8 +17,10 @@ Features:
 • Logs with facing direction
 • Logs are strippable
 • Axes from other Add-ons can strip logs (if they have "tag:minecraft_is_axe":{} component)
-Known Issues:
+Issues:
 • If leaves were broken using shears can spawn ordinary loot too
+
+Use /fill command to replace all custom_leaves with custm leaves so they will be decayable
 
 ## Getting Started
 
