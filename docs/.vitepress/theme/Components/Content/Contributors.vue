@@ -30,11 +30,15 @@
 
 <script setup lang="ts">
 import { usePageData, useSiteDataByRoute } from 'vitepress'
-import { ref, watch } from 'vue'
+import { ref, watch, defineProps } from 'vue'
 import { universalFetch } from '../../Utils/fetch'
 
 const page = usePageData()
 const site = useSiteDataByRoute()
+
+const props = defineProps<{
+	mentioned : Array<string>
+}>()
 
 const getContributors = async function () {
 	let url =
@@ -65,6 +69,22 @@ const getContributors = async function () {
 		) {
 			contributors.push(commits[i].author)
 		}
+	}
+
+	// mentioned
+	for (let i = 0; i < props.mentioned.length; i++){
+		url = 'https://api.github.com/users/' + props.mentioned[i]
+		const result = await universalFetch(url, {
+			headers: new Headers(
+				import.meta.env.GITHUB_TOKEN
+					? {
+							Authorization: 'Bearer ' + process.env.GITHUB_TOKEN,
+					}
+					: {}
+			),
+		})
+		let user = await result.json()
+		contributors.push(user)
 	}
 	return contributors
 }

@@ -24,7 +24,7 @@
 			<h2>Contributors</h2>
 			<Suspense>
 				<template #default>
-					<Contributors />
+					<Contributors :mentioned="mentionedContributors" />
 				</template>
 				<template #fallback>
 					<div>
@@ -61,15 +61,11 @@ const showContributors = computed(() =>
 		: !!route.data.frontmatter.show_contributors
 )
 
-const swipeRight = () => {
-	console.log('right', isVisible.value)
-	if (!isVisible.value) toggle()
-}
-
-const swipeLeft = () => {
-	console.log('left', isVisible.value)
-	if ( isVisible.value) toggle()
-}
+const mentionedContributors = computed(() =>
+	route.data.frontmatter.mention == null
+		? []
+		: route.data.frontmatter.mention
+)
 </script>
 
 <style scoped>
