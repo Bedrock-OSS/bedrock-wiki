@@ -13,10 +13,9 @@
 import { defineProps, toRefs } from 'vue'
 import { useBadgeColor } from '../../Composables/useBadgeColor'
 
-const props =
-	defineProps<{
-		color: 'red' | 'yellow' | 'green'
-	}>()
+const props = defineProps<{
+	color: 'red' | 'yellow' | 'green'
+}>()
 const { color } = toRefs(props)
 
 const cssClasses = useBadgeColor(color)

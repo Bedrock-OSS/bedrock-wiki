@@ -1,5 +1,5 @@
 ---
-title: Intro to Animation Controller
+title: Intro to Animation Controllers
 nav_order: 1
 tags:
     - guide

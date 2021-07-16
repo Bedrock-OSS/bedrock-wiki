@@ -9,20 +9,18 @@
 			props.item.number
 		}}</span>
 
-		<div class="flex-1">{{ props.item.text }}</div>
+		<div class="flex-1 text-sm">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
 
 		<span v-for="tag in props.item.tags">
-			<GuideIcon v-if="tag == 'guide'" />
-			<RecipeIcon v-if="tag == 'recipe' || tag == 'short'" />
-			<ChemIcon
-				v-if="
-					tag == 'experimental' ||
-					tag == 'beta' ||
-					tag == 'warning' ||
-					tag == 'exp'
-				"
-			/>
+			<p v-if="tag == 'guide'" class="green label">GUIDE</p>
+			<p
+				v-if="tag == 'exp' || tag == 'experimental'"
+				class="orange label"
+			>
+				EXP
+			</p>
+			<p v-if="tag == 'beta'" class="red label">beta</p>
 		</span>
 	</a>
 </template>
@@ -95,6 +93,37 @@ watchEffect(() => {
 </script>
 
 <style scoped>
+.label {
+	@apply rounded-lg flex-initial px-1;
+	font-size: 0.66rem;
+	line-height: 1rem;
+	font-weight: 650;
+}
+
+.dark .green {
+	@apply bg-green-800;
+}
+
+.green {
+	@apply bg-green-300;
+}
+
+.dark .orange {
+	@apply bg-orange-800;
+}
+
+.orange {
+	@apply bg-yellow-300;
+}
+
+.dark .red {
+	@apply bg-red-900;
+}
+
+.red {
+	@apply bg-red-300;
+}
+
 .item .icon {
 	width: 16px;
 	margin-left: 4px;
