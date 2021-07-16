@@ -1,1 +1,0 @@
-import{o as e,c as t}from"./404.md.dd59f442.js";const r='{"title":"Beginners Guide","description":"","frontmatter":{"title":"Beginners Guide","nav_order":1},"relativePath":"guide/index.md","lastUpdated":1626434195779}',d={};d.render=function(r,d,i,n,o,a){return e(),t("div")};export default d;export{r as __pageData};
