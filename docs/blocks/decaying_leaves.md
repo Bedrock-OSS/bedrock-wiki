@@ -114,7 +114,7 @@ Create behaviour manifest
                 "*":{
                     "texture":"custom_leaves",
                     "render_method":"alpha_test"
-                    //Use this render method to make leaves half-transpared, like vanilla ones
+                    //Use this render method to make leaves half-transparent, like vanilla ones
                 }
             },
             "minecraft:unit_cube":{},
