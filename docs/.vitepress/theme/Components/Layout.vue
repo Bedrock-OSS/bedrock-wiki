@@ -9,9 +9,6 @@
 			'mt-0': true,
 			'min-h-screen': true,
 		}"
-
-		v-touch:swipe.right="swipeRight"
-		v-touch:swipe.left="swipeLeft"
 	>
 		<h1 v-if="page.title != ''" id="top">{{ page.title }}</h1>
 		<TOC v-if="showToc" />
@@ -44,7 +41,7 @@ import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import Contributors from './Content/Contributors.vue'
-const { toggle, isVisible } = useSidebarState()
+const { isVisible } = useSidebarState()
 import { usePageData, useRoute } from 'vitepress'
 const page = usePageData()
 
@@ -60,16 +57,6 @@ const showContributors = computed(() =>
 		? true
 		: !!route.data.frontmatter.show_contributors
 )
-
-const swipeRight = () => {
-	console.log('right', isVisible.value)
-	if (!isVisible.value) toggle()
-}
-
-const swipeLeft = () => {
-	console.log('left', isVisible.value)
-	if ( isVisible.value) toggle()
-}
 </script>
 
 <style scoped>
