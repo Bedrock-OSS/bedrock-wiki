@@ -9,9 +9,6 @@
 			'mt-0': true,
 			'min-h-screen': true,
 		}"
-
-		v-touch:swipe.right="swipeRight"
-		v-touch:swipe.left="swipeLeft"
 	>
 		<h1 v-if="page.title != ''" id="top">{{ page.title }}</h1>
 		<TOC v-if="showToc" />
