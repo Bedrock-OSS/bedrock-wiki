@@ -3,6 +3,7 @@ title: Feature Types
 ---
 
 # Feature Types
+
 *Last updated for 1.17.2*
 
 ::: warning
@@ -233,7 +234,7 @@ For some examples:
 |:--|:--|
 | `/structures/well.mcstructure` | `"mystructure:well"` |
 | `/structures/farmstead/silo.mcstructure` | `"farmstead:silo"` |
-| `/structures/campsites/taiga/rustic/tents/wool.mcstructure` | `campsites:taiga/rustic/tents/wool` |
+| `/structures/campsites/taiga/rustic/tents/wool.mcstructure` | `"campsites:taiga/rustic/tents/wool"` |
 
 ::: warning
 [Due to constraints in the feature system](#), large structures may need to be pre-sliced into smaller structures and positioned together.
@@ -297,16 +298,83 @@ The `"unburied"` component clears the space above a structure by several blocks 
 
 ### Growing Plant Features
 ```json
+{
+	"format_version": "1.13.0",
+	"minecraft:growing_plant_feature": {
+		"description": {
+			"identifier": "growing_plant_features:growing_plant_feature"
+		},
 
+		"growth_direction": "up",
+		"height_distribution":  [
+			[{"range_min": 4, "range_max": 8}, 1],
+			[10, 1]
+		],
+		"age" : {"range_min": 4, "range_max": 6},
+
+		"body_blocks" : [
+			["minecraft:planks", 4],
+			["minecraft:obsidian", 1]
+		],
+		"head_blocks" : [
+			["minecraft:glass", 4],
+			["minecraft:sand", 1 ]
+		],
+
+		"allow_water": true
+	}
+}
 ```
 
 **Growing plant features** place columns of blocks divided in two parts: a body and a head. Both can be randomized per-block for fine-tuned customization.
 
-
-
 ### Tree Features
 ```json
+{
+	"format_version": "1.13.0",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "forgotten_forests:grand_oak"
+		},
 
+		"base_block": [
+			"minecraft:dirt",
+			"minecraft:coarse_dirt"
+		],
+		"base_cluster": {
+			"num_clusters": 4,
+			"cluster_radius": 3,
+			"may_replace": ["minecraft:air"]
+		},
+
+		"may_replace": ["minecraft:air"],
+
+		"fancy_trunk": {
+			"trunk_block": "minecraft:log",
+
+			"trunk_height": {
+				"base": 24,
+				"variance": 9,
+				"scale": 1
+			},
+			"trunk_width": 3,
+			"width_scale": 2,
+
+			"foliage_altitude_factor": 0.5,
+			"branches": {
+				"slope": 0.33,
+				"density": 0.25,
+				"min_altitude_factor": 0
+			}
+		},
+
+		"fancy_canopy": {
+			"height": 3,
+			"radius": 4,
+			"leaf_block": "minecraft:leaves"
+		}
+	}
+}
 ```
 
 **Tree features** generate tree-like shapes. Tree features allow for more customization than any other feature type, including:
@@ -316,27 +384,173 @@ The `"unburied"` component clears the space above a structure by several blocks 
 - Restricting foundation and intersection blocks
 - Customizing branch frequency and angle
 
-Tree features are composed of *many* sub-properties to reflect the many variations of tree shapes found in vanilla gameplay. In general, these properties are divided into [condition](#condition-properties), [wood](#wood-properties), and [leaf](#leaf-properties) properties.
+Tree features are composed of *many* sub-properties to reflect the many variations of tree shapes found in vanilla gameplay. In general, these properties are divided into [setup](#setup-properties), [trunk](#trunk-properties), and [canopy](#canopy-properties) properties.
 
-#### Condition Properties
-Attachment and intersection blocks for the tree are specified using **condition properties**.
+#### Setup Properties
+```json
+"base_block": [
+	"minecraft:dirt",
+	"minecraft:grass"
+],
+"base_cluster": {
+	"may_replace": [
 
-#### Wood Properties
-**Wood properties** establish the trunk and branches.
+	],
+	"num_clusers": 2,
+	"cluster_radius": 3
+},
 
-#### Leaf Properties
-Tree canopies are constructed using **leaf properties**.
+"may_grow_on": [
 
-### Multiface Features
+],
+"may_replace": [
+
+],
+"may_grow_through": [
+
+]
+```
+
+Foundation and intersection blocks for the tree are specified using **setup properties**.
+
+#### Trunk Properties
+**Trunk properties** establish the trunk and branches.
+
+##### Trunks
 ```json
 
 ```
 
+##### Acacia Trunks
+```json
+
+```
+
+##### Fancy Trunk
+```json
+
+```
+
+##### Mega Trunk
+```json
+
+```
+
+##### Fallen Trunk
+```json
+
+```
+
+#### Canopy Properties
+Tree canopies are constructed using **canopy properties**.
+
+##### Canopies
+```json
+
+```
+
+##### Fancy Canopies
+```json
+
+```
+
+##### Mega Canopies
+```json
+
+```
+
+##### Spruce Canopies
+```json
+
+```
+
+##### Pine Canopies
+```json
+
+```
+
+##### Mega Pine Canopies
+```json
+
+```
+
+##### Acacia Canopies
+```json
+
+```
+
+##### Roofed Canopies
+```json
+
+```
+
+##### Random Spread Canopies
+```json
+
+```
+
+
+### Multiface Features
 ::: warning
-Multiface features are currently bugged and should not be used.
+Multiface features are currently bugged and should not be used. At most 2 iterations are being placed — regardless of the spread chance. Additionally, they will only successfully orient glow lichen.
 :::
 
+```json
+{
+	"format_version": "1.13.0",
+	"minecraft:multiface_feature": {
+		"description": {
+			"identifier": "underworld:decay_spread"
+		},
+
+		"places_block": "underworld:decay",
+
+		"search_range": 8,
+		"chance_of_spreading": 0.5,
+
+		"can_place_on_ceiling": false,
+		"can_place_on_floor": false,
+		"can_place_on_wall": true,
+		"can_place_on": [
+			"minecraft:stone",
+			"minecraft:deepslate",
+			"minecraft:tuff"
+		]
+	}
+}
+```
+
 Multiface features randomly place sequences of blocks based on the success of the previous element of the sequence; additionally, they automatically orient blocks designed to attach to multiple faces, such as glow lichen, on placement.
+
+#### Spread Mechanics
+```json
+"search_range": 4,
+"chance_of_spreading": 0.75
+```
+
+Multiface features begin by attempting to place the **target block** (via the `"places_block"` property) at the [input position]() of the multiface feature. For each subsequent attempt, a roll is made against the **spread chance**. The spread chance is given with the `"chance_of_spreading"` float property; it ranges from `0` (never successful) to `1` (always successful). If it succeeds, the next block in the sequence will be placed randomly within a cube centered on the input position that has a half side length equal to the value given by "search_range"`. The sequence continues until a block fails to be placed.
+
+#### Placement Restrictions
+```json
+"can_place_on_ceiling": true,
+"can_place_on_floor": false,
+"can_place_on_wall": true,
+"can_place_on": [
+	"minecraft:log",
+	"minecraft:log2",
+	"minecraft:leaves"
+]
+```
+
+Multiface features also define **placement restrictions** to limit block attachment. With any iteration (including the first), if the placement check fails, the sequence is terminated. 3 required boolean properties control where the target can be placed:
+
+- "can_place_on_floor"
+- "can_place_on_ceiling"
+- "can_place_on_wall"
+
+When these properties are true, their corresponding surfaces are eligible for attachment. Of course, at least one property must be true, or the sequence will never begin.
+
+An optional collection of blocks to which the target may attach is available via the `"can_place_on"` array property. Omitting this property defaults to allowing all blocks to attach.
 
 ## Proxy Features
 Proxy features group, arrange, or gate features, including other proxy features. Proxy features themselves are incapable of having a direct effect on world generation.
@@ -676,45 +890,167 @@ By default, every entry in the features list will attempt to be placed. A **plac
 | `"first_failure"` | Stop placing features once the first failed placement occurs |
 
 ### Sequence Features
-```json
+::: warning
+Sequence features are currently bugged and should not be used. Currently, all features in the features list generate at the same input location, like [aggregate features](#aggregate-features).
+:::
 
+```json
+{
+	"format_version": "1.13.0",
+
+	"minecraft:sequence_feature": {
+		"description": {
+			"identifier": "first_nations:totem_pole"
+		},
+
+		"features": [
+			"first_nations:totem_pole_base",
+			"first_nations:totem_pole_body",
+			"first_nations:totem_pole_head"
+		]
+	}
+}
 ```
 
+**Sequence features** place a collection of features in spatial sequence.
 
+Features are ordered via the **features list**, given by the `"features"` property. The output location from the previous feature becomes the input location of the subsequent feature. As an example, if the origin of the sequence feature were at (0, 67, 0), and the first listed feature were a column that extended 10 blocks vertically, the input position for the next listed feature would be (0, 77, 0).
 
 ### Snap-to-Surface Features
 ```json
+{
+	"format_version": "1.16.0",
 
+	"minecraft:snap_to_surface_feature": {
+		"description": {
+			"identifier": "herbs_and_spices:underground_silas_plant_snap"
+		},
+
+		"feature_to_snap":  "herbs_and_spices:underground_silas_plant",
+
+		"vertical_search_range": 12,
+		"surface": "floor"
+	}
+}
 ```
 
-Features can be pinned to a floor or ceiling when proxied by **snap-to-surface features**.
+Features can be pinned to a floor or ceiling when proxied by **snap-to-surface features**. Currently, the **target feature**, given with `"feature_to_snap"`, can only be projected through air onto solid surfaces.
+
+The **target surface** is given with the optional `"surface"` property, which accepts either `"floor"` or `"ceiling"`, defaulting to `"floor"`.
 
 ### Search Features
 ```json
+{
+	"format_version": "1.13.0",
 
+	"minecraft:search_feature": {
+		"description": {
+			"identifier": "search_features:search_feature"
+		},
+
+		"places_feature": "search_features:search_feature_obsidian",
+
+		"search_volume": {
+			"min": [0, 0, 0],
+			"max": [7, 7, 7]
+		},
+
+		"search_axis": "y",
+		"required_successes": 512
+	}
+}
 ```
 
-**Search features** search a volume for valid placement locations for a target feature. These features are a great option when placing features with challenging placement conditions.
+**Search features** search a volume for valid placement locations for a target feature. These features are a great option when positioning features with challenging placement conditions.
+
+The **target feature** is placed with the `"places_feature"` property. The success of its placement depends on whether the required successes threshold is met within the search volume. The placement conditions of the target feature are successively checked at each location within the volume before any placement occurs.
+
+#### Search Volume
+```json
+"search_volume": {
+	"min": [-12, 0, -12],
+	"max": [11, 11, 11]
+},
+```
+
+The **search volume** declares the space in which the search will occur. Two vectors define the bounds of this volume: `"min"`, which points to the corner with the lowest coordinates and `"max"`, which points to the *origin of the block* in the opposite corner. The coordinates of the maximum corner therefore extend 1 block in each dimension beyond what is given by the `"max"` vector. As an example, the following search volume actually covers 8 blocks, not 1:
+
+```json
+"search_volume": {
+	"min": [0, 0, 0],
+	"max": [1, 1, 1]
+},
+```
+
+#### Placement Success
+
 
 ### Rect Layouts
 ```json
+{
+	"format_version": "1.13.0",
 
+	"minecraft:rect_layout": {
+		"description": {
+			"identifier": "gardenpalooza:"
+		},
+
+		"ratio_of_empty_space": 0.5,
+		"feature_areas":[
+			{
+				"feature": ":",
+				"area_dimensions": [2, 4]
+			},
+			{
+				"feature": ":",
+				"area_dimensions": [1, 3]
+			}
+		]
+	}
+}
 ```
 
 ::: warning
-Rect layouts are currently bugged and should not be used. No provable information has been provided about how they will work.
+Rect layouts are currently bugged and should not be used. No information has been provided about how they will work. Presumably, rect layouts divide the surface area of a chunk into the provided rectangles given by `"area_dimensions"` and place their associated features based on the declared ratio of empty space.
 :::
 
 ### Scan Surface Features
 ```json
+{
+	"format_version": "1.13.0",
 
+	"minecraft:scan_surface": {
+		"description": {
+			"identifier": "yosemite:fallen_leaves_cover"
+		},
+
+		"scan_surface_feature": "yosemite:fallen_leaves"
+	}
+}
 ```
 
-Every block across the surface of a chunk can be covered by a feature using **scan surface features**.
+Every block across the surface of a chunk can be covered by a feature using **scan surface features**. For this reason, it is strongly recommended to choose a feature that only occupies a column’s space.
+
+
 
 ### Weighted Random Features
 ```json
+{
+	"format_version": "1.13.0",
 
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "sweet_tooth:gelatin"
+		},
+
+		"features": [
+			["sweet_tooth:gelatin_green", 3],
+			["sweet_tooth:gelatin_red", 3],
+			["sweet_tooth:gelatin_blue", 2],
+			["sweet_tooth:gelatin_purple", 1]
+		]
+	}
+}
 ```
 
 **Weighted random features** randomly select a feature from a list. They are typically used to provide variation across a set of related features.
@@ -722,7 +1058,7 @@ Every block across the surface of a chunk can be covered by a feature using **sc
 Weighted random features select from their **weighted feature list**. Each entry in the list is an array made of a feature reference and an integer weight. A weighted random feature can select a different feature each instance it is run.
 
 ::: tip NOTE
-To understand how weights work, see [Probabilities](#).
+To understand how weights work, see [the associated section in Probabilities](#).
 :::
 
 ## Scene Features
@@ -752,31 +1088,87 @@ Scene features only allow minimal customizations of their shapes to achieve thei
 **Vegetation patches** place sub-features (often vegetation) within a square-like boundary (the patch).
 
 ## Carver Features
-Carver features are special feature types for modifying vanilla cave generation. Little can currently be customized using carvers.
-
-::: warning
-The block intersection set for carvers currently cannot be customized. Only natural vanilla blocks such as dirt, grass, and stone will be culled; custom blocks will not be stripped to form caves.
-:::
+Carver features are special feature types for modifying vanilla cave generation. Little can currently be customized using carvers. Carvers only include the classic spaghetti caves and not ravines or structures.
 
 All carver features require being placed in the [pregeneration pass](#). Carver features can therefore not be combined with any other features by any means, even by proxies.
 
+Carvers work by culling blocks around predetermined paths; these paths are unchangeable. Instead, carver features allow for customization of the **width modifier**, which is added to the base width variance provided by the game. This property is available across all carver features as `"width_modifier"`. Width modifiers only affect the lateral distance around the carver path, not the height. Negative values behave as normal subtraction: shrinking the carver instead of dilating it; low enough values, around `-16`, can be used on the vanilla carvers to remove caves.
+
+::: warning
+Although listed in the features schema as optional, `"width_modifier"` should always be provided; errors will be thrown relentlessly, and entire chunks will appear corrupted. Furthermore, large values for the width modifier (greater than approximately `16`) shouldn’t be used: world loading slows to a crawl, and chunks may get culled in entirety.
+:::
+
+Carvers don’t truly *cull* blocks per se; instead they replace existing blocks (such as from biome surface builders or earlier-placed carvers) with a **fill block**. The fill block can be provided with the optional `"fill_with"` property, whose default depends on the carver type; this property, too, is usable in all carver feature types. Although carvers invisibly dip above and below the heightmap, using a non-air block won’t affect the region of the carver above the heightmap; this is because air isn’t a block whitelisted for replacement.
+
+::: warning
+The block intersection set for carvers currently cannot be customized. Only vanilla blocks specific to each carver type will be replaced; custom blocks cannot be stripped to form caves.
+:::
+
 ### Cave Carver Features
 ```json
+{
+	"format_version": "1.13.0",
 
+	"minecraft:cave_carver_feature": {
+		"description": {
+			"identifier": "spelunkers_dreams:massive_cave"
+		},
+
+		"fill_with": "minecraft:air",
+		"width_modifier": 4
+	}
+}
 ```
 
-The classic Overworld caving system is controlled using **cave carver features**.
+The classic Overworld caving system is controlled using **cave carver features**. These carvers only work when used in the Overworld.
 
-### Hell Cave Carver Features
-```json
-
-```
-
-Nether-based caves are formed via **Hell cave carver features**.
+Overworld caves naturally extend from just above the bedrock layer at *y*-3 to *y*s of indeterminate values over 100. The fill block for cave carver features defaults to air if omitted. Cave carver features strip typical Overworld surface and foundation blocks, such as stone variants, dirt variants, sand variants, and sandstone. However, water is not culled, and water in oceans and rivers is aggressively avoided.
 
 ### Underwater Cave Carver Features
 ```json
+{
+	"format_version": "1.13.0",
 
+	"minecraft:underwater_cave_carver_feature": {
+		"description": {
+			"identifier": "aquamarine:underwater_thick_caves"
+		},
+
+		"fill_with": "minecraft:water",
+		"replace_air_with": "minecraft:flowing_water",
+		"width_modifier": 8
+	}
+}
 ```
 
-**Underwater cave carver features** generate caves at lower heights in the Overworld. Unlike the other carvers, underwater cave carver features support specifying the block that will replace culled blocks.
+**Underwater cave carver features** generate caves at lower heights in the Overworld — below the sea level of 63. These carvers, too, only work in the Overworld. Underwater carver features accept an additional optional property, `"replace_air_with"`, which is intended to substitute intersections of pre-existing air with a given block.
+
+::: warning
+This property currently seems non-functional. Whether acting on a biome whose foundation was air or intersecting an earlier-placed [cave carver feature](#cave-carver-feature) that used air, the intersecting air was never successfully replaced during testing.
+:::
+
+Underwater carvers replace the same natural vanilla blocks as [cave carver features](#cave-carver-features) with one addition: water. This means spiraling masses can be constructed from the fill block in underwater settings. Underwater carvers can begin at a height of 3; they won’t ever operate above *y*-63 (the Overworld sea level) even if they have the opportunity to do so.
+
+::: warning
+Underwater cave carvers won’t function in custom biomes — even if that biome uses vanilla blocks.
+:::
+
+### Hell Cave Carver Features
+```json
+{
+	"format_version": "1.13.0",
+
+	"minecraft:hell_cave_carver_feature": {
+		"description": {
+			"identifier": "hellscape:nether_caves"
+		},
+
+		"fill_with": "minecraft:air",
+		"width_modifier": 1
+	}
+}
+```
+
+Nether-based caves are formed via **Hell cave carver features**. Surprisingly, these carvers may be used in the Overworld in addition to the Nether; [biome filters]() must be applied to the feature rule to limit this occurrence.
+
+Nether carvers extend from *y*s of 5 to 121, and their fill block defaults to air. Hell carvers strip the same set of blocks as [cave carver features](#cave-carver-features) with a few exceptions: hell carvers won’t strip sand variants or sandstone but will remove Netherrack and water.
