@@ -84,7 +84,15 @@ const getContributors = async function () {
 			),
 		})
 		let user = await result.json()
-		contributors.push(user)
+		let add = true
+		contributors.every(u => {
+			if (u.login == user.login) {
+				add = false
+				return false
+			}
+			return true
+		})
+		if (add) contributors.push(user)
 	}
 	return contributors
 }
