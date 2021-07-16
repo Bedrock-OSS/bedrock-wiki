@@ -1,5 +1,7 @@
 ---
 title: Understanding JSON
+nav_order: 100
+number: 'a.'
 ---
 
 ::: tip

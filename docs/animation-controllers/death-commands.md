@@ -4,7 +4,7 @@ tags:
     - recipe
 ---
 
-<BButton color="blue" link="#animation-controllers/animation-controllers.md">Learn more about Animation Controllers</BButton>
+<BButton color="blue" link="/animation-controllers/animation-controllers.md">Learn more about Animation Controllers</BButton>
 
 I define `Death Effects` as "Doing something when an Entity dies". There are a few wrong ways to achieve this that should be avoided, including:
 

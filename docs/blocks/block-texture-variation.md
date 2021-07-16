@@ -1,5 +1,7 @@
 ---
 title: Block Texture Variation
+tags:
+    - recipe
 ---
 
 <Label color="yellow">Intermediate</Label>

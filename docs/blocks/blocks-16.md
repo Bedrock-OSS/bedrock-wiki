@@ -1,5 +1,5 @@
 ---
-title: Block Documentation
+title: 'Blocks 1.16+'
 tags:
     - experimental
 nav_order: 2
@@ -7,12 +7,15 @@ nav_order: 2
 
 <Label color="yellow">Experimental</Label>
 
-
 Better documentation on the new block format introduced in the 1.16.100.56 Minecraft beta.
 
-# Block Properties
+:::warning
+This document covers experimental features, for 1.16 format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
+:::
 
-## Defining Properties:
+## Block Properties
+
+### Defining Properties:
 
 ```json
 {
@@ -35,17 +38,13 @@ Better documentation on the new block format introduced in the 1.16.100.56 Minec
 }
 ```
 
-## Using Properties:
+### Using Properties:
 
 Properties can be queried with `query.block_property`, like this:
 
 `query.block_property('example:string_property_example') == 'blue'`
 
-
-
-# Block Events
-
-## Using Events
+## Block Events
 
 ```json
 {
@@ -71,11 +70,11 @@ Properties can be queried with `query.block_property`, like this:
 }
 ```
 
-*This example spawns a loot table when an entity stands on the block.*
+_This example spawns a loot table when an entity stands on the block._
 
 ## Event Functions
 
-#### `add_mob_effect`
+### `add_mob_effect`
 
 Adds a mob effect when triggered
 
@@ -92,7 +91,7 @@ Adds a mob effect when triggered
 }
 ```
 
-#### `remove_mob_effect`
+### `remove_mob_effect`
 
 Removes a mob effect when triggered
 
@@ -107,7 +106,7 @@ Removes a mob effect when triggered
 }
 ```
 
-#### `spawn_loot`
+### `spawn_loot`
 
 Summons a loot table when the event is triggered.
 
@@ -121,7 +120,7 @@ Summons a loot table when the event is triggered.
 }
 ```
 
-#### `set_block`
+### `set_block`
 
 Removes the current block and replaces it with the defined block in the same position.
 
@@ -133,7 +132,7 @@ Removes the current block and replaces it with the defined block in the same pos
 }
 ```
 
-#### `set_block_property`
+### `set_block_property`
 
 Used to set the value of a block's property
 
@@ -147,7 +146,7 @@ Used to set the value of a block's property
 }
 ```
 
-#### `set_block_at_pos`
+### `set_block_at_pos`
 
 Used to set a block relative to the position of this block
 
@@ -162,7 +161,7 @@ Used to set a block relative to the position of this block
 }
 ```
 
-#### `run_command`
+### `run_command`
 
 Used to execute a command
 
@@ -176,7 +175,7 @@ Used to execute a command
 }
 ```
 
-#### `damage`
+### `damage`
 
 ```json
 {
@@ -190,7 +189,7 @@ Used to execute a command
 }
 ```
 
-#### `decrement_stack`
+### `decrement_stack`
 
 Decrements the stack
 
@@ -202,7 +201,7 @@ Decrements the stack
 }
 ```
 
-#### `die`
+### `die`
 
 Kills the target or destroys the block
 
@@ -216,7 +215,7 @@ Kills the target or destroys the block
 }
 ```
 
-#### `play_effect`
+### `play_effect`
 
 Runs a particle effect on the target
 
@@ -231,7 +230,7 @@ Runs a particle effect on the target
 }
 ```
 
-#### `play_sound`
+### `play_sound`
 
 Plays a sound on the target
 
@@ -246,7 +245,7 @@ Plays a sound on the target
 }
 ```
 
-#### `trigger`
+### `trigger`
 
 Used to trigger an event, this can be a block event or an entity event.
 
@@ -261,7 +260,7 @@ Used to trigger an event, this can be a block event or an entity event.
 }
 ```
 
-#### `sequence`
+### `sequence`
 
 Used to sequence event functions
 
@@ -286,7 +285,7 @@ Used to sequence event functions
 }
 ```
 
-#### `randomize`
+### `randomize`
 
 Used to randomize event functions
 
@@ -315,7 +314,7 @@ Used to randomize event functions
 }
 ```
 
-### Triggering Events
+## Triggering Events
 
 Block components to trigger block events:
 
@@ -329,10 +328,11 @@ Block components to trigger block events:
 
 -   `minecraft:ticking` and `minecraft:random_ticking` can both be used to trigger events after a set amount of time or at random times, depending on which component you use
 
-# Block Components
+## Block Components
+
 List of all new block components, with usage examples.
 
--   minecraft:unit_cube
+### minecraft:unit_cube
 
 ```json
 {
@@ -340,37 +340,37 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:crafting_table
+### minecraft:crafting_table
 
 ```json
 {
 	"minecraft:crafting_table": {
 		"custom_description": "Example Crafting Table", // Name shown in GUI
 		"grid_size": 3, // Currently only supports 3
-		"crafting_tags": [ "crafting_table", "custom_crafting_tag" ]
+		"crafting_tags": ["crafting_table", "custom_crafting_tag"]
 	}
 }
 ```
 
--   minecraft:material_instances
+### minecraft:material_instances
 
 ```json
 {
-    "minecraft:material_instances": {
-        // Can also be a specific material instance for a specific face mapped in the geometry
-        // Wildcards follow render controller syntax
-        // Options 'up', 'down', and 'sides' are builtin
-        "*": {
-            "texture": "texture_name", // References texture defined in terrain_textures.json
-            "render_method": "blend", // Options 'blend', 'opaque', 'alpha_test',
-            "face_dimming": true, // Defaults to true; refers to whether or not block is affected by lighting (Undocumented)
-            "ambient_occlusion": true // Defaults to true; refers to whether or not faces have smooth lighting (Undocumented)
-        }
-    }
+	"minecraft:material_instances": {
+		// Can also be a specific material instance for a specific face mapped in the geometry
+		// Wildcards follow render controller syntax
+		// Options 'up', 'down', and 'sides' are builtin
+		"*": {
+			"texture": "texture_name", // References texture defined in terrain_textures.json
+			"render_method": "blend", // Options 'blend', 'opaque', 'alpha_test',
+			"face_dimming": true, // Defaults to true; refers to whether or not block is affected by lighting (Undocumented)
+			"ambient_occlusion": true // Defaults to true; refers to whether or not faces have smooth lighting (Undocumented)
+		}
+	}
 }
 ```
 
--   minecraft:geometry
+### minecraft:geometry
 
 ```json
 {
@@ -378,7 +378,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:on_step_on
+### minecraft:on_step_on
 
 ```json
 {
@@ -390,7 +390,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:on_step_off
+### minecraft:on_step_off
 
 ```json
 {
@@ -402,7 +402,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:on_fall_on
+### minecraft:on_fall_on
 
 ```json
 {
@@ -415,7 +415,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:on_placed
+### minecraft:on_placed
 
 ```json
 {
@@ -427,7 +427,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:on_player_placing
+### minecraft:on_player_placing
 
 ```json
 {
@@ -439,7 +439,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:on_player_destroyed
+### minecraft:on_player_destroyed
 
 ```json
 {
@@ -451,7 +451,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:on_interact
+### minecraft:on_interact
 
 ```json
 {
@@ -463,7 +463,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:ticking
+### minecraft:ticking
 
 ```json
 {
@@ -479,7 +479,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:random_ticking
+### minecraft:random_ticking
 
 ```json
 {
@@ -493,7 +493,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:entity_collision
+### minecraft:entity_collision
 
 ```json
 {
@@ -510,7 +510,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:pick_collision
+### minecraft:pick_collision
 
 ```json
 {
@@ -527,7 +527,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:breakonpush
+### minecraft:breakonpush
 
 ```json
 {
@@ -535,7 +535,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:display_name
+### minecraft:display_name
 
 ```json
 {
@@ -543,7 +543,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:breathability
+### minecraft:breathability
 
 ```json
 {
@@ -551,7 +551,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:immovable
+### minecraft:immovable
 
 ```json
 {
@@ -559,7 +559,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:onlypistonpush
+### minecraft:onlypistonpush
 
 ```json
 {
@@ -567,41 +567,41 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:placement_filter
+### minecraft:placement_filter
 
 ```json
 {
 	"minecraft:placement_filter": {
 		"conditions": [
 			{
-				"block_filter": [ "minecraft:dirt" ],
+				"block_filter": ["minecraft:dirt"],
 				"allowed_faces": ["up"]
 			}
 		]
 	}
 }
 ```
-*This also accepts tags, such as:*
+
+_This also accepts tags, such as:_
+
 ```json
 {
-    "minecraft:placement_filter": {
-        "conditions": [
-            {
-                "allowed_faces": [
-                    "up"
-                ],
-                "block_filter": [
-                    {
-                        "tags": "!q.any_tag('air')"
-                    }
-                ]
-            }
-        ]
-    }
-}     
+	"minecraft:placement_filter": {
+		"conditions": [
+			{
+				"allowed_faces": ["up"],
+				"block_filter": [
+					{
+						"tags": "!q.any_tag('air')"
+					}
+				]
+			}
+		]
+	}
+}
 ```
 
--   minecraft:preventsjumping
+### minecraft:preventsjumping
 
 ```json
 {
@@ -609,7 +609,7 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:rotation
+### minecraft:rotation
 
 ```json
 {
@@ -617,14 +617,13 @@ List of all new block components, with usage examples.
 }
 ```
 
--   minecraft:unwalkable
+### minecraft:unwalkable
 
 ```json
 {
 	"minecraft:unwalkable": true
 }
 ```
-
 
 ## Block Tags
 
@@ -640,7 +639,7 @@ A tag can be applied like this:
 		},
 		"components": {
 			"tag:example:my_tag": {},
-            "tag:my_other_tag": {}
+			"tag:my_other_tag": {}
 		}
 	}
 }
@@ -682,10 +681,7 @@ Example of querying a tag:
 }
 ```
 
-
-
-
-# Block Permutations
+## Block Permutations
 
 Block permutations are a way of conditionally applying components to a block with MoLang expressions.
 
@@ -728,22 +724,32 @@ Example:
 }
 ```
 
-# Additional Notes
+## Additional Notes
 
--   Vanilla Blocks are hardcoded; you may not override or access them.
--   You may only have one `"minecraft:ticking"` component at any given time.
--   You may only have one `"minecraft:random_ticking"` component at any given time.
--   Using component `minecraft:display_name` is not recommended. For example, the below code:
+-   Vanilla Blocks are hardcoded. You may not override or access them.
+-   Following components may only have one at any given time:
+    -   `"minecraft:ticking"`
+    -   `"minecraft:random_ticking"`
+-   It is not recommended to use `minecraft:display_name`. Example:
+
 ```json
 {
-    "minecraft:display_name": "Barrel of Foxes"
+	"minecraft:display_name": "Barrel of Foxes"
 }
 ```
-Would, in-game, yield a result such as `tile.Barrel of Foxes.name`. Using `lang` files is the recommended alternative.
--   There is a maximum of 16 values per `property`. 
--   Components `minecraft:entity_collision` and `minecraft:pick_collision` cannot be larger than `16x16x16`.
+
+In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is recommended.
+
+-   Maximum of 16 values per `property`.
+-   Following components cannot be larger than 16x16x16:
+    -   `minecraft:entity_collision`
+    -   `minecraft:pick_collision`
 -   Execute commands cannot be run on blocks.
 -   Custom Blocks will not be mined any faster/slower with vanilla tools.
 -   Block faces will become dark if buried in another block.
--   Blocks will always be dropped with enchantment Silk Touch.
--   Block Identifiers cannot match those Vanilla, even ignoring namespace.
+-   Blocks will always be dropped with `Silk Touch` enchantment.
+-   Block Identifiers cannot match Vanilla blocks, even ignoring namespace.
+-   Following components requires `entity_collision` to be 4 or higher on the y-axis:
+    -   `on_step_on`
+    -   `on_step_off`
+    -   `on_fall_on`

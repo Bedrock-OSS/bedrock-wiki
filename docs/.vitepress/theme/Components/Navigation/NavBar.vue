@@ -11,8 +11,7 @@
 			p-4
 			bg-true-gray-50
 			border-b-1 border-true-gray-200
-			dark:border-true-gray-600
-			dark:bg-true-gray-900
+			dark:border-true-gray-600 dark:bg-true-gray-900
 			select-none
 		"
 	>
@@ -23,10 +22,18 @@
 		/>
 
 		<a :href="site.base" class="flex flex-row justify-between items-center">
-			<WikiLogo class="mr-2" /> 
-			<div class="pb-0.5"><span class="hidden sm:inline">Bedrock </span><span>Wiki</span></div>
+			<WikiLogo class="mr-2" />
+			<div class="font-semibold text-lg pb-0.5">
+				<span class="hidden sm:inline">Bedrock </span><span>Wiki</span>
+			</div>
 		</a>
 		<span class="flex-grow"></span>
+		<NavLink
+			class="hidden lg:flex"
+			v-for="item in navLinks"
+			:item="item"
+			:key="item.link"
+		/>
 		<DarkMode />
 		<AlgoliaSearchBox v-if="!!algoliaConfig" :options="algoliaConfig" />
 	</header>
@@ -49,6 +56,7 @@ const AlgoliaSearchBox = defineAsyncComponent(
 
 const { toggle, isVisible } = useSidebarState()
 const site = useSiteDataByRoute()
+const navLinks = computed(() => site.value.themeConfig.nav)
 const algoliaConfig = computed(() => site.value.themeConfig.algolia)
 
 const { isMobile } = useIsMobile()

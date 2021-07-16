@@ -1,5 +1,5 @@
 ---
-title: Building and Editing JSON with jq
+title: Creating addons with JQ
 ---
 
 ## Introduction

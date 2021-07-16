@@ -2,15 +2,14 @@
 title: Shaders
 ---
 
-## Disclaimer
-
-The way to create shaders described on this page is not working on consoles (PS4, Xbox, Switch), and in the new rendering
-engine (renderdragon, which is in the latest Windows version beta).
+:::warning
+The shaders on this page are incompatible with [Render Dragon](https://help.minecraft.net/hc/en-us/articles/360052771272-About-the-1-16-200-Update-for-Windows-10-). That means that they will not work on Windows 10 or Console devices!
+:::
 
 ## Overview
 
-Shaders are divided into 2 folders: glsl and hlsl. For shaders to work on every device,
-you need to code shaders in both languages. For testing on Windows, hlsl is enough.
+Shaders are divided into 2 folders: `glsl` and `hlsl`. For shaders to work on every device,
+you need to code shaders in both languages. For testing on Windows, `hlsl` is enough.
 When rewriting shaders from one language to another, there are few things to change,
 like HLSL `float3` is `vec3` in GLSL. [Mapping between those languages can be found here](https://anteru.net/blog/2016/mapping-between-HLSL-and-GLSL/)
 

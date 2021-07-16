@@ -76,9 +76,9 @@ function generateSidebar(base, dir) {
 
 	return data.sort(
 		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
-			if (!dataA.nav_order && dataB.nav_order) return 1
-			if (dataA.nav_order && !dataB.nav_order) return -1
-			if (dataA.nav_order && dataB.nav_order)
+			if (dataA.nav_order == null && dataB.nav_order != null) return 1
+			if (dataA.nav_order != null && dataB.nav_order == null) return -1
+			if (dataA.nav_order != null && dataB.nav_order != null)
 				return dataA.nav_order - dataB.nav_order
 			return textA.localeCompare(textB)
 		}
@@ -115,7 +115,7 @@ module.exports = {
 	],
 
 	markdown: {
-		lineNumbers: true
+		lineNumbers: true,
 	},
 
 	themeConfig: {
@@ -144,8 +144,12 @@ module.exports = {
 				activeMatch: '^/contribute',
 			},
 			{
-				text: 'bedrock.dev',
+				text: 'Docs',
 				link: 'https://bedrock.dev',
+			},
+			{
+				text: 'MS Docs',
+				link: 'https://docs.microsoft.com/en-us/minecraft/creator/',
 			},
 			// {
 			// 	text: 'News',

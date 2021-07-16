@@ -7,7 +7,6 @@
 			fixed
 			mt-14
 			pb-14
-			pt-1
 			z-10
 			top-0
 			w-72
