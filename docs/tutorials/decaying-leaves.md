@@ -538,7 +538,7 @@ This loot will spawn stripped log
 
 Now you need to get custom_stripped_log1 and custom_stripped_log2 structures.
 
-![](/assets/images/tutorials/decaying-leaves/export_structures.png)
+![](/assets/images/tutorials/decaying-leaves/export_structures.jpeg)
 
 ## Texture Pack
 
