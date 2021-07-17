@@ -9,25 +9,17 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
 
 ## Features
 
-Features:
+- Features:
+    - Decaying leaves
+    - If leaves are broken using shears, they will drop themselves
+    - Leaves doesn't decay if placed by a player
+    - Logs are strippable and rotatable
+    - Stripping logs are compatible with tools from other Add-Ons (if they have the `tag:minecraft_is_axe` component)
+    - Saplings can be bonemealed
 
-• Decaying leaves
-
-• If leaves were broken using shears, they will drop leaves block
-
-• Leaves doesn't decay if were placed by player
-
-• Logs are strippable and have facing direction
-
-• Stripping logs is compabilityable to tools from other add-ons (if they have "tag:minecraft_is_axe":{} component)
-
-• Sapplings can be bonemealed
-
-Issues:
-
-• If leaves were broken using shears can spawn ordinary loot too
-
-• To make leaves decay, you need to use /fill command that will replace custom_leaves with custom_leaves
+- Issues:
+    - If leaves are broken using shears, they can drop normal loot
+    - To make leaves decay, you need to use the `/fill` command that will replace custom_leaves with custom_leaves
 
 
 ## Making Leaves
@@ -316,7 +308,7 @@ Issues:
 
 ## Making Fake Leaves
 
-<CodeHeader>BP/blocks/custom_leaves.json</CodeHeader>
+<CodeHeader>BP/blocks/fake_leaves.json</CodeHeader>
 
 ```json
 {
@@ -369,6 +361,10 @@ Issues:
 ## Making Stripped Log
 
 Here all components are the same
+
+::: warning
+Note to wiki maintainers: Can't this be merged into the normal log block. Just have another permutation to change the texture?
+:::
 
 <CodeHeader>BP/blocks/custom_stripped_log.json</CodeHeader>
 
@@ -828,6 +824,10 @@ This will spawn custom_sapling_placer
 
 ## Exporting Structures
 
+::: warning
+Note to wiki maintainers: This part does not seem neccesary as stated in previous note that stripped logs could be merged into normal logs but with a different permutation to change textures.
+:::
+
 Now you need to get custom_stripped_log1 and custom_stripped_log2 structures. Just export rotated stripped logs.
 
 ![](/assets/images/blocks/parts-of-custom-tree/export_structures.png)
@@ -850,7 +850,7 @@ tile.tut:custom_leaves.name=Custom leaves
 tile.tut:custom_stripped_log.name=Custom Stripped Log
 tile.tut:custom_sapling.name=Custom Sapling
 item.tut:custom_sapling_placer.name=Custom Sapling
-tile.tut:fake_leaves,name=Custom Leaves
+tile.tut:fake_leaves.name=Custom Leaves
 ```
 
 Make terrain_texture.json and textures.
@@ -970,4 +970,4 @@ Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Stru
 
 ![](/assets/images/blocks/parts-of-custom-tree/result.png)
 
-Page is under developing!
+Page is under development!
