@@ -1,60 +1,34 @@
 ---
-title: Decaying Leaves
+title: Parts of Custom Tree
 tags:
 	- experimental
 ---
 
 
-Vanilla-like custom decaying leaves are possible. Make them following this tutorial.
+Vanilla-like custom trees are possible. Make their parts following this tutorial.
 
-## Concept & Features
+## Features
 
-Idea: Custom logs replace custom leaves blocks that have ticking component with decay event.
 Features:
+
 • Decaying leaves
-• If were broken using shears drop leaves block
-• Doesn't decay if were placed by player
-• Logs with facing direction
-• Logs are strippable
-• Axes from other Add-ons can strip logs (if they have "tag:minecraft_is_axe":{} component)
+
+• If leaves were broken using shears, they will drop leaves block
+
+• Leaves doesn't decay if were placed by player
+
+• Logs are strippable and have facing direction
+
+• Stripping logs is compabilityable to tools from other add-ons (if they have "tag:minecraft_is_axe":{} component)
+
+• Sapplings can be bonemealed
+
 Issues:
+
 • If leaves were broken using shears can spawn ordinary loot too
 
-Use /fill command to replace all custom_leaves with custm leaves so they will be decayable
+• To make leaves decay, you need to use /fill command that will replace custom_leaves with custom_leaves
 
-## Getting Started
-
-Create behaviour manifest
-
-<CodeHeader>BP/manifest.json</CodeHeader>
-
-```json
-{
-	"format_version": 2,
-	"header": {
-		"name": "Custom Decaying Leaves",
-		"description": "Adds custom decaying leaves and more",
-		"uuid": "7a1bccb8-a62c-4f71-905b-91fff64eccac",
-		"version": [0, 0, 1],
-		// We make sure we target the min version with the beta item changes
-		"min_engine_version": [1, 16, 100]
-	},
-	"modules": [
-		{
-			"type": "data",
-			"uuid": "d8e9e744-bcff-4e73-96e3-1675014f7946",
-			"version": [0, 0, 1]
-		}
-	],
-	// We are also depending on the RP as we need textures within there
-	"dependencies": [
-		{
-			"uuid": "8653ca00-05fb-426b-b579-e56f1ec21102",
-			"version": [0, 1, 0]
-		}
-	]
-}
-```
 
 ## Making Leaves
 
@@ -68,8 +42,8 @@ Create behaviour manifest
             "identifier":"tut:custom_leaves",
             "properties":{
                 "tut:decaying":[
-                    false,
-                    true
+					true,
+                    false
                 ]
             }
             //Properties will make leaves decay or not
@@ -77,13 +51,12 @@ Create behaviour manifest
         "permutations":[
             {
                 "condition":"query.block_property('tut:decaying') == true",
-                //If blocks decay:
                 "components":{
                     "minecraft:ticking":{
                         "looping":true,
                         "range":[
-                            10.0,
-                            18.0
+                            15.0,
+                            20.0
                         ],
                         "on_tick":{
                             "event":"tut:decay"
@@ -94,21 +67,12 @@ Create behaviour manifest
             },
             {
                 "condition":"query.block_property('tut:decaying') == false",
-                    "minecraft:ticking":{
-                    "looping":true,
-                    "range":[
-                        2.0,
-                        2.0
-                    ],
-                    "on_tick":{
-                        "event":"tut:set_property_false"
-                    }
-                    //This component every 2 seconds sets decaying property to false so logs won't make it decayable
-                }
+				"components":{}
+				//Empty components
             }
         ],
         "components":{
-            "minecraft:destroy_time":0.5,
+            "minecraft:destroy_time":0.35,
             "minecraft:breakonpush":true,
             "minecraft:material_instances":{
                 "*":{
@@ -117,30 +81,22 @@ Create behaviour manifest
                     //Use this render method to make leaves half-transparent, like vanilla ones
                 }
             },
+			"minecraft:flammable": {
+				"burn_odds": 50,
+				"flame_odds": 50
+			},
             "minecraft:unit_cube":{},
             "minecraft:loot":"loot_tables/blocks/custom_leaves_loot.json",
             //Basic loot
             "minecraft:on_player_placing":{
                 "event":"tut:set_property_false"
             },
-            //On player placing happens event that sets decaying property to false
+            //On player placing runs event that sets decaying property to false
             "minecraft:on_player_destroyed":{
                 "condition":"query.get_equipped_item_name(0) == 'shears'",
-                //Detects if player hold shears in main hand on destroyed
                 "event":"tut:spawn_loot"
                 //Spawns loot (leaves block)
-            },
-            "minecraft:ticking":{
-                "looping":true,
-                "range":[
-                    1.0,
-                    1.0
-                ],
-                "on_tick":{
-                    "event":"tut:set_property_true"
-                }
             }
-            //If this block was naturally generated sets decaying to true
         },
         "events":{
             "tut:set_property_false":{
@@ -264,8 +220,8 @@ Create behaviour manifest
             "minecraft:ticking":{
                 "looping":true,
                 "range":[
-                    4.0,
-                    6.0
+                    6.0,
+                    8.0
                 ],
                 "on_tick":{
                     "event":"tut:update_leaves"
@@ -281,7 +237,8 @@ Create behaviour manifest
             "tut:update_leaves":{
                 "run_command":{
                     "command":[
-                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:custom_leaves 0 replace tut:custom_leaves"
+                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:fake_leaves 0 replace tut:custom_leaves",
+                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:custom_leaves 0 replace tut:fake_leaves"
                     ]
                 }
             },
@@ -357,6 +314,58 @@ Create behaviour manifest
 }
 ```
 
+## Making Fake Leaves
+
+<CodeHeader>BP/blocks/custom_leaves.json</CodeHeader>
+
+```json
+{
+    "format_version":"1.16.100",
+    "minecraft:block":{
+        "description":{
+            "identifier":"tut:fake_leaves"
+        },
+        "components":{
+            "minecraft:destroy_time":2,
+            "minecraft:breakonpush":true,
+            "minecraft:material_instances":{
+                "*":{
+                    "texture":"custom_leaves",
+                    "render_method":"alpha_test"
+                    //Use this render method to make leaves half-transparent, like vanilla ones
+                }
+            },
+			"minecraft:flammable": {
+				"burn_odds": 50,
+				"flame_odds": 50
+			},
+            "minecraft:ticking":{
+                "range":[
+                    0.1,
+                    0.1
+                ],
+                "on_tick":{
+                    "event":"tut:update_leaves"
+                }
+            },
+            "minecraft:unit_cube":{},
+            "minecraft:loot":"loot_tables/blocks/custom_leaves_loot.json"
+            //Basic loot
+        },
+        "events":{
+            "tut:update_leaves":{
+                "run_command":{
+                    "command":[
+                        "setblock ~~~ tut:custom_leaves"
+                    ]
+                }
+            }
+            //Turning Back into custom leaves (if log was broken)
+        }
+    }
+}
+```
+
 ## Making Stripped Log
 
 Here all components are the same
@@ -422,6 +431,10 @@ Here all components are the same
 				"up": "ends",
 				"down": "ends"
 			},
+			"minecraft:flammable": {
+				"burn_odds": 50,
+				"flame_odds": 25
+			},
 			"minecraft:loot": "loot_tables/blocks/custom_stripped_log_block.json",
             "minecraft:destroy_time":1.0,
             "minecraft:unit_cube":{},
@@ -437,6 +450,262 @@ Here all components are the same
             }
         }
     }
+}
+```
+
+## Making Sapling
+
+<CodeHeader>BP/blocks/custom_sapling.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "tut:custom_sapling",
+            "properties":{
+                "tut:growing":[
+                    0,
+                    1,
+                    2
+                ]
+            }
+			//Properties of sapling growing
+		},
+		"permutations":[
+            {
+                "condition":"query.block_property('tut:growing') == 0",
+                "components":{
+					"minecraft:on_interact": {
+						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+						"event": "bone_meal_1"
+					},
+					"minecraft:ticking": {
+						"range": [
+							120,
+							180
+						],
+						"on_tick": {
+							"event": "grow_1"
+						}
+					}
+                }
+            },
+            {
+                "condition":"query.block_property('tut:growing') == 1",
+				"components":{
+					"minecraft:on_interact": {
+						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+						"event": "bone_meal_2"
+					},
+					"minecraft:ticking": {
+						"range": [
+							120,
+							180
+						],
+						"on_tick": {
+							"event": "grow_2"
+						}
+					}
+                }
+            },
+            {
+                "condition":"query.block_property('tut:growing') == 2",
+                "components":{
+					"minecraft:on_interact": {
+						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+						"event": "bone_meal_3"
+					},
+					"minecraft:ticking": {
+						"range": [
+							120,
+							180
+						],
+						"on_tick": {
+							"event": "grow_3"
+						}
+					}
+                }
+            }
+        ],
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "custom_sapling",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					13,
+					12
+				]
+			},
+			"minecraft:loot": "loot_tables/blocks/custom_sapling.json",
+			//Add loot component so it will drop sapling placer
+			"minecraft:geometry": "geometry.custom_sapling",
+			"minecraft:destroy_time": 0.01,
+			"minecraft:entity_collision": false,
+			"minecraft:breakonpush": true,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:dirt",
+							"minecraft:grass",
+							"minecraft:podzol"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			//Allows to place block only on this blocks
+			"minecraft:ticking": {
+				"range": [
+					1,
+					1
+				],
+				"on_tick": {
+					"event": "grow_0"
+				}
+			}
+			//Starts to grow
+		},
+		"events": {
+			"grow_0":{
+				"set_block_property":{
+					"tut:growing":0
+				}
+				//Sets growing stage to 0
+			},
+			"grow_1": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~"
+							]
+						}
+						//Adds particles
+					},
+					{
+						"set_block_property":{
+							"tut:growing":1
+						}
+						//Sets growing stage to 1
+					}
+				]
+			},
+			"grow_2": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~"
+							]
+						}
+						//Adds particles
+					},
+					{
+						"set_block_property":{
+							"tut:growing":2
+							//Sets growing stage to 2
+						}
+					}
+				]
+			},
+			"grow_3": {
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~",
+                        "structure load custom_tree ~-2 ~ ~-2"
+					]
+				}
+				//Particles and structure loads. Magic!
+			},
+			"bone_meal_1": {
+				"sequence": [
+					{
+						"decrement_stack": {}
+						//Clears item that were used to interact
+					},
+					{
+						"trigger": {
+							"event": "grow_1"
+						}
+						//Runs grow_1 event
+					}
+				]
+			},
+			"bone_meal_2": {
+				"sequence": [
+					{
+						"decrement_stack": {}
+						//Clears item that were used to interact
+					},
+					{
+						"trigger": {
+							"event": "grow_2"
+						}
+						//Runs grow_2 event
+					}
+				]
+			},
+			"bone_meal_3": {
+				"sequence": [
+					{
+						"decrement_stack": {}
+						//Clears item that were used to interact
+					},
+					{
+						"trigger": {
+							"event": "grow_3"
+						}
+						//Runs grow_3 event
+					}
+				]
+			}
+		}
+	}
+}
+```
+
+## Making Sapling Placer
+
+<CodeHeader>BP/items/custom_sapling_placer.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tut:custom_sapling_placer",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sapling"
+			},
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "tut:custom_sapling"
+			},
+			"minecraft:icon": {
+				"texture": "custom_sapling_placer"
+			}
+		},
+		"events": {}
+	}
 }
 ```
 
@@ -480,7 +749,7 @@ Leaves default loot
                 },
                 {
                     "type":"item",
-                    "name":"minecraft:sapling",
+                    "name":"tut:custom_sapling",
                     "weight":5
                 },
                 {
@@ -536,13 +805,38 @@ This loot will spawn stripped log
 }
 ```
 
+This will spawn custom_sapling_placer
+
+<CodeHeader>BP/loot_tables/blocks/custom_sapling_placer.json</CodeHeader>
+
+```json
+{
+    "pools":[
+        {
+            "rolls":1,
+            "entries":[
+                {
+                    "type":"item",
+                    "name":"tut:custom_sapling_placer",
+                    "weight":1
+                }
+            ]
+        }
+    ]
+}
+```
+
 ## Exporting Structures
 
-Now you need to get custom_stripped_log1 and custom_stripped_log2 structures.
+Now you need to get custom_stripped_log1 and custom_stripped_log2 structures. Just export rotated stripped logs.
 
-![](/assets/images/blocks/decaying-leaves/export_structures.png)
+![](/assets/images/blocks/parts-of-custom-tree/export_structures.png)
 
-## Texture Pack
+Build some trees too! (Don't forget to update leaves using /fill command)
+
+![](/assets/images/blocks/parts-of-custom-tree/export_tree.png)
+
+## Resource Pack
 
 It is time to make a resource pack!
 
@@ -554,10 +848,12 @@ Make translations for blocks:
 tile.tut:custom_log.name=Custom Log
 tile.tut:custom_leaves.name=Custom leaves
 tile.tut:custom_stripped_log.name=Custom Stripped Log
+tile.tut:custom_sapling.name=Custom Sapling
+item.tut:custom_sapling_placer.name=Custom Sapling
+tile.tut:fake_leaves,name=Custom Leaves
 ```
 
-Make terrain_texture.json and the textures.
-Used vanilla textures
+Make terrain_texture.json and textures.
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
@@ -565,7 +861,7 @@ Used vanilla textures
 {
     "num_mip_levels":4,
     "padding":8,
-    "resource_pack_name":"Decaying Leaves",
+    "resource_pack_name":"Parts of Custom Tree",
     "texture_data":{
 		"custom_leaves":{
             "textures":"textures/blocks/leaves_oak"
@@ -581,8 +877,97 @@ Used vanilla textures
         },
         "custom_stripped_log_top":{
             "textures":"textures/blocks/stripped_oak_log_top"
-        }
+        },
+		"custom_sapling":{
+			"textures":"textures/blocks/sapling_oak"
+		}
     },
     "texture_name":"atlas.terrain"
 }
 ```
+
+Make geometry for sapling:
+
+<CodeHeader>RP/models/blocks/custom_sapling.geo.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.custom_sapling",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 16, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 16, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}
+```
+
+Make item_texture file
+
+<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+
+```json
+{
+	"resource_pack_name": "Parts of Custom Tree",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"custom_sapling_placer":{
+			"textures":"textures/blocks/sapling_oak"
+		}
+	}
+}
+```
+
+Add sounds to blocks
+
+<CodeHeader>RP/blocks.json</CodeHeader>
+
+```json
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"tut:custom_leaves": {
+		"sound": "grass"
+	},
+	"tut:custom_log": {
+		"sound": "wood"
+	},
+	"tut:custom_stripped_log": {
+		"sound": "wood"
+	},
+	"tut:custom_sapling": {
+		"sound": "grass"
+	},
+	"tut:fake_leaves": {
+		"sound": "grass"
+	}
+}
+```
+
+## Result
+
+What you have now:
+Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Structure
+
+![](/assets/images/blocks/parts-of-custom-tree/result.png)
+
+Page is under developing!
