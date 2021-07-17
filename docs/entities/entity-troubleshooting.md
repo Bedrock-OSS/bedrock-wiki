@@ -10,7 +10,7 @@ title: Troubleshooting Entities
 
 Accept that something, somewhere, is wrong. _Nobody_ at _any_ level is immune to these mistakes, so don't get offended and think, "Of course I did that!" and skip a step!
 
-<BButton color="blue" link="#1.0.0">Continue</BButton>
+<BButton color="blue" link="#_1-0-0-are-both-packs-active">Continue</BButton>
 
 ---
 
@@ -20,7 +20,7 @@ Accept that something, somewhere, is wrong. _Nobody_ at _any_ level is immune to
 
 Make sure both the resource pack and behavior pack are active for the world (an excellent way to avoid accidentally having this issue is to set each pack as a dependency of the other in both packs' manifest.json files so that adding or removing one of the packs automatically adds/removes the other)
 
-<BButton color="blue" link="#2.0.0">Continue</BButton>
+<BButton color="blue" link="#_2-0-0-determine-whether-the-issue-is-in-the-rp-or-the-bp">Continue</BButton>
 
 ---
 
@@ -58,11 +58,11 @@ Make sure `is_spawnable` and `is_summonable` are set to true, and that `is_exper
 
 ### Results
 
-I don't see a spawn egg at all: <BButton color="blue" link="#3.1.0">Go</BButton>
+I don't see a spawn egg at all: <BButton color="blue" link="#_3-1-0-bp">Go</BButton>
 
-I see a spawn egg for my entity, but it's just black, and the entity doesn't appear when I spawn or summon it: <BButton color="blue" link="#3.2.0">Go</BButton>
+I see a spawn egg for my entity, but it's just black, and the entity doesn't appear when I spawn or summon it: <BButton color="blue" link="#step-3-2-0-rp-entity">Go</BButton>
 
-I see a spawn egg for my entity, and it has the colors I chose, but the entity still doesn't appear when I spawn or summon it: <BButton color="blue" link="#3.3.0">Go</BButton>
+I see a spawn egg for my entity, and it has the colors I chose, but the entity still doesn't appear when I spawn or summon it: <BButton color="blue" link="#step-3-3-0-rp-resources-still-writing-because-this-is-going-to-be-extensive">Go</BButton>
 
 ---
 
