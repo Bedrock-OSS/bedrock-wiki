@@ -1,0 +1,287 @@
+---
+title: 'Block Troubleshooting'
+---
+
+# Step-by-step Block Debugging
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+<a name="0.0.0"></a>
+## 0.0.0 - Trouble
+
+I followed a tutorial or tried to make my own block and something's wrong! Calm down. This page will help debug common issues.
+
+[Continue](#1.0.0){: .btn .btn-blue }
+
+---
+<a name="1.0.0"></a>
+## 1.0.0 - My Block Has a Black-Magenta checkered pattern/My Textures Are Missing!
+
+I will be reviewing three different types of blocks that have different layouts: Dirt-like ![](/assets/images/blocks/block_tr/tr_dirt.png){: .pixelated}, Log-like ![](/assets/images/blocks/block_tr/tr_log.png){: .pixelated}, Grass-like ![](/assets/images/blocks/block_tr/tr_grass.png){: .pixelated}
+
+
+1.10 Block [Continue](#1.1.0){: .btn .btn-blue }
+
+1.16.100 Block[Continue](#1.2.0){: .btn .btn-blue }
+
+---
+<a name="1.1.0"></a>
+## 1.10 Blocks
+
+Navigate to your `blocks.json`. Ensure that it is properly named.
+
+{% include filepath.html path="RP/textures/blocks.json"%}
+```jsonc
+{
+    "format_version": [
+        1,
+        1,
+        0
+    ],
+    "namespace:dirt_like": {
+        "textures": "dirt_like", //You can replace this with anything, just remember the name
+        "sound": "your_sound_name"
+    },
+    "namespace:log_like": {
+        "textures": {
+            "up": "log_like_top", //You can replace this with anything, just remember the name
+            "down": "log_like_top", //You can replace this with anything, just remember the name
+            "side": "log_like_side" //You can replace this with anything, just remember the name
+        },
+        "sound": "your_sound_name"
+    },
+    "namespace:grass_like": {
+        "textures": {
+            "up": "grass_like_top", //You can replace this with anything, just remember the name
+            "down": "grass_like_bottom", //You can replace this with anything, just remember the name
+            "side": "grass_like_side" //You can replace this with anything, just remember the name
+        },
+        "sound": "your_sound_name"
+    }
+}
+```
+
+Next, navigate to your `terrain_texture.json`. Ensure that it is properly named.
+
+{% include filepath.html path="RP/textures/terrain_texture.json"%}
+```jsonc
+{
+  "resource_pack_name": "tut",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "dirt_like": {
+      "textures": "textures/blocks/dirt_like" //You can replace this with anything, just remember the name
+    },
+    "log_like_top": {
+      "textures": "textures/blocks/log_like_top" //You can replace this with anything, just remember the name
+    },
+    "log_like_side": {
+      "textures": "textures/blocks/log_like_side" //You can replace this with anything, just remember the name
+    },
+    "grass_like_top": {
+      "textures": "textures/blocks/grass_like_top" //You can replace this with anything, just remember the name
+    },
+    "grass_like_bottom": {
+      "textures": "textures/blocks/grass_like_bottom" //You can replace this with anything, just remember the name
+    },
+    "grass_like_side": {
+      "textures": "textures/blocks/grass_like_side" //You can replace this with anything, just remember the name
+    }
+  }
+}
+```
+
+If you followed this properly, your 1.10 block should now have a texture.
+
+---
+<a name="1.2.0"></a>
+## 1.16.100 Blocks
+
+You can follow the exact same steps as the 1.10 blocks. But doing this method allows you to rotate your blocks.
+Navigate to your `terrain_texture.json`. Ensure that it is properly named
+
+{% include filepath.html path="RP/textures/terrain_texture.json"%}
+```jsonc
+{
+  "resource_pack_name": "tut",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "dirt_like": {
+      "textures": "textures/blocks/dirt_like" //You can replace this with anything, just remember the name
+    },
+    "log_like_top": {
+      "textures": "textures/blocks/log_like_top" //You can replace this with anything, just remember the name
+    },
+    "log_like_side": {
+      "textures": "textures/blocks/log_like_side" //You can replace this with anything, just remember the name
+    },
+    "grass_like_top": {
+      "textures": "textures/blocks/grass_like_top" //You can replace this with anything, just remember the name
+    },
+    "grass_like_bottom": {
+      "textures": "textures/blocks/grass_like_bottom" //You can replace this with anything, just remember the name
+    },
+    "grass_like_side": {
+      "textures": "textures/blocks/grass_like_side" //You can replace this with anything, just remember the name
+    }
+  }
+}
+```
+
+Next, navigate to your block file. In your block file, make sure you have the `material_instance` component.
+
+Dirt like block example:
+{% include filepath.html path="BP/blocks/dirt_like.json"%}
+```jsonc
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "tut:dirt_like",
+            "register_to_creative_menu": true
+        },
+        "components": {
+            minecraft:material_instances": {
+                "*": {
+                    "texture": "dirt_like",
+                }
+            },
+            ...
+        },
+        "events": {...}
+    }
+}
+```
+
+Log like block example:
+{% include filepath.html path="BP/blocks/dirt_like.json"%}
+```jsonc
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "tut:log_like",
+            "register_to_creative_menu": true
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "log_like_side"
+                },
+                "ends": {
+                    "texture": "log_like_top"
+                },
+                "up": "ends",
+                "down": "ends"
+            },
+            ...
+        },
+        "events": {...}
+    }
+}
+```
+
+Grass like block example:
+{% include filepath.html path="BP/blocks/dirt_like.json"%}
+```jsonc
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "tut:grass_like",
+            "register_to_creative_menu": true
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "grass_like_side"
+                },
+                "up": {
+                    "texture": "grass_like_top"
+                },
+                "down": {
+                    "texture": "grass_like_bottom"
+                }
+            },
+            ...
+        },
+        "events": {...}
+    }
+}
+```
+
+If you followed this properly, your 1.16.100 block should now have a texture.
+
+---
+<a name="2.0.0"></a>
+## 2.0.0 - My Block Looks Like Dirt!
+
+Problem: My custom block has turned into a dirt block with green writing on it. ![](/assets/images/blocks/block_tr/tr_update.png){: .pixelated} This is called `info_update` block. This happens when the block identifier changed or an invalid json was made.
+
+Solution: Use a json linter and double check that your identifier didn't change.
+
+---
+<a name="3.0.0"></a>
+## 3.0.0 - Block isn't transparent!
+
+Problem: You have transparent pixels in your texture file. When you apply it in game, they become opaque.
+
+Solution: Navigate to your block file. Navigate to your `material_instance` component. Add the following to your component:
+
+{% include filepath.html path="BP/blocks/your_block.json"%}
+```jsonc
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "render_method": "alpha_test"
+            }
+         }
+      }
+   }
+}
+```
+
+---
+<a name="4.0.0"></a>
+## 4.0.0 - Common Content Log Errors
+
+This section will describe common content log errors and how to debug them.
+
+---
+<a name="4.1.0"></a>
+## 4.1.0 - [Blocks][Error]
+
+Problem: Your content log shows `[Blocks][error]-minecraft:entity_collision: min can't be below (-8, 0, -8) and max can't be more than (8, 16, 8)` or `[Blocks][error]-minecraft:pick_collision: min can't be below (-8, 0, -8) and max can't be more than (8, 16, 8)`
+
+Solution: Check your `entity_collision` or `pick_collision` components and do the following:
+  - Make sure the x or z isn't less than -8.
+  - Make sure the y isn't less than 0.
+  - Make sure the size isn't bigger than 16x16x16.
+
+---
+<a name="4.2.0"></a>
+## 4.2.0 - [Blocks][warning]
+
+Problem: Your content log shows `geometry.your_block contains an X amount of boxes outside the warning bounds of (*insert numbers*) to (*insert numbers*)`
+
+Solution: Don't worry. It's nothing to worry about. It's just telling you that you geometry is bigger than 16x16x16. You can either make the geometry smaller or just ignore it.
+
+---
+## What Now?
+
+That is all the common block troubleshooting tips I have seen. If you still have any problems, feel free to join the discord server and ask your question there. If you believe any information is wrong or outdated, feel free to contribute via github.
