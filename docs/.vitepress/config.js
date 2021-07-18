@@ -41,15 +41,6 @@ function generateSidebar(base, dir) {
 			// Don't include hidden pages (ignores children)
 			if (frontMatter.data.hidden == true) return
 
-			let badge = null
-
-			if (frontMatter.data.badge != null && frontMatter.badge != '') {
-				badge = {
-					text: frontMatter.data.badge,
-					color: frontMatter.data.badge_color,
-				}
-			}
-
 			let number = null
 
 			if (frontMatter.data.number != null) {
@@ -65,7 +56,6 @@ function generateSidebar(base, dir) {
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
-				badge: badge,
 				tags: tags,
 				number: number,
 				link,

@@ -41,19 +41,8 @@ import {
 	watchEffect,
 } from 'vue'
 import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navLink'
-import type { Badge } from '../Sidebar/Structure'
-import { useBadgeColor } from '../../Composables/useBadgeColor'
 import { useIsMobile } from '../../Composables/isMobile'
 import { useSidebarState } from '../../Composables/sidebar'
-
-const badgeClass = {
-	'text-xs': true,
-	'pl-2': true,
-	'pr-2': true,
-	'rounded-lg': true,
-	'flex-initial': true,
-	'py-1': true,
-}
 
 const emit = defineEmit(['change'])
 
@@ -61,23 +50,13 @@ const props = defineProps<{
 	item: {
 		text: string
 		link: string
-		badge?: Badge
 		tags?: Array<string>
 		number?: string
 	}
 }>()
 const propsRefs = toRefs(props)
-const { color } = toRefs(props.item.badge ?? reactive({ color: 'default' }))
 
 const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
-
-const badgeColorClass = computed(() => {
-	if (props.item.badge == null) {
-		return {}
-	} else {
-		return useBadgeColor(color).value
-	}
-})
 
 const { isMobile } = useIsMobile()
 const { toggle } = useSidebarState()
