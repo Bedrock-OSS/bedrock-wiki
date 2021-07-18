@@ -39,6 +39,13 @@ const props = defineProps<{
 	mentioned: Array<string>
 }>()
 
+// partial type of https://api.github.com/users/user
+interface GitHubAuthor {
+	login: string
+	avatar_url: string
+	html_url: string
+}
+
 const getContributors = async function () {
 	let url =
 		'https://api.github.com/repos/' +
@@ -56,15 +63,16 @@ const getContributors = async function () {
 				: {}
 		),
 	})
-	let commits = await result.json()
-	let contributors = []
+	let commits: { author: GitHubAuthor }[] = await result.json()
+	let contributors: GitHubAuthor[] = []
+
+	const contributorExists = (login: string) =>
+		contributors.filter((value) => value.login === login).length > 0
+
 	for (let i = 0; i < commits.length; i++) {
 		if (
-			commits[i].author &&
-			commits[i].author.login &&
-			contributors.filter(
-				(value) => value.login === commits[i].author.login
-			).length === 0
+			commits[i]?.author?.login &&
+			!contributorExists(commits[i].author.login)
 		) {
 			contributors.push(commits[i].author)
 		}
@@ -82,16 +90,8 @@ const getContributors = async function () {
 					: {}
 			),
 		})
-		let user = await result.json()
-		let add = true
-		contributors.every((u) => {
-			if (u.login == user.login) {
-				add = false
-				return false
-			}
-			return true
-		})
-		if (add) contributors.push(user)
+		let user: GitHubAuthor = await result.json()
+		if (!contributorExists(user.login)) contributors.push(user)
 	}
 	return contributors
 }
