@@ -34,14 +34,14 @@
 <script setup lang="ts">
 import Navigation from './Navigation.vue'
 import { computed, ref, watch } from 'vue'
-import { useSiteDataByRoute } from 'vitepress'
+import { useData } from 'vitepress'
 import { useSidebarState } from '../../Composables/sidebar'
 import { onClickOutside } from '@vueuse/core'
 import { useIsMobile } from '../../Composables/isMobile'
 
 const sidebarElement = ref<HTMLElement | null>(null)
 const { isVisible, toggle } = useSidebarState()
-const site = useSiteDataByRoute()
+const { site } = useData()
 const navLinks = computed(() => site.value.themeConfig.sidebar['/'])
 const { isMobile } = useIsMobile()
 

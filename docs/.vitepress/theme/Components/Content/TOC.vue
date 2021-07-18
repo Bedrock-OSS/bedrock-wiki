@@ -1,6 +1,14 @@
 <template>
 	<div class="sidebar-toc xl:fixed flex flex-col top-0 right-0 my-4">
-		<details open class="outline-none w-full sm:min-w-sm sm:w-max xl:min-w-0 xl:w-auto">
+		<details
+			open
+			class="
+				outline-none
+				w-full
+				sm:min-w-sm sm:w-max
+				xl:min-w-0 xl:w-auto
+			"
+		>
 			<summary
 				class="
 					flex
@@ -85,9 +93,9 @@
 </template>
 
 <script setup lang="ts">
-import { usePageData } from 'vitepress'
+import { useData } from 'vitepress'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
-const page = usePageData()
+const { page } = useData()
 
 import { ref, watch } from 'vue'
 

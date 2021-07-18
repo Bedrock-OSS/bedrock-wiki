@@ -19,10 +19,10 @@ import type { INavCategory } from './Structure'
 import Category from './Category.vue'
 import NavLink from '../Navigation/NavLink.vue'
 import { defineProps, ref, computed } from 'vue'
-import { useSiteDataByRoute } from 'vitepress'
+import { useData } from 'vitepress'
 import { useIsMobile } from '../../Composables/isMobile'
 
-const site = useSiteDataByRoute()
+const { site } = useData()
 const navLinks = computed(() => site.value.themeConfig.nav)
 const { isMobile } = useIsMobile()
 

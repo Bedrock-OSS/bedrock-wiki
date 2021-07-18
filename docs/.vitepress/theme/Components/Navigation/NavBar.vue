@@ -46,7 +46,7 @@ import NavLink from './NavLink.vue'
 import DarkMode from '../Controls/DarkMode.vue'
 import WikiLogo from '../Content/WikiLogo.vue'
 import { computed, defineAsyncComponent } from 'vue'
-import { useSiteDataByRoute } from 'vitepress'
+import { useData } from 'vitepress'
 import { useSidebarState } from '../../Composables/sidebar'
 import { useIsMobile } from '../../Composables/isMobile'
 
@@ -55,7 +55,7 @@ const AlgoliaSearchBox = defineAsyncComponent(
 )
 
 const { toggle, isVisible } = useSidebarState()
-const site = useSiteDataByRoute()
+const { site } = useData()
 const navLinks = computed(() => site.value.themeConfig.nav)
 const algoliaConfig = computed(() => site.value.themeConfig.algolia)
 

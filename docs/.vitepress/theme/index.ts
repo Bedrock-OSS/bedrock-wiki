@@ -35,7 +35,7 @@ const globalComponents: [string, Component][] = [
 const theme: Theme = {
 	Layout,
 	// @ts-ignore
-	NotFound: () => Component404, //Custom 404
+	NotFound: Component404, //Custom 404
 	enhanceApp({ app, router, siteData }) {
 		for (const [componentName, globalComponent] of globalComponents) {
 			app.component(componentName, globalComponent)

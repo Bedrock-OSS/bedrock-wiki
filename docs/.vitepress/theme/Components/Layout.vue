@@ -34,16 +34,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-const route = useRoute()
+import { computed, watchEffect, onMounted } from 'vue'
 import TOC from './Content/TOC.vue'
 import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import Contributors from './Content/Contributors.vue'
+import { useData, useRoute } from 'vitepress'
+
+const route = useRoute()
+const { page } = useData()
 const { toggle, isVisible } = useSidebarState()
-import { usePageData, useRoute } from 'vitepress'
-const page = usePageData()
 
 // Default toc to true
 const showToc = computed(() =>
@@ -59,9 +60,7 @@ const showContributors = computed(() =>
 )
 
 const mentionedContributors = computed(() =>
-	route.data.frontmatter.mention == null
-		? []
-		: route.data.frontmatter.mention
+	route.data.frontmatter.mention == null ? [] : route.data.frontmatter.mention
 )
 </script>
 
