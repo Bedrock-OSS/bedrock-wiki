@@ -14,7 +14,7 @@
 		<TOC v-if="showToc" />
 		<Content
 			:class="{
-				'xl:pr-72': showToc,
+				'xl:mr-72': showToc,
 			}"
 		/>
 		<div v-if="showContributors">
