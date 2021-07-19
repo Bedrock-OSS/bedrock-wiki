@@ -20,7 +20,7 @@
         </div>
         <div class="m-0 p-0 pb-4 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 m-0 p-0">
-                <CardLink title="Beginner's Guide" imgsrc="assets/images/homepage/crafting_table_0.png" link="guide/">
+                <CardLink title="Beginner's Guide" imgsrc="assets/images/homepage/crafting_table_0.png" link="guide/introduction">
                 Step-by-step tutorials, intended as your first-contact with addons.
                 </CardLink>
                 <Card title="Learn" imgsrc="assets/images/homepage/bookshelf_0.png">
@@ -28,12 +28,12 @@
                 <a href="#">Tutorials</a>: Tutorial-like write-ups, containing specific instructions and example json.
                 </Card>
                 <Card title="Items" imgsrc="assets/images/homepage/iron_pickaxe_0.png">
-                <a href="items/intro.html">Beginner's Guide</a>: A "Hello world" guide in creating your first item.<br/>
-                <a href="items/documentation.html">Documentation</a>: Item tags, events and etc. are covered here.
+                <a href="items/items-intro">Beginner's Guide</a>: A "Hello world" guide in creating your first item.<br/>
+                <a href="items/items-16">Documentation</a>: Item tags, events and etc. are covered here.
                 </Card>
                 <Card title="Blocks" imgsrc="assets/images/homepage/diamond_ore_0.png">
-                <a href="blocks/intro.html">Beginner's Guide</a>: A "Hello world" guide in making blocks.<br/>
-                <a href="blocks/documentation.html">Documentation</a>: Block tags, events, permutations and etc. are covered here.
+                <a href="blocks/blocks-intro">Beginner's Guide</a>: A "Hello world" guide in making blocks.<br/>
+                <a href="blocks/blocks-16">Documentation</a>: Block tags, events, permutations and etc. are covered here.
                 </Card>
                 <Card title="Entities" imgsrc="assets/images/homepage/spawn_egg_30.png">
                 <a href="entities/intro.html">Beginner's Guide</a>: Doesn't exist yet.<br/>
