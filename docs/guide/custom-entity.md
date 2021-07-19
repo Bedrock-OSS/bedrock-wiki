@@ -1,7 +1,7 @@
 ---
 title: 'Create a custom Entity'
-nav_order: 5
-number: '5.'
+nav_order: 6
+number: '6.'
 ---
 
 Last time you created a custom item for this custom entity to drop. This time you will create the Ghost itself, as promised.
@@ -15,95 +15,92 @@ Just like with items, the main files of a custom entity are its RP and BP files.
 
 ```json
 {
-    "format_version": "1.16.0",
-    "minecraft:entity": {
-        "description": {
-            "identifier": "wiki:ghost",
-            "is_summonable": true,
-            "is_spawnable": true,
-            "is_experimental": false
-        },
-        "components": {
-            "minecraft:type_family": {
-                "family": [
-                    "ghost",
-                    "monster"
-                ]
-            },
-            "minecraft:jump.static": {},
-            "minecraft:can_climb": {},
-            "minecraft:physics": {},
-            "minecraft:movement.basic": {},
-            "minecraft:loot": {
-                "table": "loot_tables/entities/ghost.json"
-            },
-            "minecraft:health": {
-                "value": 20,
-                "max": 20
-            },
-            "minecraft:collision_box": {
-                "width": 1,
-                "height": 2
-            },
-            "minecraft:movement": {
-                "value": 0.2
-            },
-            "minecraft:behavior.delayed_attack": {
-                "priority": 0,
-                "attack_once": false,
-                "track_target": true,
-                "require_complete_path": false,
-                "random_stop_interval": 0,
-                "reach_multiplier": 1.5,
-                "speed_multiplier": 1,
-                "attack_duration": 0.75,
-                "hit_delay_pct": 0.5
-            },
-            "minecraft:navigation.walk": {
-                "can_walk": true,
-                "avoid_sun": true,
-                "can_pass_doors": true,
-                "can_open_doors": true
-            },
-            "minecraft:attack": {
-                "damage": 3
-            },
-            "minecraft:behavior.random_look_around": {
-                "priority": 7
-            },
-            "minecraft:behavior.hurt_by_target": {
-                "priority": 1
-            },
-            "minecraft:behavior.nearest_attackable_target": {
-                "priority": 2,
-                "within_radius": 25,
-                "reselect_targets": true,
-                "entity_types": [
-                    {
-                        "filters": {
-                            "any_of": [
-                                {
-                                    "test": "is_family",
-                                    "subject": "other",
-                                    "value": "player"
-                                }
-                            ]
-                        },
-                        "max_dist": 35
-                    }
-                ]
-            },
-            "minecraft:behavior.random_stroll": {
-                "priority": 6,
-                "speed_multiplier": 1
-            },
-            "minecraft:behavior.look_at_player": {
-                "priority": 7,
-                "look_distance": 6,
-                "probability": 0.02
-            }
-        }
-    }
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "wiki:ghost",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["ghost", "monster"]
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:physics": {},
+			"minecraft:movement.basic": {},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/ghost.json"
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 2
+			},
+			"minecraft:movement": {
+				"value": 0.2
+			},
+			"minecraft:behavior.delayed_attack": {
+				"priority": 0,
+				"attack_once": false,
+				"track_target": true,
+				"require_complete_path": false,
+				"random_stop_interval": 0,
+				"reach_multiplier": 1.5,
+				"speed_multiplier": 1,
+				"attack_duration": 0.75,
+				"hit_delay_pct": 0.5
+			},
+			"minecraft:navigation.walk": {
+				"can_walk": true,
+				"avoid_sun": true,
+				"can_pass_doors": true,
+				"can_open_doors": true
+			},
+			"minecraft:attack": {
+				"damage": 3
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 7
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"within_radius": 25,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								}
+							]
+						},
+						"max_dist": 35
+					}
+				]
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"look_distance": 6,
+				"probability": 0.02
+			}
+		}
+	}
 }
 ```
 
@@ -152,36 +149,36 @@ Again, just like with the item, a custom entity needs a resource file listing it
 
 ```json
 {
-    "format_version": "1.10.0",
-    "minecraft:client_entity": {
-        "description": {
-            "identifier": "wiki:ghost",
-            "materials": {
-                "default": "entity_alphatest"
-            },
-            "textures": {
-                "default": "textures/entity/ghost"
-            },
-            "geometry": {
-                "default": "geometry.ghost"
-            },
-            "scripts": {
-                "animate": ["walk_controller", "attack_controller"]
-            },
-            "animations": {
-                "walk_controller": "controller.animation.ghost.walk",
-                "attack_controller": "controller.animation.ghost.attack",
-                "attack": "animation.ghost.attack",
-                "idle": "animation.ghost.idle",
-                "move": "animation.ghost.move"
-            },
-            "spawn_egg": {
-                "overlay_color": "#bdd1d1",
-                "base_color": "#9fb3b3"
-            },
-            "render_controllers": ["controller.render.ghost"]
-        }
-    }
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "wiki:ghost",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/ghost"
+			},
+			"geometry": {
+				"default": "geometry.ghost"
+			},
+			"scripts": {
+				"animate": ["walk_controller", "attack_controller"]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.ghost.walk",
+				"attack_controller": "controller.animation.ghost.attack",
+				"attack": "animation.ghost.attack",
+				"idle": "animation.ghost.idle",
+				"move": "animation.ghost.move"
+			},
+			"spawn_egg": {
+				"overlay_color": "#bdd1d1",
+				"base_color": "#9fb3b3"
+			},
+			"render_controllers": ["controller.render.ghost"]
+		}
+	}
 }
 ```
 
@@ -210,20 +207,18 @@ Our next step is creating the mentioned _render controller_ with the id `control
 
 ```json
 {
-    "format_version": "1.10.0",
-    "render_controllers": {
-        "controller.render.ghost": {
-            "geometry": "Geometry.default",
-            "materials": [
-                {
-                    "*": "Material.default"
-                }
-            ],
-            "textures": [
-                "Texture.default"
-            ]
-        }
-    }
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.ghost": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": ["Texture.default"]
+		}
+	}
 }
 ```
 
@@ -249,73 +244,73 @@ Before you take a look at a models code, which holds data about the size, rotati
 
 ```json
 {
-    "format_version": "1.12.0",
-    "minecraft:geometry": [
-        {
-            "description": {
-                "identifier": "geometry.ghost",
-                "texture_width": 64,
-                "texture_height": 64,
-                "visible_bounds_width": 3,
-                "visible_bounds_height": 3.5,
-                "visible_bounds_offset": [0, 1.25, 0]
-            },
-            "bones": [
-                {
-                    "name": "root",
-                    "pivot": [0, 3, 0]
-                },
-                {
-                    "name": "body",
-                    "parent": "root",
-                    "pivot": [0, 4.625, 0],
-                    "cubes": [
-                        {
-                            "origin": [-4, 3, -4],
-                            "size": [8, 13, 8],
-                            "uv": [0, 20]
-                        }
-                    ]
-                },
-                {
-                    "name": "leftArm",
-                    "parent": "body",
-                    "pivot": [4.6, 15.5, 0.5],
-                    "cubes": [
-                        {
-                            "origin": [4.1, 7, -1],
-                            "size": [3, 9, 3],
-                            "uv": [32, 32]
-                        }
-                    ]
-                },
-                {
-                    "name": "rightArm",
-                    "parent": "body",
-                    "pivot": [-4.5, 15.5, 0.5],
-                    "cubes": [
-                        {
-                            "origin": [-7.1, 7, -1],
-                            "size": [3, 9, 3],
-                            "uv": [32, 20]
-                        }
-                    ]
-                },
-                {
-                    "name": "head",
-                    "parent": "body",
-                    "pivot": [0, 16, 0],
-                    "cubes": [
-                        {
-                            "origin": [-5, 16, -5],
-                            "size": [10, 10, 10],
-                            "uv": [0, 0]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ghost",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 3, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 4.625, 0],
+					"cubes": [
+						{
+							"origin": [-4, 3, -4],
+							"size": [8, 13, 8],
+							"uv": [0, 20]
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [4.6, 15.5, 0.5],
+					"cubes": [
+						{
+							"origin": [4.1, 7, -1],
+							"size": [3, 9, 3],
+							"uv": [32, 32]
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-4.5, 15.5, 0.5],
+					"cubes": [
+						{
+							"origin": [-7.1, 7, -1],
+							"size": [3, 9, 3],
+							"uv": [32, 20]
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 16, 0],
+					"cubes": [
+						{
+							"origin": [-5, 16, -5],
+							"size": [10, 10, 10],
+							"uv": [0, 0]
+						}
+					]
+				}
+			]
+		}
+	]
 }
 ```
 
@@ -329,308 +324,124 @@ Most of what was said for models is also true for animations. Here's the code yo
 
 ```json
 {
-    "format_version": "1.8.0",
-    "animations": {
-        "animation.ghost.idle": {
-            "loop": true,
-            "animation_length": 3,
-            "bones": {
-                "body": {
-                    "rotation": {
-                        "0.0": [
-                            10,
-                            0,
-                            0
-                        ],
-                        "3.0": [
-                            10,
-                            0,
-                            0
-                        ]
-                    },
-                    "position": {
-                        "0.0": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "1.5": [
-                            0,
-                            1,
-                            0
-                        ],
-                        "3.0": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                },
-                "leftArm": {
-                    "rotation": {
-                        "0.0": [
-                            -10,
-                            0,
-                            0
-                        ],
-                        "1.5": [
-                            -5,
-                            0,
-                            0
-                        ],
-                        "3.0": [
-                            -10,
-                            0,
-                            0
-                        ]
-                    }
-                },
-                "rightArm": {
-                    "rotation": {
-                        "0.0": [
-                            -10,
-                            0,
-                            0
-                        ],
-                        "1.5": [
-                            -5,
-                            0,
-                            0
-                        ],
-                        "3.0": [
-                            -10,
-                            0,
-                            0
-                        ]
-                    }
-                },
-                "head": {
-                    "rotation": {
-                        "0.0": [
-                            -7.5,
-                            0,
-                            0
-                        ],
-                        "1.5": [
-                            -2.5,
-                            0,
-                            0
-                        ],
-                        "3.0": [
-                            -7.5,
-                            0,
-                            0
-                        ]
-                    }
-                }
-            }
-        },
-        "animation.ghost.attack": {
-            "animation_length": 0.75,
-            "bones": {
-                "body": {
-                    "rotation": {
-                        "0.0": [
-                            10,
-                            0,
-                            0
-                        ],
-                        "0.2917": [
-                            10,
-                            15,
-                            0
-                        ],
-                        "0.5": [
-                            22.5,
-                            -12.5,
-                            0
-                        ],
-                        "0.75": [
-                            10,
-                            0,
-                            0
-                        ]
-                    },
-                    "position": {
-                        "0.0": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "0.2917": [
-                            0,
-                            0,
-                            3
-                        ],
-                        "0.5": [
-                            0,
-                            0,
-                            -3
-                        ],
-                        "0.75": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                },
-                "leftArm": {
-                    "rotation": {
-                        "0.0": [
-                            -10,
-                            0,
-                            0
-                        ],
-                        "0.75": [
-                            -10,
-                            0,
-                            0
-                        ]
-                    }
-                },
-                "rightArm": {
-                    "rotation": {
-                        "0.0": [
-                            -10,
-                            0,
-                            0
-                        ],
-                        "0.2083": [
-                            -10,
-                            0,
-                            0
-                        ],
-                        "0.2917": [
-                            -10,
-                            62.5,
-                            117.5
-                        ],
-                        "0.5": [
-                            -80,
-                            -17.5,
-                            22.5
-                        ],
-                        "0.75": [
-                            -10,
-                            0,
-                            0
-                        ]
-                    }
-                },
-                "head": {
-                    "rotation": {
-                        "0.0": [
-                            -7.5,
-                            0,
-                            0
-                        ],
-                        "0.75": [
-                            -7.5,
-                            0,
-                            0
-                        ]
-                    }
-                }
-            }
-        },
-        "animation.ghost.move": {
-            "loop": true,
-            "animation_length": 1,
-            "bones": {
-                "body": {
-                    "rotation": {
-                        "0.0": [
-                            15,
-                            0,
-                            0
-                        ],
-                        "0.25": [
-                            15,
-                            -2.5,
-                            0
-                        ],
-                        "0.5": [
-                            15,
-                            0,
-                            0
-                        ],
-                        "0.75": [
-                            15,
-                            2.5,
-                            0
-                        ],
-                        "1.0": [
-                            15,
-                            0,
-                            0
-                        ]
-                    },
-                    "position": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                "leftArm": {
-                    "rotation": {
-                        "0.0": [
-                            15,
-                            0,
-                            0
-                        ],
-                        "0.5": [
-                            20,
-                            0,
-                            0
-                        ],
-                        "1.0": [
-                            15,
-                            0,
-                            0
-                        ]
-                    }
-                },
-                "rightArm": {
-                    "rotation": {
-                        "0.0": [
-                            15,
-                            0,
-                            0
-                        ],
-                        "0.5": [
-                            20,
-                            0,
-                            0
-                        ],
-                        "1.0": [
-                            15,
-                            0,
-                            0
-                        ]
-                    }
-                },
-                "head": {
-                    "rotation": {
-                        "0.0": [
-                            -12.5,
-                            0,
-                            0
-                        ],
-                        "0.5": [
-                            -15,
-                            0,
-                            0
-                        ],
-                        "1.0": [
-                            -12.5,
-                            0,
-                            0
-                        ]
-                    }
-                }
-            }
-        }
-    }
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ghost.idle": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [10, 0, 0],
+						"3.0": [10, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.5": [0, 1, 0],
+						"3.0": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"1.5": [-5, 0, 0],
+						"3.0": [-10, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"1.5": [-5, 0, 0],
+						"3.0": [-10, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [-7.5, 0, 0],
+						"1.5": [-2.5, 0, 0],
+						"3.0": [-7.5, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.ghost.attack": {
+			"animation_length": 0.75,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [10, 0, 0],
+						"0.2917": [10, 15, 0],
+						"0.5": [22.5, -12.5, 0],
+						"0.75": [10, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2917": [0, 0, 3],
+						"0.5": [0, 0, -3],
+						"0.75": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"0.75": [-10, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"0.2083": [-10, 0, 0],
+						"0.2917": [-10, 62.5, 117.5],
+						"0.5": [-80, -17.5, 22.5],
+						"0.75": [-10, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [-7.5, 0, 0],
+						"0.75": [-7.5, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.ghost.move": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.25": [15, -2.5, 0],
+						"0.5": [15, 0, 0],
+						"0.75": [15, 2.5, 0],
+						"1.0": [15, 0, 0]
+					},
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.5": [20, 0, 0],
+						"1.0": [15, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.5": [20, 0, 0],
+						"1.0": [15, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [-12.5, 0, 0],
+						"0.5": [-15, 0, 0],
+						"1.0": [-12.5, 0, 0]
+					}
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -645,52 +456,52 @@ Approaching the end, we'll create our Animation Controller file, which will _con
 
 ```json
 {
-    "format_version": "1.12.0",
-    "animation_controllers": {
-        "controller.animation.ghost.attack": {
-            "states": {
-                "default": {
-                    "transitions": [
-                        {
-                            "attacking": "query.is_delayed_attacking"
-                        }
-                    ]
-                },
-                "attacking": {
-                    "blend_transition": 0.2,
-                    "animations": ["attack"],
-                    "transitions": [
-                        {
-                            "default": "!query.is_delayed_attacking"
-                        }
-                    ]
-                }
-            }
-        },
-        "controller.animation.ghost.walk": {
-            "initial_state": "standing",
-            "states": {
-                "standing": {
-                    "blend_transition": 0.2,
-                    "animations": ["idle"],
-                    "transitions": [
-                        {
-                            "moving": "query.modified_move_speed > 0.1"
-                        }
-                    ]
-                },
-                "moving": {
-                    "blend_transition": 0.2,
-                    "animations": ["move"],
-                    "transitions": [
-                        {
-                            "standing": "query.modified_move_speed < 0.1"
-                        }
-                    ]
-                }
-            }
-        }
-    }
+	"format_version": "1.12.0",
+	"animation_controllers": {
+		"controller.animation.ghost.attack": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attacking": "query.is_delayed_attacking"
+						}
+					]
+				},
+				"attacking": {
+					"blend_transition": 0.2,
+					"animations": ["attack"],
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.ghost.walk": {
+			"initial_state": "standing",
+			"states": {
+				"standing": {
+					"blend_transition": 0.2,
+					"animations": ["idle"],
+					"transitions": [
+						{
+							"moving": "query.modified_move_speed > 0.1"
+						}
+					]
+				},
+				"moving": {
+					"blend_transition": 0.2,
+					"animations": ["move"],
+					"transitions": [
+						{
+							"standing": "query.modified_move_speed < 0.1"
+						}
+					]
+				}
+			}
+		}
+	}
 }
 ```
 

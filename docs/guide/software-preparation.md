@@ -4,9 +4,9 @@ nav_order: 3
 number: '3.'
 ---
 
-In order to be able to code addons you'll need a certain set of software installed. While Windows 10 offers the best development environment, and largest variety of tools, alternatives can be found on other platforms, including mobile.
+Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on windows 10, we have provided mobile alternatives for both Android and ios, where applicable.
 
-## A valid copy of Bedrock Minecraft
+### A valid copy of Bedrock Minecraft
 
 -   [Windows 10](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab)
 -   [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
@@ -14,13 +14,15 @@ In order to be able to code addons you'll need a certain set of software install
 
 ## Picking an Editor
 
-Bedrock Addons can be created using any text editor (even the Windows-pre-installed Notepad), however it's much more comfortable to work in a dedicated Code Editor.
+Addons can be created using any text editor, however it's much more comfortable to work in a dedicated editor. A good editor can give you code-completion, error-detection, and in-editor documentation.
 
 There are strong opinions about the best editor for beginners, but generally speaking you cannot go wrong selecting any of the following editors.
 
-Editor recommendations are starred.
+_Recommendations are starred._
 
 ### Plaintext Editors
+
+Plaintext editors are great for programmers, advanced users, and confident computer-users. Editors in this section are very powerful and customizable, but may be difficult to use.
 
 -   ⭐[_VSCode_](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for addon development. (_Warning: Do not install Visual Studio, which is something different_)
 -   [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities.
@@ -28,10 +30,12 @@ Editor recommendations are starred.
 
 ### Dedicated Editors
 
+Dedicated editors are great for beginners. You will be somewhat limited in power and customization, but the development experience is very smooth.
+
 -   ⭐[_bridge._](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft addon development. It offers JSON in tree view. However, the process of creating addons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
 -   [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for addon creation with JSON linting and autocomplete.
 
-### Mobile Alternatives
+### Mobile Editors
 
 -   **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
 -   **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
@@ -76,24 +80,25 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 
 <br>
 
-## Additional Add-on-creation Software
+### Additional Software
 
--   [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile. An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop _(≈$10/m)_](https://www.adobe.com/products/photoshop) or paint.net, is recommended to be used along.
--   You may also be recommended software such as [AJG (≈$3.50)](https://kaifireborn.itch.io/addon-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (≈$3.50)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
+### Blockbench
+
+-   ⭐ [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.
+
+### Image Editors
+
+-   ⭐ [Krita](https://krita.org/en/)
+-   [GIMP](https://www.gimp.org/)
+-   [Photoshop _(≈$10/m)_](https://www.adobe.com/products/photoshop)
 
 ![](/assets/images/guide/blockbench_workspace.png)
 
----
-
-Now that you have your tools installed, let's move onto some pre-organisation:
-
 ## The com.mojang folder
 
-The com.mojang folder is the folder we're going to be working with throughout the Guide and Addon development in general. All files we access or create will be placed somewhere in this folder:
+The `com.mojang` folder is a special folder where we build our addons. Minecraft understand this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder.
 
-I strongly recommend creating a shortcut to the folder on your Desktop, in order to be able to easily access it at any time.You'll find a lot of folders and files in the folder, among them: `behavior_packs`, `development_behavior_packs`, `resource_packs`, `development_resource_packs`.
-
-![com.mojang folder](/assets/images/guide/com_mojang_folder.png)
+You should create a shortcut to the `com.mojang` folder on your Desktop, so you can easily access it at any time.
 
 ### Windows
 
@@ -107,11 +112,9 @@ I strongly recommend creating a shortcut to the folder on your Desktop, in order
 
 `My iDevice>Minecraft>games>com.mojang`
 
-### Folder concents
+### Development Packs
 
-We will use `development_behavior_packs` and `development_resource_packs` for developing addons. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test pack content without reloading minecraft.
-
-Thus we'll work with these folders.
+We will develop our addon in `development_behavior_packs` and `development_resource_packs`. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test your addon without reloading minecraft.
 
 `resource_packs` and `behavior_packs` on the other hand contain stable addons, including those imported via `.mcpack`. We can ignore these folders for now.
 

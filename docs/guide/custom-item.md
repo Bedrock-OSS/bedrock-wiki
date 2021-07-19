@@ -1,7 +1,7 @@
 ---
 title: 'Create a custom Item'
-nav_order: 3
-number: '3.'
+nav_order: 4
+number: '4.'
 ---
 
 This section will walk you through the creation of a simple custom item for our custom entity, the Ghost, to drop. Like blocks and entities, items consist of a BP file (that defines how the item would function/behave) and an RP file (that describes how the item would look)
