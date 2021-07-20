@@ -4,7 +4,7 @@ title: Feature Types
 
 # Feature Types
 
-*Last updated for 1.17.2*
+*Last updated for 1.17.10*
 
 ::: warning
 Some links designed to reference external documents do not function, and will be updated at a later time to point to the correct resource.
@@ -706,7 +706,7 @@ Each distribution type requires an **extent**, which represents the range of val
 
 **Uniform distribution** is uniformly random distribution on a half-open interval between two values. It is known as “uniform” because every value within the range has an equal chance of being selected and “half-open” because the extent minimum is a member of the range, while the extent maximum is not:
 
-<i>minimum extent</i> <= <i>x</i> < <i>maximum extent</i>
+*minimum extent* <= *x* < *maximum extent*
 
 Therefore, if an extent of `[0, 16]` were given for a uniform distribution, blocks may be placed in a range of size 16: from 0 to 15. The 1st possible position starts at 0 while the 15th possible position ends at 16, matching the extent.
 
@@ -732,7 +732,7 @@ Therefore, if an extent of `[0, 16]` were given for a uniform distribution, bloc
 
 **Grid distributions** are powerful systems for placing blocks either directly on (`"fixed_grid"`) or randomly within (`"jittered_grid"`) evenly spaced intervals along a coordinate. Unlike the other distribution types, the extent of grids forms an interval that includes the maximum extent:
 
-<i>minimum extent</i> <= <i>x</i> <= <i>maximum extent</i>
+*minimum extent* <= *x* <= *maximum extent*
 
 Two grid distribution-only properties are available for finer control over the grids used by these systems. The interval size, which defaults to 1, can be customized with the `"step_size"` property. An initial offset, defaulting to 0, can also be provided via the `"grid_offset"` property.
 
@@ -1082,10 +1082,114 @@ Scene features only allow minimal customizations of their shapes to achieve thei
 
 ### Vegetation Patches
 ```json
+{
+	"format_version": "1.13.0",
 
+	"minecraft:vegetation_patch_feature": {
+		"description": {
+			"identifier": "tension:shiitake_patch"
+		},
+
+		"horizontal_radius": 4,
+		"extra_edge_column_chance": 0.5,
+
+		"surface": "floor",
+		"vertical_range": 5,
+
+		"ground_block": "minecraft:mycelium",
+		"replaceable_blocks": [
+			"minecraft:dirt",
+			"minecraft:grass"
+		],
+		"depth": 4,
+		"extra_deep_block_chance": 0.5,
+
+		"vegetation_feature": "tension:shiitake_mushroom",
+		"vegetation_chance": 0.125
+	}
+}
 ```
 
 **Vegetation patches** place sub-features (often vegetation) within a square-like boundary (the patch).
+
+Vegetation patches fundamentally perform 4 operations:
+
+- Determine a lateral patch shape from a given radius
+- Search vertically from the [input position](#) of every block in the shape for a surface (ceiling or floor)
+- Place columns of blocks into the surface
+- Generate sub-features randomly within the created patch
+
+#### Patch Shape
+```json
+"horizontal_radius": 3,
+"extra_edge_column_chance": 0.25
+```
+
+Vegetation patches commence by constructing the patch’s lateral shape. This shape is centered on the *x* and *z* of the [input position](#). From here, the required `"horizontal_radius"` specifies how far away in all lateral directions the initial shape should extend. This shape doesn’t use [taxicab distance](#); instead, the corners are filled in, constructing a simple square. The size of this square is given by:
+
+*horizontal radius* * 2 + 1
+
+Therefore, a horizontal radius of 4 will generate a square of side length 9, centered on the input *x* and *z*.
+
+Patch shape can be mildly randomized using the optional `"extra_edge_column_chance"` property. This property accepts values between `0`, the default, and `1` inclusively, indicating the odds for any of the blocks along the outside of the perimeter to be included in the patch shape. These perimeter blocks do not include the outer perimeter corners. If the corners are ignored, setting this property to `1` is equivalent to increasing the horizontal radius by 1.
+
+#### Patch Search
+```json
+"surface": "ceiling",
+"vertical_range": 8
+```
+
+The vegetation patch then searches each column within the determined patch shape from the *y*-component of the [input position](#) vertically to find the appropriate surface, given with the optional `"surface"` property. Either `"floor"` (the default if unspecified) or `"ceiling"` may be provided. The surface search only functions against air; no other contrast of blocks may be used. The search itself, however, may begin from within any block.
+
+The distance searched is given with `"vertical_range"`, which is required and has no tangible limit. The search occurs bidirectionally. As an example, if starting from a *y* of 70 and using a vertical range of `5`, surfaces between 65 and 75 inclusively will succeed.
+
+Only the first matched surface within range in a column will be used. When targeting floor surfaces, the first match is the highest surface. If targeting ceilings, the first match is the lowest surface.
+
+#### Patch Column Placement
+```json
+"ground_block": "arabia:lush_sand",
+"waterlogged": true,
+"replaceable_blocks": [
+	"minecraft:sand",
+	"minecraft:sandstone"
+],
+"depth": 2,
+"extra_deep_block_chance": 0.75
+```
+
+Patch column generation is then attempted in each column whose surface search succeeds. Columns are generated procedurally, starting at the input position and continuing away into the surface.
+
+The block that forms the solid foundation of the patch is given with the `"ground_block"`. Its length into the surface is given with `"depth"`. As expected, a depth of `0` will generate no blocks as part of the patch column, but negative values will generate a column that continues indefinitely until reaching a non-whitelisted block.
+
+The optional `"extra_deep_block_chance"` property provides a chance for each column to attempt generation of an additional block, increasing the depth of that column by 1. It takes a value between `0` and `1` inclusively, defaulting to 0. Setting the property to `1` has the same effect as increasing the depth by 1.
+
+::: tip NOTE
+The [vertical range](#patch-search) takes no further affect in generation after the search phase. If a column were to barely be within search range, its entire depth would still be attempted. Furthermore, if a surface would be out of the vertical range but blocks in that column would fall within the range, those blocks will still be ignored. Placement begins from the surface and continues downward when targeting [floor surfaces](#patch-search), and vice versa.
+:::
+
+A whitelist of blocks must be provided via the `"replaceable_blocks"` property. When generating a patch column, each block is checked and placed in order. If a non-whitelisted block is detected, generation of that column ceases. It is therefore possible for columns not to reach their target depth. Failure of a single column’s generation has no effect on other columns.
+
+Lastly, the optional boolean `"waterlogged"` property attempts to replace the topmost block in a patch column with water when set to true and `"surface"` is `"floor"`. Water will therefore be exposed to air along the surface. Water will not be substituted if one of its lateral faces is attached to air; this prevents water from spilling out. If `"waterlogged"` is omitted, water generation is disabled by default. When `"depth"` is `0` and waterlogging is enabled, blocks not whitelisted may be replaced with water anyway. For all other depth values, only whitelisted blocks will be replaced with water.
+
+#### Vegetation Placement
+```json
+"vegetation_feature": "tension:shiitake_mushroom",
+"vegetation_chance": 0.125
+```
+
+Finally, vegetation patches take a vegetation feature and corresponding generation chance to place sub-features at random locations on the surface of the patch. The sub-feature is given with the required `"vegetation_feature"` property. Every surface block generated has a chance to support this vegetation feature.
+
+::: warning
+Vegetation features multiple blocks in height that are attached to the surface of ceilings will still generate *upward* naturally. They must be constructed or proxied in such a way to generate downward from the ceiling.
+:::
+
+The chance that any block surface is selected as an input position for the sub-feature is given with the optional `"vegetation_chance"` float property, which defaults to `0`. Like the other chances in vegetation patch features, it ranges from 0 to 1 inclusively, where `0` will generate no sub-features and `1` will attempt to generate one for each block surface. Be wary of vegetation features that span more than a single column; collisions may occur, clumping individual features into a single mass.
+
+For [floor-bound](#patch-search) patches, if [`"waterlogged"`](#patch-column-placement) is `false`, vegetation features generate directly on the surface and have the potential to generate on surface edges. If waterlogging is enabled, however, vegetation features can’t generate on surface edges but may generate in water, waterlogging the block if supported. When the [`"depth"`](#patch-column-placement) is `0`, sub-features may be placed even though no patch blocks support them.
+
+::: warning
+If waterlogging is enabled on a ceiling-targeting vegetation patch feature, no vegetation features will be placed.
+:::
 
 ## Carver Features
 Carver features are special feature types for modifying vanilla cave generation. Little can currently be customized using carvers. Carvers only include the classic spaghetti caves and not ravines or structures.
@@ -1098,7 +1202,7 @@ Carvers work by culling blocks around predetermined paths; these paths are uncha
 Although listed in the features schema as optional, `"width_modifier"` should always be provided; errors will be thrown relentlessly, and entire chunks will appear corrupted. Furthermore, large values for the width modifier (greater than approximately `16`) shouldn’t be used: world loading slows to a crawl, and chunks may get culled in entirety.
 :::
 
-Carvers don’t truly *cull* blocks per se; instead they replace existing blocks (such as from biome surface builders or earlier-placed carvers) with a **fill block**. The fill block can be provided with the optional `"fill_with"` property, whose default depends on the carver type; this property, too, is usable in all carver feature types. Although carvers invisibly dip above and below the heightmap, using a non-air block won’t affect the region of the carver above the heightmap; this is because air isn’t a block whitelisted for replacement.
+Carvers don’t truly *cull* blocks per se; instead they replace existing blocks (such as from biome surface builders or earlier-placed carvers) with a **fill block**. The fill block can be provided with the optional `"fill_with"` property, whose default depends on the carver type; this property, too, is usable in all carver feature types.
 
 ::: warning
 The block intersection set for carvers currently cannot be customized. Only vanilla blocks specific to each carver type will be replaced; custom blocks cannot be stripped to form caves.
@@ -1114,7 +1218,6 @@ The block intersection set for carvers currently cannot be customized. Only vani
 			"identifier": "spelunkers_dreams:massive_cave"
 		},
 
-		"fill_with": "minecraft:air",
 		"width_modifier": 4
 	}
 }
@@ -1134,8 +1237,6 @@ Overworld caves naturally extend from just above the bedrock layer at *y*-3 to *
 			"identifier": "aquamarine:underwater_thick_caves"
 		},
 
-		"fill_with": "minecraft:water",
-		"replace_air_with": "minecraft:flowing_water",
 		"width_modifier": 8
 	}
 }
@@ -1163,7 +1264,7 @@ Underwater cave carvers won’t function in custom biomes — even if that biome
 			"identifier": "hellscape:nether_caves"
 		},
 
-		"fill_with": "minecraft:air",
+		"fill_with": "minecraft:magma",
 		"width_modifier": 1
 	}
 }
