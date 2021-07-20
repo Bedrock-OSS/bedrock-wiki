@@ -1,7 +1,7 @@
 ---
 title: Introduction
 nav_order: 1
-number: '1.'
+prefix: '1.'
 ---
 
 ## What are Addons?

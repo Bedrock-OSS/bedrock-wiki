@@ -1,6 +1,6 @@
 ---
 title: Download Example Packs
-number: 'b.'
+prefix: 'b.'
 nav_order: 101
 ---
 

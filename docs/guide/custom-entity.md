@@ -1,7 +1,7 @@
 ---
 title: 'Create a custom Entity'
 nav_order: 5
-number: '5.'
+prefix: '5.'
 ---
 
 Last time you created a custom item for this custom entity to drop. This time you will create the Ghost itself, as promised.

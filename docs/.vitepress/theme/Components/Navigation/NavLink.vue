@@ -5,8 +5,8 @@
 		v-bind="linkProps"
 		@click="onNavigation"
 	>
-		<span v-if="props.item.number != null" class="font-bold">{{
-			props.item.number
+		<span v-if="props.item.prefix != null" class="font-bold">{{
+			props.item.prefix
 		}}</span>
 
 		<div class="flex-1 text-sm">{{ props.item.text }}</div>
@@ -51,7 +51,7 @@ const props = defineProps<{
 		text: string
 		link: string
 		tags?: Array<string>
-		number?: string
+		prefix?: string
 	}
 }>()
 const propsRefs = toRefs(props)
