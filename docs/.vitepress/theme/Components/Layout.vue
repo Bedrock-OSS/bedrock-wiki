@@ -34,13 +34,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed, watchEffect, onMounted } from 'vue'
+import { computed, watchEffect, onMounted, defineAsyncComponent } from 'vue'
 import TOC from './Content/TOC.vue'
 import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
-import Contributors from './Content/Contributors.vue'
 import { useData, useRoute } from 'vitepress'
+
+const Contributors = defineAsyncComponent(() => import('./Content/Contributors.vue'))
 
 const route = useRoute()
 const { page } = useData()
