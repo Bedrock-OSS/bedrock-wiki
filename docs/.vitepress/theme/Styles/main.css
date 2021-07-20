@@ -47,15 +47,32 @@ p + p {
 }
 
 h1 {
-	@apply font-bold
+	@apply font-bold;
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+	text-decoration-color: #d7d7d7;
 }
 
 h2 {
-	@apply font-semibold
+	@apply font-semibold;
+	border-bottom: 2px solid #d7d7d7;
+	padding-bottom: 4px;
+}
+
+.dark h1 {
+	text-decoration-color: #686868;
+}
+
+.dark h2 {
+	border-bottom: 2px solid #686868;
 }
 
 h3 {
-	@apply font-medium
+	@apply font-semibold;
+}
+
+h4 {
+	@apply font-semibold;
 }
 
 /* Lists */

@@ -10,7 +10,9 @@
 			'min-h-screen': true,
 		}"
 	>
-		<h1 v-if="page.title != ''" id="top">{{ page.title }}</h1>
+		<h1 class="xl:pr-72" v-if="page.title != ''" id="top">
+			{{ page.title }}
+		</h1>
 		<TOC v-if="showToc" />
 		<Content
 			:class="{

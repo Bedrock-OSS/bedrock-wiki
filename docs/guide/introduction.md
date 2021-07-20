@@ -8,17 +8,13 @@ number: '1.'
 
 An "Addon" is the Minecraft Bedrock Edition (_Windows 10, iOS, Android, Consoles_) equivalent to Java mods. However, in contrast to Java, the Bedrock Edition API is officially maintained by Mojang instead of the community.
 
-In general, you can think of _mods_ as _modifying_ the game, and _ addons_ as _adding-onto_ the game, following the development opportunities provided by Microsoft.
+In general, you can think of _mods_ as _modifying_ the game, and _addons_ as _adding-onto_ the game, following the development opportunities provided by Microsoft.
 
 ## What is this guide?
 
 This guide is a beginner tutorial, intended to walk you through the first stages of addon-creation. You will create your very own fully-functional Ghost entity, as well as an Ectoplasm item, and some other associated files.
 
-By the end of this guide, you will have created an entire addon all by yourself, which you can play with and modify.
-
-## What do I need to create Addons?
-
-This guide is focused on creating addons on a Windows 10 PC for any Bedrock platform. However, the process is similar when working on Android or iOS, although it is significantly more tedious. If something works differently on a mobile device, a note will state that.
+By the end of this guide, you will have created an entire addon all by yourself, which you can play with and modify!
 
 ## Is the guide up to date?
 

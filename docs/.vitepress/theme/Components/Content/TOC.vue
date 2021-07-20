@@ -141,6 +141,7 @@ ul {
 
 @screen xl {
 	.sidebar-toc {
+		z-index: 10;
 		/* Scroll if needed */
 		max-height: calc(100vh - 4.5rem);
 		overflow-y: auto;
