@@ -4,7 +4,7 @@ title: Feature Types
 
 # Feature Types
 
-*Last updated for 1.17.10*
+*Last updated for 1.17.2*
 
 ::: warning
 Some links designed to reference external documents do not function, and will be updated at a later time to point to the correct resource.
@@ -194,7 +194,7 @@ The shape of the cluster cannot be controlled; to achieve this, use [scatter fea
 ]
 ```
 
-In ore features, **replacement rules** bind target blocks to replacement lists that restrict the target’s placement. **Target blocks** are the blocks placed by a replacement rule; **replacement lists** are optional arrays that only allow replacement of specific blocks. The block selected for a given position in the cluster will be the target block of the first matching rule.
+In ore features, **replacement rules** bind target blocks to replacement lists that restrict the target’s placement; these rules are given with `"replace_rules"`. **Target blocks** are the blocks placed by a replacement rule, provided with the required `"places_block"` property; **replacement lists** (via `"may_replace"`) are optional arrays that only allow replacement of specific blocks. The block selected for a given position in the cluster will be the target block of the first matching rule. If a replacement list is not provided, that rule will always succeed in its position amongst the other rules, and all future rules will be ignored.
 
 ### Structure Template Features
 ```json
@@ -492,7 +492,7 @@ Tree canopies are constructed using **canopy properties**.
 
 ### Multiface Features
 ::: warning
-Multiface features are currently bugged and should not be used. At most 2 iterations are being placed — regardless of the spread chance. Additionally, they will only successfully orient glow lichen.
+Multiface features are currently bugged and should not be used. At most 2 iterations are being placed — regardless of the spread chance. [Scatter features](#scatter-features) are a viable substitute in the meantime.
 :::
 
 ```json
@@ -520,7 +520,7 @@ Multiface features are currently bugged and should not be used. At most 2 iterat
 }
 ```
 
-Multiface features randomly place sequences of blocks based on the success of the previous element of the sequence; additionally, they automatically orient blocks designed to attach to multiple faces, such as glow lichen, on placement.
+Multiface features randomly place sequences of blocks on surfaces based on the success of the previous element of the sequence. **Surfaces** are defined as between either air or water and any other block.
 
 #### Spread Mechanics
 ```json
@@ -528,7 +528,7 @@ Multiface features randomly place sequences of blocks based on the success of th
 "chance_of_spreading": 0.75
 ```
 
-Multiface features begin by attempting to place the **target block** (via the `"places_block"` property) at the [input position]() of the multiface feature. For each subsequent attempt, a roll is made against the **spread chance**. The spread chance is given with the `"chance_of_spreading"` float property; it ranges from `0` (never successful) to `1` (always successful). If it succeeds, the next block in the sequence will be placed randomly within a cube centered on the input position that has a half side length equal to the value given by "search_range"`. The sequence continues until a block fails to be placed.
+Multiface features begin by attempting to place the **target block** (via the `"places_block"` property) at the [input position](#) of the multiface feature. For each subsequent attempt, a roll is made against the **spread chance**. The spread chance is given with the `"chance_of_spreading"` float property; it ranges from `0` (never successful) to `1` (always successful). If it succeeds, the next block in the sequence will be placed randomly within a cube centered on the input position that has a half side length equal to the value given by `"search_range"`. The sequence continues until a block fails to be placed. The search range may be between `1` and `64`.
 
 #### Placement Restrictions
 ```json
@@ -542,7 +542,7 @@ Multiface features begin by attempting to place the **target block** (via the `"
 ]
 ```
 
-Multiface features also define **placement restrictions** to limit block attachment. With any iteration (including the first), if the placement check fails, the sequence is terminated. 3 required boolean properties control where the target can be placed:
+Multiface features use **placement restrictions** to limit block attachment. With any iteration (including the first), if the placement check fails, the sequence is terminated. 3 required boolean properties control where the target can be placed:
 
 - "can_place_on_floor"
 - "can_place_on_ceiling"
@@ -550,7 +550,11 @@ Multiface features also define **placement restrictions** to limit block attachm
 
 When these properties are true, their corresponding surfaces are eligible for attachment. Of course, at least one property must be true, or the sequence will never begin.
 
-An optional collection of blocks to which the target may attach is available via the `"can_place_on"` array property. Omitting this property defaults to allowing all blocks to attach.
+::: tip NOTE
+These properties *do not* dictate block state, only attachment. Multiface blocks, such as torches, will not automatically orient to the appropriate face. Furthermore, if the target block supports simultaneous attachment to multiple faces and would be attached to a face whitelisted by these properties, it may also automatically attach to a face that is *not* whitelisted.
+:::
+
+An optional whitelist of blocks to which the target may attach is available via the `"can_place_on"` array property. Omitting this property defaults to allowing all blocks to attach.
 
 ## Proxy Features
 Proxy features group, arrange, or gate features, including other proxy features. Proxy features themselves are incapable of having a direct effect on world generation.
@@ -986,33 +990,33 @@ The **search volume** declares the space in which the search will occur. Two vec
 
 
 ### Rect Layouts
+::: warning
+Rect layouts are currently bugged and should not be used. No information has been provided about how they will work. Presumably, rect layouts divide the surface area of a chunk into the provided rectangles given by `"area_dimensions"` and place their associated features based on the declared ratio of empty space.
+:::
+
 ```json
 {
 	"format_version": "1.13.0",
 
 	"minecraft:rect_layout": {
 		"description": {
-			"identifier": "gardenpalooza:"
+			"identifier": "gardenpalooza:garden_maze"
 		},
 
 		"ratio_of_empty_space": 0.5,
 		"feature_areas":[
 			{
-				"feature": ":",
+				"feature": "gardenpalooza:flower_patch",
 				"area_dimensions": [2, 4]
 			},
 			{
-				"feature": ":",
+				"feature": "gardenpalooza:garden_hedge",
 				"area_dimensions": [1, 3]
 			}
 		]
 	}
 }
 ```
-
-::: warning
-Rect layouts are currently bugged and should not be used. No information has been provided about how they will work. Presumably, rect layouts divide the surface area of a chunk into the provided rectangles given by `"area_dimensions"` and place their associated features based on the declared ratio of empty space.
-:::
 
 ### Scan Surface Features
 ```json
@@ -1031,7 +1035,7 @@ Rect layouts are currently bugged and should not be used. No information has bee
 
 Every block across the surface of a chunk can be covered by a feature using **scan surface features**. For this reason, it is strongly recommended to choose a feature that only occupies a column’s space.
 
-
+The **target feature** to be placed is given with the `"scan_surface_feature"` property. Placement position is the same as [the MoLang query `heightmap`](#), which means that water surfaces are used instead of their floors. It is therefore typically recommended to use [scatter features](#scatter-features) with a *y* expression utilizing the [`above_top_solid` query](#).
 
 ### Weighted Random Features
 ```json
@@ -1074,13 +1078,17 @@ Scene features only allow minimal customizations of their shapes to achieve thei
 **Geode features** construct spherical structures comprised of multiple block layers; they allow placement of features along walls of the interior.
 
 ### Beards and Shavers
+::: warning
+Beards and shavers are currently bugged and should be avoided. In particular, the platform is poorly constructed, with the surface block usually generating on the incorrect layer and the shape being cut off awkwardly.
+:::
+
 ```json
 
 ```
 
 **Beards and shavers** simultaneously provide a platform (beard) and a clearance (shaver) for a feature to generate.
 
-### Vegetation Patches
+### Vegetation Patch Features
 ```json
 {
 	"format_version": "1.13.0",
