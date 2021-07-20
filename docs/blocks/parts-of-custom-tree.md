@@ -969,5 +969,3 @@ What you have now:
 Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Structure
 
 ![](/assets/images/blocks/parts-of-custom-tree/result.png)
-
-Page is under development!

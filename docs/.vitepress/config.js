@@ -41,10 +41,10 @@ function generateSidebar(base, dir) {
 			// Don't include hidden pages (ignores children)
 			if (frontMatter.data.hidden == true) return
 
-			let number = null
+			let prefix = null
 
-			if (frontMatter.data.number != null) {
-				number = frontMatter.data.number
+			if (frontMatter.data.prefix != null) {
+				prefix = frontMatter.data.prefix
 			}
 
 			let tags = null
@@ -57,7 +57,7 @@ function generateSidebar(base, dir) {
 				text: frontMatter.data.title,
 				data: frontMatter.data,
 				tags: tags,
-				number: number,
+				prefix: prefix,
 				link,
 				activeMatch: `^${link}`,
 			})

@@ -1,7 +1,7 @@
 ---
 title: Project Setup
 nav_order: 4
-number: '4.'
+prefix: '4.'
 ---
 
 ## Preparation

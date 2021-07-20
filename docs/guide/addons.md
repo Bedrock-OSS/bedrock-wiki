@@ -1,7 +1,7 @@
 ---
 title: Addons Explained
 nav_order: 2
-number: '2.'
+prefix: '2.'
 ---
 
 ## What are addons?

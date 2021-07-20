@@ -4,7 +4,7 @@ tags:
     - recipe
 ---
 
-<BButton color="blue" link="#animation-controllers/animation-controllers.md">Learn more about Animation Controllers</BButton>
+<BButton color="blue" link="animation-controllers-intro">Learn more about Animation Controllers</BButton>
 
 This animation controller can be used to run commands, such as re-adding potion effects or giving items when the player respawns.
 
