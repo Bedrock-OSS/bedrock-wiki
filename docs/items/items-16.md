@@ -233,7 +233,7 @@ Used to execute commands
 
 ## Behaviour Item Components
 
-List of all new block components, with usage examples
+List of all new item components, with usage examples
 
 -   minecraft:ignores_permission
 
