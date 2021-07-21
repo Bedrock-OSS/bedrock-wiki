@@ -10,7 +10,7 @@
 			'min-h-screen': true,
 		}"
 	>
-		<h1 class="xl:pr-72" v-if="page.title != ''" id="top">
+		<h1 class="xl:pr-72" v-if="page && page.title" id="top">
 			{{ page.title }}
 		</h1>
 		<TOC v-if="showToc" />
@@ -43,27 +43,38 @@ import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import { useData, useRoute } from 'vitepress'
 
-const Contributors = defineAsyncComponent(() => import('./Content/Contributors.vue'))
+const Contributors = defineAsyncComponent(
+	() => import('./Content/Contributors.vue')
+)
 
 const route = useRoute()
 const { page } = useData()
 const { toggle, isVisible } = useSidebarState()
 
+const routeData = computed(() => {
+	if (route?.data) return route?.data
+
+	// Hack for error from navLinks when visiting 404 page
+	// We are manually populating the route.data object with data that fits to the 404 page
+	// @ts-ignore
+	route.data = {
+		frontmatter: {
+			title: '404',
+			relativePath: '/404.md',
+		},
+	}
+	return route.data
+})
+
 // Default toc to true
-const showToc = computed(() =>
-	route.data.frontmatter.show_toc == null
-		? true
-		: !!route.data.frontmatter.show_toc
+const showToc = computed(() => !!routeData.value.frontmatter.show_toc)
+
+const showContributors = computed(
+	() => !!routeData.value.frontmatter.show_contributors
 )
 
-const showContributors = computed(() =>
-	route.data.frontmatter.show_contributors == null
-		? true
-		: !!route.data.frontmatter.show_contributors
-)
-
-const mentionedContributors = computed(() =>
-	route.data.frontmatter.mention == null ? [] : route.data.frontmatter.mention
+const mentionedContributors = computed(
+	() => routeData.value.frontmatter.mention ?? []
 )
 </script>
 
