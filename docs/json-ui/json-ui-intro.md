@@ -314,7 +314,7 @@ Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc.,
 
 | Operator Name         | Operator | Examples                                                                      |
 | --------------------- | -------- | ----------------------------------------------------------------------------- |
-| Addiction             | +        | `"100% + 420px"` `($text + ' my')` `($index + 2)` `('#' + $bdg_nm + '_name')` |
+| Addition              | +        | `"100% + 420px"` `($text + ' my')` `($index + 2)` `('#' + $bdg_nm + '_name')` |
 | Subtraction           | -        | `"100% - 69px"` `($text - ' my')` `($index - 13)`                             |
 | Division              | /        | `($var / 12)` `(#value / 2)`                                                  |
 | Equal to              | =        | `($var = 12)` `($var = 'this_text')` `(#name = 'Wither')`                     |
