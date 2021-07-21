@@ -36,7 +36,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, watchEffect, onMounted, defineAsyncComponent } from 'vue'
+import {
+	computed,
+	reactive,
+	watchEffect,
+	onMounted,
+	defineAsyncComponent,
+} from 'vue'
 import TOC from './Content/TOC.vue'
 import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
@@ -60,14 +66,13 @@ const routeData = computed(() => {
 	route.data = {
 		frontmatter: {
 			title: '404',
-			relativePath: '404.md',
+			relativePath: '/404.md',
 			show_contributors: false,
 			show_toc: false,
 		},
 	}
 	return route.data
 })
-console.log(routeData.value)
 
 // Default toc to true
 const showToc = computed(() => routeData.value.frontmatter.show_toc ?? true)
