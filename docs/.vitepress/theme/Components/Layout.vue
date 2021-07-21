@@ -61,6 +61,8 @@ const routeData = computed(() => {
 		frontmatter: {
 			title: '404',
 			relativePath: '404.md',
+			show_contributors: false,
+			show_toc: false,
 		},
 	}
 	return route.data
@@ -68,10 +70,10 @@ const routeData = computed(() => {
 console.log(routeData.value)
 
 // Default toc to true
-const showToc = computed(() => !!routeData.value.frontmatter.show_toc)
+const showToc = computed(() => routeData.value.frontmatter.show_toc ?? true)
 
 const showContributors = computed(
-	() => !!routeData.value.frontmatter.show_contributors
+	() => routeData.value.frontmatter.show_contributors ?? true
 )
 
 const mentionedContributors = computed(
