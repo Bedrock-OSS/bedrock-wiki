@@ -33,7 +33,6 @@ Important links have a ⭐.
 -   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [World Converter (free)](http://www.mcctoolchest.com/)
 -   [World Converter (paid)](https://www.universalminecraftconverter.com/download)
--   [Json Obfuscator](https://pixelpoly.co/creator-tools/obfuscator)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 
@@ -59,10 +58,9 @@ Important links have a ⭐.
 
 ## Documentation Links
 
--   ⭐[bedrock.dev](https://bedrock.dev/)
--   ⭐ [ Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
+-   ⭐ [bedrock.dev](https://bedrock.dev/)
+-   ⭐ [Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
 -   [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
--   [JSON UI](https://geenium.com/bedrock/json-guis/)
 -   [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
 -   [Format Versions](https://gist.github.com/Tschrock/e6615f93f0db82ef30ada63f9ad670ac)
