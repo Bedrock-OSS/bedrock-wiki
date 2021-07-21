@@ -1,1 +1,0 @@
-import{o as t,c as e}from"./404.md.6d88a4a3.js";const r='{"title":"JSON UI","description":"","frontmatter":{"title":"JSON UI"},"relativePath":"json-ui/index.md","lastUpdated":1626862696397}',a={};a.render=function(r,a,d,i,o,n){return t(),e("div")};export default a;export{r as __pageData};
