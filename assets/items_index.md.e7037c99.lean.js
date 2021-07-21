@@ -1,1 +1,0 @@
-import{o as t,c as e}from"./404.md.1ad41aff.js";const r='{"title":"Items","description":"","frontmatter":{"title":"Items"},"relativePath":"items/index.md","lastUpdated":1626901077211}',a={};a.render=function(r,a,d,i,o,s){return t(),e("div")};export default a;export{r as __pageData};
