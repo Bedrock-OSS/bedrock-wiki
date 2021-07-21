@@ -4,7 +4,7 @@ title: Feature Types
 
 # Feature Types
 
-*Last updated for 1.17.2*
+*Last updated for 1.17.10*
 
 ::: warning
 Some links designed to reference external documents do not function, and will be updated at a later time to point to the correct resource.
@@ -226,6 +226,10 @@ In ore features, **replacement rules** bind target blocks to replacement lists t
 
 **Structure template features** generate structures by referencing saved structure files. These features trade power and flexibility for convenience.
 
+::: warning
+Unlike with data-driven features, blocks in structure features are *not* automatically waterlogged if placed in water.
+:::
+
 The **target structure** is placed with the `"structure_name"` string property. This string follows a unique naming system to select a `.mcstructure` file from the behavior pack; it follows the form `namespace:path`. Structure files must be placed in the top-level `structures` directory; any hierarchy of folders from here is allowed but not required. If the structure file is placed directly in the `structures` directory, the default namespace `mystructure` is used. Otherwise, if placed in a directory inside `structures`, that directory name is used as the namespace. If any nesting is present within this directory, it is reflected in the path. Finally, the file extension (`.mcstructure`) is omitted.
 
 For some examples:
@@ -245,10 +249,25 @@ For some examples:
 "facing_direction": "south"
 ```
 
-**Structure rotation** is performed using the `"facing_direction"` property, which accepts the four lateral directions: `"north"`, `"south"`, `"east"`, and `"west"`, and an additional `"random"` property to shuffle amongst them each instance. Unfortunately, rotation occurs around the [structure origin](#), so large structure may be cut off during this rotation.
+**Structure rotation** is performed using the `"facing_direction"` property, which accepts the four lateral directions: `"north"`, `"south"`, `"east"`, and `"west"`, and an additional `"random"` property to shuffle amongst them each instance. South is the “default” direction; structures extend into the positive *x* and *z* directions using this orientation.
 
 ::: warning
-Because of how random rotation is handled, structure features typically need to be proxied by [weighted random features](#weighted-random-features) and [scatter proxies](#scatter-features) that offset position.
+For non-South-oriented structures, not all block states are updated to accommodate the rotation, causing some rotatable blocks, such as vines, to hang in invalid positions.
+:::
+
+Rotations are performed clockwise from a top-down perspective. Unfortunately, rotations occur around the [structure origin](#), not the center, so large structures may be cut off in random rotation due to [feature limitations](#). Using a set rotation, however, will orient in reliable (albeit inconvenient) ways. All rotations begin inclusively from the [feature origin](#) and are generated with the following orientations:
+
+| Rotation | *x* Projection | *z* Projection | Clockwise rotation from above |
+|:--|:--|:--|:--|
+| `"east"` | Positive | Negative | 270° |
+| `"south"` | Positive | Positive | 0° |
+| `"west"` | Negative | Positive | 90° |
+| `"north"` | Negative | Negative | 180° |
+
+Therefore, if a 7 × 6 feature is generated from an origin of (64, 64), an east rotation would occupy the lateral area from (64, 58) to (70, 65).
+
+::: warning
+Because of how rotation is handled, structure features typically need to be proxied by [weighted random features](#weighted-random-features) and [scatter proxies](#scatter-features) that offset position.
 :::
 
 #### Constraints
@@ -263,8 +282,7 @@ Because of how random rotation is handled, structure features typically need to 
 	},
 	"unburied": {},
 	"grounded": {}
-},
-"adjustment_radius": 4
+}
 ```
 
 Structure features can enforce **constraints** using the required `"constraints"` property to restrict block intersection, adjust the placement position, and clear the space above the features using air. Although the property and its object (`{}`) are required, all sub-properties are optional.
@@ -272,29 +290,46 @@ Structure features can enforce **constraints** using the required `"constraints"
 ##### Block Intersection
 ```json
 "block_intersection": {
-	"block_allowlist": [
+	"block_whitelist": [
 		"minecraft:end_stone"
 	]
 },
 ```
 
-The set of blocks the structure may replace are given by the **block allowlist**. If even one block within the structure’s attempted volume is not in the allowlist, the structure will not be placed at that position. If no block intersection is provided, the structure may replace all blocks.
+The set of blocks the structure may replace are given by the **block whitelist**, given with `"block_whitelist"`. If even one block within the structure’s attempted volume is not in the whitelist, the structure will not be placed at that position. If no block intersection is provided, the structure may replace all blocks.
 
-To accommodate such intense placement restrictions, the `"adjustment_radius"` property is available (outside the scope of the constraints object); it accepts values from `0` (the default) to `16`. During placement, Minecraft will begin at the input position and radially search laterally outward up to the number of blocks specified by this property. Each corresponding volume will be checked for validity until a success is found.
+::: tip NOTE
+Bizarrely, the `"block_whitelist"` property can also be given with `"block_allowlist"`. Both function the same.
+:::
 
 ##### Ground Projection
 ```json
 "grounded": {}
 ```
 
-The `"grounded"` component alters the vertical position of the structure by projecting it into the ground. In particular, the heightmap of each intersecting column of the structure’s volume is examined, and the lowest height is selected. This prevents structures from awkwardly overhanging over ledges by preventing any such ledge from existing at all.
+The optional `"grounded"` component ensures the base of a structure is not overhanging into open space — air or water. All non-structure void blocks along the bottom layer of the structure are considered; if air or water is beneath even one such block, generation will fail.
 
 ##### Top Clearance
 ```json
 "unburied": {}
 ```
 
-The `"unburied"` component clears the space above a structure by several blocks using air. This can ensure a structure isn’t submerged by overhangs in the terrain.
+The `"unburied"` component ensures a structure’s top is exposed to air for generation to succeed. Only non-structure void blocks on the top layer of the structure are considered, and all must be exposed to air above for the structure to successfully generate.
+
+::: tip NOTE
+Unlike [ground projection](#ground-projection), exposure to water is *not* considered.
+:::
+
+#### Placement Adjustment
+```json
+"adjustment_radius": 4
+```
+
+To accommodate possibly stringent [#constraints](#constraints), the optional `"adjustment_radius"` property is available; it accepts values from `0` (the default) to `16`. During placement, Minecraft will begin at the input position and radially search laterally outward up to the number of blocks specified by this property; vertical adjustment is not attempted. Each corresponding volume will be checked for validity; [block intersection](#block-intersection), [ground projection](#ground-projection), and [top clearance](#top-clearance) are all considered. The first success, if one exists, is used.
+
+::: tip
+If vertical adjustment should be used, proxy the structure feature with a [search feature](#search-feature).
+:::
 
 ### Growing Plant Features
 ```json
@@ -302,23 +337,22 @@ The `"unburied"` component clears the space above a structure by several blocks 
 	"format_version": "1.13.0",
 	"minecraft:growing_plant_feature": {
 		"description": {
-			"identifier": "growing_plant_features:growing_plant_feature"
+			"identifier": "echelon:bulbous_cerulon"
 		},
 
 		"growth_direction": "up",
 		"height_distribution":  [
-			[{"range_min": 4, "range_max": 8}, 1],
-			[10, 1]
+			[{"range_min": 4, "range_max": 12}, 1]
 		],
-		"age" : {"range_min": 4, "range_max": 6},
+		"age" : 11,
 
 		"body_blocks" : [
-			["minecraft:planks", 4],
-			["minecraft:obsidian", 1]
+			["echelon:bulbous_cerulon_stem", 1],
+			["echelon:bulbous_cerulon_spiked_stem", 1]
 		],
 		"head_blocks" : [
-			["minecraft:glass", 4],
-			["minecraft:sand", 1 ]
+			["echelon:bulbous_cerulon_bulb", 1],
+			["echelon:bulbous_cerulon_bulb_exposed", 1]
 		],
 
 		"allow_water": true
@@ -1072,10 +1106,46 @@ Scene features only allow minimal customizations of their shapes to achieve thei
 
 ### Geode Features
 ```json
+{
+	"format_version": "1.13.0",
+	"minecraft:geode_feature": {
+		"description": {
+			"identifier": "insectorium:wasp_hive"
+		},
 
+		"max_radius": 12,
+
+		"filler": "minecraft:air",
+
+		"inner_layer": "insectorium:wasp_hive_inside",
+		"alternate_inner_layer": "insectorium:wasp_hive_spawner_base",
+		"use_alternate_layer0_chance": 0.125,
+
+		"middle_layer": "insectorium:wasp_hive_inside",
+
+		"outer_layer": "insectorium:wasp_hive_shell",
+
+		"inner_placements": ["insectorium:wasp_hive_spawner"],
+		"placements_require_layer0_alternate": true,
+		"use_potential_placements_chance": 1,
+
+		"min_distribution_points": 2,
+		"max_distribution_points": 4,
+		"min_outer_wall_distance": 2,
+		"max_outer_wall_distance": 4,
+		"min_point_offset": 0,
+		"max_point_offset": 2,
+		"noise_multiplier": 0.125,
+		"invalid_blocks_threshold": 64,
+
+		"crack_point_offset": 0,
+		"generate_crack_chance": 1,
+		"base_crack_size": 1
+	}
+}
 ```
 
-**Geode features** construct spherical structures comprised of multiple block layers; they allow placement of features along walls of the interior.
+**Geode features** construct spherical structures comprised of multiple block layers; they allow placement of sub-features along walls of the interior.
 
 ### Beards and Shavers
 ::: warning
@@ -1083,7 +1153,26 @@ Beards and shavers are currently bugged and should be avoided. In particular, th
 :::
 
 ```json
+{
+	"format_version": "1.13.0",
 
+	"minecraft:beards_and_shavers": {
+		"description": {
+			"identifier": "broadmoor_wars:highland_tower_foundation"
+		},
+
+		"places_feature": "broadmoor_wars:highland_tower",
+		"y_delta": 0,
+
+		"bounding_box_min": [-4, 0, -4],
+		"bounding_box_max": [5, 12, 5],
+		"beard_raggedness_min": 0.25,
+		"beard_raggedness_max": 0.5,
+
+		"surface_block_type": "minecraft:grass",
+		"subsurface_block_type": "minecraft:dirt"
+	}
+}
 ```
 
 **Beards and shavers** simultaneously provide a platform (beard) and a clearance (shaver) for a feature to generate.
