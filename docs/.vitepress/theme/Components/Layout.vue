@@ -60,11 +60,12 @@ const routeData = computed(() => {
 	route.data = {
 		frontmatter: {
 			title: '404',
-			relativePath: '/404.md',
+			relativePath: '404.md',
 		},
 	}
 	return route.data
 })
+console.log(routeData.value)
 
 // Default toc to true
 const showToc = computed(() => !!routeData.value.frontmatter.show_toc)
