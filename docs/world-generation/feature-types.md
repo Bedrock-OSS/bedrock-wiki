@@ -302,22 +302,22 @@ The set of blocks the structure may replace are given by the **block whitelist**
 Bizarrely, the `"block_whitelist"` property can also be given with `"block_allowlist"`. Both function the same.
 :::
 
-##### Ground Projection
+##### Ground Attachment
 ```json
 "grounded": {}
 ```
 
-The optional `"grounded"` component ensures the base of a structure is not overhanging into open space — air or water. All non-structure void blocks along the bottom layer of the structure are considered; if air or water is beneath even one such block, generation will fail.
+The optional `"grounded"` component ensures the base of a structure is not overhanging into open space — air, water, or lava. All non-structure void, non-air blocks along the bottom layer of the structure are considered; if air, water, or lava is beneath even one such block, generation will fail.
 
 ##### Top Clearance
 ```json
 "unburied": {}
 ```
 
-The `"unburied"` component ensures a structure’s top is exposed to air for generation to succeed. Only non-structure void blocks on the top layer of the structure are considered, and all must be exposed to air above for the structure to successfully generate.
+The `"unburied"` component ensures a structure’s top is exposed to air for generation to succeed. Only non-structure void, non-air blocks on the top layer of the structure are considered, and all must be exposed to air above for the structure to successfully generate.
 
 ::: tip NOTE
-Unlike [ground projection](#ground-projection), exposure to water is *not* considered.
+Unlike [ground attachment](#ground-attachment), exposure to water is *not* considered.
 :::
 
 #### Placement Adjustment
@@ -325,7 +325,7 @@ Unlike [ground projection](#ground-projection), exposure to water is *not* consi
 "adjustment_radius": 4
 ```
 
-To accommodate possibly stringent [#constraints](#constraints), the optional `"adjustment_radius"` property is available; it accepts values from `0` (the default) to `16`. During placement, Minecraft will begin at the input position and radially search laterally outward up to the number of blocks specified by this property; vertical adjustment is not attempted. Each corresponding volume will be checked for validity; [block intersection](#block-intersection), [ground projection](#ground-projection), and [top clearance](#top-clearance) are all considered. The first success, if one exists, is used.
+To accommodate possibly stringent [#constraints](#constraints), the optional `"adjustment_radius"` property is available; it accepts values from `0` (the default) to `16`. During placement, Minecraft will begin at the input position and radially search laterally outward up to the number of blocks specified by this property; vertical adjustment is not attempted. Each corresponding volume will be checked for validity; [block intersection](#block-intersection), [ground attachment](#ground-attachment), and [top clearance](#top-clearance) are all considered. The first success, if one exists, is used.
 
 ::: tip
 If vertical adjustment should be used, proxy the structure feature with a [search feature](#search-feature).
