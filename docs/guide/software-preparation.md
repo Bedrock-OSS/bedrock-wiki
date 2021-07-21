@@ -6,7 +6,7 @@ prefix: '3.'
 
 Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on windows 10, we have provided mobile alternatives for both Android and ios, where applicable.
 
-### A valid copy of Bedrock Minecraft
+### Download Bedrock Minecraft
 
 -   [Windows 10](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab)
 -   [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
@@ -16,40 +16,15 @@ Before you can start creating addons, you first have to install the required too
 
 Addons can be created using any text editor, however it's much more comfortable to work in a dedicated editor. A good editor can give you code-completion, error-detection, and in-editor documentation.
 
-There are strong opinions about the best editor for beginners, but generally speaking you cannot go wrong selecting any of the following editors.
+There are strong opinions about the best editor for beginners, but generally speaking you cannot go wrong selecting either VSCode, or bridge. If you are mobile, you will need to use a mobile alternative.
 
-_Recommendations are starred._
+### VSCode
 
-### Plaintext Editors
+VSCode is a general purpose text-editor and IDE. With VSCode, you will be able to edit your addons in plain-text, guided along by a powerful array of extensions and addons. VSCode is a great for programmers and advanced users.
 
-Plaintext editors are great for programmers, advanced users, and confident computer-users. Editors in this section are very powerful and customizable, but may be difficult to use.
+[⚙️Install VSCode](https://code.visualstudio.com/)
 
--   ⭐[_VSCode_](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for addon development. (_Warning: Do not install Visual Studio, which is something different_)
--   [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities.
--   [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.
-
-### Dedicated Editors
-
-Dedicated editors are great for beginners. You will be somewhat limited in power and customization, but the development experience is very smooth.
-
--   ⭐[_bridge._](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft addon development. It offers JSON in tree view. However, the process of creating addons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
--   [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for addon creation with JSON linting and autocomplete.
-
-### Mobile Editors
-
--   **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
--   **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
-
-### Additional Notes
-
-<Spoiler title="Features to look for in a Code Editor">
--   **Opening Folders:** When editing addons, it is very convenient to open an entire folder as a project, instead of just individual files. This allows you to edit the files in both the Behavior Pack and Resource Pack at the same time, and quickly switch between tasks.
--   **Json Linting/Prettify:** Linting is the ability to validate code as correct in real-time. Linting for json will mark things like missing commas, misplaced parens, or other formatting issues so that you can fix them. [Linting can also be found online](https://jsonlint.com/), but having real-time linting built directly into your editor is very much preferred.
--   **Built in Terminal:** I find a terminal built into my editor to be very useful. I often use python scripting to supplement my workflow, and having easy access to a terminal speeds up that workflow.
-
-</Spoiler>
-
-<Spoiler title="VSCode Extensions for Addon development">
+<Spoiler title="Configuring VSCode">
 
 Many packages exist for VSCode that make editing addons easier:
 
@@ -65,7 +40,13 @@ Many packages exist for VSCode that make editing addons easier:
 
 </Spoiler>
 
-<Spoiler title="If you choose to use bridge.">
+### Bridge
+
+bridge. is a powerful add-on editor designed to speed up your development process. It provides a rich editing experience for all files inside behavior and resource packs (JavaScript, JSON and functions) and provides a powerful work environment. Unleash the full power of add-ons with bridge. plugins and make use of rich auto-completions provided as you navigate through a file. Creating Minecraft add-ons was never more convenient!
+
+[⚙️ Install bridge.](https://github.com/bridge-core/bridge.)
+
+<Spoiler title="Configuring bridge.">
 
 You should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
 
@@ -78,57 +59,52 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 
 </Spoiler>
 
-<br>
+### Mobile Editors
 
-### Additional Software
+-   **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
+-   **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
+
+## Additional Software
 
 ### Blockbench
 
--   ⭐ [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.
+-   [Blockbench](https://blockbench.net/) is a 'boxy 3D model editor' typically used to create Minecraft models, textures and animations. Also provides a web-browser version which is compatible with mobile.
 
 ### Image Editors
 
--   ⭐ [Krita](https://krita.org/en/)
--   [GIMP](https://www.gimp.org/)
--   [Photoshop _(≈$10/m)_](https://www.adobe.com/products/photoshop)
+-   [Krita](https://krita.org/en/) _or_ [GIMP](https://www.gimp.org/)
 
-![](/assets/images/guide/blockbench_workspace.png)
+## Reference Material
 
-## Setting up your workspace
+This guide will walk you through the first stages of addon development, but it is not comprehensive! To learn more about addons, you will have to use and reference other sources of information, which we will link to here.
 
-_The remainder of this Guide assumes you are using VSCode. You may also follow along in other editors._
+### Join the Discord
 
-Let's create your first addon workspace in Visual Studio Code now.
+The best place to get help with this guide is to join the [discord server](/discord).
 
-1. Open VSCode (_Visual Studio Code, the code editor_)
-2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**, in accordance with the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide).
-3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP`**.
-4. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
-5. Press `File > Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
+### Vanilla Packs
 
-## Learning to reference
+Minecraft's vanilla files are a good source of reference material. You should download these packs, and store them on a convenient location on your computer. When you need an example of an item, or entity, or animation, you can reference these files for inspiration.
 
-## Vanilla Packs
+-   [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
+-   [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
 
-Referencing means looking at other addons to find out how certain results are achieved. Minecraft's unmodified files are a good place to start. Download the [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate) and [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate) and get creative! I recommend adding them to your workspace for easy referencing.
+### Documentation
 
-Once you complete this guide, you can download and reference some open-source addons from, for example, [MCPEDL](https://mcpedl.com/?cookie_check=1). You can also upload your own addons there.
+There are many good sources of Addon documentation. Familiarize yourself with all of them, and consider bookmarking them.
 
-## Documentation
-
-The best tool you have when learning about addons is the documentation. [bedrock.dev](https://bedrock.dev/) contains the best, and most up to date addon documentation. Make sure you are using the documentation for the current edition (bedrock.dev/docs/stable).
-
----
+-   [bedrock.dev](https://bedrock.dev/): Reference documentation.
+-   [wiki.bedrock.dev](https://wiki.bedrock.dev/): Tutorials and guides.
+-   [MS Docs](https://docs.microsoft.com/en-us/minecraft/creator/): The official microsoft creator portal for addons.
 
 ## Your progress so far
 
 **What you've done:**
 
--   [x] Installed the necessary software;
--   [x] Downloaded the Vanilla Example files;
--   [x] Located your com.mojang folder and created your addon's workspace.
+-   [x] Installed the necessary software
+-   [x] Downloaded the Vanilla Example files
 
-**What you are to do next:**
+**Whats next:**
 
--   [ ] Create your addons manifests, pack icons;
--   [ ] Learn to use `.mcfunction`, `.mcstructure`, `.mcpack` and `.mcaddon`.
+-   [ ] Locate your `com.mojang` folder and create your addon's workspace.
+-   [ ] Create the manifest and pack icon for your first addon
