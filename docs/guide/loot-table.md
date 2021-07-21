@@ -1,7 +1,7 @@
 ---
 title: Adding a Loot Table
-nav_order: 6
-prefix: '6.'
+nav_order: 7
+prefix: '7.'
 ---
 
 Next, we'll enhance the custom Ghost entity by adding some more basic mechanics to it:

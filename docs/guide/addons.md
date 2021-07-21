@@ -39,3 +39,27 @@ In most cases, you will have both an BP and a BP together. These packs can commu
 
 -   An RP entity definition, which describes how your entity will _look_
 -   A BP entity definition, which describes how your entity will _act_
+
+## The com.mojang folder
+
+The `com.mojang` folder is a special folder where we build our addons. Minecraft understand this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder.
+
+You should create a shortcut to the `com.mojang` folder on your Desktop, so you can easily access it at any time.
+
+### Windows
+
+`C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
+
+### Android
+
+`Phone>games>com.mojang`
+
+### iOS
+
+`My iDevice>Minecraft>games>com.mojang`
+
+### Development Packs
+
+We will develop our addon in `development_behavior_packs` and `development_resource_packs`. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test your addon without reloading minecraft.
+
+`resource_packs` and `behavior_packs` on the other hand contain stable addons, including those imported via `.mcpack`. We can ignore these folders for now.
