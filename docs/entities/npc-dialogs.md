@@ -2,10 +2,8 @@
 title: NPC Dialogs
 ---
 
-# Creating NPC Dialogs
-
 Intermediate
-{: .label .label-yellow }
+<Label color="yellow">Intermediate</Label>
 
 Non-Player Characters, or NPCs are villager-like entities that can be given a dialog with a message and multiple buttons. They were originally designed for use in adventure maps, but with the introduction of the `/dialogue` command, they can now be used in the context of a normal addon.
 
