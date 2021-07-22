@@ -1,14 +1,13 @@
 ---
 title: Item Troubleshooting
+nav_order: 3
 ---
 
-# Step-by-step Item Debugging
-
-## Your Item Has a Problem
+### Your Item Has a Problem
 
 _I followed a tutorial or tried to make my own item and something's wrong!_ No worry, items are easy to make mistakes with. This page will help you to debug common issues.
 
-# | **Before you Begin**
+## Before you Begin
 
 ::: warning
 As of game versions `1.16.100` and onward, there are two distinct types of items, as constituted by its `format_version`.
@@ -18,7 +17,7 @@ Versions `1.16.100` or over are **experimental**. These items **will not work un
 
 _Before troubleshooting, please ensure that you have in mind a format that you'd want to use for your item._
 
-## Version Dependent Components
+### Version Dependent Components
 
 Among the three main item versions, there are also different sets of item `components`. **It is absolutely imperative that the correct components and syntax are used for their respective versions**. A failure to meet such criteria will **always** result in a broken item. You may find the correct components and their appropriate syntax in the following links:
 
@@ -26,20 +25,20 @@ Among the three main item versions, there are also different sets of item `compo
 
 `Stable (1.12.0)` -- https://bedrock.dev/docs/1.16.0.0/1.16.20.54/Item
 
-# | **Troubleshooting All Items**
+## Troubleshooting All Items
 
-## 1.0 - Pack Updating/Presence
+### 1.0 - Pack Updating/Presence
 
 Are the packs _both_ active in your world of testing? (You may check this by going to world settings > behavior/resource packs) Further, are they both set up to properly update? That is, are you either using **development folders** or creating a **new world** each pack update? Ensuring that the packs are actually changing per pack-update is always first step in troubleshooting.
 
-## 1.5 - Determining Pack [Resource or Behavior]
+### 1.5 - Determining Pack [Resource or Behavior]
 
 Determining which pack the error is actually in is also very important. There are a few surefire ways to prove which it is in (if not both):
 _-If the item is invisible, often constantly throwing the error, `[Item] requires either an icon atlas or icon texture`, the error is in the `resource pack`.
 -If the item is showing the black-magenta checkerboard texture, or the "missing" texture, the error is contained in the `resource pack`.
 -If the item fails to register at all, that is, not showing in the inventory or through commands, the error is in the `behavior pack`_.
 
-## 2.0 - Ensuring Correct Behaviors
+### 2.0 - Ensuring Correct Behaviors
 
 If the item fails to register at all, that is, not showing in the inventory or through commands, the error is in the `behavior pack`. To fix this, there are a few big things to consider:
 
@@ -51,11 +50,11 @@ If the item fails to register at all, that is, not showing in the inventory or t
 
 -   _Make sure that all component names match those found in documentation. Remember_: **no spaces or capitals**
 
-## 3.0 - Ensuring Correct Resources
+### 3.0 - Ensuring Correct Resources
 
 If the item is showing the black-magenta checkerboard texture, or constantly throwing the error, `[Item] requires either an icon atlas or icon texture`, the error is in the `resource pack`. More on this later.
 
-## 4.0 - Choosing a Version
+### 4.0 - Choosing a Version
 
 As stated previously, items work very differently across different `format_version`s. Deciding which format you wish to use is the next step in the troubleshooting process.
 
@@ -63,9 +62,9 @@ As stated previously, items work very differently across different `format_versi
 
 -   I wish to use the experimental, `1.16.100` format: [Continue](#6.0)
 
-# | **Stable Item Troubleshooting [1.12.0]**
+## Stable Item Troubleshooting [1.12.0]
 
-## 5.0 - Assessing Specific Issue
+### 5.0 - Assessing Specific Issue
 
 -   My item is invisible in my hand, and is spamming a content log error that it needs an icon: [Continue](#5.1)
 
@@ -73,7 +72,7 @@ As stated previously, items work very differently across different `format_versi
 
 -   My item is missing a texture, and has a pink-and-black one: [Continue](#5.3)
 
-## 5.1 - Invisible Item
+### 5.1 - Invisible Item
 
 For this error, ensure that your item is properly defined in the **Resource Pack**.
 To do this, you need to create an item file in `rp/items/` called `<name_of_your_item>.json`.
@@ -99,7 +98,7 @@ _An example of how this file should look_
 
 Be sure that your `"minecraft:icon"` correctly points to your `item_texture.json` name.
 
-## 5.2 - Item Not Appearing
+### 5.2 - Item Not Appearing
 
 For this error, ensure that your item is properly defined in your **Behavior Pack**.
 To do this, you need to create an item file in `<behaviorpackname>/items/`, called `<name_of_your_item>.json`.
@@ -126,7 +125,7 @@ _An example of how this file should look_
 
 Be sure that your `component` names correctly match those found in the documentation.
 
-## 5.3 - Item Has Magenta-and-Black Checkerboard Texture
+### 5.3 - Item Has Magenta-and-Black Checkerboard Texture
 
 For this error, ensure that your item's texture is properly referenced in your **Resource Pack**.
 This is commonly due to a mismatched file or folder name. Remember, no capitals or spaces in file or folder names.
