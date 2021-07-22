@@ -1,149 +1,166 @@
----
-title: 'Item Troubleshooting'
----
-
 # Step-by-step Item Debugging
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+## Your Item Has a Problem
 
----
-<a name="0.0.0"></a>
-## 0.0.0 - Trouble
+*I followed a tutorial or tried to make my own item and something's wrong!* No worry, items are easy to make mistakes with. This page will help you to debug common issues.
 
-I followed a tutorial or tried to make my own item and something's wrong! Calm down. This page will help debug common issues.
+# Before you Begin
 
-[Continue](#1.0.0){: .btn .btn-blue }
+## Item Versions
 
----
-<a name="1.0.0"></a>
-## 1.0.0 - 1.10 vs 1.16 Items?
+As of game versions `1.16.100` and onward, there are two distinct types of items, as constituted by its `format_version`. 
+In short, versions `1.16.0` and prior are currently the stable (This includes **1.16, 1.14, 1.13, 1.12**) **non-experimental** version. These **do not** require `Holiday Creator Features` to be enabled. 
+	Versions `1.16.100` or over are **experimental**. These items **will not work unless `Holiday Creator Features` is enabled in the world**. 
+	
+Before troubleshooting, please ensure that you have in mind a format that you'd want to use for your item.
 
-First things first, determine whether you used 1.10 or 1.16 format.
-Items are VERY DIFFERENT in 1.16. The main change you need to focus on is that there are longer two files (BP + RP), but rather a single BP file. This means that components like the following need to go into the BP -not the non-existent RP file.
+## Version Dependent Components
+Among the three main item versions, there are also different sets of item `components`. **It is absolutely imperative that the correct components and syntax are used for their respective versions**. A failure to meet such criteria will **always** result in a broken item. You may find the correct components and their syntax in the following links:
 
-{% include filepath.html path="BP/items/your_item.json"%}
-```jsonc
-"minecraft:icon": {
-    "texture": "copper_ingot"
-}
-```
-Make sure it matches the one from your item_texture.json
-Learn about the new 1.16 items here: https://wiki.bedrock.dev/concepts/items
+`Experimental (1.16.100+)` -- https://bedrock.dev/docs/stable/Item
 
-## Result
-I'm using 1.10 format [Go](#2.0.0){: .btn .btn-blue }
+`Stable (1.12.0)` -- https://bedrock.dev/docs/1.16.0.0/1.16.20.54/Item
 
-I'm using 1.16 format [Go](#3.0.0){: .btn .btn-blue }
 
----
-<a name="2.0.0"></a>
-## 2.0.0 - 1.10 Items
 
----
-<a name="2.1.0"></a>
-## My Textures Are Missing!
+# Troubleshooting All Items
 
-Calm down, navigate to your `item_texture.json`. Ensure that it is properly named.
+## 1.0 - Pack Updating/Presence
+Are the packs *both* active in your world of testing? (You may check this by going to world settings > behavior/resource packs) Further, are they both set up to properly update? That is, are you either using **development folders** or creating a **new world** each pack update? Ensuring that the packs are actually changing per pack-update is always first step in troubleshooting.
 
-{% include filepath.html path="RP/textures/item_texture.json"%}
-```jsonc
+## 1.5 - Determining Pack [Resource or Behavior]
+Determining which pack the error is actually in is also very important. There are a few surefire ways to prove which it is in (if not both): 
+*-If the item is invisible, often constantly throwing the error,  `[Item] requires either an icon atlas or icon texture`, the error is in the `resource pack`. 
+	-If the item is showing the black-magenta checkerboard texture, or the "missing" texture, the error is contained in the `resource pack`.
+	-If the item fails to register at all, that is, not showing in the inventory or through commands, the error is in the `behavior pack`*.
+
+## 2.0 - Ensuring Correct Behaviors
+If the item fails to register at all, that is, not showing in the inventory or through commands, the error is in the `behavior pack`. To fix this, there are a few big things to consider:
+
+- Is the `.json` syntax valid? A validator can be found here: https://jsonlint.com/
+
+- What does the content log say? Always consider what the log is outputting. 
+
+- Is the pack enabled in the world? (it happens to the best of us)
+
+- *Make sure that all component names match those found in documentation. Remember*: **no spaces or capitals**
+
+## 3.0
+**Ensuring Correct Resources**
+
+If the item is showing the black-magenta checkerboard texture, or constantly throwing the error,  `[Item] requires either an icon atlas or icon texture`, the error is in the `resource pack`. There are a few universal things to consider here, too:
+
+- Are your texture paths correct? These are the folders that all lead to your texture file, as defined in `resourcepack\textures\item_texture.json`. For example:
+
+```json
 {
-	"resource_pack_name": "tut",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"gem": {
-			"textures": "textures/items/your_item_name"
+	"texture_name":  "atlas.items",
+	"resource_pack_name":  "vanilla",
+		"texture_data": {
+			"amethyst_sword": {
+				"textures": "textures/items/amethyst_sword"
 		}
 	}
 }
 ```
+*This texture should be in the folder `"textures/items/"`, and the image should be called `amethyst_sword.png`.*
 
-Next, navigate to your item RP file. Ensure that it is properly named.
+- Does your `"minecraft:icon"` component(behavior or resource, same concept here) point toward the correct short name?
 
-{% include filepath.html path="RP/items/your_item.json"%}
-```jsonc
+```json
 {
-	"format_version": "1.10",
-	"minecraft:item": {
-		"description": {
-			"identifier": "namespace:your_item",
-			"category": "Nature"
-		},
-		"components": {
-			"minecraft:icon": "your_item_name", //make sure this string matches the string you put in item_texture.json
-			"minecraft:render_offsets": "tools"
-		}
-	}
-}
+	"minecraft:icon": "amethyst_sword"
+},
 ```
+*resource icon*
 
-If you followed this properly, your item should now have a texture.
-
----
-<a name="3.0.0"></a>
-## 3.0.0 - 1.16 Items
-
----
-<a name="3.1.0"></a>
-## My Textures Are Missing!
-
-Calm down, navigate to your `item_texture.json`. Ensure that it is properly named.
-
-{% include filepath.html path="RP/textures/item_texture.json"%}
-```jsonc
+```json
 {
-	"resource_pack_name": "tut",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"gem": {
-			"textures": "textures/items/your_item_name"
-		}
+	"minecraft:icon": {
+		"texture": "amethyst_sword"
 	}
-}
+},
 ```
+*behavior icon*
 
-Next, navigate to your item BP file. Remember, you are using the 1.16 format, so there shouldn't be an RP file for your item. Place the `minecraft:icon` component in your item file under the components section. Ensure that it is properly named.
+These, for example, search for a name in `item_texture.json` called `amethyst_sword`, as seen above.
 
-{% include filepath.html path="BP/items/your_item.json"%}
-```jsonc
+## 4.0
+**Choosing a Version**
+
+As stated previously, items work very differently across different `format_version`s. Deciding which format you wish to use is the next step in the troubleshooting process. 
+
+I wish to use the stable, `1.12.0` format: [Continue](#5.0)
+
+I wish to use the experimental, `1.16.100` format: [Continue](#6.0)
+
+
+
+# Stable Item Troubleshooting [1.12.0]
+
+## 5.0
+**Assessing Specific Issue**
+
+- My item is invisible in my hand, and is spamming a content log error that it needs an icon: [Continue](#5.1)
+
+- My item is not appearing in the inventory or through commands: [Continue](#5.2)
+
+- My item is missing a texture, and has a pink-and-black one: [Continue](#5.3)
+
+## 5.1 
+
+For this error, ensure that your item is properly defined in the **Resource Pack**. 
+To do this, you need to create an item file in `rp/items/` called `<name_of_your_item>.json`.
+
+```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.12.0",
   "minecraft:item": {
-      "description": {
-          "identifier": "namespace:your_item",
-          "category" : "items"     // This line is required
-      },
-      "components": {
-        "minecraft:icon": {
-          "texture": "your_item_name" //make sure this string matches the string you put in item_texture.json
-        }
-      },
-      "events": {...}
+    "description": {
+      "identifier": "yana:amethyst_sword",
+      "category": "Equipment"
+    },
+	
+    "components": {
+      "minecraft:icon": "amethyst_sword",
+      "minecraft:render_offsets": "tools"
+    }
   }
 }
 ```
+*An example of how this file should look*
 
-If you followed this properly, your item should now have a texture.
+Be sure that your `"minecraft:icon"` correctly points to your `item_texture.json` name. 
 
-[Continue](#3.2.0){: .btn .btn-blue }
+## 5.2
 
----
-<a name="3.2.0"></a>
-## My item is Huge When Using The New `render_offset` For 1.16.100!
+For this error, ensure that your item is properly defined in your **Behavior Pack**.
+To do this, you need to create an item file in `<behaviorpackname>/items/`, called `<name_of_your_item>.json`.
 
-To turn it to back into a normal size item (16x16), use the following formula provided by || MajestikButter ||#3362: `base value/(res/16)`
+```json
+{
+  "format_version": "1.12.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "yana:amethyst_sword"
+    },
 
-The base values, [0.075, 0.125, 0.075], seems to be the about the same scale value as normal items
+    "components": {
+      "minecraft:foil": false,
+	  "minecraft:max_damage": 250,
+      "minecraft:hand_equipped": true,
+      "minecraft:max_stack_size": 1
+    }
+  }
+}
+```
+*An example of how this file should look*
 
----
-<a name="4.0.0"></a>
-## What Now?
+Be sure that your `component` names correctly match those found in the documentation.
 
-That is all the common item troubleshooting tips I have seen. If you still have any problems, feel free to join the discord server and ask your question there. If you believe any information is wrong or outdated, feel free to contribute via github.
+## 5.3
+
+For this error, ensure that your item's texture is properly referenced in your **Resource Pack**.
+This is commonly due to a mismatched file or folder name. Remember, no capitals or spaces in file or folder names. 
+
+Example: [Continue](#2.0)
