@@ -4,13 +4,14 @@
 
 *I followed a tutorial or tried to make my own item and something's wrong!* No worry, items are easy to make mistakes with. This page will help you to debug common issues.
 
-# | Before you Begin
+# | **Before you Begin**
 
-## Item Versions
+::: warning
 As of game versions `1.16.100` and onward, there are two distinct types of items, as constituted by its `format_version`. 
-> In short, versions `1.16.0` and prior are currently the stable (This includes **1.16, 1.14, 1.13, 1.12, 1.10**) **non-experimental** version. These **do not** require `Holiday Creator Features` to be enabled. 
-> 	Versions `1.16.100` or over are **experimental**. These items **will not work unless `Holiday Creator Features` is enabled in the world**. 
-	
+In short, versions `1.16.0` and prior are currently the stable (This includes **1.16, 1.14, 1.13, 1.12, 1.10**) **non-experimental** version. These **do not** require `Holiday Creator Features` to be enabled. 
+Versions `1.16.100` or over are **experimental**. These items **will not work unless `Holiday Creator Features` is enabled in the world**. 
+:::
+
 *Before troubleshooting, please ensure that you have in mind a format that you'd want to use for your item.*
 
 ## Version Dependent Components
@@ -23,7 +24,7 @@ Among the three main item versions, there are also different sets of item `compo
 
 
 
-# | Troubleshooting All Items
+# | **Troubleshooting All Items**
 
 ## 1.0 - Pack Updating/Presence
 Are the packs *both* active in your world of testing? (You may check this by going to world settings > behavior/resource packs) Further, are they both set up to properly update? That is, are you either using **development folders** or creating a **new world** each pack update? Ensuring that the packs are actually changing per pack-update is always first step in troubleshooting.
@@ -54,13 +55,13 @@ If the item is showing the black-magenta checkerboard texture, or constantly thr
 
 As stated previously, items work very differently across different `format_version`s. Deciding which format you wish to use is the next step in the troubleshooting process. 
 
-I wish to use the stable, `1.12.0` format: [Continue](#5.0)
+- I wish to use the stable, `1.12.0` format: [Continue](#5.0)
 
-I wish to use the experimental, `1.16.100` format: [Continue](#6.0)
+- I wish to use the experimental, `1.16.100` format: [Continue](#6.0)
 
 
-
-# Stable Item Troubleshooting [1.12.0]
+ 
+# | **Stable Item Troubleshooting [1.12.0]**
 
 ## 5.0 - Assessing Specific Issue
 
