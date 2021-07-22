@@ -4,7 +4,35 @@ nav_order: 4
 prefix: '4.'
 ---
 
+## The com.mojang folder
+
+The `com.mojang` folder is a special folder where we build our addons. Minecraft understand this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder!
+
+You should create a shortcut to the `com.mojang` folder on your Desktop, so you can easily access it at any time.
+
+### Windows
+
+`C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
+
+### Android
+
+`Phone>games>com.mojang`
+
+### iOS
+
+`My iDevice>Minecraft>games>com.mojang`
+
+### Development Packs
+
+We will develop our addon in `development_behavior_packs` and `development_resource_packs`. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test your addon without reloading minecraft.
+
+`resource_packs` and `behavior_packs` on the other hand contain stable addons, including those imported via `.mcpack`. We can ignore these folders for now.
+
 ## Your Workspace
+
+:::tip
+In this guide, BP refers to the folder you created in `development_behavior_packs` ("the behavior pack"), and RP refers to the folder you created in `development_resource_packs` ("the resource pack")
+:::
 
 First of all, you will need to create the proper folders in suitable locations and set up your workspace.
 _The remainder of this guide assumes you are using VSCode. You may also follow along with other editors._
@@ -17,15 +45,11 @@ Let's create your first add-on workspace in Visual Studio Code now.
 4. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
 5. Press `File > Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
 
+## BP Manifest
+
 :::tip
 In this guide, you will often be instructed to create files with specific names, placed in specific folders. If the folder doesn't exist yet, please create it!
 :::
-
-:::tip
-In this guide, BP refers to the folder you created in `development_behavior_packs` ("the behavior pack"), and RP refers to the folder you created in `development_resource_packs` ("the resource pack")
-:::
-
-## BP Manifest
 
 The manifest is a file that identifies your pack to Minecraft. Every pack has one manifest. A folder with a correctly formatted manifest will show up in Minecraft, and we consider this the "minimal" pack before we can add additional content.
 
@@ -61,7 +85,7 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 -   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game. We are defining these files in "code form" so we can translate them later into other languages.
 
--   The "`UUID`" field is **essential**, and will be discussed in more detail bellow.
+-   The "`UUID`" field is **essential**, and will be discussed in more detail below.
 
 -   "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device with an older version installed, the more recent version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
 
@@ -81,7 +105,7 @@ To ensure that your add-on will work correctly you should generate two new UUID'
 
 ## RP Manifest
 
-The next step is to create the `manifest.json` for the RP. The format for a resource-pack manifest is nearly identical to a BP manifests except that the "`type`" is "`resources`".
+The next step is to create the `manifest.json` for the RP. The format for a resource-pack manifest is nearly identical to a BP manifests except that the `type` is `resources`, which marks the pack as a _Resource Pack_.
 
 Copy the following code into your newly created `RP/manifest.json`.
 
@@ -111,7 +135,7 @@ Copy the following code into your newly created `RP/manifest.json`.
 
 The pack icon is an image file which identifies how your addon will look in-game. If you have a low-resolution square image, you can use it. Otherwise, download and use this example icon:
 
-<WikiImage src="/assets/images/guide/pack_icon_BP.png" alt="Pack Icon" pixelated/>
+<WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated/>
 
 You should place a copy of your desired image into both the RP and the BP. The image needs to be named `pack_icon.png`
 
@@ -137,7 +161,13 @@ pack.description=My First Addon
 
 If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](/meta/troubleshooting)
 
-![](/assets/images/guide/behavior_pack_existing.jpg)
+![](/assets/images/guide/project-setup/active_pack.png)
+
+## Turn on Content Log
+
+Content Log is an extremely important debugging tool, which you should always have on.
+
+Turn on both `settings > profile > content_log_file` and `settings>profile>content_log_gui`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`. [Learn more about the content log here.](/meta/troubleshooting)
 
 ## Creating your testing world
 
@@ -145,15 +175,14 @@ Now to create a testing world to test your new add-on!
 
 1. Click "**Create new world**";
 
-2. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`. [Learn more about the content log here.](/meta/troubleshooting)
+2. Ensure that the following settings are set.
 
-TODO Replace these images
-![](/assets/images/guide/world_params_1.jpg)
-![](/assets/images/guide/world_params_2.jpg)
-![](/assets/images/guide/world_params_3.jpg)
+    ![](/assets/images/guide/project-setup/settings_1.png)
+    ![](/assets/images/guide/project-setup/settings_2.png)
 
-Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too. Otherwise, it'll be applied automatically). Now click '**Create**'. You might need a separate '_Infinite_' world to test entity spawning too.
-![](/assets/images/guide/behavior_pack_applied.png)
+3. Now activate your behavior pack, and your resource pack. You can do this by selecting the packs, and clicking 'apply'.
+
+4. Now click '**Create**'!
 
 ---
 
@@ -161,10 +190,10 @@ Now activate your behavior pack. If you haven't set up dependencies in the manif
 
 **What you've done:**
 
--   [x] Setup your pack;
+-   [x] Setup your pack
 
 **What are you to do next:**
 
--   [ ] Create a custom item;
--   [ ] Create a custom entity;
--   [ ] Create the entity's loot, spawn rules and a custom recipe;
+-   [ ] Create a custom item
+-   [ ] Create a custom entity
+-   [ ] Create the entity's loot, spawn rules and a custom recipe
