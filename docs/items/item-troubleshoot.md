@@ -156,5 +156,3 @@ Ensure your `"minecraft:icon"` component points toward the correct short name.
 ```
 
 These, for example, search for a name in `item_texture.json` called `amethyst_sword`, as seen above.
-
-Example: [Continue](#2.0)
