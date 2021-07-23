@@ -12,7 +12,7 @@ First, we'll make the ghost drop Ectoplasm upon death: create the following file
 
 TODO: needs to be finished
 
-<CodeHeader>BP/loot_tables_entities/ghost.json</CodeHeader>
+<CodeHeader>BP/loot_tables/entities/ghost.json</CodeHeader>
 
 ```json
 {
@@ -42,7 +42,7 @@ TODO: needs to be finished
 
 ## Spawn rules
 
-Next, we'll make the ghost spawn in desrts at night:
+Next, we'll make the ghost spawn in deserts at night:
 
 <CodeHeader>BP/spawn_rules/ghost.json</CodeHeader>
 

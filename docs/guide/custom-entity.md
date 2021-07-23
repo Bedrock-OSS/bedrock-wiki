@@ -9,7 +9,7 @@ Last time you created a custom item for this custom entity to drop. This time yo
 ## Behavior code
 
 Just like with items, the main files of a custom entity are its RP and BP files. We'll start with the latter in the `BP/entities/` folder:
-(the `.e` suffix after the entity's name specifies that this JSON is an entity file. Recommended in the [Style Guide]().
+(the `.e` suffix after the entity's name specifies that this JSON is an entity file. Recommended in the [Style Guide]()).
 
 <CodeHeader>BP/entities/ghost.e.json</CodeHeader>
 
@@ -105,22 +105,22 @@ Just like with items, the main files of a custom entity are its RP and BP files.
 ```
 
 -   You can already recognize parts of the file syntax from the custom item creation, such as `"format_version"` and `"description"/"identifier"`. We use the same _namespace_ in all the pack files. In our example case, the namespace is `wiki`. The entity's _id_ is `ghost`.
--   The other keys in `"description"` all take Booleans (`true` or `false`) as their values. These are: `" is_summonable"` (whether you can spawn the entity with a `/summon` command), `"is_spawnable"` (whether you can spawn one with a spawn egg or naturally), and `"is_experimental"` (whether you need to turn on [EX] (Experimental mode) in a world for this entity to exist). Set the options to `true`, `true` and `false` respectively. We do not need [EX].
+-   The other keys in `"description"` all take Booleans (`true` or `false`) as their values. These are: `"is_summonable"` (whether you can spawn the entity with a `/summon` command), `"is_spawnable"` (whether you can spawn one with a spawn egg or naturally), and `"is_experimental"` (whether you need to turn on [EX] (Experimental mode) in a world for this entity to exist). Set the options to `true`, `true` and `false` respectively. We do not need [EX].
 -   The next section is `"components"`. Again, just like with items, components define the main traits of an entity. Let's go over every single one in this example:
 
-    -   `"minecraft:type_family" ` lists the _family tags_ of your custom entity. These are used to interact with other entities. For example, Wolves will attack all entities from the `sheep` and `cow` families, while Villagers will flee from entities from the `monster` family.
+    -   `"minecraft:type_family"` lists the _family tags_ of your custom entity. These are used to interact with other entities. For example, Wolves will attack all entities from the `sheep` and `cow` families, while Villagers will flee from entities from the `monster` family.
     -   `"minecraft:jump.static"` (the entity's jumps are of the static type), `"minecraft:can_climb"` (the entity can climb blocks), `"minecraft:physics"` (the entity is affected by gravity), `"minecraft:movement.basic"` (the entity's moves using basic patterns) all take nothing but an empty object `{}` as their values. This is because simply having an _attribute_ listed will ALWAYS apply its traits to the entity. There is a way to temporarily enable and disable attributes using _`component_groups`_ and _`events`_, but that's for later.
-    -   `"minecraft_loot"` references a file int he pack, `"loot_tables/entities/ghost.json"` under it's `"table"` key. That file defines what items the entity will drop upon death, and we will create it right after finishing the Ghost.
-    -   `" minecraft:health" ` gives the Ghost 20 health points, which are equivalent to 10 hearts in-game.
+    -   `"minecraft_loot"` references a file in the pack, `"loot_tables/entities/ghost.json"` under its `"table"` key. That file defines what items the entity will drop upon death, and we will create it right after finishing the Ghost.
+    -   `"minecraft:health"` gives the Ghost 20 health points, which are equivalent to 10 hearts in-game.
     -   `"minecraft:collision_box"` defines the size of the mob's hitbox in blocks.
-    -   `" minecraft:movement" ` is, of course, the movement speed.
-    -   `" minecraft:behavior.delayed_attack"` is a _behavior attribute_, which allows the entity to execute some behavior patterns like, in this case, attacking. Its most important options are:
-        -   `" priority"` is often seen in components. If a mob can execute two actions simultaneously, the lower behavior integer will get picked. `0` means the action is always preferred over everything else.
+    -   `"minecraft:movement"` is, of course, the movement speed.
+    -   `"minecraft:behavior.delayed_attack"` is a _behavior attribute_, which allows the entity to execute some behavior patterns like, in this case, attacking. Its most important options are:
+        -   `"priority"` is often seen in components. If a mob can execute two actions simultaneously, the lower behavior integer will get picked. `0` means the action is always preferred over everything else.
         -   You can look up the rest of the options on the official Documentation, [bedrock.dev/r/Entities](https://bedrock.dev/r/Entities)
     -   `"minecraft:navigation.walk"` allows the mob to use its `"movement.basic"` goal and `"movement"` to navigate by walking. The options inside define if the mob should _avoid sun_, _pass doors_ and if it can _walk_ and _open doors_ itself.
-    -   `" minecraft:attack" `/`" damage"` defines the amount of damage the mob deals upon an attack
+    -   `"minecraft:attack"` / `"damage"` defines the amount of damage the mob deals upon an attack
     -   `"minecraft:behavior.random_look_around"` allows the mob to sometimes look around itself;
-    -   `" minecraft:behavior.hurt_by_target"` makes the entity immediately choose the entity that damages/_hurts_ them as their target. For example, a Zombie Piglin will act this way.
+    -   `"minecraft:behavior.hurt_by_target"` makes the entity immediately choose the entity that damages/_hurts_ them as their target. For example, a Zombie Piglin will act this way.
     -   `"minecraft:behavior.nearest_attackable_target"` allows the mob to select targets itself (within the radius of 25) as a hostile mob. The `"filters"` in `"entity_type"` will make sure the target belongs to the `player` _family_ in our case, but you could also make it attack villagers, for example, by changing everything inside `" filters": {}` to
 
     ```json
@@ -185,11 +185,11 @@ Again, just like with the item, a custom entity needs a resource file listing it
 Let's go over every single object in `"description"` , as usual:
 
 -   `"identifier"` is, of course, the entity's `namespace:id`. This tells the game that this file belongs to the same entity as the one defined in `BP/entities/ghost.e.json`.
--   `" materials" ` tell the game how to _render_ our entity. Depending on which material you choose, the translucent pixels on the texture might glow, be transparent, or have no effect. We assigned `entity_alphatest` the shortname `default` (precisely like with item textures) to allow partly transparent textures, making sense for a ghost. Custom materials are also possible, but they're more complicated. (You can learn more about materials in general [here]()).
+-   `"materials"` tell the game how to _render_ our entity. Depending on which material you choose, the translucent pixels on the texture might glow, be transparent, or have no effect. We assigned `entity_alphatest` the shortname `default` (precisely like with item textures) to allow partly transparent textures, making sense for a ghost. Custom materials are also possible, but they're more complicated. (You can learn more about materials in general [here]()).
 -   `"textures"/"default"` is the path (relative to the RP folder) to the entity's texture. Like in `item_textures.json`, the `.png` extension can be ignored. Again, the texture path is assigned to the shortname `"default"`. In some cases, like the Villager mob, you'd want to have multiple textures for the entity to switch between.
 -   `"geometry"` takes the model's identifier as its value; Note it for yourself, since we'll create the model itself in a moment. Again, `"default"` is the shortname for that.
--   `" scripts"/"animate"` and `"animations"` control when animations are to be played with the help of _animation controllers_ and list them under their _shortnames_ respectively. Again, we'll come back to this once we have the animations ready.
--   `" spawn_egg" ` automatically creates an item that will spawn the custom entity on use. It can look in two different ways: one of them can be seen here: both the `"overlay"_color" ` and `"base_color"` are defined with [hex codes](https://www.w3schools.com/colors/colors_picker.asp) in the form of text. The other way would be changing the whole thing to
+-   `"scripts"/"animate"` and `"animations"` control when animations are to be played with the help of _animation controllers_ and list them under their _shortnames_ respectively. Again, we'll come back to this once we have the animations ready.
+-   `"spawn_egg"` automatically creates an item that will spawn the custom entity on use. It can look in two different ways: one of them can be seen here: both the `"overlay_color" ` and `"base_color"` are defined with [hex codes](https://www.w3schools.com/colors/colors_picker.asp) in the form of text. The other way would be changing the whole thing to
 
 ```json
  "spawn_egg": {
@@ -222,7 +222,7 @@ Our next step is creating the mentioned _render controller_ with the id `control
 }
 ```
 
-The id of the only render controllers in this file is `" controller.render.ghost" `, which was referenced in the RP entity folder of the ghost (`RP/entity/ghost.e.json/"render_controllers"`). The code inside tells the game the geometry.
+The id of the only render controllers in this file is `"controller.render.ghost"`, which was referenced in the RP entity folder of the ghost (`RP/entity/ghost.e.json/"render_controllers"`). The code inside tells the game the geometry.
 
 ## Visuals
 
@@ -238,7 +238,7 @@ Like items, the entity textures are simply `.png` files in `RP/textures/entity/`
 ### Model
 
 'Model' means 'shape' or 'geometry'. Entity model JSON files are located in `RP/models/entity/` and, according to the [Style guide](), use the suffix `.geo`.
-Before you take a look at a models code, which holds data about the size, rotation, and position of every single _cube_ and _bone_, remember that there's no need to learn its syntax by hard: as mentioned above, model and animation files are all automatically generated by a dedicated 3D editor called [Blockbench]().
+Before you take a look at a model's code, which holds data about the size, rotation, and position of every single _cube_ and _bone_, remember that there's no need to learn its syntax by hard: as mentioned above, model and animation files are all automatically generated by a dedicated 3D editor called [Blockbench]().
 
 <CodeHeader>RP/models/entity/ghost.geo.json</CodeHeader>
 
@@ -510,7 +510,7 @@ Two animation controllers are listed in this file: `"controller.animation.ghost.
 TODO: Details of each NEED to be explained better
 
 Let's take a look at the Ghost's RP file: just like the _animations_, the _animation controllers_ get assigned to their shortnames (`walk_controller` and `attack_controller` respectively) under `"animations"`. Now, since the controllers control the animations, they have to constantly run, which is why we put their shortnames in the array of `"scripts"/"animate"`.
-(For example, if you put the shortname `" move" ` there, the entity would constantly play the moving animation, even when staying in place. The controller only launches the relevant animation when the entity is doing a certain action, for example, `is_walking`.)
+(For example, if you put the shortname `"move"` there, the entity would constantly play the moving animation, even when staying in place. The controller only launches the relevant animation when the entity is doing a certain action, for example, `is_walking`.)
 
 `from RP/entity/ghost.e.json`
 

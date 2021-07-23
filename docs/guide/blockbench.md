@@ -11,7 +11,11 @@ Let's get started.
 1. Open Blockbench.
 2. Choose _File>New>Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
 3. A screen like this will have popped up.
-   ![](/assets/images/guide/create_entity_project_menu.png) - "File name:" Self-explanatory. My file will generate as "skele_yaklin.geo.json"; - "Model Identifier:" This is the model identifier (namespace not required), a shortname for this ID will be defined later; - "Box UV" has to be checked on for automatic UV editing and unwrapping for texturing. - "Texture Height" and "Texture Width" define the resolution of the model's textures;
+   ![](/assets/images/guide/create_entity_project_menu.png)
+   - "File name:" Self-explanatory. My file will generate as "skele_yaklin.geo.json";
+   - "Model Identifier:" This is the model identifier (namespace not required), a shortname for this ID will be defined later;
+   - "Box UV" has to be checked on for automatic UV editing and unwrapping for texturing.
+   - "Texture Height" and "Texture Width" define the resolution of the model's textures;
 
 4. Press confirm. You'll see a screen like this:
    ![](/assets/images/guide/create_entity_workspace.png) - You can see many tools here: move, resize, rotate, etc. - You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;

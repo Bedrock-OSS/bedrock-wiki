@@ -4,7 +4,7 @@ nav_order: 3
 prefix: '3.'
 ---
 
-Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on windows 10, we have provided mobile alternatives for both Android and ios, where applicable.
+Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.
 
 ### Download Bedrock Minecraft
 

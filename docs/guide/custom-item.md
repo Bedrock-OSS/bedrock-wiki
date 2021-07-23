@@ -33,7 +33,7 @@ Let's break up the code first:
     -   `"identifier"` in `"description"` is a name unique to this item. It should contain no upper-case letters, and `_` should be used instead of spaces. An identifier consists of two parts: a _namespace_ (before the `:`) and the _id_ (after the `:`). The _namespace_ should be the same in all files of the same add-on. Usually, either the author's initials or an abbreviation of the pack name is used as one. In our case, `wiki` is a short enough word to be used as well. The _id_ is the item's own name. All vanilla items use `minecraft` as their namespace, but one CANNOT use that or `minecon` as the namespace in an add-on.
         The most usual way to encounter an identifier is using the `/give` command in-game: for example, to acquire our Ectoplasm, you'd have to type `/give @s wiki:ectoplasm`.
     -   `"components"` is where all the data about the item's behavior is stored. There are a lot of different components for items, blocks, and entities each, but since Ectoplasm is very simple, we only need one, which is:
-        -   "`minecraft:max_stack_size`" takes an integer (`64` in this case) for its value, but some other components might take JSON objects (`{}`). You can experiment by setting the max stack size value anywhere between 1 and 64. For example, a Diamond Sword would have it as 1, an Ender Pearl as 16.
+        -   "`minecraft:max_stack_size`" takes an integer (`16` in this case) for its value, but some other components might take JSON objects (`{}`). You can experiment by setting the max stack size value anywhere between 1 and 64. For example, a Diamond Sword would have it as 1, an Ender Pearl as 16.
 
 For more information on components, you can always refer to the documentation on [bedrock.dev/r/Item](https://bedrock.dev/r/Item).
 
@@ -66,8 +66,8 @@ As you can see, we used the same identifier (`namespace:id`), since we are refer
 
 -   `"category"` in `"description"` defines in which tab of the creative inventory the item would show up. There are four tabs to choose from: `"Nature"`, `"Equipment"`, `"Construction"` and `"Items"`.
 -   The only RP component we need right now is `"minecraft:icon"`, which, of course, references the item's texture; we'll get to that in just a moment.
-    (There are a few other item RP components we'll look into in the future, like `"minecraft:use_animation`, which defines the animation that would play when the item is used, like `"eat"` for food items.)
-    The component's value. `"wiki.ectoplasm` is the item texture's _shortname_, which brings us to our next section.
+    (There are a few other item RP components we'll look into in the future, like `"minecraft:use_animation"`, which defines the animation that would play when the item is used, like `"eat"` for food items.)
+    The component's value. `"wiki.ectoplasm"` is the item texture's _shortname_, which brings us to our next section.
 
 ## Item texture and its shortname
 
@@ -81,7 +81,7 @@ Navigate to `RP/textures/items/`, creating subdirectories as needed: this is whe
 
 ### Shortnames
 
-Finally, we need to tell the game that an exact texture file belongs to a specific custom item. In Ectoplasm's RP file, we already defined its icon as `"wiki.ectoplasm`. Now we have to establish a connection between this _shortname_ and the texture file `ectoplasm.png`
+Finally, we need to tell the game that an exact texture file belongs to a specific custom item. In Ectoplasm's RP file, we already defined its icon as `"wiki.ectoplasm"`. Now we have to establish a connection between this _shortname_ and the texture file `ectoplasm.png`
 This is done through the `item_textures.json` file, located in `RP/textures/`. Its base code is this:
 
 <CodeHeader>RP/textures/item_textures.json</CodeHeader>
@@ -136,7 +136,7 @@ item.wiki:ectoplasm.name=Ectoplasm
 ## Done!
 
 Now your first custom item, Ectoplasm, is complete! If everything has been done correctly, the item should now be obtainable through the `/give` command in-game, as well as appearing in your creative inventory.
-If you're having some trouble, check the [Troubleshooting page](https://wiki.bedrock.dev/troubleshooting/). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
+If you're having some trouble, check the [Troubleshooting page](../items/item-troubleshoot). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
 
 ## Your progress so far:
 

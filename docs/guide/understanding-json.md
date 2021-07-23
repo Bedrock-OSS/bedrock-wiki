@@ -91,7 +91,7 @@ Take a careful look at the format. You will see that the entire structure is bui
 -   What is the value of `format_version`?
 -   What `structure` is the value for: `"loop": true`?
 
-## Troublshooting Examples
+## Troubleshooting Examples
 
 ---
 

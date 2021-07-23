@@ -6,7 +6,7 @@ prefix: '4.'
 
 ## The com.mojang folder
 
-The `com.mojang` folder is a special folder where we build our addons. Minecraft understand this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder!
+The `com.mojang` folder is a special folder where we build our addons. Minecraft understands this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder!
 
 You should create a shortcut to the `com.mojang` folder on your Desktop, so you can easily access it at any time.
 
@@ -16,15 +16,15 @@ You should create a shortcut to the `com.mojang` folder on your Desktop, so you 
 
 ### Android
 
-`Phone>games>com.mojang`
+`Phone > games > com.mojang`
 
 ### iOS
 
-`My iDevice>Minecraft>games>com.mojang`
+`My iDevice > Minecraft > games>com.mojang`
 
 ### Development Packs
 
-We will develop our addon in `development_behavior_packs` and `development_resource_packs`. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test your addon without reloading minecraft.
+We will develop our addon in `development_behavior_packs` and `development_resource_packs`. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test your addon without reloading Minecraft.
 
 `resource_packs` and `behavior_packs` on the other hand contain stable addons, including those imported via `.mcpack`. We can ignore these folders for now.
 
@@ -53,7 +53,7 @@ In this guide, you will often be instructed to create files with specific names,
 
 The manifest is a file that identifies your pack to Minecraft. Every pack has one manifest. A folder with a correctly formatted manifest will show up in Minecraft, and we consider this the "minimal" pack before we can add additional content.
 
-Manifest files are written in `json`. If this isn't familiar to you, you can [learn more about json here.](/guide/understanding-json)
+Manifest files are written in `json`. If this isn't familiar to you, you can [learn more about json here.](./understanding-json)
 
 First, create a new file in your BP folder by right-clicking on the folder and selecting `New File`. Call the file `manifest.json`. To begin, you can copy paste the following code into the file.
 
@@ -141,7 +141,7 @@ You should place a copy of your desired image into both the RP and the BP. The i
 
 ## Language Files
 
-The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](/concepts/lang)
+The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](../concepts/lang)
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
@@ -159,7 +159,7 @@ pack.description=My First Addon
 
 ## Checking your Work
 
-If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](/meta/troubleshooting)
+If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](../meta/troubleshooting)
 
 ![](/assets/images/guide/project-setup/active_pack.png)
 
@@ -167,7 +167,7 @@ If you have done everything correctly, your packs should show up in Minecraft no
 
 Content Log is an extremely important debugging tool, which you should always have on.
 
-Turn on both `settings > profile > content_log_file` and `settings>profile>content_log_gui`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`. [Learn more about the content log here.](/meta/troubleshooting)
+Turn on both `settings > profile > content_log_file` and `settings > profile > content_log_gui`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`. [Learn more about the content log here.](../meta/troubleshooting)
 
 ## Creating your testing world
 
