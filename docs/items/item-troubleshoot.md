@@ -1,29 +1,29 @@
 ---
-title: Item Troubleshooting
+title: Troubleshooting Items
 nav_order: 3
 ---
 
 ### Your Item Has a Problem
 
-_I followed a tutorial or tried to make my own item and something's wrong!_ No worry, items are easy to make mistakes with. This page will help you to debug common issues.
+_I followed a tutorial or tried to make my own item and something's wrong!_ No worries, it's easy to make mistakes when dealing with items. This page will help you to debug common issues.
 
 ## Before you Begin
 
 ::: warning
 As of game versions `1.16.100` and onward, there are two distinct types of items, as constituted by its `format_version`.
-In short, versions `1.16.0` and prior are currently the stable (This includes **1.16, 1.14, 1.13, 1.12, 1.10**) **non-experimental** version. These **do not** require `Holiday Creator Features` to be enabled.
-Versions `1.16.100` or over are **experimental**. These items **will not work unless `Holiday Creator Features` is enabled in the world**.
+In short, versions `1.16.0` and prior are currently the stable (Includes **1.16, 1.14, 1.13, 1.12, 1.10**), **non-experimental** version. These **do not** require `Holiday Creator Features` to be enabled.
+Versions `1.16.100` and onward are **experimental**. These items **will not work unless** `Holiday Creator Features` **is enabled in the world**.
 :::
 
-_Before troubleshooting, please ensure that you have in mind a format that you'd want to use for your item._
+_Before troubleshooting, please ensure that you have a format version that you'd want to use for your item._
 
 ### Version Dependent Components
 
-Among the three main item versions, there are also different sets of item `components`. **It is absolutely imperative that the correct components and syntax are used for their respective versions**. A failure to meet such criteria will **always** result in a broken item. You may find the correct components and their appropriate syntax in the following links:
+Among the three main item versions, there are also different sets of item `components`. **It is absolutely imperative that the correct components and syntax are used for their respective versions**. Failure to meet such criteria will **always** result in a broken item. You may find the correct components and their appropriate syntax in the following links:
 
-`Experimental (1.16.100+)` -- https://bedrock.dev/docs/stable/Item
+- `Experimental (1.16.100+)` - https://bedrock.dev/docs/stable/Item
 
-`Stable (1.12.0)` -- https://bedrock.dev/docs/1.16.0.0/1.16.20.54/Item
+- `Stable (1.12.0)` - https://bedrock.dev/docs/1.16.0.0/1.16.20.54/Item
 
 ## Troubleshooting All Items
 
@@ -58,9 +58,9 @@ If the item is showing the black-magenta checkerboard texture, or constantly thr
 
 As stated previously, items work very differently across different `format_version`s. Deciding which format you wish to use is the next step in the troubleshooting process.
 
--   I wish to use the stable, `1.12.0` format: [Continue](#5.0)
+-   I wish to use the stable, `1.12.0` format: <BButton color="blue" link="item-troubleshoot#_5-0-assessing-specific-issue">Continue</BButton>
 
--   I wish to use the experimental, `1.16.100` format: [Continue](#6.0)
+-   I wish to use the experimental, `1.16.100` format: <BButton color="blue">Coming Soon</BButton>
 
 ## Stable Item Troubleshooting [1.12.0]
 
