@@ -26,19 +26,19 @@ This guide is written for the most recent _stable_ release of Minecraft Bedrock 
 
 Let's start by setting up your tools, which you will use throughout the development of your addons. This section will precisely cover what **software** is needed, where to **set up/initialize** your addons, and create a **workspace** where you can create your addons.
 
-<BButton color="green">Project Setup</BButton>
+<BButton color="green" link="project-setup">Project Setup</BButton>
 
 ### Custom Item
 
 Now that your workspace is ready to go, we can start creating a fully custom Item that our entity will drop.
 
-<BButton color="green">Custom Item</BButton>
+<BButton color="green" link="custom-item">Custom Item</BButton>
 
 ### Custom Entity
 
 Finally, it's time to create the mob that drops our custom item: A hostile Ghost that spawns at night.
 
-<BButton color="green">Custom Entity</BButton>
+<BButton color="green" link="custom-entity">Custom Entity</BButton>
 
 ## What to do after finishing the Guide
 
