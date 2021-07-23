@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Items
+title: 'Troubleshooting Items'
 nav_order: 3
 ---
 
@@ -66,16 +66,17 @@ As stated previously, items work very differently across different `format_versi
 
 ### 5.0 - Assessing Specific Issue
 
--   My item is invisible in my hand, and is spamming a content log error that it needs an icon: [Continue](#5.1)
+-   My item is invisible in my hand, and is spamming a content log error that it needs an icon: <BButton color="blue" link="item-troubleshoot#_5-1-invisible-item">Continue</BButton>
 
--   My item is not appearing in the inventory or through commands: [Continue](#5.2)
+-   My item is not appearing in the inventory or through commands: <BButton color="blue" link="item-troubleshoot#_5-2-item-not-appearing">Continue</BButton>
 
--   My item is missing a texture, and has a pink-and-black one: [Continue](#5.3)
+-   My item is missing a texture, and has a pink-and-black one: <BButton color="blue" link="item-troubleshoot#_5-3-item-has-magenta-and-black-checkerboard-texture">Continue</BButton>
 
 ### 5.1 - Invisible Item
 
 For this error, ensure that your item is properly defined in the **Resource Pack**.
-To do this, you need to create an item file in `rp/items/` called `<name_of_your_item>.json`.
+To do this, you need to create an item file in `RP/items/` called `<name_of_your_item>.json`.
+<CodeHeader>RP/items/your_item.json</CodeHeader>
 
 ```json
 {
@@ -96,12 +97,13 @@ To do this, you need to create an item file in `rp/items/` called `<name_of_your
 
 _An example of how this file should look_
 
-Be sure that your `"minecraft:icon"` correctly points to your `item_texture.json` name.
+Be sure that your `"minecraft:icon"` correctly matches to your `item_texture.json` name.
 
 ### 5.2 - Item Not Appearing
 
 For this error, ensure that your item is properly defined in your **Behavior Pack**.
-To do this, you need to create an item file in `<behaviorpackname>/items/`, called `<name_of_your_item>.json`.
+To do this, you need to create an item file in `BP/items/` called `<name_of_your_item>.json`.
+<CodeHeader>BP/items/your_item.json</CodeHeader>
 
 ```json
 {
@@ -131,7 +133,8 @@ For this error, ensure that your item's texture is properly referenced in your *
 This is commonly due to a mismatched file or folder name. Remember, no capitals or spaces in file or folder names.
 
 To fix, ensure your texture paths correct.
-These are the folders that all lead to your texture file, as defined in `resourcepack\textures\item_texture.json`. For example:
+These are the folders that all lead to your texture file, as defined in `RP\textures\item_texture.json`. For example:
+<CodeHeader>RP\textures\item_texture.json</CodeHeader>
 
 ```json
 {
@@ -147,7 +150,7 @@ These are the folders that all lead to your texture file, as defined in `resourc
 
 _This texture should be in the folder `"textures/items/"`, and the image should be called `amethyst_sword.png`._
 
-Ensure your `"minecraft:icon"` component points toward the correct short name.
+Ensure your `"minecraft:icon"` component matches toward the correct short name.
 
 ```json
 {

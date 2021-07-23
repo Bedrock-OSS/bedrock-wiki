@@ -1,45 +1,29 @@
 ---
-title: 'Block Troubleshooting'
+title: 'Troubleshooting Blocks'
 ---
 
-# Step-by-step Block Debugging
+## Step-by-step Block Debugging
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
----
-<a name="0.0.0"></a>
 ## 0.0.0 - Trouble
 
-I followed a tutorial or tried to make my own block and something's wrong! Calm down. This page will help debug common issues.
+I followed a tutorial or tried to make my own block and something's wrong! Calm down. This page will help debug common issues. <BButton color="blue" link="block-troubleshoot#_1-0-0-my-block-has-a-black-magenta-checkered-pattern-my-textures-are-missing">Continue</BButton>
 
-[Continue](#1.0.0){: .btn .btn-blue }
-
----
-<a name="1.0.0"></a>
 ## 1.0.0 - My Block Has a Black-Magenta checkered pattern/My Textures Are Missing!
 
-I will be reviewing three different types of blocks that have different layouts: Dirt-like ![](/assets/images/blocks/block_tr/tr_dirt.png){: .pixelated}, Log-like ![](/assets/images/blocks/block_tr/tr_log.png){: .pixelated}, Grass-like ![](/assets/images/blocks/block_tr/tr_grass.png){: .pixelated}
+I will be reviewing three different types of blocks that have different layouts: Dirt-like ![](/assets/images/blocks/block_tr/tr_dirt.png), Log-like ![](/assets/images/blocks/block_tr/tr_log.png), Grass-like ![](/assets/images/blocks/block_tr/tr_grass.png)
 
 
-1.10 Block [Continue](#1.1.0){: .btn .btn-blue }
+1.10 Block <BButton color="blue" link="block-troubleshoot#_1-10-blocks">Continue</BButton>
 
-1.16.100 Block[Continue](#1.2.0){: .btn .btn-blue }
+1.16.100 Block <BButton color="blue" link="block-troubleshoot#_1-16-100-blocks">Continue</BButton>
 
----
-<a name="1.1.0"></a>
 ## 1.10 Blocks
 
 Navigate to your `blocks.json`. Ensure that it is properly named.
 
-{% include filepath.html path="RP/textures/blocks.json"%}
-```jsonc
+<CodeHeader>RP/textures/blocks.json</CodeHeader>
+
+```json
 {
     "format_version": [
         1,
@@ -71,8 +55,9 @@ Navigate to your `blocks.json`. Ensure that it is properly named.
 
 Next, navigate to your `terrain_texture.json`. Ensure that it is properly named.
 
-{% include filepath.html path="RP/textures/terrain_texture.json"%}
-```jsonc
+<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+
+```json
 {
   "resource_pack_name": "tut",
   "texture_name": "atlas.terrain",
@@ -103,15 +88,14 @@ Next, navigate to your `terrain_texture.json`. Ensure that it is properly named.
 
 If you followed this properly, your 1.10 block should now have a texture.
 
----
-<a name="1.2.0"></a>
 ## 1.16.100 Blocks
 
 You can follow the exact same steps as the 1.10 blocks. But doing this method allows you to rotate your blocks.
 Navigate to your `terrain_texture.json`. Ensure that it is properly named
 
-{% include filepath.html path="RP/textures/terrain_texture.json"%}
-```jsonc
+<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+
+```json
 {
   "resource_pack_name": "tut",
   "texture_name": "atlas.terrain",
@@ -143,8 +127,9 @@ Navigate to your `terrain_texture.json`. Ensure that it is properly named
 Next, navigate to your block file. In your block file, make sure you have the `material_instance` component.
 
 Dirt like block example:
-{% include filepath.html path="BP/blocks/dirt_like.json"%}
-```jsonc
+<CodeHeader>BP/blocks/dirt_like.json</CodeHeader>
+
+```json
 {
     "format_version": "1.16.100",
     "minecraft:block": {
@@ -166,8 +151,9 @@ Dirt like block example:
 ```
 
 Log like block example:
-{% include filepath.html path="BP/blocks/dirt_like.json"%}
-```jsonc
+<CodeHeader>BP/blocks/log_like.json</CodeHeader>
+
+```json
 {
     "format_version": "1.16.100",
     "minecraft:block": {
@@ -194,8 +180,9 @@ Log like block example:
 ```
 
 Grass like block example:
-{% include filepath.html path="BP/blocks/dirt_like.json"%}
-```jsonc
+<CodeHeader>BP/blocks/grass_like.json</CodeHeader>
+
+```json
 {
     "format_version": "1.16.100",
     "minecraft:block": {
@@ -224,11 +211,9 @@ Grass like block example:
 
 If you followed this properly, your 1.16.100 block should now have a texture.
 
----
-<a name="2.0.0"></a>
 ## 2.0.0 - My Block Looks Like Dirt!
 
-Problem: My custom block has turned into a dirt block with green writing on it. ![](/assets/images/blocks/block_tr/tr_update.png){: .pixelated} This is called `info_update` block. This happens when the block identifier changed or an invalid json was made.
+Problem: My custom block has turned into a dirt block with green writing on it. ![](/assets/images/blocks/block_tr/tr_update.png) This is called `info_update` block. This happens when the block identifier changed or an invalid json was made.
 
 Solution: Use a json linter and double check that your identifier didn't change.
 
@@ -240,8 +225,9 @@ Problem: You have transparent pixels in your texture file. When you apply it in 
 
 Solution: Navigate to your block file. Navigate to your `material_instance` component. Add the following to your component:
 
-{% include filepath.html path="BP/blocks/your_block.json"%}
-```jsonc
+<CodeHeader>BP/blocks/your_block.json</CodeHeader>
+
+```json
 {
    "format_version": "1.16.100",
    "minecraft:block": {
@@ -256,14 +242,10 @@ Solution: Navigate to your block file. Navigate to your `material_instance` comp
 }
 ```
 
----
-<a name="4.0.0"></a>
 ## 4.0.0 - Common Content Log Errors
 
 This section will describe common content log errors and how to debug them.
 
----
-<a name="4.1.0"></a>
 ## 4.1.0 - [Blocks][Error]
 
 Problem: Your content log shows `[Blocks][error]-minecraft:entity_collision: min can't be below (-8, 0, -8) and max can't be more than (8, 16, 8)` or `[Blocks][error]-minecraft:pick_collision: min can't be below (-8, 0, -8) and max can't be more than (8, 16, 8)`
@@ -273,8 +255,6 @@ Solution: Check your `entity_collision` or `pick_collision` components and do th
   - Make sure the y isn't less than 0.
   - Make sure the size isn't bigger than 16x16x16.
 
----
-<a name="4.2.0"></a>
 ## 4.2.0 - [Blocks][warning]
 
 Problem: Your content log shows `geometry.your_block contains an X amount of boxes outside the warning bounds of (*insert numbers*) to (*insert numbers*)`
