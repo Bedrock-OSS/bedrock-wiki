@@ -1,5 +1,5 @@
 <template>
-	<NavBar class="z-20" />
+	<NavBar />
 	<Sidebar />
 
 	<main
@@ -15,7 +15,6 @@
 		</h1>
 		<TOC v-if="showToc" />
 		<Content
-			class="z-10"
 			:class="{
 				'xl:mr-72': showToc,
 			}"
