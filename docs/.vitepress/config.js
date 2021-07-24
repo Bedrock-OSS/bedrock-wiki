@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
 
-const baseUrl = '/bedrock-wiki-vite/'
+const baseUrl = '/'
 
 function formatLink(path) {
 	return path.split(/\\|\//g).join('/').replace('.md', '')
@@ -109,7 +109,7 @@ module.exports = {
 	},
 
 	themeConfig: {
-		repo: 'bedrock-oss/bedrock-wiki-vite',
+		repo: 'bedrock-oss/bedrock-wiki',
 		docsDir: 'docs',
 
 		// vitepress config right now

@@ -623,7 +623,7 @@ List of all new item components, with usage examples
 }
 ```
 
-_Full list of categories can be found [here](https://bedrock-oss.github.io/bedrock-wiki-vite/items/item-categories.html)_
+_Full list of categories can be found [here](/items/item-categories)_
 
 -   minecraft:food
     _New Syntax_
@@ -737,15 +737,16 @@ If your item isn't showing up, these changes might have broken your item.
 
 ## Additional Notes
 
-Broken/Nonfunctional Features 
-- Components
-  - `minecraft:mining_speed` - Currently has no function.
-  - `minecraft:shooter` - Currently broken.
-  - `minecraft:digger`
-        - `use_efficiency` - Parameter currently has no function.
-- Event Functions
-  - `transform_item` - Crashes the game.
-  
+Broken/Nonfunctional Features
+
+-   Components
+    -   `minecraft:mining_speed` - Currently has no function.
+    -   `minecraft:shooter` - Currently broken.
+    -   `minecraft:digger` - `use_efficiency` - Parameter currently has no function.
+-   Event Functions
+    -   `transform_item` - Crashes the game.
+
 Current Limitations
+
 -   Vanilla Items are hardcoded; you may not override or access them, using the new format.
 -   `minecraft:record` - May not add a custom `sound_event`.

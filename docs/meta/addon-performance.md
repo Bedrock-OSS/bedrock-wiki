@@ -10,108 +10,106 @@ Performance in addons is crucial, as the most technically fantastic addon is mai
 
 This guide is a non-exhaustive list of specific performance considerations separated by the various subsystems of Bedrock Edition. No single point should be taken as a hard and fast rule. Instead, these performance considerations should help you to recognize potential areas for improvement.
 
-## Performance Cost by Subsystem
+## Biomes and Features
 
-### Biomes and Features
-
-#### Biomes
+### Biomes
 
 -   The biome system is generally efficient
 -   Large values for heightmaps are usually handled gracefully
 -   The component `climate` creates large particle storms
 
-#### Features
+### Features
 
 -   Biomes generally cause less lag than feature generation
 -   Hundreds of iterations per chunk of a multi-block feature have been achieved at a low-performance cost
 -   Thousands of iterations per chunk of multi-block features negatively impact gameplay
 -   Hundreds of thousands of iterations per chunk of a single-block feature have been achieved at a low-performance cost
 
-### Blocks
+## Blocks
 
-#### Materials
+### Materials
 
 -   The minimum needed material type with regards to rendering should always be utilized
     -   alpha_blend performance is worse than alpha_test, which is worse than opaque
 
-#### Quantity and Type
+### Quantity and Type
 
 -   Flowing liquids should be avoided and minimized
 
-#### Updates
+### Updates
 
 -   Block updates should be minimized
 
-### Commands
+## Commands
 
-#### Quantity and Type
+### Quantity and Type
 
 -   Minimize the number of commands run per tick
     -   /effect and /gamemode run every tick are avoidable and have a significant performance impact
 -   Large clones and fills during runtime should be avoided
     -   Breaking these more extensive operations into multiple commands distributed over multiple ticks will avoid lag spikes
 
-#### Selectors
+### Selectors
 
 -   Care should be taken to ensure a function is not executed on too many entities, and therefore too many times
 -   Executing a scoreboard command outweighs the cost of running an entity selector multiple times
 -   Using c=1 to ensure the selector stops when it finds one entity may improve performance
 -   When executing multiple commands with the same selector, use a function instead to avoid repeatedly resolving the same selector
 
-#### Tags vs. Scoreboards
+### Tags vs. Scoreboards
 
 -   Scoreboards perform better at a large scale than tags
 
-### Entities
+## Entities
 
 -   Entities generally have one of the most significant performance impacts by subsystem and thus should be minimized where possible
 
-#### Components
+### Components
 
 -   Pathfinding on flying mobs has a significant performance cost
 -   Flying mobs in general encounter performance problems
     -   Faking flying mobs via animation should be considered if possible
 
-#### Dummy Entities
+### Dummy Entities
 
 -   Dummy entities generally have equal performance impact to proper entities, except when excluding heavy components like pathfinding
 
-#### Geometry
+### Geometry
 
-##### Bones
+#### Bones
 
 -   No performance impact has been observed regarding bone count
 
-##### Elements
+#### Elements
 
 -   Element count is not generally an issue, except in extreme cases when thousands of elements are reached
 
-#### Materials
+### Materials
 
 -   The minimum material required to achieve the desired effect should always be used
 -   When in doubt, refer to the material definition files to get an idea of the costs of various materials, taking the material inheritance system into account
 
-#### Quantity
+### Quantity
 
 -   Loaded entities at any given time should be minimized
     -   Below 30 is optimal
 
-### Lighting
+## Lighting
 
-#### Map Considerations
+### Map Considerations
 
 -   Hollow areas will cause lag due to lighting calculations
     -   Avoid this by filling in unused enclosed areas
 -   Keeping the map set to day or night will avoid lighting recalculation
 
-#### Sources
+### Sources
 
 -   Bedrock lighting is calculated dynamically, meaning different light sources have different performance costs
     -   Light blocks are the most performant because they lack particles, rendering, and particular state logic
     -   Torches are a minor performance issue because they emit particles, render, and have particular state logic dependent on what block they connect to
     -   Custom light blocks with minimal components are a reasonable compromise between performance and aesthetics
 
-##### Comparison Table
+#### Comparison Table
 
 |     Light Source | Score | Redstone Updates | Animted Texture | Light Updates | Tick Updates | Particles | Renders |
 | ---------------: | :---: | :--------------: | :-------------: | :-----------: | :----------: | :-------: | :-----: |
@@ -125,67 +123,67 @@ This guide is a non-exhaustive list of specific performance considerations separ
 |          Torches |   4   |      False       |      False      |     True      |     True     |   True    |  True   |
 | Redstone Torches |   5   |       True       |      False      |     True      |     True     |   True    |  True   |
 
-### Molang
+## Molang
 
-#### Recursion
+### Recursion
 
 -   Minimize use of recursion when possible
 -   Intense nested loop structures will cause performance issues
 -   Use break to escape loops when possible
 
-#### Structs
+### Structs
 
 -   Avoid making structs too deep, as there is a performance cost with each layer
 
-#### Variables
+### Variables
 
 -   Use temp variables when possible to minimize variables loaded in memory
 -   Consider how often variables are calculated based on script type
 
-### Textures
+## Textures
 
-#### Quantity
+### Quantity
 
 -   No more than 3000 textures should be used
     -   This is due to limits imposed by Render Dragon
     -   Render Dragon has a 4096 texture quantity limit, and there are 800 vanilla textures as of 1.16
 
-#### Resolution
+### Resolution
 
 -   The maximum texture resolution is 16384x16384
 -   The recommended maximum texture resolution is 4096x4096 to maintain compatibility with low-end devices
 -   Keep in mind that textures are atlased, and larger textures can mess with atlas generation on lower-end devices
 -   Only make textures as significant as needed to convey the detail needed at the needed distance
 
-### Sounds
+## Sounds
 
-#### Count
+### Count
 
 -   Total registered sounds are reported to have an impact on performance
 
-#### Compression
+### Compression
 
 -   Sound compression is exceptionally beneficial to pack size
 -   This is especially noticeable on older and low power devices, such as the Switch
 -   The FMod simple API utilized by Bedrock decompresses all sounds into WAV before loading into RAM, meaning no CPU performance improvement in this respect
     -   If audio is streamed, this does not occur
 
-#### Streaming
+### Streaming
 
 -   As general guidance, sounds over 500kb in size or 1 minute in length should be streamed
 
-### Redstone
+## Redstone
 
-#### Chunk Boundaries
+### Chunk Boundaries
 
 -   Crossing chunk boundaries with Redstone should be avoided
 
-#### Command Blocks
+### Command Blocks
 
 -   When creating large command blockchains, stack vertically and in a single chunk
 -   Minimize command block use in favor of functions and behaviors where possible
 
-### Ticking Areas
+## Ticking Areas
 
 -   Total chunks are of more significant concern than ticking areas
 -   Dynamic areas should be avoided unless necessary
