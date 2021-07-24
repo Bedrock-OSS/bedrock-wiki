@@ -1,0 +1,1 @@
+import{o as t,c as e}from"./404.md.815b6aef.js";const n='{"title":"Models and Animations","description":"","frontmatter":{"title":"Models and Animations"},"relativePath":"models-animations/index.md","lastUpdated":1627143638503}',a={};a.render=function(n,a,i,o,d,r){return t(),e("div")};export default a;export{n as __pageData};
