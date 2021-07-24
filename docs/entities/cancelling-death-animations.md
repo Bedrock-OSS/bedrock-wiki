@@ -67,7 +67,7 @@ Animation Controller: (query.all_animations_finished is only needed for respawni
 
 You can also cancel the death animation of any entity by removing their damage color overlay.
 
-Before starting, you must have the basics of render controller so check out the [tutorial](/concepts/render-controller) of render controller.
+Before starting, you must have the basics of render controller so check out the [tutorial](/visuals/render-controller) of render controller.
 
 To remove the damage overlay color of any entity you want when it gets damaged, we will use `is_hurt_color` and remove the damage overlay color when an entity receives damage due to lava and fire use `on_fire _color`.
 First, you need to make the rgba values to 0

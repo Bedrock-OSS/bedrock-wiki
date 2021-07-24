@@ -167,7 +167,7 @@ If you have done everything correctly, your packs should show up in Minecraft no
 
 Content Log is an extremely important debugging tool, which you should always have on.
 
-Turn on both `settings > profile > content_log_file` and `settings > profile > content_log_gui`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`. [Learn more about the content log here.](../meta/troubleshooting)
+Turn on both `settings > profile > content_log_file` and `settings > profile > content_log_gui`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`. [Learn more about the content log here.](/guide/troubleshooting)
 
 ## Creating your testing world
 

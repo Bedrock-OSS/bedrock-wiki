@@ -18,7 +18,7 @@ This json contains geometry for both the Steve and Alex versions:
 
 `geometry.npc.alex`
 
-<Spoiler title="Geometry>
+<Spoiler title="Geometry">
 
 ```json
 {

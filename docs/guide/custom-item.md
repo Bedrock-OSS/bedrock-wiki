@@ -136,7 +136,7 @@ item.wiki:ectoplasm.name=Ectoplasm
 ## Done!
 
 Now your first custom item, Ectoplasm, is complete! If everything has been done correctly, the item should now be obtainable through the `/give` command in-game, as well as appearing in your creative inventory.
-If you're having some trouble, check the [Troubleshooting page](../items/item-troubleshoot). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
+If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
 
 ## Your progress so far:
 

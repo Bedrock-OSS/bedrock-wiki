@@ -2,7 +2,7 @@
 title: Materials
 ---
 
-You can [learn more about materials here](/concepts/materials).
+You can [learn more about materials here](/visuals/materials).
 
 | Material                                  | Note                            |
 | ----------------------------------------- | ------------------------------- |

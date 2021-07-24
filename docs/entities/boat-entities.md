@@ -8,7 +8,7 @@ tags:
 
 ## Using Runtime Identifiers
 
-You can [read more about runtime identifiers here](/documentation/runtime-identifier). Using runtime identifiers, you can implement most of the boat's hard-coded behaviors. However, your boat won't rotate with you, and it will always face North.
+You can [read more about runtime identifiers here](/entities/runtime-identifier). Using runtime identifiers, you can implement most of the boat's hard-coded behaviors. However, your boat won't rotate with you, and it will always face North.
 
 ## Using Components
 

@@ -9,7 +9,7 @@ There are two methods for making 3D items:
 <Label color="red">Expert</Label>
 
 ::: tip
-This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/concepts/render-controller) before starting this tutorial.
+This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/visuals/render-controller) before starting this tutorial.
 :::
 
 ### Concept & Idea
