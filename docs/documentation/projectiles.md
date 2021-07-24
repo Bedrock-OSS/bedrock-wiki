@@ -44,10 +44,6 @@ _Disclaimer: this component has been mostly documented based on projectiles foun
 | uncertainty_base          | Decimal          | 0             | The base accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel \* uncertaintyMultiplier                               |
 | uncertainty_multiplier    | Decimal          | 0             | Determines how much difficulty affects accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel \* uncertaintyMultiplier |
 
-### Test level 3 header
-
-If this gets pushed, bonk stirante on the head.
-
 ## on_hit
 
 This object contains all behaviors, that can be executed, when projectile hits something.
