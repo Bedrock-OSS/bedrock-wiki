@@ -113,10 +113,10 @@ module.exports = {
 		docsDir: 'docs',
 
 		// vitepress config right now
-		algolia: {
-			apiKey: 'c57105e511faa5558547599f120ceeba',
-			indexName: 'vitepress',
-		},
+		// algolia: {
+		// 	apiKey: 'c57105e511faa5558547599f120ceeba',
+		// 	indexName: 'vitepress',
+		// },
 
 		editLinks: true,
 		editLinkText: 'Edit this page on GitHub',
