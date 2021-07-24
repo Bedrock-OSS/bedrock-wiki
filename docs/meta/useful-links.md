@@ -100,8 +100,3 @@ Important links have a ⭐.
 -   [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
-
-## Shader Resources
-
--   [The book of Shaders](https://thebookofshaders.com/)
--   [Learn OpenGL](https://learnopengl.com/)
