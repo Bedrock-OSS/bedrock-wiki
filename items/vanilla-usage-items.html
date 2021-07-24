@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vanilla Usage Items | Bedrock Wiki</title>
+    <meta name="description" content="Technical bedrock knowledge-sharing wiki.">
+    <link rel="stylesheet" href="/assets/style.c6d201d9.css">
+    <link rel="modulepreload" href="/assets/AlgoliaSearch.6042abe9.js">
+    <link rel="modulepreload" href="/assets/Contributors.0be98551.js">
+    <link rel="modulepreload" href="/assets/404.md.d286ce68.js">
+    <link rel="modulepreload" href="/assets/items_vanilla-usage-items.md.01e371b6.lean.js">
+    <link rel="modulepreload" href="/assets/404.md.d286ce68.js">
+    <meta name="twitter:title" content="Vanilla Usage Items | Bedrock Wiki">
+    <meta property="og:title" content="Vanilla Usage Items | Bedrock Wiki">
+  </head>
+  <body>
+    <div id="app"><!--[--><header class="nav-bar
+			flex
+			items-center
+			justify-items-center
+			sticky
+			z-50
+			top-0
+			p-4
+			bg-true-gray-50
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600 dark:bg-true-gray-900
+			select-none" data-v-2069b7b6 data-v-69370de9><svg class="icon mr-3 cursor-pointer" width="24" height="24" viewbox="0 0 24 24" data-v-69370de9><path d="M21,15.61L19.59,17L14.58,12L19.59,7L21,8.39L17.44,12L21,15.61M3,6H16V8H3V6M3,13V11H13V13H3M3,18V16H16V18H3Z"></path></svg><a href="/" class="flex flex-row justify-between items-center" data-v-69370de9><img src="/favicon.ico" alt="Bedrock Wiki Logo" style="height:30px;" class="mr-2" data-v-69370de9><div class="font-semibold text-lg pb-0.5" data-v-69370de9><span class="hidden sm:inline" data-v-69370de9>Bedrock </span><span data-v-69370de9>Wiki</span></div></a><span class="flex-grow" data-v-69370de9></span><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md hidden lg:flex" href="/discord" data-v-69370de9 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Discord</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md hidden lg:flex" href="/contribute" data-v-69370de9 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Contribute</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md isExternal hidden lg:flex" href="https://bedrock.dev" target="_blank" rel="noopener noreferrer" data-v-69370de9 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Docs</div><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" data-v-e72de3ec><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md isExternal hidden lg:flex" href="https://docs.microsoft.com/en-us/minecraft/creator/" target="_blank" rel="noopener noreferrer" data-v-69370de9 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>MS Docs</div><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" data-v-e72de3ec><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md isExternal hidden lg:flex" href="https://old-wiki.bedrock.dev/" target="_blank" rel="noopener noreferrer" data-v-69370de9 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Legacy Wiki</div><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" data-v-e72de3ec><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg><!--[--><!--]--></a><!--]--><div class="relative" data-v-69370de9><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute opacity-70 top-2 left-2 pointer-events-none w-4.5 h-4.5" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg><select name="theme" class="
+				appearance-none
+				outline-none
+				select-none
+				leading-4
+				rounded-md
+				border-1 border-gray-200
+				dark:border-true-gray-600
+				focus:border-blue-300
+				focus:ring
+				focus:ring-blue-200
+				focus:ring-opacity-50
+				dark:bg-dark-gray-900 dark:border-dark-gray-800
+				text-sm
+				py-2
+				px-8
+				block
+			"><option value="light">Light</option><option value="dark">Dark</option><option value="system">System</option></select><svg class="icon absolute
+				opacity-70
+				top-1
+				right-1
+				transform
+				-rotate-90
+				pointer-events-none" width="24" height="24" viewbox="0 0 24 24"><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></div><!----></header><aside class="sidebar
+			float-left
+			fixed
+			mt-14
+			pb-14
+			z-10
+			top-0
+			w-72
+			border-r-1 border-gray-200
+			dark:border-true-gray-600
+			select-none
+			overflow-auto
+			transform
+			transition
+			md:transition-none
+			transition-transform
+			duration-150
+			ease-in-out translate-x-0" style="height:calc(100% - 57px);" data-v-2069b7b6><!--[--><div class="lg:hidden px-2 mt-3 mb-4" data-v-a3357492><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md" href="/discord" data-v-a3357492 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Discord</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md" href="/contribute" data-v-a3357492 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Contribute</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md isExternal" href="https://bedrock.dev" target="_blank" rel="noopener noreferrer" data-v-a3357492 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Docs</div><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" data-v-e72de3ec><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md isExternal" href="https://docs.microsoft.com/en-us/minecraft/creator/" target="_blank" rel="noopener noreferrer" data-v-a3357492 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>MS Docs</div><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" data-v-e72de3ec><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md isExternal" href="https://old-wiki.bedrock.dev/" target="_blank" rel="noopener noreferrer" data-v-a3357492 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Legacy Wiki</div><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" data-v-e72de3ec><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg><!--[--><!--]--></a><!--]--></div><div class="border-t" data-v-a3357492><!--[--><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Beginners Guide</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/introduction" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>1.</span><div class="flex-1 text-sm" data-v-e72de3ec>Introduction</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/addons" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>2.</span><div class="flex-1 text-sm" data-v-e72de3ec>Addons Explained</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/software-preparation" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>3.</span><div class="flex-1 text-sm" data-v-e72de3ec>Software and preparation</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/project-setup" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>4.</span><div class="flex-1 text-sm" data-v-e72de3ec>Project Setup</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/custom-item" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>5.</span><div class="flex-1 text-sm" data-v-e72de3ec>Create a custom Item</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/custom-entity" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>6.</span><div class="flex-1 text-sm" data-v-e72de3ec>Create a custom Entity</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/blockbench" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>7.</span><div class="flex-1 text-sm" data-v-e72de3ec>Blockbench: Modeling, Texturing, Animating</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/loot-table" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>8.</span><div class="flex-1 text-sm" data-v-e72de3ec>Adding a Loot Table</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/understanding-json" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>a.</span><div class="flex-1 text-sm" data-v-e72de3ec>Understanding JSON</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/download-packs" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>b.</span><div class="flex-1 text-sm" data-v-e72de3ec>Download Example Packs</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/guide/troubleshooting" data-v-6f88f311 data-v-e72de3ec><span class="font-bold" data-v-e72de3ec>c.</span><div class="flex-1 text-sm" data-v-e72de3ec>Troubleshooting</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><p class="blue label" data-v-e72de3ec>HELP</p></span><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Animation Controllers</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/animation-controllers/animation-controllers-intro" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Intro to Animation Controllers</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/animation-controllers/entity-commands" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Entity Commands</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/animation-controllers/afk-animation-controller" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>AFK Detector</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/animation-controllers/death-commands" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Death Commands</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/animation-controllers/respawn-commands" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Respawn Commands</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Blocks</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/blocks-intro" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Intro to Blocks</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/blocks-16" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Blocks 1.16+</div><!----><!--[--><span data-v-e72de3ec><!----><p class="orange label" data-v-e72de3ec> EXP </p><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/troubleshooting-blocks" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Troubleshooting Blocks</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><p class="blue label" data-v-e72de3ec>HELP</p></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/block-materials" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Block Materials</div><!----><!--[--><span data-v-e72de3ec><!----><p class="orange label" data-v-e72de3ec> EXP </p><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/block-shapes" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Block Shapes</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/block-tags" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Block Tags</div><!----><!--[--><span data-v-e72de3ec><!----><p class="orange label" data-v-e72de3ec> EXP </p><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/block-texture-variation" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Block Texture Variation</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/fake-blocks" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Fake Blocks</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/blocks/parts-of-custom-tree" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Parts of Custom Tree</div><!----><!--[--><span data-v-e72de3ec><!----><p class="orange label" data-v-e72de3ec> EXP </p><!----><!----></span><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Commands</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/commands/commands-intro" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Intro to Commands</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/commands/nbt-commands" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>NBT Commands</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/commands/mcfunction" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Understanding .mcfunction</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Concepts</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/lang" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>.lang</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/mcstructure" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>.mcstructure</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/emojis" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Emojis &amp; Symbols</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/format-version" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Format Versions</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/namespaces" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Namespaces</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/shaders" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Shaders</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/sounds" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Sounds</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/subpacks" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Subpacks</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/concepts/text-localization" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Text Localization</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Documentation</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/documentation/fog-ids" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Fog IDs</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/documentation/materials" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Materials</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/documentation/queries" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Molang Queries</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/documentation/particles" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Particles</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/documentation/projectiles" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Projectiles</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/documentation/sound-definitions" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Sound Definitions</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Entities</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/entities-intro" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Intro to Entities</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/troubleshooting-entities" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Troubleshooting Entities</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><p class="blue label" data-v-e72de3ec>HELP</p></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/cancelling-death-animations" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Cancelling Death Animations</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/boat-entities" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Creating Boats</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/custom-armor" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Custom Armor</div><!----><!--[--><span data-v-e72de3ec><!----><p class="orange label" data-v-e72de3ec> EXP </p><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/disabling-team-damage" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Disabling Team-damage</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/dummy-components" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Dummy Components</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/dummy-entities" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Dummy Entities</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/entity-events" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Entity Events</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/entity-holds-item" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Entity Holds Item</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/entity-movement" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Entity Movement</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/entity-properties" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Entity Properties</div><!----><!--[--><span data-v-e72de3ec><!----><!----><p class="red label" data-v-e72de3ec>BETA</p><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/timers" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Entity Timers</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/flying-entities" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Flying Entities</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/invulnerable-entities" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Invulnerable Entities</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/npc-dialogs" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>NPC Dialogs</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/pathfinding-entities" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Pathfinding</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/runtime-identifier" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Runtime Identifiers</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/solid-entities" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Solid Entities</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/vanilla-usage-components" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Vanilla Usage Components</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/entities/vanilla-usage-spawn-rules" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Vanilla Usage Spawn Rules</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Items</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/items/items-intro" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Intro to Items</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/items/items-16" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Items 1.16+</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/items/troubleshooting-items" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Troubleshooting Items</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><p class="blue label" data-v-e72de3ec>HELP</p></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/items/3d-items" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>3D Items</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/items/item-categories" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Item Categories</div><!----><!--[--><span data-v-e72de3ec><!----><p class="orange label" data-v-e72de3ec> EXP </p><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/items/spawning-items" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Spawning Items</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md active block" href="/items/vanilla-usage-items" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Vanilla Usage Items</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>JSON UI</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/json-ui/json-ui-intro" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Intro to JSON UI</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/json-ui/json-ui-documentation" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>JSON UI Documentation</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Meta</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/meta/addon-performance" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Addon Performance</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/meta/jq" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Creating addons with JQ</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/meta/addon-programming" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Creating addons with Programming</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/meta/style-guide" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Style Guide</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/meta/useful-links" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Useful Links</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/meta/using-schemas" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Using Schemas</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/meta/version-control" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Version Control</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Recipes and Loot</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/loot/craftable-spawneggs" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Craftable Spawn-Eggs</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/loot/egg-drops" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Egg Drops</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/loot/loot_tables-recipes-spawn_rules" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Loot Tables, Recipes, Spawn Rules</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/loot/custom-trades" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Trade Tables</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Scripting</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/scripting/scripting-intro" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Intro to Scripting</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/scripting/game-tests" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Game Tests</div><!----><!--[--><span data-v-e72de3ec><!----><p class="orange label" data-v-e72de3ec> EXP </p><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/scripting/saving-loading" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Saving and Loading Data</div><!----><!--[--><span data-v-e72de3ec><!----><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/scripting/typescript" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>TypeScript</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>Visuals</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/textures-list" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>.textures_list</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/bedrock-modeling" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Bedrock Modeling Introduction</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/disabling-particles" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Disabling Particles</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/materials" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Materials</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/math-based-animations" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Math-based Animations</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/custom-particles" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Particles and Sounds</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/player-geometry" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Player Geometry</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/remove-shadows" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Remove Entity Shadows</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/render-controller" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Render Controllers</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/retexturing-spawn-eggs" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Retexturing Spawn Eggs</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/visuals/custom-skin-packs" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Skin Packs</div><!----><!--[--><!--]--></a><!--]--></div></details><details class="navigation-category
+			p-2
+			pl-4
+			cursor-pointer
+			border-b-1 border-true-gray-200
+			dark:border-true-gray-600" data-v-a3357492 data-v-6f88f311><summary class="list-none outline-none" data-v-6f88f311><span data-v-6f88f311>World Generation</span><svg class="icon" width="24" height="24" viewbox="0 0 24 24" data-v-6f88f311><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div data-v-6f88f311><!--[--><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/world-generation/world-generation-intro" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Intro to World Generation</div><!----><!--[--><span data-v-e72de3ec><p class="green label" data-v-e72de3ec>GUIDE</p><!----><!----><!----></span><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/world-generation/biome-tags" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Biome Tags</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/world-generation/biomes" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Biomes</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/world-generation/feature-types" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Feature Types</div><!----><!--[--><!--]--></a><a class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md block" href="/world-generation/randomized-structure-loot" data-v-6f88f311 data-v-e72de3ec><!----><div class="flex-1 text-sm" data-v-e72de3ec>Randomized Structure Loot</div><!----><!--[--><!--]--></a><!--]--></div></details><!--]--></div><!--]--></aside><main class="m-8 md:ml-80 mt-0 min-h-screen" data-v-2069b7b6><h1 class="xl:pr-72" id="top" data-v-2069b7b6>Vanilla Usage Items</h1><div class="sidebar-toc xl:fixed flex flex-col top-0 right-0 my-4" data-v-2069b7b6 data-v-6f792468><details open class="
+				outline-none
+				w-full
+				sm:min-w-sm sm:w-max
+				xl:min-w-0 xl:w-auto
+			" data-v-6f792468><summary class="
+					flex
+					justify-between
+					align-center
+					px-4
+					py-3
+					bg-gray-200
+					dark:bg-true-gray-600
+					xl:hidden
+					rounded-md rounded-bl-none
+					text-lg
+					outline-none
+					select-none
+				" data-v-6f792468><span data-v-6f792468>Table of Contents</span><svg class="icon my-auto transition-transform" width="24" height="24" viewbox="0 0 24 24" data-v-6f792468><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></summary><div class="
+					p-4
+					xl:pb-6
+					border-l-4
+					xl:pt-6
+					z-10
+					xl:w-72 xl:border-r-1 xl:my-0 xl:mt-14
+					border-gray-200
+					dark:border-true-gray-600
+				" data-v-6f792468><a href="#top" class="
+						pb-1
+						pt-0
+						text-black
+						dark:text-white
+						no-underline
+						font-bold
+						text-lg
+					" data-v-6f792468>Vanilla Usage Items</a><div data-v-6f792468><ol id="toc" data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-block" data-v-6f792468>minecraft:block</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#camera" data-v-6f792468>camera</a></li><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-camera" data-v-6f792468>minecraft:camera</a><ol data-v-6f792468><!--[--><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-foil" data-v-6f792468>minecraft:foil</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#appleenchanted" data-v-6f792468>appleEnchanted</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#golden-apple" data-v-6f792468>golden_apple</a></li><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-food" data-v-6f792468>minecraft:food</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#apple" data-v-6f792468>apple</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#appleenchanted-1" data-v-6f792468>appleEnchanted</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#baked-potato" data-v-6f792468>baked_potato</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#beef" data-v-6f792468>beef</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#beetroot" data-v-6f792468>beetroot</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#beetroot-soup" data-v-6f792468>beetroot_soup</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#bread" data-v-6f792468>bread</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#carrot" data-v-6f792468>carrot</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#chicken" data-v-6f792468>chicken</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#chorus-fruit" data-v-6f792468>chorus_fruit</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#clownfish" data-v-6f792468>clownfish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-beef" data-v-6f792468>cooked_beef</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-chicken" data-v-6f792468>cooked_chicken</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-fish" data-v-6f792468>cooked_fish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-porkchop" data-v-6f792468>cooked_porkchop</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-rabbit" data-v-6f792468>cooked_rabbit</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-salmon" data-v-6f792468>cooked_salmon</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cookie" data-v-6f792468>cookie</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#dried-kelp" data-v-6f792468>dried_kelp</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#fish" data-v-6f792468>fish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#glow-berries" data-v-6f792468>glow_berries</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#golden-apple-1" data-v-6f792468>golden_apple</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#golden-carrot" data-v-6f792468>golden_carrot</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#honey-bottle" data-v-6f792468>honey_bottle</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#melon" data-v-6f792468>melon</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#mushroom-stew" data-v-6f792468>mushroom_stew</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#muttoncooked" data-v-6f792468>muttonCooked</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#muttonraw" data-v-6f792468>muttonRaw</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#poisonous-potato" data-v-6f792468>poisonous_potato</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#porkchop" data-v-6f792468>porkchop</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#potato" data-v-6f792468>potato</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#pufferfish" data-v-6f792468>pufferfish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#pumpkin-pie" data-v-6f792468>pumpkin_pie</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#rabbit" data-v-6f792468>rabbit</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#rabbit-stew" data-v-6f792468>rabbit_stew</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#rotten-flesh" data-v-6f792468>rotten_flesh</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#salmon" data-v-6f792468>salmon</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#spider-eye" data-v-6f792468>spider_eye</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#suspicious-stew" data-v-6f792468>suspicious_stew</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#sweet-berries" data-v-6f792468>sweet_berries</a></li><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-hand-equipped" data-v-6f792468>minecraft:hand_equipped</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#appleenchanted-2" data-v-6f792468>appleEnchanted</a></li><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-max-damage" data-v-6f792468>minecraft:max_damage</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#clownfish-1" data-v-6f792468>clownfish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-fish-1" data-v-6f792468>cooked_fish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-salmon-1" data-v-6f792468>cooked_salmon</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#fish-1" data-v-6f792468>fish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#pufferfish-1" data-v-6f792468>pufferfish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#salmon-1" data-v-6f792468>salmon</a></li><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-max-stack-size" data-v-6f792468>minecraft:maxstacksize</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#beetroot-soup-1" data-v-6f792468>beetroot_soup</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#honey-bottle-1" data-v-6f792468>honey_bottle</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#mushroom-stew-1" data-v-6f792468>mushroom_stew</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#rabbit-stew-1" data-v-6f792468>rabbit_stew</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#suspicious-stew-1" data-v-6f792468>suspicious_stew</a></li><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-seed" data-v-6f792468>minecraft:seed</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#beetroot-seeds" data-v-6f792468>beetroot_seeds</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#carrot-1" data-v-6f792468>carrot</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#glow-berries-1" data-v-6f792468>glow_berries</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#melon-seeds" data-v-6f792468>melon_seeds</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#nether-wart" data-v-6f792468>nether_wart</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#potato-1" data-v-6f792468>potato</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#pumpkin-seeds" data-v-6f792468>pumpkin_seeds</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#sweet-berries-1" data-v-6f792468>sweet_berries</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#wheat-seeds" data-v-6f792468>wheat_seeds</a></li><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-stacked-by-data" data-v-6f792468>minecraft:stackedbydata</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#appleenchanted-3" data-v-6f792468>appleEnchanted</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#clownfish-2" data-v-6f792468>clownfish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-fish-2" data-v-6f792468>cooked_fish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-salmon-2" data-v-6f792468>cooked_salmon</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#fish-2" data-v-6f792468>fish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#golden-apple-2" data-v-6f792468>golden_apple</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#pufferfish-2" data-v-6f792468>pufferfish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#salmon-2" data-v-6f792468>salmon</a></li><!--]--></ol></li><li class="py-0.5" data-v-6f792468><a class="text-black dark:text-white no-underline" href="#minecraft-use-duration" data-v-6f792468>minecraft:use_duration</a><ol data-v-6f792468><!--[--><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#apple-1" data-v-6f792468>apple</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#appleenchanted-4" data-v-6f792468>appleEnchanted</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#baked-potato-1" data-v-6f792468>baked_potato</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#beef-1" data-v-6f792468>beef</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#beetroot-1" data-v-6f792468>beetroot</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#beetroot-soup-2" data-v-6f792468>beetroot_soup</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#bread-1" data-v-6f792468>bread</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#camera-1" data-v-6f792468>camera</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#carrot-2" data-v-6f792468>carrot</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#chicken-1" data-v-6f792468>chicken</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#chorus-fruit-1" data-v-6f792468>chorus_fruit</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#clownfish-3" data-v-6f792468>clownfish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-beef-1" data-v-6f792468>cooked_beef</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-chicken-1" data-v-6f792468>cooked_chicken</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-fish-3" data-v-6f792468>cooked_fish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-porkchop-1" data-v-6f792468>cooked_porkchop</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-rabbit-1" data-v-6f792468>cooked_rabbit</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cooked-salmon-3" data-v-6f792468>cooked_salmon</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#cookie-1" data-v-6f792468>cookie</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#dried-kelp-1" data-v-6f792468>dried_kelp</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#fish-3" data-v-6f792468>fish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#glow-berries-2" data-v-6f792468>glow_berries</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#golden-apple-3" data-v-6f792468>golden_apple</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#golden-carrot-1" data-v-6f792468>golden_carrot</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#honey-bottle-2" data-v-6f792468>honey_bottle</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#melon-1" data-v-6f792468>melon</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#mushroom-stew-2" data-v-6f792468>mushroom_stew</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#muttoncooked-1" data-v-6f792468>muttonCooked</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#muttonraw-1" data-v-6f792468>muttonRaw</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#poisonous-potato-1" data-v-6f792468>poisonous_potato</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#porkchop-1" data-v-6f792468>porkchop</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#potato-2" data-v-6f792468>potato</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#pufferfish-3" data-v-6f792468>pufferfish</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#pumpkin-pie-1" data-v-6f792468>pumpkin_pie</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#rabbit-1" data-v-6f792468>rabbit</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#rabbit-stew-2" data-v-6f792468>rabbit_stew</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#rotten-flesh-1" data-v-6f792468>rotten_flesh</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#salmon-3" data-v-6f792468>salmon</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#spider-eye-1" data-v-6f792468>spider_eye</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#suspicious-stew-2" data-v-6f792468>suspicious_stew</a></li><li class="py-0.5" data-v-6f792468><a class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										" href="#sweet-berries-2" data-v-6f792468>sweet_berries</a></li><!--]--></ol></li><!--]--></ol></div></div></details></div><div style="position:relative;" class="xl:mr-72" data-v-2069b7b6><div><p>This documentation is stripped from the vanilla files using an automated script.`</p><h2 id="minecraft-block"><a class="header-anchor" href="#minecraft-block" aria-hidden="true">#</a> minecraft:block</h2><h3 id="camera"><a class="header-anchor" href="#camera" aria-hidden="true">#</a> camera</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccamera.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:block&quot;</span><span class="token operator">:</span> <span class="token string">&quot;minecraft:camera&quot;</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="minecraft-camera"><a class="header-anchor" href="#minecraft-camera" aria-hidden="true">#</a> minecraft:camera</h2><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:camera&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;black_bars_duration&quot;</span><span class="token operator">:</span> <span class="token number">0.2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;black_bars_screen_ratio&quot;</span><span class="token operator">:</span> <span class="token number">0.08</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;shutter_duration&quot;</span><span class="token operator">:</span> <span class="token number">0.2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;picture_duration&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;slide_away_duration&quot;</span><span class="token operator">:</span> <span class="token number">0.2</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="minecraft-foil"><a class="header-anchor" href="#minecraft-foil" aria-hidden="true">#</a> minecraft:foil</h2><h3 id="appleenchanted"><a class="header-anchor" href="#appleenchanted" aria-hidden="true">#</a> appleEnchanted</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CappleEnchanted.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:foil&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="golden-apple"><a class="header-anchor" href="#golden-apple" aria-hidden="true">#</a> golden_apple</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cgolden_apple.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:foil&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="minecraft-food"><a class="header-anchor" href="#minecraft-food" aria-hidden="true">#</a> minecraft:food</h2><h3 id="apple"><a class="header-anchor" href="#apple" aria-hidden="true">#</a> apple</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Capple.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="appleenchanted-1"><a class="header-anchor" href="#appleenchanted-1" aria-hidden="true">#</a> appleEnchanted</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CappleEnchanted.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;supernatural&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;can_always_eat&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;effects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regeneration&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">4</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;absorption&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">120</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;resistance&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fire_resistance&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h3 id="baked-potato"><a class="header-anchor" href="#baked-potato" aria-hidden="true">#</a> baked_potato</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbaked_potato.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="beef"><a class="header-anchor" href="#beef" aria-hidden="true">#</a> beef</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbeef.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="beetroot"><a class="header-anchor" href="#beetroot" aria-hidden="true">#</a> beetroot</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbeetroot.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="beetroot-soup"><a class="header-anchor" href="#beetroot-soup" aria-hidden="true">#</a> beetroot_soup</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbeetroot_soup.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;using_converts_to&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bowl&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="bread"><a class="header-anchor" href="#bread" aria-hidden="true">#</a> bread</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbread.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="carrot"><a class="header-anchor" href="#carrot" aria-hidden="true">#</a> carrot</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccarrot.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="chicken"><a class="header-anchor" href="#chicken" aria-hidden="true">#</a> chicken</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cchicken.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;effects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hunger&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">0.3</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="chorus-fruit"><a class="header-anchor" href="#chorus-fruit" aria-hidden="true">#</a> chorus_fruit</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cchorus_fruit.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;on_use_action&quot;</span><span class="token operator">:</span> <span class="token string">&quot;chorus_teleport&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;on_use_range&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token number">8</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;cooldown_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;chorusfruit&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;cooldown_time&quot;</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;can_always_eat&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="clownfish"><a class="header-anchor" href="#clownfish" aria-hidden="true">#</a> clownfish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cclownfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poor&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="cooked-beef"><a class="header-anchor" href="#cooked-beef" aria-hidden="true">#</a> cooked_beef</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_beef.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;good&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="cooked-chicken"><a class="header-anchor" href="#cooked-chicken" aria-hidden="true">#</a> cooked_chicken</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_chicken.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="cooked-fish"><a class="header-anchor" href="#cooked-fish" aria-hidden="true">#</a> cooked_fish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_fish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="cooked-porkchop"><a class="header-anchor" href="#cooked-porkchop" aria-hidden="true">#</a> cooked_porkchop</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_porkchop.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;good&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="cooked-rabbit"><a class="header-anchor" href="#cooked-rabbit" aria-hidden="true">#</a> cooked_rabbit</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_rabbit.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="cooked-salmon"><a class="header-anchor" href="#cooked-salmon" aria-hidden="true">#</a> cooked_salmon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_salmon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;good&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="cookie"><a class="header-anchor" href="#cookie" aria-hidden="true">#</a> cookie</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccookie.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poor&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="dried-kelp"><a class="header-anchor" href="#dried-kelp" aria-hidden="true">#</a> dried_kelp</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cdried_kelp.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poor&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="fish"><a class="header-anchor" href="#fish" aria-hidden="true">#</a> fish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poor&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="glow-berries"><a class="header-anchor" href="#glow-berries" aria-hidden="true">#</a> glow_berries</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cglow_berries.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;is_meat&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="golden-apple-1"><a class="header-anchor" href="#golden-apple-1" aria-hidden="true">#</a> golden_apple</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cgolden_apple.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;supernatural&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;can_always_eat&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;effects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regeneration&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;absorption&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">120</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="golden-carrot"><a class="header-anchor" href="#golden-carrot" aria-hidden="true">#</a> golden_carrot</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cgolden_carrot.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;supernatural&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="honey-bottle"><a class="header-anchor" href="#honey-bottle" aria-hidden="true">#</a> honey_bottle</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Choney_bottle.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poor&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;can_always_eat&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;using_converts_to&quot;</span><span class="token operator">:</span> <span class="token string">&quot;glass_bottle&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;remove_effects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;poison&quot;</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="melon"><a class="header-anchor" href="#melon" aria-hidden="true">#</a> melon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cmelon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="mushroom-stew"><a class="header-anchor" href="#mushroom-stew" aria-hidden="true">#</a> mushroom_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cmushroom_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;using_converts_to&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bowl&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="muttoncooked"><a class="header-anchor" href="#muttoncooked" aria-hidden="true">#</a> muttonCooked</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CmuttonCooked.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;good&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="muttonraw"><a class="header-anchor" href="#muttonraw" aria-hidden="true">#</a> muttonRaw</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CmuttonRaw.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="poisonous-potato"><a class="header-anchor" href="#poisonous-potato" aria-hidden="true">#</a> poisonous_potato</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpoisonous_potato.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;effects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poison&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">0.6</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="porkchop"><a class="header-anchor" href="#porkchop" aria-hidden="true">#</a> porkchop</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cporkchop.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="potato"><a class="header-anchor" href="#potato" aria-hidden="true">#</a> potato</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpotato.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="pufferfish"><a class="header-anchor" href="#pufferfish" aria-hidden="true">#</a> pufferfish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpufferfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poor&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;effects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poison&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">60</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;nausea&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hunger&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="pumpkin-pie"><a class="header-anchor" href="#pumpkin-pie" aria-hidden="true">#</a> pumpkin_pie</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpumpkin_pie.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="rabbit"><a class="header-anchor" href="#rabbit" aria-hidden="true">#</a> rabbit</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Crabbit.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="rabbit-stew"><a class="header-anchor" href="#rabbit-stew" aria-hidden="true">#</a> rabbit_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Crabbit_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;using_converts_to&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bowl&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="rotten-flesh"><a class="header-anchor" href="#rotten-flesh" aria-hidden="true">#</a> rotten_flesh</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Crotten_flesh.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poor&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;effects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hunger&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">0.8</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="salmon"><a class="header-anchor" href="#salmon" aria-hidden="true">#</a> salmon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csalmon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poor&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="spider-eye"><a class="header-anchor" href="#spider-eye" aria-hidden="true">#</a> spider_eye</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cspider_eye.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;good&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;effects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;poison&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;chance&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;amplifier&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="suspicious-stew"><a class="header-anchor" href="#suspicious-stew" aria-hidden="true">#</a> suspicious_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csuspicious_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;normal&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;using_converts_to&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bowl&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;on_use_action&quot;</span><span class="token operator">:</span> <span class="token string">&quot;suspicious_stew_effect&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="sweet-berries"><a class="header-anchor" href="#sweet-berries" aria-hidden="true">#</a> sweet_berries</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csweet_berries.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:food&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nutrition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;saturation_modifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;low&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;is_meat&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="minecraft-hand-equipped"><a class="header-anchor" href="#minecraft-hand-equipped" aria-hidden="true">#</a> minecraft:hand_equipped</h2><h3 id="appleenchanted-2"><a class="header-anchor" href="#appleenchanted-2" aria-hidden="true">#</a> appleEnchanted</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CappleEnchanted.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:hand_equipped&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="minecraft-max-damage"><a class="header-anchor" href="#minecraft-max-damage" aria-hidden="true">#</a> minecraft:max_damage</h2><h3 id="clownfish-1"><a class="header-anchor" href="#clownfish-1" aria-hidden="true">#</a> clownfish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cclownfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_damage&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-fish-1"><a class="header-anchor" href="#cooked-fish-1" aria-hidden="true">#</a> cooked_fish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_fish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_damage&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-salmon-1"><a class="header-anchor" href="#cooked-salmon-1" aria-hidden="true">#</a> cooked_salmon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_salmon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_damage&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="fish-1"><a class="header-anchor" href="#fish-1" aria-hidden="true">#</a> fish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_damage&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="pufferfish-1"><a class="header-anchor" href="#pufferfish-1" aria-hidden="true">#</a> pufferfish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpufferfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_damage&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="salmon-1"><a class="header-anchor" href="#salmon-1" aria-hidden="true">#</a> salmon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csalmon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_damage&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="minecraft-max-stack-size"><a class="header-anchor" href="#minecraft-max-stack-size" aria-hidden="true">#</a> minecraft:max_stack_size</h2><h3 id="beetroot-soup-1"><a class="header-anchor" href="#beetroot-soup-1" aria-hidden="true">#</a> beetroot_soup</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbeetroot_soup.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_stack_size&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="honey-bottle-1"><a class="header-anchor" href="#honey-bottle-1" aria-hidden="true">#</a> honey_bottle</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Choney_bottle.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_stack_size&quot;</span><span class="token operator">:</span> <span class="token number">16</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="mushroom-stew-1"><a class="header-anchor" href="#mushroom-stew-1" aria-hidden="true">#</a> mushroom_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cmushroom_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_stack_size&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="rabbit-stew-1"><a class="header-anchor" href="#rabbit-stew-1" aria-hidden="true">#</a> rabbit_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Crabbit_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_stack_size&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="suspicious-stew-1"><a class="header-anchor" href="#suspicious-stew-1" aria-hidden="true">#</a> suspicious_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csuspicious_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:max_stack_size&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="minecraft-seed"><a class="header-anchor" href="#minecraft-seed" aria-hidden="true">#</a> minecraft:seed</h2><h3 id="beetroot-seeds"><a class="header-anchor" href="#beetroot-seeds" aria-hidden="true">#</a> beetroot_seeds</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbeetroot_seeds.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;beetroot&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="carrot-1"><a class="header-anchor" href="#carrot-1" aria-hidden="true">#</a> carrot</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccarrot.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;carrots&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="glow-berries-1"><a class="header-anchor" href="#glow-berries-1" aria-hidden="true">#</a> glow_berries</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cglow_berries.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cave_vines&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;plant_at&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;cave_vines&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;cave_vines_head_with_berries&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;plant_at_any_solid_surface&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;plant_at_face&quot;</span><span class="token operator">:</span> <span class="token string">&quot;DOWN&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="melon-seeds"><a class="header-anchor" href="#melon-seeds" aria-hidden="true">#</a> melon_seeds</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cmelon_seeds.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;melon_stem&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="nether-wart"><a class="header-anchor" href="#nether-wart" aria-hidden="true">#</a> nether_wart</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cnether_wart.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;plant_at&quot;</span><span class="token operator">:</span> <span class="token string">&quot;soul_sand&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;nether_wart&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="potato-1"><a class="header-anchor" href="#potato-1" aria-hidden="true">#</a> potato</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpotato.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;potatoes&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="pumpkin-seeds"><a class="header-anchor" href="#pumpkin-seeds" aria-hidden="true">#</a> pumpkin_seeds</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpumpkin_seeds.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;pumpkin_stem&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="sweet-berries-1"><a class="header-anchor" href="#sweet-berries-1" aria-hidden="true">#</a> sweet_berries</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csweet_berries.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sweet_berry_bush&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;plant_at&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;grass&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;dirt&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;podzol&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;moss_block&quot;</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="wheat-seeds"><a class="header-anchor" href="#wheat-seeds" aria-hidden="true">#</a> wheat_seeds</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cwheat_seeds.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:seed&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;crop_result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;wheat&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="minecraft-stacked-by-data"><a class="header-anchor" href="#minecraft-stacked-by-data" aria-hidden="true">#</a> minecraft:stacked_by_data</h2><h3 id="appleenchanted-3"><a class="header-anchor" href="#appleenchanted-3" aria-hidden="true">#</a> appleEnchanted</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CappleEnchanted.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:stacked_by_data&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="clownfish-2"><a class="header-anchor" href="#clownfish-2" aria-hidden="true">#</a> clownfish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cclownfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:stacked_by_data&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-fish-2"><a class="header-anchor" href="#cooked-fish-2" aria-hidden="true">#</a> cooked_fish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_fish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:stacked_by_data&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-salmon-2"><a class="header-anchor" href="#cooked-salmon-2" aria-hidden="true">#</a> cooked_salmon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_salmon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:stacked_by_data&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="fish-2"><a class="header-anchor" href="#fish-2" aria-hidden="true">#</a> fish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:stacked_by_data&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="golden-apple-2"><a class="header-anchor" href="#golden-apple-2" aria-hidden="true">#</a> golden_apple</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cgolden_apple.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:stacked_by_data&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="pufferfish-2"><a class="header-anchor" href="#pufferfish-2" aria-hidden="true">#</a> pufferfish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpufferfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:stacked_by_data&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="salmon-2"><a class="header-anchor" href="#salmon-2" aria-hidden="true">#</a> salmon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csalmon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:stacked_by_data&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="minecraft-use-duration"><a class="header-anchor" href="#minecraft-use-duration" aria-hidden="true">#</a> minecraft:use_duration</h2><h3 id="apple-1"><a class="header-anchor" href="#apple-1" aria-hidden="true">#</a> apple</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Capple.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="appleenchanted-4"><a class="header-anchor" href="#appleenchanted-4" aria-hidden="true">#</a> appleEnchanted</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CappleEnchanted.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="baked-potato-1"><a class="header-anchor" href="#baked-potato-1" aria-hidden="true">#</a> baked_potato</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbaked_potato.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="beef-1"><a class="header-anchor" href="#beef-1" aria-hidden="true">#</a> beef</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbeef.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="beetroot-1"><a class="header-anchor" href="#beetroot-1" aria-hidden="true">#</a> beetroot</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbeetroot.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="beetroot-soup-2"><a class="header-anchor" href="#beetroot-soup-2" aria-hidden="true">#</a> beetroot_soup</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbeetroot_soup.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="bread-1"><a class="header-anchor" href="#bread-1" aria-hidden="true">#</a> bread</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cbread.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="camera-1"><a class="header-anchor" href="#camera-1" aria-hidden="true">#</a> camera</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccamera.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">100000</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="carrot-2"><a class="header-anchor" href="#carrot-2" aria-hidden="true">#</a> carrot</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccarrot.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="chicken-1"><a class="header-anchor" href="#chicken-1" aria-hidden="true">#</a> chicken</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cchicken.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="chorus-fruit-1"><a class="header-anchor" href="#chorus-fruit-1" aria-hidden="true">#</a> chorus_fruit</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cchorus_fruit.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="clownfish-3"><a class="header-anchor" href="#clownfish-3" aria-hidden="true">#</a> clownfish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cclownfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-beef-1"><a class="header-anchor" href="#cooked-beef-1" aria-hidden="true">#</a> cooked_beef</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_beef.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-chicken-1"><a class="header-anchor" href="#cooked-chicken-1" aria-hidden="true">#</a> cooked_chicken</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_chicken.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-fish-3"><a class="header-anchor" href="#cooked-fish-3" aria-hidden="true">#</a> cooked_fish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_fish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-porkchop-1"><a class="header-anchor" href="#cooked-porkchop-1" aria-hidden="true">#</a> cooked_porkchop</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_porkchop.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-rabbit-1"><a class="header-anchor" href="#cooked-rabbit-1" aria-hidden="true">#</a> cooked_rabbit</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_rabbit.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cooked-salmon-3"><a class="header-anchor" href="#cooked-salmon-3" aria-hidden="true">#</a> cooked_salmon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccooked_salmon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="cookie-1"><a class="header-anchor" href="#cookie-1" aria-hidden="true">#</a> cookie</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Ccookie.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="dried-kelp-1"><a class="header-anchor" href="#dried-kelp-1" aria-hidden="true">#</a> dried_kelp</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cdried_kelp.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">16</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="fish-3"><a class="header-anchor" href="#fish-3" aria-hidden="true">#</a> fish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="glow-berries-2"><a class="header-anchor" href="#glow-berries-2" aria-hidden="true">#</a> glow_berries</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cglow_berries.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="golden-apple-3"><a class="header-anchor" href="#golden-apple-3" aria-hidden="true">#</a> golden_apple</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cgolden_apple.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="golden-carrot-1"><a class="header-anchor" href="#golden-carrot-1" aria-hidden="true">#</a> golden_carrot</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cgolden_carrot.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="honey-bottle-2"><a class="header-anchor" href="#honey-bottle-2" aria-hidden="true">#</a> honey_bottle</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Choney_bottle.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">40</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="melon-1"><a class="header-anchor" href="#melon-1" aria-hidden="true">#</a> melon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cmelon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="mushroom-stew-2"><a class="header-anchor" href="#mushroom-stew-2" aria-hidden="true">#</a> mushroom_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cmushroom_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="muttoncooked-1"><a class="header-anchor" href="#muttoncooked-1" aria-hidden="true">#</a> muttonCooked</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CmuttonCooked.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="muttonraw-1"><a class="header-anchor" href="#muttonraw-1" aria-hidden="true">#</a> muttonRaw</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5CmuttonRaw.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="poisonous-potato-1"><a class="header-anchor" href="#poisonous-potato-1" aria-hidden="true">#</a> poisonous_potato</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpoisonous_potato.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="porkchop-1"><a class="header-anchor" href="#porkchop-1" aria-hidden="true">#</a> porkchop</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cporkchop.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="potato-2"><a class="header-anchor" href="#potato-2" aria-hidden="true">#</a> potato</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpotato.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="pufferfish-3"><a class="header-anchor" href="#pufferfish-3" aria-hidden="true">#</a> pufferfish</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpufferfish.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="pumpkin-pie-1"><a class="header-anchor" href="#pumpkin-pie-1" aria-hidden="true">#</a> pumpkin_pie</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cpumpkin_pie.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="rabbit-1"><a class="header-anchor" href="#rabbit-1" aria-hidden="true">#</a> rabbit</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Crabbit.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="rabbit-stew-2"><a class="header-anchor" href="#rabbit-stew-2" aria-hidden="true">#</a> rabbit_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Crabbit_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="rotten-flesh-1"><a class="header-anchor" href="#rotten-flesh-1" aria-hidden="true">#</a> rotten_flesh</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Crotten_flesh.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="salmon-3"><a class="header-anchor" href="#salmon-3" aria-hidden="true">#</a> salmon</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csalmon.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="spider-eye-1"><a class="header-anchor" href="#spider-eye-1" aria-hidden="true">#</a> spider_eye</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Cspider_eye.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="suspicious-stew-2"><a class="header-anchor" href="#suspicious-stew-2" aria-hidden="true">#</a> suspicious_stew</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csuspicious_stew.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="sweet-berries-2"><a class="header-anchor" href="#sweet-berries-2" aria-hidden="true">#</a> sweet_berries</h3><p><small><a href="https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items%5Csweet_berries.json" target="_blank" rel="noopener noreferrer">View file</a></small></p><div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;minecraft:use_duration&quot;</span><span class="token operator">:</span> <span class="token number">32</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div></div><div data-v-2069b7b6><h2 data-v-2069b7b6>Contributors</h2><!----></div></main><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"404.md\":\"d286ce68\",\"contribute.md\":\"e9b71177\",\"discord.md\":\"edc78eec\",\"index.md\":\"fdae7960\",\"animation-controllers_afk-animation-controller.md\":\"bf83775c\",\"animation-controllers_animation-controllers-intro.md\":\"2822c28a\",\"animation-controllers_death-commands.md\":\"d37509f0\",\"animation-controllers_entity-commands.md\":\"312dcefe\",\"animation-controllers_index.md\":\"6d8ac665\",\"animation-controllers_respawn-commands.md\":\"b18826ce\",\"blocks_block-materials.md\":\"100824b5\",\"blocks_block-shapes.md\":\"29bcb733\",\"blocks_block-tags.md\":\"efa343c9\",\"blocks_block-texture-variation.md\":\"ebe35897\",\"blocks_blocks-16.md\":\"8b51d1ba\",\"blocks_blocks-intro.md\":\"6e66ba41\",\"blocks_fake-blocks.md\":\"8a3dc3e4\",\"blocks_index.md\":\"b0304437\",\"blocks_parts-of-custom-tree.md\":\"fb3ad6b8\",\"blocks_troubleshooting-blocks.md\":\"5f38d598\",\"commands_commands-intro.md\":\"2572dd4f\",\"commands_index.md\":\"45bc2676\",\"commands_mcfunction.md\":\"a49e6b86\",\"commands_nbt-commands.md\":\"4dbca7d6\",\"concepts_emojis.md\":\"2d9d49cf\",\"concepts_format-version.md\":\"a58b954f\",\"concepts_index.md\":\"7ee35c2e\",\"concepts_lang.md\":\"8370acc6\",\"concepts_mcstructure.md\":\"8fb6cf4b\",\"concepts_namespaces.md\":\"4df4fcc5\",\"concepts_shaders.md\":\"d1d9ea01\",\"concepts_sounds.md\":\"7255a21f\",\"concepts_subpacks.md\":\"bf66312d\",\"concepts_text-localization.md\":\"52458562\",\"documentation_fog-ids.md\":\"135312c8\",\"documentation_index.md\":\"e2e6c187\",\"documentation_materials.md\":\"869727cf\",\"documentation_particles.md\":\"4b16cf14\",\"documentation_projectiles.md\":\"06dfc2a3\",\"documentation_queries.md\":\"96317298\",\"documentation_sound-definitions.md\":\"ac994e3a\",\"entities_boat-entities.md\":\"d8e726e9\",\"entities_cancelling-death-animations.md\":\"e468d3ac\",\"entities_custom-armor.md\":\"d6e46a48\",\"entities_disabling-team-damage.md\":\"50e5a95a\",\"entities_dummy-components.md\":\"8db95292\",\"entities_dummy-entities.md\":\"a25befb2\",\"entities_entities-intro.md\":\"0d6fa981\",\"entities_entity-events.md\":\"c7f582bf\",\"entities_entity-holds-item.md\":\"72d8eb8f\",\"entities_entity-movement.md\":\"56beebc3\",\"entities_entity-properties.md\":\"9f36aa21\",\"entities_flying-entities.md\":\"3b840f8c\",\"entities_index.md\":\"b0fcec55\",\"entities_invulnerable-entities.md\":\"c3fd6a1e\",\"entities_npc-dialogs.md\":\"9da32431\",\"entities_pathfinding-entities.md\":\"7156df28\",\"entities_runtime-identifier.md\":\"d80716d9\",\"entities_solid-entities.md\":\"1c8290b4\",\"entities_timers.md\":\"13432f46\",\"entities_troubleshooting-entities.md\":\"c44f276d\",\"entities_vanilla-usage-components.md\":\"cdbef06f\",\"entities_vanilla-usage-spawn-rules.md\":\"78a822fc\",\"guide_addons.md\":\"00b2f57c\",\"guide_blockbench.md\":\"76cdb218\",\"guide_custom-entity.md\":\"b4b143a9\",\"guide_custom-item.md\":\"8c2f1f19\",\"guide_download-packs.md\":\"5ddd8a01\",\"guide_index.md\":\"140111d3\",\"guide_introduction.md\":\"f071a0e1\",\"guide_loot-table.md\":\"7dcd3f6e\",\"guide_project-setup.md\":\"e02f47a2\",\"guide_software-preparation.md\":\"43bffd82\",\"guide_troubleshooting.md\":\"f6c5d887\",\"guide_understanding-json.md\":\"161c57b7\",\"items_3d-items.md\":\"846c2a74\",\"items_index.md\":\"e471bd6c\",\"items_item-categories.md\":\"32451cb7\",\"items_items-16.md\":\"66db61c7\",\"items_items-intro.md\":\"7360ed89\",\"items_spawning-items.md\":\"22b86f64\",\"items_troubleshooting-items.md\":\"2eb807ba\",\"items_vanilla-usage-items.md\":\"01e371b6\",\"json-ui_index.md\":\"a2473ef1\",\"json-ui_json-ui-documentation.md\":\"d6a5dffa\",\"json-ui_json-ui-intro.md\":\"a840d8f3\",\"loot_craftable-spawneggs.md\":\"bedacdb7\",\"loot_custom-trades.md\":\"af0211da\",\"loot_egg-drops.md\":\"564745dd\",\"loot_index.md\":\"30ba26d8\",\"loot_loot_tables-recipes-spawn_rules.md\":\"38408744\",\"meta_addon-performance.md\":\"78e8cfb1\",\"meta_addon-programming.md\":\"429a4fa0\",\"meta_index.md\":\"d313133f\",\"meta_jq.md\":\"8b90061c\",\"meta_style-guide.md\":\"e25c841a\",\"meta_useful-links.md\":\"ddb04961\",\"meta_using-schemas.md\":\"ae33799e\",\"meta_version-control.md\":\"c5e7e124\",\"scripting_game-tests.md\":\"43dd46d3\",\"scripting_index.md\":\"62589ee7\",\"scripting_saving-loading.md\":\"50c92f98\",\"scripting_scripting-intro.md\":\"99c5dd33\",\"scripting_typescript.md\":\"14161bde\",\"visuals_bedrock-modeling.md\":\"7528b390\",\"visuals_custom-particles.md\":\"a1f9bdbf\",\"visuals_custom-skin-packs.md\":\"c251dd45\",\"visuals_disabling-particles.md\":\"17f6edc6\",\"visuals_index.md\":\"508ece57\",\"visuals_materials.md\":\"fcefa24e\",\"visuals_math-based-animations.md\":\"57f27cad\",\"visuals_player-geometry.md\":\"94fcb073\",\"visuals_remove-shadows.md\":\"e54bc6ea\",\"visuals_render-controller.md\":\"2df59bd6\",\"visuals_retexturing-spawn-eggs.md\":\"bc3118f4\",\"visuals_textures-list.md\":\"d8abaf01\",\"world-generation_biome-tags.md\":\"df23ae21\",\"world-generation_biomes.md\":\"8fe55b3f\",\"world-generation_feature-types.md\":\"0d52ae1c\",\"world-generation_index.md\":\"20681ac3\",\"world-generation_randomized-structure-loot.md\":\"87b8ab7c\",\"world-generation_world-generation-intro.md\":\"48772f69\"}")</script>
+    <script type="module" async src="/assets/404.md.d286ce68.js"></script>
+  </body>
+</html>
