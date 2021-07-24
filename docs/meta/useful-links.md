@@ -20,6 +20,7 @@ Important links have a ⭐.
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
 -   [MCPECore](https://discord.gg/Zgu3qt4)
 -   [Bedrock Commands](https://discord.gg/bedrockcommands)
+-   [BDSX ](https://discord.gg/KyrVChfR)
 
 ## Software
 

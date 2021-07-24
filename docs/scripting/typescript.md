@@ -4,7 +4,7 @@ title: TypeScript
 parent: Scripting
 ---
 
-[//]: # (Documentation is heavily based on https://minecraft-addon-tools.github.io/tutorials/getting-started)
+[//]: # 'Documentation is heavily based on https://minecraft-addon-tools.github.io/tutorials/getting-started'
 
 [TypeScript](https://www.typescriptlang.org/) is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.
 
@@ -22,16 +22,16 @@ You do not need to know how to utilize these tools since there are already [libr
 
 ## Prerequisites
 
-1. [Beginners Guide Prerequisites](/scripting/intro)
+1. [Beginners Guide Prerequisites](/scripting/scripting-intro)
 2. [Node.js](https://nodejs.org/en/) is required for installing tooling and compiling TypeScript into JavaScript.
-3. Knowledge of TypeScript and read through the [Beginners Guide](/scripting/intro)
+3. Knowledge of TypeScript and read through the [Beginners Guide](/scripting/scripting-intro)
 
 ## TypeScript-Supported Libraries
 
-| Author          | Package     |
-|-----------------|-------------|
+| Author                                                            | Package                                                                                         |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | [minecraft-addon-tools](https://github.com/minecraft-addon-tools) | [minecraft-addon-toolchain](https://github.com/minecraft-addon-tools/minecraft-addon-toolchain) |
-| [karikera](https://github.com/karikera) | [minecraft-addon](https://github.com/karikera/mcaddon-start) |
+| [karikera](https://github.com/karikera)                           | [minecraft-addon](https://github.com/karikera/mcaddon-start)                                    |
 
 ## Setup Guide
 
