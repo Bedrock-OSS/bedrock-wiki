@@ -18,6 +18,8 @@ This json contains geometry for both the Steve and Alex versions:
 
 `geometry.npc.alex`
 
+<Spoiler title="Geometry>
+
 ```json
 {
 	"format_version": "1.12.0",
@@ -448,6 +450,8 @@ This json contains geometry for both the Steve and Alex versions:
 }
 ```
 
+</Spoiler>
+
 ## Entity File
 
 Use this entity file if you would like to have animatinos for your geometry. This file includes error-free animations for:
@@ -457,6 +461,8 @@ Use this entity file if you would like to have animatinos for your geometry. Thi
 -   idle animation
 
 If you need a more complete set of animations, consider copying the default player RP-entity file, and trying to work with the animations by hand.
+
+<Spoiler title="Entity File">
 
 ```json
 {
@@ -497,23 +503,4 @@ If you need a more complete set of animations, consider copying the default play
 }
 ```
 
-## Render Controller File
-
-You can also use a vanilla render controller if you prefer.
-
-```json
-{
-	"format_version": "1.10.0",
-	"render_controllers": {
-		"controller.render.single_texture": {
-			"geometry": "Geometry.default",
-			"materials": [
-				{
-					"*": "Material.default"
-				}
-			],
-			"textures": ["Texture.default"]
-		}
-	}
-}
-```
+</Spoiler>

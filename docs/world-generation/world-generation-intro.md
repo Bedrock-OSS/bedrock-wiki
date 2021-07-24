@@ -1,5 +1,5 @@
 ---
-title: Beginners Guide to World Generation
+title: Intro to World Generation
 nav_order: 1
 tags:
     - guide

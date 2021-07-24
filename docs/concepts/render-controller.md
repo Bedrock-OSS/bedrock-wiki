@@ -2,18 +2,6 @@
 title: Render Controllers
 ---
 
-<details id="toc" open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
-Beginner
-{: .label .label-green }
-
 Render controllers are an often-misunderstood part of the `Resource Pack`. But you don't need to be afraid! You should think of render-controllers as logic packs that take `short-name` definitions from the RP Entity File, and determine how they will be combined/layered/rendered in-game.
 
 ## Defining short-names

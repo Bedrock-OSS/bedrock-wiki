@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting Entities
+nav_order: 2
 ---
 
 ---
