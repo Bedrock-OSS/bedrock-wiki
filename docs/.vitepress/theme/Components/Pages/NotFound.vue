@@ -37,6 +37,7 @@ const URL_MAP: any = {
 	'documentation/runtime-identifier': 'entities/runtime-identifier',
 	'documentation/subpacks': 'concepts/subpacks',
 	'documentation/tellraw': 'commands/tellraw',
+	'knowledge/bedrock-modeling': 'visuals/bedrock-modeling',
 }
 
 let path = document.location.pathname
