@@ -141,6 +141,10 @@ module.exports = {
 				text: 'MS Docs',
 				link: 'https://docs.microsoft.com/en-us/minecraft/creator/',
 			},
+			{
+				text: 'Legacy Wiki',
+				link: 'https://old-wiki.bedrock.dev/',
+			},
 			// {
 			// 	text: 'News',
 			// 	link: '/news',
