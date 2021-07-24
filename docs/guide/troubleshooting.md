@@ -2,6 +2,8 @@
 title: Troubleshooting
 prefix: 'c.'
 nav_order: 102
+tags:
+    - help
 ---
 
 Creating Addons for Minecraft is a relatively straightforward process _once you get the hang of it_. The first time is usually a complicated, bug-prone process. This document contains some tips and tricks for fixing those dastardly bugs, as well as best practice information.

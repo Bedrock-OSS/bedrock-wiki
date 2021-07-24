@@ -1,7 +1,5 @@
 ---
 title: Spawning Items
-
-nav_order: 1
 ---
 
 <Label color="yellow">Intermediate</Label>

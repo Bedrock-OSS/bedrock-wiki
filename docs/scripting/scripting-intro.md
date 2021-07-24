@@ -1,5 +1,6 @@
 ---
 title: Intro to Scripting
+nav_order: 1
 tags:
     - guide
 ---

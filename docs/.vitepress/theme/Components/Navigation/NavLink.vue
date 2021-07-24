@@ -20,7 +20,8 @@
 			>
 				EXP
 			</p>
-			<p v-if="tag == 'beta'" class="red label">beta</p>
+			<p v-if="tag == 'beta'" class="red label">BETA</p>
+			<p v-if="tag == 'help'" class="blue label">HELP</p>
 		</span>
 	</a>
 </template>
@@ -101,6 +102,14 @@ watchEffect(() => {
 
 .red {
 	@apply bg-red-300;
+}
+
+.dark .blue {
+	@apply bg-blue-900;
+}
+
+.blue {
+	@apply bg-blue-300;
 }
 
 .item .icon {

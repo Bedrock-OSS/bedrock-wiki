@@ -1,5 +1,8 @@
 ---
 title: 'Troubleshooting Blocks'
+nav_order: 2
+tags:
+    - help
 ---
 
 ## Learn about Troubleshooting

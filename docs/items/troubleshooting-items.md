@@ -1,6 +1,8 @@
 ---
 title: 'Troubleshooting Items'
 nav_order: 3
+tags:
+    - help
 ---
 
 ### Your Item Has a Problem
@@ -21,9 +23,9 @@ _Before troubleshooting, please ensure that you have a format version that you'd
 
 Among the three main item versions, there are also different sets of item `components`. **It is absolutely imperative that the correct components and syntax are used for their respective versions**. Failure to meet such criteria will **always** result in a broken item. You may find the correct components and their appropriate syntax in the following links:
 
-- `Experimental (1.16.100+)` - https://bedrock.dev/docs/stable/Item
+-   `Experimental (1.16.100+)` - https://bedrock.dev/docs/stable/Item
 
-- `Stable (1.12.0)` - https://bedrock.dev/docs/1.16.0.0/1.16.20.54/Item
+-   `Stable (1.12.0)` - https://bedrock.dev/docs/1.16.0.0/1.16.20.54/Item
 
 ## Troubleshooting All Items
 
