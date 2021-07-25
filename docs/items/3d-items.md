@@ -627,7 +627,7 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 }
 ```
 
-Pack download link: [Link](assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
+Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
 
 ## Attachable Based 3D Item Models
 
@@ -981,4 +981,4 @@ In order to place the item in the head slot: `/replaceitem entity @p slot.armor.
 
 ![](assets/images/tutorials/custom-item-models/hat_attachable.png)
 
-Pack download link: [Link](assets/packs/tutorials/custom-item-models/CustomItemModels_attachable.mcaddon)
+Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels_attachable.mcaddon)
