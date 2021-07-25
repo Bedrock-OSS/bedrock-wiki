@@ -10,6 +10,7 @@ Important links have a ⭐.
 
 -   ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
+-   ⭐ [Mcbehub](https://discord.gg/jfQeGqVsxA)
 -   [Minecraft Commands](https://discord.gg/QAFXFtZ)
 -   [Blockbench](http://discord.gg/fZQbxbg)
 -   [bridge.](https://discord.gg/NxKuWuA)
@@ -61,6 +62,7 @@ Important links have a ⭐.
 
 -   ⭐ [bedrock.dev](https://bedrock.dev/)
 -   ⭐ [Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
+-   ⭐ [Mcbehub](https://mcbehub.com/category/realmdocs)
 -   [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
 -   [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
@@ -86,6 +88,7 @@ Important links have a ⭐.
 
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
+-   ⭐ [Mcbehub](https://mcbehub.com/)
 -   [MCPECore](https://mcpecore.com/)
 
 ## Other useful Links
