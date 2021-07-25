@@ -54,15 +54,14 @@ const getContributors = async function () {
 		site.value.themeConfig.docsDir +
 		'/' +
 		page.value.relativePath
-	const result = await universalFetch(url, {
-		headers: new Headers(
-			import.meta.env.GITHUB_TOKEN
-				? {
-						Authorization: 'Bearer ' + process.env.GITHUB_TOKEN,
-				  }
-				: {}
-		),
-	})
+
+	const headers = {
+		...(!!import.meta.env.GITHUB_TOKEN && {
+			Authorization: 'Bearer ' + import.meta.env.GITHUB_TOKEN,
+		}),
+	}
+
+	const result = await universalFetch(url, { headers })
 	let commits: { author: GitHubAuthor }[] = await result.json()
 	let contributors: GitHubAuthor[] = []
 
@@ -81,15 +80,7 @@ const getContributors = async function () {
 	// mentioned
 	for (let i = 0; i < props.mentioned.length; i++) {
 		url = 'https://api.github.com/users/' + props.mentioned[i]
-		const result = await universalFetch(url, {
-			headers: new Headers(
-				import.meta.env.GITHUB_TOKEN
-					? {
-							Authorization: 'Bearer ' + process.env.GITHUB_TOKEN,
-					  }
-					: {}
-			),
-		})
+		const result = await universalFetch(url, { headers })
 		let user: GitHubAuthor = await result.json()
 		if (!contributorExists(user.login)) contributors.push(user)
 	}
