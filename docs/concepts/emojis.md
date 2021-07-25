@@ -184,13 +184,17 @@ Your filepath should look like this:
 
 ### Finding the correct hex.
 
-Once you have emojis inside the `glyph_E0.png` or `glyph_E1.png` you need to find your character in a hex. First two characters (`F0` or `F1`) depend on which file you added emojis to.
-Next to characters determine the position inside the image like this `<row><column>`, where each character is a number in hexadecimal numeral system.
+Once you have emojis inside the `glyph_E0.png` or `glyph_E1.png` you need to find your character "code" so it can be converted.
 
-Hexadecimal uses the decimal numbers and six extra symbols. There are no numerical symbols that represent values greater than nine, so letters taken from the English alphabet are used, specifically A, B, C, D, E and F. Hexadecimal A = decimal 10, and hexadecimal F = decimal 15([Source](https://simple.wikipedia.org/wiki/Hexadecimal)).
-Numbers in hexadecimal should be written with `0x` prefix.
+The first two characters are always `0x`.
 
-So after you are done, it might look like `0xE102` and need to convert the hex into a character. You can copy and paste your hex here to convert:
+The next two characters are either `E0` or `E1`, depending on which file you added emojis to.
+
+The next two characters are the position inside the image like `<row><column>`, where each character is a number in hexadecimal numeral system. You can find this number by referencing the images above. For example, the top-right square in `E0` is `0F`, and the bottom right is `FF`.
+
+So after you are done, it might look like `0xE102` (`0x` + `E1` + `02`).
+
+Copy this code into the following field, and press convert. The symbol on the right-hand side can be copy/pasted into MC.
 
 <div markdown="0">
 <form>
