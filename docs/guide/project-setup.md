@@ -141,7 +141,7 @@ You should place a copy of your desired image into both the RP and the BP. The i
 
 ## Language Files
 
-The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](../concepts/lang)
+The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](/concepts/lang)
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 

@@ -221,4 +221,4 @@ Function Pack Structure:
 
 Here are [some open-source examples](https://github.com/VideoCarp/carpcorps/tree/master/function_packs) of basic commands on GitHub.
 
-Learn about [tick.json](commands/mcfunction#creating-tickjson)
+Learn about [tick.json](/commands/mcfunction#creating-tickjson)

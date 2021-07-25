@@ -15,7 +15,7 @@ For example for US English they created a `en_US.lang` file and inside it you ca
 For Spanish we have the `es_ES.lang` file and inside that one you can find the line: `item.gold_ingot.name=Lingote de oro`
 For French Canadian we have `fr_CA.lang` and the line: `item.gold_ingot.name=Lingot d'or`
 
-You get the point! For more information about these localization files I recommend our [.lang](concepts/lang) section.
+You get the point! For more information about these localization files I recommend our [.lang](/concepts/lang) section.
 
 ## Why would you want to use localization?
 
