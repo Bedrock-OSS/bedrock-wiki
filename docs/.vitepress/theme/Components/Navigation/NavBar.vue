@@ -17,7 +17,7 @@
 	>
 		<component
 			:is="isVisible ? MenuOpenIcon : MenuIcon"
-			class="mr-3 cursor-pointer"
+			class="menu-icon mr-3 cursor-pointer"
 			@pointerdown.prevent="toggle"
 		/>
 
@@ -65,5 +65,9 @@ const { isMobile } = useIsMobile()
 <style scoped>
 header {
 	height: 57px;
+}
+
+.menu-icon {
+	touch-action: manipulation;
 }
 </style>
