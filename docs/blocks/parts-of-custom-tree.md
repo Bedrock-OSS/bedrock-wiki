@@ -19,7 +19,7 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
 
 - Issues:
     - If leaves are broken using shears, they can drop normal loot
-    - To make leaves decay, you need to use the `/fill` command that will replace custom_leaves with custom_leaves
+    - To make leaves decay, you need to use `/fill` command that will replace custom_leaves with custom_leaves. It is needed for switching decaying to true because on player placing it sets decaying to false.
 
 
 ## Making Leaves
