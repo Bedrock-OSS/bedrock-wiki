@@ -23,10 +23,15 @@ export function useTheme() {
 	watchEffect(() => {
 		if (import.meta.env.SSR) return
 
-		if (currentTheme.value === 'dark')
-			document.querySelector('html')?.classList.add('dark')
-		else if (currentTheme.value === 'light')
-			document.querySelector('html')?.classList.remove('dark')
+		const el = document.querySelector('html')
+
+		if (currentTheme.value === 'dark') {
+			el?.classList.remove('light')
+			el?.classList.add('dark')
+		} else if (currentTheme.value === 'light') {
+			el?.classList.remove('dark')
+			el?.classList.add('light')
+		}
 	})
 
 	return {

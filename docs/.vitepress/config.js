@@ -108,6 +108,14 @@ module.exports = {
 		lineNumbers: true,
 	},
 
+	head: [
+		[
+			'script',
+			{},
+			`!function(){try {var d=document.documentElement.classList;d.remove('light','dark');var e=localStorage.getItem('docTheme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);m.media!==t||m.matches?d.add('dark'):d.add('light')}else if(e) d.add(e)}catch(e){}}()`,
+		],
+	],
+
 	themeConfig: {
 		repo: 'bedrock-oss/bedrock-wiki',
 		docsDir: 'docs',
