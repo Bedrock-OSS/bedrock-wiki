@@ -15,15 +15,15 @@ This page offers specific advice for troubleshooting blocks. You should consider
 
 ## 0.0.0 - Trouble
 
-I followed a tutorial or tried to make my own block and something's wrong! Calm down. This page will help debug common issues. <BButton color="blue" link="block-troubleshoot#_1-0-0-my-block-has-a-black-magenta-checkered-pattern-my-textures-are-missing">Continue</BButton>
+I followed a tutorial or tried to make my own block and something's wrong! Calm down. This page will help debug common issues. <BButton color="blue" link="troubleshooting-blocks#_1-0-0-my-block-has-a-black-magenta-checkered-pattern-my-textures-are-missing">Continue</BButton>
 
 ## 1.0.0 - My Block Has a Black-Magenta checkered pattern/My Textures Are Missing!
 
 I will be reviewing three different types of blocks that have different layouts: Dirt-like ![](/assets/images/blocks/block_tr/tr_dirt.png), Log-like ![](/assets/images/blocks/block_tr/tr_log.png), Grass-like ![](/assets/images/blocks/block_tr/tr_grass.png)
 
-1.10 Block <BButton color="blue" link="block-troubleshoot#_1-10-blocks">Continue</BButton>
+1.10 Block <BButton color="blue" link="troubleshooting-blocks#_1-10-blocks">Continue</BButton>
 
-1.16.100 Block <BButton color="blue" link="block-troubleshoot#_1-16-100-blocks">Continue</BButton>
+1.16.100 Block <BButton color="blue" link="troubleshooting-blocks#_1-16-100-blocks">Continue</BButton>
 
 ## 1.10 Blocks
 
