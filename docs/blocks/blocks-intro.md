@@ -221,7 +221,7 @@ tile.tut:compass_block.name=A compass in block-form
 tile.tut:flashing.name=Block of Flashing Matter
 ```
 
-[You can learn more about .lang here](https://wiki.bedrock.dev/concepts/lang)
+[You can learn more about .lang here](concepts/lang)
 
 ---
 

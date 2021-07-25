@@ -24,9 +24,7 @@
 
 		<p class="text-xl font-bold">
 			All articles must follow the
-			<a href="https://wiki.bedrock.dev/knowledge/style-guide"
-				>Style Guide</a
-			>!
+			<a href="meta/style-guide">Style Guide</a>!
 		</p>
 
 		<h2>Guide Rules:</h2>

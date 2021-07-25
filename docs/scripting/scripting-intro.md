@@ -63,7 +63,7 @@ Similarly, create a file called `clientScript.js` inside of the `client` folder.
 
 Last but not least, download this image and place it in the `HelloWorld` folder:
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/pack_icon.png)
+![](assets/images/scripting/hello-world-tutorial/pack_icon.png)
 
 Your folder structure should now look like this:
 
@@ -211,44 +211,44 @@ Let's open Minecraft Bedrock Edition and see what happens.
 
 Go to "Create New World" and click on the "Behavior Packs" button in the lower-left "Add-Ons" sub-menu.
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addons-menu.png)
+![](assets/images/scripting/hello-world-tutorial/addons-menu.png)
 
 Your Hello World add-on should show up in the list of behavior packs!
 
 Clicking on your add-on should bring up a button titled "Activate". Click it.
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/load-pack-menu-activate.png)
+![](assets/images/scripting/hello-world-tutorial/load-pack-menu-activate.png)
 
 After clicking "Activate", a pop-up should appear titled "Turn Off Achievements?".
 For apparent reasons, achievement getting has to be turned off when add-ons are loaded as they could potentially make it easier to achieve them.
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/turn-off-achievements-popup.png)
+![](assets/images/scripting/hello-world-tutorial/turn-off-achievements-popup.png)
 
 After clicking "Continue", your behavior pack should have been moved to the "Active" section!
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/active-hello-world-addon.png)
+![](assets/images/scripting/hello-world-tutorial/active-hello-world-addon.png)
 
 The next most important part is to enable "Additional Modding Capabilities" under "Experiments".
 If you don't enable this, then none of your scripts will work at all!
 Scroll down until you see this toggle button and turn it on.
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/additional-modding-capabilities-toggle.png)
+![](assets/images/scripting/hello-world-tutorial/additional-modding-capabilities-toggle.png)
 
 After turning it on, you will see a pop-up titled "Activate Experimental Gameplay?".
 Select "Continue".
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/activate-experimental-gameplay-popup.png)
+![](assets/images/scripting/hello-world-tutorial/activate-experimental-gameplay-popup.png)
 
 While you're down here, you can toggle any other options that will make development easier.
 Here are some that I prefer to have on.
 
 World Options:
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/world-options.png)
+![](assets/images/scripting/hello-world-tutorial/world-options.png)
 
 World Cheats:
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/world-cheats.png)
+![](assets/images/scripting/hello-world-tutorial/world-cheats.png)
 
 That should be it!
 
@@ -258,11 +258,11 @@ The first thing that you should see when your world is loading is another pop-up
 This appears so that everyone knows for a fact that some non-official code will be running when they join your world.
 This is helpful to prepare other players for random bugs that could appear due to an arbitrary add-on or just any other hijinks that you as a mod-maker will put them through :)
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/enable-scripts-popup.png)
+![](assets/images/scripting/hello-world-tutorial/enable-scripts-popup.png)
 
 After selecting "Enter World", you will finally join with your new Minecraft Bedrock Edition world with your latest behavior pack installed, and ........ nothing happens, lol.
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-off.png)
+![](assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-off.png)
 
 That's because we haven't written code yet! Let's do that now - on to the fun part!
 
@@ -389,7 +389,7 @@ We never use the `.shutdown()` method because nothing we used needs to be cleane
 Now that we know everything about this script let's test it out!
 Load up the Minecraft world you created earlier!
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-server-only.png)
+![](assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-server-only.png)
 
 You should end up seeing something like this!
 
@@ -478,7 +478,7 @@ The only difference between them is that we switched it to' client' wherever you
 That should be it!
 Load backs up your Minecraft world.
 
-![](https://wiki.bedrock.dev/assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-both.png)
+![](assets/images/scripting/hello-world-tutorial/addon-loaded-scripts-on-both.png)
 
 You should see something like this!
 
@@ -506,4 +506,4 @@ When a user double-clicks on the file, it'll be automatically opened by, and imp
 If you made it this far - congrats!
 You're now an official Minecraft Bedrock Edition modder!
 
-If you want the source code from this tutorial, you can download the pack [here](https://wiki.bedrock.dev/assets/packs/scripting/hello-world-tutorial/HelloWorld.mcpack).
+If you want the source code from this tutorial, you can download the pack [here](assets/packs/scripting/hello-world-tutorial/HelloWorld.mcpack).

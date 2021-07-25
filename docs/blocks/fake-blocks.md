@@ -1,12 +1,14 @@
 ---
 title: Fake Blocks
+tags:
+    - experimental
 ---
 
 <Label color="yellow">Intermediate</Label>
 
 ## Creating the Hitbox
 
-Here is a tutorial on making a solid Hitbox in four different ways, with `runtime_identifiers`, blocks, and components. [Solid Entities](https://wiki.bedrock.dev/tutorials/solid-entities)
+Here is a tutorial on making a solid Hitbox in four different ways, with `runtime_identifiers`, blocks, and components. [Solid Entities](/entities/solid-entities).
 
 ## Basic Components
 

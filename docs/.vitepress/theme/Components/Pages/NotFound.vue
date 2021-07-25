@@ -38,6 +38,15 @@ const URL_MAP: any = {
 	'documentation/subpacks': 'concepts/subpacks',
 	'documentation/tellraw': 'commands/tellraw',
 	'knowledge/bedrock-modeling': 'visuals/bedrock-modeling',
+	'knowledge/jq': 'meta/jq',
+	'knowledge/addon-programming': 'meta/addon-programming',
+	'knowledge/entity-movement': 'entities/entity-movement',
+	'knowledge/nbt_commands': 'commands/nbt-commands',
+	'knowledge/addon-performance': 'meta/addon-performance',
+	'knowledge/style-guide': 'meta/style-guide',
+	'knowledge/useful-links': 'meta/useful-links',
+	'knowledge/using-schemas': 'meta/using-schemas',
+	'knowledge/version-control': 'meta/version-control',
 }
 
 let path = document.location.pathname
