@@ -219,7 +219,7 @@ It's rather tiresome to create particles that way, comparable to creating models
 
 ## Defining Custom Sounds
 
-_You can find a more in-depth tutorial on custom sounds on [wiki.bedrock.dev](concepts/sounds)._
+_You can find a more in-depth tutorial on custom sounds on [wiki.bedrock.dev](/concepts/sounds)._
 
 Minecraft can read sound files in the `.ogg` (recommended) or `.wav` format. (You can look up an .mp3 to .ogg converter online). Personally, I usually get my sound effects from ZapSplat.com.
 

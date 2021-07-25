@@ -20,13 +20,13 @@ Since Bedrock doesn't support custom item models out of the box, we have to get 
 
 First of all, we need to make sure our item is ready. You can add custom models to both custom and vanilla items. In this tutorial, we will be making an automatic drill. We won't be going in-depth on creating custom items in this tutorial, but you can use [this](https://gitwither.github.io/bedrock-item-generator/) online custom item generator. Make sure your item has got a texture and displays correctly in the player's inventory.
 
-![](assets/images/tutorials/custom-item-models/drill-sprite-inventory.png)
+![](/assets/images/tutorials/custom-item-models/drill-sprite-inventory.png)
 
 ### Geometry
 
 Before implementing your custom item model into the game, make sure your item geometry is ready to be used. For your item to render correctly inside a player's hand, it must contain the player's bone skeleton. This means that your item model must contain all of the bones the player model has **without their respective elements (the player's bones must be empty!)**. Export it with a unique identifier. In our case, it will be `geometry.drill`. A geometry file example is present at the end of the file.
 
-![](assets/images/tutorials/custom-item-models/drill-bone-structure.png)
+![](/assets/images/tutorials/custom-item-models/drill-bone-structure.png)
 
 ### Client Player Definition
 
@@ -266,7 +266,7 @@ Note: we have the decorative animation defined here as well.
 
 Great! Our item works, but there is a small problem: you can see that our item sprite is rendered with the 3D model in the player's hand.
 
-![](assets/images/tutorials/custom-item-models/drill-item-visible.png)
+![](/assets/images/tutorials/custom-item-models/drill-item-visible.png)
 
 To fix this, set the opacity of the item texture to 1 in a free image editor like GIMP.
 
@@ -275,7 +275,7 @@ Using Gimp:
 
 If you have the item sprite ready in Gimp, go to the top bar and select `Colors`. Then go to button `Levels`, which says `Adjust color levels` when you hover over it. A new screen will pop up, the same as seen in the picture below. Change the channel to `Alpha` and then adjust the level (next to `Clamp output`) to 1, as seen in the example below.
 
-![](assets/images/tutorials/custom-item-models/drill-opacity.png)
+![](/assets/images/tutorials/custom-item-models/drill-opacity.png)
 
 Gimp doesn't let you usually save the picture as a png when pressing `Ctrl+S`, so you'll have to export it. To do this, go to the top bar and select `File`. There you can either choose `Overwrite <your picture_name.png>`, which will automatically export and save it in the same name and same format (which should be `.png`) and overwrite the item sprite you imported. Or you can choose `Export as ...`, which lets you select the location you want to save it in and the name you save it as. Again, make sure it saves as a `.png` format since this format supports transparent backgrounds and translucent pixels.
 
@@ -627,7 +627,7 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 }
 ```
 
-Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
+Pack download link: [Link](https://wiki.bedrock.dev/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
 
 ## Attachable Based 3D Item Models
 
@@ -979,6 +979,6 @@ In order to place the item in the head slot: `/replaceitem entity @p slot.armor.
 
 ## Example Pack Download
 
-![](assets/images/tutorials/custom-item-models/hat_attachable.png)
+![](/assets/images/tutorials/custom-item-models/hat_attachable.png)
 
-Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels_attachable.mcaddon)
+Pack download link: [Link](https://wiki.bedrock.dev/assets/packs/tutorials/custom-item-models/CustomItemModels_attachable.mcaddon)
