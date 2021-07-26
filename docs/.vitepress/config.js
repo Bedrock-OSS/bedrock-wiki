@@ -30,6 +30,9 @@ function generateSidebar(base, dir) {
 				data: frontMatter.data,
 				children: generateSidebar(base, joinedPath),
 			})
+			if (frontMatter.data.title === void 0) {
+				throw new Error("File " + path.join(joinedPath, 'index.md') + " has invalid frontmatter!");
+			}
 		} else if (stats.isFile()) {
 			// Don't include non-markdown files, or the index page itself
 			if (!file.endsWith('.md') || file.endsWith('index.md')) return
@@ -61,6 +64,9 @@ function generateSidebar(base, dir) {
 				link,
 				activeMatch: `^${link}`,
 			})
+			if (frontMatter.data.title === void 0) {
+				throw new Error("File " + joinedPath + " has invalid frontmatter!");
+			}
 		}
 	})
 

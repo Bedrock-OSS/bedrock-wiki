@@ -1,5 +1,7 @@
 ---
 title: JSON UI Documentation
+mention:
+    - KalmeMarq
 ---
 
 ## Element Types
@@ -565,7 +567,7 @@ If you have multiple variables use `"variables": [{}]`
 
 ## Animations
 
-`anim_type` and its possible values are `color`, `wait`, `size`, `offset`, `alpha` and `flipbook`.
+`anim_type` and its possible values are `color`, `wait`, `size`, `offset`, `uv`, `alpha` and `flipbook`.
 
 | Property Name               | Type            | Description                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -581,7 +583,9 @@ If you have multiple variables use `"variables": [{}]`
 | `to`                        | array or number | (`anim_type` alpha) or a `size`/`offset` array (`anim_type` size/offset)                                                                                                                                                                                                                                                                                         |
 | `destroy_at_end`            | string          | Name of the object to destroy (stop rendering/ignored) when the animation ends. Doesn't require namespace                                                                                                                                                                                                                                                        |
 | `next`                      | string          | Name of the animation that will play after this ends                                                                                                                                                                                                                                                                                                             |
+| `activated`                 | boolean         | Whether the animation should play                                                                                                                                                                                                                                                                                                                                |
 | `resettable`                | boolean         |                                                                                                                                                                                                                                                                                                                                                                  |
+| `reset_event`               | string          | Name of the event when the animation resets                                                                                                                                                                                                                                                                                                                      |
 | `play_event`                | string          | Name of the event when the animation starts                                                                                                                                                                                                                                                                                                                      |
 | `end_event`                 | string          | Name of the event when the animation ends                                                                                                                                                                                                                                                                                                                        |
 
