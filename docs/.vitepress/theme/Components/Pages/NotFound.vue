@@ -28,6 +28,8 @@ const URL_MAP: any = {
 	'concepts/entity-properties': 'entities/entity-properties',
 	'concepts/items': 'items/items-16',
 	'concepts/json-ui': 'json-ui/json-ui-intro',
+	'concepts/render-controller': 'visuals/render-controller',
+	'concepts/math-based-animations': 'visuals/math-based-animations',
 
 	'documentation/block-model-materials': 'blocks/block-materials',
 	'documentation/block-shapes': 'blocks/block-shapes',
