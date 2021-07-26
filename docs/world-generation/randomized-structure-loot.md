@@ -20,7 +20,7 @@ Export your structure into `BP/structures`
 
 Create the directory `BP/loot_tables/chests` and create your loot table file here.
 
-You can learn how to make loot tables in Beginners Guide
+You can learn how to make loot tables in [Beginners Guide](/guide/loot-table)
 
 <CodeHeader>BP/loot_tables/chests/my_structure_loot.json</CodeHeader>
 
