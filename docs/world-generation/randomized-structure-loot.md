@@ -1,3 +1,5 @@
+mention:
+- MedicalJewel105
 ---
 title: Randomized Structure Loot
 ---
