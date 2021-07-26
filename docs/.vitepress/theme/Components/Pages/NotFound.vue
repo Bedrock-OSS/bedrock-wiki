@@ -13,10 +13,12 @@
 </template>
 
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, useRouter } from 'vitepress'
 
 const { site } = useData()
-const URL_MAP: any = {
+const router = useRouter()
+
+const URL_MAP: Record<string, string> = {
 	'documentation/biome-tags': 'world-generation/biome-tags',
 
 	'concepts/mcfunction': 'commands/mcfunction',
@@ -96,6 +98,6 @@ let path = document.location.pathname
 	.replace('.html', '')
 
 if (URL_MAP[path]) {
-	document.location.pathname = site.value.base + URL_MAP[path]
+	router.go(URL_MAP[path])
 }
 </script>
