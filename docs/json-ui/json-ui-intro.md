@@ -26,7 +26,7 @@ In `_ui_defs.json` you add all the files that will be used on the UI.
 
 Imagine I created the files `RP/ui/button.json` and `RP/my_ui/main_menu.json`:
 
-<CodeHeader>RP/ui/\_ui_defs.json</CodeHeader>
+<CodeHeader>RP/ui/_ui_defs.json</CodeHeader>
 
 ```json
 {
@@ -48,7 +48,7 @@ Let's say you have a variable `"$info_text_color": [0.8, 0.8, 0.8]` that stores 
 If you use the same value in multiple files instead of repeatedly writing `"color": [0.8, 0.8, 0.8]`, you can just reference the variable (`"color": "$info_text_color"`) and put the variable on the `_global_variables.json` file.
 Another good advantage of doing that is you only need to change in one place, and all the elements that use the variable will have the value updated.
 
-<CodeHeader>RP/ui/\_global_variables.json</CodeHeader>
+<CodeHeader>RP/ui/_global_variables.json</CodeHeader>
 
 ```json
 {
