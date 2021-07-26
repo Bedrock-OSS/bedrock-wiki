@@ -2,22 +2,18 @@
 	<div class="homepage max-w-screen-md mx-auto">
 		<h1>Contributions are welcome!</h1>
 
-		<div class="my-5 flex flex-col sm:flex-row sm:justify-around">
+		<div class="my-5 flex sm:justify-around">
 			<BButton
+				class="max-w-sm"
 				color="blue"
-				link="https://github.com/Bedrock-OSS/bedrock-wiki-legacy"
-				>GitHub - Wiki Legacy</BButton
-			>
-			<BButton
-				color="green"
 				link="https://github.com/Bedrock-OSS/bedrock-wiki"
-				>GitHub - Wiki Vite</BButton
+				>Bedrock Wiki GitHub</BButton
 			>
 		</div>
 
 		<p>
 			If you are familiar with GitHub, the Wiki accepts pull requests.
-			Website is located on the <code>gh-pages</code> branch.<br />
+			Push your changes to the <code>wiki</code> branch.<br />
 			If you aren't comfortable with Git, you can submit your article via
 			<a href="https://discord.gg/XjV87YN">Discord</a> instead.
 		</p>
