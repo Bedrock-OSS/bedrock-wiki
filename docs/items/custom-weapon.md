@@ -5,7 +5,7 @@ title: Custom Weapons
 Making a custom weapon is pretty simple since the 1.16.100 beta changes, as these allow you to simply define an item entry for it in your `BP/items` folder and provide a corresponding texture in the `RP/textures/items` folder with a bit of config and you have a fully working weapon that you can customize however you see fit.
 
 :::tip
-Before starting this you should have already read over the [Beginners Guide > Items](/guide/custom-items) page and be familiar with the general layout of an item json file and how to create a custom item, if you are not sure how to do this go give that a quick read before attempting this.
+Before starting this you should have already read over the [Beginners Guide > Items](/guide/custom-item) page and be familiar with the general layout of an item json file and how to create a custom item, if you are not sure how to do this go give that a quick read before attempting this.
 :::
 
 ## Setting the manifest min version
