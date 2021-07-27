@@ -40,22 +40,22 @@ Many packages exist for VSCode that make editing addons easier:
 
 </Spoiler>
 
-### Bridge
+### bridge.
 
-bridge. is a powerful add-on editor designed to speed up your development process. It provides a rich editing experience for all files inside behavior and resource packs (JavaScript, JSON and functions) and provides a powerful work environment. Unleash the full power of add-ons with bridge. plugins and make use of rich auto-completions provided as you navigate through a file. Creating Minecraft add-ons was never more convenient!
+bridge. v2 is the next generation of bridge., it is a powerful add-on editor designed to speed up your development process. It provides a rich editing experience for all files inside behavior and resource packs (JavaScript, JSON, functions and more) and provides a powerful work environment and allows you to choose between the tree editor or raw text editor. A summary of bridge. v2's most notable features can be found [here](https://github.com/bridge-core/editor/blob/main/README.md). Unleash the full power of add-ons with [bridge. extensions](https://bridge-core.app/extension-docs/) and make use of rich auto-completions provided as you navigate through a file. Creating Minecraft add-ons was never more convenient!
 
-[⚙️ Install bridge.](https://github.com/bridge-core/bridge.)
+[⚙️ Visit bridge. v2](https://editor.bridge-core.app)
 
 <Spoiler title="Configuring bridge.">
 
-You should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
+To get started with setting up bridge., check out our [getting started guide](https://bridge-core.app/editor-docs/getting-started/).
 
-1. Increase or remove the `bridge-file-version: #11` comment the app leaves in your files after editing a file without bridge.
-2. Add files that you want to edit without bridge. to a `.no-cache` file at the root of your behavior pack
+Tips when following the guide with bridge.:
 
-Due to the nature of the file versioning system, most scripts and tools will continue to work as expected.
+-   To create individual files you can open the new file window with `ctrl + n` and look in the `Simple Files` category. The other categories can be used to create multiple files to create a whole block or entity for example.
+-   To see your files in a traditional folder structure, disable `PackSpider` in `Settings > General` the settings can be accessed by pressing `ctrl + ,`.
 
-For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev). bridge. also has an [official Discord server](https://discord.gg/wcRJZN3), with announcements, plugin discussion, addon help, and more.
+For further guidance on the editor, feel free to contact us on [Twitter](https://twitter.com/bridgeEditor). bridge. also has an [official Discord server](https://discord.gg/wcRJZN3), where you can hear the latest bridge. news, get help with the editor and extensions and get addon help.
 
 </Spoiler>
 
