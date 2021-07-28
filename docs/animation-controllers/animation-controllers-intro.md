@@ -109,7 +109,7 @@ Lets look at a simple animation controller from our State Machine example above:
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.helicopter": {
-			"default_state": "ground",
+			"initial_state": "ground",
 			"states": {
 				"ground": {
 					"transitions": [
@@ -142,7 +142,7 @@ So this particular example contains two states:
 -   `ground`
 -   `flying`
 
-You can note that `"default_state": "ground"` means that our Animation Controller will begin in the `ground` state.
+You can note that `"initial_state": "ground"` means that our Animation Controller will begin in the `ground` state.
 
 <CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</CodeHeader>
 
@@ -189,7 +189,7 @@ Here is the code for the second state machine from above, with three states this
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.helicopter": {
-			"default_state": "ground",
+			"initial_state": "ground",
 			"states": {
 				"ground": {
 					"transitions": [
@@ -241,7 +241,7 @@ Here is an example BP animation controller, which exhibits some of this behavior
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.helicopter.commands": {
-			"default_state": "ground",
+			"initial_state": "ground",
 			"states": {
 				"ground": {
 					"on_entry": ["/say I am now in the ground!"],
