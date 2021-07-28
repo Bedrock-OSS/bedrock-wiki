@@ -2,8 +2,6 @@
 title: Feature Types
 ---
 
-# Feature Types
-
 *Last updated for 1.17.10*
 
 ::: warning
@@ -47,6 +45,10 @@ The **target block**, the block to be placed, is specified by the `"places_block
 
 #### Conditions
 **Conditions** can be specified to limit placement success. If any of the conditions would fail, the block will not be placed.
+
+::: warning
+For the sake of placement success, single block features are considered to fail if replacing themselves. This is an important distinction for [aggregate features](#aggregate-features), [conditional lists](#conditional-lists), and others. Proxy single block features with a [search feature](#search-feature) when only considering placement restriction success.
+:::
 
 ##### Innate Block Conditions
 Single block features can allow block placement that wouldn’t be allowed in-game due to a block’s innate conditions.
@@ -257,7 +259,7 @@ For non-South-oriented structures, not all block states are updated to accommoda
 
 Rotations are performed clockwise from a top-down perspective. Unfortunately, rotations occur around the [structure origin](#), not the center, so large structures may be cut off in random rotation due to [feature limitations](#). Using a set rotation, however, will orient in reliable (albeit inconvenient) ways. All rotations begin inclusively from the [feature origin](#) and are generated with the following orientations:
 
-| Rotation | *x* Projection | *z* Projection | Clockwise rotation from above |
+| Rotation | *x* Projection | *z* Projection | Clockwise Rotation from Above |
 |:--|:--|:--|:--|
 | `"east"` | Positive | Negative | 270° |
 | `"south"` | Positive | Positive | 0° |
@@ -274,7 +276,7 @@ Because of how rotation is handled, structure features typically need to be prox
 ```json
 "constraints": {
 	"block_intersection": {
-		"block_allowlist": [
+		"block_whitelist": [
 			"minecraft:sand",
 			"minecraft:sandstone",
 			"minecraft:stone"
@@ -325,7 +327,7 @@ Unlike [ground attachment](#ground-attachment), exposure to water is *not* consi
 "adjustment_radius": 4
 ```
 
-To accommodate possibly stringent [#constraints](#constraints), the optional `"adjustment_radius"` property is available; it accepts values from `0` (the default) to `16`. During placement, Minecraft will begin at the input position and radially search laterally outward up to the number of blocks specified by this property; vertical adjustment is not attempted. Each corresponding volume will be checked for validity; [block intersection](#block-intersection), [ground attachment](#ground-attachment), and [top clearance](#top-clearance) are all considered. The first success, if one exists, is used.
+To accommodate possibly stringent [constraints](#constraints), the optional `"adjustment_radius"` property is available; it accepts values from `0` (the default) to `16`. During placement, Minecraft will begin at the input position and radially search laterally outward up to the number of blocks specified by this property; vertical adjustment is not attempted. Each corresponding volume will be checked for validity; [block intersection](#block-intersection), [ground attachment](#ground-attachment), and [top clearance](#top-clearance) are all considered. The first success, if one exists, is used.
 
 ::: tip
 If vertical adjustment should be used, proxy the structure feature with a [search feature](#search-feature).
@@ -340,27 +342,102 @@ If vertical adjustment should be used, proxy the structure feature with a [searc
 			"identifier": "echelon:bulbous_cerulon"
 		},
 
-		"growth_direction": "up",
-		"height_distribution":  [
-			[{"range_min": 4, "range_max": 12}, 1]
-		],
-		"age" : 11,
-
-		"body_blocks" : [
+		"body_blocks": [
 			["echelon:bulbous_cerulon_stem", 1],
 			["echelon:bulbous_cerulon_spiked_stem", 1]
 		],
-		"head_blocks" : [
+		"head_blocks": [
 			["echelon:bulbous_cerulon_bulb", 1],
 			["echelon:bulbous_cerulon_bulb_exposed", 1]
 		],
+		"age": {"range_min": 1, "range_max": 15},
 
-		"allow_water": true
+		"growth_direction": "up",
+		"height_distribution":  [
+			[{"range_min": 4, "range_max": 12}, 1]
+		]
 	}
 }
 ```
 
-**Growing plant features** place columns of blocks divided in two parts: a body and a head. Both can be randomized per-block for fine-tuned customization.
+**Growing plant features** place columns of body blocks with a head block at the end. Both can be randomized per-block for fine-tuned customization.
+
+::: tip
+For advanced column generation, use [scatter features](#scatter-features) with [fixed grid distribution](#grid-distributions).
+:::
+
+#### Column Blocks
+```json
+"body_blocks" : [
+	["arctica:ice", 4],
+	["arctica:ice_crystallized", 1]
+],
+"head_blocks" : [
+	["arctica:growing_ice", 1]
+],
+"age": 3
+```
+
+The growing plant is divided into **body blocks**, which make up most of the feature, and **head blocks**, which are only the last block generated as part of the plant. Both are given as arrays of **block entries**. Each block entry is an array that binds a block reference to an integer [weight](#):
+
+```json
+["crestfallen:fungi_stem", 2]
+```
+
+Each block is independently selected for the body or head. There is no way using growing plant features to make all of the body blocks the same.
+
+An optional `"age"` property exists to set the age block state of the head block. It accepts two forms, an integer and a range object. When using the range object, the age is uniformly randomly selected each instance of the feature between the two provided integer bounds.
+
+Integer:
+
+```json
+"age": 12
+```
+
+Range object:
+
+```json
+"age": {"range_min": 4, "range_max": 8}
+```
+
+::: warning
+Age configuration is currently only applicable to cave vines.
+:::
+
+#### Column Generation
+```json
+"growth_direction": "down",
+"height_distribution":  [
+	[{"range_min": 8, "range_max": 12}, 4],
+	[{"range_min": 4, "range_max": 8}, 2],
+	[2, 1]
+],
+"allow_water": true
+```
+
+Columns are generated from the feature origin in the vertical direction specified by the required `"growth_direction"` property, which accepts either `"up"` or `"down"`.
+
+The *maximum* possible length of the growing plant feature is given with the `"height_distribution"` array. Like the [block declarations previously](#column-blocks), each entry in the height distribution is a **height entry** that binds a height to a weight. Heights may be given as fixed integers or as [range objects](#column-blocks).
+
+As an integer:
+
+```json
+[6, 3]
+```
+
+As a range object:
+
+```json
+[{"range_min": 2, "range_max": 8}, 1]
+```
+
+One entry from the height distribution is selected according to [weight](#), and  if a range is provided, a random value is uniformly selected inclusively between the given limits.
+
+Growing plant features begin from the [input position](#) and proceed up or down (depending on the `"growth_direction"`). By default, only air is replaced along the generated column. If not beginning in air, column generation begins at the first available air block along the correct direction. Block opportunities that were missed because of non-air blocks in the way are not re-attempted. This means that if the feature origin had to search through two non-air blocks before reaching air, the height will be stunted by 2.
+
+After reaching (or beginning in) air, the column generates body blocks until reaching a non-air block, at which point column generation is permanently stopped. Column generation is — of course — also stopped when traversing the determined height, as counted from the feature origin. Regardless, the final block in the column will be a head block, even if the column ends up being only one block in height.
+
+When true, the optional `"allow_water"` boolean allows the *first available replacement* to be water instead of air. If this property is `true` and the first water block is not attached to air above, only the single head block is generated for the entire column; otherwise, column generation resumes as usual.
 
 ### Tree Features
 ```json
@@ -840,7 +917,7 @@ When finished with the target’s feature tree, if more iterations have yet to b
 			},
 			{
 				"places_feature": "olympus:columns_weathered",
-				"condition": "query.noise(v.originx, v.originz) >= 0"
+				"condition": 1
 			}
 		],
 
@@ -849,7 +926,7 @@ When finished with the target’s feature tree, if more iterations have yet to b
 }
 ```
 
-**Conditional lists** pick a single feature from a collection based on conditions; they are akin to if-else if blocks in programming languages. Once a condition has been evaluated as successful (as determined via [success determination](#success-determination), the conditional list will select *only that one feature* for placement.
+**Conditional lists** pick a single feature from a collection based on conditions; they are akin to “if-else if” blocks in programming languages. Once a condition has been evaluated as successful (as determined via [success determination](#success-determination), the conditional list will select *only that one feature* for placement.
 
 ::: tip NOTE
 Instead, if *every* success should place a feature in the same location, use an [aggregate feature](#aggregate-features) pointing to [scatter features](#scatter-features) that proxy the target features.
@@ -868,12 +945,12 @@ Instead, if *every* success should place a feature in the same location, use an 
 	},
 	{
 		"places_feature": "summer_fun:beachadjustment_air",
-		"condition": "query.noise(v.originx, v.originz) >= 63"
+		"condition": 1
 	}
 ]
 ```
 
-The **conditions list**, `"conditional_features"`, is an ordered array comprised of **feature entries** objects. Feature entries bind [target features](#proxy-features) to their **conditions**:
+The **conditions list**, `"conditional_features"`, is an ordered array comprised of **feature entries** objects. Feature entries bind [**target features**](#proxy-features) to their **conditions**:
 
 ```json
 {
@@ -882,6 +959,8 @@ The **conditions list**, `"conditional_features"`, is an ordered array comprised
 }
 ```
 
+Conditions are given with the required `"condition"` property. Conditions are traditionally represented via MoLang strings, but numbers may be used as well. `0` will always result in that feature entry being disabled. Non-zero values will always cause that entry to succeed. Generally, using `1` can be considered as a catch-all “else” or “default” clause — it should only be used at the very end of the conditions list.
+
 The condition of each feature entry is evaluated by entry order in the conditions list. Once a feature entry [would succeed](#success-determination), no later-listed conditions will be evaluated.
 
 #### Success Determination
@@ -889,7 +968,7 @@ The condition of each feature entry is evaluated by entry order in the condition
 "early_out_scheme": "placement_success"
 ```
 
-Condition success is considered in light of the optional **early out scheme**. Two mechanisms are provided for controlling if a feature entry would succeed. `"condition_success"` — the default if no `"early_out_scheme"` is provided — considers a success to occur when a condition evaluates to true. `"placement_success"` goes further: a condition must evaluate to true, and its target feature’s placement must succeed.
+Feature entry success is considered in light of the optional **early out scheme**. Two mechanisms are provided for controlling if a feature entry would succeed. `"condition_success"` — the default if no `"early_out_scheme"` is provided — considers a success to occur when a condition evaluates to true. `"placement_success"` goes further: a condition must evaluate to true, and its target feature’s placement must succeed.
 
 ### Aggregate Features
 ```json
@@ -966,15 +1045,27 @@ Features are ordered via the **features list**, given by the `"features"` proper
 
 		"feature_to_snap":  "herbs_and_spices:underground_silas_plant",
 
-		"vertical_search_range": 12,
-		"surface": "floor"
+		"surface": "floor",
+		"vertical_search_range": 12
 	}
 }
 ```
 
 Features can be pinned to a floor or ceiling when proxied by **snap-to-surface features**. Currently, the **target feature**, given with `"feature_to_snap"`, can only be projected through air onto solid surfaces.
 
-The **target surface** is given with the optional `"surface"` property, which accepts either `"floor"` or `"ceiling"`, defaulting to `"floor"`.
+#### Surface Search
+```json
+"surface": "ceiling",
+"vertical_search_range": 16
+```
+
+Snap-to-surface features effectively remap the input *y* coordinate to a usable surface for a proxied feature. This **target surface** is given with the optional `"surface"` property, which accepts either `"floor"` or `"ceiling"`, defaulting to `"floor"`. The remapping occurs by beginning at the [feature origin](#) and searching vertically down (if targeting floors) or up (if targeting ceilings) for a surface, which seemingly must be a solid block.
+
+::: warning
+The feature origin must begin in air (even if just one block of it), or the surface search will immediately fail.
+:::
+
+The distance that should be searched is given with the required `"vertical_search_range"` property, which has no reasonable limit. Unfortunately, the actual range isn’t particularly intuitive. The range acts as though it were 2 less than this value. As an example, starting from a *y* of 70 and using a search range of `5` can position features from 67 to 70. If targeting a ceiling from 48 with a range of `6`, features may be placed from 48 to 52.
 
 ### Search Features
 ```json
@@ -1001,7 +1092,7 @@ The **target surface** is given with the optional `"surface"` property, which ac
 
 **Search features** search a volume for valid placement locations for a target feature. These features are a great option when positioning features with challenging placement conditions.
 
-The **target feature** is placed with the `"places_feature"` property. The success of its placement depends on whether the required successes threshold is met within the search volume. The placement conditions of the target feature are successively checked at each location within the volume before any placement occurs.
+The **target feature** is placed with the `"places_feature"` property. The success of its placement depends on whether a [successes threshold](#search-specifications) is met within a [search volume](#search-volume). The placement conditions of the target feature are successively checked at each location within the volume before any placement occurs.
 
 #### Search Volume
 ```json
@@ -1011,7 +1102,7 @@ The **target feature** is placed with the `"places_feature"` property. The succe
 },
 ```
 
-The **search volume** declares the space in which the search will occur. Two vectors define the bounds of this volume: `"min"`, which points to the corner with the lowest coordinates and `"max"`, which points to the *origin of the block* in the opposite corner. The coordinates of the maximum corner therefore extend 1 block in each dimension beyond what is given by the `"max"` vector. As an example, the following search volume actually covers 8 blocks, not 1:
+The **search volume** declares the space in which the search will occur. Two vectors define the bounds of this volume: `"min"`, which points to the corner with the lowest coordinates and `"max"`, which points to the *origin of the block* in the opposite corner of the prism. The coordinates of the maximum corner therefore extend 1 block in each dimension beyond what is given by the `"max"` vector. As an example, the following search volume actually covers 8 blocks (2 in each dimension), not 1:
 
 ```json
 "search_volume": {
@@ -1020,8 +1111,24 @@ The **search volume** declares the space in which the search will occur. Two vec
 },
 ```
 
-#### Placement Success
+These vectors only accept numbers and are relative to the [feature origin](#)
 
+#### Search Specifications
+```json
+"search_axis": "z",
+"required_successes": 16
+```
+
+Within the given search volume, positions are checked layer by layer according to the `"search_axis"` property, which accepts `"+x"`, `"-x"`, `"+y"`,`"-y"`, `"+z"`, or `"-z"`. The other dimensions within a layer of the specified search axis are checked in a grid until reaching their respective boundaries before the next search axis layer is checked. In particular, the order of coordinates checked is:
+
+- The earliest of *x* or *y* that *isn’t* a search axis
+- The earliest remaining of *y* or *z* that *isn’t* a search axis
+- The specified search axis
+
+The feature is only placed if the number given by the optional `"required_successes"` property is met while scanning the search volume. If the property is omitted, only one success in the entire volume must be found for feature placement to succeed.
+
+#### Search Procedure
+The search begins at the position given by the [minimum vector](#search-volume) relative to the [feature origin](#). This position is updated one coordinate at a time, as determined by the [search axis](#search-axis). When the maximum for a coordinate is reached, the position is wrapped to the start of the next coordinate; if iterating over the search axis, the specified direction (`+` or `-`) is considered. At each position, the search conditions innate to the [target feature](#search-features) are checked. Once the number of successes found reaches the [required successes threshold](#search-specifications) (or once one such success is found if no threshold is provided), the target feature is placed at *every* such success. No features are placed prior to the threshold being reached.
 
 ### Rect Layouts
 ::: warning
