@@ -11,6 +11,7 @@ Before you can start creating addons, you first have to install the required too
 -   [Windows 10](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab)
 -   [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
 -   [iOS](https://apps.apple.com/us/app/minecraft/id479516143)
+-   [Run MC on Linux](https://discord.gg/VJTZ3KaTx6)
 
 ## Picking an Editor
 
