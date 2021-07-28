@@ -310,6 +310,11 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
 
 ## Making Fake Leaves
 
+You can replace block with itself only one time, then it doesn't work. That is why fake leaves are needed.
+Log commands will update leaves without stopping:
+`fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:fake_leaves 0 replace tut:custom_leaves`
+`fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:custom_leaves 0 replace tut:fake_leaves`
+
 <CodeHeader>BP/blocks/fake_leaves.json</CodeHeader>
 
 ```json
@@ -342,6 +347,7 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
                     "event":"tut:update_leaves"
                 }
             },
+            //If something went wrong and fake leaves weren't replaces with custom leaves
             "minecraft:unit_cube":{},
             "minecraft:loot":"loot_tables/blocks/custom_leaves_loot.json"
             //Basic loot
