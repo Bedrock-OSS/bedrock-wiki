@@ -123,8 +123,8 @@
 					title="Scripting"
 					imgsrc="assets/images/homepage/lever_0.png"
 				>
-					<a href="scripting/intro.html">Beginner's Guide</a>: Learn
-					the basics of the legacy scripting-API<br /><br />
+					<a href="scripting/scripting-intro.html">Beginner's Guide</a
+					>: Learn the basics of the legacy scripting-API<br /><br />
 					<a href="scripting/game-tests.html">Game Test Framework</a>:
 					Learn about the new scripting-API!
 				</Card>
