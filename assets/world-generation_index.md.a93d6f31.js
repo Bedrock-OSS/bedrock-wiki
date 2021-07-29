@@ -1,1 +1,0 @@
-import{o as t,c as e}from"./404.md.3aea8a0a.js";const r='{"title":"World Generation","description":"","frontmatter":{"title":"World Generation"},"relativePath":"world-generation/index.md","lastUpdated":1627510247405}',a={};a.render=function(r,a,o,n,d,i){return t(),e("div")};export default a;export{r as __pageData};
