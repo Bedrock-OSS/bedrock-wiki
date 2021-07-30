@@ -2,14 +2,14 @@
 title: Block Categories
 tags:
     - beta
+mention:
+	- warhead51707
 ---
 
-<Label color="orange">Experimental</Label>
+<Label color="red">Beta</Label>
 
 -   Block Categories were added in the Minecraft: Bedrock Edition, Beta 1.17.20.23.
--   Block Categories are used for adding Data Driven Blocks in the Creative Inventory, similar to adding [Item Categories](https://wiki.bedrock.dev/items/item-categories.html) for a Data Driven Item.
-
----
+-   Block Categories are used for adding Data Driven Blocks in the Creative Inventory, similar to adding [Item Categories](/items/item-categories) for a Data Driven Item.
 
 ## Block Categories Definition
 
@@ -34,9 +34,7 @@ Block Categories are defined via the `minecraft:creative_category` component, yo
 
 As you can see, the `minecraft:creative_category` component accepts 2 optional children, the `category` child & the `group` child. A list of groups & categories can be found below.
 
----
-
-# List of Creative Tabs
+## List of Creative Tabs
 
 > _For use with `creative_category` parameter `category`_
 
@@ -49,7 +47,7 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | Nature |  
 | None |
 
-# List of Categories
+## List of Categories
 
 > _For use with the `creative_category` parameter 'group'_
 
