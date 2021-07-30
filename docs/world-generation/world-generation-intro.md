@@ -2,8 +2,14 @@
 title: Intro to World Generation
 nav_order: 1
 tags:
+    - experimental
+tags:
     - guide
 ---
+
+:::warning
+This page is somewhat out-dated, and contains limited information. For the most up-to-date and comprehensive information, view the other pages in this section.
+:::
 
 You can change the world's generation via Add-ons. The needed folders in the Behavior pack for these are:
 
