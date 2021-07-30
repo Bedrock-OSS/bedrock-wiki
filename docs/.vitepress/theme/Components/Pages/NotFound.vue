@@ -94,6 +94,7 @@ const URL_MAP: Record<string, string> = {
 
 	'world-generation/randomized-structure-loot':
 		'loot/randomized-structure-loot',
+	'visuals/render-controllers': 'visuals/entity-visuals-intro',
 	'items/item-categories': 'items/creative-categories',
 	'blocks/block-categories': 'items/creative-categories',
 }
