@@ -1,16 +1,16 @@
 ---
-title: Item Categories
+title: Creative Categories
 tags:
     - experimental
 ---
 
-<Label color="yellow">Experimental</Label>
+Creative categories are the categories that an item or block can appear in inside of the creative inventory.
 
-# Application
+## For Items
 
-Item categories are categories that an item appears in inside of the creative inventory.
-
-## Description
+:::warning
+This feature is currently experimental and is currently only available for custom items. Make sure to use the [1.16+ format](/items/item-16!)
+:::
 
 Item categories applied with the item description direct it to a more broad field in the creative category, individual tabs. They need to be the same tab as the component `creative_category`. Such would be applied like the following example:
 
@@ -19,14 +19,12 @@ Item categories applied with the item description direct it to a more broad fiel
 	"format_version": "1.16.100",
 	"minecraft:item": {
 		"description": {
-			"identifier": "yanasakana:blind_skull",
+			"identifier": "wiki:dagger",
 			"category": "equipment"
 		}
 	}
 }
 ```
-
-## Component
 
 Item categories applied with the item component `creative_category` direct it exactly where to go. Such would be applied like the following example:
 
@@ -38,9 +36,35 @@ Item categories applied with the item component `creative_category` direct it ex
 }
 ```
 
-> _Note: This feature is currently experimental, and, as such, is currently only available for custom items. Make sure to use the new format!_
+## For Blocks
 
-# List of Creative Tabs
+:::error
+This feature is beta-only, and cannot be used in stable or experimental gameplay.
+
+:::
+
+Block Categories are defined via the `minecraft:creative_category` component, your custom block will not show up in the Creative Inventory if you don't have this component, here's an example:
+
+```json
+{
+	"format_version": "1.17.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "wiki:balsa"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.wood"
+			}
+		}
+	}
+}
+```
+
+As you can see, the `minecraft:creative_category` component accepts 2 optional children, the `category` child & the `group` child. A list of groups & categories can be found below.
+
+## List of Creative Tabs
 
 > _For use with `description` parameter `category`_
 
@@ -53,11 +77,11 @@ Item categories applied with the item component `creative_category` direct it ex
 | Nature |  
 | None |
 
-# List of Item Categories
+## List of Creative Categories
 
 > _For use with the `creative_category` component_
 
-| Category  
+| Category |
 | --------------------------------
 | itemGroup.name.anvil |  
 | itemGroup.name.arrow |  

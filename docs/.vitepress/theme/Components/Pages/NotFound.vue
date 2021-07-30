@@ -94,6 +94,8 @@ const URL_MAP: Record<string, string> = {
 
 	'world-generation/randomized-structure-loot':
 		'loot/randomized-structure-loot',
+	'items/item-categories': 'items/creative-categories',
+	'blocks/block-categories': 'items/creative-categories',
 }
 
 let path = document.location.pathname
