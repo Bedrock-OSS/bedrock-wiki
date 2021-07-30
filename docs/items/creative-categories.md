@@ -1,5 +1,7 @@
 ---
 title: Creative Categories
+mention:
+    - Warhead51707
 tags:
     - experimental
 ---
@@ -9,7 +11,7 @@ Creative categories are the categories that an item or block can appear in insid
 ## For Items
 
 :::warning
-This feature is currently experimental and is currently only available for custom items. Make sure to use the [1.16+ format!](/items/item-16)
+This feature is currently experimental and is currently only available for custom items. Make sure to use the [1.16+ format!](/items/items-16)
 :::
 
 Item categories applied with the item description direct it to a more broad field in the creative category, individual tabs. They need to be the same tab as the component `creative_category`. Such would be applied like the following example:
