@@ -4,6 +4,7 @@ mention:
     - Warhead51707
 tags:
     - experimental
+	- beta
 ---
 
 Creative categories are the categories that an item or block can appear in inside of the creative inventory.
