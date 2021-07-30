@@ -2,9 +2,8 @@
 title: Intro to World Generation
 nav_order: 1
 tags:
-    - experimental
-tags:
     - guide
+    - experimental
 ---
 
 :::warning
