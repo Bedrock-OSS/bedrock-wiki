@@ -11,7 +11,7 @@ Creative categories are the categories that an item or block can appear in insid
 
 ## For Items
 
-:::warning
+::: warning
 This feature is currently experimental and is currently only available for custom items. Make sure to use the [1.16+ format!](/items/items-16)
 :::
 
@@ -41,9 +41,8 @@ Item categories applied with the item component `creative_category` direct it ex
 
 ## For Blocks
 
-:::error
+::: warning
 This feature is beta-only, and cannot be used in stable or experimental gameplay.
-
 :::
 
 Block Categories are defined via the `minecraft:creative_category` component, your custom block will not show up in the Creative Inventory if you don't have this component, here's an example:
