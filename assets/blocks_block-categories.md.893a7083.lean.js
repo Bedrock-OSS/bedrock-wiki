@@ -1,0 +1,1 @@
+import{o as t,c as e}from"./404.md.efacaf07.js";const o='{"title":"Block Categories","description":"","frontmatter":{"title":"Block Categories","tags":["beta"]},"relativePath":"blocks/block-categories.md","lastUpdated":1627674651536}',a={};a.render=function(o,a,r,i,s,c){return t(),e("div")};export default a;export{o as __pageData};
