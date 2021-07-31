@@ -18,10 +18,9 @@ UUID is an abbreviation for Universal Unique Identifier, there are 5 UUID versio
 
 Minecraft uses Version 4: Variant 1, which is completely random. This is what creates your packs unique identiy in Minecraft.
 
-### UUID Regular Expression (REGEX)
-The regex below can be used to validate the format of UUIDs:
+You can use online sites such as [UUID Generator](https://www.uuidgenerator.net/version4/) to generate the correct version required for Minecraft.
 
-[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}
-
+---
+### UUID FAQ
 ### Are UUIDs Case-sensitive?
 No, UUIDs are written in base 16 which uses numbers 0-9 and characters a-f. There is no distinction between upper and lowercase letters.
