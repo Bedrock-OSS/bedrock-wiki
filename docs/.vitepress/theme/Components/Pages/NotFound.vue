@@ -91,6 +91,11 @@ const URL_MAP: Record<string, string> = {
 	'vanilla-usage/items': 'items/vanilla-usage-items',
 	'vanilla-usage/components': 'entities/vanilla-usage-components',
 	'vanilla-usage/spawn-rules': 'entities/vanilla-usage-spawn-rules',
+
+	'world-generation/randomized-structure-loot':
+		'loot/randomized-structure-loot',
+	'visuals/render-controllers': 'visuals/entity-visuals-intro',
+	'items/item-categories': 'items/creative-categories',
 }
 
 let path = document.location.pathname

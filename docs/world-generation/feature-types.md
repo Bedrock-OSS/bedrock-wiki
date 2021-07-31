@@ -1,8 +1,10 @@
 ---
 title: Feature Types
+tags:
+    - experimental
 ---
 
-*Last updated for 1.17.10*
+_Last updated for 1.17.10_
 
 ::: warning
 Some links designed to reference external documents do not function, and will be updated at a later time to point to the correct resource.
@@ -11,9 +13,11 @@ Screenshots and other resources may be provided for many feature types given her
 :::
 
 ## Content Features
+
 Content features are the fundamental feature type responsible for defining block placements in a feature system. They offer nothing in terms of arrangement or composition. Instead, they define basic arrangements of blocks and are often combined or positioned using [proxy features](#proxy-features).
 
 ### Single Block Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -30,10 +34,7 @@ Content features are the fundamental feature type responsible for defining block
 		"may_replace": ["minecraft:water"],
 		"may_attach_to": {
 			"top": "minecraft:air",
-			"sides": [
-				"minecraft:planks",
-				"minecraft:water"
-			]
+			"sides": ["minecraft:planks", "minecraft:water"]
 		}
 	}
 }
@@ -44,6 +45,7 @@ Content features are the fundamental feature type responsible for defining block
 The **target block**, the block to be placed, is specified by the `"places_block"` property. No variation capabilities are currently possible in the definition; [weighted random features](#weighted-random-features) over additional single block features must be used instead.
 
 #### Conditions
+
 **Conditions** can be specified to limit placement success. If any of the conditions would fail, the block will not be placed.
 
 ::: warning
@@ -51,6 +53,7 @@ For the sake of placement success, single block features are considered to fail 
 :::
 
 ##### Innate Block Conditions
+
 Single block features can allow block placement that wouldn’t be allowed in-game due to a block’s innate conditions.
 
 When true, the required `"enforce_placement_rules"` boolean ensures a block’s innate placement check must succeed for the block to be placed; setting to false ignores this check. As an example, seeds can usually only be placed on farmland, but disabling this check can allow them to generate anywhere.
@@ -62,6 +65,7 @@ Just because the block’s survivability check was ignored for world generation 
 :::
 
 ##### Replacement Conditions
+
 ```json
 "may_replace": [
 	"minecraft:air",
@@ -70,13 +74,14 @@ Just because the block’s survivability check was ignored for world generation 
 ]
 ```
 
-Single block features may optionally specify a **replacement list** via the `"may_replace"` array to restrict the set of blocks the target block may replace. If the block at the [input position](#) of the single block feature is *not* in this list, the placement will fail.
+Single block features may optionally specify a **replacement list** via the `"may_replace"` array to restrict the set of blocks the target block may replace. If the block at the [input position](#) of the single block feature is _not_ in this list, the placement will fail.
 
 ::: warning
 Unlike [attachment properties](#attachment-conditions), `"may_replace"` must be an array. It cannot be declared as a direct block reference.
 :::
 
 ##### Attachment Conditions
+
 ```json
 "may_attach_to": {
 	"top": "minecraft:air",
@@ -89,12 +94,12 @@ Unlike [attachment properties](#attachment-conditions), `"may_replace"` must be 
 
 **Attachment specifications**, given via the optional `"may_attach_to"` property, restrict block adjacency. A property exists for each attachable side:
 
-- `"top"`
-- `"bottom"`
-- `"north"`
-- `"south"`
-- `"east"`
-- `"west"`
+-   `"top"`
+-   `"bottom"`
+-   `"north"`
+-   `"south"`
+-   `"east"`
+-   `"west"`
 
 Each property accepts either a single direct block reference or an array of such references:
 
@@ -150,6 +155,7 @@ For attachment along the sides (`"north"`, `"south"`, `"east"`, `"west"`), 2 mor
 Specifically, with the preceding code, the force conduit block would be sandwiched between adjacent glass along opposing lateral sides — regardless of the orientation.
 
 ### Ore Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -163,9 +169,7 @@ Specifically, with the preceding code, the force conduit block would be sandwich
 		"replace_rules": [
 			{
 				"places_block": "deepest_depths:starlite_ore",
-				"may_replace": [
-					"minecraft:stone"
-				]
+				"may_replace": ["minecraft:stone"]
 			}
 		]
 	}
@@ -179,6 +183,7 @@ The shape of the cluster cannot be controlled; to achieve this, use [scatter fea
 :::
 
 #### Replacement Rules
+
 ```json
 "replace_rules": [
 	{
@@ -199,6 +204,7 @@ The shape of the cluster cannot be controlled; to achieve this, use [scatter fea
 In ore features, **replacement rules** bind target blocks to replacement lists that restrict the target’s placement; these rules are given with `"replace_rules"`. **Target blocks** are the blocks placed by a replacement rule, provided with the required `"places_block"` property; **replacement lists** (via `"may_replace"`) are optional arrays that only allow replacement of specific blocks. The block selected for a given position in the cluster will be the target block of the first matching rule. If a replacement list is not provided, that rule will always succeed in its position amongst the other rules, and all future rules will be ignored.
 
 ### Structure Template Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -229,17 +235,17 @@ In ore features, **replacement rules** bind target blocks to replacement lists t
 **Structure template features** generate structures by referencing saved structure files. These features trade power and flexibility for convenience.
 
 ::: warning
-Unlike with data-driven features, blocks in structure features are *not* automatically waterlogged if placed in water.
+Unlike with data-driven features, blocks in structure features are _not_ automatically waterlogged if placed in water.
 :::
 
 The **target structure** is placed with the `"structure_name"` string property. This string follows a unique naming system to select a `.mcstructure` file from the behavior pack; it follows the form `namespace:path`. Structure files must be placed in the top-level `structures` directory; any hierarchy of folders from here is allowed but not required. If the structure file is placed directly in the `structures` directory, the default namespace `mystructure` is used. Otherwise, if placed in a directory inside `structures`, that directory name is used as the namespace. If any nesting is present within this directory, it is reflected in the path. Finally, the file extension (`.mcstructure`) is omitted.
 
 For some examples:
 
-| Structure file location | Associated `"structure_name"` |
-|:--|:--|
-| `/structures/well.mcstructure` | `"mystructure:well"` |
-| `/structures/farmstead/silo.mcstructure` | `"farmstead:silo"` |
+| Structure file location                                     | Associated `"structure_name"`         |
+| :---------------------------------------------------------- | :------------------------------------ |
+| `/structures/well.mcstructure`                              | `"mystructure:well"`                  |
+| `/structures/farmstead/silo.mcstructure`                    | `"farmstead:silo"`                    |
 | `/structures/campsites/taiga/rustic/tents/wool.mcstructure` | `"campsites:taiga/rustic/tents/wool"` |
 
 ::: warning
@@ -247,11 +253,12 @@ For some examples:
 :::
 
 #### Rotation
+
 ```json
 "facing_direction": "south"
 ```
 
-**Structure rotation** is performed using the `"facing_direction"` property, which accepts the four lateral directions: `"north"`, `"south"`, `"east"`, and `"west"`, and an additional `"random"` property to shuffle amongst them each instance. South is the “default” direction; structures extend into the positive *x* and *z* directions using this orientation.
+**Structure rotation** is performed using the `"facing_direction"` property, which accepts the four lateral directions: `"north"`, `"south"`, `"east"`, and `"west"`, and an additional `"random"` property to shuffle amongst them each instance. South is the “default” direction; structures extend into the positive _x_ and _z_ directions using this orientation.
 
 ::: warning
 For non-South-oriented structures, not all block states are updated to accommodate the rotation, causing some rotatable blocks, such as vines, to hang in invalid positions.
@@ -259,12 +266,12 @@ For non-South-oriented structures, not all block states are updated to accommoda
 
 Rotations are performed clockwise from a top-down perspective. Unfortunately, rotations occur around the [structure origin](#), not the center, so large structures may be cut off in random rotation due to [feature limitations](#). Using a set rotation, however, will orient in reliable (albeit inconvenient) ways. All rotations begin inclusively from the [feature origin](#) and are generated with the following orientations:
 
-| Rotation | *x* Projection | *z* Projection | Clockwise Rotation from Above |
-|:--|:--|:--|:--|
-| `"east"` | Positive | Negative | 270° |
-| `"south"` | Positive | Positive | 0° |
-| `"west"` | Negative | Positive | 90° |
-| `"north"` | Negative | Negative | 180° |
+| Rotation  | _x_ Projection | _z_ Projection | Clockwise Rotation from Above |
+| :-------- | :------------- | :------------- | :---------------------------- |
+| `"east"`  | Positive       | Negative       | 270°                          |
+| `"south"` | Positive       | Positive       | 0°                            |
+| `"west"`  | Negative       | Positive       | 90°                           |
+| `"north"` | Negative       | Negative       | 180°                          |
 
 Therefore, if a 7 × 6 feature is generated from an origin of (64, 64), an east rotation would occupy the lateral area from (64, 58) to (70, 65).
 
@@ -273,6 +280,7 @@ Because of how rotation is handled, structure features typically need to be prox
 :::
 
 #### Constraints
+
 ```json
 "constraints": {
 	"block_intersection": {
@@ -290,6 +298,7 @@ Because of how rotation is handled, structure features typically need to be prox
 Structure features can enforce **constraints** using the required `"constraints"` property to restrict block intersection, adjust the placement position, and clear the space above the features using air. Although the property and its object (`{}`) are required, all sub-properties are optional.
 
 ##### Block Intersection
+
 ```json
 "block_intersection": {
 	"block_whitelist": [
@@ -305,6 +314,7 @@ Bizarrely, the `"block_whitelist"` property can also be given with `"block_allow
 :::
 
 ##### Ground Attachment
+
 ```json
 "grounded": {}
 ```
@@ -312,6 +322,7 @@ Bizarrely, the `"block_whitelist"` property can also be given with `"block_allow
 The optional `"grounded"` component ensures the base of a structure is not overhanging into open space — air, water, or lava. All non-structure void, non-air blocks along the bottom layer of the structure are considered; if air, water, or lava is beneath even one such block, generation will fail.
 
 ##### Top Clearance
+
 ```json
 "unburied": {}
 ```
@@ -319,10 +330,11 @@ The optional `"grounded"` component ensures the base of a structure is not overh
 The `"unburied"` component ensures a structure’s top is exposed to air for generation to succeed. Only non-structure void, non-air blocks on the top layer of the structure are considered, and all must be exposed to air above for the structure to successfully generate.
 
 ::: tip NOTE
-Unlike [ground attachment](#ground-attachment), exposure to water is *not* considered.
+Unlike [ground attachment](#ground-attachment), exposure to water is _not_ considered.
 :::
 
 #### Placement Adjustment
+
 ```json
 "adjustment_radius": 4
 ```
@@ -334,6 +346,7 @@ If vertical adjustment should be used, proxy the structure feature with a [searc
 :::
 
 ### Growing Plant Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -350,12 +363,10 @@ If vertical adjustment should be used, proxy the structure feature with a [searc
 			["echelon:bulbous_cerulon_bulb", 1],
 			["echelon:bulbous_cerulon_bulb_exposed", 1]
 		],
-		"age": {"range_min": 1, "range_max": 15},
+		"age": { "range_min": 1, "range_max": 15 },
 
 		"growth_direction": "up",
-		"height_distribution":  [
-			[{"range_min": 4, "range_max": 12}, 1]
-		]
+		"height_distribution": [[{ "range_min": 4, "range_max": 12 }, 1]]
 	}
 }
 ```
@@ -367,6 +378,7 @@ For advanced column generation, use [scatter features](#scatter-features) with [
 :::
 
 #### Column Blocks
+
 ```json
 "body_blocks" : [
 	["arctica:ice", 4],
@@ -405,6 +417,7 @@ Age configuration is currently only applicable to cave vines.
 :::
 
 #### Column Generation
+
 ```json
 "growth_direction": "down",
 "height_distribution":  [
@@ -417,7 +430,7 @@ Age configuration is currently only applicable to cave vines.
 
 Columns are generated from the feature origin in the vertical direction specified by the required `"growth_direction"` property, which accepts either `"up"` or `"down"`.
 
-The *maximum* possible length of the growing plant feature is given with the `"height_distribution"` array. Like the [block declarations previously](#column-blocks), each entry in the height distribution is a **height entry** that binds a height to a weight. Heights may be given as fixed integers or as [range objects](#column-blocks).
+The _maximum_ possible length of the growing plant feature is given with the `"height_distribution"` array. Like the [block declarations previously](#column-blocks), each entry in the height distribution is a **height entry** that binds a height to a weight. Heights may be given as fixed integers or as [range objects](#column-blocks).
 
 As an integer:
 
@@ -428,18 +441,19 @@ As an integer:
 As a range object:
 
 ```json
-[{"range_min": 2, "range_max": 8}, 1]
+[{ "range_min": 2, "range_max": 8 }, 1]
 ```
 
-One entry from the height distribution is selected according to [weight](#), and  if a range is provided, a random value is uniformly selected inclusively between the given limits.
+One entry from the height distribution is selected according to [weight](#), and if a range is provided, a random value is uniformly selected inclusively between the given limits.
 
 Growing plant features begin from the [input position](#) and proceed up or down (depending on the `"growth_direction"`). By default, only air is replaced along the generated column. If not beginning in air, column generation begins at the first available air block along the correct direction. Block opportunities that were missed because of non-air blocks in the way are not re-attempted. This means that if the feature origin had to search through two non-air blocks before reaching air, the height will be stunted by 2.
 
 After reaching (or beginning in) air, the column generates body blocks until reaching a non-air block, at which point column generation is permanently stopped. Column generation is — of course — also stopped when traversing the determined height, as counted from the feature origin. Regardless, the final block in the column will be a head block, even if the column ends up being only one block in height.
 
-When true, the optional `"allow_water"` boolean allows the *first available replacement* to be water instead of air. If this property is `true` and the first water block is not attached to air above, only the single head block is generated for the entire column; otherwise, column generation resumes as usual.
+When true, the optional `"allow_water"` boolean allows the _first available replacement_ to be water instead of air. If this property is `true` and the first water block is not attached to air above, only the single head block is generated for the entire column; otherwise, column generation resumes as usual.
 
 ### Tree Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -448,10 +462,7 @@ When true, the optional `"allow_water"` boolean allows the *first available repl
 			"identifier": "forgotten_forests:grand_oak"
 		},
 
-		"base_block": [
-			"minecraft:dirt",
-			"minecraft:coarse_dirt"
-		],
+		"base_block": ["minecraft:dirt", "minecraft:coarse_dirt"],
 		"base_cluster": {
 			"num_clusters": 4,
 			"cluster_radius": 3,
@@ -490,14 +501,15 @@ When true, the optional `"allow_water"` boolean allows the *first available repl
 
 **Tree features** generate tree-like shapes. Tree features allow for more customization than any other feature type, including:
 
-- Setting wood and leaf blocks
-- Adding tree face decorations
-- Restricting foundation and intersection blocks
-- Customizing branch frequency and angle
+-   Setting wood and leaf blocks
+-   Adding tree face decorations
+-   Restricting foundation and intersection blocks
+-   Customizing branch frequency and angle
 
-Tree features are composed of *many* sub-properties to reflect the many variations of tree shapes found in vanilla gameplay. In general, these properties are divided into [setup](#setup-properties), [trunk](#trunk-properties), and [canopy](#canopy-properties) properties.
+Tree features are composed of _many_ sub-properties to reflect the many variations of tree shapes found in vanilla gameplay. In general, these properties are divided into [setup](#setup-properties), [trunk](#trunk-properties), and [canopy](#canopy-properties) properties.
 
 #### Setup Properties
+
 ```json
 "base_block": [
 	"minecraft:dirt",
@@ -525,83 +537,99 @@ Tree features are composed of *many* sub-properties to reflect the many variatio
 Foundation and intersection blocks for the tree are specified using **setup properties**.
 
 #### Trunk Properties
+
 **Trunk properties** establish the trunk and branches.
 
 ##### Trunks
+
 ```json
 
 ```
 
 ##### Acacia Trunks
+
 ```json
 
 ```
 
 ##### Fancy Trunk
+
 ```json
 
 ```
 
 ##### Mega Trunk
+
 ```json
 
 ```
 
 ##### Fallen Trunk
+
 ```json
 
 ```
 
 #### Canopy Properties
+
 Tree canopies are constructed using **canopy properties**.
 
 ##### Canopies
+
 ```json
 
 ```
 
 ##### Fancy Canopies
+
 ```json
 
 ```
 
 ##### Mega Canopies
+
 ```json
 
 ```
 
 ##### Spruce Canopies
+
 ```json
 
 ```
 
 ##### Pine Canopies
+
 ```json
 
 ```
 
 ##### Mega Pine Canopies
+
 ```json
 
 ```
 
 ##### Acacia Canopies
+
 ```json
 
 ```
 
 ##### Roofed Canopies
+
 ```json
 
 ```
 
 ##### Random Spread Canopies
+
 ```json
 
 ```
 
-
 ### Multiface Features
+
 ::: warning
 Multiface features are currently bugged and should not be used. At most 2 iterations are being placed — regardless of the spread chance. [Scatter features](#scatter-features) are a viable substitute in the meantime.
 :::
@@ -634,6 +662,7 @@ Multiface features are currently bugged and should not be used. At most 2 iterat
 Multiface features randomly place sequences of blocks on surfaces based on the success of the previous element of the sequence. **Surfaces** are defined as between either air or water and any other block.
 
 #### Spread Mechanics
+
 ```json
 "search_range": 4,
 "chance_of_spreading": 0.75
@@ -642,6 +671,7 @@ Multiface features randomly place sequences of blocks on surfaces based on the s
 Multiface features begin by attempting to place the **target block** (via the `"places_block"` property) at the [input position](#) of the multiface feature. For each subsequent attempt, a roll is made against the **spread chance**. The spread chance is given with the `"chance_of_spreading"` float property; it ranges from `0` (never successful) to `1` (always successful). If it succeeds, the next block in the sequence will be placed randomly within a cube centered on the input position that has a half side length equal to the value given by `"search_range"`. The sequence continues until a block fails to be placed. The search range may be between `1` and `64`.
 
 #### Placement Restrictions
+
 ```json
 "can_place_on_ceiling": true,
 "can_place_on_floor": false,
@@ -655,24 +685,26 @@ Multiface features begin by attempting to place the **target block** (via the `"
 
 Multiface features use **placement restrictions** to limit block attachment. With any iteration (including the first), if the placement check fails, the sequence is terminated. 3 required boolean properties control where the target can be placed:
 
-- "can_place_on_floor"
-- "can_place_on_ceiling"
-- "can_place_on_wall"
+-   "can_place_on_floor"
+-   "can_place_on_ceiling"
+-   "can_place_on_wall"
 
 When these properties are true, their corresponding surfaces are eligible for attachment. Of course, at least one property must be true, or the sequence will never begin.
 
 ::: tip NOTE
-These properties *do not* dictate block state, only attachment. Multiface blocks, such as torches, will not automatically orient to the appropriate face. Furthermore, if the target block supports simultaneous attachment to multiple faces and would be attached to a face whitelisted by these properties, it may also automatically attach to a face that is *not* whitelisted.
+These properties _do not_ dictate block state, only attachment. Multiface blocks, such as torches, will not automatically orient to the appropriate face. Furthermore, if the target block supports simultaneous attachment to multiple faces and would be attached to a face whitelisted by these properties, it may also automatically attach to a face that is _not_ whitelisted.
 :::
 
 An optional whitelist of blocks to which the target may attach is available via the `"can_place_on"` array property. Omitting this property defaults to allowing all blocks to attach.
 
 ## Proxy Features
+
 Proxy features group, arrange, or gate features, including other proxy features. Proxy features themselves are incapable of having a direct effect on world generation.
 
 All proxy features must therefore point to one or multiple **target features**: the features that are placed, rearranged, or selected by proxy features. Target features are represented as string references to the identifier of the intended feature.
 
 ### Scatter Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -705,11 +737,13 @@ All proxy features must therefore point to one or multiple **target features**: 
 ```
 
 **Scatter features** are the most flexible and useful feature type available. Scatter features can:
-- Distribute or reposition a feature any number of times within a [chunk’s feature domain](#)
-- Act as a gate to conditionally enable a feature to be placed
-- Execute MoLang within the current [feature context](#)
+
+-   Distribute or reposition a feature any number of times within a [chunk’s feature domain](#)
+-   Act as a gate to conditionally enable a feature to be placed
+-   Execute MoLang within the current [feature context](#)
 
 Scatter features attempt to place a [target feature](#proxy-features) with each iteration:
+
 ```json
 "places_feature": "lostlands:shimmerfields_spire"
 ```
@@ -717,6 +751,7 @@ Scatter features attempt to place a [target feature](#proxy-features) with each 
 If, where, and how an instance of the target is placed depend on the [generation potential](#generation-potential), [distribution](#distribution), and the [evaluation order](#evaluation-order)
 
 #### Generation Potential
+
 ```json
 "scatter_chance": 25,
 "iterations": 12
@@ -727,6 +762,7 @@ A scatter feature will determine placement attempts of its target using the `"sc
 **Scatter chance** represents the potential for the scatter feature to succeed. It can be represented as…
 
 A numeric literal:
+
 ```json
 "scatter_chance": 12.5
 ```
@@ -736,11 +772,13 @@ The numeric literal form is considered against 100, not 1. A scatter chance of `
 :::
 
 A MoLang expression:
+
 ```json
 "scatter_chance": "1 / 8"
 ```
 
 A fraction object:
+
 ```json
 "scatter_chance": {
 	"numerator": 1,
@@ -750,10 +788,10 @@ A fraction object:
 
 All 3 examples have a 12.5% chance for success. Use whichever form feels most appropriate for your case. If scatter chance is omitted, it defaults to a 100% chance for the scatter feature to attempt to place its target.
 
-
-**Iterations** are the number of attempts a scatter feature will try to place its target. If an instance of a scatter feature would succeed (in other words, if its scatter chance check were successful), *all* of the iterations given by `"iterations"` will be attempted. Iterations may be represented as integer literals or MoLang expressions. Unlike scatter chance, iterations are required.
+**Iterations** are the number of attempts a scatter feature will try to place its target. If an instance of a scatter feature would succeed (in other words, if its scatter chance check were successful), _all_ of the iterations given by `"iterations"` will be attempted. Iterations may be represented as integer literals or MoLang expressions. Unlike scatter chance, iterations are required.
 
 #### Distribution
+
 ```json
 "x": {
 	"distribution": "fixed_grid",
@@ -769,16 +807,19 @@ All 3 examples have a 12.5% chance for success. Use whichever form feels most ap
 Distribution is predominantly handled using **coordinate properties**: `"x"`, `"z"`, and `"y"`. All these properties may be represented using…
 
 An integer literal:
+
 ```json
 "x": 0
 ```
 
 A MoLang Expression:
+
 ```json
 "x": "math.random_integer(0, v.surface_grass.spread - 1)"
 ```
 
 Or a number of object forms for conveniently distributing a coordinate:
+
 ```json
 "x": {
 	"distribution": "uniform",
@@ -788,30 +829,32 @@ Or a number of object forms for conveniently distributing a coordinate:
 
 Literals and MoLang expressions are relative to the [feature origin](#). See [Distribution Types](#distribution-types) for the available pre-constructed distribution systems.
 
-Because placement of features is so often relative to the heightmap, the incoming *y*-origin for the scatter feature may be **projected into the heightmap**:
+Because placement of features is so often relative to the heightmap, the incoming _y_-origin for the scatter feature may be **projected into the heightmap**:
 
 ```json
 "project_input_to_floor": true
 ```
 
-This means that the specified *y*-origin from the scatter feature’s parent is ignored in favor of the *y*-coordinate of the heightmap at an iteration’s *x*-*z* location ([assuming the *y*-coordinate would be evaluated after the lateral coordinates](#evaluation-order)). The `"y"` property may still be given a value that will represent the offset from the heightmap.
+This means that the specified _y_-origin from the scatter feature’s parent is ignored in favor of the _y_-coordinate of the heightmap at an iteration’s _x_-_z_ location ([assuming the _y_-coordinate would be evaluated after the lateral coordinates](#evaluation-order)). The `"y"` property may still be given a value that will represent the offset from the heightmap.
 
 ::: tip NOTE
 Functionally, this is the same as using the MoLang expression `"query.heightmap(v.worldx, v.worldz) + *offset*"`.
 :::
 
 ##### Distribution Types
+
 Custom distribution systems can be constructed using MoLang expressions, but scatter features come pre-equipped with a few common **distribution types** for convenient authoring:
 
-- Uniform
-- Gaussian
-- Inverse Gaussian
-- Fixed grid
-- Jittered grid
+-   Uniform
+-   Gaussian
+-   Inverse Gaussian
+-   Fixed grid
+-   Jittered grid
 
 Each distribution type requires an **extent**, which represents the range of values on which that distribution operates, from minimum to maximum. Extents, like the basic forms of coordinate declarations, are relative to the [feature origin](#).
 
 ###### Uniform Distribution
+
 ```json
 "z": {
 	"distribution": "uniform",
@@ -821,11 +864,12 @@ Each distribution type requires an **extent**, which represents the range of val
 
 **Uniform distribution** is uniformly random distribution on a half-open interval between two values. It is known as “uniform” because every value within the range has an equal chance of being selected and “half-open” because the extent minimum is a member of the range, while the extent maximum is not:
 
-*minimum extent* <= *x* < *maximum extent*
+_minimum extent_ <= _x_ < _maximum extent_
 
 Therefore, if an extent of `[0, 16]` were given for a uniform distribution, blocks may be placed in a range of size 16: from 0 to 15. The 1st possible position starts at 0 while the 15th possible position ends at 16, matching the extent.
 
 ###### Gaussian Distributions
+
 ```json
 "y": {
 	"distribution": "gaussian",
@@ -836,6 +880,7 @@ Therefore, if an extent of `[0, 16]` were given for a uniform distribution, bloc
 **Gaussian distribution** (`"gaussian"`) and its **inverse** (`"inverse_gaussian"`) are useful for grouping features together: toward or away from the center of the extent respectively. Gaussian distribution is so extreme that values will almost never be selected away from the center with normal Gaussian distribution or toward the center with inverse Gaussian distribution. The extents for Gaussian distribution behave the as with [uniform distribution](#uniform-distribution).
 
 ###### Grid Distributions
+
 ```json
 "x": {
 	"distribution": "jittered_grid",
@@ -847,7 +892,7 @@ Therefore, if an extent of `[0, 16]` were given for a uniform distribution, bloc
 
 **Grid distributions** are powerful systems for placing blocks either directly on (`"fixed_grid"`) or randomly within (`"jittered_grid"`) evenly spaced intervals along a coordinate. Unlike the other distribution types, the extent of grids forms an interval that includes the maximum extent:
 
-*minimum extent* <= *x* <= *maximum extent*
+_minimum extent_ <= _x_ <= _maximum extent_
 
 Two grid distribution-only properties are available for finer control over the grids used by these systems. The interval size, which defaults to 1, can be customized with the `"step_size"` property. An initial offset, defaulting to 0, can also be provided via the `"grid_offset"` property.
 
@@ -856,6 +901,7 @@ If the iteration count in conjunction with the step size and offset would push a
 While grids are useful on a coordinate independently, their true power shows when in combination with grid distributions on other coordinates. Placements prioritize incrementing the earliest evaluated grid system before later systems; the later layouts are only considered when wrapping occurs in the previous grid system. When a placement in an earlier evaluated coordinate would wrap, the next evaluated grid-powered coordinate will be offset by the number of wraps that occurred.
 
 As a simple example:
+
 ```json
 "iterations": 21,
 
@@ -869,7 +915,7 @@ As a simple example:
 }
 ```
 
-Placements will first begin along *x*: (0, 0), (1, 0), etc., until reaching the end of the extent at (15, 0). However, only 16 of the 21 iterations have occurred; 5 remain. Now, the *x*-coordinate wraps back around to 0, while the *z*-coordinate increments to 1: (0, 1).
+Placements will first begin along _x_: (0, 0), (1, 0), etc., until reaching the end of the extent at (15, 0). However, only 16 of the 21 iterations have occurred; 5 remain. Now, the _x_-coordinate wraps back around to 0, while the _z_-coordinate increments to 1: (0, 1).
 
 This wrapping occurs in three-dimensions, too, so when a plane along the earliest evaluated coordinates would wrap (assuming a high enough iteration count), another plane will begin formation based on the final coordinate’s step size.
 
@@ -880,6 +926,7 @@ When using multiple grid distributions to form a surface or volume, extents for 
 :::
 
 #### Evaluation Order
+
 When a scatter chance is included, it is evaluated before any other properties. If the check against scatter chance fails for that instance of the scatter feature, nothing downstream within that instance is evaluated. No further MoLang is interpreted; no variables within the [feature context](#) are updated. The target feature is entirely disregarded.
 
 Next, the iteration count is evaluated. Similarly to scatter chance, if the iteration count were not to resolve to a positive number of placement attempts, nothing further is evaluated.
@@ -887,10 +934,10 @@ Next, the iteration count is evaluated. Similarly to scatter chance, if the iter
 Next, every iteration is attempted regardless of whether an early iteration would for some reason fail. For each iteration, each coordinate is evaluated using the same ordering across all iterations.
 
 ::: warning
-The order of coordinate evaluation is *not* dependent upon the order the coordinate properties are declared in JSON.
+The order of coordinate evaluation is _not_ dependent upon the order the coordinate properties are declared in JSON.
 :::
 
-By default, the coordinate ordering is *x* then *z* then *y*. This covers the majority of use-cases: if the coordinates aren’t independent, more than likely the vertical position depends on the lateral coordinates. However, scatter features may declare an atypical **coordinate evaluation order** for full control over coordinate dependence:
+By default, the coordinate ordering is _x_ then _z_ then _y_. This covers the majority of use-cases: if the coordinates aren’t independent, more than likely the vertical position depends on the lateral coordinates. However, scatter features may declare an atypical **coordinate evaluation order** for full control over coordinate dependence:
 
 ```json
 "coordinate_eval_order": "zyx"
@@ -901,6 +948,7 @@ After the coordinates for an iteration have been determined, world generation mo
 When finished with the target’s feature tree, if more iterations have yet to be run from the scatter feature, focus returns to the scatter feature beginning with the first-evaluated coordinate and execution is resumed.
 
 ### Conditional Lists
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -926,13 +974,14 @@ When finished with the target’s feature tree, if more iterations have yet to b
 }
 ```
 
-**Conditional lists** pick a single feature from a collection based on conditions; they are akin to “if-else if” blocks in programming languages. Once a condition has been evaluated as successful (as determined via [success determination](#success-determination), the conditional list will select *only that one feature* for placement.
+**Conditional lists** pick a single feature from a collection based on conditions; they are akin to “if-else if” blocks in programming languages. Once a condition has been evaluated as successful (as determined via [success determination](#success-determination), the conditional list will select _only that one feature_ for placement.
 
 ::: tip NOTE
-Instead, if *every* success should place a feature in the same location, use an [aggregate feature](#aggregate-features) pointing to [scatter features](#scatter-features) that proxy the target features.
+Instead, if _every_ success should place a feature in the same location, use an [aggregate feature](#aggregate-features) pointing to [scatter features](#scatter-features) that proxy the target features.
 :::
 
 #### Conditions List
+
 ```json
 "conditional_features": [
 	{
@@ -964,6 +1013,7 @@ Conditions are given with the required `"condition"` property. Conditions are tr
 The condition of each feature entry is evaluated by entry order in the conditions list. Once a feature entry [would succeed](#success-determination), no later-listed conditions will be evaluated.
 
 #### Success Determination
+
 ```json
 "early_out_scheme": "placement_success"
 ```
@@ -971,6 +1021,7 @@ The condition of each feature entry is evaluated by entry order in the condition
 Feature entry success is considered in light of the optional **early out scheme**. Two mechanisms are provided for controlling if a feature entry would succeed. `"condition_success"` — the default if no `"early_out_scheme"` is provided — considers a success to occur when a condition evaluates to true. `"placement_success"` goes further: a condition must evaluate to true, and its target feature’s placement must succeed.
 
 ### Aggregate Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -991,22 +1042,24 @@ Feature entry success is considered in light of the optional **early out scheme*
 
 **Aggregate features** successively place features from a given list at the input location. Aggregate features are typically used to build custom scenes comprised of many disparate features.
 
-The features to be placed by the aggregate are given by the required **features list**. Each feature in this list — [if placed](#placement-escape) — will be positioned *in order of declaration* at the same spot. Aggregate features will often need to point to [scatter features](#scatter-features) to position elements of a scene.
+The features to be placed by the aggregate are given by the required **features list**. Each feature in this list — [if placed](#placement-escape) — will be positioned _in order of declaration_ at the same spot. Aggregate features will often need to point to [scatter features](#scatter-features) to position elements of a scene.
 
 #### Placement Escape
+
 ```json
 "early_out": "first_success"
 ```
 
 By default, every entry in the features list will attempt to be placed. A **placement escape** is provided via the `"early_out"` property, which accepts 3 values:
 
-| Value | Description |
-|:--|:--|
-| `"none"` | Attempt to place each feature (default) |
+| Value             | Description                                                      |
+| :---------------- | :--------------------------------------------------------------- |
+| `"none"`          | Attempt to place each feature (default)                          |
 | `"first_success"` | Stop placing features once the first successful placement occurs |
-| `"first_failure"` | Stop placing features once the first failed placement occurs |
+| `"first_failure"` | Stop placing features once the first failed placement occurs     |
 
 ### Sequence Features
+
 ::: warning
 Sequence features are currently bugged and should not be used. Currently, all features in the features list generate at the same input location, like [aggregate features](#aggregate-features).
 :::
@@ -1034,6 +1087,7 @@ Sequence features are currently bugged and should not be used. Currently, all fe
 Features are ordered via the **features list**, given by the `"features"` property. The output location from the previous feature becomes the input location of the subsequent feature. As an example, if the origin of the sequence feature were at (0, 67, 0), and the first listed feature were a column that extended 10 blocks vertically, the input position for the next listed feature would be (0, 77, 0).
 
 ### Snap-to-Surface Features
+
 ```json
 {
 	"format_version": "1.16.0",
@@ -1043,7 +1097,7 @@ Features are ordered via the **features list**, given by the `"features"` proper
 			"identifier": "herbs_and_spices:underground_silas_plant_snap"
 		},
 
-		"feature_to_snap":  "herbs_and_spices:underground_silas_plant",
+		"feature_to_snap": "herbs_and_spices:underground_silas_plant",
 
 		"surface": "floor",
 		"vertical_search_range": 12
@@ -1054,20 +1108,22 @@ Features are ordered via the **features list**, given by the `"features"` proper
 Features can be pinned to a floor or ceiling when proxied by **snap-to-surface features**. Currently, the **target feature**, given with `"feature_to_snap"`, can only be projected through air onto solid surfaces.
 
 #### Surface Search
+
 ```json
 "surface": "ceiling",
 "vertical_search_range": 16
 ```
 
-Snap-to-surface features effectively remap the input *y* coordinate to a usable surface for a proxied feature. This **target surface** is given with the optional `"surface"` property, which accepts either `"floor"` or `"ceiling"`, defaulting to `"floor"`. The remapping occurs by beginning at the [feature origin](#) and searching vertically down (if targeting floors) or up (if targeting ceilings) for a surface, which seemingly must be a solid block.
+Snap-to-surface features effectively remap the input _y_ coordinate to a usable surface for a proxied feature. This **target surface** is given with the optional `"surface"` property, which accepts either `"floor"` or `"ceiling"`, defaulting to `"floor"`. The remapping occurs by beginning at the [feature origin](#) and searching vertically down (if targeting floors) or up (if targeting ceilings) for a surface, which seemingly must be a solid block.
 
 ::: warning
 The feature origin must begin in air (even if just one block of it), or the surface search will immediately fail.
 :::
 
-The distance that should be searched is given with the required `"vertical_search_range"` property, which has no reasonable limit. Unfortunately, the actual range isn’t particularly intuitive. The range acts as though it were 2 less than this value. As an example, starting from a *y* of 70 and using a search range of `5` can position features from 67 to 70. If targeting a ceiling from 48 with a range of `6`, features may be placed from 48 to 52.
+The distance that should be searched is given with the required `"vertical_search_range"` property, which has no reasonable limit. Unfortunately, the actual range isn’t particularly intuitive. The range acts as though it were 2 less than this value. As an example, starting from a _y_ of 70 and using a search range of `5` can position features from 67 to 70. If targeting a ceiling from 48 with a range of `6`, features may be placed from 48 to 52.
 
 ### Search Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -1095,6 +1151,7 @@ The distance that should be searched is given with the required `"vertical_searc
 The **target feature** is placed with the `"places_feature"` property. The success of its placement depends on whether a [successes threshold](#search-specifications) is met within a [search volume](#search-volume). The placement conditions of the target feature are successively checked at each location within the volume before any placement occurs.
 
 #### Search Volume
+
 ```json
 "search_volume": {
 	"min": [-12, 0, -12],
@@ -1102,7 +1159,7 @@ The **target feature** is placed with the `"places_feature"` property. The succe
 },
 ```
 
-The **search volume** declares the space in which the search will occur. Two vectors define the bounds of this volume: `"min"`, which points to the corner with the lowest coordinates and `"max"`, which points to the *origin of the block* in the opposite corner of the prism. The coordinates of the maximum corner therefore extend 1 block in each dimension beyond what is given by the `"max"` vector. As an example, the following search volume actually covers 8 blocks (2 in each dimension), not 1:
+The **search volume** declares the space in which the search will occur. Two vectors define the bounds of this volume: `"min"`, which points to the corner with the lowest coordinates and `"max"`, which points to the _origin of the block_ in the opposite corner of the prism. The coordinates of the maximum corner therefore extend 1 block in each dimension beyond what is given by the `"max"` vector. As an example, the following search volume actually covers 8 blocks (2 in each dimension), not 1:
 
 ```json
 "search_volume": {
@@ -1114,6 +1171,7 @@ The **search volume** declares the space in which the search will occur. Two vec
 These vectors only accept numbers and are relative to the [feature origin](#)
 
 #### Search Specifications
+
 ```json
 "search_axis": "z",
 "required_successes": 16
@@ -1121,16 +1179,18 @@ These vectors only accept numbers and are relative to the [feature origin](#)
 
 Within the given search volume, positions are checked layer by layer according to the `"search_axis"` property, which accepts `"+x"`, `"-x"`, `"+y"`,`"-y"`, `"+z"`, or `"-z"`. The other dimensions within a layer of the specified search axis are checked in a grid until reaching their respective boundaries before the next search axis layer is checked. In particular, the order of coordinates checked is:
 
-- The earliest of *x* or *y* that *isn’t* a search axis
-- The earliest remaining of *y* or *z* that *isn’t* a search axis
-- The specified search axis
+-   The earliest of _x_ or _y_ that _isn’t_ a search axis
+-   The earliest remaining of _y_ or _z_ that _isn’t_ a search axis
+-   The specified search axis
 
 The feature is only placed if the number given by the optional `"required_successes"` property is met while scanning the search volume. If the property is omitted, only one success in the entire volume must be found for feature placement to succeed.
 
 #### Search Procedure
-The search begins at the position given by the [minimum vector](#search-volume) relative to the [feature origin](#). This position is updated one coordinate at a time, as determined by the [search axis](#search-axis). When the maximum for a coordinate is reached, the position is wrapped to the start of the next coordinate; if iterating over the search axis, the specified direction (`+` or `-`) is considered. At each position, the search conditions innate to the [target feature](#search-features) are checked. Once the number of successes found reaches the [required successes threshold](#search-specifications) (or once one such success is found if no threshold is provided), the target feature is placed at *every* such success. No features are placed prior to the threshold being reached.
+
+The search begins at the position given by the [minimum vector](#search-volume) relative to the [feature origin](#). This position is updated one coordinate at a time, as determined by the [search axis](#search-axis). When the maximum for a coordinate is reached, the position is wrapped to the start of the next coordinate; if iterating over the search axis, the specified direction (`+` or `-`) is considered. At each position, the search conditions innate to the [target feature](#search-features) are checked. Once the number of successes found reaches the [required successes threshold](#search-specifications) (or once one such success is found if no threshold is provided), the target feature is placed at _every_ such success. No features are placed prior to the threshold being reached.
 
 ### Rect Layouts
+
 ::: warning
 Rect layouts are currently bugged and should not be used. No information has been provided about how they will work. Presumably, rect layouts divide the surface area of a chunk into the provided rectangles given by `"area_dimensions"` and place their associated features based on the declared ratio of empty space.
 :::
@@ -1145,7 +1205,7 @@ Rect layouts are currently bugged and should not be used. No information has bee
 		},
 
 		"ratio_of_empty_space": 0.5,
-		"feature_areas":[
+		"feature_areas": [
 			{
 				"feature": "gardenpalooza:flower_patch",
 				"area_dimensions": [2, 4]
@@ -1160,6 +1220,7 @@ Rect layouts are currently bugged and should not be used. No information has bee
 ```
 
 ### Scan Surface Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -1176,9 +1237,10 @@ Rect layouts are currently bugged and should not be used. No information has bee
 
 Every block across the surface of a chunk can be covered by a feature using **scan surface features**. For this reason, it is strongly recommended to choose a feature that only occupies a column’s space.
 
-The **target feature** to be placed is given with the `"scan_surface_feature"` property. Placement position is the same as [the MoLang query `heightmap`](#), which means that water surfaces are used instead of their floors. It is therefore typically recommended to use [scatter features](#scatter-features) with a *y* expression utilizing the [`above_top_solid` query](#).
+The **target feature** to be placed is given with the `"scan_surface_feature"` property. Placement position is the same as [the MoLang query `heightmap`](#), which means that water surfaces are used instead of their floors. It is therefore typically recommended to use [scatter features](#scatter-features) with a _y_ expression utilizing the [`above_top_solid` query](#).
 
 ### Weighted Random Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -1207,11 +1269,13 @@ To understand how weights work, see [the associated section in Probabilities](#)
 :::
 
 ## Scene Features
+
 Scene features are a sort of combination of content features and proxy features. They are opinionated feature types designed around an aesthetic necessary for vanilla generation.
 
 Scene features only allow minimal customizations of their shapes to achieve their intended aesthetic. Like content features, though, their blocks are conveniently modifiable, and like proxy features, they can place their own sub-features.
 
 ### Geode Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -1255,6 +1319,7 @@ Scene features only allow minimal customizations of their shapes to achieve thei
 **Geode features** construct spherical structures comprised of multiple block layers; they allow placement of sub-features along walls of the interior.
 
 ### Beards and Shavers
+
 ::: warning
 Beards and shavers are currently bugged and should be avoided. In particular, the platform is poorly constructed, with the surface block usually generating on the incorrect layer and the shape being cut off awkwardly.
 :::
@@ -1285,6 +1350,7 @@ Beards and shavers are currently bugged and should be avoided. In particular, th
 **Beards and shavers** simultaneously provide a platform (beard) and a clearance (shaver) for a feature to generate.
 
 ### Vegetation Patch Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -1301,10 +1367,7 @@ Beards and shavers are currently bugged and should be avoided. In particular, th
 		"vertical_range": 5,
 
 		"ground_block": "minecraft:mycelium",
-		"replaceable_blocks": [
-			"minecraft:dirt",
-			"minecraft:grass"
-		],
+		"replaceable_blocks": ["minecraft:dirt", "minecraft:grass"],
 		"depth": 4,
 		"extra_deep_block_chance": 0.5,
 
@@ -1318,38 +1381,41 @@ Beards and shavers are currently bugged and should be avoided. In particular, th
 
 Vegetation patches fundamentally perform 4 operations:
 
-- Determine a lateral patch shape from a given radius
-- Search vertically from the [input position](#) of every block in the shape for a surface (ceiling or floor)
-- Place columns of blocks into the surface
-- Generate sub-features randomly within the created patch
+-   Determine a lateral patch shape from a given radius
+-   Search vertically from the [input position](#) of every block in the shape for a surface (ceiling or floor)
+-   Place columns of blocks into the surface
+-   Generate sub-features randomly within the created patch
 
 #### Patch Shape
+
 ```json
 "horizontal_radius": 3,
 "extra_edge_column_chance": 0.25
 ```
 
-Vegetation patches commence by constructing the patch’s lateral shape. This shape is centered on the *x* and *z* of the [input position](#). From here, the required `"horizontal_radius"` specifies how far away in all lateral directions the initial shape should extend. This shape doesn’t use [taxicab distance](#); instead, the corners are filled in, constructing a simple square. The size of this square is given by:
+Vegetation patches commence by constructing the patch’s lateral shape. This shape is centered on the _x_ and _z_ of the [input position](#). From here, the required `"horizontal_radius"` specifies how far away in all lateral directions the initial shape should extend. This shape doesn’t use [taxicab distance](#); instead, the corners are filled in, constructing a simple square. The size of this square is given by:
 
-*horizontal radius* * 2 + 1
+_horizontal radius_ \* 2 + 1
 
-Therefore, a horizontal radius of 4 will generate a square of side length 9, centered on the input *x* and *z*.
+Therefore, a horizontal radius of 4 will generate a square of side length 9, centered on the input _x_ and _z_.
 
 Patch shape can be mildly randomized using the optional `"extra_edge_column_chance"` property. This property accepts values between `0`, the default, and `1` inclusively, indicating the odds for any of the blocks along the outside of the perimeter to be included in the patch shape. These perimeter blocks do not include the outer perimeter corners. If the corners are ignored, setting this property to `1` is equivalent to increasing the horizontal radius by 1.
 
 #### Patch Search
+
 ```json
 "surface": "ceiling",
 "vertical_range": 8
 ```
 
-The vegetation patch then searches each column within the determined patch shape from the *y*-component of the [input position](#) vertically to find the appropriate surface, given with the optional `"surface"` property. Either `"floor"` (the default if unspecified) or `"ceiling"` may be provided. The surface search only functions against air; no other contrast of blocks may be used. The search itself, however, may begin from within any block.
+The vegetation patch then searches each column within the determined patch shape from the _y_-component of the [input position](#) vertically to find the appropriate surface, given with the optional `"surface"` property. Either `"floor"` (the default if unspecified) or `"ceiling"` may be provided. The surface search only functions against air; no other contrast of blocks may be used. The search itself, however, may begin from within any block.
 
-The distance searched is given with `"vertical_range"`, which is required and has no tangible limit. The search occurs bidirectionally. As an example, if starting from a *y* of 70 and using a vertical range of `5`, surfaces between 65 and 75 inclusively will succeed.
+The distance searched is given with `"vertical_range"`, which is required and has no tangible limit. The search occurs bidirectionally. As an example, if starting from a _y_ of 70 and using a vertical range of `5`, surfaces between 65 and 75 inclusively will succeed.
 
 Only the first matched surface within range in a column will be used. When targeting floor surfaces, the first match is the highest surface. If targeting ceilings, the first match is the lowest surface.
 
 #### Patch Column Placement
+
 ```json
 "ground_block": "arabia:lush_sand",
 "waterlogged": true,
@@ -1376,6 +1442,7 @@ A whitelist of blocks must be provided via the `"replaceable_blocks"` property. 
 Lastly, the optional boolean `"waterlogged"` property attempts to replace the topmost block in a patch column with water when set to true and `"surface"` is `"floor"`. Water will therefore be exposed to air along the surface. Water will not be substituted if one of its lateral faces is attached to air; this prevents water from spilling out. If `"waterlogged"` is omitted, water generation is disabled by default. When `"depth"` is `0` and waterlogging is enabled, blocks not whitelisted may be replaced with water anyway. For all other depth values, only whitelisted blocks will be replaced with water.
 
 #### Vegetation Placement
+
 ```json
 "vegetation_feature": "tension:shiitake_mushroom",
 "vegetation_chance": 0.125
@@ -1384,7 +1451,7 @@ Lastly, the optional boolean `"waterlogged"` property attempts to replace the to
 Finally, vegetation patches take a vegetation feature and corresponding generation chance to place sub-features at random locations on the surface of the patch. The sub-feature is given with the required `"vegetation_feature"` property. Every surface block generated has a chance to support this vegetation feature.
 
 ::: warning
-Vegetation features multiple blocks in height that are attached to the surface of ceilings will still generate *upward* naturally. They must be constructed or proxied in such a way to generate downward from the ceiling.
+Vegetation features multiple blocks in height that are attached to the surface of ceilings will still generate _upward_ naturally. They must be constructed or proxied in such a way to generate downward from the ceiling.
 :::
 
 The chance that any block surface is selected as an input position for the sub-feature is given with the optional `"vegetation_chance"` float property, which defaults to `0`. Like the other chances in vegetation patch features, it ranges from 0 to 1 inclusively, where `0` will generate no sub-features and `1` will attempt to generate one for each block surface. Be wary of vegetation features that span more than a single column; collisions may occur, clumping individual features into a single mass.
@@ -1396,6 +1463,7 @@ If waterlogging is enabled on a ceiling-targeting vegetation patch feature, no v
 :::
 
 ## Carver Features
+
 Carver features are special feature types for modifying vanilla cave generation. Little can currently be customized using carvers. Carvers only include the classic spaghetti caves and not ravines or structures.
 
 All carver features require being placed in the [pregeneration pass](#). Carver features can therefore not be combined with any other features by any means, even by proxies.
@@ -1406,13 +1474,14 @@ Carvers work by culling blocks around predetermined paths; these paths are uncha
 Although listed in the features schema as optional, `"width_modifier"` should always be provided; errors will be thrown relentlessly, and entire chunks will appear corrupted. Furthermore, large values for the width modifier (greater than approximately `16`) shouldn’t be used: world loading slows to a crawl, and chunks may get culled in entirety.
 :::
 
-Carvers don’t truly *cull* blocks per se; instead they replace existing blocks (such as from biome surface builders or earlier-placed carvers) with a **fill block**. The fill block can be provided with the optional `"fill_with"` property, whose default depends on the carver type; this property, too, is usable in all carver feature types.
+Carvers don’t truly _cull_ blocks per se; instead they replace existing blocks (such as from biome surface builders or earlier-placed carvers) with a **fill block**. The fill block can be provided with the optional `"fill_with"` property, whose default depends on the carver type; this property, too, is usable in all carver feature types.
 
 ::: warning
 The block intersection set for carvers currently cannot be customized. Only vanilla blocks specific to each carver type will be replaced; custom blocks cannot be stripped to form caves.
 :::
 
 ### Cave Carver Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -1429,9 +1498,10 @@ The block intersection set for carvers currently cannot be customized. Only vani
 
 The classic Overworld caving system is controlled using **cave carver features**. These carvers only work when used in the Overworld.
 
-Overworld caves naturally extend from just above the bedrock layer at *y*-3 to *y*s of indeterminate values over 100. The fill block for cave carver features defaults to air if omitted. Cave carver features strip typical Overworld surface and foundation blocks, such as stone variants, dirt variants, sand variants, and sandstone. However, water is not culled, and water in oceans and rivers is aggressively avoided.
+Overworld caves naturally extend from just above the bedrock layer at _y_-3 to *y*s of indeterminate values over 100. The fill block for cave carver features defaults to air if omitted. Cave carver features strip typical Overworld surface and foundation blocks, such as stone variants, dirt variants, sand variants, and sandstone. However, water is not culled, and water in oceans and rivers is aggressively avoided.
 
 ### Underwater Cave Carver Features
+
 ```json
 {
 	"format_version": "1.13.0",
@@ -1452,13 +1522,14 @@ Overworld caves naturally extend from just above the bedrock layer at *y*-3 to *
 This property currently seems non-functional. Whether acting on a biome whose foundation was air or intersecting an earlier-placed [cave carver feature](#cave-carver-feature) that used air, the intersecting air was never successfully replaced during testing.
 :::
 
-Underwater carvers replace the same natural vanilla blocks as [cave carver features](#cave-carver-features) with one addition: water. This means spiraling masses can be constructed from the fill block in underwater settings. Underwater carvers can begin at a height of 3; they won’t ever operate above *y*-63 (the Overworld sea level) even if they have the opportunity to do so.
+Underwater carvers replace the same natural vanilla blocks as [cave carver features](#cave-carver-features) with one addition: water. This means spiraling masses can be constructed from the fill block in underwater settings. Underwater carvers can begin at a height of 3; they won’t ever operate above _y_-63 (the Overworld sea level) even if they have the opportunity to do so.
 
 ::: warning
 Underwater cave carvers won’t function in custom biomes — even if that biome uses vanilla blocks.
 :::
 
 ### Hell Cave Carver Features
+
 ```json
 {
 	"format_version": "1.13.0",

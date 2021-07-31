@@ -1,5 +1,8 @@
 ---
-title: Render Controllers
+title: Intro to Entity Visuals
+nav_order: 0
+tags:
+    - guide
 ---
 
 <Label color="green">Beginner</Label>
