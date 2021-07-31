@@ -1,1 +1,9 @@
-Place holder just for a moment
+---
+title: Advanced Manifest
+nav_order: 100
+prefix: 'd.'
+---
+
+::: tip
+This is an appendix page. You can start the guide from the beginning [here](/guide/index).
+:::
