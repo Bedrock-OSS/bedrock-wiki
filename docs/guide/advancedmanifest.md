@@ -1,14 +1,16 @@
 ---
 title: Advanced Manifest
 nav_order: 100
-prefix: 'd..'
+prefix: 'd.'
 ---
 
 ::: tip
 This is an appendix page. You can start the guide from the beginning [here](/guide/index).
 :::
 
-JSON is a simple "language" that is used for lots of things in Computer Science... including making Minecraft Bedrock Addons! If you have never heard of JSON before, you are encouraged to read through [this tutorial](https://www.digitalocean.com/community/tutorials/an-introduction-to-json). It will teach you everything you need to know about writing valid JSON files.
+This page is desgined to go into more detail about the manifest.json file, Here we will go into more detail about how the UUIDs work, and how to add them. We will explain the use of dependencies, the different format versions and how to include meta-data.
+
+Mention that manifest has different format between RP, BP, and Skins.
 
 ## Valid JSON
 
