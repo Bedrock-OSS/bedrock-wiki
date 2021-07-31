@@ -10,7 +10,7 @@ This is an appendix page. You can start the guide from the beginning [here](/gui
 
 This page is desgined to go into more detail about the manifest.json file, Here we will go into more detail about how the UUIDs work, and how to add them. We will explain the use of dependencies, the different format versions and how to include meta-data.
 
-Mention that manifest has different format between RP, BP, and Skins.
+We will also go over the version differences between the packs.
 
 ## Valid JSON
 
