@@ -6,7 +6,7 @@ tags:
 ---
 
 :::warning
-This page is currently under construction. Visit the [old item troubleshoot page](/old-troubleshooting-items)
+This page is currently under construction. Visit the [old item troubleshoot page](./old-troubleshooting-items)
 :::
 
 ### Your Item Has a Problem
