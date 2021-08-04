@@ -5,6 +5,10 @@ tags:
     - help
 ---
 
+:::warning
+This page is currently under construction. Visit the [old item troubleshoot page](/old-troubleshooting-items)
+:::
+
 ### Your Item Has a Problem
 
 _I followed a tutorial or tried to make my own item and something's wrong!_ No worries, it's easy to make mistakes when dealing with items. This page will help you to debug common issues.
