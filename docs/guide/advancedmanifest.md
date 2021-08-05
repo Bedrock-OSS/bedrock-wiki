@@ -14,7 +14,7 @@ We will also go over the version differences between Behaviour packs, Resource p
 
 ## UUIDs
 
-UUID is an abbreviation for Universal Unique Identifier, there are 5 UUID versions plus one common unofficial version, A UUID is 36 character string containing numbers, letters and dashes. 
+UUID is an abbreviation for Universal Unique Identifier, there are 5 UUID versions plus one common unofficial version, A UUID is a 36 character string containing numbers, letters and dashes. 
 
 Minecraft uses Version 4: Variant 1, which is completely random. This is what creates your packs unique identiy in Minecraft.
 
