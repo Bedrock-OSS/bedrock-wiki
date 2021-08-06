@@ -265,8 +265,9 @@ Lastly, create an item that will open the dialog when right-clicked/interacted w
       "open_menu":{
         "run_command":{
           "command":[
-            "dialogue open @e[type=npc,c=1] @p main_teleport_menu"
-          ]
+            "dialogue open @e[type=npc,c=1] @s main_teleport_menu"
+          ],
+          "target": "player"
         }
       }
     }
