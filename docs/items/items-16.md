@@ -54,6 +54,8 @@ This document covers experimental features, for 1.16 format version items. If yo
 
 #### swing
 
+Plays the item swinging animation.
+
 ```json
 {
 	"example:swing_event": {
@@ -64,7 +66,7 @@ This document covers experimental features, for 1.16 format version items. If yo
 
 #### shoot
 
-Shoots a projectile when triggered
+Shoots a projectile when triggered.
 
 ```json
 {
@@ -80,11 +82,13 @@ Shoots a projectile when triggered
 
 #### damage
 
+Applies damage to a specified target.
+
 ```json
 {
 	"example:damage_event": {
 		"damage": {
-			"type": "magic", // Can alsp be any entity-accepted damage source
+			"type": "magic", // Can also be any entity-accepted damage source
 			"amount": 4
 		}
 	}
@@ -93,7 +97,7 @@ Shoots a projectile when triggered
 
 #### decrement_stack
 
-Decrements the stack
+Decrements the stack by one.
 
 ```json
 {
@@ -105,7 +109,7 @@ Decrements the stack
 
 #### add_mob_effect
 
-Adds a mob effect when triggered
+Adds a mob effect when triggered.
 
 ```json
 {
@@ -122,7 +126,7 @@ Adds a mob effect when triggered
 
 #### remove_mob_effect
 
-Removes a mob effect when triggered
+Removes a mob effect when triggered.
 
 ```json
 {
@@ -137,7 +141,7 @@ Removes a mob effect when triggered
 
 #### transform_item
 
-Transforms the item into the item specified
+Transforms the item into the item specified.
 
 ```json
 {
@@ -151,7 +155,7 @@ Transforms the item into the item specified
 
 #### teleport
 
-Teleports the target to a random location in the specified range
+Teleports the target to a random location in the specified range.
 
 ```json
 {
@@ -166,7 +170,7 @@ Teleports the target to a random location in the specified range
 
 #### sequence
 
-Used to sequence event functions
+Used to sequence event functions.
 
 ```json
 {
@@ -192,7 +196,7 @@ Used to sequence event functions
 
 #### randomize
 
-Used to randomize event functions
+Used to randomize event functions.
 
 ```json
 {
@@ -220,7 +224,7 @@ Used to randomize event functions
 
 #### run_command
 
-Used to execute commands
+Used to execute commands.
 
 ```json
 {
