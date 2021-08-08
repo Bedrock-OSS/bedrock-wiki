@@ -61,6 +61,8 @@ Animation controller are defined in their own files, and must be "attached" to e
 
 Here is a sample `description`, which shows how the AC can first be defined in `animations`, and then played in `scripts/animate`.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "description": {
 	"identifier": "wiki:helicopter",
