@@ -50,6 +50,12 @@ It's important to remember that `runtime_identifier` will only parse the hard-co
 
 ---
 
+### minecraft:egg
+
+-   When spawning such entity using its spawn egg, it will spawn at player's position rather than where you place it
+
+---
+
 ### minecraft:ender_crystal
 
 -   The entity will stick to the center of the block it's spawned in.
