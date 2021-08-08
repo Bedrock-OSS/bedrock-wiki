@@ -20,15 +20,17 @@ title: GameTest Q&A 2021/08/06
 
 -   **A**: We want to default to keeping the scripting APIs more limited and add functionality over time. File and network APIs would require privileges and likely consent by the game owner, so those probably won't be in the default set of APIs, but we may add those capabilities down the road (e.g., potentially for server owners)
 
-### So such interface will only be implemented on part of all available platforms?
+-   **Q**: So such interface will only be implemented on part of all available platforms?
 
--   We strive to implement all APIs across all platforms. The only exception would be if we introduce some editor specific APIs that may be desktop only.
+-   **A:** We strive to implement all APIs across all platforms. The only exception would be if we introduce some editor specific APIs that may be desktop only.
 
-## when are we able to registrate custom slash commands?
+## Slash Commands
 
--   While we don't have a concrete timeline, this is high up in our list of things to build.
+-   **Q:** when are we able to registrate custom slash commands?
 
--   It was pretty clear that we need this when people started making their own !commands
+-   **A:** While we don't have a concrete timeline, this is high up in our list of things to build.
+
+-   **A:** It was pretty clear that we need this when people started making their own !commands
 
 ## Testing Vanilla
 
@@ -38,11 +40,13 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** Ideally, over time, the community would also help us by using GameTest to report bugs with vanilla and we could incorporate those tests (once we fix the issue) and make sure we don't break that stuff again :slight_smile:
 
-## Could we get a timeline of what events are planned for the API next?
+## Timeline
 
--   Our team is still deciding which events to add next so there isn't much of a timeline we can share. Which events would you like to see added?
+-   **Q:** Could we get a timeline of what events are planned for the API next?
 
--   definitely agree with block breaking/placing being a high priority
+-   **A:** Our team is still deciding which events to add next so there isn't much of a timeline we can share. Which events would you like to see added?
+
+-   **A:** Definitely agree with block breaking/placing being a high priority
 
 ## Politics of GameTests
 
@@ -60,17 +64,21 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** Yes! we plan to support all our platforms, a couple of platforms didn't have all the API's our JS Engine Required, aligned_alloc was one. We are actively working on enabling those platforms.
 
-# Will there be any support for gametests to support different languages?
+## Additional Languages
 
--   We've implemented the binding layer generically enough to fit into other programming/scripting languages. Internally we've done some fun things like play around with Lua and even something like Blockly. I don't think we can commit to adding any official support for other languages at the moment though :slight_smile:
+-   **Q:** Will there be any support for gametests to support different languages?
 
-### Have you considered Kotlin
+-   **A:** We've implemented the binding layer generically enough to fit into other programming/scripting languages. Internally we've done some fun things like play around with Lua and even something like Blockly. I don't think we can commit to adding any official support for other languages at the moment though :slight_smile:
 
--   I haven't looking into Kotlin much (all of our Android platform is still written in Java :slight_smile: ) but that sounds sweet! I'll take a peak some time.
+-   **Q:** Have you considered Kotlin
 
-## Seeing there is also an event system in data-driven. How do you position the relationship between the event system in the gametest framework and the event system in data-driven? Will an interface between the two be provided in the future?
+-   **A:** I haven't looking into Kotlin much (all of our Android platform is still written in Java :slight_smile: ) but that sounds sweet! I'll take a peak some time.
 
--   We want the systems to play well together. If you're familiar with building with data driving , we'd like you to be able to sprinkle in script in a way that makes sense. We're still working out exactly what that looks like.
+## Event System
+
+-   **Q:** Seeing there is also an event system in data-driven. How do you position the relationship between the event system in the gametest framework and the event system in data-driven? Will an interface between the two be provided in the future?
+
+-   **A:** We want the systems to play well together. If you're familiar with building with data driving , we'd like you to be able to sprinkle in script in a way that makes sense. We're still working out exactly what that looks like.
 
 ## Anything in our NOT list?
 
@@ -94,9 +102,11 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** Yes we have plans to add key value pair storage maybe Json storage. One would be with a Javascript Api for accessing tags and scoreboards. but going further would be to allow for generic read write storage (still not direct File system access). There are some security issues we'd want to work through around ensuring storage is sand boxed per pack.
 
-## Plans to support GameTests on custom dimensions, if that ever happened?
+## Custom Dimensions
 
--   While designing the GameTest APIs we've been keeping custom content in mind. That's actually why Commands.run takes the dimension as a string, rather than a hard-coded dimension variable for example. So we're definitely leaving open the possibility for integration with custom dimensions and other custom content down the road.
+-   **Q:** Plans to support GameTests on custom dimensions, if that ever happened?
+
+-   **A:** While designing the GameTest APIs we've been keeping custom content in mind. That's actually why Commands.run takes the dimension as a string, rather than a hard-coded dimension variable for example. So we're definitely leaving open the possibility for integration with custom dimensions and other custom content down the road.
 
 ## Old Scripting API
 
@@ -125,19 +135,23 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** One reason GameTest might not work is that the world needs to have the experiment enabled, which is not easy to do via dedicated server. The easiest way to do it today is use a Minecraft client to generate the world w/ the GameTest experiment turned on, and then transfer the world over to dedicated server.
 
-## As someone who is just starting to learn JavaScript, is there anything you can recommend that would help new coders to learn gametests? Talking more about in the context of gametests, not JS in general.
+## Learning JS
 
--   Awesome! JavaScript is a great way to start programming :slight_smile:
+-   **Q:** As someone who is just starting to learn JavaScript, is there anything you can recommend that would help new coders to learn gametests? Talking more about in the context of gametests, not JS in general.
 
--   We have a super small article here on building your first game test: https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestbuildyourfirstgametest
+-   **A:** Awesome! JavaScript is a great way to start programming :slight_smile:
 
--   Hopefully we'll have more content soon!
+-   **A:** We have a super small article here on building your first game test: https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestbuildyourfirstgametest
 
--   NOTE: If you want to contribute to these guides, we'd love that!
+-   **A:** Hopefully we'll have more content soon!
 
-## Are there any plans to release beta builds of BDS to the public to help us better debug and diagnose issues in Gametests?
+-   **Q:** NOTE: If you want to contribute to these guides, we'd love that!
 
--   Thanks for the suggestion. I'd like to do that. I'll follow up with our release management team to see if it's possible.
+## Beta BDS
+
+-   **Q:** Are there any plans to release beta builds of BDS to the public to help us better debug and diagnose issues in Gametests?
+
+-   **A:** Thanks for the suggestion. I'd like to do that. I'll follow up with our release management team to see if it's possible.
 
 ## NPM
 
@@ -147,19 +161,23 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** Also!! our official TypeScript bindings are coming soon :slight_smile: We've shared some early versions on here but we are getting much closer to publishing them
 
-### Will there be a package manager for the gametest like npm?
+-   **Q:** Will there be a package manager for the gametest like npm?
 
--   We've thought about it, but it's a lot of work. We'll keep thinking about it :slight_smile: I think as more and more people start using the scripting stuff we'll see some natural dev. patterns emerge and we'll want to lean into those
+-   **A:** We've thought about it, but it's a lot of work. We'll keep thinking about it :slight_smile: I think as more and more people start using the scripting stuff we'll see some natural dev. patterns emerge and we'll want to lean into those
 
-## What exactly is the ultimate goal for GameTests? Will it remain as a testing tool, or will it extend beyond, perhaps, to add totally new content?
+## Ultimate Goal of GameTests
 
--   For GameTest, we're looking to make the testing of content and validation much easier. We want it to be simple for folks to build tests around their content, their contraptions, and their scripts. Part of that is a rich script API for mocking and testing assertions, which we've built out with the GameTest modules. We will be adding some new APIs as well to GameTest including some really cool methods for simulating players in the environment. We are also trying to figure out ways to make it even easier to create those JavaScript based tests.
+-   **Q:** What exactly is the ultimate goal for GameTests? Will it remain as a testing tool, or will it extend beyond, perhaps, to add totally new content?
 
--   Of course, a happy byproduct of GameTest is the opportunity to build out more of a generalized server-based scripting API which helps us explore how it could be used in scenarios down the road, as well.
+-   **A:** For GameTest, we're looking to make the testing of content and validation much easier. We want it to be simple for folks to build tests around their content, their contraptions, and their scripts. Part of that is a rich script API for mocking and testing assertions, which we've built out with the GameTest modules. We will be adding some new APIs as well to GameTest including some really cool methods for simulating players in the environment. We are also trying to figure out ways to make it even easier to create those JavaScript based tests.
 
-## you've indicated in the past that there is hope all commands will become API's. If an experimental feature arrives, will it get api support and if so will that be in an experimental module?
+-   **A:** Of course, a happy byproduct of GameTest is the opportunity to build out more of a generalized server-based scripting API which helps us explore how it could be used in scenarios down the road, as well.
 
--   We definitely want to have APIs for experimental features. We haven't decided exactly how we'll do that. Maybe a separate module, mojang-minecraft-experimental or something like that? This would mirror how C++ handles not yet standardized types in experimental namespaces.
+## Experimental Modules
+
+-   Q you've indicated in the past that there is hope all commands will become API's. If an experimental feature arrives, will it get api support and if so will that be in an experimental module?
+
+-   **A:** We definitely want to have APIs for experimental features. We haven't decided exactly how we'll do that. Maybe a separate module, mojang-minecraft-experimental or something like that? This would mirror how C++ handles not yet standardized types in experimental namespaces.
 
 ## Working on GameTests API
 
@@ -173,100 +191,129 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** In a Game Jam I actually did get Python 2.7 working in a very hacked manner, but we don't have a product plan for it at the moment.
 
-## Are some of the current methods going to also be available to the player? Such as the item stack method
+## API Coverage
 
--   You can see the latest list of APIs here: https://docs.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/player
+-   **Q:** Are some of the current methods going to also be available to the player? Such as the item stack method
 
--   Note: The API surface is still a bit small, we are slowing adding more and more as we go!
+-   **A:** You can see the latest list of APIs here: https://docs.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/player
 
-## Will GameTests replace command blocks?
+-   **A:** Note: The API surface is still a bit small, we are slowing adding more and more as we go!
 
--   I don't see the scripting stuff replacing command blocks, but I do see it shifting a lot of the "heavy logic" to script. Ideally they'd work closely with each other (think something like registering a custom command in script and having a command block execute it)
+## GameTests replacing CommandBlocks
 
-## Are there any plans to make the gametest API more accessible like the education edition code builder?
+-   **Q:** Will GameTests replace command blocks?
 
--   We've started looking into something like Blockly (visual programming) for GameTest. Nothing concrete to report right now, but I think it'd be super cool!
+-   **A:** I don't see the scripting stuff replacing command blocks, but I do see it shifting a lot of the "heavy logic" to script. Ideally they'd work closely with each other (think something like registering a custom command in script and having a command block execute it)
 
-## What was the funniest bug that has happened while working on gametest?
+## EDU Edition Code Builder
 
--   A funny one that happened a while back was I was testing the taming API and wanted to see what would happen if I spawned and tamed 100 or so wolves... https://imgur.com/a/NIF7D4x
+-   **Q:** Are there any plans to make the gametest API more accessible like the education edition code builder?
 
-## How much of an impact will GameTests have on the marketplace?
+-   **A:** We've started looking into something like Blockly (visual programming) for GameTest. Nothing concrete to report right now, but I think it'd be super cool!
 
--   Right now, GameTest is an experimental feature so it can't be included with marketplace content. We do think GameTest would be great "on the side" for helping to validate content before it goes into the marketplace.
+## Funniest Bug
 
-## What is the future of game test on realms? Is it going to remain on realms or be removed like the old scripting API?
+-   **Q:** What was the funniest bug that has happened while working on gametest?
 
--   It is our intention to ship Gametest (and subsequent gameplay scripting) on Realms. Therefore we would not expect to subsequently deprecate it.
+-   **A:** A funny one that happened a while back was I was testing the taming API and wanted to see what would happen if I spawned and tamed 100 or so wolves... https://imgur.com/a/NIF7D4x
 
-# Seeing how the community's utilization of gametests has mostly been to include them as part of a final product (like what the scripting engine was designed for) as oppose to strictly using them during production to catch bugs, do you see gametests being repurposed to serve more general applications and grow to become considered a supported feature of add-ons?
+## Marketplace
 
--   We're focused on GameTest for content testing right now. Ahead of supporting the scripting APIs for general gameplay purposes, we want to make sure we do more testing and add more infrastructure behind the scenes to determine when and how those scripting APIs can come out of experimental so they can be used in those roles.
+-   **Q:** How much of an impact will GameTests have on the marketplace?
 
-## Can you test MoLang through the GameTest API?
+-   **A:** Right now, GameTest is an experimental feature so it can't be included with marketplace content. We do think GameTest would be great "on the side" for helping to validate content before it goes into the marketplace.
 
--   You can test entity behavior in a variety of ways. And of course entities can have Molang in their animation controllers and conditions for entity state transitions.
+## Realms
 
--   Do you have something specific in mind that you'd like to cover?
+-   **Q:** What is the future of game test on realms? Is it going to remain on realms or be removed like the old scripting API?
 
--   Should have mentioned that you can use GameTest on custom entities by having your custom entity's behavior pack in the stack while you're running game tests.
+-   **A:** It is our intention to ship Gametest (and subsequent gameplay scripting) on Realms. Therefore we would not expect to subsequently deprecate it.
 
-## Are new Gametest Features planed/going to be added based on what Mojang needs for testing purposes or community feedback/request? Will this change?
+## Is GameTests General Purpose?
 
--   Definitely a mix of both! We have been adding some new GameTest APIs to test some Vanilla behaviors, but we also want to know which APIs you all are interested in.
+-   **Q:** Seeing how the community's utilization of gametests has mostly been to include them as part of a final product (like what the scripting engine was designed for) as oppose to strictly using them during production to catch bugs, do you see gametests being repurposed to serve more general applications and grow to become considered a supported feature of add-ons?
 
--   A good example of this is a custom commands API. It's high on our list to add because the community has been asking for it :smile:
+-   **A:** We're focused on GameTest for content testing right now. Ahead of supporting the scripting APIs for general gameplay purposes, we want to make sure we do more testing and add more infrastructure behind the scenes to determine when and how those scripting APIs can come out of experimental so they can be used in those roles.
 
--   Just a couple of other features coming to make gametests more powerful and easier to create: simulated player APIs, and script debugging in Visual Studio Code
+## Molang
 
-## How compatible will it be with other platforms/generally efficent?
+-   **Q:** Can you test MoLang through the GameTest API?
 
--   We expect to enable it on all platforms. Re: performance, we do have to work across both platforms that support Just in Time compilation and platforms that don't. So that is a big area of known analysis and performance tuning for us.
+-   **A:** You can test entity behavior in a variety of ways. And of course entities can have Molang in their animation controllers and conditions for entity state transitions.
 
-### By generally efficent i mean how "close to the metal" the api is
+-   **A:** Do you have something specific in mind that you'd like to cover?
 
--   Thanks for the clarification on efficient: Our API will attempt to "play well" with data driven systems to start out. And therefore operate at a Minecraft entity, item, block, chunk, etc. level of abstraction. If you're familiar with Bukkit we're attempting to have a similar level of abstraction to that (plus client side additions also within our ambitions).
+-   **A:** Should have mentioned that you can use GameTest on custom entities by having your custom entity's behavior pack in the stack while you're running game tests.
 
-## what was the reason for the name GameTest?
+## Community Feedback
 
--   We were building off work that Java had done. They built an initial GameTest framework that they use in their testing process.
+-   **Q:** Are new Gametest Features planed/going to be added based on what Mojang needs for testing purposes or community feedback/request? Will this change?
 
-### Sort of a follow up on this, is the plan to refer to the whole system as gametests or something else?
+-   **A:** Definitely a mix of both! We have been adding some new GameTest APIs to test some Vanilla behaviors, but we also want to know which APIs you all are interested in.
 
--   I don't think it would make sense to refer to the whole JS API set as GameTest if we extend beyond testing scenarios. You can see some of this thinking surface in the overall API naming.
+-   **A:** A good example of this is a custom commands API. It's high on our list to add because the community has been asking for it :smile:
 
-## What was your guys intention with the gametest or things that you thought of while coming up about it's uses
+-   **A:** Just a couple of other features coming to make gametests more powerful and easier to create: simulated player APIs, and script debugging in Visual Studio Code
 
--   Basically: Test the game! Allowing tests to be added to the game without needing to re-compile is a great tool. We can work faster on tests and community members can write tests when they report bugs.
+## Efficiency of Platforms
 
--   GameTest is also a great "proving ground" for us in terms of getting script to run in Minecraft.
+-   **Q:** How compatible will it be with other platforms/generally efficent?
+
+-   **A:** We expect to enable it on all platforms. Re: performance, we do have to work across both platforms that support Just in Time compilation and platforms that don't. So that is a big area of known analysis and performance tuning for us.
+
+-   **Q:** By generally efficent i mean how "close to the metal" the api is
+
+-   **A:** Thanks for the clarification on efficient: Our API will attempt to "play well" with data driven systems to start out. And therefore operate at a Minecraft entity, item, block, chunk, etc. level of abstraction. If you're familiar with Bukkit we're attempting to have a similar level of abstraction to that (plus client side additions also within our ambitions).
+
+## Why the name?
+
+-   **Q:** what was the reason for the name GameTest?
+
+-   **A:** We were building off work that Java had done. They built an initial GameTest framework that they use in their testing process.
+
+-   **A:** Sort of a follow up on this, is the plan to refer to the whole system as gametests or something else?
+
+-   **A:** I don't think it would make sense to refer to the whole JS API set as GameTest if we extend beyond testing scenarios. You can see some of this thinking surface in the overall API naming.
+
+## Why Gametests?
+
+-   **Q:** What was your guys intention with the gametest or things that you thought of while coming up about it's uses
+
+-   **A:** Basically: Test the game! Allowing tests to be added to the game without needing to re-compile is a great tool. We can work faster on tests and community members can write tests when they report bugs.
+
+-   **A:** GameTest is also a great "proving ground" for us in terms of getting script to run in Minecraft.
 
 ## What are the limits of gametest?
 
--   Only your imagination!
+-   **Q:** What are the limits of gametest?
+-   **A:** Only your imagination!
 
--   Seriously though, we have some limits: structures are limited to 64x64x64. We presently only run in the overworld dimension, but we'd like to broaden that.
+-   **A:** Seriously though, we have some limits: structures are limited to 64x64x64. We presently only run in the overworld dimension, but we'd like to broaden that.
 
--   We don't support interactions with player right now but that's deep in the works.
+-   **A:** We don't support interactions with player right now but that's deep in the works.
 
--   Gametest does work on mobile. And we're working on the only two platforms that it doesn't presently work on: Switch and PlayStation.
+-   **A:** Gametest does work on mobile. And we're working on the only two platforms that it doesn't presently work on: Switch and PlayStation.
 
-### how many for loops will i be able to nest before crashing the game?
+-   **Q:** how many for loops will i be able to nest before crashing the game?
 
--   Actually, that's a good question. Right now if you while (true) you will hang the game. But we prototyped and plan to build a "watchdog" that will be able to detect and stop this case.
+-   **A:** Actually, that's a good question. Right now if you while (true) you will hang the game. But we prototyped and plan to build a "watchdog" that will be able to detect and stop this case.
 
--   Our watchdog prototype did more than that. It was also able to monitor script object count and memory in addition to cycles.
+-   **A:** Our watchdog prototype did more than that. It was also able to monitor script object count and memory in addition to cycles.
     (and worked across language runtimes, so that's cool)
 
-## Will there ever be any easy way to re-load the gametest api files from within the game similar to the /reload command used for functions? The ability to reload quickly really makes debugging and just working on things in general much easier and more enjoyable.
+## Hot Reloading
 
--   speaking as someone who has written a bunch of gametest JS, definitely on our mind and roadmap to have an easier way to reload JS
+-   **Q:** Will there ever be any easy way to re-load the gametest api files from within the game similar to the /reload command used for functions? The ability to reload quickly really makes debugging and just working on things in general much easier and more enjoyable.
 
-## The documentation of gametests has been one of the things that's made it difficult for me to get into. Are there plans to make the documentation more accessible to allow people to more easily understand how to use this framework from a ground up perspective?
+-   **A:** speaking as someone who has written a bunch of gametest JS, definitely on our mind and roadmap to have an easier way to reload JS
 
--   We recently released a new creator portal which includes articles on how to get started with GameTest. https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted
+## Documentation
 
--   The API docs are fairly new so we have a long way to go in terms of providing detailed documentation and samples. The docs are hosted on GitHub so we're welcome to pull requests if people from the community wish to contribute. https://github.com/MicrosoftDocs/minecraft-creator/tree/main/creator/ScriptAPI
+-   **Q:** The documentation of gametests has been one of the things that's made it difficult for me to get into. Are there plans to make the documentation more accessible to allow people to more easily understand how to use this framework from a ground up perspective?
+
+-   **A:** We recently released a new creator portal which includes articles on how to get started with GameTest. https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted
+
+-   **A:** The API docs are fairly new so we have a long way to go in terms of providing detailed documentation and samples. The docs are hosted on GitHub so we're welcome to pull requests if people from the community wish to contribute. https://github.com/MicrosoftDocs/minecraft-creator/tree/main/creator/ScriptAPI
 
 ## Hummingbird UI
 
@@ -278,19 +325,25 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** We don't expect to run in the same sandbox as GameFace JS. Also, right now we're focused server first and GameFace is only running on the client.
 
-## will gametest work with external scripts? so they could communicate with scripts that are run in another directory
+## External Scripts
 
--   We do want to provide a way for scripts to have dependencies on other scripts - e.g., maybe a really good script for doing testing, or for doing terrain gen -- but that'd probably be through the behavior pack dependency system. I don't think we've have a way to load JS from arbitrary locations.
+-   **Q:** will gametest work with external scripts? so they could communicate with scripts that are run in another directory
 
--   Yeah, making external scripts work across all platforms would be challenging. And potentially a security challenge as well.
+-   **A:** We do want to provide a way for scripts to have dependencies on other scripts - e.g., maybe a really good script for doing testing, or for doing terrain gen -- but that'd probably be through the behavior pack dependency system. I don't think we've have a way to load JS from arbitrary locations.
 
-## Will gametests be available for marketplace content? If yes, is there an approximate date?
+-   **A:** Yeah, making external scripts work across all platforms would be challenging. And potentially a security challenge as well.
 
--   Currently our focus is on testing scenarios. While we have lots of future thoughts and plans, we don't want to get folks making plans or counting on anything we can't promise yet.
+## Marketplace
 
-## will gametest be able to connect discord to mc?
+-   Q:Will gametests be available for marketplace content? If yes, is there an approximate date?
 
--   not in the first versions, probably, no :slight_smile:
+-   **A:** Currently our focus is on testing scenarios. While we have lots of future thoughts and plans, we don't want to get folks making plans or counting on anything we can't promise yet.
+
+## Discord
+
+-   **Q:** will gametest be able to connect discord to mc?
+
+-   **A:** not in the first versions, probably, no :slight_smile:
 
 ## Java Parity
 
