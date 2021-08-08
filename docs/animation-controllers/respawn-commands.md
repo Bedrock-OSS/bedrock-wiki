@@ -10,6 +10,8 @@ This animation controller can be used to run commands, such as re-adding potion 
 
 Simply add the animation controller to the `player.json`, and
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.10.0",

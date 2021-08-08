@@ -19,6 +19,8 @@ In short, animation controllers allow us to trigger events from behavior packs.
 
 Here is an example animation controller:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.10.0",
@@ -55,6 +57,8 @@ If you need to stop this from happening, you need to add additional queries, suc
 
 To add this animation controller to our entity, we can use the following code in the entity definition description:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "description": {
     "identifier": "sirlich:entity_commands",
@@ -78,6 +82,8 @@ Animation transitions are created using queries. You can [read about queries her
 I personally like using [skin_id](https://docs.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entityproperties/minecraftproperty_skin_id).
 
 We can update our animation controller to trigger based on `skin_id`:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -134,6 +140,8 @@ Back in our entity file, we can set the `skin_id` using the `skin_id` component.
 
 The `skin_id` component looks like this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:skin_id": {
     "value": 1
@@ -141,6 +149,8 @@ The `skin_id` component looks like this:
 ```
 
 We can add component groups that contains skin_ids:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "component_groups": {
@@ -165,6 +175,8 @@ We can add component groups that contains skin_ids:
 ## Adding Events
 
 Now lets create events so we can easily add these groups:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "events": {
@@ -207,6 +219,8 @@ There are loads of ways to trigger events in Minecraft. Lets look at two specifi
 
 This component will spawn zombies whenever you click on him.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:interact": {
     "interactions": [{
@@ -228,6 +242,8 @@ This component will spawn zombies whenever you click on him.
 ### Timer
 
 This component will trigger the example command every 10 seconds:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:timer": {

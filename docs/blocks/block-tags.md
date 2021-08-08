@@ -13,6 +13,8 @@ Some tags are prefixed with `can_be`, or `can_hurt`. One would expect these to h
 
 Block tags can be applied exactly as items, as seen below:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
     "format_version": "1.16.100",

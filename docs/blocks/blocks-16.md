@@ -17,6 +17,8 @@ This document covers experimental features, for 1.16 format version blocks. If y
 
 ### Defining Properties:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.16.100",
@@ -45,6 +47,8 @@ Properties can be queried with `query.block_property`, like this:
 `query.block_property('example:string_property_example') == 'blue'`
 
 ## Block Events
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -78,6 +82,8 @@ _This example spawns a loot table when an entity stands on the block._
 
 Adds a mob effect when triggered
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:effect_event": {
@@ -95,6 +101,8 @@ Adds a mob effect when triggered
 
 Removes a mob effect when triggered
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:remove_effect_event": {
@@ -110,6 +118,8 @@ Removes a mob effect when triggered
 
 Summons a loot table when the event is triggered.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:drop_loot": {
@@ -124,6 +134,8 @@ Summons a loot table when the event is triggered.
 
 Removes the current block and replaces it with the defined block in the same position.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:place_block": {
@@ -135,6 +147,8 @@ Removes the current block and replaces it with the defined block in the same pos
 ### `set_block_property`
 
 Used to set the value of a block's property
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -149,6 +163,8 @@ Used to set the value of a block's property
 ### `set_block_at_pos`
 
 Used to set a block relative to the position of this block
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -165,6 +181,8 @@ Used to set a block relative to the position of this block
 
 Used to execute a command
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:execute_event": {
@@ -176,6 +194,8 @@ Used to execute a command
 ```
 
 ### `damage`
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -193,6 +213,8 @@ Used to execute a command
 
 Decrements the stack
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:remove_one": {
@@ -204,6 +226,8 @@ Decrements the stack
 ### `die`
 
 Kills the target or destroys the block
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -218,6 +242,8 @@ Kills the target or destroys the block
 ### `play_effect`
 
 Runs a particle effect on the target
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -234,6 +260,8 @@ Runs a particle effect on the target
 
 Plays a sound on the target
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:play_sound": {
@@ -249,6 +277,8 @@ Plays a sound on the target
 
 Used to trigger an event, this can be a block event or an entity event.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:trigger_event": {
@@ -263,6 +293,8 @@ Used to trigger an event, this can be a block event or an entity event.
 ### `sequence`
 
 Used to sequence event functions
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -288,6 +320,8 @@ Used to sequence event functions
 ### `randomize`
 
 Used to randomize event functions
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -334,6 +368,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:unit_cube
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:unit_cube": {}
@@ -341,6 +377,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:crafting_table
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -353,6 +391,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:material_instances
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -372,6 +412,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:geometry
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:geometry": "geometry.example" // Geometry identifier from geo file in 'RP/models/entity' folder
@@ -379,6 +421,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:on_step_on
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -392,6 +436,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:on_step_off
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:on_step_off": {
@@ -403,6 +449,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:on_fall_on
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -417,6 +465,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:on_placed
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:on_placed": {
@@ -428,6 +478,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:on_player_placing
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -441,6 +493,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:on_player_destroyed
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:on_player_destroyed": {
@@ -453,6 +507,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:on_interact
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:on_interact": {
@@ -464,6 +520,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:ticking
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -481,6 +539,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:random_ticking
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:random_ticking": {
@@ -495,6 +555,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:entity_collision
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:entity_collision": {
@@ -504,6 +566,9 @@ List of all new block components, with usage examples.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
+
 ```json
 {
 	"minecraft:entity_collision": false
@@ -511,6 +576,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:pick_collision
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -521,6 +588,9 @@ List of all new block components, with usage examples.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
+
 ```json
 {
 	"minecraft:pick_collision": false
@@ -528,6 +598,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:breakonpush
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -537,6 +609,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:display_name
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:display_name": "Name"
@@ -544,6 +618,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:breathability
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -553,6 +629,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:immovable
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:immovable": true
@@ -561,6 +639,8 @@ List of all new block components, with usage examples.
 
 ### minecraft:onlypistonpush
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:onlypistonpush": true
@@ -568,6 +648,8 @@ List of all new block components, with usage examples.
 ```
 
 ### minecraft:placement_filter
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -583,6 +665,8 @@ List of all new block components, with usage examples.
 ```
 
 _This also accepts tags, such as:_
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -603,6 +687,8 @@ _This also accepts tags, such as:_
 
 ### minecraft:preventsjumping
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:preventsjumping": true
@@ -611,6 +697,8 @@ _This also accepts tags, such as:_
 
 ### minecraft:rotation
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:rotation": [90, 180, 0]
@@ -618,6 +706,8 @@ _This also accepts tags, such as:_
 ```
 
 ### minecraft:unwalkable
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -629,6 +719,8 @@ _This also accepts tags, such as:_
 
 Block tags can be given to blocks to be queried or referenced with `any_tag` or `all_tags`, which is used inside item and entity files.
 A tag can be applied like this:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -655,6 +747,8 @@ and this tag can be queried with:
 -   `query.relative_block_has_any_tag`
 
 Example of querying a tag:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -686,6 +780,8 @@ Example of querying a tag:
 Block permutations are a way of conditionally applying components to a block with MoLang expressions.
 
 Example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -731,6 +827,8 @@ Example:
     -   `"minecraft:ticking"`
     -   `"minecraft:random_ticking"`
 -   It is not recommended to use `minecraft:display_name`. Example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

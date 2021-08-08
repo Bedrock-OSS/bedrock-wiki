@@ -10,6 +10,8 @@ tags:
 
 Block materials essentially control how a block is rendered in the world, much like entity materials. They can be applied with the block component, `material_instances`, with the optional parameter, `render_method`. Using this would look something like the below example, a non-full block:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
     
@@ -32,6 +34,9 @@ Block materials essentially control how a block is rendered in the world, much l
 | double_sided | Used for completely disabling backface culling.                                                                                                                                                                                                   |
 
 *Note: Some of these features may be disabled or overridden with their respective parameters. For example:*
+
+<CodeHeader></CodeHeader>
+
 ```json
 {
     

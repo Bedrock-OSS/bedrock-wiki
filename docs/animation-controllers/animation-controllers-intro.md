@@ -79,6 +79,8 @@ Here is a sample `description`, which shows how the AC can first be defined in `
 
 If you want to conditionally play an animation controller, you can supply an optional molang argument. If the argument evaluates to true, the controller will play:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "scripts": {
 	"animate": [
@@ -186,6 +188,8 @@ Here is the code for the second state machine from above, with three states this
 -   States with multiple transitions
 -   States with no transitions
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.10.0",
@@ -237,6 +241,8 @@ Commands in this context mean three distinct things:
 -   An arbitrary molang expression, such as `variable.tickets += 1;`
 
 Here is an example BP animation controller, which exhibits some of this behavior:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
