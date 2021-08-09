@@ -32,6 +32,8 @@ The following sound formats are accepted:
 
 `sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example, `sound_definitions.json`, that adds a new trumpet sound called `example.toot`.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.14.0",
@@ -81,6 +83,8 @@ The maximum distance **to** the source of the client's sound needs to be within 
 
 In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds but does not have much power. For starts, I can add multiple sounds to the list. These sounds will be randomized when played:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "sounds": [
     "sounds/trumpet",
@@ -114,6 +118,8 @@ The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (sta
 ### Example
 
 Here is a more realistic example containing these options:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "block.beehive.drip": {
@@ -183,6 +189,8 @@ There are also many sound events, which _most likely_ trigger automatically, but
 | scream             |
 
 ### Example
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

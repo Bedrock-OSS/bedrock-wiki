@@ -39,6 +39,8 @@ material after a colon. For example: `entity_alpha:entity_base`
 
 Example:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"materials": {
@@ -92,6 +94,8 @@ Input color is clamped to `<0.0, 1.0>`. To pass more significant values, you nee
 ### Using time in shader
 
 `TIME` variable is a number of seconds as `float` and is global for all shaders. For time-based on particle lifetime, you need to pass this:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:particle_appearance_tinting": {

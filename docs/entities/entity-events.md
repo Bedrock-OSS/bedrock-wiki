@@ -14,6 +14,8 @@ This section covers the main feature of events and how to call them inside an en
 
 The most essential and common use of events is directly adding and/or removing component groups. The following event named `shanewolf:ranged_attacker` adds the two component groups "attacker" and "ranged" and removes the groups "standby" and "melee".
 
+<CodeHeader></CodeHeader>
+
 ```json
 "shanewolf:ranged_attacker": {
   "add": {
@@ -31,6 +33,8 @@ Following are examples of calling an event on an entity using a component, an an
 
 The `minecraft:environment_sensor` component is used in the zombie to call the event `minecraft:start_transforming` when the entity is underwater.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:environment_sensor": {
   "triggers": {
@@ -46,6 +50,8 @@ The `minecraft:environment_sensor` component is used in the zombie to call the e
 
 This behavior-based animation is used to call the event `shanewolf:start_pouncing` after 10 seconds.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "animation.entity.pounce_timer": {
   "timeline": {
@@ -56,6 +62,8 @@ This behavior-based animation is used to call the event `shanewolf:start_pouncin
 ```
 
 This behavior-based animation controller is used to call the event `shanewolf:running` upon transition to the state "run".
+
+<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.entity.movement": {
@@ -74,6 +82,8 @@ This behavior-based animation controller is used to call the event `shanewolf:ru
 
 This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`. This particular example does not showcase the most practical usage, but there will be better examples shown in the following section.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:entity_born": {
   "trigger": "spawn_baby"
@@ -89,6 +99,8 @@ More complex and powerful usage of entity events consists of the `sequence` and 
 Some components, such as the damage sensor, can target entities other than "self" when calling events. One component in particular is specifically designed to call events in other entities: `minecraft:behavior.send_event`. Examples of each are shown below.
 
 The component `minecraft:damage_sensor` inside the pillager calls the event `minecraft:gain_bad_omen` on the player which kills it. Note how the target of the event is set to "other".
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:damage_sensor": {
@@ -115,6 +127,8 @@ The component `minecraft:damage_sensor` inside the pillager calls the event `min
 ```
 
 The `minecraft:behavior.send_event` component is used inside the evoker to call an event named `wololo` inside any blue sheep within its activation range.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:behavior.send_event": {
@@ -152,6 +166,8 @@ Sequence is a parameter which can be used inside of an entity event to add or re
 
 The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:convert_to_drowned": {
   "sequence": [
@@ -170,6 +186,8 @@ The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` p
 ```
 
 In this particular case, it may be noted that both entries in the sequence remove the same component group. In practice, a more useful way to write this event may appear as follows:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:convert_to_drowned": {
@@ -197,6 +215,8 @@ Randomize is a parameter which can be used inside of an entity event to add or r
 
 The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95% chance of the cow spawning as an adult and a 5% chance of spawning as a baby (component groups "minecraft:cow_adult" and "minecraft:cow_baby").
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:entity_spawned": {
   "randomize": [
@@ -217,6 +237,8 @@ The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95%
 The sequence and randomize parameters can be combined for more complex behavior inside an event. Below is an example which aims to be exhaustive in showing how these parameters can be combined and utilized.
 
 This event is run when the entity is hit by a player or projectile. There is a 60% chance nothing will happen and a 40% chance an attack sequence will activate. This attack sequence chooses a random attack with weights determined both by the entity's current health (stronger attacks are given a higher chance when the entity is below half health) and the distance to the nearest player (ranged attacks have higher priority when the player is further away).
+
+<CodeHeader></CodeHeader>
 
 ```json
 "shanewolf:on_hit": {

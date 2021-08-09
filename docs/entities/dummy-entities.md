@@ -21,7 +21,7 @@ This is a non-exhaustive list of how dummies can be used:
 
 You can use whatever behaviors you like, but here is a good template. The important aspects are: no damage, and can't be pushed.
 
-entities/dummy.json
+<CodeHeader>BP/entities/dummy.json</CodeHeader>
 
 ```json
 {
@@ -63,7 +63,7 @@ entities/dummy.json
 
 ### Resource Entity
 
-entity/dummy.json
+<CodeHeader>RP/entity/dummy.json</CodeHeader>entity/dummy.json
 
 ```json
 {
@@ -88,7 +88,7 @@ entity/dummy.json
 
 ### Geometry
 
-models/entity/dummy.json
+<CodeHeader>RP/models/entity/dummy.json</CodeHeader>
 
 ```json
 {
@@ -107,7 +107,7 @@ models/entity/dummy.json
 
 ### Render Controller (Optional)
 
-render_controllers/dummy.json
+<CodeHeader>RP/render_controllers/dummy.json</CodeHeader>
 
 ```json
 {

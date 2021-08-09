@@ -30,6 +30,8 @@ Functions will be run for each tick as if placed in a repeating command block.
 
 Create a file called tick.json in your root function folder. The format is this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"values": ["function_file_name_one", "function_file_name_two"]

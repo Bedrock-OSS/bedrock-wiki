@@ -29,11 +29,15 @@ Rotation needs to be applied to a bone parent to all other bones, with a pivot a
 
 Animation:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, query.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
 ```
 
 Animation Controller: (query.all_animations_finished is only needed for respawning entities, like players)
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -73,6 +77,8 @@ To remove the damage overlay color of any entity you want when it gets damaged, 
 First, you need to make the rgba values to 0
 Here's the example of removing the damage and fire overlay color.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.8.0",
@@ -92,6 +98,8 @@ The code above will remove the red damage overlay color.
 
 You can also change the damage color overlay to different colors just by putting different values in rgba. You can check out various websites to get the rgba values of all colors.
 Here's another example in which the damage color overlay becomes pink.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -125,6 +133,8 @@ You can use the damage_sensor component to trigger an event upon fatal damage; t
 Please note that you will have to find another work to drop multiple loot or for entities with an inventory. You should also ensure that the despawn component group is not added when the entity is spawned using the entity_spawned event.
 
 Here an example file in the BP
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -191,6 +201,8 @@ Here an example file in the BP
 
 Note: You can also spawn custom spawn egg items using the **minecraft:spawn_entity** component by setting "spawn_item":
 to be your entity's id and an affix of **\_spawn_egg**, and it will look something like this.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
