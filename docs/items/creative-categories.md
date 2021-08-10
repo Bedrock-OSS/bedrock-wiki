@@ -16,6 +16,8 @@ This feature is currently experimental and is currently only available for custo
 
 Item categories applied with the item description direct it to a more broad field in the creative category, individual tabs. They need to be the same tab as the component `creative_category`. Such would be applied like the following example:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.16.100",
@@ -29,6 +31,8 @@ Item categories applied with the item description direct it to a more broad fiel
 ```
 
 Item categories applied with the item component `creative_category` direct it exactly where to go. Such would be applied like the following example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -45,6 +49,8 @@ This feature is beta-only, and cannot be used in stable or experimental gameplay
 :::
 
 Block Categories are defined via the `minecraft:creative_category` component, your custom block will not show up in the Creative Inventory if you don't have this component, here's an example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

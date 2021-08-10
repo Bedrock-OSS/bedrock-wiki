@@ -7,9 +7,9 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
 
 <Spoiler title="Example Loot Tables">
 
-```json
-//BP/loot_tables/entities/ghast/json
+<CodeHeader>BP/loot_tables/entities/ghast.json</CodeHeader>
 
+```json
 {
 	"pools": [
 		{
@@ -68,9 +68,9 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
 }
 ```
 
-```json
-//BP/loot_tables/chests/equipment.low_tier_items.json
+<CodeHeader>BP/loot_tables/chests/equipment.low_tier_items.json</CodeHeader>
 
+```json
 {
 	"pools": [
 		{
@@ -115,9 +115,9 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
 }
 ```
 
-```json
-//BP/loot_tables/chests/village/village_cartographer.json
+<CodeHeader>BP/loot_tables/chests/village/village_cartographer.json</CodeHeader>
 
+```json
 {
 	"pools": [
 		{
@@ -197,9 +197,9 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
 }
 ```
 
-```json
-//BP/loot_tables/gameplay/fishing/treasure.json
+<CodeHeader>BP/loot_tables/gameplay/fishing/treasure.json</CodeHeader>
 
+```json
 {
 	"pools": [
 		{
@@ -295,6 +295,8 @@ You can also use `loot_tables.empty.json` for no loot.
 
 Let's break up the Loot table structure somewhat. I took a simple zombie loot table as an example.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"pools": [
@@ -388,6 +390,8 @@ Let's look through some recipe-specific syntax next.
 
 ### Smelting recipe example
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.12",
@@ -413,6 +417,8 @@ Let's look through some recipe-specific syntax next.
 -   "`output`": the item that the furnace outputs after smelting.
 
 ### Shaped recipe example
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -447,6 +453,8 @@ Let's look through some recipe-specific syntax next.
 
 Let's also look into a recipe that gives you more than one item as a result.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.12",
@@ -475,6 +483,8 @@ Let's also look into a recipe that gives you more than one item as a result.
 
 ### Shapeless recipe example
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.12",
@@ -495,6 +505,8 @@ Let's also look into a recipe that gives you more than one item as a result.
 	}
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -532,9 +544,9 @@ Let's also look into a recipe that gives you more than one item as a result.
 
 Spawn rules define how vanilla Entities and custom entities spawn. In the next chapter we'll be creating a custom entity, so make sure to prepare a custom spawn rule for it! Check out the vanilla example files for more information. ;)
 
-```json
-//BP/spawn_rules/zombie.json
+<CodeHeader>BP/spawn_rules/zombie.json</CodeHeader>
 
+```json
 {
 	"format_version": "1.8.0",
 	"minecraft:spawn_rules": {
@@ -591,6 +603,8 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 -   "`minecraft:herd`" sets the number of entities spawning together, on the same spawn rule.
 -   "`minecraft:permute_type`" with "`weight`"s and "`entity_type`"s sets a chance for the spawned entity to mutate into a different one.
 -   And, lastly, "`minecraft:biome_filter`" tests for certain biome tags. Look up the filter syntax and list of biome tags in the documentation or search examples in the vanilla Example pack.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {

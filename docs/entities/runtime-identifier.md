@@ -5,6 +5,8 @@ title: Runtime Identifiers
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
 It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 
+"within_radius": 1000,
+
 ```json
 "description": {
     "identifier": "assassin:my_box",

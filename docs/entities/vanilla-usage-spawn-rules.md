@@ -10,6 +10,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -21,6 +23,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### bee
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -46,6 +50,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -57,6 +63,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### cod
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -77,6 +85,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -89,6 +99,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -100,6 +112,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### dolphin
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -120,6 +134,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -132,6 +148,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -139,6 +157,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "ocean"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -152,6 +172,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -159,6 +181,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "monster"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -177,6 +201,8 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -184,6 +210,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "warped_forest"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -199,6 +227,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -210,6 +240,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ghast
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -232,6 +264,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -243,6 +277,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### hoglin
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -256,6 +292,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -263,6 +301,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "plains"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -276,6 +316,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -288,6 +330,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -295,6 +339,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "extreme_hills"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -308,6 +354,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -315,6 +363,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "spawn_magma_cubes"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -328,6 +378,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -340,6 +392,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -351,6 +405,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### panda
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -367,6 +423,8 @@ This documentation is stripped from the vanilla files using an automated script.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -378,6 +436,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### parrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -391,6 +451,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -402,6 +464,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### pig
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -415,6 +479,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -422,6 +488,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "spawn_piglin"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -434,6 +502,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### pillager_patrol
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -461,6 +531,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -475,6 +547,8 @@ This documentation is stripped from the vanilla files using an automated script.
     }
 ]
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -495,6 +569,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -513,6 +589,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### rabbit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -545,6 +623,8 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -556,6 +636,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -572,6 +654,8 @@ This documentation is stripped from the vanilla files using an automated script.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -586,6 +670,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -597,6 +683,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### skeleton
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -628,6 +716,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "any_of": [
@@ -654,6 +744,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -666,6 +758,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -673,6 +767,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "ocean"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -690,6 +786,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -704,6 +802,8 @@ This documentation is stripped from the vanilla files using an automated script.
     }
 ]
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -724,6 +824,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -735,6 +837,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### tropicalfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": [
@@ -755,6 +859,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": [
     {
@@ -774,6 +880,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -786,6 +894,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -793,6 +903,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "taiga"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -830,6 +942,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -842,6 +956,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
@@ -849,6 +965,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "value": "spawn_zombified_piglin"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:biome_filter": {
@@ -864,6 +982,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -875,6 +995,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### bat
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -888,6 +1010,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -899,6 +1023,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### chicken
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -912,6 +1038,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -923,6 +1051,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### creeper
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -936,6 +1066,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -947,6 +1079,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### drowned
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -960,6 +1094,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -971,6 +1107,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### fox
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -984,6 +1122,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -995,6 +1135,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### horse
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1008,6 +1150,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1019,6 +1163,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### llama
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1032,6 +1178,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 9,
@@ -1043,6 +1191,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ocelot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1056,6 +1206,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1067,6 +1219,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### parrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1080,6 +1234,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1091,6 +1247,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### pig
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1104,6 +1262,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1115,6 +1275,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### polar_bear
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1128,6 +1290,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1139,6 +1303,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### sheep
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1152,6 +1318,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1163,6 +1331,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### spider
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1176,6 +1346,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1187,6 +1359,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### turtle
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1200,6 +1374,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 0,
@@ -1212,6 +1388,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:brightness_filter": {
     "min": 7,
@@ -1223,6 +1401,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### zombie
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:brightness_filter": {
@@ -1238,6 +1418,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:delay_filter": {
     "min": 600,
@@ -1247,6 +1429,8 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:delay_filter": {
     "min": 600,
@@ -1255,6 +1439,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "spawn_chance": 20
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:delay_filter": {
@@ -1271,6 +1457,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:density_limit": {
     "surface": 5
@@ -1280,6 +1468,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### cod
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:density_limit": {
@@ -1291,6 +1481,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:density_limit": {
     "surface": 5
@@ -1300,6 +1492,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### dolphin
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:density_limit": {
@@ -1312,11 +1506,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:density_limit": {
     "surface": 5
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:density_limit": {
@@ -1327,6 +1525,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ghast
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:density_limit": {
@@ -1339,6 +1539,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:density_limit": {
     "surface": 5
@@ -1348,6 +1550,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### pufferfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:density_limit": {
@@ -1359,11 +1563,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:density_limit": {
     "surface": 10
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:density_limit": {
@@ -1375,11 +1583,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:density_limit": {
     "surface": 4
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:density_limit": {
@@ -1391,6 +1603,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:density_limit": {
     "surface": 3
@@ -1400,6 +1614,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### tropicalfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:density_limit": {
@@ -1413,6 +1629,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1423,6 +1641,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### drowned
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1435,6 +1655,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1445,6 +1667,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ghast
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1457,6 +1681,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "peaceful",
@@ -1467,6 +1693,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### husk
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1479,6 +1707,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1489,6 +1719,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### phantom
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1501,6 +1733,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "peaceful",
@@ -1512,11 +1746,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "max": "easy"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1524,6 +1762,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "max": "normal"
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1534,6 +1774,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### skeleton
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1546,6 +1788,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1556,6 +1800,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### spider
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1568,6 +1814,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1578,6 +1826,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### strider
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1590,6 +1840,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1601,6 +1853,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:difficulty_filter": {
     "min": "easy",
@@ -1611,6 +1865,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### zombie_pigman
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:difficulty_filter": {
@@ -1625,6 +1881,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:distance_filter": {
     "min": 12,
@@ -1635,6 +1893,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### pillager_patrol
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:distance_filter": {
@@ -1647,6 +1907,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:distance_filter": {
     "min": 12,
@@ -1658,6 +1920,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:distance_filter": {
     "min": 12,
@@ -1668,6 +1932,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### tropicalfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:distance_filter": {
@@ -1682,6 +1948,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:height_filter": {
     "min": 0,
@@ -1692,6 +1960,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### bat
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:height_filter": {
@@ -1704,6 +1974,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:height_filter": {
     "min": 0,
@@ -1715,6 +1987,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:height_filter": {
     "min": 60,
@@ -1725,6 +1999,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### turtle
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:height_filter": {
@@ -1739,6 +2015,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1752,6 +2030,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1762,6 +2042,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### bee
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -1774,6 +2056,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1784,6 +2068,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### cod
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -1796,6 +2082,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1806,6 +2094,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### dolphin
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -1818,6 +2108,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1828,6 +2120,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### drowned
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -1840,6 +2134,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -1847,12 +2143,16 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 1
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -1864,6 +2164,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### fox
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -1878,6 +2180,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1888,6 +2192,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### goat
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -1900,6 +2206,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
@@ -1910,6 +2218,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### horse
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": [
@@ -1955,6 +2265,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -1966,12 +2278,16 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 6
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -1984,12 +2300,16 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 4
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2002,6 +2322,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
@@ -2012,6 +2334,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ocelot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2024,6 +2348,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -2034,6 +2360,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### parrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2046,6 +2374,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -2057,12 +2387,16 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2074,6 +2408,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### pillager_patrol
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2090,6 +2426,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -2103,6 +2441,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 3,
@@ -2114,12 +2454,16 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 3
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2132,6 +2476,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 3,
@@ -2142,6 +2488,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### sheep
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2154,6 +2502,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -2164,6 +2514,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### squid
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2176,6 +2528,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -2187,6 +2541,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -2197,6 +2553,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### tropicalfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": [
@@ -2313,6 +2671,8 @@ This documentation is stripped from the vanilla files using an automated script.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 1,
@@ -2323,6 +2683,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### turtle
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2335,6 +2697,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 4,
@@ -2346,6 +2710,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
     "min_size": 2,
@@ -2356,6 +2722,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### zombie_pigman
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:herd": {
@@ -2370,6 +2738,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:mob_event_filter": {
     "event": "minecraft:pillager_patrols_event"
@@ -2377,6 +2747,8 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ## minecraft:permute_type
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:permute_type": [
@@ -2386,6 +2758,8 @@ This documentation is stripped from the vanilla files using an automated script.
     }
 ]
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:permute_type": [
@@ -2403,6 +2777,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### zombie
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:permute_type": [
@@ -2422,6 +2798,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:player_in_village_filter": {
     "distance": 48,
@@ -2435,6 +2813,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawn_event": {
     "event": "change_to_skeleton"
@@ -2447,6 +2827,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_lava": {}
 ```
@@ -2457,6 +2839,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2464,6 +2848,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### cow
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
@@ -2473,6 +2859,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2480,6 +2868,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### horse
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
@@ -2489,6 +2879,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2496,6 +2888,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ocelot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
@@ -2505,6 +2899,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2512,6 +2908,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### parrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
@@ -2521,6 +2919,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2529,6 +2929,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:ice"
 ```
@@ -2536,6 +2938,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### rabbit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_filter": [
@@ -2549,6 +2953,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
@@ -2556,6 +2962,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### turtle
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:sand"
@@ -2565,6 +2973,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_filter": [
     "minecraft:grass",
@@ -2572,6 +2982,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "minecraft:dirt"
 ]
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_filter": "minecraft:grass"
@@ -2582,6 +2994,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### hoglin
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
@@ -2594,6 +3008,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
@@ -2604,6 +3020,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### piglin
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
@@ -2616,6 +3034,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
@@ -2626,6 +3046,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### zombie_pigman
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_block_prevented_filter": [
@@ -2640,6 +3062,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2647,6 +3071,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### chicken
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2656,6 +3082,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2663,6 +3091,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### cow
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2672,6 +3102,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2679,6 +3111,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### dolphin
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2688,6 +3122,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2695,6 +3131,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### drowned
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2704,6 +3142,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2711,6 +3151,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### fox
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2720,6 +3162,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2727,6 +3171,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### horse
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2736,6 +3182,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2743,6 +3191,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### llama
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2752,6 +3202,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2759,6 +3211,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ocelot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2768,6 +3222,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2775,6 +3231,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### parrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2784,6 +3242,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2791,6 +3251,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### pig
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2800,6 +3262,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2807,6 +3271,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### polar_bear
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2816,6 +3282,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2823,6 +3291,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### rabbit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2832,6 +3302,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2839,6 +3311,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### sheep
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2848,6 +3322,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2855,6 +3331,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### slime
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2864,6 +3342,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2871,6 +3351,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### squid
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2880,6 +3362,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2887,6 +3371,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### tropicalfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2896,6 +3382,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2903,6 +3391,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### witch
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2912,6 +3402,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_on_surface": {}
 ```
@@ -2919,6 +3411,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### zombie
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_on_surface": {}
@@ -2930,6 +3424,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2937,6 +3433,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### bat
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underground": {}
@@ -2946,6 +3444,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2953,6 +3453,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### enderman
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underground": {}
@@ -2962,6 +3464,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2969,6 +3473,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### glow_squid
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underground": {}
@@ -2978,6 +3484,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -2985,6 +3493,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### magma_cube
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underground": {}
@@ -2994,6 +3504,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -3001,6 +3513,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### skeleton
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underground": {}
@@ -3010,6 +3524,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -3017,6 +3533,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### spider
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underground": {}
@@ -3026,6 +3544,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -3033,6 +3553,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### strider
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underground": {}
@@ -3042,6 +3564,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -3050,6 +3574,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underground": {}
 ```
@@ -3057,6 +3583,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### zombie_pigman
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underground": {}
@@ -3068,6 +3596,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -3075,6 +3605,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### cod
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underwater": {}
@@ -3084,6 +3616,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -3091,6 +3625,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### drowned
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underwater": {}
@@ -3100,6 +3636,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -3107,6 +3645,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### guardian
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/guardian.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underwater": {}
@@ -3116,6 +3656,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -3123,6 +3665,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underwater": {}
@@ -3132,6 +3676,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:spawns_underwater": {}
 ```
@@ -3139,6 +3685,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### tropicalfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:spawns_underwater": {}
@@ -3150,6 +3698,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3159,6 +3709,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### bat
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3170,6 +3722,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -3179,6 +3733,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### chicken
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3190,6 +3746,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 75
@@ -3199,6 +3757,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### cow
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3210,6 +3770,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -3219,6 +3781,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### dolphin
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3230,6 +3794,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 1
@@ -3240,11 +3806,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 100
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3256,11 +3826,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 10
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3272,6 +3846,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3281,6 +3857,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ghast
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3292,6 +3870,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -3301,6 +3881,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### goat
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3312,6 +3894,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 20
@@ -3322,11 +3906,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 4
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3338,6 +3926,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 240
@@ -3348,11 +3938,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 5
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3364,11 +3958,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 10
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3380,6 +3978,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3389,6 +3989,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### ocelot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3400,11 +4002,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 10
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3416,6 +4022,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 40
@@ -3425,6 +4033,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### phantom
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3436,6 +4046,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 10
@@ -3446,11 +4058,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 5
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3462,11 +4078,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 1
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3478,6 +4098,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 25
@@ -3488,11 +4110,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 4
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3504,11 +4130,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 26
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3520,6 +4150,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 12
@@ -3529,6 +4161,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### skeleton
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3540,6 +4174,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -3549,6 +4185,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### spider
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3560,6 +4198,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3569,6 +4209,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### stray
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3580,6 +4222,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 20
@@ -3590,11 +4234,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 75
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3606,6 +4254,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 8
@@ -3615,6 +4265,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### witch
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3626,11 +4278,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 8
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3642,6 +4298,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 100
@@ -3652,11 +4310,15 @@ This documentation is stripped from the vanilla files using an automated script.
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weight": {
     "default": 100
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:weight": {
@@ -3669,6 +4331,8 @@ This documentation is stripped from the vanilla files using an automated script.
 #### pillager_patrol
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:world_age_filter": {

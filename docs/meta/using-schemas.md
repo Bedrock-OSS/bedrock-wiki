@@ -27,6 +27,8 @@ To use this schema inside your JSON file in VSCode, simply add this line to your
 
 It should look like something like this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "format_version": "1.14.0",
 "$schema": "https://aexer0e.github.io/bedrock-schema/"
@@ -37,6 +39,8 @@ It should look like something like this:
 If you want to utilize this schema to work with all of your files inside your Workspace, you can add it to your VS Code Workspace's settings.
 
 To do this, make sure you're in your Workspace, then press `Ctrl+Shift+P` and type and select `>Preferences: Open Workspace Settings (JSON)`. After that, add this to the root object
+
+<CodeHeader></CodeHeader>
 
 ```json
 "settings": {

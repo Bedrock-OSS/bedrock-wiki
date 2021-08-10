@@ -110,6 +110,8 @@ Texture layering is achieved through the use of render controllers. If you aren'
 
 #### Render Controller
 
+<CodeHeader>RP/render_controllers/controller.render.texture_layering</CodeHeader>
+
 ```json
 {
 	"format_version": "1.10.0",
@@ -135,6 +137,8 @@ Texture layering is achieved through the use of render controllers. If you aren'
 
 You need to define all textures in the entity and also use `villager_v2_masked` material.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "materials": {
   "default": "villager_v2_masked"
@@ -154,6 +158,8 @@ While I guess hard-coding layered textures are cool, the real fun comes when you
 
 Set multiple top textures, which we will index later.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "textures": {
   "top_1": "textures/top_1",
@@ -164,6 +170,8 @@ Set multiple top textures, which we will index later.
 ```
 
 #### Render Controller
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -201,6 +209,8 @@ Using arrays and then `query.variant`, we can select the top texture based on th
 Now, to select which layer will show up, we can simply set the variant component in the entity:
 
 Remember that components like variants are zero-indexed, which means `0` is our first texture, and then `1` and `2` point to the second and third.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:variant": {

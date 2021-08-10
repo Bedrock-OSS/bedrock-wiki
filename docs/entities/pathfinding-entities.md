@@ -22,6 +22,8 @@ These components can be edited as needed to create good pathing. Make sure to up
 
 The attack radius in `ranged_attack` can be updated. This number sets how close the entity will pathfind to the marker before stopping. A value of 0 will cause the entity to pathfind as close as possible.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:movement": {
     "value": 0.3

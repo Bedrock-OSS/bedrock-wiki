@@ -65,6 +65,9 @@ The text to display in the speech bubble. Optional.
 
 #### on_open_commands
 Array of command strings to be run when the dialog is opened. Optional.
+
+<CodeHeader></CodeHeader>
+
 ```json
 "on_open_commands": [
   "/say Hello"
@@ -74,6 +77,8 @@ Array of command strings to be run when the dialog is opened. Optional.
 #### on_close_commands
 Array of command strings to be run when the dialog is closed. Optional.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "on_close_commands": [
   "/say Goodbye"
@@ -82,6 +87,8 @@ Array of command strings to be run when the dialog is closed. Optional.
 
 #### buttons
 An array of objects specifying the buttons to show in the dialog. Optional.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "buttons": [
@@ -103,6 +110,8 @@ An array of objects specifying the buttons to show in the dialog. Optional.
 ## Selecting the Player
 In `on_open_commands`, `on_close_commands`, and the `commands` property of each button object, you can use normal selectors, such as `@p` to select the nearest player. However, these selectors are run relative to the NPC entity, so this may be confusing in multiplayer. To solve this, there is a special selector, `@initiator` which always selects the player with the dialog open.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "buttons": [
   {
@@ -118,6 +127,8 @@ This selector **only** works within NPC dialogs, it cannot be used anywhere else
 
 ## Translation
 All of the dialog properties that will be displayed to the user can also be translated:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "npc_name": {

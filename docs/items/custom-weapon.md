@@ -138,6 +138,8 @@ Now that wasn't too hard was it! and you can make as many custom swords as you w
 
 You can also mix and match other components like `minecraft:digger` to allow you to go through web or bamboo quicker like this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:digger": {
     "use_efficiency": true,
@@ -172,6 +174,8 @@ At this point you could call it a day, but what if you wanted to make a sword th
 
 Assuming you wanted to do something like this we will need to build off the `minecraft:weapon` component and raise an event when the weapon hits an entity.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:weapon": {
     "on_hurt_entity": {
@@ -187,6 +191,8 @@ Once we add that then every time you hurt an entity it will raise the event `exa
 Now that we have an event being raised we can do what we want with it. In this example I am going to do 2 things, I will teleport the player 25% of the time and I will output a text message letting the player know that the swords done something.
 
 So if you go back into your my_sword.json and after your `components` section add a new section like so.
+
+<CodeHeader></CodeHeader>
 
 ```json
 // This is a separate section to "components"

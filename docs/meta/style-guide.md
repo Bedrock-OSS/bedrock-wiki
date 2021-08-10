@@ -105,6 +105,8 @@ When we make short-names of this form, we can use a generic "sit" animation cont
 
 Example:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
     "format_version": "1.8.0",

@@ -10,6 +10,8 @@ It is fairly common to want to spawn an item in the world, as if dropped. This p
 
 The simplest method of spawning items - and generally the most common one - is dropping items upon an entity's death. This is done by adding the `minecraft:loot` component to the entity and linking it to the respective loot table (`forium` in the following example) containing items you wish to be dropped.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:loot": {
@@ -23,6 +25,8 @@ The simplest method of spawning items - and generally the most common one - is d
 We can use `minecraft:loot` on a [dummy entity](/entities/dummy-entities) that dies when we spawn it to create a `drop entity`. This entity can be summoned like `/summon sirlich:drop_entity` to spawn the items. This is useful for scenarios where death particles or sounds are not an issue.
 
 Behaviors:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -54,6 +58,8 @@ Behaviors:
 Here is an example of an entity called "box" which will drop its contents upon interaction. The table in `spawn_items` is linked to the loot table with the items desired to be dropped. In this particular case, the event `break_box` is also called when the entity is interacted with, adding a component group that removes the box.
 
 Note that if the entity is not removed upon interaction, it can be interacted with again and will spawn the items. If the entity should persist after the interaction, the `cooldown` parameter may be added to the entity to prevent interaction for a specified amount of time. Alternatively, an event may be called to remove the component group containing this `minecraft:interact` component.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -91,6 +97,8 @@ The items are spawned using the `minecraft:behavior.drop_item_for` component in 
 
 This behavior appears to push the mob back when the items are dropped. Thus it is essential to summon the entity slightly above the ground (or teleport it up in the following animation controller) to avoid the items spawning a few blocks away from the spawn location. Decreasing the size of the collision box may also help.
 
+<CodeHeader></CodeHeader>
+
 ```json
  {
                 "minecraft:navigation.walk": {},
@@ -112,6 +120,8 @@ This behavior appears to push the mob back when the items are dropped. Thus it i
 The following animation controller must be linked to the entity to remove it upon summoning. Alternatively, an animation with a timeline can be used. If you are unsure how to do this, refer to the Entity Commands tutorial.
 
 Teleporting the entity into the void causes no death animation, sound, or particles. Two transitions are used to ensure it is not killed in the same tick it spawns.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

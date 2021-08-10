@@ -17,6 +17,8 @@ For a simple trading UI, `trade_table` + `trade_with_player` components should d
 1. Add `"minecraft:behavior.trade_with_player": {}` to your entity's components.
 2. Copy the following code into a component group of your entity. I'll call mine `"tut:trader"`;
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:trade_table": {
   "display_name": "Trading Entity", //String can be replaced with any text to be displayed.
@@ -51,6 +53,8 @@ Every tier has two keys ("parameters").
 Lower you can see how a _group_ looks inside. As you can see, it holds "`trades`" objects in the array. The other parameter is "`num_to_select`". This number defines the number of trades from this group to be applied (randomly selected), and cannot be more then the number of defined trades. For example, here we have two *trade*s in the _trade group_ and `num_to_select` set to `1`. This means that only one trade from the two will be selected for the entity with equal chances. See Wandering Trader file for clear examples.
 ![](/assets/images/guide/trade_table_tree_4.png)
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"wants": [
@@ -84,6 +88,8 @@ Finally, we'll look through the trade object itself. It's quite self-explanatory
 -   "`reward_exp`" is a random hard-coded quantity of xp the player will egt from the trade (unless it's set to false).
 
 ---
+
+<CodeHeader></CodeHeader>
 
 ```json
 //Example trade table.

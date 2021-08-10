@@ -14,6 +14,8 @@ While not exactly "flying", setting the entity's jumping power high and giving i
 
 To achieve this, we will need to add the `"minecraft:horse.jump_strength"` component to our entity. Adding this will allow you to control its jumping power and disable dismounting when the player presses the jump button.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:horse.jump_strength": {
     "value": 7
@@ -21,6 +23,8 @@ To achieve this, we will need to add the `"minecraft:horse.jump_strength"` compo
 ```
 
 We can also use `"value"` as an object to utilize the **range bar** players will see when holding down the jump button.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:horse.jump_strength": {
@@ -31,6 +35,8 @@ We can also use `"value"` as an object to utilize the **range bar** players will
 Now we will give it slow falling and speed as it's falling so that it doesn't instantly fall. To do this, we will make an animation controller and give it those effects when it's not on the ground as so:
 
 (You can read a [tutorial on how to use animation controllers to execute commands here](/animation-controllers/entity-commands).)
+
+<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.dragon.flying": {
@@ -57,6 +63,8 @@ Now we will give it slow falling and speed as it's falling so that it doesn't in
 ```
 
 We'll also need to hook it up to our entity as so:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "description": {
@@ -95,6 +103,8 @@ execute @a[rxm=35,rx=90] ~~~ effect @e[type=ass:dragon,r=1] clear
 After you run those commands in a repeating command block, you should control its vertical movement by looking up and down.
 
 The entity will still probably be too slow when flying, so we'll borrow our animation controller from the first method with some changes to give the entity speed when it's flying.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.dragon.flying": {
@@ -144,6 +154,8 @@ _Since the entity's effects might be cleared when it's being flown, we changed t
 
 You might also notice that the entity levitates when you go near it. We can fix this by giving the entity a tag when it's being ridden (removing it when it isn't) and only applying those effects when the entity has the tag by making and animating another animation controller and updating our commands.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "controller.animation.dragon.test_rider": {
     "states": {
@@ -184,6 +196,8 @@ To do this, we need an animation controller attached to the player rather than t
 
 First, on the entity, disable dismounting and jumping:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:horse.jump_strength": {
     "value": 0
@@ -192,6 +206,8 @@ First, on the entity, disable dismounting and jumping:
 ```
 
 Next, we need an animation controller that causes the entity to levitate when the player uses their jump button and resets the levitation when they release their jump button.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.fly_dragon": {
@@ -219,6 +235,8 @@ Next, we need an animation controller that causes the entity to levitate when th
 
 Now, we need a copy of the player's behavior file, which we will modify slightly. You can find the player's behavior file in the vanilla behavior pack provided by Mojang (found [here](https://aka.ms/behaviorpacktemplate)). Once you have copied the player's behavior file to your own behavior pack, find their `"description"` object and add the animation controller. We also want to ensure that the entity will only respond to the player's jump input when the player is riding it, so we can use a MoLang query in the player's behavior to only activate the animation controller when the player is riding.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "description": {
     "identifier": "minecraft:player",
@@ -236,6 +254,8 @@ Now, we need a copy of the player's behavior file, which we will modify slightly
 ```
 
 The entity can now be controlled with the jump key, but there's a bug. If the player dismounts the entity while holding the jump key, it will continue rising. We can fix this with an animation controller on the entity itself that resets the levitation whenever a player dismounts it.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.reset_levitation": {

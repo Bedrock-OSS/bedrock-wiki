@@ -10,6 +10,8 @@ Minecraft Bedrock 1.16 introduced the ability to use MoLang expressions in the `
 
 This recipe will convert a piece of gunpowder to a creeper spawn egg.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.13.0",

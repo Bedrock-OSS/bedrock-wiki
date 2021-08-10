@@ -82,6 +82,7 @@ As stated previously, items work very differently across different `format_versi
 
 For this error, ensure that your item is properly defined in the **Resource Pack**.
 To do this, you need to create an item file in `RP/items/` called `<name_of_your_item>.json`.
+
 <CodeHeader>RP/items/your_item.json</CodeHeader>
 
 ```json
@@ -109,6 +110,7 @@ Be sure that your `"minecraft:icon"` correctly matches to your `item_texture.jso
 
 For this error, ensure that your item is properly defined in your **Behavior Pack**.
 To do this, you need to create an item file in `BP/items/` called `<name_of_your_item>.json`.
+
 <CodeHeader>BP/items/your_item.json</CodeHeader>
 
 ```json
@@ -140,6 +142,7 @@ This is commonly due to a mismatched file or folder name. Remember, no capitals 
 
 To fix, ensure your texture paths correct.
 These are the folders that all lead to your texture file, as defined in `RP\textures\item_texture.json`. For example:
+
 <CodeHeader>RP\textures\item_texture.json</CodeHeader>
 
 ```json
@@ -157,6 +160,8 @@ These are the folders that all lead to your texture file, as defined in `RP\text
 _This texture should be in the folder `"textures/items/"`, and the image should be called `amethyst_sword.png`._
 
 Ensure your `"minecraft:icon"` component matches toward the correct short name.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

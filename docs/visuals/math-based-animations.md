@@ -8,6 +8,8 @@ Math animations are a powerful alternative to keyframe animations. Generally spe
 
 Here is an example:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "leftarm" : {
     "rotation" : [ "((-0.2 + 1.5 * (math.abs(math.mod(query.modified_distance_moved, 13) - 6.5) - 3.25) / 3.25) * query.modified_move_speed) * 57.3 - variable.agent.armxrotationfactor", 0.0, "-variable.agent.armzrotation" ]
@@ -51,6 +53,8 @@ By using queries, you can avoid the need to create animation controllers. If the
 ## Example
 
 A specific example is using animations to drive the wheels of a car based on the `modified_distance_moved`:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

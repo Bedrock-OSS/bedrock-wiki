@@ -121,6 +121,8 @@ To recap, your `manifest.json` file defines your behavior pack; its name, defini
 
 Copy/paste this into your `manifest.json`:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": 2,
@@ -190,6 +192,8 @@ When a user selects your add-on in Minecraft when creating a new world, the game
 
 For example, let's say that you created a resource pack with new blocks, items, and crafting recipes, and you want to make sure that it is always loaded into a world every time a user loads your add-on.
 Here's what that would look like:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "dependencies": [

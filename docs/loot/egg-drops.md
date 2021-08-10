@@ -8,6 +8,8 @@ Here is how to make entities drop their own eggs when killed:
 
 ## Add loot table to BP entity
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/your_entity.json"
@@ -15,6 +17,8 @@ Here is how to make entities drop their own eggs when killed:
 ```
 
 ## Create the loot table
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

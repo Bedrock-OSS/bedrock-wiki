@@ -20,7 +20,9 @@ Add the texture file under `textures/items/`. I personally suggest creating an `
 
 ## Giving the texture a name:
 
-Now we need to give our texture a short-name. This can be done by adding a new file: `textures/item_texture.json`.
+Now we need to give our texture a short-name. This can be done by adding a new file:
+
+<CodeHeader>textures/item_texture.json</CodeHeader>
 
 ```json
 {
@@ -37,6 +39,8 @@ Now we need to give our texture a short-name. This can be done by adding a new f
 ## Using the new texture:
 
 Now we can use our new texture inside of the Resource Pack entity file:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "spawn_egg": {

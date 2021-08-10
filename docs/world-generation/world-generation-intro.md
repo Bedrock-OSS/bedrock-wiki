@@ -25,7 +25,7 @@ However, bridge. is not required.
 
 ## Custom Biomes
 
-BP/biomes/cold_biome.json
+<CodeHeader>BP/biomes/cold_biome.json</CodeHeader>
 
 ```json
 {
@@ -131,7 +131,7 @@ Features are located in `BP/features` and are basically a group of blocks stored
 
 You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev/r/Features)
 
-`BP/features/blocky_ore_feature.json`
+<CodeHeader>BP/features/blocky_ore_feature.json</CodeHeader>
 
 ```json
 {
@@ -200,7 +200,7 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
 
 **Feature Rules** control where and how _features_ (and, in the future, _structures_) are placed.
 
-`BP/feature_rules/overworld_underground_blocky_ore_feature.json`
+<CodeHeader>BP/feature_rules/overworld_underground_blocky_ore_feature.json</CodeHeader>
 
 ```json
 {
@@ -282,6 +282,8 @@ Now that you have your `.mcstructure`, time to write your `feature` and `feature
 -   Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `tut:myfeaturerule` or simply `myfeaturerule`, the file name can be be `myfeaturerule.json` in both cases.
 
 Here's an code example from the [Features Documentation](https://bedrock.dev/r/Features#minecraft:structure_template_feature):
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

@@ -8,6 +8,8 @@ Minecraft Particles can be used in entity animations. For example, the phantom h
 
 `part of RP/entity/description/`
 
+<CodeHeader></CodeHeader>
+
 ```json
   "particle_effects": {
     "l_explosion": "minecraft:large_explosion"
@@ -56,7 +58,7 @@ File structure:
 
 That is the texture I'm going to use, it's size is `16x16`. (`RP/particles/tut_particles.png`). As you can see, it has 4 different textures in it, each of them being a `8x8`. The upper row (_starting/top left corner at at 0, 0_) is the flipbook texture for "tut:curvy*particle" and the bottom row (\_top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
 
-`RP/particles/curvy_particle.json`
+<CodeHeader>RP/particles/curvy_particle.json</CodeHeader>
 
 ```json
 {
@@ -128,7 +130,7 @@ The components are quite complicated here, but they're explained well on the [Pa
 
 The second particle, "tut:pink_hit".
 
-`RP/particles/pink_hit.json`
+<CodeHeader>RP/particles/pink_hit.json</CodeHeader>
 
 ```json
 {
@@ -229,7 +231,7 @@ Sound files are located in subfolders of the `RP/sounds/` folder. My skele_yakli
 
 Now to define the sound's shortnames! This process is similar to defining block texture shortnames. It's done in `RP/sounds/sound_definitions.json`.
 
-`RP/sounds/sound_definitions.json`
+<CodeHeader>RP/sounds/sound_definitions.json</CodeHeader>
 
 ```json
 {
@@ -268,7 +270,7 @@ Now we are about to call our sounds. We can do it either through the `/playsound
 
 ^ the file's structure. I recommend checking out the same file in the Example Resource Pack.
 
-`RP/sounds.json/"entities": {}/"tut:skele_yaklin": {}`
+<CodeHeader>RP/sounds.json/"entities": {}/"tut:skele_yaklin": {}</CodeHeader>
 
 ```json
   "tut:skele_yaklin": {

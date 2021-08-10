@@ -8,6 +8,8 @@ In the event that you want to disable a particle, it is recommended to do so fro
 
 The basic idea of disabling a particle from emitting is as follows:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.10.0",

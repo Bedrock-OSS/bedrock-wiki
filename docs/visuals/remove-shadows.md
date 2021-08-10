@@ -12,6 +12,8 @@ Make the size of the collision component very, very small (does 0, 0 work?) this
 
 But you can also add the custom hit test component, to at least make it possible to hit the entity, you will not be abble to interact wih it, but at least you can hit it.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:custom_hit_test": {
     "hitboxes": [
@@ -46,6 +48,8 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 
 ## Working shadow code: Shadows for ALL entities:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "shadow_overlay": {
       "+states": [
@@ -69,6 +73,8 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 ```
 
 ## Disabled shadow code: No Shadows for ALL entities:
+
+<CodeHeader></CodeHeader>
 
 ```json
  "shadow_overlay": {
@@ -94,6 +100,8 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 ```
 
 ## Vanilla shadow.material file with working shadows
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -220,6 +228,8 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 ```
 
 ## shadow.material with NO Shadows
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

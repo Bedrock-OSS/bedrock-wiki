@@ -17,6 +17,8 @@ This document covers experimental features, for 1.16 format version items. If yo
 
 ### Using Events
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.16.100",
@@ -56,6 +58,8 @@ This document covers experimental features, for 1.16 format version items. If yo
 
 Plays the item swinging animation.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:swing_event": {
@@ -67,6 +71,8 @@ Plays the item swinging animation.
 #### shoot
 
 Shoots a projectile when triggered.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -84,6 +90,8 @@ Shoots a projectile when triggered.
 
 Applies damage to a specified target.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:damage_event": {
@@ -99,6 +107,8 @@ Applies damage to a specified target.
 
 Decrements the stack by one.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:remove_one": {
@@ -110,6 +120,8 @@ Decrements the stack by one.
 #### add_mob_effect
 
 Adds a mob effect when triggered.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -128,6 +140,8 @@ Adds a mob effect when triggered.
 
 Removes a mob effect when triggered.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:remove_effect_event": {
@@ -143,6 +157,8 @@ Removes a mob effect when triggered.
 
 Transforms the item into the item specified.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:transform_event": {
@@ -156,6 +172,8 @@ Transforms the item into the item specified.
 #### teleport
 
 Teleports the target to a random location in the specified range.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -171,6 +189,8 @@ Teleports the target to a random location in the specified range.
 #### sequence
 
 Used to sequence event functions.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -197,6 +217,8 @@ Used to sequence event functions.
 #### randomize
 
 Used to randomize event functions.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -226,6 +248,8 @@ Used to randomize event functions.
 
 Used to execute commands.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"example:execute_command_event": {
@@ -243,6 +267,8 @@ List of all new item components, with usage examples
 
 -   minecraft:ignores_permission
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:ignores_permission": true
@@ -250,6 +276,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:mining_speed
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -259,6 +287,8 @@ List of all new item components, with usage examples
 
 -   minecraft:damage
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:damage": 5
@@ -267,6 +297,8 @@ List of all new item components, with usage examples
 
 -   minecraft:can_destroy_in_creative
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:can_destroy_in_creative": true
@@ -274,6 +306,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:dye_powder
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -285,6 +319,8 @@ List of all new item components, with usage examples
 
 -   minecraft:mirrored_art
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:mirrored_art": true
@@ -292,6 +328,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:explodable
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -301,6 +339,8 @@ List of all new item components, with usage examples
 
 -   minecraft:should_despawn
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:should_despawn": true
@@ -308,6 +348,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:liquid_clipped
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -317,6 +359,8 @@ List of all new item components, with usage examples
 
 -   minecraft:allow_off_hand
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:allow_off_hand": true // Disables most functionality
@@ -324,6 +368,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:projectile
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -336,6 +382,8 @@ List of all new item components, with usage examples
 
 -   minecraft:block_placer
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:block_placer": {
@@ -346,6 +394,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:entity_placer
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -358,6 +408,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:on_use_on
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -372,6 +424,8 @@ List of all new item components, with usage examples
 
 -   minecraft:on_use
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:on_use": {
@@ -385,6 +439,8 @@ List of all new item components, with usage examples
 
 -   minecraft:knockback_resistance
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:knockback_resistance": {
@@ -394,6 +450,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:enchantable
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -426,6 +484,8 @@ List of all new item components, with usage examples
 
 -   minecraft:shooter
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:shooter": {
@@ -446,6 +506,8 @@ List of all new item components, with usage examples
 
 -   minecraft:durability
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:durability": {
@@ -460,6 +522,8 @@ List of all new item components, with usage examples
 
 -   minecraft:armor
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:armor": {
@@ -470,6 +534,8 @@ List of all new item components, with usage examples
 
 -   minecraft:wearable
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:wearable": {
@@ -479,6 +545,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:weapon
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -492,6 +560,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:record
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -522,6 +592,8 @@ List of all new item components, with usage examples
 
 -   minecraft:repairable
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:repairable": {
@@ -541,6 +613,8 @@ List of all new item components, with usage examples
 
 -   minecraft:cooldown
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:cooldown": {
@@ -552,6 +626,8 @@ List of all new item components, with usage examples
 
 -   minecraft:use_duration
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:use_duration": 1.6 // Use duration in seconds of the item
@@ -559,6 +635,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:digger
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -578,6 +656,8 @@ List of all new item components, with usage examples
 
 -   minecraft:fertilizer
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:fertilizer": {
@@ -588,6 +668,8 @@ List of all new item components, with usage examples
 
 -   minecraft:fuel
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:fuel": {
@@ -597,6 +679,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:throwable
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -610,6 +694,8 @@ List of all new item components, with usage examples
 
 -   minecraft:icon
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:icon": {
@@ -620,6 +706,8 @@ List of all new item components, with usage examples
 ```
 
 -   minecraft:creative_category
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -633,6 +721,8 @@ _Full list of categories can be found [here](/items/creative-categories)_
 
 -   minecraft:food
     _New Syntax_
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -651,6 +741,8 @@ _Full list of categories can be found [here](/items/creative-categories)_
 
 -   minecraft:use_animation
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:use_animation": "eat" // Adds the animation and sound when eating a food item. It can also be changed to "drink".
@@ -659,6 +751,8 @@ _Full list of categories can be found [here](/items/creative-categories)_
 
 -   minecraft:render*offsets
     \_New Syntax*
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -695,6 +789,8 @@ _Full list of categories can be found [here](/items/creative-categories)_
 
 Item tags work the same as block tags and can be applied like this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.16.100",
@@ -722,6 +818,8 @@ If your item isn't showing up, these changes might have broken your item.
 
 -   Item behavior files now require a "category" to show up in the /give command and creative inventory.
     Example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

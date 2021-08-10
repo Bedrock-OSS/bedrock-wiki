@@ -37,6 +37,8 @@ The issue you're suffering can be narrowed down significantly by how your entity
 
 Make sure the .entity file has a custom spawn_egg object like:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "spawn_egg":{
     "base_color": "#FF0000",
@@ -49,6 +51,8 @@ The colors you choose will need to be something other than "#000000" for this gu
 ### In the BP
 
 Make sure `is_spawnable` and `is_summonable` are set to true, and that `is_experimental` is set to `false` in the description object:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "description":{

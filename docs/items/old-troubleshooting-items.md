@@ -22,7 +22,8 @@ I followed a tutorial or tried to make my own item and something's wrong! Calm d
 First things first, determine whether you used 1.10 or 1.16 format.
 Items are VERY DIFFERENT in 1.16. The main change you need to focus on is that there are longer two files (BP + RP), but rather a single BP file. This means that components like the following need to go into the BP -not the non-existent RP file.
 
-{% include filepath.html path="BP/items/your_item.json"%}
+<CodeHeader>BP/items/your_item.json</CodeHeader>
+
 ```json
 "minecraft:icon": {
     "texture": "copper_ingot"
@@ -43,7 +44,8 @@ I'm using 1.16 format <BButton color="blue" link="old-troubleshooting-items#_3-0
 
 Calm down, navigate to your `item_texture.json`. Ensure that it is properly named.
 
-{% include filepath.html path="RP/textures/item_texture.json"%}
+<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+
 ```json
 {
 	"resource_pack_name": "tut",
@@ -58,7 +60,8 @@ Calm down, navigate to your `item_texture.json`. Ensure that it is properly name
 
 Next, navigate to your item RP file. Ensure that it is properly named.
 
-{% include filepath.html path="RP/items/your_item.json"%}
+<CodeHeader>RP/items/your_item.json</CodeHeader>
+
 ```json
 {
 	"format_version": "1.10",
@@ -84,7 +87,8 @@ If you followed this properly, your item should now have a texture.
 
 Calm down, navigate to your `item_texture.json`. Ensure that it is properly named.
 
-{% include filepath.html path="RP/textures/item_texture.json"%}
+<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+
 ```json
 {
 	"resource_pack_name": "tut",
@@ -99,7 +103,8 @@ Calm down, navigate to your `item_texture.json`. Ensure that it is properly name
 
 Next, navigate to your item BP file. Remember, you are using the 1.16 format, so there shouldn't be an RP file for your item. Place the `minecraft:icon` component in your item file under the components section. Ensure that it is properly named.
 
-{% include filepath.html path="BP/items/your_item.json"%}
+<CodeHeader>BP/items/your_item.json</CodeHeader>
+
 ```json
 {
   "format_version": "1.16.100",
