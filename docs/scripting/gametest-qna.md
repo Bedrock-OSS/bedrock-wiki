@@ -38,7 +38,7 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** Yes! We have lots of tests for vanilla content right now and want to expand that to more and more over time. We actually ship some of the tests we have for vanilla content in our public builds (vanilla_gametest).
 
--   **A:** Ideally, over time, the community would also help us by using GameTest to report bugs with vanilla and we could incorporate those tests (once we fix the issue) and make sure we don't break that stuff again :slight_smile:
+-   **A:** Ideally, over time, the community would also help us by using GameTest to report bugs with vanilla and we could incorporate those tests (once we fix the issue) and make sure we don't break that stuff again 🙂
 
 ## Timeline
 
@@ -56,7 +56,7 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** Of course, we do see the potential for more scenarios down the road - including gameplay - but we really don't want to get anyones expectations high (or have people take a bet on scripting/gametest APIs for gameplay) until we have a bit more validation on things like perf, and getting support for more platforms, and responding to your feedback as well.
 
--   **A:** RE: Is there anything we can do to help with that? - Keep engaging with us on improving and adding new stuff! :slight_smile: The creator community is the driver for all of this.
+-   **A:** RE: Is there anything we can do to help with that? - Keep engaging with us on improving and adding new stuff! 🙂 The creator community is the driver for all of this.
 
 ## Consoles
 
@@ -68,11 +68,11 @@ title: GameTest Q&A 2021/08/06
 
 -   **Q:** Will there be any support for gametests to support different languages?
 
--   **A:** We've implemented the binding layer generically enough to fit into other programming/scripting languages. Internally we've done some fun things like play around with Lua and even something like Blockly. I don't think we can commit to adding any official support for other languages at the moment though :slight_smile:
+-   **A:** We've implemented the binding layer generically enough to fit into other programming/scripting languages. Internally we've done some fun things like play around with Lua and even something like Blockly. I don't think we can commit to adding any official support for other languages at the moment though 🙂
 
 -   **Q:** Have you considered Kotlin
 
--   **A:** I haven't looking into Kotlin much (all of our Android platform is still written in Java :slight_smile: ) but that sounds sweet! I'll take a peak some time.
+-   **A:** I haven't looking into Kotlin much (all of our Android platform is still written in Java 🙂 ) but that sounds sweet! I'll take a peak some time.
 
 ## Event System
 
@@ -139,7 +139,7 @@ title: GameTest Q&A 2021/08/06
 
 -   **Q:** As someone who is just starting to learn JavaScript, is there anything you can recommend that would help new coders to learn gametests? Talking more about in the context of gametests, not JS in general.
 
--   **A:** Awesome! JavaScript is a great way to start programming :slight_smile:
+-   **A:** Awesome! JavaScript is a great way to start programming 🙂
 
 -   **A:** We have a super small article here on building your first game test: https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestbuildyourfirstgametest
 
@@ -159,11 +159,11 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** Natively we don't support NPM libraries but we have had some limited successes when playing around with WebPack to "bake" down the packages.
 
--   **A:** Also!! our official TypeScript bindings are coming soon :slight_smile: We've shared some early versions on here but we are getting much closer to publishing them
+-   **A:** Also!! our official TypeScript bindings are coming soon 🙂 We've shared some early versions on here but we are getting much closer to publishing them
 
 -   **Q:** Will there be a package manager for the gametest like npm?
 
--   **A:** We've thought about it, but it's a lot of work. We'll keep thinking about it :slight_smile: I think as more and more people start using the scripting stuff we'll see some natural dev. patterns emerge and we'll want to lean into those
+-   **A:** We've thought about it, but it's a lot of work. We'll keep thinking about it 🙂 I think as more and more people start using the scripting stuff we'll see some natural dev. patterns emerge and we'll want to lean into those
 
 ## Ultimate Goal of GameTests
 
@@ -185,7 +185,7 @@ title: GameTest Q&A 2021/08/06
 
 -   **A:** For me personally it was creating a Binding layer + Consumer which allows for support of multiple scripting languages.
 
--   **A:** The idea is that each pack would be able to chose which scripting runtime to use :slight_smile:
+-   **A:** The idea is that each pack would be able to chose which scripting runtime to use 🙂
 
 -   **Q:** Hype! Any chance we get Python some time in the future?
 
@@ -343,7 +343,7 @@ title: GameTest Q&A 2021/08/06
 
 -   **Q:** will gametest be able to connect discord to mc?
 
--   **A:** not in the first versions, probably, no :slight_smile:
+-   **A:** not in the first versions, probably, no 🙂
 
 ## Java Parity
 
