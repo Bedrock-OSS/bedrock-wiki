@@ -1,5 +1,6 @@
 ---
 title: Vanilla Usage Components
+toc_max_level: 1
 ---
 
 This documentation is stripped from the vanilla files using an automated script.`

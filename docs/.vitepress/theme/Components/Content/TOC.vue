@@ -55,7 +55,7 @@
 					>{{ title }}</a
 				>
 				<div>
-					<ol id="toc">
+					<ol id="toc" class="pl-2">
 						<li
 							v-for="header in headers"
 							key="header.title"
@@ -66,7 +66,7 @@
 								:href="'#' + header.slug"
 								>{{ header.title }}</a
 							>
-							<ol>
+							<ol v-if="maxTocLevel > 1" class="pl-2">
 								<li
 									v-for="child in header.children"
 									key="child.title"
@@ -103,7 +103,7 @@ const getHeaders = function () {
 	let grouped = []
 	let lastHeader = null
   let lastSubHeader = null
-  console.log(page.value.headers);
+  console.log(page.value);
   if (page.value.headers) {
 		for (const header of page.value.headers) {
 			if (header.level === 1) {
@@ -135,9 +135,11 @@ const getHeaders = function () {
 
 let headers = ref(getHeaders())
 let title = ref(page.value.title)
+let maxTocLevel = ref(page.value.frontmatter.max_toc_level ?? 4)
 watch(page, () => {
 	headers.value = getHeaders()
 	title.value = page.value.title
+  maxTocLevel.value = page.value.frontmatter.max_toc_level ?? 4
 })
 </script>
 
