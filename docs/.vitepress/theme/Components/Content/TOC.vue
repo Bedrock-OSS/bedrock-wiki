@@ -124,7 +124,6 @@ const getHeaders = function () {
 	let grouped = []
 	let lastHeader = null
   let lastSubHeader = null
-  console.log(page.value);
   if (page.value.headers) {
 		for (const header of page.value.headers) {
 			if (header.level === 1) {
