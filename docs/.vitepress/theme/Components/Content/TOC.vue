@@ -56,14 +56,14 @@
 					>{{ title }}</a
 				>
 				<div>
-					<ol id="toc" class="pl-2">
+					<ol id="toc" class="pl-0">
 						<li
 							v-for="header in headers"
 							key="header.title"
 							class="py-0.5"
 						>
 							<a
-								class="text-black dark:text-white no-underline"
+								class="text-black dark:text-white no-underline font-bold break-all"
 								:href="'#' + header.slug"
 								>{{ header.title }}</a
 							>
@@ -75,11 +75,10 @@
 								>
 									<a
 										class="
-											text-black
-											dark:text-white
-											no-underline
-											italic
-											break-all
+										text-black
+										dark:text-white
+										no-underline
+										break-all
 										"
 										:href="'#' + child.slug"
 										>{{ child.title }}</a
@@ -133,33 +132,47 @@ const getHeaders = function () {
 			} else if (header.level === 2) {
 			  lastSubHeader = header;
 			  header.children = [];
-				if (lastHeader) {
-					lastHeader.children.push(header)
-				} else {
-					grouped.push(header)
-				}
-			} else if (header.level === 3) {
-        if (lastSubHeader) {
-          lastSubHeader.children.push(header)
-        } else if (lastHeader) {
-          lastHeader.children.push(header)
-        } else {
-          grouped.push(header)
+			  if (!lastHeader) {
+          lastHeader = {
+            slug: '',
+            title: '',
+            children: []
+          }
+          grouped.push(lastHeader);
         }
+        lastHeader.children.push(header)
+			} else if (header.level === 3) {
+        if (!lastHeader) {
+          lastHeader = {
+            slug: '',
+            title: '',
+            children: []
+          }
+          grouped.push(lastHeader);
+        }
+        if (!lastSubHeader) {
+          lastSubHeader = {
+            slug: '',
+            title: '',
+            children: []
+          }
+          lastHeader.children.push(lastSubHeader);
+        }
+        lastSubHeader.children.push(header)
       }
 		}
 	}
-
-	return grouped
+  console.log(grouped);
+  return grouped
 }
 
 let headers = ref(getHeaders())
 let title = ref(page.value.title)
-let maxTocLevel = ref(page.value.frontmatter.max_toc_level ?? 2)
+let maxTocLevel = ref(page.value.frontmatter.max_toc_level ?? 3)
 watch(page, () => {
 	headers.value = getHeaders()
 	title.value = page.value.title
-  maxTocLevel.value = page.value.frontmatter.max_toc_level ?? 2
+  maxTocLevel.value = page.value.frontmatter.max_toc_level ?? 3
 })
 </script>
 
