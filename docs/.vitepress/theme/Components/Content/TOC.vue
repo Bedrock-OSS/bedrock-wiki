@@ -82,6 +82,24 @@
 										:href="'#' + child.slug"
 										>{{ child.title }}</a
 									>
+                  <ol v-if="maxTocLevel > 2" class="pl-2">
+                    <li
+                        v-for="grandchild in child.children"
+                        key="grandchild.title"
+                        class="py-0.5"
+                    >
+                      <a
+                          class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+										"
+                          :href="'#' + grandchild.slug"
+                      >{{ grandchild.title }}</a
+                      >
+                    </li>
+                  </ol>
 								</li>
 							</ol>
 						</li>
@@ -135,11 +153,11 @@ const getHeaders = function () {
 
 let headers = ref(getHeaders())
 let title = ref(page.value.title)
-let maxTocLevel = ref(page.value.frontmatter.max_toc_level ?? 4)
+let maxTocLevel = ref(page.value.frontmatter.max_toc_level ?? 2)
 watch(page, () => {
 	headers.value = getHeaders()
 	title.value = page.value.title
-  maxTocLevel.value = page.value.frontmatter.max_toc_level ?? 4
+  maxTocLevel.value = page.value.frontmatter.max_toc_level ?? 2
 })
 </script>
 
