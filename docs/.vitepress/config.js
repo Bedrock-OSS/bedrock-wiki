@@ -42,7 +42,7 @@ function generateSidebar(base, dir) {
 			const link = formatLink(joinedPath.toString().replace(base, ''))
 
 			// Don't include hidden pages (ignores children)
-			if (frontMatter.data.hidden == true) return
+			if (frontMatter.data.hidden === true) return
 
 			let prefix = null
 
@@ -55,7 +55,6 @@ function generateSidebar(base, dir) {
 			if (frontMatter.data.tags != null) {
 				tags = frontMatter.data.tags
 			}
-
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
@@ -92,6 +91,13 @@ module.exports = {
 	description: 'Technical bedrock knowledge-sharing wiki.',
 	base: baseUrl,
 
+	markdown: {
+		lineNumbers: true,
+		config: (md) => {
+			md.use(require('./theme/Utils/full-headers'))
+		}
+	},
+
 	head: [
 		// Enable to make the bedrock wiki installable
 		// [
@@ -108,13 +114,6 @@ module.exports = {
 		// 		src: '/registerSW.js',
 		// 	},
 		// ],
-	],
-
-	markdown: {
-		lineNumbers: true,
-	},
-
-	head: [
 		[
 			'script',
 			{},

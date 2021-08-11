@@ -93,7 +93,7 @@
 </template>
 
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import {useData, useRoute} from 'vitepress'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
 const { page } = useData()
 
@@ -102,19 +102,31 @@ import { ref, watch } from 'vue'
 const getHeaders = function () {
 	let grouped = []
 	let lastHeader = null
-	if (page.value.headers) {
+  let lastSubHeader = null
+  console.log(page.value.headers);
+  if (page.value.headers) {
 		for (const header of page.value.headers) {
-			if (header.level === 2) {
+			if (header.level === 1) {
 				lastHeader = header
 				header.children = []
 				grouped.push(header)
-			} else if (header.level === 3) {
+			} else if (header.level === 2) {
+			  lastSubHeader = header;
+			  header.children = [];
 				if (lastHeader) {
 					lastHeader.children.push(header)
 				} else {
 					grouped.push(header)
 				}
-			}
+			} else if (header.level === 3) {
+        if (lastSubHeader) {
+          lastSubHeader.children.push(header)
+        } else if (lastHeader) {
+          lastHeader.children.push(header)
+        } else {
+          grouped.push(header)
+        }
+      }
 		}
 	}
 
