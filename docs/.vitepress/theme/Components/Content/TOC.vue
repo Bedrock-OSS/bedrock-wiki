@@ -51,6 +51,7 @@
 						no-underline
 						font-bold
 						text-lg
+						break-all
 					"
 					>{{ title }}</a
 				>
@@ -78,6 +79,7 @@
 											dark:text-white
 											no-underline
 											italic
+											break-all
 										"
 										:href="'#' + child.slug"
 										>{{ child.title }}</a
@@ -94,6 +96,7 @@
 											dark:text-white
 											no-underline
 											italic
+											break-all
 										"
                           :href="'#' + grandchild.slug"
                       >{{ grandchild.title }}</a
