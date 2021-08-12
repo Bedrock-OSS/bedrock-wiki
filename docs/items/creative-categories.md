@@ -2,8 +2,10 @@
 title: Creative Categories
 tags:
     - experimental
+    - beta
 mention:
     - Warhead51707
+    - yanasakana
 ---
 
 Creative categories are the categories that an item or block can appear in inside of the creative inventory.
@@ -73,7 +75,7 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 
 ## List of Creative Tabs
 
-> _For use with `description` parameter `category`_
+> _For use with `description` parameter, `category`_
 
 | Category  
 | --------------------------------
