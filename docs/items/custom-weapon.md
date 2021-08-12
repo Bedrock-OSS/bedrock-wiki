@@ -152,11 +152,36 @@ You can also mix and match other components like `minecraft:digger` to allow you
             "block": "minecraft:bamboo",
             "speed": 10
         }
-    ]
+    ],
+	"on_dig":{
+		"event": "example:my_sword.on_dig_damage"
+		//Needed to change sword durability
+	}
+}
+```
+
+Also add `example:my_sword.on_dig_damage` event:
+
+<CodeHeader></CodeHeader>
+
+```json
+// This is a separate section to "components"
+"events": {
+    // This is the event we named above
+    "example:my_sword.on_dig_damage": {
+		"damage":{
+			//This part of event will make sword take damage when it was used to dig block
+			"type":"durability",
+			"target":"self",
+			//By using "self" you define item as target to take damage
+			"amount":1
+		}
+	}
 }
 ```
 
 You can also give it a default mining speed by adding `"minecraft:mining_speed": 1.5`, which would give it a generic mining speed letting you use your weapon like a pickaxe.
+(It is currently broken)
 
 ## Adding the damage to the icon popup
 
@@ -164,11 +189,11 @@ The above was a bare bones approach, but you probably want to be able to show th
 
 To do this you need to add the `"minecraft:weapon": {}` component, even if its just empty this is enough to MC to know internally to treat your popup like a weapon popup when mouse over-ing.
 
-So if you add the above component to your item json file when you mouse over your sword you will now see **+10 Attack Power** listed in its tooltip.
+So if you add the above component to your item json file when you mouse over your sword you will now see **+10 Attack Damage** listed in its tooltip.
 
 > You may be thinking "why didnt you just add this above?" and the answer is because we will build off this component to add more cool stuff in the next section, so I wanted to keep it separate.
 
-## Giving the sword a unique ability
+## Giving the sword a unique ability & durability
 
 At this point you could call it a day, but what if you wanted to make a sword that could inflict status effects, or teleport an enemy when they attacked you?
 
@@ -188,7 +213,7 @@ Once we add that then every time you hurt an entity it will raise the event `exa
 
 > I could just as easily call the event **"space-noodle"** and it would work fine, but you want it to be easily searchable and self explaining, so keep that in mind
 
-Now that we have an event being raised we can do what we want with it. In this example I am going to do 2 things, I will teleport the player 25% of the time and I will output a text message letting the player know that the swords done something.
+Now that we have an event being raised we can do what we want with it. In this example I am going to do 3 things, I will teleport the player 25% of the time, I will output a text message letting the player know that the swords done something and damaging the sword.
 
 So if you go back into your my_sword.json and after your `components` section add a new section like so.
 
@@ -199,28 +224,42 @@ So if you go back into your my_sword.json and after your `components` section ad
 "events": {
     // This is the event we named above
     "example:my_sword.hurt_entity": {
-        // We will randomize the output
-        "randomize": [
-            {
-                // Weights are relative, so this has 1
-                "weight": 1,
-                // Teleport the HOLDER (you) within an 8x8x8 range
-                "teleport": {
-                    "target": "holder",
-                    "max_range": [8,8,8]
-                },
-                // Then output on the console "Your Sword Glows" in green text
-                "run_command":{
-                    "command":[
-                        "tellraw @s{\"rawtext\":[{\"text\":\"§aYour Sword Glows\"}]}"
-                    ]
-                }
-            },
-            {
-                // We have another dummy random element here which contains the max weight
-                "weight": 4
-            }
-        ]
+		"sequence":[
+			//Sequence is needed to run two or more parts of event
+			{
+				// We will randomize the output
+				"randomize": [
+					{
+						// Weights are relative, so this has 1
+						"weight": 1,
+						// Teleport the HOLDER (you) within an 8x8x8 range
+						"teleport": {
+							"target": "holder",
+							"max_range": [8,8,8]
+						},
+						// Then output on the console "Your Sword Glows" in green text
+						"run_command":{
+							"command":[
+								"tellraw @s{\"rawtext\":[{\"text\":\"§aYour Sword Glows\"}]}"
+							]
+						}
+					},
+					{
+						// We have another dummy random element here which contains the max weight
+						"weight": 4
+					}
+				]
+			},
+			{
+				"damage":{
+					//This part of event will make sword take damage when it was used to hurt an entity
+					"type":"durability",
+					"target":"self",
+					//By using "self" you define item as target to take damage
+					"amount":1
+				}
+			}
+		]
     }
 }
 ```
@@ -239,7 +278,7 @@ You should probably make a recipe for it, which is covered in previous chapters,
 
 ```json
 {
-	"format_version": "1.16.100",
+	"format_version": "1.12.0",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "example:my_sword"
