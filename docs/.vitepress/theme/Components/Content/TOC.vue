@@ -51,22 +51,23 @@
 						no-underline
 						font-bold
 						text-lg
+						break-all
 					"
 					>{{ title }}</a
 				>
 				<div>
-					<ol id="toc">
+					<ol id="toc" class="pl-0">
 						<li
 							v-for="header in headers"
 							key="header.title"
 							class="py-0.5"
 						>
 							<a
-								class="text-black dark:text-white no-underline"
+								class="text-black dark:text-white no-underline font-bold break-all"
 								:href="'#' + header.slug"
 								>{{ header.title }}</a
 							>
-							<ol>
+							<ol v-if="maxTocLevel > 1" class="pl-2">
 								<li
 									v-for="child in header.children"
 									key="child.title"
@@ -74,14 +75,33 @@
 								>
 									<a
 										class="
-											text-black
-											dark:text-white
-											no-underline
-											italic
+										text-black
+										dark:text-white
+										no-underline
+										break-all
 										"
 										:href="'#' + child.slug"
 										>{{ child.title }}</a
 									>
+                  <ol v-if="maxTocLevel > 2" class="pl-2">
+                    <li
+                        v-for="grandchild in child.children"
+                        key="grandchild.title"
+                        class="py-0.5"
+                    >
+                      <a
+                          class="
+											text-black
+											dark:text-white
+											no-underline
+											italic
+											break-all
+										"
+                          :href="'#' + grandchild.slug"
+                      >{{ grandchild.title }}</a
+                      >
+                    </li>
+                  </ol>
 								</li>
 							</ol>
 						</li>
@@ -93,7 +113,7 @@
 </template>
 
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import {useData, useRoute} from 'vitepress'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
 const { page } = useData()
 
@@ -102,30 +122,57 @@ import { ref, watch } from 'vue'
 const getHeaders = function () {
 	let grouped = []
 	let lastHeader = null
-	if (page.value.headers) {
+  let lastSubHeader = null
+  if (page.value.headers) {
 		for (const header of page.value.headers) {
-			if (header.level === 2) {
+			if (header.level === 1) {
 				lastHeader = header
 				header.children = []
 				grouped.push(header)
+			} else if (header.level === 2) {
+			  lastSubHeader = header;
+			  header.children = [];
+			  if (!lastHeader) {
+          lastHeader = {
+            slug: '',
+            title: '',
+            children: []
+          }
+          grouped.push(lastHeader);
+        }
+        lastHeader.children.push(header)
 			} else if (header.level === 3) {
-				if (lastHeader) {
-					lastHeader.children.push(header)
-				} else {
-					grouped.push(header)
-				}
-			}
+        if (!lastHeader) {
+          lastHeader = {
+            slug: '',
+            title: '',
+            children: []
+          }
+          grouped.push(lastHeader);
+        }
+        if (!lastSubHeader) {
+          lastSubHeader = {
+            slug: '',
+            title: '',
+            children: []
+          }
+          lastHeader.children.push(lastSubHeader);
+        }
+        lastSubHeader.children.push(header)
+      }
 		}
 	}
-
-	return grouped
+  console.log(grouped);
+  return grouped
 }
 
 let headers = ref(getHeaders())
 let title = ref(page.value.title)
+let maxTocLevel = ref(page.value.frontmatter.max_toc_level ?? 3)
 watch(page, () => {
 	headers.value = getHeaders()
 	title.value = page.value.title
+  maxTocLevel.value = page.value.frontmatter.max_toc_level ?? 3
 })
 </script>
 
