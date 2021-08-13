@@ -31,7 +31,11 @@ function generateSidebar(base, dir) {
 				children: generateSidebar(base, joinedPath),
 			})
 			if (frontMatter.data.title === void 0) {
-				throw new Error("File " + path.join(joinedPath, 'index.md') + " has invalid frontmatter!");
+				throw new Error(
+					'File ' +
+						path.join(joinedPath, 'index.md') +
+						' has invalid frontmatter!'
+				)
 			}
 		} else if (stats.isFile()) {
 			// Don't include non-markdown files, or the index page itself
@@ -64,7 +68,9 @@ function generateSidebar(base, dir) {
 				activeMatch: `^${link}`,
 			})
 			if (frontMatter.data.title === void 0) {
-				throw new Error("File " + joinedPath + " has invalid frontmatter!");
+				throw new Error(
+					'File ' + joinedPath + ' has invalid frontmatter!'
+				)
 			}
 		}
 	})
@@ -95,7 +101,7 @@ module.exports = {
 		lineNumbers: true,
 		config: (md) => {
 			md.use(require('./theme/Utils/full-headers'))
-		}
+		},
 	},
 
 	head: [
@@ -126,10 +132,10 @@ module.exports = {
 		docsDir: 'docs',
 
 		// vitepress config right now
-		// algolia: {
-		// 	apiKey: 'c57105e511faa5558547599f120ceeba',
-		// 	indexName: 'vitepress',
-		// },
+		algolia: {
+			apiKey: '10cfe09996bc971de563cfdde5ee438e',
+			indexName: 'wiki-bedrock',
+		},
 
 		editLinks: true,
 		editLinkText: 'Edit this page on GitHub',
