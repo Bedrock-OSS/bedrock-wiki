@@ -13,7 +13,7 @@ Creative categories are the categories that an item or block can appear in insid
 ## For Items
 
 ::: warning
-This feature is currently experimental and is currently only available for custom items. Make sure to use the [1.16+ format!](/items/items-16)
+This feature is currently experimental and is currently only available for custom items. Make sure to use the [1.16.100+ format version!](/items/items-16)
 :::
 
 Item categories applied with the item description direct it to a more broad field in the creative category, individual tabs. They need to be the same tab as the component `creative_category`. Such would be applied like the following example:
@@ -79,12 +79,12 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 
 | Category  
 | --------------------------------
-| Commands |  
-| Construction |  
-| Equipment |  
-| Items |  
-| Nature |  
-| None |
+| commands |  
+| construction |  
+| equipment |  
+| items |  
+| nature |  
+| none |
 
 ## List of Creative Categories
 
