@@ -21,6 +21,8 @@ It's important to remember that `runtime_identifier` will only parse the hard-co
 
 ## Known runtime-identifier effects:
 
+-   All runtime ID change name of tamed entity to name of entity which runtime ID it is using
+
 ### minecraft:armor_stand
 
 -   Disables entity shadows
