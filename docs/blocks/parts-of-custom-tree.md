@@ -536,7 +536,10 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "custom_sapling",
-					"render_method": "alpha_test"
+					"render_method": "alpha_test",
+                    //Add this two components to remove shadow from this block:
+                    "face_dimming":false,
+					"ambient_occlusion":false
 				}
 			},
 			"minecraft:pick_collision": {

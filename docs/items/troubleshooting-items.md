@@ -93,7 +93,6 @@ To do this, you need to create an item file in `RP/items/` called `<name_of_your
 			"identifier": "yana:amethyst_sword",
 			"category": "Equipment"
 		},
-
 		"components": {
 			"minecraft:icon": "amethyst_sword",
 			"minecraft:render_offsets": "tools"
@@ -120,7 +119,6 @@ To do this, you need to create an item file in `BP/items/` called `<name_of_your
 		"description": {
 			"identifier": "yana:amethyst_sword"
 		},
-
 		"components": {
 			"minecraft:foil": false,
 			"minecraft:max_damage": 250,
