@@ -132,7 +132,7 @@
 					title="World Generation"
 					imgsrc="assets/images/homepage/buildplate.png"
 				>
-					<a href="world-generation/world-generation-intro">Beginner's Guide</a>: A "Intro to world generation.<br /><br />
+					<a href="world-generation/world-generation-intro">Beginner's Guide</a>: Intro to world generation.<br /><br />
 				</Card>
 				<CardLink
 					title="Contribute"
