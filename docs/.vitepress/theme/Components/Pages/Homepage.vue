@@ -132,7 +132,8 @@
 					title="World Generation"
 					imgsrc="assets/images/homepage/buildplate.png"
 				>
-					<a href="world-generation/world-generation-intro">Beginner's Guide</a>: Intro to world generation.<br /><br />
+					<a href="world-generation/world-generation-intro">Beginner's Guide</a>:
+					Learn about creation of custom biomes, structures, ores and more.<br /><br />
 				</Card>
 				<CardLink
 					title="Contribute"
