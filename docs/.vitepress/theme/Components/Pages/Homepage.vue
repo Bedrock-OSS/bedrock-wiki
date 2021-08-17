@@ -133,8 +133,6 @@
 					imgsrc="assets/images/homepage/buildplate.png"
 				>
 					<a href="world-generation/world-generation-intro">Beginner's Guide</a>: A "Intro to world generation.<br /><br />
-					<a href="blocks/blocks-16">Blocks 1.16+</a>: Learn about the
-					world generation.
 				</Card>
 				<CardLink
 					title="Contribute"
