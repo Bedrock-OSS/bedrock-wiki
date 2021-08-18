@@ -82,9 +82,9 @@ Navigate to `RP/textures/items/`, creating subdirectories as needed: this is whe
 ### Shortnames
 
 Finally, we need to tell the game that an exact texture file belongs to a specific custom item. In Ectoplasm's RP file, we already defined its icon as `"wiki.ectoplasm"`. Now we have to establish a connection between this _shortname_ and the texture file `ectoplasm.png`
-This is done through the `item_textures.json` file, located in `RP/textures/`. Its base code is this:
+This is done through the `item_texture.json` file, located in `RP/textures/`. Its base code is this:
 
-<CodeHeader>RP/textures/item_textures.json</CodeHeader>
+<CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
 {
@@ -97,7 +97,7 @@ This is done through the `item_textures.json` file, located in `RP/textures/`. I
 -   `"resource_pack_name"` is quite self-explanatory: it's the RP name string;
 -   `"texture_data"` is an object where each item shortname is defined - for Ectoplasm, we need to pu this code snippet inside of it:
 
-<CodeHeader>RP/textures/item_textures.json/texture_data</CodeHeader>
+<CodeHeader>RP/textures/item_texture.json/texture_data</CodeHeader>
 
 ```json
 "wiki.ectoplasm": {
@@ -107,9 +107,9 @@ This is done through the `item_textures.json` file, located in `RP/textures/`. I
 
 This snippet tells the game that by typing `"wiki.ectoplasm"` in our add-on, you mean the _texture_ located in `textures/items/` and called `ectoplasm`. You do not need the `.png` extension here.
 
-After you add the snippet in, `item_textures.json` should look like this:
+After you add the snippet in, `item_texture.json` should look like this:
 
-<CodeHeader>RP/textures/item_textures.json</CodeHeader>
+<CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
 {
