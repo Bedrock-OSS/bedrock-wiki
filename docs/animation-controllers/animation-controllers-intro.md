@@ -112,7 +112,7 @@ Lets look at a simple animation controller from our State Machine example above:
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
-		"controller.animation.helicopter": {
+		"controller.animation.helicopter.blade": {
 			"initial_state": "ground",
 			"states": {
 				"ground": {
@@ -194,7 +194,7 @@ Here is the code for the second state machine from above, with three states this
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
-		"controller.animation.helicopter": {
+		"controller.animation.helicopter.blade": {
 			"initial_state": "ground",
 			"states": {
 				"ground": {
