@@ -87,7 +87,34 @@ Next, we'll make the ghost spawn in deserts at night:
 
 ## Crafting recipes
 
-And finally, as an introduction to recipes, we'll make the Ectoplasm craftable into Slime Blocks.
+And finally, as an introduction to recipes, we'll make the Ectoplasm craftable into Slime Blocks:
+
+<CodeHeader>BP/recipes/ectoplasm_slime_blocks.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "wiki:ectoplasm_slime_block"
+		},
+    "tags": [ "crafting_table" ],
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "wiki:ectoplasm"
+			}
+		},
+		"result": {
+			"item": "minecraft:slime"
+		}
+	}
+}
+```
 
 ## Your progress so far:
 
