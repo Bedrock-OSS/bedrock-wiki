@@ -5,6 +5,10 @@ tags:
     - help
 ---
 
+:::tip
+This page contains troubleshooting information about _entities_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
+:::
+
 ---
 
 <a name="0.0.0"></a>

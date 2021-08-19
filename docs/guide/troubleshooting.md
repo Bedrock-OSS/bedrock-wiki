@@ -12,7 +12,7 @@ Creating Addons for Minecraft is a relatively straightforward process _once you 
 
 ### Reload
 
-Reload MC. Just do it.
+First, you should always reload Minecraft. That means fully closing the game, and reopening the game.
 
 ### The Environment
 

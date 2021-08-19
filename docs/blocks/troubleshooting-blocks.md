@@ -7,9 +7,9 @@ tags:
 
 ## Learn about Troubleshooting
 
-This page offers specific advice for troubleshooting blocks. You should consider reading our general tips on troubleshooting before starting here.
-
-<BButton link="/guide/troubleshooting"> Troubleshooting Basics </BButton>
+:::tip
+This page contains troubleshooting information about _blocks_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
+:::
 
 ## Step-by-step Block Debugging
 
