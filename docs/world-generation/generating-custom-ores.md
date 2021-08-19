@@ -2,6 +2,8 @@
 title: Generating Custom Ores
 mention:
 	- DerpMcaddon
+tags:
+	- experimental
 ---
 
 Ore Features are basic but important features. They can cluster from blocks by replacing blocks where they are generated. This tutorial will show you how to make mineral ores that naturally generates.
