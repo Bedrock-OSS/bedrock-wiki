@@ -74,7 +74,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
    },
    "run_command": {
       "command": [
-         "setblock ~~~ thing:align"
+         "setblock ~~~ wiki:align"
       ]
    }
 }
@@ -97,7 +97,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "thing:align" //Block used to summon the dummy entity right on the block, and as the block is centered, the entity will center too.
+			"identifier": "wiki:align" //Block used to summon the dummy entity right on the block, and as the block is centered, the entity will center too.
 		},
 		"components": {
 			"minecraft:destroy_time": 2,
@@ -117,16 +117,16 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 				"size": [0, 0, 0]
 			},
 			"minecraft:on_placed": {
-				"event": "my:event"
+				"event": "wiki:event"
 			},
 			"minecraft:loot": "loot_tables/empty.json"
 		},
 		"events": {
-			"my:event": {
+			"wiki:event": {
 				"run_command": {
 					"command": [
 						"setblock ~~~ air 0", //This will despawn the block
-						"summon thing:dummy_align" //And this spawn the dummy entity.
+						"summon wiki:dummy_align" //And this spawn the dummy entity.
 					]
 				}
 			}
@@ -142,7 +142,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 	"format_version": "1.13.0",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "thing:dummy_align", //The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
+			"identifier": "wiki:dummy_align", //The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false
@@ -150,7 +150,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 		"component_groups": {
 			"transform": {
 				"minecraft:transformation": {
-					"into": "thing:your_entity",
+					"into": "wiki:your_entity",
 					"delay": 0
 				}
 			}

@@ -1472,8 +1472,8 @@ Features are mostly outside the scope of biomes, but the two components within a
 "minecraft:forced_features": {
 	"surface_pass": [
 		{
-			"identifier": "aetherlands:redwood_tree_feature",
-			"places_feature": "aetherlands:redwood_tree",
+			"identifier": "wiki:redwood_tree_feature",
+			"places_feature": "wiki:redwood_tree",
 
 			"iterations": "math.random_integer(2, 4)",
 

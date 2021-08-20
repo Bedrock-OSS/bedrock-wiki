@@ -15,7 +15,7 @@ This goal is accomplished via `minecraft:trade_table` or `minecraft:economy_trad
 For a simple trading UI, `trade_table` + `trade_with_player` components should do the trick.
 
 1. Add `"minecraft:behavior.trade_with_player": {}` to your entity's components.
-2. Copy the following code into a component group of your entity. I'll call mine `"tut:trader"`;
+2. Copy the following code into a component group of your entity. I'll call mine `"wiki:trader"`;
 
 <CodeHeader></CodeHeader>
 

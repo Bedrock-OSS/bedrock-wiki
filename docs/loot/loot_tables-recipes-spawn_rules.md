@@ -380,7 +380,7 @@ _Blocks do not drop loot in creative mode_
 
 ## Custom crafting/smelting/etc Recipes
 
-Recipes can have unique identifiers like `tut:compass_from_compass_block`. They're located in `BP/recipes`.
+Recipes can have unique identifiers like `wiki:compass_from_compass_block`. They're located in `BP/recipes`.
 
 -   The parameter below "`format_version`" defines the type of this recipe. It can be set to "`recipe_furnace`"(smelting), "`recipe_shaped`"(every ingredient has a set place in the crafting grid) and "`recipe_shapeless`"(ingredients can be placed in whatever order into the crafting grid).
 -   Every recipe takes "`tags`" which are a list of vanilla benches that can use this recipe. Can be "`crafting_table`", "`furnace`", "`smoker`", "`blast_furnace`", "`campfire`", "`stonecutter`" etc.
@@ -525,7 +525,7 @@ Let's also look into a recipe that gives you more than one item as a result.
 		],
 		"result": {},
 		"description": {
-			"identifier": "tut:randomity_recipe"
+			"identifier": "wiki:randomity_recipe"
 		}
 	}
 }
@@ -615,7 +615,7 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
         },
 ```
 
--   "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity:born`" (as baby). Can be used in any event.
+-   "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity_born`" (as baby). Can be used in any event.
     `"event_skip_count": 2`, for example, means that the first two entities will not be spawned with this event, but all the next ones will.
 
 _Why not create some more custom blocks, items, recipes and loot tables before moving onto the next big chapter?_

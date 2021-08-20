@@ -68,7 +68,7 @@ We'll also need to hook it up to our entity as so:
 
 ```json
 "description": {
-    "identifier": "ass:dragon",
+    "identifier": "wiki:dragon",
     "is_spawnable": true,
     "is_summonable": true,
     "is_experimental": false,
@@ -90,12 +90,12 @@ This method detects the riding player's vertical rotation and applies levitation
 There are multiple ways of achieving that, but in this tutorial, we'll be using the target selectors `rym` (minimum y-rotation) and `ry` (maximum y-rotation) in a chain of repeating command-blocks to detect the player's pitch, and depending on the range, giving our entity levitation or slowly falling.
 
 ```
-execute @a[rxm=-90,rx=-25] ~~~ effect @e[type=ass:dragon,r=1] levitation 1 6 true
-execute @a[rxm=-25,rx=-15] ~~~ effect @e[type=ass:dragon,r=1] levitation 1 3 true
-execute @a[rxm=-15,rx=-5] ~~~ effect @e[type=ass:dragon,r=1] levitation 1 2 true
-execute @a[rxm=-5,rx=20] ~~~ effect @e[type=ass:dragon,r=1] levitation 1 1 true
-execute @a[rxm=20,rx=35] ~~~ effect @e[type=ass:dragon,r=1] slow_falling 1 1 true
-execute @a[rxm=35,rx=90] ~~~ effect @e[type=ass:dragon,r=1] clear
+execute @a[rxm=-90,rx=-25] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 6 true
+execute @a[rxm=-25,rx=-15] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 3 true
+execute @a[rxm=-15,rx=-5] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 2 true
+execute @a[rxm=-5,rx=20] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 1 true
+execute @a[rxm=20,rx=35] ~~~ effect @e[type=wiki:dragon,r=1] slow_falling 1 1 true
+execute @a[rxm=35,rx=90] ~~~ effect @e[type=wiki:dragon,r=1] clear
 ```
 
 **Depending on how big your entity is and how far away the player's seat is from its pivot, you might need to change the radius `r` to a more significant value.**
@@ -180,12 +180,12 @@ You might also notice that the entity levitates when you go near it. We can fix 
 ```
 
 ```
-execute @a[rxm=-90,rx=-25] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] levitation 1 6 true
-execute @a[rxm=-25,rx=-15] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] levitation 1 3 true
-execute @a[rxm=-15,rx=-5] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] levitation 1 2 true
-execute @a[rxm=-5,rx=20] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] levitation 1 1 true
-execute @a[rxm=20,rx=35] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] slow_falling 1 1 true
-execute @a[rxm=35,rx=90] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] clear
+execute @a[rxm=-90,rx=-25] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 6 true
+execute @a[rxm=-25,rx=-15] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 3 true
+execute @a[rxm=-15,rx=-5] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 2 true
+execute @a[rxm=-5,rx=20] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 1 true
+execute @a[rxm=20,rx=35] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] slow_falling 1 1 true
+execute @a[rxm=35,rx=90] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] clear
 ```
 
 ## Controlling Through Jumping
@@ -215,7 +215,7 @@ Next, we need an animation controller that causes the entity to levitate when th
     "states": {
         "falling": {
             "on_entry": [
-                "/effect @e[type=ass:dragon,r=1,c=1] levitation 0"
+                "/effect @e[type=wiki:dragon,r=1,c=1] levitation 0"
             ],
             "transitions": [
                 { "rising": "query.is_jumping" }
@@ -223,7 +223,7 @@ Next, we need an animation controller that causes the entity to levitate when th
         },
         "rising": {
             "on_entry": [
-                "/effect @e[type=ass:dragon,r=1,c=1] levitation 100000 6 true"
+                "/effect @e[type=wiki:dragon,r=1,c=1] levitation 100000 6 true"
             ],
             "transitions": [
                 { "falling": "!query.is_jumping" }

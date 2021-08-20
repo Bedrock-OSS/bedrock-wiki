@@ -12,7 +12,7 @@ Blockshapes are essentially block geometries or models that are hard-coded into 
 
 ```json
 
-    "yana:invisible_aluminium_ore": {
+    "wiki:invisible_aluminium_ore": {
         "blockshape": "invisible",
         "sound": "stone",
         "textures": "invisible_aluminium_ore"

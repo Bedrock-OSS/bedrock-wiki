@@ -33,12 +33,12 @@ You can find the BP player entity file in the vanilla behavior pack provided by 
             "is_experimental": false
         },
         "component_groups": {
-            "oss:spawn_tamed_wolf": {
+            "wiki:spawn_tamed_wolf": {
                 "minecraft:spawn_entity": {
                     "entities": {
                         "min_wait_time": 0,
                         "max_wait_time": 0,
-                        "spawn_entity": "oss:pretamed_wolf",
+                        "spawn_entity": "wiki:pretamed_wolf",
                         "single_use": true,
                         "num_to_spawn": 1
                     }
@@ -46,7 +46,7 @@ You can find the BP player entity file in the vanilla behavior pack provided by 
             },
             ...
         "events": {
-            "oss:spawn_tamed_wolf": { "add": { "component_groups": [ "oss:spawn_tamed_wolf" ] } }
+            "wiki:spawn_tamed_wolf": { "add": { "component_groups": [ "wiki:spawn_tamed_wolf" ] } }
             ...
         }
     }
@@ -64,7 +64,7 @@ Then, we'll need to create a simple custom entity that will have the `minecraft:
     "format_version": "1.16.0",
     "minecraft:entity": {
         "description": {
-            "identifier": "oss:pretamed_wolf",
+            "identifier": "wiki:pretamed_wolf",
             "runtime_identifier": "minecraft:arrow",
             "is_spawnable": false,
             "is_summonable": true,
@@ -81,6 +81,6 @@ Then, we'll need to create a simple custom entity that will have the `minecraft:
 }
 ```
 
-And now, you can spawn a tamed wolf next to the player with `/event entity @p oss:spawn_tamed_wolf`; You can also spawn it with an `oss:pretamed_wolf` spawn egg by setting `is_spawnable` to `true`!
+And now, you can spawn a tamed wolf next to the player with `/event entity @p wiki:spawn_tamed_wolf`; You can also spawn it with an `wiki:pretamed_wolf` spawn egg by setting `is_spawnable` to `true`!
 
 Special thanks to [Zarkmend ZAN](https://twitter.com/Zarkmend_ZAN) for figuring this out :)

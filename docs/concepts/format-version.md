@@ -25,7 +25,7 @@ _Example: Running a Command after a Player consumes an item._
 	"format_version": "1.16.100",
 	"minecraft:item": {
 		"description": {
-			"identifier": "example:food",
+			"identifier": "wiki:food",
 			"category": "nature"
 		},
 		"components": {
@@ -60,7 +60,7 @@ _Example: Running a Command after a Player consumes an item._
 	"format_version": "1.10.0",
 	"minecraft:item": {
 		"description": {
-			"identifier": "example:food"
+			"identifier": "wiki:food"
 		},
 		"components": {
 			"minecraft:use_duration": 32,

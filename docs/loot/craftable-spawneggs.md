@@ -17,7 +17,7 @@ This recipe will convert a piece of gunpowder to a creeper spawn egg.
 	"format_version": "1.13.0",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "foo:bar"
+			"identifier": "wiki:my_recipe"
 		},
 		"tags": ["crafting_table"],
 		"ingredients": [

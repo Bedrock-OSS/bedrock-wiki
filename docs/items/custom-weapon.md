@@ -57,7 +57,7 @@ Like with the other item tutorials we will start by making a simple custom sword
 	// We add in an additional "category" field with "equipment"
 	"minecraft:item": {
 		"description": {
-			"identifier": "example:my_sword",
+			"identifier": "wiki:my_sword",
 			"category": "equipment"
 		},
 		"components": {
@@ -154,13 +154,13 @@ You can also mix and match other components like `minecraft:digger` to allow you
         }
     ],
 	"on_dig":{
-		"event": "example:my_sword.on_dig_damage"
+		"event": "wiki:my_sword.on_dig_damage"
 		//Needed to change sword durability
 	}
 }
 ```
 
-Also add `example:my_sword.on_dig_damage` event:
+Also add `wiki:my_sword.on_dig_damage` event:
 
 <CodeHeader></CodeHeader>
 
@@ -168,7 +168,7 @@ Also add `example:my_sword.on_dig_damage` event:
 // This is a separate section to "components"
 "events": {
     // This is the event we named above
-    "example:my_sword.on_dig_damage": {
+    "wiki:my_sword.on_dig_damage": {
 		"damage":{
 			//This part of event will make sword take damage when it was used to dig block
 			"type":"durability",
@@ -204,12 +204,12 @@ Assuming you wanted to do something like this we will need to build off the `min
 ```json
 "minecraft:weapon": {
     "on_hurt_entity": {
-        "event": "example:my_sword.hurt_entity"
+        "event": "wiki:my_sword.hurt_entity"
     }
 }
 ```
 
-Once we add that then every time you hurt an entity it will raise the event `example:my_sword.hurt_entity`. You can name this whatever you want, but if you end up with lots of events its recommended to have some level of namespacing, so in this scenario `example` is my main namespace, `my_sword` is the item I want it to apply on and `hurt_entity` is the related event on that item.
+Once we add that then every time you hurt an entity it will raise the event `wiki:my_sword.hurt_entity`. You can name this whatever you want, but if you end up with lots of events its recommended to have some level of namespacing, so in this scenario `example` is my main namespace, `my_sword` is the item I want it to apply on and `hurt_entity` is the related event on that item.
 
 > I could just as easily call the event **"space-noodle"** and it would work fine, but you want it to be easily searchable and self explaining, so keep that in mind
 
@@ -223,7 +223,7 @@ So if you go back into your my_sword.json and after your `components` section ad
 // This is a separate section to "components"
 "events": {
     // This is the event we named above
-    "example:my_sword.hurt_entity": {
+    "wiki:my_sword.hurt_entity": {
 		"sequence":[
 			//Sequence is needed to run two or more parts of event
 			{
@@ -281,7 +281,7 @@ You should probably make a recipe for it, which is covered in previous chapters,
 	"format_version": "1.12.0",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "example:my_sword"
+			"identifier": "wiki:my_sword"
 		},
 		"tags": ["crafting_table"],
 		"pattern": ["e", "E", "#"],
@@ -297,7 +297,7 @@ You should probably make a recipe for it, which is covered in previous chapters,
 			}
 		},
 		"result": {
-			"item": "example:my_sword"
+			"item": "wiki:my_sword"
 		}
 	}
 }

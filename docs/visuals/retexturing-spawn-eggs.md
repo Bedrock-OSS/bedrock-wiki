@@ -4,7 +4,7 @@ title: Retexturing Spawn Eggs
 
 <Label color="green">Beginner</Label>
 
-Custom entities will automatically be given a spawn egg. This spawn egg can be found inside of the creative menu, with a name like `item.spawn_egg.entity.sirlich:my_entity.name`. If you want to rename your spawn egg as well as set a texture, you can do so in the lang files.
+Custom entities will automatically be given a spawn egg. This spawn egg can be found inside of the creative menu, with a name like `item.spawn_egg.entity.wiki:my_entity.name`. If you want to rename your spawn egg as well as set a texture, you can do so in the lang files.
 
 In this tutorial we are going to retexture the spawn egg so it looks more like your spawned item, and less like an egg.
 

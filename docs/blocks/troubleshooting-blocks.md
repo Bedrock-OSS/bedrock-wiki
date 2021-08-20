@@ -34,11 +34,11 @@ Navigate to your `blocks.json`. Ensure that it is properly named.
 ```json
 {
 	"format_version": [1, 1, 0],
-	"namespace:dirt_like": {
+	"wiki:dirt_like": {
 		"textures": "dirt_like", //You can replace this with anything, just remember the name
 		"sound": "your_sound_name"
 	},
-	"namespace:log_like": {
+	"wiki:log_like": {
 		"textures": {
 			"up": "log_like_top", //You can replace this with anything, just remember the name
 			"down": "log_like_top", //You can replace this with anything, just remember the name
@@ -46,7 +46,7 @@ Navigate to your `blocks.json`. Ensure that it is properly named.
 		},
 		"sound": "your_sound_name"
 	},
-	"namespace:grass_like": {
+	"wiki:grass_like": {
 		"textures": {
 			"up": "grass_like_top", //You can replace this with anything, just remember the name
 			"down": "grass_like_bottom", //You can replace this with anything, just remember the name
@@ -138,7 +138,7 @@ Dirt like block example:
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "tut:dirt_like",
+            "identifier": "wiki:dirt_like",
             "register_to_creative_menu": true
         },
         "components": {
@@ -162,7 +162,7 @@ Log like block example:
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "tut:log_like",
+            "identifier": "wiki:log_like",
             "register_to_creative_menu": true
         },
         "components": {
@@ -191,7 +191,7 @@ Grass like block example:
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "tut:grass_like",
+            "identifier": "wiki:grass_like",
             "register_to_creative_menu": true
         },
         "components": {
