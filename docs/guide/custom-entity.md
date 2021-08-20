@@ -214,13 +214,13 @@ Our next step is creating the mentioned _render controller_ with the id `control
 	"format_version": "1.10.0",
 	"render_controllers": {
 		"controller.render.ghost": {
-			"geometry": "Geometry.default",
+			"geometry": "geometry.default",
 			"materials": [
 				{
-					"*": "Material.default"
+					"*": "material.default"
 				}
 			],
-			"textures": ["Texture.default"]
+			"textures": ["texture.default"]
 		}
 	}
 }
