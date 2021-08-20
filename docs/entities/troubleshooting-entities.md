@@ -60,7 +60,7 @@ Make sure `is_spawnable` and `is_summonable` are set to true, and that `is_exper
 
 ```json
 "description":{
-    "identifier": "foxy:example_entity",
+    "identifier": "wiki:example_entity",
     "is_spawnable": true,
     "is_summonable": true,
     "is_experimental": false
@@ -117,7 +117,7 @@ Ensure the folder containing your behavior files is named "entities" and not "en
 
 ## Step 3.2.0 - RP .entity
 
-_You DO see a spawn egg for your entity in the creative inventory, but it's black (and probably has a weird name like "item.spawn_egg.entity.something:your_mob.name"), and nothing appears when you spawn/summon it._
+_You DO see a spawn egg for your entity in the creative inventory, but it's black (and probably has a weird name like "item.spawn_egg.entity.wiki:your_mob.name"), and nothing appears when you spawn/summon it._
 
 This means you have a working behavior file, but for whatever reason, the game isn't connecting it to the corresponding .entity file in your resource pack. Some common reasons for this include:
 

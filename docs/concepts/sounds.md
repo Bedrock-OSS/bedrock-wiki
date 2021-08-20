@@ -196,7 +196,7 @@ There are also many sound events, which _most likely_ trigger automatically, but
 {
 	"entity_sounds": {
 		"entities": {
-			"sirlich:elephant": {
+			"wiki:elephant": {
 				"volume": 1,
 				"pitch": [0.9, 1.0],
 				"events": {

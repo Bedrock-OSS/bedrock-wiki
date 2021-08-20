@@ -22,7 +22,7 @@ The simplest method of spawning items - and generally the most common one - is d
 
 ## Dummy Entity Deaths
 
-We can use `minecraft:loot` on a [dummy entity](/entities/dummy-entities) that dies when we spawn it to create a `drop entity`. This entity can be summoned like `/summon sirlich:drop_entity` to spawn the items. This is useful for scenarios where death particles or sounds are not an issue.
+We can use `minecraft:loot` on a [dummy entity](/entities/dummy-entities) that dies when we spawn it to create a `drop entity`. This entity can be summoned like `/summon wiki:drop_entity` to spawn the items. This is useful for scenarios where death particles or sounds are not an issue.
 
 Behaviors:
 
@@ -33,7 +33,7 @@ Behaviors:
 	"format_version": "1.16.0",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "sirlich:drop_entity",
+			"identifier": "wiki:drop_entity",
 			"is_spawnable": true,
 			"is_summonable": true,
 			"is_experimental": false

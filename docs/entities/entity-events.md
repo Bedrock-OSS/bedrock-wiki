@@ -12,12 +12,12 @@ This section covers the main feature of events and how to call them inside an en
 
 ### Adding/Removing Component Groups
 
-The most essential and common use of events is directly adding and/or removing component groups. The following event named `shanewolf:ranged_attacker` adds the two component groups "attacker" and "ranged" and removes the groups "standby" and "melee".
+The most essential and common use of events is directly adding and/or removing component groups. The following event named `wiki:ranged_attacker` adds the two component groups "attacker" and "ranged" and removes the groups "standby" and "melee".
 
 <CodeHeader></CodeHeader>
 
 ```json
-"shanewolf:ranged_attacker": {
+"wiki:ranged_attacker": {
   "add": {
     "component_groups": [ "attacker", "ranged" ]
   },
@@ -48,20 +48,20 @@ The `minecraft:environment_sensor` component is used in the zombie to call the e
 }
 ```
 
-This behavior-based animation is used to call the event `shanewolf:start_pouncing` after 10 seconds.
+This behavior-based animation is used to call the event `wiki:start_pouncing` after 10 seconds.
 
 <CodeHeader></CodeHeader>
 
 ```json
 "animation.entity.pounce_timer": {
   "timeline": {
-    "10.0": "@s shanewolf:start_pouncing"
+    "10.0": "@s wiki:start_pouncing"
   },
   "animation_length": 15.0
 }
 ```
 
-This behavior-based animation controller is used to call the event `shanewolf:running` upon transition to the state "run".
+This behavior-based animation controller is used to call the event `wiki:running` upon transition to the state "run".
 
 <CodeHeader></CodeHeader>
 
@@ -73,7 +73,7 @@ This behavior-based animation controller is used to call the event `shanewolf:ru
       "transitions": [ { "run": "query.is_sheared" } ]
     },
     "run": {
-      "on_entry": [ "@s shanewolf:running" ],
+      "on_entry": [ "@s wiki:running" ],
       "transitions": [ { "walk": "!query.is_sheared" } ]
     }
   }
@@ -241,7 +241,7 @@ This event is run when the entity is hit by a player or projectile. There is a 6
 <CodeHeader></CodeHeader>
 
 ```json
-"shanewolf:on_hit": {
+"wiki:on_hit": {
   "randomize": [
     //60% chance nothing happens
     {

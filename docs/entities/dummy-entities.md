@@ -70,7 +70,7 @@ You can use whatever behaviors you like, but here is a good template. The import
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "sirlich:dummy",
+			"identifier": "wiki:dummy",
 			"materials": {
 				"default": "entity_alphatest"
 			},

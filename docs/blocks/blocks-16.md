@@ -24,16 +24,16 @@ This document covers experimental features, for 1.16 format version blocks. If y
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "example:my_block",
+			"identifier": "wiki:my_block",
 			"properties": {
-				"example:string_property_example": [
+				"wiki:string_property_example": [
 					"red",
 					"green",
 					"blue",
 					"purple"
 				],
-				"example:boolean_property_example": [true, false],
-				"example:integer_property_example": [1, 2, 3, 4, 5]
+				"wiki:boolean_property_example": [true, false],
+				"wiki:integer_property_example": [1, 2, 3, 4, 5]
 			}
 		}
 	}
@@ -44,7 +44,7 @@ This document covers experimental features, for 1.16 format version blocks. If y
 
 Properties can be queried with `query.block_property`, like this:
 
-`query.block_property('example:string_property_example') == 'blue'`
+`query.block_property('wiki:string_property_example') == 'blue'`
 
 ## Block Events
 
@@ -55,16 +55,16 @@ Properties can be queried with `query.block_property`, like this:
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "example:my_block"
+			"identifier": "wiki:my_block"
 		},
 		"components": {
 			"minecraft:on_step_on": {
-				"event": "example:drop_loot",
+				"event": "wiki:drop_loot",
 				"target": "self"
 			}
 		},
 		"events": {
-			"example:drop_loot": {
+			"wiki:drop_loot": {
 				"spawn_loot": {
 					"table": "loot_tables/blocks/my_loot_table.json"
 				}
@@ -86,7 +86,7 @@ Adds a mob effect when triggered
 
 ```json
 {
-	"example:effect_event": {
+	"wiki:effect_event": {
 		"add_mob_effect": {
 			"effect": "poison",
 			"target": "other",
@@ -105,7 +105,7 @@ Removes a mob effect when triggered
 
 ```json
 {
-	"example:remove_effect_event": {
+	"wiki:remove_effect_event": {
 		"remove_mob_effect": {
 			"effect": "poison",
 			"target": "other"
@@ -122,7 +122,7 @@ Summons a loot table when the event is triggered.
 
 ```json
 {
-	"example:drop_loot": {
+	"wiki:drop_loot": {
 		"spawn_loot": {
 			"table": "loot_tables/blocks/my_loot_table.json"
 		}
@@ -138,7 +138,7 @@ Removes the current block and replaces it with the defined block in the same pos
 
 ```json
 {
-	"example:place_block": {
+	"wiki:place_block": {
 		"set_block": "minecraft:grass"
 	}
 }
@@ -152,9 +152,9 @@ Used to set the value of a block's property
 
 ```json
 {
-	"example:change_color": {
+	"wiki:change_color": {
 		"set_block_property": {
-			"example:string_property_example": "red"
+			"wiki:string_property_example": "red"
 		}
 	}
 }
@@ -168,7 +168,7 @@ Used to set a block relative to the position of this block
 
 ```json
 {
-	"example:trigger_event": {
+	"wiki:trigger_event": {
 		"set_block_at_pos": {
 			"block_type": "minecraft:stone",
 			"block_offset": [0, 0, 0]
@@ -185,7 +185,7 @@ Used to execute a command
 
 ```json
 {
-	"example:execute_event": {
+	"wiki:execute_event": {
 		"run_command": {
 			"command": ["summon pig"]
 		}
@@ -199,7 +199,7 @@ Used to execute a command
 
 ```json
 {
-	"example:damage_event": {
+	"wiki:damage_event": {
 		"damage": {
 			"type": "magic",
 			"target": "other",
@@ -217,7 +217,7 @@ Decrements the stack
 
 ```json
 {
-	"example:remove_one": {
+	"wiki:remove_one": {
 		"decrement_stack": {}
 	}
 }
@@ -231,7 +231,7 @@ Kills the target or destroys the block
 
 ```json
 {
-	"example:destroy": {
+	"wiki:destroy": {
 		"die": {
 			"target": "self"
 		}
@@ -247,7 +247,7 @@ Runs a particle effect on the target
 
 ```json
 {
-	"example:particle_effect": {
+	"wiki:particle_effect": {
 		"play_effect": {
 			"effect": "minecraft:campfire_smoke",
 			"target": "self"
@@ -264,7 +264,7 @@ Plays a sound on the target
 
 ```json
 {
-	"example:play_sound": {
+	"wiki:play_sound": {
 		"play_sound": {
 			"sound": "mob.enderman.death",
 			"target": "self"
@@ -281,9 +281,9 @@ Used to trigger an event, this can be a block event or an entity event.
 
 ```json
 {
-	"example:trigger_event": {
+	"wiki:trigger_event": {
 		"trigger": {
-			"event": "example:my_event",
+			"event": "wiki:my_event",
 			"target": "self" // If set to 'other' an entity event can be defined. It will be triggered on the entity that causes the block event.
 		}
 	}
@@ -298,7 +298,7 @@ Used to sequence event functions
 
 ```json
 {
-	"example:sequence_event": {
+	"wiki:sequence_event": {
 		"sequence": [
 			{
 				"set_block_property": {
@@ -308,7 +308,7 @@ Used to sequence event functions
 			{
 				"condition": "query.block_property('test:my_prop') == true",
 				"trigger": {
-					"event": "example:my_entity_event",
+					"event": "wiki:my_entity_event",
 					"target": "other"
 				}
 			}
@@ -325,18 +325,18 @@ Used to randomize event functions
 
 ```json
 {
-	"example:randomize_events": {
+	"wiki:randomize_events": {
 		"randomize": [
 			{
 				"weight": 1,
 				"set_block_property": {
-					"example:boolean_property_example": false
+					"wiki:boolean_property_example": false
 				}
 			},
 			{
 				"weight": 2,
 				"set_block_property": {
-					"example:boolean_property_example": true
+					"wiki:boolean_property_example": true
 				}
 			},
 			{
@@ -416,7 +416,7 @@ List of all new block components, with usage examples.
 
 ```json
 {
-	"minecraft:geometry": "geometry.example" // Geometry identifier from geo file in 'RP/models/entity' folder
+	"minecraft:geometry": "geometry.wiki" // Geometry identifier from geo file in 'RP/models/entity' folder
 }
 ```
 
@@ -429,7 +429,7 @@ List of all new block components, with usage examples.
 	"minecraft:on_step_on": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('example:block_property') == true"
+		"condition": "query.block_property('wiki:block_property') == true"
 	}
 }
 ```
@@ -443,7 +443,7 @@ List of all new block components, with usage examples.
 	"minecraft:on_step_off": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('example:block_property') == true"
+		"condition": "query.block_property('wiki:block_property') == true"
 	}
 }
 ```
@@ -457,7 +457,7 @@ List of all new block components, with usage examples.
 	"minecraft:on_fall_on": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('example:block_property') == true",
+		"condition": "query.block_property('wiki:block_property') == true",
 		"min_fall_distance": 5
 	}
 }
@@ -472,7 +472,7 @@ List of all new block components, with usage examples.
 	"minecraft:on_placed": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('example:block_property') == true"
+		"condition": "query.block_property('wiki:block_property') == true"
 	}
 }
 ```
@@ -486,7 +486,7 @@ List of all new block components, with usage examples.
 	"minecraft:on_player_placing": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('example:block_property') == true"
+		"condition": "query.block_property('wiki:block_property') == true"
 	}
 }
 ```
@@ -500,7 +500,7 @@ List of all new block components, with usage examples.
 	"minecraft:on_player_destroyed": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('example:block_property') == true"
+		"condition": "query.block_property('wiki:block_property') == true"
 	}
 }
 ```
@@ -514,7 +514,7 @@ List of all new block components, with usage examples.
 	"minecraft:on_interact": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('example:block_property') == true"
+		"condition": "query.block_property('wiki:block_property') == true"
 	}
 }
 ```
@@ -531,7 +531,7 @@ List of all new block components, with usage examples.
 		"on_tick": {
 			"event": "block_event",
 			"target": "self",
-			"condition": "query.block_property('example:block_property') == true"
+			"condition": "query.block_property('wiki:block_property') == true"
 		}
 	}
 }
@@ -547,7 +547,7 @@ List of all new block components, with usage examples.
 		"on_tick": {
 			"event": "block_event",
 			"target": "self",
-			"condition": "query.block_property('example:block_property') == true"
+			"condition": "query.block_property('wiki:block_property') == true"
 		}
 	}
 }
@@ -727,10 +727,10 @@ A tag can be applied like this:
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "example:my_block"
+			"identifier": "wiki:my_block"
 		},
 		"components": {
-			"tag:example:my_tag": {},
+			"tag:wiki:my_tag": {},
 			"tag:my_other_tag": {}
 		}
 	}
@@ -756,7 +756,7 @@ Example of querying a tag:
 	"minecraft:item": {
 		"description": {
 			"category": "equipment",
-			"identifier": "example:pickaxe"
+			"identifier": "wiki:pickaxe"
 		},
 		"components": {
 			"minecraft:digger": {
@@ -764,7 +764,7 @@ Example of querying a tag:
 				"destroy_speeds": [
 					{
 						"block": {
-							"tags": "query.any_tag('example:my_tag', 'stone', 'metal')"
+							"tags": "query.any_tag('wiki:my_tag', 'stone', 'metal')"
 						},
 						"speed": 6
 					}
@@ -779,7 +779,7 @@ Example of querying a tag:
 
 Block permutations are a way of conditionally applying components to a block with MoLang expressions.
 
-Example:
+wiki:
 
 <CodeHeader></CodeHeader>
 
@@ -788,11 +788,11 @@ Example:
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "example:my_block",
+            "identifier": "wiki:my_block",
             "properties": {
-                "example:custom_integer_property": [ 10, 20, 30, 40 ],
-                "example:custom_boolean_property": [ false, true ],
-                "example:custom_string_property": [ "red", "green", "blue" ]
+                "wiki:custom_integer_property": [ 10, 20, 30, 40 ],
+                "wiki:custom_boolean_property": [ false, true ],
+                "wiki:custom_string_property": [ "red", "green", "blue" ]
             }
         },
         "components": {...},

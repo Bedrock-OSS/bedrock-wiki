@@ -33,9 +33,9 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
     "format_version":"1.16.100",
     "minecraft:block":{
         "description":{
-            "identifier":"tut:custom_leaves",
+            "identifier":"wiki:custom_leaves",
             "properties":{
-                "tut:decaying":[
+                "wiki:decaying":[
 					true,
                     false
                 ]
@@ -44,7 +44,7 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
         },
         "permutations":[
             {
-                "condition":"query.block_property('tut:decaying') == true",
+                "condition":"query.block_property('wiki:decaying') == true",
                 "components":{
                     "minecraft:ticking":{
                         "looping":true,
@@ -53,14 +53,14 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
                             20.0
                         ],
                         "on_tick":{
-                            "event":"tut:decay"
+                            "event":"wiki:decay"
                         }
                         //In range of 10-18 seconds leaves will decay if weren't updated
                     }
                 }
             },
             {
-                "condition":"query.block_property('tut:decaying') == false",
+                "condition":"query.block_property('wiki:decaying') == false",
 				"components":{}
 				//Empty components
             }
@@ -83,35 +83,35 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
             "minecraft:loot":"loot_tables/blocks/custom_leaves_loot.json",
             //Basic loot
             "minecraft:on_player_placing":{
-                "event":"tut:set_property_false"
+                "event":"wiki:set_property_false"
             },
             //On player placing runs event that sets decaying property to false
             "minecraft:on_player_destroyed":{
                 "condition":"query.get_equipped_item_name(0) == 'shears'",
-                "event":"tut:spawn_loot"
+                "event":"wiki:spawn_loot"
                 //Spawns loot (leaves block)
             }
         },
         "events":{
-            "tut:set_property_false":{
+            "wiki:set_property_false":{
                 "set_block_property":{
-                    "tut:decaying":false
+                    "wiki:decaying":false
                 }
             },
             //Sets decaying to false
-            "tut:set_property_true":{
+            "wiki:set_property_true":{
                 "set_block_property":{
-                    "tut:decaying":true
+                    "wiki:decaying":true
                 }
             },
             //Sets decaying to true
-            "tut:spawn_loot":{
+            "wiki:spawn_loot":{
                 "spawn_loot":{
                     "table":"loot_tables/blocks/custom_leaves_block.json"
                 }
             },
             //Spawns leaves block
-            "tut:decay":{
+            "wiki:decay":{
                 "run_command":{
                     "command":[
                         "setblock ~~~ air 0 destroy"
@@ -133,9 +133,9 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
     "format_version":"1.16.100",
     "minecraft:block":{
         "description":{
-            "identifier":"tut:custom_log",
+            "identifier":"wiki:custom_log",
             "properties":{
-                "tut:facing_direction":[
+                "wiki:facing_direction":[
                     0,
                     1,
                     2
@@ -145,8 +145,8 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
         },
         "permutations":[
             {
-                "condition":"query.block_property('tut:facing_direction') == 0",
-                //If query.block_property('tut:facing_direction') == 0 sets no rotation and on_interact component
+                "condition":"query.block_property('wiki:facing_direction') == 0",
+                //If query.block_property('wiki:facing_direction') == 0 sets no rotation and on_interact component
                 "components":{
                     "minecraft:rotation":[
                         0,
@@ -155,14 +155,14 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
                     ],
 					"minecraft:on_interact": {
                         "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
-						"event": "tut:become_stripped_0"
+						"event": "wiki:become_stripped_0"
                         //Event sets custom stripped log with no rotation
 					}
                 }
             },
             {
-                "condition":"query.block_property('tut:facing_direction') == 1",
-                //If query.block_property('tut:facing_direction') == 1 sets rotation and on_interact component
+                "condition":"query.block_property('wiki:facing_direction') == 1",
+                //If query.block_property('wiki:facing_direction') == 1 sets rotation and on_interact component
                 "components":{
                     "minecraft:rotation":[
                         90,
@@ -171,14 +171,14 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
                     ],
 					"minecraft:on_interact": {
 						"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
-                        "event": "tut:become_stripped1"
+                        "event": "wiki:become_stripped1"
                         //Event sets custom stripped log with rotation
 					}
                 }
             },
             {
-                "condition":"query.block_property('tut:facing_direction') == 2",
-                //If query.block_property('tut:facing_direction') == 2 sets rotation and on_interact component
+                "condition":"query.block_property('wiki:facing_direction') == 2",
+                //If query.block_property('wiki:facing_direction') == 2 sets rotation and on_interact component
                 "components":{
                     "minecraft:rotation":[
                         0,
@@ -187,7 +187,7 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
                     ],
 					"minecraft:on_interact": {
                         "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
-						"event": "tut:become_stripped2"
+						"event": "wiki:become_stripped2"
                         //Event sets custom stripped log with rotation
 					}
                 }
@@ -218,37 +218,37 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
                     8.0
                 ],
                 "on_tick":{
-                    "event":"tut:update_leaves"
+                    "event":"wiki:update_leaves"
                 }
             },
             //Updates blocks every 4-6 seconds so they don't decay. Use range to prevent huge lags every N-seconds
             "minecraft:on_player_placing":{
-                "event":"tut:set_facing_direction"
+                "event":"wiki:set_facing_direction"
             }
             //Sets log rotation on player placing
         },
         "events":{
-            "tut:update_leaves":{
+            "wiki:update_leaves":{
                 "run_command":{
                     "command":[
-                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:fake_leaves 0 replace tut:custom_leaves",
-                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:custom_leaves 0 replace tut:fake_leaves"
+                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:fake_leaves 0 replace wiki:custom_leaves",
+                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:custom_leaves 0 replace wiki:fake_leaves"
                     ]
                 }
             },
             //Updates leaves
-            "tut:set_facing_direction":{
+            "wiki:set_facing_direction":{
                 "set_block_property":{
-                    "tut:facing_direction":"math.floor( query.block_face / 2.0 )"
+                    "wiki:facing_direction":"math.floor( query.block_face / 2.0 )"
                 }
             },
             //Sets block rotation
-			"tut:become_stripped_0": {
+			"wiki:become_stripped_0": {
                 "sequence":[
 					{
 						"run_command": {
                             "command": [
-                                "setblock ~~~ tut:custom_stripped_log"
+                                "setblock ~~~ wiki:custom_stripped_log"
                             ]
                         }
 					},
@@ -263,7 +263,7 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
 				]
 			},
             //Sets custom stripped log with special rotation
-			"tut:become_stripped1": {
+			"wiki:become_stripped1": {
                 "sequence":[
 					{
 						"run_command": {
@@ -283,7 +283,7 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
 				]
 			},
             //Loads structure (custom stripped log with special rotation)
-			"tut:become_stripped2": {
+			"wiki:become_stripped2": {
                 "sequence":[
 					{
 						"run_command": {
@@ -312,8 +312,8 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
 
 You can replace block with itself only one time, then it doesn't work. That is why fake leaves are needed.
 Log commands will update leaves without stopping:
-`fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:fake_leaves 0 replace tut:custom_leaves`
-`fill ~3 ~3 ~3 ~-3 ~-3 ~-3 tut:custom_leaves 0 replace tut:fake_leaves`
+`fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:fake_leaves 0 replace wiki:custom_leaves`
+`fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:custom_leaves 0 replace wiki:fake_leaves`
 
 <CodeHeader>BP/blocks/fake_leaves.json</CodeHeader>
 
@@ -322,7 +322,7 @@ Log commands will update leaves without stopping:
     "format_version":"1.16.100",
     "minecraft:block":{
         "description":{
-            "identifier":"tut:fake_leaves"
+            "identifier":"wiki:fake_leaves"
         },
         "components":{
             "minecraft:destroy_time":2,
@@ -344,7 +344,7 @@ Log commands will update leaves without stopping:
                     0.1
                 ],
                 "on_tick":{
-                    "event":"tut:update_leaves"
+                    "event":"wiki:update_leaves"
                 }
             },
             //If something went wrong and fake leaves weren't replaces with custom leaves
@@ -353,10 +353,10 @@ Log commands will update leaves without stopping:
             //Basic loot
         },
         "events":{
-            "tut:update_leaves":{
+            "wiki:update_leaves":{
                 "run_command":{
                     "command":[
-                        "setblock ~~~ tut:custom_leaves"
+                        "setblock ~~~ wiki:custom_leaves"
                     ]
                 }
             }
@@ -381,9 +381,9 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
     "format_version":"1.16.100",
     "minecraft:block":{
         "description":{
-            "identifier":"tut:custom_stripped_log",
+            "identifier":"wiki:custom_stripped_log",
             "properties":{
-                "tut:facing_direction":[
+                "wiki:facing_direction":[
                     0,
                     1,
                     2
@@ -392,7 +392,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
         },
         "permutations":[
             {
-                "condition":"query.block_property('tut:facing_direction') == 0",
+                "condition":"query.block_property('wiki:facing_direction') == 0",
                 "components":{
                     "minecraft:rotation":[
                         0,
@@ -402,7 +402,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
                 }
             },
             {
-                "condition":"query.block_property('tut:facing_direction') == 1",
+                "condition":"query.block_property('wiki:facing_direction') == 1",
                 "components":{
                     "minecraft:rotation":[
                         90,
@@ -412,7 +412,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
                 }
             },
             {
-                "condition":"query.block_property('tut:facing_direction') == 2",
+                "condition":"query.block_property('wiki:facing_direction') == 2",
                 "components":{
                     "minecraft:rotation":[
                         0,
@@ -443,13 +443,13 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
             "minecraft:destroy_time":1.0,
             "minecraft:unit_cube":{},
             "minecraft:on_player_placing":{
-                "event":"tut:set_facing_direction"
+                "event":"wiki:set_facing_direction"
             }
         },
         "events":{
-            "tut:set_facing_direction":{
+            "wiki:set_facing_direction":{
                 "set_block_property":{
-                    "tut:facing_direction":"math.floor( query.block_face / 2.0 )"
+                    "wiki:facing_direction":"math.floor( query.block_face / 2.0 )"
                 }
             }
         }
@@ -466,9 +466,9 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "tut:custom_sapling",
+			"identifier": "wiki:custom_sapling",
             "properties":{
-                "tut:growing":[
+                "wiki:growing":[
                     0,
                     1,
                     2
@@ -478,7 +478,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 		},
 		"permutations":[
             {
-                "condition":"query.block_property('tut:growing') == 0",
+                "condition":"query.block_property('wiki:growing') == 0",
                 "components":{
 					"minecraft:on_interact": {
 						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
@@ -496,7 +496,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
                 }
             },
             {
-                "condition":"query.block_property('tut:growing') == 1",
+                "condition":"query.block_property('wiki:growing') == 1",
 				"components":{
 					"minecraft:on_interact": {
 						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
@@ -514,7 +514,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
                 }
             },
             {
-                "condition":"query.block_property('tut:growing') == 2",
+                "condition":"query.block_property('wiki:growing') == 2",
                 "components":{
 					"minecraft:on_interact": {
 						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
@@ -591,7 +591,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 		"events": {
 			"grow_0":{
 				"set_block_property":{
-					"tut:growing":0
+					"wiki:growing":0
 				}
 				//Sets growing stage to 0
 			},
@@ -607,7 +607,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 					},
 					{
 						"set_block_property":{
-							"tut:growing":1
+							"wiki:growing":1
 						}
 						//Sets growing stage to 1
 					}
@@ -625,7 +625,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 					},
 					{
 						"set_block_property":{
-							"tut:growing":2
+							"wiki:growing":2
 							//Sets growing stage to 2
 						}
 					}
@@ -696,7 +696,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 	"format_version": "1.16.100",
 	"minecraft:item": {
 		"description": {
-			"identifier": "tut:custom_sapling_placer",
+			"identifier": "wiki:custom_sapling_placer",
 			"category": "nature"
 		},
 		"components": {
@@ -705,7 +705,7 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 			},
 			"minecraft:max_stack_size": 64,
 			"minecraft:block_placer": {
-				"block": "tut:custom_sapling"
+				"block": "wiki:custom_sapling"
 			},
 			"minecraft:icon": {
 				"texture": "custom_sapling_placer"
@@ -730,7 +730,7 @@ This loot will spawn leaves block
             "entries":[
                 {
                     "type":"item",
-                    "name":"tut:custom_leaves",
+                    "name":"wiki:custom_leaves",
                     "weight":1
                 }
             ]
@@ -756,7 +756,7 @@ Leaves default loot
                 },
                 {
                     "type":"item",
-                    "name":"tut:custom_sapling",
+                    "name":"wiki:custom_sapling",
                     "weight":5
                 },
                 {
@@ -782,7 +782,7 @@ This loot will spawn log block
             "entries":[
                 {
                     "type":"item",
-                    "name":"tut:custom_log",
+                    "name":"wiki:custom_log",
                     "weight":1
                 }
             ]
@@ -803,7 +803,7 @@ This loot will spawn stripped log
             "entries":[
                 {
                     "type":"item",
-                    "name":"tut:custom_stripped_log",
+                    "name":"wiki:custom_stripped_log",
                     "weight":1
                 }
             ]
@@ -824,7 +824,7 @@ This will spawn custom_sapling_placer
             "entries":[
                 {
                     "type":"item",
-                    "name":"tut:custom_sapling_placer",
+                    "name":"wiki:custom_sapling_placer",
                     "weight":1
                 }
             ]
@@ -856,12 +856,12 @@ Make translations for blocks:
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
 ```
-tile.tut:custom_log.name=Custom Log
-tile.tut:custom_leaves.name=Custom leaves
-tile.tut:custom_stripped_log.name=Custom Stripped Log
-tile.tut:custom_sapling.name=Custom Sapling
-item.tut:custom_sapling_placer.name=Custom Sapling
-tile.tut:fake_leaves.name=Custom Leaves
+tile.wiki:custom_log.name=Custom Log
+tile.wiki:custom_leaves.name=Custom leaves
+tile.wiki:custom_stripped_log.name=Custom Stripped Log
+tile.wiki:custom_sapling.name=Custom Sapling
+item.wiki:custom_sapling_placer.name=Custom Sapling
+tile.wiki:fake_leaves.name=Custom Leaves
 ```
 
 Make terrain_texture.json and textures.
@@ -956,19 +956,19 @@ Add sounds to blocks
 		1,
 		0
 	],
-	"tut:custom_leaves": {
+	"wiki:custom_leaves": {
 		"sound": "grass"
 	},
-	"tut:custom_log": {
+	"wiki:custom_log": {
 		"sound": "wood"
 	},
-	"tut:custom_stripped_log": {
+	"wiki:custom_stripped_log": {
 		"sound": "wood"
 	},
-	"tut:custom_sapling": {
+	"wiki:custom_sapling": {
 		"sound": "grass"
 	},
-	"tut:fake_leaves": {
+	"wiki:fake_leaves": {
 		"sound": "grass"
 	}
 }

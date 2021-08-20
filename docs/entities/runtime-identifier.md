@@ -9,7 +9,7 @@ It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 
 ```json
 "description": {
-    "identifier": "assassin:my_box",
+    "identifier": "wiki:my_box",
     "is_spawnable": true,
     "is_summonable": true,
     "is_experimental": false,

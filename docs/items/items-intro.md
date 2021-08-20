@@ -22,7 +22,7 @@ Let's start by creating our simple item's behavior file: `BP/items/gem.item.json
 	"format_version": "1.10",
 	"minecraft:item": {
 		"description": {
-			"identifier": "tut:gem"
+			"identifier": "wiki:gem"
 		},
 		"components": {
 			"minecraft:hand_equipped": false,
@@ -36,7 +36,7 @@ Let's start by creating our simple item's behavior file: `BP/items/gem.item.json
 ```
 
 -   `format_version` defines what format the file uses. We'll be using 1.10.
--   `identifier` in `description` is used in blocks, recipes, and entities. It will be used to define your item. For example, you can use /give with the identifier like this: `/give @s tut:gem`. The first part of the identifier is your pack's namespace. It's best to use the same namespace throughout your pack. It can be anything you like (e.g. `kf:`, `jdot:`, `ve:`, `kai:`) providing it isn't too long. A namespace CANNOT be `minecraft:` or `minecon:`. The second part of the identifier is the name of the item, entity, recipe, or block.
+-   `identifier` in `description` is used in blocks, recipes, and entities. It will be used to define your item. For example, you can use /give with the identifier like this: `/give @s wiki:gem`. The first part of the identifier is your pack's namespace. It's best to use the same namespace throughout your pack. It can be anything you like (e.g. `kf:`, `jdot:`, `ve:`, `kai:`) providing it isn't too long. A namespace CANNOT be `minecraft:` or `minecon:`. The second part of the identifier is the name of the item, entity, recipe, or block.
 -   `components` are "qualities" the object always has. We'll look deeper into them when creating a custom entity. Let's break up everything into "components".
     -   `minecraft:hand_equipped` defines whether the item 'equips' in your hand. This controls how the item is displayed on your character. For example, a Wooden Sword is hand equipped, but an Apple isn't.
     -   `minecraft:stacked_by_data` defines whether this item with different aux values will be able to stack. For example
@@ -47,7 +47,7 @@ Let's start by creating our simple item's behavior file: `BP/items/gem.item.json
 
 For more information on components, you can always refer to the documentation on [bedrock.dev/r/Item.](https://bedrock.dev/docs/stable/Item).
 
-If you enter the game now, the item will function, but it will be invisible. You can test the functionality of your item by running `./give @s tut:gem`. Let's fix the invisibility by defining the items visuals in the RP folder.
+If you enter the game now, the item will function, but it will be invisible. You can test the functionality of your item by running `./give @s wiki:gem`. Let's fix the invisibility by defining the items visuals in the RP folder.
 
 ## Gem Resource Code (RP)
 
@@ -58,7 +58,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 	"format_version": "1.10",
 	"minecraft:item": {
 		"description": {
-			"identifier": "tut:gem",
+			"identifier": "wiki:gem",
 			"category": "Nature"
 		},
 		"components": {
@@ -119,7 +119,7 @@ Creating a food item is the same as creating a simple item, except an additional
 	"format_version": "1.12.0",
 	"minecraft:item": {
 		"description": {
-			"identifier": "tut:meal"
+			"identifier": "wiki:meal"
 		},
 		"components": {
 			"minecraft:hand_equipped": false,
@@ -168,7 +168,7 @@ Creating a food item is the same as creating a simple item, except an additional
 	"format_version": "1.10",
 	"minecraft:item": {
 		"description": {
-			"identifier": "tut:meal",
+			"identifier": "wiki:meal",
 			"category": "Nature"
 		},
 		"components": {
@@ -209,13 +209,13 @@ Make sure to check out the current Item documentation for even more components o
 
 ## Setting Item Names
 
-Your items should now show up in-game, but they have weird names consisting of their identifiers. For example, `tut:gem` shows up as `item.tut:gem.name`. To fix this, we need a `.lang` file in `RP/texts`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`. You can find file names for other languages in the example resource pack's texts folder. Paste the following "code" into res/texts/en_US.lang. Now your items will have the correct names:
+Your items should now show up in-game, but they have weird names consisting of their identifiers. For example, `wiki:gem` shows up as `item.wiki:gem.name`. To fix this, we need a `.lang` file in `RP/texts`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`. You can find file names for other languages in the example resource pack's texts folder. Paste the following "code" into res/texts/en_US.lang. Now your items will have the correct names:
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
 ```
-item.tut:gem.name=Gem
-item.tut:meal.name=Meal
+item.wiki:gem.name=Gem
+item.wiki:meal.name=Meal
 ```
 
 [You can learn more about .lang here](/concepts/lang)

@@ -20,7 +20,7 @@ Block tags can be applied exactly as items, as seen below:
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "yanasakana:tree_stump"
+            "identifier": "wiki:tree_stump"
         },
         "components": {
             "tag:wood": {},

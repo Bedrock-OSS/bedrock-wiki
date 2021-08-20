@@ -53,7 +53,7 @@ Once done we can get on with creating our actual armor item piece like so.
 	"format_version": "1.16.100",
 	"minecraft:item": {
 		"description": {
-			"identifier": "example:my_chest",
+			"identifier": "wiki:my_chest",
 			// Notice we give it the equipment category
 			"category": "equipment"
 		},
@@ -122,7 +122,7 @@ To start with you need to create an `attachables` folder in your RP (you may alr
 	"minecraft:attachable": {
 		"description": {
 			// The identifier of the item
-			"identifier": "example:my_chest",
+			"identifier": "wiki:my_chest",
 			// These 2 are default and are required
 			"materials": {
 				"default": "armor",
@@ -174,7 +174,7 @@ So while the chest piece alone is great, you probably want a whole set, so from 
 	"format_version": "1.16.100",
 	"minecraft:item": {
 		"description": {
-			"identifier": "example:my_leggings",
+			"identifier": "wiki:my_leggings",
 			"category": "equipment"
 		},
 		"components": {
@@ -232,7 +232,7 @@ Once we are done here we need to create the attachables file like this.
 	"format_version": "1.8.0",
 	"minecraft:attachable": {
 		"description": {
-			"identifier": "example:my_leggings",
+			"identifier": "wiki:my_leggings",
 			// Notice this is the same as before
 			"materials": {
 				"default": "armor",
@@ -272,7 +272,7 @@ This is just like the chest piece, just we change some of the categories and slo
 	"format_version": "1.16.100",
 	"minecraft:item": {
 		"description": {
-			"identifier": "example:my_helm",
+			"identifier": "wiki:my_helm",
 			"category": "equipment"
 		},
 		"components": {
@@ -327,7 +327,7 @@ As you can see not much has changed, we just update the categories/slots to the 
 	"format_version": "1.8.0",
 	"minecraft:attachable": {
 		"description": {
-			"identifier": "example:my_helm",
+			"identifier": "wiki:my_helm",
 			"materials": {
 				"default": "armor",
 				"enchanted": "armor_enchanted"
@@ -364,7 +364,7 @@ You already know the pattern so lets make the item and attachable json files.
 	"format_version": "1.16.100",
 	"minecraft:item": {
 		"description": {
-			"identifier": "example:my_boots",
+			"identifier": "wiki:my_boots",
 			"category": "equipment"
 		},
 		"components": {
@@ -419,7 +419,7 @@ The custom boots texture if you need it.
 	"format_version": "1.8.0",
 	"minecraft:attachable": {
 		"description": {
-			"identifier": "example:my_boots",
+			"identifier": "wiki:my_boots",
 			"materials": {
 				"default": "armor",
 				"enchanted": "armor_enchanted"
@@ -487,7 +487,7 @@ So rather than include the whole `player.json` I will just include the parts you
 							// We want to check that it matches our item
 							"operator": "==",
 							// The item identifier we want to check
-							"value": "example:my_helm"
+							"value": "wiki:my_helm"
 						},
 						{
 							"test": "has_equipment",
@@ -495,26 +495,26 @@ So rather than include the whole `player.json` I will just include the parts you
 							"domain": "torso",
 							"operator": "==",
 							// Worth noting you can omit prefix for minecraft internal items i.e stick
-							"value": "example:my_chest"
+							"value": "wiki:my_chest"
 						},
 						{
 							"test": "has_equipment",
 							"subject": "self",
 							"domain": "leg",
 							"operator": "==",
-							"value": "example:my_leggings"
+							"value": "wiki:my_leggings"
 						},
 						{
 							"test": "has_equipment",
 							"subject": "self",
 							"domain": "feet",
 							"operator": "==",
-							"value": "example:my_boots"
+							"value": "wiki:my_boots"
 						}
 					]
 				},
 				// If all the triggers match in the filter raise the event
-				"event": "example:armor_sets.my_custom.taken_damage"
+				"event": "wiki:armor_sets.my_custom.taken_damage"
 			},
 			// This means if it matches the check it still applies damage
 			// Can be good to ignore team damage or similar scenarios
@@ -533,7 +533,7 @@ As you can see from the comments, there is a lot there but really all we are doi
 ```json
 {
 	// The event we want to handle
-	"example:armor_sets.my_custom.taken_damage": {
+	"wiki:armor_sets.my_custom.taken_damage": {
 		// Set a randomize so effects dont happen every time
 		"randomize": [
 			{

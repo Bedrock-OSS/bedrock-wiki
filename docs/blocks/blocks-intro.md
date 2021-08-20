@@ -24,7 +24,7 @@ Block behaviors are structured similarly to entities: They contain a description
 	"format_version": "1.12.0",
 	"minecraft:block": {
 		"description": {
-			"identifier": "tut:blocky",
+			"identifier": "wiki:blocky",
 			"is_experimental": false,
 			"register_to_creative_menu": true
 		},
@@ -57,10 +57,10 @@ Block behaviors are structured similarly to entities: They contain a description
 
 Let's create some more blocks in `BP/blocks`. I created these for four for the tutorials' sake:
 
--   Filename: `blocky.json`; Identifier: `tut:blocky`;
--   Filename: `sapp_log.json`; Identifier: `tut:sapp_log`;
--   Filename: `compass_block.json`; Identifier: `tut:compass_block`;
--   Filename: `flashing.json`; Identifier: `tut:flashing`;
+-   Filename: `blocky.json`; Identifier: `wiki:blocky`;
+-   Filename: `sapp_log.json`; Identifier: `wiki:sapp_log`;
+-   Filename: `compass_block.json`; Identifier: `wiki:compass_block`;
+-   Filename: `flashing.json`; Identifier: `wiki:flashing`;
     You can play around with changing the component values for each of these. Now let's move over to the resource definition.
 
 ## Block Resource File
@@ -72,11 +72,11 @@ The resource definition for blocks differs from entities/items, because all the 
 ```json
 {
 	"format_version": [1, 1, 0],
-	"tut:blocky": {
+	"wiki:blocky": {
 		"textures": "blocky",
 		"sound": "stone"
 	},
-	"tut:sapp_log": {
+	"wiki:sapp_log": {
 		"textures": {
 			"up": "sapp_log_top",
 			"down": "sapp_log_top",
@@ -84,7 +84,7 @@ The resource definition for blocks differs from entities/items, because all the 
 		},
 		"sound": "wood"
 	},
-	"tut:compass_block": {
+	"wiki:compass_block": {
 		"textures": {
 			"up": "compass_block_up",
 			"down": "compass_block_down",
@@ -95,7 +95,7 @@ The resource definition for blocks differs from entities/items, because all the 
 		},
 		"sound": "wool"
 	},
-	"tut:flashing": {
+	"wiki:flashing": {
 		"textures": "flashing",
 		"sound": "glass"
 	}
@@ -104,10 +104,10 @@ The resource definition for blocks differs from entities/items, because all the 
 
 As you can see, every block's identifier is applied with textures and step sounds. All of these blocks have different types of textures. Let's look through them.
 
--   "`tut:blocky`" has "`textures`" set to the texture shortname "`**blocky**`". We'll define it in a file similar to `RP/textures/item_texture.json`, `RP/textures/terrain_texture.json` later.
--   "`tut:sapp_log`"'s "textures" are broken up into 3 parts: "`up`"(for the upper face of the block), "`down`"(for the bottom face of the block), and "`side`"(for the remaining four faces). Each one of these has a separate texture shortname applied.
--   "`tut:compass_block`"'s "`textures`" are broken up in even more sub-textures. Instead of "`side`"s, we have a different texture shortname set for the "`north`" side, the "`south`" side, the "`west`" side, and the "`east`" side.
--   And, lastly, "`tut_flashing`" has "`flashing`" defined in the same way as "`tut_blocky`".
+-   "`wiki:blocky`" has "`textures`" set to the texture shortname "`**blocky**`". We'll define it in a file similar to `RP/textures/item_texture.json`, `RP/textures/terrain_texture.json` later.
+-   "`wiki:sapp_log`"'s "textures" are broken up into 3 parts: "`up`"(for the upper face of the block), "`down`"(for the bottom face of the block), and "`side`"(for the remaining four faces). Each one of these has a separate texture shortname applied.
+-   "`wiki:compass_block`"'s "`textures`" are broken up in even more sub-textures. Instead of "`side`"s, we have a different texture shortname set for the "`north`" side, the "`south`" side, the "`west`" side, and the "`east`" side.
+-   And, lastly, "`wiki_flashing`" has "`flashing`" defined in the same way as "`wiki_blocky`".
 
 ### Block terrain texture definition
 
@@ -115,18 +115,18 @@ These "gorgeous" textures are the ones I'm going to use for my example blocks. T
 
 _Left to right: `blocky.png`, `sapp_log_side.png`, `side_block_top.png`, `sb_up.png`, `sb_down.png`, `sb_north.png`, `sb_south.png`, `sb_west.png`, `sb_east.png`_
 
-<WikiImage src="/assets/images/guide/tut_blocky_texture.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_blocky_texture.png" pixelated/>
 
-<WikiImage src="/assets/images/guide/tut_log_side_texture.png" pixelated/>
-<WikiImage src="/assets/images/guide/tut_log_top_texture.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_log_side_texture.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_log_top_texture.png" pixelated/>
 
-<WikiImage src="/assets/images/guide/tut_sb_up.png" pixelated/>
-<WikiImage src="/assets/images/guide/tut_sb_down.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_sb_up.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_sb_down.png" pixelated/>
 
-<WikiImage src="/assets/images/guide/tut_sb_north.png" pixelated/>
-<WikiImage src="/assets/images/guide/tut_sb_south.png" pixelated/>
-<WikiImage src="/assets/images/guide/tut_sb_west.png" pixelated/>
-<WikiImage src="/assets/images/guide/tut_sb_east.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_sb_north.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_sb_south.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_sb_west.png" pixelated/>
+<WikiImage src="/assets/images/guide/wiki_sb_east.png" pixelated/>
 
 All textures need to define a **shortname**, (and we'll do it the same way as we defined item texture shortnames in `RP/textures/item_texture.json`), but this time in `RP/textures/terrain_texture.json`
 
@@ -134,7 +134,7 @@ All textures need to define a **shortname**, (and we'll do it the same way as we
 
 ```json
 {
-	"resource_pack_name": "tut",
+	"resource_pack_name": "wiki",
 	"texture_name": "atlas.terrain",
 	"padding": 8,
 	"num_mip_levels": 4,
@@ -178,7 +178,7 @@ Next, all our texture shortnames have been defined. These shortnames were alread
 
 ![](/assets/images/guide/custom_blocks_inventory.png)
 
-But, we still have to define the `tut:flashing`'s texture(third from the left), which is currently undefined. That's why it appears as a purple-and-black tiled texture right now.
+But, we still have to define the `wiki:flashing`'s texture(third from the left), which is currently undefined. That's why it appears as a purple-and-black tiled texture right now.
 
 ### Block flipbook texture definition
 
@@ -197,7 +197,7 @@ As you might have already guessed, flipbook texture shortnames are defined in a 
 ```
 
 -   "`flipbook_texture`" is the path to your texture file, which is named "`flashing_flipbook`" in this scenario.
--   "`atlas_tile`" is the shortname definition. As you know, we already applied "`flashing`" texture shortname to the `tut:flashing` block in RPblocks.json`.
+-   "`atlas_tile`" is the shortname definition. As you know, we already applied "`flashing`" texture shortname to the `wiki:flashing` block in RPblocks.json`.
 -   "`ticks_per_frame`" defines how quickly the different textures will fade into the block, in other words, the speed of the animation.
 
 A **flipbook texture** file is created like this:
@@ -215,10 +215,10 @@ A **flipbook texture** file is created like this:
 And, finally, let's define our block's names in `/RP/texts/en_US.lang` as we did with items, somewhat like this:
 
 ```
-tile.tut:blocky.name=Blocky Block
-tile.tut:sapp_log.name=Sapphire Wood
-tile.tut:compass_block.name=A compass in block-form
-tile.tut:flashing.name=Block of Flashing Matter
+tile.wiki:blocky.name=Blocky Block
+tile.wiki:sapp_log.name=Sapphire Wood
+tile.wiki:compass_block.name=A compass in block-form
+tile.wiki:flashing.name=Block of Flashing Matter
 ```
 
 [You can learn more about .lang here](/concepts/lang)

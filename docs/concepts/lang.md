@@ -54,11 +54,11 @@ It is completely allowed and encouraged to override vanilla language strings. Fo
 
 Sometimes, undefined lang codes will show up in-game. When this happens, they will show the entire lang code instead of a string. A widespread place where you will see this is with an entity name:
 
-`entity.sirlich:my_entity.name`
+`entity.wiki:my_entity.name`
 
 When you see these codes, you can simply copy them down into your `.lang` files. For example:
 
-`entity.sirlich:my_entity.name=MY VERY COOL ENTITY`
+`entity.wiki:my_entity.name=MY VERY COOL ENTITY`
 
 ## What's with the %s?
 

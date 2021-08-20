@@ -142,13 +142,13 @@ Here an example file in the BP
 	"min_engine_version": "1.16.100",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "example:entity",
+			"identifier": "wiki:entity",
 			"is_spawnable": true,
 			"is_summonable": true,
 			"is_experimental": true
 		},
 		"component_groups": {
-			"beluga:despawn": {
+			"wiki:despawn": {
 				"minecraft:spawn_entity": {
 					"max_wait_time": 0,
 					"min_wait_time": 0,
@@ -182,16 +182,16 @@ Here an example file in the BP
 							"test": "has_damage",
 							"value": "fatal"
 						},
-						"event": "beluga:despawn",
+						"event": "wiki:despawn",
 						"target": "self"
 					}
 				}
 			}
 		},
 		"events": {
-			"beluga:despawn": {
+			"wiki:despawn": {
 				"add": {
-					"component_groups": ["beluga:despawn"]
+					"component_groups": ["wiki:despawn"]
 				}
 			}
 		}
@@ -210,7 +210,7 @@ to be your entity's id and an affix of **\_spawn_egg**, and it will look somethi
 		{
 			"min_wait_time": 0,
 			"max_wait_time": 0,
-			"spawn_item": "prefix:custom_zombie_spawn_egg",
+			"spawn_item": "wiki:custom_zombie_spawn_egg",
 			"single_use": true
 		}
 	]

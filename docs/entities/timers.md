@@ -32,7 +32,7 @@ A simple example which triggers an event after 5.6 seconds:
   "minecraft:timer": {
     "time": 5.6,
     "time_down_event": {
-      "event": "namespace:my_event"
+      "event": "wiki:my_event"
     }
   }
 ```
@@ -63,7 +63,7 @@ A more complex example which triggers an event after a randomized amount of dela
       }
     ],
     "time_down_event": {
-      "event": "namespace:event",
+      "event": "wiki:event",
       "target": "self"
     }
   }
@@ -74,13 +74,13 @@ A particularly useful way to handle time events is using a single, looping `mine
 <CodeHeader></CodeHeader>
 
 ```json
-  "sirlich:do_event": {
+  "wiki:do_event": {
     "randomize": [
       {
         "weight": 1,
         "add": {
           "component_groups": [
-            "sirlich:my_event"
+            "wiki:my_event"
           ]
         }
       },
@@ -88,7 +88,7 @@ A particularly useful way to handle time events is using a single, looping `mine
         "weight": 5,
         "add": {
           "component_groups": [
-            "sirlich:my_more_frequent_event"
+            "wiki:my_more_frequent_event"
           ]
         }
       },
@@ -116,7 +116,7 @@ Here is an example which is used to fire an event 800 ticks after the start of t
           "operator": "=",
           "value": 800
         },
-        "event": "namespace:my_daily_event"
+        "event": "wiki:my_daily_event"
       }
     ]
   }
@@ -135,7 +135,7 @@ Here is an example which fires an event after four seconds:
   "minecraft:ageable": {
     "duration": 4,
     "grow_up": {
-      "event": "namespace:my_other_event",
+      "event": "wiki:my_other_event",
       "target": "self"
     }
   }
@@ -214,7 +214,7 @@ A very useful feature of the timer component is its ability to define a random i
           "/say random interval started"
         ],
         "animations": [
-          "shanewolf:animate_interval"
+          "wiki:animate_interval"
         ],
         "transitions": [
           {
@@ -222,7 +222,7 @@ A very useful feature of the timer component is its ability to define a random i
           }
         ],
         "on_exit": [
-          "@s shanewolf:stop_random_interval",
+          "@s wiki:stop_random_interval",
           "/say random interval finished"
         ]
       }
@@ -270,7 +270,7 @@ Another useful feature of the timer component is its ability to trigger events a
           "/say random interval started"
         ],
         "animations": [
-          "shanewolf:animate_choices"
+          "wiki:animate_choices"
         ],
         "transitions": [
           {
@@ -284,7 +284,7 @@ Another useful feature of the timer component is its ability to trigger events a
           }
         ],
         "on_exit": [
-          "@s shanewolf:stop_random_choices",
+          "@s wiki:stop_random_choices",
           "/say random choices finished"
         ]
       }

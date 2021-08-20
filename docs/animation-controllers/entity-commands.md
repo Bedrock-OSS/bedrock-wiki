@@ -15,7 +15,7 @@ In short, animation controllers allow us to trigger events from behavior packs.
 
 -   Slash commands (like `/say`)
 -   Molang
--   Entity Events (such as `namespace:my_event`)
+-   Entity Events (such as `wiki:my_event`)
 
 Here is an example animation controller:
 
@@ -61,14 +61,14 @@ To add this animation controller to our entity, we can use the following code in
 
 ```json
 "description": {
-    "identifier": "sirlich:entity_commands",
+    "identifier": "wiki:entity_commands",
     "scripts": {
         "animate": [
-            "sirlich:entity_commands"
+            "wiki:entity_commands"
         ]
     },
     "animations": {
-        "sirlich:entity_commands": "controller.animation.sirlich_entity_commands"
+        "wiki:entity_commands": "controller.animation.wiki_entity_commands"
     }
 }
 ```

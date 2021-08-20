@@ -66,7 +66,7 @@ However, bridge. is not required.
 
 -   Set `format_version` to 1.13.0: it's the latest biome file version as of the current release.
 -   `description` takes only one value: `identifier`. This requires **NO namespace** and **MUST** be the same as the **file's name**.
-    (If you do use a namespace, for example `tut:cold_biome`, the file name needs to only match the id, so it has to remain as `cold_biome.json`.
+    (If you do use a namespace, for example `wiki:cold_biome`, the file name needs to only match the id, so it has to remain as `cold_biome.json`.
 -   `components` is just what you'd expect: something applied to the biome at default. let's look through them:
 -   `minecraft:climate` controls everything climate-wise.
 -   `downfall` is how often it'll be raining or snowing. 0.0 is for absolutely no rain (like a desert) and 1.0 should mean constant rain.
@@ -117,7 +117,7 @@ It is even possible to create custom structures using those, but as it is very g
 
 Now, it's worthwhile to mention that the easiest way to generate Custom Structures is this [auto generator](https://machine-builder.itch.io/frg-v2) by [MACHINE_BUILDER](https://www.youtube.com/channel/UC8FBQgo4AWwKFX97h60NKOQ). However, we'll still learn some other manual feature generation here, because some things like Ores are much more efficient to generate as `ore_feature`s and not `structure_template_feature`s.
 
-Let's make our `tut:blocky` custom block generate as an ore for the tutorial's sake. I'll do it the easy way, like this:
+Let's make our `wiki:blocky` custom block generate as an ore for the tutorial's sake. I'll do it the easy way, like this:
 
 1. Open _bridge._, choose your Add-on.
 1. _Add new file>features>diamond_ore and Add new file>feature_rules>diamond_ore_.
@@ -141,7 +141,7 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
 			"identifier": "blocky_ore_feature"
 		},
 		"count": 8,
-		"places_block": "tut:blocky",
+		"places_block": "wiki:blocky",
 		"may_replace": [
 			{
 				"name": "minecraft:stone",
@@ -279,7 +279,7 @@ A simple way to generate Structures is [this](https://machine-builder.itch.io/fr
 
 Now that you have your `.mcstructure`, time to write your `feature` and `feature rule`. The last is the same as with ores (see the beginning of this article). Let's continue to the **Feature**.
 
--   Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `tut:myfeaturerule` or simply `myfeaturerule`, the file name can be be `myfeaturerule.json` in both cases.
+-   Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `wiki:myfeaturerule` or simply `myfeaturerule`, the file name can be be `myfeaturerule.json` in both cases.
 
 Here's an code example from the [Features Documentation](https://bedrock.dev/r/Features#minecraft:structure_template_feature):
 
@@ -290,16 +290,16 @@ Here's an code example from the [Features Documentation](https://bedrock.dev/r/F
   "format_version": 1.13.0,
   "minecraft:structure_template_feature": {
     "description": {
-      "identifier": "example:hot_air_balloon_feature"
+      "identifier": "wiki:hot_air_balloon_feature"
     },
-    "structure_name": "example:hot_air_balloon",
+    "structure_name": "wiki:hot_air_balloon",
     "adjustment_radius": 8,
     "facing_direction": "random",
     "constraints": {
       "unburied": {},
       "block_intersection": {
         "block_whitelist": [
-          "example:air"
+          "minecraft:air"
         ]
       }
     }
