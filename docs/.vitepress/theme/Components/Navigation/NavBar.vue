@@ -5,7 +5,8 @@
 			flex
 			items-center
 			justify-items-center
-			sticky
+			fixed
+			w-full
 			z-50
 			top-0
 			p-4
