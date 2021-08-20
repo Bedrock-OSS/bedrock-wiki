@@ -19,6 +19,9 @@
 				'xl:mr-72': showToc,
 			}"
 		/>
+		<div class="pt-4" v>
+			<a :href="editLink" target="_blank">Edit this page on Github</a>
+		</div>
 		<div v-if="showContributors">
 			<h2>Contributors</h2>
 			<Suspense>
@@ -84,6 +87,8 @@ const showContributors = computed(
 const mentionedContributors = computed(
 	() => routeData.value.frontmatter.mention ?? []
 )
+
+const editLink = computed(() => 'https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/' + routeData.value.relativePath)
 </script>
 
 <style scoped>
