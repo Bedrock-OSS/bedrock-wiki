@@ -2,7 +2,7 @@
 title: Fake Blocks
 tags:
     - experimental
-	- intermediate
+    - intermediate
 ---
 
 ## Creating the Hitbox

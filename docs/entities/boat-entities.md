@@ -2,7 +2,7 @@
 title: Creating Boats
 tags:
     - recipe
-	- intermediate
+    - intermediate
 ---
 
 ## Using Runtime Identifiers
