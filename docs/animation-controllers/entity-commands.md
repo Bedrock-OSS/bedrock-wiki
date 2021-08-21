@@ -19,7 +19,7 @@ In short, animation controllers allow us to trigger events from behavior packs.
 
 Here is an example animation controller:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/animation_controllers/entity_commands.ac.json</CodeHeader>
 
 ```json
 {
@@ -57,7 +57,7 @@ If you need to stop this from happening, you need to add additional queries, suc
 
 To add this animation controller to our entity, we can use the following code in the entity definition description:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/entity_commands.entity.bp.json#minecraft:entity</CodeHeader>
 
 ```json
 "description": {
@@ -83,7 +83,7 @@ I personally like using [skin_id](https://docs.microsoft.com/en-us/minecraft/cre
 
 We can update our animation controller to trigger based on `skin_id`:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/animation_controllers/entity_commands.ac.json</CodeHeader>
 
 ```json
 {
@@ -150,7 +150,7 @@ The `skin_id` component looks like this:
 
 We can add component groups that contains skin_ids:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity</CodeHeader>
 
 ```json
 "component_groups": {
@@ -176,7 +176,7 @@ We can add component groups that contains skin_ids:
 
 Now lets create events so we can easily add these groups:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity</CodeHeader>
 
 ```json
 "events": {
@@ -219,7 +219,7 @@ There are loads of ways to trigger events in Minecraft. Lets look at two specifi
 
 This component will spawn zombies whenever you click on him.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity/component_groups/execute_no_commands</CodeHeader>
 
 ```json
 "minecraft:interact": {
@@ -243,7 +243,7 @@ This component will spawn zombies whenever you click on him.
 
 This component will trigger the example command every 10 seconds:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity/component_groups/execute_no_commands</CodeHeader>
 
 ```json
 "minecraft:timer": {

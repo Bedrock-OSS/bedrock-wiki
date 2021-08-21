@@ -61,7 +61,7 @@ Animation controller are defined in their own files, and must be "attached" to e
 
 Here is a sample `description`, which shows how the AC can first be defined in `animations`, and then played in `scripts/animate`.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/entity/helicopter.entity.rp.json#minecraft:client_entity OR BP/entities/helicopter.entity.bp.json#minecraft:entity</CodeHeader>
 
 ```json
 "description": {
@@ -79,7 +79,7 @@ Here is a sample `description`, which shows how the AC can first be defined in `
 
 If you want to conditionally play an animation controller, you can supply an optional molang argument. If the argument evaluates to true, the controller will play:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/entity/helicopter.entity.json#minecraft:client_entity/description OR BP/entities/helicopter.json#minecraft:entity/description</CodeHeader>
 
 ```json
 "scripts": {
@@ -148,7 +148,7 @@ So this particular example contains two states:
 
 You can note that `"initial_state": "ground"` means that our Animation Controller will begin in the `ground` state.
 
-<CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</CodeHeader>
+<CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter.blade/states</CodeHeader>
 
 ```json
 "ground": {
@@ -162,7 +162,7 @@ You can note that `"initial_state": "ground"` means that our Animation Controlle
 
 The `ground` state contains a list of _transitions_, which is how we get to other states. In this example, the default state is saying: _Move to the `flying` state when `query.is_on_ground` is NOT true_. In other words -start the flying animation when we fly into the air!
 
-<CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter/states</CodeHeader>
+<CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter.blade/states</CodeHeader>
 
 ```json
 "flying": {
@@ -188,7 +188,7 @@ Here is the code for the second state machine from above, with three states this
 -   States with multiple transitions
 -   States with no transitions
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/animation_controllers/helicopter.ac.json</CodeHeader>
 
 ```json
 {
@@ -242,7 +242,7 @@ Commands in this context mean three distinct things:
 
 Here is an example BP animation controller, which exhibits some of this behavior:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/animation_controllers/helicopter.ac.json</CodeHeader>
 
 ```json
 {
