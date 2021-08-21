@@ -279,7 +279,7 @@ Through the examples, hopefully you are starting to get some concept for how ani
 
 ### Loading
 
-When an entity loads into the world, it will _enter_ the default animation controller state, in each of its attached animation controllers. If no `default_state` is defined, the state named `default` is used. If this is missing, the AC will generate a content log.
+When an entity loads into the world, it will _enter_ the default animation controller state, in each of its attached animation controllers. If no `initial_state` is defined, the state named `default` is used. If this is missing, the AC will generate a content log.
 
 When running, the AC will do the following things each tick:
 
