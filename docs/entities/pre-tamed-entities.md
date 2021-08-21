@@ -1,6 +1,6 @@
 ---
 title: Summon Pre-tamed Entities
-mentions:
+mention:
   - Axelpvz2030
 ---
 
