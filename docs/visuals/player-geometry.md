@@ -1,8 +1,8 @@
 ---
 title: Player Geometry
+tags:
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 This tutorial will show you how to create player NPCs and add them into your world. These player NPCs will take vanilla player skins, and come included with walk-animations, attack animations, etc.
 

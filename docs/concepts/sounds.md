@@ -1,8 +1,8 @@
 ---
 title: Sounds
+tags:
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 In bedrock, we can add custom sounds without overwriting any vanilla sounds. This is done by adding files to the resource pack.
 

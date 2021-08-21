@@ -1,8 +1,8 @@
 ---
 title: Remove Entity Shadows
+tags:
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 There are quite a few ways to remove shadows from entities. This document will cover some of the best ways.
 

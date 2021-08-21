@@ -13,6 +13,7 @@
 		<h1 class="xl:pr-72" v-if="page && page.title" id="top">
 			{{ page.title }}
 		</h1>
+		<Label v-for="tag in tags" :name="tag"> </Label>
 		<TOC v-if="showToc" />
 		<Content
 			:class="{
@@ -51,6 +52,7 @@ import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import { useData, useRoute } from 'vitepress'
+import Label from './Content/Label.vue'
 
 const Contributors = defineAsyncComponent(
 	() => import('./Content/Contributors.vue')
@@ -88,7 +90,13 @@ const mentionedContributors = computed(
 	() => routeData.value.frontmatter.mention ?? []
 )
 
-const editLink = computed(() => 'https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/' + routeData.value.relativePath)
+const tags = computed(() => routeData.value.frontmatter.tags ?? [])
+
+const editLink = computed(
+	() =>
+		'https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/' +
+		routeData.value.relativePath
+)
 </script>
 
 <style scoped>

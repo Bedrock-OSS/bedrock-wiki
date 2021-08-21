@@ -5,8 +5,6 @@ tags:
 nav_order: 2
 ---
 
-<Label color="yellow">Experimental</Label>
-
 Better documentation on the new block format introduced in the 1.16.100.56 Minecraft beta.
 
 :::warning
@@ -568,7 +566,6 @@ List of all new block components, with usage examples.
 
 <CodeHeader></CodeHeader>
 
-
 ```json
 {
 	"minecraft:entity_collision": false
@@ -589,7 +586,6 @@ List of all new block components, with usage examples.
 ```
 
 <CodeHeader></CodeHeader>
-
 
 ```json
 {

@@ -1,8 +1,8 @@
 ---
 title: Disabling Particles
+tags:
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 In the event that you want to disable a particle, it is recommended to do so from the particle file itself as opposed to simply making the particle texture transparent in `particles.png`. Additionally, disabling a particle might offer a slight performance boost compared to making it transparent, as transparent particles are still emitted (but not visible).
 

@@ -5,8 +5,6 @@ tags:
 nav_order: 2
 ---
 
-<Label color="red">Experimental</Label>
-
 Better documentation on the new item format introduced in the 1.16.100.56 Minecraft beta
 
 :::warning

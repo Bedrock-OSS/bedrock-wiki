@@ -1,8 +1,8 @@
 ---
 title: Materials
+tags:
+    - expert
 ---
-
-<Label color="red">Expert</Label>
 
 ## Overview
 

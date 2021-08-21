@@ -1,8 +1,8 @@
 ---
 title: Text Localization
+tags:
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 ## What is localization?
 
@@ -133,7 +133,7 @@ And this on the second page:
 
 When you click outside the pages you should see the story just like we wanted it to show. So again, like with the sign, we can't just paste `book.mystory.page1` and hope it works. We have to wrap our code inside a special formula and tell minecraft _"I want you to replace each `%1` with a new line"_
 
-<Label color="yellow">Intermediate</Label>
+</Label color="orange" name="intermediate">
 
 -   Making the next few examples **Intermediate** level because we're going to use commands and stop mentioning all the restarts you have to do and what files to create.
 
@@ -195,7 +195,7 @@ And now we run the same 2 commands again:
 
 ## Using player names with localization
 
-<Label color="red">Expert</Label>
+</Label color="red" name="expert>
 
 -   Now we're getting into some really advanced stuff that have to do with scoreboards and selectors. These are features that were introduces in [Bedrock Edition v1.16.100](https://minecraft.gamepedia.com/Bedrock_Edition_1.16.100)
 

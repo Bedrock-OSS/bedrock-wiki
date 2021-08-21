@@ -4,9 +4,8 @@ mention:
     - pieterdefour
 tags:
     - recipe
+	- intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 ::: tip
 This tutorial assumes you have a basic understanding of entities, loot tables, and Blockbench.

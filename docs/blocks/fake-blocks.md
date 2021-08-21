@@ -2,9 +2,8 @@
 title: Fake Blocks
 tags:
     - experimental
+	- intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 ## Creating the Hitbox
 

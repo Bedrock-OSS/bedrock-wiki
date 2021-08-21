@@ -1,8 +1,8 @@
 ---
 title: Spawning Tamed Entities
+tags:
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 In this tutorial, you will learn how to spawn a pre-tamed entity by running an event on the player you want the entity tamed to.
 
@@ -12,7 +12,7 @@ Traditionally, if you wanted entity tamed by a player, you had to force the play
 
 To do this, we'll summon a dummy middle-man projectile entity through `minecraft:spawn_entity`, which will instantly transform into the entity we want to spawn pre-tamed—in this tutorial, a vanilla wolf—through `minecraft:transformation` with `keep_owner` set to `true`.
 
-\*: *Spawning* should not be confused with *summoning*. The projectile will keep track of the player if it was spawned by a spawn egg or `minecraft:spawn_entity` component, but not by a `/summon` command.
+\*: _Spawning_ should not be confused with _summoning_. The projectile will keep track of the player if it was spawned by a spawn egg or `minecraft:spawn_entity` component, but not by a `/summon` command.
 
 ## player.json
 
@@ -61,23 +61,23 @@ Then, we'll need to create a simple custom entity that will have the `minecraft:
 
 ```json
 {
-    "format_version": "1.16.0",
-    "minecraft:entity": {
-        "description": {
-            "identifier": "wiki:pretamed_wolf",
-            "runtime_identifier": "minecraft:arrow",
-            "is_spawnable": false,
-            "is_summonable": true,
-            "is_experimental": false
-        },
-        "components": {
-            "minecraft:projectile": {},
-            "minecraft:transformation": {
-                "into": "minecraft:wolf<tamed>",
-                "keep_owner": true
-            }
-        }
-    }
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "wiki:pretamed_wolf",
+			"runtime_identifier": "minecraft:arrow",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:projectile": {},
+			"minecraft:transformation": {
+				"into": "minecraft:wolf<tamed>",
+				"keep_owner": true
+			}
+		}
+	}
 }
 ```
 

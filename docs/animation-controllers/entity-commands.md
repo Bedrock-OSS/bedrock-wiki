@@ -1,9 +1,9 @@
 ---
 title: Entity Commands
 nav_order: 2
+tags:
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad!
 

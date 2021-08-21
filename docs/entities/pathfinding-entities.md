@@ -2,9 +2,8 @@
 title: Pathfinding
 tags:
     - recipe
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 Making entities go places is one of the most common requests for Marketplace content. This tutorial will show you the most common way to do pathfinding.
 

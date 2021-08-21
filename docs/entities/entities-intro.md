@@ -105,7 +105,7 @@ Like component groups, events are 100% custom-created inside each entity. You ca
 
 The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible.
 
-<Label color="yellow">Advanced</Label>
+</Label color="red" name=advanced>
 
 ### Conditional Events
 

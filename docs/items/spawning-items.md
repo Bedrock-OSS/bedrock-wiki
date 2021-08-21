@@ -1,8 +1,8 @@
 ---
 title: Spawning Items
+tags:
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 It is fairly common to want to spawn an item in the world, as if dropped. This page will walk through how to accomplish this through various methods, including Entity Deaths, Interactions, and an all-purpose method.
 
@@ -63,25 +63,25 @@ Note that if the entity is not removed upon interaction, it can be interacted wi
 
 ```json
 {
-    "minecraft:interact": {
-        "interactions": [
-            {
-                "on_interact": {
-                    "filters": {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    "event": "break_box",
-                    "target": "self"
-                },
-                "swing": true,
-                "spawn_items": {
-                    "table": "loot_tables/entities/box.json"
-                }
-            }
-        ]
-    }
+	"minecraft:interact": {
+		"interactions": [
+			{
+				"on_interact": {
+					"filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "player"
+					},
+					"event": "break_box",
+					"target": "self"
+				},
+				"swing": true,
+				"spawn_items": {
+					"table": "loot_tables/entities/box.json"
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -100,19 +100,16 @@ This behavior appears to push the mob back when the items are dropped. Thus it i
 <CodeHeader></CodeHeader>
 
 ```json
- {
-                "minecraft:navigation.walk": {},
-		
-                "minecraft:behavior.drop_item_for": {
-                    "priority": 1,
-                    "max_dist": 16,
-                    "loot_table": "loot_tables/entities/forium.json",
-                    "time_of_day_range": [
-                        0.0,
-                        1.0
-                    ]
-                }
-            }
+{
+	"minecraft:navigation.walk": {},
+
+	"minecraft:behavior.drop_item_for": {
+		"priority": 1,
+		"max_dist": 16,
+		"loot_table": "loot_tables/entities/forium.json",
+		"time_of_day_range": [0.0, 1.0]
+	}
+}
 ```
 
 ### Animation Controller
@@ -125,32 +122,30 @@ Teleporting the entity into the void causes no death animation, sound, or partic
 
 ```json
 {
-    "format_version": "1.10.0",
-    "animation_controllers": {
-        "controller.animation.drop_items.die": {
-            "initial_state": "spawn",
-            "states": {
-                "spawn": {
-                    "transitions": [
-                        {
-                            "delay": "1"
-                        }
-                    ]
-                },
-                "delay": {
-                    "transitions": [
-                        {
-                            "die": "1"
-                        }
-                    ]
-                },
-                "die": {
-                    "on_entry": [
-                        "/tp @s ~ -200 ~"
-                    ]
-                }
-            }
-        }
-    }
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.drop_items.die": {
+			"initial_state": "spawn",
+			"states": {
+				"spawn": {
+					"transitions": [
+						{
+							"delay": "1"
+						}
+					]
+				},
+				"delay": {
+					"transitions": [
+						{
+							"die": "1"
+						}
+					]
+				},
+				"die": {
+					"on_entry": ["/tp @s ~ -200 ~"]
+				}
+			}
+		}
+	}
 }
 ```

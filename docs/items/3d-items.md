@@ -1,12 +1,12 @@
 ---
 title: 3D Items
+tags:
+    - expert
 ---
 
 There are two methods for making 3D items:
 
 ## Entity Based 3D Item Models
-
-<Label color="red">Expert</Label>
 
 ::: tip
 This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/visuals/entity-visuals-intro) before starting this tutorial.

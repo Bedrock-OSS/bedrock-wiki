@@ -1,8 +1,8 @@
 ---
 title: Egg Drops
+tags:
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 Here is how to make entities drop their own eggs when killed:
 
