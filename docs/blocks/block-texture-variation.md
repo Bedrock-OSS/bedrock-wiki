@@ -1,8 +1,8 @@
 ---
 title: Block Texture Variation
 tags:
-	- recipe
-	- intermediate
+    - recipe
+    - intermediate
 ---
 
 Block texture variation is when a single block can have multiple textures. This is useful for blocks such as dirt or grass, where some blocks may have slight variations such as small rocks and others don't.
