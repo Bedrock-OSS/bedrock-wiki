@@ -3,6 +3,10 @@ title: Entity Commands
 nav_order: 2
 ---
 
+::: tip
+A much easier method of running entity commands is through the `run_command` event response. However, this is currently experimental.
+:::
+
 <Label color="yellow">Intermediate</Label>
 
 A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad!
@@ -14,8 +18,8 @@ To trigger slash commands, we are going to use Behavior Pack animation controlle
 In short, animation controllers allow us to trigger events from behavior packs.
 
 -   Slash commands (like `/say`)
--   Molang
--   Entity Events (such as `wiki:my_event`)
+-   Molang ( `variable.foo += 1;` )
+-   Entity Events (such as `@s wiki:my_event`)
 
 Here is an example animation controller:
 
@@ -45,7 +49,7 @@ Here is an example animation controller:
 
 This animation controller will run the command `/say I have been summoned` as soon as the entity is summoned into the world. If you are confused about how this works, please review Molang, Animations, and Entity Events.
 
-In short, there are `states`, which can trigger events in their `on_entry` clause. We use queries to move between different states. By default, entities will be inside of the `default` state.
+In short, there are `states`, which can trigger events in their `on_entry` clause. We use queries to move between different states. By default, entities will be inside of the `default` state, unless an `initial_state` value has been defined.
 
 ::: warning
 Queries are re-run when the world/chunk reloads. This means the line `"/say I have been summoned"` will actually run each time the entity "loads" -not only when it is summoned.
@@ -73,11 +77,11 @@ To add this animation controller to our entity, we can use the following code in
 }
 ```
 
-Once again, if you are confused about any of this step, please review the Entity Events documentation.
+Once again, if you are confused about any of this step, please review the [Entity Events documentation](https://bedrock.dev/r/Entity%20Events).
 
 ## Triggering Commands using Events:
 
-Animation transitions are created using queries. You can [read about queries here](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicate queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
+Animation transitions are created using queries. You can [read about queries here](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicated queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
 
 I personally like using [skin_id](https://docs.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entityproperties/minecraftproperty_skin_id).
 
@@ -130,7 +134,7 @@ We can update our animation controller to trigger based on `skin_id`:
 }
 ```
 
-This animation controller has two command states now: The first is triggered by `skin_id = 1`, and the second by `skin_id = 2`. Note how I've added the `@s execute_no_commands` syntax at the end of each command list. We will create `execute_no_commands` later. It will allow us to set the skin_id back to 0, and re-use our commands.
+This animation controller has two command states now: The first is triggered by `skin_id = 1`, and the second by `skin_id = 2`. Notice that `==` and `!=` was used. `==` tests for equality, do NOT use a single `=`. `!` means NOT, so `!=` tests to make sure it is NOT equal to a specific value. Additionally, note how I've added the `@s execute_no_commands` syntax at the end of each command list. We will create `execute_no_commands` later. It will allow us to set the skin_id back to 0, and re-use our commands.
 
 The syntax is `@s` followed by the name of an entity event. This allows us to add/remove components from within the animation controller.
 
@@ -174,7 +178,7 @@ We can add component groups that contains skin_ids:
 
 ## Adding Events
 
-Now lets create events so we can easily add these groups:
+Now let's create events so we can easily add these groups:
 
 <CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity</CodeHeader>
 
@@ -213,7 +217,7 @@ Now lets create events so we can easily add these groups:
 
 ## Triggering Events
 
-There are loads of ways to trigger events in Minecraft. Lets look at two specific examples:
+There are loads of ways to trigger events in Minecraft. As stated earlier, you can use animation controllers to trigger events. Additionally, let's look at two specific examples:
 
 ### Interact Component:
 
@@ -247,12 +251,12 @@ This component will trigger the example command every 10 seconds:
 
 ```json
 "minecraft:timer": {
-        "looping": true,
-        "time": 1,
-        "time_down_event": {
-            "event": "example_command"
-        }
+    "looping": true,
+    "time": 10,
+    "time_down_event": {
+        "event": "example_command"
     }
+}
 ```
 
 By adding these (and similar!) components to our entity, we can control when the `skin_id` changes, and therefor which events run.
