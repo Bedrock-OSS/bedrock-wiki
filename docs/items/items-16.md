@@ -729,7 +729,7 @@ _Full list of categories can be found [here](/items/creative-categories)_
 			"event": "example_event",
 			"target": "holder" // Can also be 'self' to trigger an item event
 		},
-		"nurtition": 3,
+		"nutrition": 3,
 		"can_always_eat": true,
 		"saturation_modifier": "normal",
 		"using_converts_to": "minecraft:apple" // Changes the food or drink into another item when consumed. It can be changed to any item.

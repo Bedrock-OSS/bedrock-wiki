@@ -1,9 +1,8 @@
 ---
-title: Entity Holds Item
+title: 'Entity Holds Item'
 mention:
     - pieterdefour
 tags:
-    - recipe
 	- intermediate
 ---
 

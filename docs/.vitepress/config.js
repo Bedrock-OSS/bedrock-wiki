@@ -153,7 +153,7 @@ module.exports = {
 				activeMatch: '^/contribute',
 			},
 			{
-				text: 'Docs',
+				text: 'Bedrock.dev',
 				link: 'https://bedrock.dev',
 			},
 			{
