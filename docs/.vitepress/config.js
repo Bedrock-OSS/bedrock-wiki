@@ -138,7 +138,8 @@ module.exports = {
 		},
 
 		editLinks: true,
-		editLinkText: 'Edit this page on GitHub',
+		editLinkText: '⚙️ Edit this page on GitHub.',
+		lastUpdated: true,
 		lastUpdated: 'Last Updated',
 
 		nav: [
