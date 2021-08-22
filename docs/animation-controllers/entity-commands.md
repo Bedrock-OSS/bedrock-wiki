@@ -5,13 +5,9 @@ tags:
     - intermediate
 ---
 
+:::warning
 A much easier method of running entity commands is through the `run_command` event response. However, this is currently experimental.
 :::
-
-<Label color="yellow">Intermediate</Label>
-
-> > > > > > > 725188d757f066f7b2eaf204530b13b18183bb27
-> > > > > > > A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad!
 
 ## Animation Controllers
 

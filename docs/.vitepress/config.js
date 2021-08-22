@@ -165,11 +165,6 @@ module.exports = {
 				text: 'Legacy Wiki',
 				link: 'https://old-wiki.bedrock.dev/',
 			},
-			// {
-			// 	text: 'News',
-			// 	link: '/news',
-			// 	activeMatch: '^/news',
-			// },
 		],
 
 		sidebar: {
