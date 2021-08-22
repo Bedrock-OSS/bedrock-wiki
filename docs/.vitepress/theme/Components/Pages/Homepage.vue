@@ -84,7 +84,7 @@
 				</CardLink>
 				<CardLink
 					title="Discord"
-					imgsrc="assets/images/homepage/discord.webp"
+					imgsrc="assets/images/homepage/discord.png"
 					link="/discord"
 				>
 					Join the discord to learn about addons, and seek help from
@@ -121,7 +121,7 @@
 				</Card>
 				<Card
 					title="Scripting"
-					imgsrc="assets/images/homepage/lever_0.png"
+					imgsrc="assets/images/homepage/scripting.png"
 				>
 					<a href="scripting/scripting-intro.html">Beginner's Guide</a
 					>: Learn the basics of the legacy scripting-API<br /><br />
@@ -132,8 +132,10 @@
 					title="World Generation"
 					imgsrc="assets/images/homepage/buildplate.png"
 				>
-					<a href="world-generation/world-generation-intro">Beginner's Guide</a>:
-					Learn about creation of custom biomes, structures, ores and more.<br /><br />
+					<a href="world-generation/world-generation-intro"
+						>Beginner's Guide</a
+					>: Learn about creation of custom biomes, structures, ores
+					and more.<br /><br />
 				</Card>
 				<CardLink
 					title="Contribute"
