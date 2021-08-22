@@ -96,8 +96,13 @@ Introduced as one of [1.16's experimental item features](https://wiki.bedrock.de
             "identifier": "wiki:throwable_pretamed_wolf"
         },
         "components": {
-            "minecraft:projectile": {
-                "projectile_entity": "wiki:pretamed_wolf"
+            "minecraft:on_use": {
+                "on_use": { "event": "wiki:on_use" }
+            }
+        },
+        "events": {
+            "wiki:on_use": {
+                "shoot": { "projectile": "wiki:pretamed_wolf" }
             }
         }
     }
