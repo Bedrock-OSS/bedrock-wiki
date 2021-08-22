@@ -14,7 +14,7 @@ This only tested in beta 1.17.20.20
 
 First let's start with some basic navigation behavior.
 
-###Pathing
+### Pathing
 
  "minecraft:preferred_path":{
                 "max_fall_blocks":1,
@@ -73,7 +73,7 @@ Allow an entity to entering a building and also take shelter when raining. Need 
 
 "minecraft:behavior.restrict_open_door" allows an entity to stay indoors while the sun is down.
 
-###Door
+### Door
 
 "minecraft:annotation.open_door" use in pair with 
 "minecraft:navigation.walk":{
@@ -90,7 +90,7 @@ allows an entity to interact and open a door.
 
 ## The Mechanic
 
-###Main Behavior(Important)
+### Main Behavior(Important)
 
 "minecraft:dweller": {
 					"dwelling_type": "village",
@@ -115,7 +115,7 @@ allows an entity to interact and open a door.
 "can_migrate" currently not tested but it may allow entity to claim new bed and bell when get to far from the first village
 "first_founding_reward" currently unknown.
 
-###Sleep
+### Sleep
 
 :::warning
 require "dweller_role" set to be "inhabitant" also Make sure your entity already had sleep animation otherwise they will just standing still on the bed
@@ -136,7 +136,7 @@ require "dweller_role" set to be "inhabitant" also Make sure your entity already
 "sleep_y_offset" set how height entity position when sleep
 "timeout_cooldown" currently unknown yet but possibly similar to Villager unable to create path to the bed
 
-###Work
+### Work
 
 :::warning
 require "dweller_role" set to be "inhabitant" also if "preferred_profession" doesn't exist the entity will try to move to the closest any job site
@@ -163,7 +163,7 @@ require "dweller_role" set to be "inhabitant" also if "preferred_profession" doe
 "work_in_rain_tolerance" how much the entity tolerance to work in rain before stop the working
 "on_arrival" what events to trigger when the entity arrive on their job site
 
-###Scheduler
+### Scheduler
 
 Now you know everything about the mechanic, let's try put all of this together in "minecraft:scheduler"
 First let's do something simple
