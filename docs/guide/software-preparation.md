@@ -75,9 +75,11 @@ For further guidance on the editor, feel free to contact us on [Twitter](https:/
 
 -   [Krita](https://krita.org/en/) _or_ [GIMP](https://www.gimp.org/)
 
-## Reference Material
+## Additional Materials
 
+:::tip
 This guide will walk you through the first stages of addon development, but it is not comprehensive! To learn more about addons, you will have to use and reference other sources of information, which we will link to here.
+:::
 
 ### Join the Discord
 
@@ -97,6 +99,11 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 -   [bedrock.dev](https://bedrock.dev/): Reference documentation.
 -   [wiki.bedrock.dev](https://wiki.bedrock.dev/): Tutorials and guides.
 -   [MS Docs](https://docs.microsoft.com/en-us/minecraft/creator/): The official microsoft creator portal for addons.
+
+### Troubleshooting and Additional Help
+
+-   If the json format is very tricky for you, consider reading the [understanding-json guide](/guide/understanding-formatting).
+-   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
 
 ## Your progress so far
 
