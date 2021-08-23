@@ -8,7 +8,7 @@ Important links have a ⭐.
 
 ## Discord Links
 
-*There are more discord links at the bottom!*
+_There are more discord links at the bottom!_
 
 -   ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
@@ -88,7 +88,8 @@ Important links have a ⭐.
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
 -   ⭐ [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
--   [Mcbehub](https://mcbehub.com/)
+-   [MCDLHub](https://mcdlhub.com/)
+-   [MCBEHub](https://mcbehub.com/)
 -   [MCPECore](https://mcpecore.com/)
 
 ## Other useful Links
@@ -105,8 +106,8 @@ Important links have a ⭐.
 
 ## Community-Addon Discords
 
-*These discord links are to community-created addons, with a public discord*
+_These discord links are to community-created addons, with a public discord_
 
-- [World Expansion](https://discord.gg/CRQ6veyjak)
-- [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
-- [Project Vex](https://discord.gg/P95nXc4jbR)
+-   [World Expansion](https://discord.gg/CRQ6veyjak)
+-   [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
+-   [Project Vex](https://discord.gg/P95nXc4jbR)

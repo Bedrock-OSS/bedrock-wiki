@@ -102,7 +102,7 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 
 ### Troubleshooting and Additional Help
 
--   If the json format is very tricky for you, consider reading the [understanding-json guide](/guide/understanding-formatting).
+-   If the json format is very tricky for you, consider reading the [understanding-json guide](/guide/understanding-json).
 -   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
 
 ## Your progress so far
