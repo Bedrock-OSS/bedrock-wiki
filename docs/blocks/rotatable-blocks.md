@@ -24,6 +24,16 @@ Rotating blocks make use of the permutations that were intoduced in 1.16.100. Th
 {
   "permutations": [
     {
+      "condition": "query.block_property('wiki:rotation') == 0",
+      "components": {
+        "minecraft:rotation": [
+          0,
+          180,
+          0
+        ]
+      }
+    },
+    {
       "condition": "query.block_property('wiki:rotation') == 1",
       "components": {
         "minecraft:rotation": [
@@ -38,7 +48,7 @@ Rotating blocks make use of the permutations that were intoduced in 1.16.100. Th
       "components": {
         "minecraft:rotation": [
           0,
-          180,
+          270,
           0
         ]
       }
@@ -49,16 +59,6 @@ Rotating blocks make use of the permutations that were intoduced in 1.16.100. Th
         "minecraft:rotation": [
           0,
           90,
-          0
-        ]
-      }
-    },
-    {
-      "condition": "query.block_property('wiki:rotation') == 4",
-      "components": {
-        "minecraft:rotation": [
-          0,
-          270,
           0
         ]
       }
@@ -76,7 +76,7 @@ In order to make the block rotate the way the player is facing, we have to use s
   "events": {
     "wiki:set_rotation": {
       "set_block_property": {
-        "wiki:rotation": "(query.cardinal_facing_2d)"
+        "wiki:rotation": "query.cardinal_facing_2d-2"
       }
     }
   }
@@ -103,17 +103,17 @@ This event is called upon by using the `minecraft:on_player_placing` component.
       "identifier": "wiki:cabinet",
       "properties": {
         "wiki:rotation": [
+          0,
           1,
           2,
-          3,
-          4
+          3
         ]
       }
     },
     "events": {
       "wiki:set_rotation": {
         "set_block_property": {
-          "wiki:rotation": "(query.cardinal_facing_2d)"
+          "wiki:rotation": "query.cardinal_facing_2d-2"
         }
       }
     },
@@ -157,6 +157,16 @@ This event is called upon by using the `minecraft:on_player_placing` component.
     },
     "permutations": [
       {
+        "condition": "query.block_property('wiki:rotation') == 0",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            180,
+            0
+          ]
+        }
+      },
+      {
         "condition": "query.block_property('wiki:rotation') == 1",
         "components": {
           "minecraft:rotation": [
@@ -171,7 +181,7 @@ This event is called upon by using the `minecraft:on_player_placing` component.
         "components": {
           "minecraft:rotation": [
             0,
-            180,
+            270,
             0
           ]
         }
@@ -181,17 +191,7 @@ This event is called upon by using the `minecraft:on_player_placing` component.
         "components": {
           "minecraft:rotation": [
             0,
-            90,
-            0
-          ]
-        }
-      },
-      {
-        "condition": "query.block_property('wiki:rotation') == 4",
-        "components": {
-          "minecraft:rotation": [
-            0,
-            270,
+            900,
             0
           ]
         }

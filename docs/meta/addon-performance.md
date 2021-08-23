@@ -24,6 +24,9 @@ This guide is a non-exhaustive list of specific performance considerations separ
 -   Hundreds of iterations per chunk of a multi-block feature have been achieved at a low-performance cost
 -   Thousands of iterations per chunk of multi-block features negatively impact gameplay
 -   Hundreds of thousands of iterations per chunk of a single-block feature have been achieved at a low-performance cost
+-   Thousands of instances of features *per chunk* comes at little cost.
+-   Tens of thousands of feature instances *per chunk* yields a noticeable impact on chunk loading.
+-   Hundreds of thousands of instances of features *per chunk* slows chunk loading to an unbearable crawl.
 
 ## Blocks
 
