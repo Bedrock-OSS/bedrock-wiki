@@ -91,6 +91,7 @@ _There are more discord links at the bottom!_
 -   [MCDLHub](https://mcdlhub.com/)
 -   [MCBEHub](https://mcbehub.com/)
 -   [MCPECore](https://mcpecore.com/)
+-   [CubitosMC](https://www.cubitosmc.com/)
 
 ## Other useful Links
 
