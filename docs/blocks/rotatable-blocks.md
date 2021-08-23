@@ -191,7 +191,7 @@ This event is called upon by using the `minecraft:on_player_placing` component.
         "components": {
           "minecraft:rotation": [
             0,
-            900,
+            90,
             0
           ]
         }
