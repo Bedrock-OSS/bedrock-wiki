@@ -16,11 +16,19 @@ First, you should always reload Minecraft. That means fully closing the game, an
 
 ### The Environment
 
-The best way to prevent nasty bugs is by working in the right environment. You should review [the software preparation document](/guide/software-preparation) for editor recommendations. The most important part is getting a JSON-linter, ([or using an online json-linter](https://jsonlint.com/)).
+The best way to prevent nasty bugs is by working in the right environment. You should review [the software preparation document](/guide/software-preparation) for editor recommendations. The most important part is getting a JSON-linter, ([or using an online json-linter](https://jsonlint.com/)), and storing your packs in `development_behavior_packs` and `development_resource_packs`.
+
+If you have your addons in the normal folders, you can run into "pack caching" issues, where you edit the files in one location, but the game is still using the old files.
 
 ### Content Log
 
-The next thing you should do is turn on your content log. This can be done like: `Settings > Profile > Enable Content Log GUI`. Then press `ctrl+h` in-game to see any errors or output that might pop up. Errors in the content log will show up every time you open the world and also during gameplay if more errors occur.
+:::warning
+Content log is the best tool you have for debugging your addons. Please don't skip this step!
+:::
+
+![](/assets/images/guide/content_log.png)
+
+The next thing you should do is turn on your content log. This can be turning on both settings in `Settings > Creator`. Then press `ctrl+h` in-game to see any errors or output that might pop up. Errors in the content log will show up every time you open the world and also during gameplay if more errors occur.
 
 ::: tip
 Errors are not cleared between runs, so the errors you see in the content log may be _old_ errors from prior runs.
