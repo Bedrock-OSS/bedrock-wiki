@@ -25,9 +25,10 @@ _There are more discord links at the bottom!_
 -   [MCPECore](https://discord.com/invite/N3e6exUQGs)
 -   [Bedrock Commands](https://discord.gg/bedrockcommands)
 -   [BDSX ](https://discord.gg/KyrVChfR)
+-   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
--   [Mcbehub](https://discord.gg/jfQeGqVsxA)
+-   [MCBE Hub](https://discord.gg/jfQeGqVsxA)
 
 ## Software
 
