@@ -8,8 +8,6 @@ Important links have a ⭐.
 
 ## Discord Links
 
-_There are more discord links at the bottom!_
-
 -   ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
@@ -80,6 +78,7 @@ _There are more discord links at the bottom!_
 
 ## Scripting Resources
 
+-   [GameTests API Wrapper](https://github.com/notbeer/Framework-Wrapper)
 -   [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/TimerJS)
 -   [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
 -   [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
@@ -106,10 +105,3 @@ _There are more discord links at the bottom!_
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 
-## Community-Addon Discords
-
-_These discord links are to community-created addons, with a public discord_
-
--   [World Expansion](https://discord.gg/CRQ6veyjak)
--   [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
--   [Project Vex](https://discord.gg/P95nXc4jbR)
