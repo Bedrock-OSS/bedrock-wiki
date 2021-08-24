@@ -79,6 +79,7 @@ Important links have a ⭐.
 ## Scripting Resources
 
 -   [GameTests API Wrapper](https://github.com/notbeer/Framework-Wrapper)
+-   [GameTests Plugin-API-Starter-Pack](https://github.com/MajestikButter/Plugin-API-Starter-Pack)
 -   [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/TimerJS)
 -   [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
 -   [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
@@ -104,4 +105,5 @@ Important links have a ⭐.
 -   [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
+-   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
 
