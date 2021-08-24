@@ -82,7 +82,7 @@ First let's start with some basic navigation behavior.
 <CodeHeader></CodeHeader>
 
 ```json
-`"minecraft:behavior.restrict_open_door":{
+"minecraft:behavior.restrict_open_door":{
     //Allows entity to stay indoors while the sun is down
     "priority": 5
 }
