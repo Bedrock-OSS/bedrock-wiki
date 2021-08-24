@@ -1,5 +1,7 @@
 ---
 title: Custom Weapons
+tags:
+	- experimental
 ---
 
 Making a custom weapon is pretty simple since the 1.16.100 beta changes, as these allow you to simply define an item entry for it in your `BP/items` folder and provide a corresponding texture in the `RP/textures/items` folder with a bit of config and you have a fully working weapon that you can customize however you see fit.
@@ -122,7 +124,7 @@ Here is an example texture if you do not have your own to use, just `Save As` an
 
 ## Using the custom sword
 
-So now we have a BP containing our items json data and an RP containing the texture, we can make a new level, and make sure we include our BP/RP, however we **also need to enable the Holday Creator Features** under experimental gameplay.
+So now we have a BP containing our items json data and an RP containing the texture, we can make a new level, and make sure we include our BP/RP, however we **also need to enable the Holiday Creator Features** under experimental gameplay.
 
 Once you have done all the above, go into creative mode and you should be able to find your sword by its name, or under the sword category as shown.
 
