@@ -28,10 +28,12 @@ Here's an example that can be used to track AFK players.
 				"stands_still": {
 					"on_entry": [
 							"v.afk = q.life_time;"
-					]
+					],
 					"transitions": [
 						{
-							"afk": "(q.life time - v.afk) >= 30 && !q.is_moving",
+							"afk": "(q.life time - v.afk) >= 30 && !q.is_moving"
+						},
+						{
 							"default": "q.is_moving"
 						}
 					]
