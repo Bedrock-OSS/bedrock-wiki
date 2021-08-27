@@ -32,7 +32,6 @@ The attack radius in `ranged_attack` can be updated. This number sets how close 
     "reselect_targets": true,
     "target_search_height": 1000,
     "within_radius": 1000,
-    "max_dist": 1000,
     "must_see": false,
     "entity_types": [
         {
