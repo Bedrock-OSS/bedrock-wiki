@@ -1,3 +1,4 @@
+---
 title: Village Mechanic for Custom Entities
 mention:
  - AeroForta
