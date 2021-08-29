@@ -113,9 +113,9 @@
 </template>
 
 <script setup lang="ts">
-import {useData, useRoute} from 'vitepress'
+import {useData, useRoute, } from 'vitepress'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
-const { page } = useData()
+const { page, } = useData()
 
 import { ref, watch } from 'vue'
 
@@ -162,7 +162,7 @@ const getHeaders = function () {
       }
 		}
 	}
-  console.log(grouped);
+//   console.log(grouped);
   return grouped
 }
 

@@ -39,14 +39,30 @@ const props = defineProps<{
 	mentioned: Array<string>
 }>()
 
-// partial type of https://api.github.com/users/user
-interface GitHubAuthor {
-	login: string
-	avatar_url: string
-	html_url: string
+const getContributors = async function () {
+	const path = site.value.themeConfig.docsDir + '/' + page.value.relativePath
+	
+	if (!site.value.themeConfig.contributors || !JSON.stringify(site.value.themeConfig.contributors).includes('SirLich')) {
+		console.error('couldn\'t fetch contributors:', site.value.themeConfig.contributors);
+		return await getContributorsLegacy()
+	}
+	
+	const contrs = site.value.themeConfig.contributors[path];
+	
+	return contrs
 }
 
-const getContributors = async function () {
+
+const getContributorsLegacy = async function () {
+
+
+	// partial type of https://api.github.com/users/user
+	interface GitHubAuthor {
+		login: string
+		avatar_url: string
+		html_url: string
+	}
+
 	let url =
 		'https://api.github.com/repos/' +
 		site.value.themeConfig.repo +
