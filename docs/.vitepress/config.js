@@ -69,7 +69,7 @@ function generateSidebar(base, dir) {
 			})
 			if (frontMatter.data.title === void 0) {
 				joinedPath = path.relative(process.cwd(), joinedPath);
-				console.log(`::error file=${joinedPath},line=1,col=1::Invalid frontmatter!`);
+				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter!`);
 				throw new Error(
 					`File ${joinedPath} has invalid frontmatter!`
 				)
