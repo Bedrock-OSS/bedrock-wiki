@@ -48,8 +48,8 @@ Some entities don't have shadows, or very small shadows at least. By using the r
 
 ## Using Materials
 
-::: error
-This methos is no longer support. With the advent of render-dragon, materials like this no longer function. Please do not attempt to use this code in a serious way, and definitely do not attempt it on a marketplace map.
+:::error
+This methos is no longer supported. With the advent of render-dragon, materials like this no longer function. Please do not attempt to use this code in a serious way, and definitely do not attempt it on a marketplace map.
 :::
 
 :::warning
