@@ -39,22 +39,23 @@ const props = defineProps<{
 	mentioned: Array<string>
 }>()
 
+
+if (import.meta.env.MODE == 'development') console.log('DEV MODE: Using getContributorsLegacy')
+
 const getContributors = async function () {
 	const path = site.value.themeConfig.docsDir + '/' + page.value.relativePath
+	const contrs = site.value.themeConfig.contributors;
 	
-	if (!site.value.themeConfig.contributors || !JSON.stringify(site.value.themeConfig.contributors).includes('SirLich')) {
-		console.error('couldn\'t fetch contributors:', site.value.themeConfig.contributors);
+	if (import.meta.env.MODE == 'development') return await getContributorsLegacy()
+	if (!contrs || !JSON.stringify(contrs).includes('SirLich')) {
+		console.error('couldn\'t fetch contributors:', contrs)
 		return await getContributorsLegacy()
 	}
 	
-	const contrs = site.value.themeConfig.contributors[path];
-	
-	return contrs
+	return contrs[path]
 }
 
-
 const getContributorsLegacy = async function () {
-
 
 	// partial type of https://api.github.com/users/user
 	interface GitHubAuthor {
