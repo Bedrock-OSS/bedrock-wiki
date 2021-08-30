@@ -49,7 +49,7 @@ Animation Controller: (query.all_animations_finished is only needed for respawni
 				"default": {
 					"transitions": [
 						{
-							"cancel_animation": "query.is_alive"
+							"cancel_animation": "!query.is_alive"
 						}
 					]
 				},
