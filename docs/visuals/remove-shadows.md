@@ -114,4 +114,4 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 }
 ```
 
-<Spoiler>
+</Spoiler>
