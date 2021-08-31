@@ -20,10 +20,10 @@ This tutorial will show you how to make:
 -   Water surface structure
 
 :::tip
-For exporting structure on android devices, use this resource pack https://mcpedl.com/export-structure-button-android-addon/
+For exporting structure on android devices, use this [resource pack](https://mcpedl.com/export-structure-button-android-addon/)
 :::
 
-Make sure you put the `.mcstructure file` inside of `BP/structures/`!
+Make sure you put the `.mcstructure` file inside of `BP/structures/`!
 
 ## Surface Structure
 
