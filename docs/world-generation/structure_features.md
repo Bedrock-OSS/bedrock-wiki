@@ -153,7 +153,7 @@ Make sure you put the `.mcstructure file` inside of `BP/structures/`!
 			"y": {
 				"extent": [
 					11,
-					50 //Makes the structure generates between y-11 and y-50
+					50 //Makes the structure generates between y11 and y50
 				],
 				"distribution": "uniform"
 			},
@@ -227,7 +227,7 @@ Make sure you put the `.mcstructure file` inside of `BP/structures/`!
 			},
 			"y": {
 				"extent": [
-					100, //Makes the structure generate from y-100 to y-200
+					100, //Makes the structure generate from y100 to y200
 					200
 				],
 				"distribution": "uniform"
@@ -374,7 +374,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"y": 62, //Makes the feature generates only on y-62, which is Minecraft water level
+			"y": 62, //Makes the feature generates only on y62, which is Minecraft water level
 			"z": {
 				"extent": [0, 16],
 				"distribution": "uniform"
