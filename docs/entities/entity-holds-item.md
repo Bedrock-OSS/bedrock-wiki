@@ -1,9 +1,9 @@
 ---
 title: 'Entity Holds Item'
-mention:
-    - pieterdefour
 tags:
 	- intermediate
+mention:
+    - pieterdefour
 ---
 
 ::: tip
