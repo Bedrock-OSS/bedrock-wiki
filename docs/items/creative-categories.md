@@ -106,7 +106,8 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | itemGroup.name.chestplate |  
 | itemGroup.name.concrete |  
 | itemGroup.name.concretePowder |  
-| itemGroup.name.cookedFood |  
+| itemGroup.name.cookedFood |    
+| itemGroup.name.cooper |  
 | itemGroup.name.coral |  
 | itemGroup.name.coral_decorations |  
 | itemGroup.name.crop |  
