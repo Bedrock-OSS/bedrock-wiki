@@ -20,7 +20,7 @@ This tutorial will show you how to make:
 
 -   Water surface structure
 
-##Preparing the Structure File
+## Preparing the Structure File
 
  `.mcstructure` files are exported using *Structure Blocks*. They can only be obtained via commands
 
