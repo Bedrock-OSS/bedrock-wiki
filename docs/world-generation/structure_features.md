@@ -6,7 +6,8 @@ tags:
 	- experimental
 ---
 
-Structure feature is one of the most basic feature. It places exported `.mcstructure` file in the world.
+Structure features places exported `.mcstructure` file into the world using `minecraft:structure_template_feature`.
+
 This tutorial will show you how to make:
 
 -   Surface structure,
@@ -19,11 +20,30 @@ This tutorial will show you how to make:
 
 -   Water surface structure
 
-:::tip
-For exporting structure on android devices, use this resource pack https://mcpedl.com/export-structure-button-android-addon/
+##Preparing the Structure File
+
+ `.mcstructure` files are exported using *Structure Blocks*. They can only be obtained via commands
+
+• `/give @p structure_block` 
+
+Place it near your structure and right click the block.
+Select the save mode, then set the size and offset so that your structure fits into the bounding box.
+
+:::warning
+Currently, maximum structure size for `structure_template_feature` is 64 x 256 x 64 blocks
 :::
 
-Make sure you put the `.mcstructure file` inside of `BP/structures/`!
+![](/assets/images/world-generation/structure-features/structure_block_gui.png)
+
+Finally, click *Export*, save it to `BP/structures`, and now you have the `.mcstructure` file!
+
+![](/assets/images/world-generation/structure-features/structure_folder.png)
+
+
+
+:::tip
+For exporting structure on android devices, use [Export Structure Button for Android](https://mcpedl.com/export-structure-button-android-addon/)
+:::
 
 ## Surface Structure
 
@@ -85,7 +105,7 @@ Make sure you put the `.mcstructure file` inside of `BP/structures/`!
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"scatter_chance": {
+			"scatter_chance": {//Chance of the structure to generate
 				"numerator": 1,
 				"denominator": 25
 			}
@@ -161,7 +181,7 @@ Make sure you put the `.mcstructure file` inside of `BP/structures/`!
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"scatter_chance": {
+			"scatter_chance": {//Chance of the structure to generate
 				"numerator": 1,
 				"denominator": 15
 			}
@@ -227,7 +247,7 @@ Make sure you put the `.mcstructure file` inside of `BP/structures/`!
 			},
 			"y": {
 				"extent": [
-					100, //Makes the structure generate from y-100 to y-200
+					100, //Makes the structure generate from y100 to y200
 					200
 				],
 				"distribution": "uniform"
@@ -236,7 +256,7 @@ Make sure you put the `.mcstructure file` inside of `BP/structures/`!
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"scatter_chance": {
+			"scatter_chance": {//Chance of the structure to generate
 				"numerator": 1,
 				"denominator": 25
 			}
@@ -252,6 +272,9 @@ Make sure you put the `.mcstructure file` inside of `BP/structures/`!
 ::: tip
 For underwater structures, make sure you waterlogged the structure, because Minecraft won't waterlog them automatically!
 :::
+
+![](/assets/images/world-generation/structure-features/waterlogged_structure.png)
+
 
 ### Feature File
 
@@ -309,7 +332,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"scatter_chance": {
+			"scatter_chance": {//Chance of the structure to generate
 				"numerator": 1,
 				"denominator": 25
 			}
@@ -374,13 +397,13 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"y": 62, //Makes the feature generates only on y-62, which is Minecraft water level
+			"y": 62, //Makes the feature generates only on y62, which is Minecraft water level
 			"z": {
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
 			"scatter_chance": {
-				"numerator": 1,
+				"numerator": 1,//Chance of the structure to generate
 				"denominator": 25
 			}
 		}
