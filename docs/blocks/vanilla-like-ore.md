@@ -89,3 +89,4 @@ This structure will be needed later, download it:
 
 ## Result
 
+![](/assets/images/blocks/vanilla-like-ores/test.gif)
