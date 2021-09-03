@@ -18,6 +18,10 @@ Features:
 - Can be mined using pickaxes only (vanilla ones included)
 - Drops XP reward
 
+Issues:
+
+- When block mined using pickaxe with silk touch enchant, it will drop double loot
+
 ## Preparation
 
 This structure will be needed later, download it:
@@ -89,4 +93,4 @@ This structure will be needed later, download it:
 
 ## Result
 
-![](/assets/images/blocks/vanilla-like-ores/test.gif)
+![](/assets/images/blocks/vanilla-like-ores/result.gif)
