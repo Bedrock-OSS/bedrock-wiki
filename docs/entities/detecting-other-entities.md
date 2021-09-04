@@ -4,19 +4,17 @@ tags:
     - intermediate
 ---
 
-At some point in time you might have thought about making your entities do things when in the vicinity of a nearby entity. This article details the various known ways to do so.
+You might have thought about making your entities fire an event when other entities are nearby. This article details the various known ways to do so.
 
 ## Using `minecraft:entity_sensor`
-This is probably the most basic way to detect other entities. The main issues are that it only accepts one entry, and detecting if the entity you want to detect goes away can be very tricky to say the least. Because it's an entity component, you can just plug it into your entity behavior file and plug in Minecraft filters. Here's a demonstration.
-
-<CodeHeader></CodeHeader>
+This is probably the most basic way to detect other entities. The main issues is it only accepts one entry and if the entity is out of range can be very tricky, to say the least. Because it's an entity component, you can just place into your entity behavior file and edit the Minecraft filters. Here's a demonstration:
 
 ```json
 "minecraft:entity_sensor": {
     "sensor_range": 2.5, //this is for the radius in blocks it will detect other entities in
     "relative_range": false, //if true, the sensor range is additive on top of the entity's hitbox size
     "require_all": true, //if true, all nearby entities must pass the filter conditions for the event to send
-    "minimum_count": 1, //minimum amount of entities required for the event to fire. by default it's 1
+    "minimum_count": 1, //minimum amount of entities required for the event to fire. by default, it's 1
     "maximum_count": 4, //maximum amount of entities required for the event to fire. by default it's -1, which means infinity
     "event_filters": { //you can put any filter you want here, the one that's being used in this example just detects players
         "test": "is_family",
@@ -25,15 +23,14 @@ This is probably the most basic way to detect other entities. The main issues ar
     },
     "event": "event:on_player_detected" //the event that fires when all the conditions in event_filters are met
 }
-
 ```
 
 ## Using BP Animations & Animation Controllers
 The `for_each` function and `query.get_nearby_entities` or `query.get_nearby_entities_except_self` can also be used for detecting other entities. They are more effective than using `minecraft:entity_sensor` because they are better at detecting if the entity you want to detect goes away than with `minecraft:entity_sensor`. The only downside is that they're experimental.
 
-This example you'll be following will make pigs say "oink oink" upon detecting players, though you can replace those with whatever you want. First of all, copy paste this BP animation:
+This example you'll be following will make pigs say "oink oink" upon detecting players, though you can replace those with whatever you want. First of all, copy-paste this BP animation:
 
-<CodeHeader>BP/animations/detection animation.json</CodeHeader>
+<CodeHeader>BP/animations/detection_animation.json</CodeHeader>
 
 ```json
 {
@@ -52,11 +49,11 @@ This example you'll be following will make pigs say "oink oink" upon detecting p
 }
 ```
 
-The first parameter that `query.get_nearby_entities_except_self` needs in order to work is the radius in blocks it will detect other entities in. The other is the identifier of the mob you want to make it detect.
+The first parameter that `query.get_nearby_entities_except_self` needs to work is the radius in blocks it will detect other entities in. The other is the identifier of the mob you want to make it detect.
 
-Now that's good and all, but in the offchance you want to make the pig detect players with some attribute that can be detected with MoLang, use this.
+Now that's good and all, but on the off chance, you want to make the pig detect players with some attribute that can be detected with MoLang, use this.
 
-<CodeHeader>BP/animations/detection animation.json</CodeHeader>
+<CodeHeader>BP/animations/detection_animation.json</CodeHeader>
 
 ```json
 {
@@ -77,7 +74,7 @@ Now that's good and all, but in the offchance you want to make the pig detect pl
 
 Next of all, copy paste this BP animation controller:
 
-<CodeHeader>BP/animation_controllers/pig animation controllers.json</CodeHeader>
+<CodeHeader>BP/animation_controllers/pig_animation_controllers.json</CodeHeader>
 
 ```json
 {
@@ -88,7 +85,7 @@ Next of all, copy paste this BP animation controller:
             "states": {
                 "default": {
                     "animations": [
-                        "animFindPlayer"
+                        "find_player"
                     ],
                     "transitions": [
                         {
@@ -98,7 +95,7 @@ Next of all, copy paste this BP animation controller:
                 },
                 "detected": {
                     "animations": [
-                        "animFindPlayer"
+                        "find_player"
                     ],
                     "transitions": [
                         {
@@ -115,15 +112,15 @@ Next of all, copy paste this BP animation controller:
 }
 ```
 
-Finally, copy paste this snippet into the behavior file for the pig like so. Make sure to insert this in `description`.
+Finally, copy-paste this snippet into the behavior file for the pig-like so. Make sure to insert this in `description`.
 ```json
 "animations": {
-	"contFindPlayer": "controller.animation.pig_find_player",
-	"animFindPlayer": "animation.pig.find_player"
+	"no_find_player": "controller.animation.pig_find_player",
+	"find_player": "animation.pig.find_player"
 },
 "scripts": {
     "animate": [
-	    "contFindPlayer"
+	    "no_find_player"
 	]
 }
 ```
