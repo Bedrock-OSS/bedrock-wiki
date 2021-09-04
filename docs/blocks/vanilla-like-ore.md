@@ -22,6 +22,8 @@ Issues:
 
 - When block mined using pickaxe with silk touch enchant, it will drop double loot
 
+- Xp reward structure doesn't load under y=0 (Caves & Cliffs) - Minecraft bug
+
 ## Preparation
 
 This structure will be needed later, download it:
