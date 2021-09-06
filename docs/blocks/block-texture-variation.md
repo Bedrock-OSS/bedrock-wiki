@@ -70,4 +70,4 @@ After completing the example above, if you want to adjust the weights, edit the 
 Some notes:
 
 -   This does appear to grab the texture set file. However, the texture set files do not seem to grasp the MER or regular file defined in the texture set.
-    -- https://bugs.mojang.com/browse/MCPE-110361
+    -- https://bugs.mojang.com/browse/MCPE-126617
