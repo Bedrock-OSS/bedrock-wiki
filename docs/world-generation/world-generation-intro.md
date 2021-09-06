@@ -104,7 +104,7 @@ _A non-smooth transition between the same biome, generated with noise_params as 
 
 Then, you can test for your tag in _environment_sensors_, _filters_, _has_biome_ tests, _spawn rules_, and more.
 
-Your custom biome is now complete! _Note: cold_biome as well as volcanic biomes are now included in the guide's files on [GitHub](https://github.com/KaiFireborn/Minecraft-Bedrock-Full-Beginner-Add-on-development-Guide-FILES)._
+Your custom biome is now complete!
 
 ---
 
