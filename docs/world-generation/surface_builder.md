@@ -37,7 +37,8 @@ Coarse Dirt File
 			"minecraft:grass"//The block can only replace grass
 		]
 	}
-}```
+}
+```
 
 Podzol File
 
@@ -57,7 +58,8 @@ Podzol File
 			"minecraft:grass"//The block can only replace grass
 		]
 	}
-}```
+}
+```
 
 Cobblestone File
 
@@ -77,7 +79,8 @@ Cobblestone File
 			"minecraft:grass"//The block can only replace grass
 		]
 	}
-}```
+}
+```
 
 
 ## Weighted Random Features
@@ -110,7 +113,8 @@ Learn more about weighted random features [here](/world-generation/feature-types
 			]
 		]
 	}
-}```
+}
+```
 
 ## Scatter Features
 
@@ -146,18 +150,19 @@ Learn more about scatter features [here](/world-generation/feature-types.html#sc
 		"y": "query.heightmap(v.worldx, v.worldz) -1",
 		"places_feature": "wiki:select_surface_block_feature"//Weighted random feature identifier
 	}
-}```
+}
+```
 
 
-• `iterations` determine how many blocks will be placed. I'm going to use the Molang `math.random` function to randomize the number of blocks. In this case, it'll be 20 to 25 blocks.
+* `iterations` determine how many blocks will be placed. I'm going to use the Molang `math.random` function to randomize the number of blocks. In this case, it'll be 20 to 25 blocks.
 
-• `extent` use an array to determine the size of the blob. `[0, 8]` means the size is extended from 0 to 8 blocks. So, our blob would be 8 blocks long both on X and Z axis. **Only use this for X and Z distribution**.
+* `extent` use an array to determine the size of the blob. `[0, 8]` means the size is extended from 0 to 8 blocks. So, our blob would be 8 blocks long both on X and Z axis. **Only use this for X and Z distribution**.
 
  
-• `"y": "query.heightmap(v.worldx, v.worldz) -1` means it will put the block on the highest block on the y coordinate -1. So it'll always put the feature on the surface.
+* `"y": "query.heightmap(v.worldx, v.worldz) -1` means it will put the block on the highest block on the y coordinate -1. So it'll always put the feature on the surface.
 
 
-• `distribution` specifies the type of distribution to use. Available include `Gaussian`, `Inverse Gaussian`, `Uniform`,`Fixed Grid` and `Jittered Grid`
+* `distribution` specifies the type of distribution to use. Available include `Gaussian`, `Inverse Gaussian`, `Uniform`,`Fixed Grid` and `Jittered Grid`
 
 
 ## Feature Rule
@@ -167,7 +172,7 @@ This is the final step for our surface builder. The feature rules for our surfac
 
 <CodeHeader>BP/feature_rules/overworld_surface_blocks_feature.json</CodeHeader>
 
-json```
+```json
 {
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
@@ -206,7 +211,8 @@ json```
 			}
 		}
 	}
-}```
+}
+```
 
 And our surface builder is done! Feel free to modify and messing around with it!
 
