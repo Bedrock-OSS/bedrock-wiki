@@ -1,1 +1,0 @@
-import{r as t,o as e,c as r,a as o}from"./404.md.60ff2571.js";const s='{"title":"","description":"","frontmatter":{"hidden":true,"show_toc":false,"show_contributors":false},"relativePath":"contribute.md","lastUpdated":1630896502880}',a={};a.render=function(s,a,n,i,d,c){const f=t("Contribute",!0);return e(),r("div",null,[o(f)])};export default a;export{s as __pageData};
