@@ -5,7 +5,7 @@ tags:
     - guide
 ---
 
-Bedrock Minecraft allows us to add custom blocks into our world with various vanilla-like properties. In the newest beta, custom blocks can have multiple stages (like plants), directional facing, among other features. This tutorial will cover how to create some simple blocks for the stable version of Minecraft Bedrock.
+Minecraft Bedrock allows us to add custom blocks into our world with various vanilla-like properties. In the newest beta, custom blocks can have multiple stages (like plants), directional facing, and other features. This tutorial will cover how to create some simple blocks for the stable version of Minecraft Bedrock.
 
 :::warning
 Blocks on the stable version of Minecraft (1.10 format version) are missing many new features, available in experimental (1.16 format version). You can learn more about [experimental blocks here](/blocks/blocks-16).
@@ -13,7 +13,7 @@ Blocks on the stable version of Minecraft (1.10 format version) are missing many
 
 ## Block Behavior File
 
-Block behaviors are structured similarly to entities: They contain a description and a list of components that describe the block's behavior.
+Block behaviors are structured similarly to entities: they contain a description and a list of components that defines the block's behavior.
 
 <CodeHeader>BP/blocks/blockname.json</CodeHeader>
 
@@ -43,17 +43,19 @@ Block behaviors are structured similarly to entities: They contain a description
 }
 ```
 
--   "`identifier`" under "`description`" is already familiar to us;
--   "`components`":
--   "`minecraft:loot`" defines a loot table path that will define what the block will drop. We'll look into loot tables in the next chapter.
--   "`minecraft:destroy_time`" defines how long the player will need to punch the block until it breaks. Currently, it isn't possible to set different destroy times for different tools;
--   "`minecraft:explosion_resistance`": the higher the value, the lower the chance that an explosion will destroy the block;
--   "`minecraft:friction`" defines how much friction the block has. For example, Soul and has a high value for friction, and thus it slows players down. Ice has a lower friction value, and thus it has the effect of being slippery. The friction of classic blocks such as wood or stone is `0.6`.
--   "`minecraft:flammable":"flame_odds`": how likely the block is to catch fire; "`burn_odds`": how likely the block is to be destroyed by fire;
--   "`minecraft:map_color`" has the hex code of the color that will be displayed on a minecraft Map to symbolize this block. `#FFFFFF` means white. You can get hex codes for other colors [here](https://www.google.com/search?q=hex+color+picker&rlz=1C1CHBF_enDE886DE886&oq=hex+color+picker&aqs=chrome..69i57j0l7.2293j0j8&sourceid=chrome&ie=UTF-8).
--   "`minecraft:block_light_emission`" defines the light level the block will output.
+-   `"identifier"` under `"description"` is already familiar to us.
+-   `"components"`
+	-   `"minecraft:loot"` defines a loot table path for the block to drop. We'll look into loot tables in the next chapter.
+	-   `"minecraft:destroy_time"` defines how long the player will need to mine the block until it breaks. Currently, it isn't possible to set different destroy times for different tools.
+	-   `"minecraft:explosion_resistance"` defines the chance for an explosion to break the block. Higher the value, lower the chance.
+	-   `"minecraft:friction"` defines how much friction the block has. For example, soulsand and has a high value for friction, so it slows the players. Ice has a lower friction value, so it has a slippery effect. The friction of classic blocks such as wood or stone is `0.6`.
+	-   `"minecraft:flammable"`
+		-   `"flame_odds"` defines how likely the block is to catch fire.
+		-   `"burn_odds"` defines how likely the block is to be destroyed by fire.
+	-   `"minecraft:map_color"` is the hex color code that will be displayed on a Minecraft map to symbolize this block. `#FFFFFF` means white. You can get hex codes for other colors [here](https://www.google.com/search?q=hex+color+picker&rlz=1C1CHBF_enDE886DE886&oq=hex+color+picker&aqs=chrome..69i57j0l7.2293j0j8&sourceid=chrome&ie=UTF-8).
+	-   `"minecraft:block_light_emission"` defines the light level the block will output. Light level is out of 15, so to get a light level of 9, insert `0.6` as the value.
 
-Let's create some more blocks in `BP/blocks`. I created these for four for the tutorials' sake:
+Let's create some more blocks in `BP/blocks`. I created these four block for the tutorial:
 
 -   Filename: `blocky.json`; Identifier: `wiki:blocky`;
 -   Filename: `sapp_log.json`; Identifier: `wiki:sapp_log`;
@@ -63,7 +65,7 @@ Let's create some more blocks in `BP/blocks`. I created these for four for the t
 
 ## Block Resource File
 
-The resource definition for blocks differs from entities/items, because all the definitions appear in a single file.
+The resource definition for blocks differs from entities/items because all the definitions appear in a single file.
 
 <CodeHeader>RP/blocks.json</CodeHeader>
 
@@ -102,31 +104,34 @@ The resource definition for blocks differs from entities/items, because all the 
 
 As you can see, every block's identifier is applied with textures and step sounds. All of these blocks have different types of textures. Let's look through them.
 
--   "`wiki:blocky`" has "`textures`" set to the texture shortname "`**blocky**`". We'll define it in a file similar to `RP/textures/item_texture.json`, `RP/textures/terrain_texture.json` later.
--   "`wiki:sapp_log`"'s "textures" are broken up into 3 parts: "`up`"(for the upper face of the block), "`down`"(for the bottom face of the block), and "`side`"(for the remaining four faces). Each one of these has a separate texture shortname applied.
--   "`wiki:compass_block`"'s "`textures`" are broken up in even more sub-textures. Instead of "`side`"s, we have a different texture shortname set for the "`north`" side, the "`south`" side, the "`west`" side, and the "`east`" side.
--   And, lastly, "`wiki_flashing`" has "`flashing`" defined in the same way as "`wiki_blocky`".
+-   `"wiki:blocky"` has textures set to the shortname `"blocky"`. We'll define it in a file similar to `item_texture.json` later.
+-   `"wiki:sapp_log"` has textures broken into 3 parts:
+	-   `"up"` for the upper face of the block.
+	-   `"down"` for the bottom face of the block.
+	-   `"side"` for the remaining four faces. Each one of these has a separate texture shortname applied.
+-   `"wiki:compass_block"` has textures broken into more sub-textures. Instead of `"side"`, we have a different texture shortname set for the `"north"` side, the `"south"` side, the `"west"` side, and the `"east"` side.
+-   `"wiki_flashing`" has `"flashing"` defined in the same way as `"wiki_blocky"`.
 
 ### Block terrain texture definition
 
-These "gorgeous" textures are the ones I'm going to use for my example blocks. The first three are located in the `RP/textures/blocks/` folder and, the last 6 are located in the `/RP/textures/blocks/compass_block` subfolder - they show North, South, etc.
+These "gorgeous" textures are the ones I'm going to use for my example blocks. The first three are located in the `RP/textures/blocks/` folder and, the last 6 are located in the `RP/textures/blocks/compass_block` subfolder - they show North, South, etc.
 
 _Left to right: `blocky.png`, `sapp_log_side.png`, `side_block_top.png`, `sb_up.png`, `sb_down.png`, `sb_north.png`, `sb_south.png`, `sb_west.png`, `sb_east.png`_
 
-<WikiImage src="/assets/images/guide/wiki_blocky_texture.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_blocky_texture.png" pixelated/>
 
-<WikiImage src="/assets/images/guide/wiki_log_side_texture.png" pixelated/>
-<WikiImage src="/assets/images/guide/wiki_log_top_texture.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_log_side_texture.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_log_top_texture.png" pixelated/>
 
-<WikiImage src="/assets/images/guide/wiki_sb_up.png" pixelated/>
-<WikiImage src="/assets/images/guide/wiki_sb_down.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_up.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_down.png" pixelated/>
 
-<WikiImage src="/assets/images/guide/wiki_sb_north.png" pixelated/>
-<WikiImage src="/assets/images/guide/wiki_sb_south.png" pixelated/>
-<WikiImage src="/assets/images/guide/wiki_sb_west.png" pixelated/>
-<WikiImage src="/assets/images/guide/wiki_sb_east.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_north.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_south.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_west.png" pixelated/>
+<WikiImage src="/assets/images/guide/tut_sb_east.png" pixelated/>
 
-All textures need to define a **shortname**, (and we'll do it the same way as we defined item texture shortnames in `RP/textures/item_texture.json`), but this time in `RP/textures/terrain_texture.json`
+All textures need to define a **shortname** and we'll do it the same way as we defined item texture shortnames in `RP/textures/item_texture.json`, but this time in `RP/textures/terrain_texture.json`
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
@@ -170,13 +175,13 @@ All textures need to define a **shortname**, (and we'll do it the same way as we
 
 The only difference from `item_textures.json` is that "`atlas.items`" is now changed to "`atlas.terrain`".
 
-"`padding`" and "`num_mip_leavels`" mean the quality of how the texture is displayed, especially noticeable on higher resolution textures. The performance will be better if it's lower, but the textures will appear glitchy from further distances.
+`"padding"` and `"num_mip_leavels"` mean the quality of how the texture is displayed, especially noticeable on higher resolution textures. The performance will be better if it's lower, but the textures will appear glitchy from further distances.
 
 Next, all our texture shortnames have been defined. These shortnames were already used in `RP/blocks.json`, as you might remember. If you load the game now, you'll be able to see the 3 new custom blocks you just added, with all the texture functionality :)
 
 ![](/assets/images/guide/custom_blocks_inventory.png)
 
-But, we still have to define the `wiki:flashing`'s texture(third from the left), which is currently undefined. That's why it appears as a purple-and-black tiled texture right now.
+But, we still have to define the `wiki:flashing` texture(third from the left), which is currently undefined. That's why it appears as a purple/black tiled texture right now.
 
 ### Block flipbook texture definition
 
@@ -194,9 +199,9 @@ As you might have already guessed, flipbook texture shortnames are defined in a 
 ]
 ```
 
--   "`flipbook_texture`" is the path to your texture file, which is named "`flashing_flipbook`" in this scenario.
--   "`atlas_tile`" is the shortname definition. As you know, we already applied "`flashing`" texture shortname to the `wiki:flashing` block in RPblocks.json`.
--   "`ticks_per_frame`" defines how quickly the different textures will fade into the block, in other words, the speed of the animation.
+-   `"flipbook_texture"` is the path to your texture file, which is named `"flashing_flipbook"` in this scenario.
+-   `"atlas_tile"` is the shortname definition. As you know, we already applied `"flashing"` texture shortname to the `wiki:flashing` block in `RP/blocks.json`.
+-   `"ticks_per_frame"` defines how quickly the different textures will fade into the block, in other words, the speed of the animation.
 
 A **flipbook texture** file is created like this:
 
