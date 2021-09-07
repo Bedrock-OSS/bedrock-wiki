@@ -24,7 +24,7 @@ Vanilla-like custom trees are possible. Make their parts following this tutorial
     - If leaves are broken using shears, they can drop normal loot too
     - Due to some Minecraft bugs leaves will decay after reloading chunks
 
-:::info
+:::tip
 To make leaves decay, you need to use `/fill` command that will replace custom_leaves with custom_leaves. It is needed for switching decaying to true because on player placing it sets decaying to false.
 :::
 
@@ -33,6 +33,8 @@ This method requires PC.
 :::
 
 ## Making Leaves
+
+<Spoiler title="Code">
 
 <CodeHeader>BP/blocks/custom_leaves.json</CodeHeader>
 
@@ -132,189 +134,167 @@ This method requires PC.
 }
 ```
 
+</Spoiler>
+
 ## Making Log
+
+<Spoiler title="Code">
 
 <CodeHeader>BP/blocks/custom_log.json</CodeHeader>
 
 ```json
 {
-    "format_version":"1.16.100",
-    "minecraft:block":{
-        "description":{
-            "identifier":"wiki:custom_log",
-            "properties":{
-                "wiki:facing_direction":[
-                    0,
-                    1,
-                    2
-                ]
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_log",
+            "properties": {
+                "wiki:facing_direction": [0, 1, 2]
             }
             //Log direction properties
         },
-        "permutations":[
+        "permutations": [
             {
-                "condition":"query.block_property('wiki:facing_direction') == 0",
+                "condition": "query.block_property('wiki:facing_direction') == 0",
                 //If query.block_property('wiki:facing_direction') == 0 sets no rotation and on_interact component
-                "components":{
-                    "minecraft:rotation":[
-                        0,
-                        0,
-                        0
-                    ],
-					"minecraft:on_interact": {
+                "components": {
+                    "minecraft:rotation": [0, 0, 0],
+                    "minecraft:on_interact": {
                         "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
-						"event": "wiki:become_stripped_0"
+                        "event": "wiki:become_stripped_0"
                         //Event sets custom stripped log with no rotation
-					}
+                    }
                 }
             },
             {
-                "condition":"query.block_property('wiki:facing_direction') == 1",
+                "condition": "query.block_property('wiki:facing_direction') == 1",
                 //If query.block_property('wiki:facing_direction') == 1 sets rotation and on_interact component
-                "components":{
-                    "minecraft:rotation":[
-                        90,
-                        0,
-                        0
-                    ],
-					"minecraft:on_interact": {
-						"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
+                "components": {
+                    "minecraft:rotation": [90, 0, 0],
+                    "minecraft:on_interact": {
+                        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
                         "event": "wiki:become_stripped1"
                         //Event sets custom stripped log with rotation
-					}
+                    }
                 }
             },
             {
-                "condition":"query.block_property('wiki:facing_direction') == 2",
+                "condition": "query.block_property('wiki:facing_direction') == 2",
                 //If query.block_property('wiki:facing_direction') == 2 sets rotation and on_interact component
-                "components":{
-                    "minecraft:rotation":[
-                        0,
-                        0,
-                        90
-                    ],
-					"minecraft:on_interact": {
+                "components": {
+                    "minecraft:rotation": [0, 0, 90],
+                    "minecraft:on_interact": {
                         "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
-						"event": "wiki:become_stripped2"
+                        "event": "wiki:become_stripped2"
                         //Event sets custom stripped log with rotation
-					}
+                    }
                 }
             }
         ],
-        "components":{
+        "components": {
             "minecraft:material_instances": {
-				"*": {
-					"texture": "custom_log",
-					"render_method": "opaque"
-					},
-				"ends": {
-					"texture": "custom_log_top",
-					"render_method": "opaque"
-					},
-				"up": "ends",
-				"down": "ends"
+                "*": {
+                    "texture": "custom_log",
+                    "render_method": "opaque"
+                },
+                "ends": {
+                    "texture": "custom_log_top",
+                    "render_method": "opaque"
+                },
+                "up": "ends",
+                "down": "ends"
                 //Sets different textures for sides and top/bottom of log
-			},
-			"minecraft:loot": "loot_tables/blocks/custom_log_block.json",
+            },
+            "minecraft:loot": "loot_tables/blocks/custom_log_block.json",
             //Due to some bugs you need to add this component and loot table
-            "minecraft:destroy_time":1.0,
-            "minecraft:unit_cube":{},
-            "minecraft:ticking":{
-                "looping":true,
-                "range":[
-                    6.0,
-                    8.0
-                ],
-                "on_tick":{
-                    "event":"wiki:update_leaves"
+            "minecraft:destroy_time": 1.0,
+            "minecraft:unit_cube": {},
+            "minecraft:ticking": {
+                "looping": true,
+                "range": [6.0, 8.0],
+                "on_tick": {
+                    "event": "wiki:update_leaves"
                 }
             },
             //Updates blocks every 4-6 seconds so they don't decay. Use range to prevent huge lags every N-seconds
-            "minecraft:on_player_placing":{
-                "event":"wiki:set_facing_direction"
+            "minecraft:on_player_placing": {
+                "event": "wiki:set_facing_direction"
             }
             //Sets log rotation on player placing
         },
-        "events":{
-            "wiki:update_leaves":{
-                "run_command":{
-                    "command":[
-                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:fake_leaves 0 replace wiki:custom_leaves",
-                        "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:custom_leaves 0 replace wiki:fake_leaves"
-                    ]
+        "events": {
+            "wiki:update_leaves": {
+                "run_command": {
+                    "command": ["fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:fake_leaves 0 replace wiki:custom_leaves", "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:custom_leaves 0 replace wiki:fake_leaves"]
                 }
             },
             //Updates leaves
-            "wiki:set_facing_direction":{
-                "set_block_property":{
-                    "wiki:facing_direction":"math.floor( query.block_face / 2.0 )"
+            "wiki:set_facing_direction": {
+                "set_block_property": {
+                    "wiki:facing_direction": "math.floor( query.block_face / 2.0 )"
                 }
             },
             //Sets block rotation
-			"wiki:become_stripped_0": {
-                "sequence":[
-					{
-						"run_command": {
-                            "command": [
-                                "setblock ~~~ wiki:custom_stripped_log"
-                            ]
+            "wiki:become_stripped_0": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": ["setblock ~~~ wiki:custom_stripped_log"]
                         }
-					},
+                    },
                     //Damages axe of player who stripped the log
-					{
-						"damage":{
-							"type": "durability",
-							"amount": 1,
-							"target": "item"
-						}
-					}
-				]
-			},
+                    {
+                        "damage": {
+                            "type": "durability",
+                            "amount": 1,
+                            "target": "item"
+                        }
+                    }
+                ]
+            },
             //Sets custom stripped log with special rotation
-			"wiki:become_stripped1": {
-                "sequence":[
-					{
-						"run_command": {
-                            "command": [
-                                "structure load custom_stripped_log1 ~~~"
-                            ]
+            "wiki:become_stripped1": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": ["structure load custom_stripped_log1 ~~~"]
                         }
-					},
+                    },
                     //Damages axe of player who stripped the log
-					{
-						"damage":{
-							"type": "durability",
-							"amount": 1,
-							"target": "item"
-						}
-					}
-				]
-			},
+                    {
+                        "damage": {
+                            "type": "durability",
+                            "amount": 1,
+                            "target": "item"
+                        }
+                    }
+                ]
+            },
             //Loads structure (custom stripped log with special rotation)
-			"wiki:become_stripped2": {
-                "sequence":[
-					{
-						"run_command": {
-                            "command": [
-                                "structure load custom_stripped_log2 ~~~"
-                            ]
+            "wiki:become_stripped2": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": ["structure load custom_stripped_log2 ~~~"]
                         }
-					},
+                    },
                     //Damages axe of player who stripped the log
-					{
-						"damage":{
-							"type": "durability",
-							"amount": 1,
-							"target": "item"
-						}
-					}
-				]
-			}
+                    {
+                        "damage": {
+                            "type": "durability",
+                            "amount": 1,
+                            "target": "item"
+                        }
+                    }
+                ]
+            }
             //Loads structure (custom stripped log with special rotation)
         }
     }
 }
 ```
+	
+</Spoiler>
 
 ## Making Fake Leaves
 
@@ -323,49 +303,46 @@ Log commands will update leaves without stopping:
 `fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:fake_leaves 0 replace wiki:custom_leaves`
 `fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:custom_leaves 0 replace wiki:fake_leaves`
 
+<Spoiler title="Code">
+
 <CodeHeader>BP/blocks/fake_leaves.json</CodeHeader>
 
 ```json
 {
-    "format_version":"1.16.100",
-    "minecraft:block":{
-        "description":{
-            "identifier":"wiki:fake_leaves"
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:fake_leaves"
         },
-        "components":{
-            "minecraft:destroy_time":2,
-            "minecraft:breakonpush":true,
-            "minecraft:material_instances":{
-                "*":{
-                    "texture":"custom_leaves",
-                    "render_method":"alpha_test"
+        "components": {
+            "minecraft:destroy_time": 2,
+            "minecraft:breakonpush": true,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "custom_leaves",
+                    "render_method": "alpha_test"
                     //Use this render method to make leaves half-transparent, like vanilla ones
                 }
             },
-			"minecraft:flammable": {
-				"burn_odds": 50,
-				"flame_odds": 50
-			},
-            "minecraft:ticking":{
-                "range":[
-                    0.1,
-                    0.1
-                ],
-                "on_tick":{
-                    "event":"wiki:update_leaves"
+            "minecraft:flammable": {
+                "burn_odds": 50,
+                "flame_odds": 50
+            },
+            "minecraft:ticking": {
+                "range": [0.1, 0.1],
+                "on_tick": {
+                    "event": "wiki:update_leaves"
                 }
             },
             //If something went wrong and fake leaves weren't replaces with custom leaves
-            "minecraft:unit_cube":{},
-            "minecraft:loot":"loot_tables/blocks/custom_leaves_loot.json"
+            "minecraft:unit_cube": {},
+            "minecraft:loot": "loot_tables/blocks/custom_leaves_loot.json"
             //Basic loot
         },
-        "events":{
-            "wiki:update_leaves":{
-                "run_command":{
-                    "command":[
-                        "setblock ~~~ wiki:custom_leaves"
-                    ]
+        "events": {
+            "wiki:update_leaves": {
+                "run_command": {
+                    "command": ["setblock ~~~ wiki:custom_leaves"]
                 }
             }
             //Turning Back into custom leaves (if log was broken)
@@ -374,90 +351,74 @@ Log commands will update leaves without stopping:
 }
 ```
 
+</Spoiler>
+
 ## Making Stripped Log
 
 Here all components are the same
 
-::: warning
-Note to wiki maintainers: Can't this be merged into the normal log block. Just have another permutation to change the texture?
-:::
+<Spoiler title="Code">
 
 <CodeHeader>BP/blocks/custom_stripped_log.json</CodeHeader>
 
 ```json
 {
-    "format_version":"1.16.100",
-    "minecraft:block":{
-        "description":{
-            "identifier":"wiki:custom_stripped_log",
-            "properties":{
-                "wiki:facing_direction":[
-                    0,
-                    1,
-                    2
-                ]
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_stripped_log",
+            "properties": {
+                "wiki:facing_direction": [0, 1, 2]
             }
         },
-        "permutations":[
+        "permutations": [
             {
-                "condition":"query.block_property('wiki:facing_direction') == 0",
-                "components":{
-                    "minecraft:rotation":[
-                        0,
-                        0,
-                        0
-                    ]
+                "condition": "query.block_property('wiki:facing_direction') == 0",
+                "components": {
+                    "minecraft:rotation": [0, 0, 0]
                 }
             },
             {
-                "condition":"query.block_property('wiki:facing_direction') == 1",
-                "components":{
-                    "minecraft:rotation":[
-                        90,
-                        0,
-                        0
-                    ]
+                "condition": "query.block_property('wiki:facing_direction') == 1",
+                "components": {
+                    "minecraft:rotation": [90, 0, 0]
                 }
             },
             {
-                "condition":"query.block_property('wiki:facing_direction') == 2",
-                "components":{
-                    "minecraft:rotation":[
-                        0,
-                        0,
-                        90
-                    ]
+                "condition": "query.block_property('wiki:facing_direction') == 2",
+                "components": {
+                    "minecraft:rotation": [0, 0, 90]
                 }
             }
         ],
-        "components":{
+        "components": {
             "minecraft:material_instances": {
-				"*": {
-					"texture": "custom_stripped_log",
-					"render_method": "opaque"
-					},
-				"ends": {
-					"texture": "custom_stripped_log_top",
-					"render_method": "opaque"
-					},
-				"up": "ends",
-				"down": "ends"
-			},
-			"minecraft:flammable": {
-				"burn_odds": 50,
-				"flame_odds": 25
-			},
-			"minecraft:loot": "loot_tables/blocks/custom_stripped_log_block.json",
-            "minecraft:destroy_time":1.0,
-            "minecraft:unit_cube":{},
-            "minecraft:on_player_placing":{
-                "event":"wiki:set_facing_direction"
+                "*": {
+                    "texture": "custom_stripped_log",
+                    "render_method": "opaque"
+                },
+                "ends": {
+                    "texture": "custom_stripped_log_top",
+                    "render_method": "opaque"
+                },
+                "up": "ends",
+                "down": "ends"
+            },
+            "minecraft:flammable": {
+                "burn_odds": 50,
+                "flame_odds": 25
+            },
+            "minecraft:loot": "loot_tables/blocks/custom_stripped_log_block.json",
+            "minecraft:destroy_time": 1.0,
+            "minecraft:unit_cube": {},
+            "minecraft:on_player_placing": {
+                "event": "wiki:set_facing_direction"
             }
         },
-        "events":{
-            "wiki:set_facing_direction":{
-                "set_block_property":{
-                    "wiki:facing_direction":"math.floor( query.block_face / 2.0 )"
+        "events": {
+            "wiki:set_facing_direction": {
+                "set_block_property": {
+                    "wiki:facing_direction": "math.floor( query.block_face / 2.0 )"
                 }
             }
         }
@@ -465,281 +426,255 @@ Note to wiki maintainers: Can't this be merged into the normal log block. Just h
 }
 ```
 
+</Spoiler>
+
 ## Making Sapling
+
+<Spoiler title="Code">
 
 <CodeHeader>BP/blocks/custom_sapling.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:custom_sapling",
-            "properties":{
-                "wiki:growing":[
-                    0,
-                    1,
-                    2
-                ]
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_sapling",
+            "properties": {
+                "wiki:growing": [0, 1, 2]
             }
-			//Properties of sapling growing
-		},
-		"permutations":[
+            //Properties of sapling growing
+        },
+        "permutations": [
             {
-                "condition":"query.block_property('wiki:growing') == 0",
-                "components":{
-					"minecraft:on_interact": {
-						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
-						"event": "bone_meal_1"
-					},
-					"minecraft:ticking": {
-						"range": [
-							120,
-							180
-						],
-						"on_tick": {
-							"event": "grow_1"
-						}
-					}
+                "condition": "query.block_property('wiki:growing') == 0",
+                "components": {
+                    "minecraft:on_interact": {
+                        "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+                        "event": "bone_meal_1"
+                    },
+                    "minecraft:ticking": {
+                        "range": [120, 180],
+                        "on_tick": {
+                            "event": "grow_1"
+                        }
+                    }
                 }
             },
             {
-                "condition":"query.block_property('wiki:growing') == 1",
-				"components":{
-					"minecraft:on_interact": {
-						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
-						"event": "bone_meal_2"
-					},
-					"minecraft:ticking": {
-						"range": [
-							120,
-							180
-						],
-						"on_tick": {
-							"event": "grow_2"
-						}
-					}
+                "condition": "query.block_property('wiki:growing') == 1",
+                "components": {
+                    "minecraft:on_interact": {
+                        "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+                        "event": "bone_meal_2"
+                    },
+                    "minecraft:ticking": {
+                        "range": [120, 180],
+                        "on_tick": {
+                            "event": "grow_2"
+                        }
+                    }
                 }
             },
             {
-                "condition":"query.block_property('wiki:growing') == 2",
-                "components":{
-					"minecraft:on_interact": {
-						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
-						"event": "bone_meal_3"
-					},
-					"minecraft:ticking": {
-						"range": [
-							120,
-							180
-						],
-						"on_tick": {
-							"event": "grow_3"
-						}
-					}
+                "condition": "query.block_property('wiki:growing') == 2",
+                "components": {
+                    "minecraft:on_interact": {
+                        "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+                        "event": "bone_meal_3"
+                    },
+                    "minecraft:ticking": {
+                        "range": [120, 180],
+                        "on_tick": {
+                            "event": "grow_3"
+                        }
+                    }
                 }
             }
         ],
-		"components": {
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "custom_sapling",
-					"render_method": "alpha_test",
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "custom_sapling",
+                    "render_method": "alpha_test",
                     //Add this two components to remove shadow from this block:
-                    "face_dimming":false,
-					"ambient_occlusion":false
-				}
-			},
-			"minecraft:pick_collision": {
-				"origin": [
-					-6,
-					0,
-					-6
-				],
-				"size": [
-					12,
-					13,
-					12
-				]
-			},
-			"minecraft:loot": "loot_tables/blocks/custom_sapling.json",
-			//Add loot component so it will drop sapling placer
-			"minecraft:geometry": "geometry.custom_sapling",
-			"minecraft:destroy_time": 0.01,
-			"minecraft:entity_collision": false,
-			"minecraft:breakonpush": true,
-			"minecraft:breathability": "air",
-			"minecraft:block_light_absorption": 0,
-			"minecraft:placement_filter": {
-				"conditions": [
-					{
-						"block_filter": [
-							"minecraft:dirt",
-							"minecraft:grass",
-							"minecraft:podzol"
-						],
-						"allowed_faces": [
-							"up"
-						]
-					}
-				]
-			},
-			//Allows to place block only on this blocks
-			"minecraft:ticking": {
-				"range": [
-					1,
-					1
-				],
-				"on_tick": {
-					"event": "grow_0"
-				}
-			}
-			//Starts to grow
-		},
-		"events": {
-			"grow_0":{
-				"set_block_property":{
-					"wiki:growing":0
-				}
-				//Sets growing stage to 0
-			},
-			"grow_1": {
-				"sequence": [
-					{
-						"run_command": {
-							"command": [
-								"particle minecraft:crop_growth_emitter ~~~"
-							]
-						}
-						//Adds particles
-					},
-					{
-						"set_block_property":{
-							"wiki:growing":1
-						}
-						//Sets growing stage to 1
-					}
-				]
-			},
-			"grow_2": {
-				"sequence": [
-					{
-						"run_command": {
-							"command": [
-								"particle minecraft:crop_growth_emitter ~~~"
-							]
-						}
-						//Adds particles
-					},
-					{
-						"set_block_property":{
-							"wiki:growing":2
-							//Sets growing stage to 2
-						}
-					}
-				]
-			},
-			"grow_3": {
-				"run_command": {
-					"command": [
-						"particle minecraft:crop_growth_emitter ~~~",
-                        "structure load custom_tree ~-2 ~ ~-2"
-					]
-				}
-				//Particles and structure loads. Magic!
-			},
-			"bone_meal_1": {
-				"sequence": [
-					{
-						"decrement_stack": {}
-						//Clears item that were used to interact
-					},
-					{
-						"trigger": {
-							"event": "grow_1"
-						}
-						//Runs grow_1 event
-					}
-				]
-			},
-			"bone_meal_2": {
-				"sequence": [
-					{
-						"decrement_stack": {}
-						//Clears item that were used to interact
-					},
-					{
-						"trigger": {
-							"event": "grow_2"
-						}
-						//Runs grow_2 event
-					}
-				]
-			},
-			"bone_meal_3": {
-				"sequence": [
-					{
-						"decrement_stack": {}
-						//Clears item that were used to interact
-					},
-					{
-						"trigger": {
-							"event": "grow_3"
-						}
-						//Runs grow_3 event
-					}
-				]
-			}
-		}
-	}
+                    "face_dimming": false,
+                    "ambient_occlusion": false
+                }
+            },
+            "minecraft:pick_collision": {
+                "origin": [-6, 0, -6],
+                "size": [12, 13, 12]
+            },
+            "minecraft:loot": "loot_tables/blocks/custom_sapling.json",
+            //Add loot component so it will drop sapling placer
+            "minecraft:geometry": "geometry.custom_sapling",
+            "minecraft:destroy_time": 0.01,
+            "minecraft:entity_collision": false,
+            "minecraft:breakonpush": true,
+            "minecraft:breathability": "air",
+            "minecraft:block_light_absorption": 0,
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": ["minecraft:dirt", "minecraft:grass", "minecraft:podzol"],
+                        "allowed_faces": ["up"]
+                    }
+                ]
+            },
+            //Allows to place block only on this blocks
+            "minecraft:ticking": {
+                "range": [1, 1],
+                "on_tick": {
+                    "event": "grow_0"
+                }
+            }
+            //Starts to grow
+        },
+        "events": {
+            "grow_0": {
+                "set_block_property": {
+                    "wiki:growing": 0
+                }
+                //Sets growing stage to 0
+            },
+            "grow_1": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": ["particle minecraft:crop_growth_emitter ~~~"]
+                        }
+                        //Adds particles
+                    },
+                    {
+                        "set_block_property": {
+                            "wiki:growing": 1
+                        }
+                        //Sets growing stage to 1
+                    }
+                ]
+            },
+            "grow_2": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": ["particle minecraft:crop_growth_emitter ~~~"]
+                        }
+                        //Adds particles
+                    },
+                    {
+                        "set_block_property": {
+                            "wiki:growing": 2
+                            //Sets growing stage to 2
+                        }
+                    }
+                ]
+            },
+            "grow_3": {
+                "run_command": {
+                    "command": ["particle minecraft:crop_growth_emitter ~~~", "structure load custom_tree ~-2 ~ ~-2"]
+                }
+                //Particles and structure loads. Magic!
+            },
+            "bone_meal_1": {
+                "sequence": [
+                    {
+                        "decrement_stack": {}
+                        //Clears item that were used to interact
+                    },
+                    {
+                        "trigger": {
+                            "event": "grow_1"
+                        }
+                        //Runs grow_1 event
+                    }
+                ]
+            },
+            "bone_meal_2": {
+                "sequence": [
+                    {
+                        "decrement_stack": {}
+                        //Clears item that were used to interact
+                    },
+                    {
+                        "trigger": {
+                            "event": "grow_2"
+                        }
+                        //Runs grow_2 event
+                    }
+                ]
+            },
+            "bone_meal_3": {
+                "sequence": [
+                    {
+                        "decrement_stack": {}
+                        //Clears item that were used to interact
+                    },
+                    {
+                        "trigger": {
+                            "event": "grow_3"
+                        }
+                        //Runs grow_3 event
+                    }
+                ]
+            }
+        }
+    }
 }
 ```
 
+</Spoiler>
+
 ## Making Sapling Placer
+
+<Spoiler title="Code">
 
 <CodeHeader>BP/items/custom_sapling_placer.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:custom_sapling_placer",
-			"category": "nature"
-		},
-		"components": {
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.sapling"
-			},
-			"minecraft:max_stack_size": 64,
-			"minecraft:block_placer": {
-				"block": "wiki:custom_sapling"
-			},
-			"minecraft:icon": {
-				"texture": "custom_sapling_placer"
-			}
-		},
-		"events": {}
-	}
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:custom_sapling_placer",
+            "category": "nature"
+        },
+        "components": {
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.sapling"
+            },
+            "minecraft:max_stack_size": 64,
+            "minecraft:block_placer": {
+                "block": "wiki:custom_sapling"
+            },
+            "minecraft:icon": {
+                "texture": "custom_sapling_placer"
+            }
+        }
+    }
 }
 ```
+
+</Spoiler>
 
 ## Making Loot Tables
 
 This loot will spawn leaves block
 
+<Spoiler title="Code">
+
 <CodeHeader>BP/loot_tables/blocks/custom_leaves_block.json</CodeHeader>
 
 ```json
 {
-    "pools":[
+    "pools": [
         {
-            "rolls":1,
-            "entries":[
+            "rolls": 1,
+            "entries": [
                 {
-                    "type":"item",
-                    "name":"wiki:custom_leaves",
-                    "weight":1
+                    "type": "item",
+                    "name": "wiki:custom_leaves",
+                    "weight": 1
                 }
             ]
         }
@@ -753,24 +688,24 @@ Leaves default loot
 
 ```json
 {
-    "pools":[
+    "pools": [
         {
-            "rolls":1,
-            "entries":[
+            "rolls": 1,
+            "entries": [
                 {
-                    "type":"item",
-                    "name":"minecraft:apple",
-                    "weight":1
+                    "type": "item",
+                    "name": "minecraft:apple",
+                    "weight": 1
                 },
                 {
-                    "type":"item",
-                    "name":"wiki:custom_sapling",
-                    "weight":5
+                    "type": "item",
+                    "name": "wiki:custom_sapling",
+                    "weight": 5
                 },
                 {
-                    "type":"empty",
+                    "type": "empty",
                     //Nothing wil drop
-                    "weight":10
+                    "weight": 10
                 }
             ]
         }
@@ -784,14 +719,14 @@ This loot will spawn log block
 
 ```json
 {
-    "pools":[
+    "pools": [
         {
-            "rolls":1,
-            "entries":[
+            "rolls": 1,
+            "entries": [
                 {
-                    "type":"item",
-                    "name":"wiki:custom_log",
-                    "weight":1
+                    "type": "item",
+                    "name": "wiki:custom_log",
+                    "weight": 1
                 }
             ]
         }
@@ -805,14 +740,14 @@ This loot will spawn stripped log
 
 ```json
 {
-    "pools":[
+    "pools": [
         {
-            "rolls":1,
-            "entries":[
+            "rolls": 1,
+            "entries": [
                 {
-                    "type":"item",
-                    "name":"wiki:custom_stripped_log",
-                    "weight":1
+                    "type": "item",
+                    "name": "wiki:custom_stripped_log",
+                    "weight": 1
                 }
             ]
         }
@@ -826,14 +761,14 @@ This will spawn custom_sapling_placer
 
 ```json
 {
-    "pools":[
+    "pools": [
         {
-            "rolls":1,
-            "entries":[
+            "rolls": 1,
+            "entries": [
                 {
-                    "type":"item",
-                    "name":"wiki:custom_sapling_placer",
-                    "weight":1
+                    "type": "item",
+                    "name": "wiki:custom_sapling_placer",
+                    "weight": 1
                 }
             ]
         }
@@ -841,11 +776,9 @@ This will spawn custom_sapling_placer
 }
 ```
 
-## Exporting Structures
+</Spoiler>
 
-::: warning
-Note to wiki maintainers: This part does not seem neccesary as stated in previous note that stripped logs could be merged into normal logs but with a different permutation to change textures.
-:::
+## Exporting Structures
 
 Now you need to get custom_stripped_log1 and custom_stripped_log2 structures. Just export rotated stripped logs.
 
@@ -878,30 +811,30 @@ Make terrain_texture.json and textures.
 
 ```json
 {
-    "num_mip_levels":4,
-    "padding":8,
-    "resource_pack_name":"Parts of Custom Tree",
-    "texture_data":{
-		"custom_leaves":{
-            "textures":"textures/blocks/leaves_oak"
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "Parts of Custom Tree",
+    "texture_data": {
+        "custom_leaves": {
+            "textures": "textures/blocks/leaves_oak"
         },
-        "custom_log":{
-            "textures":"textures/blocks/log_oak"
+        "custom_log": {
+            "textures": "textures/blocks/log_oak"
         },
-        "custom_log_top":{
-            "textures":"textures/blocks/log_oak_top"
+        "custom_log_top": {
+            "textures": "textures/blocks/log_oak_top"
         },
-		"custom_stripped_log":{
-            "textures":"textures/blocks/stripped_oak_log"
+        "custom_stripped_log": {
+            "textures": "textures/blocks/stripped_oak_log"
         },
-        "custom_stripped_log_top":{
-            "textures":"textures/blocks/stripped_oak_log_top"
+        "custom_stripped_log_top": {
+            "textures": "textures/blocks/stripped_oak_log_top"
         },
-		"custom_sapling":{
-			"textures":"textures/blocks/sapling_oak"
-		}
+        "custom_sapling": {
+            "textures": "textures/blocks/sapling_oak"
+        }
     },
-    "texture_name":"atlas.terrain"
+    "texture_name": "atlas.terrain"
 }
 ```
 
@@ -911,29 +844,29 @@ Make geometry for sapling:
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:geometry": [
-		{
-			"description": {
-				"identifier": "geometry.custom_sapling",
-				"texture_width": 16,
-				"texture_height": 16,
-				"visible_bounds_width": 2,
-				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
-			},
-			"bones": [
-				{
-					"name": "bb_main",
-					"pivot": [0, 0, 0],
-					"cubes": [
-						{"origin": [-8, 0, 0], "size": [16, 16, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]},
-						{"origin": [-8, 0, 0], "size": [16, 16, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]}
-					]
-				}
-			]
-		}
-	]
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.custom_sapling",
+                "texture_width": 16,
+                "texture_height": 16,
+                "visible_bounds_width": 2,
+                "visible_bounds_height": 2.5,
+                "visible_bounds_offset": [0, 0.75, 0]
+            },
+            "bones": [
+                {
+                    "name": "bb_main",
+                    "pivot": [0, 0, 0],
+                    "cubes": [
+                        { "origin": [-8, 0, 0], "size": [16, 16, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0] },
+                        { "origin": [-8, 0, 0], "size": [16, 16, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0] }
+                    ]
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -943,13 +876,13 @@ Make item_texture file
 
 ```json
 {
-	"resource_pack_name": "Parts of Custom Tree",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"custom_sapling_placer":{
-			"textures":"textures/blocks/sapling_oak"
-		}
-	}
+    "resource_pack_name": "Parts of Custom Tree",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "custom_sapling_placer": {
+            "textures": "textures/blocks/sapling_oak"
+        }
+    }
 }
 ```
 
@@ -959,26 +892,22 @@ Add sounds to blocks
 
 ```json
 {
-	"format_version": [
-		1,
-		1,
-		0
-	],
-	"wiki:custom_leaves": {
-		"sound": "grass"
-	},
-	"wiki:custom_log": {
-		"sound": "wood"
-	},
-	"wiki:custom_stripped_log": {
-		"sound": "wood"
-	},
-	"wiki:custom_sapling": {
-		"sound": "grass"
-	},
-	"wiki:fake_leaves": {
-		"sound": "grass"
-	}
+    "format_version": [1, 1, 0],
+    "wiki:custom_leaves": {
+        "sound": "grass"
+    },
+    "wiki:custom_log": {
+        "sound": "wood"
+    },
+    "wiki:custom_stripped_log": {
+        "sound": "wood"
+    },
+    "wiki:custom_sapling": {
+        "sound": "grass"
+    },
+    "wiki:fake_leaves": {
+        "sound": "grass"
+    }
 }
 ```
 
