@@ -1,13 +1,12 @@
 ---
 title: Block Texture Variation
 tags:
-    - recipe
     - intermediate
 ---
 
 Block texture variation is when a single block can have multiple textures. This is useful for blocks such as dirt or grass, where some blocks may have slight variations such as small rocks and others don't.
 
-To enable texture variations, you create a terrain_texture.json file in the textures folder. The terrain_texture.json in the block definition of the texture should be set to a dictionary with a variation key, and the variation key is an array of dictionaries that must contain a path key pointing to the texture file and may contain a weight to control how often the textures show up.
+To enable texture variations, create a `terrain_texture.json` file in the textures folder. The `terrain_texture.json` in the block definition of the texture should be set to a dictionary with a variation key, and the variation key is an array of dictionaries that must contain a path key pointing to the texture file and may contain a weight to control how often the textures show up.
 
 ## Example Dirt Texture Variation
 
@@ -43,7 +42,7 @@ This is an example of how to create texture variations for the dirt block with t
 
 ## Example of weighted dirt amounts
 
-After completing the example above, if you want to adjust the weights, edit the terrain_textures.json to include a weight field as shown below.
+After completing the example above, if you want to adjust the weights, edit the `terrain_textures.json` to include a weight field as shown below.
 
 <CodeHeader></CodeHeader>
 
@@ -67,7 +66,6 @@ After completing the example above, if you want to adjust the weights, edit the 
 }
 ```
 
-Some notes:
-
+Notes:
 -   This does appear to grab the texture set file. However, the texture set files do not seem to grasp the MER or regular file defined in the texture set.
-    -- https://bugs.mojang.com/browse/MCPE-126617
+    -- [Bug Report](https://bugs.mojang.com/browse/MCPE-126617)
