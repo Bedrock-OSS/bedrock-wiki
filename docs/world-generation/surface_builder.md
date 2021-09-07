@@ -215,15 +215,3 @@ This is the final step for our surface builder. The feature rules for our surfac
 ```
 
 And our surface builder is done! Feel free to modify and messing around with it!
-
-![](/assets/images/concepts/animation-controllers/surface_builder_preview.png)
-
-
-
-
-
-
-
-
-
-
