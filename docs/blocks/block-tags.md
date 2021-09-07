@@ -22,7 +22,7 @@ Block tags can be applied exactly as items, as seen below:
 		},
 		"components": {
 			"tag:wood": {},
-			"tag:yana:very_useless": {}
+			"tag:wiki:very_useless": {}
 		},
 		"events": {}
 	}
