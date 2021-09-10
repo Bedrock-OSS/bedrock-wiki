@@ -43,7 +43,16 @@ function generateSidebar(base, dir) {
 			if (!file.endsWith('.md') || file.endsWith('index.md')) return
 
 			const str = fs.readFileSync(joinedPath, 'utf8')
-			let frontMatter = matter(str)
+			let frontMatter;
+			try {
+				frontMatter = matter(str)
+			} catch (e) {
+				joinedPath = path.relative(process.cwd(), joinedPath);
+				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`);
+				throw new Error(
+					`File ${joinedPath} has invalid frontmatter! ${e.message}`
+				)
+			}
 			const link = formatLink(joinedPath.toString().replace(base, ''))
 
 			// Don't include hidden pages (ignores children)
