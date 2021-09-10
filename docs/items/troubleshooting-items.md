@@ -17,7 +17,7 @@ This page contains troubleshooting information about _items_. You should read ou
 
 I followed a tutorial or tried to make my own item and something is wrong! Calm down. This page will help debug common issues. Follow the buttons and prompts to learn about possible issues with your item, and tips for fixing.
 
-<BButton color="blue" link="#1.1">Continue</BButton>
+<BButton color="blue" link="#_1-10-vs-1-16-items">Continue</BButton>
 
 <a name="1.0.0"></a>
 
@@ -44,7 +44,7 @@ Versions `1.16.100` and onward are **experimental**. These items **will not work
 
 ### Continue
 
-<BButton color="blue" link="#2.0">1.10 format (stable)</BButton> <BButton color="blue" link="#3.0">1.16.100 format (experimental)</BButton>
+<BButton color="blue" link="#stable-items">1.10 format (stable)</BButton> <BButton color="blue" link="#experimental-items">1.16.100 format (experimental)</BButton>
 
 ---
 
