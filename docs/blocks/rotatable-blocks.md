@@ -79,7 +79,8 @@ This event is called upon by using the `minecraft:on_player_placing` component.
 
 ### The Block Code
 
-```json{
+```json
+{
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
@@ -143,5 +144,4 @@ This event is called upon by using the `minecraft:on_player_placing` component.
 			}
 		]
 	}
-}
-```
+}```
