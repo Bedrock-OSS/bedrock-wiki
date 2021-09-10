@@ -1,1 +1,0 @@
-import{o as t,c as e}from"./404.md.eba8deb4.js";const o='{"title":"Concepts","description":"","frontmatter":{"title":"Concepts"},"relativePath":"concepts/index.md","lastUpdated":1631031863535}',r={};r.render=function(o,r,n,d,a,i){return t(),e("div")};export default r;export{o as __pageData};
