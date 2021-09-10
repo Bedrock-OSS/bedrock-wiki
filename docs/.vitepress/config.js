@@ -25,7 +25,16 @@ function generateSidebar(base, dir) {
 				path.join(joinedPath, 'index.md'),
 				'utf8'
 			)
-			let frontMatter = matter(str)
+			let frontMatter;
+			try {
+				frontMatter = matter(str)
+			} catch (e) {
+				joinedPath = path.relative(process.cwd(), path.join(joinedPath, 'index.md'));
+				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`);
+				throw new Error(
+					`File ${joinedPath} has invalid frontmatter! ${e.message}`
+				)
+			}
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
