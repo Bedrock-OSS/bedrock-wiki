@@ -35,6 +35,6 @@ jobs:
           username: "You messed up"
           message: >
             Wiki deployment failed!
-            Fix me pls :PE_PandaCryYou:
+            Fix me pls
 
             https://github.com/Bedrock-OSS/bedrock-wiki/actions/runs/${{github.run_id}}
