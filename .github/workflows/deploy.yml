@@ -27,6 +27,10 @@ jobs:
           folder: docs/.vitepress/dist
       - name: Report failure
         if: ${{ failure() }}
-        uses: Ilshidur/action-discord@0.3.2
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.WEBHOOK_ID }}
+          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          color: "#eb4034"
+          username: "You messed up"
+          message: 'Wiki deployment failed!\n\nhttps://github.com/Bedrock-OSS/bedrock-wiki/actions/runs/${{github.run_id}}'
