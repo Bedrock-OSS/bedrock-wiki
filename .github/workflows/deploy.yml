@@ -27,7 +27,7 @@ jobs:
           folder: docs/.vitepress/dist
       - name: Report failure
         if: ${{ failure() }}
-        uses: distributhor/workflow-webhook
+        uses: distributhor/workflow-webhook@v2
         with:
           url: ${{ secrets.DISCORD_WEBHOOK }}
           json: '{ "content": "Wiki deployment failed!\n\nhttps://github.com/Bedrock-OSS/bedrock-wiki/actions/runs/${{github.run_id}}" }'
