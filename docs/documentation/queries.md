@@ -262,4 +262,4 @@ Example:
 
 To do multiple tags you would use `q.correct_query(0,-1,0,'grass', 'plant')` with `correct_query` being replaced by the right query.
 
-Note that this can also detect custom tags and [vanilla tags](./blocks/block-tags)
+Note that this can also detect custom tags and [vanilla tags](/blocks/block-tags)
