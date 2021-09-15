@@ -22,7 +22,7 @@ If yes, this tutorial will be useful for you.
 
  ## tick.json
 
- You can understang how tick.json works here:
+ You can understand how tick.json works here:
 
  [tick.json explanation](/commands/mcfunction.html#creating-tick-json)
 
@@ -45,8 +45,8 @@ Learn how tellraw works:
 <CodeHeader>BP/functions/my_greeting_message.json</CodeHeader>
 
 ```
-tellraw @a[tag=!readed_greeting_message] {"rawtext":[{"text":"This is greeting message."}]}
-tag @a add readed_greeting_message
+tellraw @a[tag=!joined] {"rawtext":[{"text":"This is greeting message."}]}
+tag @a add joined
 ```
 
 ## Result
