@@ -1,8 +1,8 @@
 ---
 title: Invulnerable Entities
+tags:
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 ## Using Damage Sensor
 

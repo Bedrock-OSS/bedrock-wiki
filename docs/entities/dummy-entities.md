@@ -1,8 +1,8 @@
 ---
 title: Dummy Entities
+tags:
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 Dummy entities are invisible entities which are used behind the scenes for game-play purposes. Dummy entities are a very useful tool, and this document will cover some of the ways they are utilized, as well as showing how to set up the resource side of things.
 
@@ -21,7 +21,7 @@ This is a non-exhaustive list of how dummies can be used:
 
 You can use whatever behaviors you like, but here is a good template. The important aspects are: no damage, and can't be pushed.
 
-entities/dummy.json
+<CodeHeader>BP/entities/dummy.json</CodeHeader>
 
 ```json
 {
@@ -63,14 +63,14 @@ entities/dummy.json
 
 ### Resource Entity
 
-entity/dummy.json
+<CodeHeader>RP/entity/dummy.json</CodeHeader>entity/dummy.json
 
 ```json
 {
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "sirlich:dummy",
+			"identifier": "wiki:dummy",
 			"materials": {
 				"default": "entity_alphatest"
 			},
@@ -88,7 +88,7 @@ entity/dummy.json
 
 ### Geometry
 
-models/entity/dummy.json
+<CodeHeader>RP/models/entity/dummy.json</CodeHeader>
 
 ```json
 {
@@ -107,7 +107,7 @@ models/entity/dummy.json
 
 ### Render Controller (Optional)
 
-render_controllers/dummy.json
+<CodeHeader>RP/render_controllers/dummy.json</CodeHeader>
 
 ```json
 {

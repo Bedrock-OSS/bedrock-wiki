@@ -38,6 +38,8 @@ Another good automation topic could be:
 
 The first thing you need to do is inspect the format of the file you want to create. Here is a simple `sound_definitions.json` file:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"dragon.roar": {
@@ -52,6 +54,8 @@ The first thing you need to do is inspect the format of the file you want to cre
 ```
 
 The next step, is to look at the file, and select a _chunk_. Our goal will be to generate this chunk programmatically, based on some _input_. In this case, our chunk is a single sound_definition:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "$folder.$sound:": {

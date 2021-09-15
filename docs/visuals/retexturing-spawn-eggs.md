@@ -1,10 +1,10 @@
 ---
 title: Retexturing Spawn Eggs
+tags:
+    - beginner
 ---
 
-<Label color="green">Beginner</Label>
-
-Custom entities will automatically be given a spawn egg. This spawn egg can be found inside of the creative menu, with a name like `item.spawn_egg.entity.sirlich:my_entity.name`. If you want to rename your spawn egg as well as set a texture, you can do so in the lang files.
+Custom entities will automatically be given a spawn egg. This spawn egg can be found inside of the creative menu, with a name like `item.spawn_egg.entity.wiki:my_entity.name`. If you want to rename your spawn egg as well as set a texture, you can do so in the lang files.
 
 In this tutorial we are going to retexture the spawn egg so it looks more like your spawned item, and less like an egg.
 
@@ -20,7 +20,9 @@ Add the texture file under `textures/items/`. I personally suggest creating an `
 
 ## Giving the texture a name:
 
-Now we need to give our texture a short-name. This can be done by adding a new file: `textures/item_texture.json`.
+Now we need to give our texture a short-name. This can be done by adding a new file:
+
+<CodeHeader>textures/item_texture.json</CodeHeader>
 
 ```json
 {
@@ -37,6 +39,8 @@ Now we need to give our texture a short-name. This can be done by adding a new f
 ## Using the new texture:
 
 Now we can use our new texture inside of the Resource Pack entity file:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "spawn_egg": {

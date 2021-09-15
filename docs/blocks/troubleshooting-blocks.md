@@ -7,9 +7,9 @@ tags:
 
 ## Learn about Troubleshooting
 
-This page offers specific advice for troubleshooting blocks. You should consider reading our general tips on troubleshooting before starting here.
-
-<BButton link="/guide/troubleshooting"> Troubleshooting Basics </BButton>
+:::tip
+This page contains troubleshooting information about _blocks_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
+:::
 
 ## Step-by-step Block Debugging
 
@@ -34,11 +34,11 @@ Navigate to your `blocks.json`. Ensure that it is properly named.
 ```json
 {
 	"format_version": [1, 1, 0],
-	"namespace:dirt_like": {
+	"wiki:dirt_like": {
 		"textures": "dirt_like", //You can replace this with anything, just remember the name
 		"sound": "your_sound_name"
 	},
-	"namespace:log_like": {
+	"wiki:log_like": {
 		"textures": {
 			"up": "log_like_top", //You can replace this with anything, just remember the name
 			"down": "log_like_top", //You can replace this with anything, just remember the name
@@ -46,7 +46,7 @@ Navigate to your `blocks.json`. Ensure that it is properly named.
 		},
 		"sound": "your_sound_name"
 	},
-	"namespace:grass_like": {
+	"wiki:grass_like": {
 		"textures": {
 			"up": "grass_like_top", //You can replace this with anything, just remember the name
 			"down": "grass_like_bottom", //You can replace this with anything, just remember the name
@@ -138,11 +138,11 @@ Dirt like block example:
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "tut:dirt_like",
+            "identifier": "wiki:dirt_like",
             "register_to_creative_menu": true
         },
         "components": {
-            minecraft:material_instances": {
+            "minecraft:material_instances": {
                 "*": {
                     "texture": "dirt_like",
                 }
@@ -162,7 +162,7 @@ Log like block example:
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "tut:log_like",
+            "identifier": "wiki:log_like",
             "register_to_creative_menu": true
         },
         "components": {
@@ -191,7 +191,7 @@ Grass like block example:
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "tut:grass_like",
+            "identifier": "wiki:grass_like",
             "register_to_creative_menu": true
         },
         "components": {
@@ -225,7 +225,11 @@ Solution: Use a json linter and double check that your identifier didn't change.
 
 <a name="3.0.0"></a>
 
-## 3.0.0 - Block isn't transparent!
+## 3.0.0 - Block Rendering
+
+This section will describe common block rendering issues and how to fix them.
+
+## 3.1.0 - Block isn't transparent!
 
 Problem: You have transparent pixels in your texture file. When you apply it in game, they become opaque.
 
@@ -243,6 +247,48 @@ Solution: Navigate to your block file. Navigate to your `material_instance` comp
 					"render_method": "alpha_test"
 				}
 			}
+		}
+	}
+}
+```
+
+## 3.2.0 - Block has shadow!
+
+Problem: You have block with custom geometry but it has shadow.
+
+Solution: Navigate to your block file. Navigate to your `material_instance` component. Add the following to your component:
+
+<CodeHeader>BP/blocks/your_block.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"face_dimming": false,
+        			"ambient_occlusion": false
+				}
+			}
+		}
+	}
+}
+```
+
+Another method:
+
+Add following components to your block's code:
+
+<CodeHeader>BP/blocks/your_block.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"components": {
+			"minecraft:block_light_emission": 0.0,
+			"minecraft:block_light_absorption": 0
 		}
 	}
 }

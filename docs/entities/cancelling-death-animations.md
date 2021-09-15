@@ -1,8 +1,8 @@
 ---
 title: Cancelling Death Animations
+tags:
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 Death animation refers to the rotation of the entity as it dies. This is accompanied by a red coloring and followed shortly after by the disappearance of the entity geometry and the appearance of the death particles.
 
@@ -29,11 +29,15 @@ Rotation needs to be applied to a bone parent to all other bones, with a pivot a
 
 Animation:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, query.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
 ```
 
 Animation Controller: (query.all_animations_finished is only needed for respawning entities, like players)
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -45,7 +49,7 @@ Animation Controller: (query.all_animations_finished is only needed for respawni
 				"default": {
 					"transitions": [
 						{
-							"cancel_animation": "query.is_alive"
+							"cancel_animation": "!query.is_alive"
 						}
 					]
 				},
@@ -73,6 +77,8 @@ To remove the damage overlay color of any entity you want when it gets damaged, 
 First, you need to make the rgba values to 0
 Here's the example of removing the damage and fire overlay color.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.8.0",
@@ -92,6 +98,8 @@ The code above will remove the red damage overlay color.
 
 You can also change the damage color overlay to different colors just by putting different values in rgba. You can check out various websites to get the rgba values of all colors.
 Here's another example in which the damage color overlay becomes pink.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -126,19 +134,21 @@ Please note that you will have to find another work to drop multiple loot or for
 
 Here an example file in the BP
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.14.0",
 	"min_engine_version": "1.16.100",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "example:entity",
+			"identifier": "wiki:entity",
 			"is_spawnable": true,
 			"is_summonable": true,
 			"is_experimental": true
 		},
 		"component_groups": {
-			"beluga:despawn": {
+			"wiki:despawn": {
 				"minecraft:spawn_entity": {
 					"max_wait_time": 0,
 					"min_wait_time": 0,
@@ -172,16 +182,16 @@ Here an example file in the BP
 							"test": "has_damage",
 							"value": "fatal"
 						},
-						"event": "beluga:despawn",
+						"event": "wiki:despawn",
 						"target": "self"
 					}
 				}
 			}
 		},
 		"events": {
-			"beluga:despawn": {
+			"wiki:despawn": {
 				"add": {
-					"component_groups": ["beluga:despawn"]
+					"component_groups": ["wiki:despawn"]
 				}
 			}
 		}
@@ -192,13 +202,15 @@ Here an example file in the BP
 Note: You can also spawn custom spawn egg items using the **minecraft:spawn_entity** component by setting "spawn_item":
 to be your entity's id and an affix of **\_spawn_egg**, and it will look something like this.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"minecraft:spawn_entity": [
 		{
 			"min_wait_time": 0,
 			"max_wait_time": 0,
-			"spawn_item": "prefix:custom_zombie_spawn_egg",
+			"spawn_item": "wiki:custom_zombie_spawn_egg",
 			"single_use": true
 		}
 	]

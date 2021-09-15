@@ -15,7 +15,7 @@ _Note: On Android, the com.mojang folder is located in `Phone>games>com.mojang`_
 
 ## Skin pack Manifest
 
-`//skin_packs/TutorialSkinPack/manifest.json`
+<CodeHeader>skin_packs/TutorialSkinPack/manifest.json</CodeHeader>
 
 ```json
 {
@@ -44,7 +44,7 @@ _Note: On Android, the com.mojang folder is located in `Phone>games>com.mojang`_
 
 is used to define the skin texture files. Most of the options are, however, hard-coded/unchangeable. The skin `.png` or other image files are located in the same folder as `manifest.json` and `skins.json`, which is `skin_packs/TutorialSkinpack` in this scenario. My example skin files are named `Niika.png` and `Senn_skin.png` ~~guess where I took the names from~~.
 
-`//skin_packs//TutorialSkinPack/skins.json`
+<CodeHeader>skin_packs//TutorialSkinPack/skins.json</CodeHeader>
 
 ```json
 {

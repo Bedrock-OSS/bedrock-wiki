@@ -6,19 +6,23 @@
 		:class="{
 			'm-8': true,
 			'md:ml-80': isVisible,
-			'mt-0': true,
+			'mt-22': true,
 			'min-h-screen': true,
 		}"
 	>
 		<h1 class="xl:pr-72" v-if="page && page.title" id="top">
 			{{ page.title }}
 		</h1>
+		<Label v-for="tag in tags" :name="tag"> </Label>
 		<TOC v-if="showToc" />
 		<Content
 			:class="{
 				'xl:mr-72': showToc,
 			}"
 		/>
+		<div class="pt-4" v>
+			<a :href="editLink" target="_blank">Edit this page on Github</a>
+		</div>
 		<div v-if="showContributors">
 			<h2>Contributors</h2>
 			<Suspense>
@@ -48,6 +52,7 @@ import Sidebar from './Sidebar/Sidebar.vue'
 import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import { useData, useRoute } from 'vitepress'
+import Label from './Content/Label.vue'
 
 const Contributors = defineAsyncComponent(
 	() => import('./Content/Contributors.vue')
@@ -83,6 +88,14 @@ const showContributors = computed(
 
 const mentionedContributors = computed(
 	() => routeData.value.frontmatter.mention ?? []
+)
+
+const tags = computed(() => routeData.value.frontmatter.tags ?? [])
+
+const editLink = computed(
+	() =>
+		'https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/' +
+		routeData.value.relativePath
 )
 </script>
 

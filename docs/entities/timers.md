@@ -1,8 +1,8 @@
 ---
 title: Entity Timers
+tags:
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 Time-based interactions are extremely useful tools for map making. This article hopes to provide an extensive list which details the many ways which timers can be made. For convenience, this page will be split up into two main sections: component-based timers and animation-based timers. Each has their own advantages and disadvantages, which will be outlined in their respective sections.
 
@@ -26,16 +26,20 @@ In the vanilla Behavior Pack, this component is used in all kinds of circumstanc
 
 A simple example which triggers an event after 5.6 seconds:
 
+<CodeHeader></CodeHeader>
+
 ```json
   "minecraft:timer": {
     "time": 5.6,
     "time_down_event": {
-      "event": "namespace:my_event"
+      "event": "wiki:my_event"
     }
   }
 ```
 
 A more complex example which triggers an event after a randomized amount of delay using weighted values:
+
+<CodeHeader></CodeHeader>
 
 ```json
   "minecraft:timer": {
@@ -59,7 +63,7 @@ A more complex example which triggers an event after a randomized amount of dela
       }
     ],
     "time_down_event": {
-      "event": "namespace:event",
+      "event": "wiki:event",
       "target": "self"
     }
   }
@@ -67,14 +71,16 @@ A more complex example which triggers an event after a randomized amount of dela
 
 A particularly useful way to handle time events is using a single, looping `minecraft:timer` component and processing the events on each tick (or however often you decide to fire the timer). This is done by using the `randomize` parameter in events, where a weight may be used determine how often other events will be run. This can get you a lot of extra mileage out of a single timer component.
 
+<CodeHeader></CodeHeader>
+
 ```json
-  "sirlich:do_event": {
+  "wiki:do_event": {
     "randomize": [
       {
         "weight": 1,
         "add": {
           "component_groups": [
-            "sirlich:my_event"
+            "wiki:my_event"
           ]
         }
       },
@@ -82,7 +88,7 @@ A particularly useful way to handle time events is using a single, looping `mine
         "weight": 5,
         "add": {
           "component_groups": [
-            "sirlich:my_more_frequent_event"
+            "wiki:my_more_frequent_event"
           ]
         }
       },
@@ -99,6 +105,8 @@ Another component which can be very useful for time-based events is `minecraft:e
 
 Here is an example which is used to fire an event 800 ticks after the start of the day (valid range is 0 to 24000):
 
+<CodeHeader></CodeHeader>
+
 ```json
   "minecraft:environment_sensor": {
     "triggers": [
@@ -108,7 +116,7 @@ Here is an example which is used to fire an event 800 ticks after the start of t
           "operator": "=",
           "value": 800
         },
-        "event": "namespace:my_daily_event"
+        "event": "wiki:my_daily_event"
       }
     ]
   }
@@ -120,12 +128,14 @@ If this component is not being used in the entity's behavior for a different pur
 
 Here is an example which fires an event after four seconds:
 
+<CodeHeader></CodeHeader>
+
 ```json
   "minecraft:is_baby": {},
   "minecraft:ageable": {
     "duration": 4,
     "grow_up": {
-      "event": "namespace:my_other_event",
+      "event": "wiki:my_other_event",
       "target": "self"
     }
   }
@@ -152,6 +162,8 @@ Animations function differently in behavior packs than in resource packs. If you
 By triggering animations from an animation controller or directly from the scripts section, you can execute specific events, commands, or molang expressions in a timed-sequence, called a timeline.
 
 You can set up timelines like this:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -183,6 +195,8 @@ You can set up timelines like this:
 
 A very useful feature of the timer component is its ability to define a random interval in which the event will be triggered. This functionality can be replicated using animations and a controller. Below is an example of an animation triggered by adding the `minecraft:is_sheared` component to an entity which randomly fires an event between 2 to 7 seconds after activation. Animation and controller version 1.10.0.
 
+<CodeHeader></CodeHeader>
+
 ```json
   "controller.animation.shanewolf.random_interval": {
     "initial_state": "inactive",
@@ -200,7 +214,7 @@ A very useful feature of the timer component is its ability to define a random i
           "/say random interval started"
         ],
         "animations": [
-          "shanewolf:animate_interval"
+          "wiki:animate_interval"
         ],
         "transitions": [
           {
@@ -208,13 +222,15 @@ A very useful feature of the timer component is its ability to define a random i
           }
         ],
         "on_exit": [
-          "@s shanewolf:stop_random_interval",
+          "@s wiki:stop_random_interval",
           "/say random interval finished"
         ]
       }
     }
   }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
   "animation.shanewolf.random_interval": {
@@ -235,6 +251,8 @@ Notes:
 
 Another useful feature of the timer component is its ability to trigger events at a time determined by a weighted list of values. This functionality can also be replicated using animations and a controller. Below is an example of an animation triggered by adding the `minecraft:is_charged` component to an entity which randomly fires an event at either 2, 5, or 9 seconds with weights of 30, 60, and 10, respectively. Animation and controller version 1.10.0.
 
+<CodeHeader></CodeHeader>
+
 ```json
   "controller.animation.shanewolf.random_choices": {
     "initial_state": "inactive",
@@ -252,7 +270,7 @@ Another useful feature of the timer component is its ability to trigger events a
           "/say random interval started"
         ],
         "animations": [
-          "shanewolf:animate_choices"
+          "wiki:animate_choices"
         ],
         "transitions": [
           {
@@ -266,13 +284,15 @@ Another useful feature of the timer component is its ability to trigger events a
           }
         ],
         "on_exit": [
-          "@s shanewolf:stop_random_choices",
+          "@s wiki:stop_random_choices",
           "/say random choices finished"
         ]
       }
     }
   }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
   "animation.shanewolf.random_choices": {

@@ -1,8 +1,8 @@
 ---
 title: Player Geometry
+tags:
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 This tutorial will show you how to create player NPCs and add them into your world. These player NPCs will take vanilla player skins, and come included with walk-animations, attack animations, etc.
 
@@ -19,6 +19,8 @@ This json contains geometry for both the Steve and Alex versions:
 `geometry.npc.alex`
 
 <Spoiler title="Geometry">
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -463,6 +465,8 @@ Use this entity file if you would like to have animatinos for your geometry. Thi
 If you need a more complete set of animations, consider copying the default player RP-entity file, and trying to work with the animations by hand.
 
 <Spoiler title="Entity File">
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

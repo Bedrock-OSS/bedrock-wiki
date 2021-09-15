@@ -2,8 +2,10 @@
 title: Creative Categories
 tags:
     - experimental
+    - beta
 mention:
     - Warhead51707
+    - yanasakana
 ---
 
 Creative categories are the categories that an item or block can appear in inside of the creative inventory.
@@ -11,10 +13,12 @@ Creative categories are the categories that an item or block can appear in insid
 ## For Items
 
 ::: warning
-This feature is currently experimental and is currently only available for custom items. Make sure to use the [1.16+ format!](/items/items-16)
+This feature is currently experimental and is currently only available for custom items. Make sure to use the [1.16.100+ format version!](/items/items-16)
 :::
 
 Item categories applied with the item description direct it to a more broad field in the creative category, individual tabs. They need to be the same tab as the component `creative_category`. Such would be applied like the following example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -29,6 +33,8 @@ Item categories applied with the item description direct it to a more broad fiel
 ```
 
 Item categories applied with the item component `creative_category` direct it exactly where to go. Such would be applied like the following example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -45,6 +51,8 @@ This feature is beta-only, and cannot be used in stable or experimental gameplay
 :::
 
 Block Categories are defined via the `minecraft:creative_category` component, your custom block will not show up in the Creative Inventory if you don't have this component, here's an example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -67,16 +75,16 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 
 ## List of Creative Tabs
 
-> _For use with `description` parameter `category`_
+> _For use with `description` parameter, `category`_
 
 | Category  
 | --------------------------------
-| Commands |  
-| Construction |  
-| Equipment |  
-| Items |  
-| Nature |  
-| None |
+| commands |  
+| construction |  
+| equipment |  
+| items |  
+| nature |  
+| none |
 
 ## List of Creative Categories
 
@@ -99,6 +107,7 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | itemGroup.name.concrete |  
 | itemGroup.name.concretePowder |  
 | itemGroup.name.cookedFood |  
+| itemGroup.name.copper |  
 | itemGroup.name.coral |  
 | itemGroup.name.coral_decorations |  
 | itemGroup.name.crop |  

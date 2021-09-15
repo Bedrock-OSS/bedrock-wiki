@@ -1,12 +1,14 @@
 ---
 title: Math-based Animations
+tags:
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 Math animations are a powerful alternative to keyframe animations. Generally speaking, `math-based animations` is the concept of using Molang expressions to animate entity geometry. All vanilla animations are math-based:
 
 Here is an example:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "leftarm" : {
@@ -51,6 +53,8 @@ By using queries, you can avoid the need to create animation controllers. If the
 ## Example
 
 A specific example is using animations to drive the wheels of a car based on the `modified_distance_moved`:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

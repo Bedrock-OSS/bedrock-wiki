@@ -1,16 +1,30 @@
 ---
 title: Remove Entity Shadows
+tags:
+    - intermediate
 ---
 
-<Label color="yellow">Intermediate</Label>
+There are quite a few ways to remove shadows from entities, and nearly all of them have undesirable effects. There is no foolproof way to perfectly remove shadows from specific entities, without causing side effects. 
 
-There are quite a few ways to remove shadows from entities. This document will cover some of the best ways.
+This document will showcase some of the various ways to remove shadows, and any possible effects from doing this. 
 
-## Very small Collision Box
+## Small Collision Box
 
-Make the size of the collision component very, very small (does 0, 0 work?) this will make it impossible to interact/hit the entity, but it will make the shadow disappear!
+One possibility is to make the size of the collision component very small. This will make it hard to interact/hit the entity, but it will make the shadow disappear!
 
-But you can also add the custom hit test component, to at least make it possible to hit the entity, you will not be abble to interact wih it, but at least you can hit it.
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:collision_box": {
+    "width": 0.1,
+    "height": 0.1
+}
+
+```
+
+You can also add the [custom hit test component](https://bedrock.dev/docs/stable/Entities#minecraft:custom_hit_test). The `custom_hit_test` component will allow you to hit the entity, although you will not be able to interact with it. The `custom_hit_test` will not create a shadow.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:custom_hit_test": {
@@ -28,23 +42,28 @@ But you can also add the custom hit test component, to at least make it possible
 
 If you have a dummy entity (invisible) that you need to interact with, you can telport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
 
-## using runtime identifier
+## Using runtime identifier
 
-Some entities don't have shadows. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors. See the [runtime identifers document for more information](/entities/runtime-identifier)
+Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifers document for more information](/entities/runtime-identifier).
 
-## Remove Entity Shadows for ALL Entities
+## Using Materials
 
-::: tip
-Can crash your game, or get you rejected on Marketplace!
+:::error
+This method is no longer supported. With the advent of render-dragon, materials like this no longer function. Please do not attempt to use this code in a serious way, and definitely do not attempt it on a marketplace map.
 :::
+
+:::warning
+ - This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
+ - This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
+:::
+
+<Spoiler title="Removing shadows via Materials.">
 
 Change these lines in the `shadows.material` file under the Resource Pack / materials folder.
 
-**NOTE:** This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
+#### Working shadow code: Shadows for ALL entities:
 
-**NOTE:** This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
-
-## Working shadow code: Shadows for ALL entities:
+<CodeHeader></CodeHeader>
 
 ```json
 "shadow_overlay": {
@@ -68,7 +87,9 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
       },
 ```
 
-## Disabled shadow code: No Shadows for ALL entities:
+#### Disabled shadow code: No Shadows for ALL entities:
+
+<CodeHeader></CodeHeader>
 
 ```json
  "shadow_overlay": {
@@ -93,256 +114,4 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 }
 ```
 
-## Vanilla shadow.material file with working shadows
-
-```json
-{
-	"materials": {
-		"version": "1.0.0",
-
-		"shadow_front": {
-			"+states": [
-				"StencilWrite",
-				"DisableColorWrite",
-				"DisableDepthWrite",
-				"EnableStencilTest"
-			],
-
-			"vertexShader": "shaders/position.vertex",
-			"vrGeometryShader": "shaders/position.geometry",
-			"fragmentShader": "shaders/flat_white.fragment",
-
-			"frontFace": {
-				"stencilFunc": "Always",
-				"stencilFailOp": "Keep",
-				"stencilDepthFailOp": "Keep",
-				"stencilPassOp": "Replace"
-			},
-
-			"backFace": {
-				"stencilFunc": "Always",
-				"stencilFailOp": "Keep",
-				"stencilDepthFailOp": "Keep",
-				"stencilPassOp": "Replace"
-			},
-
-			"stencilRef": 0,
-			"stencilReadMask": 255,
-			"stencilWriteMask": 1,
-			"vertexFields": [{ "field": "Position" }],
-			"msaaSupport": "Both"
-		},
-
-		"shadow_back": {
-			"+states": [
-				"StencilWrite",
-				"DisableColorWrite",
-				"DisableDepthWrite",
-				"InvertCulling",
-				"EnableStencilTest"
-			],
-
-			"vertexShader": "shaders/position.vertex",
-			"vrGeometryShader": "shaders/position.geometry",
-			"fragmentShader": "shaders/flat_white.fragment",
-
-			"frontFace": {
-				"stencilFunc": "Always",
-				"stencilFailOp": "Keep",
-				"stencilDepthFailOp": "Keep",
-				"stencilPassOp": "Replace"
-			},
-
-			"backFace": {
-				"stencilFunc": "Always",
-				"stencilFailOp": "Keep",
-				"stencilDepthFailOp": "Keep",
-				"stencilPassOp": "Replace"
-			},
-
-			"stencilRef": 1,
-			"stencilReadMask": 255,
-			"stencilWriteMask": 1,
-
-			"vertexFields": [{ "field": "Position" }],
-			"msaaSupport": "Both"
-		},
-
-		"shadow_overlay": {
-			"+states": [
-				"DisableDepthTest",
-				"DisableCulling",
-				"Blending",
-				"EnableStencilTest"
-			],
-
-			"vertexShader": "shaders/color.vertex",
-			"vrGeometryShader": "shaders/color.geometry",
-			"fragmentShader": "shaders/shadow_stencil_overlay.fragment",
-
-			"blendSrc": "DestColor",
-			"blendDst": "Zero",
-
-			"frontFace": {
-				"stencilFunc": "Equal",
-				"stencilPass": "Replace"
-			},
-
-			"backFace": {
-				"stencilFunc": "Equal",
-				"stencilPass": "Replace"
-			},
-
-			"stencilRef": 1,
-			"stencilReadMask": 255,
-			"stencilWriteMask": 0,
-
-			"vertexFields": [{ "field": "Position" }, { "field": "Color" }],
-			"msaaSupport": "Both"
-		},
-
-		"water_hole": {
-			"+states": ["DisableColorWrite"],
-			"vertexFields": [
-				{ "field": "Position" },
-				{ "field": "Color" },
-				{ "field": "UV0" }
-			],
-
-			"vertexShader": "shaders/position.vertex",
-			"vrGeometryShader": "shaders/position.geometry",
-			"fragmentShader": "shaders/flat_white.fragment",
-
-			"msaaSupport": "Both"
-		}
-	}
-}
-```
-
-## shadow.material with NO Shadows
-
-```json
-{
-	"materials": {
-		"version": "1.0.0",
-
-		"shadow_front": {
-			"+states": [
-				"StencilWrite",
-				"DisableColorWrite",
-				"DisableDepthWrite",
-				"EnableStencilTest"
-			],
-
-			"vertexShader": "",
-			"vrGeometryShader": "",
-			"fragmentShader": "",
-
-			"frontFace": {
-				"stencilFunc": "Always",
-				"stencilFailOp": "Keep",
-				"stencilDepthFailOp": "Keep",
-				"stencilPassOp": "Replace"
-			},
-
-			"backFace": {
-				"stencilFunc": "Always",
-				"stencilFailOp": "Keep",
-				"stencilDepthFailOp": "Keep",
-				"stencilPassOp": "Replace"
-			},
-
-			"stencilRef": 0,
-			"stencilReadMask": 255,
-			"stencilWriteMask": 1,
-			"vertexFields": [{ "field": "Position" }],
-			"msaaSupport": "Both"
-		},
-
-		"shadow_back": {
-			"+states": [
-				"StencilWrite",
-				"DisableColorWrite",
-				"DisableDepthWrite",
-				"InvertCulling",
-				"EnableStencilTest"
-			],
-
-			"vertexShader": "",
-			"vrGeometryShader": "",
-			"fragmentShader": "",
-
-			"frontFace": {
-				"stencilFunc": "Always",
-				"stencilFailOp": "Keep",
-				"stencilDepthFailOp": "Keep",
-				"stencilPassOp": "Replace"
-			},
-
-			"backFace": {
-				"stencilFunc": "Always",
-				"stencilFailOp": "Keep",
-				"stencilDepthFailOp": "Keep",
-				"stencilPassOp": "Replace"
-			},
-
-			"stencilRef": 1,
-			"stencilReadMask": 255,
-			"stencilWriteMask": 1,
-
-			"vertexFields": [{ "field": "Position" }],
-			"msaaSupport": "Both"
-		},
-
-		"shadow_overlay": {
-			"+states": [
-				"DisableDepthTest",
-				"DisableCulling",
-				"Blending",
-				"EnableStencilTest"
-			],
-
-			"vertexShader": "",
-			"vrGeometryShader": "",
-			"fragmentShader": "",
-
-			"blendSrc": "DestColor",
-			"blendDst": "Zero",
-
-			"frontFace": {
-				"stencilFunc": "Equal",
-				"stencilPass": "Replace"
-			},
-
-			"backFace": {
-				"stencilFunc": "Equal",
-				"stencilPass": "Replace"
-			},
-
-			"stencilRef": 1,
-			"stencilReadMask": 255,
-			"stencilWriteMask": 0,
-
-			"vertexFields": [{ "field": "Position" }, { "field": "Color" }],
-			"msaaSupport": "Both"
-		},
-
-		"water_hole": {
-			"+states": ["DisableColorWrite"],
-			"vertexFields": [
-				{ "field": "Position" },
-				{ "field": "Color" },
-				{ "field": "UV0" }
-			],
-
-			"vertexShader": "shaders/position.vertex",
-			"vrGeometryShader": "shaders/position.geometry",
-			"fragmentShader": "shaders/flat_white.fragment",
-
-			"msaaSupport": "Both"
-		}
-	}
-}
-```
-
-I hope this helps, if you find other ways to disable shadow please let us know so we can add them.
+</Spoiler>

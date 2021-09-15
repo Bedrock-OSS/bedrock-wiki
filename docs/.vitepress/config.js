@@ -3,6 +3,7 @@ require('molangjs/syntax/molang-prism-syntax')
 const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
+const fetch = require('node-fetch')
 
 const baseUrl = '/'
 
@@ -24,25 +25,47 @@ function generateSidebar(base, dir) {
 				path.join(joinedPath, 'index.md'),
 				'utf8'
 			)
-			let frontMatter = matter(str)
+			let frontMatter;
+			try {
+				frontMatter = matter(str)
+			} catch (e) {
+				joinedPath = path.relative(process.cwd(), path.join(joinedPath, 'index.md'));
+				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`);
+				throw new Error(
+					`File ${joinedPath} has invalid frontmatter! ${e.message}`
+				)
+			}
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
 				children: generateSidebar(base, joinedPath),
 			})
 			if (frontMatter.data.title === void 0) {
-				throw new Error("File " + path.join(joinedPath, 'index.md') + " has invalid frontmatter!");
+				throw new Error(
+					'File ' +
+						path.join(joinedPath, 'index.md') +
+						' has invalid frontmatter!'
+				)
 			}
 		} else if (stats.isFile()) {
 			// Don't include non-markdown files, or the index page itself
 			if (!file.endsWith('.md') || file.endsWith('index.md')) return
 
 			const str = fs.readFileSync(joinedPath, 'utf8')
-			let frontMatter = matter(str)
+			let frontMatter;
+			try {
+				frontMatter = matter(str)
+			} catch (e) {
+				joinedPath = path.relative(process.cwd(), joinedPath);
+				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`);
+				throw new Error(
+					`File ${joinedPath} has invalid frontmatter! ${e.message}`
+				)
+			}
 			const link = formatLink(joinedPath.toString().replace(base, ''))
 
 			// Don't include hidden pages (ignores children)
-			if (frontMatter.data.hidden == true) return
+			if (frontMatter.data.hidden === true) return
 
 			let prefix = null
 
@@ -55,7 +78,6 @@ function generateSidebar(base, dir) {
 			if (frontMatter.data.tags != null) {
 				tags = frontMatter.data.tags
 			}
-
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
@@ -65,7 +87,11 @@ function generateSidebar(base, dir) {
 				activeMatch: `^${link}`,
 			})
 			if (frontMatter.data.title === void 0) {
-				throw new Error("File " + joinedPath + " has invalid frontmatter!");
+				joinedPath = path.relative(process.cwd(), joinedPath);
+				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter!`);
+				throw new Error(
+					`File ${joinedPath} has invalid frontmatter!`
+				)
 			}
 		}
 	})
@@ -86,88 +112,119 @@ function getSidebar() {
 	return generateSidebar(docsPath, docsPath)
 }
 
-module.exports = {
-	lang: 'en-US',
-	title: 'Bedrock Wiki',
-	description: 'Technical bedrock knowledge-sharing wiki.',
-	base: baseUrl,
+const req = async (url2) => {
+	if (!process.env.GITHUB_TOKEN) return { "message": "Unable to get GITHUB_TOKEN" }
+	res = await fetch(
+		`https://api.github.com/repos/Bedrock-OSS/bedrock-wiki/${url2}`,
+		{ headers: {'User-Agent': 'request', 'Authorization': `Bearer ${process.env.GITHUB_TOKEN}` }}
+	);
+	return await res.json()
+};
+const getAuthors = async () => {
+	let files = await req('git/trees/wiki?recursive=1');
+	if (!files.tree) return files
+	files = files.tree.filter(({path}) => path.match('docs\/(?!public|\.vite.*$).*\.md')).map(e => e.path);
+	
+	let contributors = {};
+	let authors = [];
+	await new Promise((resolve, reject) => {
+		for (let i = 0; i < files.length; i++) {
+			req(`commits?path=${files[i]}`).then(commit => {
+				if (!commit[0]?.author) return commit
+				contributors[files[i]] = commit.map(e => e.author).filter((v,i,a) => a.findIndex(t => (t.login == v.login)) == i);
+				authors.push(contributors[files[i]].login)
+				if (i == files.length-1) resolve()
+			})
+		}
+	})
 
-	head: [
-		// Enable to make the bedrock wiki installable
-		// [
-		// 	'link',
-		// 	{
-		// 		rel: 'manifest',
-		// 		type: 'application/json',
-		// 		href: '/manifest.webmanifest',
-		// 	},
-		// ],
-		// [
-		// 	'script',
-		// 	{
-		// 		src: '/registerSW.js',
-		// 	},
-		// ],
-	],
+	return contributors;
+};
 
-	markdown: {
-		lineNumbers: true,
-	},
 
-	head: [
-		[
-			'script',
-			{},
-			`!function(){try {var d=document.documentElement.classList;d.remove('light','dark');var e=localStorage.getItem('docTheme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);m.media!==t||m.matches?d.add('dark'):d.add('light')}else if(e) d.add(e)}catch(e){}}()`,
-		],
-	],
 
-	themeConfig: {
-		repo: 'bedrock-oss/bedrock-wiki',
-		docsDir: 'docs',
+module.exports = (async function(){
+	return {
+		lang: 'en-US',
+		title: 'Bedrock Wiki',
+		description: 'Technical bedrock knowledge-sharing wiki.',
+		base: baseUrl,
 
-		// vitepress config right now
-		// algolia: {
-		// 	apiKey: 'c57105e511faa5558547599f120ceeba',
-		// 	indexName: 'vitepress',
-		// },
-
-		editLinks: true,
-		editLinkText: 'Edit this page on GitHub',
-		lastUpdated: 'Last Updated',
-
-		nav: [
-			{
-				text: 'Discord',
-				link: '/discord',
-				activeMatch: '^/discord',
+		markdown: {
+			lineNumbers: true,
+			config: (md) => {
+				md.use(require('./theme/Utils/full-headers'))
 			},
-			{
-				text: 'Contribute',
-				link: '/contribute',
-				activeMatch: '^/contribute',
-			},
-			{
-				text: 'Docs',
-				link: 'https://bedrock.dev',
-			},
-			{
-				text: 'MS Docs',
-				link: 'https://docs.microsoft.com/en-us/minecraft/creator/',
-			},
-			{
-				text: 'Legacy Wiki',
-				link: 'https://old-wiki.bedrock.dev/',
-			},
-			// {
-			// 	text: 'News',
-			// 	link: '/news',
-			// 	activeMatch: '^/news',
-			// },
-		],
-
-		sidebar: {
-			'/': getSidebar(),
 		},
-	},
-}
+
+		head: [
+			// Enable to make the bedrock wiki installable
+			// [
+			// 	'link',
+			// 	{
+			// 		rel: 'manifest',
+			// 		type: 'application/json',
+			// 		href: '/manifest.webmanifest',
+			// 	},
+			// ],
+			// [
+			// 	'script',
+			// 	{
+			// 		src: '/registerSW.js',
+			// 	},
+			// ],
+			[
+				'script',
+				{},
+				`!function(){try {var d=document.documentElement.classList;d.remove('light','dark');var e=localStorage.getItem('docTheme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);m.media!==t||m.matches?d.add('dark'):d.add('light')}else if(e) d.add(e)}catch(e){}}()`,
+			],
+		],
+
+		themeConfig: {
+			repo: 'bedrock-oss/bedrock-wiki',
+			docsDir: 'docs',
+
+			// vitepress config right now
+			algolia: {
+				apiKey: '10cfe09996bc971de563cfdde5ee438e',
+				indexName: 'wiki-bedrock',
+			},
+
+			editLinks: true,
+			editLinkText: '⚙️ Edit this page on GitHub.',
+			lastUpdated: true,
+			lastUpdated: 'Last Updated',
+
+			nav: [
+				{
+					text: 'Discord',
+					link: '/discord',
+					activeMatch: '^/discord',
+				},
+				{
+					text: 'Contribute',
+					link: '/contribute',
+					activeMatch: '^/contribute',
+				},
+				{
+					text: 'Bedrock.dev',
+					link: 'https://bedrock.dev',
+				},
+				{
+					text: 'MS Docs',
+					link: 'https://docs.microsoft.com/en-us/minecraft/creator/',
+				},
+				{
+					text: 'Legacy Wiki',
+					link: 'https://old-wiki.bedrock.dev/',
+				},
+			],
+
+			sidebar: {
+				'/': getSidebar(),
+			},
+
+			contributors: await getAuthors(),
+		},
+	}
+})()

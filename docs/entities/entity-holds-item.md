@@ -1,12 +1,10 @@
 ---
-title: Entity Holds Item
+title: 'Entity Holds Item'
+tags:
+	- intermediate
 mention:
     - pieterdefour
-tags:
-    - recipe
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 ::: tip
 This tutorial assumes you have a basic understanding of entities, loot tables, and Blockbench.

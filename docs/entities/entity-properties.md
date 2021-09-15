@@ -3,10 +3,8 @@ layout: page
 title: Entity Properties
 parent: Concepts
 tags:
-    - beta
+    - experimental
 ---
-
-<Label color="orange">Experimental</Label>
 
 -   Documentation on the new Entity Properties, also known as Actor Properties, introduced in the 1.16.230.52 Minecraft: Bedrock Edition beta version.
 -   Entity Properties were implemented to save data or store values on entities efficiently without needing the use of components or attributes (For example, "minecraft:variant") in server-side of the entity (Behavior Pack), similar to Block Properties.
@@ -18,6 +16,8 @@ tags:
 ### Defining Properties on Entities
 
 -   Entity Properties Definition:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -55,6 +55,8 @@ tags:
 -   `values` property is required, and omitting this field may cause errors and failure to register the property.
 -   `values` field can be evaluated as an array of enum values, or a range of minimum and maximum values (Note that integer, float, and boolean enum values currently supports only two values):
 
+<CodeHeader></CodeHeader>
+
 ```json
 "property:range_example": {
     "values": {
@@ -66,6 +68,8 @@ tags:
 
 **OR**
 
+<CodeHeader></CodeHeader>
+
 ```json
 "property:enum_example": {
     "values": [1, 2]
@@ -75,6 +79,8 @@ tags:
 #### `default`
 
 -   You can set the default value of the entity property (By default, the first value of the enum array index), through the <code>default</code> field inside the defined property object:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "property:default_value_example": {
@@ -88,6 +94,8 @@ tags:
 #### `client_sync`
 
 -   To sync through the Resource Pack (client-side), <code>client_sync</code> field can be used to allow the Client Entity access the Entity Properties. By default, the value is set to `false`.
+
+<CodeHeader></CodeHeader>
 
 ```json
 "property:client_sync_example": {
@@ -110,6 +118,8 @@ tags:
 
 -   With entity events, you may set the entity property to a value with the `set_actor_property` event response:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "events": {
     "event:set_entity_property": {
@@ -128,6 +138,8 @@ tags:
 
 -   You can define aliases for your entity to summon the entity with set entity property values through the `summon` command.
 -   Entity can have various aliases with custom entity identifier to use:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -171,6 +183,8 @@ tags:
 
 -   Entity Permutations are implemented to apply a set of components every tick if the condition is met.
 -   `permutations` array is inserted in the `minecraft:entity` object, the same level as the `components` object:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "permutations": [

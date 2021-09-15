@@ -105,3 +105,42 @@ ul {
 ol {
 	list-style: lower-alpha;
 }
+
+.label {
+	@apply rounded-lg flex-initial px-1;
+	font-size: 0.66rem;
+	line-height: 1rem;
+	font-weight: 650;
+}
+
+.dark .green {
+	@apply bg-green-800;
+}
+
+.green {
+	@apply bg-green-300;
+}
+
+.dark .orange {
+	@apply bg-orange-800;
+}
+
+.orange {
+	@apply bg-yellow-300;
+}
+
+.dark .red {
+	@apply bg-red-900;
+}
+
+.red {
+	@apply bg-red-300;
+}
+
+.dark .blue {
+	@apply bg-blue-900;
+}
+
+.blue {
+	@apply bg-blue-300;
+}

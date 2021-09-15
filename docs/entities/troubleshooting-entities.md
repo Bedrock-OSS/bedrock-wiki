@@ -5,6 +5,10 @@ tags:
     - help
 ---
 
+:::tip
+This page contains troubleshooting information about _entities_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
+:::
+
 ---
 
 <a name="0.0.0"></a>
@@ -37,6 +41,8 @@ The issue you're suffering can be narrowed down significantly by how your entity
 
 Make sure the .entity file has a custom spawn_egg object like:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "spawn_egg":{
     "base_color": "#FF0000",
@@ -50,9 +56,11 @@ The colors you choose will need to be something other than "#000000" for this gu
 
 Make sure `is_spawnable` and `is_summonable` are set to true, and that `is_experimental` is set to `false` in the description object:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "description":{
-    "identifier": "foxy:example_entity",
+    "identifier": "wiki:example_entity",
     "is_spawnable": true,
     "is_summonable": true,
     "is_experimental": false
@@ -109,7 +117,7 @@ Ensure the folder containing your behavior files is named "entities" and not "en
 
 ## Step 3.2.0 - RP .entity
 
-_You DO see a spawn egg for your entity in the creative inventory, but it's black (and probably has a weird name like "item.spawn_egg.entity.something:your_mob.name"), and nothing appears when you spawn/summon it._
+_You DO see a spawn egg for your entity in the creative inventory, but it's black (and probably has a weird name like "item.spawn_egg.entity.wiki:your_mob.name"), and nothing appears when you spawn/summon it._
 
 This means you have a working behavior file, but for whatever reason, the game isn't connecting it to the corresponding .entity file in your resource pack. Some common reasons for this include:
 

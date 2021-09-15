@@ -5,9 +5,11 @@ title: Runtime Identifiers
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
 It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 
+"within_radius": 1000,
+
 ```json
 "description": {
-    "identifier": "assassin:my_box",
+    "identifier": "wiki:my_box",
     "is_spawnable": true,
     "is_summonable": true,
     "is_experimental": false,
@@ -18,6 +20,8 @@ It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 It's important to remember that `runtime_identifier` will only parse the hard-coded properties of an entity. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity. Additionally, some entity runtimes may overwrite properties found in datadriven components even if they are added in the components section, such as the collision box size for the shulker entity.
 
 ## Known runtime-identifier effects:
+
+-   All runtime ID change name of tamed entity to name of entity which runtime ID it is using
 
 ### minecraft:armor_stand
 
@@ -47,6 +51,12 @@ It's important to remember that `runtime_identifier` will only parse the hard-co
 
 -   Makes entity flop when not in water
 -   Interacting with bucket of water will give you a bucket of cod, but when the bucket of cod is placed, it will place bucketed entity instead of cod
+
+---
+
+### minecraft:egg
+
+-   When spawning such entity using its spawn egg, it will spawn at player's position rather than where you place it
 
 ---
 

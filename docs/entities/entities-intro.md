@@ -84,6 +84,8 @@ Events are a special syntax for adding and removing component groups. By adding/
 
 An example:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:ageable_grow_up": { //Name of the event
     "remove": { //list of component groups to remove
@@ -103,7 +105,7 @@ Like component groups, events are 100% custom-created inside each entity. You ca
 
 The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible.
 
-<Label color="yellow">Advanced</Label>
+</Label color="red" name=advanced>
 
 ### Conditional Events
 
@@ -111,6 +113,8 @@ Conditional events are events using "filters" to return a component group depend
 We are testing if a tag exists and if it doesn't return the "prefix:is_false" component, but if it does exist, return "prefix:is_true".
 
 An example:
+
+<CodeHeader></CodeHeader>
 
 ```json
       "prefix:event_name": {//Name of the event
@@ -162,6 +166,8 @@ Many components can trigger events. Particularly, components like the [environme
 `Note:` You can also use the `/event <target> <prefix:event_name>` to trigger an event directly off an entity. In the below example, we run the "minecraft:become_charged" event to turn all creepers in loaded chunks into charged creepers.
 
 An example.
+
+<CodeHeader></CodeHeader>
 
 ```json
         //Command usage to send an event to all creepers.

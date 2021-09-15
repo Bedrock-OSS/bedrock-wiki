@@ -246,3 +246,20 @@ Essentially, returns the ratio between speed in the specified argument, over the
 If stationary, the values will return as `0`. When you are moving along the positive X/Y/Z axis, the returned value is positive. If you are moving in the opposite direction, the returned value is negative. The return value should never exceed `1` or `-1`.
 
 It's worth noting that the `Y` axis may not work as expected. When you stay in the same spot, and are not hovering, the query returns `-1`. When you stay on the same X and Z coordinates and move downwards on the Y axis, the query also returns `-1`. If you are hovering on a constant Y coordinate, it returns `0`.
+
+## query.block_neighbor_has_any_tag and query.relative_block_has_any_tag
+
+Requires `'Experimental Molang Features` to use (Upcoming 1.17.30). From the docs `Takes a relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has any of the tags provided`. This is useful for using connecting blocks or detecting entities.
+
+`query.block_neighbor_has_any_tag` - Takes block position
+`query.relative_block_has_any_tag` - Takes entity position
+
+The syntax for it is `q.block_neighbor_has_any_tag(x,y,z,'tag_name')` and `q.relative_block_has_any_tag(x,y,z,'tag_name')`.
+
+Example:
+- `q.relative_block_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the entity.
+- `q.block_neighbor_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the block.
+
+To do multiple tags you would use `q.correct_query(0,-1,0,'grass', 'plant')` with `correct_query` being replaced by the right query.
+
+Note that this can also detect custom tags and [vanilla tags](/blocks/block-tags)

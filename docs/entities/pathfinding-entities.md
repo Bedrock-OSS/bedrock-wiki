@@ -2,9 +2,8 @@
 title: Pathfinding
 tags:
     - recipe
+    - beginner
 ---
-
-<Label color="green">Beginner</Label>
 
 Making entities go places is one of the most common requests for Marketplace content. This tutorial will show you the most common way to do pathfinding.
 
@@ -22,6 +21,8 @@ These components can be edited as needed to create good pathing. Make sure to up
 
 The attack radius in `ranged_attack` can be updated. This number sets how close the entity will pathfind to the marker before stopping. A value of 0 will cause the entity to pathfind as close as possible.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -31,7 +32,6 @@ The attack radius in `ranged_attack` can be updated. This number sets how close 
     "reselect_targets": true,
     "target_search_height": 1000,
     "within_radius": 1000,
-    "max_dist": 1000,
     "must_see": false,
     "entity_types": [
         {

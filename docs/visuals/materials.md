@@ -1,8 +1,8 @@
 ---
 title: Materials
+tags:
+    - expert
 ---
-
-<Label color="red">Expert</Label>
 
 ## Overview
 
@@ -12,6 +12,8 @@ At the moment, most things in the game are hard-coded to use specific material a
 ## Syntax and Structure
 
 Most materials inherit the settings of previously defined materials, then further building off of them. This is written in the following format:
+
+<CodeHeader></CodeHeader>
 
 ```json
     "<New material ID>:<ID of material to use as a base>": {
@@ -23,6 +25,8 @@ Most materials inherit the settings of previously defined materials, then furthe
 
 Some material files contain extensive branching trees of materials. For example, nearly all of the materials used by default entities are ultimately derivatives of the material "entity_static" in the entity.material file. If we look at the material used by the current villagers,
 
+<CodeHeader></CodeHeader>
+
 ```json
     "villager_v2_masked:entity_multitexture_masked": {
       "depthFunc": "LessEqual"
@@ -31,6 +35,8 @@ Some material files contain extensive branching trees of materials. For example,
 
 We can see that the material's name is "villager_v2_masked" and builds off the material named "entity_multitexture_masked".
 Scrolling up in the file, we can find "entity_multitexture_masked" inheriting the settings from "entity_alphatest" and building further onto it:
+
+<CodeHeader></CodeHeader>
 
 ```json
     "entity_multitexture_masked:entity_alphatest": {
@@ -52,6 +58,8 @@ Scrolling up in the file, we can find "entity_multitexture_masked" inheriting th
 
 "entity_alphatest" can then be followed to "entity_nocull"
 
+<CodeHeader></CodeHeader>
+
 ```json
     "entity_alphatest:entity_nocull": {
       "+defines": [ "ALPHA_TEST" ],
@@ -67,6 +75,8 @@ Scrolling up in the file, we can find "entity_multitexture_masked" inheriting th
 
 which can be followed to plain "entity"
 
+<CodeHeader></CodeHeader>
+
 ```json
     "entity_nocull:entity": {
       "+states": [ "DisableCulling" ]
@@ -74,6 +84,8 @@ which can be followed to plain "entity"
 ```
 
 which can then finally be followed to "entity_static"
+
+<CodeHeader></CodeHeader>
 
 ```json
     "entity:entity_static": {
@@ -84,6 +96,8 @@ which can then finally be followed to "entity_static"
 ```
 
 "entity_static" doesn't have a colon followed by another material, indicating that it's the bottom of this inheritance tree.
+
+<CodeHeader></CodeHeader>
 
 ```json
     "entity_static": {

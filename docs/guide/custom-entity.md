@@ -123,6 +123,8 @@ Just like with items, the main files of a custom entity are its RP and BP files.
     -   `"minecraft:behavior.hurt_by_target"` makes the entity immediately choose the entity that damages/_hurts_ them as their target. For example, a Zombie Piglin will act this way.
     -   `"minecraft:behavior.nearest_attackable_target"` allows the mob to select targets itself (within the radius of 25) as a hostile mob. The `"filters"` in `"entity_type"` will make sure the target belongs to the `player` _family_ in our case, but you could also make it attack villagers, for example, by changing everything inside `" filters": {}` to
 
+	<CodeHeader></CodeHeader>
+
     ```json
     "any_of": [
                 {
@@ -191,6 +193,8 @@ Let's go over every single object in `"description"` , as usual:
 -   `"scripts"/"animate"` and `"animations"` control when animations are to be played with the help of _animation controllers_ and list them under their _shortnames_ respectively. Again, we'll come back to this once we have the animations ready.
 -   `"spawn_egg"` automatically creates an item that will spawn the custom entity on use. It can look in two different ways: one of them can be seen here: both the `"overlay_color" ` and `"base_color"` are defined with [hex codes](https://www.w3schools.com/colors/colors_picker.asp) in the form of text. The other way would be changing the whole thing to
 
+<CodeHeader></CodeHeader>
+
 ```json
  "spawn_egg": {
     "texture": "wiki.ectoplasm"
@@ -201,7 +205,7 @@ You can probably remember that `"wiki.ectoplasm"` is the shortname of our custom
 
 -   And, finally, `"render_controllers"` lists one or more identifiers of render controllers, which control materials.
 
-Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same; the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn more about that HERE (TODO).
+Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same; the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn more about [render controlles here.](/visuals/entity-visuals-intro)
 
 <CodeHeader>RP/render_controllers/entity/ghost.rc.json</CodeHeader>
 
@@ -210,13 +214,13 @@ Our next step is creating the mentioned _render controller_ with the id `control
 	"format_version": "1.10.0",
 	"render_controllers": {
 		"controller.render.ghost": {
-			"geometry": "Geometry.default",
+			"geometry": "geometry.default",
 			"materials": [
 				{
-					"*": "Material.default"
+					"*": "material.default"
 				}
 			],
-			"textures": ["Texture.default"]
+			"textures": ["texture.default"]
 		}
 	}
 }
@@ -514,6 +518,8 @@ Let's take a look at the Ghost's RP file: just like the _animations_, the _anima
 
 `from RP/entity/ghost.e.json`
 
+<CodeHeader></CodeHeader>
+
 ```json
 "scripts": {
     "animate": [
@@ -534,7 +540,7 @@ Let's take a look at the Ghost's RP file: just like the _animations_, the _anima
 
 And finally, we have to define the entity's and its spawn egg's in-game names in `en_US.lang` by adding these lines:
 
-`RP/texts/en_US.lang`
+<CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
 ```json
 entity.wiki:ghost.name=Ghost

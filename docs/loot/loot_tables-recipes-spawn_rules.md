@@ -7,9 +7,9 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
 
 <Spoiler title="Example Loot Tables">
 
-```json
-//BP/loot_tables/entities/ghast/json
+<CodeHeader>BP/loot_tables/entities/ghast.json</CodeHeader>
 
+```json
 {
 	"pools": [
 		{
@@ -68,9 +68,9 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
 }
 ```
 
-```json
-//BP/loot_tables/chests/equipment.low_tier_items.json
+<CodeHeader>BP/loot_tables/chests/equipment.low_tier_items.json</CodeHeader>
 
+```json
 {
 	"pools": [
 		{
@@ -115,9 +115,9 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
 }
 ```
 
-```json
-//BP/loot_tables/chests/village/village_cartographer.json
+<CodeHeader>BP/loot_tables/chests/village/village_cartographer.json</CodeHeader>
 
+```json
 {
 	"pools": [
 		{
@@ -197,9 +197,9 @@ One can even make a loot that drops half-removed blocks like glowingobsidian and
 }
 ```
 
-```json
-//BP/loot_tables/gameplay/fishing/treasure.json
+<CodeHeader>BP/loot_tables/gameplay/fishing/treasure.json</CodeHeader>
 
+```json
 {
 	"pools": [
 		{
@@ -295,6 +295,8 @@ You can also use `loot_tables.empty.json` for no loot.
 
 Let's break up the Loot table structure somewhat. I took a simple zombie loot table as an example.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"pools": [
@@ -378,7 +380,7 @@ _Blocks do not drop loot in creative mode_
 
 ## Custom crafting/smelting/etc Recipes
 
-Recipes can have unique identifiers like `tut:compass_from_compass_block`. They're located in `BP/recipes`.
+Recipes can have unique identifiers like `wiki:compass_from_compass_block`. They're located in `BP/recipes`.
 
 -   The parameter below "`format_version`" defines the type of this recipe. It can be set to "`recipe_furnace`"(smelting), "`recipe_shaped`"(every ingredient has a set place in the crafting grid) and "`recipe_shapeless`"(ingredients can be placed in whatever order into the crafting grid).
 -   Every recipe takes "`tags`" which are a list of vanilla benches that can use this recipe. Can be "`crafting_table`", "`furnace`", "`smoker`", "`blast_furnace`", "`campfire`", "`stonecutter`" etc.
@@ -387,6 +389,8 @@ Recipes can have unique identifiers like `tut:compass_from_compass_block`. They'
 Let's look through some recipe-specific syntax next.
 
 ### Smelting recipe example
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -413,6 +417,8 @@ Let's look through some recipe-specific syntax next.
 -   "`output`": the item that the furnace outputs after smelting.
 
 ### Shaped recipe example
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -447,6 +453,8 @@ Let's look through some recipe-specific syntax next.
 
 Let's also look into a recipe that gives you more than one item as a result.
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.12",
@@ -475,6 +483,8 @@ Let's also look into a recipe that gives you more than one item as a result.
 
 ### Shapeless recipe example
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.12",
@@ -496,6 +506,8 @@ Let's also look into a recipe that gives you more than one item as a result.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.12",
@@ -513,7 +525,7 @@ Let's also look into a recipe that gives you more than one item as a result.
 		],
 		"result": {},
 		"description": {
-			"identifier": "tut:randomity_recipe"
+			"identifier": "wiki:randomity_recipe"
 		}
 	}
 }
@@ -532,9 +544,9 @@ Let's also look into a recipe that gives you more than one item as a result.
 
 Spawn rules define how vanilla Entities and custom entities spawn. In the next chapter we'll be creating a custom entity, so make sure to prepare a custom spawn rule for it! Check out the vanilla example files for more information. ;)
 
-```json
-//BP/spawn_rules/zombie.json
+<CodeHeader>BP/spawn_rules/zombie.json</CodeHeader>
 
+```json
 {
 	"format_version": "1.8.0",
 	"minecraft:spawn_rules": {
@@ -592,6 +604,8 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 -   "`minecraft:permute_type`" with "`weight`"s and "`entity_type`"s sets a chance for the spawned entity to mutate into a different one.
 -   And, lastly, "`minecraft:biome_filter`" tests for certain biome tags. Look up the filter syntax and list of biome tags in the documentation or search examples in the vanilla Example pack.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:herd": {
           "min_size": 1,
@@ -601,7 +615,7 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
         },
 ```
 
--   "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity:born`" (as baby). Can be used in any event.
+-   "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity_born`" (as baby). Can be used in any event.
     `"event_skip_count": 2`, for example, means that the first two entities will not be spawned with this event, but all the next ones will.
 
 _Why not create some more custom blocks, items, recipes and loot tables before moving onto the next big chapter?_

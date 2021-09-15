@@ -8,6 +8,8 @@ Minecraft Particles can be used in entity animations. For example, the phantom h
 
 `part of RP/entity/description/`
 
+<CodeHeader></CodeHeader>
+
 ```json
   "particle_effects": {
     "l_explosion": "minecraft:large_explosion"
@@ -48,25 +50,25 @@ _Note: Skip to the end of this section for a tool to generate particle files vis
 
 File structure:
 
--   "identifier" is exactly what you'd expect: I'll use "tut:curvy_particle" and "tut_pink_hit" for the tutorial. File names do not matter.
+-   "identifier" is exactly what you'd expect: I'll use "wiki:curvy_particle" and "wiki_pink_hit" for the tutorial. File names do not matter.
 -   "texture" defines the texture file. Not that a single image file can hold textures for many particles.
 -   "material" is usually set to "particles_alpha" for particles.
 
 ![](/assets/images/guide/custom_particles_5.png){:height="100px" width="100px" .pixelated}
 
-That is the texture I'm going to use, it's size is `16x16`. (`RP/particles/tut_particles.png`). As you can see, it has 4 different textures in it, each of them being a `8x8`. The upper row (_starting/top left corner at at 0, 0_) is the flipbook texture for "tut:curvy*particle" and the bottom row (\_top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
+That is the texture I'm going to use, it's size is `16x16`. (`RP/particles/wiki_particles.png`). As you can see, it has 4 different textures in it, each of them being a `8x8`. The upper row (_starting/top left corner at at 0, 0_) is the flipbook texture for "wiki:curvy*particle" and the bottom row (\_top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
 
-`RP/particles/curvy_particle.json`
+<CodeHeader>RP/particles/curvy_particle.json</CodeHeader>
 
 ```json
 {
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "tut:curvy_particle",
+			"identifier": "wiki:curvy_particle",
 			"basic_render_parameters": {
 				"material": "particles_alpha",
-				"texture": "textures/particle/tut_particles"
+				"texture": "textures/particle/wiki_particles"
 			}
 		},
 		"components": {
@@ -116,29 +118,29 @@ That is the texture I'm going to use, it's size is `16x16`. (`RP/particles/tut_p
 }
 ```
 
-Here's the code for our first particle, "tut:curvy_particle". Our texture file is defined.
+Here's the code for our first particle, "wiki:curvy_particle". Our texture file is defined.
 
 The components are quite complicated here, but they're explained well on the [Particle doc](http://bedrock.dev/r/Particles). Let's move forward to the `"minecraft:particle_appearance_billboard"` component for now.
 
 -   "texture_width" and "texture_height" defines the size of the image file itself.
--   "base_UV" in "flipbook" defines the top-left corner of the particle texture. For this particle it's at 0, 0, which is the upper left corner of the image itself. For the second particle, "tut:pink_hit", "base_UV" will be at 0, 8, which is 8 pixels lower then the first location.
+-   "base_UV" in "flipbook" defines the top-left corner of the particle texture. For this particle it's at 0, 0, which is the upper left corner of the image itself. For the second particle, "wiki:pink_hit", "base_UV" will be at 0, 8, which is 8 pixels lower then the first location.
 -   "size_UV" defines the size of the particle's texture(8*8) on the image file(which is 16*16).
 -   "step_UV" is how far the flipbook needs to step in order to get the next particle texture. In this case it's 8, 0, which is 8 pixels to the right.
 -   "frames_per_second" is quite self-explainable. "max_frame" is the total number of frames for the particle.
 
-The second particle, "tut:pink_hit".
+The second particle, "wiki:pink_hit".
 
-`RP/particles/pink_hit.json`
+<CodeHeader>RP/particles/pink_hit.json</CodeHeader>
 
 ```json
 {
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "tut:pink_hit",
+			"identifier": "wiki:pink_hit",
 			"basic_render_parameters": {
 				"material": "particles_alpha",
-				"texture": "textures/particle/tut_particles"
+				"texture": "textures/particle/wiki_particles"
 			}
 		},
 		"components": {
@@ -210,10 +212,10 @@ Done! Now you have two custom particles that can be used in animations!
 It's rather tiresome to create particles that way, comparable to creating models without Blockbench. Luckily, you can use [Snowstorm](https://jannisx11.github.io/snowstorm/), a Visual Particle Generator. It's especially convenient to download the [VSC Snowstorm Extension](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm), which is going to create an interactive UI in Visual Studio Code itself for `.particle.json` files.
 
 ![](/assets/images/guide/custom_particles_6.jpg)
-`/particle tut:pink_hit ~ ~2 ~`
+`/particle wiki:pink_hit ~ ~2 ~`
 
 ![](/assets/images/guide/custom_particles_7.jpg)
-`/particle tut:curvy_particle ~ ~2 ~`
+`/particle wiki:curvy_particle ~ ~2 ~`
 
 ---
 
@@ -229,7 +231,7 @@ Sound files are located in subfolders of the `RP/sounds/` folder. My skele_yakli
 
 Now to define the sound's shortnames! This process is similar to defining block texture shortnames. It's done in `RP/sounds/sound_definitions.json`.
 
-`RP/sounds/sound_definitions.json`
+<CodeHeader>RP/sounds/sound_definitions.json</CodeHeader>
 
 ```json
 {
@@ -268,10 +270,10 @@ Now we are about to call our sounds. We can do it either through the `/playsound
 
 ^ the file's structure. I recommend checking out the same file in the Example Resource Pack.
 
-`RP/sounds.json/"entities": {}/"tut:skele_yaklin": {}`
+<CodeHeader>RP/sounds.json/"entities": {}/"wiki:skele_yaklin": {}</CodeHeader>
 
 ```json
-  "tut:skele_yaklin": {
+  "wiki:skele_yaklin": {
     "volume": 1.0,
     "pitch": [
       1.0,

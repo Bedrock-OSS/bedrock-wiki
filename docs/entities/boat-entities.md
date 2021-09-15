@@ -2,9 +2,8 @@
 title: Creating Boats
 tags:
     - recipe
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 ## Using Runtime Identifiers
 
@@ -15,6 +14,8 @@ You can [read more about runtime identifiers here](/entities/runtime-identifier)
 Currently, the best way to create a boat entity is by using components. 1.16 introduced new components that we can use to our advantage: `minecraft:behavior.rise_to_liquid_level` and `minecraft:buoyant`. Striders use the first one in vanilla to make them float on lava, but we can repurpose it for water as well.
 
 ## 1st method: `minecraft:behavior.rise_to_liquid_level`
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -78,6 +79,8 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 ```
 
 ## 2nd method: `minecraft:buoyant`
+
+<CodeHeader></CodeHeader>
 
 ```json
 {

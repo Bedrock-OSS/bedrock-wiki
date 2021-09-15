@@ -89,6 +89,7 @@ Namespaces are identifiers for the UI files. They are used to access elements in
 They must be unique and short if possible because you may use them a lot of times.
 
 An example:
+
 <CodeHeader>vanilla/ui/file_a.json</CodeHeader>
 
 ```json
@@ -201,6 +202,7 @@ Also, you can use a string variable after `@`. Its value will be interpreted as 
 ## Animations
 
 `offset` animation example.
+
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
 ```json
@@ -222,6 +224,7 @@ Also, you can use a string variable after `@`. Its value will be interpreted as 
 ```
 
 `Wait` animation example. It's used when you want no animation between two other animations.
+
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
 ```json
@@ -258,6 +261,7 @@ Also, you can use a string variable after `@`. Its value will be interpreted as 
 ```
 
 `flip_book` animation example.
+
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
@@ -281,6 +285,7 @@ Also, you can use a string variable after `@`. Its value will be interpreted as 
 ```
 
 Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc., you can reference the animations that will be applied to the element using the `anims` property.
+
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
@@ -336,6 +341,7 @@ Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc.,
 Here's an example of a label using a hardcoded text.
 The `text` property value is `#hardtext`. By using `bindings`, I can get the value of the hardcoded variable `#hardtext` so the `text` property can use it.
 Here it's directly assigning the `#hardtext` value to the `text` property.
+
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
@@ -353,6 +359,8 @@ Here it's directly assigning the `#hardtext` value to the `text` property.
 ```
 
 Talking more about the `label` example, it can also appear in another way. Let's see:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -372,6 +380,8 @@ Talking more about the `label` example, it can also appear in another way. Let's
 In this case, the `#hardtext` value is assigned to the `#text` binding property name that will then be assigned to the `text` property.
 
 This happens a lot with the `visible` and `enabled` properties. Here's an example with both of them:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -401,6 +411,8 @@ And `#play_button_enabled` will override the `#enabled` binding property value, 
 
 Let's say you want to show a panel with some content when a specific toggle is selected/checked. You'll need a different type of binding structure.
 We have to tell the source element where the value will come from, tell which property of that source element we want to get the value from and which property we want to override its value.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -496,6 +508,7 @@ The `ignored` property is used to conditionally render a UI control when working
 ```
 
 Modifying the above JSON into an unintrusive UI file used in a resource pack should look identical to this:
+
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
 ```json
@@ -694,6 +707,7 @@ You will need to add another binding object to the text to control its visibilit
 ```
 
 Modifying the above JSON into an unintrusive UI file used in a resource pack should look identical to this:
+
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
 ```json

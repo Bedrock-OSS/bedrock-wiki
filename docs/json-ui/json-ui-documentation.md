@@ -73,6 +73,7 @@ Specific properties:
 | `notify_on_ellipses`      |      array      | Name of the objects it will receive #using_ellipses when the text has '...'                                                                             |
 
 Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
+
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
@@ -445,6 +446,7 @@ Specific properties:
 | `focus_container_custom_right` |  array  |                                                                                                                              |
 
 For `focus_container_custom_*`
+
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
@@ -523,6 +525,7 @@ Button mappings can be applied to any kind of input elements (`button`, `toggle`
 | `requires` | string | condition   |
 
 If you only have one variable to use, you should just use `"variables": {}`
+
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
@@ -540,6 +543,7 @@ If you only have one variable to use, you should just use `"variables": {}`
 ```
 
 If you have multiple variables use `"variables": [{}]`
+
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
 ```json
@@ -577,7 +581,8 @@ If you have multiple variables use `"variables": [{}]`
 | `reversible`                | boolean         |                                                                                                                                                                                                                                                                                                                                                                  |
 | `scale_from_starting_alpha` | boolean         |                                                                                                                                                                                                                                                                                                                                                                  |
 | `fps`                       | number          | Number of frames per second                                                                                                                                                                                                                                                                                                                                      |
-| `easing`                    | string          | Possible values:<br>- `linear`<br>- `spring`<br>- `in_quad`<br>- `in_out_quad`<br>- `in_out_cubic`<br>- `in_out_quart`<br>- `in_out_quint`<br>- `in_sine`<br>- `in_out_sine`<br>- `in_expo`<br>- `in_out_expo`<br>- `in_circ`<br>- `in_out_circ`<br>- `in_bounce`<br>- `in_out_bounce`<br>- `in_back`<br>- `in_out_back`<br>- `in_elastic`<br>- `in_out_elastic` |
+| `easing`                    | string          | Possible values:<br>- `linear`<br>- `spring`<br>- `in_quad`<br>- `out_quad`<br>- `in_out_quad`<br>- `in_cubic`<br>- `out_cubic`<br>- `in_out_cubic`<br>- `in_quart`<br>- `out_quart`<br>- `in_out_quart`<br>- `in_quint`<br>- `out_quint`<br>- `in_out_quint`<br>- `in_sine`<br>- `out_sine`<br>- `in_out_sine`<br>- `in_expo`<br>- `out_expo`<br>- `in_out_expo`<br>- `in_circ`<br>- `out_circ`<br>- `in_out_circ`<br>- `in_bounce`<br>- `out_bounce`<br>- `in_out_bounce`<br>- `in_back`<br>- `out_back`<br>- `in_out_back`<br>- `in_elastic`<br>- `out_elastic`<br>- `in_out_elastic`
+ |
 | `duration`                  | number          | Number. Duration of the animation in seconds                                                                                                                                                                                                                                                                                                                     |
 | `from`                      | array or number | Number (`anim_type` alpha) or a `size`/`offset` array (`anim_type` size/offset)                                                                                                                                                                                                                                                                                  |
 | `to`                        | array or number | (`anim_type` alpha) or a `size`/`offset` array (`anim_type` size/offset)                                                                                                                                                                                                                                                                                         |

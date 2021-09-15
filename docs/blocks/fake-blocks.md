@@ -2,9 +2,8 @@
 title: Fake Blocks
 tags:
     - experimental
+    - intermediate
 ---
-
-<Label color="yellow">Intermediate</Label>
 
 ## Creating the Hitbox
 
@@ -13,6 +12,8 @@ Here is a tutorial on making a solid Hitbox in four different ways, with `runtim
 ## Basic Components
 
 Those components below are required to make the entity act as a block, and also don't add the `"minecraft:physics": {}` component in there, because this will make your entity fall or have a collision with some blocks like water or lava.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -72,7 +73,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
    },
    "run_command": {
       "command": [
-         "setblock ~~~ thing:align"
+         "setblock ~~~ wiki:align"
       ]
    }
 }
@@ -95,7 +96,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "thing:align" //Block used to summon the dummy entity right on the block, and as the block is centered, the entity will center too.
+			"identifier": "wiki:align" //Block used to summon the dummy entity right on the block, and as the block is centered, the entity will center too.
 		},
 		"components": {
 			"minecraft:destroy_time": 2,
@@ -115,16 +116,16 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 				"size": [0, 0, 0]
 			},
 			"minecraft:on_placed": {
-				"event": "my:event"
+				"event": "wiki:event"
 			},
 			"minecraft:loot": "loot_tables/empty.json"
 		},
 		"events": {
-			"my:event": {
+			"wiki:event": {
 				"run_command": {
 					"command": [
 						"setblock ~~~ air 0", //This will despawn the block
-						"summon thing:dummy_align" //And this spawn the dummy entity.
+						"summon wiki:dummy_align" //And this spawn the dummy entity.
 					]
 				}
 			}
@@ -140,7 +141,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 	"format_version": "1.13.0",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "thing:dummy_align", //The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
+			"identifier": "wiki:dummy_align", //The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false
@@ -148,7 +149,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 		"component_groups": {
 			"transform": {
 				"minecraft:transformation": {
-					"into": "thing:your_entity",
+					"into": "wiki:your_entity",
 					"delay": 0
 				}
 			}
@@ -185,6 +186,8 @@ Vanilla blocks have a cracking texture that appears when you break them. Here I 
 
 First, we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
 
+<CodeHeader></CodeHeader>
+
 ```json
 "textures": {
     "default": "textures/entity/your_texture",
@@ -203,6 +206,8 @@ First, we have to add some textures to your .entity file, make sure that you are
 
 And add a geometry that has to inflate 0.1 in all their cubes to avoid Z-Fighting.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "geometry": {
     "default": "geometry.your_geometry",
@@ -211,6 +216,8 @@ And add a geometry that has to inflate 0.1 in all their cubes to avoid Z-Fightin
 ```
 
 And now we have to add a new render controller. This is going to select different textures between the destroys stages. (Remember not to replace your actual controller, you need two controllers, the first one is just the one that adds Model, textures, and material to your normal entity, and the second one is this one that defines the cracking texture)
+
+<CodeHeader></CodeHeader>
 
 ```json
 "controller.render.broken": {

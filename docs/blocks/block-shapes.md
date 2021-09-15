@@ -8,9 +8,11 @@ Blockshapes are essentially block geometries or models that are hard-coded into 
 
  They are added in the resource pack's file, `blocks.json`, using child `"blockshape"` in a block's object. This would look something like this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 
-    "yana:invisible_aluminium_ore": {
+    "wiki:invisible_aluminium_ore": {
         "blockshape": "invisible",
         "sound": "stone",
         "textures": "invisible_aluminium_ore"

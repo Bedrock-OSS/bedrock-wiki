@@ -1,12 +1,12 @@
 ---
 title: 3D Items
+tags:
+    - expert
 ---
 
 There are two methods for making 3D items:
 
 ## Entity Based 3D Item Models
-
-<Label color="red">Expert</Label>
 
 ::: tip
 This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/visuals/entity-visuals-intro) before starting this tutorial.
@@ -39,6 +39,8 @@ This is the most crucial part. We must add it to the player entity client defini
 
 Let's start by defining the texture and the geometry of our item in the player client definition file. Copy the `player.entity.json` file from the [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate) into the `entity` folder of your resource pack. Open the file, find the `geometries` JSON object, and add a new entry to the `geometries` object:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "geometry": {
     ...,
@@ -47,6 +49,8 @@ Let's start by defining the texture and the geometry of our item in the player c
 ```
 
 In our case, it will look like this:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "geometry": {
@@ -57,6 +61,8 @@ In our case, it will look like this:
 
 Next, add a new entry to your `textures` entry that references the texture of your model:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "textures": {
     ...,
@@ -65,6 +71,8 @@ Next, add a new entry to your `textures` entry that references the texture of yo
 ```
 
 In our case, it will look like this:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "textures": {
@@ -76,6 +84,8 @@ In our case, it will look like this:
 Now, let's define the variable that tells us whether the player is holding our item. In your player's `scripts.pre_animation` array, add a new entry:
 `variable.<your_item> = query.get_equipped_item_name('main_hand') == <your_item_identifier_without_namespace>`
 In our case, this entry will look like the following:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "pre_animation": [
@@ -90,6 +100,8 @@ Note: it is essential to define this variable because checking for the item dire
 ### Render Controller
 
 Next, let's create a render controller that will render our item. Create a new file in the `render_controllers` folder of your resource pack called `<your_item_name>.render_controllers.json`. In our case, it will be `drill.render_controllers.json`
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -112,6 +124,8 @@ Next, let's create a render controller that will render our item. Create a new f
 
 In our case, the render controller will look like the following:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.8.0",
@@ -131,6 +145,8 @@ In our case, the render controller will look like the following:
 
 Now, let's add this render controller to our player client definition file. Add a new object to the `render_controllers array like so:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "render_controllers": [
     ...,
@@ -142,6 +158,8 @@ Now, let's add this render controller to our player client definition file. Add 
 ```
 
 In our case, it will look like this:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "render_controllers": [
@@ -155,6 +173,8 @@ In our case, it will look like this:
 ### Animations
 
 This part contains an unnecessary step - creating custom animations for the item, but we will go over it anyway. Let's start with the vital part. If you load up the pack right now, you will see that your item is shifted weirdly in first-person. This is because it still renders as a third-person item. To fix this, we will create an animation that just offsets the item into the correct location. Create a new file called `<your_item>.animation.json` in your resource pack's `animations` folder.
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -177,6 +197,8 @@ Note: these numbers will likely **not** work for you. You must play around with 
 Note: your item geometry must be contained within a root bone that can be easily manipulated.
 In our case, the animation will look like this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"format_version": "1.8.0",
@@ -195,6 +217,8 @@ In our case, the animation will look like this:
 ```
 
 Now, let's add the decorative animation for our drill:
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -227,6 +251,8 @@ Now, let's add the decorative animation for our drill:
 This animation will spin the drill quickly to simulate an actual drill.
 Now, let's add these animations to the player client definition file. Add a new entity to the `animations` object of your `player.entity.json` file like this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "animations": {
     ...,
@@ -235,6 +261,8 @@ Now, let's add these animations to the player client definition file. Add a new 
 ```
 
 Next, let's make this animation loop: add a new entry to your `scripts.animate` array like so:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "animate": [
@@ -247,6 +275,8 @@ Next, let's make this animation loop: add a new entry to your `scripts.animate` 
 ```
 
 In our case, it will look like this:
+
+<CodeHeader></CodeHeader>
 
 ```json
 "animate": [
@@ -283,7 +313,7 @@ Gimp doesn't let you usually save the picture as a png when pressing `Ctrl+S`, s
 
 Here you can find the final `player.entity.json` file, render controllers, animations, as well as a download link to the pack.
 
-`entity/player.entity.json`
+<CodeHeader>RP/entity/player.entity.json</CodeHeader>
 
 ```json
 {
@@ -411,7 +441,7 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 }
 ```
 
-`render_controllers/drill.render_controllers.json`
+<CodeHeader>RP/render_controllers/drill.render_controllers.json</CodeHeader>
 
 ```json
 {
@@ -430,7 +460,7 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 }
 ```
 
-`animations/drill.animation.json`
+<CodeHeader>animations/drill.animation.json</CodeHeader>
 
 ```json
 {
@@ -460,7 +490,7 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 }
 ```
 
-`models/entity/drill.geo.json`
+<CodeHeader>RP/models/entity/drill.geo.json</CodeHeader>
 
 ```json
 {
