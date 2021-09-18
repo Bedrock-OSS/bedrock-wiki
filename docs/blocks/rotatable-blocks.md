@@ -232,9 +232,6 @@ This event is called upon by using the `minecraft:on_player_placing` component.
 			}
 		},
 		"components": {
-				"burn_odds": 1,
-				"flame_odds": 1
-			},
 			"minecraft:destroy_time": 1.5,
 			"minecraft:explosion_resistance": 2,
 			"minecraft:friction": 1,
@@ -264,8 +261,7 @@ This event is called upon by using the `minecraft:on_player_placing` component.
 				"event": "wiki:update_rotation"
 			}
 		},
-		"permutations": [
-			{
+		"permutations": [{
 				"condition": "query.block_property('wiki:block_rotation') == 0",
 				"components": {
 					"minecraft:rotation": [
