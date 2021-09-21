@@ -225,7 +225,10 @@ This method requires PC.
         "events": {
             "wiki:update_leaves": {
                 "run_command": {
-                    "command": ["fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:fake_leaves 0 replace wiki:custom_leaves", "fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:custom_leaves 0 replace wiki:fake_leaves"]
+                    "command": [
+						"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:fake_leaves 0 replace wiki:custom_leaves",
+						"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:custom_leaves 0 replace wiki:fake_leaves"
+					]
                 }
             },
             //Updates leaves
@@ -239,10 +242,13 @@ This method requires PC.
                 "sequence": [
                     {
                         "run_command": {
-                            "command": ["setblock ~~~ wiki:custom_stripped_log"]
+                            "command": [
+								"setblock ~~~ wiki:custom_stripped_log",
+								"playsound hit.wood @a ~~~"
+							]
                         }
                     },
-                    //Damages axe of player who stripped the log
+                    //Sets custom stripped log with special rotation and plays sound
                     {
                         "damage": {
                             "type": "durability",
@@ -250,17 +256,20 @@ This method requires PC.
                             "target": "item"
                         }
                     }
+                    //Damages axe of player who stripped the log
                 ]
             },
-            //Sets custom stripped log with special rotation
             "wiki:become_stripped1": {
                 "sequence": [
                     {
                         "run_command": {
-                            "command": ["structure load custom_stripped_log1 ~~~"]
+                            "command": [
+								"structure load custom_stripped_log1 ~~~",
+								"playsound hit.wood @a ~~~"
+							]
                         }
                     },
-                    //Damages axe of player who stripped the log
+                    //Loads structure (custom stripped log with special rotation) and plays sound
                     {
                         "damage": {
                             "type": "durability",
@@ -268,17 +277,20 @@ This method requires PC.
                             "target": "item"
                         }
                     }
+                    //Damages axe of player who stripped the log
                 ]
             },
-            //Loads structure (custom stripped log with special rotation)
             "wiki:become_stripped2": {
                 "sequence": [
                     {
                         "run_command": {
-                            "command": ["structure load custom_stripped_log2 ~~~"]
+                            "command": [
+								"structure load custom_stripped_log2 ~~~",
+								"playsound hit.wood @a ~~~"
+							]
                         }
                     },
-                    //Damages axe of player who stripped the log
+                    //Loads structure (custom stripped log with special rotation) and plays sound
                     {
                         "damage": {
                             "type": "durability",
@@ -286,9 +298,9 @@ This method requires PC.
                             "target": "item"
                         }
                     }
+                    //Damages axe of player who stripped the log
                 ]
             }
-            //Loads structure (custom stripped log with special rotation)
         }
     }
 }
@@ -917,3 +929,9 @@ What you have now:
 Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Structure
 
 ![](/assets/images/blocks/parts-of-custom-tree/result.png)
+
+## Download Example Pack
+
+[RP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree_RP.zip)
+
+[BP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/PoCT_BP.zip)

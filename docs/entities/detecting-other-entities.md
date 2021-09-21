@@ -7,7 +7,7 @@ tags:
 You might have thought about making your entities fire an event when other entities are nearby. This article details the various known ways to do so.
 
 ## Using `minecraft:entity_sensor`
-This is probably the most basic way to detect other entities. The main issues is it only accepts one entry and if the entity is out of range can be very tricky, to say the least. Because it's an entity component, you can just place into your entity behavior file and edit the Minecraft filters. Here's a demonstration:
+This is probably the most basic way to detect other entities. The main issues is it only accepts one entry and testing if the entity is out of range can be very tricky. Because it's an entity component, you can just place into your entity behavior file and edit the Minecraft filters. Here's a demonstration:
 
 ```json
 "minecraft:entity_sensor": {

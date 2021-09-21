@@ -34,7 +34,10 @@ Create a file called tick.json in your root function folder. The format is this:
 
 ```json
 {
-	"values": ["function_file_name_one", "function_file_name_two"]
+	"values": [
+		"function_file_name_one",
+		"function_file_name_two"
+	]
 }
 ```
 

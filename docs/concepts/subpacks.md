@@ -126,7 +126,7 @@ Defines the name that will show when selecting the subpacks.
 
 -   `memory_tier`
 
-A number specifying the order of the subpacks on the slider. (Starts at 0)
+Thought to be the number specifying the order of the subpacks on the slider. Further testing have found that it is not the case. Instead the order is determined by the order of each JSON object literal in the subpack list which are sorted from left to right of the slider. E.g the first object will be placed on the left most of the slider and the last object will be placed on the right most of the slider.
 
 -   `folder_name`
 
