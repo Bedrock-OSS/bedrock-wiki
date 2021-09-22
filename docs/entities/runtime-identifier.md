@@ -178,6 +178,12 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
+### minecraft:wolf
+
+-   Prevents some components like minecraft:target_nearby_sensor from ignoring entity owner status.
+
+---
+
 ### minecraft:zombie
 
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect
