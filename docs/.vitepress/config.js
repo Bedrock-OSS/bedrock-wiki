@@ -25,12 +25,17 @@ function generateSidebar(base, dir) {
 				path.join(joinedPath, 'index.md'),
 				'utf8'
 			)
-			let frontMatter;
+			let frontMatter
 			try {
 				frontMatter = matter(str)
 			} catch (e) {
-				joinedPath = path.relative(process.cwd(), path.join(joinedPath, 'index.md'));
-				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`);
+				joinedPath = path.relative(
+					process.cwd(),
+					path.join(joinedPath, 'index.md')
+				)
+				console.log(
+					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`
+				)
 				throw new Error(
 					`File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
@@ -52,12 +57,14 @@ function generateSidebar(base, dir) {
 			if (!file.endsWith('.md') || file.endsWith('index.md')) return
 
 			const str = fs.readFileSync(joinedPath, 'utf8')
-			let frontMatter;
+			let frontMatter
 			try {
 				frontMatter = matter(str)
 			} catch (e) {
-				joinedPath = path.relative(process.cwd(), joinedPath);
-				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`);
+				joinedPath = path.relative(process.cwd(), joinedPath)
+				console.log(
+					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`
+				)
 				throw new Error(
 					`File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
@@ -87,11 +94,11 @@ function generateSidebar(base, dir) {
 				activeMatch: `^${link}`,
 			})
 			if (frontMatter.data.title === void 0) {
-				joinedPath = path.relative(process.cwd(), joinedPath);
-				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter!`);
-				throw new Error(
-					`File ${joinedPath} has invalid frontmatter!`
+				joinedPath = path.relative(process.cwd(), joinedPath)
+				console.log(
+					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter!`
 				)
+				throw new Error(`File ${joinedPath} has invalid frontmatter!`)
 			}
 		}
 	})
@@ -113,37 +120,47 @@ function getSidebar() {
 }
 
 const req = async (url2) => {
-	if (!process.env.GITHUB_TOKEN) return { "message": "Unable to get GITHUB_TOKEN" }
+	if (!process.env.GITHUB_TOKEN)
+		return { message: 'Unable to get GITHUB_TOKEN' }
 	res = await fetch(
 		`https://api.github.com/repos/Bedrock-OSS/bedrock-wiki/${url2}`,
-		{ headers: {'User-Agent': 'request', 'Authorization': `Bearer ${process.env.GITHUB_TOKEN}` }}
-	);
+		{
+			headers: {
+				'User-Agent': 'request',
+				Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+			},
+		}
+	)
 	return await res.json()
-};
+}
 const getAuthors = async () => {
-	let files = await req('git/trees/wiki?recursive=1');
+	let files = await req('git/trees/wiki?recursive=1')
 	if (!files.tree) return files
-	files = files.tree.filter(({path}) => path.match('docs\/(?!public|\.vite.*$).*\.md')).map(e => e.path);
-	
-	let contributors = {};
-	let authors = [];
+	files = files.tree
+		.filter(({ path }) => path.match('docs/(?!public|.vite.*$).*.md'))
+		.map((e) => e.path)
+
+	let contributors = {}
+	let authors = []
 	await new Promise((resolve, reject) => {
 		for (let i = 0; i < files.length; i++) {
-			req(`commits?path=${files[i]}`).then(commit => {
-				if (!commit[0]?.author) return commit
-				contributors[files[i]] = commit.map(e => e.author).filter((v,i,a) => a.findIndex(t => (t.login == v.login)) == i);
+			req(`commits?path=${files[i]}`).then((commit) => {
+				if (!commit[0].author) return commit
+				contributors[files[i]] = commit
+					.map((e) => e.author)
+					.filter(
+						(v, i, a) => a.findIndex((t) => t.login == v.login) == i
+					)
 				authors.push(contributors[files[i]].login)
-				if (i == files.length-1) resolve()
+				if (i == files.length - 1) resolve()
 			})
 		}
 	})
 
-	return contributors;
-};
+	return contributors
+}
 
-
-
-module.exports = (async function(){
+module.exports = (async function () {
 	return {
 		lang: 'en-US',
 		title: 'Bedrock Wiki',

@@ -26,7 +26,7 @@ To run locally:
 
 -   `npm install` (once, to install packages)
 -   `npm run dev` (to test the site, good for writing markdown)
--   `npm build` (to fully build, good for testing issues with the live site)
+-   `npm run build` (to fully build, good for testing issues with the live site)
 
 ## Markdown
 
