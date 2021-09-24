@@ -231,10 +231,6 @@ module.exports = (async function () {
 					text: 'MS Docs',
 					link: 'https://docs.microsoft.com/en-us/minecraft/creator/',
 				},
-				{
-					text: 'Legacy Wiki',
-					link: 'https://old-wiki.bedrock.dev/',
-				},
 			],
 
 			sidebar: {
