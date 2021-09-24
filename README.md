@@ -20,11 +20,13 @@ You may directly open PRs for the following:
 
 For more complex things, like full article rewrites, or new articles, [join the discord](https://discord.gg/XjV87YN)!
 
-## Code and Platform
+## Running Locally
 
-The wiki uses a custom [VitePress theme](https://vitepress.vuejs.org/), and is statically generated from the `wiki` branch into the `generated` branch.
+To run locally:
 
-If you are interested in helping us maintain the core platform, as opposed to the markdown articles, [join the discord](https://discord.gg/XjV87YN)!
+-   `npm install` (once, to install packages)
+-   `npm run dev` (to test the site, good for writing markdown)
+-   `npm build` (to fully build, good for testing issues with the live site)
 
 ## Markdown
 
@@ -45,3 +47,9 @@ We can use front-matter to define the following custom behavior:
 | `show_toc`  | No       | True    | Whether the table of contents will be generated for this page.                                                                                           |
 | `tags`      | No       | []      | A list of tags for the page. Some will be displayed on sidebar, such as 'guide' or 'beta'. All will be displayed in the actual page, at the top.         |
 | `mentions`  | No       | []      |                                                                                                                                                          |
+
+## Code and Platform
+
+The wiki uses a custom [VitePress theme](https://vitepress.vuejs.org/), and is statically generated from the `wiki` branch into the `generated` branch.
+
+If you are interested in helping us maintain the core platform, as opposed to the markdown articles, [join the discord](https://discord.gg/XjV87YN)!
