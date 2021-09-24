@@ -107,4 +107,5 @@ Important links have a ⭐.
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 -   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
+-   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
 
