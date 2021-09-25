@@ -2,7 +2,6 @@
 title: Creative Categories
 tags:
     - experimental
-    - beta
 mention:
     - Warhead51707
     - yanasakana
