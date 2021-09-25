@@ -8,7 +8,7 @@ mention:
 ---
 
 
-Vanilla-like custom trees are possible. Make their parts following this tutorial.
+Vanilla-like custom trees are possible. Make their parts by following this tutorial.
 
 ## Features
 
