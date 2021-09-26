@@ -29,8 +29,9 @@ show_toc: false
 
 'BP/recipes/example.recipe.json',
 
-'BP/scripts/client/example.js',
-'BP/scripts/server/example.js',
+'BP/scripts/client/exampleClient.js',
+'BP/scripts/server/exampleServer.js',
+'BP/scripts/gametests/exampleTest.js',
 
 'BP/spawn_rules/example.spawn.json',
 
@@ -39,6 +40,8 @@ show_toc: false
 
 'BP/trading/example.trade.json',
 'BP/trading/economy_trades/example.trade.json',
+
+'BP/structures/example.mcstructure',
 
 'RP/manifest.json',
 'RP/pack_icon.png',
@@ -101,7 +104,7 @@ show_toc: false
 'RP/texts/zh_TW.lang',
 'RP/texts/zh_TW.lang',
 'RP/texts/ja_JP/font/glyph_2E.png',
-'RP/texts/ja_JP/font/glyph...png',
+'RP/texts/ja_JP/font/\*.png',
 'RP/texts/zh_TW/font/glyph_2E.png',
 'RP/texts/zh_TW/font/\*.png',
 
