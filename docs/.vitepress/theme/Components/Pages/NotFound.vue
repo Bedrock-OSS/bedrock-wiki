@@ -14,6 +14,7 @@
 
 <script setup lang="ts">
 import { useData, useRouter } from 'vitepress'
+import { onMounted } from 'vue'
 
 const { site } = useData()
 const router = useRouter()
@@ -97,12 +98,13 @@ const URL_MAP: Record<string, string> = {
 	'visuals/render-controllers': 'visuals/entity-visuals-intro',
 	'items/item-categories': 'items/creative-categories',
 }
+onMounted(() => {
+  let path = document.location.pathname
+      .substr(site.value.base.length)
+      .replace('.html', '')
 
-let path = document.location.pathname
-	.substr(site.value.base.length)
-	.replace('.html', '')
-
-if (URL_MAP[path]) {
-	router.go(URL_MAP[path])
-}
+  if (URL_MAP[path]) {
+    router.go(URL_MAP[path])
+  }
+})
 </script>
