@@ -3,7 +3,6 @@ title: Coordinate System
 
 mention:
  - MedicalJewel105
- - Sprunkles137
 ---
 
 ## The Coordinate System
