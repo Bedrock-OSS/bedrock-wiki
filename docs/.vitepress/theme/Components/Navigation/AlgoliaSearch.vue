@@ -10,7 +10,7 @@ import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
 
 // @ts-ignore
 import docsearch from '@docsearch/js'
-import '@docsearch/css'
+import '@docsearch/css/dist/style.css'
 
 const { lang } = useData()
 
