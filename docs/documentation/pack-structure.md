@@ -43,7 +43,7 @@ show_toc: false
 'RP/manifest.json',
 'RP/pack_icon.png',
 'RP/biomes_client.json',
-'RP/blocks.json'
+'RP/blocks.json',
 'RP/sounds.json',
 
 'RP/animation_controllers/example.ac.json',
