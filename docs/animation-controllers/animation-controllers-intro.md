@@ -22,7 +22,7 @@ A state machine can only be `in` one state at a time. When a state machine "runs
 
 The reason that state-machines are useful, is they allow us to naturally break up our animations into a logical flow, where each state handles its own animations _and_ its own logic.
 
-For example, imagine you want to animate the spinning blade of a helicopter -but only when on the ground. You have two states:
+For example, imagine you want to animate the spinning blade of a helicopter - but only when on the ground. You have two states:
 
 -   `ground state`
 -   `flying state`
@@ -98,7 +98,7 @@ RP animation controllers go in the RP, and can be attached to RP entities. They 
 
 ### BP Animation Controllers
 
-BP animation controllers go in the BP, and can be attached to BP entities. They allow you to play commands.
+BP animation controllers go in the BP, and can be attached to BP entities. They allow you to play commands and send events to entities.
 
 ## Animation Controller example
 
@@ -160,7 +160,7 @@ You can note that `"initial_state": "ground"` means that our Animation Controlle
 }
 ```
 
-The `ground` state contains a list of _transitions_, which is how we get to other states. In this example, the default state is saying: _Move to the `flying` state when `query.is_on_ground` is NOT true_. In other words -start the flying animation when we fly into the air!
+The `ground` state contains a list of _transitions_, which is how we get to other states. In this example, the default state is saying: _Move to the `flying` state when `query.is_on_ground` is NOT true_. In other words - start the flying animation when we fly into the air!
 
 <CodeHeader>RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter.blade/states</CodeHeader>
 
@@ -177,7 +177,7 @@ The `ground` state contains a list of _transitions_, which is how we get to othe
 }
 ```
 
-The `flying` state also contains a list of transitions. In this case it contains the opposite transition: _Move to the `ground` state when `query.is_on_ground` is true_. In other words -move back to the default state when we land on the ground!
+The `flying` state also contains a list of transitions. In this case it contains the opposite transition: _Move to the `ground` state when `query.is_on_ground` is true_. In other words - move back to the default state when we land on the ground!
 
 Alongside the `transition` list, there is also a list of `animations` to play while inside of this state. In this case, playing the `flying` animation. This animation will need to be defined in the entity definition file for this entity.
 

@@ -15,7 +15,7 @@ This is an example of how to create texture variations for the dirt block with t
 -   Create a `textures/terrain_texture.json` file in the resource pack
 -   In the JSON file, you need to define the blocks that have variation, as shown below
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
 ```json
 {
@@ -44,7 +44,7 @@ This is an example of how to create texture variations for the dirt block with t
 
 After completing the example above, if you want to adjust the weights, edit the `terrain_textures.json` to include a weight field as shown below.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
 ```json
 {

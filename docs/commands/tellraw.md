@@ -28,6 +28,8 @@ This sends the words in the last set of quotes
 /tellraw @a {"rawtext":[{"text":"Hello"}]}
 ```
 
+## Escaping Characters
+
 To use quotations in a tellraw message place a backslash to the left side of the quotation mark.
 
 ```json

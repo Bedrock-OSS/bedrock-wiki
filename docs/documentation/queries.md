@@ -5,7 +5,7 @@ title: Molang Queries
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
 
 :::warning
-This page is not an exhaustive list list! It only contains queries we've written extra information for. [The full list of queries can be found here!](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries)
+This page is not an exhaustive list list! It only contains queries we've written extra information for. [The full list of queries can be found here!](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries)
 :::
 
 ## query.get_equiped_item_name

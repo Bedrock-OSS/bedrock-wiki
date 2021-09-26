@@ -215,7 +215,7 @@ And add a geometry that has to inflate 0.1 in all their cubes to avoid Z-Fightin
 }
 ```
 
-And now we have to add a new render controller. This is going to select different textures between the destroys stages. (Remember not to replace your actual controller, you need two controllers, the first one is just the one that adds Model, textures, and material to your normal entity, and the second one is this one that defines the cracking texture)
+And now we have to add a new render controller. This is going to select different textures between the destroys stages. (Remember not to replace your actual controller, you need two controllers, the first one is just the one that adds model, textures, and material to your normal entity, and the second one is this one that defines the cracking texture)
 
 <CodeHeader></CodeHeader>
 

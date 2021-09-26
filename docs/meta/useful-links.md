@@ -39,6 +39,7 @@ Important links have a ⭐.
 -   [Add-on JSON Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
 -   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [World Converter (paid)](https://www.universalminecraftconverter.com/download)
+-   [Chunker (World Converter)](https://chunker.app/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 
@@ -106,4 +107,5 @@ Important links have a ⭐.
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 -   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
+-   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
 

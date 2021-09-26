@@ -128,7 +128,7 @@ Navigate to your `terrain_texture.json`. Ensure that it is properly named
 }
 ```
 
-Next, navigate to your block file. In your block file, make sure you have the `material_instance` component.
+Next, navigate to your block file. In your block file, make sure you have the `material_instances` component.
 
 Dirt like block example:
 <CodeHeader>BP/blocks/dirt_like.json</CodeHeader>
@@ -233,7 +233,7 @@ This section will describe common block rendering issues and how to fix them.
 
 Problem: You have transparent pixels in your texture file. When you apply it in game, they become opaque.
 
-Solution: Navigate to your block file. Navigate to your `material_instance` component. Add the following to your component:
+Solution: Navigate to your block file. Navigate to your `material_instances` component. Add the following to your component:
 
 <CodeHeader>BP/blocks/your_block.json</CodeHeader>
 
@@ -256,7 +256,7 @@ Solution: Navigate to your block file. Navigate to your `material_instance` comp
 
 Problem: You have block with custom geometry but it has shadow.
 
-Solution: Navigate to your block file. Navigate to your `material_instance` component. Add the following to your component:
+Solution: Navigate to your block file. Navigate to your `material_instances` component. Add the following to your component:
 
 <CodeHeader>BP/blocks/your_block.json</CodeHeader>
 

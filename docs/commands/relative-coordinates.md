@@ -1,25 +1,27 @@
 ---
-title: Relative Coordinates
+title: Coordinate System
 
 mention:
  - MedicalJewel105
 ---
 
-## ~ Relative Coordinates
+## The Coordinate System
+Minecraft stores the locations of blocks and entities in the world using a system of three-dimensional coordinates, each representing a value in a one-dimensional axis. They are stored in the format of X, then Y, and lastly Z. Whether you are placing structures and blocks, or teleporting and summoning entities, you can, and are sometimes required to, put in coordinates. They don't need to always be real values however; you can substitute world coordinates for relative values, either based in world space or local space.
 
-`~` coordinate offsets work simply: they execute commands at current position of entity/block who ran this command or at position of entity on which `execute` command were used.
-~<x+/x-> ~<y+/y-> ~<z+/z->
+![image](https://user-images.githubusercontent.com/64864915/134789891-85644dd7-e30f-4e02-966c-df2bf17a7879.png)
 
-## ^ Relative Coordinates
+_You may already be familiar with coordinates if you've enabled the Show Coordinates world option!_
 
-`^` coordinate offsets detect entity's view angles and execute command there. 
-^<left/right> ^<up/down> ^<forward/backward>
-Usually you want to offset it a bit upwards, due to camera being 1.7 blocks higher than player's feet.
-You might also need to teleport player at his own coordinates facing for example `~90 ~~` to set block correctly.
-So `setblock ^-2^1^3 diamond_block` will work like this:
+## Relative Coordinates (~)
+Relative coordinates are represented using tildes in place of real coordinates, and represent a position that is relative to the world coordinates its located at. You may insert numbers after a tilde to add an offset to the current position. These can be mixed with world coordinates, but cannot be mixed with local coordinates.
+Examples:
+  - ``~ ~ ~``: Current position with no changes.
+  - ``~5 ~-2 ~``: Current position with a 5-block X offset and a negative 2-block Y offset.
 
-![](/assets/images/commands/relative-coordinates/command-result.png)
+## Local Coordinates (^)
+Local coordinates are similar to relative coordinates, but represent a position in local space, where the axes are based off of rotation. They take the form ``^left ^up ^forward``; you can think of this as ~x ~y ~z if your rotation is 0 (facing straight ahead, due south).
 
-## Space in Commands
-
-It doesn't matter if you add ` ` between them or not. Both work same: `fill ~1 ~1 ~1 ~-1 ~-1 ~-1 diamond_block` and `fill ~1~1~1~-1~-1~-1 diamond_block`. First command can be just easier to read.
+Like relative coordinates, you can insert numbers to produce an offset of the current position, in local space. If there is no entity to copy rotation from, the x- and y-rotations are assumed to be 0.
+Examples:
+  - ``^10 ^ ^``: Current position with a 10-block offset to the left.
+  - ``^ ^1.62 ^1``: Current position with a 1.62-block offset upward and a 1-block offset forward.
