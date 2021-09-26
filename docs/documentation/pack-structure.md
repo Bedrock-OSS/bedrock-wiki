@@ -1,5 +1,5 @@
 ---
-title: Behavior Pack Structure
+title: Pack Folder Structure
 show_toc: false
 ---
 
