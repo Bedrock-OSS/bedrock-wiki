@@ -94,6 +94,8 @@ export default {
 				return '🖼️'
 			} else if (type == 'ogg' || type == 'wav' || type == 'mp4' || type == 'fsb') {
 				return '🔊'
+			} else if (type == 'lang') {
+				return '🈵'
 			} else {
 				return '📁'
 			}
