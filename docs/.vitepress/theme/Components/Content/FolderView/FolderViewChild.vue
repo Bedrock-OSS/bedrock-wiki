@@ -12,8 +12,8 @@
 
 		<div :class="{ hidden: collapsed }">
 			<FolderViewChild
-				v-for="node in this.getNodes()"
-				:depth="this.depth + 1"
+				v-for="node in getNodes()"
+				:depth="depth + 1"
 				:nodes="node"
 				:name="node.name"
 			>
@@ -75,8 +75,7 @@ export default {
 			return Object.keys(this.nodes.children).length > 0
 		},
 		getNodes() {
-			let data = Object.values(this.nodes.children);
-			return data;
+      return Object.values(this.nodes.children);
 		},
 		getIcon(path) {
 			if (this.isFolder())
@@ -86,15 +85,15 @@ export default {
 
 			let type = path.split(".").pop()
 
-			if (type == 'js' || type == 'json' || type == 'mcfunction') {
+			if (type === 'js' || type === 'json' || type === 'mcfunction') {
 				return '📝'
-			} else if (type == 'mcstructure') {
+			} else if (type === 'mcstructure') {
 				return '💾'
-			} else if (type == 'png' || type == 'jpg' || type == 'jpeg') {
+			} else if (type === 'png' || type === 'jpg' || type === 'jpeg') {
 				return '🖼️'
-			} else if (type == 'ogg' || type == 'wav' || type == 'mp4' || type == 'fsb') {
+			} else if (type === 'ogg' || type === 'wav' || type === 'mp4' || type === 'fsb') {
 				return '🔊'
-			} else if (type == 'lang') {
+			} else if (type === 'lang') {
 				return '🈵'
 			} else {
 				return '📁'
