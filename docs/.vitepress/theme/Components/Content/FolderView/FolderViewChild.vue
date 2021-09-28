@@ -75,7 +75,7 @@ export default {
 			return Object.keys(this.nodes.children).length > 0
 		},
 		getNodes() {
-      return Object.values(this.nodes.children);
+			return Object.values(this.nodes.children);
 		},
 		getIcon(path) {
 			if (this.isFolder())
