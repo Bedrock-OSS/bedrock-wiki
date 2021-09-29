@@ -204,7 +204,7 @@ module.exports = (async function () {
 				_paq.push(['trackPageView']);
 				_paq.push(['enableLinkTracking']);
 				(function() {
-				  var u="//45.33.198.89/matomo/";
+				  var u="//hopper.bedrock.dev/matomo/";
 				  _paq.push(['setTrackerUrl', u+'matomo.php']);
 				  _paq.push(['setSiteId', '1']);
 				  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
