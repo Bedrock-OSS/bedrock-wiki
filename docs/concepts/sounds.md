@@ -10,23 +10,20 @@ In bedrock, we can add custom sounds without overwriting any vanilla sounds. Thi
 
 ### Folder Structure
 
-There are two main files that we edit when we want to add sounds. Note how `sound_definition` is nested inside `sounds`.
+There are two main files that we edit when we want to add sounds. Note how `sound_definition` is nestedinside `sounds`.
 
-```
-└───example_RP
-    │   sounds.json
-    └───sounds
-            sound_definitions.json
-```
+Sound files themselves are added inside of the `sounds` folder, and can be any of the following formats.
 
-### Sound Formats
+<FolderView :paths="[
 
-The following sound formats are accepted:
+'RP/sounds.json',
+'RP/sounds/sound_definitions.json',
+'RP/sounds/example.wav',
+'RP/sounds/example.ogg',
+'RP/sounds/example.mp3',
+'RP/sounds/example.fsb',
 
--   .ogg (reccomended)
--   .wav
--   .mp3 (Not executable with `/music`!)
--   .fsb (difficult to work with)
+]"></FolderView>
 
 ## sound_definitions.json
 

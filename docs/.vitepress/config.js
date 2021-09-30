@@ -195,6 +195,22 @@ module.exports = (async function () {
 				{},
 				`!function(){try {var d=document.documentElement.classList;d.remove('light','dark');var e=localStorage.getItem('docTheme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);m.media!==t||m.matches?d.add('dark'):d.add('light')}else if(e) d.add(e)}catch(e){}}()`,
 			],
+			[
+				'script',
+				{},
+				`// Matomo analytics
+				var _paq = window._paq = window._paq || [];
+				/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+				_paq.push(['trackPageView']);
+				_paq.push(['enableLinkTracking']);
+				(function() {
+				  var u="//hopper.bedrock.dev/matomo/";
+				  _paq.push(['setTrackerUrl', u+'matomo.php']);
+				  _paq.push(['setSiteId', '1']);
+				  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				  g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+				})();`,
+			],
 		],
 
 		themeConfig: {

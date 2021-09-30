@@ -4,12 +4,14 @@ title: Style Guide
 
 This document will present the officially supported Bedrock-Wiki style guide for addon-creation. This guide aims to promote best practices while creating addons and create a consistent format for everyone to follow.
 
-The style guide is a living, breathing document, which will evolve as addon-creation evolves. Please get in touch if you think something needs to be updated or changed.
+:::tip
+The style guide is a living, breathing document, which will evolve as addon-creation evolves. Please get in touch if you think something needs to be updated or changed!
+:::
 
 ## Folder Structure
 
 -   No spaces in your file paths. `use_underscores`.
--   No `CAPITALS` in your identifiers, file names, or folder names, except at the top level.
+-   No `CAPITALS` in your identifiers, file names, or folder names.
 -   The total character length of any path must not exceed 80 characters (console limitation).
 -   Content folders should use consistent pluralization: Don't mix and match.
 
@@ -28,15 +30,17 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 | Animation Controller | dragon.ac.json             |
 | RP Entity            | dragon.entity.rp.json      |
 | BP Entity            | dragon.entity.bp.json      |
+| Item 1.16.100+       | dragon_tooth.item.json     |
 | BP Item              | dragon_tooth.item.bp.json  |
 | RP Item              | dragon_tooth.item.rp.json  |
-| Render Controller    | dragon.render.json         |
+| Render Controller    | dragon.rc.json             |
 | Loot Table           | dragon.loot.json           |
 | Dragon Saddle        | dragon_saddle.recipe.json  |
 | Spawn Rules          | dragon.spawn.json          |
 | Trade Table          | dragon.trade.json          |
 | Particles            | dragon_magic.particle.json |
 | Texture              | dragon.png                 |
+| Gametest             | dragonTest.js              |
 
 ## Namespaces
 

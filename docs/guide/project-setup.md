@@ -196,7 +196,23 @@ Now to create a testing world to test your new add-on!
 
 ---
 
-## Your progress so far:
+## Your progress so far
+
+**Here is how your project should look, after completing this page:**
+
+Remember that in future, we will represent `com.mojang/development_behavior_packs/guide_RP/` as `RP`, and `com.mojang/development_behavior_packs/guide_BP/` as `BP`.
+
+<FolderView :paths="[
+
+'com.mojang/development_resource_packs/guide_RP/manifest.json',
+'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+
+'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
+'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
+
+]"></FolderView>
 
 **What you've done:**
 

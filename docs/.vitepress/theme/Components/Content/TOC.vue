@@ -37,8 +37,7 @@
 					xl:pt-6
 					z-10
 					xl:w-72 xl:border-r-1 xl:my-0 xl:mt-14
-					border-gray-200
-					dark:border-true-gray-600
+					border-gray
 				"
 			>
 				<a
@@ -63,7 +62,13 @@
 							class="py-0.5"
 						>
 							<a
-								class="text-black dark:text-white no-underline font-bold break-all"
+								class="
+									text-black
+									dark:text-white
+									no-underline
+									font-bold
+									break-all
+								"
 								:href="'#' + header.slug"
 								>{{ header.title }}</a
 							>
@@ -75,33 +80,33 @@
 								>
 									<a
 										class="
-										text-black
-										dark:text-white
-										no-underline
-										break-all
+											text-black
+											dark:text-white
+											no-underline
+											break-all
 										"
 										:href="'#' + child.slug"
 										>{{ child.title }}</a
 									>
-                  <ol v-if="maxTocLevel > 2" class="pl-2">
-                    <li
-                        v-for="grandchild in child.children"
-                        key="grandchild.title"
-                        class="py-0.5"
-                    >
-                      <a
-                          class="
-											text-black
-											dark:text-white
-											no-underline
-											italic
-											break-all
-										"
-                          :href="'#' + grandchild.slug"
-                      >{{ grandchild.title }}</a
-                      >
-                    </li>
-                  </ol>
+									<ol v-if="maxTocLevel > 2" class="pl-2">
+										<li
+											v-for="grandchild in child.children"
+											key="grandchild.title"
+											class="py-0.5"
+										>
+											<a
+												class="
+													text-black
+													dark:text-white
+													no-underline
+													italic
+													break-all
+												"
+												:href="'#' + grandchild.slug"
+												>{{ grandchild.title }}</a
+											>
+										</li>
+									</ol>
 								</li>
 							</ol>
 						</li>
@@ -113,57 +118,57 @@
 </template>
 
 <script setup lang="ts">
-import {useData, useRoute, } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
-const { page, } = useData()
+const { page } = useData()
 
 import { ref, watch } from 'vue'
 
 const getHeaders = function () {
 	let grouped = []
 	let lastHeader = null
-  let lastSubHeader = null
-  if (page.value.headers) {
+	let lastSubHeader = null
+	if (page.value.headers) {
 		for (const header of page.value.headers) {
 			if (header.level === 1) {
 				lastHeader = header
 				header.children = []
 				grouped.push(header)
 			} else if (header.level === 2) {
-			  lastSubHeader = header;
-			  header.children = [];
-			  if (!lastHeader) {
-          lastHeader = {
-            slug: '',
-            title: '',
-            children: []
-          }
-          grouped.push(lastHeader);
-        }
-        lastHeader.children.push(header)
+				lastSubHeader = header
+				header.children = []
+				if (!lastHeader) {
+					lastHeader = {
+						slug: '',
+						title: '',
+						children: [],
+					}
+					grouped.push(lastHeader)
+				}
+				lastHeader.children.push(header)
 			} else if (header.level === 3) {
-        if (!lastHeader) {
-          lastHeader = {
-            slug: '',
-            title: '',
-            children: []
-          }
-          grouped.push(lastHeader);
-        }
-        if (!lastSubHeader) {
-          lastSubHeader = {
-            slug: '',
-            title: '',
-            children: []
-          }
-          lastHeader.children.push(lastSubHeader);
-        }
-        lastSubHeader.children.push(header)
-      }
+				if (!lastHeader) {
+					lastHeader = {
+						slug: '',
+						title: '',
+						children: [],
+					}
+					grouped.push(lastHeader)
+				}
+				if (!lastSubHeader) {
+					lastSubHeader = {
+						slug: '',
+						title: '',
+						children: [],
+					}
+					lastHeader.children.push(lastSubHeader)
+				}
+				lastSubHeader.children.push(header)
+			}
 		}
 	}
-//   console.log(grouped);
-  return grouped
+	//   console.log(grouped);
+	return grouped
 }
 
 let headers = ref(getHeaders())
@@ -172,7 +177,7 @@ let maxTocLevel = ref(page.value.frontmatter.max_toc_level ?? 3)
 watch(page, () => {
 	headers.value = getHeaders()
 	title.value = page.value.title
-  maxTocLevel.value = page.value.frontmatter.max_toc_level ?? 3
+	maxTocLevel.value = page.value.frontmatter.max_toc_level ?? 3
 })
 </script>
 
