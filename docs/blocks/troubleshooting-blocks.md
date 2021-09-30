@@ -90,7 +90,7 @@ Next, navigate to your `terrain_texture.json`. Ensure that it is properly named.
 }
 ```
 
-If you followed this properly, your 1.10 block should now have a texture.
+If you followed this properly, your 1.10 block should now have correct texture.
 
 ## 1.16.100 Blocks
 
@@ -213,7 +213,7 @@ Grass like block example:
 }
 ```
 
-If you followed this properly, your 1.16.100 block should now have a texture.
+If you followed this properly, your 1.16.100 block should now have correct texture.
 
 ## 2.0.0 - My Block Looks Like Dirt!
 
