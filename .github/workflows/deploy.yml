@@ -31,6 +31,7 @@ jobs:
         with:
           repository: 'Bedrock-OSS/discord-bully'
           path: './discord-bully'
+          ref: 'master'
       - name: Bully someone into fixing it
         if: ${{ failure() }}
         env:
