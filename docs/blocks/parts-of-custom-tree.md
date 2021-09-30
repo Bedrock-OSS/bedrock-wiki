@@ -727,7 +727,7 @@ Leaves default loot
 
 This loot will spawn log block
 
-<CodeHeader>BP/loot_tables/blocks/custom_leaves_block.json</CodeHeader>
+<CodeHeader>BP/loot_tables/blocks/custom_log_block.json</CodeHeader>
 
 ```json
 {
@@ -884,7 +884,7 @@ Make geometry for sapling:
 
 Make item_texture file
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
 {
@@ -927,6 +927,42 @@ Add sounds to blocks
 
 What you have now:
 Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Structure
+
+
+<FolderView :paths="[
+
+'BP/manifest.json',
+'BP/pack_icon.png',
+
+'BP/blocks/custom_leaves.json',
+'BP/blocks/custom_log.json',
+'BP/blocks/fake_leaves.json',
+'BP/blocks/custom_stripped_log.json',
+'BP/blocks/custom_sapling.json',
+
+'BP/items/custom_sapling_placer.json',
+
+'BP/loot_tables/blocks/custom_leaves_block.json',
+'BP/loot_tables/blocks/custom_leaves_loot.json',
+'BP/loot_tables/blocks/custom_log_block.json',
+'BP/loot_tables/blocks/custom_stripped_log_block.json',
+'BP/loot_tables/blocks/custom_sapling_placer.json',
+
+'BP/structures/custom_stripped_log1.mcstructure',
+'BP/structures/custom_stripped_log2.mcstructure',
+'BP/structures/custom_tree.mcstructure',
+
+'RP/manifest.json',
+'RP/pack_icon.png',
+'RP/blocks.json',
+
+'RP/texts/en_US.lang',
+
+'RP/textures/terrain_texture.json',
+
+'RP/models/blocks/custom_sapling.geo.json',
+'RP/textures/item_texture.json'
+]"></FolderView>
 
 ![](/assets/images/blocks/parts-of-custom-tree/result.png)
 

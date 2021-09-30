@@ -13,32 +13,30 @@ Here is a tutorial on making a solid Hitbox in four different ways, with `runtim
 
 Those components below are required to make the entity act as a block, and also don't add the `"minecraft:physics": {}` component in there, because this will make your entity fall or have a collision with some blocks like water or lava.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/your_entity.json#minecraft:entity/components</CodeHeader>
 
 ```json
-{
-	"minecraft:knockback_resistance": {
-		//Knockback resistance is needed to make it not be Knocked off by an entity.
-		"value": 1
-	},
-	"minecraft:pushable": {
-		//Tells if the entity can be pushed or not.
-		"is_pushable": false,
-		"is_pushable_by_piston": true
-	},
-	"minecraft:push_through": {
-		//Sets the distance through which the entity can push through.
-		"value": 1
-	},
-	"minecraft:damage_sensor": {
-		//Makes it invincible.
-		"triggers": [
-			{
-				"deals_damage": false,
-				"cause": "all"
-			}
-		]
-	}
+"minecraft:knockback_resistance": {
+	//Knockback resistance is needed to make it not be Knocked off by an entity.
+	"value": 1
+},
+"minecraft:pushable": {
+	//Tells if the entity can be pushed or not.
+	"is_pushable": false,
+	"is_pushable_by_piston": true
+},
+"minecraft:push_through": {
+	//Sets the distance through which the entity can push through.
+	"value": 1
+},
+"minecraft:damage_sensor": {
+	//Makes it invincible.
+	"triggers": [
+		{
+			"deals_damage": false,
+			"cause": "all"
+		}
+	]
 }
 ```
 
@@ -46,13 +44,15 @@ Those components below are required to make the entity act as a block, and also 
 
 To align your entity in rotation, you will need some Math.
 
+<CodeHeader></CodeHeader>
+
 ```json
 "rotation": [ 0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0 ]
 ```
 
-Apply that code on the core folder(that has all the other groups inside) of your model in an animation, make sure the pivot point is 0 in the X and Z Axis, to avoid visual bugs. And also you don't need to add components like:
+Apply that code on the core folder (that has all the other groups inside) of your model in an animation, make sure the pivot point is 0 in the X and Z Axis, to avoid visual bugs. And also you don't need to add components like:
 
-`"minecraft:behavior.look_at_entity": {} "minecraft:behavior.look_at_player": {} "minecraft:behavior.look_at_target": {} ...`
+`"minecraft:behavior.look_at_entity": {}"minecraft:behavior.look_at_player": {} "minecraft:behavior.look_at_target": {} ...`
 
 The reason why is because this will change the Target Y Rotation, causing it to move the Body Y Rotation so the Model will move. Don't add walk components too.
 
@@ -124,8 +124,8 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 			"wiki:event": {
 				"run_command": {
 					"command": [
-						"setblock ~~~ air 0", //This will despawn the block
-						"summon wiki:dummy_align" //And this spawn the dummy entity.
+						"setblock ~~~ air 0", //This will remove the block
+						"summon wiki:dummy_align" //And this will spawn the dummy entity.
 					]
 				}
 			}
@@ -186,7 +186,7 @@ Vanilla blocks have a cracking texture that appears when you break them. Here I 
 
 First, we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/entity/your_entity.json#description</CodeHeader>
 
 ```json
 "textures": {
@@ -206,7 +206,7 @@ First, we have to add some textures to your .entity file, make sure that you are
 
 And add a geometry that has to inflate 0.1 in all their cubes to avoid Z-Fighting.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/entity/your_entity.json#description</CodeHeader>
 
 ```json
 "geometry": {
@@ -215,9 +215,9 @@ And add a geometry that has to inflate 0.1 in all their cubes to avoid Z-Fightin
 }
 ```
 
-And now we have to add a new render controller. This is going to select different textures between the destroys stages. (Remember not to replace your actual controller, you need two controllers, the first one is just the one that adds model, textures, and material to your normal entity, and the second one is this one that defines the cracking texture)
+And now we have to add a new render controller. This is going to select different textures between the destroy stages. (Remember not to replace your actual controller, you need two controllers, the first one is just the one that adds model, textures, and material to your normal entity, and the second one is this one that defines the cracking texture)
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/render_controllers/my_entity.json</CodeHeader>
 
 ```json
 "controller.render.broken": {

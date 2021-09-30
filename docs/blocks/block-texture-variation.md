@@ -42,7 +42,7 @@ This is an example of how to create texture variations for the dirt block with t
 
 ## Example of weighted dirt amounts
 
-After completing the example above, if you want to adjust the weights, edit the `terrain_textures.json` to include a weight field as shown below.
+After using the example above, you might want to adjust the weights, edit the `terrain_textures.json` to include a weight field as shown below.
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 

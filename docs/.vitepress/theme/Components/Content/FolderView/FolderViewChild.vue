@@ -75,7 +75,7 @@ export default {
 			return Object.keys(this.nodes.children).length > 0
 		},
 		getNodes() {
-      return Object.values(this.nodes.children);
+			return Object.values(this.nodes.children);
 		},
 		getIcon(path) {
 			if (this.isFolder())
@@ -91,7 +91,7 @@ export default {
 				return '💾'
 			} else if (type === 'png' || type === 'jpg' || type === 'jpeg') {
 				return '🖼️'
-			} else if (type === 'ogg' || type === 'wav' || type === 'mp4' || type === 'fsb') {
+			} else if (type === 'ogg' || type === 'wav' || type === 'mp3' || type === 'fsb') {
 				return '🔊'
 			} else if (type === 'lang') {
 				return '🈵'
