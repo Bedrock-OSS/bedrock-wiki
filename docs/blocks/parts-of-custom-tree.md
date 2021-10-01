@@ -239,7 +239,7 @@ This method requires PC.
             "minecraft:on_player_placing": {
                 "event": "wiki:set_facing_direction"
             }
-            //Sets log rotation on player placing
+            //Sets log rotation on player placing 
         },
         "events": {
             "wiki:update_leaves": {
