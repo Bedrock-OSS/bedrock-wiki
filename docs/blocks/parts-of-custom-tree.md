@@ -21,8 +21,8 @@ Vanilla-like custom trees are possible. Make their parts by following this tutor
     - Saplings can be bonemealed
 
 - Issues:
-    - If leaves are broken using shears, they can drop normal loot too
     - Due to some Minecraft bugs leaves will decay after reloading chunks
+    - If you made a structure with these blocks, it will crash the game when generated using features. Minecrfat bug.
 
 :::tip
 To make leaves decay, you need to use `/fill` command that will replace custom_leaves with custom_leaves. It is needed for switching decaying to true because on player placing it sets decaying to false.
@@ -76,6 +76,11 @@ This method requires PC.
             }
         ],
         "components":{
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.leaves"
+				//Don't add this component for fake leaves, they should be hidden
+			},
             "minecraft:destroy_time":0.35,
             "minecraft:breakonpush":true,
             "minecraft:material_instances":{
@@ -90,16 +95,15 @@ This method requires PC.
 				"flame_odds": 50
 			},
             "minecraft:unit_cube":{},
-            "minecraft:loot":"loot_tables/blocks/custom_leaves_loot.json",
-            //Basic loot
+			"minecraft:loot": "loot_tables/empty.json",
+			//It is needed to prevent this block from dropping when just destroyed 
             "minecraft:on_player_placing":{
                 "event":"wiki:set_property_false"
             },
             //On player placing runs event that sets decaying property to false
             "minecraft:on_player_destroyed":{
-                "condition":"query.get_equipped_item_name(0) == 'shears'",
-                "event":"wiki:spawn_loot"
-                //Spawns loot (leaves block)
+                "event":"wiki:on_destroyed"
+                //Triggers event that spawns different loot
             }
         },
         "events":{
@@ -115,10 +119,21 @@ This method requires PC.
                 }
             },
             //Sets decaying to true
-            "wiki:spawn_loot":{
-                "spawn_loot":{
-                    "table":"loot_tables/blocks/custom_leaves_block.json"
-                }
+            "wiki:on_destroyed":{
+				"sequence":[
+					{
+						"condition": "query.get_equipped_item_name == 'shears'",
+						"spawn_loot":{
+							"table":"loot_tables/blocks/custom_leaves_block.json"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name != 'shears'",
+						"spawn_loot":{
+							"table":"loot_tables/blocks/custom_leaves_loot.json"
+						}
+					}
+				]
             },
             //Spawns leaves block
             "wiki:decay":{
@@ -192,6 +207,10 @@ This method requires PC.
             }
         ],
         "components": {
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.log"
+			},
             "minecraft:material_instances": {
                 "*": {
                     "texture": "custom_log",
@@ -310,7 +329,7 @@ This method requires PC.
 
 ## Making Fake Leaves
 
-You can replace block with itself only one time, then it doesn't work. That is why fake leaves are needed.
+You can replace block with itself only one time, then it wont work. That is why fake leaves are needed.
 Log commands will update leaves without stopping:
 `fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:fake_leaves 0 replace wiki:custom_leaves`
 `fill ~3 ~3 ~3 ~-3 ~-3 ~-3 wiki:custom_leaves 0 replace wiki:fake_leaves`
@@ -404,6 +423,10 @@ Here all components are the same
             }
         ],
         "components": {
+            "minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.log"
+			},
             "minecraft:material_instances": {
                 "*": {
                     "texture": "custom_stripped_log",
@@ -671,22 +694,22 @@ Here all components are the same
 
 ## Making Loot Tables
 
-This loot will spawn leaves block
-
 <Spoiler title="Code">
 
 <CodeHeader>BP/loot_tables/blocks/custom_leaves_block.json</CodeHeader>
 
+This loot will spawn leaves block (when you breaak it using shears)
+
 ```json
 {
-    "pools": [
+    "pools":[
         {
-            "rolls": 1,
-            "entries": [
+            "rolls":1,
+            "entries":[
                 {
-                    "type": "item",
-                    "name": "wiki:custom_leaves",
-                    "weight": 1
+                    "type":"item",
+                    "name":"wiki:custom_leaves",
+                    "weight":1
                 }
             ]
         }
@@ -711,7 +734,7 @@ Leaves default loot
                 },
                 {
                     "type": "item",
-                    "name": "wiki:custom_sapling",
+                    "name": "wiki:custom_sapling_placer",
                     "weight": 5
                 },
                 {
@@ -796,13 +819,13 @@ Now you need to get custom_stripped_log1 and custom_stripped_log2 structures. Ju
 
 ![](/assets/images/blocks/parts-of-custom-tree/export_structures.png)
 
-Build some trees too! (Don't forget to update leaves using /fill command)
+Build some trees too! (Don't forget to update leaves using `/fill` command)
 
 ![](/assets/images/blocks/parts-of-custom-tree/export_tree.png)
 
 ## Resource Pack
 
-It is time to make a resource pack!
+Now it is time to make a resource pack!
 
 Make translations for blocks:
 
@@ -813,7 +836,7 @@ tile.wiki:custom_log.name=Custom Log
 tile.wiki:custom_leaves.name=Custom leaves
 tile.wiki:custom_stripped_log.name=Custom Stripped Log
 tile.wiki:custom_sapling.name=Custom Sapling
-item.wiki:custom_sapling_placer.name=Custom Sapling
+item.wiki:custom_sapling_placer=Custom Sapling
 tile.wiki:fake_leaves.name=Custom Leaves
 ```
 
@@ -968,6 +991,6 @@ Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Stru
 
 ## Download Example Pack
 
-[RP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree_RP.zip)
+[RP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_rp.zip)
 
-[BP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/PoCT_BP.zip)
+[BP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_bp.zip)
