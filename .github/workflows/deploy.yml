@@ -25,22 +25,9 @@ jobs:
         with:
           branch: generated
           folder: docs/.vitepress/dist
-      - name: Create folder for bully bot
-        if: ${{ failure() }}
-        run: mkdir discord-bully
-      - name: Get bully bot
-        if: ${{ failure() }}
-        uses: actions/checkout@v1
-        with:
-          repository: 'Bedrock-OSS/discord-bully'
-          path: 'discord-bully'
-          ref: 'master'
       - name: Bully someone into fixing it
         if: ${{ failure() }}
-        env:
-          WEBHOOK_ID: ${{ secrets.WEBHOOK_ID }}
-          WEBHOOK_TOKEN: ${{ secrets.WEBHOOK_TOKEN }}
-        working-directory: 'discord-bully'
-        run: |
-          npm install
-          npm run run
+        uses: Bedrock-OSS/discord-bully@v1.0.0
+        with:
+          webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
+          emoji: <:PE_PandaBonk:885395101877166110>
