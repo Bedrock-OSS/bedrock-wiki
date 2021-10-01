@@ -32,7 +32,7 @@ jobs:
           webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
           emoji: <:PE_PandaBonk:885395101877166110>
           title: 'Wiki deployment failed!'
-          usermap: >
+          usermap: |-
             {
               'stirante':'210798002808422400',
               'SirLich': '97792771619827712',
