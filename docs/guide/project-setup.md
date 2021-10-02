@@ -161,7 +161,7 @@ pack.name=Wiki Behavior Pack
 pack.description=My First Addon
 ```
 
-<CodeHeader>BP/texts/languages.json</CodeHeader>
+<CodeHeader>RP/texts/languages.json</CodeHeader>
 
 ```json
 [
