@@ -3,7 +3,7 @@ title: Vanilla Usage Spawn Rules
 ---
 
 # Spawn Rules
-This documentation is stripped from the vanilla files, using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester).
+This documentation is stripped from the vanilla files, using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester)
 
 # Table of contents
  - [minecraft:biome_filter](#minecraftbiome_filter)
