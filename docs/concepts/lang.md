@@ -17,6 +17,7 @@ Lang-codes can be used in any of the following places:
 -   pack description
 -   entity name
 -   item name
+-   block name
 -   books
 -   signs
 -   tellraw commands

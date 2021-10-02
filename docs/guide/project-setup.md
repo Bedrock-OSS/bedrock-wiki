@@ -161,6 +161,14 @@ pack.name=Wiki Behavior Pack
 pack.description=My First Addon
 ```
 
+<CodeHeader>BP/texts/languages.json</CodeHeader>
+
+```json
+[
+    "en_US"
+]
+```
+
 ## Checking your Work
 
 If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](./troubleshooting)
