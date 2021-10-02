@@ -205,7 +205,7 @@ module.exports = (async function () {
 				_paq.push(['enableLinkTracking']);
 				(function() {
 				  var u="//hopper.bedrock.dev/wikihopper/";
-				  _paq.push(['setTrackerUrl', u+'matomo.php']);
+				  _paq.push(['setTrackerUrl', u+'hopper.php']);
 				  _paq.push(['setSiteId', '1']);
 				  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 				  g.async=true; g.src=u+'hopper.js'; s.parentNode.insertBefore(g,s);
