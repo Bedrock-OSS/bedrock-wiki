@@ -70,12 +70,13 @@ Important links have a ⭐.
 -   [Loot and Trade Table Functions](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
 -   [Docs Graveyard (removed components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 
-## Vanilla Behavior & Resource Packs
+## Behavior & Resource Packs
 
 -   ⭐ [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
 -   ⭐ [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
--   [Beta RP](https://aka.ms/MinecraftBetaResources)
--   [Beta BP](https://aka.ms/MinecraftBetaBehaviors)
+-   [Vanilla Resource Pack (BETA)](https://aka.ms/MinecraftBetaResources)
+-   [Vanilla Behavior Pack (BETA)](https://aka.ms/MinecraftBetaBehaviors)
+-   [Pack Archive (old versions)](https://bedrock.dev/packs)
 
 ## Scripting Resources
 
