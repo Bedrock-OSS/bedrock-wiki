@@ -42,6 +42,7 @@ Important links have a ⭐.
 -   [Chunker (World Converter)](https://chunker.app/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
+-   [Resource Pack Converter (for Android)](https://play.google.com/store/apps/details?id=net.theluckycoder.resourcepackconverter)
 
 ## JSON Generators
 
