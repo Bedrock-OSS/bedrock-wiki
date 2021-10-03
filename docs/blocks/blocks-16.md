@@ -1,5 +1,5 @@
 ---
-title: 'Blocks 1.16+'
+title: 'Blocks 1.16.100+'
 tags:
     - experimental
 nav_order: 2
@@ -8,7 +8,7 @@ nav_order: 2
 Better documentation on the new block format introduced in the Minecraft Beta 1.16.100.
 
 :::warning
-This document covers experimental features, for 1.16 format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
+This document covers experimental features, for 1.16.100+ format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
 :::
 
 ## Block Properties
@@ -838,12 +838,12 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
 -   Following components cannot be larger than 16x16x16:
     -   `minecraft:entity_collision`
     -   `minecraft:pick_collision`
--   Execute commands cannot be run on blocks.
--   Custom Blocks will not be mined any faster/slower with vanilla tools.
+-   `/execute` commands cannot be run on blocks.
+-   Custom blocks' tags are ignored by vanilla items.
 -   Block faces will become dark if buried in another block.
 -   Blocks will always be dropped with `Silk Touch` enchantment.
--   Block Identifiers cannot match Vanilla blocks, even ignoring namespace.
+-   Block identifiers cannot match vanilla blocks, even ignoring namespace.
 -   Following components requires `entity_collision` to be 4 or higher on the y-axis:
-    -   `on_step_on`
-    -   `on_step_off`
-    -   `on_fall_on`
+    -   `minecraft:on_step_on`
+    -   `minecraft:on_step_off`
+    -   `minecraft:on_fall_on`
