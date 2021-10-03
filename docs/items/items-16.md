@@ -1,14 +1,14 @@
 ---
-title: Items 1.16+
+title: Items 1.16.100+
 tags:
     - experimental
 nav_order: 2
 ---
 
-Better documentation on the new item format introduced in the 1.16.100.56 Minecraft beta
+Better documentation on the new item format introduced in the 1.16.100.56 Minecraft beta.
 
 :::warning
-This document covers experimental features, for 1.16 format version items. If you would like to learn about stable items, [you can do so here](/items/items-intro).
+This document covers experimental features, for 1.16.100+ format version items. If you would like to learn about stable items, [you can do so here](/items/items-intro).
 :::
 
 ## Item Events
