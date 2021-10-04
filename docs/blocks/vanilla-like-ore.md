@@ -18,12 +18,7 @@ Features:
 
 Issues:
 - When the block is mined with a pickaxe enchanted with Silk Touch, it will drop the loot twice
-- XP reward structure doesn't load under y=0 (Caves & Cliffs) due to a _Minecraft_ bug
 - Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
-
-## Preparation
-
-For spawning XP orbs, a structure with those from lapis lazuli ore will be loaded in. You can [download it](https://wiki.bedrock.dev/assets/packs/tutorials/vanilla-like-ore/my_xp_structure.mcstructure) if you choose to use it, and save it in `BP/structures/`.
 
 ## Block behavior
 
@@ -41,7 +36,15 @@ The following block behavior can be used as a template. Don't forget to set the 
         "components": {
             //Basic components
             "minecraft:destroy_time": 2.5,
+            "minecraft:block_light_absorption": 15,
             "minecraft:explosion_resistance": 3,
+            "minecraft:unit_cube": {},
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "silver_ore",
+                    "render_method": "opaque"
+                }
+            },
             "minecraft:on_player_destroyed": {
                 "event": "block_destroyed_correctly", //The event runs only if the block was destroyed by a player and the conditions were met
                 "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')" //The condition will return true if the player breaking the block is holding an item with the `minecraft:is_pickaxe` tag in their main hand
@@ -55,7 +58,7 @@ The following block behavior can be used as a template. Don't forget to set the 
                 },
                 "run_command": {
                     "command": [
-                        "structure load my_xp_structure ~ ~ ~" //XP orbs can't be summoned via `/summon` due to a Minecraft bug, so a structure is used instead
+                        "summon xp_orb"
                     ]
                 }
             }
