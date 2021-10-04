@@ -55,7 +55,7 @@ Software will be marked as discontinued after roughly one month of inactivity.
 
 ## Discontinued Software
 
-### C++]
+### C++
 
 -   [Cenisys](https://github.com/iTXTech/Cenisys)
 -   [CenisysPro](https://github.com/GenisysPro/CenisysPro)
