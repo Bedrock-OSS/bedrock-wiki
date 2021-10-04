@@ -1,5 +1,5 @@
 ---
-title: Vanilla Like Ore
+title: Vanilla-Like Ore
 
 tags:
  - experimental
@@ -10,25 +10,24 @@ mention:
 
 ## Features
 
-Custom ores are really easy to make by adding `"minecraft:loot"` component but they aren't vanilla-like.
-In this small tutorial you will learn how to make vanilla-like custom ore.
+One problem encountered when creating custom ore blocks is the loot. The `minecraft:loot` component will drop the items given regardless of the tool used. Using `minecraft:on_player_destroyed` and events, the loot behavior of vanilla ore can be simulated.
 
 Features:
-
-- Can be mined using pickaxes only (vanilla ones included)
-- Drops XP reward
+- Can be mined using any given item (this tutorial covers pickaxes)
+- Drops XP reward upon mining
 
 Issues:
-
-- When block mined using pickaxe with silk touch enchant, it will drop double loot
-
-- Xp reward structure doesn't load under y=0 (Caves & Cliffs) - Minecraft bug
+- When the block is mined with a pickaxe enchanted with Silk Touch, it will drop the loot twice
+- XP reward structure doesn't load under y=0 (Caves & Cliffs) due to a _Minecraft_ bug
+- Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
 
 ## Preparation
 
-This structure will be needed later, [download it](https://wiki.bedrock.dev/assets/packs/tutorials/vanilla-like-ore/my_xp_structure.mcstructure)
+For spawning XP orbs, a structure with those from lapis lazuli ore will be loaded in. You can [download it](https://wiki.bedrock.dev/assets/packs/tutorials/vanilla-like-ore/my_xp_structure.mcstructure) if you choose to use it, and save it in `BP/structures/`.
 
-## Making block
+## Block behavior
+
+The following block behavior can be used as a template. Don't forget to set the block's texture using `blocks.json` and `terrain_texture.json`.
 
 <CodeHeader>BP/blocks/silver_ore.json</CodeHeader>
 
@@ -37,54 +36,43 @@ This structure will be needed later, [download it](https://wiki.bedrock.dev/asse
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "tut:silver_ore",
-            "is_experimental": false
+            "identifier": "tut:silver_ore"
         },
         "components": {
-            //Some basic components:
+            //Basic components
             "minecraft:destroy_time": 2.5,
-            "minecraft:block_light_absorption": 15,
-            "minecraft:explosion_resistance": 1,
-            "minecraft:unit_cube": {},
-            "minecraft:material_instances": {
-                "*": {
-                    "texture": "silver_ore",
-                    "render_method": "opaque"
-                }
-            },
+            "minecraft:explosion_resistance": 3,
             "minecraft:on_player_destroyed": {
-                "event": "block_destroyed_correctly",
-                //This event happens only if block was destroyed by player and conditions met
-                "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')"
-                //This condition will turn (1.0) if player was holding item with "tag:minecraft:is_pickaxe" component
-                //If you want to make your ore don't drop loot when destroyed using wooden pickaxe, you can add  && query.get_equipped_item_name('main_hand') != 'wooden_pickaxe' to your condition
+                "event": "block_destroyed_correctly", //The event runs only if the block was destroyed by a player and the conditions were met
+                "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')" //The condition will return true if the player breaking the block is holding an item with the `minecraft:is_pickaxe` tag in their main hand
             },
-            "minecraft:loot": "loot_tables/empty.json"
-            //This component is needed to make block drop nothing when broken and conditions doesn't met
+            "minecraft:loot": "loot_tables/empty.json" //The component is set to not drop loot, as the intended loot is handled via event; if the correct tool isn't used, then the event isn't run, and nothing drops
         },
         "events": {
             "block_destroyed_correctly": {
-                "sequence": [
-                    //Sequence is needed to add more than one elements
-                    {
-                        "spawn_loot": {
-                            //This part will spawn block's loot
-                            "table": "loot_tables/blocks/silver_ore.json"
-                            //Put path to your loot table here
-                        }
-                    },
-                    {
-                        "run_command": {
-                            "command": [
-                                "structure load my_xp_structure ~~~"
-                                //You can't summon xp_orb due to some bugs so you need to load structure with them.
-                                //This one contains xp orbs from lapis ore, download it from above
-                            ]
-                        }
-                    }
-                ]
+                "spawn_loot": {
+                    "table": "loot_tables/blocks/silver_ore.json" //"spawn_loot" spawns the intended loot; replace the value of "table" with the file path of the block's loot table
+                },
+                "run_command": {
+                    "command": [
+                        "structure load my_xp_structure ~ ~ ~" //XP orbs can't be summoned via `/summon` due to a Minecraft bug, so a structure is used instead
+                    ]
+                }
             }
         }
+    }
+}
+```
+
+### Excluding valid tools
+
+By extending the MoLang condition in `minecraft:on_player_destroyed`, specific items with the `minecraft:is_pickaxe` tag can be excluded. For example, excluding the wooden pickaxe:
+
+```json
+{
+    "minecraft:on_player_destroyed": {
+        "event": "block_destroyed_correctly",
+        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe') && query.get_equipped_item_name(0) != 'wooden_pickaxe'"
     }
 }
 ```
