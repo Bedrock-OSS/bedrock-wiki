@@ -118,8 +118,9 @@ function getSidebar() {
 	let docsPath = path.join(process.cwd(), 'docs')
 	return generateSidebar(docsPath, docsPath)
 }
-
+let attempts = 0
 const req = async (url2) => {
+	attempts++
 	if (!process.env.GITHUB_TOKEN)
 		return { message: 'Unable to get GITHUB_TOKEN' }
 	res = await fetch(
@@ -139,12 +140,17 @@ const getAuthors = async () => {
 	files = files.tree
 		.filter(({ path }) => path.match('docs/(?!public|.vite.*$).*.md'))
 		.map((e) => e.path)
-
+	console.log("Getting data for the files " + files)
 	let contributors = {}
 	let authors = []
 	await new Promise((resolve, reject) => {
 		for (let i = 0; i < files.length; i++) {
 			req(`commits?path=${files[i]}`).then((commit) => {
+				if(!commit[0]) {
+					// Github token rate limit?
+					console.log(`GitHub token rate limit reached after ${attempts} requests`)
+					return commit
+				}
 				if (!commit[0].author) return commit
 				contributors[files[i]] = commit
 					.map((e) => e.author)
