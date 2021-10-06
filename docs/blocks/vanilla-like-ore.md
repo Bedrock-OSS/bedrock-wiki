@@ -46,7 +46,7 @@ The following block behavior can be used as a template. Don't forget to set the 
                 }
             },
             "minecraft:creative_category": {
-				"category": "nature",
+	            "category": "nature",
 				"group": "itemGroup.name.ore"
 			},
             "minecraft:on_player_destroyed": {
