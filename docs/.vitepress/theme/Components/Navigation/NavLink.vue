@@ -1,7 +1,7 @@
 <!--Volar complains here but everything is working fine-->
 <template>
 	<a
-		class="item flex flex-nowrap items-center space-x-2 px-2 rounded-md"
+		class="item flex flex-nowrap items-center px-2 rounded-md"
 		v-bind="linkProps"
 		@click="onNavigation"
 	>
@@ -9,24 +9,18 @@
 			props.item.prefix
 		}}</span>
 
-		<div class="flex-1 text-sm">{{ props.item.text }}</div>
+		<div class="text-sm">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
 
-		<span v-for="tag in props.item.tags">
-			<p v-if="tag == 'guide'" class="green label">GUIDE</p>
-			<p
-				v-if="tag == 'exp' || tag == 'experimental'"
-				class="orange label"
-			>
-				EXP
-			</p>
-			<p v-if="tag == 'beta'" class="red label">BETA</p>
-			<p v-if="tag == 'help'" class="blue label">HELP</p>
+		<span class="ml-auto space-x-2" v-if="!!props.item.tags?.length">
+			<NavLinkTag v-for="tag in props.item.tags" :tag="tag" />
 		</span>
 	</a>
 </template>
 
 <script setup lang="ts">
+import NavLinkTag from './NavLinkTag.vue'
+
 import ExternalIcon from '../Icons/ExternalIcon.vue'
 import GuideIcon from '../Icons/GuideIcon.vue'
 import WarningIcon from '../Icons/WarningIcon.vue'
