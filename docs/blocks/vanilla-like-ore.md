@@ -58,7 +58,7 @@ The following block behavior can be used as a template. Don't forget to set the 
                 },
                 "run_command": {
                     "command": [
-                        "summon xp_orb"
+                        "structure_load my_xp_structure ~~~" //You can download structure with saved xp orbes lower
                     ]
                 }
             }
@@ -79,6 +79,10 @@ By extending the MoLang condition in `minecraft:on_player_destroyed`, specific i
     }
 }
 ```
+
+## Download .mcstructure
+
+[Link](https://wiki.bedrock.dev/assets/packs/tutorials/vanilla-like-ore/my_xp_structure.mcstructure)
 
 ## Result
 

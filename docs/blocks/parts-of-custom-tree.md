@@ -991,6 +991,6 @@ Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Stru
 
 ## Download Example Pack
 
-[RP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_rp.zip)
+[RP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_rp.mcpack)
 
-[BP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_bp.zip)
+[BP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_bp.mcpack)
