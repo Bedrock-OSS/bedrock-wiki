@@ -6,7 +6,9 @@ title: Projectiles
 
 This page intends to document all different fields you can use inside `minecraft:projectile` entity behavior component.
 
+:::warning
 _Disclaimer: this component has been mostly documented based on projectiles found in the game or reverse engineering the game._
+:::
 
 | Name                      | Type             | Default Value | Description                                                                                                                                       |
 | ------------------------- | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
