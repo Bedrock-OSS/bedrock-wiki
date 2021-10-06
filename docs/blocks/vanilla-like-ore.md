@@ -28,7 +28,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 
 ```json
 {
-    "format_version": "1.16.100",
+    "format_version": "1.17.20",
     "minecraft:block": {
         "description": {
             "identifier": "tut:silver_ore"
@@ -45,6 +45,10 @@ The following block behavior can be used as a template. Don't forget to set the 
                     "render_method": "opaque"
                 }
             },
+            "minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.ore"
+			},
             "minecraft:on_player_destroyed": {
                 "event": "block_destroyed_correctly", //The event runs only if the block was destroyed by a player and the conditions were met
                 "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')" //The condition will return true if the player breaking the block is holding an item with the `minecraft:is_pickaxe` tag in their main hand
