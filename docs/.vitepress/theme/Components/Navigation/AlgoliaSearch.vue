@@ -165,7 +165,7 @@ function initialize(userOptions: any) {
 
 	/* modal */
 	--docsearch-modal-width: 560px;
-	--docsearch-modal-height: 600px;
+	--docsearch-modal-height: 550px;
 	--docsearch-modal-background: rgb(245, 246, 247);
 	--docsearch-modal-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.5),
 		0 3px 8px 0 rgba(85, 90, 100, 1);
