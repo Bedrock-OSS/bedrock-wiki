@@ -1,0 +1,1 @@
+import{o as t,c as e}from"./404.md.7cc8bd35.js";const o='{"title":"Blocks","description":"","frontmatter":{"title":"Blocks"},"relativePath":"blocks/index.md","lastUpdated":1634232744594}',r={};r.render=function(o,r,d,c,i,s){return t(),e("div")};export default r;export{o as __pageData};
