@@ -103,7 +103,7 @@ After you run those commands in a repeating command block, you should control it
 or u may use a simple animation controller and link it too the entity, so it always plays the function.
 
 You May use this instead of a repeating command block,link this too the entity or the player.
-It's recommended that u link it to the player.
+It's recommended that you link it to the player.
 
 <CodeHeader></CodeHeader>
 
