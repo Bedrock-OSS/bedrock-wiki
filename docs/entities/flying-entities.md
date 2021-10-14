@@ -102,7 +102,7 @@ execute @a[rxm=35,rx=90] ~~~ effect @e[type=wiki:dragon,r=1] clear
 After you run those commands in a repeating command block, you should control its vertical movement by looking up and down.
 or u may use a simple animation controller and link it too the entity, so it always plays the function.
 
-You May use this instead of a repeating command block,link this too the entity or the player.
+You may use this instead of a repeating command block,link this to the entity or the player.
 It's recommended that you link it to the player.
 
 <CodeHeader></CodeHeader>
