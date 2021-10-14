@@ -100,6 +100,45 @@ execute @a[rxm=35,rx=90] ~~~ effect @e[type=wiki:dragon,r=1] clear
 **Depending on how big your entity is and how far away the player's seat is from its pivot, you might need to change the radius `r` to a more significant value.**
 
 After you run those commands in a repeating command block, you should control its vertical movement by looking up and down.
+or u may use a simple animation controller and link it too the entity, so it always plays the function.
+
+You May use this instead of a repeating command block,link this too the entity or the player.
+It's recommended that u link it to the player.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.base":{
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {
+                            "base": "(1.0)"
+                        }
+                    ],
+                    "on_entry": [
+                        "/function dragon_control"
+                    ]
+                },
+                "base":{
+                    "transitions": [
+                        {
+                            "default": "(1.0)"
+                        }
+                    ],
+                    "on_entry": [
+                        "/function dragon_control"
+                    ]
+                }
+            }
+        }
+    }
+}
+```
 
 The entity will still probably be too slow when flying, so we'll borrow our animation controller from the first method with some changes to give the entity speed when it's flying.
 
@@ -118,7 +157,7 @@ The entity will still probably be too slow when flying, so we'll borrow our anim
                     "transition_to_default": "query.is_on_ground"
                 },
                 {
-                    "jumping_2": true
+                    "jumping_2": "true"
                 }
             ],
             "on_entry": [
@@ -130,7 +169,7 @@ The entity will still probably be too slow when flying, so we'll borrow our anim
                     "transition_to_default": "query.is_on_ground"
                 },
                 {
-                    "jumping_1": true
+                    "jumping_1": "true"
                 }
             ],
             "on_entry": [
@@ -139,7 +178,7 @@ The entity will still probably be too slow when flying, so we'll borrow our anim
         },
         "transition_to_default": {
             "transitions": [{
-                "transition_to_default": true
+                "transition_to_default": "true"
             }],
             "on_entry": [
                 "/effect @s clear"
