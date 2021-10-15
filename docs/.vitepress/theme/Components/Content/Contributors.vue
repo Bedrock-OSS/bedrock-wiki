@@ -51,7 +51,18 @@ const getContributors = async function () {
 		console.error("couldn't fetch contributors:", contrs)
 		return await getContributorsLegacy()
 	}
-	const ret: GitHubAuthor[] = Array.from(contrs[path])
+	const ret: GitHubAuthor[] | null = contrs[path]
+		? Array.from(contrs[path])
+		: null
+	if (!ret) {
+		console.error(
+			'Document path:',
+			path,
+			'not found within contributors:',
+			Object.keys(contrs)
+		)
+		return await getContributorsLegacy()
+	}
 	const headers = {
 		...(!!import.meta.env.GITHUB_TOKEN && {
 			Authorization: 'Bearer ' + import.meta.env.GITHUB_TOKEN,

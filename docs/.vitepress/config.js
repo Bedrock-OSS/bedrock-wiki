@@ -48,8 +48,8 @@ function generateSidebar(base, dir) {
 			if (frontMatter.data.title === void 0) {
 				throw new Error(
 					'File ' +
-						path.join(joinedPath, 'index.md') +
-						' has invalid frontmatter!'
+					path.join(joinedPath, 'index.md') +
+					' has invalid frontmatter!'
 				)
 			}
 		} else if (stats.isFile()) {
@@ -146,7 +146,7 @@ const getAuthors = async () => {
 	await new Promise((resolve, reject) => {
 		for (let i = 0; i < files.length; i++) {
 			req(`commits?path=${files[i]}`).then((commit) => {
-				if(!commit[0]) {
+				if (!commit[0]) {
 					// Github token rate limit?
 					console.log(`GitHub token rate limit reached after ${attempts} requests`)
 					return commit
