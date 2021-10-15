@@ -317,4 +317,4 @@ All of this is useable by custom entities:
 `"minecraft:behavior.stroll_towards_village"` is used by fox to seach a village and go there.
 `"minecraft:behavior.inspect_bookshelf"` used by librarian villager allows an entity to look at and inspect a bookshelf.
 `"minecraft:behavior.explore_outskirts"` allowing the entity to explore beyond the bounds of village(use schedule and component group to keep the entity return to the village)
-`"minecraft:behavior.defend_village_target"` only use this on melee attack, cause ranged attack will accidentally shoot villager or any entity with inhabitant dwelling role thus make the ranged entity attack each other
+`"minecraft:behavior.defend_village_target"` only use this on melee attack. Ranged attack can accidentally shoot any entity with inhabitant dwelling role making the ranged entity attack each other.
