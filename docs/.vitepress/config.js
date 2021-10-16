@@ -119,20 +119,23 @@ function getSidebar() {
 	return generateSidebar(docsPath, docsPath)
 }
 let attempts = 0
+let limit = 0;
 const req = async (url2) => {
 	attempts++
 	if (!process.env.GITHUB_TOKEN)
 		return { message: 'Unable to get GITHUB_TOKEN' }
-	res = await fetch(
+	let res = await fetch(
 		`https://api.github.com/repos/Bedrock-OSS/bedrock-wiki/${url2}`,
 		{
 			headers: {
-				'User-Agent': 'request',
-				Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+				'content-type': 'application/json',
+				'authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
 			},
-		}
+		},
 	)
-	return await res.json()
+	let response = await res;
+	limit = response.headers.get('X-RateLimit-Limit');
+	return response.json();
 }
 const getAuthors = async () => {
 	let files = await req('git/trees/wiki?recursive=1')
@@ -148,7 +151,7 @@ const getAuthors = async () => {
 			req(`commits?path=${files[i]}`).then((commit) => {
 				if (!commit[0]) {
 					// Github token rate limit?
-					console.log(`GitHub token rate limit reached after ${attempts} requests`)
+					console.log(`GitHub token rate limit reached after ${attempts} requests (limit: ${limit})`)
 					return commit
 				}
 				if (!commit[0].author) return commit
