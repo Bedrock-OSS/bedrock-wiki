@@ -27,6 +27,7 @@ Important links have a ⭐.
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
 -   [MCBE Hub](https://discord.gg/jfQeGqVsxA)
+-   [Minecraft Education](https://discord.gg/7fSQBdx)
 
 ## Software
 
