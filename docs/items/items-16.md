@@ -715,7 +715,7 @@ List of all new item components, with usage examples
 }
 ```
 
-_Full list of categories can be found [here](/items/creative-categories)_
+_Full list of categories can be found [here](/documentation/creative-categories)_
 
 -   minecraft:food
     _New Syntax_
