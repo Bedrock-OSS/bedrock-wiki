@@ -111,11 +111,15 @@ For entity shaders, you can make the shader dependent on the camera direction to
 
 -   Add to `PS_Input` in vertex and fragment shader new field
 
+<CodeHeader></CodeHeader>
+
 ```
 float3 viewDir: POSITION;
 ```
 
 -   After that, add to vertex shader this line
+
+<CodeHeader></CodeHeader>
 
 ```
 PSInput.viewDir = normalize((mul(WORLD, mul(BONES[VSInput.boneId], float4(VSInput.position, 1)))).xyz);
@@ -127,6 +131,8 @@ PSInput.viewDir = normalize((mul(WORLD, mul(BONES[VSInput.boneId], float4(VSInpu
 
 The easiest way to debug a value is to turn it into color and render it like this.
 
+<CodeHeader></CodeHeader>
+
 ```
 PSOutput.color = float4(PSInput.uv, 0., 1.);
 ```
@@ -135,6 +141,8 @@ This should create a red-green gradient, showing that the values of `uv` are bet
 
 You can use the debug shader I wrote [based on this shader](http://mew.cx/drawtext/drawtext).
 Right now, this shader will display values of the color passed to the shader. To display another value, change line 70 in hlsl shader to
+
+<CodeHeader></CodeHeader>
 
 ```
 int ascii = getFloatCharacter( cellIndex, <float4 vector here> );
