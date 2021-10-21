@@ -126,7 +126,8 @@ Defines the name that will show when selecting the subpacks.
 
 -   `memory_tier`
 
-Thought to be the number specifying the order of the subpacks on the slider. Further testing have found that it is not the case. Instead the order is determined by the order of each JSON object literal in the subpack list which are sorted from left to right of the slider. E.g the first object will be placed on the left most of the slider and the last object will be placed on the right most of the slider.
+Defines what amount GB of RAM device needs to have to enable this subpack.
+1 memory tier = 0.25 GB
 
 -   `folder_name`
 

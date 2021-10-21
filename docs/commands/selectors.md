@@ -6,7 +6,7 @@ Selectors are what you use in commands to target who or what you want to execute
 `@e` - Target all entities `@s` - Target yourself, or the origin who the command is executed at `@a` - Target every player `@r` - Target a random player.
 
 Examples are as followed
-```mcfunction
+```
 kill @a
 kill @e
 kill @r
