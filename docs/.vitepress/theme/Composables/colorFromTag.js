@@ -7,6 +7,8 @@ export function colorFromTag(tag) {
 		return 'green'
 	} else if (tag == 'help') {
 		return 'blue'
+	} else if (tag == 'easy') {
+		return 'blue'
 	} else if (tag == 'beginner') {
 		return 'blue'
 	} else if (tag == 'expert') {

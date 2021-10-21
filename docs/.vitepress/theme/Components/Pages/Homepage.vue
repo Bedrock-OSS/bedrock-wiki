@@ -74,15 +74,6 @@
 					addons.
 				</CardLink>
 				<CardLink
-					title="Legacy Wiki"
-					imgsrc="assets/images/homepage/bookshelf_0.png"
-					link="https://old-wiki.bedrock.dev/"
-				>
-					Missing something? You can continue to visit the old wiki
-					here, but please be warned it will not contain any new or
-					updated content.
-				</CardLink>
-				<CardLink
 					title="Discord"
 					imgsrc="assets/images/homepage/discord.png"
 					link="/discord"

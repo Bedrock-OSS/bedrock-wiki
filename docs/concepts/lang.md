@@ -17,6 +17,7 @@ Lang-codes can be used in any of the following places:
 -   pack description
 -   entity name
 -   item name
+-   block name
 -   books
 -   signs
 -   tellraw commands
@@ -38,7 +39,7 @@ Lang files are found under `my_pack/texts/`. You should download and view the va
 `my_pack/texts/languages.json`: This contains a list of languages that your addon supports.
 `language_LOCALIZATION.lang`: Contains the lang-codes for a specific language/localization (for example, `en_US.lang` is for the USA)
 
-It would be best to create `languages.json`, and then one `.lang` file for each language you want to support. If you are only writing for English, you HIGHLY recommended supporting both `en_US` and `en_GB` (great Britain), even if you only copy/paste the `.lang` file.
+It would be best to create `languages.json`, and then one `.lang` file for each language you want to support. If you are only writing for English, you HIGHLY recommended supporting both `en_US` and `en_GB` (Great Britain), even if you only copy/paste the `.lang` file.
 
 ## RP Vs. BP?
 
@@ -59,6 +60,10 @@ Sometimes, undefined lang codes will show up in-game. When this happens, they wi
 When you see these codes, you can simply copy them down into your `.lang` files. For example:
 
 `entity.wiki:my_entity.name=MY VERY COOL ENTITY`
+
+1.16.100+ items translation is different:
+
+`item.wiki:my_item=My Item`
 
 ## What's with the %s?
 

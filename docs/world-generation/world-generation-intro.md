@@ -115,7 +115,7 @@ Note: in v.1.15Beta, it is possible to use `.mcstructures` from the `structures`
 Features and Feature Rules are used to generate everything from ores to grass and flowers, vegetation to granite or clay patches.
 It is even possible to create custom structures using those, but as it is very grindy and will be much easier after the mentioned update, we won't talk about it just yet.
 
-Now, it's worthwhile to mention that the easiest way to generate Custom Structures is this [auto generator](https://machine-builder.itch.io/frg-v2) by [MACHINE_BUILDER](https://www.youtube.com/channel/UC8FBQgo4AWwKFX97h60NKOQ). However, we'll still learn some other manual feature generation here, because some things like Ores are much more efficient to generate as `ore_feature`s and not `structure_template_feature`s.
+Now, it's worthwhile to mention that the easiest way to generate Custom Structures is this [auto generator](https://machine-builder.itch.io/frg-v2) by [MACHINE_BUILDER](https://www.youtube.com/channel/UC8FBQgo4AWwKFX97h60NKOQ), you should note that this tool has a free version with limited functionality and to enjoy the full functionality use the payware version. However, we'll still learn some other manual feature generation here, because some things like Ores are much more efficient to generate as `ore_feature`s and not `structure_template_feature`s.
 
 Let's make our `wiki:blocky` custom block generate as an ore for the tutorial's sake. I'll do it the easy way, like this:
 

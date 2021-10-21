@@ -25,12 +25,17 @@ function generateSidebar(base, dir) {
 				path.join(joinedPath, 'index.md'),
 				'utf8'
 			)
-			let frontMatter;
+			let frontMatter
 			try {
 				frontMatter = matter(str)
 			} catch (e) {
-				joinedPath = path.relative(process.cwd(), path.join(joinedPath, 'index.md'));
-				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`);
+				joinedPath = path.relative(
+					process.cwd(),
+					path.join(joinedPath, 'index.md')
+				)
+				console.log(
+					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`
+				)
 				throw new Error(
 					`File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
@@ -43,8 +48,8 @@ function generateSidebar(base, dir) {
 			if (frontMatter.data.title === void 0) {
 				throw new Error(
 					'File ' +
-						path.join(joinedPath, 'index.md') +
-						' has invalid frontmatter!'
+					path.join(joinedPath, 'index.md') +
+					' has invalid frontmatter!'
 				)
 			}
 		} else if (stats.isFile()) {
@@ -52,12 +57,14 @@ function generateSidebar(base, dir) {
 			if (!file.endsWith('.md') || file.endsWith('index.md')) return
 
 			const str = fs.readFileSync(joinedPath, 'utf8')
-			let frontMatter;
+			let frontMatter
 			try {
 				frontMatter = matter(str)
 			} catch (e) {
-				joinedPath = path.relative(process.cwd(), joinedPath);
-				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`);
+				joinedPath = path.relative(process.cwd(), joinedPath)
+				console.log(
+					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`
+				)
 				throw new Error(
 					`File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
@@ -87,11 +94,11 @@ function generateSidebar(base, dir) {
 				activeMatch: `^${link}`,
 			})
 			if (frontMatter.data.title === void 0) {
-				joinedPath = path.relative(process.cwd(), joinedPath);
-				console.log(`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter!`);
-				throw new Error(
-					`File ${joinedPath} has invalid frontmatter!`
+				joinedPath = path.relative(process.cwd(), joinedPath)
+				console.log(
+					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter!`
 				)
+				throw new Error(`File ${joinedPath} has invalid frontmatter!`)
 			}
 		}
 	})
@@ -111,39 +118,58 @@ function getSidebar() {
 	let docsPath = path.join(process.cwd(), 'docs')
 	return generateSidebar(docsPath, docsPath)
 }
-
+let attempts = 0
+let limit = 0;
 const req = async (url2) => {
-	if (!process.env.GITHUB_TOKEN) return { "message": "Unable to get GITHUB_TOKEN" }
-	res = await fetch(
+	attempts++
+	if (!process.env.GITHUB_TOKEN)
+		return { message: 'Unable to get GITHUB_TOKEN' }
+	let res = await fetch(
 		`https://api.github.com/repos/Bedrock-OSS/bedrock-wiki/${url2}`,
-		{ headers: {'User-Agent': 'request', 'Authorization': `Bearer ${process.env.GITHUB_TOKEN}` }}
-	);
-	return await res.json()
-};
+		{
+			headers: {
+				'content-type': 'application/json',
+				'authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+			},
+		},
+	)
+	let response = await res;
+	limit = response.headers.get('X-RateLimit-Limit');
+	return response.json();
+}
 const getAuthors = async () => {
-	let files = await req('git/trees/wiki?recursive=1');
+	let files = await req('git/trees/wiki?recursive=1')
 	if (!files.tree) return files
-	files = files.tree.filter(({path}) => path.match('docs\/(?!public|\.vite.*$).*\.md')).map(e => e.path);
-	
-	let contributors = {};
-	let authors = [];
+	files = files.tree
+		.filter(({ path }) => path.match('docs/(?!public|.vite.*$).*.md'))
+		.map((e) => e.path)
+	console.log("Getting data for the files " + files)
+	let contributors = {}
+	let authors = []
 	await new Promise((resolve, reject) => {
 		for (let i = 0; i < files.length; i++) {
-			req(`commits?path=${files[i]}`).then(commit => {
-				if (!commit[0]?.author) return commit
-				contributors[files[i]] = commit.map(e => e.author).filter((v,i,a) => a.findIndex(t => (t.login == v.login)) == i);
+			req(`commits?path=${files[i]}`).then((commit) => {
+				if (!commit[0]) {
+					// Github token rate limit?
+					console.log(`GitHub token rate limit reached after ${attempts} requests (limit: ${limit})`)
+					return commit
+				}
+				if (!commit[0].author) return commit
+				contributors[files[i]] = commit
+					.map((e) => e.author)
+					.filter(
+						(v, i, a) => a.findIndex((t) => t.login == v.login) == i
+					)
 				authors.push(contributors[files[i]].login)
-				if (i == files.length-1) resolve()
+				if (i == files.length - 1) resolve()
 			})
 		}
 	})
 
-	return contributors;
-};
+	return contributors
+}
 
-
-
-module.exports = (async function(){
+module.exports = (async function () {
 	return {
 		lang: 'en-US',
 		title: 'Bedrock Wiki',
@@ -177,6 +203,22 @@ module.exports = (async function(){
 				'script',
 				{},
 				`!function(){try {var d=document.documentElement.classList;d.remove('light','dark');var e=localStorage.getItem('docTheme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);m.media!==t||m.matches?d.add('dark'):d.add('light')}else if(e) d.add(e)}catch(e){}}()`,
+			],
+			[
+				'script',
+				{},
+				`// Matomo analytics
+				var _paq = window._paq = window._paq || [];
+				/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+				_paq.push(['trackPageView']);
+				_paq.push(['enableLinkTracking']);
+				(function() {
+				  var u="//hopper.bedrock.dev/wikihopper/";
+				  _paq.push(['setTrackerUrl', u+'hopper.php']);
+				  _paq.push(['setSiteId', '1']);
+				  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				  g.async=true; g.src=u+'hopper.js'; s.parentNode.insertBefore(g,s);
+				})();`,
 			],
 		],
 
@@ -213,10 +255,6 @@ module.exports = (async function(){
 				{
 					text: 'MS Docs',
 					link: 'https://docs.microsoft.com/en-us/minecraft/creator/',
-				},
-				{
-					text: 'Legacy Wiki',
-					link: 'https://old-wiki.bedrock.dev/',
 				},
 			],
 

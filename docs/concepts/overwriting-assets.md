@@ -12,7 +12,7 @@ The addon system is built layer by layer, where each pack is added _on top_ of t
 
 ### Accessing Vanilla Files
 
-This layered structure is very useful, because it allows us to access the files inside of vanilla, without copy/pasting them into our addon. For example you can access `blocks/stone.png` without moving it into your addon! Just set it as the texture for your custom entity -it will work out of the box. This is particularly useful for things like models, or render controllers, or sounds.
+This layered structure is very useful, because it allows us to access the files inside of vanilla, without copy/pasting them into our addon. For example you can access `blocks/stone.png` without moving it into your addon! Just set it as the texture for your custom entity - it will work out of the box. This is particularly useful for things like models, or render controllers, or sounds.
 
 If the vanilla assets change, for example if [JAPPA](https://twitter.com/JasperBoerstra?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) updates the stone texture, your addon will also receive the update, since you are relying on the actual dynamic, vanilla resources.
 
@@ -46,7 +46,7 @@ When you overwrite these files, the overwriting is absolute: The new asset will 
 
 Many assets are defined not by their name, but by their identifier! To overwrite these assets, simply create a new file that shares the same identifier, regardless of file-path. The following can be overwritten in this way:
 
--   RP Entities
+-   BP Entities
 -   RP Entities
 -   Animations
 -   Models
@@ -82,6 +82,8 @@ The following files work in this way:
 :::tip
 **Example:** Lets say you want to override the `sugar` texture, using the reference files. You can do so by creating a new `item_textures.json`, with the following contents:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
 	"resource_pack_name": "vanilla",
@@ -106,5 +108,5 @@ This is mostly a problem with `player.json` (in either the RP or the BP), since 
 
 Not everything can be overwritten, the following is a list of things that cannot be overwritten using any of the described methods:
 
--   Vanilla items
+-   Vanilla items (Not all)
 -   Vanilla blocks

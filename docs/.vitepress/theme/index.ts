@@ -2,6 +2,8 @@ import Layout from './Components/Layout.vue'
 import CodeHeader from './Components/Content/CodeHeader.vue'
 import Spoiler from './Components/Content/Spoiler.vue'
 import Label from './Components/Content/Label.vue'
+import FolderView from './Components/Content/FolderView/FolderView.vue'
+
 import YouTubeEmbed from './Components/Content/YouTubeEmbed.vue'
 import Button from './Components/Content/Button.vue'
 import JQEmbed from './Components/Content/JQEmbed.vue'
@@ -10,7 +12,7 @@ import Card from './Components/Content/Card.vue'
 import CardLink from './Components/Content/CardLink.vue'
 import Homepage from './Components/Pages/Homepage.vue'
 import NotFound from './Components/Pages/NotFound.vue'
-import Contribute from './Components/Pages/Contribute.vue'
+
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import Component404 from '../../404.md'
@@ -21,6 +23,7 @@ const globalComponents: [string, Component][] = [
 	['CodeHeader', CodeHeader],
 	['Spoiler', Spoiler],
 	['Label', Label],
+	['FolderView', FolderView],
 	['YouTubeEmbed', YouTubeEmbed],
 	['JQEmbed', JQEmbed],
 	['BButton', Button],
@@ -29,7 +32,6 @@ const globalComponents: [string, Component][] = [
 	['Card', Card],
 	['Homepage', Homepage],
 	['NotFound', NotFound],
-	['Contribute', Contribute],
 ]
 
 const theme: Theme = {
