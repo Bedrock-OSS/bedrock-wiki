@@ -77,7 +77,7 @@ Defines the name that will show when selecting the subpacks.
 -   `memory_tier`
 
 Defines what amount GB of RAM device needs to have to enable this subpack.
-1 memory tier = 0.25 GB
+1 memory tier = 0.25 GB.
 
 -   `folder_name`
 
