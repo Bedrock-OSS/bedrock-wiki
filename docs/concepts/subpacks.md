@@ -12,73 +12,23 @@ Subpacks are what cause the gear icon to appear on packs. They are intended for 
 -   Then inside the `subpacks` folder add a folder for each subpack you want to have
     e.g.
 
-<div markdown="0" class="folder-structure">
-    <ul>
-        <li><span class="folder">RP</span>
-            <ul>
-                <li><span class="folder">subpacks</span>
-                    <ul>
-                        <li><span class="folder">subpack_1</span></li>
-                        <li><span class="folder">subpack_2</span></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
+<FolderView :paths="[
+
+'RP/subpacks/subpack_1',
+'RP/subpacks/subpack_2'
+]"></FolderView>
 
 -   Inside each of these folders you can add the content of each subpack.
     This can be anything that normally goes in your behavior or resource pack.
     e.g.
 
-<div markdown="0" class="folder-structure">
-    <ul>
-        <li><span class="folder">RP</span>
-            <ul>
-                <li><span class="folder">subpacks</span>
-                    <ul>
-                        <li><span class="folder">subpack_1</span>
-                            <ul>
-                                <li><span class="folder">textures</span>
-                                    <ul>
-                                        <li><span class="folder">blocks</span>
-                                            <ul>
-                                                <li><span class="image">dirt.png</span></li>
-                                            </ul>
-                                        </li>
-                                        <li><span class="folder">items</span>
-                                            <ul>
-                                                <li><span class="image">example_item.png</span></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><span class="folder">subpack_2</span>
-                            <ul>
-                                <li><span class="folder">textures</span>
-                                    <ul>
-                                        <li><span class="folder">blocks</span>
-                                            <ul>
-                                                <li><span class="image">dirt.png</span></li>
-                                            </ul>
-                                        </li>
-                                        <li><span class="folder">items</span>
-                                            <ul>
-                                                <li><span class="image">example_item.png</span></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
+<FolderView :paths="[
+
+'RP/subpacks/subpack_1/textures/blocks/dirt.png',
+'RP/subpacks/subpack_1/textures/items/example_item.png',
+'RP/subpacks/subpack_2/textures/blocks/dirt.png',
+'RP/subpacks/subpack_2/textures/items/example_item.png'
+]"></FolderView>
 
 ## Adding subpacks to manifests
 
