@@ -2,8 +2,8 @@
 ---
 title: Understanding Selectors
 mention:
- - Science-geek42
- - Brougud
+  - Science-geek42
+  - Brougud
 ---
 
 Selectors are used in commands to target where you want to execute a command at. The primary target selectors are:
