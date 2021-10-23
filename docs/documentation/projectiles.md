@@ -6,14 +6,16 @@ title: Projectiles
 
 This page intends to document all different fields you can use inside `minecraft:projectile` entity behavior component.
 
+:::warning
 _Disclaimer: this component has been mostly documented based on projectiles found in the game or reverse engineering the game._
+:::
 
 | Name                      | Type             | Default Value | Description                                                                                                                                       |
 | ------------------------- | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | anchor                    | Integer          |               |                                                                                                                                                   |
 | angle_offset              | Decimal          | 0             | Determines the angle at which the projectile is thrown                                                                                            |
 | catch_fire                | Boolean          | false         | If true, the entity hit will be set on fire                                                                                                       |
-| crit_particle_on_hurt     | Boolean          | false         | If true, the projectile will produce additional particles when a critical hit happens                                                             |
+| crit_particle_on_hurt     | Boolean          | false         | If true, the projectile will produce critical hit particles when it happens                                                             |
 | destroy_on_hurt           | Boolean          | false         | If true, this entity will be destroyed when hit                                                                                                   |
 | filter                    | String           |               | Entity Definitions defined here can't be hurt by the projectile                                                                                   |
 | fire_affected_by_griefing | Boolean          | false         | If true, whether the projectile causes fire is affected by the mob griefing game rule                                                             |

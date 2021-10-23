@@ -1,9 +1,9 @@
 ---
 title: Generating Custom Ores
-mention:
-	- DerpMcaddon
 tags:
 	- experimental
+mention:
+	- DerpMcaddon
 ---
 
 `ore_feature`'s are basic but important features! They can form clusters of blocks by replacing blocks where they are generated. This tutorial will show you how to make mineral ores that naturally generate.

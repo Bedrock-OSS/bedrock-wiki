@@ -98,11 +98,12 @@ Creates a blank GameTest area with the specified dimensions.
 
 ## Reference Documentation
 
-Official documentation on the `"mojang-gametest"` module can be found [here](https://docs.microsoft.com/en-us/minecraft/creator/scriptapi/gametest/gametest) and found [here](https://docs.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/minecraft) for the `'mojang-minecraft'` module.
+Official documentation on the `"mojang-gametest"` module can be found [here](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/mojang-gametest) and found [here](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft) for the `'mojang-minecraft'` module.
 
-Typescript declarations can be found here:
+Official typescript declarations can be found here:
 
--   [Official](https://github.com/Bedrock-OSS/gametest-types)
--   [Unofficial](https://github.com/bridge-core/editor/tree/main/data/packages/minecraftBedrock/types/gameTest)
+- [mojang-minecraft](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mojang-minecraft)
+- [mojang-gametest](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mojang-gametest)
+
 
 These allow for enhanced auto-completions and validation when used inside of your editor. bridge. v2 ships with GameTest support built-in.

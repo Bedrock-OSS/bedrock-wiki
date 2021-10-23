@@ -39,14 +39,57 @@ const props = defineProps<{
 	mentioned: Array<string>
 }>()
 
+if (import.meta.env.MODE == 'development')
+	console.log('DEV MODE: Using getContributorsLegacy')
+
+const getContributors = async function () {
+	const path = site.value.themeConfig.docsDir + '/' + page.value.relativePath
+	const contrs = site.value.themeConfig.contributors
+	if (import.meta.env.MODE == 'development')
+		return await getContributorsLegacy()
+	if (!contrs || !JSON.stringify(contrs).includes('SirLich')) {
+		console.error("couldn't fetch contributors:", contrs)
+		return await getContributorsLegacy()
+	}
+	const ret: GitHubAuthor[] | null = contrs[path]
+		? Array.from(contrs[path])
+		: null
+	if (!ret) {
+		console.error(
+			'Document path:',
+			path,
+			'not found within contributors:',
+			Object.keys(contrs)
+		)
+		return await getContributorsLegacy()
+	}
+	const headers = {
+		...(!!import.meta.env.GITHUB_TOKEN && {
+			Authorization: 'Bearer ' + import.meta.env.GITHUB_TOKEN,
+		}),
+	}
+	for (let i = 0; i < props.mentioned.length; i++) {
+		if (
+			ret.filter(
+				(value: GitHubAuthor) => value.login === props.mentioned[i]
+			).length > 0
+		)
+			continue
+		const url = 'https://api.github.com/users/' + props.mentioned[i]
+		const result = await universalFetch(url, { headers })
+		let user: GitHubAuthor = await result.json()
+		ret.push(user)
+	}
+	return ret
+}
+
 // partial type of https://api.github.com/users/user
 interface GitHubAuthor {
 	login: string
 	avatar_url: string
 	html_url: string
 }
-
-const getContributors = async function () {
+const getContributorsLegacy = async function () {
 	let url =
 		'https://api.github.com/repos/' +
 		site.value.themeConfig.repo +

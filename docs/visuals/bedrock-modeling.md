@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Bedrock Modeling Introduction
-parent: Knowledge
 ---
 
 This will guide tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.

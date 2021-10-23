@@ -37,6 +37,8 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | Bit       | query.can_fly                                                 | minecraft:can_fly            | Marks the entity as being able to fly, the pathfinder won't be restricted to paths where a solid block is required underneath it. |
 | Bit       | query.can_power_jump                                          | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
 | Bit       | query.is_ignited                                              | minecraft:is_ignited         |                                                                                                                                   |
+| Bit       | query.out_of_control                                          | minecraft:out_of_control         | New, used by code for hardcoded boat movement/particle stuff, and the Molang query. Probably safe                            |
+
 
 ### Colors for the color and color2 components
 

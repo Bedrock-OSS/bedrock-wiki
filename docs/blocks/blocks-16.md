@@ -1,14 +1,14 @@
 ---
-title: 'Blocks 1.16+'
+title: 'Blocks 1.16.100+'
 tags:
     - experimental
 nav_order: 2
 ---
 
-Better documentation on the new block format introduced in the 1.16.100.56 Minecraft beta.
+Better documentation on the new block format introduced in the Minecraft Beta 1.16.100.
 
 :::warning
-This document covers experimental features, for 1.16 format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
+This document covers experimental features, for 1.16.100+ format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
 :::
 
 ## Block Properties
@@ -300,11 +300,11 @@ Used to sequence event functions
 		"sequence": [
 			{
 				"set_block_property": {
-					"test:my_prop": true
+					"wiki:my_prop": true
 				}
 			},
 			{
-				"condition": "query.block_property('test:my_prop') == true",
+				"condition": "query.block_property('wiki:my_prop') == true",
 				"trigger": {
 					"event": "wiki:my_entity_event",
 					"target": "other"
@@ -364,7 +364,7 @@ Block components to trigger block events:
 
 List of all new block components, with usage examples.
 
-### minecraft:unit_cube
+### `minecraft:unit_cube`
 
 <CodeHeader></CodeHeader>
 
@@ -374,7 +374,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:crafting_table
+### `minecraft:crafting_table`
 
 <CodeHeader></CodeHeader>
 
@@ -388,7 +388,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:material_instances
+### `minecraft:material_instances`
 
 <CodeHeader></CodeHeader>
 
@@ -408,7 +408,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:geometry
+### `minecraft:geometry`
 
 <CodeHeader></CodeHeader>
 
@@ -418,7 +418,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:on_step_on
+### `minecraft:on_step_on`
 
 <CodeHeader></CodeHeader>
 
@@ -432,7 +432,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:on_step_off
+### `minecraft:on_step_off`
 
 <CodeHeader></CodeHeader>
 
@@ -446,7 +446,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:on_fall_on
+### `minecraft:on_fall_on`
 
 <CodeHeader></CodeHeader>
 
@@ -461,7 +461,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:on_placed
+### `minecraft:on_placed`
 
 <CodeHeader></CodeHeader>
 
@@ -475,7 +475,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:on_player_placing
+### `minecraft:on_player_placing`
 
 <CodeHeader></CodeHeader>
 
@@ -489,7 +489,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:on_player_destroyed
+### `minecraft:on_player_destroyed`
 
 <CodeHeader></CodeHeader>
 
@@ -503,7 +503,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:on_interact
+### `minecraft:on_interact`
 
 <CodeHeader></CodeHeader>
 
@@ -517,7 +517,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:ticking
+### `minecraft:ticking`
 
 <CodeHeader></CodeHeader>
 
@@ -535,7 +535,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:random_ticking
+### `minecraft:random_ticking`
 
 <CodeHeader></CodeHeader>
 
@@ -551,7 +551,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:entity_collision
+### `minecraft:entity_collision`
 
 <CodeHeader></CodeHeader>
 
@@ -572,7 +572,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:pick_collision
+### `minecraft:pick_collision`
 
 <CodeHeader></CodeHeader>
 
@@ -593,7 +593,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:breakonpush
+### `minecraft:breakonpush`
 
 <CodeHeader></CodeHeader>
 
@@ -603,7 +603,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:display_name
+### `minecraft:display_name`
 
 <CodeHeader></CodeHeader>
 
@@ -613,7 +613,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:breathability
+### `minecraft:breathability`
 
 <CodeHeader></CodeHeader>
 
@@ -623,7 +623,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:immovable
+### `minecraft:immovable`
 
 <CodeHeader></CodeHeader>
 
@@ -633,7 +633,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:onlypistonpush
+### `minecraft:onlypistonpush`
 
 <CodeHeader></CodeHeader>
 
@@ -643,7 +643,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:placement_filter
+### `minecraft:placement_filter`
 
 <CodeHeader></CodeHeader>
 
@@ -672,7 +672,7 @@ _This also accepts tags, such as:_
 				"allowed_faces": ["up"],
 				"block_filter": [
 					{
-						"tags": "!q.any_tag('air')"
+						"tags": "!query.any_tag('air')"
 					}
 				]
 			}
@@ -681,7 +681,7 @@ _This also accepts tags, such as:_
 }
 ```
 
-### minecraft:preventsjumping
+### `minecraft:preventsjumping`
 
 <CodeHeader></CodeHeader>
 
@@ -691,7 +691,7 @@ _This also accepts tags, such as:_
 }
 ```
 
-### minecraft:rotation
+### `minecraft:rotation`
 
 <CodeHeader></CodeHeader>
 
@@ -701,7 +701,7 @@ _This also accepts tags, such as:_
 }
 ```
 
-### minecraft:unwalkable
+### `minecraft:unwalkable`
 
 <CodeHeader></CodeHeader>
 
@@ -794,19 +794,19 @@ wiki:
         "components": {...},
         "permutations": [
             {
-                "condition": "query.block_property('test:custom_int_property') == 20",
+                "condition": "query.block_property('wiki:custom_integer_property') == 20",
                 "components": {
                     "minecraft:friction": 0.1
                 }
             },
             {
-                "condition": "query.block_property('test:custom_bool_property') == true",
+                "condition": "query.block_property('wiki:custom_boolean_property') == true",
                 "components": {
                 "minecraft:destroy_time": 0.5
                 }
             },
             {
-                "condition": "query.block_property('test:custom_str_property') == 'red'",
+                "condition": "query.block_property('wiki:custom_string_property') == 'red'",
                 "components": {
                     "minecraft:geometry": "geometry.pig"
                 }
@@ -838,12 +838,12 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
 -   Following components cannot be larger than 16x16x16:
     -   `minecraft:entity_collision`
     -   `minecraft:pick_collision`
--   Execute commands cannot be run on blocks.
--   Custom Blocks will not be mined any faster/slower with vanilla tools.
+-   `/execute` commands cannot be run on blocks.
+-   Custom blocks' tags are ignored by vanilla items.
 -   Block faces will become dark if buried in another block.
 -   Blocks will always be dropped with `Silk Touch` enchantment.
--   Block Identifiers cannot match Vanilla blocks, even ignoring namespace.
+-   Block identifiers cannot match vanilla blocks, even ignoring namespace.
 -   Following components requires `entity_collision` to be 4 or higher on the y-axis:
-    -   `on_step_on`
-    -   `on_step_off`
-    -   `on_fall_on`
+    -   `minecraft:on_step_on`
+    -   `minecraft:on_step_off`
+    -   `minecraft:on_fall_on`

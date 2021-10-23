@@ -90,7 +90,7 @@ Next, navigate to your `terrain_texture.json`. Ensure that it is properly named.
 }
 ```
 
-If you followed this properly, your 1.10 block should now have a texture.
+If you followed this properly, your 1.10 block should now have correct texture.
 
 ## 1.16.100 Blocks
 
@@ -128,7 +128,7 @@ Navigate to your `terrain_texture.json`. Ensure that it is properly named
 }
 ```
 
-Next, navigate to your block file. In your block file, make sure you have the `material_instance` component.
+Next, navigate to your block file. In your block file, make sure you have the `material_instances` component.
 
 Dirt like block example:
 <CodeHeader>BP/blocks/dirt_like.json</CodeHeader>
@@ -142,7 +142,7 @@ Dirt like block example:
             "register_to_creative_menu": true
         },
         "components": {
-            minecraft:material_instances": {
+            "minecraft:material_instances": {
                 "*": {
                     "texture": "dirt_like",
                 }
@@ -213,7 +213,7 @@ Grass like block example:
 }
 ```
 
-If you followed this properly, your 1.16.100 block should now have a texture.
+If you followed this properly, your 1.16.100 block should now have correct texture.
 
 ## 2.0.0 - My Block Looks Like Dirt!
 
@@ -225,11 +225,15 @@ Solution: Use a json linter and double check that your identifier didn't change.
 
 <a name="3.0.0"></a>
 
-## 3.0.0 - Block isn't transparent!
+## 3.0.0 - Block Rendering
+
+This section will describe common block rendering issues and how to fix them.
+
+## 3.1.0 - Block isn't transparent!
 
 Problem: You have transparent pixels in your texture file. When you apply it in game, they become opaque.
 
-Solution: Navigate to your block file. Navigate to your `material_instance` component. Add the following to your component:
+Solution: Navigate to your block file. Navigate to your `material_instances` component. Add the following to your component:
 
 <CodeHeader>BP/blocks/your_block.json</CodeHeader>
 
@@ -243,6 +247,48 @@ Solution: Navigate to your block file. Navigate to your `material_instance` comp
 					"render_method": "alpha_test"
 				}
 			}
+		}
+	}
+}
+```
+
+## 3.2.0 - Block has shadow!
+
+Problem: You have block with custom geometry but it has shadow.
+
+Solution: Navigate to your block file. Navigate to your `material_instances` component. Add the following to your component:
+
+<CodeHeader>BP/blocks/your_block.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"face_dimming": false,
+        			"ambient_occlusion": false
+				}
+			}
+		}
+	}
+}
+```
+
+Another method:
+
+Add following components to your block's code:
+
+<CodeHeader>BP/blocks/your_block.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"components": {
+			"minecraft:block_light_emission": 0.0,
+			"minecraft:block_light_absorption": 0
 		}
 	}
 }

@@ -8,8 +8,6 @@ Important links have a ⭐.
 
 ## Discord Links
 
-*There are more discord links at the bottom!*
-
 -   ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
@@ -25,9 +23,11 @@ Important links have a ⭐.
 -   [MCPECore](https://discord.com/invite/N3e6exUQGs)
 -   [Bedrock Commands](https://discord.gg/bedrockcommands)
 -   [BDSX ](https://discord.gg/KyrVChfR)
+-   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
--   [Mcbehub](https://discord.gg/jfQeGqVsxA)
+-   [MCBE Hub](https://discord.gg/jfQeGqVsxA)
+-   [Minecraft Education](https://discord.gg/7fSQBdx)
 
 ## Software
 
@@ -40,8 +40,10 @@ Important links have a ⭐.
 -   [Add-on JSON Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
 -   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [World Converter (paid)](https://www.universalminecraftconverter.com/download)
+-   [Chunker (World Converter)](https://chunker.app/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
+-   [Resource Pack Converter (for Android)](https://play.google.com/store/apps/details?id=net.theluckycoder.resourcepackconverter)
 
 ## JSON Generators
 
@@ -70,15 +72,18 @@ Important links have a ⭐.
 -   [Loot and Trade Table Functions](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
 -   [Docs Graveyard (removed components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 
-## Vanilla Behavior & Resource Packs
+## Behavior & Resource Packs
 
 -   ⭐ [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
 -   ⭐ [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
--   [Beta RP](https://aka.ms/MinecraftBetaResources)
--   [Beta BP](https://aka.ms/MinecraftBetaBehaviors)
+-   [Vanilla Resource Pack (BETA)](https://aka.ms/MinecraftBetaResources)
+-   [Vanilla Behavior Pack (BETA)](https://aka.ms/MinecraftBetaBehaviors)
+-   [Pack Archive (old versions)](https://bedrock.dev/packs)
 
 ## Scripting Resources
 
+-   [GameTests API Wrapper](https://github.com/notbeer/Framework-Wrapper)
+-   [GameTests Plugin-API-Starter-Pack](https://github.com/MajestikButter/Plugin-API-Starter-Pack)
 -   [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/TimerJS)
 -   [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
 -   [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
@@ -88,8 +93,10 @@ Important links have a ⭐.
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
 -   ⭐ [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
--   [Mcbehub](https://mcbehub.com/)
+-   [MCDLHub](https://mcdlhub.com/)
+-   [MCBEHub](https://mcbehub.com/)
 -   [MCPECore](https://mcpecore.com/)
+-   [CubitosMC](https://www.cubitosmc.com/)
 
 ## Other useful Links
 
@@ -110,3 +117,6 @@ Important links have a ⭐.
 - [World Expansion](https://discord.gg/CRQ6veyjak)
 - [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
 - [Project Vex](https://discord.gg/P95nXc4jbR)
+=======
+-   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
+-   [Java & Bedrock Client](https://github.com/kennyvv/Alex)

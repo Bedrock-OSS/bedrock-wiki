@@ -51,6 +51,10 @@ Let's create your first add-on workspace in Visual Studio Code now.
 In this guide, you will often be instructed to create files with specific names, placed in specific folders. If the folder doesn't exist yet, please create it!
 :::
 
+:::warning
+Wrongly named files/folders is a common source of errors. Please check your work carefully against the examples.
+:::
+
 The manifest is a file that identifies your pack to Minecraft. Every pack has one manifest. A folder with a correctly formatted manifest will show up in Minecraft, and we consider this the "minimal" pack before we can add additional content.
 
 Manifest files are written in `json`. If this isn't familiar to you, you can [learn more about json here.](./understanding-json)
@@ -157,6 +161,14 @@ pack.name=Wiki Behavior Pack
 pack.description=My First Addon
 ```
 
+<CodeHeader>RP/texts/languages.json</CodeHeader>
+
+```json
+[
+    "en_US"
+]
+```
+
 ## Checking your Work
 
 If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](./troubleshooting)
@@ -165,9 +177,15 @@ If you have done everything correctly, your packs should show up in Minecraft no
 
 ## Turn on Content Log
 
+:::warning
+Content log is the most useful tool you have for debugging your addons. Please do not skip this step.
+:::
+
+![](/assets/images/guide/content_log.png)
+
 Content Log is an extremely important debugging tool, which you should always have on.
 
-Turn on both `settings > profile > content_log_file` and `settings > profile > content_log_gui`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`. [Learn more about the content log here.](/guide/troubleshooting)
+Turn on both content log settings in `settings > creator`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI in-game by pressing `ctrl+h`. [Learn more about the content log here.](/guide/troubleshooting)
 
 ## Creating your testing world
 
@@ -186,7 +204,23 @@ Now to create a testing world to test your new add-on!
 
 ---
 
-## Your progress so far:
+## Your progress so far
+
+**Here is how your project should look, after completing this page:**
+
+Remember that in future, we will represent `com.mojang/development_behavior_packs/guide_RP/` as `RP`, and `com.mojang/development_behavior_packs/guide_BP/` as `BP`.
+
+<FolderView :paths="[
+
+'com.mojang/development_resource_packs/guide_RP/manifest.json',
+'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+
+'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
+'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
+
+]"></FolderView>
 
 **What you've done:**
 

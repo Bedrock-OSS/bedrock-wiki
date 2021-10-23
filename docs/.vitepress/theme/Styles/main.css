@@ -144,3 +144,11 @@ ol {
 .blue {
 	@apply bg-blue-300;
 }
+
+.border-gray {
+	@apply border-gray-200;
+}
+
+.dark .border-gray {
+	@apply border-true-gray-600;
+}

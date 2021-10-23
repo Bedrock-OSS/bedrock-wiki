@@ -456,7 +456,7 @@ This json contains geometry for both the Steve and Alex versions:
 
 ## Entity File
 
-Use this entity file if you would like to have animatinos for your geometry. This file includes error-free animations for:
+Use this entity file if you would like to have animations for your geometry. This file includes error-free animations for:
 
 -   walking
 -   looking at player

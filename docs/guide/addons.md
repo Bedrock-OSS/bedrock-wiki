@@ -35,7 +35,7 @@ The Behavior Pack, also known as the _server_, or BP, is responsible for the _lo
 
 ### Communication between packs
 
-In most cases, you will have both an BP and a BP together. These packs can communicate with each other, in the sense that assets defined in one can be accessed in the other. For example, when creating a custom entity, you need two files:
+In most cases, you will have both a RP and a BP together. These packs can communicate with each other, in the sense that assets defined in one can be accessed in the other. For example, when creating a custom entity, you need two files:
 
 -   An RP entity definition, which describes how your entity will _look_
 -   A BP entity definition, which describes how your entity will _act_
