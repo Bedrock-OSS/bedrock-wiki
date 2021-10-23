@@ -51,7 +51,7 @@ Important links have a ⭐.
 -   [Manifests](https://bedrock-manifest.web.app/)
 -   [behavior-builder (beta)](https://stirante.com/behavior/index.html)
 -   [controller-builder (beta)](https://stirante.com/controller/index.html)
--   [.lang](https://solveddev.github.io/AnyLanguage/)
+-   [Generate .lang files](https://solveddev.github.io/AnyLanguage/)
 
 ## Tools
 
