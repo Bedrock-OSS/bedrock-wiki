@@ -22,7 +22,6 @@ Sound files themselves are added inside of the `sounds` folder, and can be any o
 'RP/sounds/sound_definitions.json',
 'RP/sounds/example.wav',
 'RP/sounds/example.ogg',
-'RP/sounds/example.mp3',
 'RP/sounds/example.fsb',
 
 ]"></FolderView>
