@@ -51,6 +51,14 @@ Now we will take a look at the secondary selectors so you can be specific in reg
 - `kill @e[ry=<yrotation>]` The selector `ry` will target any entities with a rotation around the y axis equal to or less than the value put in place of `<yrotation>`. -180 is north, -90 is east, 0 is south, 90 is west, 180 is north.
 - `kill @e[rym=<yrotationm>]` The selector `rym` will target any entities with a rotation around the y axis equal to or greater than the value put in place of `<yrotationm>`. -180 is north, -90 is east, 0 is south, 90 is west, 180 is north.
 
+## Tags
+
+Tags are a way to discriminate towards a player, or group of players and or mobs. Tags can be useful in alot of ways like making a ranks system, and or making a server with a anticheat. Tags can be used in a number of ways, for example, `give @e[tag=steak] cooked_beef` will give everyone with the tag steak, one steak. There are a number of ways you can use tags but we will be looking at the most used options.
+
+- `kill @e[tag=<tag>]` This is how you would kill all the players with your given tag. Its useful if you are making a minigame, and a player were to lose, you could kill them then set there gamemode into something else with a command block.
+- `kill @e[tag=!<tag>]` This will kill all of the entities that **DONT** have the tag that you specified.
+- `tag @a <add | remove | list> <tag>` This is how you would give, or remove a tag, useing `add` or `remove`. If you want to see what tags a player has then you can do `tag <selector> list`
+
 ## Other Useful Information
 Secondary selectors can be used together by utilizing commas. Make sure to split each selector into its own part. As an example `@e[type=<type>]` and `@e[name=<name>]` can be combined like this, `@e[type=<type>,name=<name>]`. However, with the `score` selector you must format checks to another scoreboard like this, `@e[scores={<scoreboard>=<score>,<scoreboard2>=<score2>,}]`.
 There is one more primary selector on bedrock edition which is a very niche case, `@initiator`. When an NPC is set up to have a button run a command, `@initiator` can be used to target the player which clicked the button. Otherwise, `@p` might likely be used and the command might execute onto a different player who is nearer to the NPC than the player who clicked the button.
