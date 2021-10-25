@@ -149,7 +149,7 @@ The `"minecraft:biome"` property also holds the `"components"` property, which i
 
 Components are always object properties, even those that should seemingly act as booleans. For example, the `"minecraft:ignore_automatic_features"` component property is not assigned `true` or `false`, but instead an empty object, `{}`:
 
-```
+```json
 "components": {
 	…
 
@@ -159,7 +159,7 @@ Components are always object properties, even those that should seemingly act as
 
 Although the JSON may be invalid, properties of the same name representing components may be used within the `"components"` object. Although this situation should be avoided, it should be noted that only the last provided instance of a component will be used by the game: the values inside the earlier defined component(s) will be completely ignored. For example:
 
-```
+```json
 "components": {
 	…
 
@@ -1153,7 +1153,7 @@ Only the [default surface builder](#default) can be overridden. Overrides will f
 		{
 			"materials": {
 				"top_material": "minecraft:podzol"
-			}
+			},
 
 			"noise_range": [0, 0.5],
 			"noise_frequency_scale": 0.0625,
