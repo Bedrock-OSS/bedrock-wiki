@@ -261,7 +261,7 @@ Once we are done here we need to create the attachables file like this.
 
 Given that we have already put in the textures needed we can run it and see our legs straight away.
 
-## Adding a helm
+## Adding a helmet
 
 This is just like the chest piece, just we change some of the categories and slots like so.
 
