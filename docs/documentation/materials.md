@@ -64,5 +64,3 @@ You can [learn more about materials here](/visuals/materials).
 | opaque_block                              |                                 |
 | opaque_block_color                        |                                 |
 | opaque_block_color_uv2                    |                                 |
-
-[Original Credit](http://tokamcwin10.blog.jp/archives/40825563)
