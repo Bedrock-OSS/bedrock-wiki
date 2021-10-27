@@ -7,8 +7,7 @@ mention:
     - Eko-byte
 ---
 
-## Features
-Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a more vanilla glass block.
+Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.
 
  - Features
 	 - Make a Glass Block
@@ -17,152 +16,28 @@ Making glass blocks may seem like a simple task, however it comes with many draw
 	- When breaking there is invisible textures for a second (Minecraft Bug)
 	- When placing there is window textures visible for a second (Minecraft Bug)
 
-:::Requires 
-Molang and Holiday Toggles ENABLED
+:::warning
+**Requires** Molang for connected textures and Holiday Toggles for BOTH ENABLED
 :::
+
+By The End You Should Be Able To Create Something Like This!
+
+![Glass Results](/assets/images/blocks/glass-block/glass_showcase.png)
 
 ## Glass Block
 
+<CodeHeader>BP/blocks/custom_glass.json</CodeHeader>
+
 ```json
-//add a "nothing" texture in terrain_texture, and make it have a transparent file
 {
-	//this block works because it uses different permutations active at once and multiple material instances at once to change different sides of the custom_glass to be invisible
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "wiki:custom_glass",
-			"properties": {
-				//the properties needed to detect what sides of the block needs to be invisible
-				"wiki:north": [
-					0,
-					1
-				],
-				"wiki:south": [
-					0,
-					1
-				],
-				"wiki:east": [
-					0,
-					1
-				],
-				"wiki:west": [
-					0,
-					1
-				],
-				"wiki:up": [
-					0,
-					1
-				],
-				"wiki:down": [
-					0,
-					1
-				]
-			}
+			"identifier": "wiki:custom_glass"
 		},
-		"permutations": [
-			{
-				//if the north side of the block has custom glass on it, the north side will be invisible
-				"condition": "q.block_property('wiki:north')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "custom_glass",
-							"render_method": "blend"
-						},
-						"north": {
-							"texture": "nothing",
-							"render_method": "blend"
-						}
-					}
-				}
-			},
-			{
-				//if the south side of the block has custom glass on it, the south side will be invisible
-				"condition": "q.block_property('wiki:south')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "custom_glass",
-							"render_method": "blend"
-						},
-						"south": {
-							"texture": "nothing",
-							"render_method": "blend"
-						}
-					}
-				}
-			},
-			{
-				//if the east side of the block has custom glass on it, the east side will be invisible
-				"condition": "q.block_property('wiki:east')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "custom_glass",
-							"render_method": "blend"
-						},
-						"east": {
-							"texture": "nothing",
-							"render_method": "blend"
-						}
-					}
-				}
-			},
-			{
-				//if the west side of the block has custom glass on it, the west side will be invisible
-				"condition": "q.block_property('wiki:west')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "custom_glass",
-							"render_method": "blend"
-						},
-						"west": {
-							"texture": "nothing",
-							"render_method": "blend"
-						}
-					}
-				}
-			},
-			{
-				//if the top of the block has custom glass on it, the top will be invisible
-				"condition": "q.block_property('wiki:up')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "custom_glass",
-							"render_method": "blend"
-						},
-						"up": {
-							"texture": "nothing",
-							"render_method": "blend"
-						}
-					}
-				}
-			},
-			{
-				//if the bottom of the block has custom glass on it, the bottom will be invisible
-				"condition": "q.block_property('wiki:down')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "custom_glass",
-							"render_method": "blend"
-						},
-						"down": {
-							"texture": "nothing",
-							"render_method": "blend"
-						}
-					}
-				}
-			}
-		],
 		"components": {
 			//basic custom glass components
-			//custom glass tag used to detect othere custom glass blocks NOTE this must be different per custom glass block
-			"tag:custom_glass": {},
 			"minecraft:block_light_absorption": 0,
-			"minecraft:unit_cube": {},
 			"minecraft:material_instances": {
 				"*": {
 					"render_method": "blend",
@@ -172,117 +47,31 @@ Molang and Holiday Toggles ENABLED
 			"minecraft:creative_category": {
 				"group": "itemGroup.name.glass",
 				"category": "construction"
-			},
-			//constantly lets the block be updated
-			"minecraft:ticking": {
-				"looping": true,
-				"on_tick": {
-					"event": "change_texture"
-				},
-				"range": [
-					0,
-					0
-				]
-			}
-		},
-		"events": {
-			//the state used to update the block
-			"change_texture": {
-				"sequence": [
-					{
-						//if custom glass above, then the up property is set to 1, and the top side will be invisible
-						"condition": "q.block_neighbor_has_any_tag(0,1,0,'custom_glass')",
-						"set_block_property": {
-							"wiki:up": 1
-						}
-					},
-					{
-						//if custom glass below, then the down property is set to 1, and the bottom side will be invisible
-						"condition": "q.block_neighbor_has_any_tag(0,-1,0,'custom_glass')",
-						"set_block_property": {
-							"wiki:down": 1
-						}
-					},
-					{
-						//if custom glass to the north, then the north property is set to 1, and the north side will be invisible
-						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_glass')",
-						"set_block_property": {
-							"wiki:north": 1
-						}
-					},
-					{
-						//if custom glass to the south, then the south property is set to 1, and the south side will be invisible
-						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_glass')",
-						"set_block_property": {
-							"wiki:south": 1
-						}
-					},
-					{
-						//if custom glass to the west, then the west property is set to 1, and the west side will be invisible
-						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_glass')",
-						"set_block_property": {
-							"wiki:west": 1
-						}
-					},
-					{
-						//if custom glass to the east, then the east property is set to 1, and the east side will be invisible
-						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_glass')",
-						"set_block_property": {
-							"wiki:east": 1
-						}
-					},
-					{
-						//if there is not custom glass to the top, then the up property is set to 0, and the top side will be textured
-						"condition": "!q.block_neighbor_has_any_tag(0,1,0,'custom_glass')",
-						"set_block_property": {
-							"wiki:up": 0
-						}
-					},
-					{
-						//if there is not custom glass to the bottom, then the down property is set to 0, and the bottom side will be textured
-						"condition": "!q.block_neighbor_has_any_tag(0,-1,0,'custom_glass')",
-						"set_block_property": {
-							"wiki:down": 0
-						}
-					},
-					{
-						//if there is not custom glass to the north, then the north property is set to 0, and the north side will be textured
-						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_glass')",
-						"set_block_property": {
-							"wiki:north": 0
-						}
-					},
-					{
-						//if there is not custom glass to the south, then the south property is set to 0, and the south side will be textured
-						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_glass')",
-						"set_block_property": {
-							"wiki:south": 0
-						}
-					},
-					{
-						//if there is not custom glass to the west, then the west property is set to 0, and the west side will be textured
-						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_glass')",
-						"set_block_property": {
-							"wiki:west": 0
-						}
-					},
-					{
-						//if there is not custom glass to the east, then the east property is set to 0, and the east side will be textured
-						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_glass')",
-						"set_block_property": {
-							"wiki:east": 0
-						}
-					}
-				]
 			}
 		}
 	}
 }
 ```
+<CodeHeader>RP/blocks.json</CodeHeader>
+
+```json
+{
+	"wiki:custom_glass": {
+    	"textures": "window_block",
+		"sound": "glass"
+   	}
+}
+```
+
 ## Vertical Connecting Glass
-:::Note
-This next tutorial is advanced and does not go as in depth
+
+:::warning
+**Note** This next tutorial is advanced and is not meant for beginners
 :::
+
+<CodeHeader>BP/blocks/custom_vertical_connecting_glass.json</CodeHeader>
+<Spoiler title="Code">
+
 ```json
 //add a "nothing" texture in terrain_texture, and make it have a transparent file
 {
@@ -291,14 +80,14 @@ This next tutorial is advanced and does not go as in depth
 		"description": {
 			"identifier": "wiki:custom_vertical_connecting_glass",
 			"properties": {
-				//properties needed for connected textures
+				//properties needed for connected textures, also contols up and down culling
 				"wiki:connected_state": [
 					0,
 					1,
 					2,
 					3
 				],
-				//properties to remove culling
+				//properties to remove culling, depending on the direction in which a block is placed
 				"wiki:north": [
 					0,
 					1
@@ -319,6 +108,7 @@ This next tutorial is advanced and does not go as in depth
 		},
 		"components": {
 			//basic glass components
+			//tags used to give connected textures, and remove culling
 			"tag:custom_vertical_connecting_glass":{},
 			"tag:glass":{},
 			"minecraft:creative_category": {
@@ -591,6 +381,7 @@ This next tutorial is advanced and does not go as in depth
 					}
 				}
 			},
+			//in this situation if there is a block to the west and it is the upper connected texture then it shall have the west side invisible and the sides be the upper connected part
 			{
 				"condition": "q.block_property('wiki:west') == 1 && q.block_property('wiki:connected_state') == 1",
 				"components": {
@@ -921,6 +712,6 @@ This next tutorial is advanced and does not go as in depth
 	}
 }
 ```
-## Results
-![Glass Results](https://i.imgur.com/ehKCWVm.png)
+</Spoiler>
+
 More Coming Soon!
