@@ -53,7 +53,7 @@ Important links have a ⭐.
 -   [Manifests](https://bedrock-manifest.web.app/)
 -   [behavior-builder (beta)](https://stirante.com/behavior/index.html)
 -   [controller-builder (beta)](https://stirante.com/controller/index.html)
--   [.lang](https://solveddev.github.io/AnyLanguage/)
+-   [Generate .lang files](https://solveddev.github.io/AnyLanguage/)
 
 ## Tools
 
@@ -109,5 +109,14 @@ Important links have a ⭐.
 -   [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
+
+## Community-Addon Discords
+
+*These discord links are to community-created addons, with a public discord*
+
+- [World Expansion](https://discord.gg/CRQ6veyjak)
+- [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
+- [Project Vex](https://discord.gg/P95nXc4jbR)
+=======
 -   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
 -   [Java & Bedrock Client](https://github.com/kennyvv/Alex)

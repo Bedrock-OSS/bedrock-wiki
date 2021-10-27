@@ -223,4 +223,4 @@ If you want to change the texture of an entity during gameplay dynamically, you 
 
 #### Dynamic Layered Textures
 
-Dynamic layered textures can be achieved by adding more lists of textures and other dummy components as indexes. You can [read about dummy components here](/entities/dummy-entities)
+Dynamic layered textures can be achieved by adding more lists of textures and other dummy components as indexes. You can [read about dummy components here](/entities/dummy-components)

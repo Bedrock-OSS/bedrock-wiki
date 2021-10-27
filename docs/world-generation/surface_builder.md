@@ -10,7 +10,7 @@ Feature based surface builder is a feature that puts together a collection of bl
 
 ## Single Block Features
 
-Single block features are going to be the base of our surface builder. They will define which blocks we are goingto use.  For this tutorial I'll be using Coarse Dirt, Podzol and Cobblestone.
+Single block features are going to be the base of our surface builder. They will define which blocks we are going to use.  For this tutorial I'll be using Coarse Dirt, Podzol and Cobblestone.
 
 Learn more about single block features [here](/world-generation/feature-types.html#single-block-features)
 
@@ -214,4 +214,4 @@ This is the final step for our surface builder. The feature rules for our surfac
 }
 ```
 
-And our surface builder is done! Feel free to modify and messing around with it!
+And our surface builder is done! Feel free to modify and mess around with it!

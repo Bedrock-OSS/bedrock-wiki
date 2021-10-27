@@ -7,6 +7,8 @@ tags:
 
 This tutorial will teach you how to get up and running as a Minecraft Bedrock Edition (Windows 10) script modder!
 
+:::warning As of 1.17.40, Scripting is only supported in Windows, and doesn't support mobile platforms (Android/iOS) or Console devices.
+
 ## Prerequisites
 
 1. Minecraft Bedrock Edition (Windows 10)
