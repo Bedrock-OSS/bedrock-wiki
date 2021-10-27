@@ -140,7 +140,7 @@ Just like with items, the main files of a custom entity are its RP and BP files.
             ]
     ```
 
-    -   `"minecraft:behavior.random_stroll"` makes the entity stroll around sometmes;
+    -   `"minecraft:behavior.random_stroll"` makes the entity stroll around sometimes;
     -   And, finally, `"minecraft:behavior.look_at_player"` makes the entity follow the player with its head.
 
 ## Resource code
