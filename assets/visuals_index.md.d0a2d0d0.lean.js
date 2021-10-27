@@ -1,1 +1,0 @@
-import{o as t,c as e}from"./404.md.acedfbab.js";const a='{"title":"Visuals","description":"","frontmatter":{"title":"Visuals"},"relativePath":"visuals/index.md","lastUpdated":1635335674816}',i={};i.render=function(a,i,r,s,d,o){return t(),e("div")};export default i;export{a as __pageData};
