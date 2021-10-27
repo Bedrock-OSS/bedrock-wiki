@@ -1,4 +1,4 @@
-﻿---
+---
 title: Making Custom Glass Blocks
 tags:
     - experimental
@@ -17,7 +17,7 @@ Making glass blocks may seem like a simple task, however it comes with many draw
 	- When breaking there is invisible textures for a second (Minecraft Bug)
 	- When placing there is window textures visible for a second (Minecraft Bug)
 
-::: Requires 
+:::Requires 
 Molang and Holiday Toggles ENABLED
 :::
 
