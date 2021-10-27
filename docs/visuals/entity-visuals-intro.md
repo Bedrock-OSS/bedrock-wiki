@@ -224,3 +224,71 @@ If you want to change the texture of an entity during gameplay dynamically, you 
 #### Dynamic Layered Textures
 
 Dynamic layered textures can be achieved by adding more lists of textures and other dummy components as indexes. You can [read about dummy components here](/entities/dummy-components)
+
+
+### Dynamic Alternate Geometries
+
+Altering geometry dynamically works almost the same way as altering the texture.
+
+In the following example you can see a render controller set up to change the entity's geometry based on variant.
+Just the same way as in textures, the order in which you write down your geometries is what determines their numbering order. Top being 0.
+As we change the variant it will use a different geometry.
+
+Note that unlike textures you can not layer geometries, and such you should not include a "base bottom layer" geometry.
+This still requires the use of `villager_v2_masked` material
+
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.player.third_person": {
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.bottom",
+				"Array.top[query.variant]"
+			],
+			"arrays": {
+				"geometries": {
+					"Array.geo": [
+						"Geometry.default",
+						"Geometry.custom_1",
+						"Geometry.custom_2"
+					]
+				},
+				"textures": {
+					"Array.top": [
+						"Texture.bottom",
+						"Texture.top_1",
+						"Texture.top_2"
+					]
+				}
+			},
+			"geometry": "Array.geo[query.variant]"
+		}
+	}
+}
+```
+
+####Entity
+
+Remember to include the geometry variants in your entity's file
+
+
+<CodeHeader></CodeHeader>
+
+```json
+
+	"geometry": {
+	"default": "geometry.entity.default",
+	"cape": "geometry.entity.custom_1",
+	"spacesuit": "geometry.entity.custom_2"
+}
+```
+
