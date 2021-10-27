@@ -112,4 +112,28 @@ Blockshapes are essentially block geometries or models that are hard-coded into 
 | 134 | glow_frame                |
 | 135 | glow_lichen               |
 
+
+## Known Issues
+
+ Currently, blockshapes do **not** work for custom blocks through the usage of 1 resource pack, it just doesn't work. But by utilising the hierarchy system of active resource packs, you may spread the contents of `blocks.json` over 2 separate resource packs, allowing for blockshapes to be applied.
+ 
+ Example of `blocks.json` from first pack:
+ ```json
+
+    "wiki:void_fire": {
+        "sound": "stone",
+        "textures": "void_fire"
+    }
+
+```
+ Example of `blocks.json` from second pack:
+ ```json
+
+    "wiki:void_fire": {
+        "blockshape": "fire"
+    }
+
+```
+All that is required of the second pack is to contain the information relevent to blockshape of the custom block, so the only required files in the pack are `manifest.json` and `blocks.json`. Then when it comes to applying the addon to your world, make sure to have the second resource pack **above** the first in the hierarchy.
+
 [ Original Credit ](https://gist.github.com/toka7290/3bef704d2f57c775bb9ac84443a6df1c)
