@@ -18,6 +18,15 @@ This guide is a beginner tutorial, intended to walk you through the first stages
 
 By the end of this guide, you will have created an entire addon all by yourself, which you can play with and modify!
 
+In this guide you will find boxes like these:
+:::tip
+Some very important information!
+:::
+:::warning
+Attention! Watch out for these common mistakes.
+:::
+Watch out for these boxes! They contain very important information that could help you with problems.
+
 ## Is the guide up to date?
 
 This guide is written for the most recent _stable_ release of Minecraft Bedrock Edition. Many things won't work in previous versions, and some will be changed in later ones. We will keep the guide as up-to-date as possible, so no need to worry.
@@ -35,4 +44,4 @@ Alongside the step-by-step guide, we have a few other files here, which may be i
 Now, your first addon is complete! To further expand your knowledge, consider doing these:
 
 -   Start your own project!
--   To dive into the other aspects of adding onto MCBE, you can use the different sections' sub guides listed in the Appendix. This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.
+-   To dive into the other aspects of adding onto MCBE (Minecraft Bedrock Edition), you can use the different sections' sub guides listed in the Appendix. This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.

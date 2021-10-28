@@ -261,3 +261,9 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 	}
 }
 ```
+
+## What you have learned
+:::tip
+- How to create an entity in Blockbench
+- How to use Blockbench to model, texture and animate your entity
+:::

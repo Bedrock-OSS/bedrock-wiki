@@ -4,7 +4,14 @@ nav_order: 5
 prefix: '5.'
 ---
 
-This section will walk you through the creation of a simple custom item for our custom entity, the Ghost, to drop. Like blocks and entities, items consist of a BP file (that defines how the item would function/behave) and an RP file (that describes how the item would look)
+This section will walk you through the creation of a simple custom item, the ectoplasm, for our custom entity, the Ghost, to drop. 
+
+<br>
+<img src="/assets/images/guide/custom_item/ectoplasm_view.png" width=150>
+<br>
+<br>
+
+Like blocks and entities, items consist of a BP file (that defines how the item would function/behave) and an RP file (that describes how the item would look)
 
 ## Behavior code
 
@@ -67,7 +74,7 @@ As you can see, we used the same identifier (`namespace:id`), since we are refer
 -   `"category"` in `"description"` defines in which tab of the creative inventory the item would show up. There are four tabs to choose from: `"Nature"`, `"Equipment"`, `"Construction"` and `"Items"`.
 -   The only RP component we need right now is `"minecraft:icon"`, which, of course, references the item's texture; we'll get to that in just a moment.
     (There are a few other item RP components we'll look into in the future, like `"minecraft:use_animation"`, which defines the animation that would play when the item is used, like `"eat"` for food items.)
-    The component's value. `"wiki.ectoplasm"` is the item texture's _shortname_, which brings us to our next section.
+    The component's value `"wiki.ectoplasm"` is the item texture's _shortname_, which brings us to our next section.
 
 ## Item texture and its shortname
 
@@ -78,6 +85,8 @@ Navigate to `RP/textures/items/`, creating subdirectories as needed: this is whe
 `RP/textures/items/ectoplasm.png`
 
 ![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png)
+
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png">Download Texture here</BButton>
 
 ### Shortnames
 
@@ -95,7 +104,7 @@ This is done through the `item_texture.json` file, located in `RP/textures/`. It
 ```
 
 -   `"resource_pack_name"` is quite self-explanatory: it's the RP name string;
--   `"texture_data"` is an object where each item shortname is defined - for Ectoplasm, we need to pu this code snippet inside of it:
+-   `"texture_data"` is an object where each item shortname is defined - for Ectoplasm, we need to put this code snippet inside of it:
 
 <CodeHeader>RP/textures/item_texture.json/texture_data</CodeHeader>
 
@@ -137,6 +146,13 @@ item.wiki:ectoplasm.name=Ectoplasm
 
 Now your first custom item, Ectoplasm, is complete! If everything has been done correctly, the item should now be obtainable through the `/give` command in-game, as well as appearing in your creative inventory.
 If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
+
+## What you have learned
+:::tip
+- How to format the behavior and resource files for an item
+- What components are and how to use them
+- How to set an items texture
+:::
 
 ## Your progress so far:
 

@@ -6,7 +6,7 @@ prefix: '3.'
 
 Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.
 
-### Download Bedrock Minecraft
+### Download Minecraft Bedrock Edition
 
 -   [Windows 10](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab)
 -   [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
@@ -21,7 +21,7 @@ There are strong opinions about the best editor for beginners, but generally spe
 
 ### VSCode
 
-VSCode is a general purpose text-editor and IDE. With VSCode, you will be able to edit your addons in plain-text, guided along by a powerful array of extensions and addons. VSCode is a great for programmers and advanced users.
+VSCode is a general purpose text-editor and IDE. With VSCode, you will be able to edit your addons in plain-text, guided along by a powerful array of extensions and addons. VSCode is a great option for programmers and advanced users.
 
 [⚙️Install VSCode](https://code.visualstudio.com/)
 
@@ -33,7 +33,7 @@ Many packages exist for VSCode that make editing addons easier:
 -   [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
 -   [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
 -   [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
--   [Prettt-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
+-   [Prettify-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
 -   [Spell Checker (for writing wiki)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 -   [Snowstorm Particle Editor](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm)
 -   [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
@@ -73,7 +73,7 @@ For further guidance on the editor, feel free to contact us on [Twitter](https:/
 
 ### Image Editors
 
--   [Krita](https://krita.org/en/) _or_ [GIMP](https://www.gimp.org/)
+-   [Krita](https://krita.org/en/) _or_ [GIMP](https://www.gimp.org/) _or_ [paint.net](https://www.getpaint.net)
 
 ## Additional Materials
 
@@ -104,6 +104,17 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 
 -   If the json format is very tricky for you, consider reading the [understanding-json guide](/guide/understanding-json).
 -   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
+- If you still haven't found a solution, feel free to join our [Discord server](/discord).
+
+## What you have learned
+:::tip
+- To develop Addons, you need an **Editor**
+- Other useful software:
+    - Blockbench for creating Minecraft Models like Entities
+    - Image Editors for creating Textures and Images
+- Use the Vanilla Example files as a reference or inspiration for your addons
+- How to solve problems and get help
+:::
 
 ## Your progress so far
 

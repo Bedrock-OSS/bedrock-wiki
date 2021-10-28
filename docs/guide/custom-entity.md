@@ -6,10 +6,13 @@ prefix: '6.'
 
 Last time you created a custom item for this custom entity to drop. This time you will create the Ghost itself, as promised.
 
+<br>
+<img src="/assets/images/guide/custom_entity/ghost_view.png" width=150>
+
 ## Behavior code
 
 Just like with items, the main files of a custom entity are its RP and BP files. We'll start with the latter in the `BP/entities/` folder:
-(the `.e` suffix after the entity's name specifies that this JSON is an entity file. Recommended in the [Style Guide](/meta/style-guide)).
+(the `.e` suffix after the entity's name specifies that this JSON is an entity file. The game will ignore the part after the first `"."`, so it can be used to describe the type of this file. Recommended in the [Style Guide](/meta/style-guide)).
 
 <CodeHeader>BP/entities/ghost.e.json</CodeHeader>
 
@@ -237,7 +240,10 @@ Now it's time to create the entity's visuals. An example model, texture, and ani
 Like items, the entity textures are simply `.png` files in `RP/textures/entity/`. However, unlike these, entity textures don't need a file equivalent to `item_textures.json`. Instead, their shortnames are defined in the entity's RP file (`RP/entity/ghost.e.json` in our case). Usually, the shortname for an entity's texture is set to `default`, just like in our example.
 
 `RP/textures/entity/ghost.png`
-![Ghost_texture](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png)
+
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png)
+
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png">Download Texture here</BButton>
 
 ### Model
 
@@ -449,7 +455,7 @@ Most of what was said for models is also true for animations. Here's the code yo
 }
 ```
 
-Unlike the model's file, this one contains three animations for the Ghost, which are ` "animation. Ghost.idle"` (which is an animation playing from time to time), `"animation.ghost.attack" ` and `"animation.ghost.move"` (quite self-explanatory). Their shortnames, as defined in the Ghost's RP entity file, are ` "idle"`, `"attack"` and `"move"` respectively.
+Unlike the model's file, this one contains three animations for the Ghost, which are ` "animation.ghost.idle"` (which is an animation playing from time to time), `"animation.ghost.attack" ` and `"animation.ghost.move"` (quite self-explanatory). Their shortnames, as defined in the Ghost's RP entity file, are ` "idle"`, `"attack"` and `"move"` respectively.
 Of course, feel free to open the files and check how the visuals look using Blockbench.
 
 ### Animation Controller
@@ -511,8 +517,6 @@ Approaching the end, we'll create our Animation Controller file, which will _con
 
 Two animation controllers are listed in this file: `"controller.animation.ghost.walk"` and `"controller.animation.ghost.attack"`.
 
-TODO: Details of each NEED to be explained better
-
 Let's take a look at the Ghost's RP file: just like the _animations_, the _animation controllers_ get assigned to their shortnames (`walk_controller` and `attack_controller` respectively) under `"animations"`. Now, since the controllers control the animations, they have to constantly run, which is why we put their shortnames in the array of `"scripts"/"animate"`.
 (For example, if you put the shortname `"move"` there, the entity would constantly play the moving animation, even when staying in place. The controller only launches the relevant animation when the entity is doing a certain action, for example, `is_walking`.)
 
@@ -548,6 +552,13 @@ item.spawn_egg.entity.wiki:ghost.name=Ghost
 ```
 
 Done! Your entity should now show up in Minecraft, complete with all behaviors and visuals, including animations!
+
+## What you have learned
+:::tip
+- How to format the behavior- and resource-files for an item
+- How to set an entities texture
+- How to use models, animations and animation controllers to make your entity more exciting
+:::
 
 ## Your progress so far:
 
