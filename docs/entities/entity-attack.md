@@ -1,10 +1,25 @@
 ---
 title: Entity Attack
 ---
+# Overview
 
 If you're making custom entities, chances are that you will want them to attack other entities. This page will cover the types of attack, their usages and advantages over one another.
 
-These are the currently known attacks:
+## Dealing Damage
+WIP link to https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source, info about `cause` and `damage` and how theyre caused by `attack` components
+
+## Requirements
+In order for a mob to attack a target (not just damage everything within X blocks), many things are required, such as pathfinding and targeting systems, othewise your entity will **not** be able to attack.
+
+## Pathfinding
+WIP example, table, description, link to https://wiki.bedrock.dev/entities/entity-movement.html
+
+## Target selecting
+WIP 
+
+# Types of Attack
+WIP
+These are the currently known types of attack:
 
 - [Melee](#melee)
 - [Ranged](#ranged)
@@ -12,13 +27,19 @@ These are the currently known attacks:
 - [Knockback Roar](#knockback-roar)
 
 ## Melee
-WIP
+`minecraft:behavior.melee_attack` example, table, description
 ## Ranged
-WIP
+`minecraft:behavior.ranged_attack` example, table, description
 ## Area
-WIP
+`minecraft:area_attack` example, table, description
 ## Knockback Roar
-WIP
+`minecraft:behavior.knockback_roar` example, table, description
+
+
+# More on Attacks
+
+
+
 ## Difficulty Dependant Attacks
 
 Sometimes you may want your mob to be even more dangerous depending on game difficulty. Typically this is used to apply mob effects to targets WIP
@@ -73,7 +94,9 @@ These compenent groups won't actually do anything by themselves. Another compone
             "wiki:melee_components"
           ]
         }
-      },
+      }
+```
+```
       "wiki:ranged_swap": {
         "remove": {
           "component_groups": [
@@ -97,4 +120,4 @@ To trigger the events, another compenent group is used. Sensors . . . WIP
 You aren't limited to just 2 attack types, you can have as many as you want! Just make sure to have the event's and sensors to compensate for them.
 :::
 ## Alternative Methods
-WIP
+WIP commands, mob effects, spawn, other
