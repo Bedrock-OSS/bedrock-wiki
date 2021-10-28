@@ -104,16 +104,16 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 
 -   If the json format is very tricky for you, consider reading the [understanding-json guide](/guide/understanding-json).
 -   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
-- If you still haven't found a solution, feel free to join our [Discord server](/discord).
+-   If you still haven't found a solution, feel free to join our [Discord server](/discord).
 
 ## What you have learned
 :::tip
-- To develop Addons, you need an **Editor**
-- Other useful software:
-    - Blockbench for creating Minecraft Models like Entities
-    - Image Editors for creating Textures and Images
-- Use the Vanilla Example files as a reference or inspiration for your addons
-- How to solve problems and get help
+-   To develop Addons, you need an **Editor**
+-   Other useful software:
+    -   Blockbench for creating Minecraft Models like Entities
+    -   Image Editors for creating Textures and Images
+-   Use the Vanilla Example files as a reference or inspiration for your addons
+-   How to solve problems and get help
 :::
 
 ## Your progress so far

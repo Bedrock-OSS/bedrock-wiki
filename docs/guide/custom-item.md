@@ -149,9 +149,9 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 
 ## What you have learned
 :::tip
-- How to format the behavior and resource files for an item
-- What components are and how to use them
-- How to set an items texture
+- 	How to format the behavior and resource files for an item
+- 	What components are and how to use them
+- 	How to set an items texture
 :::
 
 ## Your progress so far:
