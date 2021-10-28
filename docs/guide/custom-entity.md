@@ -243,7 +243,7 @@ Like items, the entity textures are simply `.png` files in `RP/textures/entity/`
 
 ![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png">Download Texture here</BButton>
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png">Download texture here</BButton>
 
 ### Model
 

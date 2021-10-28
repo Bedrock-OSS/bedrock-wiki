@@ -86,7 +86,7 @@ Navigate to `RP/textures/items/`, creating subdirectories as needed: this is whe
 
 ![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png">Download Texture here</BButton>
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png">Download texture here</BButton>
 
 ### Shortnames
 
