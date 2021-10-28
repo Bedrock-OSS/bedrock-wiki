@@ -6,16 +6,67 @@ title: Entity Attack
 If you're making custom entities, chances are that you will want them to attack other entities. This page will cover the types of attack, their usages and advantages over one another.
 
 ## Dealing Damage
-WIP link to https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source, info about `cause` and `damage` and how theyre caused by `attack` components
+First things first. Entities can attack and casue damage to other entities through a multitude of different components and events. The amount of damage depends on many factors, such as the amount stated in `"damage": ...`, difficulty multiplier, [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source). It all makes a difference. Take into considderation the sources, as certain items in vanilla can protect from some, like armour enchantments, and you can also make mobs immune to specific sources.
+
+The value defined can simply be a constant, or a string containing 2 numbers, for a range of possible values.
+
+`"damage": 3` would result in 3 each time
+
+`"damage": [ 2, 6 ]` would result in any intiger between 2 and 6
 
 ## Requirements
-In order for a mob to attack a target (not just damage everything within X blocks), many things are required, such as pathfinding and targeting systems, othewise your entity will **not** be able to attack.
+In order for a mob to attack a target, many things are required, such as pathfinding and targeting systems, othewise your entity will **not** be able to attack.
 
 ## Pathfinding
-WIP example, table, description, link to https://wiki.bedrock.dev/entities/entity-movement.html
+[Movement](https://wiki.bedrock.dev/entities/entity-movement.html) is required in most cases, so that mobs can change the distance between themselves and a potential target.
+Mobs will pathfind to it's prey through `minecraft:behavior.nearest_attackable_target`.
 
-## Target selecting
-WIP 
+```
+      "minecraft:behavior.nearest_attackable_target": {
+        "must_see": true,                       //If true, potential target must be in mob's line of sight
+        "reselect_targets": true,               //Allows mob to select new target, if one is closer than current
+        "within_radius": 25.0,                  //Radius that potential target must be withing
+        "must_see_forget_duration": 17.0,       //If "must_see" = true, time before forgetting target
+        "entity_types": [
+          {
+            "filters": {                        //Entities to target. Will go into it below
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 48.0                    
+          }
+        ]
+      }
+```
+
+### Target selecting
+
+Mobs find targets by using [filters](https://bedrock.dev/docs/stable/Entities#Filters) can be used to determine which entities are a valid target, through `test`s, `subject`s, `operator`s, and `values`.
+
+```
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "operator": "==", "value": "snow_golem" },
+                  { "test": "is_family", "subject": "other", "operator": "==", "value": "iron_golem" }
+                ]                //anything that is equal to either "snow_golem" or "iron_golem"
+              },
+              "max_dist": 24
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "operator": "==", "value": "player" },
+                  { "test": "has_equiptment", "subject": "other", "domain": "head", "operator": "=!", "value": "turtle_helmet" }
+                ]                //anything equal to player AND not wearing "turtle_helmet" on head
+              },
+              "max_dist": 24
+            }
+          ]
+```
+This would only target `snow_golem`s, `iron_golem`s, and `player`s that are **not** wearing `turtle_helmet`s. There are a lot of things you could do with `filters`.
 
 # Types of Attack
 WIP
