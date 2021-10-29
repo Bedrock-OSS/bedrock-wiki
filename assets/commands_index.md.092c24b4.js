@@ -1,0 +1,1 @@
+import{o as t,c as e}from"./404.md.9644e39d.js";const d='{"title":"Commands","description":"","frontmatter":{"title":"Commands"},"relativePath":"commands/index.md","lastUpdated":1635511822944}',o={};o.render=function(d,o,r,a,m,n){return t(),e("div")};export default o;export{d as __pageData};
