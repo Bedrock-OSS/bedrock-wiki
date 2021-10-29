@@ -53,6 +53,8 @@ some more text
 
 table showing other things you can define
 
+must_reach, persist_time, 
+
 ### Target selecting
 
 Mobs find targets by using [filters](https://bedrock.dev/docs/stable/Entities#Filters) can be used to determine which entities are a valid target, through `test`, `subject`, `operator`, and `value`.
@@ -84,22 +86,129 @@ This would only target `snow_golem`s, `iron_golem`s, and `player`s that are **no
 Now lets take a look at the different attacks.
 
 ## Melee
-`minecraft:behavior.melee_attack` example, table, description
-## Ranged
-`minecraft:behavior.ranged_attack` example, table, description
-## Area
-`minecraft:area_attack` example, table, description
-## Knockback Roar
-`minecraft:behavior.knockback_roar` example, table, description
 
+text
+
+```
+      "wiki:melee_attack": {
+        "minecraft:attack": {
+          "damage": 3,
+          "effect_name": "slowness",
+	        "effect_duration": 20
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "speed_multiplier": 1,
+          "track_target": false,
+          "require_complete_path": true
+        }
+      },
+```
+text
+
+table
+
+text
+
+## Ranged
+
+text
+
+```
+      "wiki:ranged_attack": {
+        "minecraft:behavior.ranged_attack": {
+          "priority": 0,
+          "attack_interval_min": 1.0,
+          "attack_interval_max": 3.0,
+          "attack_radius": 15.0
+        },
+        "minecraft:shooter": {
+          "def": "wiki:projectile"
+        }
+      }
+```
+
+text
+
+table
+
+crossbow
+
+texttext
+
+```
+    "minecraft:behavior.charge_held_item": {
+    	"priority": 3,
+    	"items": [
+      	"minecraft:arrow"
+      ]
+    }
+```
+
+text
+
+## Area
+
+text
+
+```
+      "minecraft:area_attack" : {
+        "damage_range": 0.2,
+        "damage_per_tick": 2,
+        "cause": "contact",
+        "entity_filter": {
+           "any_of": [
+            { "test": "is_family", "subject": "other", "value": "player" },
+            { "test": "is_family", "subject": "other", "value": "monster" }
+          ]
+        }
+      }
+```
+text
+
+## Knockback Roar
+
+teXt
+
+```
+      "wiki:roar": {
+        "minecraft:behavior.knockback_roar":{
+          "priority":2,
+          "duration":0.7,
+          "attack_time":0.2,
+          "knockback_damage":1,
+          "knockback_horizontal_strength":1,
+          "knockback_vertical_strength":1,
+          "knockback_range":5,
+          "knockback_filters":{
+            "test":"is_family",
+            "subject":"other",
+            "operator":"==",
+            "value":"player"
+          },
+          "damage_filters":{
+            "test":"is_family",
+            "subject":"other",
+            "operator":"==",
+            "value":"player"
+          },
+          "on_roar_end":{
+            "event":"wiki:other_event"
+          },
+          "cooldown_time":10
+        }
+      }
+```
+
+text something text disable knockback text block damage emulation text dummy entity
 
 # More on Attacks
 
-Entity Attacks don't have to be as simple as Mob being hostile towards X target, doing X attack, dealing X damage
+Entity Attacks don't have to be as simple as Mob being hostile towards X target, doing X attack, dealing X damage.
 
 ## Difficulty Dependant Attacks
 
-Sometimes you may want your mob to be even more dangerous depending on game difficulty. Typically this is used to apply mob effects to targets WIP
+Sometimes you may want your mob to be even more dangerous depending on game difficulty. Typically this is used to apply mob effects to targets . . . WIP
 
 ## Switching Modes
 
@@ -173,7 +282,7 @@ The events are effectively for just turning attack modes on and off, by adding a
 
 To trigger the events, another compenent group is used. Sensors are components that can trigger events when certain conditions are fulfilled. Here are 2 examples of different sensors:
 
-For sensing the distance between the mob and target
+- For sensing the distance between the mob and target
 ```
       "wiki:switcher_range": {
         "minecraft:target_nearby_sensor": {
@@ -192,7 +301,7 @@ For sensing the distance between the mob and target
       }
 ```
 
-For sensing certain features of the environment of wich the mob is exposed to
+- For sensing certain features of the environment of wich the mob is exposed to
 ```
       "wiki:switcher_environment": {
         "minecraft:environment_sensor": {
@@ -219,19 +328,49 @@ For sensing certain features of the environment of wich the mob is exposed to
         }
       }
 ```
-This uses `Filters`, similar to how the [target is initially selected](#target-selecting)
+This uses `Filters`, similar to how the [target is initially selected](#target-selecting).
 
 
 :::tip
 You aren't limited to just 2 attack types, you can have as many as you want! Just make sure to have the event's and sensors to compensate for them.
 :::
-## Alternative Methods
-WIP commands, mob effects, spawn, other
 
-# Animations
+## Other Methods
+
+There are also alternative, indirect ways of making entieties "attack", such as spawning dummy entities that can cause damage and act as a "special attack", or placing dangerous blocks, and even applying mob effects. These can be achieved through the entitie's file in the "entities" folder, and also though [Animation Controllers](/docs/animation-controllers/animation-controllers-intro).
+
+### Mob Effects
+
+ways of applying examples
+
+### Summon Dummy Entity
+
+summoning, 
+
+### Commands
+
+/summon, /kill, /mobeffect, /tp,
+
+### Animation Controllers (Behaviour Pack)
+
+explaination on what it is and on why to use
+
+# Visual Animations
+
+Inside resource packs are where it is decided what animations are played and when. This requires Animations, for the visuals, Animation Controllers, for triggers, and a way of defining the animations and controllers to use in the entity's dedicated `mobname.json`.
+
+## Animations
+
+structure of animations, mention blockbench, that kinda stuff. Maybe a brief explaination on how to make them and some links
 
 ## Animation Controllers
 
-### Behavior Pack
+explain how theyre used and structured
 
-### Resource Pack
+## Defining Them
+
+show and explain how the animations and controllers for the mob to use are defined
+
+## Additional Information
+
+timers, molang queries, etc. 
