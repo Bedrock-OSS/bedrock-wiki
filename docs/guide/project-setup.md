@@ -12,7 +12,9 @@ You should create a shortcut to the `com.mojang` folder on your Desktop, so you 
 
 ### Windows
 
-`C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
+```
+C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang
+```
 
 ### Android
 
@@ -20,7 +22,7 @@ You should create a shortcut to the `com.mojang` folder on your Desktop, so you 
 
 ### iOS
 
-`My iDevice > Minecraft > games>com.mojang`
+`My iDevice > Minecraft > games > com.mojang`
 
 ### Development Packs
 
@@ -87,7 +89,7 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 -   "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version; use it.
 
--   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game. We are defining these files in "code form" so we can translate them later into other languages.
+-   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game. We are defining these files in "code form" so we can translate them later into other languages. For more information about localization, look [here](/concepts/text-localization).
 
 -   The "`UUID`" field is **essential**, and will be discussed in more detail below.
 
@@ -111,7 +113,7 @@ To ensure that your add-on will work correctly you should generate two new UUID'
 
 The next step is to create the `manifest.json` for the RP. The format for a resource-pack manifest is nearly identical to a BP manifests except that the `type` is `resources`, which marks the pack as a _Resource Pack_.
 
-Copy the following code into your newly created `RP/manifest.json`.
+Copy the following code into your newly created `RP/manifest.json` and insert your own UUIDs.
 
 <CodeHeader>RP/manifest.json</CodeHeader>
 
@@ -189,7 +191,7 @@ Turn on both content log settings in `settings > creator`. This will show you an
 
 ## Creating your testing world
 
-Now to create a testing world to test your new add-on!
+Now we create a world to test your new add-on!
 
 1. Click "**Create new world**";
 
@@ -221,6 +223,18 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
 
 ]"></FolderView>
+
+## What you have learned
+:::tip
+- 	What the com.mojang folder is, where it is and what folders it contains
+- 	How to setup your workspace
+- 	What a `manifest.json` file is
+- 	How to use UUIDs
+- 	How to create an icon for your addon
+- 	What a `.lang` file is
+:::
+
+## Your progress so far
 
 **What you've done:**
 
