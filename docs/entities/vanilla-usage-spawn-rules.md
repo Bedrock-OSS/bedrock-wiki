@@ -3,7 +3,23 @@ title: Vanilla Usage Spawn Rules
 ---
 
 # Spawn Rules
-This documentation is stripped from the vanilla files, using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester)
+
+In Minecraft Bedrock Edition, spawn rules for most of the entites are data driven which allows you to adjust the spawn conditions of entities including new entities added to the game to spawn naturally. There are some entities such as the dragons that cannot be changed.
+
+A basic spawn rule must always contain a population control. There is no way to add custom population controls into the game so you have to choose from one of the following:
+
+  - animal
+  - water_animal
+  - monster
+  - cat
+  - villager
+  - pillager
+
+Although these are the available options within the game, some of them do come with pre-set conditions, for example the cat population rules and limits are based upon the amount within a village and not within the simulation distance.
+
+Once a population control has been defined you can refine the spawning conditions with the componants listed below.
+
+The listed componants was stripped from the vanilla files, using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester)
 
 # Table of contents
  - [minecraft:biome_filter](#minecraftbiome_filter)
@@ -31,7 +47,12 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:biome_filter
 
+This component is used to specify which biomes the entity can spawn in. A current known list of biomes and the tags used in them are located [here](https://wiki.bedrock.dev/world-generation/biome-tags.html)
+
+Below is all the areas where this is used in the vanilla files.
+
 <Spoiler title="Code">
+ 
 ### bat
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
 ```json
@@ -802,7 +823,18 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:brightness_filter
 
+This component is used to set the allowed light level range for spawning in the entity. This component has the following parameters;
+
+| Parameters  | Type | Description |
+| ------------- | ------------- | ------------- |
+| adjust_for_weather  | Boolean | When true this gives the ability to spawn in during certain weather conditions where it wouldn't normally spawn |
+| min  | Decimal | The minimum value is 0.0  |
+| max  | Decimal | The minimum value is 15.0  |
+
+Below is all the areas where this is used in the vanilla files.
+
 <Spoiler title="Code">
+ 
 ### axolotl
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 ```json
@@ -1118,6 +1150,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:delay_filter
 
 <Spoiler title="Code">
+
 ### pillager_patrol
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 ```json
@@ -1151,7 +1184,19 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:density_limit
 
+This component specifies the amount of entities to spawn in depending on if its a surface or uderground spawn. This limit is only calculated based on the simulation distance, entities who are not loaded would not be considered for this rule.
+
+This component has the following parameters;
+
+| Parameters  | Type | Description |
+| ------------- | ------------- | ------------- |
+| surface  | Integer | As there is a global cap, technically the max would be 200 |
+| underground  | Integer | As there is a global cap, technically the max would be 200 |
+ 
+Below is all the areas where this is used in the vanilla files.
+
 <Spoiler title="Code">
+ 
 ### bat
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
 ```json
@@ -1272,7 +1317,26 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:difficulty_filter
 
+This component is used to set what difficulty level the entity can spawn in on, for example if your mob is hostile you would not want it to spawn in when on peaceful mode.
+
+This component has the following parameters;
+
+| Parameters  | Type | Description |
+| ------------- | ------------- | ------------- |
+| min  | String | This is the minimum difficulty level in which the entity should spawn from |
+| max  | String | This is the maximum difficulty level in which the entity should spawn to |
+
+ The min and max values must be one of the following only:
+
+- peaceful
+- easy
+- normal
+- hard
+
+Below is all the areas where this is used in the vanilla files.
+
 <Spoiler title="Code">
+ 
 ### creeper
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
 ```json
@@ -1452,6 +1516,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:disallow_spawns_in_bubble
 
 <Spoiler title="Code">
+
 ### axolotl
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 ```json
@@ -1463,6 +1528,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:distance_filter
 
 <Spoiler title="Code">
+ 
 ### cod
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
 ```json
@@ -1513,6 +1579,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:height_filter
 
 <Spoiler title="Code">
+
 ### axolotl
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 ```json
@@ -1562,7 +1629,21 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:herd
 
+This component is used to determine how many spawn in at once. When this happens its called a herd. 
+
+This component has the following parameters;
+
+| Parameters  | Type | Description |
+| ------------- | ------------- | ------------- |
+| event  | String | This is used to trigger the entities spawn events |
+| event_skip_count  | Integer | Number of entities spawned before event is triggered |
+| min_size  | Integer | Minimum number of entities that can spawn. |
+| max_size  | Integer | Maximum number of entities that can spawn. |
+
+Below is all the areas where this is used in the vanilla files.
+
 <Spoiler title="Code">
+ 
 ### axolotl
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 ```json
@@ -2119,6 +2200,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:mob_event_filter
 
 <Spoiler title="Code">
+ 
 ### pillager_patrol
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 ```json
@@ -2132,6 +2214,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:permute_type
 
 <Spoiler title="Code">
+ 
 ```json
 "minecraft:permute_type": [
     {
@@ -2172,7 +2255,21 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:player_in_village_filter
 
+This component is used to track when a player enters a village. This is useful for entities that should only spawn in villages such as cats / villager's or pillager patrols.
+
+This component has the following parameters;
+
+| Parameters  | Type | Description |
+| ------------- | ------------- | ------------- |
+| distance  | Integer | Used to define how far away from the player the entity will spawn |
+| village_border_tolerance  | Integer | Used to define how close to the village boarder the entity is allowed to spawn |
+ 
+For the village_border_tolerance, if 0 this will allow the entity to spawn right on the village boarder; increasing the number will push the entity further away from the boarder. 
+
+Below is all the areas where this is used in the vanilla files.
+ 
 <Spoiler title="Code">
+ 
 ### pillager_patrol
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
 ```json
@@ -2187,6 +2284,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:spawn_event
 
 <Spoiler title="Code">
+
 ### stray
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
 ```json
@@ -2200,6 +2298,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:spawns_above_block_filter
 
 <Spoiler title="Code">
+
 ### axolotl
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 ```json
@@ -2213,7 +2312,10 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:spawns_lava
 
+This component is used to specify if the entity should spawn in lava or not. There are no parameters for this component, if its added as a rule then it sets itself to true and if there isn't one its automatically considered false.
+ 
 <Spoiler title="Code">
+ 
 ### strider
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
 ```json
@@ -2225,6 +2327,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:spawns_on_block_filter
 
 <Spoiler title="Code">
+
 ### chicken
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
 ```json
@@ -2326,6 +2429,7 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 # minecraft:spawns_on_block_prevented_filter
 
 <Spoiler title="Code">
+
 ### hoglin
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
 ```json
@@ -2375,7 +2479,12 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:spawns_on_surface
 
+This component allows entities to spawn on the ground / outside. There are no parameters for this component, if its added as a rule then it sets itself to true and if there isn't one its automatically considered false.
+
+Below is all the areas where this is used in the vanilla files.
+
 <Spoiler title="Code">
+ 
 ### bee
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
 ```json
@@ -2596,7 +2705,12 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:spawns_underground
 
+This component allows entities to spawn underground in caves / mineshafts etc.. There are no parameters for this component, if its added it sets itself to true and if there isn't one its automatically considered false.
+
+Below is all the areas where this is used in the vanilla files.
+
 <Spoiler title="Code">
+ 
 ### axolotl
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 ```json
@@ -2703,7 +2817,12 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:spawns_underwater
 
+This component allows entities to spawn in water. There are no parameters for this component, if its added it sets itself to true and if there isn't one its automatically considered false.
+
+Below is all the areas where this is used in the vanilla files.
+ 
 <Spoiler title="Code">
+
 ### axolotl
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 ```json
@@ -2768,7 +2887,18 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # minecraft:weight
 
+This component is used to set the spawning priority for the entity. 
+
+This component has the following parameters;
+
+| Parameters  | Type | Description |
+| ------------- | ------------- | ------------- |
+| default  | Integer | Entities with a lower weight value will have a lower chance to spawn than entities with a higher weight value. | 
+
+Below is all the areas where this is used in the vanilla files.
+
 <Spoiler title="Code">
+ 
 ### axolotl
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
 ```json
