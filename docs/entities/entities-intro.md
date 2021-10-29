@@ -11,7 +11,7 @@ Confusing component groups with components is a widespread source of errors. Pay
 
 ## Components
 
-Components are logical building blocks that make up Minecraft entities. All components are written by Mojang and provided to us for use. Components can do all sorts of things, like set the size of an entity or give it the ability to swim. The [complete list of components can be found here](https://bedrock.dev/docs/stable/Entities).
+Components are logical building blocks that make up Minecraft entities. All components are written by Mojang and provided to us for use. Components can do all sorts of things, like set the size of an entity or give it the ability to swim. The complete list of components can be found [here](https://bedrock.dev/docs/stable/Entities).
 
 It is _impossible_ to create your own components. The entire list of components is hard-coded and provided by Microsoft.
 
@@ -74,7 +74,7 @@ Here is an example:
 
 All component groups are custom-created. You cannot use component groups from other entities in your entity.
 
-In vanilla Minecraft entities, component groups are namespaced with `minecraft:` -like `minecraft:cat_persian` above. But it is important to remember that they are _not components_. When you create your component groups, you can use whatever name/namespace:name combination you want. For example, `wiki:example_group` above. [Here's more info on namespaces](/concepts/namespaces).
+In vanilla Minecraft entities, component groups are namespaced with `minecraft:`, like `minecraft:cat_persian` above. But it is important to remember that they are _not components_. When you create your component groups, you can use whatever name/namespace:name combination you want. For example, `wiki:example_group` above. [Here](/concepts/namespaces)'s more info on namespaces.
 
 When a component is placed into a group, is it _not_ automatically added to your entity. It won't do anything at all until the group is added. When the group is added, the component will become active and start affecting the behavior of your entity.
 
@@ -84,7 +84,7 @@ Events are a special syntax for adding and removing component groups. By adding/
 
 An example:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/example.json#minecraft:entity#events</CodeHeader>
 
 ```json
 "minecraft:ageable_grow_up": { //Name of the event
@@ -105,8 +105,6 @@ Like component groups, events are 100% custom-created inside each entity. You ca
 
 The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible.
 
-</Label color="red" name=advanced>
-
 ### Conditional Events
 
 Conditional events are events using "filters" to return a component group depending on your filter (see the example below).
@@ -114,7 +112,7 @@ We are testing if a tag exists and if it doesn't return the "prefix:is_false" co
 
 An example:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/example.json#minecraft:entity#events</CodeHeader>
 
 ```json
       "prefix:event_name": {//Name of the event
@@ -169,15 +167,15 @@ An example.
 
 <CodeHeader></CodeHeader>
 
-```json
-        //Command usage to send an event to all creepers.
-        /event entity @e[type=creeper] minecraft:become_charged
+```
+## Command usage to send an event to all creepers.
+/event entity @e[type=creeper] minecraft:become_charged
 ```
 
 The flow is:
 
 -   Add the component to the entity
--   Component triggers event or /event triggers event
+-   Component triggers event or `/event` triggers event
 -   Which adds component group
 -   Which adds the component
 -   Which affects the entity in some form or another.
@@ -186,4 +184,4 @@ The flow is:
 
 Component groups and events are the primary tools that vanilla entities use to create custom and adaptable behavior. For a specific example, look at the zombie.
 
-The zombie is programmed to turn into a `drowned` if it spends too long in the water. Look at the component groups and events, and see if you can work out how this is done!
+The zombie is programmed to turn into a `drowned` if it spends too long under the water. Look at the component groups and events, and see if you can work out how this is done!
