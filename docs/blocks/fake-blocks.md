@@ -184,7 +184,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 
 Vanilla blocks have a cracking texture that appears when you break them. Here I will show you how to add this effect to your entity.
 
-First, we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
+First, we have to add some textures to your entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
 
 <CodeHeader>RP/entity/your_entity.json#description</CodeHeader>
 

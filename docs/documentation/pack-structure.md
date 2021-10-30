@@ -15,7 +15,7 @@ show_toc: false
 
 'BP/biomes/example.biome.json',
 
-'BP/entities/example.entity.json',
+'BP/entities/example.se.json',
 
 'BP/features/example.feature.json',
 'BP/feature_rules/example.rule.json',
@@ -54,7 +54,7 @@ show_toc: false
 
 'RP/attachables/example.attachable.json',
 
-'RP/entity/example.entity.json',
+'RP/entity/example.ce.json',
 
 'RP/models/entity/example.geo.json',
 'RP/models/blocks/example.geo.json',
