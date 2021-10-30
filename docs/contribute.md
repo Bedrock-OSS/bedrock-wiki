@@ -9,10 +9,18 @@ The Bedrock Wiki is fully open source. This means that is it maintained word-for
 
 ## Bedrock OSS
 
-Bedrock OSS is a Github Organization that maintains many Bedrock resources, including the wiki! You can view our [github organization here](https://github.com/Bedrock-OSS), and our [Discord here](https://discord.gg/XjV87YN).
+Bedrock OSS is a Github Organization that maintains many Bedrock resources, including the wiki! You can view our github organization [here](https://github.com/Bedrock-OSS), and our Discord [here](https://discord.gg/XjV87YN).
 
 Getting in touch via [Discord](https://discord.gg/XjV87YN) is the best way to discuss and learn about editing the wiki. We can offer support there in how to use github, how to make a pull request, and how to write valid markdown for the wiki.
 
 ## Contributing
 
-Instructions for editing the wiki can be found in the readme of our [github repository.](https://github.com/Bedrock-OSS/bedrock-wiki).
+Some basic instructions for editing the wiki can be found in the readme of our [github repository](https://github.com/Bedrock-OSS/bedrock-wiki).
+
+You may directly open PRs for the following:
+
+- Rewriting sections for clarity
+- Fixing spelling or grammar
+- Removing or correcting false information.
+
+For more complex things, like full article rewrites, or new articles, join the [Discord](https://discord.gg/XjV87YN)!
