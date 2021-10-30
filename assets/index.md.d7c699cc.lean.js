@@ -1,0 +1,1 @@
+import{r as t,o as e,c as o,b as r}from"./404.md.7fc10f89.js";const s='{"title":"","description":"","frontmatter":{"show_toc":false,"show_contributors":false,"hidden":true},"relativePath":"index.md","lastUpdated":1635633173436}',a={};a.render=function(s,a,n,d,i,c){const f=t("Homepage");return e(),o("div",null,[r(f)])};export default a;export{s as __pageData};
