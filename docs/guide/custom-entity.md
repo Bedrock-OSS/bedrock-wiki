@@ -161,7 +161,7 @@ You can probably remember that `"wiki.ectoplasm"` is the shortname of our custom
 
 -   And, finally, `"render_controllers"` lists one or more identifiers of render controllers, which control materials.
 
-Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same; the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn more about [render controlles here.](/visuals/entity-visuals-intro)
+Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same; the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn more about [render controllers here.](/visuals/entity-visuals-intro)
 
 <CodeHeader>RP/render_controllers/entity/ghost.rc.json</CodeHeader>
 
