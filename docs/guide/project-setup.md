@@ -9,6 +9,7 @@ prefix: '4.'
 The `com.mojang` folder is a special folder where we build our addons. Minecraft understands this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder!
 
 You should create a shortcut to the `com.mojang` folder on your Desktop, so you can easily access it at any time.
+See below for the pathing on how to get to your com.mojang folder!
 
 ### Windows
 
@@ -153,14 +154,14 @@ The last thing to do is setup language support for your addon. You will need to 
 
 ```json
 pack.name=Wiki Resource Pack
-pack.description=My First Addon
+pack.description=A Ghostly Guide
 ```
 
 <CodeHeader>BP/texts/en_US.lang</CodeHeader>
 
 ```json
 pack.name=Wiki Behavior Pack
-pack.description=My First Addon
+pack.description=A Ghostly Guide
 ```
 
 <CodeHeader>RP/texts/languages.json</CodeHeader>
