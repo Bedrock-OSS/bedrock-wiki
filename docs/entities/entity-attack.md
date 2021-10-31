@@ -30,7 +30,8 @@ But first, it's important to know that generally, attacks require a way of knowi
 [Movement](/entities/entity-movement) is required in most cases, so that mobs can change the distance between themselves and a potential target.
 Mobs will [pathfind](/entities/entity-movement), become hostile to, or both to another entity through the usage of some special components.
 
-```
+<CodeHeader></CodeHeader>
+```json
       "minecraft:behavior.nearest_attackable_target": {
         "must_see": true,                       //If true, potential target must be in mob's line of sight
         "reselect_targets": true,               //Allows mob to select new target, if one is closer than current
@@ -61,7 +62,8 @@ Following 3 structured roughly the same as given example.
 
 This last component listed is slightly different to the other three, as it is for detecting and targeting entities that attempt eye contact. It is structured like so:
 
-```
+<CodeHeader>BP/entities/enderman.json</CodeHeader>
+```json
       "minecraft:lookat": {
         "search_radius": 64.0,
         "set_target": true,              //Becomes a valid target if true
@@ -82,7 +84,7 @@ This last component listed is slightly different to the other three, as it is fo
             }
           ]
         }
-      }                                  //example straight from enderman.json
+      }
 ```
 
 
@@ -90,7 +92,8 @@ This last component listed is slightly different to the other three, as it is fo
 
 Mobs find targets by using [filters](https://bedrock.dev/docs/stable/Entities#Filters) can be used to determine which entities are a valid target, through `test`, `subject`, `operator`, and `value`.
 
-```
+<CodeHeader></CodeHeader>
+```json
           "entity_types": [
             {
               "filters": {
@@ -183,7 +186,8 @@ Both the mob effect and duration timer are optional, but when they are used, the
 
 Fires specified [projectiles](/documentation/projectiles) towards target at set intervals.
 
-```
+<CodeHeader></CodeHeader>
+```json
       "wiki:ranged_attack": {
         "minecraft:behavior.ranged_attack": {     //defines the properties of the ranged attack
           "priority": 2,
@@ -220,7 +224,8 @@ List of vanilla projectiles:
 
 Only one item has an effect on an entity's ranged attacks. Crossbows. If one is equipped, it is first required for it to be "charged" before the entity can fire anything. Regardless of the projectile stated in `minecraft:shooter`, the item to charge the crossbow with should always be `minecraft:arrow`.
 
-```
+<CodeHeader></CodeHeader>
+```json
     "minecraft:behavior.charge_held_item": {
       "priority": 2,
       "items": [
@@ -236,7 +241,8 @@ Once `minecraft:behavior.charge_held_item` has been achieved, the entity will be
 
 These attacks damage all entities within a set radius. It is different to both ranged and melee in that this component doesn’t actually require a target. Regardless of the entities behaviour, *all* entities will be affected by this. It appears to be similar to melee attacks, as it deals knockback in a similar manner, though dealing damage at a constant rate.
 
-```
+<CodeHeader></CodeHeader>
+```json
       "minecraft:area_attack" : {
         "damage_range": 1,                 //distance in blocks
         "damage_per_tick": 2,
@@ -257,7 +263,8 @@ In most cases, a [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage
 
 Many similarities between this and `minecraft:area_attack`, this component though having much more flexibility.
 
-```
+<CodeHeader></CodeHeader>
+```json
       "wiki:roar_attack": {
         "minecraft:behavior.knockback_roar":{
           "priority":2,
@@ -299,7 +306,8 @@ Entity Attacks don't have to be as simple as Mob being hostile towards X target,
 
 Express components and values to use for each difficulty.
 
-```
+<CodeHeader>BP/entities/bee.json</CodeHeader>
+```json
             "easy_attack": {
                 "minecraft:attack": {
                     "damage": 2
@@ -331,7 +339,8 @@ You can use events to make your mob only attack under specific circumstances, or
 
 Component groups are required to define the different modes of attack, such as:
 
-```
+<CodeHeader></CodeHeader>
+```json
       "wiki:ranged_components": {
         "minecraft:shooter": {
           "def": "wiki:projectile"
@@ -344,7 +353,8 @@ Component groups are required to define the different modes of attack, such as:
         }
       }
 ```
-```
+<CodeHeader></CodeHeader>
+```json
       "wiki:melee_components": {
         "minecraft:attack": {
           "damage": 6
@@ -362,7 +372,8 @@ Those are examples of your attack modes, but they are not the only ones you can 
 
 These component groups won't actually do anything by themselves. Another component group is required, and some events to add/remove the attack modes.
 
-```
+<CodeHeader></CodeHeader>
+```json
       "wiki:melee_swap": {    //When triggered, adds component group for ranged and removes melee component group
         "remove": {
           "component_groups": [
@@ -376,7 +387,8 @@ These component groups won't actually do anything by themselves. Another compone
         }
       }
 ```
-```
+<CodeHeader></CodeHeader>
+```json
       "wiki:ranged_swap": {   //When triggered, adds component froup for melee and removes ranged component group
         "remove": {
           "component_groups": [
@@ -398,7 +410,8 @@ The events are effectively for just turning attack modes on and off, by adding a
 To trigger the events, another component group is used. Sensors are components that can trigger events when certain conditions are fulfilled. Here are 2 examples of different sensors:
 
 - For sensing the distance between the mob and target
-```
+<CodeHeader></CodeHeader>
+```json
       "wiki:switcher_range": {
         "minecraft:target_nearby_sensor": {
           "inside_range": 4.0,
@@ -417,7 +430,8 @@ To trigger the events, another component group is used. Sensors are components t
 ```
 
 - For sensing certain features of the environment of which the mob is exposed to
-```
+<CodeHeader></CodeHeader>
+```json
       "wiki:switcher_environment": {
         "minecraft:environment_sensor": {
           "triggers": [
