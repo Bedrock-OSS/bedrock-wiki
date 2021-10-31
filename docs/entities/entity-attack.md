@@ -1,5 +1,7 @@
 ---
 title: Entity Attack
+mention:
+  - Luthorius
 ---
 
 Entity attacks are a complex subject that require many different things to work correctly:
@@ -140,6 +142,7 @@ The value defined in components stating integers of damage can simply be a const
 
 `"damage": [ 2, 6 ]` would result in any integer between 2 and 6
 
+
 Both the mob effect and duration timer are optional, but when they are used, the available effects are as following:
 
 | Effect Name     |
@@ -178,7 +181,7 @@ Both the mob effect and duration timer are optional, but when they are used, the
 
 ### Ranged
 
-Fires specified [projectiles](/docs/documentation/projectiles) towards target at set intervals.
+Fires specified [projectiles](/documentation/projectiles) towards target at set intervals.
 
 ```
       "wiki:ranged_attack": {
@@ -248,6 +251,7 @@ These attacks damage all entities within a set radius. It is different to both r
 ```
 
 In most cases, a [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source). It  is important to take these into consideration, as certain items in vanilla can protect from some, like armour enchantments, and you can also make mobs immune to specific sources using `minecraft:damage_sensor`.
+
 
 ### Knockback Roar
 
@@ -459,7 +463,7 @@ Or as long as you know the names of vanilla animations and animation controllers
 
 ### Animations
 
-Animations are self explanatory. The files themselves contain all specific animations for the given entity. The recommended way to make animations is by using [blockbench](/docs/guide/blockbench).
+Animations are self explanatory. The files themselves contain all specific animations for the given entity. The recommended way to make animations is by using [blockbench](/guide/blockbench).
 
 Though it is possible to create them in a simple text editor.
 
