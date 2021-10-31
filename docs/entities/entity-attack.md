@@ -3,36 +3,37 @@ title: Entity Attack
 ---
 # Overview
 
-If you're making custom entities, chances are that you will want them to attack other entities. This page will cover the types of attack, their usages and advantages over one another.
+If you're making custom entities, chances are that you will want them to attack other entities. This page will cover the types of attack, give examples of structure, and list components.
 
 
 ## Dealing Damage
-Entities can attack and casue damage to other entities through a multitude of different components and events. The amount of damage depends on many factors, such as the amount stated in `"damage": ...`, difficulty multiplier, [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source). It all makes a difference. Take into considderation the sources, as certain items in vanilla can protect from some, like armour enchantments, and you can also make mobs immune to specific sources.
+
+Entities can attack and cause damage to other entities through a multitude of different components and events. The amount of damage depends on many factors, such as the amount stated in `"damage": ...`, difficulty multiplier, [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source). It all makes a difference. Take into consideration the sources, as certain items in vanilla can protect from some, like armour enchantments, and you can also make mobs immune to specific sources.
 
 The value defined can simply be a constant, or a string containing 2 numbers, for a range of possible values.
 
 `"damage": 3` would result in 3 each time
 
-`"damage": [ 2, 6 ]` would result in any intiger between 2 and 6
-
+`"damage": [ 2, 6 ]` would result in any integer between 2 and 6
 
 # Types of Attack
+
 These are the currently known types of attack:
 
-| Component                                                               | Note                             |
-| ----------------------------------------------------------------------- | -------------------------------- |
-| [minecraft:behavior.melee_attack](#melee)     | Deals damage to a single target      |
-| [minecraft:behavior.ranged_attack](#ranged)   | Fires a ptojectile towards a target |
-| [minecraft:area_attack](#area)                         | Effectively melee attacks on anything withing range        |
-| [minecraft:behavior.knockback_roar](#knockback-roar) | Similar to minecraft:area_attack, but much more flexible
+| Component                                            | Note                                                     |
+| ---------------------------------------------------- | -------------------------------------------------------- |
+| [minecraft:behavior.melee_attack](#melee)            | Deals damage to a single target                          |
+| [minecraft:behavior.ranged_attack](#ranged)          | Fires a projectile towards a target                      |
+| [minecraft:area_attack](#area)                       | Effectively melee attacks on anything withing range      |
+| [minecraft:behavior.knockback_roar](#knockback-roar) | Similar to minecraft:area_attack, but much more flexible |
 
-
-But first, it's important to know that generally, attacks require a way of knowwing *how* to attack another entity.
+But first, it's important to know that generally, attacks require a way of knowing *how* to attack another entity.
 
 
 ## Triggering Hostility
+
 [Movement](/entities/entity-movement) is required in most cases, so that mobs can change the distance between themselves and a potential target.
-Mobs will pathfind to it's prey through 
+Mobs will pathfind, become hostile to, or both to another entity through the usage of some special components.
 
 ```
       "minecraft:behavior.nearest_attackable_target": {
@@ -60,10 +61,10 @@ Following 3 structured roughly the same as given example.
 | minecraft:behavior.nearest_attackable_target             | Targets entity meeting the given requirements               |
 | minecraft:behavior.nearest_prioritized_attackable_target | Allows for "priority": [number] to be set after each filter |
 | minecraft:behavior.defend_trusted_target                 | Targets entity that hurts any entities specified in filters |
-| -------------------------------------------------------- | ----------------------------------------------------------- |
+
 | minecraft:lookat                                         | Senses mobs that stare at the given entity                  |
 
-The last component listed is slightly different to the other three, as it is for detecting and targeting entities that attempt eye contact. It is structured like so:
+This last component listed is slightly different to the other three, as it is for detecting and targeting entities that attempt eye contact. It is structured like so:
 
 ```
       "minecraft:lookat": {
@@ -128,9 +129,9 @@ Melee attacks are the most common type of attack, they cause knockback, and have
         "minecraft:attack": {                  //defines the base stats of melee attacks
           "damage": 3,
           "effect_name": "slowness",
-	        "effect_duration": 20
+          "effect_duration": 20
         },
-        "minecraft:behavior.melee_attack": {   //defines the propperties of the melee attack
+        "minecraft:behavior.melee_attack": {   //defines the properties of the melee attack
           "priority": 3,
           "speed_multiplier": 1,
           "track_target": false,
@@ -138,11 +139,8 @@ Melee attacks are the most common type of attack, they cause knockback, and have
         }
       },
 ```
-text
+Set the damage, choose a mob effect (or not), and change some additional properties.
 
-table
-
-text
 
 ## Ranged
 
@@ -183,14 +181,13 @@ List of vanilla projectiles:
 | minecraft:wither_skull_dangerous |
 | minecraft:xp_bottle              |
 
-
-Only one item has an effect on an entity's ranged attacks. Crossbows. If one is equiped, it is first required for it to be "charged" before the entity can fire anything. Regardless of the projectile stated in `minecraft:shooter`, the item to charge the crossbow with should always be `minecraft:arrow`.
+Only one item has an effect on an entity's ranged attacks. Crossbows. If one is equipped, it is first required for it to be "charged" before the entity can fire anything. Regardless of the projectile stated in `minecraft:shooter`, the item to charge the crossbow with should always be `minecraft:arrow`.
 
 ```
     "minecraft:behavior.charge_held_item": {
-    	"priority": 2,
-    	"items": [
-      	"minecraft:arrow"
+      "priority": 2,
+      "items": [
+        "minecraft:arrow"
       ]
     }
 ```
@@ -200,7 +197,7 @@ Once `minecraft:behavior.charge_held_item` has been achieved, the entity will be
 
 ## Area
 
-These attacks damage all entities within a set radius. It is different to both ranged and melee in that this component doesnt actually require a target. Regardless of the entities behavior, *all* entities will be affected by this. It appears to be similar to melee attacks, as it deals knockback in a similar mannar, though dealing damage at a constant rate.
+These attacks damage all entities within a set radius. It is different to both ranged and melee in that this component doesn’t actually require a target. Regardless of the entities behaviour, *all* entities will be affected by this. It appears to be similar to melee attacks, as it deals knockback in a similar manner, though dealing damage at a constant rate.
 
 ```
       "minecraft:area_attack" : {
@@ -251,7 +248,7 @@ Many similarities between this and `minecraft:area_attack`, this component thoug
       }
 ```
 
-This is more like a shockwave of damage. Extremely versatile in uses. Produces a particle effect, which can be disabled by adding a moddified version of `knockback_roar.json` to a resource pack's particles folder.
+This is more like a shockwave of damage. Extremely versatile in uses. Produces a particle effect, which can be disabled by adding a modified version of `knockback_roar.json` to a resource pack's particles folder.
 
 
 # More on Attacks
@@ -261,7 +258,29 @@ Entity Attacks don't have to be as simple as Mob being hostile towards X target,
 
 ## Difficulty Dependant Attacks
 
-Sometimes you may want your mob to be even more dangerous depending on game difficulty. Typically this is used to apply mob effects to targets . . . WIP
+Express components and values to use for each difficulty.
+
+```
+            "easy_attack": {
+                "minecraft:attack": {
+                    "damage": 2
+                }
+            },
+            "normal_attack": {
+                "minecraft:attack": {
+                    "damage": 2,
+                    "effect_name": "poison",
+                    "effect_duration": 10
+                }
+            },
+            "hard_attack": {
+                "minecraft:attack": {
+                    "damage": 2,
+                    "effect_name": "poison",
+                    "effect_duration": 18
+                }
+            }                       //Example from bee.json
+```
 
 
 ## Switching Modes
@@ -271,7 +290,7 @@ You can use events to make your mob only attack under specific circumstances, or
 
 ### Attacks 
 
-Compenent groups are required to define the different modes of attack, such as:
+Component groups are required to define the different modes of attack, such as:
 
 ```
       "wiki:ranged_components": {
@@ -302,7 +321,7 @@ Those are examples of your attack modes, but they are not the only ones you can 
 
 ### Events
 
-These compenent groups won't actually do anything by themselves. Another component group is required, and some events to add/remove the attack modes.
+These component groups won't actually do anything by themselves. Another component group is required, and some events to add/remove the attack modes.
 
 ```
       "wiki:melee_swap": {    //When triggered, adds component group for ranged and removes melee component group
@@ -337,7 +356,7 @@ The events are effectively for just turning attack modes on and off, by adding a
 
 ### Sensors
 
-To trigger the events, another compenent group is used. Sensors are components that can trigger events when certain conditions are fulfilled. Here are 2 examples of different sensors:
+To trigger the events, another component group is used. Sensors are components that can trigger events when certain conditions are fulfilled. Here are 2 examples of different sensors:
 
 - For sensing the distance between the mob and target
 ```
@@ -358,7 +377,7 @@ To trigger the events, another compenent group is used. Sensors are components t
       }
 ```
 
-- For sensing certain features of the environment of wich the mob is exposed to
+- For sensing certain features of the environment of which the mob is exposed to
 ```
       "wiki:switcher_environment": {
         "minecraft:environment_sensor": {
@@ -387,57 +406,50 @@ To trigger the events, another compenent group is used. Sensors are components t
 ```
 This uses `Filters`, similar to how the [target is initially selected](#target-selecting).
 
-
 :::tip
 You aren't limited to just 2 attack types, you can have as many as you want! Just make sure to have the event's and sensors to compensate for them.
 :::
 
 
-## Other Methods
-
-There are also alternative, indirect ways of making entieties "attack", such as spawning dummy entities that can cause damage and act as a "special attack", or placing dangerous blocks, and even applying mob effects. These can be achieved through the entitie's file in the "entities" folder, and also though [Animation Controllers](/docs/animation-controllers/animation-controllers-intro).
-
-
-### Mob Effects
-
-ways of applying examples
-
-
-### Summon Dummy Entity
-
-summoning, 
-
-
-### Commands
-
-/summon, /kill, /mobeffect, /tp,
-
-
-### Animation Controllers (Behaviour Pack)
-
-explaination on what it is and on why to use
-
-
 # Visual Animations
 
-Inside resource packs are where it is decided what animations are played and when. This requires Animations, for the visuals, Animation Controllers, for triggers, and a way of defining the animations and controllers to use in the entity's dedicated `mobname.json`.
+Attacks and animations go hand in hand. Within resource packs, the following 3 directories are required:
+
+- animations (entityname.animation.json)
+- animation_controllers (entityname.animation_controller.json)
+- entity (entityname.json)
+
+Or as long as you know the names of vanilla animations and animation controllers, you can define them in the latter directory and folder.
 
 
 ## Animations
 
-structure of animations, mention [blockbench](/docs/guide/blockbench), that kinda stuff. Maybe a brief explaination on how to make them and some links
+Animations are self explanatory. The files themselves contain all specific animations for the given entity. The recommended way to make animations is by using [blockbench](/docs/guide/blockbench).
+
+Though it is possible to create them in a simple text editor.
+
+| Vanilla Attack Animations                    |
+| -------------------------------------------- |
+| "animation.zombie.attack_bare_hand"          |
+| "animation.skeleton.attack.v1.0"             |
+| "animation.humanoid.bow_and_arrow.v1.0"      |
+| "animation.humanoid.damage_nearby_mobs.v1.0" |
+
+A few examples of Animations. Locate /vanilla_resource_pack/animations for all of them.
 
 
 ## Animation Controllers
 
-explain how theyre used and structured
+List of states that trigger animations.
 
+| Vanilla Attack Animation Controllers           |
+| ---------------------------------------------- |
+| "controller.animation.zombie.attack_bare_hand" |
+| "controller.animation.skeleton.attack"         |
+| "controller.animation.humanoid.bow_and_arrow"  |
+| "controller.animation.humanoid.attack"         |
 
-## Defining Them
+A few examples of Animation Controllers. Locate /vanilla_resource_pack/animation_controllers for all of them
 
-show and explain how the animations and controllers for the mob to use are defined
+More information on animations can be found [here](https://bedrock.dev/docs/stable/Animations).
 
-
-## Additional Information
-
-timers, molang queries, etc. 
