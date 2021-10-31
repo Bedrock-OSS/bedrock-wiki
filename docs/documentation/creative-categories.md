@@ -7,7 +7,7 @@ mention:
     - yanasakana
 ---
 
-Creative categories are the categories that an item or block can appear in inside of the creative inventory.
+Creative categories are the categories that determine where an item or block will appear inside of the creative inventory.
 
 ## For Items
 

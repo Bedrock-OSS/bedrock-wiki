@@ -167,14 +167,14 @@ You can set up timelines like this:
 
 ```json
 {
-	"format_version": "1.10.0",
+	"format_version": "1.8.0",
 	"animations": {
 		"animation.command.example_timeline": {
 			"timeline": {
 				"0.0": "/say this will trigger instantly",
 				"3.0": "/say this will trigger after 3 seconds"
 			},
-			"animation_length": 3
+			"animation_length": 3.1
 		},
 		"animation.command.example_timeline_2": {
 			"timeline": {
@@ -185,7 +185,7 @@ You can set up timelines like this:
 				],
 				"55.55": "/say this will trigger after 55.55 seconds."
 			},
-			"animation_length": 100
+			"animation_length": 100.1
 		}
 	}
 }
