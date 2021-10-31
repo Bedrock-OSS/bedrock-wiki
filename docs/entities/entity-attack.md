@@ -1,22 +1,15 @@
 ---
 title: Entity Attack
 ---
-# Overview
 
-If you're making custom entities, chances are that you will want them to attack other entities. This page will cover the types of attack, give examples of structure, and list components.
+Entity attacks are a complex subject that require many different things to work correctly:
+- Navigation and movement abilities to move towards its target
+- Targeting abilities to pick which entity to attack 
+- Attack type, such as melee or ranged
+- Attack damage and effects
 
 
-## Dealing Damage
-
-Entities can attack and cause damage to other entities through a multitude of different components and events. The amount of damage depends on many factors, such as the amount stated in `"damage": ...`, difficulty multiplier, [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source). It all makes a difference. Take into consideration the sources, as certain items in vanilla can protect from some, like armour enchantments, and you can also make mobs immune to specific sources.
-
-The value defined can simply be a constant, or a string containing 2 numbers, for a range of possible values.
-
-`"damage": 3` would result in 3 each time
-
-`"damage": [ 2, 6 ]` would result in any integer between 2 and 6
-
-# Types of Attack
+## Types of Attack
 
 These are the currently known types of attack:
 
@@ -30,10 +23,10 @@ These are the currently known types of attack:
 But first, it's important to know that generally, attacks require a way of knowing *how* to attack another entity.
 
 
-## Triggering Hostility
+### Triggering Hostility
 
 [Movement](/entities/entity-movement) is required in most cases, so that mobs can change the distance between themselves and a potential target.
-Mobs will pathfind, become hostile to, or both to another entity through the usage of some special components.
+Mobs will [pathfind](/entities/entity-movement), become hostile to, or both to another entity through the usage of some special components.
 
 ```
       "minecraft:behavior.nearest_attackable_target": {
@@ -120,7 +113,7 @@ Mobs find targets by using [filters](https://bedrock.dev/docs/stable/Entities#Fi
 This would only target `snow_golem`s, `iron_golem`s, and `player`s that are **not** wearing `turtle_helmet`s.
 
 
-## Melee
+### Melee
 
 Melee attacks are the most common type of attack, they cause knockback, and have a 100% success rate at accuracy.
 
@@ -139,10 +132,51 @@ Melee attacks are the most common type of attack, they cause knockback, and have
         }
       },
 ```
-Set the damage, choose a mob effect (or not), and change some additional properties.
+Set the damage, choose a mob effect, and change some additional properties.
+
+The value defined in components stating integers of damage can simply be a constant, or a string containing 2 numbers, for a range of possible values.
+
+`"damage": 3` would result in 3 each time
+
+`"damage": [ 2, 6 ]` would result in any integer between 2 and 6
+
+Both the mob effect and duration timer are optional, but when they are used, the available effects are as following:
+
+| Effect Name     |
+| --------------- |
+| speed           |
+| slowness        |
+| haste           |
+| mining_fatigue  |
+| strength        |
+| instant_health  |
+| instant_damage  |
+| jump_boost      |
+| nausea          |
+| regeneration    |
+| resistance      |
+| fire_resistance |
+| water_breathing |
+| invisibility    |
+| blindness       |
+| night_vision    |
+| hunger          |
+| weakness        |
+| poison          |
+| wither          |
+| health_boost    |
+| absorbtion      |
+| saturation      |
+| levitation      |
+| fatal_poison    |
+| slow_falling    |
+| conduit_power   |
+| bad_omen        |
+| village_hero    |
+| darkness        |
 
 
-## Ranged
+### Ranged
 
 Fires specified [projectiles](/docs/documentation/projectiles) towards target at set intervals.
 
@@ -195,7 +229,7 @@ Only one item has an effect on an entity's ranged attacks. Crossbows. If one is 
 Once `minecraft:behavior.charge_held_item` has been achieved, the entity will be able to execute the process of `minecraft:behavior.ranged_attack`, and will then need to charge again.
 
 
-## Area
+### Area
 
 These attacks damage all entities within a set radius. It is different to both ranged and melee in that this component doesn’t actually require a target. Regardless of the entities behaviour, *all* entities will be affected by this. It appears to be similar to melee attacks, as it deals knockback in a similar manner, though dealing damage at a constant rate.
 
@@ -213,8 +247,9 @@ These attacks damage all entities within a set radius. It is different to both r
       }
 ```
 
+In most cases, a [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source). It  is important to take these into consideration, as certain items in vanilla can protect from some, like armour enchantments, and you can also make mobs immune to specific sources using `minecraft:damage_sensor`.
 
-## Knockback Roar
+### Knockback Roar
 
 Many similarities between this and `minecraft:area_attack`, this component though having much more flexibility.
 
@@ -251,12 +286,12 @@ Many similarities between this and `minecraft:area_attack`, this component thoug
 This is more like a shockwave of damage. Extremely versatile in uses. Produces a particle effect, which can be disabled by adding a modified version of `knockback_roar.json` to a resource pack's particles folder.
 
 
-# More on Attacks
+## More on Attacks
 
 Entity Attacks don't have to be as simple as Mob being hostile towards X target, doing X attack, dealing X damage.
 
 
-## Difficulty Dependant Attacks
+### Difficulty Dependant Attacks
 
 Express components and values to use for each difficulty.
 
@@ -283,12 +318,12 @@ Express components and values to use for each difficulty.
 ```
 
 
-## Switching Modes
+### Switching Modes
 
 You can use events to make your mob only attack under specific circumstances, or swap between the different types of attack. This can be achieved through simple usage of [events](/entities/entity-events) and component groups. Two prime examples being `minecraft:environment_sensor` and `minecraft:target_nearby_sensor`. The two are pretty similar in regards of structure, difference being that one is for sensing environments and the other for testing for target distance.
 
 
-### Attacks 
+#### Attacks 
 
 Component groups are required to define the different modes of attack, such as:
 
@@ -319,7 +354,7 @@ Component groups are required to define the different modes of attack, such as:
 Those are examples of your attack modes, but they are not the only ones you can use. `wiki:ranged_components` and `wiki:melee_components` are generic names for the components within them, they can have any name, but it's what's nested inside them that counts.
 
 
-### Events
+#### Events
 
 These component groups won't actually do anything by themselves. Another component group is required, and some events to add/remove the attack modes.
 
@@ -354,7 +389,7 @@ These component groups won't actually do anything by themselves. Another compone
 The events are effectively for just turning attack modes on and off, by adding and removing different component groups.
 
 
-### Sensors
+#### Sensors
 
 To trigger the events, another component group is used. Sensors are components that can trigger events when certain conditions are fulfilled. Here are 2 examples of different sensors:
 
@@ -411,7 +446,7 @@ You aren't limited to just 2 attack types, you can have as many as you want! Jus
 :::
 
 
-# Visual Animations
+## Visual Animations
 
 Attacks and animations go hand in hand. Within resource packs, the following 3 directories are required:
 
@@ -422,7 +457,7 @@ Attacks and animations go hand in hand. Within resource packs, the following 3 d
 Or as long as you know the names of vanilla animations and animation controllers, you can define them in the latter directory and folder.
 
 
-## Animations
+### Animations
 
 Animations are self explanatory. The files themselves contain all specific animations for the given entity. The recommended way to make animations is by using [blockbench](/docs/guide/blockbench).
 
@@ -438,7 +473,7 @@ Though it is possible to create them in a simple text editor.
 A few examples of Animations. Locate /vanilla_resource_pack/animations for all of them.
 
 
-## Animation Controllers
+### Animation Controllers
 
 List of states that trigger animations.
 
