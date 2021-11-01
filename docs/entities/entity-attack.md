@@ -122,6 +122,7 @@ This would only target `snow_golem`s, `iron_golem`s, and `player`s that are **no
 
 Melee attacks are the most common type of attack, they cause knockback, and have a 100% success rate at accuracy.
 
+<CodeHeader></CodeHeader>
 ```
       "wiki:melee_attack": {
         "minecraft:attack": {                  //defines the base stats of melee attacks
@@ -326,7 +327,7 @@ Express components and values to use for each difficulty.
                     "effect_name": "poison",
                     "effect_duration": 18
                 }
-            }                       //Example from bee.json
+            }
 ```
 
 
