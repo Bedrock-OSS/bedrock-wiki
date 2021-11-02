@@ -19,7 +19,7 @@ Not all techniques are ideal for all scenarios. Experiment, and figure out what 
 
 ### Boat
 
-<CodeHeader>BP/Entities/entity_name</CodeHeader>
+<CodeHeader>BP/Entities/entity_name.json</CodeHeader>
 ```json
 {
   "format_version": "1.16.0",
@@ -39,7 +39,7 @@ Not all techniques are ideal for all scenarios. Experiment, and figure out what 
 
 ### Shulker
 
-<CodeHeader>BP/Entities/entity_name</CodeHeader>
+<CodeHeader>BP/Entities/entity_name.json</CodeHeader>
 ```json
 {
   "format_version": "1.16.0",
