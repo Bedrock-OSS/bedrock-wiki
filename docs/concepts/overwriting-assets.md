@@ -30,11 +30,11 @@ Different resources have different methods of overwriting, so be careful to use 
 
 Assets that are referenced by _path_, and do _not have an identifier_ can be overwritten by simply placing a new asset into the same path. The following can be overwritten in this way:
 
+-   Functions
 -   Loot tables
 -   Textures
 -   Sounds
 -   Trade Tables
--   UI Files
 
 When you overwrite these files, the overwriting is absolute: The new asset will fully replace the old asset.
 
