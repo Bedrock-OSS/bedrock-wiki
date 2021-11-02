@@ -11,13 +11,52 @@ This document will discuss some of the ways that solid entities can be created.
 
 Not all techniques are ideal for all scenarios. Experiment, and figure out what works best for you.
 
-## Boat runtime identifier
 
-The boat runtime identifier will cause the entity to be solid with the shape of a boat and provide some other boat-like effects, which might not be desirable. It is not possible to increase the scale of the solid part, even if you scale the entity.
+## Runtime Identifiers
 
-## Shulker runtime identifier
+[Runtime identifiers](/entities/runtime-identifier) can be used to achieve solid entities, but currently only 2, each with a specific shape, and their own side effects. Neither colission shapes are possible to change or scale.
 
-The shulker runtime identifier will cause the entity to be solid with a 1x1 block and act like a shulker, including unwanted teleports. It is not possible to increase the scale of the substantial part, even if you scale the entity.
+
+### Boat
+
+<CodeHeader>BP/Entities/entity_name.json</CodeHeader>
+```json
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wiki:solid_entity",
+      "runtime_identifier": "minecraft:boat"
+       . . .
+    }
+  }
+}  
+```
+
+-   Boat-shaped solid collision
+-   Certain other boat-like effects
+
+
+### Shulker
+
+<CodeHeader>BP/Entities/entity_name.json</CodeHeader>
+```json
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wiki:solid_entity",
+      "runtime_identifier": "minecraft:shulker"
+       . . .
+    }
+  }
+}  
+```
+
+-   1x1 solid colission box.
+-   Sticks to block grid
+-   Teleports when supporting block removed.
+
 
 ## is_stackable
 
@@ -27,4 +66,17 @@ You will also need to add `minecraft:push_through` and set its `value` parameter
 
 ## Faking it with blocks
 
-In some scenarios, it's probably better to `/setblock` barriers, either statically or dynamically.
+In some scenarios, it's probably better to `/setblock` or `/fill` to place barrier blocks, either statically or dynamically. For example, lets say we have a *really* big entity:
+
+<CodeHeader>BP/Entities/big_entity.json</CodeHeader>
+```json
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wiki:big_solid_entity"
+       . . .
+    }
+  }
+}  
+```
