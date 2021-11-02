@@ -14,12 +14,12 @@ Not all techniques are ideal for all scenarios. Experiment, and figure out what 
 
 ## Runtime Identifiers
 
-[Runtime identifiers](/entities/runtime-identifier) can be used to achieve solid entities, but currently only 2, each with a specific shape, and their own side effects. Neither colission shapes are possible to change or scale.
+[Runtime identifiers](/entities/runtime-identifier) can be used to achieve solid entities, but currently only 2, each with a specific shape, and their own side effects. Neither colision shapes are possible to change or scale.
 
 
 ### Boat
 
-<CodeHeader>BP/Entities/entity_name.json</CodeHeader>
+<CodeHeader>BP/Entities/entity_name</CodeHeader>
 ```json
 {
   "format_version": "1.16.0",
@@ -39,7 +39,7 @@ Not all techniques are ideal for all scenarios. Experiment, and figure out what 
 
 ### Shulker
 
-<CodeHeader>BP/Entities/entity_name.json</CodeHeader>
+<CodeHeader>BP/Entities/entity_name</CodeHeader>
 ```json
 {
   "format_version": "1.16.0",
@@ -53,7 +53,7 @@ Not all techniques are ideal for all scenarios. Experiment, and figure out what 
 }  
 ```
 
--   1x1x1 block sized solid colission.
+-   1x1 block sized solid colision.
 -   Sticks to block grid.
 -   Teleports randomly when supporting block removed.
 

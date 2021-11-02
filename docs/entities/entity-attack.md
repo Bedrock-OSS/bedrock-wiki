@@ -1,5 +1,5 @@
 ---
-title: Entity Attack
+title: Entity Attacks
 mention:
   - Luthorius
 ---
