@@ -59,6 +59,10 @@ Tags are a way to discriminate towards a player, or group of players and or mobs
 - `kill @e[tag=!<tag>]` This will kill all of the entities that **DONT** have the tag that you specified.
 - `tag @a <add | remove | list> <tag>` This is how you would give, or remove a tag, useing `add` or `remove`. If you want to see what tags a player has then you can do `tag <selector> list`
 
+## Combining Selectors
+
+Secondary selectors can be used together by utilizing commas. Make sure to split each selector into its own part. As an example `@e[type=<type>]` and `@e[name=<name>]` can be combined like this: `@e[type=<type>,name=<name>]`. However, with the `score` selector you must format checks to another scoreboard like this, `@e[scores={<scoreboard>=<score>,<scoreboard2>=<score2>}]`.
+
 ## Other Useful Information
-Secondary selectors can be used together by utilizing commas. Make sure to split each selector into its own part. As an example `@e[type=<type>]` and `@e[name=<name>]` can be combined like this, `@e[type=<type>,name=<name>]`. However, with the `score` selector you must format checks to another scoreboard like this, `@e[scores={<scoreboard>=<score>,<scoreboard2>=<score2>,}]`.
-There is one more primary selector on bedrock edition which is a very niche case, `@initiator`. When an NPC is set up to have a button run a command, `@initiator` can be used to target the player which clicked the button. Otherwise, `@p` might likely be used and the command might execute onto a different player who is nearer to the NPC than the player who clicked the button.
+
+There is one more primary selector on bedrock edition which is a very niche case, `@initiator`. When an NPC is set up to have a button run a command, `@initiator` can be used to target the player which clicked the button. Otherwise, `@p` might likely be used and the command might execute on a different player who is nearer to the NPC than the player who clicked the button.

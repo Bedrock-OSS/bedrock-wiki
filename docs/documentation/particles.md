@@ -14,12 +14,13 @@ And for some other inexplicable reason, it doesn't have autocomplete for these.
 | minecraft:basic_portal_particle             |
 | minecraft:basic_smoke_particle              |
 | minecraft:bleach                            |
-| minecraft:blue_flame_particle (1.16)        |
+| minecraft:blue_flame_particle               |
 | minecraft:camera_shoot_explosion            |
 | minecraft:campfire_smoke_particle           |
 | minecraft:campfire_tall_smoke_particle      |
+| minecraft:candle_flame_particle             |
 | minecraft:critical_hit_emitter              |
-| minecraft:crop_growth_emitter (1.16)        |
+| minecraft:crop_growth_emitter               |
 | minecraft:dragon_breath_trail               |
 | minecraft:dragon_death_explosion_emitter    |
 | minecraft:dragon_destroy_block              |
@@ -38,7 +39,7 @@ And for some other inexplicable reason, it doesn't have autocomplete for these.
 | minecraft:falling_dust_scaffolding_particle |
 | minecraft:falling_dust_top_snow_particle    |
 | minecraft:heart_particle                    |
-| minecraft:honey_drip_particle (1.14)        |
+| minecraft:honey_drip_particle               |
 | minecraft:huge_explosion_lab_misc_emitter   |
 | minecraft:huge_explosion_emitter            |
 | minecraft:ice_evaporation_emitter           |
@@ -52,12 +53,18 @@ And for some other inexplicable reason, it doesn't have autocomplete for these.
 | minecraft:mob_portal                        |
 | minecraft:mycelium_dust_particle            |
 | minecraft:obsidian_glow_dust_particle       |
-| minecraft:obsidian_tear_particle (1.16)     |
+| minecraft:obsidian_tear_particle            |
 | minecraft:redstone_ore_dust_particle        |
 | minecraft:redstone_repeater_dust_particle   |
 | minecraft:redstone_torch_dust_particle      |
 | minecraft:redstone_wire_dust_particle       |
 | minecraft:rising_border_dust_particle       |
+| minecraft:sculk_sensor_redstone_particle    |
+| minecraft:snowflake_particle                |
+| minecraft:spore_blossom_ambient_particle    |
+| minecraft:spore_blossom_shower_particle     |
+| minecraft:stalactite_lava_drip_particle     |
+| minecraft:stalactite_water_drip_particle    |
 | minecraft:totem_particle                    |
 | minecraft:villager_angry                    |
 | minecraft:villager_happy                    |
@@ -78,6 +85,7 @@ The following particles can be spawned, but might spam you with content log erro
 | minecraft:conduit_attack_emitter                |
 | minecraft:dragon_breath_fire                    |
 | minecraft:dragon_breath_lingering               |
+| minecraft:electric_spark_particle               |
 | minecraft:enchanting_table_particle             |
 | minecraft:elephant_tooth_paste_vapor_particle   |
 | minecraft:death_explosion_emitter               |
@@ -90,16 +98,17 @@ The following particles can be spawned, but might spam you with content log erro
 | minecraft:mob_block_spawn_emitter               |
 | minecraft:note_particle                         |
 | minecraft:portal_directional                    |
-| minecraft:portal_reverse_particle (1.16)        |
+| minecraft:portal_reverse_particle               |
 | minecraft:rain_splash_particle                  |
 | minecraft:shulker_bullet                        |
 | minecraft:silverfish_grief_emitter              |
-| minecraft:soul_particle (1.16)                  |
+| minecraft:soul_particle                         |
 | minecraft:sparkler_emitter                      |
 | minecraft:splash_spell_emitter                  |
 | minecraft:water_evaporation_actor_emitter       |
 | minecraft:water_splash_particle                 |
 | minecraft:water_wake_particle                   |
+| minecraft:wax_particle                          |
 | minecraft:wither_boss_invulnerable              |
 
 ### Bubble particles
@@ -119,6 +128,7 @@ The following particles are various bubbles that only show up underwater. Some o
 | minecraft:eye_of_ender_bubble_particle |
 | minecraft:fish_hook_particle           |
 | minecraft:fish_pos_particle            |
+| minecraft:glow_particle                |
 | minecraft:guardian_attack_particle     |
 | minecraft:guardian_water_move_particle |
 | minecraft:sponge_absorb_water_particle |
@@ -134,7 +144,7 @@ The following particles are permanent and will not be removed once spawned until
 | Permanent particles                   |
 | ------------------------------------- |
 | minecraft:mobflame_emitter            |
-| minecraft:nectar_drip_particle (1.14) |
+| minecraft:nectar_drip_particle        |
 | minecraft:phantom_trail_particle      |
 | minecraft:stunned_emitter             |
 
@@ -145,13 +155,14 @@ The following particles exist in-game but cannot be spawned because they require
 | Broken particles                 |
 | -------------------------------- |
 | minecraft:block_destruct         |
-| minecraft:block_slide (1.14)     |
+| minecraft:block_slide            |
 | minecraft:breaking_item_icon     |
 | minecraft:breaking_item_terrain  |
 | minecraft:cauldron_spell_emitter |
 | minecraft:ink_emitter            |
 | minecraft:portal_east_west       |
 | minecraft:portal_north_south     |
+| minecraft:vibration_signal       |
 | minecraft:colored_flame_particle |
 
 ---

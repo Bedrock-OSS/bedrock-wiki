@@ -46,7 +46,7 @@ We can use front-matter to define the following custom behavior:
 | `nav_order` | No       | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order. |
 | `show_toc`  | No       | True    | Whether the table of contents will be generated for this page.                                                                                           |
 | `tags`      | No       | []      | A list of tags for the page. Some will be displayed on sidebar, such as 'guide' or 'beta'. All will be displayed in the actual page, at the top.         |
-| `mentions`  | No       | []      |                                                                                                                                                          |
+| `mentions`  | No       | []      | Add your GitHub username here so that you will always be in the contributors section if this page is moved.                                              |
 
 ## Code and Platform
 

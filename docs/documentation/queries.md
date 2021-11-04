@@ -111,6 +111,15 @@ Where `slot` and `channel` are both integer arguments, from the following tables
 
 Query returns color value in specified channel.
 
+## query.is_enchanted
+
+Formatted like: `is_enchanted = query.is_enchanted`.
+
+Return 1.0 or 0.0 based on whether the entity is enchanted.
+
+_Currently, can be only used in materials._
+
+
 ## query.is_ghost
 
 Formatted like: `is_ghost = query.is_ghost`.
@@ -170,6 +179,14 @@ Value example:
 -   Entity stops being on fire the second time: value resets to 0 and continues to count up 1 every tick despite not being on fire
 
 Basically it's tick timer that starts after entity is first ignited and resets every time it changes from/to being on fire.
+
+## query.scoreboard
+
+Formatted like: `query.scoreboard('score_name') > 0`
+
+Returns 1.0 or 0.0 based on score count, molang operator and number.
+
+Note that sometimes it might not work because of unknown reasons.
 
 ## query.structural_integrity
 

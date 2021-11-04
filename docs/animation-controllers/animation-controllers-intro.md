@@ -61,7 +61,7 @@ Animation controller are defined in their own files, and must be "attached" to e
 
 Here is a sample `description`, which shows how the AC can first be defined in `animations`, and then played in `scripts/animate`.
 
-<CodeHeader>RP/entity/helicopter.entity.rp.json#minecraft:client_entity OR BP/entities/helicopter.entity.bp.json#minecraft:entity</CodeHeader>
+<CodeHeader>RP/entity/helicopter.ce.json OR BP/entities/helicopter.se.json</CodeHeader>
 
 ```json
 "description": {
@@ -79,7 +79,7 @@ Here is a sample `description`, which shows how the AC can first be defined in `
 
 If you want to conditionally play an animation controller, you can supply an optional molang argument. If the argument evaluates to true, the controller will play:
 
-<CodeHeader>RP/entity/helicopter.entity.json#minecraft:client_entity/description OR BP/entities/helicopter.json#minecraft:entity/description</CodeHeader>
+<CodeHeader>RP/entity/helicopter.ce.json OR BP/entities/helicopter.se.json</CodeHeader>
 
 ```json
 "scripts": {

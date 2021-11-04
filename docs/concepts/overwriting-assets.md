@@ -16,7 +16,11 @@ This layered structure is very useful, because it allows us to access the files 
 
 If the vanilla assets change, for example if [JAPPA](https://twitter.com/JasperBoerstra?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) updates the stone texture, your addon will also receive the update, since you are relying on the actual dynamic, vanilla resources.
 
-You should try to use this system of layering as often as you can. If you don't *need* to copy/paste something into your addon, don't. This is an especially big mistake if you begin creating an addon inside of a copy of the vanilla resource/behavior pack. This will make the download for your addon incredibly huge, and will reduce performance.
+You should try to use this system of layering as often as you can. If you don't *need* to copy/paste something into your addon, don't. 
+
+:::warning
+It is never OK to make an addon inside of a copy of the vanilla resource/behavior pack. This will make the download for your addon incredibly huge, and will reduce performance. Always begin with a blank addon, then copy/paste the files you want to overwrite. 
+:::
 
 ## Overwriting Assets
 
@@ -30,11 +34,11 @@ Different resources have different methods of overwriting, so be careful to use 
 
 Assets that are referenced by _path_, and do _not have an identifier_ can be overwritten by simply placing a new asset into the same path. The following can be overwritten in this way:
 
+-   Functions
 -   Loot tables
 -   Textures
 -   Sounds
 -   Trade Tables
--   UI Files
 
 When you overwrite these files, the overwriting is absolute: The new asset will fully replace the old asset.
 
