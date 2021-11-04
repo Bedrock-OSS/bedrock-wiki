@@ -20,7 +20,7 @@ Minecraft uses Version 4: Variant 1, which is completely random. This is what cr
 
 ### How to Generate the correct UUID
 
-You can use online sites such as [UUID Generator](https://www.uuidgenerator.net/version4/) to generate the correct version required for Minecraft.
+You can use online sites such as [UUID Generator](https://www.uuidgenerator.net/version4/) and [UUID Tools](https://www.uuidtools.com/generate/v4) to generate the correct version required for Minecraft.
 
 ##
 

@@ -58,9 +58,9 @@ Following 3 structured roughly the same as given example.
 | minecraft:behavior.nearest_prioritized_attackable_target | Allows for "priority": [number] to be set after each filter |
 | minecraft:behavior.defend_trusted_target                 | Targets entity that hurts any entities specified in filters |
 
-| minecraft:lookat                                         | Senses mobs that stare at the given entity                  |
+But there is also one more - `minecraft:lookat`
 
-This last component listed is slightly different to the other three, as it is for detecting and targeting entities that attempt eye contact. It is structured like so:
+This last component is slightly different to the other three, as it is for detecting and targeting entities that attempt eye contact. It is structured like so:
 
 <CodeHeader>BP/entities/enderman.json</CodeHeader>
 ```json
