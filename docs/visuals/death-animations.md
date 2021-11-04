@@ -14,13 +14,37 @@ This part will explain how to remove death animations at all.
 
 A fairly common way to remove entities without causing death effects is to teleport them into the void. This can be done from animation controllers by using `!query.is_alive` like:
 `/teleport @s ~ ~-1000 ~`
-Please note that this will remove all death effects, including sound, particles, loot, and the visual death of the entity.
-
-### Transforming the Entity
-
-Similar to teleporting, the entity is triggering an entity transform on death. Use query is_alive in animation controller to send an event which will add component group with `"minecraft:instant_despawn":{}`. This entity will despawn with no animations.
 
 Please note that this will remove all death effects, including sound, particles, loot, and the visual death of the entity.
+
+### minecraft:instant_despawn
+
+If you want to make entity just dissapear, you can add component group with `"minecraft:instant_despawn":{}` and run an event which will add this component group.
+
+Please note that this will remove all death effects, including sound, particles, loot, and the visual death of the entity.
+
+### Transformation to another entity
+
+Similar to teleporting, the entity is triggering an entity transform on death. Use `!query.is_alive` in animation controller to send an event which will add component group with `"minecraft:transformation"` component. With this component entity will convert into another:
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:transformation": {
+	"into": "wiki:death_animation_entity",
+	"transformation_sound" : "converted_to_zombified",
+	"keep_level": true,
+	"drop_inventory": true,
+	"preserve_equipment": false,
+	"drop_equipment": true,
+	"delay": {
+        "block_assist_chance": 0.0,
+        "block_radius": 0,
+        "block_max": 0,
+        "value": 10
+    }
+}
+```
 
 ### Cancelling the Animation
 
@@ -282,3 +306,22 @@ If you want to drop a loot table, you can trigger an event (as shown below) and 
 ```
 
 And then despawn it through adding component group with instant_despawn through `wiki:my_despawn_event`.
+
+### Detecting Death with Commands
+
+Death detection with commands might be useful because it don't use `player.json`
+
+<CodeHeader>BP/functions/detecting_death/mcfunction</CodeHeader>
+
+```
+tag @a add dead
+tag @e[type=player] remove dead
+execute @a[tag=dead, tag=!last_dead] ~ ~ ~ summon hatchibombotar:grave
+tag @a[tag=dead, tag=!last_dead] add last_dead
+tag @a[tag=!dead, tag=last_dead] remove last_dead
+```
+This works because @a targets all players whereas @e[type=player] only targets alive players.
+
+You can do whatever you want with that summoned entity
+
+Don't forget to add this function into [tick.json](/commands/mcfunction.html#running-functions-through-tick-json).
