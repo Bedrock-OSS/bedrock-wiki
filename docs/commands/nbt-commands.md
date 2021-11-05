@@ -41,7 +41,7 @@ These two variations of ItemLock are mutually exclusive. Itemlock works in both 
 
 ### Overriding how ItemLock displays
 
-The texture to overwrite is `16x16`, and is located in `RP/ui/item_lock_red.png` and `RP/ui/item_lock_yellow.png`
+The texture to overwrite is `16x16`, and is located in `RP/textures/ui/item_lock_red.png` and `RP/textures/ui/item_lock_yellow.png`
 
 The lang codes if you want to change how KeepOnDeath displays:
 
