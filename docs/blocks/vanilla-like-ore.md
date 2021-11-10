@@ -1,12 +1,12 @@
 ---
-title: Ore loot tables
+title: Ore Loot Tables
 
 tags:
     - experimental
     - easy
 mention:
-    - ExDrill#2734
-    - SyKo#4442
+    - SykoUSS
+	- ExDrill
     - MedicalJewel105
 ---
 
@@ -22,10 +22,9 @@ Features:
 Issues:
 
 -   All items must be specified individualy
--   Does not drop XP
 -   Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
 
-## Block behavior
+## Block Behavior
 
 The following block behavior can be used as a template. Don't forget to set the block's texture using `terrain_texture.json`.
 
@@ -44,7 +43,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 				"category": "nature",
 				"group": "itemGroup.name.ore"
 			},
-			"minecraft:destroy_time": 15,
+			"minecraft:destroy_time": 10,
 			"minecraft:block_light_absorption": 15,
 			"minecraft:explosion_resistance": 3,
 			"minecraft:unit_cube": {},
@@ -54,7 +53,19 @@ The following block behavior can be used as a template. Don't forget to set the 
 					"render_method": "opaque"
 				}
 			},
-			"minecraft:loot": "loot_tables/silver_ore.json" //The component will not run the loot if the held tool has silk touch
+			"minecraft:on_player_destroyed": {
+                "event": "xp_reward"
+            },
+			"minecraft:loot": "loot_tables/blocks/silver_ore.json" //The component will not run the loot if the held tool has silk touch
+		},
+		"events":{
+			"xp_reward":{
+				"run_command": {
+                    "command": [
+                        "structure_load my_xp_structure ~~~" //You can download structure with saved xp orbs lower
+                    ]
+                }
+			}
 		}
 	}
 }
@@ -64,7 +75,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 
 The example shown, displays the required components
 
-<CodeHeader>BP/loot_tables/silver_ore.json
+<CodeHeader>BP/loot_tables/blocks/silver_ore.json<CodeHeader>
 
 ```json
 {
@@ -93,7 +104,7 @@ The example shown, displays the required components
 
 If needed you can add the enchanments section to your condition, but remember each tool and level must be listed as seperate pools
 
-<CodeHeader>Enchantments
+<CodeHeader>BP/loot_tables/blocks/silver_ore.json#pools<CodeHeader>
 
 ```json
 "conditions": [
@@ -114,8 +125,9 @@ If needed you can add the enchanments section to your condition, but remember ea
 
 ## Download .mcstructure
 
-[Link](https://wiki.bedrock.dev/assets/packs/tutorials/vanilla-like-ore/my_xp_structure.mcstructure)
+[Link](https://wiki.bedrock.dev/assets/packs/tutorials/ore-loot/my_xp_structure.mcstructure)
+
 
 ## Result
 
-![](/assets/images/blocks/vanilla-like-ores/result.gif)
+![](/assets/images/blocks/ore-loot/result.gif)
