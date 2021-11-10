@@ -2,12 +2,12 @@
 title: Ore Loot Tables
 
 tags:
-	- experimental
-	- easy
+    - experimental
+    - easy
 mention:
-	- SykoUSS
-	- ExDrill
-	- MedicalJewel105
+    - SykoUSS
+    - ExDrill
+    - MedicalJewel105
 ---
 
 ## Features
