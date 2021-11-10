@@ -1,6 +1,5 @@
 ---
 title: Ore Loot Tables
-
 tags:
 	- experimental
 	- easy
