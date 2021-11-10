@@ -2,12 +2,12 @@
 title: Ore Loot Tables
 
 tags:
-    - experimental
-    - easy
+	- experimental
+	- easy
 mention:
-    - SykoUSS
-    - ExDrill
-    - MedicalJewel105
+	- SykoUSS
+	- ExDrill
+	- MedicalJewel105
 ---
 
 ## Features
@@ -54,17 +54,17 @@ The following block behavior can be used as a template. Don't forget to set the 
 				}
 			},
 			"minecraft:on_player_destroyed": {
-                "event": "xp_reward"
-            },
+				"event": "xp_reward"
+			},
 			"minecraft:loot": "loot_tables/blocks/silver_ore.json" //The component will not run the loot if the held tool has silk touch
 		},
 		"events":{
 			"xp_reward":{
 				"run_command": {
-                    "command": [
-                        "structure_load my_xp_structure ~~~" //You can download structure with saved xp orbs lower
-                    ]
-                }
+					"command": [
+						"structure_load my_xp_structure ~~~" //You can download structure with saved xp orbs lower
+					]
+				}
 			}
 		}
 	}
@@ -125,8 +125,7 @@ If needed you can add the enchanments section to your condition, but remember ea
 
 ## Download .mcstructure
 
-[Link](https://wiki.bedrock.dev/assets/packs/tutorials/ore-loot/my_xp_structure.mcstructure)
-
+<BButton link="https://wiki.bedrock.dev/assets/packs/tutorials/ore-loot/my_xp_structure.mcstructure">Download structure here</BButton>
 
 ## Result
 
