@@ -6,7 +6,7 @@ tags:
     - easy
 mention:
     - SykoUSS
-	- ExDrill
+    - ExDrill
     - MedicalJewel105
 ---
 
@@ -104,7 +104,7 @@ The example shown, displays the required components
 
 If needed you can add the enchanments section to your condition, but remember each tool and level must be listed as seperate pools
 
-<CodeHeader>BP/loot_tables/blocks/silver_ore.json#pools<CodeHeader>
+<CodeHeader>Enchantments<CodeHeader>
 
 ```json
 "conditions": [
