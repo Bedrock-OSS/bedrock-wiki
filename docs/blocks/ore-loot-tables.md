@@ -58,8 +58,8 @@ The following block behavior can be used as a template. Don't forget to set the 
 			},
 			"minecraft:loot": "loot_tables/blocks/silver_ore.json" //The component will not run the loot if the held tool has silk touch
 		},
-		"events":{
-			"xp_reward":{
+		"events": {
+			"xp_reward": {
 				"run_command": {
 					"command": [
 						"structure_load my_xp_structure ~~~" //You can download structure with saved xp orbs lower
@@ -75,7 +75,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 
 The example shown, displays the required components
 
-<CodeHeader>BP/loot_tables/blocks/silver_ore.json<CodeHeader>
+<CodeHeader>BP/loot_tables/blocks/silver_ore.json</CodeHeader>
 
 ```json
 {
@@ -102,9 +102,9 @@ The example shown, displays the required components
 
 ## Specifying Enchantments
 
-If needed you can add the enchanments section to your condition, but remember each tool and level must be listed as seperate pools
+If needed you can add the enchantments section to your condition, but remember each tool and level must be listed as seperate pools
 
-<CodeHeader>BP/loot_tables/blocks/silver_ore.json#pools<CodeHeader>
+<CodeHeader>BP/loot_tables/blocks/silver_ore.json#pools</CodeHeader>
 
 ```json
 "conditions": [
