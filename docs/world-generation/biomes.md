@@ -149,7 +149,7 @@ The `"minecraft:biome"` property also holds the `"components"` property, which i
 
 Components are always object properties, even those that should seemingly act as booleans. For example, the `"minecraft:ignore_automatic_features"` component property is not assigned `true` or `false`, but instead an empty object, `{}`:
 
-```
+```json
 "components": {
 	…
 
@@ -159,7 +159,7 @@ Components are always object properties, even those that should seemingly act as
 
 Although the JSON may be invalid, properties of the same name representing components may be used within the `"components"` object. Although this situation should be avoided, it should be noted that only the last provided instance of a component will be used by the game: the values inside the earlier defined component(s) will be completely ignored. For example:
 
-```
+```json
 "components": {
 	…
 
@@ -301,8 +301,6 @@ Unlike [region slots](#regions), biomes can be registered for multiple climates.
 
 <CodeHeader>biomes/plains.json</CodeHeader>
 
-<CodeHeader></CodeHeader>
-
 ```json
 "generate_for_climates": [
 	["cold", 1],
@@ -439,8 +437,6 @@ Biomes slotted into the deep ocean region use the `deep` tag in addition to the 
 ###### Islands
 
 <CodeHeader>biomes/ocean.json</CodeHeader>
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:overworld_generation_rules": {
@@ -591,15 +587,11 @@ Mutated sub-biomes are large, rare subsets of a base biome that are typically us
 
 <CodeHeader>biomes/mangrove_forest.json</CodeHeader>
 
-<CodeHeader></CodeHeader>
-
 ```json
 "hills_transformation": "mangrove_forest_hills"
 ```
 
 <CodeHeader>biomes/mangrove_forest_hills.json</CodeHeader>
-
-<CodeHeader></CodeHeader>
 
 ```json
 "mutate_transformation": "mangrove_forest_hills_mutated"
@@ -622,8 +614,6 @@ Rivers exist in dedicated spaces fixed to the seed of a world and are unchangeab
 By default, Minecraft uses the River biome if the `"river_transformation"` property is not declared as part of the `"minecraft:overworld_generation_rules"` component or if this component is not declared at all. To effectively remove rivers from a biome, the `"river_transformation"` property can point to the declaring biome itself via its identifier:
 
 <CodeHeader>biomes/ivory_shallows.json</CodeHeader>
-
-<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -664,8 +654,6 @@ Shores are special stretches of land designated to generate between a land biome
 Like rivers, shores are declared as part of a land biome, this time using `"shore_transformation"`. The shores that generate between land and ocean biomes are _always_ selected from the land biome; adding shores to oceans has no effect on generation. [Slotting tag](#overworld-generation-aspects) additions have no effect on shores. Shores default to Beaches and can again be effectively removed by referencing the declaring biome:
 
 <CodeHeader>biomes/lava_fields.json</CodeHeader>
-
-<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -1153,7 +1141,7 @@ Only the [default surface builder](#default) can be overridden. Overrides will f
 		{
 			"materials": {
 				"top_material": "minecraft:podzol"
-			}
+			},
 
 			"noise_range": [0, 0.5],
 			"noise_frequency_scale": 0.0625,
@@ -1236,8 +1224,6 @@ Using integers directly will create boring layers of adjustments. However, unlik
 Surface adjustments from earlier definitions of a biome can be removed by matching the definitions from the biome’s [surface builder](#surface-builders) across the relevant conditions. Take, for example, the vanilla surface adjustments made to the Shattered Savanna:
 
 <CodeHeader>biomes/savanna_mutated.json</CodeHeader>
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:surface_parameters": {
@@ -1555,8 +1541,6 @@ No tags are implied based on the nature of a biome. For example, if a biome is s
 
 <CodeHeader>biomes/highlands.json</CodeHeader>
 
-<CodeHeader></CodeHeader>
-
 ```json
 {
 	"format_version": "1.13.0",
@@ -1590,8 +1574,6 @@ No tags are implied based on the nature of a biome. For example, if a biome is s
 The sub-biome _must_ redeclare the `"highlands"` tag to opt in to its functionality — in this case, the addition of scattered tall grass across the surface:
 
 <CodeHeader>biomes/highlands_forest.json</CodeHeader>
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

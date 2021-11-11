@@ -715,7 +715,7 @@ List of all new item components, with usage examples
 }
 ```
 
-_Full list of categories can be found [here](/items/creative-categories)_
+_Full list of categories can be found [here](/documentation/creative-categories)_
 
 -   minecraft:food
     _New Syntax_
@@ -839,16 +839,39 @@ If your item isn't showing up, these changes might have broken your item.
 
 ## Additional Notes
 
-Broken/Nonfunctional Features
+Niche Features
 
 -   Components
-    -   `minecraft:mining_speed` - Currently has no function.
-    -   `minecraft:shooter` - Currently broken.
-    -   `minecraft:digger` - `use_efficiency` - Parameter currently has no function.
--   Event Functions
-    -   `transform_item` - Crashes the game.
+    -   `minecraft:icon` - Property `"frame"` may take in MoLang values. This can be used to animate items:
+    ```json
+    	{
+    		"minecraft:icon": {
+			    "texture": "dye_powder",
+  			    "frame": "t.a ?? {t.a = -1;}; t.a = t.a + 1; return math.mod(math.floor(t.a / 60), 16);"
+		    }
+	    }
+    ```
+    *as found by Ciosciaa*
+   
+> Broken/Nonfunctional Features
 
-Current Limitations
+-   Components
+    -   `minecraft:mining_speed` - Currently has no known function.
+    -   `minecraft:dye_powder` - Currently has no known function.
+    -   `minecraft:frame_count` - Currently has no known function.
+    -   `minecraft:animates_in_toolbar` - Currently has no known function.
+    -   `minecraft:mirrored_art` - Currently has no known function.
+    -   `minecraft:requires_interact` - Currently has no known function.
+    -   `minecraft:ignores_permission` - Currently has no known function.
+    -   `minecraft:map` - Currently has no known function.
+    -   `"saddle"` - Currently has no known function.
+    -   `minecraft:shears` - Currently has no known function.
+    -   `minecraft:bucket` - Currently has no known function.
+    -   `minecraft:shooter` - Currently broken.
+    -   `minecraft:digger` - `use_efficiency` - Parameter Currently has no known function.
+
+> Current Limitations
 
 -   Vanilla Items are hardcoded; you may not override or access them, using the new format.
 -   `minecraft:record` - May not add a custom `sound_event`.
+-   Items aliases currently do not work.

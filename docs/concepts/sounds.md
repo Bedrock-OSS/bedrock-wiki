@@ -6,7 +6,9 @@ tags:
 
 In bedrock, we can add custom sounds without overwriting any vanilla sounds. This is done by adding files to the resource pack.
 
-`protip:` The best way to learn about sounds is by downloading and playing around with the default resource pack.
+:::tip
+The best way to learn about sounds is by downloading and playing around with the default resource pack.
+:::
 
 ### Folder Structure
 
@@ -20,7 +22,6 @@ Sound files themselves are added inside of the `sounds` folder, and can be any o
 'RP/sounds/sound_definitions.json',
 'RP/sounds/example.wav',
 'RP/sounds/example.ogg',
-'RP/sounds/example.mp3',
 'RP/sounds/example.fsb',
 
 ]"></FolderView>
@@ -45,7 +46,9 @@ Sound files themselves are added inside of the `sounds` folder, and can be any o
 
 Sounds added in this way can be triggered using `/playsound`. Please note that `playsound` does not auto-correct, so you will need to be careful in your typing.
 
-`note:` New files referenced by file path, such as sounds, DO need a complete client restart to load. This means that if sounds don't work, you should restart your entire MC client rather than just reloading the world.
+:::warning
+New files referenced by file path, such as sounds, DO need a complete client restart to load. This means that if sounds don't work, you should restart your entire MC client rather than just reloading the world.
+:::
 
 ### Top Level Keys
 
@@ -252,7 +255,7 @@ This example shows playing an explosion sound, synced using an animation control
 }
 ```
 
-<CodeHeader>RP/animation_controllers/custom_tnt.animation_controllers.json#animation_controllers/custom_tnt.animation_controllers.json</CodeHeader>
+<CodeHeader>RP/animation_controllers/custom_tnt.animation_controllers.json#controller.animation.custom_tnt</CodeHeader>
 
 ```json
 "states": {

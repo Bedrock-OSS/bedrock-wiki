@@ -30,7 +30,7 @@ Functions will be run for each tick as if placed in a repeating command block.
 
 Create a file called tick.json in your root function folder. The format is this:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/functions/tick.json</CodeHeader>
 
 ```json
 {

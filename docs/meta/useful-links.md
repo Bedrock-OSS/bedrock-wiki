@@ -22,11 +22,11 @@ Important links have a ⭐.
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
 -   [MCPECore](https://discord.com/invite/N3e6exUQGs)
 -   [Bedrock Commands](https://discord.gg/bedrockcommands)
--   [BDSX ](https://discord.gg/KyrVChfR)
+-   [BDSX](https://discord.gg/8UhbaDwFMh)
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
--   [MCBE Hub](https://discord.gg/jfQeGqVsxA)
+-   [Minecraft Education](https://discord.gg/7fSQBdx)
 
 ## Software
 
@@ -52,7 +52,7 @@ Important links have a ⭐.
 -   [Manifests](https://bedrock-manifest.web.app/)
 -   [behavior-builder (beta)](https://stirante.com/behavior/index.html)
 -   [controller-builder (beta)](https://stirante.com/controller/index.html)
--   [.lang](https://solveddev.github.io/AnyLanguage/)
+-   [Generate .lang files](https://solveddev.github.io/AnyLanguage/)
 
 ## Tools
 
@@ -108,5 +108,13 @@ Important links have a ⭐.
 -   [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
--   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
--   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
+
+## Community-Addon Discords
+
+*These discord links are to community-created addons, with a public discord*
+
+- [World Expansion](https://discord.gg/CRQ6veyjak)
+- [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
+- [Project Vex](https://discord.gg/P95nXc4jbR)
+- [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
+- [Java & Bedrock Client](https://github.com/kennyvv/Alex)

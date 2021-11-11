@@ -6,14 +6,16 @@ title: Projectiles
 
 This page intends to document all different fields you can use inside `minecraft:projectile` entity behavior component.
 
+:::warning
 _Disclaimer: this component has been mostly documented based on projectiles found in the game or reverse engineering the game._
+:::
 
 | Name                      | Type             | Default Value | Description                                                                                                                                       |
 | ------------------------- | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | anchor                    | Integer          |               |                                                                                                                                                   |
 | angle_offset              | Decimal          | 0             | Determines the angle at which the projectile is thrown                                                                                            |
 | catch_fire                | Boolean          | false         | If true, the entity hit will be set on fire                                                                                                       |
-| crit_particle_on_hurt     | Boolean          | false         | If true, the projectile will produce additional particles when a critical hit happens                                                             |
+| crit_particle_on_hurt     | Boolean          | false         | If true, the projectile will produce critical hit particles when it happens                                                             |
 | destroy_on_hurt           | Boolean          | false         | If true, this entity will be destroyed when hit                                                                                                   |
 | filter                    | String           |               | Entity Definitions defined here can't be hurt by the projectile                                                                                   |
 | fire_affected_by_griefing | Boolean          | false         | If true, whether the projectile causes fire is affected by the mob griefing game rule                                                             |
@@ -241,3 +243,6 @@ _Exact behavior unknown. Right now it crashes minecraft probably because of wron
 ### thrown_potion_effect
 
 _Exact behavior unknown. Right now it crashes minecraft probably because it's only valid for thrown potions_
+ 
+## Aditional Information
+When it comes to creating a custom projectile, such as an arrow or trident variant, or something entirely your own, you may want to consider defining a [`runtime identifier`](https://wiki.bedrock.dev/entities/runtime-identifier.html) to ensure that it acts as intended. Not doing so may result in unintended behaviour, from odd visuals to incorrect knockback direction and arrows that you can kill with your bare hands.

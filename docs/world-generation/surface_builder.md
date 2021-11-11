@@ -10,7 +10,7 @@ Feature based surface builder is a feature that puts together a collection of bl
 
 ## Single Block Features
 
-Single block features are going to be the base of our surface builder. They will define which blocks we are goingto use.  For this tutorial I'll be using Coarse Dirt, Podzol and Cobblestone.
+Single block features are going to be the base of our surface builder. They will define which blocks we are going to use.  For this tutorial I'll be using Coarse Dirt, Podzol and Cobblestone.
 
 Learn more about single block features [here](/world-generation/feature-types.html#single-block-features)
 
@@ -108,7 +108,7 @@ Learn more about weighted random features [here](/world-generation/feature-types
 				3
 			],
 			[
-				"wiki:cobblestone_feature",//Cobblestone dirt weighs 2
+				"wiki:cobblestone_feature",//Cobblestone weighs 2
 				2
 			]
 		]
@@ -132,7 +132,7 @@ Learn more about scatter features [here](/world-generation/feature-types.html#sc
 		"description": {
 			"identifier": "wiki:scatter_surface_block_feature"
 		},
-		"iterations": 25,
+		"iterations": "math.random_integer(20,25)",
 		"x": {
 			"extent": [
 				0,
@@ -154,7 +154,7 @@ Learn more about scatter features [here](/world-generation/feature-types.html#sc
 ```
 
 
-* `iterations` determine how many blocks will be placed. I'm going to use the Molang `math.random` function to randomize the number of blocks. In this case, it'll be 20 to 25 blocks.
+* `iterations` determine how many blocks will be placed. I'm going to use the Molang `math.random_integer` function to randomize the number of blocks. In this case, it'll be 20 to 25 blocks.
 
 * `extent` use an array to determine the size of the blob. `[0, 8]` means the size is extended from 0 to 8 blocks. So, our blob would be 8 blocks long both on X and Z axis. **Only use this for X and Z distribution**.
 
@@ -214,4 +214,4 @@ This is the final step for our surface builder. The feature rules for our surfac
 }
 ```
 
-And our surface builder is done! Feel free to modify and messing around with it!
+And our surface builder is done! Feel free to modify and mess around with it!

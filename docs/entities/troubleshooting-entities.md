@@ -131,7 +131,7 @@ This means you have a working behavior file, but for whatever reason, the game i
 
 ### Step 3.2.1 - Syntax error
 
-A single syntax error in a .json file causes the entire file to break and be ignored. To check that your file is free of syntax errors, visit https://jsonlint.com/, paste the contents of your behavior file into the big box, then click "Validate JSON".
+A single syntax error in a .json file causes the entire file to break and be ignored. To check that your file is free of syntax errors, visit [Json Lint](https://jsonlint.com/), paste the contents of your behavior file into the big box, then click "Validate JSON".
 (NOTE: Although this site will mark // comments as errors, Minecraft DOES allow .json files to contain them)
 
 ---

@@ -6,101 +6,56 @@ prefix: '6.'
 
 Last time you created a custom item for this custom entity to drop. This time you will create the Ghost itself, as promised.
 
+<br>
+<img src="/assets/images/guide/custom_entity/ghost_view.png" width=150>
+
 ## Behavior code
 
 Just like with items, the main files of a custom entity are its RP and BP files. We'll start with the latter in the `BP/entities/` folder:
-(the `.e` suffix after the entity's name specifies that this JSON is an entity file. Recommended in the [Style Guide]()).
+(the `.se` suffix after the entity's name specifies that this JSON is a server entity file. The game will ignore the part after the first `"."`, so it can be used to describe the type of this file. Recommended in the [Style Guide](/meta/style-guide)).
 
-<CodeHeader>BP/entities/ghost.e.json</CodeHeader>
+<CodeHeader>BP/entities/ghost.se.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.16.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "wiki:ghost",
-			"is_summonable": true,
-			"is_spawnable": true,
-			"is_experimental": false
-		},
-		"components": {
-			"minecraft:type_family": {
-				"family": ["ghost", "monster"]
-			},
-			"minecraft:jump.static": {},
-			"minecraft:can_climb": {},
-			"minecraft:physics": {},
-			"minecraft:movement.basic": {},
-			"minecraft:loot": {
-				"table": "loot_tables/entities/ghost.json"
-			},
-			"minecraft:health": {
-				"value": 20,
-				"max": 20
-			},
-			"minecraft:collision_box": {
-				"width": 1,
-				"height": 2
-			},
-			"minecraft:movement": {
-				"value": 0.2
-			},
-			"minecraft:behavior.delayed_attack": {
-				"priority": 0,
-				"attack_once": false,
-				"track_target": true,
-				"require_complete_path": false,
-				"random_stop_interval": 0,
-				"reach_multiplier": 1.5,
-				"speed_multiplier": 1,
-				"attack_duration": 0.75,
-				"hit_delay_pct": 0.5
-			},
-			"minecraft:navigation.walk": {
-				"can_walk": true,
-				"avoid_sun": true,
-				"can_pass_doors": true,
-				"can_open_doors": true
-			},
-			"minecraft:attack": {
-				"damage": 3
-			},
-			"minecraft:behavior.random_look_around": {
-				"priority": 7
-			},
-			"minecraft:behavior.hurt_by_target": {
-				"priority": 1
-			},
-			"minecraft:behavior.nearest_attackable_target": {
-				"priority": 2,
-				"within_radius": 25,
-				"reselect_targets": true,
-				"entity_types": [
-					{
-						"filters": {
-							"any_of": [
-								{
-									"test": "is_family",
-									"subject": "other",
-									"value": "player"
-								}
-							]
-						},
-						"max_dist": 35
-					}
-				]
-			},
-			"minecraft:behavior.random_stroll": {
-				"priority": 6,
-				"speed_multiplier": 1
-			},
-			"minecraft:behavior.look_at_player": {
-				"priority": 7,
-				"look_distance": 6,
-				"probability": 0.02
-			}
-		}
-	}
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {"identifier": "wiki:ghost", "is_summonable": true, "is_spawnable": true, "is_experimental": false},
+        "components": {
+            "minecraft:type_family": {"family": ["ghost", "monster"]},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:physics": {},
+            "minecraft:movement.basic": {},
+            "minecraft:loot": {"table": "loot_tables/entities/ghost.json"},
+            "minecraft:health": {"value": 20, "max": 20},
+            "minecraft:collision_box": {"width": 1, "height": 2},
+            "minecraft:movement": {"value": 0.2},
+            "minecraft:behavior.delayed_attack": {
+                "priority": 0,
+                "attack_once": false,
+                "track_target": true,
+                "require_complete_path": false,
+                "random_stop_interval": 0,
+                "reach_multiplier": 1.5,
+                "speed_multiplier": 1,
+                "attack_duration": 0.75,
+                "hit_delay_pct": 0.5
+            },
+            "minecraft:navigation.walk": {"can_walk": true, "avoid_sun": true, "can_pass_doors": true, "can_open_doors": true},
+            "minecraft:attack": {"damage": 3},
+            "minecraft:behavior.random_look_around": {"priority": 7},
+            "minecraft:behavior.hurt_by_target": {"priority": 1},
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "within_radius": 25,
+                "reselect_targets": true,
+                "entity_types": [{"filters": {"any_of": [{"test": "is_family", "subject": "other", "value": "player"}]}, "max_dist": 35}]
+            },
+            "minecraft:behavior.random_stroll": {"priority": 6, "speed_multiplier": 1},
+            "minecraft:behavior.look_at_player": {"priority": 7, "look_distance": 6, "probability": 0.02}
+        }
+    }
 }
 ```
 
@@ -140,14 +95,15 @@ Just like with items, the main files of a custom entity are its RP and BP files.
             ]
     ```
 
-    -   `"minecraft:behavior.random_stroll"` makes the entity stroll around sometmes;
+    -   `"minecraft:behavior.random_stroll"` makes the entity stroll around sometimes;
     -   And, finally, `"minecraft:behavior.look_at_player"` makes the entity follow the player with its head.
 
 ## Resource code
 
 Again, just like with the item, a custom entity needs a resource file listing its model, texture, and animation names.
+Note, here we named the file with a `.ce` suffix which stands for client entity.
 
-<CodeHeader>RP/entity/ghost.e.json</CodeHeader>
+<CodeHeader>RP/entity/ghost.ce.json</CodeHeader>
 
 ```json
 {
@@ -187,7 +143,7 @@ Again, just like with the item, a custom entity needs a resource file listing it
 Let's go over every single object in `"description"` , as usual:
 
 -   `"identifier"` is, of course, the entity's `namespace:id`. This tells the game that this file belongs to the same entity as the one defined in `BP/entities/ghost.e.json`.
--   `"materials"` tell the game how to _render_ our entity. Depending on which material you choose, the translucent pixels on the texture might glow, be transparent, or have no effect. We assigned `entity_alphatest` the shortname `default` (precisely like with item textures) to allow partly transparent textures, making sense for a ghost. Custom materials are also possible, but they're more complicated. (You can learn more about materials in general [here]()).
+-   `"materials"` tell the game how to _render_ our entity. Depending on which material you choose, the translucent pixels on the texture might glow, be transparent, or have no effect. We assigned `entity_alphatest` the shortname `default` (precisely like with item textures) to allow partly transparent textures, making sense for a ghost. Custom materials are also possible, but they're more complicated. (You can learn more about materials in general [here](/visuals/materials)).
 -   `"textures"/"default"` is the path (relative to the RP folder) to the entity's texture. Like in `item_textures.json`, the `.png` extension can be ignored. Again, the texture path is assigned to the shortname `"default"`. In some cases, like the Villager mob, you'd want to have multiple textures for the entity to switch between.
 -   `"geometry"` takes the model's identifier as its value; Note it for yourself, since we'll create the model itself in a moment. Again, `"default"` is the shortname for that.
 -   `"scripts"/"animate"` and `"animations"` control when animations are to be played with the help of _animation controllers_ and list them under their _shortnames_ respectively. Again, we'll come back to this once we have the animations ready.
@@ -205,7 +161,7 @@ You can probably remember that `"wiki.ectoplasm"` is the shortname of our custom
 
 -   And, finally, `"render_controllers"` lists one or more identifiers of render controllers, which control materials.
 
-Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same; the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn more about [render controlles here.](/visuals/entity-visuals-intro)
+Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same; the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn more about [render controllers here.](/visuals/entity-visuals-intro)
 
 <CodeHeader>RP/render_controllers/entity/ghost.rc.json</CodeHeader>
 
@@ -230,91 +186,41 @@ The id of the only render controllers in this file is `"controller.render.ghost"
 
 ## Visuals
 
-Now it's time to create the entity's visuals. An example model, texture, and animation are all already provided with this Guide, but you can learn how to create your own using _Blockbench_ [here]().
+Now it's time to create the entity's visuals. An example model, texture, and animation are all already provided with this Guide, but you can learn how to create your own using _Blockbench_ [here](/guide/blockbench).
 
 ### Texture
 
 Like items, the entity textures are simply `.png` files in `RP/textures/entity/`. However, unlike these, entity textures don't need a file equivalent to `item_textures.json`. Instead, their shortnames are defined in the entity's RP file (`RP/entity/ghost.e.json` in our case). Usually, the shortname for an entity's texture is set to `default`, just like in our example.
 
 `RP/textures/entity/ghost.png`
-![Ghost_texture](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png)
+
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png)
+
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png">Download texture here</BButton>
 
 ### Model
 
-'Model' means 'shape' or 'geometry'. Entity model JSON files are located in `RP/models/entity/` and, according to the [Style guide](), use the suffix `.geo`.
-Before you take a look at a model's code, which holds data about the size, rotation, and position of every single _cube_ and _bone_, remember that there's no need to learn its syntax by hard: as mentioned above, model and animation files are all automatically generated by a dedicated 3D editor called [Blockbench]().
+'Model' means 'shape' or 'geometry'. Entity model JSON files are located in `RP/models/entity/` and, according to the [Style guide](/meta/style-guide), use the suffix `.geo`.
+Before you take a look at a model's code, which holds data about the size, rotation, and position of every single _cube_ and _bone_, remember that there's no need to learn its syntax by hard: as mentioned above, model and animation files are all automatically generated by a dedicated 3D editor called [Blockbench](/guide/blockbench).
+Please note that we have edited the output file for it to be a little bit more compact and easier to copy. A BlockBench output will look different from this.
 
 <CodeHeader>RP/models/entity/ghost.geo.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:geometry": [
-		{
-			"description": {
-				"identifier": "geometry.ghost",
-				"texture_width": 64,
-				"texture_height": 64,
-				"visible_bounds_width": 3,
-				"visible_bounds_height": 3.5,
-				"visible_bounds_offset": [0, 1.25, 0]
-			},
-			"bones": [
-				{
-					"name": "root",
-					"pivot": [0, 3, 0]
-				},
-				{
-					"name": "body",
-					"parent": "root",
-					"pivot": [0, 4.625, 0],
-					"cubes": [
-						{
-							"origin": [-4, 3, -4],
-							"size": [8, 13, 8],
-							"uv": [0, 20]
-						}
-					]
-				},
-				{
-					"name": "leftArm",
-					"parent": "body",
-					"pivot": [4.6, 15.5, 0.5],
-					"cubes": [
-						{
-							"origin": [4.1, 7, -1],
-							"size": [3, 9, 3],
-							"uv": [32, 32]
-						}
-					]
-				},
-				{
-					"name": "rightArm",
-					"parent": "body",
-					"pivot": [-4.5, 15.5, 0.5],
-					"cubes": [
-						{
-							"origin": [-7.1, 7, -1],
-							"size": [3, 9, 3],
-							"uv": [32, 20]
-						}
-					]
-				},
-				{
-					"name": "head",
-					"parent": "body",
-					"pivot": [0, 16, 0],
-					"cubes": [
-						{
-							"origin": [-5, 16, -5],
-							"size": [10, 10, 10],
-							"uv": [0, 0]
-						}
-					]
-				}
-			]
-		}
-	]
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {"identifier": "geometry.ghost", "texture_width": 64, "texture_height": 64, "visible_bounds_width": 3, "visible_bounds_height": 3.5, "visible_bounds_offset": [0, 1.25, 0]},
+            "bones": [
+                {"name": "root", "pivot": [0, 3, 0]},
+                {"name": "body", "parent": "root", "pivot": [0, 4.625, 0], "cubes": [{"origin": [-4, 3, -4], "size": [8, 13, 8], "uv": [0, 20]}]},
+                {"name": "leftArm", "parent": "body", "pivot": [4.6, 15.5, 0.5], "cubes": [{"origin": [4.1, 7, -1], "size": [3, 9, 3], "uv": [32, 32]}]},
+                {"name": "rightArm", "parent": "body", "pivot": [-4.5, 15.5, 0.5], "cubes": [{"origin": [-7.1, 7, -1], "size": [3, 9, 3], "uv": [32, 20]}]},
+                {"name": "head", "parent": "body", "pivot": [0, 16, 0], "cubes": [{"origin": [-5, 16, -5], "size": [10, 10, 10], "uv": [0, 0]}]}
+            ]
+        }
+    ]
 }
 ```
 
@@ -323,138 +229,56 @@ The only important thing, pretty much, is the value of `"identifier"`, which is 
 ### Animations
 
 Most of what was said for models is also true for animations. Here's the code you ought to copy to `RP/animations/ghost.a.json`. The suffix for resource animation files is `.a`.
+Please note that we have edited the output file for it to be a little bit more compact and easier to copy. A BlockBench output will look different from this.
 
 <CodeHeader>RP/animations/ghost.a.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.ghost.idle": {
-			"loop": true,
-			"animation_length": 3,
-			"bones": {
-				"body": {
-					"rotation": {
-						"0.0": [10, 0, 0],
-						"3.0": [10, 0, 0]
-					},
-					"position": {
-						"0.0": [0, 0, 0],
-						"1.5": [0, 1, 0],
-						"3.0": [0, 0, 0]
-					}
-				},
-				"leftArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"1.5": [-5, 0, 0],
-						"3.0": [-10, 0, 0]
-					}
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"1.5": [-5, 0, 0],
-						"3.0": [-10, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": {
-						"0.0": [-7.5, 0, 0],
-						"1.5": [-2.5, 0, 0],
-						"3.0": [-7.5, 0, 0]
-					}
-				}
-			}
-		},
-		"animation.ghost.attack": {
-			"animation_length": 0.75,
-			"bones": {
-				"body": {
-					"rotation": {
-						"0.0": [10, 0, 0],
-						"0.2917": [10, 15, 0],
-						"0.5": [22.5, -12.5, 0],
-						"0.75": [10, 0, 0]
-					},
-					"position": {
-						"0.0": [0, 0, 0],
-						"0.2917": [0, 0, 3],
-						"0.5": [0, 0, -3],
-						"0.75": [0, 0, 0]
-					}
-				},
-				"leftArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"0.75": [-10, 0, 0]
-					}
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"0.2083": [-10, 0, 0],
-						"0.2917": [-10, 62.5, 117.5],
-						"0.5": [-80, -17.5, 22.5],
-						"0.75": [-10, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": {
-						"0.0": [-7.5, 0, 0],
-						"0.75": [-7.5, 0, 0]
-					}
-				}
-			}
-		},
-		"animation.ghost.move": {
-			"loop": true,
-			"animation_length": 1,
-			"bones": {
-				"body": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.25": [15, -2.5, 0],
-						"0.5": [15, 0, 0],
-						"0.75": [15, 2.5, 0],
-						"1.0": [15, 0, 0]
-					},
-					"position": [0, 0, 0]
-				},
-				"leftArm": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.5": [20, 0, 0],
-						"1.0": [15, 0, 0]
-					}
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.5": [20, 0, 0],
-						"1.0": [15, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": {
-						"0.0": [-12.5, 0, 0],
-						"0.5": [-15, 0, 0],
-						"1.0": [-12.5, 0, 0]
-					}
-				}
-			}
-		}
-	}
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.ghost.idle": {
+            "loop": true,
+            "animation_length": 3,
+            "bones": {
+                "body": {"rotation": {"0.0": [10, 0, 0], "3.0": [10, 0, 0]}, "position": {"0.0": [0, 0, 0], "1.5": [0, 1, 0], "3.0": [0, 0, 0]}},
+                "leftArm": {"rotation": {"0.0": [-10, 0, 0], "1.5": [-5, 0, 0], "3.0": [-10, 0, 0]}},
+                "rightArm": {"rotation": {"0.0": [-10, 0, 0], "1.5": [-5, 0, 0], "3.0": [-10, 0, 0]}},
+                "head": {"rotation": {"0.0": [-7.5, 0, 0], "1.5": [-2.5, 0, 0], "3.0": [-7.5, 0, 0]}}
+            }
+        },
+        "animation.ghost.attack": {
+            "animation_length": 0.75,
+            "bones": {
+                "body": {
+                    "rotation": {"0.0": [10, 0, 0], "0.2917": [10, 15, 0], "0.5": [22.5, -12.5, 0], "0.75": [10, 0, 0]},
+                    "position": {"0.0": [0, 0, 0], "0.2917": [0, 0, 3], "0.5": [0, 0, -3], "0.75": [0, 0, 0]}
+                },
+                "leftArm": {"rotation": {"0.0": [-10, 0, 0], "0.75": [-10, 0, 0]}},
+                "rightArm": {"rotation": {"0.0": [-10, 0, 0], "0.2083": [-10, 0, 0], "0.2917": [-10, 62.5, 117.5], "0.5": [-80, -17.5, 22.5], "0.75": [-10, 0, 0]}},
+                "head": {"rotation": {"0.0": [-7.5, 0, 0], "0.75": [-7.5, 0, 0]}}
+            }
+        },
+        "animation.ghost.move": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {
+                "body": {"rotation": {"0.0": [15, 0, 0], "0.25": [15, -2.5, 0], "0.5": [15, 0, 0], "0.75": [15, 2.5, 0], "1.0": [15, 0, 0]}, "position": [0, 0, 0]},
+                "leftArm": {"rotation": {"0.0": [15, 0, 0], "0.5": [20, 0, 0], "1.0": [15, 0, 0]}},
+                "rightArm": {"rotation": {"0.0": [15, 0, 0], "0.5": [20, 0, 0], "1.0": [15, 0, 0]}},
+                "head": {"rotation": {"0.0": [-12.5, 0, 0], "0.5": [-15, 0, 0], "1.0": [-12.5, 0, 0]}}
+            }
+        }
+    }
 }
 ```
 
-Unlike the model's file, this one contains three animations for the Ghost, which are ` "animation. Ghost.idle"` (which is an animation playing from time to time), `"animation.ghost.attack" ` and `"animation.ghost.move"` (quite self-explanatory). Their shortnames, as defined in the Ghost's RP entity file, are ` "idle"`, `"attack"` and `"move"` respectively.
+Unlike the model's file, this one contains three animations for the Ghost, which are ` "animation.ghost.idle"` (which is an animation playing from time to time), `"animation.ghost.attack" ` and `"animation.ghost.move"` (quite self-explanatory). Their shortnames, as defined in the Ghost's RP entity file, are ` "idle"`, `"attack"` and `"move"` respectively.
 Of course, feel free to open the files and check how the visuals look using Blockbench.
 
 ### Animation Controller
 
-Approaching the end, we'll create our Animation Controller file, which will _control_ how the animations are played, as expected.
+Approaching the end, we'll create our Animation Controller file, which will _control_ how the animations are played, as expected. The suffix for resource animation files is `.ac`.
 
 <CodeHeader>RP/animation_controllers/ghost.ac.json</CodeHeader>
 
@@ -511,12 +335,10 @@ Approaching the end, we'll create our Animation Controller file, which will _con
 
 Two animation controllers are listed in this file: `"controller.animation.ghost.walk"` and `"controller.animation.ghost.attack"`.
 
-TODO: Details of each NEED to be explained better
-
 Let's take a look at the Ghost's RP file: just like the _animations_, the _animation controllers_ get assigned to their shortnames (`walk_controller` and `attack_controller` respectively) under `"animations"`. Now, since the controllers control the animations, they have to constantly run, which is why we put their shortnames in the array of `"scripts"/"animate"`.
 (For example, if you put the shortname `"move"` there, the entity would constantly play the moving animation, even when staying in place. The controller only launches the relevant animation when the entity is doing a certain action, for example, `is_walking`.)
 
-`from RP/entity/ghost.e.json`
+`from RP/entity/ghost.ce.json`
 
 <CodeHeader></CodeHeader>
 
@@ -548,6 +370,13 @@ item.spawn_egg.entity.wiki:ghost.name=Ghost
 ```
 
 Done! Your entity should now show up in Minecraft, complete with all behaviors and visuals, including animations!
+
+## What you have learned
+:::tip
+- 	How to format the behavior- and resource-files for an item
+- 	How to set an entities texture
+- 	How to use models, animations and animation controllers to make your entity more exciting
+:::
 
 ## Your progress so far:
 

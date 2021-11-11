@@ -41,7 +41,7 @@ It would be best if you also used namespaces in animation controllers, render co
 
 For example: `controller.animation.namespace.entity_name.action` is better than `controller.animation.my_action`.
 
-## Where **NOT** to use namespaces.
+## Where NOT to use namespaces.
 
 The actual file structure does not need namespaces.
 

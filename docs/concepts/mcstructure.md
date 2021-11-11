@@ -9,12 +9,12 @@ title: .mcstructure
 
 ### Saving and Loading
 
-The **Export** button creates ' mcstructure` files in a structure block. The files must be placed in a behavior pack to load them in-game with a load structure block. The path determines the structure identifier, which is typed into the structure block to load the structure.
+The **Export** button creates `.mcstructure` files in a structure block. The files must be placed in a behavior pack to load them in-game with a load structure block. The path determines the structure identifier, which is typed into the structure block to load the structure.
 
 **Examples:**  
-`myBP/structures/house.mcstructure` → `mystructure:house`  
-`myBP/structures/dungeon/entrance.mcstructure` → `dungeon:entrance`  
-`myBP/structures/stuff/towers/diamond.mcstructure` → `stuff:towers/diamond`
+`BP/structures/house.mcstructure` → `mystructure:house`  
+`BP/structures/dungeon/entrance.mcstructure` → `dungeon:entrance`  
+`BP/structures/stuff/towers/diamond.mcstructure` → `stuff:towers/diamond`
 
 The first subfolder defines the namespace, and subsequent folders define the path, ending with the structure file's name.
 
@@ -107,6 +107,10 @@ Results from testing to see what happens when modified structure files are loade
 ```
 [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | The "block_indices" field should have as many elements as defined by the "size" field.
 ```
+
+## NBT Editors
+
+You can find download links for some NBT editors [here](/meta/useful-links)
 
 ---
 

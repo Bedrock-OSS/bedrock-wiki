@@ -10,9 +10,9 @@ Time-based interactions are extremely useful tools for map making. This article 
 
 Component-based timers are done inside the entity.json file of the behavior pack. They have the distinct advantage of persisting upon the entity being reloaded, but are limited by the number of timing components (duplicate components replace each other, which means defining multiple timers using the `minecraft:timer` component isn't possible).
 
-### [minecraft:timer](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Entities#minecraft:timer)
+### minecraft:timer
 
-This is the simplest but most effective component for triggering events after an elapsed amount of time. The component provides three main ways in which the amount of time before the event can be defined:
+This is the simplest but most effective component for triggering events after an elapsed amount of time. The component [minecraft:timer](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Entities#minecraft:timer) provides three main ways in which the amount of time before the event can be defined:
 
 -   Exact timing: an exact amount of time after which the event will fire is defined (e.g. 3.4 seconds)
 -   Random interval: an interval is defined in which the event will fire at a random time inside that interval (e.g. between 3 to 5 seconds)
@@ -99,9 +99,9 @@ A particularly useful way to handle time events is using a single, looping `mine
   }
 ```
 
-### [minecraft:environment_sensor](https://bedrock.dev/docs/stable/Entities#minecraft:environment_sensor)
+### minecraft:environment_sensor
 
-Another component which can be very useful for time-based events is `minecraft:environment_sensor`. Pairing this sensor with the `hourly_clock_time` or `clock_time` filters can be used to trigger events based off in-game time.
+Another component ([minecraft:environment_sensor](https://bedrock.dev/docs/stable/Entities#minecraft:environment_sensor)) which can be very useful for time-based events is `minecraft:environment_sensor`. Pairing this sensor with the `hourly_clock_time` or `clock_time` filters can be used to trigger events based off in-game time.
 
 Here is an example which is used to fire an event 800 ticks after the start of the day (valid range is 0 to 24000):
 
@@ -122,9 +122,9 @@ Here is an example which is used to fire an event 800 ticks after the start of t
   }
 ```
 
-### [minecraft:ageable](https://bedrock.dev/docs/stable/Entities#minecraft:ageable)
+### minecraft:ageable
 
-If this component is not being used in the entity's behavior for a different purpose, it can be useful as an additional timer. It's important to note that it requires the `minecraft:is_baby` component to be defined in order to function.
+If this component ([minecraft:ageable](https://bedrock.dev/docs/stable/Entities#minecraft:ageable)) is not being used in the entity's behavior for a different purpose, it can be useful as an additional timer. It's important to note that it requires the `minecraft:is_baby` component to be defined in order to function.
 
 Here is an example which fires an event after four seconds:
 
@@ -167,14 +167,14 @@ You can set up timelines like this:
 
 ```json
 {
-	"format_version": "1.10.0",
+	"format_version": "1.8.0",
 	"animations": {
 		"animation.command.example_timeline": {
 			"timeline": {
 				"0.0": "/say this will trigger instantly",
 				"3.0": "/say this will trigger after 3 seconds"
 			},
-			"animation_length": 3
+			"animation_length": 3.1
 		},
 		"animation.command.example_timeline_2": {
 			"timeline": {
@@ -185,7 +185,7 @@ You can set up timelines like this:
 				],
 				"55.55": "/say this will trigger after 55.55 seconds."
 			},
-			"animation_length": 100
+			"animation_length": 100.1
 		}
 	}
 }
@@ -309,4 +309,4 @@ Notes:
 -   To assign a weight to a time in the list, add the weight to the value the randomized variable must be less than in the list's previous entry (e.g. 5 seconds has a weight of 90 - 30 = 60)
 -   Any events or commands to run when the animation is finished are put inside on_exit
 
-Hopefully this spread some light on the subject of handling time in Minecraft Bedrock! As shown above, there are many possible ways it can be done, each with their own pros and cons. If you have any other useful methods for creating time-based events, please [contribute to the wiki](https://github.com/SirLich/technical-bedrock)!
+Hopefully this spread some light on the subject of handling time in Minecraft Bedrock! As shown above, there are many possible ways it can be done, each with their own pros and cons. If you have any other useful methods for creating time-based events, please [contribute to the wiki](https://github.com/Bedrock-OSS/bedrock-wiki)!

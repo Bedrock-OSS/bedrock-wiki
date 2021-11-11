@@ -14,10 +14,10 @@ Vanilla-like custom trees are possible. Make their parts by following this tutor
 
 - Features:
     - Decaying leaves
-    - If leaves are broken using shears, they will drop themselves
-    - Leaves doesn't decay if placed by a player
+    - If leaves were broken using shears, they will drop block
+    - Leaves doesn't decay if placed by player
     - Logs are strippable and rotatable
-    - Stripping logs are compatible with tools from other Add-Ons (if they have the `tag:minecraft_is_axe` component)
+    - Stripping logs is compatible with tools from other Add-Ons (if they have the `"tag:minecraft:is_axe":{}` component)
     - Saplings can be bonemealed
 
 - Issues:
@@ -991,6 +991,6 @@ Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Stru
 
 ## Download Example Pack
 
-[RP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_rp.zip)
+[RP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_rp.mcpack)
 
-[BP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_bp.zip)
+[BP](https://wiki.bedrock.dev/assets/packs/tutorials/parts-of-custom-tree/poct_bp.mcpack)
