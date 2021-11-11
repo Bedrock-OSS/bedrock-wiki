@@ -1,22 +1,49 @@
 ---
 title: Discord
 hidden: true
+show_toc: false
+show_contributors: false
 ---
 
-## Bedrock Addons
+We own two rich discord communities, which you are encouraged to join. Additionally, we maintain an actively updated list of community discords, some of which you may find interesting to join!
 
-This community exists to help you learn about the various aspects of Bedrock Addons, including Scripting, custom-entities, and block & item creation.
+<br>
+<br>
+<br>
 
-<BButton color="blue" link="https://discord.gg/46JUdQb">Bedrock Addons</BButton>
-
-## Bedrock OSS
-
-We use discord as the hub for all our wiki communication. Here you can report wiki issues, collaborate on new articles, etc.
-
-<BButton color="red" link="https://discord.gg/XjV87YN">Bedrock OSS</BButton>
-
-## Additional Servers
-
-We maintain an active list of community discords here:
-
-<BButton color="green" link="/meta/useful-links#discord-links">More Discord Servers</BButton>
+<div class="max-w-screen-md xl:max-w-screen-lg">
+	<div class="m-0 p-0 pb-4 w-full">
+		<div
+			class="
+				grid grid-cols-1
+				lg:grid-cols-2
+				xl:grid-cols-3
+				gap-5
+				m-0
+				p-0
+			"
+		>
+			<CardLink
+				title="Bedrock Addons"
+				imgsrc="assets/images/homepage/wikilogo.png"
+				link="https://discord.gg/46JUdQb"
+			>
+				Bedrock Addons is a centralized creators discord for learning about and creating addons.<br /><br />Here you can learn about addons, ask questions, and participate in events.
+			</CardLink>
+			<CardLink
+				title="Bedrock OSS"
+				imgsrc="assets/images/discord/oss.png"
+				link="https://discord.gg/XjV87YN"
+			>
+				Bedrock OSS is a programming-focused creators discord for Bedrock. <br /><br />Here you can report wiki issues, collaborate on new articles, and get help with Bedrock tools, such as bridge. or Blockceptions VSCode addon.
+			</CardLink>
+			<CardLink
+				title="Additional Servers"
+				imgsrc="assets/images/homepage/discord.png"
+				link="/meta/useful-links#discord-links"
+			>
+				We maintain an active list of community discords as well, which you can find on our Useful Links page.
+			</CardLink>
+		</div>
+	</div>
+</div>
