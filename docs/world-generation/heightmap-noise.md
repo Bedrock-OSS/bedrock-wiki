@@ -1,10 +1,15 @@
 ---
-title: Custom Noise Based Terrain Generation
+title: Heightmap Noise
 tags:
     - experimental
+    - tutorial
 mention:
     - Apex360
 ---
+
+:::tip
+This tutorial assumes you have a basic understanding of molang, features and feature rules.
+:::
 
 In this tutorial we're gonna see how we can make noise based terrain using the `q.noise` molang query.
 
@@ -21,7 +26,7 @@ First we will define the single block feature. It will define the block that is 
 		"description": {
 			"identifier": "wiki:stone_feature"
 		},
-		"places_block": "minecraft:cobblestone",
+		"places_block": "minecraft:stone",
 		"enforce_survivability_rules": false,
 		"enforce_placement_rules": false
 	}
@@ -57,10 +62,10 @@ The scatter feature is the main feature which we'll be using to generate the ter
 ```
 
 Let me explain whats happening in the `iterations`:
-  In the iterations we've defined a temp `t.height` in which we've defined our main noise function
-  In `t.height` the value that we're adding first is the base height, basically the height at which the function starts
-  After that we're querying perlin using the `q.noise` query which returns values ranging from -1 to 1 and dividing that by a value which smooths out the function
-  Then we're multiplying the whole function by a value which in simple words is basically the variation in the terrain
+  In the iterations we've defined a temp `t.height` in which we've defined our main noise function.
+  In `t.height` the value that we're adding first is the base height, basically the height at which the function starts.
+  After that we're querying perlin using the `q.noise` query which returns values ranging from -1 to 1 and dividing that by a value which smooths out the function.
+  Then we're multiplying the whole function by a value which in simple words is basically the variation in the terrain.
 
 So what's happening here is that we are getting values from the `t.height` temp and assigning them to the y extent ranging from 0 to the value thus generating a column. Now this value is going to vary column by column but not in a random way as `q.noise` queryies Perlin noise, meaning the values are relative to each other. So instead of getting values like 64,69,45,100,7,56 we are getting values like 64,65,66,68,69,68,66,65 and so on.
 
