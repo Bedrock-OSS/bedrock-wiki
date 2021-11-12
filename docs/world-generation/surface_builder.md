@@ -72,7 +72,7 @@ Cobblestone File
 		"description": {
 			"identifier": "wiki:cobblestone_feature"
 		},
-		"places_block": "minecraft:cobblestone",//Podzol can be defined using direct identifier
+		"places_block": "minecraft:cobblestone",//Cobblestone can be defined using direct identifier
 		"enforce_survivability_rules": false,
 		"enforce_placement_rules": false,
 		"may_replace": [
