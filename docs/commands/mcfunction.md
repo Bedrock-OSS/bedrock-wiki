@@ -5,7 +5,7 @@ tags:
 ---
 
 :::tip
-Minecraft can run <strong>not</strong> more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
+Minecraft can <strong>not</strong> run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
 :::
 
 `mcfunction` files are stored in your BP as `BP/functions/my_function.mcfunction`. You can add as many functions as you like.
