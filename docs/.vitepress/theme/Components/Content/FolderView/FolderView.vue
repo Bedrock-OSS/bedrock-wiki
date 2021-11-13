@@ -1,6 +1,8 @@
 <template>
-  <FolderViewChild :depth="-1" :name="'.'" :nodes="getData()">
-  </FolderViewChild>
+	<div class="border-2 p-2 m-2 rounded-md border-gray">
+		<FolderViewChild :depth="-1" :name="'.'" :nodes="getData()">
+		</FolderViewChild>
+	</div>
 </template>
 
 <script lang="js">

@@ -1,16 +1,33 @@
-import path from "path";
+import path from 'path'
+
+// const createMarkdownToVueRenderFn = require('vitepress/dist/node/markdownToVue.js')
 
 export default function errorUtility() {
-  return {
-    name: 'error-utility',
-    configureServer(server) {
-      return () => {
-        console.log(server.middlewares.eventNames());
-        server.middlewares.use(function (err, req, res, next) {
-          console.log(`::error file=${err.loc.file},line=${err.loc.line},col=${err.loc.column}::Error in ${path.basename(err.loc.file)} at line ${err.loc.line}: ${err.message}`);
-          next(err)
-        })
-      }
-    }
-  }
+	// let markdownToVue
+    // let config
+	return {
+		name: 'error-utility',
+		renderError(err) {
+            console.log(`::error file=docs/error.js::${err.message}`)
+		},
+		// configResolved(resolvedConfig) {
+		// 	config = resolvedConfig
+		// 	markdownToVue = createMarkdownToVueRenderFn.createMarkdownToVueRenderFn(
+		// 		resolvedConfig.root,
+		// 		{},
+		// 		[],
+		// 		null,
+		// 		true,
+		// 	)
+		// 	console.log(markdownToVue)
+		// },
+		// transform(code, id) {
+		// 	if (id.endsWith(".md")) {
+		// 		let result = markdownToVue(code, id, config.publicDir);
+		// 		if (result && result.deadLinks && result.deadLinks.length > 0) {
+		// 			console.log(result)
+		// 		}
+		// 	}
+		// },
+	}
 }

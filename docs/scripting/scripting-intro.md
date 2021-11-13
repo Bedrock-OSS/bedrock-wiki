@@ -7,6 +7,9 @@ tags:
 
 This tutorial will teach you how to get up and running as a Minecraft Bedrock Edition (Windows 10) script modder!
 
+:::warning As of 1.17.40, Scripting is only supported in Windows, and doesn't support mobile platforms (Android/iOS) or Console devices.
+:::
+
 ## Prerequisites
 
 1. Minecraft Bedrock Edition (Windows 10)
@@ -504,6 +507,7 @@ Right-click the `HelloWorld` folder and and zip it (choose send to > compressed(
 Now change the extension [by renaming the file] from `.zip` to `.mcpack`.
 
 When a user double-clicks on the file, it'll be automatically opened by, and imported to, Minecraft for them to use (it'll be located in `.../com.mojang/behavior_packs`).
+Remember: Some experimental features in version 1.17.30 may not work.
 
 ## The End
 

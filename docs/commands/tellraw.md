@@ -24,6 +24,8 @@ tellraw <target: target> <raw json message: json>
 
 This sends the words in the last set of quotes
 
+<CodeHeader></CodeHeader>
+
 ```json
 /tellraw @a {"rawtext":[{"text":"Hello"}]}
 ```
@@ -31,6 +33,8 @@ This sends the words in the last set of quotes
 ## Escaping Characters
 
 To use quotations in a tellraw message place a backslash to the left side of the quotation mark.
+
+<CodeHeader></CodeHeader>
 
 ```json
 /tellraw @a {"rawtext":[{"text":"Quote me: \"I am here\"."}]}
@@ -40,6 +44,8 @@ To use quotations in a tellraw message place a backslash to the left side of the
 
 To insert a line break use `\n`
 
+<CodeHeader></CodeHeader>
+
 ```json
 /tellraw @a { "rawtext": [ { "text":"I am line one\nI am line two" } ] }
 ```
@@ -47,6 +53,8 @@ To insert a line break use `\n`
 ## Displaying entities / player
 
 You can use the following to use selector to display names.
+
+<CodeHeader></CodeHeader>
 
 ```json
 /tellraw @a {"rawtext": [{"text": "§6The winner is: §a"}, {"selector": "@a[r=5,c=1]"}]}
@@ -56,6 +64,8 @@ You can use the following to use selector to display names.
 
 You can use the following to use selector to display names.
 
+<CodeHeader></CodeHeader>
+
 ```json
 /tellraw @a {"rawtext": [{"text": "§6The winner is: §a"}, {"selector": "@a[r=5,c=1]"}, {"text": "§6With a score of: "}, {"score":{"name": "@s","objective": "value"}}]}
 ```
@@ -63,13 +73,16 @@ You can use the following to use selector to display names.
 ## Translate text
 
 To have a language changing text you can use the translate component. please note you will need to edit each languages files for this to work. In the
-`resource pack / texts / all languages files`:
+
+<CodeHeader>RP/texts/#all language files</CodeHeader>
 
 ```
 example.line.1=I am line 1
 ```
 
 The command:
+
+<CodeHeader></CodeHeader>
 
 ```json
 tellraw @a { "rawtext": [ { "translate": "example.line.1" } ] }
@@ -79,9 +92,13 @@ tellraw @a { "rawtext": [ { "translate": "example.line.1" } ] }
 
 language files:
 
+<CodeHeader></CodeHeader>
+
 ```
 example.ine.1=The winner is: %%s. With a score of %%s
 ```
+
+<CodeHeader></CodeHeader>
 
 ```json
 /tellraw @a {"translate": [{"text": "example.ine.1", "with": {"rawtext": [{"selector": "@a[r=5,c=1]"}, {"text": "§6With a score of: "}, {"score":{"name": "@s","objective": "value"}}]}}]}

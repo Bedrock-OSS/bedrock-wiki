@@ -20,9 +20,15 @@
 				'xl:mr-72': showToc,
 			}"
 		/>
-		<div class="pt-4" v>
-			<a :href="editLink" target="_blank">Edit this page on Github</a>
+
+		<div v-if="showEditLink">
+			<div class="pt-4" v>
+				<a :href="editLink" target="_blank"
+					>Edit {{ page.title }} on Github.</a
+				>
+			</div>
 		</div>
+
 		<div v-if="showContributors">
 			<h2>Contributors</h2>
 			<Suspense>
@@ -84,6 +90,10 @@ const showToc = computed(() => routeData.value.frontmatter.show_toc ?? true)
 
 const showContributors = computed(
 	() => routeData.value.frontmatter.show_contributors ?? true
+)
+
+const showEditLink = computed(
+	() => routeData.value.frontmatter.show_edit_link ?? true
 )
 
 const mentionedContributors = computed(

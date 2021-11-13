@@ -25,16 +25,10 @@ jobs:
         with:
           branch: generated
           folder: docs/.vitepress/dist
-      - name: Report failure
+      - name: Bully someone into fixing it
         if: ${{ failure() }}
-        uses: appleboy/discord-action@master
+        uses: Bedrock-OSS/discord-bully@v1.0.3
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          color: "#eb4034"
-          username: "You messed up"
-          message: >
-            Wiki deployment failed!
-            Fix me pls
-
-            https://github.com/Bedrock-OSS/bedrock-wiki/actions/runs/${{github.run_id}}
+          webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
+          emoji: <:PE_PandaBonk:885395101877166110>
+          title: 'Wiki deployment failed!'

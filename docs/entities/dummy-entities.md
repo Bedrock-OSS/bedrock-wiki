@@ -63,7 +63,7 @@ You can use whatever behaviors you like, but here is a good template. The import
 
 ### Resource Entity
 
-<CodeHeader>RP/entity/dummy.json</CodeHeader>entity/dummy.json
+<CodeHeader>RP/entity/dummy.json</CodeHeader>
 
 ```json
 {

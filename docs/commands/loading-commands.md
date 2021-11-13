@@ -5,7 +5,7 @@ mention:
  - MedicalJewel105
 ---
 
-Have you ever wanted to execute a command on players who joined world for the first time? 
+Have you ever wanted to execute command on a player who joined world for the first time? 
 If yes, this tutorial will be useful for you.
 
 ## Features:
@@ -15,7 +15,7 @@ If yes, this tutorial will be useful for you.
 
  ## Concept
 
- Idea of this tutorial is very simple:
+ Idea of this tutorial is simple:
 
  tick.json runs function that executes a command on everyone who doesn't have a special tag and then adds this tag.
 

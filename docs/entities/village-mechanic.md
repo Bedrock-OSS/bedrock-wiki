@@ -8,7 +8,7 @@ mention:
 This article is for anyone who wanted to try imitate the village mechanic for their entities
 
 :::warning
-This was tested only in beta 1.17.20.20
+Already tested in multiple minecraft version, both release and beta
 :::
 
 ## Navigation Behavior
@@ -311,10 +311,10 @@ Open your world spawn you custom entity then put bed and bell, you should see gr
 Your entity will sleep from morning to evening then work all night. Use /time set 6000 or /time set 18000.
 Based on "preferred_profession", when the entity work it will move to the claimed job site.
 
-## Other Beavior
+## Other Behavior
 All of this is useable by custom entities:
 `"minecraft:behavior.move_to_village"` is used by Pillager this may keep the entity to stay in the village.
 `"minecraft:behavior.stroll_towards_village"` is used by fox to seach a village and go there.
 `"minecraft:behavior.inspect_bookshelf"` used by librarian villager allows an entity to look at and inspect a bookshelf.
 `"minecraft:behavior.explore_outskirts"` allowing the entity to explore beyond the bounds of village(use schedule and component group to keep the entity return to the village)
-`"minecraft:behavior.defend_village_target"` only use this on melee attack, cause ranged attack will accidentally shoot villager or any entity with inhabitant dwelling role thus make the ranged entity attack each other
+`"minecraft:behavior.defend_village_target"` only use this on melee attack. Ranged attack can accidentally shoot any entity with inhabitant dwelling role making the ranged entity attack each other.

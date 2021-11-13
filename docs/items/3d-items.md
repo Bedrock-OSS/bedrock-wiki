@@ -4,12 +4,17 @@ tags:
     - expert
 ---
 
-There are two methods for making 3D items:
+:::tip
+There are two methods for making 3D items. Please choose the one most suitable for your use-case.
+ - [Entity Based](#entity-based-3d-item-models)
+ - [Attachable Based](#attachable-based-3d-item-models)
+
+:::
 
 ## Entity Based 3D Item Models
 
 ::: tip
-This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/visuals/entity-visuals-intro) before starting this tutorial.
+This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/visuals/entity-visuals-intro) before starting this tutorial!
 :::
 
 ### Concept & Idea
@@ -661,13 +666,13 @@ Pack download link: [Link](https://wiki.bedrock.dev/assets/packs/tutorials/custo
 
 ## Attachable Based 3D Item Models
 
-::: tip
-Attachable Based 3D Item Models works only in **Minecraft 1.16.210.59 beta or above**
-:::
-
 ### Concept & Idea
 
-1.16.210.5 is the first release in which attachables in player hand slots work correctly. When combined with custom block geometry, we can leverage this to create a minimal-compromises 3D item. Parts of this tutorial currently require that experimental features are enabled due to the presence of custom blocks. Do note that these are entirely optional, and you may use this method to create a custom item with an item sprite, similarly to what is described in the above tutorial. However, an advantage here is that it will not be necessary to remove the alpha layer of the item texture. This will allow for the dropped item and item frame visibility.
+1.16.210.5 is the first release in which attachables in player hand slots work correctly. When combined with custom block geometry, we can leverage this to create a minimal-compromises 3D item. 
+
+:::warning
+Parts of this tutorial currently require that experimental features are enabled due to the presence of custom blocks. Do note that these are entirely optional, and you may use this method to create a custom item with an item sprite, similarly to what is described in the above tutorial. However, an advantage here is that it will not be necessary to remove the alpha layer of the item texture. This will allow for the dropped item and item frame visibility.
+:::
 
 ### The "Item"
 

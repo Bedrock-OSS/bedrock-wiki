@@ -59,7 +59,7 @@ If you need to stop this from happening, you need to add additional queries, suc
 
 To add this animation controller to our entity, we can use the following code in the entity definition description:
 
-<CodeHeader>BP/entities/entity_commands.entity.bp.json#minecraft:entity</CodeHeader>
+<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
 
 ```json
 "description": {
@@ -152,7 +152,7 @@ The `skin_id` component looks like this:
 
 We can add component groups that contains skin_ids:
 
-<CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity</CodeHeader>
+<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
 
 ```json
 "component_groups": {
@@ -178,7 +178,7 @@ We can add component groups that contains skin_ids:
 
 Now let's create events so we can easily add these groups:
 
-<CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity</CodeHeader>
+<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
 
 ```json
 "events": {
@@ -221,7 +221,7 @@ There are loads of ways to trigger events in Minecraft. As stated earlier, you c
 
 This component will spawn zombies whenever you click on him.
 
-<CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity/component_groups/execute_no_commands</CodeHeader>
+<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
 
 ```json
 "minecraft:interact": {
@@ -245,7 +245,7 @@ This component will spawn zombies whenever you click on him.
 
 This component will trigger the example command every 10 seconds:
 
-<CodeHeader>BP/entities/entity_commands.entity.json#minecraft:entity/component_groups/execute_no_commands</CodeHeader>
+<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
 
 ```json
 "minecraft:timer": {
