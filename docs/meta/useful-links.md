@@ -58,6 +58,8 @@ Important links have a ⭐.
 
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
 -   [Molang Playground](https://bridge-core.github.io/molang-playground/)
+-   [Dialogue Editor/Generator](https://mcbe-essentials.glitch.me/dialogue-editor/)
+-   [Selector Generator](https://mcbe-essentials.glitch.me/selector-generator/)
 
 ## Documentation Links
 
@@ -107,14 +109,15 @@ Important links have a ⭐.
 -   [Block Models](https://blockmodels.com/)
 -   [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
+-   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 
 ## Community-Addon Discords
 
-*These discord links are to community-created addons, with a public discord*
+_These discord links are to community-created addons, with a public discord_
 
-- [World Expansion](https://discord.gg/CRQ6veyjak)
-- [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
-- [Project Vex](https://discord.gg/P95nXc4jbR)
-- [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
-- [Java & Bedrock Client](https://github.com/kennyvv/Alex)
+-   [World Expansion](https://discord.gg/CRQ6veyjak)
+-   [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
+-   [Project Vex](https://discord.gg/P95nXc4jbR)
+-   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
+-   [Java & Bedrock Client](https://github.com/kennyvv/Alex)

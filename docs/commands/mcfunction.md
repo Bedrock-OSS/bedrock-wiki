@@ -1,12 +1,19 @@
 ---
-title: Understanding .mcfunction
+title: Functions
+tags: 
+	- easy
 ---
+
+:::tip
+Minecraft can run <strong>not</strong> more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
+:::
 
 `mcfunction` files are stored in your BP as `BP/functions/my_function.mcfunction`. You can add as many functions as you like.
 
-Functions are used to group multiple Minecraft `commands` (such as `/say` or `/teleport`) into manageable chunks (or functions). Function files do not begin with `/`.
+Functions are used to group multiple Minecraft Commands (such as `/say` or `/teleport`) into manageable chunks (or functions). Commands inside a function file do not begin with `/`.
 
 Example:
+<CodeHeader>BP/functions/my_function.mcfunction</CodeHeader>
 
 ```
 tag @s add dev
@@ -18,7 +25,7 @@ Functions can be executed in-game by typing `/function name_of_function`. This w
 
 Function files can be nested, for example: `BP/functions/teleport/home.mcfunction` will create a new function called `teleport/home`, which can be called in game like `/function teleport/home`.
 
-Functions can be reloaded from the file without leaving the game with the `/reload` command.
+Function files can be reloaded without leaving the game with the `/reload` command.
 
 ## Running functions through tick.json
 
@@ -34,10 +41,7 @@ Create a file called tick.json in your root function folder. The format is this:
 
 ```json
 {
-	"values": [
-		"function_file_name_one",
-		"function_file_name_two"
-	]
+	"values": ["function_file_name_one", "function_file_name_two"]
 }
 ```
 
