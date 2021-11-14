@@ -14,8 +14,8 @@ All recipes are stored in the `recipes` folder in the behavior pack root. The fi
 
 <FolderView :paths="[
 
-'BP/recipes/obsidian_blade.recipejson',
-'BP/recipes/food/popcorn.recipejson',
+'BP/recipes/obsidian_blade.recipe.json',
+'BP/recipes/food/popcorn.recipe.json',
 
 ]"></FolderView>
 
