@@ -8,8 +8,18 @@ mention:
 
 *Last updated for Version 1.17.41*
 
-Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces and campfires, and brewing stands.
+Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands. 
 
+All recipes are stored in the `recipes` folder in the behavior pack root. The files can be named and organized under any folder hierarchy as desired. No experimental toggles are required to use recipes or any of their features.
+
+<FolderView :paths="[
+
+'BP/recipes/obsidian_blade.recipejson',
+'BP/recipes/food/popcorn.recipejson',
+
+]"></FolderView>
+
+### Example Recipe
 <CodeHeader>BP/recipes/crafting/weapons/cold_steel_sword.json</CodeHeader>
 ```json
 {
@@ -35,11 +45,10 @@ Recipes are the means of handling several item transactions, namely those occurr
 }
 ```
 
-::: tip NOTE
-Anvil interactions are handled within an [item definition](/items/items-16.html). Smithing table and loom transactions are currently unavailable.
+::: tip
+Anvil interactions are handled within an [item definition](/items/items-16.html), not via recipe files. Smithing table and loom transactions are currently unavailable.
 :::
 
-All recipes are stored in the `recipes` folder in the behavior pack root. The files can be named and organized under any folder hierarchy as desired. No experimental toggles are required to use recipes or any of their features.
 
 ## Shared Properties and Structures
 ### Format Version
