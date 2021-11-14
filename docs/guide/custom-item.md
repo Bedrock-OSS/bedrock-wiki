@@ -1,7 +1,7 @@
 ---
 title: 'Create a custom Item'
 nav_order: 5
-prefix: '5.'
+prefix: '5. '
 ---
 
 This section will walk you through the creation of a simple custom item, the ectoplasm, for our custom entity, the Ghost, to drop. 
