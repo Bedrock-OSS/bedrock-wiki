@@ -14,7 +14,7 @@ State machines are a special kind of logic management, that relies on a series o
 -   What to do in the current state
 -   How to move to other states
 
-State machines are used all over the place, especially in classical programming. They aren't only found in minecraft! [You can learn more about state machines here](https://www.itemis.com/en/yakindu/state-machine/documentation/user-guide/overview_what_are_state_machines).
+State machines are used all over the place, especially in classical programming. They aren't only found in minecraft! You can learn more about state machines [here](https://www.itemis.com/en/yakindu/state-machine/documentation/user-guide/overview_what_are_state_machines).
 
 A state machine can only be `in` one state at a time. When a state machine "runs", you can think of it as moving from state to state, executing the logic inside, and then following `transitions` to other states.
 

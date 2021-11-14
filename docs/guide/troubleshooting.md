@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-prefix: 'c.'
+prefix: 'c. '
 nav_order: 102
 tags:
     - help
@@ -12,11 +12,11 @@ Creating Addons for Minecraft is a relatively straightforward process _once you 
 
 ### Reload
 
-First, you should always reload Minecraft. That means fully closing the game, and reopening the game.
+First, you should always reload Minecraft. That means fully closing the game and then reopening it.
 
 ### The Environment
 
-The best way to prevent nasty bugs is by working in the right environment. You should review [the software preparation document](/guide/software-preparation) for editor recommendations. The most important part is getting a JSON-linter, ([or using an online json-linter](https://jsonlint.com/)), and storing your packs in `development_behavior_packs` and `development_resource_packs`.
+The best way to prevent nasty bugs is by working in the right environment. You should review the [software preparation document](/guide/software-preparation) for editor recommendations. The most important part is getting a JSON-linter, ([or using an online json-linter](https://jsonlint.com/)), and storing your packs in `development_behavior_packs` and `development_resource_packs`.
 
 If you have your addons in the normal folders, you can run into "pack caching" issues, where you edit the files in one location, but the game is still using the old files.
 
@@ -36,15 +36,17 @@ Errors are not cleared between runs, so the errors you see in the content log ma
 
 #### Content log file
 
-The content log is saved in `.txt` format at: `C:\Users\YOUR_USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
+The content log is saved in `.txt` format at: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
+
+Content Log GUI will show errors in game.
 
 ### Using Vanilla Resources
 
-You should download the vanilla resource and behavior pack. You can find [the vanilla resource and behavior pack here](https://www.minecraft.net/en-us/addons/). You can compare against the vanilla files if you have any issues.
+You should download the vanilla resource and behavior pack. You can find the vanilla resource and behavior pack [here](https://www.minecraft.net/en-us/addons/). You can compare against the vanilla files if you have any issues.
 
 ### JSON-Schemas
 
-JSON-Schemas are a valuable tool for file validation. You can learn more about [JSON-Schemas here](/meta/using-schemas).
+JSON-Schemas are a valuable tool for file validation. You can learn more about JSON-Schemas [here](/meta/using-schemas).
 
 ## Entities
 

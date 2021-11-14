@@ -1,5 +1,5 @@
 ---
-title: Loot Tables, Recipes, Spawn Rules
+title: Loot Tables and Spawn Rules
 ---
 
 Loot tables are powerful tools that define what blocks drop upon destruction, what entities upon death, what equipment can entities use, what can a player fish out of a river and what loot ends up in the game's loot chests. In order to understand loot tables better, I recommend looking into the `loot_tables` folder of the Example Vanilla Behavior pack, but I'll trow in some examples from there into here nevertheless. \
@@ -378,168 +378,6 @@ _Blocks do not drop loot in creative mode_
 
 ---
 
-## Custom crafting/smelting/etc Recipes
-
-Recipes can have unique identifiers like `wiki:compass_from_compass_block`. They're located in `BP/recipes`.
-
--   The parameter below "`format_version`" defines the type of this recipe. It can be set to "`recipe_furnace`"(smelting), "`recipe_shaped`"(every ingredient has a set place in the crafting grid) and "`recipe_shapeless`"(ingredients can be placed in whatever order into the crafting grid).
--   Every recipe takes "`tags`" which are a list of vanilla benches that can use this recipe. Can be "`crafting_table`", "`furnace`", "`smoker`", "`blast_furnace`", "`campfire`", "`stonecutter`" etc.
-    After b1.16.100 also accepts tags of custom benches.
-
-Let's look through some recipe-specific syntax next.
-
-### Smelting recipe example
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"format_version": "1.12",
-	"minecraft:recipe_furnace": {
-		"description": {
-			"identifier": "minecraft:furnace_beef"
-		},
-		"tags": ["furnace", "smoker", "campfire"],
-		"input": {
-			"item": "minecraft:beef",
-			"data": 0,
-			"count": 4
-		},
-		"output": "minecraft:cooked_beef"
-	}
-}
-```
-
--   "`input`":
-    "`item`": the item's to be smelted full identifier;
-    "`data`": it's _aux value_. Default: `0`;
--   _"`count`" is optional. It most likely has something to do with the number of items that can be smelted at the same time in a campfire, but it isn't documented anywhere._
--   "`output`": the item that the furnace outputs after smelting.
-
-### Shaped recipe example
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"format_version": "1.12",
-	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "minecraft:acacia_boat"
-		},
-		"tags": ["crafting_table"],
-		"groups": ["planks"],
-		"pattern": ["#P#", "###"],
-		"key": {
-			"P": {
-				"item": "minecraft:wooden_shovel"
-			},
-			"#": {
-				"item": "minecraft:planks",
-				"data": 4
-			}
-		},
-		"result": {
-			"item": "minecraft:boat",
-			"data": 4
-		}
-	}
-}
-```
-
--   "`pattern`" consists of 3 rows each consisting of 3 character keys. Each character symbolizes an item in a slot of the crafting grid.
--   "`key`" defines each character to mean an item. Here, 'P' means a Wooden Shovel and '`#`' means a '`planks`' block with aux value `4`, which is the Acacia Planks block.
--   "`result`" means same as output. Here it's an Acacia Boat('`boat`' with aux id `4`).
-
-Let's also look into a recipe that gives you more than one item as a result.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"format_version": "1.12",
-	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "minecraft:coal"
-		},
-
-		"tags": ["crafting_table"],
-		"pattern": ["#"],
-		"key": {
-			"#": {
-				"item": "minecraft:coal_block"
-			}
-		},
-		"result": {
-			"item": "minecraft:coal",
-			"data": 0,
-			"count": 9
-		}
-	}
-}
-```
-
--   "`count`" defines how many items you get when you craft this. Here you get 9 coal from deconstructing a coal block.
-
-### Shapeless recipe example
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"format_version": "1.12",
-	"minecraft:recipe_shapeless": {
-		"description": {
-			"identifier": "minecraft:firecharge_coal_sulphur"
-		},
-		"priority": 0,
-		"ingredients": {
-			"item": "minecraft:fireball",
-			"data": 0,
-			"count": 4
-		},
-		"result": {
-			"item": "minecraft:blaze_powder",
-			"data": 4
-		}
-	}
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"format_version": "1.12",
-	"minecraft:crafting_shapeless": {
-		"ingredients": [
-			{
-				"item": "minecraft:apple"
-			},
-			{
-				"item": "minecraft:chest_minecart"
-			},
-			{
-				"item": "minecraft:apple"
-			}
-		],
-		"result": {},
-		"description": {
-			"identifier": "wiki:randomity_recipe"
-		}
-	}
-}
-```
-
--   "`priority`" is the priority with which the recipe will be chosen over others.
--   "`ingredients`" is simply a list of all ingredients with their aux values. There are no keys, since the ingredients can be placed in any crafting grid slot.
-
-**Note: Crafting recipes can be generated visually online, check Links and Contact for a stable generator.**
-
-**_Challenge: Create custom crafting/smelting recipes for our custom blocks and items created in previous chapters!_**
-
----
-
 ## Spawn Rules
 
 Spawn rules define how vanilla Entities and custom entities spawn. In the next chapter we'll be creating a custom entity, so make sure to prepare a custom spawn rule for it! Check out the vanilla example files for more information. ;)
@@ -618,7 +456,7 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 -   "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity_born`" (as baby). Can be used in any event.
     `"event_skip_count": 2`, for example, means that the first two entities will not be spawned with this event, but all the next ones will.
 
-_Why not create some more custom blocks, items, recipes and loot tables before moving onto the next big chapter?_
+_Why not create some more custom blocks, items, and loot tables before moving onto the next big chapter?_
 
 ---
 
@@ -629,9 +467,8 @@ _Why not create some more custom blocks, items, recipes and loot tables before m
 **What you've done:**
 
 -   [x] Learned to create Loot Tables;
--   [x] Learned to create custom Recipes of different types;
 -   [x] Learned to create spawn rules;
--   [x] Created Recipes and Loot Tables for our custom blocks and items;
+-   [x] Created Loot Tables for our custom blocks and items;
 -   [x] Learned about the usefulness referencing the Example files and the documentation even better;
 -   [x] Tried out some online file generators;
 

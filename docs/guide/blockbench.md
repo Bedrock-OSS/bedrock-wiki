@@ -1,16 +1,17 @@
 ---
-title: 'Blockbench: Modeling, Texturing, Animating'
-prefix: '7.'
+title: 'Blockbench: Modeling, Texturing and Animating'
+prefix: '7. '
 nav_order: 7
 ---
 
-Blockbench is a free software designed to make Minecraft modeling, texturing, and animating possible. It is available for mobile browsers, Windows 10, and macOS. Please install it at [blockbench.net/](https://blockbench.net/)
+Blockbench is a free software designed to make Minecraft modeling, texturing, and animating possible. It is available for mobile browsers, Windows 10, and macOS. Please install it at [blockbench.net](https://blockbench.net/)
 
 Let's get started.
 
 1. Open Blockbench.
 2. Choose _File>New>Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
 3. A screen like this will have popped up.
+
    ![](/assets/images/guide/create_entity_project_menu.png)
    -	"File name:" Self-explanatory. My file will generate as "skele_yaklin.geo.json";
    - 	"Model Identifier:" This is the model identifier (namespace not required), a shortname for this ID will be defined later;
@@ -18,6 +19,7 @@ Let's get started.
    -	"Texture Height" and "Texture Width" define the resolution of the model's textures;
 
 4. Press confirm. You'll see a screen like this:
+   
    ![](/assets/images/guide/create_entity_workspace.png) 
    - 	You can see many tools here: move, resize, rotate, etc. 
    - 	You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;

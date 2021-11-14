@@ -3,7 +3,7 @@ title: Introduction
 tags:
     - guide
 nav_order: 1
-prefix: '1.'
+prefix: '1. '
 ---
 
 ## What are Addons?

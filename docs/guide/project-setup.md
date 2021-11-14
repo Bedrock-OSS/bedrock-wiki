@@ -1,7 +1,7 @@
 ---
 title: Project Setup
 nav_order: 4
-prefix: '4.'
+prefix: '4. '
 ---
 
 ## The com.mojang folder
@@ -220,8 +220,6 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
 
 'com.mojang/development_behavior_packs/guide_BP/manifest.json',
-'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
-'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
 
 ]"></FolderView>
 

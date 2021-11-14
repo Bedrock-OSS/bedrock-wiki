@@ -132,6 +132,7 @@ Melee attacks are the most common type of attack, they cause knockback, and have
         },
         "minecraft:behavior.melee_attack": {   //defines the properties of the melee attack
           "priority": 3,
+          "melee_fov": 90.0,                   //The allowable FOV the actor will use to determine if it can make a valid melee attack
           "speed_multiplier": 1,
           "track_target": false,
           "require_complete_path": true
@@ -192,6 +193,7 @@ Fires specified [projectiles](/documentation/projectiles) towards target at set 
       "wiki:ranged_attack": {
         "minecraft:behavior.ranged_attack": {     //defines the properties of the ranged attack
           "priority": 2,
+          "ranged_fov": 90.0,                     //The allowable FOV the actor will use to determine if it can make a valid ranged attack
           "attack_interval_min": 1.0,
           "attack_interval_max": 3.0,
           "attack_radius": 15.0
@@ -348,6 +350,7 @@ Component groups are required to define the different modes of attack, such as:
         },
         "minecraft:behavior.ranged_attack": {
           "priority": 3,
+          "ranged_fov": 90.0,
           "attack_interval_min": 1.0,
           "attack_interval_max": 3.0,
           "attack_radius": 15.0
