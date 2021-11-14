@@ -7,7 +7,7 @@ mentions:
 
 # About this Guide
 
-This guide will walk you trough the downloading and setup of the software you need to work on our wiki, the steps to clone this wiki, so you can edit it locally and how to create a `Pull Request` to add your changes to the wiki.
+This guild will walk you through how to get started editing the wiki. While it is possible to edit the wiki "in-place" on the github website, this guide will instead teach you the proper technique. This is a valuable and transferable skill, and will set you up for additional knowledge beyond just editing the wiki.
 
 This article will teach you how to use GitHub Desktop, the easiest way to manage your local Repositories. Its possible to do this without GitHub Desktop just by using Git, but this is more advanced than just using GitHub Desktop and we won't be covering this in this guide.
 
@@ -33,15 +33,11 @@ If you already have installed the necessary software and know how to handle Git-
 
 To edit the wiki, there are 5 major steps that you need to follow (downloading and setting up the software is just done the first time):
 
-:::tip
-The 5 steps that you need to follow to successfully update our wiki
-
-1. Update your fork to match the latest Version of our Wiki
-2. Fetch the latest changes in GitHub Desktop
+1. Fork the Repository
+2. Clone the Repository
 3. Edit the Wiki
 4. Commit your local changes and sync with GitHub
 5. Create a Pull Request
-:::
 
 If you see this the first time, it might look a little overwhelming, but don't worry! Its very easy and we guide you through this step by step.
 
@@ -56,11 +52,7 @@ If you wan't to edit the wiki more frequently, you might want to start using Git
 
 ## Visual Studio Code
 
-Visual Studio Code (VSCode) is a great environment to edit all your files, code something, etc. You can use other editors too, but in this tutorial we will guide you trough the installation of VSCode.
-
-#### Download
-
-Visit https://code.visualstudio.com/Download and download the Option thats best suited for you.
+[Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) is a great environment to edit all your files, code something, etc. You can use other editors too, but in this tutorial we will guide you trough the installation of VSCode.
 
 ![](/assets/images/contribute/setting_up_software/vscode/vsc_download.png)
 
@@ -94,11 +86,7 @@ We are finished with the installation of VSCode. You can close it for now.
 
 ## GitHub Desktop
 
-GitHub Desktop is used to download GitHub Repositories, so you can edit them locally. Its possible to do this with Git, a command line tool, instead, but this is a bit more advanced and won't be covered in this tutorial.
-
-#### Download
-
-Visit https://desktop.github.com and download GitHub Desktop.
+[GitHub Desktop](https://desktop.github.com) is used to download GitHub Repositories, so you can edit them locally. Its possible to do this with Git, a command line tool, instead, but this is a bit more advanced and won't be covered in this tutorial.
 
 ![](/assets/images/contribute/setting_up_software/ghdesktop/ghd_download.png)
 
@@ -122,11 +110,7 @@ For now, you can close GitHub Desktop.
 
 ## NodeJS
 
-With NodeJS we can view the wiki locally, as it would appear on the web. Its great to get typos or errors, before you push it and we get an error on merging it.
-
-#### Download
-
-visit https://www.nodejs.org and download NodeJS.
+With [NodeJS](https://www.nodejs.org) we can view the wiki locally, as it would appear on the web. Its great to get typos or errors, before you push it and we get an error on merging it.
 
 ![](/assets/images/contribute/setting_up_software/nodejs/njs_download.png)
 
@@ -194,7 +178,7 @@ With GitHub opened in your browser, open your fork. You will see a field that sh
 
 ![](/assets/images/contribute/updating_local/updating.png)
 
-Now in GitHub Desktop you need to pull the origin by clicking on "Pull Origin". Your local clone should automatically update.
+Now in GitHub Desktop you need to pull the origin by clicking on `Pull Origin`. Your local clone should automatically update.
 
 ![](/assets/images/contribute/updating_local/updating_pull.png)
 
@@ -230,7 +214,7 @@ Now open in VSCode.
 
 ![](/assets/images/contribute/troubleshooting/merge/merge_open.png)
 
-Click on `Accept Current Change`, because you want your changes to be updated, not someone elses.
+Click on `Accept Current Change`, because you want your changes to be updated, not someone elses. This step has to be done for every problem that exists. If you don't do this for every problem, we can't merge your PR.
 
 ![](/assets/images/contribute/troubleshooting/merge/merge_accept.png)
 

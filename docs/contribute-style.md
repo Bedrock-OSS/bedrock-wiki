@@ -53,26 +53,52 @@ To view the wiki locally, type `npm run dev` and press enter and wait until its 
 
 Hover over the part where it says `"http://localhost:3000/"` and press ctrl and left-click. Your browser will open with the wiki.
 
-Done!
+Done! Every time you change and save a file in VSCode it will automatically be updated in your browser.
 
 
 ## Working with Markdown
 
-Since our wiki supports Markdown, a really good markup language, you can use it to do great things! To learn more about Markdown, visit the official [Markdown Guide](https://www.markdownguide.org/basic-syntax)!
+The wiki uses Markdown, a powerful text-formatting syntax. To learn more about Markdown, visit the official [Markdown Guide](https://www.markdownguide.org/basic-syntax)!
 
 We wont teach you the whole Markdown-Language, but there are some things that you need to pay attention to!
+
+### Linking
+
+If you want to refer to another website, like the Microsoft Docs, you can use links.
+
+To link something in Markdown, you can either just write out the whole link:
+
+https://wiki.bedrock.dev
+
+Or show some other text instead of the link:
+
+[Click here!](https://wiki.bedrock.dev)
+
+### Linking to sources outside the wiki
+
+To link to another source, just copy the whole link url (including the https-part in front of it) and paste it in the field:
+
+```Markdown
+[Click here for the official Microsoft Docs](https://docs.microsoft.com/de-de/minecraft/creator/)
+```
+
+[Click here for the official Microsoft Docs](https://docs.microsoft.com/de-de/minecraft/creator/)
 
 #### Linking to other pages in the wiki
 
 You can create links, that redirect you to other pages in the wiki. These are called `relative links`. 
 
 ```Markdown
-[redirect to the contribute page](/contribute)
+[Redirect to the contribute page](/contribute)
 ```
 
-[redirect to the contribute page](/contribute)
+[Redirect to the contribute page](/contribute)
 
-To redirect to another page, just look in the file explorer. The main folder is the `"docs"` folder. To link to a page thats directly inside this folder, you can just write `/pagename`, like `/contribute` to link to the contribute page. Every page that is inside a folder has to be accessed by writing the names of the folder, a slash, and then the page name: `/blocks/block-materials`.
+To redirect to another page, just look in the file explorer. The main folder is the `"docs"` folder. To link to a page thats directly inside this folder, you can just write `/pagename`, like `/contribute` to link to the contribute page. Every page that is inside a folder has to be accessed by writing the name of the folder, a slash, and then the page name: `/blocks/block-materials`.
+
+:::warning
+**NEVER** use absolute links to link to a page inside our wiki. Make sure you **don't** include `wiki.bedrock.dev` inside your links.
+:::
 
 ## Working with Components
 
@@ -107,17 +133,29 @@ FolderViews are Components which can be used to show a setup of files, like in o
 
 ```html
 <FolderView :paths="[
-    'a/b/c',
-    'a/b/c/picture.png',
-    'a/b.json'
-]" />
+
+    'com.mojang/development_resource_packs/guide_RP/manifest.json',
+    'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+    'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+
+    'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+    'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
+    'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
+
+]"></FolderView>
 ```
 
 <FolderView :paths="[
-    'a/b/c',
-    'a/b/c/picture.png',
-    'a/b.json'
-]" />
+
+'com.mojang/development_resource_packs/guide_RP/manifest.json',
+'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+
+'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
+'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
+
+]"></FolderView>
 
 | Attribute | Required | Type | Note |
 | --------- | -------- | ---- | ---- |
@@ -130,7 +168,7 @@ The `:paths` Attribute is a String, that contains a List of all separate file pa
 CodeHeaders are used to nicely wrap codeblocks, so a user can easily copy the code inside them. You can also add some text, like a file path, so the users know exactly where to put this code.
 
 ~~~json
-<CodeHeader>Some_text_like_a_file_path.json</CodeHeader>
+<CodeHeader>BP/blocks/example.json</CodeHeader>
 ```json
 {
     "some": "json"
@@ -138,14 +176,29 @@ CodeHeaders are used to nicely wrap codeblocks, so a user can easily copy the co
 ```
 ~~~
 
-<CodeHeader>Some_text_like_a_file_path.json</CodeHeader>
+<CodeHeader>BP/blocks/example.json</CodeHeader>
 ```json
 {
     "some": "json"
 }
 ```
 
-The informative text goes between the two HTML-Tags. On the next line after the closing tag, you have to start a code block to use this Component, as shown in the example above.
+The filepath goes between the two HTML-Tags. Make sure to follow our [Style-Guide](/meta/style-guide) when describing filepaths:
+
+-   If you link inside a Behavior-Pack, place `BP` in front of all other files:
+
+✔️ `BP/blocks/example.json`
+
+❌ `YourBehaviorPack/blocks/example.json`
+
+-   Same for the Resource-Pack, use `RP` in front of all other files:
+
+✔️ `RP/manifest.json`
+
+❌ `YourResourcePack/manifest.json` 
+
+
+ On the next line after the closing tag, you have to start a code block to use this Component, as shown in the example above.
 
 ### Spoiler
 
@@ -174,7 +227,7 @@ and here
 
 The content between the two tags is the content that will be hidden.
 
-Pay attention to the empty lines between the content and the tags! If you forget this, this component will not work!
+Pay attention to the empty lines between the content and the tags! If you forget these, this component will not work!
 
 ### Label
 
@@ -220,13 +273,15 @@ A WikiImage is an alternative way to add an image in your article.
 <WikiImage 
     src='assets/images/homepage/wikilogo.png' 
     alt='alternative text' 
-    pixelated=true />
+    pixelated=true 
+/>
 ```
 
 <WikiImage 
     src='assets/images/homepage/wikilogo.png' 
     alt='alternative text' 
-    pixelated=true />
+    pixelated=true 
+/>
 
 | Attribute | Required | Type | Note |
 | --------- | -------- | ---- | ---- |
