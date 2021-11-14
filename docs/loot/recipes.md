@@ -13,6 +13,8 @@ Recipes are the means of handling several item transactions, namely those occurr
 
 All recipes are stored in the `recipes` folder in the behavior pack root. The files can be named and organized under any folder hierarchy as desired. No experimental toggles are required to use recipes or any of their features.
 
+### Folder Structure
+
 <FolderView :paths="[
 
 'BP/recipes/obsidian_blade.recipe.json',
