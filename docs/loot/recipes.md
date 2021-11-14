@@ -1,5 +1,6 @@
 ---
 title: Recipes
+nav_order: 0
 tags:
 	- guide
 mention:
