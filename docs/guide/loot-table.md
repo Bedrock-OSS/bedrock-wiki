@@ -1,7 +1,7 @@
 ---
 title: 'Adding a Loot Table, a Spawn rule and a crafting recipe'
 nav_order: 8
-prefix: '8.'
+prefix: '8. '
 ---
 
 Next, we'll enhance the custom Ghost entity by adding some more basic mechanics to it:
