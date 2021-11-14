@@ -1,5 +1,7 @@
 ---
 title: Recipes
+tags:
+	- guide
 mention:
 	- Ciosciaa
 ---
@@ -80,18 +82,18 @@ Recipes are linked to crafting interfaces using the required `"tags"` array prop
 
 Vanilla interfaces are exposed to tags for each set of recipe types.
 
-Crafting:
+#### Crafting:
 - `crafting_table`
 - `stonecutter`
 
-Cooking and Smelting:
+#### Cooking and Smelting:
 - `furnace`
 - `blast_furnace`
 - `smoker`
 - `campfire`
 - `soul_campfire`
 
-Brewing
+#### Brewing
 - `brewing_stand`
 
 Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-16.html#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
