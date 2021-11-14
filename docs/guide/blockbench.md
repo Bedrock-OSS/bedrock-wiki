@@ -1,6 +1,6 @@
 ---
-title: 'Blockbench: Modeling, Texturing, Animating'
-prefix: '7.'
+title: 'Blockbench: Modeling, Texturing and Animating'
+prefix: '7. '
 nav_order: 7
 ---
 
