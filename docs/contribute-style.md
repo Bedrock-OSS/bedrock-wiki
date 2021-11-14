@@ -2,7 +2,7 @@
 title: How to edit pages on our wiki
 hidden: true
 mentions:
--   TheItsNameless
+    - TheItsNameless
 ---
 
 # Working on the wiki
@@ -27,13 +27,13 @@ mentions:
 ---
 ```
 
-| Name | Required | Default | Note |
-| ---- | -------- | ------- | ---- |
-| `title` | Yes | None | The title of the page. |
-| `nav_order` | No | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order. |
-| `show_toc` | No | True | Whether the table of contents will be generated for this page. |
-| `tags` | No | [] | A list of tags for the page. Some will be displayed on sidebar, such as 'guide' or 'beta'. All will be displayed in the actual page, at the top. |
-| `mentions` | No | [] | Add your GitHub username here so that you will always be in the contributors section if this page is moved. |
+| Name        | Required | Default | Note                                                                                                                                                     |
+| ----------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`     | Yes      | None    | The title of the page.                                                                                                                                   |
+| `nav_order` | No       | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order. |
+| `show_toc`  | No       | True    | Whether the table of contents will be generated for this page.                                                                                           |
+| `tags`      | No       | []      | A list of tags for the page. Some will be displayed on sidebar, such as 'guide' or 'beta'. All will be displayed in the actual page, at the top.         |
+| `mentions`  | No       | []      | Add your GitHub username here so that you will always be in the contributors section if this page is moved.                                              |
 
 The title is required, as it is the name shown in the bar on the left side. Mentions isn't needed, but it would be great if everyone knows who made the great article they are reading!
 
@@ -54,7 +54,6 @@ To view the wiki locally, type `npm run dev` and press enter and wait until its 
 Hover over the part where it says `"http://localhost:3000/"` and press ctrl and left-click. Your browser will open with the wiki.
 
 Done! Every time you change and save a file in VSCode it will automatically be updated in your browser.
-
 
 ## Working with Markdown
 
@@ -86,7 +85,7 @@ To link to another source, just copy the whole link url (including the https-par
 
 #### Linking to other pages in the wiki
 
-You can create links, that redirect you to other pages in the wiki. These are called `relative links`. 
+You can create links, that redirect you to other pages in the wiki. These are called `relative links`.
 
 ```Markdown
 [Redirect to the contribute page](/contribute)
@@ -110,20 +109,21 @@ A Button works like a link, but is more noticeable for the user.
 
 ```html
 <BButton 
-    link='https://wiki.bedrock.dev' 
+    link="https://wiki.bedrock.dev" 
     color=red
 >your button text</BButton>
 ```
 
-<BButton 
-    link='https://wiki.bedrock.dev' 
-    color=red
->your button text</BButton>
+<BButton
+link='https://wiki.bedrock.dev'
+color=red
 
-| Attribute | Required | Type | Note |
-| --------- | -------- | ---- | ---- |
-| link | yes | String | Link to redirect when clicking on the Button |
-| color | no | String | Defines the color of the button <br> *Only accepts `red`, `green`, `blue` as values, otherwise it will be grey* |
+> your button text</BButton>
+
+| Attribute | Required | Type   | Note                                                                                                            |
+| --------- | -------- | ------ | --------------------------------------------------------------------------------------------------------------- |
+| link      | yes      | String | Link to redirect when clicking on the Button                                                                    |
+| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be grey_ |
 
 The text between the two HTML-Tags is the text that will appear on the button.
 
@@ -132,7 +132,8 @@ The text between the two HTML-Tags is the text that will appear on the button.
 FolderViews are Components which can be used to show a setup of files, like in our [Project-Setup](/guide/project-setup) guide.
 
 ```html
-<FolderView :paths="[
+<FolderView
+	:paths="[
 
     'com.mojang/development_resource_packs/guide_RP/manifest.json',
     'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
@@ -142,7 +143,8 @@ FolderViews are Components which can be used to show a setup of files, like in o
     'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
     'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
 
-]"></FolderView>
+]"
+></FolderView>
 ```
 
 <FolderView :paths="[
@@ -157,9 +159,9 @@ FolderViews are Components which can be used to show a setup of files, like in o
 
 ]"></FolderView>
 
-| Attribute | Required | Type | Note |
-| --------- | -------- | ---- | ---- |
-| :paths | yes | String containing a List of Strings | Represents all files and folders which should appear in the FolderView |
+| Attribute | Required | Type                                | Note                                                                   |
+| --------- | -------- | ----------------------------------- | ---------------------------------------------------------------------- |
+| :paths    | yes      | String containing a List of Strings | Represents all files and folders which should appear in the FolderView |
 
 The `:paths` Attribute is a String, that contains a List of all separate file paths. This String must be written with double quotes! Each file path must be written entirely and has to be wrapped inside single quotes.
 
@@ -167,19 +169,20 @@ The `:paths` Attribute is a String, that contains a List of all separate file pa
 
 CodeHeaders are used to nicely wrap codeblocks, so a user can easily copy the code inside them. You can also add some text, like a file path, so the users know exactly where to put this code.
 
-~~~json
+````json
 <CodeHeader>BP/blocks/example.json</CodeHeader>
 ```json
 {
     "some": "json"
 }
 ```
-~~~
+````
 
 <CodeHeader>BP/blocks/example.json</CodeHeader>
+
 ```json
 {
-    "some": "json"
+	"some": "json"
 }
 ```
 
@@ -195,17 +198,16 @@ The filepath goes between the two HTML-Tags. Make sure to follow our [Style-Guid
 
 ✔️ `RP/manifest.json`
 
-❌ `YourResourcePack/manifest.json` 
+❌ `YourResourcePack/manifest.json`
 
-
- On the next line after the closing tag, you have to start a code block to use this Component, as shown in the example above.
+On the next line after the closing tag, you have to start a code block to use this Component, as shown in the example above.
 
 ### Spoiler
 
 A spoiler is a Component that can be used to hide some content, so it doesn't block the whole site.
 
 ```html
-<Spoiler title='title'>
+<Spoiler title="title">
     
 text here
 
@@ -213,6 +215,7 @@ and here
 
 </Spoiler>
 ```
+
 <Spoiler title='title'>
 
 text here
@@ -221,9 +224,9 @@ and here
 
 </Spoiler>
 
-| Attribute | Required | Type | Note |
-| --------- | -------- | ---- | ---- |
-| title | yes | String | Will be displayed after the arrow |
+| Attribute | Required | Type   | Note                              |
+| --------- | -------- | ------ | --------------------------------- |
+| title     | yes      | String | Will be displayed after the arrow |
 
 The content between the two tags is the content that will be hidden.
 
@@ -235,19 +238,21 @@ A Label is a small icon with uppercase letters that can be used to give your art
 
 ```html
 <Label 
-    name='name' 
-    color='green'
+    name="name"
+    color="green"
 >label</Label>
 ```
-<Label 
-    name='name' 
-    color='green'
->label</Label>
 
-| Attribute | Required | Type | Note |
-| --------- | -------- | ---- | ---- |
-| name | yes | String | Text that will be displayed inside the box |
-| color | no | String | Color of the box <br> *Only accepts `red`, `green`, `blue` as values, otherwise it will be transparent* |
+<Label
+name='name'
+color='green'
+
+> label</Label>
+
+| Attribute | Required | Type   | Note                                                                                                    |
+| --------- | -------- | ------ | ------------------------------------------------------------------------------------------------------- |
+| name      | yes      | String | Text that will be displayed inside the box                                                              |
+| color     | no       | String | Color of the box <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be transparent_ |
 
 Don't overuse them! They look cool, but someone could really give them too much attention and forget to focus on other important parts of your article.
 
@@ -256,24 +261,24 @@ Don't overuse them! They look cool, but someone could really give them too much 
 A YouTubeEmbed can be used to embed a YouTube Video in your article.
 
 ```html
-<YouTubeEmbed id='dQw4w9WgXcQ' />
+<YouTubeEmbed id="dQw4w9WgXcQ" />
 ```
 
 <YouTubeEmbed id='dQw4w9WgXcQ' />
 
-| Attribute | Required | Type | Note |
-| --------- | -------- | ---- | ---- |
-| id | yes | String | ID of the video to display |
+| Attribute | Required | Type   | Note                       |
+| --------- | -------- | ------ | -------------------------- |
+| id        | yes      | String | ID of the video to display |
 
 ### WikiImage
 
-A WikiImage is an alternative way to add an image in your article. 
+A WikiImage is an alternative way to add an image in your article.
 
 ```html
-<WikiImage 
-    src='assets/images/homepage/wikilogo.png' 
-    alt='alternative text' 
-    pixelated=true 
+<WikiImage
+	src="assets/images/homepage/wikilogo.png"
+	alt="alternative text"
+	pixelated="true"
 />
 ```
 
@@ -283,11 +288,11 @@ A WikiImage is an alternative way to add an image in your article.
     pixelated=true 
 />
 
-| Attribute | Required | Type | Note |
-| --------- | -------- | ---- | ---- |
-| src | yes | String | Image to show |
-| alt | no | String | Text to show if the browser can't load the image. Not really important, as most modern browser support showing images. |
-| pixelated | no | Boolean | If the image should be pixelated <br> *Due to a bug, it doesn't matter if this attribute is true or false. As long as the attribute is present, the image will be pixelated. This attribute **must** be deleted so that the image is not pixelated!* |
+| Attribute | Required | Type    | Note                                                                                                                                                                                                                                                 |
+| --------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| src       | yes      | String  | Image to show                                                                                                                                                                                                                                        |
+| alt       | no       | String  | Text to show if the browser can't load the image. Not really important, as most modern browser support showing images.                                                                                                                               |
+| pixelated | no       | Boolean | If the image should be pixelated <br> _Due to a bug, it doesn't matter if this attribute is true or false. As long as the attribute is present, the image will be pixelated. This attribute **must** be deleted so that the image is not pixelated!_ |
 
 Unlike a markdown image, the image can be pixelated here.
 
@@ -296,10 +301,10 @@ Unlike a markdown image, the image can be pixelated here.
 With CardLinks you can make fancy boxes with an image and a text, which contains a link!
 
 ```html
-<CardLink 
-    imgsrc='assets/images/homepage/wikilogo.png' 
-    title='title' 
-    link='https://google.com' 
+<CardLink
+	imgsrc="assets/images/homepage/wikilogo.png"
+	title="title"
+	link="https://google.com"
 />
 ```
 
@@ -308,11 +313,11 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
     title='title' 
     link='https://google.com' />
 
-| Attribute | Required | Type | Note |
-| --------- | -------- | ---- | ---- |
-| imgsrc | yes | String | Image to display inside the box |
-| title | yes | String | Title to show |
-| link | yes | String | Link to redirect on clicking the title |
+| Attribute | Required | Type   | Note                                   |
+| --------- | -------- | ------ | -------------------------------------- |
+| imgsrc    | yes      | String | Image to display inside the box        |
+| title     | yes      | String | Title to show                          |
+| link      | yes      | String | Link to redirect on clicking the title |
 
 Don't overuse them! They look cool, but someone could really give them too much attention and forget to focus on other important parts of your article.
 
