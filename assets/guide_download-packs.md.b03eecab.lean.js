@@ -1,0 +1,1 @@
+import{o as e,c as o,d as a}from"./404.md.b986cbb1.js";const i='{"title":"Download Example Packs","description":"","frontmatter":{"title":"Download Example Packs","prefix":"b.","nav_order":101},"relativePath":"guide/download-packs.md","lastUpdated":1636888316746}',t={},d=a('',5);t.render=function(a,i,t,l,c,s){return e(),o("div",null,[d])};export default t;export{i as __pageData};
