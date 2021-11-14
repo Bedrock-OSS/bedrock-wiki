@@ -266,7 +266,7 @@ It's worth noting that the `Y` axis may not work as expected. When you stay in t
 
 ## query.block_neighbor_has_any_tag and query.relative_block_has_any_tag
 
-Requires `'Experimental Molang Features` to use. From the docs `Takes a relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has any of the tags provided`. This is useful for using connecting blocks or detecting entities.
+Requires `Experimental Molang Features` to use. From the docs `Takes a relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has any of the tags provided`. This is useful for using connecting blocks or detecting entities.
 
 `query.block_neighbor_has_any_tag` - Takes block position
 `query.relative_block_has_any_tag` - Takes entity position
