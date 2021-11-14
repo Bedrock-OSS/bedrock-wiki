@@ -8,14 +8,14 @@ mention:
 
 Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces and campfires, and brewing stands.
 
-<CodeHeader>/behaviors/recipes/crafting/weapons/cold_steel_sword.json</CodeHeader>
+<CodeHeader>BP/recipes/crafting/weapons/cold_steel_sword.json</CodeHeader>
 ```json
 {
 	"format_version": "1.17.41",
 	
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "lichbane:cold_steel_sword"
+			"identifier": "wiki:cold_steel_sword"
 		},
 		"tags": ["crafting_table", "altar"],
 
@@ -34,14 +34,14 @@ Recipes are the means of handling several item transactions, namely those occurr
 ```
 
 ::: tip NOTE
-Anvil interactions are handled within an [item definition](https://wiki.bedrock.dev/items/items-16.html). Smithing table and loom transactions are currently unavailable.
+Anvil interactions are handled within an [item definition](/items/items-16.html). Smithing table and loom transactions are currently unavailable.
 :::
 
 All recipes are stored in the `recipes` folder in the behavior pack root. The files can be named and organized under any folder hierarchy as desired. No experimental toggles are required to use recipes or any of their features.
 
 ## Shared Properties and Structures
 ### Format Version
-The format version is intended to version the schema used for the body of a recipe. It is provided with the top-level `"format_version"` property.
+The [format version](/concepts/format-version.html#top) is intended to version the schema used for the body of a recipe. It is provided with the top-level `"format_version"` property.
 
 <CodeHeader>#/</CodeHeader>
 ```json
@@ -60,7 +60,7 @@ The `"description"` object, required within any recipe type, holds the metadata 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
 "description": {
-	"identifier": "lichbane:cold_steel_sword"
+	"identifier": "wiki:cold_steel_sword"
 }
 ```
 
@@ -94,7 +94,7 @@ Cooking and Smelting:
 Brewing
 - `brewing_stand`
 
-Additionally, [custom crafting blocks can declare a custom tag](https://wiki.bedrock.dev/blocks/blocks-16.html#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
+Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-16.html#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
 
 ::: tip
 To effectively disable a recipe (useful for [overriding](#overrides) a prior recipe), set the tag array to `[""]`.
@@ -186,19 +186,19 @@ Crafting recipes support both crafting tables and stonecutters:
 "tags": ["crafting_table", "stonecutter"]
 ```
 
-`"crafting_table"` applies to both vanilla crafting tables and the player 2 × 2 crafting grid in their inventory. There is currently no way to opt into one but not the other. Crafting recipes additionally support custom tags, linking recipes to a [crafting grid provided by a custom block](https://wiki.bedrock.dev/blocks/blocks-16.html#minecraft-crafting-table).
+`"crafting_table"` applies to both vanilla crafting tables and the player 2 × 2 crafting grid in their inventory. There is currently no way to opt into one but not the other. Crafting recipes additionally support custom tags, linking recipes to a [crafting grid provided by a custom block](/blocks/blocks-16.html#minecraft-crafting-table).
 
 ### Shapeless Recipes
 Shapeless recipes simply bind a collection of inputs to a single output on a crafting grid.
 
-<CodeHeader>/behaviors/recipes/decorations/knobs/brass.json</CodeHeader>
+<CodeHeader>BP/recipes/decorations/knobs/brass.json</CodeHeader>
 ```json
 {
 	"format_version": "1.17.41",
 	
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "manorisms:brass_door_knob"
+			"identifier": "wiki:brass_door_knob"
 		},
 		"group": "handles",
 		"tags": ["construction_bench"],
@@ -248,14 +248,14 @@ Shapeless recipe outputs are expressed using the required `"result"` property an
 ### Shaped Recipes
 Shaped recipes enforce that the ingredients used during crafting conform to a strict shape.
 
-<CodeHeader>/behaviors/recipes/covered_arch.json</CodeHeader>
+<CodeHeader>BP/recipes/covered_arch.json</CodeHeader>
 ```json
 {
 	"format_version": "1.17.41",
 	
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "garden_dreams:covered_arch"
+			"identifier": "wiki:covered_arch"
 		},
 		"tags": ["crafting_table"],
 
@@ -337,7 +337,7 @@ Spaces are not automatically implied to fill in any remaining slots in the 3 × 
 
 The "L" shape isn't restricted to the upper-left corner of the crafting grid. Using a 3 × 3 grid as an example, the pattern would be usable with any of these configurations:
 
-<Spoiler title="Configurations">
+<Spoiler title="Possible Configurations">
 *Underscores represent empty slots.*
 ```txt
 O__
@@ -406,7 +406,7 @@ Keys provide meaning to characters in a [pattern](#patterns), done via the requi
 Every key present in the pattern should be accounted for here. Keys names are case-sensitive. If an item supports multiple data values and no data value is provided, any item of that identifier will be usable for that key. Any `"count"` property present in an item descriptor is ignored and regarded as `1`; stacked items in a crafting grid slot are only consumable one at a time.
 
 ::: tip NOTE
-Any unicode character from U+0020–U+07FF may be used as a key name. If a key name has more than one character, only the first character is considered. Since spaces are by default used to signify empty slots on a grid and there's no way to re-designate a key for a blank slot, it's not recommended to use them as a key.
+Any unicode character from `U+0020` to `U+07FF` may be used as a key name. If a key name has more than one character, only the first character is considered. Since spaces are by default used to signify empty slots on a grid and there's no way to re-designate a key for a blank slot, it's not recommended to use them as a key.
 :::
 
 ::: warning
@@ -468,14 +468,14 @@ Crafting recipes with lower priority values take precedence. So, if all else is 
 ## Heating
 Heating recipes are used to transform an item using a heat source over a period of time.
 
-<CodeHeader>/behaviors/recipes/magic/magic_ash.json</CodeHeader>
+<CodeHeader>BP/recipes/magic/magic_ash.json</CodeHeader>
 ```json
 {
 	"format_version": "1.17.41",
 	
 	"minecraft:recipe_furnace": {
 		"description": {
-			"identifier": "voodoo:magic_ash"
+			"identifier": "wiki:magic_ash"
 		},
 		"tags": ["soul_campfire"],
 		
@@ -545,14 +545,14 @@ Currently, the stackability of the produced output is bugged, regardless of whet
 ### Brewing Mixes
 Brewing mixes are simple brewing recipes theoretically designed to isolate the data value of the input from the data value of the output.
 
-<CodeHeader>/behaviors/recipes/brewing/negative/paralysis.json</CodeHeader>
+<CodeHeader>BP/recipes/brewing/negative/paralysis.json</CodeHeader>
 ```json
 {
 	"format_version": "1.17.41",
 	
 	"minecraft:recipe_brewing_mix": {
 		"description": {
-			"identifier": "shakeshifted:paralysis_brew"
+			"identifier": "wiki:paralysis_brew"
 		},
 		"tags": ["brewing_stand"],
 
@@ -579,14 +579,14 @@ If a data value is specified for a reagent using the `"data"` property format, a
 ### Brewing Containers
 Brewing containers are designed to pass the data value of an input to the transformed output.
 
-<CodeHeader>/behaviors/recipes/illumination_potion.json</CodeHeader>
+<CodeHeader>BP/recipes/illumination_potion.json</CodeHeader>
 ```json
 {
 	"format_version": "1.17.41",
 	
 	"minecraft:recipe_brewing_container": {
 		"description": {
-			"identifier": "ggx:illumination_potion"
+			"identifier": "wiki:illumination_potion"
 		},
 		"tags": ["brewing_stand"],
 
