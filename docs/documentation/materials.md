@@ -3,7 +3,7 @@ title: Materials
 show_toc: false
 ---
 
-You can [learn more about materials here](/visuals/materials).
+You can learn more about materials [here](/visuals/materials).
 
 | Material                                  | Note                            |
 | ----------------------------------------- | ------------------------------- |
