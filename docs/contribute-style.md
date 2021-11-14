@@ -103,67 +103,29 @@ To redirect to another page, just look in the file explorer. The main folder is 
 
 Our wiki uses special Vue-Components, which you can use to add things like Buttons, Spoilers, CodeBlocks, etc.
 
-### Button
+### Panel
 
-A Button works like a link, but is more noticeable for the user.
+Panels are used to inform or warn the user about some really important stuff. There are two types of Panels: `tip` and `warning`.
 
-```html
-<BButton 
-    link="https://wiki.bedrock.dev" 
-    color=red
->your button text</BButton>
+```HTML
+:::tip
+some tips here
+:::
+
+:::warning
+a warning here
+:::
 ```
 
-<BButton
-link='https://wiki.bedrock.dev'
-color=red
+:::tip
+some tips here
+:::
 
-> your button text</BButton>
+:::warning
+a warning here
+:::
 
-| Attribute | Required | Type   | Note                                                                                                            |
-| --------- | -------- | ------ | --------------------------------------------------------------------------------------------------------------- |
-| link      | yes      | String | Link to redirect when clicking on the Button                                                                    |
-| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be grey_ |
-
-The text between the two HTML-Tags is the text that will appear on the button.
-
-### FolderView
-
-FolderViews are Components which can be used to show a setup of files, like in our [Project-Setup](/guide/project-setup) guide.
-
-```html
-<FolderView
-	:paths="[
-
-    'com.mojang/development_resource_packs/guide_RP/manifest.json',
-    'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
-    'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
-
-    'com.mojang/development_behavior_packs/guide_BP/manifest.json',
-    'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
-    'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
-
-]"
-></FolderView>
-```
-
-<FolderView :paths="[
-
-'com.mojang/development_resource_packs/guide_RP/manifest.json',
-'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
-'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
-
-'com.mojang/development_behavior_packs/guide_BP/manifest.json',
-'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
-'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
-
-]"></FolderView>
-
-| Attribute | Required | Type                                | Note                                                                   |
-| --------- | -------- | ----------------------------------- | ---------------------------------------------------------------------- |
-| :paths    | yes      | String containing a List of Strings | Represents all files and folders which should appear in the FolderView |
-
-The `:paths` Attribute is a String, that contains a List of all separate file paths. This String must be written with double quotes! Each file path must be written entirely and has to be wrapped inside single quotes.
+Panels are created by typing three colons and the type of the Panel. Then you can write your content and at the end you close the Panel by typing just three colons.
 
 ### CodeHeader
 
@@ -201,6 +163,30 @@ The filepath goes between the two HTML-Tags. Make sure to follow our [Style-Guid
 ❌ `YourResourcePack/manifest.json`
 
 On the next line after the closing tag, you have to start a code block to use this Component, as shown in the example above.
+
+### Button
+
+A Button works like a link, but is more noticeable for the user.
+
+```html
+<BButton 
+    link="https://wiki.bedrock.dev" 
+    color=red
+>your button text</BButton>
+```
+
+<BButton
+link='https://wiki.bedrock.dev'
+color=red
+
+> your button text</BButton>
+
+| Attribute | Required | Type   | Note                                                                                                            |
+| --------- | -------- | ------ | --------------------------------------------------------------------------------------------------------------- |
+| link      | yes      | String | Link to redirect when clicking on the Button                                                                    |
+| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be grey_ |
+
+The text between the two HTML-Tags is the text that will appear on the button.
 
 ### Spoiler
 
@@ -255,6 +241,44 @@ color='green'
 | color     | no       | String | Color of the box <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be transparent_ |
 
 Don't overuse them! They look cool, but someone could really give them too much attention and forget to focus on other important parts of your article.
+
+### FolderView
+
+FolderViews are Components which can be used to show a setup of files, like in our [Project-Setup](/guide/project-setup) guide.
+
+```html
+<FolderView
+	:paths="[
+
+    'com.mojang/development_resource_packs/guide_RP/manifest.json',
+    'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+    'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+
+    'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+    'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
+    'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
+
+]"
+></FolderView>
+```
+
+<FolderView :paths="[
+
+'com.mojang/development_resource_packs/guide_RP/manifest.json',
+'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+
+'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
+'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
+
+]"></FolderView>
+
+| Attribute | Required | Type                                | Note                                                                   |
+| --------- | -------- | ----------------------------------- | ---------------------------------------------------------------------- |
+| :paths    | yes      | String containing a List of Strings | Represents all files and folders which should appear in the FolderView |
+
+The `:paths` Attribute is a String, that contains a List of all separate file paths. This String must be written with double quotes! Each file path must be written entirely and has to be wrapped inside single quotes.
 
 ### YouTubeEmbed
 
@@ -321,26 +345,3 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 
 Don't overuse them! They look cool, but someone could really give them too much attention and forget to focus on other important parts of your article.
 
-### Panel
-
-Panels are used to inform or warn the user about some really important stuff. There are two types of Panels: `tip` and `warning`.
-
-```HTML
-:::tip
-some tips here
-:::
-
-:::warning
-a warning here
-:::
-```
-
-:::tip
-some tips here
-:::
-
-:::warning
-a warning here
-:::
-
-Panels are created by typing three colons and the type of the Panel. Then you can write your content and at the end you close the Panel by typing just three colons.
