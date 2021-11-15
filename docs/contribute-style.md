@@ -5,7 +5,7 @@ mentions:
     - TheItsNameless
 ---
 
-# Working on the wiki
+## Working on the wiki
 
 Now that you have our wiki locally, you can edit the files right on your device. If you don't know how to work with VSCode, there are some very good videos from Microsoft itself [here](https://code.visualstudio.com/docs).
 
@@ -74,7 +74,7 @@ Or show some other text instead of the link:
 
 [Click here!](https://wiki.bedrock.dev)
 
-### Linking to sources outside the wiki
+#### Linking to sources outside the wiki
 
 To link to another source, just copy the whole link url (including the https-part in front of it) and paste it in the field:
 

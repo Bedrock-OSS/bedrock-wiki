@@ -5,7 +5,7 @@ mentions:
 -   TheItsNameless
 ---
 
-# About this Guide
+## About this Guide
 
 This guild will walk you through how to get started editing the wiki. While it is possible to edit the wiki "in-place" on the github website, this guide will instead teach you the proper technique. This is a valuable and transferable skill, and will set you up for additional knowledge beyond just editing the wiki.
 
@@ -41,7 +41,7 @@ To edit the wiki, there are 5 major steps that you need to follow (downloading a
 
 If you see this the first time, it might look a little overwhelming, but don't worry! Its very easy and we guide you through this step by step.
 
-# Setting up the Software
+## Setting up the Software
 
 To edit our wiki, you need to download and install the following software:
 -   GitHub Desktop
@@ -50,7 +50,7 @@ To edit our wiki, you need to download and install the following software:
 
 If you wan't to edit the wiki more frequently, you might want to start using Git, as its more powerful than GitHub Desktop. But don't worry, GitHub Desktop is enough for us!
 
-## Visual Studio Code
+### Visual Studio Code
 
 [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) is a great environment to edit all your files, code something, etc. You can use other editors too, but in this tutorial we will guide you trough the installation of VSCode.
 
@@ -84,7 +84,7 @@ On the last page, as before, click "Mark Done" if you are ready.
 
 We are finished with the installation of VSCode. You can close it for now.
 
-## GitHub Desktop
+### GitHub Desktop
 
 [GitHub Desktop](https://desktop.github.com) is used to download GitHub Repositories, so you can edit them locally. Its possible to do this with Git, a command line tool, instead, but this is a bit more advanced and won't be covered in this tutorial.
 
@@ -108,7 +108,7 @@ Now in GitHub Desktop, don't change anything and click "Finish".
 
 For now, you can close GitHub Desktop.
 
-## NodeJS
+### NodeJS
 
 With [NodeJS](https://www.nodejs.org) we can view the wiki locally, as it would appear on the web. Its great to get typos or errors, before you push it and we get an error on merging it.
 
@@ -118,7 +118,7 @@ With [NodeJS](https://www.nodejs.org) we can view the wiki locally, as it would 
 
 Now, again, just go to your download folder and double-click the nodejs setup file. For our setup, you don't need to change anything. Just make sure you don't add `Tools for native modules`, as we don't need them. On the last page, just click `Install`. Wait for the installation to finish and click `Finish`.
 
-# Setup your local environment
+## Setup your local environment
 
 Now as we have installed all of our necessary programs, we can start to contribute to the wiki. Well, at first we have to setup our local working environment. Don't worry, its very easy. Just follow the steps below:
 
@@ -140,7 +140,7 @@ After that, you will see an overview over your clone. To work on it, just click 
 
 Now you have successfully cloned the wiki to your local device and you can edit all files!
 
-# Committing your changes
+## Committing your changes
 
 Once you finished working on the wiki, you can now commit and push your changes directly to our repository!
 
@@ -156,7 +156,7 @@ After you committed your changes, you need to push your local clone to GitHub. J
 
 GitHub will now send your local clone to their servers.
 
-# Creating a Pull Request
+## Creating a Pull Request
 
 Now that GitHub has your edits on their servers, you need to create a `"Pull Request"` (PR), so that we can merge your changes.
 
@@ -170,7 +170,7 @@ GitHub Desktop will open your PR in your browser. You can edit your PR, but you 
 
 You are done! Now its our turn to merge your changes in our wiki!
 
-# Updating local environment
+## Updating local environment
 
 Since you are not the only person who works on the wiki, there might be some changes that you currently don't have in your local clone. To update your local clone, you need to update your fork. Don't worry, its really easy!
 
@@ -184,7 +184,7 @@ Now in GitHub Desktop you need to pull the origin by clicking on `Pull Origin`. 
 
 Your local clone is now up-to-date!
 
-## Troubleshooting
+### Troubleshooting
 
 This process has to be done every time someone else updates our wiki. If you forget to to that, you might get some problems, like we can't automatically merge your PR. (You see this, when you try to open a PR)
 
@@ -225,6 +225,6 @@ Otherwise, you can `Accept Incoming Change` to accept the changes someone else m
 And now this problem is solved! You can continue safely, commit to your branch and create a PR.
 
 
-# Conclusion
+## Conclusion
 
 Now you have all the software installed and learned all the skills you need to edit our wiki! If you wan't to learn more about styling your articles, you can read our [How to style our wiki](/contribute-style) guide!
