@@ -11,23 +11,9 @@ This guild will walk you through how to get started editing the wiki. While it i
 
 This article will teach you how to use GitHub Desktop, the easiest way to manage your local Repositories. Its possible to do this without GitHub Desktop just by using Git, but this is more advanced than just using GitHub Desktop and we won't be covering this in this guide.
 
-:::tip
-If you already have installed **VSCode**, **GitHub Desktop** and **NodeJS** and want to learn more about forking and cloning a GitHub Repository, you can continue 
+If you already know some of the steps we cover in this guide, feel free to use the Table Of Contens on the right side to skip to the sections you don't know!
 
-<BButton link='/contribute-how-to#setup-your-local-environment' color=blue>Setup local environment</BButton>
-:::
-
-:::tip
-If you already have installed the necessary software and know how to fork and clone a repository, but want to learn more about committing and Pull Requests, you can continue
-
-<BButton link='/contribute-how-to#committing-your-changes' color=blue>Committing and Pull Requests</BButton>
-:::
-
-:::tip
-If you already have installed the necessary software and know how to handle Git-Repositories and GitHub, you can continue by learning how to style our pages!
-
-<BButton link='/contribute-style' color=blue>Style our pages</BButton>
-:::
+And if you want to learn more about our fancy styling-features, continue with our [Contribute-Style-Guide](/contribute-style)!
 
 ## Steps to edit the wiki
 
