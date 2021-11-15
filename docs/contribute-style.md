@@ -27,13 +27,14 @@ mentions:
 ---
 ```
 
-| Name        | Required | Default | Note                                                                                                                                                     |
-| ----------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`     | Yes      | None    | The title of the page.                                                                                                                                   |
-| `nav_order` | No       | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order. |
-| `show_toc`  | No       | True    | Whether the table of contents will be generated for this page.                                                                                           |
-| `tags`      | No       | []      | A list of tags for the page. Some will be displayed on sidebar, such as 'guide' or 'beta'. All will be displayed in the actual page, at the top.         |
-| `mentions`  | No       | []      | Add your GitHub username here so that you will always be in the contributors section if this page is moved.                                              |
+| Name             | Required | Default | Note                                                                                                                                                     |
+| ---------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`          | Yes      | None    | The title of the page.                                                                                                                                   |
+| `nav_order`      | No       | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order. |
+| `show_toc`       | No       | True    | Whether the table of contents will be generated for this page.                                                                                           |
+| `show_edit_link` | No       | True    | Whether a link should be shown which leads to this page in the GitHub repository.                                                                        |
+| `tags`           | No       | []      | A list of tags for the page. Some will be displayed on sidebar, such as 'guide' or 'beta'. All will be displayed in the actual page, at the top.         |
+| `mentions`       | No       | []      | Add your GitHub username here so that you will always be in the contributors section if this page is moved.                                              |
 
 The title is required, as it is the name shown in the bar on the left side. Mentions isn't needed, but it would be great if everyone knows who made the great article they are reading!
 
