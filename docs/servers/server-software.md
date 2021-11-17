@@ -150,7 +150,6 @@ Software will be marked as discontinued after roughly one month of inactivity.
 ### Rust
 
 -   [Limonite](https://github.com/iTXTech/limonite)
--   [Netrex](https://github.com/NetrexMC/Netrex)
 
 ### TypeScript
 
