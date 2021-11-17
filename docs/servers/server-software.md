@@ -47,6 +47,10 @@ Software will be marked as discontinued after roughly one month of inactivity.
 
 -   [BlueBird] (https://github.com/BlueBirdMC/BlueBird)
 
+### Rust
+
+-   [Netrex](https://github.com/NetrexMC/Netrex)
+
 ### PHP
 
 -   [Altay](https://github.com/TuranicTeam/Altay)
