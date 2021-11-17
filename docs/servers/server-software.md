@@ -18,9 +18,9 @@ Software will be marked as discontinued after roughly one month of inactivity.
 | TypeScript | [Still Active](#typescript) : 1 < [Discontinued](#typescript-1) : 1 |
 | C++        | Still Active : 0 < [Discontinued](#c-1) : 2                         |
 | D          | Still Active : 0 < [Discontinued](#d) : 1                           |
-| JavaScript | Still Active : 0 < [Discontinued](#javascript) : 5                  |
+| JavaScript | Still Active : 1 < [Discontinued](#javascript) : 5                  |
 | Kotlin     | Still Active : 0 < [Discontinued](#kotlin) : 1                      |
-| Rust       | Still Active : 0 < [Discontinued](#rust) : 2                        |
+| Rust       | Still Active : 1 < [Discontinued](#rust) : 2                        |
 
 ## Active Software
 
@@ -42,6 +42,14 @@ Software will be marked as discontinued after roughly one month of inactivity.
 ### TypeScript
 
 -   [BDSX](https://github.com/bdsx/bdsx)
+
+### JavaScript
+
+-   [BlueBird] (https://github.com/BlueBirdMC/BlueBird)
+
+### Rust
+
+-   [Netrex](https://github.com/NetrexMC/Netrex)
 
 ### PHP
 
@@ -142,7 +150,6 @@ Software will be marked as discontinued after roughly one month of inactivity.
 ### Rust
 
 -   [Limonite](https://github.com/iTXTech/limonite)
--   [Netrex](https://github.com/NetrexMC/Netrex)
 
 ### TypeScript
 
