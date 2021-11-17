@@ -61,7 +61,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 			"xp_reward": {
 				"run_command": {
 					"command": [
-						"structure_load my_xp_structure ~~~" //You can download structure with saved xp orbs lower
+						"structure load my_xp_structure ~~~" //You can download structure with saved xp orbs lower
 					]
 				}
 			}
