@@ -10,25 +10,21 @@ Entity attacks are a complex subject that require many different things to work 
 - Attack type, such as melee or ranged
 - Attack damage and effects
 
+## Selecting Targets
 
-## Types of Attack
+### Movement
 
-These are the currently known types of attack:
+Before a mob can attack, it will need various [movement components](/entities/entity-movement).
 
-| Component                                            | Note                                                     |
-| ---------------------------------------------------- | -------------------------------------------------------- |
-| [minecraft:behavior.melee_attack](#melee)            | Deals damage to a single target                          |
-| [minecraft:behavior.ranged_attack](#ranged)          | Fires a projectile towards a target                      |
-| [minecraft:area_attack](#area)                       | Effectively melee attacks on anything withing range      |
-| [minecraft:behavior.knockback_roar](#knockback-roar) | Similar to minecraft:area_attack, but much more flexible |
+Before starting to create your entity attacks, you should ensure that your entity can walk around, and navigate its saroundings. 
 
-But first, it's important to know that generally, attacks require a way of knowing *how* to attack another entity.
-
+:::warning
+Even if you are making an unmoving entity (like turret), you still need to add navigation component, so your entity can find the entity to shoot.
+:::
 
 ### Triggering Hostility
 
-[Movement](/entities/entity-movement) is required in most cases, so that mobs can change the distance between themselves and a potential target.
-Mobs will [pathfind](/entities/entity-movement), become hostile to, or both to another entity through the usage of some special components.
+There are many ways to trigger hostility. The most common type `nearest_attackable_target`, is shown here. It generally allows you to define which entities this entity is interested in attacking:
 
 <CodeHeader></CodeHeader>
 ```json
@@ -50,12 +46,12 @@ Mobs will [pathfind](/entities/entity-movement), become hostile to, or both to a
       }
 ```
 
-Following 3 structured roughly the same as given example.
+For more fine control, you may also consider using one of the following components:
 
 | Component                                                | Note                                                        |
 | -------------------------------------------------------- | ----------------------------------------------------------- |
 | minecraft:behavior.nearest_attackable_target             | Targets entity meeting the given requirements               |
-| minecraft:behavior.nearest_prioritized_attackable_target | Allows for "priority": [number] to be set after each filter |
+| minecraft:behavior.nearest_prioritized_attackable_target | Allows for "priority": [integer] to be set after each filter |
 | minecraft:behavior.defend_trusted_target                 | Targets entity that hurts any entities specified in filters |
 
 But there is also one more - `minecraft:lookat`
@@ -90,32 +86,49 @@ This last component is slightly different to the other three, as it is for detec
 
 ### Target selecting
 
+:::tip
+This section shows you how to configure the "Targeting" components, explained above.
+:::
+
+
 Mobs find targets by using [filters](https://bedrock.dev/docs/stable/Entities#Filters) can be used to determine which entities are a valid target, through `test`, `subject`, `operator`, and `value`.
 
 <CodeHeader></CodeHeader>
 ```json
-          "entity_types": [
-            {
-              "filters": {
-                "any_of": [
-                  { "test": "is_family", "subject": "other", "operator": "==", "value": "snow_golem" },
-                  { "test": "is_family", "subject": "other", "operator": "==", "value": "iron_golem" }
-                ]                //anything that is equal to either "snow_golem" or "iron_golem"
-              },
-              "max_dist": 24
-            },
-            {
-              "filters": {
-                "all_of": [
-                  { "test": "is_family", "subject": "other", "operator": "==", "value": "player" },
-                  { "test": "has_equiptment", "subject": "other", "domain": "head", "operator": "=!", "value": "turtle_helmet" }
-                ]                //anything equal to player AND not wearing "turtle_helmet" on head
-              },
-              "max_dist": 24
-            }
-          ]
+  "entity_types": [
+    {
+      "filters": {
+        "any_of": [
+          { "test": "is_family", "subject": "other", "operator": "==", "value": "snow_golem" },
+          { "test": "is_family", "subject": "other", "operator": "==", "value": "iron_golem" }
+        ]                //anything that is equal to either "snow_golem" or "iron_golem"
+      },
+      "max_dist": 24
+    },
+    {
+      "filters": {
+        "all_of": [
+          { "test": "is_family", "subject": "other", "operator": "==", "value": "player" },
+          { "test": "has_equiptment", "subject": "other", "domain": "head", "operator": "=!", "value": "turtle_helmet" }
+        ]                //anything equal to player AND not wearing "turtle_helmet" on head
+      },
+      "max_dist": 24
+    }
+  ]
 ```
+
 This would only target `snow_golem`s, `iron_golem`s, and `player`s that are **not** wearing `turtle_helmet`s.
+
+## Types of Attack
+
+Here are the available attacks:
+
+| Component                                            | Note                                                     |
+| ---------------------------------------------------- | -------------------------------------------------------- |
+| [minecraft:behavior.melee_attack](#melee)            | Deals damage to a single target                          |
+| [minecraft:behavior.ranged_attack](#ranged)          | Fires a projectile towards a target                      |
+| [minecraft:area_attack](#area)                       | Effectively melee attacks on anything withing range      |
+| [minecraft:behavior.knockback_roar](#knockback-roar) | Similar to minecraft:area_attack, but much more flexible |
 
 
 ### Melee
