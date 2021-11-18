@@ -3,7 +3,15 @@ title: Materials
 show_toc: false
 ---
 
+Text
+
 You can learn more about materials [here](/visuals/materials).
+
+text
+
+##
+
+Just a list, with links to mini tables
 
 | Material                                  | Note                            |
 | ----------------------------------------- | ------------------------------- |
@@ -64,3 +72,7 @@ You can learn more about materials [here](/visuals/materials).
 | opaque_block                              |                                 |
 | opaque_block_color                        |                                 |
 | opaque_block_color_uv2                    |                                 |
+
+
+Mini-table for each material, covering backface-culling, alpha channel, emissiveness, color, set transparency, and other properties.
+Link to material test addon
