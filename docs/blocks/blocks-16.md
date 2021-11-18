@@ -8,7 +8,7 @@ nav_order: 2
 Better documentation on the new block format introduced in the Minecraft Beta 1.16.100.
 
 :::warning
-This document covers experimental features, for 1.16.100+ format version blocks. If you would like to learn about stable blocks, [you can do so here](/blocks/blocks-intro).
+This document covers experimental features, for 1.16.100+ format version blocks. If you would like to learn about stable blocks, you can do it [here](/blocks/blocks-intro).
 :::
 
 ## Block Properties
@@ -847,3 +847,16 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
     -   `minecraft:on_step_on`
     -   `minecraft:on_step_off`
     -   `minecraft:on_fall_on`
+-   It seems that `render_method` in `minecraft:material_instances` affects the block's properties.
+    -   If you use `opaque` it will allow redstone to pass through it, grass decay, and allow mobs to spawn on it
+    - 	If you use `alpha_test` it won't allow redstone to pass through it, it won't make grass decay, and it won't allow mobs to spawn on it
+    - 	`blend` has the same properties as `alpha_test`
+    - 	Should you want to have a transparent block but have `opaque` properties:
+```json
+"minecraft:material_instances": {
+	"*": {
+        	"render_method": "alpha_test"
+    	}
+}
+```
+Link the textures via `blocks.json`

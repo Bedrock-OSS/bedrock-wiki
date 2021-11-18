@@ -11,7 +11,7 @@ The shaders on this page are incompatible with [Render Dragon](https://help.mine
 Shaders are divided into 2 folders: `glsl` and `hlsl`. For shaders to work on every device,
 you need to code shaders in both languages. For testing on Windows, `hlsl` is enough.
 When rewriting shaders from one language to another, there are few things to change,
-like HLSL `float3` is `vec3` in GLSL. [Mapping between those languages can be found here](https://anteru.net/blog/2016/mapping-between-HLSL-and-GLSL/)
+like HLSL `float3` is `vec3` in GLSL. Mapping between those languages can be found [here](https://anteru.net/blog/2016/mapping-between-HLSL-and-GLSL/)
 
 ## Materials
 

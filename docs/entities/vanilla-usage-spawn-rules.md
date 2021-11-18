@@ -4,46 +4,20 @@ title: Vanilla Usage Spawn Rules
 
 # Spawn Rules
 
-In Minecraft Bedrock Edition, spawn rules for most of the entites are data driven which allows you to adjust the spawn conditions of entities including new entities added to the game to spawn naturally. There are some entities such as the dragons that cannot be changed.
+In Minecraft Bedrock Edition, spawn rules for most of the entities are data driven which allows you to adjust the spawn conditions of entities including new entities added to the game to spawn naturally. There are some entities such as the dragons that cannot be changed.
 
 A basic spawn rule must always contain a population control. There is no way to add custom population controls into the game so you have to choose from one of the following:
 
-  - animal
-  - water_animal
-  - monster
-  - cat
-  - villager
-  - pillager
+-   animal
+-   water_animal
+-   monster
+-   cat
+-   villager
+-   pillager
 
 Although these are the available options within the game, some of them do come with pre-set conditions, for example the cat population rules and limits are based upon the amount within a village and not within the simulation distance.
 
-Once a population control has been defined you can refine the spawning conditions with the componants listed below.
-
-The listed componants was stripped from the vanilla files, using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester)
-
-# Table of contents
- - [minecraft:biome_filter](#minecraftbiome_filter)
- - [minecraft:brightness_filter](#minecraftbrightness_filter)
- - [minecraft:delay_filter](#minecraftdelay_filter)
- - [minecraft:density_limit](#minecraftdensity_limit)
- - [minecraft:difficulty_filter](#minecraftdifficulty_filter)
- - [minecraft:disallow_spawns_in_bubble](#minecraftdisallow_spawns_in_bubble)
- - [minecraft:distance_filter](#minecraftdistance_filter)
- - [minecraft:height_filter](#minecraftheight_filter)
- - [minecraft:herd](#minecraftherd)
- - [minecraft:mob_event_filter](#minecraftmob_event_filter)
- - [minecraft:permute_type](#minecraftpermute_type)
- - [minecraft:player_in_village_filter](#minecraftplayer_in_village_filter)
- - [minecraft:spawn_event](#minecraftspawn_event)
- - [minecraft:spawns_above_block_filter](#minecraftspawns_above_block_filter)
- - [minecraft:spawns_lava](#minecraftspawns_lava)
- - [minecraft:spawns_on_block_filter](#minecraftspawns_on_block_filter)
- - [minecraft:spawns_on_block_prevented_filter](#minecraftspawns_on_block_prevented_filter)
- - [minecraft:spawns_on_surface](#minecraftspawns_on_surface)
- - [minecraft:spawns_underground](#minecraftspawns_underground)
- - [minecraft:spawns_underwater](#minecraftspawns_underwater)
- - [minecraft:weight](#minecraftweight)
- - [minecraft:world_age_filter](#minecraftworld_age_filter)
+Once a population control has been defined you can refine the spawning conditions with the components listed below.
 
 # minecraft:biome_filter
 
@@ -51,11 +25,14 @@ This component is used to specify which biomes the entity can spawn in. A curren
 
 Below is all the areas where this is used in the vanilla files.
 
-<Spoiler title="Code">
- 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -64,8 +41,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -86,8 +68,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -96,8 +83,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### cod
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -113,8 +105,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -123,8 +120,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -133,8 +135,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -150,8 +157,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -160,8 +172,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -169,7 +186,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -178,8 +198,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -187,7 +212,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "all_of": [
         {
@@ -204,7 +232,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -212,7 +243,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -223,8 +257,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -233,8 +272,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "all_of": [
         {
@@ -252,8 +296,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### goat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -262,8 +311,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -272,8 +326,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -281,7 +340,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -290,8 +352,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -300,8 +367,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -309,7 +381,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -318,8 +393,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -327,7 +407,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -336,8 +419,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -346,8 +434,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -356,8 +449,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -372,7 +470,10 @@ Below is all the areas where this is used in the vanilla files.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -381,8 +482,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -391,8 +497,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -401,8 +512,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -411,8 +527,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -420,7 +541,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -429,8 +553,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "all_of": [
         {
@@ -453,8 +582,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -469,7 +603,10 @@ Below is all the areas where this is used in the vanilla files.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -485,8 +622,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -502,8 +644,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "any_of": [
         {
@@ -534,7 +681,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -543,8 +693,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -559,7 +714,10 @@ Below is all the areas where this is used in the vanilla files.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -570,8 +728,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -580,8 +743,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "any_of": [
         {
@@ -608,8 +776,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "any_of": [
         {
@@ -632,8 +805,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -642,8 +820,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -651,7 +834,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "any_of": [
         {
@@ -664,8 +850,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -680,7 +871,10 @@ Below is all the areas where this is used in the vanilla files.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -696,8 +890,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -706,8 +905,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -723,8 +927,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": [
     {
         "test": "has_biome_tag",
@@ -740,8 +949,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -750,8 +964,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -759,7 +978,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "all_of": [
         {
@@ -792,8 +1014,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -802,8 +1029,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -811,7 +1043,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:biome_filter": {
     "test": "has_biome_tag",
     "operator": "==",
@@ -819,25 +1054,26 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
-</Spoiler>
-
 # minecraft:brightness_filter
 
 This component is used to set the allowed light level range for spawning in the entity. This component has the following parameters;
 
-| Parameters  | Type | Description |
-| ------------- | ------------- | ------------- |
-| adjust_for_weather  | Boolean | When true this gives the ability to spawn in during certain weather conditions where it wouldn't normally spawn |
-| min  | Decimal | The minimum value is 0.0  |
-| max  | Decimal | The minimum value is 15.0  |
+| Parameters         | Type    | Description                                                                                                     |
+| ------------------ | ------- | --------------------------------------------------------------------------------------------------------------- |
+| adjust_for_weather | Boolean | When true this gives the ability to spawn in during certain weather conditions where it wouldn't normally spawn |
+| min                | Decimal | The minimum value is 0.0                                                                                        |
+| max                | Decimal | The minimum value is 15.0                                                                                       |
 
 Below is all the areas where this is used in the vanilla files.
 
-<Spoiler title="Code">
- 
 ### axolotl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 0,
@@ -846,8 +1082,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 4,
@@ -856,8 +1097,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -866,8 +1112,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -876,8 +1127,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -886,8 +1142,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -896,8 +1157,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -906,8 +1172,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -916,8 +1187,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -926,8 +1202,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -936,8 +1217,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### goat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -946,8 +1232,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -956,8 +1247,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -966,8 +1262,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -976,8 +1277,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 9,
     "max": 15,
@@ -986,8 +1292,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -996,8 +1307,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -1006,8 +1322,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -1016,8 +1337,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -1026,8 +1352,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -1036,8 +1367,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -1046,8 +1382,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -1056,8 +1397,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -1066,8 +1412,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -1076,8 +1427,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -1086,8 +1442,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -1096,8 +1457,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -1106,8 +1472,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -1116,8 +1487,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -1126,8 +1502,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 7,
     "max": 15,
@@ -1136,8 +1517,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:brightness_filter": {
     "min": 0,
     "max": 7,
@@ -1145,15 +1531,16 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
-</Spoiler>
-
 # minecraft:delay_filter
 
-<Spoiler title="Code">
-
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:delay_filter": {
     "min": 600,
     "max": 660,
@@ -1162,7 +1549,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:delay_filter": {
     "min": 600,
     "max": 660,
@@ -1171,7 +1561,10 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:delay_filter": {
     "min": 600,
     "max": 660,
@@ -1180,50 +1573,66 @@ Below is all the areas where this is used in the vanilla files.
 }
 ```
 
-</Spoiler>
-
 # minecraft:density_limit
 
 This component specifies the amount of entities to spawn in depending on if its a surface or uderground spawn. This limit is only calculated based on the simulation distance, entities who are not loaded would not be considered for this rule.
 
 This component has the following parameters;
 
-| Parameters  | Type | Description |
-| ------------- | ------------- | ------------- |
-| surface  | Integer | As there is a global cap, technically the max would be 200 |
-| underground  | Integer | As there is a global cap, technically the max would be 200 |
- 
+| Parameters  | Type    | Description                                                |
+| ----------- | ------- | ---------------------------------------------------------- |
+| surface     | Integer | As there is a global cap, technically the max would be 200 |
+| underground | Integer | As there is a global cap, technically the max would be 200 |
+
 Below is all the areas where this is used in the vanilla files.
 
-<Spoiler title="Code">
- 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 5
 }
 ```
 
 ### cod
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 20
 }
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 5
 }
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 5,
     "underground": 0
@@ -1231,22 +1640,35 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 5
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 2
 }
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 0,
     "underground": 2
@@ -1254,66 +1676,100 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 5
 }
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 3
 }
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 10
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 4
 }
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 4
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 2
 }
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 3
 }
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:density_limit": {
     "surface": 20
 }
 ```
-
-</Spoiler>
 
 # minecraft:difficulty_filter
 
@@ -1321,25 +1777,28 @@ This component is used to set what difficulty level the entity can spawn in on, 
 
 This component has the following parameters;
 
-| Parameters  | Type | Description |
-| ------------- | ------------- | ------------- |
-| min  | String | This is the minimum difficulty level in which the entity should spawn from |
-| max  | String | This is the maximum difficulty level in which the entity should spawn to |
+| Parameters | Type   | Description                                                                |
+| ---------- | ------ | -------------------------------------------------------------------------- |
+| min        | String | This is the minimum difficulty level in which the entity should spawn from |
+| max        | String | This is the maximum difficulty level in which the entity should spawn to   |
 
- The min and max values must be one of the following only:
+The min and max values must be one of the following only:
 
-- peaceful
-- easy
-- normal
-- hard
+-   peaceful
+-   easy
+-   normal
+-   hard
 
 Below is all the areas where this is used in the vanilla files.
 
-<Spoiler title="Code">
- 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1347,8 +1806,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1356,8 +1820,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1365,8 +1834,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1374,8 +1848,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "peaceful",
     "max": "hard"
@@ -1383,8 +1862,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1392,8 +1876,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1401,8 +1890,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1410,8 +1904,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "peaceful",
     "max": "hard"
@@ -1419,29 +1918,45 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "max": "easy"
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "normal",
     "max": "normal"
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "hard"
 }
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1449,8 +1964,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1458,8 +1978,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1467,8 +1992,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1476,8 +2006,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "peaceful",
     "max": "hard"
@@ -1485,8 +2020,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1494,8 +2034,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
@@ -1503,35 +2048,42 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:difficulty_filter": {
     "min": "easy",
     "max": "hard"
 }
 ```
 
-</Spoiler>
-
 # minecraft:disallow_spawns_in_bubble
 
-<Spoiler title="Code">
-
 ### axolotl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:disallow_spawns_in_bubble": {}
 ```
 
-</Spoiler>
-
 # minecraft:distance_filter
 
-<Spoiler title="Code">
- 
 ### cod
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:distance_filter": {
     "min": 12,
     "max": 32
@@ -1539,8 +2091,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:distance_filter": {
     "min": 24,
     "max": 48
@@ -1548,8 +2105,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:distance_filter": {
     "min": 12,
     "max": 32
@@ -1557,8 +2119,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:distance_filter": {
     "min": 12,
     "max": 32
@@ -1566,23 +2133,29 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:distance_filter": {
     "min": 12,
     "max": 32
 }
 ```
 
-</Spoiler>
-
 # minecraft:height_filter
 
-<Spoiler title="Code">
-
 ### axolotl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:height_filter": {
     "min": 0,
     "max": 63
@@ -1590,8 +2163,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:height_filter": {
     "min": -63,
     "max": 63
@@ -1599,8 +2177,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### glow_squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:height_filter": {
     "min": 0,
     "max": 63
@@ -1608,8 +2191,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:height_filter": {
     "min": 60,
     "max": 66
@@ -1617,36 +2205,42 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:height_filter": {
     "min": 60,
     "max": 67
 }
 ```
 
-</Spoiler>
-
 # minecraft:herd
 
-This component is used to determine how many spawn in at once. When this happens its called a herd. 
+This component is used to determine how many spawn in at once. When this happens its called a herd.
 
 This component has the following parameters;
 
-| Parameters  | Type | Description |
-| ------------- | ------------- | ------------- |
-| event  | String | This is used to trigger the entities spawn events |
-| event_skip_count  | Integer | Number of entities spawned before event is triggered |
-| min_size  | Integer | Minimum number of entities that can spawn. |
-| max_size  | Integer | Maximum number of entities that can spawn. |
+| Parameters       | Type    | Description                                          |
+| ---------------- | ------- | ---------------------------------------------------- |
+| event            | String  | This is used to trigger the entities spawn events    |
+| event_skip_count | Integer | Number of entities spawned before event is triggered |
+| min_size         | Integer | Minimum number of entities that can spawn.           |
+| max_size         | Integer | Maximum number of entities that can spawn.           |
 
 Below is all the areas where this is used in the vanilla files.
 
-<Spoiler title="Code">
- 
 ### axolotl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 4,
@@ -1656,8 +2250,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 2
@@ -1665,8 +2264,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 1
@@ -1674,8 +2278,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
@@ -1683,8 +2292,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### cod
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 7
@@ -1692,8 +2306,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 3
@@ -1701,8 +2320,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 3,
     "max_size": 5
@@ -1710,8 +2334,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 6
@@ -1719,8 +2348,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
@@ -1728,22 +2362,33 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 2
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 1
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 4
@@ -1751,8 +2396,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4,
@@ -1762,8 +2412,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### glow_squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
@@ -1771,8 +2426,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### goat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 3
@@ -1780,8 +2440,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 4
@@ -1789,8 +2454,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": [
     {
         "min_size": 2,
@@ -1831,8 +2501,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
@@ -1840,15 +2515,23 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 6
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 4
@@ -1856,15 +2539,23 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 4
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 5
@@ -1872,8 +2563,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 8
@@ -1881,8 +2577,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 2
@@ -1890,8 +2591,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 2
@@ -1899,8 +2605,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 2
@@ -1908,8 +2619,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 3
@@ -1917,15 +2633,23 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 4
@@ -1933,8 +2657,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 5,
@@ -1946,8 +2675,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 2,
@@ -1957,8 +2691,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 3,
     "max_size": 5
@@ -1966,15 +2705,23 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 3
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
@@ -1982,8 +2729,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 3,
     "max_size": 5
@@ -1991,8 +2743,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 3
@@ -2000,8 +2757,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 2
@@ -2009,8 +2771,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
@@ -2018,8 +2785,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 2
@@ -2027,8 +2799,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
@@ -2036,8 +2813,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": [
     {
         "min_size": 3,
@@ -2152,7 +2934,10 @@ Below is all the areas where this is used in the vanilla files.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 1,
     "max_size": 3
@@ -2160,8 +2945,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 6
@@ -2169,8 +2959,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 4,
     "max_size": 4
@@ -2178,8 +2973,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
@@ -2187,35 +2987,40 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
 }
 ```
 
-</Spoiler>
-
 # minecraft:mob_event_filter
 
-<Spoiler title="Code">
- 
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:mob_event_filter": {
     "event": "minecraft:pillager_patrols_event"
 }
 ```
 
-</Spoiler>
-
 # minecraft:permute_type
 
-<Spoiler title="Code">
- 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:permute_type": [
     {
         "weight": 100,
@@ -2224,7 +3029,10 @@ Below is all the areas where this is used in the vanilla files.
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:permute_type": [
     {
         "weight": 80,
@@ -2238,8 +3046,13 @@ Below is all the areas where this is used in the vanilla files.
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:permute_type": [
     {
         "weight": 95
@@ -2251,146 +3064,201 @@ Below is all the areas where this is used in the vanilla files.
 ]
 ```
 
-</Spoiler>
-
 # minecraft:player_in_village_filter
 
 This component is used to track when a player enters a village. This is useful for entities that should only spawn in villages such as cats / villager's or pillager patrols.
 
 This component has the following parameters;
 
-| Parameters  | Type | Description |
-| ------------- | ------------- | ------------- |
-| distance  | Integer | Used to define how far away from the player the entity will spawn |
-| village_border_tolerance  | Integer | Used to define how close to the village boarder the entity is allowed to spawn |
- 
-For the village_border_tolerance, if 0 this will allow the entity to spawn right on the village boarder; increasing the number will push the entity further away from the boarder. 
+| Parameters               | Type    | Description                                                                    |
+| ------------------------ | ------- | ------------------------------------------------------------------------------ |
+| distance                 | Integer | Used to define how far away from the player the entity will spawn              |
+| village_border_tolerance | Integer | Used to define how close to the village boarder the entity is allowed to spawn |
+
+For the village_border_tolerance, if 0 this will allow the entity to spawn right on the village boarder; increasing the number will push the entity further away from the boarder.
 
 Below is all the areas where this is used in the vanilla files.
- 
-<Spoiler title="Code">
- 
+
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:player_in_village_filter": {
     "distance": 48,
     "village_border_tolerance": 32
 }
 ```
 
-</Spoiler>
-
 # minecraft:spawn_event
 
-<Spoiler title="Code">
-
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawn_event": {
     "event": "change_to_skeleton"
 }
 ```
 
-</Spoiler>
-
 # minecraft:spawns_above_block_filter
 
-<Spoiler title="Code">
-
 ### axolotl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_above_block_filter": {
     "blocks": "minecraft:stone",
     "distance": 10
 }
 ```
 
-</Spoiler>
-
 # minecraft:spawns_lava
 
 This component is used to specify if the entity should spawn in lava or not. There are no parameters for this component, if its added as a rule then it sets itself to true and if there isn't one its automatically considered false.
- 
-<Spoiler title="Code">
- 
+
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_lava": {}
 ```
 
-</Spoiler>
-
 # minecraft:spawns_on_block_filter
 
-<Spoiler title="Code">
-
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:ice"
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": [
     "minecraft:grass",
     "minecraft:snow",
@@ -2399,20 +3267,35 @@ This component is used to specify if the entity should spawn in lava or not. The
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:sand"
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": [
     "minecraft:grass",
     "minecraft:podzol",
@@ -2420,19 +3303,23 @@ This component is used to specify if the entity should spawn in lava or not. The
 ]
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_filter": "minecraft:grass"
 ```
 
-</Spoiler>
-
 # minecraft:spawns_on_block_prevented_filter
 
-<Spoiler title="Code">
-
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
     "minecraft:shroomlight"
@@ -2440,8 +3327,13 @@ This component is used to specify if the entity should spawn in lava or not. The
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
     "minecraft:shroomlight"
@@ -2449,8 +3341,13 @@ This component is used to specify if the entity should spawn in lava or not. The
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
     "minecraft:shroomlight"
@@ -2458,8 +3355,13 @@ This component is used to specify if the entity should spawn in lava or not. The
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
     "minecraft:shroomlight"
@@ -2467,15 +3369,18 @@ This component is used to specify if the entity should spawn in lava or not. The
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_block_prevented_filter": [
     "minecraft:nether_wart_block",
     "minecraft:shroomlight"
 ]
 ```
-
-</Spoiler>
 
 # minecraft:spawns_on_surface
 
@@ -2483,225 +3388,401 @@ This component allows entities to spawn on the ground / outside. There are no pa
 
 Below is all the areas where this is used in the vanilla files.
 
-<Spoiler title="Code">
- 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### cod
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### goat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_on_surface": {}
 ```
-
-</Spoiler>
 
 # minecraft:spawns_underground
 
@@ -2709,637 +3790,1021 @@ This component allows entities to spawn underground in caves / mineshafts etc.. 
 
 Below is all the areas where this is used in the vanilla files.
 
-<Spoiler title="Code">
- 
 ### axolotl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### glow_squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underground": {}
 ```
-
-</Spoiler>
 
 # minecraft:spawns_underwater
 
 This component allows entities to spawn in water. There are no parameters for this component, if its added it sets itself to true and if there isn't one its automatically considered false.
 
 Below is all the areas where this is used in the vanilla files.
- 
-<Spoiler title="Code">
 
 ### axolotl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### cod
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### glow_squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### guardian
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/guardian.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:spawns_underwater": {}
 ```
 
-</Spoiler>
-
 # minecraft:weight
 
-This component is used to set the spawning priority for the entity. 
+This component is used to set the spawning priority for the entity.
 
 This component has the following parameters;
 
-| Parameters  | Type | Description |
-| ------------- | ------------- | ------------- |
-| default  | Integer | Entities with a lower weight value will have a lower chance to spawn than entities with a higher weight value. | 
+| Parameters | Type    | Description                                                                                                    |
+| ---------- | ------- | -------------------------------------------------------------------------------------------------------------- |
+| default    | Integer | Entities with a lower weight value will have a lower chance to spawn than entities with a higher weight value. |
 
 Below is all the areas where this is used in the vanilla files.
 
-<Spoiler title="Code">
- 
 ### axolotl
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 8
 }
 ```
 
 ### bat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 10
 }
 ```
 
 ### bee
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/bee.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 10
 }
 ```
 
 ### chicken
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 10
 }
 ```
 
 ### cod
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cod.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 75
 }
 ```
 
 ### cow
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/cow.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 8
 }
 ```
 
 ### creeper
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/creeper.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 100
 }
 ```
 
 ### dolphin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 7
 }
 ```
 
 ### donkey
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/donkey.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 1
 }
 ```
 
 ### drowned
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/drowned.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 100
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 5
 }
 ```
 
 ### enderman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/enderman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 10
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 6
 }
 ```
 
 ### fox
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/fox.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 8
 }
 ```
 
 ### ghast
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ghast.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 40
 }
 ```
 
 ### glow_squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/glow_squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 10
 }
 ```
 
 ### goat
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/goat.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 20
 }
 ```
 
 ### hoglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/hoglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 20
 }
 ```
 
 ### horse
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/horse.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 4
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 1
 }
 ```
 
 ### husk
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/husk.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 240
 }
 ```
 
 ### llama
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/llama.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 5
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 8
 }
 ```
 
 ### magma_cube
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/magma_cube.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 10
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 100
 }
 ```
 
 ### mooshroom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/mooshroom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 8
 }
 ```
 
 ### ocelot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 30
 }
 ```
 
 ### panda
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/panda.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 10
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 40
 }
 ```
 
 ### parrot
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/parrot.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 40
 }
 ```
 
 ### phantom
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/phantom.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 100
 }
 ```
 
 ### pig
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pig.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 10
 }
 ```
 
 ### piglin
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/piglin.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 5
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 15
 }
 ```
 
 ### polar_bear
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/polar_bear.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 1
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 5
 }
 ```
 
 ### pufferfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 25
 }
 ```
 
 ### rabbit
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 4
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 20
 }
 ```
 
 ### salmon
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 26
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 16
 }
 ```
 
 ### sheep
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/sheep.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 12
 }
 ```
 
 ### skeleton
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/skeleton.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 80
 }
 ```
 
 ### slime
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/slime.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 100
 }
 ```
 
 ### spider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/spider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 100
 }
 ```
 
 ### squid
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/squid.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 8
 }
 ```
 
 ### stray
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/stray.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 120
 }
 ```
 
 ### strider
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/strider.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 20
 }
 ```
 
 ### tropicalfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/tropicalfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 75
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 25
 }
 ```
 
 ### turtle
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/turtle.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 8
 }
 ```
 
 ### witch
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/witch.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 5
 }
 ```
 
 ### wolf
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/wolf.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 8
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 5
 }
 ```
 
 ### zombie
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 100
 }
 ```
 
 ### zombie_pigman
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/zombie_pigman.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 100
 }
 ```
 
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:weight": {
     "default": 1
 }
 ```
 
-</Spoiler>
-
 # minecraft:world_age_filter
 
-<Spoiler title="Code">
 ### pillager_patrol
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/spawn_rules/pillager_patrol.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
+
 "minecraft:world_age_filter": {
     "min": 6000
 }
 ```
-
-</Spoiler>

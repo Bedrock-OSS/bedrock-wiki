@@ -13,7 +13,9 @@ This document covers experimental features, for 1.16.100+ format version items. 
 
 ## Item Events
 
-### Using Events
+### **|** Using Events
+
+Events in items are used most exactly as they are in entities. 
 
 <CodeHeader></CodeHeader>
 
@@ -25,6 +27,7 @@ This document covers experimental features, for 1.16.100+ format version items. 
 			"identifier": "example:food_item",
 			"category": "items"
 		},
+
 		"components": {
 			"minecraft:use_duration": 1.6,
 			"minecraft:food": {
@@ -38,6 +41,7 @@ This document covers experimental features, for 1.16.100+ format version items. 
 			},
 			"minecraft:use_animation": "eat"
 		},
+
 		"events": {
 			"on_consume": {
 				"remove_mob_effect": {
@@ -50,11 +54,13 @@ This document covers experimental features, for 1.16.100+ format version items. 
 }
 ```
 
-### Event Functions
+### **|** Event Functions
 
-#### swing
+Items do, however, have a slightly different set of event functions that they use.
 
-Plays the item swinging animation.
+> `swing`
+
+Plays the item swinging animation. (As if to hit.)
 
 <CodeHeader></CodeHeader>
 
@@ -66,9 +72,17 @@ Plays the item swinging animation.
 }
 ```
 
-#### shoot
+> `shoot`
 
 Shoots a projectile when triggered.
+    
+- Properties:
+
+  - `"angle_offset"` - Does nothing. (Broken)
+
+  - `"launch_power"` - The launch power to be multiplied over the base power of the projectile entity. Accepts MoLang values. 
+
+  - `"projectile"` - Takes an identifier of an entity - any entity, not just ones projectile - to use as an entity to 'shoot'.
 
 <CodeHeader></CodeHeader>
 
@@ -84,9 +98,17 @@ Shoots a projectile when triggered.
 }
 ```
 
-#### damage
+> `damage`
 
-Applies damage to a specified target.
+Applies a damage to a specified target.
+
+- Properties:
+
+  - `"type"` - The type of damage to administer to the target. Standard entity damage types apply, with contextual exceptions.
+
+  - `"target"` - The target which receives the damage.
+
+  - `"amount"` - Amount of damage points to apply.
 
 <CodeHeader></CodeHeader>
 
@@ -94,31 +116,45 @@ Applies damage to a specified target.
 {
 	"example:damage_event": {
 		"damage": {
-			"type": "magic", // Can also be any entity-accepted damage source
+			"type": "magic",
+			"target": "other",
 			"amount": 4
 		}
 	}
 }
 ```
 
-#### decrement_stack
+> `decrement_stack`
 
 Decrements the stack by one.
+
+- Properties:
+
+  - `"ignore_game_mode"` - When `false` (as is set by default) will not decrement in Creative gamemodes.
+  
+
+
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
 	"example:remove_one": {
-		"decrement_stack": {}
+		"decrement_stack": {
+            "ignore_game_mode": false
+        }
 	}
 }
 ```
 
-#### add_mob_effect
+> `add_mob_effect`
 
 Adds a mob effect when triggered.
 
+- Properties:
+
+  - `"ignore_game_mode"` - When `false` (as is set by default) will not decrement in Creative gamemodes.
+  
 <CodeHeader></CodeHeader>
 
 ```json
@@ -134,7 +170,7 @@ Adds a mob effect when triggered.
 }
 ```
 
-#### remove_mob_effect
+> `remove_mob_effect`
 
 Removes a mob effect when triggered.
 
@@ -151,7 +187,7 @@ Removes a mob effect when triggered.
 }
 ```
 
-#### transform_item
+> `transform_item`
 
 Transforms the item into the item specified.
 
@@ -167,7 +203,7 @@ Transforms the item into the item specified.
 }
 ```
 
-#### teleport
+> `teleport`
 
 Teleports the target to a random location in the specified range.
 
@@ -184,9 +220,9 @@ Teleports the target to a random location in the specified range.
 }
 ```
 
-#### sequence
+> `sequence`
 
-Used to sequence event functions.
+Used to sequence multiple event functions. Works just as in entities.
 
 <CodeHeader></CodeHeader>
 
@@ -212,9 +248,9 @@ Used to sequence event functions.
 }
 ```
 
-#### randomize
+> `randomize`
 
-Used to randomize event functions.
+Used to randomize event functions. Works just as in entities.
 
 <CodeHeader></CodeHeader>
 
@@ -242,9 +278,9 @@ Used to randomize event functions.
 }
 ```
 
-#### run_command
+> `run_command`
 
-Used to execute commands.
+Used to execute commands. Works just as in entities.
 
 <CodeHeader></CodeHeader>
 
@@ -252,7 +288,7 @@ Used to execute commands.
 {
 	"example:execute_command_event": {
 		"run_command": {
-			"command": ["say hi"],
+			"command": [ "say hi" ],
 			"target": "other"
 		}
 	}
@@ -842,16 +878,7 @@ If your item isn't showing up, these changes might have broken your item.
 Niche Features
 
 -   Components
-    -   `minecraft:icon` - Property `"frame"` may take in MoLang values. This can be used to animate items:
-    ```json
-    	{
-    		"minecraft:icon": {
-			    "texture": "dye_powder",
-  			    "frame": "t.a ?? {t.a = -1;}; t.a = t.a + 1; return math.mod(math.floor(t.a / 60), 16);"
-		    }
-	    }
-    ```
-    *as found by Ciosciaa*
+    -   `minecraft:icon` - Property `"frame"` may take in MoLang values. 
    
 > Broken/Nonfunctional Features
 

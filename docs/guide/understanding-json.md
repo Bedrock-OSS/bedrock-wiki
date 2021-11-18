@@ -1,7 +1,7 @@
 ---
 title: Understanding JSON
 nav_order: 100
-prefix: 'a.'
+prefix: 'a. '
 ---
 
 ::: tip

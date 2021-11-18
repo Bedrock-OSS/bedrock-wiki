@@ -79,7 +79,7 @@ Once again, if you are confused about any of this step, please review the [Entit
 
 ## Triggering Commands using Events:
 
-Animation transitions are created using queries. You can [read about queries here](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicated queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
+Animation transitions are created using queries. You can read about queries [here](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicated queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
 
 I personally like using [skin_id](https://docs.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entityproperties/minecraftproperty_skin_id).
 

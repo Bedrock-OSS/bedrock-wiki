@@ -5,7 +5,7 @@ title: Molang Queries
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
 
 :::warning
-This page is not an exhaustive list list! It only contains queries we've written extra information for. [The full list of queries can be found here!](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries)
+This page is not an exhaustive list list! It only contains queries we've written extra information for. The full list of queries can be found [here](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries)!
 :::
 
 ## query.get_equiped_item_name
@@ -266,7 +266,7 @@ It's worth noting that the `Y` axis may not work as expected. When you stay in t
 
 ## query.block_neighbor_has_any_tag and query.relative_block_has_any_tag
 
-Requires `'Experimental Molang Features` to use. From the docs `Takes a relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has any of the tags provided`. This is useful for using connecting blocks or detecting entities.
+Requires `Experimental Molang Features` to use. From the docs `Takes a relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has any of the tags provided`. This is useful for using connecting blocks or detecting entities.
 
 `query.block_neighbor_has_any_tag` - Takes block position
 `query.relative_block_has_any_tag` - Takes entity position

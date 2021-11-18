@@ -1,6 +1,6 @@
 ---
 title: Download Example Packs
-prefix: 'b.'
+prefix: 'b. '
 nav_order: 101
 ---
 
@@ -15,4 +15,4 @@ Download here:
 -   <a href="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/guide/guide_RP.zip?raw=true">Resource Pack Download</a>
 -   <a href="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/guide/guide_BP.zip?raw=true">Behavior Pack Download</a>.
 
-To install, simply unzip the behavior pack into the Minecraft folder: `com.mojang\development_behavior_packs` or `com.mojang\development_resource_packs`, depending on which pack you downloaded.
+To install, simply unzip the behavior pack into the Minecraft folder: `com.mojang\development_behavior_packs` or `com.mojang\development_*_packs`, depending on which pack you downloaded.

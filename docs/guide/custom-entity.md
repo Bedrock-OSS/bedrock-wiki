@@ -1,7 +1,7 @@
 ---
 title: 'Create a custom Entity'
 nav_order: 6
-prefix: '6.'
+prefix: '6. '
 ---
 
 Last time you created a custom item for this custom entity to drop. This time you will create the Ghost itself, as promised.
@@ -71,7 +71,7 @@ Just like with items, the main files of a custom entity are its RP and BP files.
     -   `"minecraft:movement"` is, of course, the movement speed.
     -   `"minecraft:behavior.delayed_attack"` is a _behavior attribute_, which allows the entity to execute some behavior patterns like, in this case, attacking. Its most important options are:
         -   `"priority"` is often seen in components. If a mob can execute two actions simultaneously, the lower behavior integer will get picked. `0` means the action is always preferred over everything else.
-        -   You can look up the rest of the options on the official Documentation, [bedrock.dev/r/Entities](https://bedrock.dev/r/Entities)
+        -   You can look up the rest of the options on the official Documentation, [bedrock.dev](https://bedrock.dev/docs/stable/Entities)
     -   `"minecraft:navigation.walk"` allows the mob to use its `"movement.basic"` goal and `"movement"` to navigate by walking. The options inside define if the mob should _avoid sun_, _pass doors_ and if it can _walk_ and _open doors_ itself.
     -   `"minecraft:attack"` / `"damage"` defines the amount of damage the mob deals upon an attack
     -   `"minecraft:behavior.random_look_around"` allows the mob to sometimes look around itself;
@@ -161,7 +161,7 @@ You can probably remember that `"wiki.ectoplasm"` is the shortname of our custom
 
 -   And, finally, `"render_controllers"` lists one or more identifiers of render controllers, which control materials.
 
-Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same; the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn more about [render controllers here.](/visuals/entity-visuals-intro)
+Our next step is creating the mentioned _render controller_ with the id `controller.render.ghost`. Since our Ghost's texture, model and materials always remain the same; the following code is quite simple. However, more advanced render controllers typically enable dynamic switching between these. You can learn more about render controllers [here](/visuals/entity-visuals-intro).
 
 <CodeHeader>RP/render_controllers/entity/ghost.rc.json</CodeHeader>
 

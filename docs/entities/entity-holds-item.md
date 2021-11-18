@@ -10,7 +10,7 @@ mention:
 This tutorial assumes you have a basic understanding of entities, loot tables, and Blockbench.
 :::
 
-In this tutorial, you will learn to have an entity spawn with an item in its hand. I'll be using a custom `mandalorian_armorer' entity and a custom `hammer` item for the examples.
+In this tutorial, you will learn to have an entity spawn with an item in its hand. I'll be using a custom `mandalorian_armorer` entity and a custom `hammer` item for the examples.
 
 ## Basic Usage
 

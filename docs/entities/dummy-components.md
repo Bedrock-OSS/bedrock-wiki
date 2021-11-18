@@ -2,7 +2,7 @@
 title: Dummy Components
 ---
 
-Dummy components are useless components that are only used for data storage. Dummy components don't **do** anything on their own. They need to be paired with secondary mechanics to have any function. Dummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
+Dummy components are useless components that are only used for data storage. Dummy components **don't** do anything on their own. They need to be paired with secondary mechanics to have any function. Dummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
 
 Good examples are `variant` and `mark_variant`. These components can be set with an Integer value. In the vanilla resource pack, this Integer is used to pick the textures for the Cat, and Horse. Another good example is `is_tamed`, which is used by the Horse to handle whether he is ridable or not.
 

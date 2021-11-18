@@ -7,12 +7,12 @@ tags:
 If you wish to disable team damage (so one cannot hurt their teammates), assign a tag with the team name to every teammate (I'm going to use `team1`, `team2`, `team3` and `team4` for this example).
 Now add this damage sensor component into your `player.json`s `"components": {}`. See comments for explanation.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/player.json#components</CodeHeader>
 
 ```json
 "minecraft:damage_sensor":{
    "triggers":[
-      { //if you already have a damage sensor, simply copy this object into the "triggers" array;
+      { //if you already have a damage sensor, simply copy this object into the "triggers" array
          "on_damage":{
             "filters":{
                "any_of":[
@@ -24,7 +24,7 @@ Now add this damage sensor component into your `player.json`s `"components": {}`
                   },
                   {
                      "all_of":[
-                        { "test":"has_tag", "value":"team2" }, //repeats for every team;
+                        { "test":"has_tag", "value":"team2" }, //repeats for every team
                         { "test":"has_tag", "subject":"other", "value":"team2" }
                      ]
                   },
