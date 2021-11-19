@@ -604,6 +604,18 @@ If the total combined cost would be negative (assuming no negative random cost p
 ```
 :::
 
+##### Spawn Egg Trader Binding
+The `"set_actor_id"` function is used to set the data value of a spawn egg based on a provided entity identifier, given with `"id"`.
+
+<CodeHeader>Example Spawn Egg Trader Binding</CodeHeader>
+```json
+{
+	"function": "set_actor_id"
+}
+```
+
+In trade tables, if no ID is provided, the trader's entity type will be assigned to the egg.
+
 ## Overrides
 Because trade tables do not use in-data identifiers, they are overridden simply by replacing a prior trade table with a new one. Below are the currently used vanilla trade tables for each trader:
 |Trader|Path|
