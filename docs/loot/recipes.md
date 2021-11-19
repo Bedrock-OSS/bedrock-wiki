@@ -9,20 +9,32 @@ mention:
 
 *Last updated for Version 1.17.41*
 
-Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands. 
+Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.
 
-All recipes are stored in the `recipes` folder in the behavior pack root. The files can be named and organized under any folder hierarchy as desired. No experimental toggles are required to use recipes or any of their features.
+![](/assets/images/loot/recipes/recipe.png)
 
-### Folder Structure
+::: tip
+Anvil interactions are handled within an [item definition](/items/items-16.html), not via recipe files. Smithing table and loom transactions are currently unavailable.
+:::
 
-<FolderView :paths="[
+No experimental toggles are required to use recipes or any of their features.
 
-'BP/recipes/obsidian_blade.recipe.json',
-'BP/recipes/food/popcorn.recipe.json',
+### Registration
+All recipes are stored in the `recipes` folder in the behavior pack root. The files can be named and organized under any folder hierarchy as desired.
 
-]"></FolderView>
+This arbitrary structure is used for the paths in this document:
+<FolderView
+	:paths="[
+		'BP/recipes/crafting/weapons/cold_steel_sword.json',
+		'BP/recipes/decorations/knobs/brass.json',
+		'BP/recipes/covered_arch.json',
+		'BP/recipes/magic/magic_ash.json',
+		'BP/recipes/brewing/negative/paralysis.json',
+		'BP/recipes/illumination_potion.json'
+	]"
+/>
 
-### Example Recipe
+As an example, a "cold steel sword" might be crafted using the following [shaped recipe](#shaped-recipes):
 <CodeHeader>BP/recipes/crafting/weapons/cold_steel_sword.json</CodeHeader>
 ```json
 {
@@ -40,18 +52,13 @@ All recipes are stored in the `recipes` folder in the behavior pack root. The fi
 			"I"
 		],
 		"key": {
-			"X": "lichbane:cold_steel",
+			"X": "wiki:cold_steel",
 			"I": "minecraft:stick"
 		},
-		"result": "lichbane:cold_steel_sword"
+		"result": "wiki:cold_steel_sword"
 	}
 }
 ```
-
-::: tip
-Anvil interactions are handled within an [item definition](/items/items-16.html), not via recipe files. Smithing table and loom transactions are currently unavailable.
-:::
-
 
 ## Shared Properties and Structures
 ### Format Version
@@ -159,6 +166,10 @@ The optional integer `"count"` property may be used to stack items. It defaults 
 If a count greater than `1` is provided for an item that does not stack, an error will be thrown. There is no way to force single-return recipe outputs, like those in shapeless recipes or brewing mixes, to return multiple items in one transaction.
 :::
 
+::: warning
+Despite having similarities to trade [table item descriptors](/loot/trade-tables.html#items), recipe item descriptors cannot use functions.
+:::
+
 #### Identifier Additions
 Additional identifiers not typically usable are available to recipes to describe basic potions.
 
@@ -205,6 +216,8 @@ Crafting recipes support both crafting tables and stonecutters:
 ### Shapeless Recipes
 Shapeless recipes simply bind a collection of inputs to a single output on a crafting grid.
 
+![](/assets/images/loot/recipes/shapeless_recipe.png)
+
 <CodeHeader>BP/recipes/decorations/knobs/brass.json</CodeHeader>
 ```json
 {
@@ -218,14 +231,14 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 		"tags": ["construction_bench"],
 		
 		"ingredients": [
-			"manorisms:brass",
+			"wiki:brass",
 			{
-				"item": "manorisms:screw",
+				"item": "wiki:screw",
 				"data": 2
 			}
 		],
 		"result": {
-			"item": "manorisms:door_knob",
+			"item": "wiki:door_knob",
 			"data": 3
 		}
 	}
@@ -238,9 +251,9 @@ The required `"ingredients"` array property lists the items required as inputs f
 <CodeHeader>#/minecraft:recipe_shapeless/</CodeHeader>
 ```json
 "ingredients": [
-	"manorisms:brass",
+	"wiki:brass",
 	{
-		"item": "manorisms:screw",
+		"item": "wiki:screw",
 		"data": 2
 	}
 ]
@@ -254,13 +267,15 @@ Shapeless recipe outputs are expressed using the required `"result"` property an
 <CodeHeader>#/minecraft:recipe_shapeless/</CodeHeader>
 ```json
 "result": {
-	"item": "manorisms:door_knob",
+	"item": "wiki:door_knob",
 	"data": 3
 }
 ```
 
 ### Shaped Recipes
 Shaped recipes enforce that the ingredients used during crafting conform to a strict shape.
+
+![](/assets/images/loot/recipes/shaped_recipe.png)
 
 <CodeHeader>BP/recipes/covered_arch.json</CodeHeader>
 ```json
@@ -279,16 +294,16 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 			"I I"
 		]
 		"key": {
-			"S": "garden_dreams:cloth",
-			"I": "garden_dreams:support"
+			"S": "wiki:cloth",
+			"I": "wiki:support"
 		},
 		"result": [
 			{
-				"item": "garden_dreams:covered_arch",
+				"item": "wiki:covered_arch",
 				
 				"count": 3
 			},
-			"garden_dreams:crafting_scrap"
+			"wiki:crafting_scrap"
 		]
 	}
 }
@@ -412,8 +427,8 @@ Keys provide meaning to characters in a [pattern](#patterns), done via the requi
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
 "key": {
-	"S": "garden_dreams:cloth",
-	"I": "garden_dreams:support"
+	"S": "wiki:cloth",
+	"I": "wiki:support"
 }
 ```
 
@@ -434,11 +449,11 @@ Shaped crafting recipe outputs behave very similarly to their [shapeless counter
 ```json
 "result": [
 	{
-		"item": "garden_dreams:covered_arch",
+		"item": "wiki:covered_arch",
 		
 		"count": 3
 	},
-	"garden_dreams:crafting_scrap"
+	"wiki:crafting_scrap"
 ]
 ```
 The first entry in the array will be used as the visible output of the crafting block. All other values are automatically placed in the player's inventory upon removing the visible result from the output slot. There does not seem to be a limit on the number of items that may be returned from a crafting action.
@@ -482,6 +497,8 @@ Crafting recipes with lower priority values take precedence. So, if all else is 
 ## Heating
 Heating recipes are used to transform an item using a heat source over a period of time.
 
+![](/assets/images/loot/recipes/furnace_recipe.png)
+
 <CodeHeader>BP/recipes/magic/magic_ash.json</CodeHeader>
 ```json
 {
@@ -493,9 +510,9 @@ Heating recipes are used to transform an item using a heat source over a period 
 		},
 		"tags": ["soul_campfire"],
 		
-		"input": "voodoo:bone_fragments"
+		"input": "wiki:bone_fragments"
 		"output": {
-			"item": "voodoo:magic_ash",
+			"item": "wiki:magic_ash",
 			
 			"count": 4
 		}
@@ -515,9 +532,9 @@ Heating recipes bind exactly one input [item descriptor](#item-descriptors) to e
 
 <CodeHeader>#/minecraft:recipe_furnace/</CodeHeader>
 ```json
-"input": "voodoo:bone_fragments"
+"input": "wiki:bone_fragments"
 "output": {
-	"item": "voodoo:magic_ash",
+	"item": "wiki:magic_ash",
 	
 	"count": 4
 }
@@ -539,9 +556,9 @@ Brewing transactions are similar to [heating transactions](#heating-transactions
 
 <CodeHeader>#/minecraft:recipe_brewing_mix/</CodeHeader>
 ```json
-"input": "moonsent:flask",
-"reagent": "moonsent:jade",
-"output": "moonsent:insanity_resistance"
+"input": "wiki:flask",
+"reagent": "wiki:jade",
+"output": "wiki:insanity_resistance"
 ```
 
 Provided count values are ignored in these brewing properties. Items are meant to transform one at a time in a brew.
@@ -559,6 +576,8 @@ Currently, the stackability of the produced output is bugged, regardless of whet
 ### Brewing Mixes
 Brewing mixes are simple brewing recipes theoretically designed to isolate the data value of the input from the data value of the output.
 
+![](/assets/images/loot/recipes/brewing_mix_recipe.png)
+
 <CodeHeader>BP/recipes/brewing/negative/paralysis.json</CodeHeader>
 ```json
 {
@@ -570,9 +589,9 @@ Brewing mixes are simple brewing recipes theoretically designed to isolate the d
 		},
 		"tags": ["brewing_stand"],
 
-		"input": "shakeshifted:amberglass_flask",
-		"reagent": "shakeshifted:viporfly_poison",
-		"output": "shakeshifted:paralysis_brew"
+		"input": "wiki:amberglass_flask",
+		"reagent": "wiki:viporfly_poison",
+		"output": "wiki:paralysis_brew"
 	}
 }
 ```
@@ -593,6 +612,8 @@ If a data value is specified for a reagent using the `"data"` property format, a
 ### Brewing Containers
 Brewing containers are designed to pass the data value of an input to the transformed output.
 
+![](/assets/images/loot/recipes/brewing_container_recipe.png)
+
 <CodeHeader>BP/recipes/illumination_potion.json</CodeHeader>
 ```json
 {
@@ -605,8 +626,8 @@ Brewing containers are designed to pass the data value of an input to the transf
 		"tags": ["brewing_stand"],
 
 		"input": "minecraft:potion",
-		"reagent": "ggx:radiant_berries",
-		"output": "ggx:illumination_potion"
+		"reagent": "wiki:radiant_berries",
+		"output": "wiki:illumination_potion"
 	}
 }
 ```
