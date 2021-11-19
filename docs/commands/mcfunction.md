@@ -1,5 +1,7 @@
 ---
 title: Functions
+mention:
+	- SirLich
 tags: 
 	- easy
 ---
@@ -19,6 +21,9 @@ Example:
 tag @s add dev
 gamemode creative
 effect @s night_vision 100000 1 true
+
+# You can write comments like this
+say hey!
 ```
 
 Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick. Nested functions will also run in the same tick as the parent function.
