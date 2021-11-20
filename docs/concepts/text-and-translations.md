@@ -96,6 +96,7 @@ Now you know about .lang files in general, you can look into internationalisatio
 For example, you could state this: 
 
 <CodeHeader>rp/texts/en_US.lang</CodeHeader>
+
 ```json
 langcode.wiki:my_text.words=My Block
 ```
@@ -103,6 +104,7 @@ langcode.wiki:my_text.words=My Block
 And also this:
 
 <CodeHeader>rp/texts/de_DE.lang</CodeHeader>
+
 ```json
 langcode.wiki:my_text.words=Meinblock
 ```
