@@ -38,11 +38,11 @@ Similar to teleporting, the entity is triggering an entity transform on death. U
 	"preserve_equipment": false,
 	"drop_equipment": true,
 	"delay": {
-        "block_assist_chance": 0.0,
-        "block_radius": 0,
-        "block_max": 0,
-        "value": 10
-    }
+		"block_assist_chance": 0.0,
+		"block_radius": 0,
+		"block_max": 0,
+		"value": 10
+	}
 }
 ```
 
@@ -165,7 +165,9 @@ Here's another example in which the damage color overlay becomes pink.
 
 You can use the damage_sensor component to trigger an event upon fatal damage; this event adds a particular despawning component group containing the spawn_entity and instant_despawn components. Spawn_entity with 0 wait time will drop an item just before the entity is despawned. For simple entities like furniture, which only need one item, this is very convenient.
 
-Please note that you will have to find another work for entities with an inventory. You should also ensure that the despawn component group is not added when the entity is spawned using the entity_spawned event.
+When an entity recieves fatal damage, an event is triggered that adds a dummy component. We can then use this dummy component to play the animation and using `minecraft:timer` we can have it despawn.
+
+Please note that you will have to find another work for entities with an inventory. You should also ensure that the despawn component group is not added when the entity is spawned using the entity_spawned event. If you have a entity that performs other actions (movement and attacks) you will likely want to remove those components as well.
 
 Here an example file in the BP
 
@@ -173,60 +175,112 @@ Here an example file in the BP
 
 ```json
 {
-	"format_version": "1.14.0",
-	"min_engine_version": "1.16.100",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "wiki:entity",
-			"is_spawnable": true,
-			"is_summonable": true,
-			"is_experimental": true
+  "format_version": "1.14.0",
+  "min_engine_version": "1.16.100",
+  "minecraft:entity": {
+	"description": {
+	  "identifier": "wiki:entity",
+	  "is_spawnable": true,
+	  "is_summonable": true,
+	  "is_experimental": true
+	},
+	"component_groups": {
+	  "wiki:death": {
+		"minecraft:spawn_entity": {
+		  "max_wait_time": 0,
+		  "min_wait_time": 0,
+		  "spawn_item": "egg",
+		  "single_use": true
 		},
-		"component_groups": {
-			"wiki:despawn": {
-				"minecraft:spawn_entity": {
-					"max_wait_time": 0,
-					"min_wait_time": 0,
-					"spawn_item": "egg",
-					"single_use": true
-				},
-				"minecraft:instant_despawn": {}
-			}
-		},
-		"components": {
-			"minecraft:type_family": {
-				"family": ["cart", "inanimate"]
-			},
-			"minecraft:collision_box": {
-				"width": 0.8,
-				"height": 0.5
-			},
-			"minecraft:health": {
-				"value": 8,
-				"max": 8
-			},
-			"minecraft:physics": {},
-			"minecraft:pushable": {
-				"is_pushable": true,
-				"is_pushable_by_piston": true
-			},
-			"minecraft:damage_sensor": {
-				"triggers": {
-					"on_damage": {
-						"filters": {
-							"test": "has_damage",
-							"value": "fatal"
-						},
-						"event": "wiki:despawn",
-						"target": "self"
-					}
+		"minecraft:is_sheared": {},
+
+		"minecraft:timer": {
+		  "looping": true,
+		  "time": [2.56, 2.56], // Change this to match your animation's time
+		  "time_down_event": {
+			"event": "wiki:despawn"
+		  }
+		}
+	  },
+	  "wiki:despawn": {
+		"minecraft:instant_despawn": {}
+	  }
+	},
+	"components": {
+	  "minecraft:type_family": {
+		"family": ["cart", "inanimate"]
+	  },
+	  "minecraft:collision_box": {
+		"width": 0.8,
+		"height": 0.5
+	  },
+	  "minecraft:health": {
+		"value": 8,
+		"max": 8
+	  },
+	  "minecraft:physics": {},
+	  "minecraft:pushable": {
+		"is_pushable": true,
+		"is_pushable_by_piston": true
+	  },
+	  "minecraft:damage_sensor": {
+		"triggers": {
+		  "on_damage": {
+			"filters": {
+			  "all_of": [
+				{
+				  "test": "has_damage",
+				  "value": "fatal"
 				}
-			}
+			  ]
+			},
+			"target": "self",
+			"event": "wiki:death",
+			"deals_damage": false,
+			"cause": "fatal"
+		  }
+		}
+	  }
+	},
+	"events": {
+	  "wiki:death": {
+		"add": {
+		  "component_groups": ["wiki:death"]
 		},
-		"events": {
-			"wiki:despawn": {
-				"add": {
-					"component_groups": ["wiki:despawn"]
+		"wiki:despawn": {
+		  "add": {
+			"component_groups": ["wiki:despawn"]
+		  }
+		}
+	  }
+	}
+  }
+}
+```
+
+Here an example file for the animation controller.
+
+<CodeHeader>RP/animation_controllers/animation_controller.entity.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.entity": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"dead": "query.is_sheared"
+						}
+					]
+				},
+				"death": {
+					"blend_transition": 0.2,
+					"animations": [
+						"death"
+					]
 				}
 			}
 		}
