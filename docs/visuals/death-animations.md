@@ -175,86 +175,101 @@ Here an example file in the BP
 
 ```json
 {
-  "format_version": "1.14.0",
-  "min_engine_version": "1.16.100",
-  "minecraft:entity": {
-	"description": {
-	  "identifier": "wiki:entity",
-	  "is_spawnable": true,
-	  "is_summonable": true,
-	  "is_experimental": true
-	},
-	"component_groups": {
-	  "wiki:death": {
-		"minecraft:spawn_entity": {
-		  "max_wait_time": 0,
-		  "min_wait_time": 0,
-		  "spawn_item": "egg",
-		  "single_use": true
-		},
-		"minecraft:is_sheared": {},
-
-		"minecraft:timer": {
-		  "looping": true,
-		  "time": [2.56, 2.56], // Change this to match your animation's time
-		  "time_down_event": {
-			"event": "wiki:despawn"
-		  }
-		}
-	  },
-	  "wiki:despawn": {
-		"minecraft:instant_despawn": {}
-	  }
-	},
-	"components": {
-	  "minecraft:type_family": {
-		"family": ["cart", "inanimate"]
-	  },
-	  "minecraft:collision_box": {
-		"width": 0.8,
-		"height": 0.5
-	  },
-	  "minecraft:health": {
-		"value": 8,
-		"max": 8
-	  },
-	  "minecraft:physics": {},
-	  "minecraft:pushable": {
-		"is_pushable": true,
-		"is_pushable_by_piston": true
-	  },
-	  "minecraft:damage_sensor": {
-		"triggers": {
-		  "on_damage": {
-			"filters": {
-			  "all_of": [
-				{
-				  "test": "has_damage",
-				  "value": "fatal"
-				}
-			  ]
-			},
-			"target": "self",
-			"event": "wiki:death",
-			"deals_damage": false,
-			"cause": "fatal"
-		  }
-		}
-	  }
-	},
-	"events": {
-	  "wiki:death": {
-		"add": {
-		  "component_groups": ["wiki:death"]
-		},
-		"wiki:despawn": {
-		  "add": {
-			"component_groups": ["wiki:despawn"]
-		  }
-		}
-	  }
-	}
-  }
+    "format_version":"1.14.0",
+    "min_engine_version":"1.16.100",
+    "minecraft:entity":{
+        "description":{
+            "identifier":"wiki:entity",
+            "is_spawnable":true,
+            "is_summonable":true,
+            "is_experimental":true
+        },
+        "component_groups":{
+            "wiki:death":{
+                "minecraft:spawn_entity":{
+                    "max_wait_time":0,
+                    "min_wait_time":0,
+                    "spawn_item":"egg",
+                    "single_use":true
+                },
+                "minecraft:is_sheared":{
+                    
+                },
+                "minecraft:timer":{
+                    "looping":true,
+                    "time":[
+                        2.56,
+                        2.56
+                    ], // Change this to match your animation's time
+                    "time_down_event":{
+                        "event":"wiki:despawn"
+                    }
+                }
+            },
+            "wiki:despawn":{
+                "minecraft:instant_despawn":{
+                    
+                }
+            }
+        },
+        "components":{
+            "minecraft:type_family":{
+                "family":[
+                    "cart",
+                    "inanimate"
+                ]
+            },
+            "minecraft:collision_box":{
+                "width":0.8,
+                "height":0.5
+            },
+            "minecraft:health":{
+                "value":8,
+                "max":8
+            },
+            "minecraft:physics":{
+                
+            },
+            "minecraft:pushable":{
+                "is_pushable":true,
+                "is_pushable_by_piston":true
+            },
+            "minecraft:damage_sensor":{
+                "triggers":{
+                    "on_damage":{
+                        "filters":{
+                            "all_of":[
+                                {
+                                    "test":"has_damage",
+                                    "value":"fatal"
+                                }
+                            ]
+                        },
+                        "target":"self",
+                        "event":"wiki:death",
+                        "deals_damage":false,
+                        "cause":"fatal"
+                    }
+                }
+            }
+        },
+        "events":{
+            "wiki:death":{
+                "add":{
+                    "component_groups":[
+                        "wiki:death"
+                    ]
+                },
+                "wiki:despawn":{
+                    "add":{
+                        "component_groups":[
+                            "wiki:despawn"
+                        ]
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -365,7 +380,7 @@ And then despawn it through adding component group with instant_despawn through 
 
 Death detection with commands might be useful because it don't use `player.json`
 
-<CodeHeader>BP/functions/detecting_death/mcfunction</CodeHeader>
+<CodeHeader>BP/functions/detecting_death.mcfunction</CodeHeader>
 
 ```
 tag @a add dead
