@@ -3,11 +3,10 @@ title: Vanilla_Materials
 show_toc: false
 ---
 
-Materials are extremely usefull for 
+Materials are extremely usefull for for making entities more unique.
 
-You can learn more about materials [here](/visuals/materials).
+You can learn more about creating materials [here](/visuals/materials).
 
-text
 
 ## List of Vanilla Materials
 
@@ -84,7 +83,7 @@ This makes the inside faces of moodels **not** render.
 
 ### Alpha
 
-Enables transparency, usage of the alpha channel of textures.
+Enables analogue translucency, usage of the alpha channel of textures.
 
 
 ### Emissive
@@ -99,7 +98,7 @@ Regardless of other properties, is always completely rendered at a pre-determine
 
 ### Texture Blending
 
-
+When multiple textures are present, may use a filter of sorts to change the entities appearence, based on the textures.
 
 
 ### Centered Geometry
@@ -123,7 +122,7 @@ The following section has currently **only** been tested for with single texture
 
 ### alpha_block_color 
 
-
+-   Backface-Culling
 
 
 ### banner
@@ -138,22 +137,22 @@ The following section has currently **only** been tested for with single texture
 
 ### beacon_beam
 
-
+-   Backface-Culling
 
 
 ### beacon_beam_transparent
 
-
+-   Emissive
 
 
 ### charged_creeper
 
-
+-   Emissive
 
 
 ### conduit_wind
 
-
+-   Transparency
 
 
 ### entity
@@ -163,7 +162,7 @@ The following section has currently **only** been tested for with single texture
 
 ### entity_alphablend  
 
-
+-   Backface-Culling
 
 
 ### entity_alphablend_nocolorentity_static
@@ -178,7 +177,8 @@ The following section has currently **only** been tested for with single texture
 
 ### entity_alphatest_change_color
 
-
+-   Transparency
+-   Renders translucency as being opaque
 
 
 ### entity_alphatest_change_color_glint
@@ -188,12 +188,12 @@ The following section has currently **only** been tested for with single texture
 
 ### entity_alphatest_glint
 
-
+-   Transparency
 
 
 ### entity_alphatest_glint_item
 
-
+-   Transparency
 
 
 ### entity_alphatest_multicolor_tint
@@ -209,12 +209,13 @@ The following section has currently **only** been tested for with single texture
 
 ### entity_beam_additive
 
-
+-   Emissive
+-   Backface-Culling
 
 
 ### entity_change_color
 
--   N/A
+-   Unknown
 
 
 ### entity_change_color_glint
@@ -224,7 +225,7 @@ The following section has currently **only** been tested for with single texture
 
 ### entity_custom  
 
-
+-   Backface-Culling
 
 
 ### entity_dissolve_layer0
@@ -239,17 +240,17 @@ The following section has currently **only** been tested for with single texture
 
 ### entity_emissive
 
-
+-   Emissive
 
 
 ### entity_emissive_alpha
 
-
+-   Emissive
 
 
 ### entity_emissive_alpha_one_sided
 
-
+-   Emissive
 
 
 ### entity_flat_color_line
@@ -309,17 +310,17 @@ The following section has currently **only** been tested for with single texture
 
 ### guardian_ghost
 
-
+-   Backface-Culling
 
 
 ### item_in_hand
 
--   N/A
+-   Unknown
 
 
 ### item_in_hand_entity_alphatest
 
-
+-   Transparency
 
 
 ### item_in_hand_entity_alphatest_color
@@ -329,12 +330,13 @@ The following section has currently **only** been tested for with single texture
 
 ### item_in_hand_glint
 
--   N/A
+-   Unknown
+-   Backface-Culling
 
 
 ### item_in_hand_multicolor_tint
 
--   N/A
+-   Unknown
 
 
 ### map
@@ -344,12 +346,14 @@ The following section has currently **only** been tested for with single texture
 
 ### map_decoration
 
+-   Backface-Culling
+-   Transparency
 
-
+Renders translucency as transparency
 
 ### map_marker
 
-
+-   Emissive
 
 
 ### moving_block
@@ -394,11 +398,12 @@ The following section has currently **only** been tested for with single texture
 
 ### opaque_block_color
 
-
+-   Backface-Culling
 
 
 ### opaque_block_color_uv2
 
+-   Backface-Culling
 
 
 
