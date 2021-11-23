@@ -152,3 +152,8 @@ ol {
 .dark .border-gray {
 	@apply border-true-gray-600;
 }
+
+/** Inputs */
+textarea {
+	outline: none;
+}

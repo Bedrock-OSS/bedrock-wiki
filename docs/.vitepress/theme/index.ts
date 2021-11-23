@@ -12,6 +12,7 @@ import Card from './Components/Content/Card.vue'
 import CardLink from './Components/Content/CardLink.vue'
 import Homepage from './Components/Pages/Homepage.vue'
 import NotFound from './Components/Pages/NotFound.vue'
+import MolangGraph from './Components/MoLang/Graph.vue'
 
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
@@ -32,6 +33,7 @@ const globalComponents: [string, Component][] = [
 	['Card', Card],
 	['Homepage', Homepage],
 	['NotFound', NotFound],
+	['MolangGraph', MolangGraph],
 ]
 
 const theme: Theme = {
