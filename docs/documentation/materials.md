@@ -3,10 +3,13 @@ title: Vanilla_Materials
 show_toc: false
 ---
 
-Materials are extremely usefull for for making entities more unique.
+:::warning
+Materials are not for the faint of heart. Be prepared for potential crashes, content log errors, and long loading times.
+:::
+
+Materials are extremely useful for making entities more unique. You can make new ones for your addons, or use pre-existing vanilla materials.
 
 You can learn more about creating materials [here](/visuals/materials).
-
 
 ## List of Vanilla Materials
 
@@ -70,340 +73,339 @@ You can learn more about creating materials [here](/visuals/materials).
 | [opaque_block_color](#opaque_block_color)                                               |
 | [opaque_block_color_uv2](#opaque_block_color_uv2)                                       |
 
-
 ## Properties
 
 Materials can have a range of different properties which affect their appearence, including:
 
-
 ### Backface-Culling
 
-This makes the inside faces of moodels **not** render.
+This makes the inside faces of models **not** render.
 
-
-### Alpha
+### Alpha Channel
 
 Enables analogue translucency, usage of the alpha channel of textures.
 
-
 ### Emissive
 
-Causes the texture to not be affected by dim lighting, and appear to glow. If there is usage of the alpha channel, the emissiveness is in direct proportion to how transparrent each induvidual pixel is.
+Causes the texture to not be affected by dim lighting, and appear to glow. If there is usage of the alpha channel, the emissiveness is in direct proportion to how transparent each individual pixel is.
 
+### Set Translucency
 
-### Set Transparency
-
-Regardless of other properties, is always completely rendered at a pre-determined transparrency.
-
+Regardless of other properties, is always completely rendered at a pre-determined translucency.
 
 ### Texture Blending
 
-When multiple textures are present, may use a filter of sorts to change the entities appearence, based on the textures.
-
-
-### Centered Geometry
-
-Each part of the entity's geometry is rendered at the same location on it's the Y and Z coordinates. This isn't usually a particularly desireble effect.
-
+When multiple textures are present, may use a filter of sorts to change the entities appearance, based on the textures.
 
 ## Details on the Materials
 
-The following is a last of each material, along with general known properies. The names are vague pointers to what each will do, some may act rather unpredictably, or have undocumented usages, so this only is what's certain for each:
+The following is a last of each material, along with general known properties. The names are vague pointers to what each will do, some may act rather unpredictably, or have undocumented usages, so this only is what's certain for each:
 
 :::warning
-The following section has currently **only** been tested for with single textures. Take it all with a pinch of salt. It is highly recomended to experiment with the materials yourself.
+The following section has currently **only** been tested for with single textures. Take it all with a pinch of salt. It is highly recommended to experiment with the materials yourself.
 :::
-
 
 ### alpha_block 
 
-
-
+-   Backface-culling
+-   Completely Opaque
 
 ### alpha_block_color 
 
 -   Backface-Culling
-
+-   Translucencies as Transparent
 
 ### banner
 
+Inconsistently renders objects with transparency behind.
 
-
+-   N/A
 
 ### banner_pole
 
+Inconsistently renders objects with transparency behind.
 
-
+-   Backface-Culling
+-   Transparency
 
 ### beacon_beam
 
--   Backface-Culling
-
+-   Completely Opaque
 
 ### beacon_beam_transparent
 
--   Emissive
+This one is rather different. Particles that are behind it are rendered in front, and it appears to have "Frontface-Culling".
 
+-   Alpha Channel
 
 ### charged_creeper
 
--   Emissive
+Inconsistently renders objects with transparency behind.
 
+-   Emissive
+-   Set Translucency
 
 ### conduit_wind
 
 -   Transparency
-
+-   Translucency as Transparency
 
 ### entity
 
-
-
+-   Completely Opaque
+-   Backface Culling
 
 ### entity_alphablend  
 
--   Backface-Culling
+Inconsistently renders objects with transparency behind.
 
+-   Backface-Culling
+-   Alpha Channel
 
 ### entity_alphablend_nocolorentity_static
 
 -   Unknown
-
+-   Potential Crash
 
 ### entity_alphatest
 
-
-
+-   Transparency
+-   Translucency as Transparency
 
 ### entity_alphatest_change_color
 
 -   Transparency
--   Renders translucency as being opaque
-
+-   Translucency as Opaque
 
 ### entity_alphatest_change_color_glint
 
-
-
+-   Unknown
 
 ### entity_alphatest_glint
 
--   Transparency
-
+-   Unknown
 
 ### entity_alphatest_glint_item
 
--   Transparency
-
+-   Unknown
 
 ### entity_alphatest_multicolor_tint
 
 -   Greyscale
 -   Backface-Culling
-
+-   Transparency
+-   Translucency as Opaque
 
 ### entity_beam
 
-
-
+-   Transparency
+-   Translucency as Transparency
 
 ### entity_beam_additive
 
+Particles always render on top
+
+-   Transparency
 -   Emissive
 -   Backface-Culling
-
+-   Set Translucency
 
 ### entity_change_color
 
--   Unknown
-
+-   Completely Opaque
 
 ### entity_change_color_glint
 
-
-
+-   Unknown
 
 ### entity_custom  
 
--   Backface-Culling
+Inconsistently renders objects with transparency behind.
 
+-   Backface-Culling
+-   Alpha Channel
 
 ### entity_dissolve_layer0
 
--   Unknown
+Inconsistently renders objects with transparency behind.
 
+-   Unknown
 
 ### entity_dissolve_layer1
 
 -   Unknown
 
-
 ### entity_emissive
 
 -   Emissive
-
+-   Completely Opaque
+-   Backface-Culling
 
 ### entity_emissive_alpha
 
 -   Emissive
-
+-   Alpha Channel
+-   Transparency
 
 ### entity_emissive_alpha_one_sided
 
 -   Emissive
-
+-   Alpha Channel
+-   Transparency
+-   Backface-Culling
 
 ### entity_flat_color_line
 
-
-
+-   Backface-Culling
+-   Completely Opaque
 
 ### entity_glint
 
-
-
+-   Unknown
 
 ### entity_lead_base
 
+Inconsistently renders objects with transparency behind.
 
-
+-   Alpha Channel
 
 ### entity_loyalty_rope
 
-
-
+-   Unknown
 
 ### entity_multitexture
 
 -   Unknown
 
-
 ### entity_multitexture_alpha_test
 
 -   Unknown
-
 
 ### entity_multitexture_alpha_test_color_mask
 
 -   Unknown
 
-
 ### entity_multitexture_color_mask
 
 -   Unknown
-
 
 ### entity_multitexture_masked
 
 -   Unknown
 
-
 ### entity_multitexture_multiplicative_blend
 
 -   Unknown
 
-
 ### entity_nocull
 
-
-
+-   Completely Opaque
 
 ### guardian_ghost
 
--   Backface-Culling
+Inconsistently renders objects with transparency behind.
 
+-   Backface-Culling
+-   Alpha Channel
 
 ### item_in_hand
 
--   Unknown
-
+-   Completely Opaque
+-   Backface-Culling
 
 ### item_in_hand_entity_alphatest
 
 -   Transparency
-
+-   Translucency into either Opaque or Transparent depends on level.
 
 ### item_in_hand_entity_alphatest_color
 
-
-
+-   Transparency
+-   Translucency into either Opaque or Transparent depends on level.
 
 ### item_in_hand_glint
 
 -   Unknown
--   Backface-Culling
-
 
 ### item_in_hand_multicolor_tint
 
--   Unknown
-
+-   Greyscale
+-   Completely Opaque
+-   Backface-Culling
 
 ### map
 
-
-
+-   Transparency
+-   Translucency into either Opaque or Transparent depends on level.
 
 ### map_decoration
 
 -   Backface-Culling
 -   Transparency
-
-Renders translucency as transparency
+-   Translucency into either Opaque or Transparent depends on level.
 
 ### map_marker
 
--   Emissive
-
+-   Backface-Culling
+-   Transparency
+-   Translucency into either Opaque or Transparent depends on level.
+-   Potential Crash
 
 ### moving_block
 
--   Unknown
-
+-   Completely Opaque
+-   Backface-Culling
 
 ### moving_block_alpha
 
--   Unknown
-
+-   Backface-Culling
+-   Transparency
+-   Translucency into either Opaque or Transparent depends on level.
 
 ### moving_block_alpha_seasons
 
--   Unknown
-
+-   Translucency into either Opaque or Transparent depends on level.
+-   Transparency
 
 ### moving_block_alpha_single_side
 
--   Unknown
-
+-   Backface-Culling
+-   Transparency
+-   Translucency into either Opaque or Transparent depends on level.
 
 ### moving_block_blend
 
+Inconsistently renders objects with transparency behind.
 
--   Unknown
+-   Backface-Culling
+-   Alpha Channel
 
 ### moving_block_double_side
 
--   Unknown
-
+-   Completely Opaqe
 
 ### moving_block_seasons
 
--   Unknown
-
+-   Completely Opaque
+-   Backface-Culling
 
 ### opaque_block
 
-
-
+-   Completely Opaque
+-   Backface-Culling
 
 ### opaque_block_color
 
+-   Completely Opaque
 -   Backface-Culling
-
 
 ### opaque_block_color_uv2
 
+-   Completely Opaque
 -   Backface-Culling
 
 
+:::warning
+Please note, that these have also only been tested using a RenderDragon platform. Non-RenderDragon visuals may differ.
+:::
 
