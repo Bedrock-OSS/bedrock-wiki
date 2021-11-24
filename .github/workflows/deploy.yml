@@ -27,8 +27,10 @@ jobs:
           folder: docs/.vitepress/dist
       - name: Bully someone into fixing it
         if: ${{ failure() }}
-        uses: Bedrock-OSS/discord-bully@v1.0.3
+        uses: Bedrock-OSS/discord-bully@v1.0.4
         with:
           webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
-          emoji: <:PE_PandaBonk:885395101877166110>
+          tenorGifApiKey: ${{ secrets.TENOR_GIF_API_KEY }}
+          message: I blame %author% <:PE_PandaBonk:885395101877166110> %newline%%gif%
           title: 'Wiki deployment failed!'
+          gifQuery: fail
