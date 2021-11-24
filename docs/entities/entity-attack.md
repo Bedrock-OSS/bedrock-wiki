@@ -10,53 +10,49 @@ Entity attacks are a complex subject that require many different things to work 
 - Attack type, such as melee or ranged
 - Attack damage and effects
 
+## Selecting Targets
 
-## Types of Attack
+### Movement
 
-These are the currently known types of attack:
+Before a mob can attack, it will need various [movement components](/entities/entity-movement).
 
-| Component                                            | Note                                                     |
-| ---------------------------------------------------- | -------------------------------------------------------- |
-| [minecraft:behavior.melee_attack](#melee)            | Deals damage to a single target                          |
-| [minecraft:behavior.ranged_attack](#ranged)          | Fires a projectile towards a target                      |
-| [minecraft:area_attack](#area)                       | Effectively melee attacks on anything withing range      |
-| [minecraft:behavior.knockback_roar](#knockback-roar) | Similar to minecraft:area_attack, but much more flexible |
+Before starting to create your entity attacks, you should ensure that your entity can walk around, and navigate its saroundings. 
 
-But first, it's important to know that generally, attacks require a way of knowing *how* to attack another entity.
-
+:::warning
+Even if you are making an unmoving entity (like turret), you still need to add navigation component, so your entity can find the entity to shoot.
+:::
 
 ### Triggering Hostility
 
-[Movement](/entities/entity-movement) is required in most cases, so that mobs can change the distance between themselves and a potential target.
-Mobs will [pathfind](/entities/entity-movement), become hostile to, or both to another entity through the usage of some special components.
+There are many ways to trigger hostility. The most common type `nearest_attackable_target`, is shown here. It generally allows you to define which entities this entity is interested in attacking:
 
 <CodeHeader></CodeHeader>
 
 ```json
-      "minecraft:behavior.nearest_attackable_target": {
-        "must_see": true,                       //If true, potential target must be in mob's line of sight
-        "reselect_targets": true,               //Allows mob to select new target, if one is closer than current
-        "within_radius": 25.0,                  //Radius that potential target must be withing
-        "must_see_forget_duration": 17.0,       //If "must_see" = true, time before forgetting target
-        "entity_types": [
-          {
-            "filters": {                        //Entities to target. More details can be found further down the page
-              "test": "is_family",
-              "subject": "other",
-              "value": "player"
-            },
-            "max_dist": 48.0                    
-          }
-        ]
-      }
+"minecraft:behavior.nearest_attackable_target": {
+  "must_see": true, //If true, potential target must be in mob's line of sight
+  "reselect_targets": true, //Allows mob to select new target, if one is closer than current
+  "within_radius": 25.0, //Radius that potential target must be withing
+  "must_see_forget_duration": 17.0, //If "must_see" = true, time before forgetting target
+  "entity_types": [
+    {
+      "filters": { //Entities to attack
+        "test": "is_family",
+        "subject": "other",
+        "value": "player"
+      },
+      "max_dist": 48.0                    
+    }
+  ]
+}
 ```
 
-Following 3 structured roughly the same as given example.
+For more fine control, you may also consider using one of the following components:
 
 | Component                                                | Note                                                        |
 | -------------------------------------------------------- | ----------------------------------------------------------- |
 | minecraft:behavior.nearest_attackable_target             | Targets entity meeting the given requirements               |
-| minecraft:behavior.nearest_prioritized_attackable_target | Allows for "priority": [number] to be set after each filter |
+| minecraft:behavior.nearest_prioritized_attackable_target | Allows for "priority": [integer] to be set after each filter |
 | minecraft:behavior.defend_trusted_target                 | Targets entity that hurts any entities specified in filters |
 
 But there is also one more - `minecraft:lookat`
@@ -66,59 +62,99 @@ This last component is slightly different to the other three, as it is for detec
 <CodeHeader>BP/entities/enderman.json</CodeHeader>
 
 ```json
-      "minecraft:lookat": {
-        "search_radius": 64.0,
-        "set_target": true,              //Becomes a valid target if true
-        "look_cooldown": 5.0,
-        "filters": {
-          "all_of": [
-            {
-              "subject": "other",
-              "test": "is_family",
-              "value": "player"
-            },
-            {
-              "test": "has_equipment",
-              "domain": "head",
-              "subject": "other",
-              "operator": "not",
-              "value": "carved_pumpkin"  //All players not with carved_pumpkin equiped on head
-            }
-          ]
-        }
+"minecraft:lookat": {
+  "search_radius": 64.0,
+  "set_target": true, //Becomes a valid target if true
+  "look_cooldown": 5.0,
+  "filters": {
+    "all_of": [
+      {
+        "subject": "other",
+        "test": "is_family",
+        "value": "player"
+      },
+      {
+        "test": "has_equipment",
+        "domain": "head",
+        "subject": "other",
+        "operator": "not",
+        "value": "carved_pumpkin"  //All players not with carved_pumpkin equipped on head
       }
+    ]
+  }
+}
 ```
 
 
 ### Target selecting
+
+:::tip
+This section shows you how to configure the "Targeting" components, explained above.
+:::
+
 
 Mobs find targets by using [filters](https://bedrock.dev/docs/stable/Entities#Filters) can be used to determine which entities are a valid target, through `test`, `subject`, `operator`, and `value`.
 
 <CodeHeader></CodeHeader>
 
 ```json
-          "entity_types": [
-            {
-              "filters": {
-                "any_of": [
-                  { "test": "is_family", "subject": "other", "operator": "==", "value": "snow_golem" },
-                  { "test": "is_family", "subject": "other", "operator": "==", "value": "iron_golem" }
-                ]                //anything that is equal to either "snow_golem" or "iron_golem"
-              },
-              "max_dist": 24
-            },
-            {
-              "filters": {
-                "all_of": [
-                  { "test": "is_family", "subject": "other", "operator": "==", "value": "player" },
-                  { "test": "has_equiptment", "subject": "other", "domain": "head", "operator": "=!", "value": "turtle_helmet" }
-                ]                //anything equal to player AND not wearing "turtle_helmet" on head
-              },
-              "max_dist": 24
-            }
-          ]
+"entity_types":[
+    {
+        "filters":{
+            "any_of":[
+                {
+                    "test":"is_family",
+                    "subject":"other",
+                    "operator":"==",
+                    "value":"snow_golem"
+                },
+                {
+                    "test":"is_family",
+                    "subject":"other",
+                    "operator":"==",
+                    "value":"iron_golem"
+                }
+                //anything that is equal to either" snow_golem" or "iron_golem"
+            ]
+        },
+        "max_dist":24
+    },
+    {
+        "filters":{
+            "all_of":[
+                {
+                    "test":"is_family",
+                    "subject":"other",
+                    "operator":"==",
+                    "value":"player"
+                },
+                {
+                    "test":"has_equipment",
+                    "subject":"other",
+                    "domain":"head",
+                    "operator":"=!",
+                    "value":"turtle_helmet"
+                }
+                //anything equal to player AND not wearing "turtle_helmet" on head
+            ]
+        },
+        "max_dist":24
+    }
+]
 ```
+
 This would only target `snow_golem`s, `iron_golem`s, and `player`s that are **not** wearing `turtle_helmet`s.
+
+## Types of Attack
+
+Here are the available attacks:
+
+| Component                                            | Note                                                     |
+| ---------------------------------------------------- | -------------------------------------------------------- |
+| [minecraft:behavior.melee_attack](#melee)            | Deals damage to a single target                          |
+| [minecraft:behavior.ranged_attack](#ranged)          | Fires a projectile towards a target                      |
+| [minecraft:area_attack](#area)                       | Effectively melee attacks on anything withing range      |
+| [minecraft:behavior.knockback_roar](#knockback-roar) | Similar to minecraft:area_attack, but much more flexible |
 
 
 ### Melee
@@ -127,21 +163,23 @@ Melee attacks are the most common type of attack, they cause knockback, and have
 
 <CodeHeader></CodeHeader>
 
-```
-      "wiki:melee_attack": {
-        "minecraft:attack": {                  //defines the base stats of melee attacks
-          "damage": 3,
-          "effect_name": "slowness",
-          "effect_duration": 20
-        },
-        "minecraft:behavior.melee_attack": {   //defines the properties of the melee attack
-          "priority": 3,
-          "melee_fov": 90.0,                   //The allowable FOV the actor will use to determine if it can make a valid melee attack
-          "speed_multiplier": 1,
-          "track_target": false,
-          "require_complete_path": true
-        }
-      },
+
+```json
+"wiki:melee_attack": {
+  "minecraft:attack": {
+    "damage": 3,
+    "effect_name": "slowness",
+    "effect_duration": 20
+  },
+  "minecraft:behavior.melee_attack": {
+    "priority": 3,
+    "melee_fov": 90.0, //The allowable FOV the actor will use to determine if it can make a valid melee attack
+    "speed_multiplier": 1,
+    "track_target": false,
+    "require_complete_path": true
+  }
+}
+
 ```
 Set the damage, choose a mob effect, and change some additional properties.
 
@@ -177,7 +215,7 @@ Both the mob effect and duration timer are optional, but when they are used, the
 | poison          |
 | wither          |
 | health_boost    |
-| absorbtion      |
+| absorption      |
 | saturation      |
 | levitation      |
 | fatal_poison    |
@@ -193,19 +231,20 @@ Both the mob effect and duration timer are optional, but when they are used, the
 Fires specified [projectiles](/documentation/projectiles) towards target at set intervals.
 
 <CodeHeader></CodeHeader>
+
 ```json
-      "wiki:ranged_attack": {
-        "minecraft:behavior.ranged_attack": {     //defines the properties of the ranged attack
-          "priority": 2,
-          "ranged_fov": 90.0,                     //The allowable FOV the actor will use to determine if it can make a valid ranged attack
-          "attack_interval_min": 1.0,
-          "attack_interval_max": 3.0,
-          "attack_radius": 15.0
-        },
-        "minecraft:shooter": {                    //defines the projectile used for ranged attacks
-          "def": "wiki:projectile"
-        }
-      }
+"wiki:ranged_attack": {
+  "minecraft:behavior.ranged_attack": {
+    "priority": 2,
+    "ranged_fov": 90.0, //The allowable FOV the actor will use to determine if it can make a valid ranged attack
+    "attack_interval_min": 1.0,
+    "attack_interval_max": 3.0,
+    "attack_radius": 15.0
+  },
+  "minecraft:shooter": {
+    "def": "wiki:projectile"
+  }
+}
 ```
 
 List of vanilla projectiles:
@@ -234,12 +273,12 @@ Only one item has an effect on an entity's ranged attacks. Crossbows. If one is 
 <CodeHeader></CodeHeader>
 
 ```json
-    "minecraft:behavior.charge_held_item": {
-      "priority": 2,
-      "items": [
-        "minecraft:arrow"
-      ]
-    }
+"minecraft:behavior.charge_held_item": {
+  "priority": 2,
+  "items": [
+    "minecraft:arrow"
+  ]
+}
 ```
 
 Once `minecraft:behavior.charge_held_item` has been achieved, the entity will be able to execute the process of `minecraft:behavior.ranged_attack`, and will then need to charge again.
@@ -252,20 +291,28 @@ These attacks damage all entities within a set radius. It is different to both r
 <CodeHeader></CodeHeader>
 
 ```json
-      "minecraft:area_attack" : {
-        "damage_range": 1,                 //distance in blocks
-        "damage_per_tick": 2,
-        "cause": "contact",
-        "entity_filter": {
-           "any_of": [
-            { "test": "is_family", "subject": "other", "value": "player" },
-            { "test": "is_family", "subject": "other", "value": "monster" }
-          ]
-        }
+"minecraft:area_attack" : {
+  "damage_range": 1, //distance in blocks
+  "damage_per_tick": 2,
+  "cause": "contact",
+  "entity_filter": {
+     "any_of": [
+      {
+        "test": "is_family",
+        "subject": "other",
+        "value": "player"
+      },
+      {
+        "test": "is_family",
+        "subject": "other",
+        "value": "monster"
       }
+    ]
+  }
+}
 ```
 
-In most cases, a [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source). It  is important to take these into consideration, as certain items in vanilla can protect from some, like armour enchantments, and you can also make mobs immune to specific sources using `minecraft:damage_sensor`.
+[Entity damage sources](https://bedrock.dev/docs/stable/Addons#Entity%20Damage%20Source). It  is important to take these into consideration, as certain items in vanilla can protect from some, like armour enchantments, and you can also make mobs immune to specific sources using `minecraft:damage_sensor`.
 
 
 ### Knockback Roar
@@ -273,34 +320,35 @@ In most cases, a [source](https://bedrock.dev/docs/stable/Addons#Entity%20Damage
 Many similarities between this and `minecraft:area_attack`, this component though having much more flexibility.
 
 <CodeHeader></CodeHeader>
+
 ```json
-      "wiki:roar_attack": {
-        "minecraft:behavior.knockback_roar":{
-          "priority":2,
-          "duration":0.7,
-          "attack_time":0.2,
-          "knockback_damage":1,
-          "knockback_horizontal_strength":1,
-          "knockback_vertical_strength":1,
-          "knockback_range":5,
-          "knockback_filters":{
-            "test":"is_family",
-            "subject":"other",
-            "operator":"==",
-            "value":"player"
-          },
-          "damage_filters":{
-            "test":"is_family",
-            "subject":"other",
-            "operator":"==",
-            "value":"player"
-          },
-          "on_roar_end":{
-            "event":"wiki:other_event"
-          },
-          "cooldown_time":10
-        }
-      }
+"wiki:roar_attack": {
+  "minecraft:behavior.knockback_roar":{
+    "priority":2,
+    "duration":0.7,
+    "attack_time":0.2,
+    "knockback_damage":1,
+    "knockback_horizontal_strength":1,
+    "knockback_vertical_strength":1,
+    "knockback_range":5,
+    "knockback_filters":{
+      "test":"is_family",
+      "subject":"other",
+      "operator":"==",
+      "value":"player"
+    },
+    "damage_filters":{
+      "test":"is_family",
+      "subject":"other",
+      "operator":"==",
+      "value":"player"
+    },
+    "on_roar_end":{
+      "event":"wiki:other_event"
+    },
+    "cooldown_time":10
+  }
+}
 ```
 
 This is more like a shockwave of damage. Extremely versatile in uses. Produces a particle effect, which can be disabled by adding a modified version of `knockback_roar.json` to a resource pack's particles folder.
@@ -316,26 +364,27 @@ Entity Attacks don't have to be as simple as Mob being hostile towards X target,
 Express components and values to use for each difficulty.
 
 <CodeHeader>BP/entities/bee.json</CodeHeader>
+
 ```json
-            "easy_attack": {
-                "minecraft:attack": {
-                    "damage": 2
-                }
-            },
-            "normal_attack": {
-                "minecraft:attack": {
-                    "damage": 2,
-                    "effect_name": "poison",
-                    "effect_duration": 10
-                }
-            },
-            "hard_attack": {
-                "minecraft:attack": {
-                    "damage": 2,
-                    "effect_name": "poison",
-                    "effect_duration": 18
-                }
-            }
+"easy_attack": {
+    "minecraft:attack": {
+        "damage": 2
+    }
+},
+"normal_attack": {
+    "minecraft:attack": {
+        "damage": 2,
+        "effect_name": "poison",
+        "effect_duration": 10
+    }
+},
+"hard_attack": {
+    "minecraft:attack": {
+        "damage": 2,
+        "effect_name": "poison",
+        "effect_duration": 18
+    }
+}
 ```
 
 
@@ -351,31 +400,31 @@ Component groups are required to define the different modes of attack, such as:
 <CodeHeader></CodeHeader>
 
 ```json
-      "wiki:ranged_components": {
-        "minecraft:shooter": {
-          "def": "wiki:projectile"
-        },
-        "minecraft:behavior.ranged_attack": {
-          "priority": 3,
-          "ranged_fov": 90.0,
-          "attack_interval_min": 1.0,
-          "attack_interval_max": 3.0,
-          "attack_radius": 15.0
-        }
-      }
+"wiki:ranged_components": {
+  "minecraft:shooter": {
+    "def": "wiki:projectile"
+  },
+  "minecraft:behavior.ranged_attack": {
+    "priority": 3,
+    "ranged_fov": 90.0,
+    "attack_interval_min": 1.0,
+    "attack_interval_max": 3.0,
+    "attack_radius": 15.0
+  }
+}
 ```
 
 <CodeHeader></CodeHeader>
 
 ```json
-      "wiki:melee_components": {
-        "minecraft:attack": {
-          "damage": 6
-        },
-        "minecraft:behavior.melee_attack": {
-          "priority": 3
-        }
-      }
+"wiki:melee_components": {
+  "minecraft:attack": {
+    "damage": 6
+  },
+  "minecraft:behavior.melee_attack": {
+    "priority": 3
+  }
+}
 ```
 
 Those are examples of your attack modes, but they are not the only ones you can use. `wiki:ranged_components` and `wiki:melee_components` are generic names for the components within them, they can have any name, but it's what's nested inside them that counts.
@@ -388,34 +437,34 @@ These component groups won't actually do anything by themselves. Another compone
 <CodeHeader></CodeHeader>
 
 ```json
-      "wiki:melee_swap": {    //When triggered, adds component group for ranged and removes melee component group
-        "remove": {
-          "component_groups": [
-            "wiki:ranged_components"
-          ]
-        },
-        "add": {
-          "component_groups": [
-            "wiki:melee_components"
-          ]
-        }
-      }
+"wiki:melee_swap": {    //When triggered, adds component group for ranged and removes melee component group
+  "remove": {
+    "component_groups": [
+      "wiki:ranged_components"
+    ]
+  },
+  "add": {
+    "component_groups": [
+      "wiki:melee_components"
+    ]
+  }
+}
 ```
 <CodeHeader></CodeHeader>
 
 ```json
-      "wiki:ranged_swap": {   //When triggered, adds component froup for melee and removes ranged component group
-        "remove": {
-          "component_groups": [
-            "wiki:melee_components"
-          ]
-        },
-        "add": {
-          "component_groups": [
-            "wiki:ranged_components"
-          ]
-        }
-      }
+"wiki:ranged_swap": {   //When triggered, adds component froup for melee and removes ranged component group
+  "remove": {
+    "component_groups": [
+      "wiki:melee_components"
+    ]
+  },
+  "add": {
+    "component_groups": [
+      "wiki:ranged_components"
+    ]
+  }
+}
 ```
 The events are effectively for just turning attack modes on and off, by adding and removing different component groups.
 
@@ -430,21 +479,21 @@ To trigger the events, another component group is used. Sensors are components t
 <CodeHeader></CodeHeader>
 
 ```json
-      "wiki:switcher_range": {
-        "minecraft:target_nearby_sensor": {
-          "inside_range": 4.0,
-          "outside_range": 5.0,
-          "must_see":  true,
-          "on_inside_range": {           //when target is within 4 blocks range, trigger "wiki:melee_swap" event
-            "event": "wiki:melee_swap",
-            "target": "self"
-          },
-          "on_outside_range": {          //when target is beyond 5 blocks range, trigger "wiki:ranged_swap" event
-            "event": "wiki:ranged_swap",
-            "target": "self"
-          }
-        }
-      }
+"wiki:switcher_range": {
+  "minecraft:target_nearby_sensor": {
+    "inside_range": 4.0,
+    "outside_range": 5.0,
+    "must_see":  true,
+    "on_inside_range": { //When target is within 4 blocks range, trigger "wiki:melee_swap" event
+      "event": "wiki:melee_swap",
+      "target": "self"
+    },
+    "on_outside_range": { //When target is beyond 5 blocks range, trigger "wiki:ranged_swap" event
+      "event": "wiki:ranged_swap",
+      "target": "self"
+    }
+  }
+}
 ```
 
 - For sensing certain features of the environment of which the mob is exposed to
@@ -453,30 +502,30 @@ To trigger the events, another component group is used. Sensors are components t
 <CodeHeader></CodeHeader>
 
 ```json
-      "wiki:switcher_environment": {
-        "minecraft:environment_sensor": {
-          "triggers": [
-            {
-              "filters": {              //When underwater, trigger "wiki:melee_swap" event
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-              },
-              "event": "wiki:melee_swap"
-            },
-            {
-              "filters": {              //When not underwater, trigger "wiki:ranged_swap" event
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-              },
-              "event": "wiki:ranged_swap"
-            }
-          ]
-        }
+"wiki:switcher_environment": {
+  "minecraft:environment_sensor": {
+    "triggers": [
+      {
+        "filters": { //When underwater, trigger "wiki:melee_swap" event
+          "test": "is_underwater",
+          "subject": "self",
+          "operator": "==",
+          "value": true
+        },
+        "event": "wiki:melee_swap"
+      },
+      {
+        "filters": { //When not underwater, trigger "wiki:ranged_swap" event
+          "test": "is_underwater",
+          "subject": "self",
+          "operator": "==",
+          "value": false
+        },
+        "event": "wiki:ranged_swap"
       }
+    ]
+  }
+}
 ```
 
 This uses `Filters`, similar to how the [target is initially selected](#target-selecting).

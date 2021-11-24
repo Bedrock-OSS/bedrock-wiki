@@ -24,6 +24,8 @@ As you can see, Math-based animations are complicated and hard to understand. Fo
 
 Math-based animations can be written by hand. Simply create a new animation file, and write the math expressions. The format is fundamentally similar to keyframe animations. The vanilla resource files can be a valuable source of inspiration, and you should download the vanilla resource pack!
 
+For visualizing how a query or equation will behave over time, you should use [Molang Grapher](https://jannisx11.github.io/molang-grapher/) from [Jannis](https://twitter.com/jannisx11). 
+
 ### In Blockbench
 
 You can write and preview math-based animations in Blockbench.
