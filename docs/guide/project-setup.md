@@ -90,7 +90,7 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 -   "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version; use it.
 
--   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game. We are defining these files in "code form" so we can translate them later into other languages. For more information about localization, look [here](/concepts/text-localization).
+-   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game. We are defining these files in "code form" so we can translate them later into other languages. For more information about localization, look [here](/concepts/text-and-translations).
 
 -   The "`UUID`" field is **essential**, and will be discussed in more detail below.
 
@@ -148,7 +148,7 @@ You should place a copy of your desired image into both the RP and the BP. The i
 
 ## Language Files
 
-The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](/concepts/lang)
+The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](/concepts/text-and-translations)
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 

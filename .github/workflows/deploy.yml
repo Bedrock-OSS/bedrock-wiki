@@ -31,6 +31,6 @@ jobs:
         with:
           webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
           tenorGifApiKey: ${{ secrets.TENOR_GIF_API_KEY }}
-          message: I blame %author% <:PE_PandaBonk:885395101877166110> %newline%%gif%
+          message: I blame %author% <:PE_PandaBonk:885395101877166110>
           title: 'Wiki deployment failed!'
           gifQuery: fail
