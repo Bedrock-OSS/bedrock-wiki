@@ -27,7 +27,7 @@ jobs:
           folder: docs/.vitepress/dist
       - name: Bully someone into fixing it
         if: ${{ failure() }}
-        uses: Bedrock-OSS/discord-bully@v1.0.4
+        uses: Bedrock-OSS/discord-bully@v1.0.5
         with:
           webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
           tenorGifApiKey: ${{ secrets.TENOR_GIF_API_KEY }}
