@@ -22,7 +22,7 @@
 		<div>
 			<NavLink
 				v-for="item in props.item.children"
-				@change="(val) => (val ? (emit('active')) : undefined)"
+				@change="(val) => (val ? emit('active') : undefined)"
 				class="block"
 				:key="item.link"
 				:item="item"
@@ -35,14 +35,13 @@
 import type { INavCategory } from './Structure'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
 import NavLink from '../Navigation/NavLink.vue'
-import { defineEmit, defineProps, ref } from 'vue'
 
 const props = defineProps<{
 	item: INavCategory
 	open: boolean
 }>()
 
-const emit = defineEmit(['click', 'active'])
+const emit = defineEmits(['click', 'active'])
 </script>
 
 <style scoped>

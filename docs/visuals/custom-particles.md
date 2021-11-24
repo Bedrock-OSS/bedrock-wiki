@@ -24,7 +24,7 @@ Now for the Blockbench part.
 
 -   Right click the bone were your particle will be emitted from, and choose 'Add Locator' with the anchor icon. Name it something distinct, like 'l_expl_emitter'. Now move the emitter to the desired location.
 
-![](/assets/images/guide/custom_particles_1.png){:height="300px" width="300px"}
+![](/assets/images/guide/custom_particles_1.png)
 
 _Note: you can also use locators to define where a lead will leash to, if you name your locator 'lead'._
 
@@ -54,7 +54,7 @@ File structure:
 -   "texture" defines the texture file. Not that a single image file can hold textures for many particles.
 -   "material" is usually set to "particles_alpha" for particles.
 
-![](/assets/images/guide/custom_particles_5.png){:height="100px" width="100px" .pixelated}
+![](/assets/images/guide/custom_particles_5.png)
 
 That is the texture I'm going to use, it's size is `16x16`. (`RP/particles/wiki_particles.png`). As you can see, it has 4 different textures in it, each of them being a `8x8`. The upper row (_starting/top left corner at at 0, 0_) is the flipbook texture for "wiki:curvy*particle" and the bottom row (\_top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
 
