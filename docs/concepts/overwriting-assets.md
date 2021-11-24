@@ -75,7 +75,7 @@ Many assets can also be registered into some kind of "registration system" file.
 The following files work in this way:
 
 -   All UI files
--   [All language files](concepts/text-and-translations)
+-   [All language files](/concepts/text-and-translations)
 -   `item_textures.json`
 -   `flipbook_textures.json`
 -   `terrain_textures.json`
