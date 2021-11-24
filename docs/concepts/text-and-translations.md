@@ -85,7 +85,7 @@ As you can see, lang-codes can be used pretty much wherever you write text in yo
 
 When using lang codes in addons, you can usually use the string.
 
-In game (signs, books, etc), use [tellraw](commands/tellraw): `{"rawtext":[{"translate" : "my.lang.code"}]}`
+In game (signs, books, etc), use [tellraw](/commands/tellraw): `{"rawtext":[{"translate" : "my.lang.code"}]}`
 
 You can also create a text directory and .lang files in Behaviour Packs, but only to define pack.title and pack.description for the BP.
 
