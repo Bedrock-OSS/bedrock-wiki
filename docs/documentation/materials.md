@@ -1,5 +1,5 @@
 ---
-title: Vanilla_Materials
+title: Vanilla Materials
 show_toc: false
 ---
 
