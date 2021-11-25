@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./404.md.f85d5643.js";const f='{"title":"Entities","description":"","frontmatter":{"title":"Entities"},"relativePath":"entities/index.md","lastUpdated":1637856905013}',i={};function n(s,r,o,c,d,p){return a(),e("div")}var l=t(i,[["render",n]]);export{f as __pageData,l as default};
