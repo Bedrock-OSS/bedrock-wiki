@@ -72,6 +72,8 @@ It's important to remember that `runtime_identifier` will only parse the *hard-c
 -   Will always be pushable through by other entities.
 -   Cannot be configured to receive damage.
 -   Cannot change the direction it faces.
+-   Can revive the Ender Dragon.
+-   Will be spawned with fire.
 
 ---
 
@@ -188,3 +190,15 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
 
+---
+
+### minecraft:ender_dragon
+
+-   Adds the Ender Dragon death effect to the entity.
+-   Can destroy blocks.
+
+---
+
+### minecraft:wither
+
+-   Explodes on death.
