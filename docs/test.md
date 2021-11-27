@@ -11,10 +11,11 @@ You can make info panels like this
 You can make warning panels like this
 :::
 
-:::error Header?!
+:::error
+No header.
 You can make error panels like this
 :::
 
-::: danger STOP
+:::danger STOP
 Danger zone, do not proceed
 :::
