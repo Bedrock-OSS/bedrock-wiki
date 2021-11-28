@@ -11,9 +11,8 @@ This tutorial will explain how to make entity sleep.
 ## Features
 
 -  Entity sleeps during the night and wakes up at day time
--  Interaction with entity will wake it up
--  If entity is hurt, it wakes up and again goes sleeping after a while
-
+-  Interaction with entity will wake it up and after a while it goes sleeping again
+-  If entity is hurt, it wakes up
 ## Behavior Pack
 
 In this section behavior pack components will be discussed.
@@ -32,7 +31,7 @@ Let's start with some basic components that you need to add to your entity.
 }
 ```
 
-Undocumented, needed for entity be able to sleep.
+Undocumented, needed for entity to be able to sleep.
 
 <CodeHeader>BP/entities/sleeping_entity.json#components</CodeHeader>
 
@@ -50,11 +49,11 @@ Undocumented, needed for entity be able to sleep.
 }
 ```
 
-This component is needed for entity understand when to sleep.
+This component is required for entity understand when to sleep.
 It runs event if it isn't day time.
 
 :::warning
-You need some basic navigation components for your entity be able to move.
+You need some basic navigation components for your entity be able to move to bed.
 :::
 
 ### Component Groups
