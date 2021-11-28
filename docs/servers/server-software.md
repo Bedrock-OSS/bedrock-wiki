@@ -45,7 +45,7 @@ Software will be marked as discontinued after roughly one month of inactivity.
 
 ### JavaScript
 
--   [BlueBird] (https://github.com/BlueBirdMC/BlueBird)
+-   [BlueBird](https://github.com/BlueBirdMC/BlueBird)
 
 ### Rust
 
