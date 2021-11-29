@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as r}from"./404.md.9b268413.js";const l='{"title":"Scripting","description":"","frontmatter":{"title":"Scripting"},"relativePath":"scripting/index.md","lastUpdated":1638128222352}',a={};function i(n,c,o,s,p,d){return r(),e("div")}var f=t(a,[["render",i]]);export{l as __pageData,f as default};
