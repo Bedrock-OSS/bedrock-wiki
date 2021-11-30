@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./404.md.ca7c1a7f.js";const _='{"title":"Animation Controllers","description":"","frontmatter":{"title":"Animation Controllers"},"relativePath":"animation-controllers/index.md","lastUpdated":1638174400828}',o={};function n(r,i,s,c,l,d){return a(),e("div")}var m=t(o,[["render",n]]);export{_ as __pageData,m as default};
