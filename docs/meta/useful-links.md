@@ -111,6 +111,7 @@ Important links have a ⭐.
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
+-   [Windows 10 Non-renderdragon install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
 
 ## Community-Addon Discords
 
