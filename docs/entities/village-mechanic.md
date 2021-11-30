@@ -114,7 +114,7 @@ Use in pair with:
 }
 ```
 
-### Main Behavior
+## Main Behavior
 
 <CodeHeader></CodeHeader>
 
@@ -137,7 +137,7 @@ Use in pair with:
 
 ### Sleep
 
-Requires "dweller_role" set to be "inhabitant" also Make sure your entity already had sleep animation otherwise they will just standing still on the bed.
+Requires "dweller_role" set to be "inhabitant" and make sure your entity already had sleep animation otherwise they will just standing still on the bed. Also this behavior doesn't have wake system like on the villager unless using damage sensor that will trigger the event for removing component group that contain this behavior.
 
 <CodeHeader></CodeHeader>
 
@@ -181,7 +181,7 @@ Requires "dweller_role" set to be "inhabitant" also if "preferred_profession" do
 ### Gathering
 
 Allowing the entity to gather.
-Requires "dweller_role" set to be "inhabitant"
+Requires "dweller_role" set to be "inhabitant".
 
 ```json
 "minecraft:behavior.mingle": {
@@ -372,10 +372,12 @@ Always remember that sleeping, working, gathering doesn't properly working witho
 
 ## Other Behavior
 
-All of this is useable by custom entities and have relation to the village:
-`"minecraft:behavior.move_to_village"` is used by Pillager this may keep the entity to stay in the village.
-`"minecraft:behavior.stroll_towards_village"` is used by fox to seach a village and go there.
-`"minecraft:behavior.inspect_bookshelf"` used by librarian villager allows an entity to look at and inspect a bookshelf.
-`"minecraft:behavior.explore_outskirts"` allowing the entity to explore beyond the bounds of village(Need to put it in schedule).
-`"minecraft:behavior.defend_village_target"` only use this on melee entity. Ranged entity can accidentally shoot and hurt any entity with "dweller_role": "inhabitant", making the other ranged entity attack the ranged entity that accidentally shoot or hurt it .
-`"minecraft:behavior.nap"` used by the fox. probably have more flexibility as capable detecting entity and various filter.
+All of this is useable by custom entities and have relation to the village or the villager:
+| Behavior | Uses | Note |
+| --------- | ------- | ------ |
+| `"minecraft:behavior.defend_village_target"` | Allowing the entity to attack other entity that hurt the entity who had the "dweller_role": "inhabitant". | only use this on melee entity. Ranged entity can accidentally shoot and hurt any entity with "dweller_role": "inhabitant", making the other ranged entity attack the ranged entity that accidentally shoot or hurt it. |
+| `"minecraft:behavior.explore_outskirts"` | Allowing the entity to explore beyond the bounds of village. | Use scheduler, otherwise the entity will staying outside the village. |
+| `"minecraft:behavior.hide"` | Is used by villager to hide and stay at defined POI. | Currently, there is no documentation for the POI type thus I recommended not to change it other than "poi_type": "bed". |
+| `"minecraft:behavior.inspect_bookshelf"` | Used by librarian villager allows an entity to look at and inspect a bookshelf. | Use scheduler, otherwise the entity will staying near the bookshelf. |
+| `"minecraft:behavior.move_to_village"` | Used by Illager and also witch allows an entity to travel to a random x,y,z coordinate in a village. | - |
+| `"minecraft:behavior.nap"` | Used by Fox to take a nap. | Similar with sleep but offer more flexibility also had built-in wake sytem by detecting specific entity. |
