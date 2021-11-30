@@ -375,7 +375,7 @@ Always remember that sleeping, working, gathering doesn't properly working witho
 All of this is useable by custom entities and have relation to the village or the villager:
 | Behavior | Uses | Note |
 | --------- | ------- | ------ |
-`"minecraft:behavior.defend_village_target"` | Allowing the entity to attack other entity that hurt the entity who had the "dweller_role": "inhabitant". | only use this on melee entity. Ranged entity can accidentally shoot and hurt any entity with "dweller_role": "inhabitant", making the other ranged entity attack the ranged entity that accidentally shoot or hurt it. |
+| `"minecraft:behavior.defend_village_target"` | Allowing the entity to attack other entity that hurt the entity who had the "dweller_role": "inhabitant". | only use this on melee entity. Ranged entity can accidentally shoot and hurt any entity with "dweller_role": "inhabitant", making the other ranged entity attack the ranged entity that accidentally shoot or hurt it. |
 | `"minecraft:behavior.explore_outskirts"` | Allowing the entity to explore beyond the bounds of village. | Use scheduler, otherwise the entity will staying outside the village. |
 | `"minecraft:behavior.hide"` | Is used by villager to hide and stay at defined POI. | Currently, there is no documentation for the POI type thus I recommended not to change it other than "poi_type": "bed". |
 | `"minecraft:behavior.inspect_bookshelf"` | Used by librarian villager allows an entity to look at and inspect a bookshelf. | Use scheduler, otherwise the entity will staying near the bookshelf. |
