@@ -53,4 +53,13 @@ Now add this damage sensor component into your `player.json`s `"components": {}`
       }
    ]
 }
+
 ```
+
+## Projectiles
+
+Due to the primative filters used by projectile entities, you have to use a completely different method to achieve this.
+
+
+
+
