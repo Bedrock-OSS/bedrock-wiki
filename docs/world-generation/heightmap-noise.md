@@ -52,7 +52,7 @@ The scatter feature is the main feature which we'll be using to generate the ter
 		"z": 0,
 		"y": {
 			"extent": [
-				0,
+				-64,
 				"t.height"
 			],
 			"distribution": "fixed_grid"
@@ -67,7 +67,7 @@ Let me explain whats happening in the `iterations`:
   After that we're querying perlin using the `q.noise` query which returns values ranging from -1 to 1 and dividing that by a value which smooths out the function.
   Then we're multiplying the whole function by a value which in simple words is basically the variation in the terrain.
 
-So what's happening here is that we are getting values from the `t.height` temp and assigning them to the y extent ranging from 0 to the value thus generating a column. Now this value is going to vary column by column but not in a random way as `q.noise` queryies Perlin noise, meaning the values are relative to each other. So instead of getting values like 64,69,45,100,7,56 we are getting values like 64,65,66,68,69,68,66,65 and so on.
+So what's happening here is that we are getting values from the `t.height` temp and assigning them to the y extent ranging from -64 to the value thus generating a column. Now this value is going to vary column by column but not in a random way as `q.noise` queryies Perlin noise, meaning the values are relative to each other. So instead of getting values like 64,69,45,100,7,56 we are getting values like 64,65,66,68,69,68,66,65 and so on.
 
 ## Feature Rule
 
