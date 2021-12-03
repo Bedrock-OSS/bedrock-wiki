@@ -82,20 +82,20 @@ _Exact behavior unknown_
 
 Deals damage on hit.
 
-| Name                           | Type                             | Description                   |
-| ------------------------------ | -------------------------------- | ----------------------------- |
-| damage                         | Integer/Integer Array [min, max] | Damage dealt to entity on hit |
-| semi_random_diff_damage        | Boolean                          |                               |
-| max_critical_damage            | Decimal                          |                               |
-| min_critical_damage            | Decimal                          |                               |
-| power_multiplier               | Decimal                          |                               |
-| channeling                     | Boolean                          |                               |
-| set_last_hurt_requires_damage  | Boolean                          |                               |
-| destroy_on_hit_requires_damage | Boolean                          |                               |
-| filter                         | String                           |                               |
-| destroy_on_hit                 | Boolean                          |                               |
-| knockback                      | Boolean                          |                               |
-| catch_fire                     | Boolean                          |                               |
+| Name                           | Type                             | Description                                                          |
+| ------------------------------ | -------------------------------- | ---------------------------------------------------------------------|
+| damage                         | Integer/Integer Array [min, max] | Damage dealt to entity on hit                                                                  |
+| semi_random_diff_damage        | Boolean                          |                                                                    |
+| max_critical_damage            | Decimal                          |                                                                    |
+| min_critical_damage            | Decimal                          |                                                                    |
+| power_multiplier               | Decimal                          |                                                                    |
+| channeling                     | Boolean                          |                                                                    |
+| set_last_hurt_requires_damage  | Boolean                          |                                                                    |
+| destroy_on_hit_requires_damage | Boolean                          |                                                                    |
+| filter                         | String                           | Entity to affect. Much more primative than filters used elsewhare, as it cannot "test" for anything other than an identifier |
+| destroy_on_hit                 | Boolean                          |                                                                    |
+| knockback                      | Boolean                          |                                                                    |
+| catch_fire                     | Boolean                          | Dictates wether or not targets will be engulfed in flames                                                               |
 
 ### definition_event
 
@@ -110,11 +110,11 @@ Calls an event on hit.
 | splash_area        | Decimal | Area of entities                                    |
 | event_trigger      | Object  | Event to trigger. Structure below.                  |
 
-| Name    | Type   | Description         |
-| ------- | ------ | ------------------- |
-| event   | String | Event to trigger    |
-| target  | String | Target of the event |
-| filters | Object |                     |
+| Name    | Type   | Description                            |
+| ------- | ------ | -------------------------------------- |
+| event   | String | Event to trigger                       |
+| target  | String | Target of the event                    |
+| filters | Object | Crieteria required in order to trigger |
 
 ### stick_in_ground
 
