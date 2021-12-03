@@ -30,6 +30,7 @@ tags:
 | desert                           | desert, monster, overworld                                                                                       |
 | desert_hills                     | desert, hills, monster, overworld                                                                                |
 | desert_mutated                   | desert, monster, mutated, overworld_generation                                                                   |
+| dripstone_caves                  | caves, overworld, dripstone_caves, monster                                                                       |
 | extreme_hills                    | animal, extreme_hills, monster, overworld                                                                        |
 | extreme_hills_edge               | animal, edge, extreme_hills, monster, mountain, overworld                                                        |
 | extreme_hills_mutated            | animal, extreme_hills, monster, mutated, overworld                                                               |
@@ -39,11 +40,14 @@ tags:
 | forest                           | animal, forest, monster, overworld, bee_habitat                                                                  |
 | forest_hills                     | animal, hills, monster, overworld, forest, bee_habitat                                                           |
 | frozen_ocean                     | frozen, monster, ocean, overworld                                                                                |
+| frozen_peaks                     | mountains, monster, overworld                                                                                    |
+| grove                            | mountains, monster, overworld, grove                                                                             |
 | frozen_river                     | frozen, overworld, river                                                                                         |
 | hell                             | nether, nether_wastes, spawn_magma_cubes, spawn_zombified_piglin, spawn_few_piglins, spawn_ghast, spawn_endermen |
 | ice_mountains                    | frozen, ice, mountain, overworld                                                                                 |
 | ice_plains                       | frozen, ice, ice_plains, overworld                                                                               |
 | ice_plains_spikes                | frozen, ice_plains, monster, mutated, overworld                                                                  |
+| jagged_peaks                     | mountains, monster, overworld                                                                                    |
 | jungle                           | animal, jungle, monster, overworld, rare                                                                         |
 | jungle_edge                      | animal, edge, jungle, monster, overworld                                                                         |
 | jungle_edge_mutated              | animal, edge, jungle, monster, mutated, overworld_generation                                                     |
@@ -51,6 +55,8 @@ tags:
 | jungle_mutated                   | animal, jungle, monster, mutated, overworld_generation                                                           |
 | legacy_frozen_ocean              | frozen, ocean, overworld                                                                                         |
 | lukewarm_ocean                   | lukewarm, monster, ocean, overworld                                                                              |
+| lush_caves                       | caves, lush_caves, overworld, monster                                                                            |
+| meadow                           | mountains, monster, overworld, meadow, bee_habitat                                                               |
 | mega_taiga                       | animal, forest, mega, monster, overworld, rare, taiga                                                            |
 | mega_taiga_hills                 | animal, forest, hills, mega, monster, overworld, taiga                                                           |
 | mesa                             | mesa, monster, overworld                                                                                         |
@@ -72,8 +78,10 @@ tags:
 | savanna_mutated                  | animal, monster, mutated, overworld, savanna                                                                     |
 | savanna_plateau                  | animal, monster, overworld, plateau, savanna                                                                     |
 | savanna_plateau_mutated          | animal, monster, mutated, overworld, plateau, savanna                                                            |
+| snowy_slopes                     | mountains, monster, overworld, snowy_slopes                                                                      |
 | soulsand_valley                  | nether, soulsand_valley, spawn_ghast, spawn_endermen                                                             |
 | stone_beach                      | beach, monster, overworld, stone                                                                                 |
+| stony_peaks                      | mountains, monster, overworld                                                                                    |
 | sunflower_plains                 | animal, monster, mutated, overworld, plains, bee_habitat                                                         |
 | swampland                        | animal, monster, overworld, swamp                                                                                |
 | swampland_mutated                | animal, monster, mutated, swamp, overworld_generation                                                            |
