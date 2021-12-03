@@ -56,10 +56,120 @@ Now add this damage sensor component into your `player.json`s `"components": {}`
 
 ```
 
-## Projectiles
+### Projectiles
 
-Due to the primative filters used by projectile entities, you have to use a completely different method to achieve this.
+Due to the primitive filters used by projectile entities, you have to use a completely different method to achieve this.
 
+The process uses:
+-  Tags
+-  Ticking
+-  Hurt on Condition
+-  Functions
 
+<CodeHeader>BP/entities/player.json#components</CodeHeader>
 
+```json
+
+//"components"
+"minecraft:timer": { //This is for applying teams to a projectile to nearby
+   "time": [         //untagged projectiles, through an event.
+      0.0,
+      0.1
+   ],
+   "looping": true,
+   "time_down_event": {
+      "event": "wiki:projectile_team",
+      "target": "self"
+   }
+},
+"minecraft:hurt_on_condition": { //The projectile will be unable to directly deal
+   "damage_conditions": [        //damage, so instead we'll apply tags to the
+      {                          //player, which will trigger this . . .
+         "filters": {
+            "test": "has_tag",
+            "value": "damage"
+         },
+         "cause": "projectile",
+         "damage_per_tick": 4
+      }
+   ]
+},
+"minecraft:damage_sensor": {     //. . . which in turn, will trigger an event
+   "triggers": {                 //to remove this tag, so the damage only
+      "cause": "projectile",     //happens once.
+      "deals_damage": true,
+      "on_damage": {
+         "filters": {
+            "test": "has_tag",
+            "value": "damage"
+         },
+         "event": "wiki:stop_damage"
+      }
+   }
+}
+
+//"events"
+"wiki:projectile_team": {  //The function here will apply tags depending on
+   "run_command": {        //which team tags the player has.
+      "command": [
+         "function wiki-apply_team"
+      ]
+   }
+},
+"wiki:stop_damage": {      //The event that simply removes the damage tag.
+   "run_command": {
+      "command": [
+         "tag @s remove damage"
+      ]
+   }
+}
+```
+
+<CodeHeader>BP/functions/wiki-apply_team.mcfunction</CodeHeader>
+
+```
+execute @s[tag=team1] ~ ~ ~ tag @p[rm=0,r=1,type=arrow,tag=] team1
+execute @s[tag=team2] ~ ~ ~ tag @p[rm=0,r=1,type=arrow,tag=] team2
+execute @s[tag=team3] ~ ~ ~ tag @p[rm=0,r=1,type=arrow,tag=] team3
+execute @s[tag=team4] ~ ~ ~ tag @p[rm=0,r=1,type=arrow,tag=] team4
+
+```
+
+<CodeHeader>BP/entities/arrow.json</CodeHeader>
+
+```json
+
+//"components"
+"on_hit": {               //On_hit, trigger an event . . .
+   "definition_event": {
+      "affect_projectile": true,
+      "event_trigger": {
+         "event": "wiki:hit",
+         "target": "self"
+      }
+   },
+   "remove_on_hit": {}
+}
+
+//"events"
+"wiki:hit": {             //. . . which executes a function, applying
+   "run_command": {       //the damage tag to any players of a different team!
+      "command": [
+         "function wiki-apply_damage"
+      ]
+   }
+}
+```
+
+<CodeHeader>BP/functions/wiki-apply_damage.mcfunction</CodeHeader>
+
+```
+execute @s[tag=team1] ~ ~ ~ tag @p[rm=0,r=1,tag=!team1] add damage
+execute @s[tag=team2] ~ ~ ~ tag @p[rm=0,r=1,tag=!team2] add damage
+execute @s[tag=team3] ~ ~ ~ tag @p[rm=0,r=1,tag=!team3] add damage
+execute @s[tag=team4] ~ ~ ~ tag @p[rm=0,r=1,tag=!team4] add damage
+
+```
+
+If you modify `arrow.json`, take into consideration the component groups.
 
