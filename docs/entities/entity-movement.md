@@ -2,14 +2,14 @@
 title: Entity Movement
 ---
 
-In Minecraft, entities have the ability to move through the world, either by walking, swimming, or flying. To get these behaviors, your entity will generally need quite a few behaviors, broken out into various types.
+In Minecraft, entities have the ability to move through the world, either by walking, swimming or flying. To get these behaviors, your entity will generally need quite a few behaviors, broken out into various types.
 
 As you read this tutorial, keep in mind that your entity will need at least:
 
 -   [A component that sets the entities movement speed.](#movement-speed)
 -   [A component to set how the entity will move (walking, flying, etc)](#movement-type)
 -   [A component to set the entities navigation abilities, so it can generate paths.](#navigation-abilities)
--   [A component that sets where/why/when the entity should move (AI Goals).](#ai)
+-   [A component that sets where/when the entity should move (AI Goals).](#ai)
 
 :::tip
 The best way to create a moving entity is by picking a similar entity from the vanilla behavior pack, and copying the components into your entity.
@@ -87,7 +87,7 @@ On top of the movement and the navigation component, there exist many additional
 | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [minecraft:annotation.break_door](https://bedrock.dev/docs/stable/Entities#minecraft%3Aannotation.break_door) | Allows entity to break doors. It must also be turned on in the navigation component.                                              |
 | [minecraft:annotation.open_door](https://bedrock.dev/docs/stable/Entities#minecraft%3Aannotation.open_door)   | Allows entity to open doors. It must also be turned on in the navigation component.                                               |
-| [minecraft:buoyant](https://bedrock.dev/docs/stable/Entities#minecraft%3Abuoyant)                             | Specify which liquids the entity can float in.                                                                                    |
+| [minecraft:buoyant](https://bedrock.dev/docs/stable/Entities#minecraft%3Abuoyant)                             | Specifies which liquids the entity can float in.                                                                                    |
 | [minecraft:can_climb](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_climb)                         | Allows this entity to climb up ladders.                                                                                           |
 | [minecraft:can_fly](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_fly)                             | Marks the entity as being able to fly. The pathfinder won't be restricted to paths where a solid block is required underneath it. |
 | [minecraft:can_power_jump](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_power_jump)               | Allows the entity to power jump like the horse does in vanilla.                                                                   |
@@ -101,7 +101,7 @@ There are also components like `minecraft:preferred_path`, which will modify nav
 
 The navigation component tells the entity _how_ to generate paths, but it doesn't say _when_ or _where_ to generate paths. This is what the AI components are for.
 
-AI Goals are prefixed with `behavior`, and follow a priority system to pick which behavior to run. The lower priorities will be picked first.
+AI Goals are prefixed with `behavior` and follow a priority system to pick which behavior to run. The lower priorities will be picked first.
 
 In general, you should usually add quite a few AI components, with different priorities. Layered together, these will create realistic movement and behavior for your entity. As always, vanilla entities provide a good template for which components to add, and with what properties/priorities.
 

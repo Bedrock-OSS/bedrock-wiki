@@ -218,7 +218,7 @@ item.wiki:gem.name=Gem
 item.wiki:meal.name=Meal
 ```
 
-[You can learn more about .lang here](/concepts/lang)
+[You can learn more about .lang here](/concepts/text-and-translations)
 
 <div markdown="0" class="folder-structure">
     <ul>
