@@ -46,7 +46,7 @@ The scatter feature is the main feature which we'll be using to generate the ter
 		"description": {
 			"identifier": "wiki:column"
 		},
-		"iterations": "t.height=64+(q.noise(v.origin/64,v.originx/64))*16; return t.height;",
+		"iterations": "t.height=64+(q.noise(v.originz/64,v.originx/64))*16; return t.height;",
 		"places_feature": "wiki:stone_feature",
 		"x": 0,
 		"z": 0,
