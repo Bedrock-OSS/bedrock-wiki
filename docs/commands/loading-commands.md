@@ -11,7 +11,7 @@ Sometimes when writing functions or creating addons it is useful to be able to r
 ![](/assets/images/commands/loading-commands/loading-commands-showcase.gif)
 
 ## Player Join
-In order to check if a new player has joined the world we need to run commands every tick. For this we use [tick.json]((/commands/mcfunction.html#creating-tick-json)).
+In order to check if a new player has joined the world we need to run commands every tick. For this we use [tick.json](/commands/mcfunction.html#creating-tick-json).
 
 Here is what your file could look like: 
 
