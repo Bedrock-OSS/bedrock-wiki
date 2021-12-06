@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./404.md.8c97a1d3.js";const _='{"title":"Blocks","description":"","frontmatter":{"title":"Blocks"},"relativePath":"blocks/index.md","lastUpdated":1638719900295}',o={};function c(s,r,n,d,i,l){return a(),e("div")}var f=t(o,[["render",c]]);export{_ as __pageData,f as default};
