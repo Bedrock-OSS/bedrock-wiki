@@ -1,6 +1,6 @@
 ---
 title: Intro to Blocks
-nav_order: 1
+category: General
 tags:
     - guide
 ---
@@ -45,15 +45,15 @@ Block behaviors are structured similarly to entities: they contain a description
 
 -   `"identifier"` under `"description"` is already familiar to us.
 -   `"components"`
-	-   `"minecraft:loot"` defines a loot table path for the block to drop. We'll look into loot tables in the next chapter.
-	-   `"minecraft:destroy_time"` defines how long the player will need to mine the block until it breaks. Currently, it isn't possible to set different destroy times for different tools.
-	-   `"minecraft:explosion_resistance"` defines the chance for an explosion to break the block. Higher the value, lower the chance.
-	-   `"minecraft:friction"` defines how much friction the block has. For example, soulsand and has a high value for friction, so it slows the players. Ice has a lower friction value, so it has a slippery effect. The friction of classic blocks such as wood or stone is `0.6`.
-	-   `"minecraft:flammable"`
-		-   `"flame_odds"` defines how likely the block is to catch fire.
-		-   `"burn_odds"` defines how likely the block is to be destroyed by fire.
-	-   `"minecraft:map_color"` is the hex color code that will be displayed on a Minecraft map to symbolize this block. `#FFFFFF` means white. You can get hex codes for other colors [here](https://www.google.com/search?q=hex+color+picker&rlz=1C1CHBF_enDE886DE886&oq=hex+color+picker&aqs=chrome..69i57j0l7.2293j0j8&sourceid=chrome&ie=UTF-8).
-	-   `"minecraft:block_light_emission"` defines the light level the block will output. Light level is out of 15, so to get a light level of 9, insert `0.6` as the value.
+    -   `"minecraft:loot"` defines a loot table path for the block to drop. We'll look into loot tables in the next chapter.
+    -   `"minecraft:destroy_time"` defines how long the player will need to mine the block until it breaks. Currently, it isn't possible to set different destroy times for different tools.
+    -   `"minecraft:explosion_resistance"` defines the chance for an explosion to break the block. Higher the value, lower the chance.
+    -   `"minecraft:friction"` defines how much friction the block has. For example, soulsand and has a high value for friction, so it slows the players. Ice has a lower friction value, so it has a slippery effect. The friction of classic blocks such as wood or stone is `0.6`.
+    -   `"minecraft:flammable"`
+        -   `"flame_odds"` defines how likely the block is to catch fire.
+        -   `"burn_odds"` defines how likely the block is to be destroyed by fire.
+    -   `"minecraft:map_color"` is the hex color code that will be displayed on a Minecraft map to symbolize this block. `#FFFFFF` means white. You can get hex codes for other colors [here](https://www.google.com/search?q=hex+color+picker&rlz=1C1CHBF_enDE886DE886&oq=hex+color+picker&aqs=chrome..69i57j0l7.2293j0j8&sourceid=chrome&ie=UTF-8).
+    -   `"minecraft:block_light_emission"` defines the light level the block will output. Light level is out of 15, so to get a light level of 9, insert `0.6` as the value.
 
 Let's create some more blocks in `BP/blocks`. I created these four block for the tutorial:
 
@@ -106,9 +106,9 @@ As you can see, every block's identifier is applied with textures and step sound
 
 -   `"wiki:blocky"` has textures set to the shortname `"blocky"`. We'll define it in a file similar to `item_texture.json` later.
 -   `"wiki:sapp_log"` has textures broken into 3 parts:
-	-   `"up"` for the upper face of the block.
-	-   `"down"` for the bottom face of the block.
-	-   `"side"` for the remaining four faces. Each one of these has a separate texture shortname applied.
+    -   `"up"` for the upper face of the block.
+    -   `"down"` for the bottom face of the block.
+    -   `"side"` for the remaining four faces. Each one of these has a separate texture shortname applied.
 -   `"wiki:compass_block"` has textures broken into more sub-textures. Instead of `"side"`, we have a different texture shortname set for the `"north"` side, the `"south"` side, the `"west"` side, and the `"east"` side.
 -   `"wiki_flashing`" has `"flashing"` defined in the same way as `"wiki_blocky"`.
 

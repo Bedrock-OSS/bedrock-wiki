@@ -1,12 +1,13 @@
 ---
 title: Block Shapes
+category: Documentation
 ---
 
 Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accesible files.
 
 ## Application
 
- They are added in the resource pack's file, `blocks.json`, using child `"blockshape"` in a block's object. This would look something like this:
+They are added in the resource pack's file, `blocks.json`, using child `"blockshape"` in a block's object. This would look something like this:
 
 <CodeHeader></CodeHeader>
 
@@ -22,25 +23,29 @@ Blockshapes are essentially block geometries or models that are hard-coded into 
 
 ## Known Issues
 
- Currently, blockshapes do **not** work for custom blocks through the usage of 1 resource pack, it just doesn't work. Although by utilising the hierarchy system of active resource packs, you may spread the contents of `blocks.json` over 2 separate resource packs, allowing for blockshapes to be applied.
- 
- Example of `blocks.json` from first pack:
- ```json
+Currently, blockshapes do **not** work for custom blocks through the usage of 1 resource pack, it just doesn't work. Although by utilising the hierarchy system of active resource packs, you may spread the contents of `blocks.json` over 2 separate resource packs, allowing for blockshapes to be applied.
 
-    "wiki:void_fire": {
-        "sound": "stone",
-        "textures": "void_fire"
-    }
+Example of `blocks.json` from first pack:
 
-```
- Example of `blocks.json` from second pack:
- ```json
+```json
 
-    "wiki:void_fire": {
-        "blockshape": "fire"
-    }
+   "wiki:void_fire": {
+       "sound": "stone",
+       "textures": "void_fire"
+   }
 
 ```
+
+Example of `blocks.json` from second pack:
+
+```json
+
+   "wiki:void_fire": {
+       "blockshape": "fire"
+   }
+
+```
+
 All that is required of the second pack is to contain the information relevant to and to define the blockshape of the custom block, so the only required files in the pack are `manifest.json` and `blocks.json`. Then when it comes to applying the addon to your world, make sure to have the second resource pack **above** the first in the hierarchy.
 
 The exact reason for this issue is unknown.
@@ -48,7 +53,7 @@ The exact reason for this issue is unknown.
 ## List of known Blockshapes
 
 | ID  | Block Shape               |
-|-----|---------------------------|
+| --- | ------------------------- |
 | -1  | invisible                 |
 | 0   | block                     |
 | 1   | cross_texture             |

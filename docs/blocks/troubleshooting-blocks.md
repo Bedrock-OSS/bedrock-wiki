@@ -1,6 +1,6 @@
 ---
 title: 'Troubleshooting Blocks'
-nav_order: 2
+category: General
 tags:
     - help
 ---
@@ -268,7 +268,7 @@ Solution: Navigate to your block file. Navigate to your `material_instances` com
 			"minecraft:material_instances": {
 				"*": {
 					"face_dimming": false,
-        			"ambient_occlusion": false
+					"ambient_occlusion": false
 				}
 			}
 		}

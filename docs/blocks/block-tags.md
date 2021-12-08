@@ -1,5 +1,6 @@
 ---
 title: Block Tags
+category: Documentation
 tags:
     - experimental
 ---
