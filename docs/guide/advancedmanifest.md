@@ -1,7 +1,7 @@
 ---
 title: Advanced Manifest
 category: Extra
-nav_order: 3
+nav_order: 4
 prefix: 'd.'
 ---
 
