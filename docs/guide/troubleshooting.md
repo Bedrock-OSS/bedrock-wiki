@@ -2,7 +2,7 @@
 title: Troubleshooting
 category: Extra
 prefix: 'c. '
-nav_order: 2
+nav_order: 3
 tags:
     - help
 ---
