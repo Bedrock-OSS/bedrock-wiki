@@ -1,5 +1,6 @@
 ---
 title: Generating Patches
+category: Tutorials
 mention:
 	- DerpMcaddon
 tags:
@@ -10,7 +11,7 @@ Feature based surface builder is a feature that puts together a collection of bl
 
 ## Single Block Features
 
-Single block features are going to be the base of our surface builder. They will define which blocks we are going to use.  For this tutorial I'll be using Coarse Dirt, Podzol and Cobblestone.
+Single block features are going to be the base of our surface builder. They will define which blocks we are going to use. For this tutorial I'll be using Coarse Dirt, Podzol and Cobblestone.
 
 Learn more about single block features [here](/world-generation/feature-types.html#single-block-features)
 
@@ -25,7 +26,8 @@ Coarse Dirt File
 		"description": {
 			"identifier": "wiki:coarse_dirt_feature"
 		},
-		"places_block": {//Coarse dirt shares same identifier as dirt, set it using name and states
+		"places_block": {
+			//Coarse dirt shares same identifier as dirt, set it using name and states
 			"name": "minecraft:dirt",
 			"states": {
 				"dirt_type": "coarse"
@@ -34,7 +36,7 @@ Coarse Dirt File
 		"enforce_survivability_rules": false,
 		"enforce_placement_rules": false,
 		"may_replace": [
-			"minecraft:grass"//The block can only replace grass
+			"minecraft:grass" //The block can only replace grass
 		]
 	}
 }
@@ -51,11 +53,11 @@ Podzol File
 		"description": {
 			"identifier": "wiki:podzol_feature"
 		},
-		"places_block": "minecraft:podzol",//Podzol can be defined using direct identifier
+		"places_block": "minecraft:podzol", //Podzol can be defined using direct identifier
 		"enforce_survivability_rules": false,
 		"enforce_placement_rules": false,
 		"may_replace": [
-			"minecraft:grass"//The block can only replace grass
+			"minecraft:grass" //The block can only replace grass
 		]
 	}
 }
@@ -72,20 +74,19 @@ Cobblestone File
 		"description": {
 			"identifier": "wiki:cobblestone_feature"
 		},
-		"places_block": "minecraft:cobblestone",//Cobblestone can be defined using direct identifier
+		"places_block": "minecraft:cobblestone", //Cobblestone can be defined using direct identifier
 		"enforce_survivability_rules": false,
 		"enforce_placement_rules": false,
 		"may_replace": [
-			"minecraft:grass"//The block can only replace grass
+			"minecraft:grass" //The block can only replace grass
 		]
 	}
 }
 ```
 
-
 ## Weighted Random Features
 
-Weighted random features are going to be our *randomizer* to select between each type of blocks.
+Weighted random features are going to be our _randomizer_ to select between each type of blocks.
 
 Learn more about weighted random features [here](/world-generation/feature-types.html#weighted-random-features)
 
@@ -104,11 +105,11 @@ Learn more about weighted random features [here](/world-generation/feature-types
 				5
 			],
 			[
-				"wiki:podzol_feature",//Podzol dirt weighs 3
+				"wiki:podzol_feature", //Podzol dirt weighs 3
 				3
 			],
 			[
-				"wiki:cobblestone_feature",//Cobblestone weighs 2
+				"wiki:cobblestone_feature", //Cobblestone weighs 2
 				2
 			]
 		]
@@ -122,7 +123,6 @@ Scatter features are an important part of our surface builder. It will determine
 
 Learn more about scatter features [here](/world-generation/feature-types.html#scatter-features)
 
-
 <CodeHeader>BP/features/scatter_surface_block_feature.json</CodeHeader>
 
 ```json
@@ -134,41 +134,30 @@ Learn more about scatter features [here](/world-generation/feature-types.html#sc
 		},
 		"iterations": "math.random_integer(20,25)",
 		"x": {
-			"extent": [
-				0,
-				8
-			],
+			"extent": [0, 8],
 			"distribution": "gaussian"
 		},
 		"z": {
-			"extent": [
-				0,
-				8
-			],
+			"extent": [0, 8],
 			"distribution": "gaussian"
 		},
 		"y": "query.heightmap(v.worldx, v.worldz) -1",
-		"places_feature": "wiki:select_surface_block_feature"//Weighted random feature identifier
+		"places_feature": "wiki:select_surface_block_feature" //Weighted random feature identifier
 	}
 }
 ```
 
+-   `iterations` determine how many blocks will be placed. I'm going to use the Molang `math.random_integer` function to randomize the number of blocks. In this case, it'll be 20 to 25 blocks.
 
-* `iterations` determine how many blocks will be placed. I'm going to use the Molang `math.random_integer` function to randomize the number of blocks. In this case, it'll be 20 to 25 blocks.
+-   `extent` use an array to determine the size of the blob. `[0, 8]` means the size is extended from 0 to 8 blocks. So, our blob would be 8 blocks long both on X and Z axis. **Only use this for X and Z distribution**.
 
-* `extent` use an array to determine the size of the blob. `[0, 8]` means the size is extended from 0 to 8 blocks. So, our blob would be 8 blocks long both on X and Z axis. **Only use this for X and Z distribution**.
+-   `"y": "query.heightmap(v.worldx, v.worldz) -1` means it will put the block on the highest block on the y coordinate -1. So it'll always put the feature on the surface.
 
- 
-* `"y": "query.heightmap(v.worldx, v.worldz) -1` means it will put the block on the highest block on the y coordinate -1. So it'll always put the feature on the surface.
-
-
-* `distribution` specifies the type of distribution to use. Available include `Gaussian`, `Inverse Gaussian`, `Uniform`,`Fixed Grid` and `Jittered Grid`
-
+-   `distribution` specifies the type of distribution to use. Available include `Gaussian`, `Inverse Gaussian`, `Uniform`,`Fixed Grid` and `Jittered Grid`
 
 ## Feature Rule
 
 This is the final step for our surface builder. The feature rules for our surface builders are slightly different.
-
 
 <CodeHeader>BP/feature_rules/overworld_surface_blocks_feature.json</CodeHeader>
 
@@ -185,27 +174,22 @@ This is the final step for our surface builder. The feature rules for our surfac
 			"minecraft:biome_filter": {
 				"test": "has_biome_tag",
 				"operator": "==",
-				"value": "overworld"//You can change this to whatever biometag you want
+				"value": "overworld" //You can change this to whatever biometag you want
 			}
 		},
 		"distribution": {
 			"iterations": 1,
 			"x": {
-				"extent": [
-					0,
-					16
-				],
+				"extent": [0, 16],
 				"distribution": "uniform"
 			},
 			"y": 0,
 			"z": {
-				"extent": [
-					0,
-					16
-				],
+				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"scatter_chance": {//Chance of the blob generating each chunk
+			"scatter_chance": {
+				//Chance of the blob generating each chunk
 				"numerator": 1,
 				"denominator": 5
 			}
