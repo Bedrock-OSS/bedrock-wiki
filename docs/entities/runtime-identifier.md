@@ -1,5 +1,6 @@
 ---
 title: Runtime Identifiers
+category: Documentation
 ---
 
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
@@ -185,4 +186,3 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
-

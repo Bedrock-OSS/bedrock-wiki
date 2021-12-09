@@ -1,5 +1,6 @@
 ---
 title: Entity Events
+category: General
 tags:
     - beginner
 ---

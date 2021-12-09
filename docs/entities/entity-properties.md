@@ -1,7 +1,6 @@
 ---
-layout: page
 title: Entity Properties
-parent: Concepts
+category: General
 tags:
     - experimental
 ---

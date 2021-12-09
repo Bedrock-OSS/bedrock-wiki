@@ -1,8 +1,9 @@
 ---
 title: Village Mechanic for Custom Entities
+category: Tutorials
 mention:
- - AeroForta
- - MedicalJewel105
+    - AeroForta
+    - MedicalJewel105
 ---
 
 This article is for anyone who wanted to try imitate the village mechanic for their entities
@@ -60,6 +61,7 @@ First let's start with some basic navigation behavior.
     "y_dist":5 //How far the entity climb up
 }
 ```
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -137,6 +139,7 @@ Use in pair with:
 	"first_founding_reward": 5
 }
 ```
+
 ### Sleep
 
 :::note
@@ -182,6 +185,7 @@ Requires "dweller_role" set to be "inhabitant" also if "preferred_profession" do
 	}
 }
 ```
+
 ### Scheduler
 
 Now you know everything about needed mechanic, let's try to put all of this together in "minecraft:scheduler"
@@ -221,6 +225,7 @@ Put sleep behavior in new component group then put work behavior in component gr
     }
 }
 ```
+
 Next, try to make your entities sleep whole day then work only at night
 The put the code in components
 
@@ -275,6 +280,7 @@ It looks something like this:
     ]
 }
 ```
+
 The events section looks something like this:
 
 <CodeHeader></CodeHeader>
@@ -307,11 +313,13 @@ The events section looks something like this:
     }
 }
 ```
+
 Open your world spawn you custom entity then put bed and bell, you should see green particle.
 Your entity will sleep from morning to evening then work all night. Use /time set 6000 or /time set 18000.
 Based on "preferred_profession", when the entity work it will move to the claimed job site.
 
 ## Other Behavior
+
 All of this is useable by custom entities:
 `"minecraft:behavior.move_to_village"` is used by Pillager this may keep the entity to stay in the village.
 `"minecraft:behavior.stroll_towards_village"` is used by fox to seach a village and go there.

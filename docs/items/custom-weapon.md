@@ -1,5 +1,6 @@
 ---
 title: Custom Weapons
+category: Tutorials
 tags:
 	- experimental
 ---

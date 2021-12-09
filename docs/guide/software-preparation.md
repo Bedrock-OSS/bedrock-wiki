@@ -1,5 +1,6 @@
 ---
 title: Software and preparation
+category: Guide
 nav_order: 3
 prefix: '3. '
 ---
@@ -107,14 +108,16 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 -   If you still haven't found a solution, feel free to join our [Discord server](/discord).
 
 ## What you have learned
+
 :::tip
+
 -   To develop Addons, you need an **Editor**
 -   Other useful software:
     -   Blockbench for creating Minecraft Models like Entities
     -   Image Editors for creating Textures and Images
 -   Use the Vanilla Example files as a reference or inspiration for your addons
 -   How to solve problems and get help
-:::
+    :::
 
 ## Your progress so far
 

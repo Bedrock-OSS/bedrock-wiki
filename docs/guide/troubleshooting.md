@@ -1,7 +1,8 @@
 ---
 title: Troubleshooting
+category: Extra
 prefix: 'c. '
-nav_order: 102
+nav_order: 2
 tags:
     - help
 ---

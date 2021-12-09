@@ -6,7 +6,7 @@
 		v-bind="linkProps"
 		@click="onNavigation"
 	>
-		<span v-if="props.item.prefix != null" class="font-bold">{{
+		<span v-if="props.item.prefix != null" class="font-bold pr-2">{{
 			props.item.prefix
 		}}</span>
 
@@ -95,30 +95,30 @@ watchEffect(() => {
 }
 
 .section {
-	@apply pointer-events-none font-bold  rounded-md p-0 pl-1;
+	@apply pointer-events-none font-bold  rounded-md p-0 pl-1 m-2;
 }
 
 .section_blue {
-	@apply from-blue-200;
+	@apply bg-blue-200;
 }
 
 .dark .section_blue {
-	@apply bg-blue-900 opacity-80;
+	@apply bg-blue-700 opacity-80;
 }
 
 .section_red {
-	@apply from-red-200;
+	@apply bg-red-200;
 }
 
 .dark .section_red {
-	@apply bg-red-900 opacity-80;
+	@apply bg-red-700 opacity-80;
 }
 
 .section_green {
-	@apply from-green-200;
+	@apply bg-green-200;
 }
 
 .dark .section_green {
-	@apply bg-green-900 opacity-80;
+	@apply bg-green-700 opacity-80;
 }
 </style>

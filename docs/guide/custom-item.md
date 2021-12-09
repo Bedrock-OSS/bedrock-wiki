@@ -1,10 +1,11 @@
 ---
 title: 'Create a custom Item'
+category: Guide
 nav_order: 5
 prefix: '5. '
 ---
 
-This section will walk you through the creation of a simple custom item, the ectoplasm, for our custom entity, the Ghost, to drop. 
+This section will walk you through the creation of a simple custom item, the ectoplasm, for our custom entity, the Ghost, to drop.
 
 <br>
 <img src="/assets/images/guide/custom_item/ectoplasm_view.png" width=150>
@@ -148,11 +149,13 @@ Now your first custom item, Ectoplasm, is complete! If everything has been done 
 If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
 
 ## What you have learned
+
 :::tip
-- 	How to format the behavior and resource files for an item
-- 	What components are and how to use them
-- 	How to set an items texture
-:::
+
+-       How to format the behavior and resource files for an item
+-       What components are and how to use them
+-       How to set an items texture
+    :::
 
 ## Your progress so far:
 

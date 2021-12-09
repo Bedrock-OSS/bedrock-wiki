@@ -1,5 +1,6 @@
 ---
 title: Items 1.16.100+
+category: General
 tags:
     - experimental
 nav_order: 2
@@ -15,7 +16,7 @@ This document covers experimental features, for 1.16.100+ format version items. 
 
 ### **|** Using Events
 
-Events in items are used most exactly as they are in entities. 
+Events in items are used most exactly as they are in entities.
 
 <CodeHeader></CodeHeader>
 
@@ -75,14 +76,14 @@ Plays the item swinging animation. (As if to hit.)
 > `shoot`
 
 Shoots a projectile when triggered.
-    
-- Properties:
 
-  - `"angle_offset"` - Does nothing. (Broken)
+-   Properties:
 
-  - `"launch_power"` - The launch power to be multiplied over the base power of the projectile entity. Accepts MoLang values. 
+    -   `"angle_offset"` - Does nothing. (Broken)
 
-  - `"projectile"` - Takes an identifier of an entity - any entity, not just ones projectile - to use as an entity to 'shoot'.
+    -   `"launch_power"` - The launch power to be multiplied over the base power of the projectile entity. Accepts MoLang values.
+
+    -   `"projectile"` - Takes an identifier of an entity - any entity, not just ones projectile - to use as an entity to 'shoot'.
 
 <CodeHeader></CodeHeader>
 
@@ -102,13 +103,13 @@ Shoots a projectile when triggered.
 
 Applies a damage to a specified target.
 
-- Properties:
+-   Properties:
 
-  - `"type"` - The type of damage to administer to the target. Standard entity damage types apply, with contextual exceptions.
+    -   `"type"` - The type of damage to administer to the target. Standard entity damage types apply, with contextual exceptions.
 
-  - `"target"` - The target which receives the damage.
+    -   `"target"` - The target which receives the damage.
 
-  - `"amount"` - Amount of damage points to apply.
+    -   `"amount"` - Amount of damage points to apply.
 
 <CodeHeader></CodeHeader>
 
@@ -128,12 +129,9 @@ Applies a damage to a specified target.
 
 Decrements the stack by one.
 
-- Properties:
+-   Properties:
 
-  - `"ignore_game_mode"` - When `false` (as is set by default) will not decrement in Creative gamemodes.
-  
-
-
+    -   `"ignore_game_mode"` - When `false` (as is set by default) will not decrement in Creative gamemodes.
 
 <CodeHeader></CodeHeader>
 
@@ -141,8 +139,8 @@ Decrements the stack by one.
 {
 	"example:remove_one": {
 		"decrement_stack": {
-            "ignore_game_mode": false
-        }
+			"ignore_game_mode": false
+		}
 	}
 }
 ```
@@ -151,10 +149,10 @@ Decrements the stack by one.
 
 Adds a mob effect when triggered.
 
-- Properties:
+-   Properties:
 
-  - `"ignore_game_mode"` - When `false` (as is set by default) will not decrement in Creative gamemodes.
-  
+    -   `"ignore_game_mode"` - When `false` (as is set by default) will not decrement in Creative gamemodes.
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -288,7 +286,7 @@ Used to execute commands. Works just as in entities.
 {
 	"example:execute_command_event": {
 		"run_command": {
-			"command": [ "say hi" ],
+			"command": ["say hi"],
 			"target": "other"
 		}
 	}
@@ -878,8 +876,8 @@ If your item isn't showing up, these changes might have broken your item.
 Niche Features
 
 -   Components
-    -   `minecraft:icon` - Property `"frame"` may take in MoLang values. 
-   
+    -   `minecraft:icon` - Property `"frame"` may take in MoLang values.
+
 > Broken/Nonfunctional Features
 
 -   Components

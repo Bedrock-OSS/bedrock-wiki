@@ -42,7 +42,7 @@ function getCategories(frontMatter) {
 			tags: category.tags,
 			prefix: category.prefix,
 			section: true,
-			section_color: category.section_color,
+			section_color: 'section_' + category.color,
 			link: '',
 			activeMatch: ' ',
 		})
@@ -87,7 +87,6 @@ function generateSidebar(base, dir) {
 			}
 
 			order = getCategoryOrder(frontMatter)
-			console.log(order)
 
 			children = generateSidebar(base, joinedPath).concat(
 				getCategories(frontMatter)
@@ -187,7 +186,26 @@ function generateSidebar(base, dir) {
 		}
 	})
 
-	return data
+	return data.sort(
+		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
+			// Default to max int, so without nav order you will show second
+			// Multiply by category value if it exists
+			navA =
+				(dataA.nav_order || 50) + (order[dataA.category] || 0) * 100 ||
+				Number.MAX_SAFE_INTEGER
+			navB =
+				(dataB.nav_order || 50) + (order[dataB.category] || 0) * 100 ||
+				Number.MAX_SAFE_INTEGER
+
+			// Tie goes to the text compare! (Will also apply for elements without nav order)
+			if (navA == navB) {
+				return textA.localeCompare(textB)
+			}
+
+			// Return nav order
+			return navA - navB
+		}
+	)
 }
 
 function getSidebar() {

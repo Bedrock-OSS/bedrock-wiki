@@ -1,5 +1,6 @@
 ---
 title: Dummy Entities
+category: Tutorials
 tags:
     - beginner
 ---
