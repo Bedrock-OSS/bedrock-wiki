@@ -13,7 +13,7 @@ This document covers experimental features, for 1.16.100+ format version items. 
 
 ## Item Events
 
-### **|** Using Events
+### Using Events
 
 Events in items are used most exactly as they are in entities. 
 
@@ -54,7 +54,7 @@ Events in items are used most exactly as they are in entities.
 }
 ```
 
-### **|** Event Functions
+### Event Functions
 
 Items do, however, have a slightly different set of event functions that they use.
 
