@@ -1,5 +1,6 @@
 ---
 title: Sleeping Entities
+category: Tutorials
 tags:
     - intermediate
 mention:
@@ -10,9 +11,10 @@ This tutorial will explain how to make entity sleep.
 
 ## Features
 
--  Entity sleeps during the night and wakes up at day time
--  Interaction with entity will wake it up and after a while it goes sleeping again
--  If entity is hurt, it wakes up
+-   Entity sleeps during the night and wakes up at day time
+-   Interaction with entity will wake it up and after a while it goes sleeping again
+-   If entity is hurt, it wakes up
+
 ## Behavior Pack
 
 In this section behavior pack components will be discussed.
@@ -211,22 +213,10 @@ Just copy/paste it.
 			"bones": {
 				"body": {
 					"rotation": {
-						"0.0": [
-							0,
-							0,
-							0
-						],
-						"0.5": [
-							-90,
-							0,
-							0
-						]
+						"0.0": [0, 0, 0],
+						"0.5": [-90, 0, 0]
 					},
-					"position": [
-						0,
-						2,
-						-15
-					]
+					"position": [0, 2, -15]
 				}
 			}
 		}
@@ -255,9 +245,7 @@ Again just copy/paste it if you need.
 					]
 				},
 				"sleep": {
-					"animations": [
-						"sleeping"
-					],
+					"animations": ["sleeping"],
 					"transitions": [
 						{
 							"default": "!query.is_sleeping"
