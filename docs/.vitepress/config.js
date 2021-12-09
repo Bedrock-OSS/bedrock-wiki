@@ -21,7 +21,7 @@ function getCategoryOrder(frontMatter) {
 	}
 
 	frontMatter.data.categories.forEach(function (category, index) {
-		data[category.title] = index * 100
+		data[category.title] = index + 1
 	})
 
 	return data
@@ -34,7 +34,8 @@ function getCategories(frontMatter) {
 	}
 
 	frontMatter.data.categories.forEach(function (category, index) {
-		category.nav_order = index * 100
+		category.nav_order = -1
+		category.category = category.title
 		data.push({
 			text: category.title,
 			data: category,
@@ -43,7 +44,7 @@ function getCategories(frontMatter) {
 			section: true,
 			section_color: category.section_color,
 			link: '',
-			activeMatch: '',
+			activeMatch: ' ',
 		})
 	})
 
@@ -86,6 +87,7 @@ function generateSidebar(base, dir) {
 			}
 
 			order = getCategoryOrder(frontMatter)
+			console.log(order)
 
 			children = generateSidebar(base, joinedPath).concat(
 				getCategories(frontMatter)
@@ -99,11 +101,17 @@ function generateSidebar(base, dir) {
 					// Default to max int, so without nav order you will show second
 					// Multiply by category value if it exists
 					navA =
-						dataA.nav_order * (order[dataA.category] || 1) ||
+						(dataA.nav_order || 50) +
+							(order[dataA.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
 					navB =
-						dataB.nav_order * (order[dataB.category] || 1) ||
+						(dataB.nav_order || 50) +
+							(order[dataB.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
+
+					console.log(navA)
+					console.log(dataA)
+					console.log('----')
 
 					// Tie goes to the text compare! (Will also apply for elements without nav order)
 					if (navA == navB) {
