@@ -28,19 +28,12 @@ import WarningIcon from '../Icons/WarningIcon.vue'
 import RecipeIcon from '../Icons/RecipeIcon.vue'
 import ChemIcon from '../Icons/ChemIcon.vue'
 
-import {
-	computed,
-	defineEmit,
-	defineProps,
-	reactive,
-	toRefs,
-	watchEffect,
-} from 'vue'
+import { toRefs, watchEffect } from 'vue'
 import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navLink'
 import { useIsMobile } from '../../Composables/isMobile'
 import { useSidebarState } from '../../Composables/sidebar'
 
-const emit = defineEmit(['change'])
+const emit = defineEmits(['change'])
 
 const props = defineProps<{
 	item: {

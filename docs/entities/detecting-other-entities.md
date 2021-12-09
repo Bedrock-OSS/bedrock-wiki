@@ -68,7 +68,7 @@ Now that's good and all, but on the off chance, you want to make the pig detect 
 			"animation_length": 0.05,
 			"loop": true,
 			"timeline": {
-				"300": [
+				"0": [
 					"v.x = 0.0; for_each(t.player, query.get_nearby_entities_except_self(2, 'minecraft:player'), { v.x = v.x + (t.player -> query.is_sheared); }); return v.x > 0.0;"
 				]
 			}

@@ -163,7 +163,7 @@ The `/dialog` command is used to open and control dialogs. The command looks lik
 
 For example, the following command would open the dialog `example` for the nearest player, using the nearest NPC:
 
-```mcfunction
+```
 /dialogue open @e[type=npc,c=1] @p example
 ```
 

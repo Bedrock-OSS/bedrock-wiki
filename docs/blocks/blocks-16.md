@@ -672,7 +672,7 @@ _This also accepts tags, such as:_
 				"allowed_faces": ["up"],
 				"block_filter": [
 					{
-						"tags": "!query.any_tag('air')"
+						"tags": "!query.any_tag('stone')"
 					}
 				]
 			}
@@ -680,6 +680,8 @@ _This also accepts tags, such as:_
 	}
 }
 ```
+
+See [this](/blocks/block-tags) page for a list of vanilla tags and relavent blocks.
 
 ### `minecraft:preventsjumping`
 
