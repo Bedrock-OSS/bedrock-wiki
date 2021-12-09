@@ -1,5 +1,6 @@
 ---
 title: Intro to Entities
+category: General
 nav_order: 1
 tags:
     - guide

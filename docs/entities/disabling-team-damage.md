@@ -1,5 +1,6 @@
 ---
 title: Disabling Team-damage
+category: Tutorials
 tags:
     - intermediate
 ---

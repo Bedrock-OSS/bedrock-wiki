@@ -1,5 +1,6 @@
 ---
 title: Runtime Identifiers
+category: Documentation
 ---
 
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
@@ -18,7 +19,7 @@ It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 ```
 
 :::tip
-It's important to remember that `runtime_identifier` will only parse the *hard-coded properties of an entity*. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity. Additionally, some entity runtimes may overwrite properties found in datadriven components even if they are added in the components section, such as the collision box size for the shulker entity.
+It's important to remember that `runtime_identifier` will only parse the _hard-coded properties of an entity_. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity. Additionally, some entity runtimes may overwrite properties found in datadriven components even if they are added in the components section, such as the collision box size for the shulker entity.
 :::
 
 ## Known runtime-identifier effects:

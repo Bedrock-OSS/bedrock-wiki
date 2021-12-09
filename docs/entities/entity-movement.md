@@ -1,5 +1,6 @@
 ---
 title: Entity Movement
+category: Tutorials
 ---
 
 In Minecraft, entities have the ability to move through the world, either by walking, swimming or flying. To get these behaviors, your entity will generally need quite a few behaviors, broken out into various types.

@@ -167,7 +167,6 @@ const getHeaders = function () {
 			}
 		}
 	}
-	//   console.log(grouped);
 	return grouped
 }
 

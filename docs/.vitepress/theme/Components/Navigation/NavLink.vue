@@ -2,10 +2,11 @@
 <template>
 	<a
 		class="item flex flex-nowrap items-center px-2 rounded-md"
+		:class="[{ section: props.item.section }, props.item.section_color]"
 		v-bind="linkProps"
 		@click="onNavigation"
 	>
-		<span v-if="props.item.prefix != null" class="font-bold">{{
+		<span v-if="props.item.prefix != null" class="font-bold pr-2">{{
 			props.item.prefix
 		}}</span>
 
@@ -38,6 +39,8 @@ const props = defineProps<{
 	item: {
 		text: string
 		link: string
+		section: boolean
+		section_color: string
 		tags?: Array<string>
 		prefix?: string
 	}
@@ -82,5 +85,33 @@ watchEffect(() => {
 .dark .item:hover,
 .dark .item.active {
 	@apply bg-true-gray-700;
+}
+
+.section {
+	@apply pointer-events-none font-bold  rounded-md p-0 pl-1 m-2;
+}
+
+.section_blue {
+	@apply bg-blue-200;
+}
+
+.dark .section_blue {
+	@apply bg-blue-700 opacity-80;
+}
+
+.section_red {
+	@apply bg-red-200;
+}
+
+.dark .section_red {
+	@apply bg-red-700 opacity-80;
+}
+
+.section_green {
+	@apply bg-green-200;
+}
+
+.dark .section_green {
+	@apply bg-green-700 opacity-80;
 }
 </style>

@@ -1,5 +1,6 @@
 ---
 title: Intro to Items
+category: General
 nav_order: 1
 tags:
     - guide

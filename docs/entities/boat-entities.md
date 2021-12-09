@@ -1,5 +1,6 @@
 ---
 title: Creating Boats
+category: Tutorials
 tags:
     - recipe
     - intermediate

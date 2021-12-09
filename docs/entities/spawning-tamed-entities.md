@@ -1,5 +1,6 @@
 ---
 title: Spawning Tamed Entities
+category: Tutorials
 tags:
     - intermediate
 mention:
@@ -23,6 +24,7 @@ Here, we'll need a copy of the player's behavior file, which we will modify slig
 You can find the BP player entity file in the vanilla behavior pack provided by Mojang [here](https://aka.ms/behaviorpacktemplate).
 
 <CodeHeader>BP/entities/player.json</CodeHeader>
+
 ```json
 {
     "format_version": "1.16.0",
@@ -59,6 +61,7 @@ You can find the BP player entity file in the vanilla behavior pack provided by 
 Afterwards, we'll need to create a simple custom entity that will have the `minecraft:arrow` runtime identifier (other projectile runtime identifiers work as well), an empty projectile component, and a trasnfomation component to turn into a tamed wolf.
 
 <CodeHeader>BP/entities/pretamed_wolf.json</CodeHeader>
+
 ```json
 {
 	"format_version": "1.16.0",
@@ -85,70 +88,72 @@ And now, you can spawn a tamed wolf next to the player with `/event entity @p wi
 
 ## Integrating Item Projectiles (Alternate Method)
 
-Introduced as one of [1.16's experimental item features](https://wiki.bedrock.dev/items/items-16.html), the `shoot` event property can be used to make projectiles that transform into tamed entities upon impact. 
+Introduced as one of [1.16's experimental item features](https://wiki.bedrock.dev/items/items-16.html), the `shoot` event property can be used to make projectiles that transform into tamed entities upon impact.
 
 <CodeHeader>BP/items/throwable_pretamed_wolf.json</CodeHeader>
+
 ```json
 {
-    "format_version": "1.16.100",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:throwable_pretamed_wolf"
-        },
-        "components": {
-            "minecraft:on_use": {
-                "on_use": { "event": "wiki:on_use" }
-            }
-        },
-        "events": {
-            "wiki:on_use": {
-                "shoot": { "projectile": "wiki:pretamed_wolf" }
-            }
-        }
-    }
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "wiki:throwable_pretamed_wolf"
+		},
+		"components": {
+			"minecraft:on_use": {
+				"on_use": { "event": "wiki:on_use" }
+			}
+		},
+		"events": {
+			"wiki:on_use": {
+				"shoot": { "projectile": "wiki:pretamed_wolf" }
+			}
+		}
+	}
 }
 ```
 
 We'll also need to make some adjustment to our custom projectile entity so that it doesn't transform right as it spawns.
 
 <CodeHeader>BP/entities/pretamed_wolf.json</CodeHeader>
+
 ```json
 {
-    "minecraft:entity": {
-        "description": {
+	"minecraft:entity": {
+		"description": {
 			"identifier": "wiki:pretamed_wolf",
 			"runtime_identifier": "minecraft:arrow",
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false
-        },
-        "component_groups": {
-            "wiki:transform_to_entity": {
-                "minecraft:transformation": {
-                    "into": "minecraft:wolf<minecraft:on_tame>",
-                    "keep_owner": true
-                }
-            }
-        },
-        "components": {
-            "minecraft:projectile": {
-                "on_hit": {
-                    "impact_damage": { "damage": 0 },
-                    "stick_in_ground": {},
-                    "definition_event": {
-                        "event_trigger": { "event": "wiki:on_hit" }
-                    }
-                }
-            }
-        },
-        "events": {
-            "wiki:on_hit": {
-                "add": {
-                    "component_groups": [ "wiki:transform_to_entity" ]
-                }
-            }
-        }
-    }
+		},
+		"component_groups": {
+			"wiki:transform_to_entity": {
+				"minecraft:transformation": {
+					"into": "minecraft:wolf<minecraft:on_tame>",
+					"keep_owner": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": { "damage": 0 },
+					"stick_in_ground": {},
+					"definition_event": {
+						"event_trigger": { "event": "wiki:on_hit" }
+					}
+				}
+			}
+		},
+		"events": {
+			"wiki:on_hit": {
+				"add": {
+					"component_groups": ["wiki:transform_to_entity"]
+				}
+			}
+		}
+	}
 }
 ```
 

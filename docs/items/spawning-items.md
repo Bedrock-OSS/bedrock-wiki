@@ -1,5 +1,6 @@
 ---
 title: Spawning Items
+category: Tutorials
 tags:
     - intermediate
 ---

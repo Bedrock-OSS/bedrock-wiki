@@ -1,5 +1,6 @@
 ---
 title: NPC Dialogs
+category: General
 tags:
     - intermediate
 ---

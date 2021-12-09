@@ -19,17 +19,17 @@ switch (props.tag) {
 		colour = 'green'
 		break
 	}
-	case 'exp':
-	case 'experimental': {
-		title = 'EXP'
-		colour = 'orange'
-		break
-	}
-	case 'beta': {
-		title = 'BETA'
-		colour = 'red'
-		break
-	}
+	// case 'exp':
+	// case 'experimental': {
+	// 	title = 'EXP'
+	// 	colour = 'orange'
+	// 	break
+	// }
+	// case 'beta': {
+	// 	title = 'BETA'
+	// 	colour = 'red'
+	// 	break
+	// }
 	case 'help': {
 		title = 'HELP'
 		colour = 'blue'

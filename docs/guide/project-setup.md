@@ -1,5 +1,6 @@
 ---
 title: Project Setup
+category: Guide
 nav_order: 4
 prefix: '4. '
 ---
@@ -167,9 +168,7 @@ pack.description=A Ghostly Guide
 <CodeHeader>RP/texts/languages.json</CodeHeader>
 
 ```json
-[
-    "en_US"
-]
+["en_US"]
 ```
 
 ## Checking your Work
@@ -224,14 +223,16 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 ]"></FolderView>
 
 ## What you have learned
+
 :::tip
-- 	What the com.mojang folder is, where it is and what folders it contains
-- 	How to setup your workspace
-- 	What a `manifest.json` file is
-- 	How to use UUIDs
-- 	How to create an icon for your addon
-- 	What a `.lang` file is
-:::
+
+-       What the com.mojang folder is, where it is and what folders it contains
+-       How to setup your workspace
+-       What a `manifest.json` file is
+-       How to use UUIDs
+-       How to create an icon for your addon
+-       What a `.lang` file is
+    :::
 
 ## Your progress so far
 

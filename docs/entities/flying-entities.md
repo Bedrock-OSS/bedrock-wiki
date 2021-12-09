@@ -1,5 +1,6 @@
 ---
 title: Flying Entities
+category: Tutorials
 tags:
     - recipe
     - intermediate
@@ -109,34 +110,30 @@ It's recommended that you link it to the player.
 
 ```json
 {
-    "format_version": "1.10.0",
-    "animation_controllers": {
-        "controller.animation.base":{
-            "initial_state": "default",
-            "states": {
-                "default":{
-                    "transitions": [
-                        {
-                            "base": "(1.0)"
-                        }
-                    ],
-                    "on_entry": [
-                        "/function dragon_control"
-                    ]
-                },
-                "base":{
-                    "transitions": [
-                        {
-                            "default": "(1.0)"
-                        }
-                    ],
-                    "on_entry": [
-                        "/function dragon_control"
-                    ]
-                }
-            }
-        }
-    }
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.base": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"base": "(1.0)"
+						}
+					],
+					"on_entry": ["/function dragon_control"]
+				},
+				"base": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": ["/function dragon_control"]
+				}
+			}
+		}
+	}
 }
 ```
 

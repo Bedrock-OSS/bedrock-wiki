@@ -1,5 +1,6 @@
 ---
 title: Invulnerable Entities
+category: Tutorials
 tags:
     - beginner
 ---

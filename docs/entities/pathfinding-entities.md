@@ -1,5 +1,6 @@
 ---
 title: Pathfinding
+category: Tutorials
 tags:
     - recipe
     - beginner
