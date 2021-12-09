@@ -1,5 +1,6 @@
 ---
 title: Biome Tags
+category: Documentation
 tags:
     - experimental
 ---

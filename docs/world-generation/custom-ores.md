@@ -1,5 +1,6 @@
 ---
 title: Generating Custom Ores
+category: Tutorials
 tags:
 	- experimental
 mention:
