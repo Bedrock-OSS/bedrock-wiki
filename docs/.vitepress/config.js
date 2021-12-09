@@ -109,10 +109,6 @@ function generateSidebar(base, dir) {
 							(order[dataB.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
 
-					console.log(navA)
-					console.log(dataA)
-					console.log('----')
-
 					// Tie goes to the text compare! (Will also apply for elements without nav order)
 					if (navA == navB) {
 						return textA.localeCompare(textB)
