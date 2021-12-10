@@ -179,7 +179,6 @@ Requires "dweller_role" set to be "inhabitant" also if "preferred_profession" do
 }
 ```
 
-# <<<<<<< HEAD
 
 ### Gathering
 
@@ -197,7 +196,6 @@ Requires "dweller_role" set to be "inhabitant".
 }
 ```
 
-> > > > > > > origin/wiki
 
 ### Scheduler
 
@@ -249,13 +247,8 @@ Put sleep behavior in new component group then put work behavior in component gr
 }
 ```
 
-<<<<<<< HEAD
-
 Next, try to make your entities sleep whole day then work only at night
 The put the code in components
-=======
-
-> > > > > > > origin/wiki
 
 Next, try to make your entities sleep whole day after gathering then work only at night
 Then put the code in components.
@@ -385,14 +378,13 @@ Always remember that sleeping, working, gathering doesn't properly working witho
 
 ## Other Behavior
 
-<<<<<<< HEAD
 All of this is useable by custom entities:
 `"minecraft:behavior.move_to_village"` is used by Pillager this may keep the entity to stay in the village.
 `"minecraft:behavior.stroll_towards_village"` is used by fox to seach a village and go there.
 `"minecraft:behavior.inspect_bookshelf"` used by librarian villager allows an entity to look at and inspect a bookshelf.
 `"minecraft:behavior.explore_outskirts"` allowing the entity to explore beyond the bounds of village(use schedule and component group to keep the entity return to the village)
 `"minecraft:behavior.defend_village_target"` only use this on melee attack. Ranged attack can accidentally shoot any entity with inhabitant dwelling role making the ranged entity attack each other.
-=======
+
 All of this is useable by custom entities and have relation to the village or the villager:
 | Behavior | Uses | Note |
 | --------- | ------- | ------ |
@@ -402,5 +394,3 @@ All of this is useable by custom entities and have relation to the village or th
 | `"minecraft:behavior.inspect_bookshelf"` | Used by librarian villager allows an entity to look at and inspect a bookshelf. | Use scheduler, otherwise the entity will staying near the bookshelf. |
 | `"minecraft:behavior.move_to_village"` | Used by Illager and also witch allows an entity to travel to a random x,y,z coordinate in a village. | - |
 | `"minecraft:behavior.nap"` | Used by Fox to take a nap. | Similar with sleep but offer more flexibility also had built-in wake sytem by detecting specific entity. |
-
-> > > > > > > origin/wiki
