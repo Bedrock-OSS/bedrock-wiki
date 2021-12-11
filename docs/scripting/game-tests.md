@@ -1,5 +1,6 @@
 ---
 title: Game Tests
+category: Game Tests
 tags:
     - experimental
 ---
@@ -102,8 +103,7 @@ Official documentation on the `"mojang-gametest"` module can be found [here](htt
 
 Official typescript declarations can be found here:
 
-- [mojang-minecraft](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mojang-minecraft)
-- [mojang-gametest](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mojang-gametest)
-
+-   [mojang-minecraft](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mojang-minecraft)
+-   [mojang-gametest](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mojang-gametest)
 
 These allow for enhanced auto-completions and validation when used inside of your editor. bridge. v2 ships with GameTest support built-in.

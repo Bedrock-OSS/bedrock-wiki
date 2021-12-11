@@ -1,7 +1,6 @@
 ---
-layout: page
 title: TypeScript
-parent: Scripting
+category: Legacy Scripting
 ---
 
 [//]: # 'Documentation is heavily based on https://minecraft-addon-tools.github.io/tutorials/getting-started'
