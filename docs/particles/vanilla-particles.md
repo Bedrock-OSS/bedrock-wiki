@@ -1,12 +1,19 @@
 ---
-title: Particles
+title: Vanilla Particles
+category: Documentation
 ---
 
-Here is the complete list of Bedrock particles. For some inexplicable reason, Bedrock requires the leading minecraft part and the coordinates in the `/particle` command.
+Here is the complete list of Bedrock particles from the vanilla resources. Please be aware that not all of these particles function properly, as many require molang context from their host entity.
 
-And for some other inexplicable reason, it doesn't have autocomplete for these.
+:::tip Playing via /particle:
+For some reason, Bedrock requires the leading `minecraft` namespace, and the coordinates in the `/particle` command.
 
-### Working particles
+It doesn't have autocomplete for particles.
+:::
+
+### Working Particles
+
+These particles can be spawned directly in-world, without any issues.
 
 | Working Particles                           |
 | ------------------------------------------- |
@@ -72,9 +79,9 @@ And for some other inexplicable reason, it doesn't have autocomplete for these.
 | minecraft:water_evaporation_bucket_emitter  |
 | minecraft:water_splash_particle_manual      |
 
-### Particles with issues
+### Particles with Issues
 
-The following particles can be spawned, but might spam you with content log errors because they rely on variables that /particle cannot set:
+The following particles can be spawned, but might spam you with content log errors because they rely on variables that `/particle` cannot set:
 
 | Particles with issues                           |
 | ----------------------------------------------- |
@@ -111,7 +118,7 @@ The following particles can be spawned, but might spam you with content log erro
 | minecraft:wax_particle                          |
 | minecraft:wither_boss_invulnerable              |
 
-### Bubble particles
+### Bubble Particles
 
 The following particles are various bubbles that only show up underwater. Some of them spam content log errors:
 
@@ -137,18 +144,18 @@ The following particles are various bubbles that only show up underwater. Some o
 | minecraft:squid_move_particle          |
 | minecraft:underwater_torch_particle    |
 
-### Permanent particles
+### Permanent Particles
 
 The following particles are permanent and will not be removed once spawned until you exit the game:
 
-| Permanent particles                   |
-| ------------------------------------- |
-| minecraft:mobflame_emitter            |
-| minecraft:nectar_drip_particle        |
-| minecraft:phantom_trail_particle      |
-| minecraft:stunned_emitter             |
+| Permanent particles              |
+| -------------------------------- |
+| minecraft:mobflame_emitter       |
+| minecraft:nectar_drip_particle   |
+| minecraft:phantom_trail_particle |
+| minecraft:stunned_emitter        |
 
-## Broken particles
+## Broken Particles
 
 The following particles exist in-game but cannot be spawned because they require context that cannot be provided by `/particle` or are simply bugged:
 

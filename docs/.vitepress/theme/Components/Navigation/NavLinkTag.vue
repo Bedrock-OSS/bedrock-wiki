@@ -19,6 +19,11 @@ switch (props.tag) {
 		colour = 'green'
 		break
 	}
+	case 'outdated': {
+		title = 'OUTDATED'
+		colour = 'red'
+		break
+	}
 	// case 'exp':
 	// case 'experimental': {
 	// 	title = 'EXP'

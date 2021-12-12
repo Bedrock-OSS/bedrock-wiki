@@ -1,5 +1,8 @@
 ---
 title: 'Particles and Sounds'
+category: General
+tags:
+    - outdated
 ---
 
 ## Particles in Animation
