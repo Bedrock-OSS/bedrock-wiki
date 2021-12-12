@@ -5588,7 +5588,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "priority": 0,
     "speed_multiplier": 0.8,
     "poi_type": "bed",
-    "duration": 30.0
+    "duration": 30.0,
+	"timeout_cooldown": 8.0
 }
 ```
 
