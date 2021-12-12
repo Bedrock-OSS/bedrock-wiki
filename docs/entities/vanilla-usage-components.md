@@ -8166,20 +8166,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft.behavior.move_to_poi
-
-<small>this component is not used in a vanilla entity</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.move_to_poi": {
-    "priority": 6,
-    "poi_type": "POI",
-    "speed_multiplier": 1.0
-}
-```
-
 ## minecraft:behavior.move_to_liquid
 
 #### strider
