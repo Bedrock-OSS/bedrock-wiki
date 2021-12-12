@@ -1,5 +1,5 @@
 ---
-title: Text and Localisation
+title: Text and Localization
 mention:
   - ThijsHankelMC
   - SirLich
@@ -89,7 +89,7 @@ In game (signs, books, etc), use [tellraw](/commands/tellraw): `{"rawtext":[{"tr
 
 You can also create a text directory and .lang files in Behaviour Packs, but only to define pack.title and pack.description for the BP.
 
-## Localisation
+## Localization
 
 Now you know about .lang files in general, you can look into internationalisation of you text. Translations that show depending on what language the player is using. In the `rp/texts` directory, there are quite a number of .lang files, each representing and containing a different language, and their name is based on the language and nation, for example en_GB (English, Great Britain), en_US (English, United States), de_DE (Deutsch, Deutschland), etc. All of the Lang-Codes are present in each individual .lang file, and contain text related to the language stated in the files name.
 
