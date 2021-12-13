@@ -4,7 +4,6 @@ tags:
     - intermediate
 ---
 
-## **MoLang**
 ### | Introduction
 Pretty much everything evaluates to a number; if something doesn't evaluate to a number, you can use an `operator` to make it into one. You can basically just think of MoLang as one big math equation.
 
