@@ -9,16 +9,16 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 # Table of contents
 
--   [minecraft:block](#minecraftblock)
--   [minecraft:camera](#minecraftcamera)
--   [minecraft:foil](#minecraftfoil)
--   [minecraft:food](#minecraftfood)
--   [minecraft:hand_equipped](#minecrafthand_equipped)
--   [minecraft:max_damage](#minecraftmax_damage)
--   [minecraft:max_stack_size](#minecraftmax_stack_size)
--   [minecraft:seed](#minecraftseed)
--   [minecraft:stacked_by_data](#minecraftstacked_by_data)
--   [minecraft:use_duration](#minecraftuse_duration)
+-   [minecraft:block](#minecraft-block)
+-   [minecraft:camera](#minecraft-camera)
+-   [minecraft:foil](#minecraft-foil)
+-   [minecraft:food](#minecraft-food)
+-   [minecraft:hand_equipped](#minecraft-hand-equipped)
+-   [minecraft:max_damage](#minecraft-max-damage)
+-   [minecraft:max_stack_size](#minecraft-max-stack-size)
+-   [minecraft:seed](#minecraft-seed)
+-   [minecraft:stacked_by_data](#minecraft-stacked-by-data)
+-   [minecraft:use_duration](#minecraft-use-duration)
 
 # minecraft:block
 
