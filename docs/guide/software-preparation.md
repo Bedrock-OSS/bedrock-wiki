@@ -107,6 +107,10 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 -   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
 -   If you still haven't found a solution, feel free to join our [Discord server](/discord).
 
+### Additional Links and Tools
+
+-   You can explore additional tools [here](https://wiki.bedrock.dev/meta/useful-links.html).
+
 ## What you have learned
 
 :::tip
