@@ -113,17 +113,17 @@ Just like with items, the main files of a custom entity are its RP and BP files.
 
     ```json
     "any_of": [
-                {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "player"
-                },
-                {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "villager"
-                }
-            ]
+	    {
+	        "test": "is_family",
+	        "subject": "other",
+	        "value": "player"
+	    },
+	    {
+	        "test": "is_family",
+	        "subject": "other",
+	        "value": "villager"
+	    }
+	]
     ```
 
     -   `"minecraft:behavior.random_stroll"` makes the entity stroll around sometimes;
@@ -534,7 +534,8 @@ Done! Your entity should now show up in Minecraft, complete with all behaviors a
 -       How to format the behavior- and resource-files for an item
 -       How to set an entities texture
 -       How to use models, animations and animation controllers to make your entity more exciting
-    :::
+
+:::
 
 ## Your progress so far:
 
