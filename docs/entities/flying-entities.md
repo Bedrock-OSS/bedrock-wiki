@@ -34,27 +34,31 @@ We can also use `"value"` as an object to utilize the **range bar** players will
 
 Now we will give it slow falling and speed as it's falling so that it doesn't instantly fall. To do this, we will make an animation controller and give it those effects when it's not on the ground as so:
 
-(You can read a [tutorial on how to use animation controllers to execute commands here](/animation-controllers/entity-commands).)
+(You can read a tutorial on how to use animation controllers to execute commands [here](/animation-controllers/entity-commands).)
 
 <CodeHeader></CodeHeader>
 
 ```json
-"controller.animation.dragon.flying": {
-    "states": {
-        "default": {
-            "transitions": [{
-                "jumping": "!query.is_on_ground"
-            }]
+"controller.animation.dragon.flying":{
+    "states":{
+        "default":{
+            "transitions":[
+                {
+                    "jumping":"!query.is_on_ground"
+                }
+            ]
         },
-        "jumping": {
-            "transitions": [{
-                "default": "query.is_on_ground"
-            }],
-            "on_entry": [
+        "jumping":{
+            "transitions":[
+                {
+                    "default":"query.is_on_ground"
+                }
+            ],
+            "on_entry":[
                 "/effect @s slow_falling 20000 0 true",
                 "/effect @s speed 20000 10 true"
             ],
-            "on_exit": [
+            "on_exit":[
                 "/effect @s clear"
             ]
         }
@@ -67,14 +71,18 @@ We'll also need to hook it up to our entity as so:
 <CodeHeader></CodeHeader>
 
 ```json
-"description": {
-    "identifier": "wiki:dragon",
-    "is_spawnable": true,
-    "is_summonable": true,
-    "is_experimental": false,
-    "scripts": { "animate": [ "flying" ] },
-    "animations": {
-        "flying": "controller.animation.dragon.flying"
+"description":{
+    "identifier":"wiki:dragon",
+    "is_spawnable":true,
+    "is_summonable":true,
+    "is_experimental":false,
+    "scripts":{
+        "animate":[
+            "flying"
+        ]
+    },
+    "animations":{
+        "flying":"controller.animation.dragon.flying"
     }
 }
 ```
@@ -88,6 +96,8 @@ This is probably the most popular method of piloting flying entities, and unlike
 This method detects the riding player's vertical rotation and applies levitation/slow_falling effects to the entity accordingly.
 
 There are multiple ways of achieving that, but in this tutorial, we'll be using the target selectors `rym` (minimum y-rotation) and `ry` (maximum y-rotation) in a chain of repeating command-blocks to detect the player's pitch, and depending on the range, giving our entity levitation or slowly falling.
+
+<CodeHeader></CodeHeader>
 
 ```
 execute @a[rxm=-90,rx=-25] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 6 true
@@ -103,7 +113,7 @@ execute @a[rxm=35,rx=90] ~~~ effect @e[type=wiki:dragon,r=1] clear
 After you run those commands in a repeating command block, you should control its vertical movement by looking up and down.
 or u may use a simple animation controller and link it too the entity, so it always plays the function.
 
-You may use this instead of a repeating command block,link this to the entity or the player.
+You may use this instead of a repeating command block, link this to the entity or the player.
 It's recommended that you link it to the player.
 
 <CodeHeader></CodeHeader>
@@ -121,7 +131,9 @@ It's recommended that you link it to the player.
 							"base": "(1.0)"
 						}
 					],
-					"on_entry": ["/function dragon_control"]
+					"on_entry": [
+                        "/function dragon_control"
+                    ]
 				},
 				"base": {
 					"transitions": [
@@ -129,7 +141,9 @@ It's recommended that you link it to the player.
 							"default": "(1.0)"
 						}
 					],
-					"on_entry": ["/function dragon_control"]
+					"on_entry": [
+                        "/function dragon_control"
+                    ]
 				}
 			}
 		}
@@ -142,42 +156,48 @@ The entity will still probably be too slow when flying, so we'll borrow our anim
 <CodeHeader></CodeHeader>
 
 ```json
-"controller.animation.dragon.flying": {
-    "states": {
-        "default": {
-            "transitions": [{
-                "jumping_1": "!query.is_on_ground"
-            }]
+"controller.animation.dragon.flying":{
+    "states":{
+        "default":{
+            "transitions":[
+                {
+                    "jumping_1":"!query.is_on_ground"
+                }
+            ]
         },
-        "jumping_1": {
-            "transitions": [{
-                    "transition_to_default": "query.is_on_ground"
+        "jumping_1":{
+            "transitions":[
+                {
+                    "transition_to_default":"query.is_on_ground"
                 },
                 {
-                    "jumping_2": "true"
+                    "jumping_2":"true"
                 }
             ],
-            "on_entry": [
+            "on_entry":[
                 "/effect @s speed 15 10 true"
             ]
         },
-        "jumping_2": {
-            "transitions": [{
-                    "transition_to_default": "query.is_on_ground"
+        "jumping_2":{
+            "transitions":[
+                {
+                    "transition_to_default":"query.is_on_ground"
                 },
                 {
-                    "jumping_1": "true"
+                    "jumping_1":"true"
                 }
             ],
-            "on_entry": [
+            "on_entry":[
                 "/effect @s speed 15 10 true"
             ]
         },
-        "transition_to_default": {
-            "transitions": [{
-                "transition_to_default": "true"
-            }],
-            "on_entry": [
+        "transition_to_default":{
+            "transitions":[
+                {
+                    "transition_to_default":"true"
+                }
+            ],
+            "on_entry":[
                 "/effect @s clear"
             ]
         }
@@ -192,27 +212,33 @@ You might also notice that the entity levitates when you go near it. We can fix 
 <CodeHeader></CodeHeader>
 
 ```json
-"controller.animation.dragon.test_rider": {
-    "states": {
-        "default": {
-            "transitions": [{
-                "has_rider": "query.has_rider"
-            }]
+"controller.animation.dragon.test_rider":{
+    "states":{
+        "default":{
+            "transitions":[
+                {
+                    "has_rider":"query.has_rider"
+                }
+            ]
         },
-        "has_rider": {
-            "transitions": [{
-                "default": "!query.has_rider"
-            }],
-            "on_entry": [
+        "has_rider":{
+            "transitions":[
+                {
+                    "default":"!query.has_rider"
+                }
+            ],
+            "on_entry":[
                 "/tag @s add has_rider"
             ],
-            "on_exit": [
+            "on_exit":[
                 "/tag @s remove has_rider"
             ]
         }
     }
 }
 ```
+
+<CodeHeader></CodeHeader>
 
 ```
 execute @a[rxm=-90,rx=-25] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 6 true
@@ -245,23 +271,27 @@ Next, we need an animation controller that causes the entity to levitate when th
 <CodeHeader></CodeHeader>
 
 ```json
-"controller.animation.fly_dragon": {
-    "initial_state": "falling",
-    "states": {
-        "falling": {
-            "on_entry": [
+"controller.animation.fly_dragon":{
+    "initial_state":"falling",
+    "states":{
+        "falling":{
+            "on_entry":[
                 "/effect @e[type=wiki:dragon,r=1,c=1] levitation 0"
             ],
-            "transitions": [
-                { "rising": "query.is_jumping" }
+            "transitions":[
+                {
+                    "rising":"query.is_jumping"
+                }
             ]
         },
-        "rising": {
-            "on_entry": [
+        "rising":{
+            "on_entry":[
                 "/effect @e[type=wiki:dragon,r=1,c=1] levitation 100000 6 true"
             ],
-            "transitions": [
-                { "falling": "!query.is_jumping" }
+            "transitions":[
+                {
+                    "falling":"!query.is_jumping"
+                }
             ]
         }
     }
@@ -273,16 +303,18 @@ Now, we need a copy of the player's behavior file, which we will modify slightly
 <CodeHeader></CodeHeader>
 
 ```json
-"description": {
-    "identifier": "minecraft:player",
-    "is_spawnable": false,
-    "is_summonable": false,
-    "animations": {
-        "fly_dragon": "controller.animation.fly_dragon"
+"description":{
+    "identifier":"minecraft:player",
+    "is_spawnable":false,
+    "is_summonable":false,
+    "animations":{
+        "fly_dragon":"controller.animation.fly_dragon"
     },
-    "scripts": {
-        "animate": [
-            { "fly_dragon": "query.is_riding" }
+    "scripts":{
+        "animate":[
+            {
+                "fly_dragon":"query.is_riding"
+            }
         ]
     }
 }
@@ -293,20 +325,24 @@ The entity can now be controlled with the jump key, but there's a bug. If the pl
 <CodeHeader></CodeHeader>
 
 ```json
-"controller.animation.reset_levitation": {
-    "initial_state": "no_rider",
-    "states": {
-        "no_rider": {
-            "transitions": [
-                { "has_rider": "query.has_rider" }
+"controller.animation.reset_levitation":{
+    "initial_state":"no_rider",
+    "states":{
+        "no_rider":{
+            "transitions":[
+                {
+                    "has_rider":"query.has_rider"
+                }
             ]
         },
-        "has_rider": {
-            "on_exit": [
+        "has_rider":{
+            "on_exit":[
                 "/effect @s levitation 0"
             ],
-            "transitions": [
-                { "no_rider": "!query.has_rider" }
+            "transitions":[
+                {
+                    "no_rider":"!query.has_rider"
+                }
             ]
         }
     }
