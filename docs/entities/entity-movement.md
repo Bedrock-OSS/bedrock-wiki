@@ -116,3 +116,73 @@ There are too many AI components that generate paths to list in this document. A
 | [minecraft:behavior.stroll_towards_village](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stroll_towards_village) |
 
 For a full list, visit [bedrock.dev](https://bedrock.dev/docs/stable/Entities#AI%20Goals).
+
+### Pathfinding
+
+Making entities go to specific places is one of the most common requests for Marketplace content.
+The best way to do pathfinding uses a second entity, which the first entity will be attracted to. I am going to call this secondary entity the **marker**. If you are confused on how to create a marker, visit the [Dummy Entities](/entities/dummy-entities) page.
+
+#### Idea
+
+The way we are going to do pathfinding is actually fairly simple: Make our entity aggressive towards our marker, and then simply place our marker where we want our entity to path to. The hard part is knowing what components to add so we get really long-range pathing.
+
+#### Components
+
+These components can be edited as needed to create good pathing. Make sure to update the `nearest_attackable_target` to point to your marker entity. This takes a `family_type`, so you should set one of those on your marker.
+
+The attack radius in `ranged_attack` can be updated. This number sets how close the entity will pathfind to the marker before stopping. A value of 0 will cause the entity to pathfind as close as possible. Don't forget to add some basic movement and navigation components so your entity is able to move.
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.nearest_attackable_target": {
+    "priority": 0,
+    "reselect_targets": true,
+    "target_search_height": 1000,
+    "within_radius": 1000,
+    "must_see": false,
+    "entity_types": [
+        {
+            "filters": [
+                {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "waypoint_1"
+                }
+            ],
+            "max_dist": 1000
+        }
+    ]
+},
+"minecraft:attack": {
+    "damage": 0
+},
+"minecraft:behavior.ranged_attack": {
+    "priority": 4,
+    "attack_radius": 2
+},
+"minecraft:follow_range": {
+    "value": 1000,
+    "max": 1000
+}
+```
+
+#### Detecting a reached waypoint
+
+You can use `minecraft:target_nearby_sensor` to detect when you have reached the marker entity:
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:target_nearby_sensor": {
+    "inside_range": 2.0,
+    "outside_range": 4.0,
+    "must_see": true,
+    "on_inside_range": {
+        "event": "reached_waypoint"
+    },
+    "on_outside_range": {
+        "event": "not_reached_waypoint"
+    }
+}
+```
