@@ -2,10 +2,6 @@
 title: Bedrock Server Software
 ---
 
-## Discontinuation of Software
-
-Software will be marked as discontinued after roughly one month of inactivity.
-
 ## Software by Language
 
 | Language   | Status                                                              |
