@@ -501,7 +501,7 @@ Each state has the following objects:
 `“transitions”` are the conditions under which we will transition to another state. Each transition needs its own object.
 In our `standing` state, we have the transition `"moving": "query.modified_move_speed > 0.1"` which means when the condition on the left, `"query.modified_move_speed > 0.1"`, is true, it will transition the animation controller to the state `moving`. 
 
-For a more in depth explanation of how animation controllers work, check out our page [Intro to Animation Controllers](\animation-controllers\animation-controllers-intro).
+For a more in depth explanation of how animation controllers work, check out our page [Intro to Animation Controllers](/animation-controllers/animation-controllers-intro).
 
 Let's take a look at the Ghost's RP file: just like the _animations_, the _animation controllers_ get assigned to their shortnames (`walk_controller` and `attack_controller` respectively) under `"animations"`. Now, since the controllers control the animations, they have to constantly run, which is why we put their shortnames in the array of `"scripts"/"animate"`.
 (For example, if you put the shortname `"move"` there, the entity would constantly play the moving animation, even when staying in place. The controller only launches the relevant animation when the entity is doing a certain action, for example, `is_walking`.)
