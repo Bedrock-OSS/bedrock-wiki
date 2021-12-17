@@ -171,6 +171,12 @@ pack.description=A Ghostly Guide
 ["en_US"]
 ```
 
+<CodeHeader>BP/texts/languages.json</CodeHeader>
+
+```json
+["en_US"]
+```
+
 ## Checking your Work
 
 If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](./troubleshooting)
@@ -217,8 +223,12 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 'com.mojang/development_resource_packs/guide_RP/manifest.json',
 'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
 'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+'com.mojang/development_resource_packs/guide_RP/texts/languages.json',
 
 'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
+'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
+'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
 
 ]"></FolderView>
 
