@@ -78,6 +78,17 @@ It's important to remember that `runtime_identifier` will only parse the _hard-c
 
 ---
 
+### minecraft:ender_dragon
+
+-   Adds the Ender Dragon death effect to the entity.
+-   Inherits Ender Dragon hitbox.
+-   Destroys blocks within hitbox, including blocks below the entity. To prevent it from falling to bedrock either, add a indutructible block below it, remove gravity from the entity or disable the `mobGriefing` gamerule.
+-   Damages players within 2 blocks of hitbox.
+-   Increases distance it is rendered.
+-   Only able to be killed using /kill.
+
+---
+
 ### minecraft:iron_golem
 
 -   Allows launching attack (attacks deal increased knockback with a vertical amplification).
@@ -190,13 +201,6 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
-
----
-
-### minecraft:ender_dragon
-
--   Adds the Ender Dragon death effect to the entity.
--   Can destroy blocks.
 
 ---
 
