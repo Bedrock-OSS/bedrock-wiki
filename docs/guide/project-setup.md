@@ -224,7 +224,7 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 
 ## What you have learned
 
-::: What you have learned:
+:::tip What you have learned:
 
 -	What the com.mojang folder is, where it is and what folders it contains
 -	How to setup your workspace
