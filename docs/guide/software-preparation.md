@@ -113,7 +113,7 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 
 ## What you have learned
 
-:::tip
+:::tip What you have learned:
 
 -   To develop Addons, you need an **Editor**
 -   Other useful software:
@@ -121,7 +121,7 @@ There are many good sources of Addon documentation. Familiarize yourself with al
     -   Image Editors for creating Textures and Images
 -   Use the Vanilla Example files as a reference or inspiration for your addons
 -   How to solve problems and get help
-    :::
+:::
 
 ## Your progress so far
 

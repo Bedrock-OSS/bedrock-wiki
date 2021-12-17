@@ -43,9 +43,9 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 
 ## What you have learned
 
-:::tip
+:::tip What you have learned:
 
 -   Addons modify Minecraft content or add their own
 -   Addons are written in json
 -   An addon is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
-    :::
+:::

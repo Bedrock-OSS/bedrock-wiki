@@ -144,12 +144,12 @@ For more information on this topic, visit our page about [Loot Tables, Recipes a
 
 ## What you have learned
 
-:::tip
+:::tip What you have learned:
 
--   How to create a loot table and define which items a mob is able to drop
--   How to set the rules for a mob to spawn
--   How to create new crafting recipes
-    :::
+-	How to create a loot table and define which items a mob is able to drop
+-	How to set the rules for a mob to spawn
+-	How to create new crafting recipes
+:::
 
 ## Your progress so far:
 

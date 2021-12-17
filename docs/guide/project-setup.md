@@ -224,15 +224,15 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 
 ## What you have learned
 
-:::tip
+::: What you have learned:
 
--       What the com.mojang folder is, where it is and what folders it contains
--       How to setup your workspace
--       What a `manifest.json` file is
--       How to use UUIDs
--       How to create an icon for your addon
--       What a `.lang` file is
-    :::
+-	What the com.mojang folder is, where it is and what folders it contains
+-	How to setup your workspace
+-	What a `manifest.json` file is
+-	How to use UUIDs
+-	How to create an icon for your addon
+-	What a `.lang` file is
+:::
 
 ## Your progress so far
 
