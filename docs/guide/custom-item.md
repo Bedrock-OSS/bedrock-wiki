@@ -91,7 +91,7 @@ Navigate to `RP/textures/items/`, creating subdirectories as needed: this is whe
 
 ### Shortnames
 
-Finally, we need to tell the game that an exact texture file belongs to a specific custom item. In Ectoplasm's RP file, we already defined its icon as `"wiki.ectoplasm"`. Now we have to establish a connection between this _shortname_ and the texture file `ectoplasm.png`
+Finally, we need to tell the game that an exact texture file belongs to a specific custom item. In Ectoplasm's RP file, we already defined its icon as `"wiki.ectoplasm"`. Now we have to establish a connection between this _shortname_ and the texture file `ectoplasm.png`.
 This is done through the `item_texture.json` file, located in `RP/textures/`. Its base code is this:
 
 <CodeHeader>RP/textures/item_texture.json</CodeHeader>
@@ -104,7 +104,8 @@ This is done through the `item_texture.json` file, located in `RP/textures/`. It
 }
 ```
 
--   `"resource_pack_name"` is quite self-explanatory: it's the RP name string;
+-   `"resource_pack_name"` is quite self-explanatory: it's the RP name string.
+-	`"texture_name"` is the type of textures this file holds. Since this is for `item_texture.json` we set it to `"atlas.items"`.
 -   `"texture_data"` is an object where each item shortname is defined - for Ectoplasm, we need to put this code snippet inside of it:
 
 <CodeHeader>RP/textures/item_texture.json/texture_data</CodeHeader>

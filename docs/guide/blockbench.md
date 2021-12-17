@@ -10,15 +10,15 @@ Blockbench is a free software designed to make Minecraft modeling, texturing, an
 Let's get started.
 
 1.  Open Blockbench.
-2.  Choose _File>New>Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
+2.  Choose _File > New > Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
 3.  A screen like this will have popped up.
 
     ![](/assets/images/guide/create_entity_project_menu.png)
 
-    -   "File name:" Self-explanatory. My file will generate as "skele_yaklin.geo.json";
-    -       "Model Identifier:" This is the model identifier (namespace not required), a shortname for this ID will be defined later;
-    -       "Box UV" has to be checked on for automatic UV editing and unwrapping for texturing.
-    -   "Texture Height" and "Texture Width" define the resolution of the model's textures;
+    -   `"File name:"` is self-explanatory. My file will generate as "skele_yaklin.geo.json";
+    -   `"Model Identifier:"` is the model identifier (namespace not required), a shortname for this ID will be defined later;
+    -   `"Box UV"` has to be checked on for automatic UV editing and unwrapping for texturing.
+    -   `"Texture Height"` and `"Texture Width"` define the resolution of the model's textures;
 
 4.  Press confirm. You'll see a screen like this:
 
@@ -64,11 +64,9 @@ You might want to adjust one of the toolbars by adding "Export Animations" and "
 
 Now that our model, texture, and walk animation are complete, you can save your work.
 
-Go to _File>Save Model_ or _File>Export Bedrock Geometry_. Save the model in `RP/models/entity`, the texture in `RP/textures/entity/` and the animation in `RP/animations`. Congratulations! You've successfully created your first entity's visuals! You can see the file examples below.
+Go to _File > Save Model_ or _File > Export Bedrock Geometry_. Save the model in `RP/models/entity`, the texture in `RP/textures/entity/` and the animation in `RP/animations`. Congratulations! You've successfully created your first entity's visuals! You can see the file examples below.
 
 _Meanwhile, why not upgrading the visuals of your own unique entities' or creating another one?_
-
-`RP/models/entity/ghost.geo.json`
 
 <CodeHeader>RP/models/entity/ghost.geo.json</CodeHeader>
 
