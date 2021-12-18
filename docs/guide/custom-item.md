@@ -12,7 +12,7 @@ This section will walk you through the creation of a simple custom item, the ect
 <br>
 <br>
 
-Like blocks and entities, items consist of a BP file (that defines how the item would function/behave) and an RP file (that describes how the item would look)
+Items consist of a BP file that defines how the item would function/behave.
 
 :::warning
 This guide requires expirimental features toggled on.
@@ -44,10 +44,10 @@ Let's start by defining the item's behaviors in the BP. Create a folder called `
 
 Let's break up the code first:
 
--   `"format_version"` defines what format the file uses. We’ll be using 1.10 because that's the current most recent version for items.
+-   `"format_version"` defines which version of the Addon system Minecraft will use to read this file. For this guide, we will be creating a "1.16.100" item, which refers to the current experimental release of items. To learn more about format versions and how they effect files, you can learn so [here](https://wiki.bedrock.dev/concepts/format-version.html#top).
 -   `"minecraft:item"` contains all of the item's server-side data:
     -   `"identifier"` in `"description"` is a name unique to this item. It should contain no upper-case letters, and `_` should be used instead of spaces. An identifier consists of two parts: a _namespace_ (before the `:`) and the _id_ (after the `:`). The _namespace_ should be the same in all files of the same add-on. Usually, either the author's initials or an abbreviation of the pack name is used as one. In our case, `wiki` is a short enough word to be used as well. The _id_ is the item's own name. All vanilla items use `minecraft` as their namespace, but one CANNOT use that or `minecon` as the namespace in an add-on.
-        The most usual way to encounter an identifier is using the `/give` command in-game: for example, to acquire our Ectoplasm, you'd have to type `/give @s wiki:ectoplasm`.
+        The most usual way to encounter an identifier is using the `/give` command in-game: for example, to acquire our Ectoplasm, you'd have to type `/give @s wiki:ectoplasm`. Learn more about namespaces [here](https://wiki.bedrock.dev/concepts/namespaces.html#top).
     -    `"category"` in `"description"` defines in which tab of the creative inventory the item would show up. There are four tabs to choose from: `"Nature"`, `"Equipment"`, `"Construction"` and `"Items"`.
     -   `"components"` is where all the data about the item's behavior is stored. There are a lot of different components for items, blocks, and entities each, but since Ectoplasm is very simple, we only need two, which is:
         -   `"minecraft:max_stack_size"` takes an integer (`16` in this case) for its value, but some other components might take JSON objects (`{}`). You can experiment by setting the max stack size value anywhere between 1 and 64. For example, a Diamond Sword would have it as 1, an Ender Pearl as 16.
