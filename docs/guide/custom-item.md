@@ -14,6 +14,10 @@ This section will walk you through the creation of a simple custom item, the ect
 
 Like blocks and entities, items consist of a BP file (that defines how the item would function/behave) and an RP file (that describes how the item would look)
 
+:::warning
+This guide requires expirimental features toggled on.
+:::
+
 ## Behavior code
 
 Let's start by defining the item's behaviors in the BP. Create a folder called `items` in your BP directory, then create a file called `ectoplasm.json` inside.
