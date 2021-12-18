@@ -42,7 +42,7 @@ First, we'll make the ghost drop Ectoplasm upon death: create the following file
 -   Loot Tables consist of `"pools"`. Each pool defines a different loot. A pool consists of 3 parts, `"rolls"`, `"entries"` and `"conditions"`. The `"conditions"` are optional and won't be covered in this guide. To learn more about conditions, look at [Loot Tables, Recipes, Spawn Rules](/loot/loot_tables-spawn_rules).
 -   The `"rolls"` section defines how many times a random entry will be chosen from the following `"entries"`object.
 -   The `"entries"` part defines the items, from which the loot table can choose. Each roll a new item will be chosen.
--   `"type"` defines what will be chosen. You can set it to `"item"` or `"loot_table"` to either chose an item or an other loot table.
+-   `"type"` defines what will be chosen. You can set it to `"item"` or `"loot_table"` to either chose an item or an different loot table.
 -   `"name"` will be set to an item identifier with its namespace. It defines which item will be selected.
 -   `"weight"` is optional and defines how likely it is, that this item will be selected. If there is more than one item in the `"entries"` section, the `"weight"` attribute can be used to make the probability of one item more or less likely. If it isn't set, it defaults to 1.
 -   `"functions"` provide a powerful way of customizing the item that will be returned. They can add enchantments to an item, setting an items' name or simply setting the number of items that will be dropped. To define the number of items, we use `"set_count"`. It takes the `"count"` attribute, which sets the maximum and minimum amount of items that will be dropped.
