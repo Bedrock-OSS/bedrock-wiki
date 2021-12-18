@@ -375,7 +375,7 @@ Combining this with the sequence parameter, this allows us to run an event in bo
 ```
 
 :::warning
-This only works if the event which uses the trigger, is a component which allows for different targets; that is the context of the target can be retained from the component. If the component `"minecraft:environment_sensor"` called the event `wiki:on_interact`, then the `trigger` parameter would have no context for the target of `other` and the event wouldn't run. However, it would add the component `wiki:interacted_with`.
+Using `target` in the event only works if the component which calls the event allows for different targets. If the component `"minecraft:environment_sensor"` called the event `wiki:on_interact`, then the `trigger` parameter would have no context for the target of `other` and the event wouldn't run. However, it would add the component `wiki:interacted_with`.
 :::
 
 ### Sequence and Randomize Combination
