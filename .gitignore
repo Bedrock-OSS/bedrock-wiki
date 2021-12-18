@@ -3,3 +3,4 @@ node_modules
 docs/.vitepress/dist
 *.code-workspace
 yarn.lock
+.vscode/settings.json
