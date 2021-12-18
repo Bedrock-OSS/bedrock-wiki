@@ -29,7 +29,9 @@ Let's start by defining the item's behaviors in the BP. Create a folder called `
 			"category": "Items"
 		},
 		"components": {
-			"minecraft:icon": "wiki.ectoplasm",
+			"minecraft:icon": {
+                            "texture": "wiki.ectoplasm"
+                        },
                         "minecraft:max_stack_size": 16
 		}
 	}
