@@ -111,10 +111,9 @@ execute @a[rxm=35,rx=90] ~~~ effect @e[type=wiki:dragon,r=1] clear
 **Depending on how big your entity is and how far away the player's seat is from its pivot, you might need to change the radius `r` to a more significant value.**
 
 After you run those commands in a repeating command block, you should control its vertical movement by looking up and down.
-or u may use a simple animation controller and link it too the entity, so it always plays the function.
+or you may use a simple animation controller and link it to the entity, so it always plays the function.
 
-You may use this instead of a repeating command block, link this to the entity or the player.
-It's recommended that you link it to the player.
+It's recommended that you link this animation controller to the player.
 
 <CodeHeader></CodeHeader>
 
@@ -151,7 +150,7 @@ It's recommended that you link it to the player.
 }
 ```
 
-The entity will still probably be too slow when flying, so we'll borrow our animation controller from the first method with some changes to give the entity speed when it's flying.
+The entity will probably still be too slow when flying, so we'll borrow our animation controller from the first method with some changes to give the entity speed when it's flying.
 
 <CodeHeader></CodeHeader>
 
@@ -207,7 +206,7 @@ The entity will still probably be too slow when flying, so we'll borrow our anim
 
 _Since the entity's effects might be cleared when it's being flown, we changed the animation controller to give the entity speed every tick it's not on the ground._
 
-You might also notice that the entity levitates when you go near it. We can fix this by giving the entity a tag when it's being ridden (removing it when it isn't) and only applying those effects when the entity has the tag by making and animating another animation controller and updating our commands.
+You might also notice that the entity levitates when you go near it. We can fix this by giving the entity a tag when it's being ridden (removing it when it isn't being ridden) and only applying those effects when the entity has the tag by making and animating another animation controller and updating our commands.
 
 <CodeHeader></CodeHeader>
 
