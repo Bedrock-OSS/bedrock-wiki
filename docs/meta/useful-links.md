@@ -119,10 +119,10 @@ _These discord links are to community-created addons, with a public discord. The
 
 
 <Spoiler title="Community Discords">
--   [Sakana](https://discord.gg/HGpvEmaA6T)
--   [World Expansion](https://discord.gg/CRQ6veyjak)
--   [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
--   [Project Vex](https://discord.gg/P95nXc4jbR)
--   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
--   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
+[Sakana](https://discord.gg/HGpvEmaA6T)
+[World Expansion](https://discord.gg/CRQ6veyjak)
+[Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
+[Project Vex](https://discord.gg/P95nXc4jbR)
+[Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
+[Java & Bedrock Client](https://github.com/kennyvv/Alex)
 </Spoiler>
