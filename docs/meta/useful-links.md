@@ -117,11 +117,11 @@ Important links have a ⭐.
 
 _These discord links are to community-created addons, with a public discord. They are not vetted for quality or content. Please join at your own risk. _
 
-<Spoiler title="Community Discords">
+<Spoiler title='Community Discords'>
 -   [Sakana](https://discord.gg/HGpvEmaA6T)
 -   [World Expansion](https://discord.gg/CRQ6veyjak)
 -   [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
 -   [Project Vex](https://discord.gg/P95nXc4jbR)
 -   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
-</Spoiler>
 -   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
+</Spoiler>
