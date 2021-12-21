@@ -542,9 +542,9 @@ Done! Your entity should now show up in Minecraft, complete with all behaviors a
 
 :::tip What you have learned:
 
--       How to format the behavior- and resource-files for an item
--       How to set an entities texture
--       How to use models, animations and animation controllers to make your entity more exciting
+How to format the behavior- and resource-files for an item
+How to set an entities texture
+How to use models, animations and animation controllers to make your entity more exciting
 
 :::
 
