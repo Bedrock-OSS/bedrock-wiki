@@ -115,7 +115,7 @@ Important links have a ⭐.
 
 ## Community-Addon Discords
 
-_These discord links are to community-created addons, with a public discord. They are not vetted for quality or content. Please join at your own risk. _
+_These discord links are to community-created addons, with a public discord. They are not vetted for quality or content. Please join at your own risk._
 
 
 <Spoiler title="Community Discords">
