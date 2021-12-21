@@ -112,6 +112,8 @@ Important links have a ⭐.
 -   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 -   [Windows 10 Non-renderdragon install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
+-   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
+-   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
 
 ## Community-Addon Discords
 
@@ -120,10 +122,6 @@ _These discord links are to community-created addons, with a public discord. The
 <Spoiler title="Community Discords">
 
 -   [Sakana](https://discord.gg/HGpvEmaA6T)
--   [World Expansion](https://discord.gg/CRQ6veyjak)
 -   [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
--   [Project Vex](https://discord.gg/P95nXc4jbR)
--   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
--   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
 
 </Spoiler>
