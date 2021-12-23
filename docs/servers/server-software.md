@@ -50,9 +50,10 @@ title: Bedrock Server Software
 ### PHP
 
 -   [Altay](https://github.com/TuranicTeam/Altay)
+-   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
+-   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
--   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
 
 ### Python
 
