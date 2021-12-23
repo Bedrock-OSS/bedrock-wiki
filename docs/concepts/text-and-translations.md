@@ -163,7 +163,7 @@ Simply just an array of `.lang` files for Minecraft to register as available lan
 
 ```json
 [
-  "xx_XX"
+  "xx_XX",
   "yy_YY"
 ]
 ```
