@@ -112,7 +112,7 @@ langcode.wiki:my_text.words=Meinblock
 The result would be that anyone using English (United States) would see the text "My Block" when `langcode.wiki:my_text.words` is used, but also anyone wih German selected as their language would see "Meinblock".
 
 :::tip
-If you do not plan on creating translations for your packs, it is advised that if you are working in English, you create both a `en.GB.lang` *and* `en.NA.lang`, with identical content
+If you do not plan on creating translations for your packs, it is advised that if you are working in English, you create both a `en_GB.lang` *and* `en_US.lang`, with identical content
 :::
 
 ### Vanilla Languages
