@@ -1,5 +1,6 @@
 ---
 title: Detecting Other Entities
+category: Tutorials
 tags:
     - intermediate
 ---
@@ -7,6 +8,7 @@ tags:
 You might have thought about making your entities fire an event when other entities are nearby. This article details the various known ways to do so.
 
 ## minecraft:entity_sensor
+
 This is probably the most basic way to detect other entities. The main issues is it only accepts one entry and testing if the entity is out of range can be very tricky. Because it's an entity component, you can just place into your entity behavior file and edit the Minecraft filters. Here's a demonstration:
 
 <CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
@@ -28,6 +30,7 @@ This is probably the most basic way to detect other entities. The main issues is
 ```
 
 ## BP Animations & Animation Controllers
+
 The `for_each` function and `query.get_nearby_entities` or `query.get_nearby_entities_except_self` can also be used for detecting other entities. They are more effective than using `minecraft:entity_sensor` because they are better at detecting if the entity you want to detect goes away than with `minecraft:entity_sensor`. The only downside is that they're experimental.
 
 This example you'll be following will make pigs say "oink oink" upon detecting players, though you can replace those with whatever you want. First of all, copy-paste this BP animation:
@@ -47,7 +50,7 @@ This example you'll be following will make pigs say "oink oink" upon detecting p
 				]
 			}
 		}
-    }
+	}
 }
 ```
 
@@ -65,12 +68,12 @@ Now that's good and all, but on the off chance, you want to make the pig detect 
 			"animation_length": 0.05,
 			"loop": true,
 			"timeline": {
-				"300": [
+				"0": [
 					"v.x = 0.0; for_each(t.player, query.get_nearby_entities_except_self(2, 'minecraft:player'), { v.x = v.x + (t.player -> query.is_sheared); }); return v.x > 0.0;"
 				]
 			}
 		}
-    }
+	}
 }
 ```
 
@@ -80,37 +83,31 @@ Next of all, copy paste this BP animation controller:
 
 ```json
 {
-    "format_version": "1.10.0",
-    "animation_controllers": {
-        "controller.animation.pig_find_player": {
-            "initial_state": "default",
-            "states": {
-                "default": {
-                    "animations": [
-                        "find_player"
-                    ],
-                    "transitions": [
-                        {
-                            "detected": "v.x > 0"
-                        }
-                    ]
-                },
-                "detected": {
-                    "animations": [
-                        "find_player"
-                    ],
-                    "transitions": [
-                        {
-                            "default": "v.x <= 0"
-                        }
-                    ],
-                    "on_entry": [
-                        "/say oink oink"
-                    ]
-                }
-            }
-        }
-    }
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pig_find_player": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": ["find_player"],
+					"transitions": [
+						{
+							"detected": "v.x > 0"
+						}
+					]
+				},
+				"detected": {
+					"animations": ["find_player"],
+					"transitions": [
+						{
+							"default": "v.x <= 0"
+						}
+					],
+					"on_entry": ["/say oink oink"]
+				}
+			}
+		}
+	}
 }
 ```
 

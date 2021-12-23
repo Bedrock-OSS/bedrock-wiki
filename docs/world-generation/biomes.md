@@ -1,6 +1,8 @@
 ---
 title: Biomes
+category: General
 tags:
+    - guide
     - experimental
 ---
 

@@ -2,16 +2,12 @@
 title: Bedrock Server Software
 ---
 
-## Discontinuation of Software
-
-Software will be marked as discontinued after roughly one month of inactivity.
-
 ## Software by Language
 
 | Language   | Status                                                              |
 | ---------- | ------------------------------------------------------------------- |
-| Java       | [Still Active](#java) : 4 < [Discontinued](#java-1) : 12            |
 | PHP        | [Still Active](#php) : 4 < [Discontinued](#php-1) : 31              |
+| Java       | [Still Active](#java) : 4 < [Discontinued](#java-1) : 12            |
 | C#         | [Still Active](#c) : 1 < [Discontinued](#c-2) : 1                   |
 | Go         | [Still Active](#go) : 1 < [Discontinued](#go-1) : 3                 |
 | Python     | [Still Active](#python) : 1 < [Discontinued](#python-1) : 1         |
@@ -54,9 +50,10 @@ Software will be marked as discontinued after roughly one month of inactivity.
 ### PHP
 
 -   [Altay](https://github.com/TuranicTeam/Altay)
+-   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
+-   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
--   [EskoBE](https://github.com/MCPE357/EskoBE)
 
 ### Python
 

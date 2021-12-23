@@ -1,5 +1,6 @@
 ---
 title: Heightmap Noise
+category: Tutorials
 tags:
     - experimental
     - tutorial
@@ -46,15 +47,12 @@ The scatter feature is the main feature which we'll be using to generate the ter
 		"description": {
 			"identifier": "wiki:column"
 		},
-		"iterations": "t.height=64+(q.noise(v.origin/64,v.originx/64))*16; return t.height;",
+		"iterations": "t.height=64+(q.noise(v.originz/64,v.originx/64))*16; return t.height;",
 		"places_feature": "wiki:stone_feature",
 		"x": 0,
 		"z": 0,
 		"y": {
-			"extent": [
-				0,
-				"t.height"
-			],
+			"extent": [-64, "t.height"],
 			"distribution": "fixed_grid"
 		}
 	}
@@ -62,12 +60,12 @@ The scatter feature is the main feature which we'll be using to generate the ter
 ```
 
 Let me explain whats happening in the `iterations`:
-  In the iterations we've defined a temp `t.height` in which we've defined our main noise function.
-  In `t.height` the value that we're adding first is the base height, basically the height at which the function starts.
-  After that we're querying perlin using the `q.noise` query which returns values ranging from -1 to 1 and dividing that by a value which smooths out the function.
-  Then we're multiplying the whole function by a value which in simple words is basically the variation in the terrain.
+In the iterations we've defined a temp `t.height` in which we've defined our main noise function.
+In `t.height` the value that we're adding first is the base height, basically the height at which the function starts.
+After that we're querying perlin using the `q.noise` query which returns values ranging from -1 to 1 and dividing that by a value which smooths out the function.
+Then we're multiplying the whole function by a value which in simple words is basically the variation in the terrain.
 
-So what's happening here is that we are getting values from the `t.height` temp and assigning them to the y extent ranging from 0 to the value thus generating a column. Now this value is going to vary column by column but not in a random way as `q.noise` queryies Perlin noise, meaning the values are relative to each other. So instead of getting values like 64,69,45,100,7,56 we are getting values like 64,65,66,68,69,68,66,65 and so on.
+So what's happening here is that we are getting values from the `t.height` temp and assigning them to the y extent ranging from -64 to the value thus generating a column. Now this value is going to vary column by column but not in a random way as `q.noise` queryies Perlin noise, meaning the values are relative to each other. So instead of getting values like 64,69,45,100,7,56 we are getting values like 64,65,66,68,69,68,66,65 and so on.
 
 ## Feature Rule
 
@@ -99,24 +97,19 @@ So what's happening here is that we are getting values from the `t.height` temp 
 		"distribution": {
 			"iterations": 256,
 			"x": {
-				"extent": [
-					0,
-					15
-				],
+				"extent": [0, 15],
 				"distribution": "fixed_grid"
 			},
 			"y": 0,
 			"z": {
-				"extent": [
-					0,
-					15
-				],
+				"extent": [0, 15],
 				"distribution": "fixed_grid"
 			}
 		}
 	}
 }
 ```
+
 In this we have set the `iteration` to 256 as the area of a whole chunk is 256 (16x16) to make the columns generate in the whole chunk.
 
 And our custom noise based terrain is finished! Feel free to mess with the values.

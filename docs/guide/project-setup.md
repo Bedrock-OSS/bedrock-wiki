@@ -1,5 +1,6 @@
 ---
 title: Project Setup
+category: Guide
 nav_order: 4
 prefix: '4. '
 ---
@@ -90,7 +91,7 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 -   "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version; use it.
 
--   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game. We are defining these files in "code form" so we can translate them later into other languages. For more information about localization, look [here](/concepts/text-localization).
+-   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game. We are defining these files in "code form" so we can translate them later into other languages. For more information about localization, look [here](/concepts/text-and-translations).
 
 -   The "`UUID`" field is **essential**, and will be discussed in more detail below.
 
@@ -148,7 +149,7 @@ You should place a copy of your desired image into both the RP and the BP. The i
 
 ## Language Files
 
-The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](/concepts/lang)
+The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](/concepts/text-and-translations)
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
@@ -167,9 +168,13 @@ pack.description=A Ghostly Guide
 <CodeHeader>RP/texts/languages.json</CodeHeader>
 
 ```json
-[
-    "en_US"
-]
+["en_US"]
+```
+
+<CodeHeader>BP/texts/languages.json</CodeHeader>
+
+```json
+["en_US"]
 ```
 
 ## Checking your Work
@@ -218,19 +223,25 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 'com.mojang/development_resource_packs/guide_RP/manifest.json',
 'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
 'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+'com.mojang/development_resource_packs/guide_RP/texts/languages.json',
 
 'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
+'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
+'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
 
 ]"></FolderView>
 
 ## What you have learned
-:::tip
-- 	What the com.mojang folder is, where it is and what folders it contains
-- 	How to setup your workspace
-- 	What a `manifest.json` file is
-- 	How to use UUIDs
-- 	How to create an icon for your addon
-- 	What a `.lang` file is
+
+:::tip What you have learned:
+
+-	What the com.mojang folder is, where it is and what folders it contains
+-	How to setup your workspace
+-	What a `manifest.json` file is
+-	How to use UUIDs
+-	How to create an icon for your addon
+-	What a `.lang` file is
 :::
 
 ## Your progress so far

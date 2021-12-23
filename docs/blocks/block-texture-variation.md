@@ -1,5 +1,6 @@
 ---
 title: Block Texture Variation
+category: Tutorials
 tags:
     - intermediate
 ---
@@ -67,5 +68,6 @@ After using the example above, you might want to adjust the weights, edit the `t
 ```
 
 Notes:
+
 -   This does appear to grab the texture set file. However, the texture set files do not seem to grasp the MER or regular file defined in the texture set.
     -- [Bug Report](https://bugs.mojang.com/browse/MCPE-126617)

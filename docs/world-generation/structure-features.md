@@ -1,5 +1,6 @@
 ---
 title: Generating Custom Structures
+category: Tutorials
 mention:
 	- DerpMcaddon
 tags:

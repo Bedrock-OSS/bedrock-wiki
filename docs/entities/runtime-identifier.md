@@ -1,23 +1,26 @@
 ---
 title: Runtime Identifiers
+category: Documentation
 ---
 
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
 It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 
-"within_radius": 1000,
+<CodeHeader>Behavior Entity Description</CodeHeader>
 
 ```json
 "description": {
     "identifier": "wiki:my_box",
+    "runtime_identifier": "minecraft:shulker", // This is the runtime. It will add hard-coded behaviors from Shulker to this entity.
     "is_spawnable": true,
     "is_summonable": true,
-    "is_experimental": false,
-    "runtime_identifier": "minecraft:shulker"
+    "is_experimental": false
 }
 ```
 
-It's important to remember that `runtime_identifier` will only parse the hard-coded properties of an entity. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity. Additionally, some entity runtimes may overwrite properties found in datadriven components even if they are added in the components section, such as the collision box size for the shulker entity.
+:::tip
+It's important to remember that `runtime_identifier` will only parse the _hard-coded properties of an entity_. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity. Additionally, some entity runtimes may overwrite properties found in datadriven components even if they are added in the components section, such as the collision box size for the shulker entity.
+:::
 
 ## Known runtime-identifier effects:
 
@@ -70,6 +73,19 @@ It's important to remember that `runtime_identifier` will only parse the hard-co
 -   Will always be pushable through by other entities.
 -   Cannot be configured to receive damage.
 -   Cannot change the direction it faces.
+-   Can revive the Ender Dragon.
+-   Will be spawned with fire.
+
+---
+
+### minecraft:ender_dragon
+
+-   Adds the Ender Dragon death effect to the entity.
+-   Inherits Ender Dragon hitbox.
+-   Destroys blocks within hitbox, including blocks below the entity. To prevent it from falling to bedrock either, add a indutructible block below it, remove gravity from the entity or disable the `mobGriefing` gamerule.
+-   Damages players within 2 blocks of hitbox.
+-   Increases distance it is rendered.
+-   Only able to be killed using /kill.
 
 ---
 
@@ -186,3 +202,8 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
 
+---
+
+### minecraft:wither
+
+-   Explodes on death.

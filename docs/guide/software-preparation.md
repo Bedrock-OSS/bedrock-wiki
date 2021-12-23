@@ -1,5 +1,6 @@
 ---
 title: Software and preparation
+category: Guide
 nav_order: 3
 prefix: '3. '
 ---
@@ -106,8 +107,14 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 -   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
 -   If you still haven't found a solution, feel free to join our [Discord server](/discord).
 
+### Additional Links and Tools
+
+-   You can explore additional tools [here](https://wiki.bedrock.dev/meta/useful-links.html).
+
 ## What you have learned
-:::tip
+
+:::tip What you have learned:
+
 -   To develop Addons, you need an **Editor**
 -   Other useful software:
     -   Blockbench for creating Minecraft Models like Entities
@@ -123,7 +130,7 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 -   [x] Installed the necessary software
 -   [x] Downloaded the Vanilla Example files
 
-**Whats next:**
+**What are you to do next:**
 
 -   [ ] Locate your `com.mojang` folder and create your addon's workspace.
 -   [ ] Create the manifest and pack icon for your first addon

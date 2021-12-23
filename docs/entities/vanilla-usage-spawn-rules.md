@@ -1,5 +1,6 @@
 ---
 title: Vanilla Usage Spawn Rules
+category: Documentation
 ---
 
 # Spawn Rules

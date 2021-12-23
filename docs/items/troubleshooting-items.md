@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting Items
+category: General
 nav_order: 4
 tags:
     - help
@@ -56,12 +57,12 @@ This section contains troubleshooting information for stable items. Remember, yo
 
 Find the issue you have, then read the prompts.
 
--   [I cannot `/give` myself my custom item!](#2.1)
+-   [I cannot /give myself my custom item!](#2.1)
 -   [My textures are missing!](#2.2)
 
 <a name="2.1"></a>
 
-### I cannot `/give` myself my custom item!
+### I cannot /give myself my custom item!
 
 An issue here will be caused by the item file in the BP.
 
@@ -132,13 +133,13 @@ This section contains troubleshooting information for experimental items. Rememb
 
 Find the issue you have, then read the prompts.
 
--   [I cannot `/give` myself my custom item!](#3.1)
+-   [I cannot /give myself my custom item!](#3.1)
 -   [My textures are missing!](#3.2)
 -   [My item is huge!](#3.3)
 
 <a name="3.1"></a>
 
-### I cannot `/give` myself my custom item!
+### I cannot /give myself my custom item!
 
 -   Confirm that your pack is actually applied to your world
 -   Confirm that your item is in the folder `BP/items/`

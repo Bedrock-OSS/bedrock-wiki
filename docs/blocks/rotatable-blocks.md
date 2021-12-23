@@ -1,5 +1,6 @@
 ---
 title: Rotatable Blocks
+category: Tutorials
 tags:
     - experimental
 ---
@@ -10,6 +11,7 @@ Ensure to check out the [blocks guide](/blocks/blocks-intro) before starting thi
 :::
 
 ### First Steps
+
 Make sure you have the `Holiday Creator Features` toggle turned on. This will allow us to utilize the `1.16.100` components.
 
 ### The Model
@@ -24,32 +26,32 @@ Rotating blocks make use of the permutations that were intoduced in 1.16.100. Th
 
 ```json
 {
-    "permutations": [
-        {
-            "condition": "query.block_property('wiki:rotation') == 2",
-            "components": {
-                "minecraft:rotation": [0, 0, 0]
-            }
-        },
-        {
-            "condition": "query.block_property('wiki:rotation') == 3",
-            "components": {
-                "minecraft:rotation": [0, 180, 0]
-            }
-        },
-        {
-            "condition": "query.block_property('wiki:rotation') == 4",
-            "components": {
-                "minecraft:rotation": [0, 90, 0]
-            }
-        },
-        {
-            "condition": "query.block_property('wiki:rotation') == 5",
-            "components": {
-                "minecraft:rotation": [0, 270, 0]
-            }
-        }
-    ]
+	"permutations": [
+		{
+			"condition": "query.block_property('wiki:rotation') == 2",
+			"components": {
+				"minecraft:rotation": [0, 0, 0]
+			}
+		},
+		{
+			"condition": "query.block_property('wiki:rotation') == 3",
+			"components": {
+				"minecraft:rotation": [0, 180, 0]
+			}
+		},
+		{
+			"condition": "query.block_property('wiki:rotation') == 4",
+			"components": {
+				"minecraft:rotation": [0, 90, 0]
+			}
+		},
+		{
+			"condition": "query.block_property('wiki:rotation') == 5",
+			"components": {
+				"minecraft:rotation": [0, 270, 0]
+			}
+		}
+	]
 }
 ```
 
@@ -61,13 +63,13 @@ In order to make the block rotate the way the player is facing, we have to use s
 
 ```json
 {
-    "events": {
-        "wiki:set_rotation": {
-            "set_block_property": {
-                "wiki:rotation": "(query.cardinal_facing_2d)"
-            }
-        }
-    }
+	"events": {
+		"wiki:set_rotation": {
+			"set_block_property": {
+				"wiki:rotation": "(query.cardinal_facing_2d)"
+			}
+		}
+	}
 }
 ```
 
@@ -77,9 +79,9 @@ This event is called upon by using the `minecraft:on_player_placing` component.
 
 ```json
 {
-    "minecraft:on_player_placing": {
-        "event": "wiki:set_rotation"
-    }
+	"minecraft:on_player_placing": {
+		"event": "wiki:set_rotation"
+	}
 }
 ```
 
@@ -126,7 +128,8 @@ This event is called upon by using the `minecraft:on_player_placing` component.
 				"event": "wiki:set_rotation"
 			}
 		},
-		"permutations": [{
+		"permutations": [
+			{
 				"condition": "query.block_property('wiki:rotation') == 2",
 				"components": {
 					"minecraft:rotation": [0, 0, 0]

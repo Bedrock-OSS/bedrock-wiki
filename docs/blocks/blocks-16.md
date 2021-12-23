@@ -1,8 +1,8 @@
 ---
 title: 'Blocks 1.16.100+'
+category: General
 tags:
     - experimental
-nav_order: 2
 ---
 
 Better documentation on the new block format introduced in the Minecraft Beta 1.16.100.
@@ -76,7 +76,7 @@ _This example spawns a loot table when an entity stands on the block._
 
 ## Event Functions
 
-### `add_mob_effect`
+### add_mob_effect
 
 Adds a mob effect when triggered
 
@@ -95,7 +95,7 @@ Adds a mob effect when triggered
 }
 ```
 
-### `remove_mob_effect`
+### remove_mob_effect
 
 Removes a mob effect when triggered
 
@@ -112,7 +112,7 @@ Removes a mob effect when triggered
 }
 ```
 
-### `spawn_loot`
+### spawn_loot
 
 Summons a loot table when the event is triggered.
 
@@ -128,7 +128,7 @@ Summons a loot table when the event is triggered.
 }
 ```
 
-### `set_block`
+### set_block
 
 Removes the current block and replaces it with the defined block in the same position.
 
@@ -142,7 +142,7 @@ Removes the current block and replaces it with the defined block in the same pos
 }
 ```
 
-### `set_block_property`
+### set_block_property
 
 Used to set the value of a block's property
 
@@ -158,7 +158,7 @@ Used to set the value of a block's property
 }
 ```
 
-### `set_block_at_pos`
+### set_block_at_pos
 
 Used to set a block relative to the position of this block
 
@@ -175,7 +175,7 @@ Used to set a block relative to the position of this block
 }
 ```
 
-### `run_command`
+### run_command
 
 Used to execute a command
 
@@ -191,7 +191,7 @@ Used to execute a command
 }
 ```
 
-### `damage`
+### damage
 
 <CodeHeader></CodeHeader>
 
@@ -207,7 +207,7 @@ Used to execute a command
 }
 ```
 
-### `decrement_stack`
+### decrement_stack
 
 Decrements the stack
 
@@ -221,7 +221,7 @@ Decrements the stack
 }
 ```
 
-### `die`
+### die
 
 Kills the target or destroys the block
 
@@ -237,7 +237,7 @@ Kills the target or destroys the block
 }
 ```
 
-### `play_effect`
+### play_effect
 
 Runs a particle effect on the target
 
@@ -254,7 +254,7 @@ Runs a particle effect on the target
 }
 ```
 
-### `play_sound`
+### play_sound
 
 Plays a sound on the target
 
@@ -271,7 +271,7 @@ Plays a sound on the target
 }
 ```
 
-### `trigger`
+### trigger
 
 Used to trigger an event, this can be a block event or an entity event.
 
@@ -288,7 +288,7 @@ Used to trigger an event, this can be a block event or an entity event.
 }
 ```
 
-### `sequence`
+### sequence
 
 Used to sequence event functions
 
@@ -315,7 +315,7 @@ Used to sequence event functions
 }
 ```
 
-### `randomize`
+### randomize
 
 Used to randomize event functions
 
@@ -364,7 +364,7 @@ Block components to trigger block events:
 
 List of all new block components, with usage examples.
 
-### `minecraft:unit_cube`
+### minecraft:unit_cube
 
 <CodeHeader></CodeHeader>
 
@@ -374,7 +374,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:crafting_table`
+### minecraft:crafting_table
 
 <CodeHeader></CodeHeader>
 
@@ -388,7 +388,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:material_instances`
+### minecraft:material_instances
 
 <CodeHeader></CodeHeader>
 
@@ -408,7 +408,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:geometry`
+### minecraft:geometry
 
 <CodeHeader></CodeHeader>
 
@@ -418,7 +418,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:on_step_on`
+### minecraft:on_step_on
 
 <CodeHeader></CodeHeader>
 
@@ -432,7 +432,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:on_step_off`
+### minecraft:on_step_off
 
 <CodeHeader></CodeHeader>
 
@@ -446,7 +446,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:on_fall_on`
+### minecraft:on_fall_on
 
 <CodeHeader></CodeHeader>
 
@@ -461,7 +461,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:on_placed`
+### minecraft:on_placed
 
 <CodeHeader></CodeHeader>
 
@@ -475,7 +475,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:on_player_placing`
+### minecraft:on_player_placing
 
 <CodeHeader></CodeHeader>
 
@@ -489,7 +489,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:on_player_destroyed`
+### minecraft:on_player_destroyed
 
 <CodeHeader></CodeHeader>
 
@@ -503,7 +503,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:on_interact`
+### minecraft:on_interact
 
 <CodeHeader></CodeHeader>
 
@@ -517,7 +517,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:ticking`
+### minecraft:ticking
 
 <CodeHeader></CodeHeader>
 
@@ -535,7 +535,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:random_ticking`
+### minecraft:random_ticking
 
 <CodeHeader></CodeHeader>
 
@@ -551,7 +551,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:entity_collision`
+### minecraft:entity_collision
 
 <CodeHeader></CodeHeader>
 
@@ -572,7 +572,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:pick_collision`
+### minecraft:pick_collision
 
 <CodeHeader></CodeHeader>
 
@@ -593,7 +593,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:breakonpush`
+### minecraft:breakonpush
 
 <CodeHeader></CodeHeader>
 
@@ -603,7 +603,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:display_name`
+### minecraft:display_name
 
 <CodeHeader></CodeHeader>
 
@@ -613,7 +613,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:breathability`
+### minecraft:breathability
 
 <CodeHeader></CodeHeader>
 
@@ -623,7 +623,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:immovable`
+### minecraft:immovable
 
 <CodeHeader></CodeHeader>
 
@@ -633,7 +633,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:onlypistonpush`
+### minecraft:onlypistonpush
 
 <CodeHeader></CodeHeader>
 
@@ -643,7 +643,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:placement_filter`
+### minecraft:placement_filter
 
 <CodeHeader></CodeHeader>
 
@@ -672,7 +672,7 @@ _This also accepts tags, such as:_
 				"allowed_faces": ["up"],
 				"block_filter": [
 					{
-						"tags": "!query.any_tag('air')"
+						"tags": "!query.any_tag('stone')"
 					}
 				]
 			}
@@ -681,7 +681,9 @@ _This also accepts tags, such as:_
 }
 ```
 
-### `minecraft:preventsjumping`
+See [this](/blocks/block-tags) page for a list of vanilla tags and relavent blocks.
+
+### minecraft:preventsjumping
 
 <CodeHeader></CodeHeader>
 
@@ -691,7 +693,7 @@ _This also accepts tags, such as:_
 }
 ```
 
-### `minecraft:rotation`
+### minecraft:rotation
 
 <CodeHeader></CodeHeader>
 
@@ -701,7 +703,7 @@ _This also accepts tags, such as:_
 }
 ```
 
-### `minecraft:unwalkable`
+### minecraft:unwalkable
 
 <CodeHeader></CodeHeader>
 
@@ -849,9 +851,10 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
     -   `minecraft:on_fall_on`
 -   It seems that `render_method` in `minecraft:material_instances` affects the block's properties.
     -   If you use `opaque` it will allow redstone to pass through it, grass decay, and allow mobs to spawn on it
-    - 	If you use `alpha_test` it won't allow redstone to pass through it, it won't make grass decay, and it won't allow mobs to spawn on it
-    - 	`blend` has the same properties as `alpha_test`
-    - 	Should you want to have a transparent block but have `opaque` properties:
+    -             If you use `alpha_test` it won't allow redstone to pass through it, it won't make grass decay, and it won't allow mobs to spawn on it
+    -             `blend` has the same properties as `alpha_test`
+    -             Should you want to have a transparent block but have `opaque` properties:
+
 ```json
 "minecraft:material_instances": {
 	"*": {
@@ -859,4 +862,5 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
     	}
 }
 ```
+
 Link the textures via `blocks.json`

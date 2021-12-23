@@ -1,5 +1,6 @@
 ---
 title: Making Custom Glass Blocks
+category: Tutorials
 tags:
     - experimental
     - expert
@@ -9,12 +10,12 @@ mention:
 
 Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.
 
- - Features
-	 - Make a Glass Block
-	 - Make Vertical Connecting Glass
-- Issues
-	- When breaking there is invisible textures for a second (Minecraft Bug)
-	- When placing there is window textures visible for a second (Minecraft Bug)
+-   Features
+    -   Make a Glass Block
+    -   Make Vertical Connecting Glass
+-   Issues
+    -   When breaking there is invisible textures for a second (Minecraft Bug)
+    -   When placing there is window textures visible for a second (Minecraft Bug)
 
 :::warning
 **Requires** Molang for connected textures and Holiday Toggles for BOTH ENABLED
@@ -52,14 +53,15 @@ By The End You Should Be Able To Create Something Like This!
 	}
 }
 ```
+
 <CodeHeader>RP/blocks.json</CodeHeader>
 
 ```json
 {
 	"wiki:custom_glass": {
-    	"textures": "window_block",
+		"textures": "window_block",
 		"sound": "glass"
-   	}
+	}
 }
 ```
 
@@ -81,36 +83,19 @@ By The End You Should Be Able To Create Something Like This!
 			"identifier": "wiki:custom_vertical_connecting_glass",
 			"properties": {
 				//properties needed for connected textures, also contols up and down culling
-				"wiki:connected_state": [
-					0,
-					1,
-					2,
-					3
-				],
+				"wiki:connected_state": [0, 1, 2, 3],
 				//properties to remove culling, depending on the direction in which a block is placed
-				"wiki:north": [
-					0,
-					1
-				],
-				"wiki:south": [
-					0,
-					1
-				],
-				"wiki:east": [
-					0,
-					1
-				],
-				"wiki:west": [
-					0,
-					1
-				]
+				"wiki:north": [0, 1],
+				"wiki:south": [0, 1],
+				"wiki:east": [0, 1],
+				"wiki:west": [0, 1]
 			}
 		},
 		"components": {
 			//basic glass components
 			//tags used to give connected textures, and remove culling
-			"tag:custom_vertical_connecting_glass":{},
-			"tag:glass":{},
+			"tag:custom_vertical_connecting_glass": {},
+			"tag:glass": {},
 			"minecraft:creative_category": {
 				"group": "itemGroup.name.glass",
 				"category": "construction"
@@ -122,10 +107,7 @@ By The End You Should Be Able To Create Something Like This!
 				"on_tick": {
 					"event": "change_state"
 				},
-				"range": [
-					0,
-					0
-				]
+				"range": [0, 0]
 			},
 			"minecraft:block_light_absorption": 0,
 			"minecraft:block_light_emission": 0.07
@@ -142,11 +124,11 @@ By The End You Should Be Able To Create Something Like This!
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						}
@@ -162,11 +144,11 @@ By The End You Should Be Able To Create Something Like This!
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_top"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -182,11 +164,11 @@ By The End You Should Be Able To Create Something Like This!
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_bottom"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						}
@@ -202,11 +184,11 @@ By The End You Should Be Able To Create Something Like This!
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_middle"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -226,11 +208,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						}
@@ -250,11 +232,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						}
@@ -274,11 +256,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						}
@@ -298,11 +280,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						}
@@ -322,11 +304,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -346,11 +328,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -370,11 +352,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -395,11 +377,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -419,11 +401,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -443,11 +425,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -467,11 +449,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -491,11 +473,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "custom_vertical_connecting_glass_up"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -515,11 +497,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -539,11 +521,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -563,11 +545,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -587,11 +569,11 @@ By The End You Should Be Able To Create Something Like This!
 							"texture": "nothing",
 							"render_method": "blend"
 						},
-						"down":  {
+						"down": {
 							"render_method": "blend",
 							"texture": "nothing"
 						},
-						"up":  {
+						"up": {
 							"render_method": "blend",
 							"texture": "nothing"
 						}
@@ -712,6 +694,7 @@ By The End You Should Be Able To Create Something Like This!
 	}
 }
 ```
+
 </Spoiler>
 
 More Coming Soon!

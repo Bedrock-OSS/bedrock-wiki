@@ -9,6 +9,9 @@ tags:
 Materials are used to specify the shaders that render the different parts of the game, along with states and settings the shaders should consider for each element.
 At the moment, most things in the game are hard-coded to use specific material and may not be assigned new ones. The only way to change how these elements are rendered is by editing their materials directly (potentially having unintentional effects on other parts) or creating new shaders (an old experimental feature no longer officially supported by Mojang). The only elements that allow default or custom materials to be assigned or removed are entities and particles.
 
+If you are not prepared to go in-depth with the ins and outs, [material presets can be found here](/documentation/materials).
+
+
 ## Syntax and Structure
 
 Most materials inherit the settings of previously defined materials, then further building off of them. This is written in the following format:
@@ -145,6 +148,4 @@ which can then finally be followed to "entity_static"
     },
 ```
 
-## Useful custom material presets
 
-A list of [material presets can be found here](/documentation/materials).

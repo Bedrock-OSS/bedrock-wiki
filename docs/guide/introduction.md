@@ -1,5 +1,6 @@
 ---
 title: Introduction
+category: Guide
 tags:
     - guide
 nav_order: 1

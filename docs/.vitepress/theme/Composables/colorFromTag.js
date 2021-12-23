@@ -1,5 +1,7 @@
 export function colorFromTag(tag) {
-	if (tag == 'experimental') {
+	if (tag == 'none') {
+		return ''
+	} else if (tag == 'experimental') {
 		return 'orange'
 	} else if (tag == 'beta') {
 		return 'red'
@@ -17,6 +19,8 @@ export function colorFromTag(tag) {
 		return 'blue'
 	} else if (tag == 'intermediate') {
 		return 'orange'
+	} else if (tag == 'red') {
+		return 'red'
 	} else {
 		return ''
 	}

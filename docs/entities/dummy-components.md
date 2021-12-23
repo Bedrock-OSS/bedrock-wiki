@@ -1,8 +1,9 @@
 ---
 title: Dummy Components
+category: Documentation
 ---
 
-Dummy components are useless components that are only used for data storage. Dummy components don't **do** anything on their own. They need to be paired with secondary mechanics to have any function. Dummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
+Dummy components are useless components that are only used for data storage. Dummy components **don't** do anything on their own. They need to be paired with secondary mechanics to have any function. Dummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
 
 Good examples are `variant` and `mark_variant`. These components can be set with an Integer value. In the vanilla resource pack, this Integer is used to pick the textures for the Cat, and Horse. Another good example is `is_tamed`, which is used by the Horse to handle whether he is ridable or not.
 
@@ -37,8 +38,7 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | Bit       | query.can_fly                                                 | minecraft:can_fly            | Marks the entity as being able to fly, the pathfinder won't be restricted to paths where a solid block is required underneath it. |
 | Bit       | query.can_power_jump                                          | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
 | Bit       | query.is_ignited                                              | minecraft:is_ignited         |                                                                                                                                   |
-| Bit       | query.out_of_control                                          | minecraft:out_of_control         | New, used by code for hardcoded boat movement/particle stuff, and the Molang query. Probably safe                            |
-
+| Bit       | query.out_of_control                                          | minecraft:out_of_control     | New, used by code for hardcoded boat movement/particle stuff, and the Molang query. Probably safe                                 |
 
 ### Colors for the color and color2 components
 

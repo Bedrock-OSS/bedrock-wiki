@@ -1,5 +1,6 @@
 ---
 title: Block Tags
+category: Documentation
 tags:
     - experimental
 ---
@@ -46,7 +47,7 @@ Vanilla tags can be applied to custom blocks, and some vanilla blocks are tagged
 | iron_pick_diggable | Coal Ore, Deepslate Coal Ore, Deepslate Diamond Ore, Deepslate Emerald Ore, Deepslate Gold Ore, Deepslate Iron Ore, Deepslate Redstone Ore, Diamond Ore, Emerald Ore, Gold ore, Iron Ore, Lapis Lazuli Ore, Redstone Ore |
 | stone_pick_diggable | |
 | wood_pick_diggable | |
-| dirt | Dirt, Coarse Dirt |
+| dirt | Dirt, Coarse Dirt, Farmland |
 | sand | Red Sand, Sand |
 | gravel | Gravel |
 | grass | Grass Block |
@@ -70,37 +71,3 @@ Vanilla block tags are tags built specifically for blocks. They can give some va
 | log              | Oak Log, Spruce Log, Birch Log, Jungle Log, Acacia Log, Dark Oak Log | A log block. |
 | oak              | Oak Log                                                              |              |
 | spruce           | Spruce Log                                                           |              |
-
-## Legacy Block Tags
-
-| BlockTags                  | Description                                                                                                |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| can_be_broken_from_falling |                                                                                                            |
-| can_hurt_and_break_item    |                                                                                                            |
-| air                        | Air is a special block. It is an unbreakable transparent block, as a substitute for the absence of blocks. |
-| button_block               |                                                                                                            |
-| container_block            |                                                                                                            |
-| crafting_block             |                                                                                                            |
-| crop_block                 |                                                                                                            |
-| door_block                 |                                                                                                            |
-| empty                      |                                                                                                            |
-| fence_block                |                                                                                                            |
-| fenceGate_block            |                                                                                                            |
-| flammable                  |                                                                                                            |
-| heavy                      |                                                                                                            |
-| hot                        |                                                                                                            |
-| hurtable_block             |                                                                                                            |
-| interactive_block          |                                                                                                            |
-| liquid                     |                                                                                                            |
-| motion_blocking_block      |                                                                                                            |
-| rail_block                 |                                                                                                            |
-| signal_source              |                                                                                                            |
-| slab_block                 |                                                                                                            |
-| solid                      |                                                                                                            |
-| solid_blocking_block       |                                                                                                            |
-| stair_block                |                                                                                                            |
-| stem_block                 |                                                                                                            |
-| thinFence_block            |                                                                                                            |
-| unbreakable                |                                                                                                            |
-| wall_block                 |                                                                                                            |
-| water_blocking             |                                                                                                            |

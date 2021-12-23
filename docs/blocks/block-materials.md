@@ -1,5 +1,6 @@
 ---
 title: Block Materials
+category: Documentation
 tags:
     - experimental
 ---
