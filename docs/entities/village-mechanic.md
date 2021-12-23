@@ -141,7 +141,14 @@ Allows entity claim a bed and bell.
 Optional for `minecraft:behavior.work`
 - `can_find_poi`
 Add it so entity is able to find point of interest.
-E.g. job site, bed.
+Known POI types:
+
+```
+bed
+jobsite
+meeting_area
+```
+
 - `can_migrate`
 Defines if entity can migrate from one village to another or not.
 
