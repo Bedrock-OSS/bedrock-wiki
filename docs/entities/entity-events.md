@@ -189,6 +189,22 @@ The `minecraft:behavior.send_event` component is used inside the evoker to call 
 }
 ```
 
+You can also call event when spawning entity. To do it, add `<my:event_name>` in the end of string that is in component that can summon entity.
+Example:
+
+<CodeHeader>BP/entities/zombie.json#component_groups/minecraft:convert_to_drowned</CodeHeader>
+
+```json
+"minecraft:transformation":{
+    "into":"minecraft:drowned<minecraft:as_adult>",
+    "transformation_sound":"convert_to_drowned",
+    "drop_equipment":true,
+    "delay":{
+        "value":15
+    }
+}
+```
+
 ### Sequence
 
 Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. This is a very useful tool when different component groups should be dependent on varying conditions.
