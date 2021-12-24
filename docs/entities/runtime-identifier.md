@@ -204,6 +204,12 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
+### minecraft:horse
+
+-   Changes texture, model and animation to the horse one.
+
+---
+
 ### minecraft:wither
 
 -   Explodes on death.
