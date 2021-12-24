@@ -28,7 +28,6 @@ Events in items are used most exactly as they are in entities.
 			"identifier": "example:food_item",
 			"category": "items"
 		},
-
 		"components": {
 			"minecraft:use_duration": 1.6,
 			"minecraft:food": {
@@ -42,7 +41,6 @@ Events in items are used most exactly as they are in entities.
 			},
 			"minecraft:use_animation": "eat"
 		},
-
 		"events": {
 			"on_consume": {
 				"remove_mob_effect": {
@@ -131,7 +129,7 @@ Decrements the stack by one.
 
 -   Properties:
 
-    -   `"ignore_game_mode"` - When `false` (as is set by default) will not decrement in Creative gamemodes.
+    -   `"ignore_game_mode"` - When `false` (as is set by default) will not decrement in Creative gamemode.
 
 <CodeHeader></CodeHeader>
 
@@ -679,7 +677,10 @@ List of all new item components, with usage examples
 				"block": {
 					"tags": "query.any_tag('stone', 'metal')" // Note that not all blocks have tags; listing many blocks may be necessary
 				},
-				"speed": 6
+				"speed": 6,
+				"on_dig": {
+                    "event": "on_dig"
+                }
 			}
 		]
 	}
@@ -752,6 +753,7 @@ List of all new item components, with usage examples
 _Full list of categories can be found [here](/documentation/creative-categories)_
 
 -   minecraft:food
+
     _New Syntax_
 
 <CodeHeader></CodeHeader>

@@ -7,7 +7,7 @@ tags:
 ---
 
 :::warning
-Items on the stable version of Minecraft (1.10 format version) are missing many new features, available in experimental (1.16 format version). You can learn more about [experimental items here](/items/items-16).
+Items on the stable version of Minecraft (1.10 format version) are missing many new features, available in experimental (1.16 format version). You can learn more about experimental items [here](/items/items-16).
 :::
 
 Items require both a behavior file, to determine the behavior of the item, and a resource file, to determine the look of the item. 
@@ -40,15 +40,12 @@ For this guide we will create two items: a gem to demonstrate creating a simple 
 -   `identifier` in `description` defines the name we use to refer to the item.
 -   `components` describe the behavior of the item. We will look at some of the ones you can apply.
     -   `minecraft:hand_equipped` defines whether the item 'equips' in your hand. This controls how the item is displayed on your character. For example, a Wooden Sword is hand equipped, but an Apple is not.
-    -   `minecraft:stacked_by_data` defines whether this item with different aux values will be able to stack. For example
-    -   the item "minecraft:dye" with aux value 0, which is an Ink Sack (`/give @s dye 1 0`), doesn't stack with "minecraft:dye" with aux value 12, which is a Cocoa Bean (`/give @s dye 1 12`).
+    -   `minecraft:stacked_by_data` defines whether this item with different aux values will be able to stack. For example the item "minecraft:dye" with aux value 0, which is an Ink Sack (`/give @s dye 1 0`), doesn't stack with "minecraft:dye" with aux value 12, which is a Cocoa Bean (`/give @s dye 1 12`).
     -   `"minecraft:foil"` defines whether the item will have the enchantment glint on it. An enchanted Shovel has this component set to true, but a disenchanted one to false.
     -   `minecraft:max_stack_size` sets how many items can stack in a single inventory slot. It cannot be larger than 64. Set this to 1 for an unstackable item.
     -   `minecraft:max_damage` defines the item's durability. This is used for tools and weapons. 
 
-For more information on components, you can always refer to the documentation on [bedrock.dev/r/Item](https://bedrock.dev/docs/stable/Item).
-
-If you enter the game now, the item will function, but it will be invisible. You can test the functionality of your item by running `./give @s wiki:gem`. Let's now define the items visuals in the RP folder.
+If you enter the game now, the item will function, but it will be invisible. You can test the functionality of your item by running `/give @s wiki:gem`. Let's now define the item's visuals in the RP folder.
 
 ## Gem Resource File
 
@@ -148,10 +145,10 @@ Now let us define a food item. This uses the component `"minecraft:food"` along 
 
 -   A new item needs a unique `identifier`, but the same [namespace](/concepts/namespaces).
 -   `minecraft:use_duration` defines how long the player will need to hold the 'use' button to consume the food
--   `minecraft:food` is the component that makes the item a food item. Let's break it up:
+-   `minecraft:food` is the component that makes the item a food. Let's break it up:
     -   `nutrition` means hunger points to be added when the player consumes the food.
     -   `saturation_modifier` shows how long these will last. Can be set to "poor", "low", "normal", "high", "good", "max" and "supernatural";
-    -   `can_always_eat` defines if the player can eat the food even if their hunger bar is full. For Golden Apples, this component is set to true. Most other vanilla food is set to false.
+    -   `can_always_eat` defines if the player can eat the food even if their hunger bar is full. For Golden Apples, this component is set to true. For most of other vanilla food it is set to false.
     -   `effects` are the status effects to be applied when the player consumes the food. It's pretty self-explanatory: when the player consumes this item, they'll get `Regeneration I` for 5 seconds and `Resistance III` for 120 seconds. This component is optional.
 
 ## Meal RP File
@@ -198,11 +195,9 @@ To add another texture for another item, we can just add another entry to `item_
 }
 ```
 
-You check out the current Item documentation for even more components on [bedrock.dev/r/Item!](https://bedrock.dev/docs/stable/Item)
-
 ## Setting Item Names
 
-Your items should now show up in-game, but they have weird names consisting of their identifiers. For example, `wiki:gem` shows up as `item.wiki:gem.name`. To fix this, we need a `.lang` file in `RP/texts`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`.
+Your items should now show up in-game, but they have weird names consisting of their identifiers. For example, `wiki:gem` shows up as `item.wiki:gem.name`. To fix this, we need a `.lang` file in `RP/texts/`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`.
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
@@ -211,7 +206,7 @@ item.wiki:gem.name=Gem
 item.wiki:meal.name=Meal
 ```
 
-[You can learn more about .lang here](/concepts/text-and-translations)
+You can learn more about .lang [here](/concepts/text-and-translations)
 
 ## Folder Layout
 If followed correctly, this is how your project should look. 
