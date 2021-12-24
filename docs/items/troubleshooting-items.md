@@ -45,12 +45,12 @@ Versions `1.16.100` and onward are **experimental**. These items **will not work
 
 ## Stable Items
 
-This section contains troubleshooting information for stable items. Remember, you are using the `1.10` format, so you need both an RP file and a BP file for your item! If you only have a BP file, you have become confused between format versions.
+This section contains troubleshooting information for stable items. Remember, you are using the `1.10` format, so you need both an RP file and a BP file for your item! If you only have a BP file, you have become confused between format versions. Please start again [here](#_1-10-vs-1-16-items).
 
 Find the issue you have, then read the prompts.
 
--   [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
--   [My textures are missing!](#my-textures-are-missing-1)
+-   [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item)
+-   [My textures are missing!](#my-textures-are-missing)
 
 ### I cannot /give myself my custom item!
 
@@ -115,13 +115,13 @@ If you followed this properly, your item should now have a texture.
 
 ## Experimental Items
 
-This section contains troubleshooting information for experimental items. Remember, you are using the `1.16` format, so there shouldn't be an RP file for your item! If you have both an RP file and a BP file, you have become confused between format versions. [Please start again here.](#2.0)
+This section contains troubleshooting information for experimental items. Remember, you are using the `1.16` format, so there shouldn't be an RP file for your item! If you have both an RP file and a BP file, you have become confused between format versions. Please start again [here](#_1-10-vs-1-16-items).
 
 Find the issue you have, then read the prompts.
 
--   [I cannot /give myself my custom item!](#3.1)
--   [My textures are missing!](#3.2)
--   [My item is huge!](#3.3)
+-   [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
+-   [My textures are missing!](#my-textures-are-missing-1)
+-   [My item is huge!](#my-item-is-huge)
 
 ### I cannot /give myself my custom item!
 
@@ -164,7 +164,7 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
   "minecraft:item": {
       "description": {
           "identifier": "namespace:your_item",
-          "category" : "items"     // This line is required
+          "category" : "items" // This line is required
       },
       "components": {
         "minecraft:icon": {
