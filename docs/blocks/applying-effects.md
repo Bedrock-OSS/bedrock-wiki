@@ -25,7 +25,7 @@ We will need to add a couple things to our code, first let's start with property
 }
 ```
 
-<Now we need `minecraft:ticking` component that will check if our property is set to `true` and if so, trigger the event causing the effect to apply:
+Now we need `minecraft:ticking` component that will check if our property is set to `true` and if so, trigger the event causing the effect to apply:
 
 <CodeHeader>BP/blocks/damage_block.json</CodeHeader>
 
@@ -99,7 +99,7 @@ Some context for the last part of the code:
 -   **A**: `false` value is needed as setting `wiki:is_on_block: true` crashes the game. Setting `wiki:is_on_block: [true]` seems to work, however creates many debug log errors.
 
 Depending on the desired outcome, there is a potential issue if effect duration is set to less than 2 seconds. If the effect is causing damage to an entity (for example via poison), that damage will be applied as soon as the effect is triggered. This results in the situation where entity receives damage faster than in vanilla Minecraft, since applying effect is quicker than damage that occurs from effects applied for more than 2 seconds (considering the entity is moving). To better understand this, simply set the effect duration in `command` to 1 second and compare the results.
-<br>Having a 2 second duration allows the game to apply the damage in correct pace.
+Having a 2 second duration allows the game to apply the damage in correct pace.
 
 <Spoiler title="Example code">
 
