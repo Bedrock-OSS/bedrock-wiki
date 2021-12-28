@@ -50,6 +50,21 @@ Sounds added in this way can be triggered using `/playsound`. Please note that `
 New files referenced by file path, such as sounds, DO need a complete client restart to load. This means that if sounds don't work, you should restart your entire MC client rather than just reloading the world.
 :::
 
+### playsound volume notes
+
+The game will clamp the sound volume to at most 1.0 before multiplying it with the sound definition's 
+
+For `/playsound`, the maximum hearable range of a sound is given by `min(max_distance, max(volume * 16, 16))`.
+If `"max_distance"`is not given in the sound's definition, it is equivalent to `volume * 16`.
+
+**Attenuation by distance** of the hearable sound's volume is not affected by the volume parameter given in the command.
+
+For example, `mob.ghast.affectionate_scream` sets `"min_distance": 100.0`, but can only be heard from at most 16 blocks away when using `/playsound` to play it.
+However when using a large enough volume to hear the sound farther away, the sound will get quieter only after a distance of more than 100.0.
+
+To make a sound which can be heard far away but also drops in volume continuously over distance, one can add e.g. `"volume": 0.01`and use large `<volume>` values in the playsound command. The high value for the `/playsound` volume will produce a large hearable range (e.g. a volume of 4 is 64 blocks as calculated above), while the low volume will prevent the played sound from capping at 1.0 too soon.
+
+
 ### Top Level Keys
 
 In the example above, I showed two `top-level` fields: `category` and `sounds`. Sounds will be discussed in further detail below, but the other `top-level` keys will be discussed here:
