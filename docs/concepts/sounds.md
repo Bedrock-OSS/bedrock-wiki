@@ -73,11 +73,11 @@ Categories are used internally by the engine to decide how each sound is played.
 
 #### min_distance
 
-The minimum distance **away** the source of the sound that the client needs to be within to hear. It must be a float (1.0), or the argument will be ignored.
+The distance from the sound source after which sound volume is attenuated. Default value: 0.0. It must be a float (eg. 1.0), or the property will be ignored.
 
 #### max_distance
 
-The maximum distance **to** the source of the client's sound needs to be within to hear. It must be a float (1.0), or the argument will be ignored.
+The distance from the sound source after which the sound volume is the quietest (if in range). It must be a float (eg. 1.0), or the property will be ignored.
 
 ### Sound definitions
 
