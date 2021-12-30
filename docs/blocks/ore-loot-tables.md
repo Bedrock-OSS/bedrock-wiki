@@ -18,10 +18,11 @@ Features:
 
 -   Can be mined using any given item (this tutorial covers the iron pickaxe)
 -   Can specify enchantments on items
+-	Also drops experience reward
 
 Issues:
 
--   All items must be specified individualy
+-   All items must be specified individually
 -   Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
 
 ## Block Behavior
@@ -54,6 +55,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 				}
 			},
 			"minecraft:on_player_destroyed": {
+				// Calls an event that loads structure with xp reward
 				"event": "xp_reward"
 			},
 			"minecraft:loot": "loot_tables/blocks/silver_ore.json" //The component will not run the loot if the held tool has silk touch
@@ -92,7 +94,7 @@ The example shown, displays the required components
 			"entries": [
 				{
 					"type": "item",
-					"name": "tut:silver_ore"
+					"name": "tut:raw_silver"
 				}
 			]
 		}
@@ -102,7 +104,7 @@ The example shown, displays the required components
 
 ## Specifying Enchantments
 
-If needed you can add the enchantments section to your condition, but remember each tool and level must be listed as seperate pools
+If needed you can add the enchantments section to your condition, but remember each tool and level must be listed as separate pools
 
 <CodeHeader>BP/loot_tables/blocks/silver_ore.json#pools</CodeHeader>
 
