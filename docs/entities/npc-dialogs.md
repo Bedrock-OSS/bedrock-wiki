@@ -172,6 +172,47 @@ summon npc "§r" 0 1 0
 
 This function will create a ticking area at 0, 0, and spawn an NPC with no name in the bedrock layer in that ticking area. You will need to run this function once, either manually, or making use of `player.json` or `tick.json`.
 
+:::tip
+You can trigger an NPC dialogue from within the player using the /dialogue command, without having to summon an NPC beforehand.
+1. Within the player's behavior, add the minecraft:npc component.
+2. Specify a scene from the BP/dialogue folder.
+3. Run the `/dialogue` command from the player, provided with the scene_tag:
+
+```
+/dialogue open @s @s <scene_tag>
+```
+
+Pros and Cons:
+`+` You don't need to worry about hiding away an NPC, if you're just going to run  NPC dialogues provided using scene_tags.
+`+` No NPC means you also don't need to make sure it is in a 'ticking area'.
+`-` Since the dialogue is being triggered from the player, in which it is not intended to, it may become unstable in some cases.
+`-` Other players can click on player and they will see this dialogue.
+To avoid this add the `minecraft:interaction` to the entity which will replace the npc interaction. The npc stuff will still work, but if a player clicks on another player, then the npc won't come up
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:interact": {
+  "interactions": [
+    {
+      "on_interact": {
+        "filters": {
+          "all_of": [
+            {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+:::
+
 ### The Dialog File
 
 This dialog file features two dialogs, each with two teleport buttons, and a button to switch between the two.
