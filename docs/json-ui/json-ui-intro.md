@@ -777,4 +777,234 @@ Like before, here's a more complicated example of conditional rendering with bin
 
 ## Button Mappings
 
-## Modify Vanilla
+## Modifications
+
+| Modification    | Description                                 |
+| --------------- | ------------------------------------------- |
+| `insert_back`   | **insert** at end of array                  |
+| `insert_front`  | **insert** at start of array                |
+| `insert_after`  | **insert** after target in array            |
+| `insert_before` | **insert** before target in array           |
+| `move_back`     | **move** target to end of array             |
+| `move_front`    | **move** target to start of array           |
+| `move_after`    | **move** target after second target         |
+| `move_before`   | **move** target before second target        |
+| `swap`          | **swap** first target with second target    |
+| `replace`       | **replace** first target with second target |
+| `remove`        | **remove** target                           |
+
+### Examples
+
+#### Front/Back
+
+```json
+{
+  "array_name": "controls",
+  "operation": "insert_front",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+
+```json
+{
+  "array_name": "controls",
+  "operation": "insert_back",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+
+```json
+{
+  "array_name": "controls",
+  "operation": "move_front",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "move_front",
+  "where": {
+    "binding_name": "#example_binding_2"
+  }
+}
+```
+
+```json
+{
+  "array_name": "controls",
+  "operation": "move_back",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "move_back",
+  "where": {
+    "binding_name": "#example_binding_1"
+  }
+}
+```
+
+#### After/Before
+
+```json
+{
+  "control_name": "second_target",
+  "operation": "insert_after",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "insert_after",
+  "where": {
+    "binding_name": "#example_binding_2"
+  },
+  "value": [
+    {
+      "binding_name": "#my_binding_1"
+    }
+  ]
+}
+```
+
+```json
+{
+  "control_name": "second_target",
+  "operation": "insert_before",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "insert_before",
+  "where": {
+    "binding_name": "#example_binding_2"
+  },
+  "value": [
+    {
+      "binding_name": "#my_binding_1"
+    }
+  ]
+}
+```
+
+```json
+{
+  "control_name": "second_target",
+  "operation": "move_after",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "move_after",
+  "where": {
+    "binding_name": "#example_binding_2"
+  },
+  "target": {
+    "binding_name": "#example_binding_1"
+  }
+}
+```
+
+```json
+{
+  "control_name": "second_target",
+  "operation": "move_before",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "move_before",
+  "where": {
+    "binding_name": "#example_binding_1"
+  },
+  "target": {
+    "binding_name": "#example_binding_2"
+  }
+}
+```
+
+#### Swap/Replace/Remove
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "swap",
+  "where": {
+    "binding_name": "#example_binding_1"
+  },
+  "target": {
+    "binding_name": "#example_binding_2"
+  }
+}
+```
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "replace",
+  "where": {
+    "binding_name": "#example_binding_1"
+  },
+  "value": {
+    "binding_name": "#replacement_binding"
+  }
+}
+```
+
+```json
+{
+  "array_name": "bindings",
+  "operation": "remove",
+  "where": {
+    "binding_name": "#example_binding_1"
+  }
+}
+```
