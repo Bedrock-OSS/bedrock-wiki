@@ -122,7 +122,7 @@ Limits the sound only to be played a limited number of instances at a time. Will
 
 #### volume
 
-How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made more audible than initially encoded.
+How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made more audible than initially encoded. Set to `1.0` by default.
 
 #### load_on_low_memory
 
@@ -130,7 +130,7 @@ Forces the loading of the sound even when nearing low memory. "load_on_low_memor
 
 #### pitch
 
-The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (default), but can be higher, such as `1.48`.
+The pitch of the sound (how low/high it sounds). Should be a positive value. For example, `2.3` will let the sound play 2.3 times as quickly and thus at higher pitch. Set to `1.0` by default.
 
 #### is3D
 
