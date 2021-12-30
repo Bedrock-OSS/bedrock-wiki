@@ -170,10 +170,7 @@ On the next line after the closing tag, you have to start a code block to use th
 A Button works like a link, but is more noticeable for the user.
 
 ```html
-<BButton 
-    link="https://wiki.bedrock.dev" 
-    color=red
->your button text</BButton>
+<BButton link="https://wiki.bedrock.dev" color="red">your button text</BButton>
 ```
 
 <BButton
@@ -194,13 +191,7 @@ The text between the two HTML-Tags is the text that will appear on the button.
 A spoiler is a Component that can be used to hide some content, so it doesn't block the whole site.
 
 ```html
-<Spoiler title="title">
-    
-text here
-
-and here
-
-</Spoiler>
+<Spoiler title="title"> text here and here </Spoiler>
 ```
 
 <Spoiler title='title'>
@@ -224,10 +215,7 @@ Pay attention to the empty lines between the content and the tags! If you forget
 A Label is a small icon with uppercase letters that can be used to give your articles more flair.
 
 ```html
-<Label 
-    name="name"
-    color="green"
->label</Label>
+<label name="name" color="green">label</label>
 ```
 
 <Label
@@ -346,3 +334,71 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 
 Don't overuse them! They look cool, but someone could really give them too much attention and forget to focus on other important parts of your article.
 
+## Formatting Guide
+
+Everyone likes to read wikis that are perfectly and consistently formatted.
+
+Well, its hard to realise that. And we don't want perfectly and consistently formatted wikis. But if everyone tries to follow these simple rules, all users will have a better time reading our wikis!
+
+### General Rules
+
+1.  For naming packages, folders, etc. consult our [Style-Guide](/meta/style-guide).
+
+### Headers
+
+1.  Dont use level-1 Headers. Your Page starts with a level-1 Header, that has the same title as written in the Front Matter.
+2.  Try to avoid Headers higher than level-3. They wont show in the right sidebar and wont be easy to see.
+3.  Start with an Uppercase Letter and use the `Title Case` style.
+4.  Dont use `:` in your Headers!
+
+Some examples:
+
+✔️ `## A Page`
+
+❌ `# A Page`
+
+✔️ `### Some Other Layer`
+
+❌ `###### Some Other Layer`
+
+✔️ `## My Own Article`
+
+❌ `## my own: article`
+
+### JSON Code
+
+1.  Use CodeHeaders, unless it is absolutely not possible.
+2.  Fully extend JSON Code (aka. as "Prettified Code").
+3.  Use `rp` and `bp` as root-folders.
+
+### Markdown Formatting
+
+This section is only for the readability of your Markdown files. It wont be visible in the wiki.
+
+1.  If you use lists or numbered lists, use tabulators or 4 spaces after the `-` or number.
+2.  Prettify Markdown tables. Use spaces and `-` to extend all rows to the same lengths. Use one space before and after each cells content.
+3.  Dont use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
+
+✔️ `- list`
+
+❌ `- list`
+
+✔️
+
+```
+| Some Data | Aaaaand More Data |
+| --------- | ----------------- |
+| here      | and here          |
+```
+
+❌
+
+```
+|Some Data|Aaaaand More Data|
+|---|---|
+|here|and here|
+```
+
+✔️ `<WikiImage src=""/>`
+
+❌ `<img src="" />`
