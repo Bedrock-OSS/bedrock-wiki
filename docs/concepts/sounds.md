@@ -50,12 +50,14 @@ Sounds added in this way can be triggered using `/playsound`. Please note that `
 New files referenced by file path, such as sounds, DO need a complete client restart to load. This means that if sounds don't work, you should restart your entire MC client rather than just reloading the world.
 :::
 
-### playsound volume notes
+### /playsound volume notes
 
 The game will clamp the sound volume to at most 1.0 before multiplying it with the sound definition's 
 
 For `/playsound`, the maximum hearable range of a sound is given by `min(max_distance, max(volume * 16, 16))`.
 If `"max_distance"`is not given in the sound's definition, it is equivalent to `volume * 16`.
+
+![](/assets/images/concepts/sounds/sound_graph.png)
 
 **Attenuation by distance** of the hearable sound's volume is not affected by the volume parameter given in the command.
 
