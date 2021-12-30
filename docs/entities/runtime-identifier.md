@@ -170,6 +170,13 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
+### minecraft:squid
+
+-   Allows to use special behavior components (see squid.json).
+-   Emits ink particles when entity receives damage.
+
+---
+
 ### minecraft:thrown_trident
 
 -   Disables death animation, sound, and particles.
