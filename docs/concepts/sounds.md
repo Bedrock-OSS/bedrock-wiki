@@ -118,7 +118,7 @@ The path to the file, such as: `"sounds/music/game/creative/creative1"`
 
 #### stream
 
-Limits the sound only to be played a limited number of instances at a time. Good for improving performance on sound heavy worlds.
+Limits the sound only to be played a limited number of instances at a time. Will cause the game to not load the entire sound data into memory while playing, but rather in smaller parts while playing, thus using less memory. Good for improving performance on sound heavy worlds.
 
 #### volume
 
@@ -130,7 +130,19 @@ Forces the loading of the sound even when nearing low memory. "load_on_low_memor
 
 #### pitch
 
-The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (standard), but can be higher, such as `1.48`.
+The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (default), but can be higher, such as `1.48`.
+
+#### is3D
+
+`true` makes the sound directional. Set to `true` for all sounds by default. Ignored for `music` and `ui` sounds. Only sounds with `false` will play stereo sound.
+
+#### interruptible
+
+Set to `true` by default.
+
+### weight
+
+If there is more than one sound in the list, the sound to be played is chosen randomly. `"weight"` (integer value like 5) will give the relative chance that this sound is chosen from the list. For example, if there are two sounds in the list, one with `"weight": 10` and the other with `"weight": 2`, the first will be played approximately 5 times more likely than the second (accurately: `10 / (10 + 2) = 83.3%` chance vs. `2 / (10 + 2) = 16.7%` chance) . Set to `1` by default.
 
 ### Example
 
