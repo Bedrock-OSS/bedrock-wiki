@@ -6,21 +6,15 @@ tags:
     - help
 ---
 
----
-
 :::tip
 This page contains troubleshooting information about _items_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
 :::
-
-<a name="0.0"></a>
 
 ## Start Here
 
 I followed a tutorial or tried to make my own item and something is wrong! Calm down. This page will help debug common issues. Follow the buttons and prompts to learn about possible issues with your item, and tips for fixing.
 
 <BButton color="blue" link="#_1-10-vs-1-16-items">Continue</BButton>
-
-<a name="1.0.0"></a>
 
 ---
 
@@ -49,18 +43,14 @@ Versions `1.16.100` and onward are **experimental**. These items **will not work
 
 ---
 
-<a name="2.0"></a>
-
 ## Stable Items
 
-This section contains troubleshooting information for stable items. Remember, you are using the `1.10` format, so you need both an RP file and a BP file for your item! If you only have a BP file, you have become confused between format versions. [Please start again here.](#2.0)
+This section contains troubleshooting information for stable items. Remember, you are using the `1.10` format, so you need both an RP file and a BP file for your item! If you only have a BP file, you have become confused between format versions. Please start again [here](#_1-10-vs-1-16-items).
 
 Find the issue you have, then read the prompts.
 
--   [I cannot /give myself my custom item!](#2.1)
--   [My textures are missing!](#2.2)
-
-<a name="2.1"></a>
+-   [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item)
+-   [My textures are missing!](#my-textures-are-missing)
 
 ### I cannot /give myself my custom item!
 
@@ -70,8 +60,6 @@ An issue here will be caused by the item file in the BP.
 -   Confirm that your item is in the folder `BP/items/`
 -   Confirm that your item is valid, according to [jsonlint](https://jsonlint.com/).
 -   Confirm that your identifier is all lowercase, and looks similar to this: `wiki:my_item`
-
-<a name="2.2"></a>
 
 ### My textures are missing!
 
@@ -97,7 +85,7 @@ Here is an example file to compare against:
 }
 ```
 
-Next, navigate to your items RP file. Ensure that it is in the correct folder. Some examples of incorrect paths:
+Next, navigate to your items RP file. Ensure that it is in the correct folder. Example of incorrect path:
 
 -   ⚠️ `item/gem.json`
 
@@ -125,19 +113,15 @@ If you followed this properly, your item should now have a texture.
 
 ---
 
-<a name="3.0"></a>
-
 ## Experimental Items
 
-This section contains troubleshooting information for experimental items. Remember, you are using the `1.16` format, so there shouldn't be an RP file for your item! If you have both an RP file and a BP file, you have become confused between format versions. [Please start again here.](#2.0)
+This section contains troubleshooting information for experimental items. Remember, you are using the `1.16` format, so there shouldn't be an RP file for your item! If you have both an RP file and a BP file, you have become confused between format versions. Please start again [here](#_1-10-vs-1-16-items).
 
 Find the issue you have, then read the prompts.
 
--   [I cannot /give myself my custom item!](#3.1)
--   [My textures are missing!](#3.2)
--   [My item is huge!](#3.3)
-
-<a name="3.1"></a>
+-   [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
+-   [My textures are missing!](#my-textures-are-missing-1)
+-   [My item is huge!](#my-item-is-huge)
 
 ### I cannot /give myself my custom item!
 
@@ -145,8 +129,6 @@ Find the issue you have, then read the prompts.
 -   Confirm that your item is in the folder `BP/items/`
 -   Confirm that your item is valid, according to [jsonlint](https://jsonlint.com/).
 -   Confirm that your identifier is all lowercase, and looks similar to this: `wiki:my_item`
-
-<a name="3.2"></a>
 
 ### My Textures Are Missing!
 
@@ -182,11 +164,11 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
   "minecraft:item": {
       "description": {
           "identifier": "namespace:your_item",
-          "category" : "items"     // This line is required
+          "category" : "items" // This line is required
       },
       "components": {
         "minecraft:icon": {
-          "texture": "your_item_name" //make sure this string matches the string you put in item_texture.json
+          "texture": "your_item_name" // Make sure this string matches the string you put in item_texture.json
         }
       },
       "events": {...}
@@ -196,15 +178,50 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
 
 If you followed this properly, your item should now have a texture.
 
-<a name="3.3"></a>
-
 ### My item is Huge
 
-To turn it to back into a normal size item (`16x16`), use the following formula: `base value/(res/16)`
+To turn it to back into a normal size item (`16x16`), use render offsets and the following formula: `base value/(res/16)`
 
 The base values, `[0.075, 0.125, 0.075]`, seems to be the about the same scale value as normal items.
 
----
+<CodeHeader>BP/items/your_item.json#components</CodeHeader>
+
+```json
+"minecraft:render_offsets":{
+    "main_hand":{
+        "first_person":{
+            "scale":[
+                0,
+                0,
+                0
+            ]
+        },
+        "third_person":{
+            "scale":[
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "off_hand":{
+        "first_person":{
+            "scale":[
+                0,
+                0,
+                0
+            ]
+        },
+        "third_person":{
+            "scale":[
+                0,
+                0,
+                0
+            ]
+        }
+    }
+}
+```
 
 ## What now?
 

@@ -45,7 +45,7 @@ Block behaviors are structured similarly to entities: they contain a description
 
 -   `"identifier"` under `"description"` is already familiar to us.
 -   `"components"`
-    -   `"minecraft:loot"` defines a loot table path for the block to drop. We'll look into loot tables in the next chapter.
+    -   `"minecraft:loot"` defines a loot table path for the block to drop. If this is removed, then the block will drop itself. You can learn more about loot tables [here](/loot/loot_tables-spawn_rules).
     -   `"minecraft:destroy_time"` defines how long the player will need to mine the block until it breaks. Currently, it isn't possible to set different destroy times for different tools.
     -   `"minecraft:explosion_resistance"` defines the chance for an explosion to break the block. Higher the value, lower the chance.
     -   `"minecraft:friction"` defines how much friction the block has. For example, soulsand and has a high value for friction, so it slows the players. Ice has a lower friction value, so it has a slippery effect. The friction of classic blocks such as wood or stone is `0.6`.
@@ -65,7 +65,8 @@ Let's create some more blocks in `BP/blocks`. I created these four block for the
 
 ## Block Resource File
 
-The resource definition for blocks differs from entities/items because all the definitions appear in a single file.
+The resource definition for blocks differs from entities/items because all the definitions appear in a single file. 
+The only two things we can define for blocks are its sound and its textures. 
 
 <CodeHeader>RP/blocks.json</CodeHeader>
 
@@ -102,15 +103,14 @@ The resource definition for blocks differs from entities/items because all the d
 }
 ```
 
-As you can see, every block's identifier is applied with textures and step sounds. All of these blocks have different types of textures. Let's look through them.
+As you can see, every block's identifier is applied with textures and step sounds. 
+When we define the textures, we use their shortnames which we will define in `terrain_texture.json` later on. There are 3 ways we can define the texture of a block: 
 
--   `"wiki:blocky"` has textures set to the shortname `"blocky"`. We'll define it in a file similar to `item_texture.json` later.
--   `"wiki:sapp_log"` has textures broken into 3 parts:
-    -   `"up"` for the upper face of the block.
-    -   `"down"` for the bottom face of the block.
-    -   `"side"` for the remaining four faces. Each one of these has a separate texture shortname applied.
--   `"wiki:compass_block"` has textures broken into more sub-textures. Instead of `"side"`, we have a different texture shortname set for the `"north"` side, the `"south"` side, the `"west"` side, and the `"east"` side.
--   `"wiki_flashing`" has `"flashing"` defined in the same way as `"wiki_blocky"`.
+-   `"wiki:blocky"` & `"wiki:flashing"` have the same texture on each side of the block. We will be animating the texture for `"wiki:flashing"` later on. 
+-   `"wiki:sapp_log"` has 3 different textures; the top of the block, the bottom of the block & the remaining sides of the block. 
+-   `"wiki:compass_block"` has a different texture for each side of the block.  
+
+When we define the sounds, we use their shortnames. For a list of vanilla sound shortnames, you can look [here](/documentation/sound-definitions). If you want to learn about making your own custom sounds, you can look [here](/concepts/sounds).
 
 ### Block terrain texture definition
 
@@ -177,11 +177,11 @@ The only difference from `item_textures.json` is that "`atlas.items`" is now cha
 
 `"padding"` and `"num_mip_leavels"` mean the quality of how the texture is displayed, especially noticeable on higher resolution textures. The performance will be better if it's lower, but the textures will appear glitchy from further distances.
 
-Next, all our texture shortnames have been defined. These shortnames were already used in `RP/blocks.json`, as you might remember. If you load the game now, you'll be able to see the 3 new custom blocks you just added, with all the texture functionality :)
+Next, all our texture shortnames have been defined. These shortnames were already used in `RP/blocks.json`, as you might remember. If you load the game now, you'll be able to see the 3 new custom blocks you just added, with all the texture functionality.
 
 ![](/assets/images/guide/custom_blocks_inventory.png)
 
-But, we still have to define the `wiki:flashing` texture(third from the left), which is currently undefined. That's why it appears as a purple/black tiled texture right now.
+But, we still have to define the `wiki:flashing` texture(third from the left), which is currently undefined. That's why it appears as a dirt block with "update" written on it.
 
 ### Block flipbook texture definition
 
@@ -228,17 +228,13 @@ You can learn more about .lang [here](/concepts/text-and-translations)
 
 ---
 
-## Your progress so far
+## What you have learned
 
-**What you've done:**
+:::tip What you have learned:
 
--   [x] Learned about custom block behavior components;
--   [x] Created a custom block with simple textures;
--   [x] Created a custom block with side- and face-relying textures;
--   [x] Created a custom block with flipbook textures;
+-   What custom block behavior components there are
+-   How to create a custom block with simple textures
+-   How to create a custom block with side and face-relying textures
+-   How to create a custom block with flipbook textures
 
-**What are you to do next:**
-
--   [x] Create custom Loot Tables for your blocks and entities;
--   [ ] Create custom crafting recipes;
--   [ ] Create custom Spawn Rules for entities;
+:::
