@@ -170,13 +170,15 @@ On the next line after the closing tag, you have to start a code block to use th
 A Button works like a link, but is more noticeable for the user.
 
 ```html
-<BButton link="https://wiki.bedrock.dev" color="red">your button text</BButton>
+<BButton 
+    link="https://wiki.bedrock.dev" 
+    color=red
+>your button text</BButton>
 ```
 
 <BButton
-link='https://wiki.bedrock.dev'
-color=red
-
+    link='https://wiki.bedrock.dev'
+    color=red
 > your button text</BButton>
 
 | Attribute | Required | Type   | Note                                                                                                            |
@@ -191,10 +193,17 @@ The text between the two HTML-Tags is the text that will appear on the button.
 A spoiler is a Component that can be used to hide some content, so it doesn't block the whole site.
 
 ```html
-<Spoiler title="title"> text here and here </Spoiler>
+<Spoiler title="title">
+
+text here
+
+and here
+
+</Spoiler>
 ```
 
-<Spoiler title='title'>
+<Spoiler 
+title='title'>
 
 text here
 
@@ -215,14 +224,17 @@ Pay attention to the empty lines between the content and the tags! If you forget
 A Label is a small icon with uppercase letters that can be used to give your articles more flair.
 
 ```html
-<label name="name" color="green">label</label>
+<Label 
+    name="name"
+    color="green"
+>label</Label>
 ```
 
 <Label
 name='name'
 color='green'
 
-> label</Label>
+>label</Label>
 
 | Attribute | Required | Type   | Note                                                                                                    |
 | --------- | -------- | ------ | ------------------------------------------------------------------------------------------------------- |
@@ -274,7 +286,9 @@ The `:paths` Attribute is a String, that contains a List of all separate file pa
 A YouTubeEmbed can be used to embed a YouTube Video in your article.
 
 ```html
-<YouTubeEmbed id="dQw4w9WgXcQ" />
+<YouTubeEmbed 
+    id="dQw4w9WgXcQ" 
+/>
 ```
 
 <YouTubeEmbed id='dQw4w9WgXcQ' />
