@@ -52,19 +52,21 @@ New files referenced by file path, such as sounds, DO need a complete client res
 
 ### /playsound volume notes
 
-The game will clamp the sound volume to at most 1.0 before multiplying it with the sound definition's 
+The game will clamp the sound volume to at most 1.0 before multiplying it with the sound definition's volume.
 
 For `/playsound`, the maximum hearable range of a sound is given by `min(max_distance, max(volume * 16, 16))`.
-If `"max_distance"`is not given in the sound's definition, it is equivalent to `volume * 16`.
+If `"max_distance"`is not given in the sound's definition, it is equivalent to `playsound_volume * 16`.
 
-![](/assets/images/concepts/sounds/sound_graph.png)
+![Approximate sound attenuation by distance. The actual graph might not be linear.](/assets/images/concepts/sounds/sound_graph.png)
 
-**Attenuation by distance** of the hearable sound's volume is not affected by the volume parameter given in the command.
+Shown above is the approximate sound attenuation factor by distance **for playing sounds with a volume parameter greater than or equal to 1**. Notice how the playsound `<volume>` limits the sound's audible range.
+The axis `distance` is the distance of the sound listener (player) to the sound source. The corresponding `volume` axis' value is the factor for the playsound volume capped to 1, multiplied by the sound definition's volume to get the final volume of the sound you hear. As an expression this could be written as: `final_volume = min(playsound_volume, 1) * graph_volume * sound_definition_volume`.
 
-For example, `mob.ghast.affectionate_scream` sets `"min_distance": 100.0`, but can only be heard from at most 16 blocks away when using `/playsound` to play it.
-However when using a large enough volume to hear the sound farther away, the sound will get quieter only after a distance of more than 100.0.
+**Note:** Attenuation by distance of the hearable sound's volume is not affected by the volume parameter given in the command.
 
-To make a sound which can be heard far away but also drops in volume continuously over distance, one can add e.g. `"volume": 0.01`and use large `<volume>` values in the playsound command. The high value for the `/playsound` volume will produce a large hearable range (e.g. a volume of 4 is 64 blocks as calculated above), while the low volume will prevent the played sound from capping at 1.0 too soon.
+For example, `mob.ghast.affectionate_scream` sets `"min_distance": 100.0`, but can only be heard from at most 16 blocks away when using `/playsound` with volume 1 to play it. Specifying a greater volume value increases the audible range. When using a large enough volume to hear the sound farther away, the sound will get quieter only after a distance of more than 100.0.
+
+To make a sound which can be heard far away but also drops in volume continuously over distance, one can add e.g. `"volume": 0.01`and use large `<volume>` values in the playsound command. The high value for the `/playsound` volume will produce a large audible range (e.g. a volume of 4 is 64 blocks as calculated above), while the low volume will prevent the played sound from capping at 1.0 too soon.
 
 
 ### Top Level Keys
@@ -95,7 +97,7 @@ The distance from the sound source after which sound volume is attenuated. Defau
 #### max_distance
 
 The distance from the sound source after which the sound volume is the quietest (if in range). It must be a float (eg. 1.0), or the property will be ignored.
-
+	
 ### Sound definitions
 
 In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds but does not have much power. For starts, I can add multiple sounds to the list. These sounds will be randomized when played:
