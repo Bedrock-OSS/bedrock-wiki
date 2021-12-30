@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./404.md.0cc5cc79.js";const _='{"title":"Visuals","description":"","frontmatter":{"title":"Visuals"},"relativePath":"visuals/index.md","lastUpdated":1640898432167}',s={};function c(r,o,i,n,d,l){return a(),e("div")}var f=t(s,[["render",c]]);export{_ as __pageData,f as default};
