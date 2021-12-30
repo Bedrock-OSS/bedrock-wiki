@@ -123,6 +123,7 @@ Limits the sound only to be played a limited number of instances at a time. Will
 #### volume
 
 How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made more audible than initially encoded. Set to `1.0` by default.
+Sounds in custom resource packs can have working values greater than 1.0.
 
 #### load_on_low_memory
 
