@@ -306,20 +306,23 @@ A WikiImage is an alternative way to add an image in your article.
 	src="assets/images/homepage/wikilogo.png"
 	alt="alternative text"
 	pixelated="true"
+	width=420
 />
 ```
 
 <WikiImage 
     src='assets/images/homepage/wikilogo.png' 
     alt='alternative text' 
-    pixelated=true 
+    pixelated=true
+    width=420
 />
 
-| Attribute | Required | Type    | Note                                                                                                                                                                                                                                                 |
-| --------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| src       | yes      | String  | Image to show                                                                                                                                                                                                                                        |
-| alt       | no       | String  | Text to show if the browser can't load the image. Not really important, as most modern browser support showing images.                                                                                                                               |
-| pixelated | no       | Boolean | If the image should be pixelated <br> _Due to a bug, it doesn't matter if this attribute is true or false. As long as the attribute is present, the image will be pixelated. This attribute **must** be deleted so that the image is not pixelated!_ |
+| Attribute | Required | Type    | Note                                                                                                                   |
+| --------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| src       | yes      | String  | Image to show                                                                                                          |
+| alt       | no       | String  | Text to show if the browser can't load the image. Not really important, as most modern browser support showing images. |
+| pixelated | no       | Boolean | If the image should be pixelated.                                                                                      |
+| width     | no       | Integer | Width of the Image. The height will be scaled automatically.                                                           |
 
 Unlike a markdown image, the image can be pixelated here.
 
@@ -413,6 +416,12 @@ This section is only for the readability of your Markdown files. It wont be visi
 |here|and here|
 ```
 
-✔️ `<WikiImage src=""/>`
+✔️ `<WikiImage src="my/image.png"/>`
 
-❌ `<img src="" />`
+_or_
+
+✔️ `![](my/image.png)`
+
+❌ `<img src="my/image.png" />`
+
+<WikiImage src="assets/images/homepage/wikilogo.png"  width="42"/>
