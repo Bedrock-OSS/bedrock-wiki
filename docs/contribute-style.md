@@ -423,5 +423,3 @@ _or_
 ✔️ `![](my/image.png)`
 
 ❌ `<img src="my/image.png" />`
-
-<WikiImage src="assets/images/homepage/wikilogo.png"  width="42"/>
