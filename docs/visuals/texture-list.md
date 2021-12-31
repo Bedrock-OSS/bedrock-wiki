@@ -39,8 +39,17 @@ If you have a lot of textures, this could obviously be tedious to go and list al
 <CodeHeader></CodeHeader>
 
 ```python
-def list_textures_v2():
-  for texture in glob.glob("./textures/**/*.png")+glob.glob("./textures/**/*.tga):
+import os
+import fnmatch
+import glob
+
+def list_textures():
+  for texture in glob.glob("./textures/blocks/*.png"):
     bn = os.path.splitext(os.path.basename(texture))[1]
-    print(texture.replace(bn,"").replace("./","").replace("\\","/"))
+    bn2 = os.path.splitext(os.path.basename(texture))[0]
+    print('"'+bn2,'"',': {"textures": ["'+texture.replace(bn,"").replace("./","").replace("\\","/"), '"]},')
+  for texture in glob.glob("./textures/blocks/**/*.png"):
+    bn = os.path.splitext(os.path.basename(texture))[1]
+    bn2 = os.path.splitext(os.path.basename(texture))[0]
+    print('"'+bn2,'"',': {"textures": ["'+texture.replace(bn,"").replace("./","").replace("\\","/"), '"]},')
 ```
