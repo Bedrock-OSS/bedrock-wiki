@@ -2,7 +2,8 @@
 	<img
 		:src="props.src"
 		:alt="props.alt"
-		:class="{ 'pixelated-image': props.pixelated }"
+		:class="{ 'pixelated-image' : props.pixelated === 'true' }"
+		:width="props.width"
 	/>
 </template>
 
@@ -13,7 +14,8 @@ const props =
 	defineProps<{
 		src: string
 		alt?: string
-		pixelated?: boolean
+		pixelated?: string
+		width?: string
 	}>()
 </script>
 
