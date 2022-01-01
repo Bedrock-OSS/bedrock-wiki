@@ -449,9 +449,15 @@ This section is only for the readability of your Markdown files. It wont be visi
 2.  Prettify Markdown tables. Use spaces and `-` to extend all rows to the same lengths. Use one space before and after each cells content.
 3.  Don't use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
 
-✔️ `- list`
+✔️ 
+```
+-   list
+```
 
-❌ `- list`
+❌ 
+```
+- list
+```
 
 ✔️
 
