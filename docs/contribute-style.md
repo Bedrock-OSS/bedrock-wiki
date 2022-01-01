@@ -106,7 +106,7 @@ Our wiki uses special Vue-Components, which you can use to add things like Butto
 
 ### Panel
 
-Panels are used to inform or warn the user about some really important stuff. There are two types of Panels: `tip` and `warning`.
+Panels are used to inform or warn the user about some really important stuff. There are three types of Panels: `tip`, `warning` and `danger`.
 
 ```HTML
 :::tip
@@ -115,6 +115,10 @@ some tips here
 
 :::warning
 a warning here
+:::
+
+:::danger
+danger zone
 :::
 ```
 
@@ -126,7 +130,23 @@ some tips here
 a warning here
 :::
 
+:::danger
+danger zone
+:::
+
 Panels are created by typing three colons and the type of the Panel. Then you can write your content and at the end you close the Panel by typing just three colons.
+
+You also can add headers for panels:
+
+```HTML
+:::danger STOP!
+danger zone
+:::
+```
+
+:::danger STOP!
+danger zone
+:::
 
 ### CodeHeader
 
@@ -134,6 +154,7 @@ CodeHeaders are used to nicely wrap codeblocks, so a user can easily copy the co
 
 ````json
 <CodeHeader>BP/blocks/example.json</CodeHeader>
+
 ```json
 {
     "some": "json"
@@ -351,6 +372,38 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 
 Don't overuse them! They look cool, but someone could really give them too much attention and forget to focus on other important parts of your article.
 
+### New Lines
+
+**Always remember to add new lines before and after components!**
+
+Wrong:
+
+````
+- one
+- two
+<CodeHeader>BP/blocks/example.json</CodeHeader>
+```json
+{
+    "some": "json"
+}
+```
+````
+
+Correct:
+
+````
+- one
+- two
+
+<CodeHeader>BP/blocks/example.json</CodeHeader>
+
+```json
+{
+    "some": "json"
+}
+```
+````
+
 ## Formatting Guide
 
 Everyone likes to read wikis that are perfectly and consistently formatted.
@@ -363,10 +416,10 @@ Well, its hard to realise that. And we don't want perfectly and consistently for
 
 ### Headers
 
-1.  Dont use level-1 Headers. Your Page starts with a level-1 Header, that has the same title as written in the Front Matter.
+1.  Don't use level-1 Headers. Your Page starts with a level-1 Header, that has the same title as written in the Front Matter.
 2.  Try to avoid Headers higher than level-3. They wont show in the right sidebar and wont be easy to see.
 3.  Start with an Uppercase Letter and use the `Title Case` style.
-4.  Dont use `:` in your Headers!
+4.  Don't use `:` in your Headers!
 
 Some examples:
 
@@ -386,7 +439,7 @@ Some examples:
 
 1.  Use CodeHeaders, unless it is absolutely not possible.
 2.  Fully extend JSON Code (aka. as "Prettified Code").
-3.  Use `rp` and `bp` as root-folders.
+3.  Use `RP` and `BP` as root-folders.
 
 ### Markdown Formatting
 
@@ -394,7 +447,7 @@ This section is only for the readability of your Markdown files. It wont be visi
 
 1.  If you use lists or numbered lists, use tabulators or 4 spaces after the `-` or number.
 2.  Prettify Markdown tables. Use spaces and `-` to extend all rows to the same lengths. Use one space before and after each cells content.
-3.  Dont use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
+3.  Don't use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
 
 ✔️ `- list`
 
