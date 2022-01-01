@@ -106,7 +106,7 @@ Our wiki uses special Vue-Components, which you can use to add things like Butto
 
 ### Panel
 
-Panels are used to inform or warn the user about some really important stuff. There are two types of Panels: `tip` and `warning`.
+Panels are used to inform or warn the user about some really important stuff. There are three types of Panels: `tip`, `warning` and `danger`.
 
 ```HTML
 :::tip
@@ -115,6 +115,10 @@ some tips here
 
 :::warning
 a warning here
+:::
+
+:::danger
+danger zone
 :::
 ```
 
@@ -126,7 +130,23 @@ some tips here
 a warning here
 :::
 
+:::danger
+danger zone
+:::
+
 Panels are created by typing three colons and the type of the Panel. Then you can write your content and at the end you close the Panel by typing just three colons.
+
+You also can add headers for panels:
+
+```HTML
+:::danger STOP!
+danger zone
+:::
+```
+
+:::danger STOP!
+danger zone
+:::
 
 ### CodeHeader
 
@@ -134,6 +154,7 @@ CodeHeaders are used to nicely wrap codeblocks, so a user can easily copy the co
 
 ````json
 <CodeHeader>BP/blocks/example.json</CodeHeader>
+
 ```json
 {
     "some": "json"
@@ -351,6 +372,38 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 
 Don't overuse them! They look cool, but someone could really give them too much attention and forget to focus on other important parts of your article.
 
+### New Lines
+
+**Always remember to add new lines before and after components!**
+
+Wrong:
+
+````
+- one
+- two
+<CodeHeader>BP/blocks/example.json</CodeHeader>
+```json
+{
+    "some": "json"
+}
+```
+````
+
+Correct:
+
+````
+- one
+- two
+
+<CodeHeader>BP/blocks/example.json</CodeHeader>
+
+```json
+{
+    "some": "json"
+}
+```
+````
+
 ## Formatting Guide
 
 Everyone likes to read wikis that are perfectly and consistently formatted.
@@ -386,7 +439,7 @@ Some examples:
 
 1.  Use CodeHeaders, unless it is absolutely not possible.
 2.  Fully extend JSON Code (aka. as "Prettified Code").
-3.  Use `rp` and `bp` as root-folders.
+3.  Use `RP` and `BP` as root-folders.
 
 ### Markdown Formatting
 
