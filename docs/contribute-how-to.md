@@ -213,4 +213,11 @@ And now this problem is solved! You can continue safely, commit to your branch a
 
 ## Conclusion
 
-Now you have all the software installed and learned all the skills you need to edit our wiki! If you wan't to learn more about styling your articles, you can read our [How to style our wiki](/contribute-style) guide!
+Now you have all the software installed and learned all the skills you need to edit our wiki! If you wan't to learn more about styling your articles, you can read
+
+<BButton
+    link='https://wiki.bedrock.dev/contribute-style.html'
+    color=blue
+> How to style our wiki</BButton>
+
+guide!
