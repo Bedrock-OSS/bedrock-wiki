@@ -192,13 +192,13 @@ A Button works like a link, but is more noticeable for the user.
 
 ```html
 <BButton 
-    link="https://wiki.bedrock.dev" 
+    link="https://youtube.com" 
     color=red
 >your button text</BButton>
 ```
 
 <BButton
-    link='https://wiki.bedrock.dev'
+    link='https://youtube.com'
     color=red
 > your button text</BButton>
 
@@ -208,6 +208,8 @@ A Button works like a link, but is more noticeable for the user.
 | color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be grey_ |
 
 The text between the two HTML-Tags is the text that will appear on the button.
+
+The link can either be an external website, or a page in our wiki. For the last case, use relative links, as described in our [linking-section](/contribute-style#linking).
 
 ### Spoiler
 
@@ -449,9 +451,15 @@ This section is only for the readability of your Markdown files. It wont be visi
 2.  Prettify Markdown tables. Use spaces and `-` to extend all rows to the same lengths. Use one space before and after each cells content.
 3.  Don't use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
 
-✔️ `- list`
+✔️ 
+```
+-   list
+```
 
-❌ `- list`
+❌ 
+```
+- list
+```
 
 ✔️
 
