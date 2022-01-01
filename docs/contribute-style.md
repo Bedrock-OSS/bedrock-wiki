@@ -363,10 +363,10 @@ Well, its hard to realise that. And we don't want perfectly and consistently for
 
 ### Headers
 
-1.  Dont use level-1 Headers. Your Page starts with a level-1 Header, that has the same title as written in the Front Matter.
+1.  Don't use level-1 Headers. Your Page starts with a level-1 Header, that has the same title as written in the Front Matter.
 2.  Try to avoid Headers higher than level-3. They wont show in the right sidebar and wont be easy to see.
 3.  Start with an Uppercase Letter and use the `Title Case` style.
-4.  Dont use `:` in your Headers!
+4.  Don't use `:` in your Headers!
 
 Some examples:
 
@@ -394,7 +394,7 @@ This section is only for the readability of your Markdown files. It wont be visi
 
 1.  If you use lists or numbered lists, use tabulators or 4 spaces after the `-` or number.
 2.  Prettify Markdown tables. Use spaces and `-` to extend all rows to the same lengths. Use one space before and after each cells content.
-3.  Dont use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
+3.  Don't use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
 
 ✔️ `- list`
 
