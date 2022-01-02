@@ -1,48 +1,89 @@
 <template>
 	<NavBar />
-	<Sidebar />
+	<div>
+		<Sidebar />
 
-	<main
-		:class="{
-			'm-8': true,
-			'md:ml-80': isVisible,
-			'mt-22': true,
-			'min-h-screen': true,
-		}"
-	>
-		<h1 class="xl:pr-72" v-if="page && page.title" id="top">
-			{{ page.title }}
-		</h1>
-		<Label v-for="tag in tags" :name="tag"> </Label>
-		<TOC v-if="showToc" />
-		<Content
+		<main
 			:class="{
-				'xl:mr-72': showToc,
+				'm-8': true,
+				'md:ml-80': isVisible,
+				'mt-22': true,
+				'min-h-screen': true,
 			}"
-		/>
+		>
+			<h1 class="xl:pr-72" v-if="page && page.title" id="top">
+				{{ page.title }}
+			</h1>
+			<Label v-for="tag in tags" :name="tag"> </Label>
+			<TOC v-if="showToc" />
+			<Content
+				:class="{
+					'xl:mr-72': showToc,
+				}"
+			/>
 
-		<div v-if="showEditLink">
-			<div class="pt-4" v>
-				<a :href="editLink" target="_blank"
-					>Edit {{ page.title }} on Github.</a
-				>
+			<div v-if="showEditLink">
+				<div class="pt-4" v>
+					<a :href="editLink" target="_blank"
+						>Edit {{ page.title }} on Github.</a
+					>
+				</div>
 			</div>
-		</div>
 
-		<div v-if="showContributors">
-			<h2>Contributors</h2>
-			<Suspense>
-				<template #default>
-					<Contributors :mentioned="mentionedContributors" />
-				</template>
-				<template #fallback>
-					<div>
-						<span> Loading contributors... </span>
-					</div>
-				</template>
-			</Suspense>
-		</div>
-	</main>
+			<div v-if="showContributors">
+				<h2>Contributors</h2>
+				<Suspense>
+					<template #default>
+						<Contributors :mentioned="mentionedContributors" />
+					</template>
+					<template #fallback>
+						<div>
+							<span> Loading contributors... </span>
+						</div>
+					</template>
+				</Suspense>
+			</div>
+			<footer>
+				<div>
+					Bedrock Wiki by
+					<a
+						href="https://github.com/Bedrock-OSS"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Bedrock-OSS</a
+					>. 
+				</div>
+				<div>
+					"Minecraft" is a trademark of Mojang AB. Bedrock-OSS,
+					Bedrock Wiki and
+					<a
+						href="https://bedrock.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+						>bedrock.dev</a
+					>
+					are not affiliated in any way with Microsoft or Mojang AB.
+				</div>
+				<ul>
+					<li>
+						<a href="#" target="_blank" rel="noopener noreferrer"
+							>Privacy Policy</a
+						>
+					</li>
+					<li>
+						<a href="https://discord.gg/XjV87YN" target="_blank" rel="noopener noreferrer"
+							>Join our Discord!</a
+						>
+					</li>
+					<li>
+						<a href="https://github.com/Bedrock-OSS" target="_blank" rel="noopener noreferrer"
+							>Visit our Project Repository!</a
+						>
+					</li>
+				</ul>
+			</footer>
+		</main>
+	</div>
 </template>
 
 <script setup lang="ts">

@@ -1,0 +1,34 @@
+footer {
+    background-color: rgb(48, 48, 48);
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.7rem;
+    margin: 2.5rem -2rem -2rem -2rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+footer li:not(:first-child) {
+    padding-left: 0.3rem;
+}
+
+footer li:not(:first-child)::before {
+    content: "|";
+    margin-right: 0.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    footer ul {
+        display: block;
+    }
+    footer li:not(:first-child)::before {
+        content: "";
+    }
+}
