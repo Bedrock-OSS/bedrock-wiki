@@ -114,6 +114,7 @@ show_toc: false
 
 'RP/textures/environment/overworld_cubemap/cubemap_0.png',
 'RP/textures/environment/overworld_cubemap/cubemap_1.png',
+'RP/textures/environment/overworld_cubemap/cubemap_2.png',
 'RP/textures/environment/overworld_cubemap/cubemap_3.png',
 'RP/textures/environment/overworld_cubemap/cubemap_4.png',
 'RP/textures/environment/overworld_cubemap/cubemap_5.png',
