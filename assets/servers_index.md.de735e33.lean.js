@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./404.md.3addfd4f.js";const l='{"title":"Servers & Realms","description":"","frontmatter":{"title":"Servers & Realms"},"relativePath":"servers/index.md","lastUpdated":1641238782534}',a={};function s(o,d,n,c,i,p){return r(),t("div")}var f=e(a,[["render",s]]);export{l as __pageData,f as default};
