@@ -227,6 +227,56 @@ Here is the code for the second state machine from above, with three states this
 }
 ```
 
+## RP Animation Controllers
+
+Resource Pack animation controllers can run things like sounds and particles too.
+Before calling sound or particle in ac, you need to define them in client entity file.
+
+<CodeHeader>RP/entities/custom_tnt.json#minecraft:client_entity/description</CodeHeader>
+
+```json
+"sound_effects": {
+    "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound definited in sound_definitions just like animation sounds.
+},
+"particle_effects": {
+    "fuse_lit": "wiki:tnt_fuse_lit_particle"
+}
+```
+
+And only then you can call them in ac:
+
+<CodeHeader>RP/animation_controllers/custom_tnt.animation_controllers.json#controller.animation.custom_tnt</CodeHeader>
+
+```json
+"states":{
+    "default":{
+        "transitions":[
+            {
+                "explode_state":"query.mark_variant == 1"
+            }
+        ]
+    },
+    "explode_state":{
+        "sound_effects":[
+            {
+                "effect":"explosion"
+            }
+        ],
+		"particle_effects": [
+			{
+				"effect": "fuse_lit"
+				// "locator": "<bone>" Locator can also go here too
+			}
+		],
+        "transitions":[
+            {
+                "default":"query.mark_variant == 0"
+            }
+        ]
+    }
+}
+```
+
 ## BP Animation Controllers
 
 Behavior Pack animation controllers use the same general format as RP Animation Controllers, except instead of triggering animations, they allow you to trigger commands. In general, they introduce two new fields:
