@@ -40,6 +40,18 @@ The title is required, as it is the name shown in the bar on the left side. Ment
 
 After the Head, you write the Body. The body is just your whole content. A common mistake everyone does the first time is to put the page title as a level 1 header on their page. You don't have to do this, because the title given in the Header will already be placed on top of your page.
 
+List of tags:
+
+-   guide
+-   recipe
+-   help
+-   experimental
+-   beta
+-   easy
+-   intermediate
+-   expert
+
+
 ## Viewing the Wiki locally
 
 Its really hard to know how your article will look when its finished and published. To help with that, you can use a tool called `npm`!
@@ -151,6 +163,7 @@ danger zone
 ### CodeHeader
 
 CodeHeaders are used to nicely wrap codeblocks, so a user can easily copy the code inside them. You can also add some text, like a file path, so the users know exactly where to put this code.
+Remember to format json. You can use [this](https://jsonformatter.curiousconcept.com) tool.
 
 ````json
 <CodeHeader>BP/blocks/example.json</CodeHeader>
