@@ -97,28 +97,4 @@
         left: -0.9rem;
         bottom: 0.52rem;
     }
-
-    /* .tickmark-checked::before {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        height: 50%;
-        width: 3px;
-        background-color: rgb(187, 193, 199);
-        content: '';
-        transform: translateX(10px) rotate(-45deg);
-        transform-origin: left bottom;
-    }
-
-    .tickmark-checked::after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 3px;
-        width: 100%;
-        background-color: rgb(187, 193, 199);
-        content: '';
-        transform: translateX(10px) rotate(-45deg);
-        transform-origin: left bottom;
-    } */
 </style>
