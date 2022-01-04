@@ -30,6 +30,12 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 
 -   All runtime ID change name of entity to one which runtime ID's entity it is using
 
+### minecraft:area_effect_cloud
+
+-   Breaks the entity.
+
+---
+
 ### minecraft:armor_stand
 
 -   Disables entity shadows.
@@ -54,6 +60,21 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 Age: Adult, Baby
 Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
+---
+
+### minecraft:bee
+
+-   Adds bee sounds to entity.
+
+---
+
+### minecraft:blaze
+
+-   Adds blaze burning sound effect and particles.
+-   Entity will fly like blaze (even if you don't have fly behavior).
+
+---
+
 ### minecraft:boat
 
 -   Adds the pocket boat UI when ridden.
@@ -62,11 +83,65 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ---
 
+### minecraft:chest_minecart
+
+-   Breaks the entity.
+-   Punching entity will make it despawn.
+-   Spawns strangely.
+-   Drops chest and minecart.
+
+---
+
+### minecraft:chicken
+
+-   Breaks some of the animations.
+-   Updates move speed.
+-   Entity will fall slowly but still receives fall damage.
+-   Spawns without gear (if it was).
+
+---
+
 ### minecraft:cod
 
 -   Makes entity flop when not in water.
 -   Interacting with bucket of water will give you a bucket of cod, but when the bucket of cod is placed, it will place bucketed entity instead of cod.
 -   Gives the entity special swimming and gravitational behavior.
+
+---
+
+### minecraft:command_block_minecart
+
+-   Breaks the entity.
+-   Punching entity will make it despawn.
+-   Spawns strangely.
+-   Drops minecart.  
+
+---
+
+### minecraft:cow
+
+-   Breaks some of the animations.
+-   Updates move speed.
+-   Spawns without gear (if it was).
+
+---
+
+### minecraft:dolphin
+
+-   Adds `minecraft:movement.dolphin` component.
+
+---
+
+### minecraft:donkey
+
+-  Changes texture, model and animations to the donkey's one.
+
+---
+
+### minecraft:dragon_fireball
+
+-  Completely breaks your entity.
+-  Emits dragon fireball trail particle.
 
 ---
 
@@ -105,6 +180,13 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 -   Breaks the entity also makes it fall.
 -   When entity touches ground, it despawns with no animations at all. Just drops acacia button.
 -   Removes the ability to have effects.
+
+### minecraft:horse
+
+-   Changes texture, model and animations to the horse's one.
+
+---
+
 
 ### minecraft:iron_golem
 
@@ -231,12 +313,8 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-### minecraft:horse
-
--   Changes texture, model and animation to the horse one.
-
----
-
 ### minecraft:wither
 
 -   Explodes on death.
+
+---
