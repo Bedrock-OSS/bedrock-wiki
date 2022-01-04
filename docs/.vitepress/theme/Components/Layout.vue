@@ -65,13 +65,13 @@
 					are not affiliated in any way with Microsoft or Mojang AB.
 				</div>
 				<ul>
-					<li>
+					<!-- <li>
 						<a href="#" target="_blank" rel="noopener noreferrer"
 							>Privacy Policy</a
 						>
-					</li>
+					</li> -->
 					<li>
-						<a href="https://discord.gg/XjV87YN" target="_blank" rel="noopener noreferrer"
+						<a href="/discord.html" target="_blank" rel="noopener noreferrer"
 							>Join our Discord!</a
 						>
 					</li>
@@ -79,6 +79,11 @@
 						<a href="https://github.com/Bedrock-OSS" target="_blank" rel="noopener noreferrer"
 							>Visit our Project Repository!</a
 						>
+					</li>
+					<li>
+						<a href="/contribute.html" target="_blank" rel="noopener norefferer">
+							Learn how to contribute!
+						</a>
 					</li>
 				</ul>
 			</footer>
