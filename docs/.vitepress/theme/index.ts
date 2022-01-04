@@ -13,6 +13,8 @@ import CardLink from './Components/Content/CardLink.vue'
 import Homepage from './Components/Pages/Homepage.vue'
 import NotFound from './Components/Pages/NotFound.vue'
 
+import Checklist from './Components/Content/Checklist.vue'
+
 import { Theme } from 'vitepress'
 import { Component } from 'vue'
 import Component404 from '../../404.md'
@@ -30,6 +32,7 @@ const globalComponents: [string, Component][] = [
 	['WikiImage', WikiImage],
 	['CardLink', CardLink],
 	['Card', Card],
+	['Checklist', Checklist],
 	['Homepage', Homepage],
 	['NotFound', NotFound],
 ]
