@@ -44,10 +44,6 @@ import fnmatch
 import glob
 
 def list_textures():
-  for texture in glob.glob("./textures/blocks/*.png"):
-    bn = os.path.splitext(os.path.basename(texture))[1]
-    bn2 = os.path.splitext(os.path.basename(texture))[0]
-    print('"'+bn2,'"',': {"textures": ["'+texture.replace(bn,"").replace("./","").replace("\\","/"), '"]},')
   for texture in glob.glob("./textures/blocks/**/*.png"):
     bn = os.path.splitext(os.path.basename(texture))[1]
     bn2 = os.path.splitext(os.path.basename(texture))[0]
