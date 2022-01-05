@@ -224,6 +224,35 @@ The text between the two HTML-Tags is the text that will appear on the button.
 
 The link can either be an external website, or a page in our wiki. For the last case, use relative links, as described in our [linking-section](/contribute-style#linking).
 
+### Checklist
+
+The Checklist can be used to tell the reader about certain things that need to be done or to show what has already been done.
+
+```html
+<Checklist>
+
+-   [x] This will be checked!
+-   [ ] This won't be checked!
+
+</Checklist>
+```
+
+<Checklist>
+
+-   [x] This will be checked!
+-   [ ] This won't be checked!
+
+</Checklist>
+
+
+To add new entries to the Checklist, you need to create a Markdown List, and start each entry with `[x]` or `[ ]`.
+
+If you start the entry with `[x]`, this entry will be checked.
+
+If you start the entry with `[ ]`, this entry won't be checked.
+
+Pay attention to the empty lines between the content and the tags! If you forget these, this component will not work!
+
 ### Spoiler
 
 A spoiler is a Component that can be used to hide some content, so it doesn't block the whole site.

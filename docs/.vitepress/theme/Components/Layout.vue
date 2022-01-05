@@ -31,7 +31,10 @@
 			</div>
 
 			<div v-if="showContributors">
-				<h2>Contributors</h2>
+				<h2
+					:class="{
+						'xl:mr-72': showToc
+					}">Contributors</h2>
 				<Suspense>
 					<template #default>
 						<Contributors :mentioned="mentionedContributors" />
