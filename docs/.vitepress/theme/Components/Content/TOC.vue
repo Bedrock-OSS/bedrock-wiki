@@ -194,7 +194,7 @@ ul {
 	.sidebar-toc {
 		z-index: 10;
 		/* Scroll if needed */
-		max-height: calc(100vh - 4.5rem);
+		max-height: calc(100vh - 6.9rem);
 		overflow-y: auto;
 	}
 }
