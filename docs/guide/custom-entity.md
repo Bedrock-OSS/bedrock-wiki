@@ -102,6 +102,19 @@ Just like with items, the main files of a custom entity are its RP and BP files.
     -   `"minecraft:movement"` is, of course, the movement speed.
     -   `"minecraft:behavior.delayed_attack"` is a _behavior attribute_, which allows the entity to execute some behavior patterns like, in this case, attacking. Its most important options are:
         -   `"priority"` is often seen in components. If a mob can execute two actions simultaneously, the lower behavior integer will get picked. `0` means the action is always preferred over everything else.
+		
+		<Spoiler title="Read more about entity behavior priority">
+
+		Behaviors are components which make the entity do something. They are always in the form: `minecraft:behavior.*`.
+
+		All behaviors contain a `"priority"` field. This field is used to decide when/how often the behavior will run.
+
+		⚠️ In general, the more important behaviors should be lower, like 0, or 1.
+
+		When the entity is picking something to do, it searches all its behaviors from lowest priority to highest priority, and picks the first one that it can do. For this reason, you need to make important behaviors like `minecraft:behavior.nearest_attackable_target` lower than behaviors like `minecraft:behavior.look_at_player`. If the `look_at_player` is lower, it will always run this first when the player is close, and entity will never attack.
+
+		</Spoiler>
+
         -   You can look up the rest of the options on the official Documentation, [bedrock.dev](https://bedrock.dev/docs/stable/Entities)
     -   `"minecraft:navigation.walk"` allows the mob to use its `"movement.basic"` goal and `"movement"` to navigate by walking. The options inside define if the mob should _avoid sun_, _pass doors_ and if it can _walk_ and _open doors_ itself.
     -   `"minecraft:attack"` / `"damage"` defines the amount of damage the mob deals upon an attack
