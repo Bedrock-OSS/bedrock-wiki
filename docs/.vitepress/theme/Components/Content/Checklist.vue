@@ -1,58 +1,36 @@
 <template>
-    <div v-show="false" ref="content">
-        <slot> </slot>
-    </div>
-
     <label v-for="i in elementsObjects" class="checklist-label">
         <input type="checkbox" :checked="i.checked === true" disabled />
         <span
             class="checkbox"
             :class="{ 'checkbox-checked': i.checked }"
         ></span>
-        <!-- <div v-if="i.checked" class="tickmark-checked"></div> -->
-        <div v-if="i.checked" class="tickmark-checked"><img src="/public/assets/images/icons/tick.png" /></div>
+        <div v-if="i.checked" class="tickmark-checked"><img src="/assets/images/icons/tick.png" /></div>
         <div v-else class="tickmark-unchecked"></div>
         {{ i.content }}
     </label>
 </template>
 
 <script setup lang="ts">
-    import { ref, onMounted } from 'vue';
+    import { useSlots, ref } from 'vue';
 
     interface IElement {
         checked: Boolean;
         content: String;
     }
 
-    const content = ref<any>(null);
-
-    let elements = ref<String[]>([]);
+    const slots = useSlots();
 
     let elementsObjects = ref<IElement[]>([]);
 
-    onMounted(() => {
-        if (content.value) {
-            // split ul (content of slot) and put each element into an Array
-            elements.value = content.value.innerHTML.split('</li><li>');
-            if (elements.value) {
-                elements.value[0] = elements.value[0].replace('<ul><li>', '');
-                elements.value[elements.value.length - 1] = elements.value[
-                    elements.value.length - 1
-                ].replace('</li></ul>', '');
-
-                // create object for each element with its own content and checked boolean
-                elements.value.forEach((element) => {
-                    if (elementsObjects.value) {
-                        elementsObjects.value.push({
-                            content: element.startsWith('[x]')
-                                ? element.replace('[x]', '')
-                                : element.replace('[ ]', ''),
-                            checked: element.startsWith('[x]'),
-                        });
-                    }
-                });
-            }
-        }
+    // get content of slots
+    // @ts-ignore
+    slots.default()[0].children.forEach(element => {
+        element = element.children
+        elementsObjects.value.push({
+            content: element.startsWith('[x]') ? element.replace('[x]', '') : element.replace('[ ]', ''),
+            checked: element.startsWith('[x]')
+        })
     });
 </script>
 
