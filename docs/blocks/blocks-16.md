@@ -364,27 +364,74 @@ Block components to trigger block events:
 
 List of all new block components, with usage examples.
 
-### minecraft:unit_cube
+### minecraft:breakonpush
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:unit_cube": {}
+	"minecraft:breakonpush": true
 }
 ```
 
-### minecraft:crafting_table
+### minecraft:breathability
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:crafting_table": {
-		"custom_description": "Example Crafting Table", // Name shown in GUI
-		"grid_size": 3, // Currently only supports 3
-		"crafting_tags": ["crafting_table", "custom_crafting_tag"]
+	"minecraft:breathability": "solid" // Also accepts 'air'
+}
+```
+
+### minecraft:display_name
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:display_name": "Name"
+}
+```
+
+### minecraft:entity_collision
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:entity_collision": {
+		"origin": [-8, 0, -8],
+		"size": [16, 16, 16]
 	}
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:entity_collision": false
+}
+```
+
+### minecraft:geometry
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:geometry": "geometry.wiki" // Geometry identifier from geo file in 'RP/models/entity' folder
+}
+```
+
+### minecraft:immovable
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:immovable": true
 }
 ```
 
@@ -408,13 +455,177 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:geometry
+### minecraft:onlypistonpush
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:geometry": "geometry.wiki" // Geometry identifier from geo file in 'RP/models/entity' folder
+	"minecraft:onlypistonpush": true
+}
+```
+
+### minecraft:part_visibility
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:part_visibility": {
+		"rules": {
+			"bone_1": "q.block_property('wiki:example_property') == 0", //also accepts `q.has_block_property`
+			"bone_2": "q.block_property('wiki:example_property') == 0"
+		}
+	}
+}
+```
+
+### minecraft:pick_collision
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:pick_collision": {
+		"origin": [-8, 0, -8],
+		"size": [16, 16, 16]
+	}
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:pick_collision": false
+}
+```
+
+### minecraft:placement_filter
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:placement_filter": {
+		"conditions": [
+			{
+				"block_filter": ["minecraft:dirt"],
+				"allowed_faces": ["up"]
+			}
+		]
+	}
+}
+```
+
+_This also accepts tags, such as:_
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:placement_filter": {
+		"conditions": [
+			{
+				"allowed_faces": ["up"],
+				"block_filter": [
+					{
+						"tags": "!query.any_tag('stone')"
+					}
+				]
+			}
+		]
+	}
+}
+```
+
+See [this](/blocks/block-tags) page for a list of vanilla tags and relavent blocks.
+
+### minecraft:preventsjumping
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:preventsjumping": true
+}
+```
+
+### minecraft:random_ticking
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:random_ticking": {
+		"on_tick": {
+			"event": "block_event",
+			"target": "self",
+			"condition": "query.block_property('wiki:block_property') == true"
+		}
+	}
+}
+```
+
+### minecraft:rotation
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:rotation": [90, 180, 0]
+}
+```
+
+### minecraft:ticking
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:ticking": {
+		"looping": true,
+		"range": [4, 4],
+		"on_tick": {
+			"event": "block_event",
+			"target": "self",
+			"condition": "query.block_property('wiki:block_property') == true"
+		}
+	}
+}
+```
+
+### minecraft:unit_cube
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:unit_cube": {}
+}
+```
+
+### minecraft:unwalkable
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:unwalkable": true
+}
+```
+
+### minecraft:crafting_table
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:crafting_table": {
+		"custom_description": "Example Crafting Table", // Name shown in GUI
+		"grid_size": 3, // Currently only supports 3
+		"crafting_tags": ["crafting_table", "custom_crafting_tag"]
+	}
 }
 ```
 
@@ -514,202 +725,6 @@ List of all new block components, with usage examples.
 		"target": "self",
 		"condition": "query.block_property('wiki:block_property') == true"
 	}
-}
-```
-
-### minecraft:ticking
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:ticking": {
-		"looping": true,
-		"range": [4, 4],
-		"on_tick": {
-			"event": "block_event",
-			"target": "self",
-			"condition": "query.block_property('wiki:block_property') == true"
-		}
-	}
-}
-```
-
-### minecraft:random_ticking
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:random_ticking": {
-		"on_tick": {
-			"event": "block_event",
-			"target": "self",
-			"condition": "query.block_property('wiki:block_property') == true"
-		}
-	}
-}
-```
-
-### minecraft:entity_collision
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:entity_collision": {
-		"origin": [-8, 0, -8],
-		"size": [16, 16, 16]
-	}
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:entity_collision": false
-}
-```
-
-### minecraft:pick_collision
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:pick_collision": {
-		"origin": [-8, 0, -8],
-		"size": [16, 16, 16]
-	}
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:pick_collision": false
-}
-```
-
-### minecraft:breakonpush
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:breakonpush": true
-}
-```
-
-### minecraft:display_name
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:display_name": "Name"
-}
-```
-
-### minecraft:breathability
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:breathability": "solid" // Also accepts 'air'
-}
-```
-
-### minecraft:immovable
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:immovable": true
-}
-```
-
-### minecraft:onlypistonpush
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:onlypistonpush": true
-}
-```
-
-### minecraft:placement_filter
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:placement_filter": {
-		"conditions": [
-			{
-				"block_filter": ["minecraft:dirt"],
-				"allowed_faces": ["up"]
-			}
-		]
-	}
-}
-```
-
-_This also accepts tags, such as:_
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:placement_filter": {
-		"conditions": [
-			{
-				"allowed_faces": ["up"],
-				"block_filter": [
-					{
-						"tags": "!query.any_tag('stone')"
-					}
-				]
-			}
-		]
-	}
-}
-```
-
-See [this](/blocks/block-tags) page for a list of vanilla tags and relavent blocks.
-
-### minecraft:preventsjumping
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:preventsjumping": true
-}
-```
-
-### minecraft:rotation
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:rotation": [90, 180, 0]
-}
-```
-
-### minecraft:unwalkable
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:unwalkable": true
 }
 ```
 
