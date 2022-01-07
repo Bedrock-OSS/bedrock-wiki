@@ -58,7 +58,7 @@ Looks simple, doesn't it?
 <CodeHeader>BP/items/my_item.json#components</CodeHeader>
 
 ```json
-minecraft:digger": {
+"minecraft:digger": {
     "use_efficiency": true,
     "destroy_speeds": [
         {
