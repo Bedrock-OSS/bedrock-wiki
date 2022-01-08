@@ -74,7 +74,7 @@ For further guidance on the editor, feel free to contact us on [Twitter](https:/
 
 ### Image Editors
 
-When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs avialable for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn. 
+When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn. 
 
 :::tip
 Choose a program that feels comfortable and easy for you to use. Many Addon creators use different art programs for different tasks. (Example: I use paint.net for most of the art, and piskel for Minecraft block animations). Choose what works best for you! 
