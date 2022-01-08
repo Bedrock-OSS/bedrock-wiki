@@ -95,7 +95,7 @@ Cons: The interface is not intuitive. Even though GIMP is powerful, it requires 
 Download Gimp: https://www.gimp.org/
 
 - **Paint.net**
-Paint.net is a simple yet powerful image editing and art software. Paint.net may not have a vast array of tools like Krita nad GIMP, but it does offer simplicity and ease of use. 
+Paint.net is a simple yet powerful image editing and art software. Paint.net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use. 
 Pros: Easy to use and learn.
 Cons: Only works on Windows. 
 
