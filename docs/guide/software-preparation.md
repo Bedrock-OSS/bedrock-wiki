@@ -115,7 +115,7 @@ Piskel is a web-based pixel art software with a focus of making pixelated sprite
 Pros: Easy to use and learn. Perfect for flipbook animations
 Cons: Must have internet connection. Only offers the most basic tools.
 
-Uaw Piskel: www.piskelapp.com
+Use Piskel: www.piskelapp.com
 
 
 ## Additional Materials
