@@ -88,7 +88,7 @@ Cons: Requires a little time to become familar with the tools.
 Download Krita: https://krita.org/en/ 
 
 - **GIMP**
-Gimp is similar to Krita in that it is a free and open source digital art program that has a vast arrays of tools. Where Kirta focuses more on illustration, GIMP focuses more on image manipulation (think Photoshop). Gimp also works on MAC or PC.
+Gimp is similar to Krita in that it is a free and open source digital art program that has a vast arrays of tools. Where Krita focuses more on illustration, GIMP focuses more on image manipulation (think Photoshop). Gimp also works on MAC or PC.
 Pros: GIMP has more than enough tools for editing Minecraft art
 Cons: The interface is not intuitive. Even though GIMP is powerful, it requires a steep learning curve.
 
