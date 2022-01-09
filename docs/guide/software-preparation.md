@@ -75,31 +75,31 @@ For further guidance on the editor, feel free to contact us on [Twitter](https:/
 When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn. 
 
 :::tip
-Choose a program that feels comfortable and easy for you to use. Many Addon creators use different art programs for different tasks. (Example: One might use paint.net for most of the art, and piskel for Minecraft block animations). Choose what works best for you! 
+Choose a program that feels comfortable and easy for you to use. Many Addon creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you! 
 :::
 
-### **Krita**
+### Krita
 Krita is a powerful open-source art programed with the goal of giving free powerful digital art tools to artists. Krita has more than enough features to cover your Minecraft needs and works on a MAC or PC.
 Pros: Plenty of features including a pixel brush with an intuitive user interface.
 Cons: Requires a little time to become familar with the tools.
 
 [Download Krita](https://krita.org/en/) 
 
-### **GIMP**
+### GIMP
 Gimp is similar to Krita in that it is a free and open source digital art program that has a vast arrays of tools. Where Krita focuses more on illustration, GIMP focuses more on image manipulation (think Photoshop). Gimp also works on MAC or PC.
 Pros: GIMP has more than enough tools for editing Minecraft art
 Cons: The interface is not intuitive. Even though GIMP is powerful, it requires a steep learning curve.
 
 [Download Gimp](https://www.gimp.org/)
 
-### **Paint.net**
-Paint.net is a simple yet powerful image editing and art software. Paint.net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use. 
+### Paint․net
+Paint․net is a simple yet powerful image editing and art software. Paint․net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use. 
 Pros: Easy to use and learn.
 Cons: Only works on Windows. 
 
 [Download Paint.net](https://www.getpaint.net)
 
-### **Pixilart**
+### Pixilart
 Pixilart is a web-based pixel art software. It is extremely simple to use since it is focused on pixel art. It also has a powerful resize option that may come in handy, so that you can resize your art without losing the pixelart details.
 
 Pros: Easy to use and learn. Curated specifically for pixel art.
@@ -107,7 +107,7 @@ Cons: Must have internet connection. May be missing tools you want.
 
 [Use Pixilart](https://www.pixilart.com/)
 
-### **Piskel**
+### Piskel
 Piskel is a web-based pixel art software with a focus of making pixelated sprites (or video game charater animations). This tool, similar to Pixilart, is simple to use. This is also a great tool for making flipbooks (Minecraft block or skin animations).
 
 Pros: Easy to use and learn. Perfect for flipbook animations
