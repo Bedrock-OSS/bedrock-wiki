@@ -12,7 +12,7 @@ title: Bedrock Server Software
 | Go         | [Still Active](#go) : 1 < [Discontinued](#go-1) : 3                 |
 | Python     | [Still Active](#python) : 1 < [Discontinued](#python-1) : 1         |
 | TypeScript | [Still Active](#typescript) : 1 < [Discontinued](#typescript-1) : 1 |
-| C++        | Still Active : 0 < [Discontinued](#c-1) : 2                         |
+| C++        | Still Active : 0 < [Discontinued](#c-1) : 3                         |
 | D          | Still Active : 0 < [Discontinued](#d) : 1                           |
 | JavaScript | Still Active : 1 < [Discontinued](#javascript) : 5                  |
 | Kotlin     | Still Active : 0 < [Discontinued](#kotlin) : 1                      |
@@ -64,6 +64,7 @@ title: Bedrock Server Software
 
 ### C++
 
+-   [Element Zero](https://github.com/Element-0/ElementZero)
 -   [Cenisys](https://github.com/iTXTech/Cenisys)
 -   [CenisysPro](https://github.com/GenisysPro/CenisysPro)
 
@@ -156,7 +157,7 @@ title: Bedrock Server Software
 
 ## Licensing
 
-:::tip
+:::tip License
 This page is licensed under the `GNU Lesser General Public License v3.0`.
 
 The original source was authored `xinghao2003`, and may be [found here.](https://github.com/xinghao2003/MCBE-ServerSoftware-List)
