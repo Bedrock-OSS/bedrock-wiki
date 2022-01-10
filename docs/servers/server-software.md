@@ -11,7 +11,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | Language   | Status                                                              |
 | ---------- | ------------------------------------------------------------------- |
 | PHP        | [Still Active](#php) : 5 < [Discontinued](#php-1) : 31              |
-| Java       | [Still Active](#java) : 4 < [Discontinued](#java-1) : 12            |
+| Java       | [Still Active](#java) : 5 < [Discontinued](#java-1) : 12            |
 | C#         | [Still Active](#c) : 1 < [Discontinued](#c-2) : 1                   |
 | Go         | [Still Active](#go) : 1 < [Discontinued](#go-1) : 3                 |
 | Python     | [Still Active](#python) : 1 < [Discontinued](#python-1) : 1         |
@@ -38,6 +38,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
 -   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
+-   [Terracotta](https://github.com/TerracottaMC/Terracotta)
 
 ### TypeScript
 
