@@ -16,13 +16,16 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | Go         | [Still Active](#go) : 1 < [Discontinued](#go-1) : 3                 |
 | Python     | [Still Active](#python) : 1 < [Discontinued](#python-1) : 1         |
 | TypeScript | [Still Active](#typescript) : 1 < [Discontinued](#typescript-1) : 1 |
-| C++        | Still Active : 0 < [Discontinued](#c-1) : 3                         |
+| C++        | Still Active : 1 < [Discontinued](#c-1) : 3                         |
 | D          | Still Active : 0 < [Discontinued](#d) : 1                           |
 | JavaScript | Still Active : 1 < [Discontinued](#javascript) : 5                  |
 | Kotlin     | Still Active : 0 < [Discontinued](#kotlin) : 1                      |
 | Rust       | Still Active : 1 < [Discontinued](#rust) : 2                        |
 
 ## Active Software
+### C++
+
+- [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
 
 ### C#
 
