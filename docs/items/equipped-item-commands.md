@@ -18,9 +18,9 @@ The use of Holiday Creator Features is also required to add item tags and easily
 
 ## Server animation
 
-<CodeHeader>BP/items/my_item.json#events</CodeHeader>
-
 The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. We can start by using the following as a template:
+
+<CodeHeader>BP/animations/player.json</CodeHeader>
 
 ```json
 {
@@ -46,13 +46,13 @@ Let's go over what's in this template and what everything does:
 
 We can add commands to the `0.0` array in our timeline to execute, such as an `/effect` command, like such:
 
+<CodeHeader>BP/animations/player.json#timeline</CodeHeader>
+
 ```json
 {
-    "timeline": {
-        "0.0": [
-            "/effect @s speed 1 0"
-        ]
-    }
+    "0.0": [
+        "/effect @s speed 1 0"
+    ]
 }
 ```
 
@@ -71,6 +71,8 @@ You can skip this section if:
 
 In our item's behavior, we'll have to add a tag to `components`. For example, if we wanted to add the `example:emerald_tier` tag, we would add the `tag:example:emerald_tier` component:
 
+<CodeHeader>BP/items/my_item.json#components</CodeHeader>
+
 ```json
 {
     "tag:example:emerald_tier": {}
@@ -85,16 +87,16 @@ Finally, we need to modify the player's behavior to run the server animation. We
 
 First, we need to set a short name for our animation. If you have any experience with client animations, this process will be quite similar. Add `animations` to `description`, and set a short name, like such:
 
+<CodeHeader>BP/entities/player.json#description</CodeHeader>
+
 ```json
 {
-    "description": {
-        "identifier": "minecraft:player",
-        "is_spawnable": false,
-        "is_summonable": false,
-        "is_experimental": false,
-        "animations": {
-            "emerald_armor": "animation.player.emerald_armor"
-        }
+    "identifier": "minecraft:player",
+    "is_spawnable": false,
+    "is_summonable": false,
+    "is_experimental": false,
+    "animations": {
+        "emerald_armor": "animation.player.emerald_armor"
     }
 }
 ```
@@ -120,23 +122,23 @@ query.equipped_item_has_all_tags('slot.armor.head','example:ancient_tier','examp
 
 Let's take a look at an example using `query.equipped_item_has_any_tag`:
 
+<CodeHeader>BP/entities/player.json#description</CodeHeader>
+
 ```json
 {
-    "description": {
-        "identifier": "minecraft:player",
-        "is_spawnable": false,
-        "is_summonable": false,
-        "is_experimental": false,
-        "animations": {
-            "emerald_armor": "animation.player.emerald_armor"
-        },
-        "scripts": {
-            "animate": [
-                {
-                    "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier')"
-                }
-            ]
-        }
+    "identifier": "minecraft:player",
+    "is_spawnable": false,
+    "is_summonable": false,
+    "is_experimental": false,
+    "animations": {
+        "emerald_armor": "animation.player.emerald_armor"
+    },
+    "scripts": {
+        "animate": [
+            {
+                "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier')"
+            }
+        ]
     }
 }
 ```
@@ -155,9 +157,15 @@ With the server animation, player behavior, and item tag all set up, your equipp
 
 If you want to run a command when multiple of the armor set's pieces are equipped, we can expand our Molang from before:
 
+<CodeHeader>BP/entities/player.json#scripts</CodeHeader>
+
 ```json
 {
-    "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.feet','example:emerald_tier')"
+    "animate": [
+        {
+            "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.feet','example:emerald_tier')"
+        }
+    ]
 }
 ```
 
@@ -167,9 +175,15 @@ This example will check for emerald-tier armor in all four armor slots, and run 
 
 The turtle shell doesn't always inflict Water Breathing, but instead only for 10 seconds when a player first enters water. If we want our emerald armor to only run our animation when we have lower health, we can add another query to our Molang:
 
+<CodeHeader>BP/entities/player.json#scripts</CodeHeader>
+
 ```json
 {
-    "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.health <= 5"
+    "animate": [
+        {
+            "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.health <= 5"
+        }
+    ]
 }
 ```
 
@@ -177,9 +191,15 @@ This example will run the animation with 2.5 hearts or less remaining, allowing 
 
 We can also apply this to requiring multiple armor pieces, with even longer Molang:
 
+<CodeHeader>BP/entities/player.json#scripts</CodeHeader>
+
 ```json
 {
-    "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.feet','example:emerald_tier') && query.health <= 5"
+    "animate": [
+        {
+            "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.feet','example:emerald_tier') && query.health <= 5"
+        }
+    ]
 }
 ```
 
@@ -188,6 +208,8 @@ You can view a list of documented Molang queries at [bedrock.dev](https://bedroc
 ### Multiple items with effects
 
 If you want to add more items with unique effects, fret not; this is easily done. You can either create a new server animation file, or add on to the file from before, like such:
+
+<CodeHeader>BP/animations/player.json</CodeHeader>
 
 ```json
 {
@@ -213,27 +235,27 @@ If you want to add more items with unique effects, fret not; this is easily done
 
 In our player behavior, you'll have to add on to `animations` and `scripts` as well.
 
+<CodeHeader>BP/entities/player.json#description</CodeHeader>
+
 ```json
 {
-    "description": {
-        "identifier": "minecraft:player",
-        "is_spawnable": false,
-        "is_summonable": false,
-        "is_experimental": false,
-        "animations": {
-            "emerald_armor": "animation.player.emerald_armor",
-            "phantom_armor": "animation.player.phantom_armor"
-        },
-        "scripts": {
-            "animate": [
-                {
-                    "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier')"
-                },
-                {
-                    "phantom_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:phantom_tier')"
-                }
-            ]
-        }
+    "identifier": "minecraft:player",
+    "is_spawnable": false,
+    "is_summonable": false,
+    "is_experimental": false,
+    "animations": {
+        "emerald_armor": "animation.player.emerald_armor",
+        "phantom_armor": "animation.player.phantom_armor"
+    },
+    "scripts": {
+        "animate": [
+            {
+                "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier')"
+            },
+            {
+                "phantom_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:phantom_tier')"
+            }
+        ]
     }
 }
 ```
