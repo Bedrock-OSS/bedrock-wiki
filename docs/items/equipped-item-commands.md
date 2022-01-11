@@ -50,7 +50,7 @@ We can add commands to the `0.0` array in our timeline to execute, such as an `/
 {
     "timeline": {
         "0.0": [
-            "/effect @s speed 1 0" //Inflicts Speed I for a second with particles
+            "/effect @s speed 1 0"
         ]
     }
 }
@@ -73,10 +73,7 @@ In our item's behavior, we'll have to add a tag to `components`. For example, if
 
 ```json
 {
-    "components": {
-        ...
-        "tag:example:emerald_tier": {}
-    }
+    "tag:example:emerald_tier": {}
 }
 ```
 
@@ -92,7 +89,9 @@ First, we need to set a short name for our animation. If you have any experience
 {
     "description": {
         "identifier": "minecraft:player",
-        ...
+        "is_spawnable": false,
+        "is_summonable": false,
+        "is_experimental": false,
         "animations": {
             "emerald_armor": "animation.player.emerald_armor"
         }
@@ -124,27 +123,6 @@ Let's take a look at an example using `query.equipped_item_has_any_tag`:
 ```json
 {
     "description": {
-        ...
-        "scripts": {
-            "animate": [
-                {
-                    "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier')"
-                }
-            ]
-        }
-    }
-}
-```
-
-This example will run a server animation with the `emerald_armor` short name if an emerald-tier item is equipped in the helmet slot. You can change the Molang field to match your item tag, use a different query, or add additional queries.
-
-You can view a list of additional slot identifiers at the [Minecraft Wiki](https://minecraft.fandom.com/wiki/Commands/replaceitem#:~:text=Slot-,Slot%20Numbers,-Restrictions).
-
-After this, `description` should look something like this:
-
-```json
-{
-    "description": {
         "identifier": "minecraft:player",
         "is_spawnable": false,
         "is_summonable": false,
@@ -162,6 +140,10 @@ After this, `description` should look something like this:
     }
 }
 ```
+
+This example will run a server animation with the `emerald_armor` short name if an emerald-tier item is equipped in the helmet slot. You can change the Molang field to match your item tag, use a different query, or add additional queries.
+
+You can view a list of additional slot identifiers at the [Minecraft Wiki](https://minecraft.fandom.com/wiki/Commands/replaceitem#:~:text=Slot-,Slot%20Numbers,-Restrictions).
 
 ## Conclusion
 
@@ -213,14 +195,14 @@ If you want to add more items with unique effects, fret not; this is easily done
     "animations": {
         "animation.player.emerald_armor": {
             "timeline": {
-                "0.0": [...]
+                "0.0": ["..."]
             },
             "animation_length": 0.05,
             "loop": true
         },
         "animation.player.phantom_armor": {
             "timeline": {
-                "0.0": [...]
+                "0.0": ["..."]
             },
             "animation_length": 0.05,
             "loop": true
@@ -235,7 +217,9 @@ In our player behavior, you'll have to add on to `animations` and `scripts` as w
 {
     "description": {
         "identifier": "minecraft:player",
-        ...
+        "is_spawnable": false,
+        "is_summonable": false,
+        "is_experimental": false,
         "animations": {
             "emerald_armor": "animation.player.emerald_armor",
             "phantom_armor": "animation.player.phantom_armor"
