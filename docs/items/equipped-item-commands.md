@@ -110,17 +110,17 @@ Add `scripts` to `description`, and set a Molang query to run. To check for the 
 query.get_equipped_item_name(0) == 'totem_of_retreat' || query.get_equipped_item_name(1) == 'totem_of_retreat'
 ```
 
-- `query.equipped_item_has_any_tag`, to check for at least one of any given tag in a given slot. This example will allow an emerald- or phantom- tier armor piece to be used:
+- `query.equipped_item_any_tag`, to check for at least one of any given tag in a given slot. This example will allow an emerald- or phantom- tier armor piece to be used:
 ```
-query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier','example:phantom_tier')
-```
-
-- `query.equipped_item_has_all_tags`, to check for all given tags in a given slot. This example will only allow an armor piece that's both emerald- and ancient- tier:
-```
-query.equipped_item_has_all_tags('slot.armor.head','example:ancient_tier','example:emerald_tier')
+query.equipped_item_any_tag('slot.armor.head','example:emerald_tier','example:phantom_tier')
 ```
 
-Let's take a look at an example using `query.equipped_item_has_any_tag`:
+- `query.equipped_item_all_tags`, to check for all given tags in a given slot. This example will only allow an armor piece that's both emerald- and ancient- tier:
+```
+query.equipped_item_all_tags('slot.armor.head','example:ancient_tier','example:emerald_tier')
+```
+
+Let's take a look at an example using `query.equipped_item_any_tag`:
 
 <CodeHeader>BP/entities/player.json#description</CodeHeader>
 
@@ -136,7 +136,7 @@ Let's take a look at an example using `query.equipped_item_has_any_tag`:
     "scripts": {
         "animate": [
             {
-                "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier')"
+                "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier')"
             }
         ]
     }
@@ -163,7 +163,7 @@ If you want to run a command when multiple of the armor set's pieces are equippe
 {
     "animate": [
         {
-            "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.feet','example:emerald_tier')"
+            "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.feet','example:emerald_tier')"
         }
     ]
 }
@@ -181,7 +181,7 @@ The turtle shell doesn't always inflict Water Breathing, but instead only for 10
 {
     "animate": [
         {
-            "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.health <= 5"
+            "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.health <= 5"
         }
     ]
 }
@@ -197,7 +197,7 @@ We can also apply this to requiring multiple armor pieces, with even longer Mola
 {
     "animate": [
         {
-            "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_has_any_tag('slot.armor.feet','example:emerald_tier') && query.health <= 5"
+            "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.feet','example:emerald_tier') && query.health <= 5"
         }
     ]
 }
@@ -250,10 +250,10 @@ In our player behavior, you'll have to add on to `animations` and `scripts` as w
     "scripts": {
         "animate": [
             {
-                "emerald_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:emerald_tier')"
+                "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier')"
             },
             {
-                "phantom_armor": "query.equipped_item_has_any_tag('slot.armor.head','example:phantom_tier')"
+                "phantom_armor": "query.equipped_item_any_tag('slot.armor.head','example:phantom_tier')"
             }
         ]
     }
