@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as d,e as o}from"./404.md.08458e9f.js";const l='{"title":"Fog IDs","description":"","frontmatter":{"title":"Fog IDs","show_toc":false},"relativePath":"documentation/fog-ids.md","lastUpdated":1641941653663}',r={},i=o('',3),a=[i];function n(s,m,g,f,_,c){return d(),e("div",null,a)}var u=t(r,[["render",n]]);export{l as __pageData,u as default};
