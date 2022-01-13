@@ -39,7 +39,7 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | Bit       | query.can_power_jump                                          | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
 | Bit       | query.is_ignited                                              | minecraft:is_ignited         |                                                                                                                                   |
 | Bit       | query.out_of_control                                          | minecraft:out_of_control     | New, used by code for hardcoded boat movement/particle stuff, and the Molang query. Probably safe                                 |
-
+| Bit   | query.has_any_family('monster')                            | minecraft:type_family         | Can use a family type and return a bit value from a family such as 'monster' as true or false.
 ### Colors for the color and color2 components
 
 -   black
