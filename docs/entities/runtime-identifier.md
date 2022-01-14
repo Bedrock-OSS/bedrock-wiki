@@ -224,6 +224,12 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ---
 
+### minecraft:player
+
+-   Activates `query.movement_direction`.
+
+---
+
 ### minecraft:pufferfish
 
 -   Makes entity flop when not in water.
@@ -255,6 +261,12 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 -   If the block it's attached to is removed, the entity will teleport to another unobstructed location nearby.
 -   If the entity is spawned on a non-full block (e.g. bed, slab, etc...), it will teleport to another unobstructed location nearby.
 -   The solid collision box's width and height cannot be changed.
+
+---
+
+### minecraft:shulker_bullet
+
+-   The entity will leave a trail of `minecraft:shulker_bullet` particles
 
 ---
 
