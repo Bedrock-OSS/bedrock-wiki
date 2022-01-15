@@ -130,7 +130,7 @@ The way we are going to do pathfinding is actually fairly simple: Make our entit
 
 These components can be edited as needed to create good pathing. Make sure to update the `nearest_attackable_target` to point to your marker entity. This takes a `family_type`, so you should set one of those on your marker.
 
-The attack radius in `ranged_attack` can be updated. This number sets how close the entity will pathfind to the marker before stopping. A value of 0 will cause the entity to pathfind as close as possible. Don't forget to add some basic movement and navigation components so your entity is able to move.
+Don't forget to add some basic movement and navigation components so your entity is able to move.
 
 <CodeHeader></CodeHeader>
 
@@ -157,9 +157,10 @@ The attack radius in `ranged_attack` can be updated. This number sets how close 
 "minecraft:attack": {
     "damage": 0
 },
-"minecraft:behavior.ranged_attack": {
-    "priority": 4,
-    "attack_radius": 2
+"minecraft:behavior.melee_attack": {
+    "priority": 0,
+    "require_complete_path": true,
+    "track_target": true
 },
 "minecraft:follow_range": {
     "value": 1000,
