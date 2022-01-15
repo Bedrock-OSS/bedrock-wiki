@@ -8,6 +8,7 @@ This page intends to document all different fields you can use inside `minecraft
 
 :::warning
 _Disclaimer: this component has been mostly documented based on projectiles found in the game or reverse engineering the game._
+_This information was last tested on **1.18.2**._
 :::
 
 | Name                      | Type             | Default Value | Description                                                                                                                                       |
@@ -22,7 +23,7 @@ _Disclaimer: this component has been mostly documented based on projectiles foun
 | gravity                   | Decimal          | 0.05          | The gravity applied to this entity when thrown. The higher the value, the faster the entity falls                                                 |
 | hit_ground_sound          | String           |               | The sound that plays when the projectile hits ground                                                                                              |
 | hit_sound                 | String           |               | The sound that plays when the projectile hits an entity                                                                                           |
-| homing                    | Boolean          | false         | If true, the projectile homes in to the nearest entity                                                                                            |
+| homing                    | Boolean          | false         | If true, the projectile homes in to the nearest. **Does not work on 1.18.2** entity                                                                                            |
 | inertia                   | Decimal          | 0.99          | The fraction of the projectile's speed maintained every frame while traveling in air                                                              |
 | is_dangerous              | Boolean          | false         | If true, the projectile will be treated as dangerous to the players                                                                               |
 | knockback                 | Boolean          | true          | If true, the projectile will knock back the entity it hits                                                                                        |
@@ -45,6 +46,7 @@ _Disclaimer: this component has been mostly documented based on projectiles foun
 | stop_on_hurt              | Boolean          |               |                                                                                                                                                   |
 | uncertainty_base          | Decimal          | 0             | The base accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel \* uncertaintyMultiplier                               |
 | uncertainty_multiplier    | Decimal          | 0             | Determines how much difficulty affects accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel \* uncertaintyMultiplier |
+| hit_water                 | Boolean          | false         | If true, liquid blocks will be treated as solid. **Requires "Education Edition" toggle active** |
 
 ## on_hit
 
@@ -133,15 +135,13 @@ Spawns an area of effect cloud of potion effect.
 | radius              | Decimal                 | Radius of the cloud                                     |
 | radius_on_use       | Decimal                 |                                                         |
 | potion              | Integer                 | Lingering Potion ID                                     |
-| particle            | String                  | Particle emitter of the cloud                           |
+| particle            | String                  | [Vanilla Particles](/particles/vanilla-particles) emitter of the cloud. Only accepts Vanilla Particles. **dragonbreath** enables the usage of Bottles to obtain Dragon's Breath.       |
 | duration            | Integer                 | Duration of the cloud in seconds                        |
 | color               | Integer array [r, g, b] | Color of the particles                                  |
-| affect_owner        | Boolean                 | Is potion effect affecting the shooter                  |
+| affect_owner        | Boolean                 | Is potion effect affecting the shooter. Does not appear to apply to the player                |
 | reapplication_delay | Integer                 | Delay in ticks between application of the potion effect |
 
-Potion IDs
-
-_Note, that crossed out IDs were not working, when tested on 1.16.100.60_
+#### Potion IDs
 
 | Potion                    | Regular | Extended | Enhanced (Level II) |
 | ------------------------- | ------- | -------- | ------------------- |
@@ -149,14 +149,14 @@ _Note, that crossed out IDs were not working, when tested on 1.16.100.60_
 | Mundane Potion            | 1       | 2        |                     |
 | Thick Potion              | 3       |          |                     |
 | Awkward Potion            | 4       |          |                     |
-| Potion of Night Vision    | 5       | ~~6~~    |                     |
-| Potion of Invisibility    | 7       | 8        | ~~9~~               |
-| Potion of Leaping         | 10      | 11       |                     |
+| Potion of Night Vision    | 5       | 6        |                     |
+| Potion of Invisibility    | 7       | 8        |                     |
+| Potion of Leaping         | 9       | 10       | 11                  |
 | Potion of Fire Resistance | 12      | 13       |                     |
 | Potion of Swiftness       | 14      | 15       | 16                  |
 | Potion of Slowness        | 17      | 18       |                     |
 | Potion of Water Breathing | 19      | 20       |                     |
-| Potion of Healing         | ~~21~~  |          | ~~22~~              |
+| Potion of Healing         | 21      |          | 22                  |
 | Potion of Harming         | 23      |          | 24                  |
 | Potion of Poison          | 25      | 26       | 27                  |
 | Potion of Regeneration    | 28      | 29       | 30                  |
@@ -185,12 +185,13 @@ Spawns an entity on hit.
 
 Spawns particles on hit.
 
-| Name          | Type    | Description                                     |
-| ------------- | ------- | ----------------------------------------------- |
-| particle_type | String  | Particles to use                                |
-| num_particles | Integer | Number of particles                             |
-| on_entity_hit | Boolean | Whether it should spawn particles on entity hit |
-| on_other_hit  | Boolean | Whether it should spawn particles on other hit  |
+| Name          | Type    | Description                                                                             |
+| ------------- | ------- | --------------------------------------------------------------------------------------- |
+| particle_type | String  | [Vanilla Particles](/particles/vanilla-particles) to use                                |
+| num_particles | Integer | Number of particles                                                                     |
+| on_entity_hit | Boolean | Whether it should spawn particles on entity hit                                         |
+| on_other_hit  | Boolean | Whether it should spawn particles on other hit                                          |
+
 
 ### mob_effect
 
@@ -209,7 +210,7 @@ Applies a mob effect to the target.
 
 ### grant_xp
 
-Spawns experience orbs giving a set amount of experience.
+Despite the name, this actually spawns a number of experience orbs, being worth the amount stated.
 
 | Name  | Type    | Description                                                                                     |
 | ----- | ------- | ----------------------------------------------------------------------------------------------- |
@@ -221,7 +222,7 @@ Spawns experience orbs giving a set amount of experience.
 
 _Exact behavior unknown_
 
-_Requires education edition to be enabled._
+_Requires Education Edition toggle to be enabled._
 Freezes water on hit.
 
 | Name          | Type    | Description                   |
@@ -245,4 +246,4 @@ _Exact behavior unknown. Right now it crashes minecraft probably because of wron
 _Exact behavior unknown. Right now it crashes minecraft probably because it's only valid for thrown potions_
  
 ## Aditional Information
-When it comes to creating a custom projectile, such as an arrow or trident variant, or something entirely your own, you may want to consider defining a [`runtime identifier`](https://wiki.bedrock.dev/entities/runtime-identifier.html) to ensure that it acts as intended. Not doing so may result in unintended behaviour, from odd visuals to incorrect knockback direction and arrows that you can kill with your bare hands.
+When it comes to creating a custom projectile, such as an arrow or trident variant, or something entirely your own, you may want to consider defining a [runtime identifier](/entities/runtime-identifier) to ensure that it acts as intended. Not doing so may result in unintended behaviour, from odd visuals to incorrect knockback direction and arrows that you can kill with your bare hands.
