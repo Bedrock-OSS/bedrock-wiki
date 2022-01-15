@@ -175,3 +175,51 @@ The following particles exist in-game but cannot be spawned because they require
 ---
 
 [Original Credit](https://www.reddit.com/r/MinecraftCommands/comments/cbd56p/i_need_a_list_of_bedrock_particles/etg8rt7/)
+
+## Component Particles
+
+The following is a list of pre-defined short names for Vanilla particles that can be used in certain components.
+**These have all been proven to generally work. This may not be a full list.**
+
+| Short names           | Notes                                                      |
+| --------------------- | ---------------------------------------------------------- |
+| mobspellambient       | Color determined by any present potion ID in the component |   
+| villagerangry         |                                                            |
+| bubble                | Only shows underwater                                      |
+| evaporation           |                                                            |
+| crit                  |                                                            |
+| dragonbreath          | Only seems to work for the AoE component for Projectiles   |
+| driplava              |                                                            |
+| dripwater             |                                                            |
+| reddust               |                                                            |
+| enchantingtable       |                                                            |
+| endrod                |                                                            |
+| mobspell              | Color determined by any present potion ID in the component |
+| largeexplode          |                                                            |
+| hugeexplosion         |                                                            |
+| fallingdust           | Color determined by any present potion ID in the component |
+| waterwake             |                                                            |
+| flame                 |                                                            |
+| villagerhappy         |                                                            |
+| heart                 |                                                            |
+| mobspellinstantaneous | Color determined by any present potion ID in the component |
+| iconcrack             | 
+| slime                 |                                                            |
+| snowballpoof          |                                                            |
+| largesmoke            |                                                            |
+| lava                  |                                                            |
+| mobflame              |                                                            |
+| townaura              |                                                            |
+| note                  |                                                            |
+| explode               |                                                            |
+| portal                |                                                            |
+| rainsplash            |                                                            |
+| smoke                 |                                                            |
+| watersplash           |                                                            |
+| ink                   |                                                            |
+| terrain               | Pulls texture from atlas.terrain                           |
+| totem                 |                                                            |
+| witchspell            |                                                            |
+| soul                  |                                                            |
+| spit                  |                                                            |
+| sneeze                |                                                            |
