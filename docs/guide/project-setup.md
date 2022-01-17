@@ -248,10 +248,11 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 
 **What you've done:**
 
+<Checklist>
+
 -   [x] Setup your pack
-
-**What are you to do next:**
-
 -   [ ] Create a custom item
 -   [ ] Create a custom entity
 -   [ ] Create the entity's loot, spawn rules and a custom recipe
+
+</Checklist>

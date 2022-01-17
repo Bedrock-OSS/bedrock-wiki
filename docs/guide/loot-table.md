@@ -151,14 +151,17 @@ For more information on this topic, visit our page about [Loot Tables, Recipes a
 -	How to create new crafting recipes
 :::
 
-## Your progress so far:
+## Your progress so far
 
 **What you've done:**
 
--   [x] Setup your pack;
--   [x] Create a custom item;
--   [x] Create a custom entity;
--   [x] Create the entity's loot, spawn rules, and a custom recipe;
+<Checklist>
 
-**What are you to do next:**
-Congratulations! you have finished the Guide and created your first Add-on.
+-   [x] Setup your pack
+-   [x] Create a custom item
+-   [x] Create a custom entity
+-   [x] Create the entity's loot, spawn rules, and a custom recipe
+
+</Checklist>
+
+Congratulations! you have finished the Guide and created your first Add-on. 🎉

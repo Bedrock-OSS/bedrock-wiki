@@ -23,8 +23,9 @@ Danger zone, do not proceed
 ## Checklists
 
 <Checklist>
+
 -   [x] My first task
--   [ ] More tasks [ ]
+-   [ ] More tasks ...
 -   [ ] and more
 
 </Checklist>

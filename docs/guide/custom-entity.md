@@ -561,14 +561,15 @@ How to use models, animations and animation controllers to make your entity more
 
 :::
 
-## Your progress so far:
+## Your progress so far
 
 **What you've done:**
 
--   [x] Setup your pack;
--   [x] Create a custom item;
--   [x] Create a custom entity;
+<Checklist>
 
-**What are you to do next:**
+-   [x] Setup your pack
+-   [x] Create a custom item
+-   [x] Create a custom entity
+-   [ ] Create the entity's loot, spawn rules, and a custom recipe
 
--   [ ] Create the entity's loot, spawn rules, and a custom recipe;
+</Checklist>

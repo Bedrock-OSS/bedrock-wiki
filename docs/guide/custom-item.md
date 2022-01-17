@@ -138,14 +138,15 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 -	How to set an items texture
 :::
 
-## Your progress so far:
+## Your progress so far
 
 **What you've done:**
 
--   [x] Setup your pack;
--   [x] Create a custom item;
+<Checklist>
 
-**What are you to do next:**
+-   [x] Setup your pack
+-   [x] Create a custom item
+-   [ ] Create a custom entity
+-   [ ] Create the entity's loot, spawn rules, and a custom recipe
 
--   [ ] Create a custom entity;
--   [ ] Create the entity's loot, spawn rules, and a custom recipe;
+</Checklist>
