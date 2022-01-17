@@ -23,7 +23,7 @@ For more information on how to contribute to the wiki, including the download of
 
 ## Bedrock OSS
 
-Bedrock OSS is a GitHub Organization that maintains many Minecraft Bedrock resources, including the wiki! You can view our [github organization here](https://github.com/Bedrock-OSS), and our [Discord here](/discord).
+Bedrock OSS is a GitHub Organization that maintains many Minecraft Bedrock resources, including the wiki! You can view our github organization [here](https://github.com/Bedrock-OSS), and our Discord [here](/discord).
 
 To contribute to our wiki, you don't need to be part of this organization. The members of this organization have experience in editing the wiki and can help you with questions at any time. Just ask a question on our Discord Server and we are glad to help you!
 
