@@ -212,9 +212,9 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:parrot
 
--   makes the wing flap animation able to work.
--   makes the mob fall slowly.
--   makes it dance to music discs.
+-   Makes the wing flap animation able to work.
+-   Makes the mob fall slowly.
+-   Makes it dance to music discs.
 
 ---
 
@@ -280,6 +280,14 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
+
+---
+
+### minecraft:stray
+
+-   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
+-   Makes the entity receive increased damage from weapons with Smite enchantment.
+-   Makes entity do not receive freezing damage.
 
 ---
 
