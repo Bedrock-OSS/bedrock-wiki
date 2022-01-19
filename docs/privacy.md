@@ -5,7 +5,7 @@ show_toc: true
 show_contributors: false
 ---
 
-[wiki.bedrock.dev](/) is created and maintained by the Bedrock-OSS organization. This privacy policy will explain how our organization uses the personal data we collect from you when you use our website. 
+[wiki.bedrock.dev](/) is created and maintained by the Bedrock-OSS organization. This privacy policy will explain how our organization uses the personal data we collect from you when you use our website. By using the wiki.bedrock.dev site, you agree to this policy. 
 
 ## What data do we collect?
 
