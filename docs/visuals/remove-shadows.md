@@ -19,7 +19,6 @@ One possibility is to make the size of the collision component very small. This 
     "width": 0.1,
     "height": 0.1
 }
-
 ```
 
 You can also add the [custom hit test component](https://bedrock.dev/docs/stable/Entities#minecraft:custom_hit_test). The `custom_hit_test` component will allow you to hit the entity, although you will not be able to interact with it. The `custom_hit_test` will not create a shadow.
@@ -66,25 +65,22 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 <CodeHeader></CodeHeader>
 
 ```json
-"shadow_overlay": {
-      "+states": [
+"shadow_overlay":{
+    "+states":[
         "DisableDepthTest",
         "DisableCulling",
         "Blending",
         "EnableStencilTest"
-      ],
-
-      "vertexShader": "shaders/color.vertex",
-      "vrGeometryShader": "shaders/color.geometry",
-      "fragmentShader": "shaders/shadow_stencil_overlay.fragment",
-
-      "blendSrc": "DestColor",
-      "blendDst": "Zero",
-
-      "frontFace": {
-        "stencilFunc": "Equal",
-        "stencilPass": "Replace"
-      },
+    ],
+    "vertexShader":"shaders/color.vertex",
+    "vrGeometryShader":"shaders/color.geometry",
+    "fragmentShader":"shaders/shadow_stencil_overlay.fragment",
+    "blendSrc":"DestColor",
+    "blendDst":"Zero",
+    "frontFace":{
+        "stencilFunc":"Equal",
+        "stencilPass":"Replace"
+    }
 ```
 
 #### Disabled shadow code: No Shadows for ALL entities:
@@ -92,25 +88,22 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 <CodeHeader></CodeHeader>
 
 ```json
- "shadow_overlay": {
-      "+states": [
+"shadow_overlay":{
+    "+states":[
         "DisableDepthTest",
         "DisableCulling",
         "Blending",
         "EnableStencilTest"
-      ],
-
-      "vertexShader": "",
-      "vrGeometryShader": "",
-      "fragmentShader": "",
-
-      "blendSrc": "DestColor",
-      "blendDst": "Zero",
-
-      "frontFace": {
-        "stencilFunc": "Equal",
-        "stencilPass": "Replace"
-      }
+    ],
+    "vertexShader":"",
+    "vrGeometryShader":"",
+    "fragmentShader":"",
+    "blendSrc":"DestColor",
+    "blendDst":"Zero",
+    "frontFace":{
+        "stencilFunc":"Equal",
+        "stencilPass":"Replace"
+    }
 }
 ```
 
