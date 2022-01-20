@@ -270,6 +270,12 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
+### minecraft:slime
+
+-   The entity will create slime particles when falling
+
+---
+
 ### minecraft:spider
 
 -   Allows cobwebs to not slow down entity.
