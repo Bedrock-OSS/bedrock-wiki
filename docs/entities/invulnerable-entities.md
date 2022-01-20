@@ -58,3 +58,5 @@ If you choose to use this component, please make sure you have another method fo
     "min": 1
 }
 ```
+
+Note that setting it to 0 breaks some death and spawn animations/effects.
