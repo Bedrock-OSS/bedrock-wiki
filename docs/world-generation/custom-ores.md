@@ -29,7 +29,7 @@ For this tutorial, I'll be using 2 custom blocks, Titanite Ore and Deepslate Tit
 		"count": 8, // Placement attempts
 		"replace_rules": [
 			{
-				// Replace all stone and stone variants (andesite, granite, and diorite) with titanite ore
+				// Replace all stone variants (andesite, granite, and diorite) with titanite ore
 				"places_block": "wiki:titanite_ore",
 				"may_replace": ["minecraft:stone"]
 			},
