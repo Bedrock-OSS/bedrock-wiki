@@ -203,6 +203,8 @@ On the next line after the closing tag, you have to start a code block to use th
 
 A Button works like a link, but is more noticeable for the user.
 
+<CodeHeader></CodeHeader>
+
 ```html
 <BButton 
     link="https://youtube.com" 
@@ -227,6 +229,8 @@ The link can either be an external website, or a page in our wiki. For the last 
 ### Checklist
 
 The Checklist can be used to tell the reader about certain things that need to be done or to show what has already been done.
+
+<CodeHeader></CodeHeader>
 
 ```html
 <Checklist>
@@ -256,6 +260,8 @@ Pay attention to the empty lines between the content and the tags! If you forget
 ### Spoiler
 
 A spoiler is a Component that can be used to hide some content, so it doesn't block the whole site.
+
+<CodeHeader></CodeHeader>
 
 ```html
 <Spoiler title="title">
@@ -287,6 +293,8 @@ Pay attention to the empty lines between the content and the tags! If you forget
 ### Label
 
 A Label is a small icon with uppercase letters that can be used to give your articles more flair.
+
+<CodeHeader></CodeHeader>
 
 ```html
 <Label 
@@ -350,6 +358,8 @@ The `:paths` Attribute is a String, that contains a List of all separate file pa
 
 A YouTubeEmbed can be used to embed a YouTube Video in your article.
 
+<CodeHeader></CodeHeader>
+
 ```html
 <YouTubeEmbed 
     id="dQw4w9WgXcQ" 
@@ -365,6 +375,8 @@ A YouTubeEmbed can be used to embed a YouTube Video in your article.
 ### WikiImage
 
 A WikiImage is an alternative way to add an image in your article.
+
+<CodeHeader></CodeHeader>
 
 ```html
 <WikiImage
@@ -395,6 +407,8 @@ Unlike a markdown image, the image can be pixelated here.
 
 With CardLinks you can make fancy boxes with an image and a text, which contains a link!
 
+<CodeHeader></CodeHeader>
+
 ```html
 <CardLink
 	imgsrc="assets/images/homepage/wikilogo.png"
@@ -423,8 +437,8 @@ Don't overuse them! They look cool, but someone could really give them too much 
 Wrong:
 
 ````
-- one
-- two
+-   one
+-   two
 <CodeHeader>BP/blocks/example.json</CodeHeader>
 ```json
 {
@@ -436,8 +450,8 @@ Wrong:
 Correct:
 
 ````
-- one
-- two
+-   one
+-   two
 
 <CodeHeader>BP/blocks/example.json</CodeHeader>
 
