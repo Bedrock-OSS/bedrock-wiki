@@ -9,6 +9,8 @@ mention:
 
 `ore_feature`'s are basic but important features! They can form clusters of blocks by replacing blocks where they are generated. This tutorial will show you how to make mineral ores that naturally generate.
 
+The use of features and feature rules requires Creation of Custom Biomes to be enabled in your world settings. If your block doesn't generate, make sure it's enabled!
+
 :::tip
 For this tutorial, I'll be using 2 custom blocks, Titanite Ore and Deepslate Titanite Ore. For how to make custom blocks, visit the [Blocks Intro](/blocks/blocks-intro) page.
 :::
@@ -27,7 +29,7 @@ For this tutorial, I'll be using 2 custom blocks, Titanite Ore and Deepslate Tit
 		"count": 8, // Placement attempts
 		"replace_rules": [
 			{
-				// Replace all stone variant (andesite, granite,diorite) with titanite ore
+				// Replace all stone variants (andesite, granite, and diorite) with titanite ore
 				"places_block": "wiki:titanite_ore",
 				"may_replace": ["minecraft:stone"]
 			},
@@ -81,7 +83,7 @@ For this tutorial, I'll be using 2 custom blocks, Titanite Ore and Deepslate Tit
 				"extent": [0, 16]
 			},
 			"y": {
-				"distribution": "uniform",
+				"distribution": "uniform", // You can use "triangle" to make ores more common in the middle of the extent
 				"extent": [
 					0, // Minimum y level for the ore to generate
 					62 // Maximum y level for the ore to generate
@@ -98,9 +100,9 @@ For this tutorial, I'll be using 2 custom blocks, Titanite Ore and Deepslate Tit
 
 ## Testing
 
-Just do usual caving, but if your ores are rare you can use commands instead. Simple place this command into a repeating command block, then fly around:
+You can look for the ore by exploring caves, but if your ores are rare, you can use commands instead to check if they're generating. Simply place this command into a repeating command block, then fly around:
 
--   `execute @a ~ ~ ~ fill ~8 ~8 ~8 ~-8 ~-8 ~-8 air 0 keep wiki:titanite_ore`
+-   `execute @a ~ ~ ~ fill ~8 ~8 ~8 ~-8 ~-8 ~-8 air 0 replace wiki:titanite_ore`
 
 Stone ores:
 
