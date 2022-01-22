@@ -44,7 +44,7 @@ Generally speaking, there is a cool tricky to pick the correct format version, f
 
 For example, imagine you are creating a Recipe file:
 
- 1) Install the [Vanilla Packs](guide/download-packs).
+ 1) Install the [Vanilla Packs](/guide/download-packs).
  2) Look at some recipe files, to judge which format version is most used, or the most recent
  3) Use this format version in your file
 

@@ -62,7 +62,7 @@ As an example, a "cold steel sword" might be crafted using the following [shaped
 
 ## Shared Properties and Structures
 ### Format Version
-The [format version](/concepts/format-version.html#top) is intended to version the schema used for the body of a recipe. It is provided with the top-level `"format_version"` property.
+The [format version](/guide/format-version) is intended to version the schema used for the body of a recipe. It is provided with the top-level `"format_version"` property.
 
 <CodeHeader>#/</CodeHeader>
 ```json
