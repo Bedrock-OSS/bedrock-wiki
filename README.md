@@ -14,7 +14,7 @@ You've found a typo, couldn't get along with a guide because it was too complica
 
 Our Bedrock wiki is fully open source and is maintained by our lovely community. And this community grows every day! If you want to be part of this community, get help on addons or just want to expand our wiki, you can join our [Discord Server](https://discord.gg/XjV87YN)!
 
-If you want to help us create more complex things, like adding a new page or fixing some typos yourself, we have a dedicated [Contribute Page](/contribute) on our wiki, which describes every step you need to follow. If you have some questions, there are some really nice people in our [Discord Server](https://discord.gg/XjV87YN).
+If you want to help us create more complex things, like adding a new page or fixing some typos yourself, we have a dedicated [Contribute Page](https://wiki.bedrock.dev/contribute) on our wiki, which describes every step you need to follow. If you have some questions, there are some really nice people in our [Discord Server](https://discord.gg/XjV87YN).
 
 ## Code and Platform
 
