@@ -46,6 +46,16 @@
 					</template>
 				</Suspense>
 			</div>
+			<div class="float" :hidden="data.isCookiesAgreed"> <!-- Cookie policy -->
+				<span>
+					We use cookies to improve your experience. By continuing to
+					use this site, you agree to our use of cookies.
+					See our <a href="/privacy">Privacy Policy</a> for more information.
+				</span>
+				<Button @click="agreeCookies">
+					Got it!
+				</Button>
+			</div>
 			<footer>
 				<div>
 					Bedrock Wiki by
@@ -68,23 +78,23 @@
 					are not affiliated in any way with Microsoft or Mojang AB.
 				</div>
 				<ul>
-					<!-- <li>
-						<a href="#" target="_blank" rel="noopener noreferrer"
+					<li>
+						<a href="/privacy.html" rel="noopener noreferrer"
 							>Privacy Policy</a
 						>
-					</li> -->
+					</li>
 					<li>
-						<a href="/discord.html" target="_blank" rel="noopener noreferrer"
+						<a href="/discord.html" rel="noopener noreferrer"
 							>Join our Discord!</a
 						>
 					</li>
 					<li>
-						<a href="https://github.com/Bedrock-OSS" target="_blank" rel="noopener noreferrer"
+						<a href="https://github.com/Bedrock-OSS/bedrock-wiki" target="_blank" rel="noopener noreferrer"
 							>Visit our Project Repository!</a
 						>
 					</li>
 					<li>
-						<a href="/contribute.html" target="_blank" rel="noopener norefferer">
+						<a href="/contribute.html" rel="noopener norefferer">
 							Learn how to contribute!
 						</a>
 					</li>
@@ -108,6 +118,7 @@ import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import { useData, useRoute } from 'vitepress'
 import Label from './Content/Label.vue'
+import Button from './Content/Button.vue'
 
 const Contributors = defineAsyncComponent(
 	() => import('./Content/Contributors.vue')
@@ -117,6 +128,15 @@ const route = useRoute()
 const { page } = useData()
 const { toggle, isVisible } = useSidebarState()
 
+let data = reactive({
+	isCookiesAgreed: document.cookie.includes('bedrock-cookies=true')
+})
+
+function agreeCookies() {
+	console.log("adding cookie");
+	document.cookie = 'bedrock-cookies=true; max-age=31536000'
+	data.isCookiesAgreed = true
+}
 const routeData = computed(() => {
 	if (route?.data) return route?.data
 
@@ -161,5 +181,16 @@ const editLink = computed(
 <style scoped>
 details summary::-webkit-details-marker {
 	display: none;
+}
+.float {
+	text-align: center;
+    position: fixed;
+    height: 10em;
+    width: 20em;
+    bottom: 10px;
+    right: 10px;
+    background: var(--docsearch-text-color);
+    border-radius: 6px;
+    padding: 14px;
 }
 </style>
