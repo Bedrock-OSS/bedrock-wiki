@@ -182,15 +182,4 @@ const editLink = computed(
 details summary::-webkit-details-marker {
 	display: none;
 }
-.float {
-	text-align: center;
-    position: fixed;
-    height: 10em;
-    width: 20em;
-    bottom: 10px;
-    right: 10px;
-    background: var(--docsearch-text-color);
-    border-radius: 6px;
-    padding: 14px;
-}
 </style>

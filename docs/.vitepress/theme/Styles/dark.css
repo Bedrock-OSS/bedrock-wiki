@@ -15,6 +15,9 @@
 .dark div.card {
 	@apply p-6 bg-true-gray-900 rounded-lg border;
 }
+.dark .float {
+	@apply bg-true-gray-800 text-white border;
+}
 
 /* Tables */
 .dark tbody,
