@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Format Versions
 category: Extra
 prefix: 'e. '
@@ -61,7 +60,7 @@ This section will list the format versions used in the vanilla game, alongside h
 
 **Entity**: 
  - `1.10.0` : 82 ⭐
- -`1.8.0` : 74 
+ - `1.8.0` : 74 
 
 **Animation Controller**: 
  - `1.10.0` : 56 ⭐
@@ -117,5 +116,3 @@ This section will list the format versions used in the vanilla game, alongside h
  - `1.8.0` : 48 ⭐
  - `1.17.0` : 1  
  - `1.11.0` : 1
-
-
