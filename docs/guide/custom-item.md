@@ -44,7 +44,7 @@ Let's start by defining the item's behaviors in the BP. Create a folder called `
 
 Let's break up the code first:
 
--   `"format_version"` defines which version of the Addon system Minecraft will use to read this file. For this guide, we will be creating a "1.16.100" item, which refers to the current experimental release of items. To learn more about format versions and how they effect files, you can learn so [here](guide/format-version).
+-   `"format_version"` defines which version of the Addon system Minecraft will use to read this file. For this guide, we will be creating a "1.16.100" item, which refers to the current experimental release of items. To learn more about format versions and how they effect files, you can learn so [here](/guide/format-version).
 -   `"minecraft:item"` contains all of the item's server-side data:
     -   `"identifier"` in `"description"` is a name unique to this item. It should contain no upper-case letters, and `_` should be used instead of spaces. An identifier consists of two parts: a _namespace_ (before the `:`) and the _id_ (after the `:`). The _namespace_ should be the same in all files of the same add-on. Usually, either the author's initials or an abbreviation of the pack name is used as one. In our case, `wiki` is a short enough word to be used as well. The _id_ is the item's own name. All vanilla items use `minecraft` as their namespace, but one CANNOT use that or `minecon` as the namespace in an add-on.
         The most usual way to encounter an identifier is using the `/give` command in-game: for example, to acquire our Ectoplasm, you'd have to type `/give @s wiki:ectoplasm`. Learn more about namespaces [here](https://wiki.bedrock.dev/concepts/namespaces.html#top).
