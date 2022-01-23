@@ -56,7 +56,7 @@
 					Got it!
 				</Button>
 			</div>
-			<footer>
+			<footer class="mainfooter">
 				<div>
 					Bedrock Wiki by
 					<a
