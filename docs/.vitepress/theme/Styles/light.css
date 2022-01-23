@@ -24,3 +24,7 @@ th {
 td {
 	background-color: #ddfbdd;
 }
+
+.float {
+	@apply bg-true-gray-50 text-black border;
+}

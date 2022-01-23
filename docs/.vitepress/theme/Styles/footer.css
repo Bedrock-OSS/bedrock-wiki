@@ -1,4 +1,4 @@
-footer {
+.mainfooter {
     background-color: rgb(228, 228, 228);
     text-align: center;
     font-size: 0.75rem;
@@ -6,7 +6,7 @@ footer {
     margin: 2.5rem -2rem -2rem -2rem;
 }
 
-footer ul {
+.mainfooter ul {
     list-style: none;
     display: flex;
     padding-left: 0;
@@ -15,20 +15,20 @@ footer ul {
     padding-bottom: 0;
 }
 
-footer li:not(:first-child) {
+.mainfooter li:not(:first-child) {
     padding-left: 0.3rem;
 }
 
-footer li:not(:first-child)::before {
+.mainfooter li:not(:first-child)::before {
     content: "|";
     margin-right: 0.3rem;
 }
 
 @media screen and (max-width: 768px) {
-    footer ul {
+    .mainfooter ul {
         display: block;
     }
-    footer li:not(:first-child)::before {
+    .mainfooter li:not(:first-child)::before {
         content: "";
     }
 }
