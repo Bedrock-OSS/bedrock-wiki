@@ -9,9 +9,9 @@ prefix: '1. '
 
 ## What are Addons?
 
-An "Addon" is the Minecraft Bedrock Edition (Windows 10, iOS, Android, Consoles) equivalent to Java mods. However, in contrast to Java, the Bedrock Edition API is officially maintained by Mojang instead of the community.
+An "Addon" is the Minecraft Bedrock Edition (_Windows 10, iOS, Android, Consoles_) equivalent to Java mods. However, in contrast to Java, the Bedrock Edition API is officially maintained by Mojang instead of the community.
 
-In general, you can think of mods as modifying the game, and addons as adding onto the game, following the development opportunities provided by Microsoft.
+In general, you can think of _mods_ as _modifying_ the game, and _addons_ as _adding onto_ the game, following the development opportunities provided by Microsoft.
 
 ## What is this guide?
 
