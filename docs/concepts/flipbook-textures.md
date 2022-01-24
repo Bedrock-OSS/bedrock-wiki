@@ -11,7 +11,7 @@ mentions:
 In this tutorial you will learn:
 
 -   How to apply flipbook textures to a block.
--   Which values you can apply and what they do.
+-   Which values you can apply in flipbook_textures.json and what they do.
 
 ## Beginning
 
