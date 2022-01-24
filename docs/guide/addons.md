@@ -1,6 +1,6 @@
 ---
 title: Addons Explained
-category: Guide
+category: guide
 nav_order: 2
 prefix: '2. '
 ---
@@ -9,11 +9,11 @@ prefix: '2. '
 
 Addons allow us to modify the contents of our Minecraft Experience by _modifying_ or _removing_ existing content and _adding_ our own. Addons are very powerful and allow us to create custom entities, items, and blocks, as well as things like custom loot tables and crafting recipes. Your imagination is the limit!
 
-Addons are primarily written in [json](./understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
+Addons are primarily written in [json](./understanding-JSON), which is a structured data format. An add-on is essentially a collection of JSON files, images, and sounds, which modify or add to the game in some way.
 
 ## Behavior Pack Vs. Resource Pack
 
-Addons are split into two pack types: Resource Packs, and Behavior Packs. Both can function independently, but they are most commonly used together. When you have both a Resource Pack and Behavior Pack, this is referred to as an _addon_.
+Addons are split into two pack types: resource packs and behavior packs. Both can function independently, but they are most commonly used together. When you have both a resource pack and a behavior pack, this is referred to as an _addon_.
 
 ### Resource Pack
 
@@ -36,7 +36,7 @@ The Behavior Pack, also known as the _server_, or BP, is responsible for the _lo
 
 ### Communication between packs
 
-In most cases, you will have both a RP and a BP together. These packs can communicate with each other, in the sense that assets defined in one can be accessed in the other. For example, when creating a custom entity, you need two files:
+In most cases, you will have both an RP and a BP. These packs can communicate with each other, in the sense that assets defined in one can be accessed in the other. For example, when creating a custom entity, you need two files:
 
 -   An RP entity definition, which describes how your entity will _look_
 -   A BP entity definition, which describes how your entity will _act_
@@ -46,6 +46,6 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 :::tip What you have learned:
 
 -   Addons modify Minecraft content or add their own
--   Addons are written in json
--   An addon is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
+-   Addons are written in JSON
+-   An add-on is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain textures, sounds,... and control how the game looks. - Behavior Packs contain entity files, crafting recipes, ... and control the logic of your game
 :::
