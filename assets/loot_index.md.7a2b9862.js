@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./404.md.ccb9d25e.js";const l='{"title":"Recipes and Loot","description":"","frontmatter":{"title":"Recipes and Loot"},"relativePath":"loot/index.md","lastUpdated":1643033179930}',a={};function c(n,r,s,d,i,p){return o(),t("div")}var f=e(a,[["render",c]]);export{l as __pageData,f as default};
