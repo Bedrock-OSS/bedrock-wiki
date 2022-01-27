@@ -7,7 +7,7 @@ nav_order: 5
 
 Format versions are an important part of Minecraft: Bedrock Edition's Addon System. They appear at the top of most files, formatted like this: `"format_version": "1.16.100"`. You can think of this as the "version number" of the file, and the number you select here is really important! The format version you select will define which syntax and features are available to you, in that particular file. 
 
-:::info
+:::tip
 Selecting the wrong format version is a common source of errors. When troubleshooting, people may ask you questions like 'what format version is your item'. Ensure that you know how to answer that question.
 :::
 
