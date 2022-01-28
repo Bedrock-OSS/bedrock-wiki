@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./404.md.e746eca0.js";const l='{"title":"Concepts","description":"","frontmatter":{"title":"Concepts"},"headers":[],"relativePath":"concepts/index.md","lastUpdated":1643378099336}',c={};function o(s,n,r,p,d,i){return a(),t("div")}var f=e(c,[["render",o]]);export{l as __pageData,f as default};
