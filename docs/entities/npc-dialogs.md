@@ -177,12 +177,14 @@ You can trigger an NPC dialogue from within the player using the /dialogue comma
 1. Within the player's behavior, add the minecraft:npc component.
 2. Specify a scene from the BP/dialogue folder.
 3. Run the `/dialogue` command from the player, provided with the scene_tag:
+:::
 
 ```
 /dialogue open @s @s <scene_tag>
 ```
 
-Pros and Cons:
+#### Pros and Cons:
+
 `+` You don't need to worry about hiding away an NPC, if you're just going to run  NPC dialogues provided using scene_tags.
 `+` No NPC means you also don't need to make sure it is in a 'ticking area'.
 `-` Since the dialogue is being triggered from the player, in which it is not intended to, it may become unstable in some cases.
@@ -210,8 +212,6 @@ To avoid this add the `minecraft:interaction` to the entity which will replace t
   ]
 }
 ```
-
-:::
 
 ### The Dialog File
 
