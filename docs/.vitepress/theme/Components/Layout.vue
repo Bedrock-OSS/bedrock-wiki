@@ -11,8 +11,8 @@
 				'min-h-screen': true,
 			}"
 		>
-			<h1 class="xl:pr-72" v-if="page && page.title" id="top">
-				{{ page.title }}
+			<h1 class="xl:pr-72" v-if="page && page.value.title" id="top">
+				{{ page.value.title }}
 			</h1>
 			<Label v-for="tag in tags" :name="tag"> </Label>
 			<TOC v-if="showToc" />
@@ -25,7 +25,7 @@
 			<div v-if="showEditLink">
 				<div class="pt-4" v>
 					<a :href="editLink" target="_blank"
-						>Edit {{ page.title }} on Github.</a
+						>Edit {{ page.value.title }} on Github.</a
 					>
 				</div>
 			</div>
@@ -124,13 +124,18 @@ const Contributors = defineAsyncComponent(
 	() => import('./Content/Contributors.vue')
 )
 
+var data = {isCookiesAgreed: false}
+onMounted(() => {
+	data = reactive({
+		isCookiesAgreed: document.cookie.includes('bedrock-cookies=true')
+	})
+})
+
 const route = useRoute()
 const { page } = useData()
 const { toggle, isVisible } = useSidebarState()
 
-let data = reactive({
-	isCookiesAgreed: document.cookie.includes('bedrock-cookies=true')
-})
+
 
 function agreeCookies() {
 	console.log("adding cookie");
