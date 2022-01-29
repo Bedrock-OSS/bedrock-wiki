@@ -162,4 +162,5 @@ ol {
     right: 10px;
     border-radius: 6px;
     padding: 14px;
+	z-index: 9999;
 }
