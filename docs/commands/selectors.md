@@ -117,6 +117,10 @@ Defines slot's id, like in `/replaceitem command`
 -   Supports range integer (`0..10`).
 -   Supports invert value (`!0`).
 
+You must specify the location to use slot:
+❎ `[hasitem={item=sand, slot=0..8}]`
+✅ `[hasitem={item=sand, location=slot.hotbar, slot=0..8}]`
+
 ### Quantity
 
 `quantity=<value>`
@@ -125,6 +129,29 @@ Defines how much item entity must have.
 
 -   Supports range integer (`0..10`).
 -   Supports invert value (`!0`).
+
+### Combining
+
+`hasitem` can:
+
+-   Accept two identical arguments: `[hasitem={item=sand,item=iron_sword}]`
+-   Accept array/multiple object: `[hasitem=[{item=sand},{item=iron_sword},{...}]]`
+
+
+## Examples
+Checks for players who have netherite sword in inventory:
+
+-   `testfor @a[hasitem={item=netherite_sword}]`
+
+Clears 2 apples if player has more than 4 apples:
+
+-   `clear @a[hasitem={item=apple,quantity=4,...}] apple 2`
+
+Checks for players who have 2 sticks and 2 diamonds:
+
+-   `testfor @a[hasitem=[{item=diamond,quantity=2},{item=stick,quantity=2}]]`
+-   `testfor @a[hasitem={item=diamond,item=stick,quantity=2}]` (**More simple method**)
+
 
 ## Combining Selectors
 
