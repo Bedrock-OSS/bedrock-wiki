@@ -59,6 +59,73 @@ Tags are a way to discriminate towards a player, or group of players and or mobs
 - `kill @e[tag=!<tag>]` This will kill all of the entities that **DONT** have the tag that you specified.
 - `tag @a <add | remove | list> <tag>` This is how you would give, or remove a tag, useing `add` or `remove`. If you want to see what tags a player has then you can do `tag <selector> list`
 
+## Has Item
+
+:::warning Warning! This argument was added in Minecraft Beta 1.18.20.21 and it is not in stable version yet. :::
+
+`hasitem` filter allows to execute commands on entities that have a special item.
+
+`/give @a[hasitem=[{item=sand,data=-1,quantity=16-64,location=slot.hotbar,slot=!4}]] minecraft:apple`
+
+This command will give apple to every player who has from 16 to 64 sand with in the hotbar but not in the fourth slot.
+
+### Item
+
+`item=<namespace:name>`
+
+Defines name of item or block, like in `/give` command.
+
+### Data
+
+`data=<int>`
+
+-   Doesn't support range.
+-   Doesn't support invert value.
+
+Data value of the item/block. If you want to use any data value, use `-1`.
+`data` can't detect item's data value. (Bug)
+
+### Location
+
+`location=<slot>`
+
+Defines slot of entity where to detect, like in `/replaceitem` command.
+This component isn't required.
+
+**Location Values:**
+
+-   `slot.armor`
+-   `slot.armor.chest`
+-   `slot.armor.feet`
+-   `slot.armor.head`
+-   `slot.armor.legs`
+-   `slot.chest`
+-   `slot.enderchest`
+-   `slot.equippable`
+-   `slot.hotbar`
+-   `slot.inventory`
+-   `slot.saddle`
+-   `slot.weapon.mainhand`
+-   `slot.weapon.offhand`
+
+### Slot
+
+`slot=<value>`
+
+Defines slot's id, like in `/replaceitem command`
+
+-   Supports range integer (`0..10`).
+-   Supports invert value (`!0`).
+
+### Quantity
+
+`quantity=<value>`
+
+Defines how much item entity must have.
+
+-   Supports range integer (`0..10`).
+-   Supports invert value (`!0`).
+
 ## Combining Selectors
 
 Secondary selectors can be used together by utilizing commas. Make sure to split each selector into its own part. As an example `@e[type=<type>]` and `@e[name=<name>]` can be combined like this: `@e[type=<type>,name=<name>]`. However, with the `score` selector you must format checks to another scoreboard like this, `@e[scores={<scoreboard>=<score>,<scoreboard2>=<score2>}]`.
