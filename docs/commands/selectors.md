@@ -70,30 +70,26 @@ This argument was added in Minecraft Beta 1.18.20.21 and it is not in stable ver
 
 `/give @a[hasitem=[{item=sand,data=-1,quantity=16..64,location=slot.hotbar,slot=!4}]] minecraft:apple`
 
-This command will give apple to every player who has from 16 to 64 sand with in the hotbar but not in the fourth slot.
+This command will give apple to every player who has 16-64 sand within the hotbar but not in the fifth slot.
 
-### Item
-
+### Item 
 `item=<namespace:name>`
 
 Defines name of item or block, like in `/give` command.
 
 ### Data
-
 `data=<int>`
 
 -   Doesn't support range.
 -   Doesn't support invert value.
 
-Data value of the item/block. If you want to use any data value, use `-1`.
-`data` can't detect item's data value. (Bug)
+Data value of the item/block. If you want to use any data value, use `-1`. Default value is `-1`.  
+**Note: There is a bug in the data where it doesn't detect Data Value correctly [MCPE-151920]**
 
 ### Location
-
 `location=<slot>`
 
-Defines slot of entity where to detect, like in `/replaceitem` command.
-This component isn't required.
+Defines slot of entity where to detect, like in `/replaceitem` command. This component isn't required.
 
 **Location Values:**
 
@@ -112,20 +108,18 @@ This component isn't required.
 -   `slot.weapon.offhand`
 
 ### Slot
-
 `slot=<value>`
 
-Defines slot's id, like in `/replaceitem command`
+Defines slot's id, like in `/replaceitem` command
 
 -   Supports range integer (`0..10`).
 -   Supports invert value (`!0`).
 
-You must specify the location to use slot:
-❎ `[hasitem={item=sand, slot=0..8}]`
+You must specify the location to use slot:  
+❎ `[hasitem={item=sand, slot=0..8}]`  
 ✅ `[hasitem={item=sand, location=slot.hotbar, slot=0..8}]`
 
 ### Quantity
-
 `quantity=<value>`
 
 Defines how much item entity must have.
@@ -133,25 +127,22 @@ Defines how much item entity must have.
 -   Supports range integer (`0..10`).
 -   Supports invert value (`!0`).
 
-### Combining
+### Additional Information
 
 `hasitem` can:
 
 -   Accept two identical arguments: `[hasitem={item=sand,item=iron_sword}]`
--   Accept array/multiple object: `[hasitem=[{item=sand},{item=iron_sword},{...}]]`
+-   Accept array/multiple item: `[hasitem=[{item=sand},{item=iron_sword},{...}]]`
 
 
-## Examples
+### Examples
 Checks for players who have netherite sword in inventory:
-
 -   `testfor @a[hasitem={item=netherite_sword}]`
 
 Clears 2 apples if player has more than 4 apples:
-
--   `clear @a[hasitem={item=apple,quantity=4,...}] apple 2`
+-   `clear @a[hasitem={item=apple,quantity=4..}] apple 2`
 
 Checks for players who have 2 sticks and 2 diamonds:
-
 -   `testfor @a[hasitem=[{item=diamond,quantity=2},{item=stick,quantity=2}]]`
 -   `testfor @a[hasitem={item=diamond,item=stick,quantity=2}]` (**More simple method**)
 
