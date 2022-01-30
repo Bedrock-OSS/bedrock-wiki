@@ -3,6 +3,7 @@ title: Understanding Selectors
 mention:
   - Science-geek42
   - Brougud
+  - MedicalJewel105
 ---
 
 Selectors are used in commands to target where you want to execute a command at. The primary target selectors are:
@@ -67,7 +68,7 @@ This argument was added in Minecraft Beta 1.18.20.21 and it is not in stable ver
 
 `hasitem` filter allows to execute commands on entities that have a special item.
 
-`/give @a[hasitem=[{item=sand,data=-1,quantity=16-64,location=slot.hotbar,slot=!4}]] minecraft:apple`
+`/give @a[hasitem=[{item=sand,data=-1,quantity=16..64,location=slot.hotbar,slot=!4}]] minecraft:apple`
 
 This command will give apple to every player who has from 16 to 64 sand with in the hotbar but not in the fourth slot.
 
