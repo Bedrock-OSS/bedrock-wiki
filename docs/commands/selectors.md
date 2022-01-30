@@ -61,7 +61,13 @@ Tags are a way to discriminate towards a player, or group of players and or mobs
 
 ## Has Item
 
+<<<<<<< Updated upstream
 :::warning Warning! This argument was added in Minecraft Beta 1.18.20.21 and it is not in stable version yet. :::
+=======
+:::warning Warning!
+This argument was added in Minecraft Beta 1.18.20.21 and it is not in stable version yet.
+:::
+>>>>>>> Stashed changes
 
 `hasitem` filter allows to execute commands on entities that have a special item.
 
