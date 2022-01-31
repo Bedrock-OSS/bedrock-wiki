@@ -124,7 +124,7 @@ const Contributors = defineAsyncComponent(
 	() => import('./Content/Contributors.vue')
 )
 
-const data = reactive({isCookiesAgreed: false});
+const data = reactive({isCookiesAgreed: true});
 onMounted(() => {
 	data.isCookiesAgreed = document.cookie.includes('bedrock-cookies=true');
 });
