@@ -136,7 +136,7 @@ const { toggle, isVisible } = useSidebarState()
 
 
 function agreeCookies() {
-	document.cookie = 'bedrock-cookies=true; max-age=31536000'
+	document.cookie = 'bedrock-cookies=true; max-age=31536000 ; path=/'
 	data.isCookiesAgreed = true
 }
 const routeData = computed(() => {
