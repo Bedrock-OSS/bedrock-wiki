@@ -147,6 +147,7 @@ For the player, conditions for its activation are:
 -   the jump button is pressed (includes being in water and climbing a scaffolding)
 -   OR auto-jump is triggered
 -   OR swimming with auto-jump
+-   OR charging the jump of a ridable entity
 
 ## query.modified_move_speed
 
