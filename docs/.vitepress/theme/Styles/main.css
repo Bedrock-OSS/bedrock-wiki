@@ -121,6 +121,14 @@ ol {
 	@apply bg-green-300;
 }
 
+.dark .red {
+	@apply bg-red-900;
+}
+
+.red {
+	@apply bg-red-300;
+}
+
 .dark .orange {
 	@apply bg-orange-800;
 }

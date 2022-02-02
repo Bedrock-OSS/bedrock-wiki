@@ -5,7 +5,7 @@
 			:item="item"
 			:key="item.link"
 			:section="item.section"
-			:section_color="item.section_color"
+			:color="item.color"
 		/>
 	</div>
 	<div class="border-t">

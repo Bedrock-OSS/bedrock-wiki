@@ -42,7 +42,7 @@ function getCategories(frontMatter) {
 			tags: category.tags,
 			prefix: category.prefix,
 			section: true,
-			section_color: 'section_' + category.color,
+			color: category.color,
 			link: '',
 			activeMatch: ' ',
 		})
@@ -172,7 +172,7 @@ function generateSidebar(base, dir) {
 				tags: tags,
 				prefix: prefix,
 				section: frontMatter.data.section || false,
-				section_color: frontMatter.data.section_color || 'none',
+				color: frontMatter.data.color || 'none',
 				link,
 				activeMatch: `^${link}`,
 			})

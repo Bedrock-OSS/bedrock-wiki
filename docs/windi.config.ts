@@ -13,10 +13,6 @@ export default defineConfig({
 
 	theme: {
 		extend: {
-			colors: {
-				'red': '#FCA5A5',
-				'dark-red': '#7F1D1D'
-			},
 			transitionProperty: {
 				spacing: 'margin, padding',
 			},
