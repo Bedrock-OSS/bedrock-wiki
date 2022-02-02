@@ -46,6 +46,7 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 
 ### minecraft:arrow
 
+-   Adds face to player animation to projectile entity.
 -   Disables death animation, sound, and particles.
 -   Makes entity's shadow small, but it doesn't make it disappear.
 -   Cannot be interacted with.
@@ -140,14 +141,23 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:dragon_fireball
 
--  Completely breaks your entity.
--  Emits dragon fireball trail particle.
+-   Completely breaks your entity.
+-   Emits dragon fireball trail particle.
 
 ---
 
 ### minecraft:egg
 
--   When spawning such entity using its spawn egg, it will spawn at player's position rather than where you place it.
+-   Adds face to player animation to projectile entity.
+-   Breaks the entity.
+-   When spawning such entity using its spawn egg, it will spawn at player's position rather than where you place it. It will also look at the sky.
+
+---
+
+### minecraft:elder_guardian
+
+-   Changes texture, model and animations to the elder guardian's one.
+-   Changes some of the behavior.
 
 ---
 
@@ -172,6 +182,26 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 -   Damages players within 2 blocks of hitbox.
 -   Increases distance it is rendered.
 -   Only able to be killed using /kill.
+
+---
+
+### minecraft:ender_pearl
+
+-   Breaks the behavior of entity.
+
+---
+
+### minecraft:ender_pearl
+
+-   Summons particles when entity receives damage.
+
+---
+
+### minecraft:endermite
+
+-   Summons particles when entity receives damage.
+-   Causes rotation glitch.
+-   Breaks some of the animations.
 
 ---
 
@@ -306,6 +336,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ### minecraft:thrown_trident
 
+-   Adds face to player animation to projectile entity.
 -   Disables death animation, sound, and particles.
 -   Makes entity's shadow small, but it doesn't make it disappear.
 -   Cannot be interacted with.
