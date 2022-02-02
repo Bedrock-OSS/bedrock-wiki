@@ -88,7 +88,7 @@ watchEffect(() => {
 }
 
 .section {
-	@apply pointer-events-none font-bold  rounded-md p-0 pl-1 m-2;
+	@apply pointer-events-none font-bold opacity-80 rounded-md p-0 pl-1 m-2;
 }
 
 .section_blue {
@@ -97,14 +97,6 @@ watchEffect(() => {
 
 .dark .section_blue {
 	@apply bg-blue-700 opacity-80;
-}
-
-.section_red {
-	@apply bg-red-200;
-}
-
-.dark .section_red {
-	@apply bg-red-700 opacity-80;
 }
 
 .section_green {

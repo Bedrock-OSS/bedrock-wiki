@@ -129,14 +129,6 @@ ol {
 	@apply bg-yellow-300;
 }
 
-.dark .red {
-	@apply bg-red-900;
-}
-
-.red {
-	@apply bg-red-300;
-}
-
 .dark .blue {
 	@apply bg-blue-900;
 }
