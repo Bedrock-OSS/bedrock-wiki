@@ -105,13 +105,13 @@ Just like with items, the main files of a custom entity are its RP and BP files.
 		
 		<Spoiler title="Read more about entity behavior priority">
 
-		Behaviors are components which make the entity do something. They are always in the form: `minecraft:behavior.*`.
+		Behaviors are components that make the entity do something. They are always in the form: `minecraft:behavior.*`.
 
 		All behaviors contain a `"priority"` field. This field is used to decide when/how often the behavior will run.
 
 		⚠️ In general, the more important behaviors should be lower, like 0, or 1.
 
-		When the entity is picking something to do, it searches all its behaviors from lowest priority to highest priority, and picks the first one that it can do. For this reason, you need to make important behaviors like `minecraft:behavior.nearest_attackable_target` lower than behaviors like `minecraft:behavior.look_at_player`. If the `look_at_player` is lower, it will always run this first when the player is close, and entity will never attack.
+		When the entity is picking something to do, it searches all its behaviors from lowest priority to the highest priority and picks the first one that it can do. For this reason, you need to make important behaviors like `minecraft:behavior.nearest_attackable_target` lower than behaviors like `minecraft:behavior.look_at_player`. If the `look_at_player` is lower, it will always run this first when the player is close, and the entity will never attack.
 
 		</Spoiler>
 
@@ -187,9 +187,9 @@ Note, here we named the file with a `.ce` suffix which stands for client entity.
 Let's go over every single object in `"description"` , as usual:
 
 -   `"identifier"` is, of course, the entity's `namespace:id`. This tells the game that this file belongs to the same entity as the one defined in `BP/entities/ghost.se.json`.
--   `"materials"` tell the game how to _render_ our entity. Depending on which material you choose, the translucent pixels on the texture might glow, be transparent, or have no effect. We assigned `entity_alphatest` the shortname `default` (precisely like with item textures) to allow partly transparent textures, making sense for a ghost. Custom materials are also possible, but they're more complicated. (You can learn more about materials in general [here](/visuals/materials)).
--   `"textures"/"default"` is the path (relative to the RP folder) to the entity's texture. Like in `item_textures.json`, the `.png` extension can be ignored. Again, the texture path is assigned to the shortname `"default"`. In some cases, like the Villager mob, you'd want to have multiple textures for the entity to switch between.
--   `"geometry"` takes the model's identifier as its value; note it for yourself, since we'll create the model itself in a moment. Again, `"default"` is the shortname for that.
+-   `"materials"` tell the game how to _render_ our entity. Depending on which material you choose, the translucent pixels on the texture might glow, be transparent, or have no effect. We assigned `entity_alphatest` the short name `default` (precisely like with item textures) to allow partly transparent textures, making sense for a ghost. Custom materials are also possible, but they're more complicated. (You can learn more about materials in general [here](/visuals/materials)).
+-   `"textures"/"default"` is the path (relative to the RP folder) to the entity's texture. Like in `item_textures.json`, the `.png` extension can be ignored. Again, the texture path is assigned to the short name `"default"`. In some cases, like the Villager mob, you'd want to have multiple textures for the entity to switch between.
+-   `"geometry"` takes the model's identifier as its value; note it for yourself, since we'll create the model itself in a moment. Again, `"default"` is the short name for that.
 -   `"scripts"/"animate"` and `"animations"` control when animations are to be played with the help of _animation controllers_ and list them under their _shortnames_ respectively. Again, we'll come back to this once we have the animations ready.
 -   `"spawn_egg"` automatically creates an item that will spawn the custom entity on use. It can look in two different ways: one of them can be seen here: both the `"overlay_color" ` and `"base_color"` are defined with [hex codes](https://www.w3schools.com/colors/colors_picker.asp) in the form of text. The other way would be changing the whole thing to
 
@@ -201,7 +201,7 @@ Let's go over every single object in `"description"` , as usual:
 }
 ```
 
-You can probably remember that `"wiki.ectoplasm"` is the shortname of our custom item's texture. If you use this code snippet, the egg will use the same texture as the item instead of a procedurally generated traditional spawn egg.
+You can probably remember that `"wiki.ectoplasm"` is the short name of our custom item's texture. If you use this code snippet, the egg will use the same texture as the item instead of a procedurally generated traditional spawn egg.
 
 -   And, finally, `"render_controllers"` lists one or more identifiers of render controllers, which control materials.
 
@@ -234,7 +234,7 @@ Now it's time to create the entity's visuals. An example model, texture, and ani
 
 ### Texture
 
-Like items, the entity textures are simply `.png` files in `RP/textures/entity/`. However, unlike these, entity textures don't need a file equivalent to `item_textures.json`. Instead, their shortnames are defined in the entity's RP file (`RP/entity/ghost.ce.json` in our case). Usually, the shortname for an entity's texture is set to `default`, just like in our example.
+Like items, the entity textures are simply `.png` files in `RP/textures/entity/`. However, unlike these, entity textures don't need a file equivalent to `item_textures.json`. Instead, their short names are defined in the entity's RP file (`RP/entity/ghost.ce.json` in our case). Usually, the short name for an entity's texture is set to `default`, just like in our example.
 
 `RP/textures/entity/ghost.png`
 
@@ -442,7 +442,7 @@ Please note that we have edited the output file for it to be a little bit more c
 }
 ```
 
-Unlike the model's file, this one contains three animations for the Ghost, which are ` "animation.ghost.idle"` (which is an animation playing from time to time), `"animation.ghost.attack" ` and `"animation.ghost.move"` (quite self-explanatory). Their shortnames, as defined in the Ghost's RP entity file, are ` "idle"`, `"attack"` and `"move"` respectively.
+Unlike the model's file, this one contains three animations for the Ghost, which are ` "animation.ghost.idle"` (which is an animation playing from time to time), `"animation.ghost.attack" ` and `"animation.ghost.move"` (quite self-explanatory). Their short names, as defined in the Ghost's RP entity file, are ` "idle"`, `"attack"` and `"move"` respectively.
 Of course, feel free to open the files and check how the visuals look using Blockbench.
 
 ### Animation Controller
@@ -510,13 +510,13 @@ Let us look inside `”controller.animation.ghost.walk”` under `”animation_c
 -	`“states”` contains the different states of an entity. Here our entity is either in its `standing` state or `moving` state. This allows us to have a separate standing animation and moving animation.
 Each state has the following objects:
 -	`“animations”` holds the animations that will run whenever the entity is in this state. When the entity is in its `standing` state it plays the `idle` animation which we defined in our RP entity file. 
--	`“blend_transition”` is time which animations will blend together during a transition. A shorter time means a snappier transition. 
+-	`“blend_transition”` is the time which animations will blend during a transition. A shorter time means a snappier transition. 
 -	`“transitions”` are the conditions under which we will transition to another state. Each transition needs its own object. In our `standing` state, we have the transition `"moving": "query.modified_move_speed > 0.1"` which means when the condition on the left, `"query.modified_move_speed > 0.1"`, is true, it will transition the animation controller to the state `moving`. 
 
-For a more in depth explanation of how animation controllers work, check out our page [Intro to Animation Controllers](/animation-controllers/animation-controllers-intro).
+For a more in-depth explanation of how animation controllers work, check out our page [Intro to Animation Controllers](/animation-controllers/animation-controllers-intro).
 
-Let's take a look at the Ghost's RP file: just like the _animations_, the _animation controllers_ get assigned to their shortnames (`walk_controller` and `attack_controller` respectively) under `"animations"`. Now, since the controllers control the animations, they have to constantly run, which is why we put their shortnames in the array of `"scripts"/"animate"`.
-(For example, if you put the shortname `"move"` there, the entity would constantly play the moving animation, even when staying in place. The controller only launches the relevant animation when the entity is doing a certain action, for example, `is_walking`.)
+Let's take a look at the Ghost's RP file: Just like the _animations_, the _animation controllers_ get assigned to their short names (`walk_controller` and `attack_controller` respectively) under `"animations"`. Now, since the controllers control the animations, they have to constantly run, which is why we put their short names in the array of `"scripts"/"animate"`.
+(For example, if you put the short name `"move"` there, the entity would constantly play the moving animation, even when staying in place. The controller only launches the relevant animation when the entity is doing a certain action, for example, `is_walking`.)
 
 `from RP/entity/ghost.ce.json`
 
@@ -555,9 +555,9 @@ Done! Your entity should now show up in Minecraft, complete with all behaviors a
 
 :::tip What you have learned:
 
-How to format the behavior- and resource-files for an item
+How to format the behavior- and resource files for an item
 How to set an entities texture
-How to use models, animations and animation controllers to make your entity more exciting
+How to use models, animations, and animation controllers to make your entity more exciting
 
 :::
 
