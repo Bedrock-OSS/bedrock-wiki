@@ -33,7 +33,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ### Go
 
--   [DragonFly](https://github.com/df-mc/dragonfly)
+-   [DragonFly](https://github.com/df-mc/dragonfly) ([Discord](https://discord.gg/62zMCB4h))
 
 ### Java
 
