@@ -43,6 +43,7 @@ Important links have a ⭐.
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [Resource Pack Converter (for Android)](https://play.google.com/store/apps/details?id=net.theluckycoder.resourcepackconverter)
+-   [BedrockLauncher (Bedrock version switcher)](https://bedrocklauncher.github.io/)
 
 ## JSON Generators
 
