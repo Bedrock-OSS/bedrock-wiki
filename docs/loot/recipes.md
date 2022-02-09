@@ -106,6 +106,8 @@ Vanilla interfaces are exposed to tags for each set of recipe types.
 - `stonecutter`
 - `smithing_table`
 
+Note that if you want to make a smithing recipe, you will need to use `<namespace>:netherite_ingot` for the second slot, though using a different identifier will not work.
+
 #### Cooking and Smelting:
 - `furnace`
 - `blast_furnace`
