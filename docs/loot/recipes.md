@@ -7,14 +7,14 @@ mention:
 	- Ciosciaa
 ---
 
-*Last updated for Version 1.17.41*
+*Last updated for Version 1.18.10*
 
 Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.
 
 ![](/assets/images/loot/recipes/recipe.png)
 
 ::: tip
-Anvil interactions are handled within an [item definition](/items/items-16.html), not via recipe files. Smithing table and loom transactions are currently unavailable.
+Anvil interactions are handled within an [item definition](/items/items-16.html), not via recipe files. Дoom transactions are currently unavailable.
 :::
 
 No experimental toggles are required to use recipes or any of their features.
@@ -104,6 +104,9 @@ Vanilla interfaces are exposed to tags for each set of recipe types.
 #### Crafting:
 - `crafting_table`
 - `stonecutter`
+- `smithing_table`
+
+Note that if you want to make a smithing recipe, you will need to use `<namespace>:netherite_ingot` for the second slot, though using a different identifier will not work.
 
 #### Cooking and Smelting:
 - `furnace`
