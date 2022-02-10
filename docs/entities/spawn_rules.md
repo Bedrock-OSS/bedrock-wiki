@@ -79,19 +79,3 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
     `"event_skip_count": 2`, for example, means that the first two entities will not be spawned with this event, but all the next ones will.
 
 _Why not create some more custom blocks, items, and loot tables before moving onto the next big chapter?_
-
----
-
----
-
-
-## Your progress so far
-
-**What you've done:**
-
--   [x] Learned to create spawn rules;
--   [x] Learned about the usefulness referencing the Example files and the documentation even better;
-
-**What are you to do next:**
-
--   [ ] **Create. Custom. Entities.**
