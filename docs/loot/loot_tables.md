@@ -373,17 +373,3 @@ _Blocks do not drop loot in creative mode_
 **Note: it is possible to generate loot tables visually online. Check Links and Contact for the link to a reliable generator.**
 
 **_Challenge: Create custom loot tables for our custom blocks created in the previous chapter!_**
-
----
-
----
-
-## Your progress so far
-
-**What you've done:**
-
--   [x] Learned to create Loot Tables;
--   [x] Learned to create spawn rules;
--   [x] Created Loot Tables for our custom blocks and items;
--   [x] Learned about the usefulness referencing the Example files and the documentation even better;
--   [x] Tried out some online file generators;
