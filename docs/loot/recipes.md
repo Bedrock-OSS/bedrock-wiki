@@ -1,20 +1,20 @@
 ---
 title: Recipes
-nav_order: 0
+category: Documentation
+nav_order: 3
 tags:
-	- guide
+- Stable
+- Last updated for Version 1.18.10
 mention:
-	- Ciosciaa
+- Ciosciaa
 ---
-
-*Last updated for Version 1.18.10*
 
 Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.
 
 ![](/assets/images/loot/recipes/recipe.png)
 
 ::: tip
-Anvil interactions are handled within an [item definition](/items/items-16.html), not via recipe files. Дoom transactions are currently unavailable.
+Anvil interactions are handled within an [item definition](/items/items-16.html), not via recipe files. Loom transactions are currently unavailable.
 :::
 
 No experimental toggles are required to use recipes or any of their features.
@@ -23,6 +23,7 @@ No experimental toggles are required to use recipes or any of their features.
 All recipes are stored in the `recipes` folder in the behavior pack root. The files can be named and organized under any folder hierarchy as desired.
 
 This arbitrary structure is used for the paths in this document:
+
 <FolderView
 	:paths="[
 		'BP/recipes/crafting/weapons/cold_steel_sword.json',
@@ -35,6 +36,7 @@ This arbitrary structure is used for the paths in this document:
 />
 
 As an example, a "cold steel sword" might be crafted using the following [shaped recipe](#shaped-recipes):
+
 <CodeHeader>BP/recipes/crafting/weapons/cold_steel_sword.json</CodeHeader>
 ```json
 {
@@ -101,21 +103,21 @@ Recipes are linked to crafting interfaces using the required `"tags"` array prop
 
 Vanilla interfaces are exposed to tags for each set of recipe types.
 
-#### Crafting:
+Crafting:
 - `crafting_table`
 - `stonecutter`
 - `smithing_table`
 
 Note that if you want to make a smithing recipe, you will need to use `<namespace>:netherite_ingot` for the second slot, though using a different identifier will not work.
 
-#### Cooking and Smelting:
+Cooking and Smelting:
 - `furnace`
 - `blast_furnace`
 - `smoker`
 - `campfire`
 - `soul_campfire`
 
-#### Brewing
+Brewing:
 - `brewing_stand`
 
 Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-16.html#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
@@ -129,12 +131,14 @@ Working with recipes entails referencing items across a number of properties. It
 
 #### String Reference
 Generally, a string reference is just the namespace and identifier combination for that item:
+
 <CodeHeader>#/minecraft:recipe_shapeless/ingredients/0</CodeHeader>
 ```json
 "minecraft:planks"
 ```
 
 String references additionally support specification of a data value as a suffix:
+
 <CodeHeader>#/minecraft:recipe_shapeless/ingredients/0</CodeHeader>
 ```json
 "minecraft:planks:2"
@@ -163,7 +167,7 @@ The required `"item"` property functions the same as the string reference format
 }
 ```
 
-The optional integer `"count"` property may be used to stack items. It defaults to `1`. Currently, setting the count only functions in [crafting](#crafting) and [heating](#heating) recipe outputs and [shapeless recipe ingredients](#ingredients). A provided count is ignored in other locations.
+The optional integer `"count"` property may be used to stack items. It defaults to `1`. Currently, setting the count only functions in [crafting](#crafting) and [furnace](#heating) recipe outputs and [shapeless recipe ingredients](#ingredients). A provided count is ignored in other locations.
 
 ::: tip NOTE
 If a count greater than `1` is provided for an item that does not stack, an error will be thrown. There is no way to force single-return recipe outputs, like those in shapeless recipes or brewing mixes, to return multiple items in one transaction.
@@ -359,6 +363,7 @@ Currently, no crafting grids, including those configurable from custom blocks, m
 
 ##### Grid Freedom
 Spaces are not automatically implied to fill in any remaining slots in the 3 × 3 space. If a provided pattern is smaller than the crafting grid being used, the pattern can be used anywhere so long as the structure and contents are maintained. As an example, consider the following pattern on a crafting table:
+
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
 "pattern": [
@@ -394,6 +399,7 @@ _OO
 </Spoiler>
 
 To restrict placements to a particular location, use explicit spaces, which enforce empty slots in certain locations. The following is only usable in the upper-left corner of a grid:
+
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
 "pattern": [
@@ -405,6 +411,7 @@ To restrict placements to a particular location, use explicit spaces, which enfo
 
 ##### Symmetry
 All shaped recipes are innately horizontally symmetric:
+
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
 "pattern": [
@@ -415,6 +422,7 @@ All shaped recipes are innately horizontally symmetric:
 ```
 
 The preceding recipe may also be used by a player as though it were set to:
+
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
 "pattern": [
@@ -498,7 +506,7 @@ Crafting recipes support an additional property for handling input collisions, `
 Crafting recipes with lower priority values take precedence. So, if all else is equal, a recipe with a priority of `0` would be used over a recipe with priority `1`. Priorities may be negative if necessary. If `"priority"` is not provided, a priority of `0` is implied.
 
 ## Heating
-Heating recipes are used to transform an item using a heat source over a period of time.
+Furnace recipes are used to transform an item using a heat source over a period of time. A slight misnomer, furnace recipes are used with any interface that involves a heat source, including campfires.
 
 ![](/assets/images/loot/recipes/furnace_recipe.png)
 
@@ -531,7 +539,7 @@ All vanilla heating blocks are supported via tags.
 ```
 
 ### Heating Transactions
-Heating recipes bind exactly one input [item descriptor](#item-descriptors) to exactly one output item descriptor.
+Furnace recipes bind exactly one input [item descriptor](#item-descriptors) to exactly one output item descriptor.
 
 <CodeHeader>#/minecraft:recipe_furnace/</CodeHeader>
 ```json
@@ -549,6 +557,7 @@ Any count given in the input is ignored. XP returns and fuel sources for a cooki
 Brewing recipes are used to transform an item using another item as a catalyst. Two brewing recipe types are available: [brewing mixes](#brewing-mixes), which do not transition data from input to output, and [brewing containers](#brewing-containers), which do.
 
 Only one interface supports brewing recipes:
+
 <CodeHeader>#/minecraft:recipe_brewing_container/</CodeHeader>
 ```json
 "tags": ["brewing_stand"]
@@ -650,7 +659,7 @@ As with all domains in add-ons, the pack order in the behavior pack list affects
 To override a recipe in a lower-listed pack, the recipe type and identifiers must both match. The override file can be named and located in any way — only the contents matter. Partial overrides are not accepted in recipes; the entire recipe must be redefined.
 
 ::: warning
-Overrides only work if the type is an *exact* match. In most cases, a mismatch results in a new recipe created alongside the existing one.
+Overrides only work if the recipe type is an *exact* match. In most cases, a mismatch results in a new recipe created alongside the existing one.
 
 If attempting to construct an override that converts between the two crafting recipe types, an error will be thrown. To circumvent this, first copy the vanilla definition into the pack. Next, set the `"tags"` for that file to `[""]`; this effectively disables the recipe. Finally, set up a new file as the other crafting recipe type, choosing a different identifier to avoid the error.
 :::

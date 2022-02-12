@@ -1,5 +1,6 @@
 ---
 title: Spawn Rules
+category: General
 ---
 
 Spawn rules define how vanilla Entities and custom entities spawn. In the next chapter we'll be creating a custom entity, so make sure to prepare a custom spawn rule for it! Check out the vanilla example files for more information. ;)
@@ -77,5 +78,3 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 
 -   "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity_born`" (as baby). Can be used in any event.
     `"event_skip_count": 2`, for example, means that the first two entities will not be spawned with this event, but all the next ones will.
-
-_Why not create some more custom blocks, items, and loot tables before moving onto the next big chapter?_
