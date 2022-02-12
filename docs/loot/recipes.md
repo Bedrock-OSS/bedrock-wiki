@@ -454,7 +454,7 @@ If a character in the pattern is not present in the key map, it will be treated 
 :::
 
 #### Shaped Results
-Shaped crafting recipe outputs behave very similarly to their [shapeless counterparts](#shapeless-results). Unlike array results for shapeless recipes, however, shaped recipe result arrays may contain more than one [items descriptor](#item-descriptors).
+Shaped crafting recipe outputs behave very similarly to their [shapeless counterparts](#shapeless-results). Unlike array results for shapeless recipes, however, shaped recipe result arrays may contain more than one [item descriptor](#item-descriptors).
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
