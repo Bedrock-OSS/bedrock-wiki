@@ -34,4 +34,4 @@ The structure is simple. The file itself is in `RP/textures` and is named `textu
 
 ## Automating
 
-If you have a lot of textures, this could obviously be tedious to go and list all the texture paths. In this case you can start to use [Regolith](https://bedrock-oss.github.io/regolith/)
+If you have a lot of textures, this could obviously be tedious to go and list all the texture paths. In this case you can start to use [Regolith](https://bedrock-oss.github.io/regolith/).
