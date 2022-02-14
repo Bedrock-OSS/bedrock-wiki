@@ -269,7 +269,7 @@ Now, let's add these animations to the player client definition file. Add a new 
 ```json
 "animations": {
     ...,
-    "<your_item>_first_person": "animation.<your_item>.first_person.hold" //This is the first-person animation you definde in the previous step
+    "<your_item>_first_person": "animation.<your_item>.first_person.hold" //This is the first-person animation you defined in the previous step
 }
 ```
 
@@ -289,7 +289,7 @@ Next, let's make this animation loop: add a new entry to your `scripts.animate` 
 
 In our case, it will look like this:
 
-<CodeHeaderRP/entity/player.entity.json#animations></CodeHeader>
+<CodeHeader>RP/entity/player.entity.json#animations</CodeHeader>
 
 ```json
 "animate": [
