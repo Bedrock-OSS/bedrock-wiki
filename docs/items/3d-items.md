@@ -995,7 +995,7 @@ To ensure our attachable does not display in the first person, we will apply a d
 
 We will also apply a simple lang file to allow our item to be displayed with a properly formatted name. Simply follow the format:
 
-<CodeHeader>RP/texts/_country_\__language_.lang</CodeHeader>
+<CodeHeader>RP/texts/_country_language_.lang</CodeHeader>
 
 ```
 tile.<your_namespace>:<your_item>.name=Your Displayed Name
