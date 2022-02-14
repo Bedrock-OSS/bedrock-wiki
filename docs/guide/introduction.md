@@ -37,8 +37,8 @@ This guide is written for the most recent _stable_ release of Minecraft Bedrock 
 Alongside the step-by-step guide, we have a few other files here, which may be interesting to you:
 
 -   [Understanding JSON](/guide/understanding-json)
--   [Troubleshooting](/guide/troubleshooting)
 -   [Downloading Example Packs](/guide/download-packs)
+-   [Troubleshooting](/guide/troubleshooting)
 
 ## What to do after finishing the Guide
 
