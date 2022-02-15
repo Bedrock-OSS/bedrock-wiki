@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./404.md.6f5dde84.js";const m='{"title":"Documentation","description":"","frontmatter":{"title":"Documentation"},"headers":[],"relativePath":"documentation/index.md","lastUpdated":1644950064999}',o={};function n(r,c,d,s,i,p){return a(),e("div")}var f=t(o,[["render",n]]);export{m as __pageData,f as default};
