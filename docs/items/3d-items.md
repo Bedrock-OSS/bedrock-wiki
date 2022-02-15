@@ -25,7 +25,7 @@ Since Bedrock doesn't support custom item models out of the box, we have to get 
 
 ### The Item
 
-First of all, we need to make sure our item is ready. You can add custom models to both custom and vanilla items. In this tutorial, we will be making an automatic drill. We won't be going in-depth on creating custom items in this tutorial, but you can use [this](https://gitwither.github.io/bedrock-item-generator/) online custom item generator. Make sure your item has got a texture and displays correctly in the player's inventory.
+First of all, we need to make sure our item is ready. You can add custom models to both custom and vanilla items. In this tutorial, we will be making an automatic drill. We won't be going in-depth on creating custom items in this tutorial, but you can use [online custom item generator](https://gitwither.github.io/bedrock-item-generator/). Make sure your item has got a texture and displays correctly in the player's inventory.
 
 ![](/assets/images/tutorials/custom-item-models/drill-sprite-inventory.png)
 
@@ -44,18 +44,7 @@ This is the most crucial part. We must add it to the player entity client defini
 3. Creating a conditional render controller that adds the model geometry whenever the player holds our item.
 4. Creating animations that position our item correctly in first person.
 
-Let's start by defining the texture and the geometry of our item in the player client definition file. Copy the `player.entity.json` from the [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate) and edit it:
-
-<CodeHeader>RP/entity/player.entity.json#geometry</CodeHeader>
-
-```json
-"geometry": {
-    ...,
-    "<your_item_name>": "geometry.<your_geometry_id>"
-}
-```
-
-In our case, it will look like this:
+Let's start by defining the texture and the geometry of our item in the player client definition file. Edit the `player.entity.json` from [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate):
 
 <CodeHeader>RP/entity/player.entity.json#geometry</CodeHeader>
 
@@ -67,17 +56,6 @@ In our case, it will look like this:
 ```
 
 Next, add a new entry to your `textures` entry that references the texture of your model:
-
-<CodeHeader>RP/entity/player.entity.json#textures</CodeHeader>
-
-```json
-"textures": {
-    ...,
-    "<your_item_name>": "path/to/texture"
-}
-```
-
-In our case, it will look like this:
 
 <CodeHeader>RP/entity/player.entity.json#textures</CodeHeader>
 
@@ -114,34 +92,11 @@ Next, let's create a render controller that will render our item.
 {
 	"format_version": "1.8.0",
 	"render_controllers": {
-		"controller.render.<your_item_name>": {
-			"textures": [
-				"Texture.<item_texture>" //This is the texture you defined in the 'textures' object in player.entity.json
-			],
-			"geometry": "Geometry.<item_geometry>", //This is the geometry you defined in the 'geometries' object in player.entity.json
-			"materials": [
-				{
-					"*": "Material.default"
-				}
-			]
-		}
-	}
-}
-```
-
-In our case, the render controller will look like the following:
-
-<CodeHeader>RP/render_controllers/drill.render_controllers.json</CodeHeader>
-
-```json
-{
-	"format_version": "1.8.0",
-	"render_controllers": {
 		"controller.render.drill": {
 			"textures": [
-				"Texture.drill"
+				"Texture.drill" //Texture you defined in the 'textures' object in player.entity.json
 			],
-			"geometry": "Geometry.drill",
+			"geometry": "Geometry.drill", //Geometry you defined in the 'geometries' object in player.entity.json
 			"materials": [
 				{
 					"*": "Material.default"
@@ -160,21 +115,7 @@ Now, let's add this render controller to our player client definition file.
 "render_controllers": [
     ...,
     {
-        //This is the ID of the render controller that you created in the previous step
-        "controller.render.<your_item>": "variable.<your_item>" //This is the variable you defined in the 'pre_animation' array
-    }
-]
-```
-
-In our case, it will look like this:
-
-<CodeHeader>RP/entity/player.entity.json#render_controllers</CodeHeader>
-
-```json
-"render_controllers": [
-    ...,
-    {
-        "controller.render.drill": "variable.drill"
+        "controller.render.drill": "variable.drill" //Variable you defined in the 'pre_animation' array
     }
 ]
 ```
@@ -269,7 +210,7 @@ Now, let's add these animations to the player client definition file. Add a new 
 ```json
 "animations": {
     ...,
-    "<your_item>_first_person": "animation.<your_item>.first_person.hold" //This is the first-person animation you defined in the previous step
+    "<your_item>_first_person": "animation.<your_item>.first_person.hold"
 }
 ```
 
@@ -281,8 +222,7 @@ Next, let's make this animation loop: add a new entry to your `scripts.animate` 
 "animate": [
     ...,
     {
-        //This is the animation you defined in the previous step
-        "<your_item>_first_person": "variable.<your_item> && variable.is_first_person" //This is the variable you defined in the 'pre_animation' array. This animation will only play if the player is in first person and holding the item (p ∧ q)
+        "<your_item>_first_person": "variable.<your_item> && variable.is_first_person" ///Variable you defined in the 'pre_animation' array. This animation will only play if the player is in first person and holding the item (p ∧ q)
     }
 ]
 ```
@@ -327,7 +267,7 @@ Gimp doesn't let you usually save the picture as a png when pressing `Ctrl+S`, s
 
 ### The Files
 
-Here you can find the final `player.entity.json` file, render controllers, animations, as well as a download link to the pack.
+Here you can find all files as well as a download link to the pack.
 
 <Spoiler title="Show Files">
 
@@ -679,8 +619,6 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 
 Pack download link: [Link](https://wiki.bedrock.dev/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
 
-## TODO: update
-
 ## Attachable Based 3D Item Models
 
 ### Concept & Idea
@@ -702,21 +640,23 @@ The item, in this case, is a custom block. We'll define this in our behavior pac
 	"format_version": "1.16.200",
 	"minecraft:block": {
 		"description": {
-			"identifier": "<your_namespace>:<your_item>" //arbitrary namespace and item name
+			"identifier": "<your_namespace>:<your_item>"
 		},
 		"components": {
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "<texture_short>", //defined texture shortname, which we'll later add to terrain_texture.json
-					"render_method": "<opaque|alpha_test|blend|double_sided>", //block model material type
-					"face_dimming": false, //optional to make the item appear more like Java
-					"ambient_occlusion": false //optional to make item appear more like java
+					"texture": "<texture_short>", //Texture shortname terrain_texture.json
+					"render_method": "<opaque|alpha_test|blend|double_sided>",
+
+					"face_dimming": false,
+					"ambient_occlusion": false
+					//Optional to make item appear more like java
 				}
 			},
 			"tag:geysercmd:example_block": {},
 			"minecraft:geometry": "geometry.<your_item>",
 			"minecraft:placement_filter": {
-				//optional to ensure our block behaves like an item and is unplaceable
+				//Makes block unplaceable
 				"conditions": [
 					{
 						"allowed_faces": [],
@@ -729,21 +669,21 @@ The item, in this case, is a custom block. We'll define this in our behavior pac
 }
 ```
 
-In the above example, we define our block, texture, render method and geometry. We also apply a conditional placement filter to ensure our block behaves like an item and cannot be placed. If this is not desired, simply omit this component.
+In the above example, we define our block, texture, [render method](blocks/block-materials) and geometry. We also apply a conditional placement filter to ensure our block behaves like an item and cannot be placed.
 
 ### Geometry
 
-Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheless, there are still some special notes to allow this to work properly. First, take careful note that we are utilizing the 1.16.0 geometry format. This is important as it will allow us to define a binding expression with a Molang query. This will effectively treat our model as though it is parented to a given bone in the entity to which it is attached. We will define our geometry in the following form:
+Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheless, there are still some special notes to allow this to work properly. First, take careful note that we are utilizing the **1.16.0** geometry format. This is important as it will allow us to define a binding expression with a Molang query. This will effectively treat our model as though it is parented to a given bone in the entity to which it is attached. We will define our geometry in the following form:
 
 <CodeHeader>RP/models/blocks/_your_item_.geo.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.16.0", //note we are on format version 1.16.0
+	"format_version": "1.16.0",
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.<your_item>", // this uses the same geometry we defined for the block previously
+				"identifier": "geometry.<your_item>",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 4,
@@ -753,14 +693,14 @@ Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheles
 			"bones": [
 				{
 					"name": "root",
-					//this is what will ensure that we bind to the correct slot
-					//currently, q.item_slot_to_bone_name only returns hand slots
-					//therefore, we must build in a special case if we'd like our item to be useable in the head slot
+					//What will ensure that we bind to the correct slot
+					//Currently, q.item_slot_to_bone_name only returns hand slots
+					//Therefore, we must build in a special case if we'd like our item to be useable in the head slot
 					"binding": "c.item_slot == 'head' ? 'head' : q.item_slot_to_bone_name(c.item_slot)",
 					"pivot": [0, 8, 0]
 				},
 				{
-					"name": "root_x", //we define these extra bones for x, y, & z axes to make applying pseudo-display settings easier
+					"name": "root_x", //Define these extra bones for x, y, & z axes to make applying pseudo-display settings easier
 					"parent": "root",
 					"pivot": [0, 8, 0]
 				},
@@ -773,7 +713,7 @@ Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheles
 					"name": "root_z",
 					"parent": "root_y",
 					"pivot": [0, 8, 0],
-					"cubes": ["<...>"] //cubes of our model
+					"cubes": [...] //Cubes of model
 				}
 			]
 		}
@@ -794,31 +734,27 @@ Next, we'll define our attachable. This can be done as follows:
 	"format_version": "1.10.0",
 	"minecraft:attachable": {
 		"description": {
-			//ensure this is the same as the block you defined
-			//this will ensure the default block geometry is hidden
 			"identifier": "<your_namespace>:<your_item>",
 			"materials": {
-				"default": "entity_alphatest",
-				//this is needed because we are using the item_default render controller
-				//this would also be useable if were overriding an echantable item
+				"default": "entity_alphatest", //This is needed because we are using the item_default render controller
 				"enchanted": "entity_alphatest_glint"
 			},
 			"textures": {
-				"default": "textures/blocks/<your_texture>", //full path to your texture
+				"default": "textures/blocks/<your_texture>",
 				"enchanted": "textures/misc/enchanted_item_glint"
 			},
 			"geometry": {
-				"default": "geometry.<your_item>" //same geometry as specified in the block definition
+				"default": "geometry.<your_item>"
 			},
 			"scripts": {
 				"pre_animation": [
-					//define a variable to check when our item is in the main hand via the context variable of the attachable
+					//Define a variable to check when our item is in the main hand via the context variable of the attachable
 					"v.main_hand = c.item_slot == 'main_hand';",
-					//define a variable to check when our item is in the off hand via the context variable of the attachable
+					//Define a variable to check when our item is in the off hand via the context variable of the attachable
 					"v.off_hand = c.item_slot == 'off_hand';",
-					//define a variable to check when our item is in the head slot via the context variable of the attachable
+					//Define a variable to check when our item is in the head slot via the context variable of the attachable
 					"v.head = c.item_slot == 'head';"
-					//in theory, you could obviously apply this to any slot
+					//In theory, you could obviously apply this to any slot
 					//I've chosen these because they are what java displays 3D items in
 				],
 				"animate": [
@@ -831,7 +767,9 @@ Next, we'll define our attachable. This can be done as follows:
 						"thirdperson_off_hand": "v.off_hand && !c.is_first_person"
 					},
 					//thirdperson_head pseudo display setting defined when we're in the head slot hand but not first person
-					{ "thirdperson_head": "v.head && !c.is_first_person" },
+					{
+						"thirdperson_head": "v.head && !c.is_first_person"
+					},
 					//firstperson_main_hand pseudo display setting defined when we're in the main hand slot slot hand and are first person
 					{
 						"firstperson_main_hand": "v.main_hand && c.is_first_person"
@@ -841,7 +779,9 @@ Next, we'll define our attachable. This can be done as follows:
 						"firstperson_off_hand": "v.off_hand && c.is_first_person"
 					},
 					//firstperson_off_hand pseudo display setting defined when we're in the head hand slot hand and are first person
-					{ "firstperson_head": "c.is_first_person && v.head" }
+					{
+						"firstperson_head": "c.is_first_person && v.head"
+					}
 				]
 			},
 			"animations": {
@@ -850,12 +790,12 @@ Next, we'll define our attachable. This can be done as follows:
 				"thirdperson_head": "animation.<your_item>.head",
 				"firstperson_main_hand": "animation.<your_item>.firstperson_main_hand",
 				"firstperson_off_hand": "animation.<your_item>.firstperson_off_hand",
-				//animation to disable our attachable in the first person, as not to obstruct player view
+				//Animation to disable our attachable in the first person, as not to obstruct player view
 				//I attempted this via render controller, but I couldn't seem to get the render controller to acknowledge the attachable variables
 				"firstperson_head": "animation.disable"
 			},
 			"render_controllers": [
-				//we'll use the same render controller as the trident here, but you could define your own if you'd like
+				//We'll use the same render controller as the trident here
 				"controller.render.item_default"
 			]
 		}
@@ -993,7 +933,7 @@ To ensure our attachable does not display in the first person, we will apply a d
 
 ### Texts
 
-We will also apply a simple lang file to allow our item to be displayed with a properly formatted name. Simply follow the format:
+Don't forget to add translations to new blocks/items:
 
 <CodeHeader>RP/texts/_country_language_.lang</CodeHeader>
 
@@ -1001,11 +941,9 @@ We will also apply a simple lang file to allow our item to be displayed with a p
 tile.<your_namespace>:<your_item>.name=Your Displayed Name
 ```
 
-This assumes you utilized blocks. If you utilize items instead, simply use "item" instead of "tile".
-
 ### Textures
 
-There are no special requirements regarding the construction of our texture beyond it being a single texture. We need only define a shortname for it in `terrain_texture.json` so that our defined block may access the full texture through the shortname. We do so as follows:
+There are no special requirements regarding the construction of our texture beyond it being a single texture. We need only define a shortname for it in `terrain_texture.json` so that our defined block may access the full texture through the shortname.
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
@@ -1017,17 +955,16 @@ There are no special requirements regarding the construction of our texture beyo
 	"num_mip_levels": 4,
 	"texture_data": {
 		"<texture_short>": {
-			//your defined texture shortname
-			"textures": "textures/blocks/<your_texture>" //full path to your texture
+			"textures": "textures/blocks/<your_texture>"
 		}
 	}
 }
 ```
 
-### Obtaining the Item
+### "Wearing" the Item
 
-To obtain the item, simply use the give command: `/give @p <your_namespace>:<your_item>`
-In order to place the item in the head slot: `/replaceitem entity @p slot.armor.head 0 <your_namespace>:<your_item>`
+In order to place the item in the head slot, use:
+`/replaceitem entity @p slot.armor.head 0 <your_namespace>:<your_item>`
 
 ## Example Pack Download
 
