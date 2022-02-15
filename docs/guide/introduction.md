@@ -42,7 +42,7 @@ Alongside the step-by-step guide, we have a few other files here, which may be i
 
 ## What to do after finishing the Guide
 
-Now, your first addon is complete! To further expand your knowledge, consider doing these:
+At the end of guide section, your first addon will be done! To further expand your knowledge, consider doing these:
 
 -   Start your project!
 -   To dive into the other aspects of adding onto MCBE (Minecraft Bedrock Edition), you can use the different sections' sub guides listed in the Appendix. This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.
