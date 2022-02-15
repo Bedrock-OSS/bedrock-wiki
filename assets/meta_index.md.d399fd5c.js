@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./404.md.0cc9f45f.js";const f='{"title":"Meta","description":"","frontmatter":{"title":"Meta"},"headers":[],"relativePath":"meta/index.md","lastUpdated":1644950830212}',r={};function c(o,s,n,d,i,p){return a(),t("div")}var l=e(r,[["render",c]]);export{f as __pageData,l as default};
