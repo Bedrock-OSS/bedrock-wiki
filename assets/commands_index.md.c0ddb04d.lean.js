@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./404.md.ceb402da.js";const _='{"title":"Commands","description":"","frontmatter":{"title":"Commands"},"headers":[],"relativePath":"commands/index.md","lastUpdated":1644863094750}',o={};function s(n,r,d,c,m,i){return a(),t("div")}var l=e(o,[["render",s]]);export{_ as __pageData,l as default};
