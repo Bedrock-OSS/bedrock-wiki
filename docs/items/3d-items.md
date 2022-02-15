@@ -669,7 +669,7 @@ The item, in this case, is a custom block. We'll define this in our behavior pac
 }
 ```
 
-In the above example, we define our block, texture, [render method](blocks/block-materials) and geometry. We also apply a conditional placement filter to ensure our block behaves like an item and cannot be placed.
+In the above example, we define our block, texture, [render method](/blocks/block-materials) and geometry. We also apply a conditional placement filter to ensure our block behaves like an item and cannot be placed.
 
 ### Geometry
 
