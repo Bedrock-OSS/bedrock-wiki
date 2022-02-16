@@ -34,12 +34,3 @@ Danger zone, do not proceed
 comment
 
 4. d
-
-
--   `minecraft:max_stack_size`
-
-...
-
--   `minecraft:creative_category`
-
-...
