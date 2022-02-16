@@ -6,23 +6,22 @@ category: Documentation
 `identifier` is an required parameter that sits inside the description of the item's behavior file.
 It accepts Vanilla Minecraft names, like `namespace:totem_of_undying`, allowing to acces hardcoded item effects.
 
-
-<CodeHeader>Behavior Item Description</CodeHeader>
+<CodeHeader>BP/items/custom_item.json#minecraft:item</CodeHeader>
 
 ```json
-        "description": {
-            "identifier": "wiki:totem_of_undying",
-            "category": "items"
-        }
+"description": {
+    "identifier": "wiki:totem_of_undying",
+    "category": "items"
+}
 ```
 
 :::warning
 Not every vanilla identifier/effect is mentioned here. Try experimenting yourself to find new vanilla identifier/effects and also consider adding them here.
 :::
 
-## Known runtime-identifier effects:
+## Known Identifier Effects
 
-The namespace is allowed to be changed, learn more about namespaces [here](https://wiki.bedrock.dev/concepts/namespaces.html#top).
+The namespace is allowed to be changed, learn more about namespaces [here](/concepts/namespaces).
 
 ### namespace:spyglass
 
