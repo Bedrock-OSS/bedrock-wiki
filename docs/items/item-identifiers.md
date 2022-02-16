@@ -38,7 +38,7 @@ The namespace is allowed to be changed, learn more about namespaces [here](https
 
 ### namespace:crossbow
 
--   The item Will be rotated horizontaly on your arm.
+-   The item will be rotated horizontaly on your arm.
 
 ---
 
@@ -51,7 +51,7 @@ The namespace is allowed to be changed, learn more about namespaces [here](https
 ### namespace:filled_map
 
 -   Will add the holding map animation.
--   Can be put in an cartography table.
+-   Can be put in a cartography table.
 
 ---
 
@@ -77,5 +77,6 @@ The namespace is allowed to be changed, learn more about namespaces [here](https
 ### namespace:netherite_ingot
 
 -   The item will be allowed to put in a Smithing table.
+-   The item can be used in Smithing Table recipes
 
 ---
