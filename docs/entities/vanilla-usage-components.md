@@ -4,13 +4,9 @@ category: Documentation
 toc_max_level: 1
 ---
 
-# Components
+This documentation is stripped from the vanilla files using an automated script.`
 
-This documentation is stripped from the vanilla files using an automated script. If there is an issue, you can tell us about it in [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-
-## addrider
-
-<Spoiler title="Show">
+## minecraft:addrider
 
 #### cave_spider
 
@@ -146,11 +142,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## admire_item
-
-<Spoiler title="Show">
+## minecraft:admire_item
 
 #### piglin
 
@@ -165,11 +157,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## ageable
-
-<Spoiler title="Show">
+## minecraft:ageable
 
 #### axolotl
 
@@ -778,11 +766,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## ambient_sound_interval
-
-<Spoiler title="Show">
+## minecraft:ambient_sound_interval
 
 #### bee
 
@@ -908,11 +892,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## angry
-
-<Spoiler title="Show">
+## minecraft:angry
 
 #### bee
 
@@ -1323,11 +1303,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## annotation.break_door
-
-<Spoiler title="Show">
+## minecraft:annotation.break_door
 
 #### drowned
 
@@ -1392,11 +1368,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:annotation.break_door": {}
 ```
 
-</Spoiler>
-
-## annotation.open_door
-
-<Spoiler title="Show">
+## minecraft:annotation.open_door
 
 #### piglin
 
@@ -1438,11 +1410,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:annotation.open_door": {}
 ```
 
-</Spoiler>
-
-## area_attack
-
-<Spoiler title="Show">
+## minecraft:area_attack
 
 #### pufferfish
 
@@ -1472,11 +1440,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## attack
-
-<Spoiler title="Show">
+## minecraft:attack
 
 #### axolotl
 
@@ -2099,11 +2063,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## attack_cooldown
-
-<Spoiler title="Show">
+## minecraft:attack_cooldown
 
 #### axolotl
 
@@ -2178,11 +2138,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## attack_damage
-
-<Spoiler title="Show">
+## minecraft:attack_damage
 
 #### cat
 
@@ -2208,57 +2164,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## balloonable
-
-<Spoiler title="Show">
-
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.5
-}
-```
-
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.5
-}
-```
-
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.6
-}
-```
+## minecraft:balloonable
 
 #### chicken
 
@@ -2275,16 +2181,6 @@ This documentation is stripped from the vanilla files using an automated script.
 #### cow
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
 
 <CodeHeader></CodeHeader>
 
@@ -2317,28 +2213,6 @@ This documentation is stripped from the vanilla files using an automated script.
 #### glow_squid
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.5
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
 
 <CodeHeader></CodeHeader>
 
@@ -2398,18 +2272,6 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:balloonable": {}
 ```
 
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.7
-}
-```
-
 #### panda
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
@@ -2417,17 +2279,9 @@ This documentation is stripped from the vanilla files using an automated script.
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:balloonable": {}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
+"minecraft:balloonable": {
+    "mass": 1.5
+}
 ```
 
 #### pig
@@ -2438,18 +2292,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:balloonable": {
-    "mass": 0.9
+    "mass": 0.75
 }
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
 ```
 
 #### rabbit
@@ -2496,50 +2340,6 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:balloonable": {}
 ```
 
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.5
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.8
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
 #### zombie_horse
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
@@ -2550,11 +2350,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:balloonable": {}
 ```
 
-</Spoiler>
-
-## barter
-
-<Spoiler title="Show">
+## minecraft:barter
 
 #### piglin
 
@@ -2569,11 +2365,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.admire_item
-
-<Spoiler title="Show">
+## minecraft:behavior.admire_item
 
 <CodeHeader></CodeHeader>
 
@@ -2596,11 +2388,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.avoid_block
-
-<Spoiler title="Show">
+## minecraft:behavior.avoid_block
 
 #### hoglin
 
@@ -2664,11 +2452,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.avoid_mob_type
-
-<Spoiler title="Show">
+## minecraft:behavior.avoid_mob_type
 
 #### cat
 
@@ -2796,18 +2580,9 @@ This documentation is stripped from the vanilla files using an automated script.
     "entity_types": [
         {
             "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "axolotl"
-                    }
-                ]
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
             },
             "max_dist": 6,
             "walk_speed_multiplier": 1.5,
@@ -3083,39 +2858,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 1,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "axolotl"
-                    }
-                ]
-            },
-            "max_dist": 6,
-            "walk_speed_multiplier": 1.5,
-            "sprint_speed_multiplier": 2.0
-        }
-    ]
-}
-```
-
 #### rabbit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
@@ -3172,18 +2914,9 @@ This documentation is stripped from the vanilla files using an automated script.
     "entity_types": [
         {
             "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "axolotl"
-                    }
-                ]
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
             },
             "max_dist": 3,
             "max_flee": 10,
@@ -3254,18 +2987,9 @@ This documentation is stripped from the vanilla files using an automated script.
     "entity_types": [
         {
             "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "axolotl"
-                    }
-                ]
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
             },
             "max_dist": 6,
             "walk_speed_multiplier": 1.5,
@@ -3444,11 +3168,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.barter
-
-<Spoiler title="Show">
+## minecraft:behavior.barter
 
 #### piglin
 
@@ -3462,11 +3182,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.beg
-
-<Spoiler title="Show">
+## minecraft:behavior.beg
 
 #### wolf
 
@@ -3499,11 +3215,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.breed
-
-<Spoiler title="Show">
+## minecraft:behavior.breed
 
 #### axolotl
 
@@ -3774,11 +3486,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.celebrate
-
-<Spoiler title="Show">
+## minecraft:behavior.celebrate
 
 #### evocation_illager
 
@@ -3910,59 +3618,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.celebrate_survive
-
-<Spoiler title="Show">
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.celebrate_survive": {
-    "priority": 5,
-    "fireworks_interval": {
-        "range_min": 2.0,
-        "range_max": 7.0
-    },
-    "duration": 30.0,
-    "on_celebration_end_event": {
-        "event": "minecraft:stop_celebrating",
-        "target": "self"
-    }
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.celebrate_survive": {
-    "priority": 5,
-    "fireworks_interval": {
-        "range_min": 2.0,
-        "range_max": 7.0
-    },
-    "duration": 30.0,
-    "on_celebration_end_event": {
-        "event": "minecraft:stop_celebrating",
-        "target": "self"
-    }
-}
-```
-
-</Spoiler>
-
-## behavior.charge_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.charge_attack
 
 #### vex
 
@@ -3976,11 +3632,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.charge_held_item
-
-<Spoiler title="Show">
+## minecraft:behavior.charge_held_item
 
 #### piglin
 
@@ -4012,11 +3664,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.circle_around_anchor
-
-<Spoiler title="Show">
+## minecraft:behavior.circle_around_anchor
 
 #### phantom
 
@@ -4047,11 +3695,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.controlled_by_player
-
-<Spoiler title="Show">
+## minecraft:behavior.controlled_by_player
 
 #### pig
 
@@ -4078,11 +3722,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.defend_trusted_target
-
-<Spoiler title="Show">
+## minecraft:behavior.defend_trusted_target
 
 #### fox
 
@@ -4104,11 +3744,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.defend_village_target
-
-<Spoiler title="Show">
+## minecraft:behavior.defend_village_target
 
 #### iron_golem
 
@@ -4140,11 +3776,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.delayed_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.delayed_attack
 
 #### ravager
 
@@ -4166,11 +3798,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.dragonchargeplayer
-
-<Spoiler title="Show">
+## minecraft:behavior.dragonchargeplayer
 
 #### ender_dragon
 
@@ -4184,11 +3812,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.dragondeath
-
-<Spoiler title="Show">
+## minecraft:behavior.dragondeath
 
 <CodeHeader></CodeHeader>
 
@@ -4198,11 +3822,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.dragonflaming
-
-<Spoiler title="Show">
+## minecraft:behavior.dragonflaming
 
 <CodeHeader></CodeHeader>
 
@@ -4212,11 +3832,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.dragonholdingpattern
-
-<Spoiler title="Show">
+## minecraft:behavior.dragonholdingpattern
 
 <CodeHeader></CodeHeader>
 
@@ -4226,11 +3842,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.dragonlanding
-
-<Spoiler title="Show">
+## minecraft:behavior.dragonlanding
 
 <CodeHeader></CodeHeader>
 
@@ -4240,11 +3852,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.dragonscanning
-
-<Spoiler title="Show">
+## minecraft:behavior.dragonscanning
 
 <CodeHeader></CodeHeader>
 
@@ -4254,11 +3862,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.dragonstrafeplayer
-
-<Spoiler title="Show">
+## minecraft:behavior.dragonstrafeplayer
 
 <CodeHeader></CodeHeader>
 
@@ -4268,11 +3872,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.dragontakeoff
-
-<Spoiler title="Show">
+## minecraft:behavior.dragontakeoff
 
 <CodeHeader></CodeHeader>
 
@@ -4282,11 +3882,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.drink_potion
-
-<Spoiler title="Show">
+## minecraft:behavior.drink_potion
 
 #### wandering_trader
 
@@ -4391,11 +3987,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.drop_item_for
-
-<Spoiler title="Show">
+## minecraft:behavior.drop_item_for
 
 #### cat
 
@@ -4449,11 +4041,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.eat_block
-
-<Spoiler title="Show">
+## minecraft:behavior.eat_block
 
 #### sheep
 
@@ -4483,11 +4071,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.eat_carried_item
-
-<Spoiler title="Show">
+## minecraft:behavior.eat_carried_item
 
 #### fox
 
@@ -4502,11 +4086,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.enderman_leave_block
-
-<Spoiler title="Show">
+## minecraft:behavior.enderman_leave_block
 
 #### enderman
 
@@ -4520,11 +4100,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.enderman_take_block
-
-<Spoiler title="Show">
+## minecraft:behavior.enderman_take_block
 
 <CodeHeader></CodeHeader>
 
@@ -4534,11 +4110,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.equip_item
-
-<Spoiler title="Show">
+## minecraft:behavior.equip_item
 
 #### drowned
 
@@ -4684,11 +4256,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.explore_outskirts
-
-<Spoiler title="Show">
+## minecraft:behavior.explore_outskirts
 
 #### villager_v2
 
@@ -4723,11 +4291,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.find_cover
-
-<Spoiler title="Show">
+## minecraft:behavior.find_cover
 
 #### fox
 
@@ -4753,11 +4317,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.find_mount
-
-<Spoiler title="Show">
+## minecraft:behavior.find_mount
 
 #### husk
 
@@ -4845,11 +4405,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.find_underwater_treasure
-
-<Spoiler title="Show">
+## minecraft:behavior.find_underwater_treasure
 
 #### dolphin
 
@@ -4866,11 +4422,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.flee_sun
-
-<Spoiler title="Show">
+## minecraft:behavior.flee_sun
 
 #### drowned
 
@@ -4937,11 +4489,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.float
-
-<Spoiler title="Show">
+## minecraft:behavior.float
 
 #### bat
 
@@ -5399,11 +4947,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.float_wander
-
-<Spoiler title="Show">
+## minecraft:behavior.float_wander
 
 #### bat
 
@@ -5437,11 +4981,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.follow_caravan
-
-<Spoiler title="Show">
+## minecraft:behavior.follow_caravan
 
 #### llama
 
@@ -5464,11 +5004,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.follow_mob
-
-<Spoiler title="Show">
+## minecraft:behavior.follow_mob
 
 #### parrot
 
@@ -5485,11 +5021,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.follow_owner
-
-<Spoiler title="Show">
+## minecraft:behavior.follow_owner
 
 #### cat
 
@@ -5551,11 +5083,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.follow_parent
-
-<Spoiler title="Show">
+## minecraft:behavior.follow_parent
 
 #### axolotl
 
@@ -5857,11 +5385,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.follow_target_captain
-
-<Spoiler title="Show">
+## minecraft:behavior.follow_target_captain
 
 #### pillager
 
@@ -5893,11 +5417,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.go_home
-
-<Spoiler title="Show">
+## minecraft:behavior.go_home
 
 #### bee
 
@@ -5996,11 +5516,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.guardian_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.guardian_attack
 
 #### elder_guardian
 
@@ -6026,11 +5542,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.harvest_farm_block
-
-<Spoiler title="Show">
+## minecraft:behavior.harvest_farm_block
 
 #### villager
 
@@ -6067,11 +5579,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.hide
-
-<Spoiler title="Show">
+## minecraft:behavior.hide
 
 <CodeHeader></CodeHeader>
 
@@ -6084,11 +5592,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.hold_ground
-
-<Spoiler title="Show">
+## minecraft:behavior.hold_ground
 
 #### pillager
 
@@ -6124,11 +5628,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.hurt_by_target
-
-<Spoiler title="Show">
+## minecraft:behavior.hurt_by_target
 
 #### bee
 
@@ -6616,11 +6116,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.inspect_bookshelf
-
-<Spoiler title="Show">
+## minecraft:behavior.inspect_bookshelf
 
 #### villager_v2
 
@@ -6645,11 +6141,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.jump_to_block
-
-<Spoiler title="Show">
+## minecraft:behavior.jump_to_block
 
 #### goat
 
@@ -6672,11 +6164,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.knockback_roar
-
-<Spoiler title="Show">
+## minecraft:behavior.knockback_roar
 
 #### ravager
 
@@ -6690,8 +6178,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "duration": 1,
     "attack_time": 0.5,
     "knockback_damage": 6,
-    "knockback_horizontal_strength": 3,
-    "knockback_vertical_strength": 3,
+    "knockback_strength": 3,
     "knockback_range": 4,
     "knockback_filters": {
         "test": "is_family",
@@ -6712,11 +6199,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.lay_down
-
-<Spoiler title="Show">
+## minecraft:behavior.lay_down
 
 #### panda
 
@@ -6732,11 +6215,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.lay_egg
-
-<Spoiler title="Show">
+## minecraft:behavior.lay_egg
 
 #### turtle
 
@@ -6758,11 +6237,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.leap_at_target
-
-<Spoiler title="Show">
+## minecraft:behavior.leap_at_target
 
 #### cat
 
@@ -6831,11 +6306,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.look_at_entity
-
-<Spoiler title="Show">
+## minecraft:behavior.look_at_entity
 
 #### evocation_illager
 
@@ -6893,11 +6364,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.look_at_player
-
-<Spoiler title="Show">
+## minecraft:behavior.look_at_player
 
 #### axolotl
 
@@ -7680,11 +7147,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.look_at_target
-
-<Spoiler title="Show">
+## minecraft:behavior.look_at_target
 
 #### wither
 
@@ -7698,11 +7161,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.look_at_trading_player
-
-<Spoiler title="Show">
+## minecraft:behavior.look_at_trading_player
 
 #### villager
 
@@ -7740,11 +7199,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.make_love
-
-<Spoiler title="Show">
+## minecraft:behavior.make_love
 
 #### villager
 
@@ -7770,11 +7225,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.melee_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.melee_attack
 
 #### axolotl
 
@@ -8216,11 +7667,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.mingle
-
-<Spoiler title="Show">
+## minecraft:behavior.mingle
 
 #### villager_v2
 
@@ -8245,11 +7692,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.mount_pathing
-
-<Spoiler title="Show">
+## minecraft:behavior.mount_pathing
 
 #### cat
 
@@ -8596,11 +8039,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_indoors
-
-<Spoiler title="Show">
+## minecraft:behavior.move_indoors
 
 #### villager
 
@@ -8629,45 +8068,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_outdoors
-
-<Spoiler title="Show">
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.move_outdoors": {
-    "priority": 2,
-    "speed_multiplier": 0.8,
-    "timeout_cooldown": 8.0
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.move_outdoors": {
-    "priority": 2,
-    "speed_multiplier": 0.8,
-    "timeout_cooldown": 8.0
-}
-```
-
-</Spoiler>
-
-## behavior.move_through_village
-
-<Spoiler title="Show">
+## minecraft:behavior.move_through_village
 
 #### iron_golem
 
@@ -8683,11 +8084,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_to_block
-
-<Spoiler title="Show">
+## minecraft:behavior.move_to_block
 
 #### bee
 
@@ -8752,11 +8149,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_to_land
-
-<Spoiler title="Show">
+## minecraft:behavior.move_to_land
 
 #### turtle
 
@@ -8773,11 +8166,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_to_liquid
-
-<Spoiler title="Show">
+## minecraft:behavior.move_to_liquid
 
 #### strider
 
@@ -8796,11 +8185,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_to_random_block
-
-<Spoiler title="Show">
+## minecraft:behavior.move_to_random_block
 
 #### pillager
 
@@ -8832,11 +8217,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_to_village
-
-<Spoiler title="Show">
+## minecraft:behavior.move_to_village
 
 #### evocation_illager
 
@@ -8907,11 +8288,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_to_water
-
-<Spoiler title="Show">
+## minecraft:behavior.move_to_water
 
 #### axolotl
 
@@ -8969,11 +8346,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_towards_dwelling_restriction
-
-<Spoiler title="Show">
+## minecraft:behavior.move_towards_dwelling_restriction
 
 #### cat
 
@@ -9013,11 +8386,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_towards_home_restriction
-
-<Spoiler title="Show">
+## minecraft:behavior.move_towards_home_restriction
 
 #### bee
 
@@ -9057,11 +8426,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.move_towards_target
-
-<Spoiler title="Show">
+## minecraft:behavior.move_towards_target
 
 #### iron_golem
 
@@ -9077,11 +8442,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.nap
-
-<Spoiler title="Show">
+## minecraft:behavior.nap
 
 #### fox
 
@@ -9149,11 +8510,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.nearest_attackable_target
-
-<Spoiler title="Show">
+## minecraft:behavior.nearest_attackable_target
 
 #### axolotl
 
@@ -10010,18 +9367,9 @@ This documentation is stripped from the vanilla files using an automated script.
     "entity_types": [
         {
             "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    }
-                ]
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
             },
             "max_dist": 16
         }
@@ -11291,11 +10639,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.nearest_prioritized_attackable_target
-
-<Spoiler title="Show">
+## minecraft:behavior.nearest_prioritized_attackable_target
 
 #### fox
 
@@ -11490,11 +10834,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.ocelot_sit_on_block
-
-<Spoiler title="Show">
+## minecraft:behavior.ocelot_sit_on_block
 
 #### cat
 
@@ -11522,11 +10862,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.ocelotattack
-
-<Spoiler title="Show">
+## minecraft:behavior.ocelotattack
 
 #### cat
 
@@ -11572,11 +10908,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.offer_flower
-
-<Spoiler title="Show">
+## minecraft:behavior.offer_flower
 
 #### iron_golem
 
@@ -11590,11 +10922,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.open_door
-
-<Spoiler title="Show">
+## minecraft:behavior.open_door
 
 #### villager
 
@@ -11622,11 +10950,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.owner_hurt_by_target
-
-<Spoiler title="Show">
+## minecraft:behavior.owner_hurt_by_target
 
 #### wolf
 
@@ -11640,11 +10964,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.owner_hurt_target
-
-<Spoiler title="Show">
+## minecraft:behavior.owner_hurt_target
 
 <CodeHeader></CodeHeader>
 
@@ -11654,11 +10974,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.panic
-
-<Spoiler title="Show">
+## minecraft:behavior.panic
 
 #### bee
 
@@ -12059,11 +11375,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.pet_sleep_with_owner
-
-<Spoiler title="Show">
+## minecraft:behavior.pet_sleep_with_owner
 
 #### cat
 
@@ -12081,11 +11393,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.pickup_items
-
-<Spoiler title="Show">
+## minecraft:behavior.pickup_items
 
 #### drowned
 
@@ -12100,10 +11408,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "goal_radius": 2,
     "speed_multiplier": 1.0,
     "pickup_based_on_chance": true,
-    "can_pickup_any_item": true,
-    "excluded_items": [
-        "minecraft:glow_ink_sac"
-    ]
+    "can_pickup_any_item": true
 }
 ```
 
@@ -12135,10 +11440,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "goal_radius": 2,
     "speed_multiplier": 1.0,
     "pickup_based_on_chance": true,
-    "can_pickup_any_item": true,
-    "excluded_items": [
-        "minecraft:glow_ink_sac"
-    ]
+    "can_pickup_any_item": true
 }
 ```
 
@@ -12270,10 +11572,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "goal_radius": 2,
     "speed_multiplier": 1.0,
     "pickup_based_on_chance": true,
-    "can_pickup_any_item": true,
-    "excluded_items": [
-        "minecraft:glow_ink_sac"
-    ]
+    "can_pickup_any_item": true
 }
 ```
 
@@ -12307,10 +11606,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "goal_radius": 2,
     "speed_multiplier": 1.0,
     "pickup_based_on_chance": true,
-    "can_pickup_any_item": true,
-    "excluded_items": [
-        "minecraft:glow_ink_sac"
-    ]
+    "can_pickup_any_item": true
 }
 ```
 
@@ -12327,18 +11623,11 @@ This documentation is stripped from the vanilla files using an automated script.
     "goal_radius": 2,
     "speed_multiplier": 1.0,
     "pickup_based_on_chance": true,
-    "can_pickup_any_item": true,
-    "excluded_items": [
-        "minecraft:glow_ink_sac"
-    ]
+    "can_pickup_any_item": true
 }
 ```
 
-</Spoiler>
-
-## behavior.play
-
-<Spoiler title="Show">
+## minecraft:behavior.play
 
 #### villager
 
@@ -12366,11 +11655,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.play_dead
-
-<Spoiler title="Show">
+## minecraft:behavior.play_dead
 
 #### axolotl
 
@@ -12406,11 +11691,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.player_ride_tamed
-
-<Spoiler title="Show">
+## minecraft:behavior.player_ride_tamed
 
 #### donkey
 
@@ -12462,11 +11743,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
-</Spoiler>
-
-## behavior.raid_garden
-
-<Spoiler title="Show">
+## minecraft:behavior.raid_garden
 
 #### fox
 
@@ -12508,11 +11785,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.ram_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.ram_attack
 
 #### goat
 
@@ -12570,11 +11843,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.random_breach
-
-<Spoiler title="Show">
+## minecraft:behavior.random_breach
 
 #### dolphin
 
@@ -12591,11 +11860,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.random_fly
-
-<Spoiler title="Show">
+## minecraft:behavior.random_fly
 
 #### parrot
 
@@ -12615,11 +11880,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.random_hover
-
-<Spoiler title="Show">
+## minecraft:behavior.random_hover
 
 #### bee
 
@@ -12641,11 +11902,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.random_look_around
-
-<Spoiler title="Show">
+## minecraft:behavior.random_look_around
 
 #### blaze
 
@@ -13176,11 +12433,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.random_look_around_and_sit
-
-<Spoiler title="Show">
+## minecraft:behavior.random_look_around_and_sit
 
 #### fox
 
@@ -13199,11 +12452,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.random_sitting
-
-<Spoiler title="Show">
+## minecraft:behavior.random_sitting
 
 #### panda
 
@@ -13233,11 +12482,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.random_stroll
-
-<Spoiler title="Show">
+## minecraft:behavior.random_stroll
 
 #### axolotl
 
@@ -13913,11 +13158,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.random_swim
-
-<Spoiler title="Show">
+## minecraft:behavior.random_swim
 
 #### axolotl
 
@@ -14056,11 +13297,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.ranged_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.ranged_attack
 
 #### blaze
 
@@ -14235,11 +13472,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.receive_love
-
-<Spoiler title="Show">
+## minecraft:behavior.receive_love
 
 #### villager
 
@@ -14265,11 +13498,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.restrict_open_door
-
-<Spoiler title="Show">
+## minecraft:behavior.restrict_open_door
 
 #### villager
 
@@ -14295,11 +13524,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.rise_to_liquid_level
-
-<Spoiler title="Show">
+## minecraft:behavior.rise_to_liquid_level
 
 #### strider
 
@@ -14316,11 +13541,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.roll
-
-<Spoiler title="Show">
+## minecraft:behavior.roll
 
 #### panda
 
@@ -14344,11 +13565,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.run_around_like_crazy
-
-<Spoiler title="Show">
+## minecraft:behavior.run_around_like_crazy
 
 #### donkey
 
@@ -14402,11 +13619,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.scared
-
-<Spoiler title="Show">
+## minecraft:behavior.scared
 
 #### panda
 
@@ -14421,11 +13634,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.send_event
-
-<Spoiler title="Show">
+## minecraft:behavior.send_event
 
 #### evocation_illager
 
@@ -14471,11 +13680,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.share_items
-
-<Spoiler title="Show">
+## minecraft:behavior.share_items
 
 #### villager
 
@@ -14525,11 +13730,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.silverfish_merge_with_stone
-
-<Spoiler title="Show">
+## minecraft:behavior.silverfish_merge_with_stone
 
 #### silverfish
 
@@ -14543,11 +13744,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.silverfish_wake_up_friends
-
-<Spoiler title="Show">
+## minecraft:behavior.silverfish_wake_up_friends
 
 <CodeHeader></CodeHeader>
 
@@ -14557,11 +13754,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.skeleton_horse_trap
-
-<Spoiler title="Show">
+## minecraft:behavior.skeleton_horse_trap
 
 #### skeleton_horse
 
@@ -14577,11 +13770,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.sleep
-
-<Spoiler title="Show">
+## minecraft:behavior.sleep
 
 #### villager_v2
 
@@ -14607,11 +13796,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.slime_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.slime_attack
 
 #### magma_cube
 
@@ -14637,11 +13822,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.slime_float
-
-<Spoiler title="Show">
+## minecraft:behavior.slime_float
 
 #### magma_cube
 
@@ -14671,11 +13852,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.slime_keep_on_jumping
-
-<Spoiler title="Show">
+## minecraft:behavior.slime_keep_on_jumping
 
 #### magma_cube
 
@@ -14703,11 +13880,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.slime_random_direction
-
-<Spoiler title="Show">
+## minecraft:behavior.slime_random_direction
 
 #### magma_cube
 
@@ -14739,11 +13912,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.snacking
-
-<Spoiler title="Show">
+## minecraft:behavior.snacking
 
 #### panda
 
@@ -14779,11 +13948,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.sneeze
-
-<Spoiler title="Show">
+## minecraft:behavior.sneeze
 
 <CodeHeader></CodeHeader>
 
@@ -14879,11 +14044,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.squid_dive
-
-<Spoiler title="Show">
+## minecraft:behavior.squid_dive
 
 #### glow_squid
 
@@ -14909,11 +14070,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.squid_flee
-
-<Spoiler title="Show">
+## minecraft:behavior.squid_flee
 
 #### glow_squid
 
@@ -14939,11 +14096,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.squid_idle
-
-<Spoiler title="Show">
+## minecraft:behavior.squid_idle
 
 #### glow_squid
 
@@ -14969,11 +14122,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.squid_move_away_from_ground
-
-<Spoiler title="Show">
+## minecraft:behavior.squid_move_away_from_ground
 
 #### glow_squid
 
@@ -14999,11 +14148,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.squid_out_of_water
-
-<Spoiler title="Show">
+## minecraft:behavior.squid_out_of_water
 
 #### glow_squid
 
@@ -15029,11 +14174,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.stalk_and_pounce_on_target
-
-<Spoiler title="Show">
+## minecraft:behavior.stalk_and_pounce_on_target
 
 #### fox
 
@@ -15061,11 +14202,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.stay_while_sitting
-
-<Spoiler title="Show">
+## minecraft:behavior.stay_while_sitting
 
 #### cat
 
@@ -15115,11 +14252,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.stomp_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.stomp_attack
 
 #### polar_bear
 
@@ -15137,11 +14270,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.stomp_turtle_egg
-
-<Spoiler title="Show">
+## minecraft:behavior.stomp_turtle_egg
 
 #### drowned
 
@@ -15245,11 +14374,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.stroll_towards_village
-
-<Spoiler title="Show">
+## minecraft:behavior.stroll_towards_village
 
 #### fox
 
@@ -15268,11 +14393,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.summon_entity
-
-<Spoiler title="Show">
+## minecraft:behavior.summon_entity
 
 #### evocation_illager
 
@@ -15359,11 +14480,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.swell
-
-<Spoiler title="Show">
+## minecraft:behavior.swell
 
 #### creeper
 
@@ -15379,11 +14496,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.swim_idle
-
-<Spoiler title="Show">
+## minecraft:behavior.swim_idle
 
 #### axolotl
 
@@ -15441,11 +14554,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.swim_wander
-
-<Spoiler title="Show">
+## minecraft:behavior.swim_wander
 
 #### fish
 
@@ -15511,11 +14620,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.swim_with_entity
-
-<Spoiler title="Show">
+## minecraft:behavior.swim_with_entity
 
 #### dolphin
 
@@ -15547,11 +14652,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.swoop_attack
-
-<Spoiler title="Show">
+## minecraft:behavior.swoop_attack
 
 #### phantom
 
@@ -15571,11 +14672,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.take_flower
-
-<Spoiler title="Show">
+## minecraft:behavior.take_flower
 
 #### villager
 
@@ -15601,11 +14698,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.target_when_pushed
-
-<Spoiler title="Show">
+## minecraft:behavior.target_when_pushed
 
 #### iron_golem
 
@@ -15639,11 +14732,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.tempt
-
-<Spoiler title="Show">
+## minecraft:behavior.tempt
 
 #### axolotl
 
@@ -16016,11 +15105,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.trade_interest
-
-<Spoiler title="Show">
+## minecraft:behavior.trade_interest
 
 #### villager_v2
 
@@ -16062,11 +15147,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.trade_with_player
-
-<Spoiler title="Show">
+## minecraft:behavior.trade_with_player
 
 #### villager
 
@@ -16104,11 +15185,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.wither_random_attack_pos_goal
-
-<Spoiler title="Show">
+## minecraft:behavior.wither_random_attack_pos_goal
 
 #### wither
 
@@ -16122,11 +15199,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.wither_target_highest_damage
-
-<Spoiler title="Show">
+## minecraft:behavior.wither_target_highest_damage
 
 <CodeHeader></CodeHeader>
 
@@ -16136,11 +15209,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## behavior.work
-
-<Spoiler title="Show">
+## minecraft:behavior.work
 
 #### villager_v2
 
@@ -16171,11 +15240,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## block_climber
-
-<Spoiler title="Show">
+## minecraft:block_climber
 
 #### endermite
 
@@ -16227,11 +15292,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:block_climber": {}
 ```
 
-</Spoiler>
-
-## block_sensor
-
-<Spoiler title="Show">
+## minecraft:block_sensor
 
 #### bee
 
@@ -16285,11 +15346,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## boostable
-
-<Spoiler title="Show">
+## minecraft:boostable
 
 #### pig
 
@@ -16331,11 +15388,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## boss
-
-<Spoiler title="Show">
+## minecraft:boss
 
 #### ender_dragon
 
@@ -16363,11 +15416,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## break_blocks
-
-<Spoiler title="Show">
+## minecraft:break_blocks
 
 #### ravager
 
@@ -16414,11 +15463,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## breathable
-
-<Spoiler title="Show">
+## minecraft:breathable
 
 #### axolotl
 
@@ -17342,11 +16387,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## breedable
-
-<Spoiler title="Show">
+## minecraft:breedable
 
 #### axolotl
 
@@ -17883,11 +16924,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## bribeable
-
-<Spoiler title="Show">
+## minecraft:bribeable
 
 #### dolphin
 
@@ -17904,11 +16941,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## buoyant
-
-<Spoiler title="Show">
+## minecraft:buoyant
 
 #### boat
 
@@ -17961,11 +16994,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## burns_in_daylight
-
-<Spoiler title="Show">
+## minecraft:burns_in_daylight
 
 #### drowned
 
@@ -18047,11 +17076,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:burns_in_daylight": {}
 ```
 
-</Spoiler>
-
-## can_climb
-
-<Spoiler title="Show">
+## minecraft:can_climb
 
 #### blaze
 
@@ -18513,11 +17538,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:can_climb": {}
 ```
 
-</Spoiler>
-
-## can_fly
-
-<Spoiler title="Show">
+## minecraft:can_fly
 
 #### bat
 
@@ -18569,11 +17590,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:can_fly": {}
 ```
 
-</Spoiler>
-
-## can_power_jump
-
-<Spoiler title="Show">
+## minecraft:can_power_jump
 
 #### donkey
 
@@ -18615,11 +17632,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:can_power_jump": {}
 ```
 
-</Spoiler>
-
-## celebrate_hunt
-
-<Spoiler title="Show">
+## minecraft:celebrate_hunt
 
 #### piglin
 
@@ -18648,11 +17661,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## collision_box
-
-<Spoiler title="Show">
+## minecraft:collision_box
 
 #### armor_stand
 
@@ -19078,7 +18087,7 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:collision_box": {
-    "width": 4.02,
+    "width": 4,
     "height": 4
 }
 ```
@@ -19252,8 +18261,8 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:collision_box": {
-    "width": 1.04,
-    "height": 1.02
+    "width": 0.78,
+    "height": 0.78
 }
 ```
 
@@ -20043,11 +19052,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## color
-
-<Spoiler title="Show">
+## minecraft:color
 
 #### cat
 
@@ -20257,11 +19262,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## color2
-
-<Spoiler title="Show">
+## minecraft:color2
 
 #### tropicalfish
 
@@ -20387,11 +19388,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## combat_regeneration
-
-<Spoiler title="Show">
+## minecraft:combat_regeneration
 
 #### axolotl
 
@@ -20403,11 +19400,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:combat_regeneration": {}
 ```
 
-</Spoiler>
-
-## conditional_bandwidth_optimization
-
-<Spoiler title="Show">
+## minecraft:conditional_bandwidth_optimization
 
 #### area_effect_cloud
 
@@ -20439,7 +19432,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -20656,7 +19649,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -20718,7 +19711,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -20760,7 +19753,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -20802,7 +19795,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -20934,7 +19927,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 5,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -20960,7 +19953,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -21212,7 +20205,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -21268,7 +20261,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -21284,7 +20277,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 100.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 5,
         "use_motion_prediction_hints": true
     }
 }
@@ -21320,7 +20313,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 5,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -21366,7 +20359,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -21379,13 +20372,7 @@ This documentation is stripped from the vanilla files using an automated script.
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 5,
-        "use_motion_prediction_hints": true
-    }
-}
+"minecraft:conditional_bandwidth_optimization": {}
 ```
 
 #### tnt_minecart
@@ -21538,7 +20525,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -21554,7 +20541,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 7,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -21580,7 +20567,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 5,
+        "max_dropped_ticks": 10,
         "use_motion_prediction_hints": true
     }
 }
@@ -21662,11 +20649,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
-</Spoiler>
-
-## custom_hit_test
-
-<Spoiler title="Show">
+## minecraft:custom_hit_test
 
 #### hoglin
 
@@ -21748,11 +20731,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## damage_over_time
-
-<Spoiler title="Show">
+## minecraft:damage_over_time
 
 #### axolotl
 
@@ -21780,11 +20759,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## damage_sensor
-
-<Spoiler title="Show">
+## minecraft:damage_sensor
 
 #### axolotl
 
@@ -22453,11 +21428,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## despawn
-
-<Spoiler title="Show">
+## minecraft:despawn
 
 #### axolotl
 
@@ -22606,18 +21577,6 @@ This documentation is stripped from the vanilla files using an automated script.
 #### endermite
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
 
 <CodeHeader></CodeHeader>
 
@@ -23133,18 +22092,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
 #### wandering_trader
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
@@ -23326,11 +22273,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## drying_out_timer
-
-<Spoiler title="Show">
+## minecraft:drying_out_timer
 
 #### axolotl
 
@@ -23376,11 +22319,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## dweller
-
-<Spoiler title="Show">
+## minecraft:dweller
 
 #### cat
 
@@ -23721,11 +22660,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## economy_trade_table
-
-<Spoiler title="Show">
+## minecraft:economy_trade_table
 
 #### villager_v2
 
@@ -23998,11 +22933,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## entity_sensor
-
-<Spoiler title="Show">
+## minecraft:entity_sensor
 
 #### pufferfish
 
@@ -24119,11 +23050,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## environment_sensor
-
-<Spoiler title="Show">
+## minecraft:environment_sensor
 
 #### axolotl
 
@@ -25088,11 +24015,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## equip_item
-
-<Spoiler title="Show">
+## minecraft:equip_item
 
 #### drowned
 
@@ -25214,11 +24137,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:equip_item": {}
 ```
 
-</Spoiler>
-
-## equipment
-
-<Spoiler title="Show">
+## minecraft:equipment
 
 #### drowned
 
@@ -25446,11 +24365,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## equippable
-
-<Spoiler title="Show">
+## minecraft:equippable
 
 #### donkey
 
@@ -25560,11 +24475,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## experience_reward
-
-<Spoiler title="Show">
+## minecraft:experience_reward
 
 #### axolotl
 
@@ -26435,11 +25346,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## explode
-
-<Spoiler title="Show">
+## minecraft:explode
 
 #### creeper
 
@@ -26590,11 +25497,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## fire_immune
-
-<Spoiler title="Show">
+## minecraft:fire_immune
 
 #### blaze
 
@@ -26716,11 +25619,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:fire_immune": {}
 ```
 
-</Spoiler>
-
-## flocking
-
-<Spoiler title="Show">
+## minecraft:flocking
 
 #### dolphin
 
@@ -26867,11 +25766,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## flying_speed
-
-<Spoiler title="Show">
+## minecraft:flying_speed
 
 #### bee
 
@@ -26897,11 +25792,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## follow_range
-
-<Spoiler title="Show">
+## minecraft:follow_range
 
 #### bee
 
@@ -27151,11 +26042,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## genetics
-
-<Spoiler title="Show">
+## minecraft:genetics
 
 #### goat
 
@@ -27272,11 +26159,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## giveable
-
-<Spoiler title="Show">
+## minecraft:giveable
 
 <CodeHeader></CodeHeader>
 
@@ -27296,11 +26179,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## group_size
-
-<Spoiler title="Show">
+## minecraft:group_size
 
 #### hoglin
 
@@ -27352,11 +26231,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## grows_crop
-
-<Spoiler title="Show">
+## minecraft:grows_crop
 
 #### bee
 
@@ -27371,11 +26246,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## healable
-
-<Spoiler title="Show">
+## minecraft:healable
 
 #### cat
 
@@ -27658,11 +26529,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## health
-
-<Spoiler title="Show">
+## minecraft:health
 
 #### armor_stand
 
@@ -28729,11 +27596,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## hide
-
-<Spoiler title="Show">
+## minecraft:hide
 
 #### villager_v2
 
@@ -28745,11 +27608,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:hide": {}
 ```
 
-</Spoiler>
-
-## home
-
-<Spoiler title="Show">
+## minecraft:home
 
 #### bee
 
@@ -28811,11 +27670,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:home": {}
 ```
 
-</Spoiler>
-
-## horse.jump_strength
-
-<Spoiler title="Show">
+## minecraft:horse.jump_strength
 
 #### donkey
 
@@ -28886,11 +27741,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## hurt_on_condition
-
-<Spoiler title="Show">
+## minecraft:hurt_on_condition
 
 #### armor_stand
 
@@ -30494,11 +29345,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## input_ground_controlled
-
-<Spoiler title="Show">
+## minecraft:input_ground_controlled
 
 #### donkey
 
@@ -30540,11 +29387,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:input_ground_controlled": {}
 ```
 
-</Spoiler>
-
-## inside_block_notifier
-
-<Spoiler title="Show">
+## minecraft:inside_block_notifier
 
 #### boat
 
@@ -30591,11 +29434,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## insomnia
-
-<Spoiler title="Show">
+## minecraft:insomnia
 
 #### player
 
@@ -30609,11 +29448,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## interact
-
-<Spoiler title="Show">
+## minecraft:interact
 
 #### cow
 
@@ -30804,46 +29639,6 @@ This documentation is stripped from the vanilla files using an automated script.
             "transform_to_item": "bucket:1",
             "play_sounds": "milk.screamer",
             "interact_text": "action.interact.milk"
-        }
-    ]
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_equipment",
-                            "domain": "hand",
-                            "subject": "other",
-                            "value": "iron_ingot"
-                        },
-                        {
-                            "test": "is_missing_health",
-                            "value": true
-                        }
-                    ]
-                }
-            },
-            "use_item": true,
-            "health_amount": 25,
-            "play_sounds": "irongolem.repair",
-            "interact_text": "action.interact.repair"
         }
     ]
 }
@@ -32307,11 +31102,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## inventory
-
-<Spoiler title="Show">
+## minecraft:inventory
 
 #### chest_minecart
 
@@ -32455,11 +31246,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## is_baby
-
-<Spoiler title="Show">
+## minecraft:is_baby
 
 #### axolotl
 
@@ -32831,11 +31618,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_baby": {}
 ```
 
-</Spoiler>
-
-## is_charged
-
-<Spoiler title="Show">
+## minecraft:is_charged
 
 #### bee
 
@@ -32857,11 +31640,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_charged": {}
 ```
 
-</Spoiler>
-
-## is_chested
-
-<Spoiler title="Show">
+## minecraft:is_chested
 
 #### donkey
 
@@ -32893,11 +31672,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_chested": {}
 ```
 
-</Spoiler>
-
-## is_dyeable
-
-<Spoiler title="Show">
+## minecraft:is_dyeable
 
 #### cat
 
@@ -32935,11 +31710,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## is_hidden_when_invisible
-
-<Spoiler title="Show">
+## minecraft:is_hidden_when_invisible
 
 #### axolotl
 
@@ -33661,11 +32432,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-</Spoiler>
-
-## is_ignited
-
-<Spoiler title="Show">
+## minecraft:is_ignited
 
 #### tnt_minecart
 
@@ -33677,11 +32444,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_ignited": {}
 ```
 
-</Spoiler>
-
-## is_illager_captain
-
-<Spoiler title="Show">
+## minecraft:is_illager_captain
 
 #### pillager
 
@@ -33703,11 +32466,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_illager_captain": {}
 ```
 
-</Spoiler>
-
-## is_saddled
-
-<Spoiler title="Show">
+## minecraft:is_saddled
 
 #### donkey
 
@@ -33759,11 +32518,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_saddled": {}
 ```
 
-</Spoiler>
-
-## is_shaking
-
-<Spoiler title="Show">
+## minecraft:is_shaking
 
 #### hoglin
 
@@ -33855,11 +32610,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_shaking": {}
 ```
 
-</Spoiler>
-
-## is_sheared
-
-<Spoiler title="Show">
+## minecraft:is_sheared
 
 #### sheep
 
@@ -33881,11 +32632,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_sheared": {}
 ```
 
-</Spoiler>
-
-## is_stackable
-
-<Spoiler title="Show">
+## minecraft:is_stackable
 
 #### boat
 
@@ -33939,11 +32686,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_stackable": {}
 ```
 
-</Spoiler>
-
-## is_stunned
-
-<Spoiler title="Show">
+## minecraft:is_stunned
 
 #### ravager
 
@@ -33955,11 +32698,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_stunned": {}
 ```
 
-</Spoiler>
-
-## is_tamed
-
-<Spoiler title="Show">
+## minecraft:is_tamed
 
 #### cat
 
@@ -34061,11 +32800,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_tamed": {}
 ```
 
-</Spoiler>
-
-## item_controllable
-
-<Spoiler title="Show">
+## minecraft:item_controllable
 
 #### pig
 
@@ -34091,11 +32826,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## item_hopper
-
-<Spoiler title="Show">
+## minecraft:item_hopper
 
 #### hopper_minecart
 
@@ -34107,11 +32838,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:item_hopper": {}
 ```
 
-</Spoiler>
-
-## jump.dynamic
-
-<Spoiler title="Show">
+## minecraft:jump.dynamic
 
 #### rabbit
 
@@ -34123,11 +32850,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:jump.dynamic": {}
 ```
 
-</Spoiler>
-
-## jump.static
-
-<Spoiler title="Show">
+## minecraft:jump.static
 
 #### axolotl
 
@@ -34771,11 +33494,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:jump.static": {}
 ```
 
-</Spoiler>
-
-## knockback_resistance
-
-<Spoiler title="Show">
+## minecraft:knockback_resistance
 
 #### armor_stand
 
@@ -34850,11 +33569,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## lava_movement
-
-<Spoiler title="Show">
+## minecraft:lava_movement
 
 #### strider
 
@@ -34868,11 +33583,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## leashable
-
-<Spoiler title="Show">
+## minecraft:leashable
 
 #### axolotl
 
@@ -35311,11 +34022,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## lookat
-
-<Spoiler title="Show">
+## minecraft:lookat
 
 #### enderman
 
@@ -35347,11 +34054,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## loot
-
-<Spoiler title="Show">
+## minecraft:loot
 
 #### armor_stand
 
@@ -36237,11 +34940,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## managed_wandering_trader
-
-<Spoiler title="Show">
+## minecraft:managed_wandering_trader
 
 #### wandering_trader
 
@@ -36253,11 +34952,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:managed_wandering_trader": {}
 ```
 
-</Spoiler>
-
-## mark_variant
-
-<Spoiler title="Show">
+## minecraft:mark_variant
 
 #### bee
 
@@ -36591,11 +35286,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## mob_effect
-
-<Spoiler title="Show">
+## minecraft:mob_effect
 
 #### pufferfish
 
@@ -36625,11 +35316,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## movement
-
-<Spoiler title="Show">
+## minecraft:movement
 
 #### axolotl
 
@@ -37635,11 +36322,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## movement.amphibious
-
-<Spoiler title="Show">
+## minecraft:movement.amphibious
 
 #### axolotl
 
@@ -37665,11 +36348,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## movement.basic
-
-<Spoiler title="Show">
+## minecraft:movement.basic
 
 #### bat
 
@@ -38213,11 +36892,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.basic": {}
 ```
 
-</Spoiler>
-
-## movement.fly
-
-<Spoiler title="Show">
+## minecraft:movement.fly
 
 #### parrot
 
@@ -38229,11 +36904,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.fly": {}
 ```
 
-</Spoiler>
-
-## movement.generic
-
-<Spoiler title="Show">
+## minecraft:movement.generic
 
 #### drowned
 
@@ -38245,11 +36916,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.generic": {}
 ```
 
-</Spoiler>
-
-## movement.glide
-
-<Spoiler title="Show">
+## minecraft:movement.glide
 
 #### phantom
 
@@ -38264,11 +36931,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## movement.hover
-
-<Spoiler title="Show">
+## minecraft:movement.hover
 
 #### bee
 
@@ -38280,11 +36943,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.hover": {}
 ```
 
-</Spoiler>
-
-## movement.jump
-
-<Spoiler title="Show">
+## minecraft:movement.jump
 
 #### magma_cube
 
@@ -38338,11 +36997,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## movement.skip
-
-<Spoiler title="Show">
+## minecraft:movement.skip
 
 #### rabbit
 
@@ -38354,11 +37009,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.skip": {}
 ```
 
-</Spoiler>
-
-## movement.sway
-
-<Spoiler title="Show">
+## minecraft:movement.sway
 
 #### elder_guardian
 
@@ -38428,11 +37079,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## nameable
-
-<Spoiler title="Show">
+## minecraft:nameable
 
 #### armor_stand
 
@@ -38752,7 +37399,7 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:nameable": {
-    "always_show": false,
+    "always_show": true,
     "allow_name_tag_renaming": false
 }
 ```
@@ -39184,11 +37831,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:nameable": {}
 ```
 
-</Spoiler>
-
-## navigation.climb
-
-<Spoiler title="Show">
+## minecraft:navigation.climb
 
 #### cave_spider
 
@@ -39214,11 +37857,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## navigation.float
-
-<Spoiler title="Show">
+## minecraft:navigation.float
 
 #### bat
 
@@ -39244,11 +37883,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## navigation.fly
-
-<Spoiler title="Show">
+## minecraft:navigation.fly
 
 #### parrot
 
@@ -39263,11 +37898,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## navigation.generic
-
-<Spoiler title="Show">
+## minecraft:navigation.generic
 
 #### axolotl
 
@@ -39476,11 +38107,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## navigation.hover
-
-<Spoiler title="Show">
+## minecraft:navigation.hover
 
 #### bee
 
@@ -39500,11 +38127,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## navigation.walk
-
-<Spoiler title="Show">
+## minecraft:navigation.walk
 
 #### blaze
 
@@ -40280,11 +38903,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## npc
-
-<Spoiler title="Show">
+## minecraft:npc
 
 #### npc
 
@@ -40379,32 +38998,13 @@ This documentation is stripped from the vanilla files using an automated script.
             },
             {
                 "variant": 19
-            },
-            {
-                "variant": 20
-            },
-            {
-                "variant": 21
-            },
-            {
-                "variant": 22
-            },
-            {
-                "variant": 23
-            },
-            {
-                "variant": 24
             }
         ]
     }
 }
 ```
 
-</Spoiler>
-
-## on_death
-
-<Spoiler title="Show">
+## minecraft:on_death
 
 #### ender_dragon
 
@@ -40419,11 +39019,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## on_friendly_anger
-
-<Spoiler title="Show">
+## minecraft:on_friendly_anger
 
 #### llama
 
@@ -40464,11 +39060,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## on_hurt
-
-<Spoiler title="Show">
+## minecraft:on_hurt
 
 #### blaze
 
@@ -40509,11 +39101,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## on_hurt_by_player
-
-<Spoiler title="Show">
+## minecraft:on_hurt_by_player
 
 #### blaze
 
@@ -40541,11 +39129,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## on_start_landing
-
-<Spoiler title="Show">
+## minecraft:on_start_landing
 
 #### ender_dragon
 
@@ -40560,11 +39144,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## on_start_takeoff
-
-<Spoiler title="Show">
+## minecraft:on_start_takeoff
 
 <CodeHeader></CodeHeader>
 
@@ -40575,11 +39155,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## on_target_acquired
-
-<Spoiler title="Show">
+## minecraft:on_target_acquired
 
 #### bee
 
@@ -40864,11 +39440,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## on_target_escape
-
-<Spoiler title="Show">
+## minecraft:on_target_escape
 
 #### creeper
 
@@ -41007,11 +39579,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## on_wake_with_owner
-
-<Spoiler title="Show">
+## minecraft:on_wake_with_owner
 
 #### cat
 
@@ -41026,11 +39594,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## out_of_control
-
-<Spoiler title="Show">
+## minecraft:out_of_control
 
 #### boat
 
@@ -41042,11 +39606,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:out_of_control": {}
 ```
 
-</Spoiler>
-
-## peek
-
-<Spoiler title="Show">
+## minecraft:peek
 
 #### shulker
 
@@ -41068,11 +39628,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## persistent
-
-<Spoiler title="Show">
+## minecraft:persistent
 
 #### armor_stand
 
@@ -41134,26 +39690,6 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:persistent": {}
 ```
 
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:persistent": {}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:persistent": {}
-```
-
 #### snow_golem
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
@@ -41184,16 +39720,6 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:persistent": {}
 ```
 
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:persistent": {}
-```
-
 #### wither
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
@@ -41204,11 +39730,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:persistent": {}
 ```
 
-</Spoiler>
-
-## physics
-
-<Spoiler title="Show">
+## minecraft:physics
 
 #### area_effect_cloud
 
@@ -42260,11 +40782,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:physics": {}
 ```
 
-</Spoiler>
-
-## player.exhaustion
-
-<Spoiler title="Show">
+## minecraft:player.exhaustion
 
 #### player
 
@@ -42279,11 +40797,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## player.experience
-
-<Spoiler title="Show">
+## minecraft:player.experience
 
 <CodeHeader></CodeHeader>
 
@@ -42294,11 +40808,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## player.level
-
-<Spoiler title="Show">
+## minecraft:player.level
 
 <CodeHeader></CodeHeader>
 
@@ -42309,11 +40819,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## player.saturation
-
-<Spoiler title="Show">
+## minecraft:player.saturation
 
 <CodeHeader></CodeHeader>
 
@@ -42323,11 +40829,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## preferred_path
-
-<Spoiler title="Show">
+## minecraft:preferred_path
 
 #### iron_golem
 
@@ -42601,11 +41103,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## projectile
-
-<Spoiler title="Show">
+## minecraft:projectile
 
 #### arrow
 
@@ -43248,11 +41746,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## pushable
-
-<Spoiler title="Show">
+## minecraft:pushable
 
 #### armor_stand
 
@@ -44489,11 +42983,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## raid_trigger
-
-<Spoiler title="Show">
+## minecraft:raid_trigger
 
 #### player
 
@@ -44510,11 +43000,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## rail_movement
-
-<Spoiler title="Show">
+## minecraft:rail_movement
 
 #### chest_minecart
 
@@ -44566,11 +43052,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:rail_movement": {}
 ```
 
-</Spoiler>
-
-## rail_sensor
-
-<Spoiler title="Show">
+## minecraft:rail_sensor
 
 #### command_block_minecart
 
@@ -44672,11 +43154,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## ravager_blocked
-
-<Spoiler title="Show">
+## minecraft:ravager_blocked
 
 #### ravager
 
@@ -44702,11 +43180,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## rideable
-
-<Spoiler title="Show">
+## minecraft:rideable
 
 #### boat
 
@@ -45049,7 +43523,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "seats": {
         "position": [
             0.0,
-            1.17,
+            1.25,
             -0.3
         ]
     }
@@ -45069,8 +43543,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "seats": {
         "position": [
             0.0,
-            1.17,
-            -0.3
+            1.1,
+            -0.2
         ]
     }
 }
@@ -45429,6 +43903,7 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:rideable": {
+    "priority": 0,
     "seat_count": 1,
     "crouching_skip_interact": true,
     "family_types": [
@@ -45449,6 +43924,7 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:rideable": {
+    "priority": 0,
     "seat_count": 1,
     "crouching_skip_interact": true,
     "family_types": [
@@ -45619,11 +44095,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## scale
-
-<Spoiler title="Show">
+## minecraft:scale
 
 #### axolotl
 
@@ -45917,7 +44389,7 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:scale": {
-    "value": 0.6
+    "value": 0.4
 }
 ```
 
@@ -45925,7 +44397,7 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:scale": {
-    "value": 0.4
+    "value": 0.6
 }
 ```
 
@@ -46125,11 +44597,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## scale_by_age
-
-<Spoiler title="Show">
+## minecraft:scale_by_age
 
 #### donkey
 
@@ -46196,11 +44664,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## scheduler
-
-<Spoiler title="Show">
+## minecraft:scheduler
 
 #### fox
 
@@ -46891,11 +45355,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## shareables
-
-<Spoiler title="Show">
+## minecraft:shareables
 
 #### drowned
 
@@ -49797,11 +48257,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## shooter
-
-<Spoiler title="Show">
+## minecraft:shooter
 
 #### blaze
 
@@ -49937,11 +48393,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## sittable
-
-<Spoiler title="Show">
+## minecraft:sittable
 
 #### cat
 
@@ -49983,11 +48435,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:sittable": {}
 ```
 
-</Spoiler>
-
-## skin_id
-
-<Spoiler title="Show">
+## minecraft:skin_id
 
 #### villager_v2
 
@@ -50093,11 +48541,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## spawn_entity
-
-<Spoiler title="Show">
+## minecraft:spawn_entity
 
 #### chicken
 
@@ -50118,33 +48562,6 @@ This documentation is stripped from the vanilla files using an automated script.
             "operator": "==",
             "value": 0
         }
-    }
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:spawn_entity": {
-    "entities": {
-        "filters": [
-            {
-                "test": "random_chance",
-                "value": 7
-            }
-        ],
-        "min_wait_time": 0,
-        "max_wait_time": 0,
-        "num_to_spawn": 2,
-        "single_use": true,
-        "spawn_entity": "minecraft:ocelot",
-        "spawn_event": "minecraft:entity_born",
-        "spawn_method": "born",
-        "spawn_sound": ""
     }
 }
 ```
@@ -50171,11 +48588,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## spell_effects
-
-<Spoiler title="Show">
+## minecraft:spell_effects
 
 #### player
 
@@ -50189,7 +48602,6 @@ This documentation is stripped from the vanilla files using an automated script.
         {
             "effect": "bad_omen",
             "duration": 6000,
-            "visible": false,
             "display_on_screen_animation": true
         }
     ]
@@ -50254,11 +48666,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## strength
-
-<Spoiler title="Show">
+## minecraft:strength
 
 #### llama
 
@@ -50309,11 +48717,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## tameable
-
-<Spoiler title="Show">
+## minecraft:tameable
 
 #### cat
 
@@ -50374,11 +48778,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## tamemount
-
-<Spoiler title="Show">
+## minecraft:tamemount
 
 #### donkey
 
@@ -50612,11 +49012,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## target_nearby_sensor
-
-<Spoiler title="Show">
+## minecraft:target_nearby_sensor
 
 #### blaze
 
@@ -50710,11 +49106,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## teleport
-
-<Spoiler title="Show">
+## minecraft:teleport
 
 #### enderman
 
@@ -50727,9 +49119,9 @@ This documentation is stripped from the vanilla files using an automated script.
     "random_teleports": true,
     "max_random_teleport_time": 30,
     "random_teleport_cube": [
-        64,
         32,
-        64
+        32,
+        32
     ],
     "target_distance": 16,
     "target_teleport_chance": 0.05,
@@ -50737,11 +49129,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## timer
-
-<Spoiler title="Show">
+## minecraft:timer
 
 #### bee
 
@@ -51087,11 +49475,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## trade_resupply
-
-<Spoiler title="Show">
+## minecraft:trade_resupply
 
 #### villager_v2
 
@@ -51103,11 +49487,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:trade_resupply": {}
 ```
 
-</Spoiler>
-
-## trade_table
-
-<Spoiler title="Show">
+## minecraft:trade_table
 
 #### villager
 
@@ -51233,11 +49613,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## trail
-
-<Spoiler title="Show">
+## minecraft:trail
 
 #### snow_golem
 
@@ -51256,11 +49632,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## transformation
-
-<Spoiler title="Show">
+## minecraft:transformation
 
 #### hoglin
 
@@ -51531,11 +49903,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## trust
-
-<Spoiler title="Show">
+## minecraft:trust
 
 #### fox
 
@@ -51547,11 +49915,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:trust": {}
 ```
 
-</Spoiler>
-
-## trusting
-
-<Spoiler title="Show">
+## minecraft:trusting
 
 #### ocelot
 
@@ -51573,11 +49937,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## type_family
-
-<Spoiler title="Show">
+## minecraft:type_family
 
 #### armor_stand
 
@@ -53763,11 +52123,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## underwater_movement
-
-<Spoiler title="Show">
+## minecraft:underwater_movement
 
 #### axolotl
 
@@ -53917,11 +52273,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## variant
-
-<Spoiler title="Show">
+## minecraft:variant
 
 #### axolotl
 
@@ -54204,34 +52556,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:variant": {
     "value": 3
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
 }
 ```
 
@@ -54631,34 +52955,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
 #### tropicalfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
@@ -54923,11 +53219,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-</Spoiler>
-
-## water_movement
-
-<Spoiler title="Show">
+## minecraft:water_movement
 
 #### panda
 
@@ -54964,5 +53256,3 @@ This documentation is stripped from the vanilla files using an automated script.
     "drag_factor": 0.9
 }
 ```
-
-</Spoiler>
