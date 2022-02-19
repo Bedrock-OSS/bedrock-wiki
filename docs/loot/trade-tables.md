@@ -1,18 +1,19 @@
 ---
 title: Trade Tables
-nav_order: 1
+category: Documentation
+nav_order: 2
 tags:
-    - guide
-    - 'Last updated for Version 1.17.41'
+- Stable
+- Last updated for Version 1.18.10
 mention:
-    - Ciosciaa
+- Ciosciaa
 ---
 
 Trade tables represent the fundamental data behind trading item transactions for an entity. Trade tables are not standalone; they must be referenced from an [entity component](https://bedrock.dev/docs/stable/Entities#minecraft%3Aeconomy_trade_table). Using the randomizing properties available to trade tables, trade offers, item counts, and cost calculations may vary across entity instances, even if all would point to the same trade table.
 
 ![](/assets/images/loot/trade_tables/trading.png)
 
-Trade tables are not identified or versioned. Like loot tables, trade tables do not support Molang and instead rely on JSON constructs, like range objects and [functions](#functions). Despite their differences, trade tables still support comments.
+Trade tables are not identified or versioned. Like loot tables, trade tables do not support Molang and instead rely on JSON constructs, like range objects and [functions](#functions). Despite being different, trade tables still support comments.
 
 ## Integration
 
@@ -32,6 +33,7 @@ It's recommended to follow vanilla convention and place all trade tables within 
 The following example is referenced and analyzed throughout the document:
 
 <Spoiler title="Trade Table File Example">
+
 <CodeHeader>BP/trading/minister.json</CodeHeader>
 ```json
 {
@@ -241,6 +243,7 @@ When the initial tier's experience threshold is non-zero, a manual update is req
 ##### Tier Freezing
 
 Excluding the [initial tier](#initial-tier-experience), it's possible to freeze trades at a tier:
+
 <CodeHeader>Example Tier Freeze</CodeHeader>
 
 ```json
@@ -440,6 +443,7 @@ Items are referenced within trades using the required `"item"` string property.
 ```
 
 The item reference must point to the identifier of an item. A data value can be provided in-place to the reference as a suffix:
+
 <CodeHeader>Example Data Assignment</CodeHeader>
 
 ```json
