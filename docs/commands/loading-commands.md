@@ -35,7 +35,7 @@ tag @a add joined
 
 In this example, the player gets a welcome message. You can swap it out for anything you'd like that targets a player without the joined tag such as teleporting them somewhere, giving them something or spawning an entity.
 
-## World load
+## First World Load
 Unlike entities, worlds can not be applied tags. Instead we have to use scoreboards. Because of that, it is a bit more complicated.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
