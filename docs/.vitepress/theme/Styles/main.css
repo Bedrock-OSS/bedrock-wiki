@@ -155,12 +155,17 @@ ol {
 
 .float {
 	text-align: center;
-    position: fixed;
-    height: 10.5em;
-    width: 20em;
-    bottom: 10px;
-    right: 10px;
-    border-radius: 6px;
-    padding: 14px;
+	position: fixed;
+	height: 10.5em;
+	width: 20em;
+	bottom: 10px;
+	right: 10px;
+	border-radius: 6px;
+	padding: 14px;
 	z-index: 9999;
+}
+
+/** Inputs */
+textarea {
+	outline: none;
 }
