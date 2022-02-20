@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toRefs, computed, ref, watch, ComponentInternalInstance } from 'vue'
+import { toRefs, computed, ref, watch } from 'vue'
 import { MoLang } from 'molang'
 import { useWindowSize } from '@vueuse/core'
 import { PrismEditor } from 'vue-prism-editor'
@@ -10,20 +10,28 @@ import 'molangjs/syntax/molang-prism-syntax'
 const props = withDefaults(
 	defineProps<{
 		code: string
-		range?: number
+		fromX?: number
+		fromY?: number
+		toX?: number
+		toY?: number
 		stepSize?: number
 		height?: number
 		useCenteredOrigin?: boolean
 		hideCode?: boolean
 	}>(),
 	{
-		range: 100,
+		fromX: 0,
+		toX: 1,
 		stepSize: 0.5,
 		height: 300,
-		useCenteredOrigin: true,
+		fromY: 0,
+		toY: 1,
 	}
 )
-const { code, range, stepSize, height, useCenteredOrigin } = toRefs(props)
+const { code, fromX, fromY, toX, toY, stepSize, height } = toRefs(props)
+
+//  Caluculate range between fromX to toX
+const range = computed(() => Math.abs(toX.value - fromX.value))
 
 const molang = new MoLang({})
 
@@ -48,42 +56,45 @@ watch([windowWidth, svgElement], () => {
 	}
 })
 
-const axes = computed(() =>
-	useCenteredOrigin.value
-		? `M0 ${height.value / 2} L${width.value} ${height.value / 2} M${
-				width.value / 2
-		  } 0 L${width.value / 2} ${height.value}`
-		: ''
+const getXRange = () => Math.abs(toX.value - fromX.value)
+const getYRange = () => Math.abs(toY.value - fromY.value)
+const getXRoot = () => Math.abs(fromX.value / getXRange()) * width.value
+const getYRoot = () => Math.abs(fromY.value / getYRange()) * height.value
+// Functions that translate a number into the corresponding pixel coordinate
+const toPixelX = (x: number) => {
+	const xScale = width.value / getXRange()
+	return x * xScale + getXRoot()
+}
+const toPixelY = (y: number) => {
+	const yScale = height.value / getYRange()
+	return y * yScale + getYRoot()
+}
+
+const axes = computed(
+	() =>
+		`M0 ${height.value - getYRoot()} L${width.value} ${
+			height.value - getYRoot()
+		} M${getXRoot()} 0 L${getXRoot()} ${height.value}`
 )
 
 const graphData = computed(() => {
-	let x = 0
+	let x = fromX.value
 	molang.updateConfig({
 		variableHandler: (varName) =>
-			xVariables.includes(varName)
-				? useCenteredOrigin.value
-					? x - range.value
-					: x
-				: undefined,
+			xVariables.includes(varName) ? x : undefined,
 	})
-
-	const widthFactor = width.value / (range.value * 2)
-	if (widthFactor === 0) return ''
-	const heightFactor = height.value / (range.value * 2)
-	console.log(widthFactor, heightFactor)
 
 	let valueBefore = NaN
 	let path = ''
 
-	while (x <= range.value * 2) {
+	while (x <= toX.value) {
 		let value = <number>molang.executeAndCatch(userCode.value)
 		if (typeof value !== 'number') value = NaN
+		console.log(x, value)
 
-		path += `${isNaN(value) || isNaN(valueBefore) ? 'M' : ' L'}${
-			x * widthFactor
-		} ${
-			(value + (useCenteredOrigin.value ? range.value : 0)) * heightFactor
-		}`
+		path += `${isNaN(value) || isNaN(valueBefore) ? 'M' : ' L'}${toPixelX(
+			x
+		)} ${toPixelY(value)}`
 
 		x += stepSize.value
 		valueBefore = value
@@ -103,24 +114,12 @@ const molangHighlight = (code: string) =>
 	<PrismEditor
 		v-if="!hideCode"
 		v-model="userCode"
-		class="
-			editor
-			px-4
-			py-2
-			rounded-md
-			border border-true-gray-200
-			dark:border-true-gray-600
-		"
+		class="editor px-4 py-2 rounded-md border border-true-gray-200 dark:border-true-gray-600"
 		:highlight="molangHighlight"
 	/>
 	<svg
 		ref="svgElement"
-		class="
-			rounded-md
-			border border-true-gray-200
-			dark:border-true-gray-600
-			my-2
-		"
+		class="rounded-md border border-true-gray-200 dark:border-true-gray-600 my-2"
 	>
 		<path
 			class="axes stroke-true-gray-200 dark:stroke-true-gray-600"
