@@ -90,7 +90,6 @@ const graphData = computed(() => {
 	while (x <= toX.value) {
 		let value = <number>molang.executeAndCatch(userCode.value)
 		if (typeof value !== 'number') value = NaN
-		console.log(x, value)
 
 		path += `${isNaN(value) || isNaN(valueBefore) ? 'M' : ' L'}${toPixelX(
 			x
