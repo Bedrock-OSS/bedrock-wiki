@@ -1,5 +1,6 @@
 ---
 title: Intro to World Generation
+category: General
 nav_order: 1
 tags:
     - guide
@@ -319,8 +320,12 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 
 **What you've done:**
 
--   Created you very first biome.
--   Made your very first ore generate naturally.
--   Learned to use bridge. for vanilla files generation and referencing.
--   Learned about other Custom Generation methods.
--   Created custom Structures
+<Checklist>
+
+-   [x] Created you very first biome.
+-   [x] Made your very first ore generate naturally.
+-   [x] Learned to use bridge. for vanilla files generation and referencing.
+-   [x] Learned about other Custom Generation methods.
+-   [x] Created custom Structures
+
+</Checklist>

@@ -1,0 +1,34 @@
+.mainfooter {
+    background-color: rgb(228, 228, 228);
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.7rem;
+    margin: 2.5rem -2rem -2rem -2rem;
+}
+
+.mainfooter ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.mainfooter li:not(:first-child) {
+    padding-left: 0.3rem;
+}
+
+.mainfooter li:not(:first-child)::before {
+    content: "|";
+    margin-right: 0.3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .mainfooter ul {
+        display: block;
+    }
+    .mainfooter li:not(:first-child)::before {
+        content: "";
+    }
+}

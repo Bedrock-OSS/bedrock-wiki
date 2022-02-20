@@ -1,30 +1,33 @@
 ---
 title: 'Blockbench: Modeling, Texturing and Animating'
+category: Guide
 prefix: '7. '
 nav_order: 7
 ---
 
-Blockbench is a free software designed to make Minecraft modeling, texturing, and animating possible. It is available for mobile browsers, Windows 10, and macOS. Please install it at [blockbench.net](https://blockbench.net/)
+Blockbench is a free software designed to make Minecraft modeling, texturing, and animating possible. It is available for mobile browsers, Windows 10, and macOS. Please install it at [blockbench.net](https://blockbench.net/).
 
 Let's get started.
 
-1. Open Blockbench.
-2. Choose _File>New>Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
-3. A screen like this will have popped up.
+1.  Open Blockbench.
+2.  Choose _File>New>Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
+3.  A screen like this will have popped up.
 
-   ![](/assets/images/guide/create_entity_project_menu.png)
-   -	"File name:" Self-explanatory. My file will generate as "skele_yaklin.geo.json";
-   - 	"Model Identifier:" This is the model identifier (namespace not required), a shortname for this ID will be defined later;
-   - 	"Box UV" has to be checked on for automatic UV editing and unwrapping for texturing.
-   -	"Texture Height" and "Texture Width" define the resolution of the model's textures;
+    ![](/assets/images/guide/create_entity_project_menu.png)
 
-4. Press confirm. You'll see a screen like this:
-   
-   ![](/assets/images/guide/create_entity_workspace.png) 
-   - 	You can see many tools here: move, resize, rotate, etc. 
-   - 	You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;
+    -   `"File name:"` is self-explanatory. My file will generate as "skele_yaklin.geo.json".
+    -   `"Model Identifier:"` is the model identifier (namespace not required), a short name for this ID will be defined later.
+    -   `"Box UV"` has to be checked on for automatic UV editing and unwrapping for texturing.
+    -   `"Texture Height"` and `"Texture Width"` define the resolution of the model's textures.
 
-5. Now, you are ready to create your own model! For more in-depth tutorials on modeling, please check out the videos by Everbloom Studio below.
+4.  Press confirm. You'll see a screen like this:
+
+    ![](/assets/images/guide/create_entity_workspace.png)
+
+    -	You can see many tools here: move, resize, rotate, etc.
+    - 	You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;
+
+5.  Now, you are ready to create your model! For more in-depth tutorials on modeling, please check out the videos by Everbloom Studio below.
 
 <YouTubeEmbed id="XqzxL_-XjA0" />
 
@@ -61,29 +64,78 @@ You might want to adjust one of the toolbars by adding "Export Animations" and "
 
 Now that our model, texture, and walk animation are complete, you can save your work.
 
-Go to _File>Save Model_ or _File>Export Bedrock Geometry_. Save the model in `RP/models/entity`, the texture in `RP/textures/entity/` and the animation in `RP/animations`. Congratulations! You've successfully created your first entity's visuals! You can see the file examples below.
+Go to _File > Save Model_ or _File > Export Bedrock Geometry_. Save the model in `RP/models/entity`, the texture in `RP/textures/entity/` and the animation in `RP/animations`. Congratulations! You've successfully created your first entity's visuals! You can see the file examples below.
 
-_Meanwhile, why not upgrading the visuals of your own unique entities' or creating another one?_
-
-`RP/models/entity/ghost.geo.json`
+_Meanwhile, why not upgrade the visuals of your own unique entities' or create another one?_
 
 <CodeHeader>RP/models/entity/ghost.geo.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.12.0",
-    "minecraft:geometry": [
-        {
-            "description": {"identifier": "geometry.ghost", "texture_width": 64, "texture_height": 64, "visible_bounds_width": 3, "visible_bounds_height": 3.5, "visible_bounds_offset": [0, 1.25, 0]},
-            "bones": [
-                {"name": "root", "pivot": [0, 3, 0]},
-                {"name": "body", "parent": "root", "pivot": [0, 4.625, 0], "cubes": [{"origin": [-4, 3, -4], "size": [8, 13, 8], "uv": [0, 20]}]},
-                {"name": "leftArm", "parent": "body", "pivot": [4.6, 15.5, 0.5], "cubes": [{"origin": [4.1, 7, -1], "size": [3, 9, 3], "uv": [32, 32]}]},
-                {"name": "rightArm", "parent": "body", "pivot": [-4.5, 15.5, 0.5], "cubes": [{"origin": [-7.1, 7, -1], "size": [3, 9, 3], "uv": [32, 20]}]},
-                {"name": "head", "parent": "body", "pivot": [0, 16, 0], "cubes": [{"origin": [-5, 16, -5], "size": [10, 10, 10], "uv": [0, 0]}]}
-            ]
-        }
-    ]
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ghost",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{ "name": "root", "pivot": [0, 3, 0] },
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 4.625, 0],
+					"cubes": [
+						{
+							"origin": [-4, 3, -4],
+							"size": [8, 13, 8],
+							"uv": [0, 20]
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [4.6, 15.5, 0.5],
+					"cubes": [
+						{
+							"origin": [4.1, 7, -1],
+							"size": [3, 9, 3],
+							"uv": [32, 32]
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-4.5, 15.5, 0.5],
+					"cubes": [
+						{
+							"origin": [-7.1, 7, -1],
+							"size": [3, 9, 3],
+							"uv": [32, 20]
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 16, 0],
+					"cubes": [
+						{
+							"origin": [-5, 16, -5],
+							"size": [10, 10, 10],
+							"uv": [0, 0]
+						}
+					]
+				}
+			]
+		}
+	]
 }
 ```
 
@@ -91,46 +143,122 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 
 ```json
 {
-    "format_version": "1.8.0",
-    "animations": {
-        "animation.ghost.idle": {
-            "loop": true,
-            "animation_length": 3,
-            "bones": {
-                "body": {"rotation": {"0.0": [10, 0, 0], "3.0": [10, 0, 0]}, "position": {"0.0": [0, 0, 0], "1.5": [0, 1, 0], "3.0": [0, 0, 0]}},
-                "leftArm": {"rotation": {"0.0": [-10, 0, 0], "1.5": [-5, 0, 0], "3.0": [-10, 0, 0]}},
-                "rightArm": {"rotation": {"0.0": [-10, 0, 0], "1.5": [-5, 0, 0], "3.0": [-10, 0, 0]}},
-                "head": {"rotation": {"0.0": [-7.5, 0, 0], "1.5": [-2.5, 0, 0], "3.0": [-7.5, 0, 0]}}
-            }
-        },
-        "animation.ghost.attack": {
-            "animation_length": 0.75,
-            "bones": {
-                "body": {
-                    "rotation": {"0.0": [10, 0, 0], "0.2917": [10, 15, 0], "0.5": [22.5, -12.5, 0], "0.75": [10, 0, 0]},
-                    "position": {"0.0": [0, 0, 0], "0.2917": [0, 0, 3], "0.5": [0, 0, -3], "0.75": [0, 0, 0]}
-                },
-                "leftArm": {"rotation": {"0.0": [-10, 0, 0], "0.75": [-10, 0, 0]}},
-                "rightArm": {"rotation": {"0.0": [-10, 0, 0], "0.2083": [-10, 0, 0], "0.2917": [-10, 62.5, 117.5], "0.5": [-80, -17.5, 22.5], "0.75": [-10, 0, 0]}},
-                "head": {"rotation": {"0.0": [-7.5, 0, 0], "0.75": [-7.5, 0, 0]}}
-            }
-        },
-        "animation.ghost.move": {
-            "loop": true,
-            "animation_length": 1,
-            "bones": {
-                "body": {"rotation": {"0.0": [15, 0, 0], "0.25": [15, -2.5, 0], "0.5": [15, 0, 0], "0.75": [15, 2.5, 0], "1.0": [15, 0, 0]}, "position": [0, 0, 0]},
-                "leftArm": {"rotation": {"0.0": [15, 0, 0], "0.5": [20, 0, 0], "1.0": [15, 0, 0]}},
-                "rightArm": {"rotation": {"0.0": [15, 0, 0], "0.5": [20, 0, 0], "1.0": [15, 0, 0]}},
-                "head": {"rotation": {"0.0": [-12.5, 0, 0], "0.5": [-15, 0, 0], "1.0": [-12.5, 0, 0]}}
-            }
-        }
-    }
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ghost.idle": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"body": {
+					"rotation": { "0.0": [10, 0, 0], "3.0": [10, 0, 0] },
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.5": [0, 1, 0],
+						"3.0": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"1.5": [-5, 0, 0],
+						"3.0": [-10, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"1.5": [-5, 0, 0],
+						"3.0": [-10, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [-7.5, 0, 0],
+						"1.5": [-2.5, 0, 0],
+						"3.0": [-7.5, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.ghost.attack": {
+			"animation_length": 0.75,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [10, 0, 0],
+						"0.2917": [10, 15, 0],
+						"0.5": [22.5, -12.5, 0],
+						"0.75": [10, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2917": [0, 0, 3],
+						"0.5": [0, 0, -3],
+						"0.75": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": { "0.0": [-10, 0, 0], "0.75": [-10, 0, 0] }
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"0.2083": [-10, 0, 0],
+						"0.2917": [-10, 62.5, 117.5],
+						"0.5": [-80, -17.5, 22.5],
+						"0.75": [-10, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": { "0.0": [-7.5, 0, 0], "0.75": [-7.5, 0, 0] }
+				}
+			}
+		},
+		"animation.ghost.move": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.25": [15, -2.5, 0],
+						"0.5": [15, 0, 0],
+						"0.75": [15, 2.5, 0],
+						"1.0": [15, 0, 0]
+					},
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.5": [20, 0, 0],
+						"1.0": [15, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.5": [20, 0, 0],
+						"1.0": [15, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [-12.5, 0, 0],
+						"0.5": [-15, 0, 0],
+						"1.0": [-12.5, 0, 0]
+					}
+				}
+			}
+		}
+	}
 }
 ```
 
 ## What you have learned
-:::tip
-- 	How to create an entity in Blockbench
-- 	How to use Blockbench to model, texture and animate your entity
+
+:::tip What you have learned:
+
+-	How to create an entity in Blockbench
+-	How to use Blockbench to model, texture, and animate your entity
 :::

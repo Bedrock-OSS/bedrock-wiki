@@ -1,5 +1,5 @@
 ---
-title: Text and Localisation
+title: Text and Localization
 mention:
   - ThijsHankelMC
   - SirLich
@@ -89,7 +89,7 @@ In game (signs, books, etc), use [tellraw](/commands/tellraw): `{"rawtext":[{"tr
 
 You can also create a text directory and .lang files in Behaviour Packs, but only to define pack.title and pack.description for the BP.
 
-## Localisation
+## Localization
 
 Now you know about .lang files in general, you can look into internationalisation of you text. Translations that show depending on what language the player is using. In the `rp/texts` directory, there are quite a number of .lang files, each representing and containing a different language, and their name is based on the language and nation, for example en_GB (English, Great Britain), en_US (English, United States), de_DE (Deutsch, Deutschland), etc. All of the Lang-Codes are present in each individual .lang file, and contain text related to the language stated in the files name.
 
@@ -112,7 +112,7 @@ langcode.wiki:my_text.words=Meinblock
 The result would be that anyone using English (United States) would see the text "My Block" when `langcode.wiki:my_text.words` is used, but also anyone wih German selected as their language would see "Meinblock".
 
 :::tip
-If you do not plan on creating translations for your packs, it is advised that if you are working in English, you create both a `en.GB.lang` *and* `en.NA.lang`, with identical content
+If you do not plan on creating translations for your packs, it is advised that if you are working in English, you create both a `en_GB.lang` *and* `en_US.lang`, with identical content
 :::
 
 ### Vanilla Languages
@@ -163,7 +163,7 @@ Simply just an array of `.lang` files for Minecraft to register as available lan
 
 ```json
 [
-  "xx_XX"
+  "xx_XX",
   "yy_YY"
 ]
 ```

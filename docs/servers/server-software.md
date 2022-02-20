@@ -2,27 +2,30 @@
 title: Bedrock Server Software
 ---
 
-## Discontinuation of Software
+Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
 
-Software will be marked as discontinued after roughly one month of inactivity.
+Alongside the Vanilla BDS offering, many community projects exist, in a variaty of languages. 
 
 ## Software by Language
 
 | Language   | Status                                                              |
 | ---------- | ------------------------------------------------------------------- |
-| Java       | [Still Active](#java) : 4 < [Discontinued](#java-1) : 12            |
-| PHP        | [Still Active](#php) : 3 < [Discontinued](#php-1) : 31              |
+| PHP        | [Still Active](#php) : 5 < [Discontinued](#php-1) : 31              |
+| Java       | [Still Active](#java) : 5 < [Discontinued](#java-1) : 12            |
 | C#         | [Still Active](#c) : 1 < [Discontinued](#c-2) : 1                   |
 | Go         | [Still Active](#go) : 1 < [Discontinued](#go-1) : 3                 |
 | Python     | [Still Active](#python) : 1 < [Discontinued](#python-1) : 1         |
 | TypeScript | [Still Active](#typescript) : 1 < [Discontinued](#typescript-1) : 1 |
-| C++        | Still Active : 0 < [Discontinued](#c-1) : 2                         |
+| C++        | Still Active : 1 < [Discontinued](#c-1) : 3                         |
 | D          | Still Active : 0 < [Discontinued](#d) : 1                           |
 | JavaScript | Still Active : 1 < [Discontinued](#javascript) : 5                  |
 | Kotlin     | Still Active : 0 < [Discontinued](#kotlin) : 1                      |
 | Rust       | Still Active : 1 < [Discontinued](#rust) : 2                        |
 
 ## Active Software
+### C++
+
+- [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
 
 ### C#
 
@@ -30,7 +33,7 @@ Software will be marked as discontinued after roughly one month of inactivity.
 
 ### Go
 
--   [DragonFly](https://github.com/df-mc/dragonfly)
+-   [DragonFly](https://github.com/df-mc/dragonfly) ([Discord](https://discord.gg/62zMCB4h))
 
 ### Java
 
@@ -38,6 +41,7 @@ Software will be marked as discontinued after roughly one month of inactivity.
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
 -   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
+-   [Terracotta](https://github.com/TerracottaMC/Terracotta)
 
 ### TypeScript
 
@@ -54,17 +58,21 @@ Software will be marked as discontinued after roughly one month of inactivity.
 ### PHP
 
 -   [Altay](https://github.com/TuranicTeam/Altay)
+-   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
+-   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
+-   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
 
 ### Python
 
--   [Podrum](https://github.com/Podrum/Podrum)
+-   [PodrumR3](https://github.com/Podrum/PodrumR3)
 
 ## Discontinued Software
 
 ### C++
 
+-   [Element Zero](https://github.com/Element-0/ElementZero)
 -   [Cenisys](https://github.com/iTXTech/Cenisys)
 -   [CenisysPro](https://github.com/GenisysPro/CenisysPro)
 
@@ -157,7 +165,7 @@ Software will be marked as discontinued after roughly one month of inactivity.
 
 ## Licensing
 
-:::tip
+:::tip License
 This page is licensed under the `GNU Lesser General Public License v3.0`.
 
 The original source was authored `xinghao2003`, and may be [found here.](https://github.com/xinghao2003/MCBE-ServerSoftware-List)

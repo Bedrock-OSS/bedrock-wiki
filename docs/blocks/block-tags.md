@@ -1,5 +1,6 @@
 ---
 title: Block Tags
+category: Documentation
 tags:
     - experimental
 ---
@@ -41,12 +42,12 @@ Vanilla tags can be applied to custom blocks, and some vanilla blocks are tagged
 | plant | Tall Grass, Large Fern, Sunflower, Lilac, Rose Bush, Peony, Oak Sapling, Oak Sapling, Spruce Sapling, Birch Sapling, Jungle Sapling, Acacia Sapling, Dark Oak Sapling |
 | stone | Stone, Cobblestone, Mossy Cobblestone, Dripstone Block, Bricks, Cobblestone Stairs, Smooth Stone Slab, Sandstone Slab, Cobblestone Slab, Brick Slab, Stone Bricks Slab, Quartz Slab, Nether Brick Slab, Cobblestone Wall, Mossy Cobblestone Wall, Stone Brick Wall, Mossy Stone Brick Wall, Andesite Wall, Diorite Wall, Granite Wall, Sandstone Wall, Red Sandstone Wall, Brick Wall, Prismarine Wall, Nether Brick Wall, Red Nether Brick Wall, End Stone Brick Wall, Andesite, Granite, Polished Andesite, Polished Granite, Polished Diorite, Diorite |
 | metal | Block of Gold, Block of Iron, Cauldron, Iron Bars |
-| diamond_pick_diggable | Obsidian, Coal Ore, Deepslate Coal Ore, Deepslate Diamond Ore, Deepslate Emerald Ore, Deepslate Gold Ore, Deepslate Iron Ore, Deepslate Redstone Ore, Diamond Ore, Emerald Ore, Gold ore, Iron Ore, Lapis Lazuli Ore, Redstone Ore |
+| diamond_pick_diggable | Obsidian, Coal Ore, Deepslate Coal Ore, Deepslate Diamond Ore, Deepslate Emerald Ore, Deepslate Gold Ore, Deepslate Iron Ore, Deepslate Redstone Ore, Diamond Ore, Emerald Ore, Gold ore, Iron Ore, Lapis Lazuli Ore, Redstone Ore, Block of Raw Iron, Block of Raw Gold |
 | gold_pick_diggable | |
-| iron_pick_diggable | Coal Ore, Deepslate Coal Ore, Deepslate Diamond Ore, Deepslate Emerald Ore, Deepslate Gold Ore, Deepslate Iron Ore, Deepslate Redstone Ore, Diamond Ore, Emerald Ore, Gold ore, Iron Ore, Lapis Lazuli Ore, Redstone Ore |
+| iron_pick_diggable | Coal Ore, Deepslate Coal Ore, Deepslate Diamond Ore, Deepslate Emerald Ore, Deepslate Gold Ore, Deepslate Iron Ore, Deepslate Redstone Ore, Diamond Ore, Emerald Ore, Gold ore, Iron Ore, Lapis Lazuli Ore, Redstone Ore, Block of Raw Iron, Block of Raw Gold |
 | stone_pick_diggable | |
 | wood_pick_diggable | |
-| dirt | Dirt, Coarse Dirt |
+| dirt | Dirt, Coarse Dirt, Farmland |
 | sand | Red Sand, Sand |
 | gravel | Gravel |
 | grass | Grass Block |

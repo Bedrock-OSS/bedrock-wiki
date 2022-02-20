@@ -1,5 +1,6 @@
 ---
 title: Custom Weapons
+category: Tutorials
 tags:
 	- experimental
 ---
@@ -92,7 +93,7 @@ Like with the other item tutorials we will start by making a simple custom sword
 				"repair_items": [
 					{
 						"items": "minecraft:stick",
-						"repair_amount": 50
+						"repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"
 					}
 				]
 			}

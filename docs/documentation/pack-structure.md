@@ -48,6 +48,7 @@ show_toc: false
 'RP/biomes_client.json',
 'RP/blocks.json',
 'RP/sounds.json',
+'RP/contents.json',
 
 'RP/animation_controllers/example.ac.json',
 'RP/animations/example.animation.json',
@@ -55,6 +56,8 @@ show_toc: false
 'RP/attachables/example.attachable.json',
 
 'RP/entity/example.ce.json',
+
+'RP/fogs/example_fog_setting.json',
 
 'RP/models/entity/example.geo.json',
 'RP/models/blocks/example.geo.json',
@@ -111,7 +114,18 @@ show_toc: false
 'RP/textures/item_texture.json',
 'RP/textures/terrain_texture.json',
 'RP/textures/flipbook_textures.json',
+'RP/textures/texture_list.json',
 
+'RP/textures/environment/overworld_cubemap/cubemap_0.png',
+'RP/textures/environment/overworld_cubemap/cubemap_1.png',
+'RP/textures/environment/overworld_cubemap/cubemap_2.png',
+'RP/textures/environment/overworld_cubemap/cubemap_3.png',
+'RP/textures/environment/overworld_cubemap/cubemap_4.png',
+'RP/textures/environment/overworld_cubemap/cubemap_5.png',
+'RP/textures/environment/overworld_cubemap/cubemap_6.png',
+
+
+                    
 'RP/textures/blocks/example.png',
 'RP/textures/entity/example.png',
 'RP/textures/items/example.png',

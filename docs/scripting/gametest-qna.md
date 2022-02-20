@@ -1,5 +1,6 @@
 ---
 title: GameTest Q&A 2021/08/06
+category: Game Tests
 ---
 
 ## Realms

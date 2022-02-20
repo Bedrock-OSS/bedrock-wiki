@@ -40,6 +40,18 @@ The title is required, as it is the name shown in the bar on the left side. Ment
 
 After the Head, you write the Body. The body is just your whole content. A common mistake everyone does the first time is to put the page title as a level 1 header on their page. You don't have to do this, because the title given in the Header will already be placed on top of your page.
 
+List of tags:
+
+-   guide
+-   recipe
+-   help
+-   experimental
+-   beta
+-   easy
+-   intermediate
+-   expert
+
+
 ## Viewing the Wiki locally
 
 Its really hard to know how your article will look when its finished and published. To help with that, you can use a tool called `npm`!
@@ -94,6 +106,18 @@ You can create links, that redirect you to other pages in the wiki. These are ca
 
 [Redirect to the contribute page](/contribute)
 
+```Markdown
+[JSON Arrays](/guide/understanding-json.html#arrays)
+```
+
+[JSON Arrays](/guide/understanding-json.html#arrays)
+
+```Markdown
+[Go to Working with Markdown header](#working-with-markdown)
+```
+
+[Go to Working with Markdown header](#working-with-markdown)
+
 To redirect to another page, just look in the file explorer. The main folder is the `"docs"` folder. To link to a page thats directly inside this folder, you can just write `/pagename`, like `/contribute` to link to the contribute page. Every page that is inside a folder has to be accessed by writing the name of the folder, a slash, and then the page name: `/blocks/block-materials`.
 
 :::warning
@@ -106,7 +130,7 @@ Our wiki uses special Vue-Components, which you can use to add things like Butto
 
 ### Panel
 
-Panels are used to inform or warn the user about some really important stuff. There are two types of Panels: `tip` and `warning`.
+Panels are used to inform or warn the user about some really important stuff. There are three types of Panels: `tip`, `warning` and `danger`.
 
 ```HTML
 :::tip
@@ -115,6 +139,10 @@ some tips here
 
 :::warning
 a warning here
+:::
+
+:::danger
+danger zone
 :::
 ```
 
@@ -126,14 +154,32 @@ some tips here
 a warning here
 :::
 
+:::danger
+danger zone
+:::
+
 Panels are created by typing three colons and the type of the Panel. Then you can write your content and at the end you close the Panel by typing just three colons.
+
+You also can add headers for panels:
+
+```HTML
+:::danger STOP!
+danger zone
+:::
+```
+
+:::danger STOP!
+danger zone
+:::
 
 ### CodeHeader
 
 CodeHeaders are used to nicely wrap codeblocks, so a user can easily copy the code inside them. You can also add some text, like a file path, so the users know exactly where to put this code.
+Remember to format json. You can use [this](https://jsonformatter.curiousconcept.com) tool.
 
 ````json
 <CodeHeader>BP/blocks/example.json</CodeHeader>
+
 ```json
 {
     "some": "json"
@@ -169,17 +215,18 @@ On the next line after the closing tag, you have to start a code block to use th
 
 A Button works like a link, but is more noticeable for the user.
 
+<CodeHeader></CodeHeader>
+
 ```html
 <BButton 
-    link="https://wiki.bedrock.dev" 
+    link="https://youtube.com" 
     color=red
 >your button text</BButton>
 ```
 
 <BButton
-link='https://wiki.bedrock.dev'
-color=red
-
+    link='https://youtube.com'
+    color=red
 > your button text</BButton>
 
 | Attribute | Required | Type   | Note                                                                                                            |
@@ -189,13 +236,48 @@ color=red
 
 The text between the two HTML-Tags is the text that will appear on the button.
 
+The link can either be an external website, or a page in our wiki. For the last case, use relative links, as described in our [linking-section](/contribute-style#linking).
+
+### Checklist
+
+The Checklist can be used to tell the reader about certain things that need to be done or to show what has already been done.
+
+<CodeHeader></CodeHeader>
+
+```html
+<Checklist>
+
+-   [x] This will be checked!
+-   [ ] This won't be checked!
+
+</Checklist>
+```
+
+<Checklist>
+
+-   [x] This will be checked!
+-   [ ] This won't be checked!
+
+</Checklist>
+
+
+To add new entries to the Checklist, you need to create a Markdown List, and start each entry with `[x]` or `[ ]`.
+
+If you start the entry with `[x]`, this entry will be checked.
+
+If you start the entry with `[ ]`, this entry won't be checked.
+
+Pay attention to the empty lines between the content and the tags! If you forget these, this component will not work!
+
 ### Spoiler
 
 A spoiler is a Component that can be used to hide some content, so it doesn't block the whole site.
 
+<CodeHeader></CodeHeader>
+
 ```html
 <Spoiler title="title">
-    
+
 text here
 
 and here
@@ -203,7 +285,8 @@ and here
 </Spoiler>
 ```
 
-<Spoiler title='title'>
+<Spoiler 
+title='title'>
 
 text here
 
@@ -223,6 +306,8 @@ Pay attention to the empty lines between the content and the tags! If you forget
 
 A Label is a small icon with uppercase letters that can be used to give your articles more flair.
 
+<CodeHeader></CodeHeader>
+
 ```html
 <Label 
     name="name"
@@ -234,7 +319,7 @@ A Label is a small icon with uppercase letters that can be used to give your art
 name='name'
 color='green'
 
-> label</Label>
+>label</Label>
 
 | Attribute | Required | Type   | Note                                                                                                    |
 | --------- | -------- | ------ | ------------------------------------------------------------------------------------------------------- |
@@ -285,8 +370,12 @@ The `:paths` Attribute is a String, that contains a List of all separate file pa
 
 A YouTubeEmbed can be used to embed a YouTube Video in your article.
 
+<CodeHeader></CodeHeader>
+
 ```html
-<YouTubeEmbed id="dQw4w9WgXcQ" />
+<YouTubeEmbed 
+    id="dQw4w9WgXcQ" 
+/>
 ```
 
 <YouTubeEmbed id='dQw4w9WgXcQ' />
@@ -299,31 +388,38 @@ A YouTubeEmbed can be used to embed a YouTube Video in your article.
 
 A WikiImage is an alternative way to add an image in your article.
 
+<CodeHeader></CodeHeader>
+
 ```html
 <WikiImage
 	src="assets/images/homepage/wikilogo.png"
 	alt="alternative text"
 	pixelated="true"
+	width=420
 />
 ```
 
 <WikiImage 
     src='assets/images/homepage/wikilogo.png' 
     alt='alternative text' 
-    pixelated=true 
+    pixelated=true
+    width=420
 />
 
-| Attribute | Required | Type    | Note                                                                                                                                                                                                                                                 |
-| --------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| src       | yes      | String  | Image to show                                                                                                                                                                                                                                        |
-| alt       | no       | String  | Text to show if the browser can't load the image. Not really important, as most modern browser support showing images.                                                                                                                               |
-| pixelated | no       | Boolean | If the image should be pixelated <br> _Due to a bug, it doesn't matter if this attribute is true or false. As long as the attribute is present, the image will be pixelated. This attribute **must** be deleted so that the image is not pixelated!_ |
+| Attribute | Required | Type    | Note                                                                                                                   |
+| --------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| src       | yes      | String  | Image to show                                                                                                          |
+| alt       | no       | String  | Text to show if the browser can't load the image. Not really important, as most modern browser support showing images. |
+| pixelated | no       | Boolean | If the image should be pixelated.                                                                                      |
+| width     | no       | Integer | Width of the Image. The height will be scaled automatically.                                                           |
 
 Unlike a markdown image, the image can be pixelated here.
 
 ### CardLink
 
 With CardLinks you can make fancy boxes with an image and a text, which contains a link!
+
+<CodeHeader></CodeHeader>
 
 ```html
 <CardLink
@@ -346,3 +442,157 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 
 Don't overuse them! They look cool, but someone could really give them too much attention and forget to focus on other important parts of your article.
 
+### New Lines
+
+**Always remember to add new lines before and after components!**
+
+Wrong:
+
+````
+-   one
+-   two
+<CodeHeader>BP/blocks/example.json</CodeHeader>
+```json
+{
+    "some": "json"
+}
+```
+````
+
+Correct:
+
+````
+-   one
+-   two
+
+<CodeHeader>BP/blocks/example.json</CodeHeader>
+
+```json
+{
+    "some": "json"
+}
+```
+````
+
+## Formatting Guide
+
+Everyone likes to read wikis that are perfectly and consistently formatted.
+
+Well, its hard to realise that. And we don't want perfectly and consistently formatted wikis. But if everyone tries to follow these simple rules, all users will have a better time reading our wikis!
+
+### General Rules
+
+1.  For naming packages, folders, etc. consult our [Style-Guide](/meta/style-guide).
+
+### Headers
+
+1.  Don't use level-1 Headers. Your Page starts with a level-1 Header, that has the same title as written in the Front Matter.
+2.  Try to avoid Headers higher than level-3. They wont show in the right sidebar and wont be easy to see.
+3.  Start with an Uppercase Letter and use the `Title Case` style.
+4.  Don't use `:` in your Headers!
+
+Some examples:
+
+✔️ `## A Page`
+
+❌ `# A Page`
+
+✔️ `### Some Other Layer`
+
+❌ `###### Some Other Layer`
+
+✔️ `## My Own Article`
+
+❌ `## my own: article`
+
+### JSON Code
+
+1.  Use CodeHeaders, unless it is illogical or not possible.
+2.  Fully extend JSON Code aka. as ["Prettified Code"](https://jsonformatter.curiousconcept.com/#).
+
+Do not extend `.geo.json` as it will be too long.
+If the code is too long and not necessary, use spoilers.
+
+3.  Use `RP` and `BP` as root-folders.
+4.  Make comments but not many.
+
+Describe the most important things in comments inside the JSON, you can tell about other components after the code. Also follow our comments style.
+Example:
+
+<CodeHeader>BP/items/copper_coin.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+            // Describing an object with components.
+			"identifier": "bs:copper_coin",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64, // Short description a value/component.
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.items"
+			},
+
+            "minecraft:use_duration": 3.5,
+            "minecraft:icon": {
+				"texture": "copper_coin"
+			}
+            // Make notes about a group of specific components (icon and use_duration in our case) used above this way. 
+		}
+	}
+}
+```
+
+-   `minecraft:max_stack_size`
+
+...
+
+-   `minecraft:creative_category`
+
+...
+
+
+### Markdown Formatting
+
+This section is only for the readability of your Markdown files. It wont be visible in the wiki.
+
+1.  If you use lists or numbered lists, use tabulators or 4 spaces after the `-` or number.
+2.  Prettify Markdown tables. Use spaces and `-` to extend all rows to the same lengths. Use one space before and after each cells content.
+3.  Don't use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
+
+✔️ 
+```
+-   list
+```
+
+❌ 
+```
+- list
+```
+
+✔️
+
+```
+| Some Data | Aaaaand More Data |
+| --------- | ----------------- |
+| here      | and here          |
+```
+
+❌
+
+```
+|Some Data|Aaaaand More Data|
+|---|---|
+|here|and here|
+```
+
+✔️ `<WikiImage src="my/image.png"/>`
+
+_or_
+
+✔️ `![](my/image.png)`
+
+❌ `<img src="my/image.png" />`

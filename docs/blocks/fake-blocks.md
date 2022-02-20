@@ -1,5 +1,6 @@
 ---
 title: Fake Blocks
+category: Tutorials
 tags:
     - experimental
     - intermediate

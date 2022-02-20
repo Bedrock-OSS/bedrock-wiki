@@ -1,21 +1,22 @@
 ---
 title: Trade Tables
-nav_order: 1
+category: Documentation
+nav_order: 2
 tags:
-	- guide
+- Stable
+- Last updated for Version 1.18.10
 mention:
-	- Ciosciaa
+- Ciosciaa
 ---
-
-*Last updated for Version 1.17.41*
 
 Trade tables represent the fundamental data behind trading item transactions for an entity. Trade tables are not standalone; they must be referenced from an [entity component](https://bedrock.dev/docs/stable/Entities#minecraft%3Aeconomy_trade_table). Using the randomizing properties available to trade tables, trade offers, item counts, and cost calculations may vary across entity instances, even if all would point to the same trade table.
 
 ![](/assets/images/loot/trade_tables/trading.png)
 
-Trade tables are not identified or versioned. Like loot tables, trade tables do not support Molang and instead rely on JSON constructs, like range objects and [functions](#functions). Despite their differences, trade tables still support comments.
+Trade tables are not identified or versioned. Like loot tables, trade tables do not support Molang and instead rely on JSON constructs, like range objects and [functions](#functions). Despite being different, trade tables still support comments.
 
 ## Integration
+
 Trade tables don't represent a primary add-on system, like blocks or biomes. They aren't registered by being placed in a specific folder; instead, they're referenced (from entities). Trade tables may be placed anywhere within a behavior pack.
 
 ::: tip
@@ -32,6 +33,7 @@ It's recommended to follow vanilla convention and place all trade tables within 
 The following example is referenced and analyzed throughout the document:
 
 <Spoiler title="Trade Table File Example">
+
 <CodeHeader>BP/trading/minister.json</CodeHeader>
 ```json
 {
@@ -158,9 +160,11 @@ The following example is referenced and analyzed throughout the document:
 </Spoiler>
 
 ## Structure
+
 Trade tables are represented as un-versioned, un-namespaced objects.
 
 <CodeHeader>#</CodeHeader>
+
 ```json
 {
 	"tiers": [
@@ -169,7 +173,7 @@ Trade tables are represented as un-versioned, un-namespaced objects.
 		},
 		{
 			"total_exp_required": 28,
-			
+
 			"trades": […]
 		}
 	]
@@ -179,9 +183,11 @@ Trade tables are represented as un-versioned, un-namespaced objects.
 Trade tables use [tiers](#tiers) to structure trade organization. Tiers are defined with the required top-level `"tiers"` array property. Tiers appear in order in the trading interface.
 
 ### Tiers
+
 Tiers act as an unlockable set of trades and represent the highest level of grouping in a trade table.
 
 <CodeHeader>#/tiers/0</CodeHeader>
+
 ```json
 {
 	"groups": […]
@@ -189,10 +195,11 @@ Tiers act as an unlockable set of trades and represent the highest level of grou
 ```
 
 <CodeHeader>#/tiers/1</CodeHeader>
+
 ```json
 {
 	"total_exp_required": 28,
-	
+
 	"trades": […]
 }
 ```
@@ -206,9 +213,11 @@ If both `"trades"` and `"groups"` are given in a tier, the trades declaration is
 Within a tier, trades appear in order in the trading interface. If trades are grouped, those groups will appear in their defined order as well, organized by group and then by trade. Trades in one group are not visually differentiable from trades in other groups; only tiers are visually separated and identifiable.
 
 #### Experience Requirement
-Tiers are unlocked when the *trader* meets experience thresholds. Each trader has its own internal lifetime experience that accumulates when trading with players. The amount of experience obtained per trade depends on that trade's [experience reward](#trader-experience). The optional `"total_exp_required"` property specifies how much experience the trader needs in order for that tier to unlock.
+
+Tiers are unlocked when the _trader_ meets experience thresholds. Each trader has its own internal lifetime experience that accumulates when trading with players. The amount of experience obtained per trade depends on that trade's [experience reward](#trader-experience). The optional `"total_exp_required"` property specifies how much experience the trader needs in order for that tier to unlock.
 
 <CodeHeader>#/tiers/1/</CodeHeader>
+
 ```json
 "total_exp_required": 28
 ```
@@ -216,6 +225,7 @@ Tiers are unlocked when the *trader* meets experience thresholds. Each trader ha
 By default, the amount of experience needed is set to the index of the trade tier. Therefore, the second tier would require the trader to have 1 XP; the third tier would require 2 XP; and so forth. The first tier is always unlocked automatically, [regardless of its set experience threshold](#initial-tier-experience).
 
 #### Tier Unlocking
+
 Tiers are unlocked in order. When a new tier is unlocked, the subsequent tier is additionally checked to see if its threshold is met by the current XP. If it is, it unlocks and checks its subsequent tier, and so forth. Tier unlocking is checked when the rewarded trader experience would suffice for multiple tiers or if a [provided initial experience](#initial-tier-experience) would unlock subsequent tiers when correctly updated by the game.
 
 ::: tip NOTE
@@ -223,15 +233,19 @@ Since tiers are checked one-at-a-time, if tier unlocking would stop due to the X
 :::
 
 ##### Initial Tier Experience
-Special handling occurs for a non-zero experience threshold in the first tier. If negative, *all* tiers will be unlocked. If greater than 0, the initial experience of the trader is set to the provided value.
+
+Special handling occurs for a non-zero experience threshold in the first tier. If negative, _all_ tiers will be unlocked. If greater than 0, the initial experience of the trader is set to the provided value.
 
 ::: warning
 When the initial tier's experience threshold is non-zero, a manual update is required for a trader's trades to reflect the actual nature of their trade table. In these cases, performing a trade or closing and re-opening the trading interface will update the interface correctly. Initially, only the first tier will be available even if other tiers should be unlocked.
 :::
 
 ##### Tier Freezing
+
 Excluding the [initial tier](#initial-tier-experience), it's possible to freeze trades at a tier:
+
 <CodeHeader>Example Tier Freeze</CodeHeader>
+
 ```json
 "total_exp_required": -1
 ```
@@ -239,13 +253,15 @@ Excluding the [initial tier](#initial-tier-experience), it's possible to freeze 
 When its prior tier is unlocked, a tier with a negative XP requirement will immediately unlock, [as expected](#tier-unlocking). However, it will be impossible for the player to progress to any subsequent tiers.
 
 ### Trade Groups
+
 Trade groups are a way to randomly select which trades an individual trader should use for a tier.
 
 <CodeHeader>#/tiers/0/groups/0</CodeHeader>
+
 ```json
 {
 	"num_to_select": 1,
-	
+
 	"trades": […]
 }
 ```
@@ -261,15 +277,17 @@ Currently, no random selection count is possible. Nor is weighting by trade, but
 :::
 
 ### Trades
+
 Trades represent a transaction between a trader and the player.
 
 <CodeHeader>#/tiers/0/trades/1</CodeHeader>
+
 ```json
 {
 	"wants": […],
 	"gives": […],
 	"max_uses": 2,
-	
+
 	"reward_exp": false,
 	"trader_exp": 8
 }
@@ -282,9 +300,11 @@ Individual trade definitions can affect more than just trades themselves. Notabl
 :::
 
 #### Wanted and Given Items
+
 The fundamental transactional units are declared using `"wants"` and `"gives"`; players trade with `"wants"` to receive `"gives"`. Both properties must be arrays and are required.
 
 <CodeHeader>#/tiers/0/trades/1/</CodeHeader>
+
 ```json
 "wants": […],
 "gives": […]
@@ -299,9 +319,11 @@ If an object is provided as an entry that contains both item and choice properti
 :::
 
 #### Trade Limit
+
 A trader can typically only perform an individual trade a set number of times before having to resupply. The numeric `"max_uses"` property configures this number.
 
 <CodeHeader>#/tiers/0/trades/1/</CodeHeader>
+
 ```json
 "max_uses": 2
 ```
@@ -315,9 +337,11 @@ The act of resupplying is handled by an entity component (`"minecraft:trade_resu
 If a value of `0` is given, that trade will be shown in the trading interface but will be impossible to use. If a negative value is given, that trade will never need resupplying; it will be infinitely usable.
 
 #### Player Experience
-Experience orbs intended for the *player* can be disabled for a trade using the optional Boolean `"reward_exp"` property.
+
+Experience orbs intended for the _player_ can be disabled for a trade using the optional Boolean `"reward_exp"` property.
 
 <CodeHeader>#/tiers/0/trades/1/</CodeHeader>
+
 ```json
 "reward_exp": false
 ```
@@ -325,23 +349,27 @@ Experience orbs intended for the *player* can be disabled for a trade using the 
 By default, `"reward_exp"` is true, and the player will be rewarded with some experience for trading. The amount of experience received is not modifiable within a trade table.
 
 #### Trader Experience
+
 Traders may receive experience when the player finalizes a trade. This property is the key to establishing a trade progression system with a trader using [tiers](#tiers).
 
 <CodeHeader>#/tiers/0/trades/1/</CodeHeader>
+
 ```json
 "trader_exp": 8
 ```
 
-The amount of experience to reward the *trader* is given the the optional numeric property `"trader_exp"`. By default, the trader will receive 1 XP.
+The amount of experience to reward the _trader_ is given the the optional numeric property `"trader_exp"`. By default, the trader will receive 1 XP.
 
 ::: tip
 For non-linearly spaced tiers, it's typical for the trader experience to increase in higher tiers. This way, lower-tier trades will have less leveling impact than higher-tier trades.
 :::
 
 ### Choices
+
 Choices are simple objects for randomly selecting an item to use for a trade. One item is selected with uniform randomness for that trade for each instance of a trader.
 
 <CodeHeader>#/tiers/1/trades/0/wants/0</CodeHeader>
+
 ```json
 {
 	"choice": [
@@ -368,9 +396,11 @@ There are currently no means of specifying a weight for a given item, but an ite
 :::
 
 ### Items
+
 Items are the subjects of a trade. Their definitions are shared between wanted and given items, but there are some various implications depending on location used.
 
 <CodeHeader>#/tiers/1/trades/0/wants/0/choice/0</CodeHeader>
+
 ```json
 {
 	"item": "wiki:sacred_stones",
@@ -378,18 +408,20 @@ Items are the subjects of a trade. Their definitions are shared between wanted a
 		"min": 4,
 		"max": 6
 	},
-	
+
 	"price_multiplier": 0.5
 }
 ```
+
 <CodeHeader>#/tiers/0/groups/0/trades/1/gives/0</CodeHeader>
+
 ```json
 {
 	"item": "wiki:exalted_blade",
 	"functions": [
 		{
 			"function": "enchant_with_levels",
-			
+
 			"treasure": true,
 			"levels": {
 				"min": 15,
@@ -401,15 +433,19 @@ Items are the subjects of a trade. Their definitions are shared between wanted a
 ```
 
 #### Item Reference
+
 Items are referenced within trades using the required `"item"` string property.
 
 <CodeHeader>#/tiers/1/trades/0/wants/0/choice/0/</CodeHeader>
+
 ```json
 "item": "wiki:exalted_blade"
 ```
 
 The item reference must point to the identifier of an item. A data value can be provided in-place to the reference as a suffix:
+
 <CodeHeader>Example Data Assignment</CodeHeader>
+
 ```json
 "item": "minecraft:log:2"
 ```
@@ -418,12 +454,14 @@ The item reference must point to the identifier of an item. A data value can be 
 Data values can also be set (and much more conveniently randomized) using the `set_data` function.
 :::
 
-If no data value is specified for a *wanted* item, any item with that identifier may be traded. If no data value is specified for a *given* item, a data value of `0` is implied.
+If no data value is specified for a _wanted_ item, any item with that identifier may be traded. If no data value is specified for a _given_ item, a data value of `0` is implied.
 
 #### Quantity
+
 The optional `"quantity"` property specifies the count of items wanted or given in a trade.
 
 <CodeHeader>#/tiers/1/trades/0/wants/0/choice/0/</CodeHeader>
+
 ```json
 "quantity": {
 	"min": 4,
@@ -438,40 +476,45 @@ Quantity is always bounded by the stack size and can only affect a single slot i
 :::
 
 #### Price Multiplier
+
 The price multiplier dictates how an item's [base quantity](#quantity) is altered due to certain events.
 
 <CodeHeader>#/tiers/1/trades/0/wants/0/choice/0/</CodeHeader>
+
 ```json
 "price_multiplier": 0.5
 ```
 
-`"price_multiplier"` is optional and defaults to `0`. Two systems exist that use the price multiplier: a modern and a legacy system. In the modern system, the given price multiplier can only affect the *first wanted item* in a trade. In the legacy system, any *wanted items* can be affected.
+`"price_multiplier"` is optional and defaults to `0`. Two systems exist that use the price multiplier: a modern and a legacy system. In the modern system, the given price multiplier can only affect the _first wanted item_ in a trade. In the legacy system, any _wanted items_ can be affected.
 
 ##### Fluctuation Factors
+
 Trade prices fluctuate as a result of serval factors:
-- An increased demand, occurring when trading for the same item across multiple [resupplies](#trade-limit)
-- Being recently cured, such as villagers being cured from being zombie villagers
-- Being *near* a trader who was recently cured
-- Trading with a player who is affected with "Hero of the Village"
+
+-   An increased demand, occurring when trading for the same item across multiple [resupplies](#trade-limit)
+-   Being recently cured, such as villagers being cured from being zombie villagers
+-   Being _near_ a trader who was recently cured
+-   Trading with a player who is affected with "Hero of the Village"
 
 The price multiplier affects all these situations with the exception of a player having "Hero of the Village" when using the new pricing formula, which uses fixed values.
 
 ##### Cost Calculations
+
 The price multiplier directly and solely affects cost increases in response to an increased demand for a trade. By default, demand is 0 and cannot decrease past that value. Demand for a trade stacks, increasing when resupplying after that trade [has been exhausted](#trade-limit) and decreasing if no trades occurred between resupplies.
 
 Cost increase due solely to demand is linear, where each increase in demand adds a proportion of the base cost, given by the price multiplier. Assuming the following variables…
 
-|Variable|Meaning|
-|-|-|
-|*c*|Total cost|
-|*p*|Base cost, including [quantity overrides](#quantity-modifying-enchantment-functions)|
-|*m*|Price multiplier|
-|*d*|Current demand|
+| Variable | Meaning                                                                              |
+| -------- | ------------------------------------------------------------------------------------ |
+| _c_      | Total cost                                                                           |
+| _p_      | Base cost, including [quantity overrides](#quantity-modifying-enchantment-functions) |
+| _m_      | Price multiplier                                                                     |
+| _d_      | Current demand                                                                       |
 
 <br>
 …The following formula can be used to calculate the total cost when no other factors are present:
 
-*c* = *p* × (1 + *m* * *d*)
+_c_ = _p_ × (1 + _m_ \* _d_)
 
 ::: tip NOTE
 Other situations additionally use entity properties for cost calculations and are not provided here.
@@ -480,18 +523,20 @@ Other situations additionally use entity properties for cost calculations and ar
 If the price multiplier is `0`, the quantity will remain constant in most situations (except the "Hero of the Village" modifier using the new pricing formula).
 
 ::: tip NOTE
-A negative price multiplier is possible but can't affect increasing costs due to [demand](#trade-limit); the multiplier will effectively be capped to `0`. However, negative values do affect prices in response to the trader recently being cured, the trader being nearby another trader who was recently cured, or trading with a player affected with "Hero of the Village" *using the legacy pricing formulas*.
+A negative price multiplier is possible but can't affect increasing costs due to [demand](#trade-limit); the multiplier will effectively be capped to `0`. However, negative values do affect prices in response to the trader recently being cured, the trader being nearby another trader who was recently cured, or trading with a player affected with "Hero of the Village" _using the legacy pricing formulas_.
 :::
 
 #### Functions
+
 Functions are used to modify the nature of the item. The optional `"functions"` array contains a collection of functions to be applied to the item.
 
 <CodeHeader>#/tiers/0/groups/0/trades/1/gives/0/</CodeHeader>
+
 ```json
 "functions": [
 	{
 		"function": "enchant_with_levels",
-		
+
 		"treasure": true,
 		"levels": {
 			"min": 15,
@@ -504,12 +549,13 @@ Functions are used to modify the nature of the item. The optional `"functions"` 
 The functions used by trade tables are shared with loot tables. When used ([where usable](#unusable-wanted-item-functions)) in a wanted item declaration, they act to restrict the nature of the wanted item. Such function restrictions can only affect the first wanted item.
 
 ##### Generally Unusable Functions
+
 In general, functions behave well for trading; however, the following do not work anywhere in trade tables:
 
-- `set_count`
-- `furnace_smelt`
-- `looting_enchant`
-- `trader_material_type`
+-   `set_count`
+-   `furnace_smelt`
+-   `looting_enchant`
+-   `trader_material_type`
 
 ::: tip NOTE
 `set_count`'s functionality is replaced by the [quantity property](#quantity).
@@ -518,33 +564,37 @@ In general, functions behave well for trading; however, the following do not wor
 :::
 
 ##### Unusable Wanted Item Functions
+
 In general, using functions to specify item attributes for a wanted item will require the offered item to conform to those attributes. However, the following functions do not enforce a strict match and are therefore useless on wanted items:
 
-- `set_name`
-- `set_lore`
-- `set_damage`
-- `set_book_contents`
-- `random_dye`
-- `fill_container`
+-   `set_name`
+-   `set_lore`
+-   `set_damage`
+-   `set_book_contents`
+-   `random_dye`
+-   `fill_container`
 
 ##### Quantity-Modifying Enchantment Functions
-2 functions actually set the quantity for the first *wanted item* if being used as *given items*, potentially overriding any provided [quantity](#quantity) for that first wanted item:
 
-- `enchant_with_levels`
-- `enchant_book_for_trading`
+2 functions actually set the quantity for the first _wanted item_ if being used as _given items_, potentially overriding any provided [quantity](#quantity) for that first wanted item:
+
+-   `enchant_with_levels`
+-   `enchant_book_for_trading`
 
 ::: tip NOTE
-Despite overriding the quantity, all [modified trade prices](#fluctuation-factors) adapt correctly. These functions cannot affect the quantity of a second wanted item, even when using the legacy cost formulas. If these functions are used on a *wanted item*, the quantity is not overridden.
+Despite overriding the quantity, all [modified trade prices](#fluctuation-factors) adapt correctly. These functions cannot affect the quantity of a second wanted item, even when using the legacy cost formulas. If these functions are used on a _wanted item_, the quantity is not overridden.
 :::
 
 ###### Enchant with Levels Function
+
 `enchant_with_levels` randomly enchants an item as through enchanted from an enchantment table.
 
 <CodeHeader>#/tiers/0/groups/0/trades/1/gives/0/functions/0</CodeHeader>
+
 ```json
 {
 	"function": "enchant_with_levels",
-	
+
 	"treasure": true,
 	"levels": {
 		"min": 5,
@@ -556,13 +606,15 @@ Despite overriding the quantity, all [modified trade prices](#fluctuation-factor
 The cost for the first wanted item is determined by adding this function's chosen level value (capped to `0` if it would be negative) to the original [quantity](#quantity). The level value is computed from the optional `"levels"` property. If a numeric literal is used, that value is the chosen level value. If a range object is used, as above, a random number is rolled inclusively between the provided minimum and maximum. That random number then acts as the chosen level value. In the above example, the first wanted item's cost would be increased by 5 to 25.
 
 ###### Enchant Book for Trading Function
+
 `enchant_book_for_trading` is intended solely for trading. Its properties combine to determine the first wanted item's cost.
 
 <CodeHeader>#/tiers/0/groups/0/trades/0/gives/0/functions/0</CodeHeader>
+
 ```json
 {
 	"function": "enchant_book_for_trading",
-	
+
 	"base_cost": 4,
 	"base_random_cost": 12,
 	"per_level_cost": 4,
@@ -592,22 +644,26 @@ If either random cost property is negative, there seems to be a 50-50 chance tha
 If the total combined cost would be negative (assuming no negative random cost properties were used), the provided [quantity](#quantity) of the affected wanted item is used instead. The simplest means of guaranteeing this would be:
 
 <CodeHeader>Example Quantity-Based Enchanted Book Cost</CodeHeader>
+
 ```json
 {
 	"function": "enchant_book_for_trading",
-	
+
 	"base_cost": -1,
 	"base_random_cost": 0,
 	"per_level_cost": 0,
 	"per_level_random_cost": 0
 }
 ```
+
 :::
 
 ##### Spawn Egg Trader Binding
+
 The `"set_actor_id"` function is used to set the data value of a spawn egg based on a provided entity identifier, given with `"id"`.
 
 <CodeHeader>Example Spawn Egg Trader Binding</CodeHeader>
+
 ```json
 {
 	"function": "set_actor_id"
@@ -617,6 +673,7 @@ The `"set_actor_id"` function is used to set the data value of a spawn egg based
 In trade tables, if no ID is provided, the trader's entity type will be assigned to the egg.
 
 ## Overrides
+
 Because trade tables do not use in-data identifiers, they are overridden simply by replacing a prior trade table with a new one. Below are the currently used vanilla trade tables for each trader:
 |Trader|Path|
 |-|-|

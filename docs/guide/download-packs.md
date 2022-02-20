@@ -1,7 +1,9 @@
 ---
 title: Download Example Packs
+category: Extra
 prefix: 'b. '
-nav_order: 101
+nav_order: 2
+show_toc: false
 ---
 
 ::: tip

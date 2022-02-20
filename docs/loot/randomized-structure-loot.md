@@ -1,7 +1,8 @@
 ---
 title: Randomized Structure Loot
+category: Tutorials
 mention:
-	- MedicalJewel105
+- MedicalJewel105
 ---
 
 Adding loot tables to containers in structure is easy, you need to have PC and NBT Studio installed.

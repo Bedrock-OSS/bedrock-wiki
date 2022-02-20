@@ -1,5 +1,6 @@
 ---
 title: Introduction
+category: Guide
 tags:
     - guide
 nav_order: 1
@@ -10,7 +11,7 @@ prefix: '1. '
 
 An "Addon" is the Minecraft Bedrock Edition (_Windows 10, iOS, Android, Consoles_) equivalent to Java mods. However, in contrast to Java, the Bedrock Edition API is officially maintained by Mojang instead of the community.
 
-In general, you can think of _mods_ as _modifying_ the game, and _addons_ as _adding-onto_ the game, following the development opportunities provided by Microsoft.
+In general, you can think of _mods_ as _modifying_ the game, and _addons_ as _adding onto_ the game, following the development opportunities provided by Microsoft.
 
 ## What is this guide?
 
@@ -35,13 +36,13 @@ This guide is written for the most recent _stable_ release of Minecraft Bedrock 
 
 Alongside the step-by-step guide, we have a few other files here, which may be interesting to you:
 
--   [Understanding Json](/guide/understanding-json)
--   [Troubleshooting](/guide/troubleshooting)
+-   [Understanding JSON](/guide/understanding-json)
 -   [Downloading Example Packs](/guide/download-packs)
+-   [Troubleshooting](/guide/troubleshooting)
 
 ## What to do after finishing the Guide
 
-Now, your first addon is complete! To further expand your knowledge, consider doing these:
+At the end of guide section, your first addon will be done! To further expand your knowledge, consider doing these:
 
--   Start your own project!
+-   Start your project!
 -   To dive into the other aspects of adding onto MCBE (Minecraft Bedrock Edition), you can use the different sections' sub guides listed in the Appendix. This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.

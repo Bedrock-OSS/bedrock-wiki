@@ -1,48 +1,107 @@
 <template>
 	<NavBar />
-	<Sidebar />
+	<div>
+		<Sidebar />
 
-	<main
-		:class="{
-			'm-8': true,
-			'md:ml-80': isVisible,
-			'mt-22': true,
-			'min-h-screen': true,
-		}"
-	>
-		<h1 class="xl:pr-72" v-if="page && page.title" id="top">
-			{{ page.title }}
-		</h1>
-		<Label v-for="tag in tags" :name="tag"> </Label>
-		<TOC v-if="showToc" />
-		<Content
+		<main
 			:class="{
-				'xl:mr-72': showToc,
+				'm-8': true,
+				'md:ml-80': isVisible,
+				'mt-22': true,
+				'min-h-screen': true,
 			}"
-		/>
+		>
+			<h1 class="xl:pr-72" v-if="page && page.title" id="top">
+				{{ page.title }}
+			</h1>
+			<Label v-for="tag in tags" :name="tag"> </Label>
+			<TOC v-if="showToc" />
+			<Content
+				:class="{
+					'xl:mr-72': showToc,
+				}"
+			/>
 
-		<div v-if="showEditLink">
-			<div class="pt-4" v>
-				<a :href="editLink" target="_blank"
-					>Edit {{ page.title }} on Github.</a
-				>
+			<div v-if="showEditLink">
+				<div class="pt-4" v>
+					<a :href="editLink" target="_blank"
+						>Edit {{ page.title }} on Github.</a
+					>
+				</div>
 			</div>
-		</div>
 
-		<div v-if="showContributors">
-			<h2>Contributors</h2>
-			<Suspense>
-				<template #default>
-					<Contributors :mentioned="mentionedContributors" />
-				</template>
-				<template #fallback>
-					<div>
-						<span> Loading contributors... </span>
-					</div>
-				</template>
-			</Suspense>
-		</div>
-	</main>
+			<div v-if="showContributors">
+				<h2
+					:class="{
+						'xl:mr-72': showToc
+					}">Contributors</h2>
+				<Suspense>
+					<template #default>
+						<Contributors :mentioned="mentionedContributors" />
+					</template>
+					<template #fallback>
+						<div>
+							<span> Loading contributors... </span>
+						</div>
+					</template>
+				</Suspense>
+			</div>
+			<div class="float" :hidden="data.isCookiesAgreed"> <!-- Cookie policy -->
+				<span>
+					We use cookies to improve your experience. By continuing to
+					use this site, you agree to our use of cookies.
+					See our <a href="/privacy">Privacy Policy</a> for more information.
+				</span>
+				<Button @click="agreeCookies">
+					Got it!
+				</Button>
+			</div>
+			<footer class="mainfooter">
+				<div>
+					Bedrock Wiki by
+					<a
+						href="https://github.com/Bedrock-OSS"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Bedrock-OSS</a
+					>. 
+				</div>
+				<div>
+					"Minecraft" is a trademark of Mojang AB. Bedrock-OSS,
+					Bedrock Wiki and
+					<a
+						href="https://bedrock.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+						>bedrock.dev</a
+					>
+					are not affiliated in any way with Microsoft or Mojang AB.
+				</div>
+				<ul>
+					<li>
+						<a href="/privacy.html" rel="noopener noreferrer"
+							>Privacy Policy</a
+						>
+					</li>
+					<li>
+						<a href="/discord.html" rel="noopener noreferrer"
+							>Join our Discord!</a
+						>
+					</li>
+					<li>
+						<a href="https://github.com/Bedrock-OSS/bedrock-wiki" target="_blank" rel="noopener noreferrer"
+							>Visit our Project Repository!</a
+						>
+					</li>
+					<li>
+						<a href="/contribute.html" rel="noopener norefferer">
+							Learn how to contribute!
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</main>
+	</div>
 </template>
 
 <script setup lang="ts">
@@ -59,15 +118,27 @@ import NavBar from './Navigation/NavBar.vue'
 import { useSidebarState } from '../Composables/sidebar'
 import { useData, useRoute } from 'vitepress'
 import Label from './Content/Label.vue'
+import Button from './Content/Button.vue'
 
 const Contributors = defineAsyncComponent(
 	() => import('./Content/Contributors.vue')
 )
 
+const data = reactive({isCookiesAgreed: true});
+onMounted(() => {
+	data.isCookiesAgreed = document.cookie.includes('bedrock-cookies=true');
+});
+
 const route = useRoute()
 const { page } = useData()
 const { toggle, isVisible } = useSidebarState()
 
+
+
+function agreeCookies() {
+	document.cookie = 'bedrock-cookies=true; max-age=31536000 ; path=/'
+	data.isCookiesAgreed = true
+}
 const routeData = computed(() => {
 	if (route?.data) return route?.data
 

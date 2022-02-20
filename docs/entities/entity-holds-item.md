@@ -1,5 +1,6 @@
 ---
-title: 'Entity Holds Item'
+title: Entity Holds Item
+category: Tutorials
 tags:
 	- intermediate
 mention:

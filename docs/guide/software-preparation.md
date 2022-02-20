@@ -1,12 +1,13 @@
 ---
 title: Software and preparation
+category: Guide
 nav_order: 3
 prefix: '3. '
 ---
 
 Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.
 
-### Download Minecraft Bedrock Edition
+## Download Minecraft Bedrock Edition
 
 -   [Windows 10](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab)
 -   [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
@@ -65,15 +66,55 @@ For further guidance on the editor, feel free to contact us on [Twitter](https:/
 -   **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
 -   **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
 
-## Additional Software
-
-### Blockbench
+## Blockbench
 
 -   [Blockbench](https://blockbench.net/) is a 'boxy 3D model editor' typically used to create Minecraft models, textures and animations. Also provides a web-browser version which is compatible with mobile.
 
-### Image Editors
+## Image Editors
 
--   [Krita](https://krita.org/en/) _or_ [GIMP](https://www.gimp.org/) _or_ [paint.net](https://www.getpaint.net)
+When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn. 
+
+:::tip
+Choose a program that feels comfortable and easy for you to use. Many Addon creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you! 
+:::
+
+### Krita
+Krita is a powerful open-source art programed with the goal of giving free powerful digital art tools to artists. Krita has more than enough features to cover your Minecraft needs and works on a MAC or PC.
+Pros: Plenty of features including a pixel brush with an intuitive user interface.
+Cons: Requires a little time to become familar with the tools.
+
+[Download Krita](https://krita.org/en/) 
+
+### GIMP
+Gimp is similar to Krita in that it is a free and open source digital art program that has a vast arrays of tools. Where Krita focuses more on illustration, GIMP focuses more on image manipulation (think Photoshop). Gimp also works on MAC or PC.
+Pros: GIMP has more than enough tools for editing Minecraft art
+Cons: The interface is not intuitive. Even though GIMP is powerful, it requires a steep learning curve.
+
+[Download Gimp](https://www.gimp.org/)
+
+### Paint․net
+Paint․net is a simple yet powerful image editing and art software. Paint․net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use. 
+Pros: Easy to use and learn.
+Cons: Only works on Windows. 
+
+[Download Paint.net](https://www.getpaint.net)
+
+### Pixilart
+Pixilart is a web-based pixel art software. It is extremely simple to use since it is focused on pixel art. It also has a powerful resize option that may come in handy, so that you can resize your art without losing the pixelart details.
+
+Pros: Easy to use and learn. Curated specifically for pixel art.
+Cons: Must have internet connection. May be missing tools you want.
+
+[Use Pixilart](https://www.pixilart.com/)
+
+### Piskel
+Piskel is a web-based pixel art software with a focus of making pixelated sprites (or video game charater animations). This tool, similar to Pixilart, is simple to use. This is also a great tool for making flipbooks (Minecraft block or skin animations).
+
+Pros: Easy to use and learn. Perfect for flipbook animations
+Cons: Must have internet connection. Only offers the most basic tools.
+
+[Download Piskel](https://www.piskelapp.com/)
+
 
 ## Additional Materials
 
@@ -106,15 +147,9 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 -   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
 -   If you still haven't found a solution, feel free to join our [Discord server](/discord).
 
-## What you have learned
-:::tip
--   To develop Addons, you need an **Editor**
--   Other useful software:
-    -   Blockbench for creating Minecraft Models like Entities
-    -   Image Editors for creating Textures and Images
--   Use the Vanilla Example files as a reference or inspiration for your addons
--   How to solve problems and get help
-:::
+### Additional Links and Tools
+
+-   You can explore additional tools [here](/meta/useful-links).
 
 ## Your progress so far
 
@@ -123,7 +158,7 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 -   [x] Installed the necessary software
 -   [x] Downloaded the Vanilla Example files
 
-**Whats next:**
+**What are you to do next:**
 
 -   [ ] Locate your `com.mojang` folder and create your addon's workspace.
 -   [ ] Create the manifest and pack icon for your first addon

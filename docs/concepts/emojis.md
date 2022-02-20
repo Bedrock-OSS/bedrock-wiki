@@ -167,20 +167,16 @@ Two sprite-sheets are provided for each glyph-target: One that accurately reflec
 
 Your filepath should look like this:
 
-<div markdown="0" class="folder-structure">
-    <ul>
-        <li><span class="folder">RP</span>
-            <ul>
-                <li><span class="folder">font</span>
-                    <ul>
-                        <li><span class="image">glyph_E0.png</span></li>
-                        <li><span class="image">glyph_E1.png</span></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
+<FolderView
+	:paths="[
+
+    'RP',
+    'RP/font',
+    'RP/font/glyph_E0.png',
+    'RP/font/glyph_E1.png'
+
+]"
+></FolderView>
 
 ### Finding the correct hex.
 
@@ -198,8 +194,8 @@ Copy this code into the following field, and press convert. The symbol on the ri
 
 <div markdown="0">
 <form>
-<input id="hexValue" placeholder="Hex value" style="padding: 1em;margin: 0.5em;border-radius: 0.2rem; border: solid 1px rgb(38, 38, 38); outline: none;"/>
-<input id="result" placeholder="Result" readonly  style="padding: 1em;margin: 0.5em;border-radius: 0.2rem; border: solid 1px rgb(38, 38, 38); outline: none;"/>
-<a onclick="document.getElementById('result').value = String.fromCodePoint(parseInt(document.getElementById('hexValue').value, 16))" style="text-decoration: none; color: white; background: rgb(91, 33, 182); padding: 0.5em; border-radius: 0.2em; cursor: pointer;">Convert</a>
+<input id="hexValue" placeholder="Hex value" style="padding: 1em;margin: 0.5em;border-radius: 0.4rem; border: solid 1px rgb(38, 38, 38); outline: none;color: #A9A9A9;"/>
+<input id="result" placeholder="Result" readonly  style="padding: 1em;margin: 0.5em;border-radius: 0.4rem; border: solid 1px rgb(38, 38, 38); outline: none;color: #A9A9A9;"/>
+<a onclick="document.getElementById('result').value = String.fromCodePoint(parseInt(document.getElementById('hexValue').value, 16))" style="text-decoration: none; color: white; background: rgb(91, 33, 182); padding: 0.5em; border-radius: 0.4em; cursor: pointer;">Convert</a>
 </form>
 </div>

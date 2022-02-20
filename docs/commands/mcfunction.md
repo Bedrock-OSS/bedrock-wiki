@@ -7,7 +7,7 @@ tags:
 ---
 
 :::tip
-Minecraft can <strong>not</strong> run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
+Minecraft can **not** run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
 :::
 
 `mcfunction` files are stored in your BP as `BP/functions/my_function.mcfunction`. You can add as many functions as you like.
@@ -53,3 +53,49 @@ Create a file called tick.json in your root function folder. The format is this:
 ### Known Issues
 
 While this is a valuable file when you're trying to stray away from using repeating command blocks in-game, it's known for executing function files before the world has fully loaded in. This might cause unintended command behavior and crashes, and it's recommended to wait for a more official release of this file.
+
+### Useful tick.json Creations
+
+In this section you can find useful creations by our community.
+
+**Looping Timer**
+
+Here you can find timer that executes function with name `my_function` on players with 10 sec delay.
+
+<CodeHeader>BP/functions/timer.mcfunction</CodeHeader>
+
+```
+# Setup
+scoreboard objectives add timer dummy
+
+# Loop
+scoreboard players add @a timer 1
+
+# Main
+execute @a[scores={timer=200}] ~~~ function my_function
+
+# Timer Update
+scoreboard players set @a[scores={timer=200..}] timer 0
+```
+
+Note that the order of loop and timer update is important.
+
+**Hello World**
+
+This function tellraws something to every player, who joined the game for the first time.
+It also has a 4 seconds delay so world is fully loaded.
+
+<CodeHeader>BP/functions/hello_world.mcfunction</CodeHeader>
+
+```
+# Setup
+scoreboard objectives add hello_world dummy
+
+# Loop
+scoreboard players set @a[tag=!hello_world] hello_world 81
+tag @a add hello_world
+scoreboard players add @a[scores={hello_world=!0}] hello_world -1
+
+# Main
+execute @a[scores={hello_world=1}] ~~~ tellraw @s {"rawtext":[{"text":"Did you know that MJ105 made this Hello World function?"}]}
+```

@@ -26,6 +26,7 @@ Important links have a ⭐.
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
+-   [Dragonly Server Software](https://discord.gg/62zMCB4h)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
 
 ## Software
@@ -43,6 +44,7 @@ Important links have a ⭐.
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [Resource Pack Converter (for Android)](https://play.google.com/store/apps/details?id=net.theluckycoder.resourcepackconverter)
+-   [BedrockLauncher (Bedrock version switcher)](https://bedrocklauncher.github.io/)
 
 ## JSON Generators
 
@@ -112,13 +114,16 @@ Important links have a ⭐.
 -   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 -   [Windows 10 Non-renderdragon install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
+-   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
+-   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
 
 ## Community-Addon Discords
 
-_These discord links are to community-created addons, with a public discord_
+_These discord links are to community-created addons, with a public discord. They are not vetted for quality or content. Please join at your own risk._
 
--   [World Expansion](https://discord.gg/CRQ6veyjak)
+<Spoiler title="Community Discords">
+
+-   [Sakana](https://discord.gg/HGpvEmaA6T)
 -   [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
--   [Project Vex](https://discord.gg/P95nXc4jbR)
--   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
--   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
+
+</Spoiler>

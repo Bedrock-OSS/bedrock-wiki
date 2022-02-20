@@ -1,7 +1,15 @@
 <template>
 	<div class="relative">
 		<CurrentThemeIcon
-			class="absolute opacity-70 top-2 left-2 pointer-events-none w-4.5 h-4.5"
+			class="
+				absolute
+				opacity-70
+				top-2
+				left-2
+				pointer-events-none
+				w-4.5
+				h-4.5
+			"
 		/>
 		<select
 			name="theme"

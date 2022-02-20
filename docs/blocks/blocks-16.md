@@ -1,8 +1,8 @@
 ---
 title: 'Blocks 1.16.100+'
+category: General
 tags:
     - experimental
-nav_order: 2
 ---
 
 Better documentation on the new block format introduced in the Minecraft Beta 1.16.100.
@@ -76,7 +76,7 @@ _This example spawns a loot table when an entity stands on the block._
 
 ## Event Functions
 
-### `add_mob_effect`
+### add_mob_effect
 
 Adds a mob effect when triggered
 
@@ -95,7 +95,7 @@ Adds a mob effect when triggered
 }
 ```
 
-### `remove_mob_effect`
+### remove_mob_effect
 
 Removes a mob effect when triggered
 
@@ -112,7 +112,7 @@ Removes a mob effect when triggered
 }
 ```
 
-### `spawn_loot`
+### spawn_loot
 
 Summons a loot table when the event is triggered.
 
@@ -128,7 +128,7 @@ Summons a loot table when the event is triggered.
 }
 ```
 
-### `set_block`
+### set_block
 
 Removes the current block and replaces it with the defined block in the same position.
 
@@ -142,7 +142,7 @@ Removes the current block and replaces it with the defined block in the same pos
 }
 ```
 
-### `set_block_property`
+### set_block_property
 
 Used to set the value of a block's property
 
@@ -158,7 +158,7 @@ Used to set the value of a block's property
 }
 ```
 
-### `set_block_at_pos`
+### set_block_at_pos
 
 Used to set a block relative to the position of this block
 
@@ -175,7 +175,7 @@ Used to set a block relative to the position of this block
 }
 ```
 
-### `run_command`
+### run_command
 
 Used to execute a command
 
@@ -191,7 +191,7 @@ Used to execute a command
 }
 ```
 
-### `damage`
+### damage
 
 <CodeHeader></CodeHeader>
 
@@ -207,7 +207,7 @@ Used to execute a command
 }
 ```
 
-### `decrement_stack`
+### decrement_stack
 
 Decrements the stack
 
@@ -221,7 +221,7 @@ Decrements the stack
 }
 ```
 
-### `die`
+### die
 
 Kills the target or destroys the block
 
@@ -237,7 +237,7 @@ Kills the target or destroys the block
 }
 ```
 
-### `play_effect`
+### play_effect
 
 Runs a particle effect on the target
 
@@ -254,7 +254,7 @@ Runs a particle effect on the target
 }
 ```
 
-### `play_sound`
+### play_sound
 
 Plays a sound on the target
 
@@ -271,7 +271,7 @@ Plays a sound on the target
 }
 ```
 
-### `trigger`
+### trigger
 
 Used to trigger an event, this can be a block event or an entity event.
 
@@ -288,7 +288,7 @@ Used to trigger an event, this can be a block event or an entity event.
 }
 ```
 
-### `sequence`
+### sequence
 
 Used to sequence event functions
 
@@ -315,7 +315,7 @@ Used to sequence event functions
 }
 ```
 
-### `randomize`
+### randomize
 
 Used to randomize event functions
 
@@ -364,194 +364,37 @@ Block components to trigger block events:
 
 List of all new block components, with usage examples.
 
-### `minecraft:unit_cube`
+### minecraft:breakonpush
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:unit_cube": {}
+	"minecraft:breakonpush": true
 }
 ```
 
-### `minecraft:crafting_table`
+### minecraft:breathability
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:crafting_table": {
-		"custom_description": "Example Crafting Table", // Name shown in GUI
-		"grid_size": 3, // Currently only supports 3
-		"crafting_tags": ["crafting_table", "custom_crafting_tag"]
-	}
+	"minecraft:breathability": "solid" // Also accepts 'air'
 }
 ```
 
-### `minecraft:material_instances`
+### minecraft:display_name
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:material_instances": {
-		// Can also be a specific material instance for a specific face mapped in the geometry
-		// Wildcards follow render controller syntax
-		// Options 'up', 'down', and 'sides' are builtin
-		"*": {
-			"texture": "texture_name", // References texture defined in terrain_textures.json
-			"render_method": "blend", // Options 'blend', 'opaque', 'alpha_test',
-			"face_dimming": true, // Defaults to true; refers to whether or not block is affected by lighting (Undocumented)
-			"ambient_occlusion": true // Defaults to true; refers to whether or not faces have smooth lighting (Undocumented)
-		}
-	}
+	"minecraft:display_name": "Name"
 }
 ```
 
-### `minecraft:geometry`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:geometry": "geometry.wiki" // Geometry identifier from geo file in 'RP/models/entity' folder
-}
-```
-
-### `minecraft:on_step_on`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:on_step_on": {
-		"event": "block_event",
-		"target": "self",
-		"condition": "query.block_property('wiki:block_property') == true"
-	}
-}
-```
-
-### `minecraft:on_step_off`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:on_step_off": {
-		"event": "block_event",
-		"target": "self",
-		"condition": "query.block_property('wiki:block_property') == true"
-	}
-}
-```
-
-### `minecraft:on_fall_on`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:on_fall_on": {
-		"event": "block_event",
-		"target": "self",
-		"condition": "query.block_property('wiki:block_property') == true",
-		"min_fall_distance": 5
-	}
-}
-```
-
-### `minecraft:on_placed`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:on_placed": {
-		"event": "block_event",
-		"target": "self",
-		"condition": "query.block_property('wiki:block_property') == true"
-	}
-}
-```
-
-### `minecraft:on_player_placing`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:on_player_placing": {
-		"event": "block_event",
-		"target": "self",
-		"condition": "query.block_property('wiki:block_property') == true"
-	}
-}
-```
-
-### `minecraft:on_player_destroyed`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:on_player_destroyed": {
-		"event": "block_event",
-		"target": "self",
-		"condition": "query.block_property('wiki:block_property') == true"
-	}
-}
-```
-
-### `minecraft:on_interact`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:on_interact": {
-		"event": "block_event",
-		"target": "self",
-		"condition": "query.block_property('wiki:block_property') == true"
-	}
-}
-```
-
-### `minecraft:ticking`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:ticking": {
-		"looping": true,
-		"range": [4, 4],
-		"on_tick": {
-			"event": "block_event",
-			"target": "self",
-			"condition": "query.block_property('wiki:block_property') == true"
-		}
-	}
-}
-```
-
-### `minecraft:random_ticking`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:random_ticking": {
-		"on_tick": {
-			"event": "block_event",
-			"target": "self",
-			"condition": "query.block_property('wiki:block_property') == true"
-		}
-	}
-}
-```
-
-### `minecraft:entity_collision`
+### minecraft:entity_collision
 
 <CodeHeader></CodeHeader>
 
@@ -572,7 +415,72 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:pick_collision`
+### minecraft:geometry
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:geometry": "geometry.wiki" // Geometry identifier from geo file in 'RP/models/entity' folder
+}
+```
+
+### minecraft:immovable
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:immovable": true
+}
+```
+
+### minecraft:material_instances
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:material_instances": {
+		// Can also be a specific material instance for a specific face mapped in the geometry
+		// Wildcards follow render controller syntax
+		// Options 'up', 'down', and 'sides' are builtin
+		"*": {
+			"texture": "texture_name", // References texture defined in terrain_textures.json
+			"render_method": "blend", // Options 'blend', 'opaque', 'alpha_test',
+			"face_dimming": true, // Defaults to true; refers to whether or not block is affected by lighting (Undocumented)
+			"ambient_occlusion": true // Defaults to true; refers to whether or not faces have smooth lighting (Undocumented)
+		}
+	}
+}
+```
+
+### minecraft:onlypistonpush
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:onlypistonpush": true
+}
+```
+
+### minecraft:part_visibility
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:part_visibility": {
+		"rules": {
+			"bone_1": "q.block_property('wiki:example_property') == 0", //also accepts `q.has_block_property`
+			"bone_2": "q.block_property('wiki:example_property') == 0"
+		}
+	}
+}
+```
+
+### minecraft:pick_collision
 
 <CodeHeader></CodeHeader>
 
@@ -593,57 +501,7 @@ List of all new block components, with usage examples.
 }
 ```
 
-### `minecraft:breakonpush`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:breakonpush": true
-}
-```
-
-### `minecraft:display_name`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:display_name": "Name"
-}
-```
-
-### `minecraft:breathability`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:breathability": "solid" // Also accepts 'air'
-}
-```
-
-### `minecraft:immovable`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:immovable": true
-}
-```
-
-### `minecraft:onlypistonpush`
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:onlypistonpush": true
-}
-```
-
-### `minecraft:placement_filter`
+### minecraft:placement_filter
 
 <CodeHeader></CodeHeader>
 
@@ -683,7 +541,7 @@ _This also accepts tags, such as:_
 
 See [this](/blocks/block-tags) page for a list of vanilla tags and relavent blocks.
 
-### `minecraft:preventsjumping`
+### minecraft:preventsjumping
 
 <CodeHeader></CodeHeader>
 
@@ -693,7 +551,23 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 }
 ```
 
-### `minecraft:rotation`
+### minecraft:random_ticking
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:random_ticking": {
+		"on_tick": {
+			"event": "block_event",
+			"target": "self",
+			"condition": "query.block_property('wiki:block_property') == true"
+		}
+	}
+}
+```
+
+### minecraft:rotation
 
 <CodeHeader></CodeHeader>
 
@@ -703,13 +577,154 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 }
 ```
 
-### `minecraft:unwalkable`
+### minecraft:ticking
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:ticking": {
+		"looping": true,
+		"range": [4, 4],
+		"on_tick": {
+			"event": "block_event",
+			"target": "self",
+			"condition": "query.block_property('wiki:block_property') == true"
+		}
+	}
+}
+```
+
+### minecraft:unit_cube
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:unit_cube": {}
+}
+```
+
+### minecraft:unwalkable
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
 	"minecraft:unwalkable": true
+}
+```
+
+### minecraft:crafting_table
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:crafting_table": {
+		"custom_description": "Example Crafting Table", // Name shown in GUI
+		"grid_size": 3, // Currently only supports 3
+		"crafting_tags": ["crafting_table", "custom_crafting_tag"]
+	}
+}
+```
+
+### minecraft:on_step_on
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:on_step_on": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('wiki:block_property') == true"
+	}
+}
+```
+
+### minecraft:on_step_off
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:on_step_off": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('wiki:block_property') == true"
+	}
+}
+```
+
+### minecraft:on_fall_on
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:on_fall_on": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('wiki:block_property') == true",
+		"min_fall_distance": 5
+	}
+}
+```
+
+### minecraft:on_placed
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:on_placed": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('wiki:block_property') == true"
+	}
+}
+```
+
+### minecraft:on_player_placing
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:on_player_placing": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('wiki:block_property') == true"
+	}
+}
+```
+
+### minecraft:on_player_destroyed
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:on_player_destroyed": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('wiki:block_property') == true"
+	}
+}
+```
+
+### minecraft:on_interact
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:on_interact": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('wiki:block_property') == true"
+	}
 }
 ```
 
@@ -851,9 +866,10 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
     -   `minecraft:on_fall_on`
 -   It seems that `render_method` in `minecraft:material_instances` affects the block's properties.
     -   If you use `opaque` it will allow redstone to pass through it, grass decay, and allow mobs to spawn on it
-    - 	If you use `alpha_test` it won't allow redstone to pass through it, it won't make grass decay, and it won't allow mobs to spawn on it
-    - 	`blend` has the same properties as `alpha_test`
-    - 	Should you want to have a transparent block but have `opaque` properties:
+    -             If you use `alpha_test` it won't allow redstone to pass through it, it won't make grass decay, and it won't allow mobs to spawn on it
+    -             `blend` has the same properties as `alpha_test`
+    -             Should you want to have a transparent block but have `opaque` properties:
+
 ```json
 "minecraft:material_instances": {
 	"*": {
@@ -861,4 +877,5 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
     	}
 }
 ```
+
 Link the textures via `blocks.json`

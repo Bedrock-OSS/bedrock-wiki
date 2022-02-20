@@ -2,10 +2,11 @@
 <template>
 	<a
 		class="item flex flex-nowrap items-center px-2 rounded-md"
+		:class="[{ section: props.item.section }, props.item.color]"
 		v-bind="linkProps"
 		@click="onNavigation"
 	>
-		<span v-if="props.item.prefix != null" class="font-bold">{{
+		<span v-if="props.item.prefix != null" class="font-bold pr-2">{{
 			props.item.prefix
 		}}</span>
 
@@ -22,10 +23,6 @@
 import NavLinkTag from './NavLinkTag.vue'
 
 import ExternalIcon from '../Icons/ExternalIcon.vue'
-import GuideIcon from '../Icons/GuideIcon.vue'
-import WarningIcon from '../Icons/WarningIcon.vue'
-import RecipeIcon from '../Icons/RecipeIcon.vue'
-import ChemIcon from '../Icons/ChemIcon.vue'
 
 import { toRefs, watchEffect } from 'vue'
 import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navLink'
@@ -38,6 +35,8 @@ const props = defineProps<{
 	item: {
 		text: string
 		link: string
+		section: boolean
+		color: string
 		tags?: Array<string>
 		prefix?: string
 	}
@@ -82,5 +81,9 @@ watchEffect(() => {
 .dark .item:hover,
 .dark .item.active {
 	@apply bg-true-gray-700;
+}
+
+.section {
+	@apply pointer-events-none font-bold opacity-80 rounded-md p-0 pl-1 m-2;
 }
 </style>

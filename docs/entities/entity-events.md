@@ -1,5 +1,6 @@
 ---
 title: Entity Events
+category: General
 tags:
     - beginner
 ---
@@ -141,6 +142,10 @@ The component `minecraft:damage_sensor` inside the pillager calls the event `min
   }
 }
 ```
+The following components are known to be able to send events to the "other" entity:
+-   `"minecraft:damage_sensor"`
+-   `"minecraft:interact"`
+-   `"minecraft:nameable"`
 
 The `minecraft:behavior.send_event` component is used inside the evoker to call an event named `wololo` inside any blue sheep within its activation range.
 
@@ -181,6 +186,22 @@ The `minecraft:behavior.send_event` component is used inside the evoker to call 
             ]
         }
     ]
+}
+```
+
+You can also call event when spawning entity. To do it, add `<my:event_name>` in the end of string that is in component that can summon entity.
+Example:
+
+<CodeHeader>BP/entities/zombie.json#component_groups/minecraft:convert_to_drowned</CodeHeader>
+
+```json
+"minecraft:transformation":{
+    "into":"minecraft:drowned<minecraft:as_adult>",
+    "transformation_sound":"convert_to_drowned",
+    "drop_equipment":true,
+    "delay":{
+        "value":15
+    }
 }
 ```
 
@@ -273,9 +294,11 @@ In this particular case, it may be noted that both entries in the sequence remov
 }
 ```
 
-Note: Entries in a sequence are not exclusive; if a filter in one of them passes, it does not prevent the other entries from running. In the case above, there is no filter in the first entry and so it automatically runs. This does not stop the other entries from being checked and subsequently running if valid.
+:::tip
+Entries in a sequence are not exclusive; if a filter in one of them passes, it does not prevent the other entries from running. In the case above, there is no filter in the first entry and so it automatically runs. This does not stop the other entries from being checked and subsequently running if valid.
+:::
 
-#### Randomize
+### Randomize
 
 Randomize is a parameter which can be used inside of an entity event to add or remove component groups based off weighted randomization. This is a very useful tool when different component groups should be added based on random chance.
 
@@ -305,8 +328,73 @@ The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95%
     ]
 }
 ```
+### Trigger
 
-#### Sequence and Randomize Combination
+Trigger is a parameter which can be used inside of an entity event to run other events based on filters to a chosen target.
+
+As seen before, the event, `minecraft:entity_born`, inside the piglin calls the event `spawn_baby` using trigger.
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:entity_born": {
+  "trigger": "spawn_baby"
+}
+```
+
+We are also able to specify filters and a target for the event, similarly to how we did in the damage sensor.
+This event runs when the entity is interacted with by a player. If the player has the tag `test`, then it will run the event `wiki:interacted` inside the player entity.
+
+<CodeHeader></CodeHeader>
+
+```json
+"wiki:on_interact": {
+  "trigger": {
+    "filters": {
+      "test": "has_tag",
+      "subject": "other",
+      "value": "test"
+    },
+    "event": "wiki:interacted",
+    "target": "other"
+  }
+}
+```
+
+Combining this with the sequence parameter, this allows us to run an event in both the entity and the player.
+
+<CodeHeader></CodeHeader>
+
+```json
+"wiki:on_interact":{
+  "sequence":[
+    {
+      "trigger": {
+        "filters": {
+          "test": "has_tag",
+          "subject": "other",
+          "value": "test"
+        },
+        "event": "wiki:interacted",
+        "target": "other"
+      }
+    },
+    {
+      "add":{
+        "component_groups": [
+          "wiki:interacted_with"
+        ]
+      }
+    }
+  ]
+}
+```
+
+:::warning
+Using `target` in the event only works if the component which calls the event allows for different targets. If the component `"minecraft:environment_sensor"` called the event `wiki:on_interact`, then the `trigger` parameter would have no context for the target of `other` and the event wouldn't run. However, it would add the component `wiki:interacted_with`.
+:::
+
+### Sequence and Randomize Combination
 
 The sequence and randomize parameters can be combined for more complex behavior inside an event. Below is an example which aims to be exhaustive in showing how these parameters can be combined and utilized.
 

@@ -3,6 +3,7 @@ title: Understanding Selectors
 mention:
   - Science-geek42
   - Brougud
+  - MedicalJewel105
 ---
 
 Selectors are used in commands to target where you want to execute a command at. The primary target selectors are:
@@ -58,6 +59,93 @@ Tags are a way to discriminate towards a player, or group of players and or mobs
 - `kill @e[tag=<tag>]` This is how you would kill all the players with your given tag. Its useful if you are making a minigame, and a player were to lose, you could kill them then set there gamemode into something else with a command block.
 - `kill @e[tag=!<tag>]` This will kill all of the entities that **DONT** have the tag that you specified.
 - `tag @a <add | remove | list> <tag>` This is how you would give, or remove a tag, useing `add` or `remove`. If you want to see what tags a player has then you can do `tag <selector> list`
+
+## Has Item
+
+:::warning Warning!
+This argument was added in Minecraft Beta 1.18.20.21 and it is not in stable version yet.
+:::
+
+`hasitem` filter allows to execute commands on entities that have a special item.
+
+`/give @a[hasitem=[{item=sand,data=-1,quantity=16..64,location=slot.hotbar,slot=!4}]] minecraft:apple`
+
+This command will give apple to every player who has 16-64 sand within the hotbar but not in the fifth slot.
+
+### Item 
+`item=<namespace:name>`
+
+Defines name of item or block, like in `/give` command.
+
+### Data
+`data=<int>`
+
+-   Doesn't support range.
+-   Doesn't support invert value.
+
+Data value of the item/block. If you want to use any data value, use `-1`. Default value is `-1`.  
+**Note: There is a bug in the data where it doesn't detect Data Value correctly [MCPE-151920]**
+
+### Location
+`location=<slot>`
+
+Defines slot of entity where to detect, like in `/replaceitem` command. This component isn't required.
+
+**Location Values:**
+
+-   `slot.armor`
+-   `slot.armor.chest`
+-   `slot.armor.feet`
+-   `slot.armor.head`
+-   `slot.armor.legs`
+-   `slot.chest`
+-   `slot.enderchest`
+-   `slot.equippable`
+-   `slot.hotbar`
+-   `slot.inventory`
+-   `slot.saddle`
+-   `slot.weapon.mainhand`
+-   `slot.weapon.offhand`
+
+### Slot
+`slot=<value>`
+
+Defines slot's id, like in `/replaceitem` command
+
+-   Supports range integer (`0..10`).
+-   Supports invert value (`!0`).
+
+You must specify the location to use slot:  
+❎ `[hasitem={item=sand, slot=0..8}]`  
+✅ `[hasitem={item=sand, location=slot.hotbar, slot=0..8}]`
+
+### Quantity
+`quantity=<value>`
+
+Defines how much item entity must have.
+
+-   Supports range integer (`0..10`).
+-   Supports invert value (`!0`).
+
+### Additional Information
+
+`hasitem` can:
+
+-   Accept two identical arguments: `[hasitem={item=sand,item=iron_sword}]`
+-   Accept array/multiple item: `[hasitem=[{item=sand},{item=iron_sword},{...}]]`
+
+
+### Examples
+Checks for players who have netherite sword in inventory:
+-   `testfor @a[hasitem={item=netherite_sword}]`
+
+Clears 2 apples if player has more than 4 apples:
+-   `clear @a[hasitem={item=apple,quantity=4..}] apple 2`
+
+Checks for players who have 2 sticks and 2 diamonds:
+-   `testfor @a[hasitem=[{item=diamond,quantity=2},{item=stick,quantity=2}]]`
+-   `testfor @a[hasitem={item=diamond,item=stick,quantity=2}]` (**More simple method**)
+
 
 ## Combining Selectors
 

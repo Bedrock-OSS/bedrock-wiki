@@ -1,5 +1,6 @@
 ---
 title: Disabling Particles
+category: Tutorials
 tags:
     - beginner
 ---

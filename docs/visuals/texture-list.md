@@ -34,13 +34,4 @@ The structure is simple. The file itself is in `RP/textures` and is named `textu
 
 ## Automating
 
-If you have a lot of textures, this could obviously be tedious to go and list all the texture paths. In this case, we can use **Python** (or another language if you prefer) to help us with automating these paths. Here is an example code in python:
-
-<CodeHeader></CodeHeader>
-
-```python
-def list_textures_v2():
-  for texture in glob.glob("./textures/**/*.png")+glob.glob("./textures/**/*.tga):
-    bn = os.path.splitext(os.path.basename(texture))[1]
-    print(texture.replace(bn,"").replace("./","").replace("\\","/"))
-```
+If you have a lot of textures, this could obviously be tedious to go and list all the texture paths. In this case you can start to use [Regolith](https://bedrock-oss.github.io/regolith/).

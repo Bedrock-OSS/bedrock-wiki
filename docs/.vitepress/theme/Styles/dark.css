@@ -15,6 +15,9 @@
 .dark div.card {
 	@apply p-6 bg-true-gray-900 rounded-lg border;
 }
+.dark .float {
+	@apply bg-true-gray-800 text-white border;
+}
 
 /* Tables */
 .dark tbody,
@@ -36,4 +39,17 @@
 
 .dark main a {
 	@apply text-blue-500 hover:text-blue-700 focus:text-blue-700 no-underline hover:underline focus:underline;
+}
+
+.dark footer {
+	background-color: rgb(48, 48, 48);
+}
+
+
+.dark .checkbox {
+	background: rgb(121, 113, 113, 0.3);
+}
+
+.dark .checkbox-checked {
+	background: rgb(204, 225, 250);
 }

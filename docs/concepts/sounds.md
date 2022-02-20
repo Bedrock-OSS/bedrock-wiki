@@ -50,6 +50,25 @@ Sounds added in this way can be triggered using `/playsound`. Please note that `
 New files referenced by file path, such as sounds, DO need a complete client restart to load. This means that if sounds don't work, you should restart your entire MC client rather than just reloading the world.
 :::
 
+### /playsound volume notes
+
+The game will clamp the sound volume to at most 1.0 before multiplying it with the sound definition's volume.
+
+For `/playsound`, the maximum hearable range of a sound is given by `min(max_distance, max(volume * 16, 16))`.
+If `"max_distance"`is not given in the sound's definition, it is equivalent to `playsound_volume * 16`.
+
+![Approximate sound attenuation by distance. The actual graph might not be linear.](/assets/images/concepts/sounds/sound_graph.png)
+
+Shown above is the approximate sound attenuation factor by distance **for playing sounds with a volume parameter greater than or equal to 1**. Notice how the playsound `<volume>` limits the sound's audible range.
+The axis `distance` is the distance of the sound listener (player) to the sound source. The corresponding `volume` axis' value is the factor for the playsound volume capped to 1, multiplied by the sound definition's volume to get the final volume of the sound you hear. As an expression this could be written as: `final_volume = min(playsound_volume, 1) * graph_volume * sound_definition_volume`.
+
+**Note:** Attenuation by distance of the hearable sound's volume is not affected by the volume parameter given in the command.
+
+For example, `mob.ghast.affectionate_scream` sets `"min_distance": 100.0`, but can only be heard from at most 16 blocks away when using `/playsound` with volume 1 to play it. Specifying a greater volume value increases the audible range. When using a large enough volume to hear the sound farther away, the sound will get quieter only after a distance of more than 100.0.
+
+To make a sound which can be heard far away but also drops in volume continuously over distance, one can add e.g. `"volume": 0.01`and use large `<volume>` values in the playsound command. The high value for the `/playsound` volume will produce a large audible range (e.g. a volume of 4 is 64 blocks as calculated above), while the low volume will prevent the played sound from capping at 1.0 too soon.
+
+
 ### Top Level Keys
 
 In the example above, I showed two `top-level` fields: `category` and `sounds`. Sounds will be discussed in further detail below, but the other `top-level` keys will be discussed here:
@@ -73,12 +92,12 @@ Categories are used internally by the engine to decide how each sound is played.
 
 #### min_distance
 
-The minimum distance **away** the source of the sound that the client needs to be within to hear. It must be a float (1.0), or the argument will be ignored.
+The distance from the sound source after which sound volume is attenuated. Default value: 0.0. It must be a float (eg. 1.0), or the property will be ignored.
 
 #### max_distance
 
-The maximum distance **to** the source of the client's sound needs to be within to hear. It must be a float (1.0), or the argument will be ignored.
-
+The distance from the sound source after which the sound volume is the quietest (if in range). It must be a float (eg. 1.0), or the property will be ignored.
+	
 ### Sound definitions
 
 In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds but does not have much power. For starts, I can add multiple sounds to the list. These sounds will be randomized when played:
@@ -101,11 +120,12 @@ The path to the file, such as: `"sounds/music/game/creative/creative1"`
 
 #### stream
 
-Limits the sound only to be played a limited number of instances at a time. Good for improving performance on sound heavy worlds.
+Limits the sound only to be played a limited number of instances at a time. Will cause the game to not load the entire sound data into memory while playing, but rather in smaller parts while playing, thus using less memory. Good for improving performance on sound heavy worlds.
 
 #### volume
 
-How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made more audible than initially encoded.
+How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made more audible than initially encoded. Set to `1.0` by default.
+Sounds in custom resource packs can have working values greater than 1.0.
 
 #### load_on_low_memory
 
@@ -113,7 +133,19 @@ Forces the loading of the sound even when nearing low memory. "load_on_low_memor
 
 #### pitch
 
-The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (standard), but can be higher, such as `1.48`.
+The pitch of the sound (how low/high it sounds). Should be a positive value. For example, `2.3` will let the sound play 2.3 times as quickly and thus at higher pitch. Set to `1.0` by default.
+
+#### is3D
+
+`true` makes the sound directional. Set to `true` for all sounds by default. Ignored for `music` and `ui` sounds. Only sounds with `false` will play stereo sound.
+
+#### interruptible
+
+Set to `true` by default.
+
+### weight
+
+If there is more than one sound in the list, the sound to be played is chosen randomly. `"weight"` (integer value like 5) will give the relative chance that this sound is chosen from the list. For example, if there are two sounds in the list, one with `"weight": 10` and the other with `"weight": 2`, the first will be played approximately 5 times more likely than the second (accurately: `10 / (10 + 2) = 83.3%` chance vs. `2 / (10 + 2) = 16.7%` chance) . Set to `1` by default.
 
 ### Example
 

@@ -1,5 +1,6 @@
 ---
 title: Project Setup
+category: Guide
 nav_order: 4
 prefix: '4. '
 ---
@@ -8,14 +9,13 @@ prefix: '4. '
 
 The `com.mojang` folder is a special folder where we build our addons. Minecraft understands this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder!
 
-You should create a shortcut to the `com.mojang` folder on your Desktop, so you can easily access it at any time.
-See below for the pathing on how to get to your com.mojang folder!
+You should create a shortcut to the `com.mojang` folder on your Desktop or on your mobile device, so you can easily access it at any time. The exact location of the `com.mojang` folder will depend on your device OS. 
 
 ### Windows
 
-```
-C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang
-```
+*Tip: You can type %appdata% into the searchbar to jump directly into the 'C:\Users\USERNAME\AppData\' folder.*
+
+`C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
 
 ### Android
 
@@ -167,9 +167,13 @@ pack.description=A Ghostly Guide
 <CodeHeader>RP/texts/languages.json</CodeHeader>
 
 ```json
-[
-    "en_US"
-]
+["en_US"]
+```
+
+<CodeHeader>BP/texts/languages.json</CodeHeader>
+
+```json
+["en_US"]
 ```
 
 ## Checking your Work
@@ -218,29 +222,36 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 'com.mojang/development_resource_packs/guide_RP/manifest.json',
 'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
 'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+'com.mojang/development_resource_packs/guide_RP/texts/languages.json',
 
 'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
+'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
+'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
 
 ]"></FolderView>
 
 ## What you have learned
-:::tip
-- 	What the com.mojang folder is, where it is and what folders it contains
-- 	How to setup your workspace
-- 	What a `manifest.json` file is
-- 	How to use UUIDs
-- 	How to create an icon for your addon
-- 	What a `.lang` file is
+
+:::tip What you have learned:
+
+-	What the com.mojang folder is, where it is and what folders it contains
+-	How to setup your workspace
+-	What a `manifest.json` file is
+-	How to use UUIDs
+-	How to create an icon for your addon
+-	What a `.lang` file is
 :::
 
 ## Your progress so far
 
 **What you've done:**
 
+<Checklist>
+
 -   [x] Setup your pack
-
-**What are you to do next:**
-
 -   [ ] Create a custom item
 -   [ ] Create a custom entity
 -   [ ] Create the entity's loot, spawn rules and a custom recipe
+
+</Checklist>

@@ -11,7 +11,7 @@ This guild will walk you through how to get started editing the wiki. While it i
 
 This article will teach you how to use GitHub Desktop, the easiest way to manage your local Repositories. Its possible to do this without GitHub Desktop just by using Git, but this is more advanced than just using GitHub Desktop and we won't be covering this in this guide.
 
-If you already know some of the steps we cover in this guide, feel free to use the Table Of Contens on the right side to skip to the sections you don't know!
+If you already know some of the steps we cover in this guide, feel free to use the Table Of contents on the right side to skip to the sections you don't know!
 
 And if you want to learn more about our fancy styling-features, continue with our [Contribute-Style-Guide](/contribute-style)!
 
@@ -213,4 +213,9 @@ And now this problem is solved! You can continue safely, commit to your branch a
 
 ## Conclusion
 
-Now you have all the software installed and learned all the skills you need to edit our wiki! If you wan't to learn more about styling your articles, you can read our [How to style our wiki](/contribute-style) guide!
+Now you have all the software installed and learned all the skills you need to edit our wiki! If you wan't to learn more about styling your articles, please read our Guide on
+
+<BButton
+    link='/contribute-style'
+    color=blue
+> How to style our wiki</BButton>

@@ -1,12 +1,13 @@
 ---
 title: Addons Explained
+category: Guide
 nav_order: 2
 prefix: '2. '
 ---
 
 ## What are addons?
 
-Addons allow us to modify the contents of our Minecraft Experience by _modifying_ or _removing_ existing content and _adding_ our own. Addons are very powerful and allow us create custom entities, items, and blocks, as well as things like custom loot tables and crafting recipes. Your imagination is the limit!
+Addons allow us to modify the contents of our Minecraft Experience by _modifying_ or _removing_ existing content and _adding_ our own. Addons are very powerful and allow us to create custom entities, items, and blocks, as well as things like custom loot tables and crafting recipes. Your imagination is the limit!
 
 Addons are primarily written in [json](./understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
 
@@ -41,10 +42,18 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 -   A BP entity definition, which describes how your entity will _act_
 
 ## What you have learned
-:::tip
+
+:::tip What you have learned:
+
 -   Addons modify Minecraft content or add their own
 -   Addons are written in json
--   An addon is split into the **Resource Pack** and the **Behavior Pack**:
-    -   Resource Packs contain Textures, Sounds, ... and control how the game looks
-    -   Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
+-   An addon is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
 :::
+
+## What to do now?
+
+<BButton 
+    link="/guide/software-preparation.html" 
+    color=blue
+>Check out software and preparation page!</BButton>
+

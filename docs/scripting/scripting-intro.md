@@ -1,9 +1,16 @@
 ---
 title: Intro to Scripting
+category: Legacy Scripting
 nav_order: 1
 tags:
     - guide
 ---
+
+:::danger Stop!
+
+Scripting API is no longer supported.
+
+:::
 
 This tutorial will teach you how to get up and running as a Minecraft Bedrock Edition (Windows 10) script modder!
 

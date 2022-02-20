@@ -1,5 +1,6 @@
 ---
 title: Feature Types
+category: General
 tags:
     - experimental
 ---

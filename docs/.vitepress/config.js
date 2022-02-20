@@ -11,12 +11,57 @@ function formatLink(path) {
 	return path.split(/\\|\//g).join('/').replace('.md', '')
 }
 
+/*
+Gets the categories from within the frontmatter of an index.md file, and returns them as list.
+ */
+function getCategoryOrder(frontMatter) {
+	data = {}
+	if (!frontMatter.data.categories) {
+		return data
+	}
+
+	frontMatter.data.categories.forEach(function (category, index) {
+		data[category.title] = index + 1
+	})
+
+	return data
+}
+
+function getCategories(frontMatter) {
+	data = []
+	if (!frontMatter.data.categories) {
+		return data
+	}
+
+	frontMatter.data.categories.forEach(function (category, index) {
+		category.nav_order = -1
+		category.category = category.title
+		data.push({
+			text: category.title,
+			data: category,
+			tags: category.tags,
+			prefix: category.prefix,
+			section: true,
+			color: category.color,
+			link: '',
+			activeMatch: ' ',
+		})
+	})
+
+	return data
+}
+
+/*
+Recursively generate the navigation links for the sidebar.
+*/
 function generateSidebar(base, dir) {
 	let data = []
 	let files = fs.readdirSync(dir)
 	files.forEach(function (file) {
 		let joinedPath = path.join(dir, file)
 		let stats = fs.statSync(joinedPath)
+
+		// Handle top level directories
 		if (
 			stats.isDirectory() &&
 			fs.existsSync(path.join(joinedPath, 'index.md'))
@@ -40,11 +85,44 @@ function generateSidebar(base, dir) {
 					`File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
 			}
-			data.push({
-				text: frontMatter.data.title,
-				data: frontMatter.data,
-				children: generateSidebar(base, joinedPath),
-			})
+
+			order = getCategoryOrder(frontMatter)
+
+			children = generateSidebar(base, joinedPath).concat(
+				getCategories(frontMatter)
+			)
+
+			children.sort(
+				(
+					{ data: dataA, text: textA },
+					{ data: dataB, text: textB }
+				) => {
+					// Default to max int, so without nav order you will show second
+					// Multiply by category value if it exists
+					navA =
+						(dataA.nav_order || 50) +
+							(order[dataA.category] || 0) * 100 ||
+						Number.MAX_SAFE_INTEGER
+					navB =
+						(dataB.nav_order || 50) +
+							(order[dataB.category] || 0) * 100 ||
+						Number.MAX_SAFE_INTEGER
+
+					// Tie goes to the text compare! (Will also apply for elements without nav order)
+					if (navA == navB) {
+						return textA.localeCompare(textB)
+					}
+
+					// Return nav order
+					return navA - navB
+				}
+			),
+				data.push({
+					text: frontMatter.data.title,
+					data: frontMatter.data,
+					children: children,
+				})
+
 			if (frontMatter.data.title === void 0) {
 				throw new Error(
 					'File ' +
@@ -52,7 +130,10 @@ function generateSidebar(base, dir) {
 						' has invalid frontmatter!'
 				)
 			}
-		} else if (stats.isFile()) {
+		}
+
+		// Handle the normal files
+		else if (stats.isFile()) {
 			// Don't include non-markdown files, or the index page itself
 			if (!file.endsWith('.md') || file.endsWith('index.md')) return
 
@@ -90,6 +171,8 @@ function generateSidebar(base, dir) {
 				data: frontMatter.data,
 				tags: tags,
 				prefix: prefix,
+				section: frontMatter.data.section || false,
+				color: frontMatter.data.color || 'none',
 				link,
 				activeMatch: `^${link}`,
 			})
@@ -105,11 +188,22 @@ function generateSidebar(base, dir) {
 
 	return data.sort(
 		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
-			if (dataA.nav_order == null && dataB.nav_order != null) return 1
-			if (dataA.nav_order != null && dataB.nav_order == null) return -1
-			if (dataA.nav_order != null && dataB.nav_order != null)
-				return dataA.nav_order - dataB.nav_order
-			return textA.localeCompare(textB)
+			// Default to max int, so without nav order you will show second
+			// Multiply by category value if it exists
+			navA =
+				(dataA.nav_order || 50) + (order[dataA.category] || 0) * 100 ||
+				Number.MAX_SAFE_INTEGER
+			navB =
+				(dataB.nav_order || 50) + (order[dataB.category] || 0) * 100 ||
+				Number.MAX_SAFE_INTEGER
+
+			// Tie goes to the text compare! (Will also apply for elements without nav order)
+			if (navA == navB) {
+				return textA.localeCompare(textB)
+			}
+
+			// Return nav order
+			return navA - navB
 		}
 	)
 }
@@ -240,7 +334,6 @@ module.exports = (async function () {
 
 			editLinks: true,
 			editLinkText: '⚙️ Edit this page on GitHub.',
-			lastUpdated: true,
 			lastUpdated: 'Last Updated',
 
 			nav: [
