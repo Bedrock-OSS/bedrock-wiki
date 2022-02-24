@@ -202,7 +202,9 @@ To finally apply our texture to our item, we add the `minecraft:icon` component 
 ```json
 "components":{
 	"minecraft:max_stack_size": 16,
-	"minecraft:icon" : "wiki.ectoplasm"
+	"minecraft:icon" : {
+		"texture": "wiki.ectoplasm"
+	}
 }
 ```
 Now your texture should appear on your item.
@@ -260,8 +262,10 @@ Your folder structure should look like this:
 			"category": "Items"
 		},
 		"components": {
-            "minecraft:max_stack_size": 16,
-			"minecraft:icon" : "wiki.ectoplasm"
+			"minecraft:max_stack_size": 16,
+			"minecraft:icon": {
+				"texture": "wiki.ectoplasm"
+			}
 		}
 	}
 }
