@@ -16,7 +16,7 @@ Let's get started.
     ![](/assets/images/guide/create_entity_project_menu.png)
 
     -   `"File name:"` is self-explanatory. My file will generate as "skele_yaklin.geo.json".
-    -   `"Model Identifier:"` is the model identifier (namespace not required), a shortname for this ID will be defined later.
+    -   `"Model Identifier:"` is the model identifier (namespace not required), a short name for this ID will be defined later.
     -   `"Box UV"` has to be checked on for automatic UV editing and unwrapping for texturing.
     -   `"Texture Height"` and `"Texture Width"` define the resolution of the model's textures.
 
@@ -27,7 +27,7 @@ Let's get started.
     -	You can see many tools here: move, resize, rotate, etc.
     - 	You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;
 
-5.  Now, you are ready to create your own model! For more in-depth tutorials on modeling, please check out the videos by Everbloom Studio below.
+5.  Now, you are ready to create your model! For more in-depth tutorials on modeling, please check out the videos by Everbloom Studio below.
 
 <YouTubeEmbed id="XqzxL_-XjA0" />
 
@@ -66,7 +66,7 @@ Now that our model, texture, and walk animation are complete, you can save your 
 
 Go to _File > Save Model_ or _File > Export Bedrock Geometry_. Save the model in `RP/models/entity`, the texture in `RP/textures/entity/` and the animation in `RP/animations`. Congratulations! You've successfully created your first entity's visuals! You can see the file examples below.
 
-_Meanwhile, why not upgrading the visuals of your own unique entities' or creating another one?_
+_Meanwhile, why not upgrade the visuals of your own unique entities' or create another one?_
 
 <CodeHeader>RP/models/entity/ghost.geo.json</CodeHeader>
 
@@ -260,5 +260,5 @@ _Meanwhile, why not upgrading the visuals of your own unique entities' or creati
 :::tip What you have learned:
 
 -	How to create an entity in Blockbench
--	How to use Blockbench to model, texture and animate your entity
+-	How to use Blockbench to model, texture, and animate your entity
 :::

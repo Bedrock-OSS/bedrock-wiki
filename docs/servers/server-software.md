@@ -33,7 +33,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ### Go
 
--   [DragonFly](https://github.com/df-mc/dragonfly)
+-   [DragonFly](https://github.com/df-mc/dragonfly) ([Discord](https://discord.gg/62zMCB4h))
 
 ### Java
 
@@ -66,7 +66,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ### Python
 
--   [Podrum](https://github.com/Podrum/Podrum)
+-   [PodrumR3](https://github.com/Podrum/PodrumR3)
 
 ## Discontinued Software
 

@@ -104,7 +104,9 @@ The example shown, displays the required components
 
 ## Specifying Enchantments
 
-If needed you can add the enchantments section to your condition, but remember each tool and level must be listed as separate pools
+If needed you can add the enchantments section to your condition, but remember each tool and level must be listed as separate pools.
+
+Also note that it can correctly detect only 1st and 2nd enchantment level.
 
 <CodeHeader>BP/loot_tables/blocks/silver_ore.json#pools</CodeHeader>
 

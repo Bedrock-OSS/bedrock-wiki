@@ -9,14 +9,13 @@ prefix: '4. '
 
 The `com.mojang` folder is a special folder where we build our addons. Minecraft understands this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder!
 
-You should create a shortcut to the `com.mojang` folder on your Desktop, so you can easily access it at any time.
-See below for the pathing on how to get to your com.mojang folder!
+You should create a shortcut to the `com.mojang` folder on your Desktop or on your mobile device, so you can easily access it at any time. The exact location of the `com.mojang` folder will depend on your device OS. 
 
 ### Windows
 
-```
-C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang
-```
+*Tip: You can type %appdata% into the searchbar to jump directly into the 'C:\Users\USERNAME\AppData\' folder.*
+
+`C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
 
 ### Android
 

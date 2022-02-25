@@ -106,6 +106,18 @@ You can create links, that redirect you to other pages in the wiki. These are ca
 
 [Redirect to the contribute page](/contribute)
 
+```Markdown
+[JSON Arrays](/guide/understanding-json.html#arrays)
+```
+
+[JSON Arrays](/guide/understanding-json.html#arrays)
+
+```Markdown
+[Go to Working with Markdown header](#working-with-markdown)
+```
+
+[Go to Working with Markdown header](#working-with-markdown)
+
 To redirect to another page, just look in the file explorer. The main folder is the `"docs"` folder. To link to a page thats directly inside this folder, you can just write `/pagename`, like `/contribute` to link to the contribute page. Every page that is inside a folder has to be accessed by writing the name of the folder, a slash, and then the page name: `/blocks/block-materials`.
 
 :::warning
@@ -495,9 +507,53 @@ Some examples:
 
 ### JSON Code
 
-1.  Use CodeHeaders, unless it is absolutely not possible.
-2.  Fully extend JSON Code (aka. as "Prettified Code").
+1.  Use CodeHeaders, unless it is illogical or not possible.
+2.  Fully extend JSON Code aka. as ["Prettified Code"](https://jsonformatter.curiousconcept.com/#).
+
+Do not extend `.geo.json` as it will be too long.
+If the code is too long and not necessary, use spoilers.
+
 3.  Use `RP` and `BP` as root-folders.
+4.  Make comments but not many.
+
+Describe the most important things in comments inside the JSON, you can tell about other components after the code. Also follow our comments style.
+Example:
+
+<CodeHeader>BP/items/copper_coin.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+            // Describing an object with components.
+			"identifier": "bs:copper_coin",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64, // Short description a value/component.
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.items"
+			},
+
+            "minecraft:use_duration": 3.5,
+            "minecraft:icon": {
+				"texture": "copper_coin"
+			}
+            // Make notes about a group of specific components (icon and use_duration in our case) used above this way. 
+		}
+	}
+}
+```
+
+-   `minecraft:max_stack_size`
+
+...
+
+-   `minecraft:creative_category`
+
+...
+
 
 ### Markdown Formatting
 

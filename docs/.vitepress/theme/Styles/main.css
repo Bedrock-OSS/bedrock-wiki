@@ -121,20 +121,20 @@ ol {
 	@apply bg-green-300;
 }
 
-.dark .orange {
-	@apply bg-orange-800;
-}
-
-.orange {
-	@apply bg-yellow-300;
-}
-
 .dark .red {
 	@apply bg-red-900;
 }
 
 .red {
 	@apply bg-red-300;
+}
+
+.dark .orange {
+	@apply bg-orange-800;
+}
+
+.orange {
+	@apply bg-yellow-300;
 }
 
 .dark .blue {
@@ -155,11 +155,17 @@ ol {
 
 .float {
 	text-align: center;
-    position: fixed;
-    height: 10.5em;
-    width: 20em;
-    bottom: 10px;
-    right: 10px;
-    border-radius: 6px;
-    padding: 14px;
+	position: fixed;
+	height: 10.5em;
+	width: 20em;
+	bottom: 10px;
+	right: 10px;
+	border-radius: 6px;
+	padding: 14px;
+	z-index: 9999;
+}
+
+/** Inputs */
+textarea {
+	outline: none;
 }

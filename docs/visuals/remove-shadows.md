@@ -47,7 +47,7 @@ Some entities don't have shadows, or very small shadows at least. By using the r
 
 ## Using Materials
 
-:::error
+:::danger
 This method is no longer supported. With the advent of render-dragon, materials like this no longer function. Please do not attempt to use this code in a serious way, and definitely do not attempt it on a marketplace map.
 :::
 
@@ -58,11 +58,9 @@ This method is no longer supported. With the advent of render-dragon, materials 
 
 <Spoiler title="Removing shadows via Materials.">
 
-Change these lines in the `shadows.material` file under the Resource Pack / materials folder.
-
 #### Working shadow code: Shadows for ALL entities:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/materials/shadows.material</CodeHeader>
 
 ```json
 "shadow_overlay":{
@@ -81,6 +79,7 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
         "stencilFunc":"Equal",
         "stencilPass":"Replace"
     }
+}
 ```
 
 #### Disabled shadow code: No Shadows for ALL entities:

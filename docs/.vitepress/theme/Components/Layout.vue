@@ -124,17 +124,19 @@ const Contributors = defineAsyncComponent(
 	() => import('./Content/Contributors.vue')
 )
 
+const data = reactive({isCookiesAgreed: true});
+onMounted(() => {
+	data.isCookiesAgreed = document.cookie.includes('bedrock-cookies=true');
+});
+
 const route = useRoute()
 const { page } = useData()
 const { toggle, isVisible } = useSidebarState()
 
-let data = reactive({
-	isCookiesAgreed: document.cookie.includes('bedrock-cookies=true')
-})
+
 
 function agreeCookies() {
-	console.log("adding cookie");
-	document.cookie = 'bedrock-cookies=true; max-age=31536000'
+	document.cookie = 'bedrock-cookies=true; max-age=31536000 ; path=/'
 	data.isCookiesAgreed = true
 }
 const routeData = computed(() => {

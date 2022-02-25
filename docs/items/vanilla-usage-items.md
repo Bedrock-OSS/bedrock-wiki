@@ -1,39 +1,35 @@
 ---
-title: Vanilla Usage Items
+title: Vanilla Usage Items Components
 category: Documentation
+toc_max_level: 1
 ---
 
 # Items
 
-This documentation is stripped from the vanilla files, using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester).
+This documentation is stripped from the vanilla files using an automated script. If there is an issue, you can tell us about it in [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 
-# Table of contents
+## block
 
--   [minecraft:block](#minecraft-block)
--   [minecraft:camera](#minecraft-camera)
--   [minecraft:foil](#minecraft-foil)
--   [minecraft:food](#minecraft-food)
--   [minecraft:hand_equipped](#minecraft-hand-equipped)
--   [minecraft:max_damage](#minecraft-max-damage)
--   [minecraft:max_stack_size](#minecraft-max-stack-size)
--   [minecraft:seed](#minecraft-seed)
--   [minecraft:stacked_by_data](#minecraft-stacked-by-data)
--   [minecraft:use_duration](#minecraft-use-duration)
+<Spoiler title="Show">
 
-# minecraft:block
+#### camera
 
-<Spoiler title="Code">
-### camera
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/camera.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:block": "minecraft:camera"
 ```
 
 </Spoiler>
 
-# minecraft:camera
+## camera
 
-<Spoiler title="Code">
+<Spoiler title="Show">
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:camera": {
     "black_bars_duration": 0.2,
@@ -46,18 +42,25 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 </Spoiler>
 
-# minecraft:foil
+## foil
 
-<Spoiler title="Code">
-### appleEnchanted
+<Spoiler title="Show">
+
+#### appleEnchanted
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/appleEnchanted.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:foil": true
 ```
 
-### golden_apple
+#### golden_apple
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/golden_apple.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:foil": false
@@ -65,11 +68,16 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 </Spoiler>
 
-# minecraft:food
+## food
 
-<Spoiler title="Code">
-### apple
+<Spoiler title="Show">
+
+#### apple
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/apple.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -77,9 +85,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### appleEnchanted
+#### appleEnchanted
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/appleEnchanted.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -115,9 +125,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### baked_potato
+#### baked_potato
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/baked_potato.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -126,9 +138,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### beef
+#### beef
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/beef.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -137,9 +151,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### beetroot
+#### beetroot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/beetroot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -148,9 +164,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### beetroot_soup
+#### beetroot_soup
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/beetroot_soup.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -160,9 +178,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### bread
+#### bread
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/bread.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -171,9 +191,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### carrot
+#### carrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/carrot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -182,9 +204,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### chicken
+#### chicken
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/chicken.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -201,9 +225,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### chorus_fruit
+#### chorus_fruit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/chorus_fruit.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -221,10 +247,12 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### clownfish
+#### clownfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/clownfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -232,10 +260,12 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### cooked_beef
+#### cooked_beef
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_beef.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -243,10 +273,12 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### cooked_chicken
+#### cooked_chicken
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_chicken.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -254,9 +286,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### cooked_fish
+#### cooked_fish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_fish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -265,9 +299,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### cooked_porkchop
+#### cooked_porkchop
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_porkchop.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -276,9 +312,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### cooked_rabbit
+#### cooked_rabbit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -287,9 +325,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### cooked_salmon
+#### cooked_salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_salmon.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -298,9 +338,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### cookie
+#### cookie
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cookie.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -309,9 +351,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### dried_kelp
+#### dried_kelp
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/dried_kelp.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -320,9 +364,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### fish
+#### fish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/fish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -331,9 +377,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### glow_berries
+#### glow_berries
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/glow_berries.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -343,9 +391,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### golden_apple
+#### golden_apple
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/golden_apple.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -369,9 +419,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### golden_carrot
+#### golden_carrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/golden_carrot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -380,9 +432,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### honey_bottle
+#### honey_bottle
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/honey_bottle.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -396,9 +450,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### melon
+#### melon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/melon.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -407,9 +463,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### mushroom_stew
+#### mushroom_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/mushroom_stew.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -419,9 +477,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### muttonCooked
+#### muttonCooked
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/muttonCooked.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -430,9 +490,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### muttonRaw
+#### muttonRaw
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/muttonRaw.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -441,9 +503,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### poisonous_potato
+#### poisonous_potato
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/poisonous_potato.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -460,9 +524,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### porkchop
+#### porkchop
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/porkchop.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -471,9 +537,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### potato
+#### potato
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/potato.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -482,9 +550,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### pufferfish
+#### pufferfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/pufferfish.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -510,9 +580,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### pumpkin_pie
+#### pumpkin_pie
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/pumpkin_pie.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -521,9 +593,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### rabbit
+#### rabbit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/rabbit.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -532,9 +606,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### rabbit_stew
+#### rabbit_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/rabbit_stew.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -544,9 +620,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### rotten_flesh
+#### rotten_flesh
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/rotten_flesh.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -563,9 +641,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### salmon
+#### salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -574,9 +654,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### spider_eye
+#### spider_eye
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/spider_eye.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -593,9 +675,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### suspicious_stew
+#### suspicious_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/suspicious_stew.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -606,9 +690,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### sweet_berries
+#### sweet_berries
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/sweet_berries.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -620,61 +706,81 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 </Spoiler>
 
-# minecraft:hand_equipped
+## hand_equipped
 
-<Spoiler title="Code">
-### appleEnchanted
+<Spoiler title="Show">
+
+#### appleEnchanted
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/appleEnchanted.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:hand_equipped": false
 ```
 
 </Spoiler>
 
-# minecraft:max_damage
+## max_damage
 
-<Spoiler title="Code">
-### clownfish
+<Spoiler title="Show">
+
+#### clownfish
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/clownfish.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:max_damage": 0
 ```
 
-### cooked_fish
+#### cooked_fish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_fish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:max_damage": 0
 ```
 
-### cooked_salmon
+#### cooked_salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:max_damage": 0
 ```
 
-### fish
+#### fish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/fish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:max_damage": 0
 ```
 
-### pufferfish
+#### pufferfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:max_damage": 0
 ```
 
-### salmon
+#### salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_damage": 0
@@ -682,42 +788,55 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 </Spoiler>
 
-# minecraft:max_stack_size
+## max_stack_size
 
-<Spoiler title="Code">
-### beetroot_soup
+<Spoiler title="Show">
+
+#### beetroot_soup
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/beetroot_soup.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
-### honey_bottle
+#### honey_bottle
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/honey_bottle.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_stack_size": 16
 ```
 
-### mushroom_stew
+#### mushroom_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/mushroom_stew.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
-### rabbit_stew
+#### rabbit_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/rabbit_stew.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:max_stack_size": 1
 ```
 
-### suspicious_stew
+#### suspicious_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/suspicious_stew.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_stack_size": 1
@@ -725,20 +844,27 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 </Spoiler>
 
-# minecraft:seed
+## seed
 
-<Spoiler title="Code">
-### beetroot_seeds
+<Spoiler title="Show">
+
+#### beetroot_seeds
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/beetroot_seeds.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:seed": {
     "crop_result": "beetroot"
 }
 ```
 
-### carrot
+#### carrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/carrot.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -746,9 +872,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### glow_berries
+#### glow_berries
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/glow_berries.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -762,9 +890,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### melon_seeds
+#### melon_seeds
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/melon_seeds.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -772,9 +902,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### nether_wart
+#### nether_wart
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/nether_wart.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -783,9 +915,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### potato
+#### potato
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/potato.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -793,9 +927,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### pumpkin_seeds
+#### pumpkin_seeds
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/pumpkin_seeds.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -803,9 +939,11 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 }
 ```
 
-### sweet_berries
+#### sweet_berries
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/sweet_berries.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -814,14 +952,17 @@ This documentation is stripped from the vanilla files, using an [automated scrip
         "grass",
         "dirt",
         "podzol",
-        "moss_block"
+        "moss_block",
+        "mycelium"
     ]
 }
 ```
 
-### wheat_seeds
+#### wheat_seeds
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/wheat_seeds.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -831,66 +972,85 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 </Spoiler>
 
-# minecraft:stacked_by_data
+## stacked_by_data
 
-<Spoiler title="Code">
-### appleEnchanted
+<Spoiler title="Show">
+
+#### appleEnchanted
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/appleEnchanted.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
-### clownfish
+#### clownfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/clownfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
-### cooked_fish
+#### cooked_fish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_fish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
-### cooked_salmon
+#### cooked_salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
-### fish
+#### fish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/fish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
-### golden_apple
+#### golden_apple
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/golden_apple.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
-### pufferfish
+#### pufferfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:stacked_by_data": true
 ```
 
-### salmon
+#### salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/salmon.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -898,330 +1058,415 @@ This documentation is stripped from the vanilla files, using an [automated scrip
 
 </Spoiler>
 
-# minecraft:use_duration
+## use_duration
 
-<Spoiler title="Code">
-### apple
+<Spoiler title="Show">
+
+#### apple
+
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/apple.json)</small>
+
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### appleEnchanted
+#### appleEnchanted
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/appleEnchanted.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### baked_potato
+#### baked_potato
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/baked_potato.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### beef
+#### beef
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/beef.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### beetroot
+#### beetroot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/beetroot.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### beetroot_soup
+#### beetroot_soup
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/beetroot_soup.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### bread
+#### bread
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/bread.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### camera
+#### camera
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/camera.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 100000
 ```
 
-### carrot
+#### carrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/carrot.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### chicken
+#### chicken
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/chicken.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### chorus_fruit
+#### chorus_fruit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/chorus_fruit.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### clownfish
+#### clownfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/clownfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### cooked_beef
+#### cooked_beef
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_beef.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### cooked_chicken
+#### cooked_chicken
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_chicken.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### cooked_fish
+#### cooked_fish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_fish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### cooked_porkchop
+#### cooked_porkchop
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_porkchop.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### cooked_rabbit
+#### cooked_rabbit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_rabbit.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### cooked_salmon
+#### cooked_salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cooked_salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### cookie
+#### cookie
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/cookie.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### dried_kelp
+#### dried_kelp
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/dried_kelp.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 16
 ```
 
-### fish
+#### fish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/fish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### glow_berries
+#### glow_berries
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/glow_berries.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### golden_apple
+#### golden_apple
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/golden_apple.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### golden_carrot
+#### golden_carrot
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/golden_carrot.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### honey_bottle
+#### honey_bottle
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/honey_bottle.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 40
 ```
 
-### melon
+#### melon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/melon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### mushroom_stew
+#### mushroom_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/mushroom_stew.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### muttonCooked
+#### muttonCooked
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/muttonCooked.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### muttonRaw
+#### muttonRaw
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/muttonRaw.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### poisonous_potato
+#### poisonous_potato
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/poisonous_potato.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### porkchop
+#### porkchop
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/porkchop.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### potato
+#### potato
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/potato.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### pufferfish
+#### pufferfish
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/pufferfish.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### pumpkin_pie
+#### pumpkin_pie
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/pumpkin_pie.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### rabbit
+#### rabbit
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/rabbit.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### rabbit_stew
+#### rabbit_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/rabbit_stew.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### rotten_flesh
+#### rotten_flesh
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/rotten_flesh.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### salmon
+#### salmon
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/salmon.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### spider_eye
+#### spider_eye
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/spider_eye.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### suspicious_stew
+#### suspicious_stew
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/suspicious_stew.json)</small>
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:use_duration": 32
 ```
 
-### sweet_berries
+#### sweet_berries
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/items/sweet_berries.json)</small>
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32

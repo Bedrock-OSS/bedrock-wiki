@@ -26,6 +26,7 @@ Important links have a ⭐.
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
+-   [Dragonly Server Software](https://discord.gg/62zMCB4h)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
 
 ## Software
@@ -43,6 +44,7 @@ Important links have a ⭐.
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [Resource Pack Converter (for Android)](https://play.google.com/store/apps/details?id=net.theluckycoder.resourcepackconverter)
+-   [BedrockLauncher (Bedrock version switcher)](https://bedrocklauncher.github.io/)
 
 ## JSON Generators
 

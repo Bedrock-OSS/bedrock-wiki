@@ -1,5 +1,4 @@
 import { defineConfig } from 'windicss/helpers'
-// const colors = require('tailwindcss/colors')
 
 export default defineConfig({
 	plugins: [

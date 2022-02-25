@@ -783,8 +783,9 @@ _Full list of categories can be found [here](/documentation/creative-categories)
 }
 ```
 
--   minecraft:render*offsets
-    \_New Syntax*
+-   minecraft:render_offsets
+
+    _New Syntax_
 
 <CodeHeader></CodeHeader>
 
