@@ -18,7 +18,7 @@
 	},
 	"scripts": {
 		"dev": "vitepress dev docs",
-		"build": "node --max-old-space-size=2048 node_modules/vitepress/bin/vitepress.js build docs",
+		"build": "node --max-old-space-size=4096 node_modules/vitepress/bin/vitepress.js build docs",
 		"serve": "vitepress serve docs"
 	},
 	"dependencies": {
