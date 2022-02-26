@@ -32,6 +32,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 -   [MiNET](https://github.com/NiclasOlofsson/MiNET)
 
+### C
+
+-   [Podrum](https://github.com/Podrum/Podrum)
+
 ### Go
 
 -   [DragonFly](https://github.com/df-mc/dragonfly) ([Discord](https://discord.gg/62zMCB4h))
@@ -64,10 +68,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
 -   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
-
-### C
-
--   [Podrum](https://github.com/Podrum/Podrum)
 
 ## Discontinued Software
 
