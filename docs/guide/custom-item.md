@@ -297,9 +297,9 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 
 -   [x] Setup your pack
 -   [x] Create a custom item
--	[x]	-	How to format the behavior and resource files for an item
--	[x]	-	What components are and how to use them
--	[x]	-	How to set an items texture
+-   [x] How to format the behavior and resource files for an item
+-   [x]	What components are and how to use them
+-   [x]	How to set an items texture
 -   [ ] Create a custom entity
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe
 
