@@ -245,8 +245,6 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 
 ## Your progress so far
 
-**What you've done:**
-
 <Checklist>
 
 -   [x] Setup your pack
