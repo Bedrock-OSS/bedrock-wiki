@@ -3,7 +3,7 @@ title: Vanilla Usage Components
 category: Documentation
 ---
 
-This documentation is stripped from the vanilla files using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester). If there is an issue, you can tell us about it in [Bedrock OSS](https://discord.gg/XjV87YN) Discord server. Please not that examples are shown from not more than 8 files to keep the page fast to load.
+This documentation is stripped from the vanilla files using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester). If there is an issue, you can tell us about it in [Bedrock OSS](https://discord.gg/XjV87YN) Discord server. Please note that examples are shown from not more than 8 files to keep the page fast to load.
 
 ## addrider
 
