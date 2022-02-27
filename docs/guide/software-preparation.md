@@ -153,12 +153,11 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 
 ## Your progress so far
 
-**What you've done:**
+<Checklist>
 
 -   [x] Installed the necessary software
 -   [x] Downloaded the Vanilla Example files
-
-**What are you to do next:**
-
 -   [ ] Locate your `com.mojang` folder and create your addon's workspace.
 -   [ ] Create the manifest and pack icon for your first addon
+
+</Checklist>
