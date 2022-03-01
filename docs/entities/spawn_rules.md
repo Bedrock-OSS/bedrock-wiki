@@ -63,7 +63,7 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 -   "`minecraft:difficulty_filter`" sets the range of level difficulty to enable this entity's spawns.
 -   "`minecraft:herd`" sets the number of entities spawning together, on the same spawn rule.
 -   "`minecraft:permute_type`" with "`weight`"s and "`entity_type`"s sets a chance for the spawned entity to mutate into a different one.
--   And, lastly, "`minecraft:biome_filter`" tests for certain biome tags. Look up the filter syntax and list of biome tags in the documentation or search examples in the vanilla Example pack.
+-   "`minecraft:biome_filter`" tests for certain biome tags. Look up the filter syntax and list of biome tags in the documentation or search examples in the vanilla Example pack.
 
 <CodeHeader></CodeHeader>
 
@@ -78,3 +78,25 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 
 -   "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity_born`" (as baby). Can be used in any event.
     `"event_skip_count": 2`, for example, means that the first two entities will not be spawned with this event, but all the next ones will.
+
+<CodeHeader>BP/spawn_rules/axolotl.json</CodeHeader>
+    
+```json
+        "minecraft:spawns_above_block_filter": {
+          "blocks": "minecraft:stone",
+          "distance": 10
+        }
+```
+
+-   "`minecraft:spawns_above_block_filter`" will detect blocks within a set distance vertically, and if the condition is met, the entity will spawn successfully.
+
+<CodeHeader>BP/spawn_rules/skeleton.json</CodeHeader>
+
+```json
+        "minecraft:spawns_on_block_prevented_filter": [
+          "minecraft:nether_wart_block",
+          "minecraft:shroomlight"
+        ]
+```
+
+-   While lastly, "`minecraft:spawns_on_block_prevented_filter`" is the opposite of the above. This is an array of block Identifiers that the entity will never spawn on.
