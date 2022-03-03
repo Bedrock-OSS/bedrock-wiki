@@ -78,5 +78,36 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 ### namespace:netherite_ingot
 
 -   Is accepted in custom Smithing Recipes as the secondary item.
+-   Is accepted as a valid item to change the effect given off by a Beacon
+
+---
+
+### namespace:gold_ingot
+
+-   Is accepted as a valid item to change the effect given off by a Beacon
+
+---
+
+### namespace:iron_ingot
+
+-   Is accepted as a valid item to change the effect given off by a Beacon
+
+---
+
+### namespace:emerald
+
+-   Is accepted as a valid item to change the effect given off by a Beacon
+
+---
+
+### namespace:diamond
+
+-   Is accepted as a valid item to change the effect given off by a Beacon
+
+---
+
+### namespace:lapis_lazuli
+
+-   Makes the Item usable with Enchantment Tables, to enchant you items in place of Lapis Lazuli
 
 ---
