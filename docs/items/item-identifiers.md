@@ -25,12 +25,6 @@ Consider experimenting with them.
 
 The namespace is allowed to be changed, learn more about namespaces [here](/concepts/namespaces).
 
-### namespace:spyglass
-
--   Makes it zoom-able like a spyglass, for the zoom to work it requires the item to be usable.
-
----
-
 ### namespace:bow
 
 -   Adds a small increasing zoom on use, for the zoom to work it requires the item to be usable.
@@ -43,9 +37,15 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 
 ---
 
-### namespace:map
+### namespace:diamond
 
--   Will use the holding map animation.
+-   Is accepted as a valid item to change the effect given off by a Beacon
+
+---
+
+### namespace:emerald
+
+-   Is accepted as a valid item to change the effect given off by a Beacon
 
 ---
 
@@ -53,32 +53,6 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 
 -   Will add the holding map animation.
 -   Can be put in a cartography table.
-
----
-
-### namespace:totem_of_undying
-
--   Will behave like a Totem of Undying.
-
----
-
-### namespace:lead
-
--   Will behave like a Lead.
-
----
-
-### namespace:shield
-
--   The item icon will be changed to that of the Vanilla Shield.
--   Adds the shield animation.
-
----
-
-### namespace:netherite_ingot
-
--   Is accepted in custom Smithing Recipes as the secondary item.
--   Is accepted as a valid item to change the effect given off by a Beacon
 
 ---
 
@@ -94,20 +68,46 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 
 ---
 
-### namespace:emerald
-
--   Is accepted as a valid item to change the effect given off by a Beacon
-
----
-
-### namespace:diamond
-
--   Is accepted as a valid item to change the effect given off by a Beacon
-
----
-
 ### namespace:lapis_lazuli
 
 -   Makes the Item usable with Enchantment Tables, to enchant you items in place of Lapis Lazuli
+
+---
+
+### namespace:lead
+
+-   Will behave like a Lead.
+
+---
+
+### namespace:map
+
+-   Will use the holding map animation.
+
+---
+
+### namespace:netherite_ingot
+
+-   Is accepted in custom Smithing Recipes as the secondary item.
+-   Is accepted as a valid item to change the effect given off by a Beacon
+
+---
+
+### namespace:shield
+
+-   The item icon will be changed to that of the Vanilla Shield.
+-   Adds the shield animation.
+
+---
+
+### namespace:spyglass
+
+-   Makes it zoom-able like a spyglass, for the zoom to work it requires the item to be usable.
+
+---
+
+### namespace:totem_of_undying
+
+-   Will behave like a Totem of Undying.
 
 ---
