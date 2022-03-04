@@ -7,7 +7,7 @@
         ></span>
         <div v-if="i.checked" class="tickmark-checked"><img src="/assets/images/icons/tick.png" /></div>
         <div v-else class="tickmark-unchecked"></div>
-        {{ i.content }}
+        <div class="checklist-content">{{ i.content }}</div>
     </label>
 </template>
 
@@ -41,11 +41,16 @@
     .checklist-label {
         display: flex;
         align-items: center;
-        word-break:break-all;
+        word-break: break-all;
     }
     .checklist-label input[type='checkbox'] {
         visibility: hidden;
     }
+
+    .checklist-content {
+        width: 100%;
+    }
+
     .checkbox {
         width: 14px;
         height: 14px;
@@ -75,5 +80,11 @@
         height: 1rem;
         left: -0.9rem;
         bottom: 0.52rem;
+    }
+
+    @media screen and (max-width: 768px){
+        .checklist-content {
+            width: 80%;
+        }
     }
 </style>
