@@ -58,7 +58,7 @@ Its really hard to know how your article will look when its finished and publish
 
 In VSCode, in the top bar, click on `"Terminal"`, then on `"New Terminal"`.
 
-The first time you view it locally, you have to type `npm install` and wait until its finished. This is just done **the first time**!
+The first time you view it locally, you have to type `npm install` and wait until its finished. This is just done **the first time** (or when you have some .vue errors)!
 
 To view the wiki locally, type `npm run dev` and press enter and wait until its finished loading. It will show you this:
 
@@ -331,6 +331,8 @@ Don't overuse them! They look cool, but someone could really give them too much 
 ### FolderView
 
 FolderViews are Components which can be used to show a setup of files, like in our [Project-Setup](/guide/project-setup) guide.
+
+<CodeHeader></CodeHeader>
 
 ```html
 <FolderView

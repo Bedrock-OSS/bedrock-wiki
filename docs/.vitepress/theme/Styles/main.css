@@ -44,6 +44,7 @@ p + p {
 * + h5,
 * + h6 {
 	margin-top: 1em !important;
+	word-break:break-all;
 }
 
 h1 {
