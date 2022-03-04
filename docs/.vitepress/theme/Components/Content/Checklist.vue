@@ -41,6 +41,7 @@
     .checklist-label {
         display: flex;
         align-items: center;
+        word-break:break-all;
     }
     .checklist-label input[type='checkbox'] {
         visibility: hidden;

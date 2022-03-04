@@ -1,5 +1,6 @@
 code {
 	@apply rounded-sm m-0 bg-true-gray-200 px-1;
+	word-break:break-all;
 }
 
 .dark code {
