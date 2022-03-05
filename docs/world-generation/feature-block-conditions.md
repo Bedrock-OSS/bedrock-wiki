@@ -177,4 +177,4 @@ Like that we have made a rock feature that can only be placed in air blocks and 
 
 Generation screenshot:
 
-![](/assets/images/world-generation/feature-block-conditions/rock_feature.png)
+![](/assets/images/world-generation/rock_feature.png)
