@@ -25,6 +25,12 @@ Consider experimenting with them.
 
 The namespace is allowed to be changed, learn more about namespaces [here](/concepts/namespaces).
 
+### namespace:banner
+
+-   The item icon and model will be changed to that of the Vanilla Banner. 
+
+---
+
 ### namespace:bow
 
 -   Adds a small increasing zoom on use, for the zoom to work it requires the item to be usable.
@@ -103,6 +109,13 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 ### namespace:spyglass
 
 -   Makes it zoom-able like a spyglass, for the zoom to work it requires the item to be usable.
+
+---
+
+### namespace:skull
+
+-   The item icon will be changed to that of the Vanilla Skull.
+-   The item will be able to put on a armorstand and a player, the model and textures of the skull will be applied only then.
 
 ---
 
