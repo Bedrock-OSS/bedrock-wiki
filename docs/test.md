@@ -5,7 +5,9 @@ hidden: true
 
 ## What?
 
-Hey, what are you doing there?
+Hey, what are you doing there? How did you get here?
+
+This is the special place thats used by the developers to develop new features and find bugs. Don't worry if this place is really messy, it doesn't need to look good!
 
 ## Panels
 
@@ -25,9 +27,15 @@ Danger zone, do not proceed
 
 <Checklist>
 
--   [x] My first task Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+-   [x] My first task Lorem *ipsum* dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
 -   [x] More tasks ...
 -   [ ] and more
+
+</Checklist>
+
+<Checklist>
+
+- [x] some `formatting` and *more* **moore** ***MORE*** formatting
 
 </Checklist>
 
@@ -61,8 +69,8 @@ comment
 
 </Checklist>
 
-<CodeHeader>kjeshvtkheskthlkrzieuoirjues;oirjt;iejtoiewtpiapojlkjgkjxhlkhretjekvhtiewjtlkgjxekttwelt.json</CodeHeader>
+<CodeHeader>kjeshvtkheskthlkrzieuoirjues;oirjt;iejtoiewtpiapojlkjgklgagafglwalgöafglöahfadklgwjhglsaglfglwaösfgäaüöäüöäüößagfagajxhlkhretjekvhtiewjtlkgjxekttwelt.json</CodeHeader>
 
 ```json
-{}
+{"var": "value"}
 ```
