@@ -36,7 +36,7 @@ details {
 
 summary {
 	@apply rounded p-4 bg-true-gray-200;
-	word-break:break-all;
+
 }
 
 .dark details {
