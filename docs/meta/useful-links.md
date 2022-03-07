@@ -50,15 +50,17 @@ Important links have a ⭐.
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Loot Table Generator](https://hopper.bedrock.dev/)
+-   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
 -   [Manifest Generator](https://bedrock-manifest.web.app/)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
 -   [behavior-builder (beta)](https://stirante.com/behavior/index.html)
 -   [controller-builder (beta)](https://stirante.com/controller/index.html)
+-   [MCPACK Generator](https://mcbe-essentials.github.io/instant-pack/)
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
 -   [Molang Playground](https://bridge-core.github.io/molang-playground/)
--   [Dialogue Generator](https://mcbe-essentials.glitch.me/dialogue-editor/)
--   [Selector Generator](https://mcbe-essentials.glitch.me/selector-generator/)
+-   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
+-   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 
 ## Documentation
@@ -97,7 +99,7 @@ Important links have a ⭐.
 -   [CubitosMC](https://www.cubitosmc.com/)
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
--   
+
 ## Other useful Links
 
 -   [UUID v4 Generator (online)](https://www.uuidgenerator.net/version4)
