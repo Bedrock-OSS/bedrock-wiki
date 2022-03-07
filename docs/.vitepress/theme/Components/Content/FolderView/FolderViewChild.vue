@@ -88,7 +88,7 @@ export default {
 			if (type === 'js' || type === 'json' || type === 'mcfunction') {
 				return '📝'
 			} else if (type === 'mcstructure') {
-				return '💾'
+				return '🏛'
 			} else if (type === 'png' || type === 'jpg' || type === 'jpeg') {
 				return '🖼️'
 			} else if (type === 'ogg' || type === 'wav' || type === 'mp3' || type === 'fsb') {

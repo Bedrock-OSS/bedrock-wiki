@@ -10,10 +10,10 @@ Important links have a ⭐.
 
 -   ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
+-   ⭐ [Minecraft](https://discord.gg/minecraft)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
 -   ⭐ [Blockbench](http://discord.gg/fZQbxbg)
 -   ⭐ [bridge.](https://discord.gg/NxKuWuA)
--   ⭐ [Minecraft](https://discord.gg/minecraft)
 -   [Skill Share](https://discord.gg/sZ7fkcN)
 -   [Minecraft RTX](http://discord.gg/vNWc3Hh)
 -   [Artists Refuge](https://discord.gg/aVXbPCdRr3)
@@ -29,11 +29,11 @@ Important links have a ⭐.
 -   [Dragonly Server Software](https://discord.gg/62zMCB4h)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
 
-## Software
+## Software (installed)
 
 -   ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
 -   ⭐ [bridge. Addon Editor](https://bridge-core.github.io/)
--   [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
+-   ⭐ [VSCode Editor](https://code.visualstudio.com/)
 -   [CoreCoder [Code Editor]](https://hanprog.itch.io/core-coder)
 -   [Feature Rule Generator v2 (paid version)](https://machine-builder.itch.io/frg-v2)
 -   [Feature Rule Generator v2 (free version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
@@ -42,38 +42,35 @@ Important links have a ⭐.
 -   [World Converter (paid)](https://www.universalminecraftconverter.com/download)
 -   [Chunker (World Converter)](https://chunker.app/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
--   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [Resource Pack Converter (for Android)](https://play.google.com/store/apps/details?id=net.theluckycoder.resourcepackconverter)
 -   [BedrockLauncher (Bedrock version switcher)](https://bedrocklauncher.github.io/)
 
-## JSON Generators
+## Bedrock Tools Websites
 
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
--   [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
--   [Loot Tables](https://amaury.carrade.eu/minecraft/loot_tables)
--   [Manifests](https://bedrock-manifest.web.app/)
+-   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
+-   [Loot Table Generator](https://hopper.bedrock.dev/)
+-   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
+-   [Manifest Generator](https://bedrock-manifest.web.app/)
+-   [Foxynotail Tools](https://www.foxynotail.com/tools/)
+-   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
 -   [behavior-builder (beta)](https://stirante.com/behavior/index.html)
 -   [controller-builder (beta)](https://stirante.com/controller/index.html)
--   [Generate .lang files](https://solveddev.github.io/AnyLanguage/)
-
-## Tools
-
+-   [MCPACK Generator](https://mcbe-essentials.github.io/instant-pack/)
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
 -   [Molang Playground](https://bridge-core.github.io/molang-playground/)
--   [Dialogue Editor/Generator](https://mcbe-essentials.glitch.me/dialogue-editor/)
--   [Selector Generator](https://mcbe-essentials.glitch.me/selector-generator/)
+-   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
+-   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
+-   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 
-## Documentation Links
+## Documentation
 
 -   ⭐ [bedrock.dev](https://bedrock.dev/)
 -   ⭐ [Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
+-   ⭐ [Gamepedia Community Wiki](https://minecraft.gamepedia.com)
 -   [Mcbehub](https://mcbehub.com/category/realmdocs)
--   [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
--   [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
--   [Format Versions](https://gist.github.com/Tschrock/e6615f93f0db82ef30ada63f9ad670ac)
--   [Loot and Trade Table Functions](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
--   [Docs Graveyard (removed components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
+-   [Documentation Graveyard (removed components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 
 ## Behavior & Resource Packs
 
@@ -91,7 +88,7 @@ Important links have a ⭐.
 -   [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
 -   [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
 
-## Addon Marketplaces
+## Addon Marketplaces & Links
 
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
@@ -100,6 +97,8 @@ Important links have a ⭐.
 -   [MCBEHub](https://mcbehub.com/)
 -   [MCPECore](https://mcpecore.com/)
 -   [CubitosMC](https://www.cubitosmc.com/)
+-   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
+-   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
 
 ## Other useful Links
 
@@ -110,20 +109,6 @@ Important links have a ⭐.
 -   [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
 -   [Block Models](https://blockmodels.com/)
 -   [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
--   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
--   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
--   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
 -   [Windows 10 Non-renderdragon install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
 -   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
 -   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
-
-## Community-Addon Discords
-
-_These discord links are to community-created addons, with a public discord. They are not vetted for quality or content. Please join at your own risk._
-
-<Spoiler title="Community Discords">
-
--   [Sakana](https://discord.gg/HGpvEmaA6T)
--   [Bedrock InSanity](https://discord.gg/BmPtsEGHQg)
-
-</Spoiler>

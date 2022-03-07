@@ -1,12 +1,15 @@
 ---
 title: Vanilla Usage Components
 category: Documentation
-toc_max_level: 1
 ---
 
-This documentation is stripped from the vanilla files using an automated script.`
+This documentation is stripped from the vanilla files using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester). If there is an issue, you can tell us about it in [Bedrock OSS](https://discord.gg/XjV87YN) Discord server. Please note that examples are shown from not more than 8 files to keep the page fast to load.
 
-## minecraft:addrider
+## addrider
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aaddrider)</small>
+
+<Spoiler title="Show">
 
 #### cave_spider
 
@@ -83,66 +86,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:addrider": {
-    "entity_type": "minecraft:vindicator",
-    "spawn_event": "minecraft:spawn_as_illager_captain"
-}
-```
+## admire_item
 
-#### spider
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aadmire_item)</small>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:addrider": {
-    "entity_type": "minecraft:skeleton"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:addrider": {
-    "entity_type": "minecraft:skeleton.stray"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:addrider": {
-    "entity_type": "minecraft:skeleton.wither"
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:addrider": {
-    "entity_type": "minecraft:zombie_pigman",
-    "spawn_event": "minecraft:spawn_as_strider_jockey"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:addrider": {
-    "entity_type": "minecraft:strider",
-    "spawn_event": "spawn_baby"
-}
-```
-
-## minecraft:admire_item
+<Spoiler title="Show">
 
 #### piglin
 
@@ -157,7 +107,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:ageable
+</Spoiler>
+
+## ageable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aageable)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -349,424 +305,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### goat
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
+## ambient_sound_interval
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aambient_sound_interval)</small>
 
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": "wheat",
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        "crimson_fungus"
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        {
-            "item": "wheat",
-            "growth": 0.016667
-        },
-        {
-            "item": "sugar",
-            "growth": 0.025
-        },
-        {
-            "item": "hay_block",
-            "growth": 0.15
-        },
-        {
-            "item": "apple",
-            "growth": 0.05
-        },
-        {
-            "item": "golden_carrot",
-            "growth": 0.05
-        },
-        {
-            "item": "golden_apple",
-            "growth": 0.2
-        },
-        {
-            "item": "appleEnchanted",
-            "growth": 0.2
-        }
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        {
-            "item": "wheat",
-            "growth": 0.1
-        },
-        {
-            "item": "hay_block",
-            "growth": 0.9
-        }
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": "wheat",
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        {
-            "item": "wheat",
-            "growth": 0.016667
-        },
-        {
-            "item": "sugar",
-            "growth": 0.025
-        },
-        {
-            "item": "hay_block",
-            "growth": 0.15
-        },
-        {
-            "item": "apple",
-            "growth": 0.05
-        },
-        {
-            "item": "golden_carrot",
-            "growth": 0.05
-        },
-        {
-            "item": "golden_apple",
-            "growth": 0.2
-        },
-        {
-            "item": "appleEnchanted",
-            "growth": 0.2
-        }
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        "fish",
-        "salmon"
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": "bamboo",
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        "carrot",
-        "beetroot",
-        "potato"
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        "golden_carrot",
-        "carrot",
-        "yellow_flower"
-    ],
-    "grow_up": {
-        "event": "grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": "wheat",
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        "warped_fungus"
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        "seagrass"
-    ],
-    "drop_items": [
-        "turtle_shell_piece"
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        "chicken",
-        "cooked_chicken",
-        "beef",
-        "cooked_beef",
-        "muttonRaw",
-        "muttonCooked",
-        "porkchop",
-        "cooked_porkchop",
-        "rabbit",
-        "cooked_rabbit",
-        "rotten_flesh"
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-## minecraft:ambient_sound_interval
+<Spoiler title="Show">
 
 #### bee
 
@@ -864,35 +409,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### vindicator
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
+## angry
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aangry)</small>
 
-```json
-"minecraft:ambient_sound_interval": {
-    "value": 2.0,
-    "range": 4.0,
-    "event_name": "ambient.in.raid"
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:ambient_sound_interval": {
-    "value": 2.0,
-    "range": 4.0,
-    "event_name": "ambient.in.raid"
-}
-```
-
-## minecraft:angry
+<Spoiler title="Show">
 
 #### bee
 
@@ -1033,277 +556,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### panda
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
+## annotation.break_door
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aannotation.break_door)</small>
 
-```json
-"minecraft:angry": {
-    "duration": 500,
-    "broadcast_anger": true,
-    "broadcast_range": 41,
-    "broadcast_filters": {
-        "test": "is_family",
-        "operator": "==",
-        "value": "panda_aggressive"
-    },
-    "calm_event": {
-        "event": "minecraft:on_calm",
-        "target": "self"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 1,
-    "broadcast_anger": true,
-    "broadcast_range": 41,
-    "broadcast_filters": {
-        "test": "is_family",
-        "operator": "==",
-        "value": "panda_aggressive"
-    },
-    "calm_event": {
-        "event": "minecraft:baby_on_calm",
-        "target": "self"
-    }
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 30,
-    "broadcast_anger": true,
-    "broadcast_anger_on_attack": true,
-    "broadcast_anger_on_being_attacked": true,
-    "broadcast_range": 16,
-    "broadcast_targets": [
-        "piglin"
-    ],
-    "calm_event": {
-        "event": "become_calm_event",
-        "target": "self"
-    },
-    "filters": {
-        "all_of": [
-            {
-                "test": "is_family",
-                "subject": "other",
-                "operator": "!=",
-                "value": "piglin"
-            },
-            {
-                "test": "has_component",
-                "subject": "self",
-                "operator": "!=",
-                "value": "minecraft:attack_cooldown"
-            }
-        ]
-    },
-    "angry_sound": "angry",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 30,
-    "broadcast_anger": false,
-    "broadcast_anger_on_attack": false,
-    "broadcast_anger_on_being_attacked": true,
-    "broadcast_range": 16,
-    "broadcast_targets": [
-        "piglin"
-    ],
-    "calm_event": {
-        "event": "become_calm_event",
-        "target": "self"
-    },
-    "filters": {
-        "all_of": [
-            {
-                "test": "is_family",
-                "subject": "other",
-                "operator": "!=",
-                "value": "piglin"
-            }
-        ]
-    },
-    "angry_sound": "angry",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 1,
-    "broadcast_anger": true,
-    "broadcast_range": 41,
-    "calm_event": {
-        "event": "minecraft:baby_on_calm",
-        "target": "self"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 500,
-    "broadcast_anger": false,
-    "broadcast_range": 20,
-    "calm_event": {
-        "event": "minecraft:on_calm",
-        "target": "self"
-    }
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": -1,
-    "broadcast_anger": true,
-    "broadcast_range": 20,
-    "calm_event": {
-        "event": "minecraft:on_calm",
-        "target": "self"
-    }
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 10,
-    "duration_delta": 3,
-    "calm_event": {
-        "event": "minecraft:become_calm",
-        "target": "self"
-    }
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": -1,
-    "broadcast_anger": false,
-    "calm_event": {
-        "event": "minecraft:stop_aggro",
-        "target": "self"
-    }
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 5,
-    "broadcastAnger": true,
-    "broadcastRange": 10,
-    "broadcast_targets": [
-        "llama"
-    ],
-    "broadcast_filters": {
-        "test": "is_leashed_to",
-        "subject": "other",
-        "value": true
-    },
-    "calm_event": {
-        "event": "minecraft:become_calm",
-        "target": "self"
-    }
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 25,
-    "broadcast_anger": true,
-    "broadcast_range": 20,
-    "calm_event": {
-        "event": "minecraft:on_calm",
-        "target": "self"
-    }
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:angry": {
-    "duration": 25,
-    "broadcast_anger": true,
-    "broadcast_range": 20,
-    "calm_event": {
-        "event": "minecraft:on_calm",
-        "target": "self"
-    }
-}
-```
-
-## minecraft:annotation.break_door
+<Spoiler title="Show">
 
 #### drowned
 
@@ -1368,7 +627,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:annotation.break_door": {}
 ```
 
-## minecraft:annotation.open_door
+</Spoiler>
+
+## annotation.open_door
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aannotation.open_door)</small>
+
+<Spoiler title="Show">
 
 #### piglin
 
@@ -1410,7 +675,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:annotation.open_door": {}
 ```
 
-## minecraft:area_attack
+</Spoiler>
+
+## area_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aarea_attack)</small>
+
+<Spoiler title="Show">
 
 #### pufferfish
 
@@ -1440,7 +711,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:attack
+</Spoiler>
+
+## attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aattack)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -1532,538 +809,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### creeper
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+## attack_cooldown
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aattack_cooldown)</small>
 
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 5
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 7
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 2
-}
-```
-
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 2
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 2
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 5
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 1.0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": [
-        3,
-        9
-    ]
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3,
-    "effect_name": "hunger",
-    "effect_duration": 30
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": {
-        "range_min": 7,
-        "range_max": 21
-    }
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 6
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 2
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 2.0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 6.0
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 6
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 5
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 7
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 1
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 6.0
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 12.0
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 1
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 0
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 2
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3,
-    "effect_name": "slowness",
-    "effect_duration": 10
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 8
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 4,
-    "effect_name": "wither",
-    "effect_duration": 10
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 4
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": [
-        3,
-        8
-    ]
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 5
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:attack": {
-    "damage": 3
-}
-```
-
-## minecraft:attack_cooldown
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -2138,7 +890,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:attack_damage
+</Spoiler>
+
+## attack_damage
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aattack_damage)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -2164,7 +922,59 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:balloonable
+</Spoiler>
+
+## balloonable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aballoonable)</small>
+
+<Spoiler title="Show">
+
+#### axolotl
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:balloonable": {
+    "mass": 0.5
+}
+```
+
+#### bee
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:balloonable": {
+    "mass": 0.5
+}
+```
+
+#### boat
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:balloonable": {}
+```
+
+#### cat
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:balloonable": {
+    "mass": 0.6
+}
+```
 
 #### chicken
 
@@ -2188,6 +998,16 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:balloonable": {}
 ```
 
+#### dolphin
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:balloonable": {}
+```
+
 #### donkey
 
 <small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
@@ -2198,159 +1018,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:balloonable": {}
 ```
 
-#### fox
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+## barter
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abarter)</small>
 
-```json
-"minecraft:balloonable": {
-    "mass": 0.6
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 2.0
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 1.5
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.75
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.4
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {
-    "mass": 0.75
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-## minecraft:barter
+<Spoiler title="Show">
 
 #### piglin
 
@@ -2365,7 +1039,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.admire_item
+</Spoiler>
+
+## behavior.admire_item
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.admire_item)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -2388,7 +1068,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.avoid_block
+</Spoiler>
+
+## behavior.avoid_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.avoid_block)</small>
+
+<Spoiler title="Show">
 
 #### hoglin
 
@@ -2452,7 +1138,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.avoid_mob_type
+</Spoiler>
+
+## behavior.avoid_mob_type
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.avoid_mob_type)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -2580,9 +1272,18 @@ This documentation is stripped from the vanilla files using an automated script.
     "entity_types": [
         {
             "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
+                "any_of": [
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                    },
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "axolotl"
+                    }
+                ]
             },
             "max_dist": 6,
             "walk_speed_multiplier": 1.5,
@@ -2709,466 +1410,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### ocelot
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
+## behavior.barter
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.barter)</small>
 
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 5,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 10,
-            "walk_speed_multiplier": 0.8,
-            "sprint_speed_multiplier": 1.33
-        }
-    ]
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 5,
-    "max_dist": 16,
-    "max_flee": 20,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "operator": "!=",
-                "subject": "other",
-                "value": "panda"
-            },
-            "max_dist": 16,
-            "sprint_speed_multiplier": 1.5
-        }
-    ]
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 0,
-    "max_dist": 16.0,
-    "ignore_visibility": true,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "ocelot"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "cat"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 4,
-    "remove_target": true,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie_pigman"
-                    }
-                ]
-            },
-            "max_dist": 6
-        },
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zoglin"
-                    }
-                ]
-            },
-            "max_dist": 6
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_target",
-                        "subject": "other",
-                        "value": true
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "hoglin"
-                    }
-                ]
-            },
-            "sprint_speed_multiplier": 1.2,
-            "check_if_outnumbered": true
-        }
-    ],
-    "on_escape_event": {
-        "event": "become_calm_event",
-        "target": "self"
-    },
-    "avoid_mob_sound": "retreat",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 4,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 8,
-            "walk_speed_multiplier": 1.5,
-            "sprint_speed_multiplier": 1.8
-        },
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "wolf"
-            },
-            "max_dist": 4,
-            "walk_speed_multiplier": 1.5,
-            "sprint_speed_multiplier": 1.8
-        },
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "monster"
-            },
-            "max_dist": 4,
-            "walk_speed_multiplier": 1.5,
-            "sprint_speed_multiplier": 1.5
-        }
-    ]
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 1,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 3,
-            "max_flee": 10,
-            "walk_speed_multiplier": 1.5,
-            "sprint_speed_multiplier": 2.0
-        }
-    ]
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 4,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "wolf"
-            },
-            "max_dist": 6,
-            "walk_speed_multiplier": 1.2,
-            "sprint_speed_multiplier": 1.2
-        }
-    ]
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 4,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "wolf"
-            },
-            "max_dist": 6,
-            "walk_speed_multiplier": 1.2,
-            "sprint_speed_multiplier": 1.2
-        }
-    ]
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 1,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 6,
-            "walk_speed_multiplier": 1.5,
-            "sprint_speed_multiplier": 2.0
-        }
-    ]
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 3,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie_villager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie_pigman"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "illager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "vex"
-                    }
-                ]
-            },
-            "max_dist": 8,
-            "walk_speed_multiplier": 0.6,
-            "sprint_speed_multiplier": 0.6
-        }
-    ]
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 4,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie_villager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie_pigman"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "illager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "vex"
-                    }
-                ]
-            },
-            "max_dist": 8,
-            "walk_speed_multiplier": 0.6,
-            "sprint_speed_multiplier": 0.6
-        }
-    ]
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 2,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie_villager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie_pigman"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "illager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "vex"
-                    }
-                ]
-            },
-            "walk_speed_multiplier": 0.6,
-            "sprint_speed_multiplier": 0.6
-        }
-    ],
-    "max_dist": 6
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.avoid_mob_type": {
-    "priority": 3,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "llama"
-            },
-            "max_dist": 24,
-            "walk_speed_multiplier": 1.5,
-            "sprint_speed_multiplier": 1.5
-        }
-    ],
-    "probability_per_strength": 0.14
-}
-```
-
-## minecraft:behavior.barter
+<Spoiler title="Show">
 
 #### piglin
 
@@ -3182,7 +1430,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.beg
+</Spoiler>
+
+## behavior.beg
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.beg)</small>
+
+<Spoiler title="Show">
 
 #### wolf
 
@@ -3215,7 +1469,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.breed
+</Spoiler>
+
+## behavior.breed
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.breed)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -3321,172 +1581,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### hoglin
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
+## behavior.celebrate
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.celebrate)</small>
 
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 0.6
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 2,
-    "speed_multiplier": 1.0
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 1.0
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 1.0
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 1.0
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 2,
-    "speed_multiplier": 0.8
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 2,
-    "speed_multiplier": 1.0
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 1.0
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 2,
-    "speed_multiplier": 1.0
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 2,
-    "speed_multiplier": 1.0
-}
-```
-
-## minecraft:behavior.celebrate
+<Spoiler title="Show">
 
 #### evocation_illager
 
@@ -3618,7 +1719,63 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.charge_attack
+</Spoiler>
+
+## behavior.celebrate_survive
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.celebrate_survive)</small>
+
+<Spoiler title="Show">
+
+#### villager
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.celebrate_survive": {
+    "priority": 5,
+    "fireworks_interval": {
+        "range_min": 2.0,
+        "range_max": 7.0
+    },
+    "duration": 30.0,
+    "on_celebration_end_event": {
+        "event": "minecraft:stop_celebrating",
+        "target": "self"
+    }
+}
+```
+
+#### villager_v2
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.celebrate_survive": {
+    "priority": 5,
+    "fireworks_interval": {
+        "range_min": 2.0,
+        "range_max": 7.0
+    },
+    "duration": 30.0,
+    "on_celebration_end_event": {
+        "event": "minecraft:stop_celebrating",
+        "target": "self"
+    }
+}
+```
+
+</Spoiler>
+
+## behavior.charge_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.charge_attack)</small>
+
+<Spoiler title="Show">
 
 #### vex
 
@@ -3632,7 +1789,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.charge_held_item
+</Spoiler>
+
+## behavior.charge_held_item
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.charge_held_item)</small>
+
+<Spoiler title="Show">
 
 #### piglin
 
@@ -3664,7 +1827,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.circle_around_anchor
+</Spoiler>
+
+## behavior.circle_around_anchor
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.circle_around_anchor)</small>
+
+<Spoiler title="Show">
 
 #### phantom
 
@@ -3695,7 +1864,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.controlled_by_player
+</Spoiler>
+
+## behavior.controlled_by_player
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.controlled_by_player)</small>
+
+<Spoiler title="Show">
 
 #### pig
 
@@ -3722,7 +1897,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.defend_trusted_target
+</Spoiler>
+
+## behavior.defend_trusted_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.defend_trusted_target)</small>
+
+<Spoiler title="Show">
 
 #### fox
 
@@ -3744,7 +1925,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.defend_village_target
+</Spoiler>
+
+## behavior.defend_village_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.defend_village_target)</small>
+
+<Spoiler title="Show">
 
 #### iron_golem
 
@@ -3776,7 +1963,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.delayed_attack
+</Spoiler>
+
+## behavior.delayed_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.delayed_attack)</small>
+
+<Spoiler title="Show">
 
 #### ravager
 
@@ -3798,7 +1991,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.dragonchargeplayer
+</Spoiler>
+
+## behavior.dragonchargeplayer
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonchargeplayer)</small>
+
+<Spoiler title="Show">
 
 #### ender_dragon
 
@@ -3812,7 +2011,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.dragondeath
+</Spoiler>
+
+## behavior.dragondeath
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragondeath)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -3822,7 +2027,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.dragonflaming
+</Spoiler>
+
+## behavior.dragonflaming
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonflaming)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -3832,7 +2043,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.dragonholdingpattern
+</Spoiler>
+
+## behavior.dragonholdingpattern
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonholdingpattern)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -3842,7 +2059,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.dragonlanding
+</Spoiler>
+
+## behavior.dragonlanding
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonlanding)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -3852,7 +2075,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.dragonscanning
+</Spoiler>
+
+## behavior.dragonscanning
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonscanning)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -3862,7 +2091,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.dragonstrafeplayer
+</Spoiler>
+
+## behavior.dragonstrafeplayer
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonstrafeplayer)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -3872,7 +2107,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.dragontakeoff
+</Spoiler>
+
+## behavior.dragontakeoff
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragontakeoff)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -3882,7 +2123,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.drink_potion
+</Spoiler>
+
+## behavior.drink_potion
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.drink_potion)</small>
+
+<Spoiler title="Show">
 
 #### wandering_trader
 
@@ -3987,7 +2234,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.drop_item_for
+</Spoiler>
+
+## behavior.drop_item_for
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.drop_item_for)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -4041,7 +2294,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.eat_block
+</Spoiler>
+
+## behavior.eat_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.eat_block)</small>
+
+<Spoiler title="Show">
 
 #### sheep
 
@@ -4071,7 +2330,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.eat_carried_item
+</Spoiler>
+
+## behavior.eat_carried_item
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.eat_carried_item)</small>
+
+<Spoiler title="Show">
 
 #### fox
 
@@ -4086,7 +2351,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.enderman_leave_block
+</Spoiler>
+
+## behavior.enderman_leave_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.enderman_leave_block)</small>
+
+<Spoiler title="Show">
 
 #### enderman
 
@@ -4100,7 +2371,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.enderman_take_block
+</Spoiler>
+
+## behavior.enderman_take_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.enderman_take_block)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -4110,7 +2387,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.equip_item
+</Spoiler>
+
+## behavior.equip_item
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.equip_item)</small>
+
+<Spoiler title="Show">
 
 #### drowned
 
@@ -4208,55 +2491,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### zombie
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
+## behavior.explore_outskirts
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.explore_outskirts)</small>
 
-```json
-"minecraft:behavior.equip_item": {
-    "priority": 2
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.equip_item": {
-    "priority": 3
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.equip_item": {
-    "priority": 3
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.equip_item": {
-    "priority": 3
-}
-```
-
-## minecraft:behavior.explore_outskirts
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -4291,7 +2532,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.find_cover
+</Spoiler>
+
+## behavior.find_cover
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.find_cover)</small>
+
+<Spoiler title="Show">
 
 #### fox
 
@@ -4317,7 +2564,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.find_mount
+</Spoiler>
+
+## behavior.find_mount
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.find_mount)</small>
+
+<Spoiler title="Show">
 
 #### husk
 
@@ -4405,7 +2658,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.find_underwater_treasure
+</Spoiler>
+
+## behavior.find_underwater_treasure
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.find_underwater_treasure)</small>
+
+<Spoiler title="Show">
 
 #### dolphin
 
@@ -4422,7 +2681,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.flee_sun
+</Spoiler>
+
+## behavior.flee_sun
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.flee_sun)</small>
+
+<Spoiler title="Show">
 
 #### drowned
 
@@ -4489,7 +2754,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.float
+</Spoiler>
+
+## behavior.float
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.float)</small>
+
+<Spoiler title="Show">
 
 #### bat
 
@@ -4587,367 +2858,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### donkey
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+## behavior.float_wander
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.float_wander)</small>
 
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 2
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 1
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 1
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 1
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 1
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-## minecraft:behavior.float_wander
+<Spoiler title="Show">
 
 #### bat
 
@@ -4981,7 +2898,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.follow_caravan
+</Spoiler>
+
+## behavior.follow_caravan
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_caravan)</small>
+
+<Spoiler title="Show">
 
 #### llama
 
@@ -5004,7 +2927,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.follow_mob
+</Spoiler>
+
+## behavior.follow_mob
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_mob)</small>
+
+<Spoiler title="Show">
 
 #### parrot
 
@@ -5021,7 +2950,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.follow_owner
+</Spoiler>
+
+## behavior.follow_owner
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_owner)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -5083,7 +3018,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.follow_parent
+</Spoiler>
+
+## behavior.follow_parent
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_parent)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -5185,207 +3126,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### goat
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
+## behavior.follow_target_captain
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_target_captain)</small>
 
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 6,
-    "speed_multiplier": 1
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 6,
-    "speed_multiplier": 1
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 5,
-    "speed_multiplier": 1.0
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 5,
-    "speed_multiplier": 1.1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 6,
-    "speed_multiplier": 1.1
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 13,
-    "speed_multiplier": 1.1
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 6,
-    "speed_multiplier": 1.1
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 4,
-    "speed_multiplier": 1.25
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 6,
-    "speed_multiplier": 1.1
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 5,
-    "speed_multiplier": 1.1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 6,
-    "speed_multiplier": 1.1
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 6,
-    "speed_multiplier": 1.1
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
-## minecraft:behavior.follow_target_captain
+<Spoiler title="Show">
 
 #### pillager
 
@@ -5417,7 +3164,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.go_home
+</Spoiler>
+
+## behavior.go_home
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.go_home)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -5516,7 +3269,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.guardian_attack
+</Spoiler>
+
+## behavior.guardian_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.guardian_attack)</small>
+
+<Spoiler title="Show">
 
 #### elder_guardian
 
@@ -5542,7 +3301,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.harvest_farm_block
+</Spoiler>
+
+## behavior.harvest_farm_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.harvest_farm_block)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -5579,7 +3344,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.hide
+</Spoiler>
+
+## behavior.hide
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.hide)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -5592,7 +3363,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.hold_ground
+</Spoiler>
+
+## behavior.hold_ground
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.hold_ground)</small>
+
+<Spoiler title="Show">
 
 #### pillager
 
@@ -5628,7 +3405,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.hurt_by_target
+</Spoiler>
+
+## behavior.hurt_by_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.hurt_by_target)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -5726,397 +3509,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### ghast
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
+## behavior.inspect_bookshelf
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.inspect_bookshelf)</small>
 
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 2
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 2,
-    "entity_types": {
-        "filters": {
-            "test": "is_family",
-            "subject": "other",
-            "operator": "!=",
-            "value": "creeper"
-        }
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 2,
-    "entity_types": {
-        "filters": {
-            "all_of": [
-                {
-                    "test": "is_family",
-                    "subject": "other",
-                    "operator": "!=",
-                    "value": "player"
-                },
-                {
-                    "test": "is_family",
-                    "subject": "other",
-                    "operator": "!=",
-                    "value": "creeper"
-                }
-            ]
-        }
-    }
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1,
-    "hurt_owner": true
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1,
-    "entity_types": {
-        "filters": {
-            "test": "is_family",
-            "subject": "other",
-            "operator": "!=",
-            "value": "illager"
-        },
-        "max_dist": 64
-    }
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 2,
-    "entity_types": {
-        "filters": {
-            "test": "is_family",
-            "subject": "other",
-            "operator": "!=",
-            "value": "illager"
-        },
-        "max_dist": 64
-    }
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 2
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1,
-    "alert_same_type": true
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 2
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 3
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-## minecraft:behavior.inspect_bookshelf
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -6141,7 +3540,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.jump_to_block
+</Spoiler>
+
+## behavior.jump_to_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.jump_to_block)</small>
+
+<Spoiler title="Show">
 
 #### goat
 
@@ -6164,7 +3569,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.knockback_roar
+</Spoiler>
+
+## behavior.knockback_roar
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.knockback_roar)</small>
+
+<Spoiler title="Show">
 
 #### ravager
 
@@ -6178,7 +3589,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "duration": 1,
     "attack_time": 0.5,
     "knockback_damage": 6,
-    "knockback_strength": 3,
+    "knockback_horizontal_strength": 3,
+    "knockback_vertical_strength": 3,
     "knockback_range": 4,
     "knockback_filters": {
         "test": "is_family",
@@ -6199,7 +3611,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.lay_down
+</Spoiler>
+
+## behavior.lay_down
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.lay_down)</small>
+
+<Spoiler title="Show">
 
 #### panda
 
@@ -6215,7 +3633,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.lay_egg
+</Spoiler>
+
+## behavior.lay_egg
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.lay_egg)</small>
+
+<Spoiler title="Show">
 
 #### turtle
 
@@ -6237,7 +3661,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.leap_at_target
+</Spoiler>
+
+## behavior.leap_at_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.leap_at_target)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -6306,7 +3736,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.look_at_entity
+</Spoiler>
+
+## behavior.look_at_entity
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.look_at_entity)</small>
+
+<Spoiler title="Show">
 
 #### evocation_illager
 
@@ -6364,7 +3800,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.look_at_player
+</Spoiler>
+
+## behavior.look_at_player
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.look_at_player)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -6474,680 +3916,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### drowned
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+## behavior.look_at_target
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.look_at_target)</small>
 
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6,
-    "probability": 0.02
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 12.0,
-    "probability": 0.01
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 8.0,
-    "probability": 8.0
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 9,
-    "look_distance": 3.0,
-    "probability": 1.0
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 14,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 10,
-    "look_distance": 6,
-    "probability": 0.02
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 12.0,
-    "probability": 0.01
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6,
-    "probability": 0.02
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 0,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 9
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 1,
-    "look_distance": 8.0
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 11,
-    "look_distance": 8
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 8
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 9,
-    "look_distance": 8
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 6,
-    "target_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 11
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6,
-    "angle_of_view_horizontal": 45,
-    "probability": 1
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 1,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 8
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 3,
-    "look_distance": 6.0
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 8
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 9,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "target_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 9,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 12,
-    "look_distance": 8,
-    "probability": 0.02
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 8,
-    "probability": 0.02
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 10,
-    "look_distance": 8,
-    "probability": 0.02
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 8,
-    "probability": 0.02
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 5,
-    "look_distance": 8.0
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 6,
-    "look_distance": 8
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 8
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 6,
-    "target_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6,
-    "probability": 0.02
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 8,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 10,
-    "look_distance": 6,
-    "probability": 0.02
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 10,
-    "look_distance": 6,
-    "probability": 0.02
-}
-```
-
-## minecraft:behavior.look_at_target
+<Spoiler title="Show">
 
 #### wither
 
@@ -7161,7 +3936,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.look_at_trading_player
+</Spoiler>
+
+## behavior.look_at_trading_player
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.look_at_trading_player)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -7199,7 +3980,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.make_love
+</Spoiler>
+
+## behavior.make_love
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.make_love)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -7225,7 +4012,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.melee_attack
+</Spoiler>
+
+## behavior.melee_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.melee_attack)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -7341,333 +4134,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### enderman
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+## behavior.mingle
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.mingle)</small>
 
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 2
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 3,
-    "track_target": true
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 10,
-    "track_target": true,
-    "require_complete_path": true,
-    "reach_multiplier": 1.5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 1,
-    "track_target": true,
-    "require_complete_path": true,
-    "reach_multiplier": 1.5
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "speed_multiplier": 1,
-    "track_target": true,
-    "reach_multiplier": 1.0,
-    "cooldown_time": 0.75
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "speed_multiplier": 1,
-    "track_target": true,
-    "reach_multiplier": 2.5,
-    "cooldown_time": 2
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 3
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 1,
-    "track_target": true
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 2,
-    "attack_once": true,
-    "track_target": true,
-    "reach_multiplier": 1.0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 2,
-    "track_target": true,
-    "reach_multiplier": 1.0
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 8,
-    "speed_multiplier": 1.0,
-    "track_target": true
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "speed_multiplier": 1,
-    "track_target": true
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "track_target": true
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "track_target": true
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "track_target": true,
-    "speed_multiplier": 1.25
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 3,
-    "track_target": true,
-    "reach_multiplier": 0.8
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "track_target": true,
-    "speed_multiplier": 1.25
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 3
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "track_target": true,
-    "speed_multiplier": 1.25
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 5
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "speed_multiplier": 1.4,
-    "track_target": true
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 3
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 4,
-    "speed_multiplier": 1.5
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 6
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 6
-}
-```
-
-## minecraft:behavior.mingle
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -7692,7 +4165,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.mount_pathing
+</Spoiler>
+
+## behavior.mount_pathing
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.mount_pathing)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -7814,232 +4293,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### mooshroom
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
+## behavior.move_indoors
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_indoors)</small>
 
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 2,
-    "speed_multiplier": 1.5,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 2,
-    "speed_multiplier": 1.5,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 1,
-    "speed_multiplier": 1.25,
-    "target_dist": 0,
-    "track_target": true
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 5,
-    "speed_multiplier": 1.5,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 1,
-    "speed_multiplier": 1.25,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 5,
-    "speed_multiplier": 1.25,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 2,
-    "speed_multiplier": 1.5,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 2,
-    "speed_multiplier": 1.5,
-    "target_dist": 4.0,
-    "track_target": true
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 5,
-    "speed_multiplier": 1.25,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 1,
-    "speed_multiplier": 1.25,
-    "target_dist": 0,
-    "track_target": true
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 2,
-    "speed_multiplier": 1.25,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 2,
-    "speed_multiplier": 1.5,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 2,
-    "speed_multiplier": 1.25,
-    "target_dist": 0,
-    "track_target": true
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 5,
-    "speed_multiplier": 1.25,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.mount_pathing": {
-    "priority": 5,
-    "speed_multiplier": 1.25,
-    "target_dist": 0.0,
-    "track_target": true
-}
-```
-
-## minecraft:behavior.move_indoors
+<Spoiler title="Show">
 
 #### villager
 
@@ -8068,7 +4328,49 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_through_village
+</Spoiler>
+
+## behavior.move_outdoors
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_outdoors)</small>
+
+<Spoiler title="Show">
+
+#### villager
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.move_outdoors": {
+    "priority": 2,
+    "speed_multiplier": 0.8,
+    "timeout_cooldown": 8.0
+}
+```
+
+#### villager_v2
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.move_outdoors": {
+    "priority": 2,
+    "speed_multiplier": 0.8,
+    "timeout_cooldown": 8.0
+}
+```
+
+</Spoiler>
+
+## behavior.move_through_village
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_through_village)</small>
+
+<Spoiler title="Show">
 
 #### iron_golem
 
@@ -8084,7 +4386,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_to_block
+</Spoiler>
+
+## behavior.move_to_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_block)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -8149,7 +4457,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_to_land
+</Spoiler>
+
+## behavior.move_to_land
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_land)</small>
+
+<Spoiler title="Show">
 
 #### turtle
 
@@ -8166,7 +4480,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_to_liquid
+</Spoiler>
+
+## behavior.move_to_liquid
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_liquid)</small>
+
+<Spoiler title="Show">
 
 #### strider
 
@@ -8185,7 +4505,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_to_random_block
+</Spoiler>
+
+## behavior.move_to_random_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_random_block)</small>
+
+<Spoiler title="Show">
 
 #### pillager
 
@@ -8217,7 +4543,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_to_village
+</Spoiler>
+
+## behavior.move_to_village
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_village)</small>
+
+<Spoiler title="Show">
 
 #### evocation_illager
 
@@ -8288,7 +4620,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_to_water
+</Spoiler>
+
+## behavior.move_to_water
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_water)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -8346,7 +4684,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_towards_dwelling_restriction
+</Spoiler>
+
+## behavior.move_towards_dwelling_restriction
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_towards_dwelling_restriction)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -8386,7 +4730,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_towards_home_restriction
+</Spoiler>
+
+## behavior.move_towards_home_restriction
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_towards_home_restriction)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -8426,7 +4776,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.move_towards_target
+</Spoiler>
+
+## behavior.move_towards_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_towards_target)</small>
+
+<Spoiler title="Show">
 
 #### iron_golem
 
@@ -8442,7 +4798,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.nap
+</Spoiler>
+
+## behavior.nap
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.nap)</small>
+
+<Spoiler title="Show">
 
 #### fox
 
@@ -8510,7 +4872,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.nearest_attackable_target
+</Spoiler>
+
+## behavior.nearest_attackable_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.nearest_attackable_target)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -8892,1754 +5260,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### elder_guardian
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+## behavior.nearest_prioritized_attackable_target
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.nearest_prioritized_attackable_target)</small>
 
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 1,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "squid"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "axolotl"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
-    "attack_interval_min": 1.0,
-    "must_see": true
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 5,
-    "must_see": true,
-    "attack_interval": 10,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "endermite"
-            },
-            "max_dist": 64
-        }
-    ]
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 5,
-    "must_see": true,
-    "within_radius": 16.0,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "enderman"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wandering_trader"
-                    }
-                ]
-            },
-            "max_dist": 20
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "minecraft:is_baby"
-                    }
-                ]
-            },
-            "max_dist": 20
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 28
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 6,
-    "within_radius": 16,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "goat"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "self",
-                        "operator": "!=",
-                        "value": "minecraft:attack_cooldown"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 1,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "squid"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "axolotl"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
-    "attack_interval_min": 1.0,
-    "must_see": true
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 4,
-    "within_radius": 16.0,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "self",
-                        "operator": "!=",
-                        "value": "minecraft:attack_cooldown"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "reselect_targets": true,
-    "within_radius": 25.0,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    }
-                ]
-            },
-            "max_dist": 35
-        },
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wandering_trader"
-                    }
-                ]
-            },
-            "max_dist": 35,
-            "must_see": false
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 35
-        }
-    ]
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 3,
-    "must_reach": true,
-    "must_see": true,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "monster"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "creeper"
-                    }
-                ]
-            },
-            "within_default": 10
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "hoglin"
-                    },
-                    {
-                        "test": "is_difficulty",
-                        "operator": "!=",
-                        "value": "peaceful"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zoglin"
-                    },
-                    {
-                        "test": "is_difficulty",
-                        "operator": "!=",
-                        "value": "peaceful"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "attack_interval": 16,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wolf"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "minecraft:is_tamed"
-                    }
-                ]
-            },
-            "max_dist": 10
-        }
-    ],
-    "must_see": false,
-    "must_reach": true
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 16
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 1,
-    "reselect_targets": true,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "chicken"
-            },
-            "max_dist": 8
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 8
-        }
-    ]
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 1,
-    "reselect_targets": true,
-    "scan_interval": 20,
-    "within_radius": 64.0,
-    "must_see_forget_duration": 0.5,
-    "target_search_height": 80.0,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 64
-        }
-    ]
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 7,
-    "within_radius": 16.0,
-    "persist_time": 2.0,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wither"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "self",
-                        "value": "piglin_hunter"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "hoglin_huntable"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "minecraft:is_baby"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "self",
-                        "operator": "!=",
-                        "value": "minecraft:attack_cooldown"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "has_equipment",
-                        "subject": "other",
-                        "domain": "head",
-                        "operator": "!=",
-                        "value": "golden_helmet"
-                    },
-                    {
-                        "test": "has_equipment",
-                        "subject": "other",
-                        "domain": "torso",
-                        "operator": "!=",
-                        "value": "golden_chestplate"
-                    },
-                    {
-                        "test": "has_equipment",
-                        "subject": "other",
-                        "domain": "leg",
-                        "operator": "!=",
-                        "value": "golden_leggings"
-                    },
-                    {
-                        "test": "has_equipment",
-                        "subject": "other",
-                        "domain": "feet",
-                        "operator": "!=",
-                        "value": "golden_boots"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "has_container_open",
-                        "subject": "other",
-                        "operator": "==",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
-    "must_see": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 7,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 3,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "reselect_targets": true,
-    "within_radius": 16.0,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wandering_trader"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "minecraft:is_baby"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 4,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 4,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "fox"
-            },
-            "max_dist": 16
-        }
-    ],
-    "must_see": false
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 3,
-    "must_see": true,
-    "within_radius": 16.0,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "subject": "other",
-                        "test": "is_family",
-                        "value": "player"
-                    },
-                    {
-                        "subject": "other",
-                        "test": "is_family",
-                        "value": "irongolem"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "minecraft:is_baby"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 3,
-    "entity_types": {
-        "filters": {
-            "test": "is_family",
-            "subject": "other",
-            "value": "player"
-        },
-        "max_dist": 16
-    },
-    "must_see": true
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "attack_interval": 10,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    }
-                ]
-            },
-            "max_dist": 8
-        }
-    ]
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "reselect_targets": true,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "irongolem"
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 1,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "monster"
-            },
-            "within_default": 6
-        }
-    ]
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "attack_interval": 5,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "reselect_targets": true,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "irongolem"
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 3,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wandering_trader"
-                    }
-                ]
-            },
-            "max_dist": 70
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "minecraft:is_baby"
-                    }
-                ]
-            },
-            "max_dist": 70
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "within_radius": 12.0,
-    "must_see_forget_duration": 40.0,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "illager"
-                    }
-                ]
-            },
-            "max_dist": 12
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "within_radius": 12.0,
-    "must_see_forget_duration": 40.0,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wandering_trader"
-                    }
-                ]
-            },
-            "max_dist": 12
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "minecraft:is_baby"
-                    }
-                ]
-            },
-            "max_dist": 12
-        }
-    ]
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    }
-                ]
-            },
-            "max_dist": 10
-        }
-    ],
-    "must_reach": true
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 3,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 70
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "undead"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "inanimate"
-                    }
-                ]
-            },
-            "max_dist": 70
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "reselect_targets": true,
-    "must_see": true,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "piglin"
-                    },
-                    {
-                        "test": "is_difficulty",
-                        "operator": "!=",
-                        "value": "peaceful"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "irongolem"
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 4,
-    "reselect_targets": true,
-    "must_see": true,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "skeleton"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "sheep"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "rabbit"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "fox"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "skeleton"
-                    },
-                    {
-                        "test": "is_underwater",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 5,
-    "must_see": true,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "skeleton"
-            },
-            "max_dist": 16
-        }
-    ]
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 3,
-    "within_radius": 16.0,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "zoglin"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "creeper"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
-    "must_see": true
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "reselect_targets": true,
-    "within_radius": 25.0,
-    "must_see_forget_duration": 17.0,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    }
-                ]
-            },
-            "max_dist": 35
-        },
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wandering_trader"
-                    }
-                ]
-            },
-            "max_dist": 35,
-            "must_see": false
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 35
-        }
-    ]
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "reselect_targets": true,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    }
-                ]
-            },
-            "max_dist": 35
-        },
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wandering_trader"
-                    }
-                ]
-            },
-            "max_dist": 35,
-            "must_see": false
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 35
-        }
-    ]
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 2,
-    "must_see": true,
-    "reselect_targets": true,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "snowgolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "irongolem"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wandering_trader"
-                    }
-                ]
-            },
-            "max_dist": 35
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "baby_turtle"
-                    },
-                    {
-                        "test": "in_water",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 35
-        }
-    ]
-}
-```
-
-## minecraft:behavior.nearest_prioritized_attackable_target
+<Spoiler title="Show">
 
 #### fox
 
@@ -10834,7 +5461,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.ocelot_sit_on_block
+</Spoiler>
+
+## behavior.ocelot_sit_on_block
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.ocelot_sit_on_block)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -10862,7 +5495,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.ocelotattack
+</Spoiler>
+
+## behavior.ocelotattack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.ocelotattack)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -10908,7 +5547,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.offer_flower
+</Spoiler>
+
+## behavior.offer_flower
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.offer_flower)</small>
+
+<Spoiler title="Show">
 
 #### iron_golem
 
@@ -10922,7 +5567,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.open_door
+</Spoiler>
+
+## behavior.open_door
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.open_door)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -10950,7 +5601,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.owner_hurt_by_target
+</Spoiler>
+
+## behavior.owner_hurt_by_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.owner_hurt_by_target)</small>
+
+<Spoiler title="Show">
 
 #### wolf
 
@@ -10964,7 +5621,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.owner_hurt_target
+</Spoiler>
+
+## behavior.owner_hurt_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.owner_hurt_target)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -10974,7 +5637,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.panic
+</Spoiler>
+
+## behavior.panic
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.panic)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -11077,305 +5746,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### goat
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
+## behavior.pet_sleep_with_owner
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.pet_sleep_with_owner)</small>
 
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 3,
-    "speed_multiplier": 1.2
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 4,
-    "speed_multiplier": 1.2
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.25
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.2
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.25
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.25
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 2.5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.25,
-    "ignore_mob_damage": true
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 0,
-    "speed_multiplier": 1.25
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 3,
-    "speed_multiplier": 1.25
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.1
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 2,
-    "speed_multiplier": 2.0
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 2.2
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.25
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.2
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 3,
-    "speed_multiplier": 1.1,
-    "panic_sound": "panic",
-    "sound_interval": {
-        "range_min": 1.0,
-        "range_max": 3.0
-    }
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 0,
-    "prefer_water": true,
-    "speed_multiplier": 1.2
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 3,
-    "speed_multiplier": 0.6
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 0.6
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 0.6
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.2
-}
-```
-
-## minecraft:behavior.pet_sleep_with_owner
+<Spoiler title="Show">
 
 #### cat
 
@@ -11393,7 +5770,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.pickup_items
+</Spoiler>
+
+## behavior.pickup_items
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.pickup_items)</small>
+
+<Spoiler title="Show">
 
 #### drowned
 
@@ -11408,7 +5791,10 @@ This documentation is stripped from the vanilla files using an automated script.
     "goal_radius": 2,
     "speed_multiplier": 1.0,
     "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
+    "can_pickup_any_item": true,
+    "excluded_items": [
+        "minecraft:glow_ink_sac"
+    ]
 }
 ```
 
@@ -11440,7 +5826,10 @@ This documentation is stripped from the vanilla files using an automated script.
     "goal_radius": 2,
     "speed_multiplier": 1.0,
     "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
+    "can_pickup_any_item": true,
+    "excluded_items": [
+        "minecraft:glow_ink_sac"
+    ]
 }
 ```
 
@@ -11527,111 +5916,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### villager_v2
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+## behavior.play
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.play)</small>
 
-```json
-"minecraft:behavior.pickup_items": {
-    "priority": 4,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 0.5,
-    "can_pickup_to_hand_or_equipment": false
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.pickup_items": {
-    "priority": 5,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.pickup_items": {
-    "priority": 6,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.pickup_items": {
-    "priority": 6,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.pickup_items": {
-    "priority": 8,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.pickup_items": {
-    "priority": 8,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-## minecraft:behavior.play
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -11655,7 +5946,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.play_dead
+</Spoiler>
+
+## behavior.play_dead
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.play_dead)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -11691,7 +5988,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.player_ride_tamed
+</Spoiler>
+
+## behavior.player_ride_tamed
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.player_ride_tamed)</small>
+
+<Spoiler title="Show">
 
 #### donkey
 
@@ -11743,7 +6046,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
-## minecraft:behavior.raid_garden
+</Spoiler>
+
+## behavior.raid_garden
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.raid_garden)</small>
+
+<Spoiler title="Show">
 
 #### fox
 
@@ -11785,7 +6094,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.ram_attack
+</Spoiler>
+
+## behavior.ram_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.ram_attack)</small>
+
+<Spoiler title="Show">
 
 #### goat
 
@@ -11843,7 +6158,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.random_breach
+</Spoiler>
+
+## behavior.random_breach
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_breach)</small>
+
+<Spoiler title="Show">
 
 #### dolphin
 
@@ -11860,7 +6181,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.random_fly
+</Spoiler>
+
+## behavior.random_fly
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_fly)</small>
+
+<Spoiler title="Show">
 
 #### parrot
 
@@ -11880,7 +6207,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.random_hover
+</Spoiler>
+
+## behavior.random_hover
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_hover)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -11902,7 +6235,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.random_look_around
+</Spoiler>
+
+## behavior.random_look_around
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_look_around)</small>
+
+<Spoiler title="Show">
 
 #### blaze
 
@@ -12000,440 +6339,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### elder_guardian
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+## behavior.random_look_around_and_sit
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_look_around_and_sit)</small>
 
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 15
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 11
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 12
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 10
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 7
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 4
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 7
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 10
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 5,
-    "look_distance": 8.0
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 7
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 8
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 11
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 11
-}
-```
-
-## minecraft:behavior.random_look_around_and_sit
+<Spoiler title="Show">
 
 #### fox
 
@@ -12452,7 +6364,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.random_sitting
+</Spoiler>
+
+## behavior.random_sitting
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_sitting)</small>
+
+<Spoiler title="Show">
 
 #### panda
 
@@ -12482,7 +6400,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.random_stroll
+</Spoiler>
+
+## behavior.random_stroll
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_stroll)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -12588,577 +6512,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### drowned
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+## behavior.random_swim
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_swim)</small>
 
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 1
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 1.0
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 1
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 8,
-    "speed_multiplier": 0.6
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 13,
-    "speed_multiplier": 0.8
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 9,
-    "speed_multiplier": 0.6
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 0.4
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.7
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 1
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.6,
-    "xz_dist": 16
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.7
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.8
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.7
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 8,
-    "speed_multiplier": 0.8
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 14,
-    "speed_multiplier": 0.8
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 1.0
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 10,
-    "speed_multiplier": 0.6
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 0.6
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 8,
-    "speed_multiplier": 1
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 5
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.6,
-    "xz_dist": 2,
-    "y_dist": 1
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 1.0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.4
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 0.8
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 1
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.7
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 2,
-    "speed_multiplier": 1
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.8
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 1
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 8,
-    "speed_multiplier": 0.8
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 9,
-    "interval": 100
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 11,
-    "speed_multiplier": 0.6
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 10,
-    "speed_multiplier": 0.6
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 9,
-    "speed_multiplier": 1
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 5,
-    "speed_multiplier": 1
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 1
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 8,
-    "speed_multiplier": 1.0
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 1.0
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 1
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 6,
-    "speed_multiplier": 0.7
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 7,
-    "speed_multiplier": 1.0
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 9,
-    "speed_multiplier": 1
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_stroll": {
-    "priority": 9,
-    "speed_multiplier": 1
-}
-```
-
-## minecraft:behavior.random_swim
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -13282,22 +6642,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### turtle
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
+## behavior.ranged_attack
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.ranged_attack)</small>
 
-```json
-"minecraft:behavior.random_swim": {
-    "priority": 7,
-    "interval": 0,
-    "xz_dist": 30,
-    "y_dist": 15
-}
-```
-
-## minecraft:behavior.ranged_attack
+<Spoiler title="Show">
 
 #### blaze
 
@@ -13426,53 +6777,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### snow_golem
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
+## behavior.receive_love
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.receive_love)</small>
 
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 1,
-    "speed_multiplier": 1.25,
-    "attack_interval": 1,
-    "attack_radius": 10
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 0,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 15.0
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 2,
-    "speed_multiplier": 1.0,
-    "attack_interval_min": 3,
-    "attack_interval_max": 3,
-    "attack_radius": 10.0
-}
-```
-
-## minecraft:behavior.receive_love
+<Spoiler title="Show">
 
 #### villager
 
@@ -13498,7 +6809,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.restrict_open_door
+</Spoiler>
+
+## behavior.restrict_open_door
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.restrict_open_door)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -13524,7 +6841,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.rise_to_liquid_level
+</Spoiler>
+
+## behavior.rise_to_liquid_level
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.rise_to_liquid_level)</small>
+
+<Spoiler title="Show">
 
 #### strider
 
@@ -13541,7 +6864,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.roll
+</Spoiler>
+
+## behavior.roll
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.roll)</small>
+
+<Spoiler title="Show">
 
 #### panda
 
@@ -13565,7 +6894,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.run_around_like_crazy
+</Spoiler>
+
+## behavior.run_around_like_crazy
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.run_around_like_crazy)</small>
+
+<Spoiler title="Show">
 
 #### donkey
 
@@ -13619,7 +6954,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.scared
+</Spoiler>
+
+## behavior.scared
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.scared)</small>
+
+<Spoiler title="Show">
 
 #### panda
 
@@ -13634,7 +6975,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.send_event
+</Spoiler>
+
+## behavior.send_event
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.send_event)</small>
+
+<Spoiler title="Show">
 
 #### evocation_illager
 
@@ -13680,7 +7027,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.share_items
+</Spoiler>
+
+## behavior.share_items
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.share_items)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -13730,7 +7083,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.silverfish_merge_with_stone
+</Spoiler>
+
+## behavior.silverfish_merge_with_stone
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.silverfish_merge_with_stone)</small>
+
+<Spoiler title="Show">
 
 #### silverfish
 
@@ -13744,7 +7103,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.silverfish_wake_up_friends
+</Spoiler>
+
+## behavior.silverfish_wake_up_friends
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.silverfish_wake_up_friends)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -13754,7 +7119,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.skeleton_horse_trap
+</Spoiler>
+
+## behavior.skeleton_horse_trap
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.skeleton_horse_trap)</small>
+
+<Spoiler title="Show">
 
 #### skeleton_horse
 
@@ -13770,7 +7141,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.sleep
+</Spoiler>
+
+## behavior.sleep
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.sleep)</small>
+
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -13796,7 +7173,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.slime_attack
+</Spoiler>
+
+## behavior.slime_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.slime_attack)</small>
+
+<Spoiler title="Show">
 
 #### magma_cube
 
@@ -13822,7 +7205,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.slime_float
+</Spoiler>
+
+## behavior.slime_float
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.slime_float)</small>
+
+<Spoiler title="Show">
 
 #### magma_cube
 
@@ -13852,7 +7241,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.slime_keep_on_jumping
+</Spoiler>
+
+## behavior.slime_keep_on_jumping
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.slime_keep_on_jumping)</small>
+
+<Spoiler title="Show">
 
 #### magma_cube
 
@@ -13880,7 +7275,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.slime_random_direction
+</Spoiler>
+
+## behavior.slime_random_direction
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.slime_random_direction)</small>
+
+<Spoiler title="Show">
 
 #### magma_cube
 
@@ -13912,7 +7313,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.snacking
+</Spoiler>
+
+## behavior.snacking
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.snacking)</small>
+
+<Spoiler title="Show">
 
 #### panda
 
@@ -13948,7 +7355,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.sneeze
+</Spoiler>
+
+## behavior.sneeze
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.sneeze)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -14044,7 +7457,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.squid_dive
+</Spoiler>
+
+## behavior.squid_dive
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_dive)</small>
+
+<Spoiler title="Show">
 
 #### glow_squid
 
@@ -14070,7 +7489,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.squid_flee
+</Spoiler>
+
+## behavior.squid_flee
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_flee)</small>
+
+<Spoiler title="Show">
 
 #### glow_squid
 
@@ -14096,7 +7521,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.squid_idle
+</Spoiler>
+
+## behavior.squid_idle
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_idle)</small>
+
+<Spoiler title="Show">
 
 #### glow_squid
 
@@ -14122,7 +7553,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.squid_move_away_from_ground
+</Spoiler>
+
+## behavior.squid_move_away_from_ground
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_move_away_from_ground)</small>
+
+<Spoiler title="Show">
 
 #### glow_squid
 
@@ -14148,7 +7585,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.squid_out_of_water
+</Spoiler>
+
+## behavior.squid_out_of_water
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_out_of_water)</small>
+
+<Spoiler title="Show">
 
 #### glow_squid
 
@@ -14174,7 +7617,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.stalk_and_pounce_on_target
+</Spoiler>
+
+## behavior.stalk_and_pounce_on_target
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stalk_and_pounce_on_target)</small>
+
+<Spoiler title="Show">
 
 #### fox
 
@@ -14202,7 +7651,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.stay_while_sitting
+</Spoiler>
+
+## behavior.stay_while_sitting
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stay_while_sitting)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -14252,7 +7707,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.stomp_attack
+</Spoiler>
+
+## behavior.stomp_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stomp_attack)</small>
+
+<Spoiler title="Show">
 
 #### polar_bear
 
@@ -14270,7 +7731,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.stomp_turtle_egg
+</Spoiler>
+
+## behavior.stomp_turtle_egg
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stomp_turtle_egg)</small>
+
+<Spoiler title="Show">
 
 #### drowned
 
@@ -14374,7 +7841,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.stroll_towards_village
+</Spoiler>
+
+## behavior.stroll_towards_village
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stroll_towards_village)</small>
+
+<Spoiler title="Show">
 
 #### fox
 
@@ -14393,7 +7866,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.summon_entity
+</Spoiler>
+
+## behavior.summon_entity
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.summon_entity)</small>
+
+<Spoiler title="Show">
 
 #### evocation_illager
 
@@ -14480,7 +7959,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.swell
+</Spoiler>
+
+## behavior.swell
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swell)</small>
+
+<Spoiler title="Show">
 
 #### creeper
 
@@ -14496,7 +7981,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.swim_idle
+</Spoiler>
+
+## behavior.swim_idle
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swim_idle)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -14554,7 +8045,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.swim_wander
+</Spoiler>
+
+## behavior.swim_wander
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swim_wander)</small>
+
+<Spoiler title="Show">
 
 #### fish
 
@@ -14620,7 +8117,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.swim_with_entity
+</Spoiler>
+
+## behavior.swim_with_entity
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swim_with_entity)</small>
+
+<Spoiler title="Show">
 
 #### dolphin
 
@@ -14652,7 +8155,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.swoop_attack
+</Spoiler>
+
+## behavior.swoop_attack
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swoop_attack)</small>
+
+<Spoiler title="Show">
 
 #### phantom
 
@@ -14672,7 +8181,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.take_flower
+</Spoiler>
+
+## behavior.take_flower
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.take_flower)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -14698,7 +8213,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.target_when_pushed
+</Spoiler>
+
+## behavior.target_when_pushed
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.target_when_pushed)</small>
+
+<Spoiler title="Show">
 
 #### iron_golem
 
@@ -14732,7 +8253,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.tempt
+</Spoiler>
+
+## behavior.tempt
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.tempt)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -14889,223 +8416,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### goat
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
+## behavior.trade_interest
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.trade_interest)</small>
 
-```json
-"minecraft:behavior.tempt": {
-    "priority": 4,
-    "speed_multiplier": 0.75,
-    "items": [
-        "wheat"
-    ]
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 5,
-    "speed_multiplier": 1.2,
-    "items": [
-        "golden_apple",
-        "appleEnchanted",
-        "golden_carrot"
-    ]
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 4,
-    "speed_multiplier": 1.25,
-    "items": [
-        "wheat"
-    ]
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 5,
-    "speed_multiplier": 1.2,
-    "items": [
-        "apple",
-        "carrot",
-        "golden_apple",
-        "appleEnchanted",
-        "golden_carrot",
-        "carrotOnAStick",
-        "hay_block",
-        "sugar",
-        "bread",
-        "wheat"
-    ]
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 4,
-    "speed_multiplier": 0.5,
-    "within_radius": 16,
-    "can_get_scared": true,
-    "items": [
-        "fish",
-        "salmon"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 4,
-    "speed_multiplier": 0.5,
-    "within_radius": 16,
-    "items": [
-        "fish",
-        "salmon"
-    ]
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 4,
-    "speed_multiplier": 1.25,
-    "items": [
-        "bamboo"
-    ]
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 5,
-    "speed_multiplier": 1.2,
-    "items": [
-        "potato",
-        "carrot",
-        "beetroot",
-        "carrotOnAStick"
-    ]
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 3,
-    "speed_multiplier": 1,
-    "items": [
-        "golden_carrot",
-        "carrot",
-        "yellow_flower"
-    ]
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 4,
-    "speed_multiplier": 1.25,
-    "items": [
-        "wheat"
-    ]
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 5,
-    "speed_multiplier": 1.2,
-    "items": [
-        "warped_fungus",
-        "warped_fungus_on_a_stick"
-    ],
-    "can_tempt_while_ridden": true,
-    "tempt_sound": "tempt",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.tempt": {
-    "priority": 3,
-    "speed_multiplier": 1.1,
-    "items": [
-        "seagrass"
-    ]
-}
-```
-
-## minecraft:behavior.trade_interest
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -15147,7 +8464,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.trade_with_player
+</Spoiler>
+
+## behavior.trade_with_player
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.trade_with_player)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -15185,7 +8508,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.wither_random_attack_pos_goal
+</Spoiler>
+
+## behavior.wither_random_attack_pos_goal
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.wither_random_attack_pos_goal)</small>
+
+<Spoiler title="Show">
 
 #### wither
 
@@ -15199,7 +8528,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.wither_target_highest_damage
+</Spoiler>
+
+## behavior.wither_target_highest_damage
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.wither_target_highest_damage)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -15209,7 +8544,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:behavior.work
+</Spoiler>
+
+## behavior.work
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.work)</small>
+
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -15240,7 +8581,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:block_climber
+</Spoiler>
+
+## block_climber
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ablock_climber)</small>
+
+<Spoiler title="Show">
 
 #### endermite
 
@@ -15292,7 +8639,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:block_climber": {}
 ```
 
-## minecraft:block_sensor
+</Spoiler>
+
+## block_sensor
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ablock_sensor)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -15346,7 +8699,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:boostable
+</Spoiler>
+
+## boostable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aboostable)</small>
+
+<Spoiler title="Show">
 
 #### pig
 
@@ -15388,7 +8747,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:boss
+</Spoiler>
+
+## boss
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aboss)</small>
+
+<Spoiler title="Show">
 
 #### ender_dragon
 
@@ -15416,7 +8781,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:break_blocks
+</Spoiler>
+
+## break_blocks
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abreak_blocks)</small>
+
+<Spoiler title="Show">
 
 #### ravager
 
@@ -15463,7 +8834,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:breathable
+</Spoiler>
+
+## breathable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abreathable)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -15572,822 +8949,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### dolphin
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+## breedable
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abreedable)</small>
 
-```json
-"minecraft:breathable": {
-    "total_supply": 240,
-    "suffocate_time": 0,
-    "breathes_air": true,
-    "breathes_water": false,
-    "generates_bubbles": false
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": true,
-    "breathes_water": true
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "breathes_water": true
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": false,
-    "breathes_water": true
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "totalSupply": 15,
-    "suffocateTime": 0
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": false,
-    "breathes_water": true
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "breathes_water": true
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_lava": true
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": true,
-    "breathes_water": false
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": -1,
-    "inhale_time": 3.75,
-    "generates_bubbles": false
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": false,
-    "breathes_water": true
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "suffocate_time": 0,
-    "total_supply": 15
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": false,
-    "breathes_water": true
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": false,
-    "breathes_water": true
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": false,
-    "breathes_water": true
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true,
-    "breathes_air": true,
-    "generates_bubbles": false
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": true,
-    "breathes_water": true
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-## minecraft:breedable
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -16602,329 +9170,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### hoglin
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
+## bribeable
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abribeable)</small>
 
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "love_filters": {
-        "test": "has_component",
-        "subject": "self",
-        "operator": "!=",
-        "value": "minecraft:attack_cooldown"
-    },
-    "breeds_with": {
-        "mate_type": "minecraft:hoglin",
-        "baby_type": "minecraft:hoglin",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "crimson_fungus"
-    ]
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": true,
-    "inherit_tamed": false,
-    "breeds_with": [
-        {
-            "mate_type": "minecraft:horse",
-            "baby_type": "minecraft:horse",
-            "breed_event": {
-                "event": "minecraft:entity_born",
-                "target": "baby"
-            }
-        },
-        {
-            "mate_type": "minecraft:donkey",
-            "baby_type": "minecraft:mule",
-            "breed_event": {
-                "event": "minecraft:entity_born",
-                "target": "baby"
-            }
-        }
-    ],
-    "breed_items": [
-        "golden_carrot",
-        "golden_apple",
-        "appleEnchanted"
-    ]
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": true,
-    "inherit_tamed": false,
-    "love_filters": {
-        "test": "is_mark_variant",
-        "subject": "self",
-        "operator": "!=",
-        "value": 1
-    },
-    "breeds_with": {
-        "mate_type": "minecraft:llama",
-        "baby_type": "minecraft:llama",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "hay_block"
-    ]
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "breed_items": "wheat",
-    "breeds_with": {
-        "mate_type": "minecraft:mooshroom",
-        "baby_type": "minecraft:mooshroom",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "deny_parents_variant": {
-        "chance": 0.00098,
-        "min_variant": 0,
-        "max_variant": 1
-    }
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "breeds_with": {
-        "mate_type": "minecraft:ocelot",
-        "baby_type": "minecraft:ocelot",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "fish",
-        "salmon"
-    ]
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "blend_attributes": false,
-    "environment_requirements": {
-        "blocks": "bamboo",
-        "count": 8,
-        "radius": 5
-    },
-    "breed_items": "bamboo",
-    "breeds_with": {
-        "mate_type": "minecraft:panda",
-        "baby_type": "minecraft:panda",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "mutation_factor": {
-        "variant": 1.0
-    }
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "breeds_with": {
-        "mate_type": "minecraft:pig",
-        "baby_type": "minecraft:pig",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "carrot",
-        "beetroot",
-        "potato"
-    ]
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "breed_items": [
-        "golden_carrot",
-        "carrot",
-        "yellow_flower"
-    ],
-    "breeds_with": {
-        "mate_type": "minecraft:rabbit",
-        "baby_type": "minecraft:rabbit"
-    },
-    "require_tame": false,
-    "mutation_factor": {
-        "variant": 0.2
-    }
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "breeds_with": {
-        "mate_type": "minecraft:sheep",
-        "baby_type": "minecraft:sheep"
-    },
-    "breed_items": "wheat"
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "breeds_with": {
-        "mate_type": "minecraft:strider",
-        "baby_type": "minecraft:strider",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "warped_fungus"
-    ]
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "causes_pregnancy": true,
-    "breeds_with": {
-        "mate_type": "minecraft:turtle",
-        "baby_type": "minecraft:turtle",
-        "breed_event": {
-            "event": "minecraft:become_pregnant",
-            "target": "self"
-        }
-    },
-    "breed_items": [
-        "seagrass"
-    ]
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breedable": {
-    "require_tame": true,
-    "require_full_health": true,
-    "breeds_with": {
-        "mate_type": "minecraft:wolf",
-        "baby_type": "minecraft:wolf",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "chicken",
-        "cooked_chicken",
-        "beef",
-        "cooked_beef",
-        "muttonRaw",
-        "muttonCooked",
-        "porkchop",
-        "cooked_porkchop",
-        "rabbit",
-        "cooked_rabbit",
-        "rotten_flesh"
-    ]
-}
-```
-
-## minecraft:bribeable
+<Spoiler title="Show">
 
 #### dolphin
 
@@ -16941,7 +9193,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:buoyant
+</Spoiler>
+
+## buoyant
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abuoyant)</small>
+
+<Spoiler title="Show">
 
 #### boat
 
@@ -16994,7 +9252,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:burns_in_daylight
+</Spoiler>
+
+## burns_in_daylight
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aburns_in_daylight)</small>
+
+<Spoiler title="Show">
 
 #### drowned
 
@@ -17076,7 +9340,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:burns_in_daylight": {}
 ```
 
-## minecraft:can_climb
+</Spoiler>
+
+## can_climb
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_climb)</small>
+
+<Spoiler title="Show">
 
 #### blaze
 
@@ -17158,387 +9428,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:can_climb": {}
 ```
 
-#### enderman
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+## can_fly
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_fly)</small>
 
-```json
-"minecraft:can_climb": {}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:can_climb": {}
-```
-
-## minecraft:can_fly
+<Spoiler title="Show">
 
 #### bat
 
@@ -17590,7 +9486,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:can_fly": {}
 ```
 
-## minecraft:can_power_jump
+</Spoiler>
+
+## can_power_jump
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_power_jump)</small>
+
+<Spoiler title="Show">
 
 #### donkey
 
@@ -17632,7 +9534,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:can_power_jump": {}
 ```
 
-## minecraft:celebrate_hunt
+</Spoiler>
+
+## celebrate_hunt
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acelebrate_hunt)</small>
+
+<Spoiler title="Show">
 
 #### piglin
 
@@ -17661,7 +9569,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:collision_box
+</Spoiler>
+
+## collision_box
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acollision_box)</small>
+
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -17767,1296 +9681,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### cave_spider
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+## color
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acolor)</small>
 
-```json
-"minecraft:collision_box": {
-    "width": 0.7,
-    "height": 0.5
-}
-```
-
-#### chest_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chest_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.98,
-    "height": 0.7
-}
-```
-
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 0.8
-}
-```
-
-#### command_block_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/command_block_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.98,
-    "height": 0.7
-}
-```
-
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 1.3
-}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.8
-}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 0.6
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.4,
-    "height": 1.6
-}
-```
-
-#### dragon_fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dragon_fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.31,
-    "height": 0.31
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### egg
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/egg.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.99,
-    "height": 1.99
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 2.9
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.4,
-    "height": 0.3
-}
-```
-
-#### ender_crystal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_crystal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.98,
-    "height": 0.98
-}
-```
-
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 13,
-    "height": 4
-}
-```
-
-#### ender_pearl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_pearl.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### eye_of_ender_signal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/eye_of_ender_signal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.31,
-    "height": 0.31
-}
-```
-
-#### fireworks_rocket
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireworks_rocket.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 0.3
-}
-```
-
-#### fishing_hook
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fishing_hook.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.15,
-    "height": 0.15
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 0.7
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 4,
-    "height": 4
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.95,
-    "height": 0.95
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 1.3
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.85,
-    "height": 0.85
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.85,
-    "height": 0.85
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 0.9
-}
-```
-
-#### hopper_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.98,
-    "height": 0.7
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.4,
-    "height": 1.6
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.4,
-    "height": 2.9
-}
-```
-
-#### lingering_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/lingering_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 1.87
-}
-```
-
-#### llama_spit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama_spit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.31,
-    "height": 0.31
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 2.08,
-    "height": 2.08
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.78,
-    "height": 0.78
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.52,
-    "height": 0.52
-}
-```
-
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.98,
-    "height": 0.7
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 1.3
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.4,
-    "height": 1.6
-}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 2.1
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 0.7
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.7,
-    "height": 1.5
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.5,
-    "height": 1
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 0.5
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 0.9
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.8
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.3,
-    "height": 1.4
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.8,
-    "height": 0.8
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.67,
-    "height": 0.67
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "height": 1.9,
-    "width": 1.2
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.5,
-    "height": 0.5
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 1.3
-}
-```
-
-#### shulker_bullet
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker_bullet.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.625,
-    "height": 0.625
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.4,
-    "height": 0.3
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.4,
-    "height": 1.6
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 2.08,
-    "height": 2.08
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.04,
-    "height": 1.04
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.52,
-    "height": 0.52
-}
-```
-
-#### small_fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/small_fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.31,
-    "height": 0.31
-}
-```
-
-#### snowball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snowball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.4,
-    "height": 1.8
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.4,
-    "height": 0.9
-}
-```
-
-#### splash_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/splash_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.95,
-    "height": 0.95
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 1.7
-}
-```
-
-#### thrown_trident
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/thrown_trident.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.35
-}
-```
-
-#### tnt
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.98,
-    "height": 0.98
-}
-```
-
-#### tnt_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.98,
-    "height": 0.7
-}
-```
-
-#### tripod_camera
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tripod_camera.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.75,
-    "height": 1.8
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.4,
-    "height": 0.4
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 0.2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.2,
-    "height": 0.4
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.4,
-    "height": 0.8
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1,
-    "height": 3
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.72,
-    "height": 2.01
-}
-```
-
-#### wither_skull
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.15,
-    "height": 0.15
-}
-```
-
-#### wither_skull_dangerous
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull_dangerous.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.15,
-    "height": 0.15
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 0.8
-}
-```
-
-#### xp_bottle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_bottle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### xp_orb
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_orb.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.85,
-    "height": 0.85
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.9,
-    "height": 0.9
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 1.4,
-    "height": 1.6
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
-## minecraft:color
-
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -19126,143 +9757,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### tropicalfish
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
+## color2
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acolor2)</small>
 
-```json
-"minecraft:color": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 6
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 7
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 8
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 9
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 10
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 11
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 12
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 13
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 14
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color": {
-    "value": 14
-}
-```
-
-## minecraft:color2
+<Spoiler title="Show">
 
 #### tropicalfish
 
@@ -19332,63 +9833,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:color2": {
-    "value": 8
-}
-```
+## combat_regeneration
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acombat_regeneration)</small>
 
-```json
-"minecraft:color2": {
-    "value": 9
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 10
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 11
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 12
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 13
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 14
-}
-```
-
-## minecraft:combat_regeneration
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -19400,7 +9851,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:combat_regeneration": {}
 ```
 
-## minecraft:conditional_bandwidth_optimization
+</Spoiler>
+
+## conditional_bandwidth_optimization
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aconditional_bandwidth_optimization)</small>
+
+<Spoiler title="Show">
 
 #### area_effect_cloud
 
@@ -19432,7 +9889,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
         "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
+        "max_dropped_ticks": 7,
         "use_motion_prediction_hints": true
     }
 }
@@ -19509,1147 +9966,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
-#### cave_spider
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+## custom_hit_test
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acustom_hit_test)</small>
 
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### chest_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chest_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 60.0,
-        "max_dropped_ticks": 20,
-        "use_motion_prediction_hints": true
-    },
-    "conditional_values": [
-        {
-            "max_optimized_distance": 0.0,
-            "max_dropped_ticks": 0,
-            "conditional_values": [
-                {
-                    "test": "is_moving",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": true
-                }
-            ]
-        }
-    ]
-}
-```
-
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### command_block_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/command_block_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 60.0,
-        "max_dropped_ticks": 20,
-        "use_motion_prediction_hints": true
-    },
-    "conditional_values": [
-        {
-            "max_optimized_distance": 0.0,
-            "max_dropped_ticks": 0,
-            "conditional_values": [
-                {
-                    "test": "is_moving",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": true
-                }
-            ]
-        }
-    ]
-}
-```
-
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### egg
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/egg.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### ender_crystal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_crystal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### ender_pearl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_pearl.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### eye_of_ender_signal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/eye_of_ender_signal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### fireworks_rocket
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireworks_rocket.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### fishing_hook
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fishing_hook.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### hopper_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 60.0,
-        "max_dropped_ticks": 20,
-        "use_motion_prediction_hints": true
-    },
-    "conditional_values": [
-        {
-            "max_optimized_distance": 0.0,
-            "max_dropped_ticks": 0,
-            "conditional_values": [
-                {
-                    "test": "is_moving",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": true
-                }
-            ]
-        }
-    ]
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### lightning_bolt
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/lightning_bolt.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### lingering_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/lingering_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### llama_spit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama_spit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 60.0,
-        "max_dropped_ticks": 20,
-        "use_motion_prediction_hints": true
-    },
-    "conditional_values": [
-        {
-            "max_optimized_distance": 0.0,
-            "max_dropped_ticks": 0,
-            "conditional_values": [
-                {
-                    "test": "is_moving",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": true
-                }
-            ]
-        }
-    ]
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### shulker_bullet
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker_bullet.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### small_fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/small_fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### snowball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snowball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 100.0,
-        "max_dropped_ticks": 5,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### splash_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/splash_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### thrown_trident
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/thrown_trident.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### tnt
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### tnt_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 60.0,
-        "max_dropped_ticks": 20,
-        "use_motion_prediction_hints": true
-    },
-    "conditional_values": [
-        {
-            "max_optimized_distance": 0.0,
-            "max_dropped_ticks": 0,
-            "conditional_values": [
-                {
-                    "test": "is_moving",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": true
-                }
-            ]
-        }
-    ]
-}
-```
-
-#### tripod_camera
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tripod_camera.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### wither_skull
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### wither_skull_dangerous
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull_dangerous.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### xp_bottle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_bottle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### xp_orb
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_orb.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 80.0,
-        "max_dropped_ticks": 10,
-        "use_motion_prediction_hints": true
-    }
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
-## minecraft:custom_hit_test
+<Spoiler title="Show">
 
 #### hoglin
 
@@ -20731,7 +10054,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:damage_over_time
+</Spoiler>
+
+## damage_over_time
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adamage_over_time)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -20759,7 +10088,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:damage_sensor
+</Spoiler>
+
+## damage_sensor
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adamage_sensor)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -20889,546 +10224,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### fox
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+## despawn
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adespawn)</small>
 
-```json
-"minecraft:damage_sensor": {
-    "triggers": [
-        {
-            "on_damage": {
-                "filters": {
-                    "test": "is_block",
-                    "subject": "block",
-                    "value": "minecraft:sweet_berry_bush"
-                }
-            },
-            "deals_damage": false
-        }
-    ]
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": false
-    }
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": true,
-        "damage_modifier": -10
-    }
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": false
-    }
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "all",
-        "deals_damage": true,
-        "on_damage": {
-            "filters": {
-                "test": "in_caravan",
-                "value": false
-            },
-            "event": "minecraft:become_angry"
-        }
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "all",
-        "deals_damage": true
-    }
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": false
-    }
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": [
-        {
-            "on_damage": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "lightning"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 0
-                        }
-                    ]
-                },
-                "event": "minecraft:become_brown"
-            },
-            "deals_damage": false,
-            "on_damage_sound_event": "convert_mooshroom"
-        },
-        {
-            "on_damage": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "lightning"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        }
-                    ]
-                },
-                "event": "minecraft:become_red"
-            },
-            "deals_damage": false,
-            "on_damage_sound_event": "convert_mooshroom"
-        }
-    ]
-}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "all",
-        "deals_damage": false
-    }
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": false
-    }
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": false
-    }
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "on_damage": {
-            "filters": [
-                {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "lightning"
-                },
-                {
-                    "test": "is_difficulty",
-                    "operator": "!=",
-                    "value": "peaceful"
-                }
-            ],
-            "event": "become_zombie"
-        },
-        "deals_damage": false
-    }
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "on_damage": {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_damage",
-                        "value": "fatal"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    }
-                ]
-            },
-            "event": "minecraft:gain_bad_omen",
-            "target": "other"
-        }
-    }
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "on_damage": {
-            "filters": {
-                "other_with_families": "lightning"
-            }
-        },
-        "deals_damage": false
-    }
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "on_damage": {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "lightning"
-            }
-        },
-        "deals_damage": false
-    }
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": false
-    }
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "lightning",
-        "deals_damage": true,
-        "damage_multiplier": 2000.0
-    }
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": [
-        {
-            "on_damage": {
-                "filters": {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "lightning"
-                },
-                "event": "become_witch"
-            },
-            "deals_damage": false
-        },
-        {
-            "on_damage": {
-                "filters": {
-                    "any_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "zombie"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "husk"
-                        }
-                    ],
-                    "all_of": [
-                        {
-                            "test": "has_damage",
-                            "value": "fatal"
-                        }
-                    ]
-                },
-                "event": "become_zombie"
-            }
-        }
-    ]
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": [
-        {
-            "on_damage": {
-                "filters": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "lightning"
-                    },
-                    {
-                        "test": "is_difficulty",
-                        "operator": "!=",
-                        "value": "peaceful"
-                    }
-                ],
-                "event": "become_witch"
-            },
-            "deals_damage": false
-        },
-        {
-            "on_damage": {
-                "filters": {
-                    "any_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "zombie"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "husk"
-                        }
-                    ],
-                    "all_of": [
-                        {
-                            "test": "has_damage",
-                            "value": "fatal"
-                        }
-                    ]
-                },
-                "event": "become_zombie"
-            }
-        }
-    ]
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "on_damage": {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_damage",
-                        "value": "fatal"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    }
-                ]
-            },
-            "event": "minecraft:gain_bad_omen",
-            "target": "other"
-        }
-    }
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": [
-        {
-            "cause": "entity_attack",
-            "deals_damage": true,
-            "on_damage": {
-                "event": "minecraft:become_scared"
-            }
-        },
-        {
-            "cause": "projectile",
-            "deals_damage": true,
-            "on_damage": {
-                "event": "minecraft:become_scared"
-            }
-        },
-        {
-            "cause": "magic",
-            "deals_damage": true,
-            "on_damage": {
-                "event": "minecraft:become_scared"
-            }
-        }
-    ]
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "on_damage": {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "undead"
-            }
-        },
-        "deals_damage": false
-    }
-}
-```
-
-## minecraft:despawn
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -21526,754 +10328,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### dolphin
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+## drying_out_timer
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adrying_out_timer)</small>
 
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {
-        "min_distance": 32,
-        "max_distance": 40
-    }
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "filters": {
-        "any_of": [
-            {
-                "all_of": [
-                    {
-                        "test": "is_persistent",
-                        "value": false
-                    },
-                    {
-                        "test": "distance_to_nearest_player",
-                        "operator": ">",
-                        "value": 54
-                    }
-                ]
-            },
-            {
-                "all_of": [
-                    {
-                        "test": "is_persistent",
-                        "value": false
-                    },
-                    {
-                        "test": "inactivity_timer",
-                        "subject": "self",
-                        "value": 30
-                    },
-                    {
-                        "test": "random_chance",
-                        "value": 800
-                    },
-                    {
-                        "test": "distance_to_nearest_player",
-                        "operator": ">",
-                        "value": 32
-                    }
-                ]
-            }
-        ]
-    }
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {
-        "min_distance": 32,
-        "max_distance": 40
-    }
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {
-        "min_distance": 32,
-        "max_distance": 40
-    }
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {
-        "min_distance": 32,
-        "max_distance": 40
-    }
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "remove_child_entities": true,
-    "filters": {
-        "all_of": [
-            {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "self",
-                        "value": "wandering_trader_despawning"
-                    },
-                    {
-                        "test": "has_trade_supply",
-                        "subject": "self",
-                        "value": false
-                    }
-                ]
-            },
-            {
-                "test": "distance_to_nearest_player",
-                "operator": ">",
-                "value": 24
-            }
-        ]
-    }
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "filters": {
-        "any_of": [
-            {
-                "all_of": [
-                    {
-                        "test": "is_persistent",
-                        "value": false
-                    },
-                    {
-                        "test": "distance_to_nearest_player",
-                        "operator": ">",
-                        "value": 54
-                    }
-                ]
-            },
-            {
-                "all_of": [
-                    {
-                        "test": "is_persistent",
-                        "value": false
-                    },
-                    {
-                        "test": "inactivity_timer",
-                        "subject": "self",
-                        "value": 30
-                    },
-                    {
-                        "test": "random_chance",
-                        "value": 800
-                    },
-                    {
-                        "test": "distance_to_nearest_player",
-                        "operator": ">",
-                        "value": 32
-                    }
-                ]
-            }
-        ]
-    }
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:despawn": {
-    "despawn_from_distance": {}
-}
-```
-
-## minecraft:drying_out_timer
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -22319,7 +10380,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:dweller
+</Spoiler>
+
+## dweller
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adweller)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -22459,212 +10526,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "shepherd",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
+## economy_trade_table
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aeconomy_trade_table)</small>
 
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "fletcher",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "librarian",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "cartographer",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "cleric",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "armorer",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "weaponsmith",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "toolsmith",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "butcher",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "leatherworker",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "inhabitant",
-    "preferred_profession": "mason",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": true,
-    "can_migrate": true,
-    "first_founding_reward": 5
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "hostile",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": false,
-    "can_migrate": false,
-    "first_founding_reward": 0
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:dweller": {
-    "dwelling_type": "village",
-    "dweller_role": "hostile",
-    "update_interval_base": 60,
-    "update_interval_variant": 40,
-    "can_find_poi": false,
-    "can_migrate": false,
-    "first_founding_reward": 0
-}
-```
-
-## minecraft:economy_trade_table
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -22805,135 +10673,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.armor",
-    "table": "trading/economy_trades/armorer_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
+## entity_sensor
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aentity_sensor)</small>
 
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.weapon",
-    "table": "trading/economy_trades/weapon_smith_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.tool",
-    "table": "trading/economy_trades/tool_smith_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.butcher",
-    "table": "trading/economy_trades/butcher_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.leather",
-    "table": "trading/economy_trades/leather_worker_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.mason",
-    "table": "trading/economy_trades/stone_mason_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.wandering_trader.name",
-    "table": "trading/economy_trades/wandering_trader_trades.json",
-    "new_screen": true
-}
-```
-
-## minecraft:entity_sensor
+<Spoiler title="Show">
 
 #### pufferfish
 
@@ -23050,7 +10796,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:environment_sensor
+</Spoiler>
+
+## environment_sensor
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aenvironment_sensor)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -23254,768 +11006,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### fox
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+## equip_item
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aequip_item)</small>
 
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_daytime",
-                "value": false
-            },
-            "event": "minecraft:fox_configure_night"
-        },
-        {
-            "filters": {
-                "test": "is_daytime",
-                "value": true
-            },
-            "event": "minecraft:fox_configure_day"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_daytime",
-                        "value": true
-                    },
-                    {
-                        "test": "has_target",
-                        "operator": "==",
-                        "value": false
-                    }
-                ]
-            },
-            "event": "minecraft:fox_configure_docile_day"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_daytime",
-                        "value": false
-                    },
-                    {
-                        "test": "has_target",
-                        "operator": "==",
-                        "value": false
-                    }
-                ]
-            },
-            "event": "minecraft:fox_configure_docile_night"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "weather_at_position",
-                        "operator": "!=",
-                        "value": "thunderstorm"
-                    },
-                    {
-                        "test": "is_daytime",
-                        "value": true
-                    }
-                ]
-            },
-            "event": "minecraft:fox_configure_day"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "weather_at_position",
-                        "operator": "!=",
-                        "value": "thunderstorm"
-                    },
-                    {
-                        "test": "is_daytime",
-                        "value": false
-                    }
-                ]
-            },
-            "event": "minecraft:fox_configure_night"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "weather_at_position",
-                "value": "thunderstorm"
-            },
-            "event": "minecraft:fox_configure_thunderstorm"
-        },
-        {
-            "filters": {
-                "test": "is_daytime",
-                "value": false
-            },
-            "event": "minecraft:fox_configure_night"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "weather_at_position",
-                "value": "thunderstorm"
-            },
-            "event": "minecraft:fox_configure_thunderstorm"
-        },
-        {
-            "filters": {
-                "test": "is_daytime",
-                "value": true
-            },
-            "event": "minecraft:fox_configure_day"
-        }
-    ]
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": false
-        },
-        "event": "start_zombification_event"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": true
-        },
-        "event": "stop_zombification_event"
-    }
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:start_transforming"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "is_underwater",
-            "subject": "self",
-            "operator": "==",
-            "value": true
-        },
-        "event": "minecraft:start_transforming"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "is_underwater",
-            "subject": "self",
-            "operator": "==",
-            "value": false
-        },
-        "event": "minecraft:stop_transforming"
-    }
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "all_of": [
-                {
-                    "test": "is_leashed",
-                    "subject": "self",
-                    "value": false
-                },
-                {
-                    "test": "has_component",
-                    "subject": "self",
-                    "operator": "!=",
-                    "value": "minecraft:is_tamed"
-                }
-            ]
-        },
-        "event": "minecraft:on_tame"
-    }
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": false
-        },
-        "event": "start_zombification_event"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": true
-        },
-        "event": "stop_zombification_event"
-    }
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": false
-        },
-        "event": "start_zombification_event"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": true
-        },
-        "event": "stop_zombification_event"
-    }
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "is_underwater",
-            "subject": "self",
-            "operator": "==",
-            "value": true
-        },
-        "event": "minecraft:melee_mode"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "in_water",
-            "subject": "self",
-            "operator": "==",
-            "value": false
-        },
-        "event": "minecraft:ranged_mode"
-    }
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "all_of": [
-                {
-                    "test": "has_mob_effect",
-                    "subject": "self",
-                    "value": "bad_omen"
-                },
-                {
-                    "test": "is_in_village",
-                    "subject": "self",
-                    "value": true
-                }
-            ]
-        },
-        "event": "minecraft:trigger_raid"
-    }
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "test": "in_block",
-                "subject": "self",
-                "operator": "==",
-                "value": "minecraft:powder_snow"
-            },
-            "event": "got_in_powder_snow"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "in_block",
-                "subject": "self",
-                "operator": "!=",
-                "value": "minecraft:powder_snow"
-            },
-            "event": "got_out_of_powder_snow"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "in_water",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": false
-                    },
-                    {
-                        "test": "has_ranged_weapon",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": true
-                    }
-                ]
-            },
-            "event": "minecraft:ranged_mode"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "in_water",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": false
-                    },
-                    {
-                        "test": "has_ranged_weapon",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": true
-                    }
-                ]
-            },
-            "event": "minecraft:ranged_mode"
-        },
-        {
-            "filters": {
-                "test": "in_block",
-                "subject": "self",
-                "operator": "==",
-                "value": "minecraft:powder_snow"
-            },
-            "event": "got_in_powder_snow"
-        }
-    ]
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "is_brightness",
-            "operator": "<",
-            "value": 0.49
-        },
-        "event": "minecraft:become_hostile"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "is_brightness",
-            "operator": ">",
-            "value": 0.49
-        },
-        "event": "minecraft:become_neutral"
-    }
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "in_water",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": false
-                    },
-                    {
-                        "test": "has_ranged_weapon",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": true
-                    }
-                ]
-            },
-            "event": "minecraft:ranged_mode"
-        }
-    ]
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "any_of": [
-                {
-                    "test": "in_lava",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": true
-                },
-                {
-                    "test": "in_lava",
-                    "subject": "other",
-                    "operator": "==",
-                    "value": true
-                }
-            ]
-        },
-        "event": "stop_suffocating"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "all_of": [
-                {
-                    "test": "in_lava",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": false
-                },
-                {
-                    "any_of": [
-                        {
-                            "test": "is_riding",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": false
-                        },
-                        {
-                            "test": "in_lava",
-                            "subject": "other",
-                            "operator": "==",
-                            "value": false
-                        }
-                    ]
-                }
-            ]
-        },
-        "event": "start_suffocating"
-    }
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "is_underwater",
-            "operator": "==",
-            "value": true
-        },
-        "event": "minecraft:start_transforming"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "is_underwater",
-            "subject": "self",
-            "operator": "==",
-            "value": true
-        },
-        "event": "minecraft:start_transforming"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "test": "is_underwater",
-            "subject": "self",
-            "operator": "==",
-            "value": false
-        },
-        "event": "minecraft:stop_transforming"
-    }
-}
-```
-
-## minecraft:equip_item
+<Spoiler title="Show">
 
 #### drowned
 
@@ -24097,47 +11094,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:equip_item": {}
 ```
 
-#### zombie
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
+## equipment
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aequipment)</small>
 
-```json
-"minecraft:equip_item": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equip_item": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equip_item": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equip_item": {}
-```
-
-## minecraft:equipment
+<Spoiler title="Show">
 
 #### drowned
 
@@ -24245,127 +11208,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/pillager_captain_equipment.json",
-    "slot_drop_chance": [
-        {
-            "slot": "slot.armor.chest",
-            "drop_chance": 1.0
-        }
-    ]
-}
-```
+## equippable
 
-#### skeleton
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aequippable)</small>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/skeleton_gear.json"
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/skeleton_gear.json"
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/vex_gear.json"
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/vindicator_gear.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/vindicator_captain_equipment.json",
-    "slot_drop_chance": [
-        {
-            "slot": "slot.armor.chest",
-            "drop_chance": 1.0
-        }
-    ]
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/wither_skeleton_gear.json"
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/zombie_equipment.json"
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/zombie_pigman_gear.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/zombified_piglin_rider_gear.json"
-}
-```
-
-## minecraft:equippable
+<Spoiler title="Show">
 
 #### donkey
 
@@ -24475,7 +11324,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:experience_reward
+</Spoiler>
+
+## experience_reward
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aexperience_reward)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -24578,779 +11433,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### dolphin
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+## explode
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aexplode)</small>
 
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 10 : 0"
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 : 0"
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 3 : 0"
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "10"
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "!query.is_baby && query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 10 : 0"
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? 5 : 0"
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? query.variant : 0"
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 : 0"
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 1 + (query.equipment_count * Math.Random(1,2)) : 0"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 20 : 0"
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "Math.Min(query.player_level * 7, 100)"
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 20 : 0"
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 : 0"
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 : 0"
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? query.variant : 0"
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 : 0"
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "!query.is_baby && query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "50"
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? 5 : 0"
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
-## minecraft:explode
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -25464,40 +11553,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### wither_skull
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull.json)</small>
+## fire_immune
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Afire_immune)</small>
 
-```json
-"minecraft:explode": {
-    "fuse_length": 0,
-    "fuse_lit": true,
-    "power": 1,
-    "causes_fire": false,
-    "destroy_affected_by_griefing": true
-}
-```
-
-#### wither_skull_dangerous
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull_dangerous.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:explode": {
-    "fuse_length": 0,
-    "fuse_lit": true,
-    "power": 1,
-    "causes_fire": false,
-    "max_resistance": 4.0,
-    "destroy_affected_by_griefing": true
-}
-```
-
-## minecraft:fire_immune
+<Spoiler title="Show">
 
 #### blaze
 
@@ -25579,47 +11641,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:fire_immune": {}
 ```
 
-#### wither
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
+## flocking
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aflocking)</small>
 
-```json
-"minecraft:fire_immune": {}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:fire_immune": {}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:fire_immune": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:fire_immune": {}
-```
-
-## minecraft:flocking
+<Spoiler title="Show">
 
 #### dolphin
 
@@ -25766,7 +11794,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:flying_speed
+</Spoiler>
+
+## flying_speed
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aflying_speed)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -25792,7 +11826,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:follow_range
+</Spoiler>
+
+## follow_range
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Afollow_range)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -25896,153 +11936,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### iron_golem
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+## genetics
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Agenetics)</small>
 
-```json
-"minecraft:follow_range": {
-    "value": 64
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 40,
-    "max": 40
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 64,
-    "max": 64
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 64
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 64
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 64
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 48
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 64
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 1024
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 128
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 64
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 64
-}
-```
-
-## minecraft:genetics
+<Spoiler title="Show">
 
 #### goat
 
@@ -26159,7 +12059,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:giveable
+</Spoiler>
+
+## giveable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Agiveable)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -26179,7 +12085,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:group_size
+</Spoiler>
+
+## group_size
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Agroup_size)</small>
+
+<Spoiler title="Show">
 
 #### hoglin
 
@@ -26231,7 +12143,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:grows_crop
+</Spoiler>
+
+## grows_crop
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Agrows_crop)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -26246,7 +12164,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:healable
+</Spoiler>
+
+## healable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahealable)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -26529,7 +12453,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:health
+</Spoiler>
+
+## health
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahealth)</small>
+
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -26630,973 +12560,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### chicken
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+## hide
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahide)</small>
 
-```json
-"minecraft:health": {
-    "value": 4,
-    "max": 4
-}
-```
-
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": {
-        "range_min": 15,
-        "range_max": 30
-    }
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 80,
-    "max": 80
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 40,
-    "max": 40
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 8,
-    "max": 8
-}
-```
-
-#### ender_crystal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_crystal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 1,
-    "max": 1
-}
-```
-
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 200,
-    "max": 200
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 24,
-    "max": 24
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 6,
-    "max": 6
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 30,
-    "max": 30
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 40,
-    "max": 40
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": {
-        "range_min": 15,
-        "range_max": 30
-    }
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 100,
-    "max": 100
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": {
-        "range_min": 15,
-        "range_max": 30
-    }
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 16,
-    "max": 16
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 4,
-    "max": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 1,
-    "max": 1
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": {
-        "range_min": 15,
-        "range_max": 30
-    }
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 6,
-    "max": 6
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 16,
-    "max": 16
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 50,
-    "max": 50
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 24,
-    "max": 24
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 30
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 6,
-    "max": 6
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 3,
-    "max": 3
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "max": 100,
-    "value": 100
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 6,
-    "max": 6
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 8,
-    "max": 8
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 30,
-    "max": 30
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 8,
-    "max": 8
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 15,
-    "max": 15
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 16,
-    "max": 16
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 4,
-    "max": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 1,
-    "max": 1
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 4,
-    "max": 4
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 16,
-    "max": 16
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### tripod_camera
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tripod_camera.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 4,
-    "max": 4
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 6,
-    "max": 6
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 30
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 14,
-    "max": 14
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 24,
-    "max": 24
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 26,
-    "max": 26
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 600,
-    "max": 600
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 8,
-    "max": 8
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### xp_orb
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_orb.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 5,
-    "max": 5
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 40,
-    "max": 40
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 15,
-    "max": 15
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:health": {
-    "value": 20,
-    "max": 20
-}
-```
-
-## minecraft:hide
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -27608,7 +12578,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:hide": {}
 ```
 
-## minecraft:home
+</Spoiler>
+
+## home
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahome)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -27670,7 +12646,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:home": {}
 ```
 
-## minecraft:horse.jump_strength
+</Spoiler>
+
+## horse.jump_strength
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahorse.jump_strength)</small>
+
+<Spoiler title="Show">
 
 #### donkey
 
@@ -27741,7 +12723,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:hurt_on_condition
+</Spoiler>
+
+## hurt_on_condition
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahurt_on_condition)</small>
+
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -27916,1436 +12904,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### cat
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+## input_ground_controlled
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainput_ground_controlled)</small>
 
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        },
-        {
-            "filters": {
-                "test": "in_contact_with_water",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "drowning",
-            "damage_per_tick": 1
-        }
-    ]
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        },
-        {
-            "filters": {
-                "test": "is_temperature_value",
-                "operator": ">",
-                "value": 1.0
-            },
-            "cause": "temperature",
-            "damage_per_tick": 1
-        },
-        {
-            "filters": {
-                "test": "in_contact_with_water",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "drowning",
-            "damage_per_tick": 1
-        }
-    ]
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_contact_with_water",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "drowning",
-            "damage_per_tick": 1
-        }
-    ]
-}
-```
-
-#### tripod_camera
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tripod_camera.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-## minecraft:input_ground_controlled
+<Spoiler title="Show">
 
 #### donkey
 
@@ -29387,7 +12952,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:input_ground_controlled": {}
 ```
 
-## minecraft:inside_block_notifier
+</Spoiler>
+
+## inside_block_notifier
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainside_block_notifier)</small>
+
+<Spoiler title="Show">
 
 #### boat
 
@@ -29434,7 +13005,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:insomnia
+</Spoiler>
+
+## insomnia
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainsomnia)</small>
+
+<Spoiler title="Show">
 
 #### player
 
@@ -29448,7 +13025,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:interact
+</Spoiler>
+
+## interact
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainteract)</small>
+
+<Spoiler title="Show">
 
 #### cow
 
@@ -29639,6 +13222,46 @@ This documentation is stripped from the vanilla files using an automated script.
             "transform_to_item": "bucket:1",
             "play_sounds": "milk.screamer",
             "interact_text": "action.interact.milk"
+        }
+    ]
+}
+```
+
+#### iron_golem
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "iron_ingot"
+                        },
+                        {
+                            "test": "is_missing_health",
+                            "value": true
+                        }
+                    ]
+                }
+            },
+            "use_item": true,
+            "health_amount": 25,
+            "play_sounds": "irongolem.repair",
+            "interact_text": "action.interact.repair"
         }
     ]
 }
@@ -30257,852 +13880,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### mule
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
+## inventory
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainventory)</small>
 
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "play_sounds": "armor.equip_generic",
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "chest"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        }
-                    ]
-                },
-                "event": "minecraft:on_chest",
-                "target": "self"
-            },
-            "use_item": true,
-            "interact_text": "action.interact.attachchest"
-        }
-    ]
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
-                    "value": "saddle"
-                },
-                "event": "minecraft:on_saddled"
-            },
-            "use_item": true,
-            "play_sounds": "saddle",
-            "interact_text": "action.interact.saddle"
-        }
-    ]
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "gold_ingot"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_component",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": "minecraft:is_baby"
-                        }
-                    ]
-                }
-            },
-            "barter": true,
-            "admire": true,
-            "use_item": true,
-            "cooldown_after_being_attacked": 20,
-            "interact_text": "action.interact.barter"
-        }
-    ]
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "cooldown": 2.5,
-            "use_item": false,
-            "hurt_item": 1,
-            "spawn_items": {
-                "table": "loot_tables/entities/sheep_shear.json"
-            },
-            "play_sounds": "shear",
-            "interact_text": "action.interact.shear",
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "shears"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_component",
-                            "operator": "!=",
-                            "value": "minecraft:is_baby"
-                        },
-                        {
-                            "test": "has_component",
-                            "value": "minecraft:is_dyeable"
-                        }
-                    ]
-                },
-                "event": "minecraft:on_sheared",
-                "target": "self"
-            }
-        }
-    ]
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "any_of": [
-                                {
-                                    "test": "has_equipment",
-                                    "subject": "other",
-                                    "domain": "hand",
-                                    "value": "dye:0"
-                                },
-                                {
-                                    "test": "has_equipment",
-                                    "subject": "other",
-                                    "domain": "hand",
-                                    "value": "dye:16"
-                                }
-                            ]
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_black"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:8"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_gray"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:7"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_silver"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "any_of": [
-                                {
-                                    "test": "has_equipment",
-                                    "subject": "other",
-                                    "domain": "hand",
-                                    "value": "dye:15"
-                                },
-                                {
-                                    "test": "has_equipment",
-                                    "subject": "other",
-                                    "domain": "hand",
-                                    "value": "dye:19"
-                                }
-                            ]
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_white"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:12"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_light_blue"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:14"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_orange"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:1"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_red"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "any_of": [
-                                {
-                                    "test": "has_equipment",
-                                    "subject": "other",
-                                    "domain": "hand",
-                                    "value": "dye:4"
-                                },
-                                {
-                                    "test": "has_equipment",
-                                    "subject": "other",
-                                    "domain": "hand",
-                                    "value": "dye:18"
-                                }
-                            ]
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_blue"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:5"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_purple"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:13"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_magenta"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:9"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_pink"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "any_of": [
-                                {
-                                    "test": "has_equipment",
-                                    "subject": "other",
-                                    "domain": "hand",
-                                    "value": "dye:3"
-                                },
-                                {
-                                    "test": "has_equipment",
-                                    "subject": "other",
-                                    "domain": "hand",
-                                    "value": "dye:17"
-                                }
-                            ]
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_brown"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:11"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_yellow"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:10"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_lime"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:2"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_green"
-            },
-            "use_item": true
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "dye:6"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    ]
-                },
-                "event": "minecraft:turn_cyan"
-            },
-            "use_item": true
-        }
-    ]
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "cooldown": 2.5,
-            "use_item": false,
-            "hurt_item": 1,
-            "spawn_items": {
-                "table": "loot_tables/entities/snow_golem_shear.json"
-            },
-            "play_sounds": "shear",
-            "interact_text": "action.interact.shear",
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "shears"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_component",
-                            "operator": "!=",
-                            "value": "minecraft:is_sheared"
-                        }
-                    ]
-                },
-                "event": "minecraft:on_sheared",
-                "target": "self"
-            }
-        }
-    ]
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
-                    "value": "saddle"
-                },
-                "event": "minecraft:on_saddled"
-            },
-            "use_item": true,
-            "play_sounds": "saddle",
-            "interact_text": "action.interact.saddle"
-        }
-    ]
-}
-```
-
-#### tnt_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "any_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "fireball:0"
-                        },
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "flint_and_steel"
-                        }
-                    ],
-                    "all_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_game_rule",
-                            "domain": "tntexplodes",
-                            "operator": "==",
-                            "value": true
-                        }
-                    ]
-                },
-                "event": "minecraft:on_prime",
-                "target": "self"
-            },
-            "swing": true,
-            "play_sounds": "ignite",
-            "interact_text": "action.interact.creeper"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "any_of": [
-                        {
-                            "test": "has_component",
-                            "subject": "other",
-                            "value": "fire_aspect"
-                        }
-                    ],
-                    "all_of": [
-                        {
-                            "test": "is_game_rule",
-                            "domain": "tntexplodes",
-                            "operator": "==",
-                            "value": true
-                        }
-                    ]
-                },
-                "event": "minecraft:on_prime",
-                "target": "self"
-            },
-            "swing": true,
-            "interact_text": "action.interact.creeper"
-        }
-    ]
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": {
-        "on_interact": {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_equipment",
-                        "domain": "hand",
-                        "subject": "other",
-                        "value": "golden_apple"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "self",
-                        "value": "minecraft:effect.weakness"
-                    }
-                ]
-            },
-            "event": "villager_converted",
-            "target": "self"
-        },
-        "use_item": true,
-        "interact_text": "action.interact.cure"
-    }
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": {
-        "on_interact": {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_equipment",
-                        "domain": "hand",
-                        "subject": "other",
-                        "value": "golden_apple"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "self",
-                        "value": "minecraft:effect.weakness"
-                    }
-                ]
-            },
-            "event": "villager_converted",
-            "target": "self"
-        },
-        "use_item": true,
-        "interact_text": "action.interact.cure"
-    }
-}
-```
-
-## minecraft:inventory
+<Spoiler title="Show">
 
 #### chest_minecart
 
@@ -31208,45 +13992,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### piglin
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+## is_baby
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_baby)</small>
 
-```json
-"minecraft:inventory": {
-    "inventory_size": 8
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:inventory": {
-    "inventory_size": 8,
-    "private": true
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:inventory": {
-    "inventory_size": 8,
-    "private": true
-}
-```
-
-## minecraft:is_baby
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -31328,297 +14080,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_baby": {}
 ```
 
-#### fox
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+## is_charged
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_charged)</small>
 
-```json
-"minecraft:is_baby": {}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_baby": {}
-```
-
-## minecraft:is_charged
+<Spoiler title="Show">
 
 #### bee
 
@@ -31640,7 +14108,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_charged": {}
 ```
 
-## minecraft:is_chested
+</Spoiler>
+
+## is_chested
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_chested)</small>
+
+<Spoiler title="Show">
 
 #### donkey
 
@@ -31672,7 +14146,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_chested": {}
 ```
 
-## minecraft:is_dyeable
+</Spoiler>
+
+## is_dyeable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_dyeable)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -31710,7 +14190,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:is_hidden_when_invisible
+</Spoiler>
+
+## is_hidden_when_invisible
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_hidden_when_invisible)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -31792,647 +14278,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-#### creeper
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+## is_ignited
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_ignited)</small>
 
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_hidden_when_invisible": {}
-```
-
-## minecraft:is_ignited
+<Spoiler title="Show">
 
 #### tnt_minecart
 
@@ -32444,7 +14296,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_ignited": {}
 ```
 
-## minecraft:is_illager_captain
+</Spoiler>
+
+## is_illager_captain
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_illager_captain)</small>
+
+<Spoiler title="Show">
 
 #### pillager
 
@@ -32466,7 +14324,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_illager_captain": {}
 ```
 
-## minecraft:is_saddled
+</Spoiler>
+
+## is_saddled
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_saddled)</small>
+
+<Spoiler title="Show">
 
 #### donkey
 
@@ -32518,7 +14382,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_saddled": {}
 ```
 
-## minecraft:is_shaking
+</Spoiler>
+
+## is_shaking
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_shaking)</small>
+
+<Spoiler title="Show">
 
 #### hoglin
 
@@ -32600,17 +14470,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_shaking": {}
 ```
 
-#### zombie_villager_v2
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
+## is_sheared
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_sheared)</small>
 
-```json
-"minecraft:is_shaking": {}
-```
-
-## minecraft:is_sheared
+<Spoiler title="Show">
 
 #### sheep
 
@@ -32632,7 +14498,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_sheared": {}
 ```
 
-## minecraft:is_stackable
+</Spoiler>
+
+## is_stackable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_stackable)</small>
+
+<Spoiler title="Show">
 
 #### boat
 
@@ -32686,7 +14558,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_stackable": {}
 ```
 
-## minecraft:is_stunned
+</Spoiler>
+
+## is_stunned
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_stunned)</small>
+
+<Spoiler title="Show">
 
 #### ravager
 
@@ -32698,7 +14576,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_stunned": {}
 ```
 
-## minecraft:is_tamed
+</Spoiler>
+
+## is_tamed
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_tamed)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -32780,27 +14664,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_tamed": {}
 ```
 
-#### wolf
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
+## item_controllable
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aitem_controllable)</small>
 
-```json
-"minecraft:is_tamed": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:is_tamed": {}
-```
-
-## minecraft:item_controllable
+<Spoiler title="Show">
 
 #### pig
 
@@ -32826,7 +14696,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:item_hopper
+</Spoiler>
+
+## item_hopper
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aitem_hopper)</small>
+
+<Spoiler title="Show">
 
 #### hopper_minecart
 
@@ -32838,7 +14714,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:item_hopper": {}
 ```
 
-## minecraft:jump.dynamic
+</Spoiler>
+
+## jump.dynamic
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ajump.dynamic)</small>
+
+<Spoiler title="Show">
 
 #### rabbit
 
@@ -32850,7 +14732,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:jump.dynamic": {}
 ```
 
-## minecraft:jump.static
+</Spoiler>
+
+## jump.static
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ajump.static)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -32932,569 +14820,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:jump.static": {}
 ```
 
-#### creeper
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+## knockback_resistance
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aknockback_resistance)</small>
 
-```json
-"minecraft:jump.static": {}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {
-    "jump_power": 0.6
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:jump.static": {}
-```
-
-## minecraft:knockback_resistance
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -33569,7 +14901,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:lava_movement
+</Spoiler>
+
+## lava_movement
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Alava_movement)</small>
+
+<Spoiler title="Show">
 
 #### strider
 
@@ -33583,7 +14921,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:leashable
+</Spoiler>
+
+## leashable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aleashable)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -33697,332 +15041,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### fox
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+## lookat
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Alookat)</small>
 
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4,
-    "hard_distance": 6,
-    "max_distance": 10
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0,
-    "can_be_stolen": true
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0,
-    "on_leash": {
-        "event": "minecraft:on_leash",
-        "target": "self"
-    },
-    "on_unleash": {
-        "event": "minecraft:on_unleash",
-        "target": "self"
-    }
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0,
-    "on_leash": {
-        "event": "minecraft:on_leash",
-        "target": "self"
-    },
-    "on_unleash": {
-        "event": "minecraft:on_unleash",
-        "target": "self"
-    }
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-## minecraft:lookat
+<Spoiler title="Show">
 
 #### enderman
 
@@ -34054,7 +15079,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:loot
+</Spoiler>
+
+## loot
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aloot)</small>
+
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -34152,795 +15183,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### dolphin
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+## managed_wandering_trader
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amanaged_wandering_trader)</small>
 
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/dolphin.json"
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/horse.json"
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/drowned.json"
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/elder_guardian.json"
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/enderman.json"
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/evocation_illager.json"
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/fish.json"
-}
-```
-
-#### fishing_hook
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fishing_hook.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/gameplay/fishing.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/gameplay/jungle_fishing.json"
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/fox.json"
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/ghast.json"
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/glow_squid.json"
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/goat.json"
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/guardian.json"
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/hoglin.json"
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/horse.json"
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/zombie.json"
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/iron_golem.json"
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/llama.json"
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/magma_cube.json"
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/mooshroom.json"
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/horse.json"
-}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/empty.json"
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/ocelot.json"
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/panda.json"
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/parrot.json"
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/phantom.json"
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/pig.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/pig_saddled.json"
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/piglin.json"
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/piglin.json"
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/pillager.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/pillager_raid.json"
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/empty.json"
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/polar_bear.json"
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/pufferfish.json"
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/rabbit.json"
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/ravager.json"
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/salmon_normal.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/salmon_large.json"
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/sheep_sheared.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/sheep.json"
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/shulker.json"
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/silverfish.json"
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/skeleton.json"
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/skeleton_horse.json"
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/slime.json"
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/snowman.json"
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/spider.json"
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/squid.json"
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/stray.json"
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/strider_saddled.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/strider.json"
-}
-```
-
-#### tripod_camera
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tripod_camera.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/empty.json"
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/tropicalfish.json"
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/sea_turtle.json"
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/vindication_illager.json"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/vindicator_raid.json"
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/witch.json"
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/wither_boss.json"
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/wither_skeleton.json"
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/wolf.json"
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/zoglin.json"
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/zombie.json"
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/zombie_horse.json"
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/zombie_pigman.json"
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/zombie.json"
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/zombie.json"
-}
-```
-
-## minecraft:managed_wandering_trader
+<Spoiler title="Show">
 
 #### wandering_trader
 
@@ -34952,7 +15201,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:managed_wandering_trader": {}
 ```
 
-## minecraft:mark_variant
+</Spoiler>
+
+## mark_variant
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amark_variant)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -35030,263 +15285,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### mooshroom
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
+## mob_effect
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amob_effect)</small>
 
-```json
-"minecraft:mark_variant": {
-    "value": -1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 6
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 7
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 8
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 9
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 5
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 6
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 6
-}
-```
-
-## minecraft:mob_effect
+<Spoiler title="Show">
 
 #### pufferfish
 
@@ -35316,7 +15321,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:movement
+</Spoiler>
+
+## movement
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -35414,915 +15425,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### creeper
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+## movement.amphibious
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.amphibious)</small>
 
-```json
-"minecraft:movement": {
-    "value": 0.2
-}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.1
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.175
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.23
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.45
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.5
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.1
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.03
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.2
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.4
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.12
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.36
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": {
-        "range_min": 0.1125,
-        "range_max": 0.3375
-    }
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.35
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.23
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.75
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.66
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.6
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.175
-}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.5
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.15
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.07
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.4
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 1.8
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.42
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.35
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.35
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.35
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.1
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.13
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.12
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.0,
-    "max": 0.0
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.2
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.6
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.2
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.2
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.16
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.12
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.1
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 1.0
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.5
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.5
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.35
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.5
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.3
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.35
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.23
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.2
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.23
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.35
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.23
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.35
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.23
-}
-```
-
-## minecraft:movement.amphibious
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -36348,7 +15457,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:movement.basic
+</Spoiler>
+
+## movement.basic
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.basic)</small>
+
+<Spoiler title="Show">
 
 #### bat
 
@@ -36430,469 +15545,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.basic": {}
 ```
 
-#### enderman
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+## movement.fly
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.fly)</small>
 
-```json
-"minecraft:movement.basic": {}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {
-    "max_turn": 180.0
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement.basic": {}
-```
-
-## minecraft:movement.fly
+<Spoiler title="Show">
 
 #### parrot
 
@@ -36904,7 +15563,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.fly": {}
 ```
 
-## minecraft:movement.generic
+</Spoiler>
+
+## movement.generic
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.generic)</small>
+
+<Spoiler title="Show">
 
 #### drowned
 
@@ -36916,7 +15581,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.generic": {}
 ```
 
-## minecraft:movement.glide
+</Spoiler>
+
+## movement.glide
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.glide)</small>
+
+<Spoiler title="Show">
 
 #### phantom
 
@@ -36931,7 +15602,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:movement.hover
+</Spoiler>
+
+## movement.hover
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.hover)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -36943,7 +15620,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.hover": {}
 ```
 
-## minecraft:movement.jump
+</Spoiler>
+
+## movement.jump
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.jump)</small>
+
+<Spoiler title="Show">
 
 #### magma_cube
 
@@ -36997,7 +15680,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:movement.skip
+</Spoiler>
+
+## movement.skip
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.skip)</small>
+
+<Spoiler title="Show">
 
 #### rabbit
 
@@ -37009,7 +15698,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.skip": {}
 ```
 
-## minecraft:movement.sway
+</Spoiler>
+
+## movement.sway
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.sway)</small>
+
+<Spoiler title="Show">
 
 #### elder_guardian
 
@@ -37079,7 +15774,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:nameable
+</Spoiler>
+
+## nameable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anameable)</small>
+
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -37161,677 +15862,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:nameable": {}
 ```
 
-#### cow
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+## navigation.climb
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.climb)</small>
 
-```json
-"minecraft:nameable": {}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {
-    "always_show": true,
-    "allow_name_tag_renaming": false
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {
-    "always_show": true,
-    "allow_name_tag_renaming": false
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {
-    "default_trigger": {
-        "event": "minecraft:stop_johnny",
-        "target": "self"
-    },
-    "name_actions": [
-        {
-            "name_filter": "Johnny",
-            "on_named": {
-                "event": "minecraft:start_johnny",
-                "target": "self"
-            }
-        }
-    ]
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:nameable": {}
-```
-
-## minecraft:navigation.climb
+<Spoiler title="Show">
 
 #### cave_spider
 
@@ -37857,7 +15894,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:navigation.float
+</Spoiler>
+
+## navigation.float
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.float)</small>
+
+<Spoiler title="Show">
 
 #### bat
 
@@ -37883,7 +15926,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:navigation.fly
+</Spoiler>
+
+## navigation.fly
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.fly)</small>
+
+<Spoiler title="Show">
 
 #### parrot
 
@@ -37898,7 +15947,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:navigation.generic
+</Spoiler>
+
+## navigation.generic
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.generic)</small>
+
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -38023,91 +16078,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### guardian
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+## navigation.hover
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.hover)</small>
 
-```json
-"minecraft:navigation.generic": {
-    "is_amphibious": true,
-    "can_path_over_water": false,
-    "can_swim": true,
-    "can_walk": false,
-    "can_breach": true
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.generic": {
-    "is_amphibious": false,
-    "can_path_over_water": false,
-    "can_swim": true,
-    "can_walk": false,
-    "can_breach": false,
-    "can_sink": false
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.generic": {
-    "is_amphibious": false,
-    "can_path_over_water": false,
-    "can_swim": true,
-    "can_walk": false,
-    "can_breach": false,
-    "can_sink": false
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.generic": {
-    "is_amphibious": false,
-    "can_path_over_water": false,
-    "can_swim": true,
-    "can_walk": false,
-    "can_breach": false,
-    "can_sink": false
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.generic": {
-    "is_amphibious": true,
-    "can_path_over_water": false,
-    "can_swim": true,
-    "can_walk": true,
-    "can_sink": false,
-    "avoid_damage_blocks": true
-}
-```
-
-## minecraft:navigation.hover
+<Spoiler title="Show">
 
 #### bee
 
@@ -38127,7 +16104,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:navigation.walk
+</Spoiler>
+
+## navigation.walk
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.walk)</small>
+
+<Spoiler title="Show">
 
 #### blaze
 
@@ -38235,675 +16218,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### evocation_illager
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
+## npc
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anpc)</small>
 
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "can_pass_doors": true,
-    "can_open_doors": true,
-    "avoid_water": true
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "can_sink": false
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true,
-    "blocks_to_avoid": [
-        {
-            "name": "minecraft:powder_snow"
-        }
-    ]
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_pass_doors": true,
-    "can_break_doors": true,
-    "avoid_portals": false
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": false,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_float": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "can_open_doors": true
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "can_open_doors": true
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "avoid_damage_blocks": true,
-    "can_path_over_water": true,
-    "can_sink": false
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "avoid_sun": true,
-    "avoid_water": true
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "avoid_water": true
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "avoid_water": true
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "can_sink": false
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "avoid_sun": true,
-    "avoid_water": true
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_lava": true,
-    "avoid_water": true,
-    "can_sink": false,
-    "can_walk_in_lava": true
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_path_over_water": true,
-    "can_pass_doors": true,
-    "can_open_doors": true,
-    "can_walk": true,
-    "avoid_water": true
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "can_pass_doors": true,
-    "can_open_doors": true,
-    "avoid_water": true
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "can_pass_doors": true,
-    "can_break_doors": true
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "can_pass_doors": true,
-    "can_open_doors": true,
-    "avoid_water": true
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": false
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_water": true
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "avoid_sun": true,
-    "avoid_water": true
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "can_path_over_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_path_over_water": false,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_pass_doors": true,
-    "can_walk": true,
-    "can_break_doors": true
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "avoid_water": true
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_pass_doors": true,
-    "can_open_doors": true,
-    "avoid_water": true,
-    "avoid_portals": true
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_pass_doors": true,
-    "can_break_doors": true,
-    "avoid_sun": false
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_pass_doors": true,
-    "can_open_doors": true,
-    "avoid_water": true,
-    "avoid_sun": true
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_pass_doors": true,
-    "can_break_doors": true,
-    "avoid_sun": false
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.walk": {
-    "is_amphibious": true,
-    "can_pass_doors": true,
-    "can_open_doors": true,
-    "avoid_water": true,
-    "avoid_sun": true
-}
-```
-
-## minecraft:npc
+<Spoiler title="Show">
 
 #### npc
 
@@ -38998,13 +16319,34 @@ This documentation is stripped from the vanilla files using an automated script.
             },
             {
                 "variant": 19
+            },
+            {
+                "variant": 20
+            },
+            {
+                "variant": 21
+            },
+            {
+                "variant": 22
+            },
+            {
+                "variant": 23
+            },
+            {
+                "variant": 24
             }
         ]
     }
 }
 ```
 
-## minecraft:on_death
+</Spoiler>
+
+## on_death
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_death)</small>
+
+<Spoiler title="Show">
 
 #### ender_dragon
 
@@ -39019,7 +16361,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:on_friendly_anger
+</Spoiler>
+
+## on_friendly_anger
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_friendly_anger)</small>
+
+<Spoiler title="Show">
 
 #### llama
 
@@ -39060,7 +16408,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:on_hurt
+</Spoiler>
+
+## on_hurt
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_hurt)</small>
+
+<Spoiler title="Show">
 
 #### blaze
 
@@ -39101,7 +16455,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:on_hurt_by_player
+</Spoiler>
+
+## on_hurt_by_player
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_hurt_by_player)</small>
+
+<Spoiler title="Show">
 
 #### blaze
 
@@ -39129,7 +16489,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:on_start_landing
+</Spoiler>
+
+## on_start_landing
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_start_landing)</small>
+
+<Spoiler title="Show">
 
 #### ender_dragon
 
@@ -39144,7 +16510,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:on_start_takeoff
+</Spoiler>
+
+## on_start_takeoff
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_start_takeoff)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -39155,7 +16527,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:on_target_acquired
+</Spoiler>
+
+## on_target_acquired
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_target_acquired)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -39268,179 +16646,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### magma_cube
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+## on_target_escape
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_target_escape)</small>
 
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_aggressive",
-    "target": "self"
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:on_scared",
-    "target": "self"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_angry",
-    "target": "self"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "become_angry_event",
-    "target": "self"
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "become_angry_event",
-    "target": "self"
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:on_scared",
-    "target": "self"
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:on_anger",
-    "target": "self"
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_angry",
-    "target": "self"
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_aggressive",
-    "target": "self"
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_angry"
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_aggro",
-    "target": "self"
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_angry",
-    "target": "self"
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_angry",
-    "target": "self"
-}
-```
-
-## minecraft:on_target_escape
+<Spoiler title="Show">
 
 #### creeper
 
@@ -39553,33 +16765,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### slime
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
+## on_wake_with_owner
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_wake_with_owner)</small>
 
-```json
-"minecraft:on_target_escape": {
-    "event": "minecraft:become_calm",
-    "target": "self"
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_escape": {
-    "event": "minecraft:stop_aggro",
-    "target": "self"
-}
-```
-
-## minecraft:on_wake_with_owner
+<Spoiler title="Show">
 
 #### cat
 
@@ -39594,7 +16786,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:out_of_control
+</Spoiler>
+
+## out_of_control
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aout_of_control)</small>
+
+<Spoiler title="Show">
 
 #### boat
 
@@ -39606,7 +16804,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:out_of_control": {}
 ```
 
-## minecraft:peek
+</Spoiler>
+
+## peek
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Apeek)</small>
+
+<Spoiler title="Show">
 
 #### shulker
 
@@ -39628,7 +16832,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:persistent
+</Spoiler>
+
+## persistent
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Apersistent)</small>
+
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -39690,19 +16900,9 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:persistent": {}
 ```
 
-#### snow_golem
+#### pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:persistent": {}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
 
 <CodeHeader></CodeHeader>
 
@@ -39710,19 +16910,9 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:persistent": {}
 ```
 
-#### villager_v2
+#### ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:persistent": {}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
 
 <CodeHeader></CodeHeader>
 
@@ -39730,7 +16920,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:persistent": {}
 ```
 
-## minecraft:physics
+</Spoiler>
+
+## physics
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aphysics)</small>
+
+<Spoiler title="Show">
 
 #### area_effect_cloud
 
@@ -39814,975 +17010,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:physics": {}
 ```
 
-#### cat
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+## player.exhaustion
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aplayer.exhaustion)</small>
 
-```json
-"minecraft:physics": {}
-```
-
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### chest_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chest_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### command_block_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/command_block_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### egg
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/egg.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### ender_crystal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_crystal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {
-    "has_gravity": false,
-    "has_collision": false
-}
-```
-
-#### ender_pearl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_pearl.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### eye_of_ender_signal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/eye_of_ender_signal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### fireworks_rocket
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireworks_rocket.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {
-    "has_gravity": false
-}
-```
-
-#### fishing_hook
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fishing_hook.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### hopper_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### lingering_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/lingering_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### llama_spit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama_spit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {
-    "has_gravity": false
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {
-    "has_gravity": false
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {
-    "has_gravity": false
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### shulker_bullet
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker_bullet.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {
-    "has_collision": false
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### small_fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/small_fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### snowball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snowball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### splash_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/splash_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### thrown_trident
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/thrown_trident.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### tnt
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### tnt_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### tripod_camera
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tripod_camera.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {
-    "has_gravity": false
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {
-    "has_gravity": false,
-    "has_collision": false
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### wither_skull
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### wither_skull_dangerous
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull_dangerous.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### xp_bottle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_bottle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### xp_orb
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_orb.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-## minecraft:player.exhaustion
+<Spoiler title="Show">
 
 #### player
 
@@ -40797,7 +17031,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:player.experience
+</Spoiler>
+
+## player.experience
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aplayer.experience)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -40808,7 +17048,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:player.level
+</Spoiler>
+
+## player.level
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aplayer.level)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -40819,7 +17065,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:player.saturation
+</Spoiler>
+
+## player.saturation
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aplayer.saturation)</small>
+
+<Spoiler title="Show">
 
 <CodeHeader></CodeHeader>
 
@@ -40829,7 +17081,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:preferred_path
+</Spoiler>
+
+## preferred_path
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Apreferred_path)</small>
+
+<Spoiler title="Show">
 
 #### iron_golem
 
@@ -41103,7 +17361,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:projectile
+</Spoiler>
+
+## projectile
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aprojectile)</small>
+
+<Spoiler title="Show">
 
 #### arrow
 
@@ -41363,390 +17627,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### fireball
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireball.json)</small>
+## pushable
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Apushable)</small>
 
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "definition_event": {
-            "affect_projectile": true,
-            "event_trigger": {
-                "event": "minecraft:explode",
-                "target": "self"
-            }
-        }
-    },
-    "power": 1.6,
-    "gravity": 0.0,
-    "inertia": 1,
-    "liquid_inertia": 1,
-    "uncertainty_base": 0,
-    "uncertainty_multiplier": 0,
-    "anchor": 1,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ],
-    "reflect_on_hurt": true,
-    "catch_fire": true
-}
-```
-
-#### fishing_hook
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fishing_hook.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "stick_in_ground": {}
-    }
-}
-```
-
-#### lingering_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/lingering_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "douse_fire": {},
-        "spawn_aoe_cloud": {
-            "radius": 3.0,
-            "radius_on_use": -0.5,
-            "duration": 30,
-            "reapplication_delay": 40
-        },
-        "remove_on_hit": {}
-    },
-    "power": 0.5,
-    "gravity": 0.05,
-    "angle_offset": -20.0,
-    "hit_sound": "glass"
-}
-```
-
-#### llama_spit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama_spit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "impact_damage": {
-            "damage": 1,
-            "knockback": false
-        },
-        "remove_on_hit": {}
-    },
-    "power": 1.5,
-    "gravity": 0.06,
-    "inertia": 1,
-    "uncertainty_base": 10,
-    "uncertainty_multiplier": 4,
-    "anchor": 1,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ],
-    "reflect_on_hurt": true
-}
-```
-
-#### shulker_bullet
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker_bullet.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "impact_damage": {
-            "damage": 4,
-            "knockback": true,
-            "should_bounce": true
-        },
-        "mob_effect": {
-            "effect": "levitation",
-            "durationeasy": 200,
-            "durationnormal": 200,
-            "durationhard": 200,
-            "amplifier": 1
-        },
-        "remove_on_hit": {},
-        "particle_on_hit": {
-            "particle_type": "largeexplode",
-            "on_other_hit": true
-        }
-    },
-    "hit_sound": "bullet.hit",
-    "destroyOnHurt": true,
-    "crit_particle_on_hurt": true,
-    "power": 1.6,
-    "gravity": 0.05,
-    "uncertainty_base": 16,
-    "uncertainty_multiplier": 4,
-    "anchor": 1,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ],
-    "homing": true
-}
-```
-
-#### small_fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/small_fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "impact_damage": {
-            "damage": 5,
-            "knockback": false,
-            "catch_fire": true,
-            "semi_random_diff_damage": false
-        },
-        "catch_fire": {
-            "fire_affected_by_griefing": true
-        },
-        "remove_on_hit": {}
-    },
-    "power": 1.3,
-    "gravity": 0.0,
-    "inertia": 1,
-    "liquid_inertia": 1,
-    "anchor": 2,
-    "offset": [
-        0,
-        0.5,
-        0
-    ],
-    "semi_random_diff_damage": true,
-    "uncertainty_base": 10.0,
-    "reflect_on_hurt": true
-}
-```
-
-#### snowball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snowball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "impact_damage": {
-            "filter": "blaze",
-            "damage": 3,
-            "knockback": true
-        },
-        "remove_on_hit": {},
-        "particle_on_hit": {
-            "particle_type": "snowballpoof",
-            "num_particles": 6,
-            "on_entity_hit": true,
-            "on_other_hit": true
-        }
-    },
-    "anchor": 1,
-    "power": 1.5,
-    "gravity": 0.03,
-    "angle_offset": 0.0,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ]
-}
-```
-
-#### splash_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/splash_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "douse_fire": {},
-        "thrown_potion_effect": {},
-        "remove_on_hit": {}
-    },
-    "power": 0.5,
-    "gravity": 0.05,
-    "angle_offset": -20.0,
-    "hit_sound": "glass"
-}
-```
-
-#### thrown_trident
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/thrown_trident.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "impact_damage": {
-            "damage": 8,
-            "knockback": true,
-            "semi_random_diff_damage": false,
-            "destroy_on_hit": false
-        },
-        "stick_in_ground": {
-            "shake_time": 0
-        }
-    },
-    "liquid_inertia": 0.99,
-    "hit_sound": "item.trident.hit",
-    "hit_ground_sound": "item.trident.hit_ground",
-    "power": 4,
-    "gravity": 0.1,
-    "uncertainty_base": 1,
-    "uncertainty_multiplier": 0,
-    "stop_on_hurt": true,
-    "anchor": 1,
-    "should_bounce": true,
-    "multiple_targets": false,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ]
-}
-```
-
-#### wither_skull
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "definition_event": {
-            "affect_projectile": true,
-            "event_trigger": {
-                "event": "minecraft:explode",
-                "target": "self"
-            }
-        },
-        "mob_effect": {
-            "effect": "wither",
-            "durationeasy": 0,
-            "durationnormal": 200,
-            "durationhard": 800,
-            "amplifier": 1
-        }
-    },
-    "power": 1.2,
-    "gravity": 0.0,
-    "uncertainty_base": 7.5,
-    "uncertainty_multiplier": 1,
-    "shoot_sound": "bow",
-    "hit_sound": "bow.hit",
-    "anchor": 1,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ],
-    "inertia": 1.0,
-    "liquid_inertia": 1.0,
-    "shoot_target": false
-}
-```
-
-#### wither_skull_dangerous
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull_dangerous.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "definition_event": {
-            "affect_projectile": true,
-            "event_trigger": {
-                "event": "minecraft:explode",
-                "target": "self"
-            }
-        },
-        "mob_effect": {
-            "effect": "wither",
-            "durationeasy": 0,
-            "durationnormal": 200,
-            "durationhard": 800,
-            "amplifier": 1
-        }
-    },
-    "power": 0.6,
-    "gravity": 0.0,
-    "uncertainty_base": 7.5,
-    "uncertainty_multiplier": 1,
-    "shoot_sound": "bow",
-    "hit_sound": "bow.hit",
-    "anchor": 1,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ],
-    "is_dangerous": true,
-    "inertia": 1.0,
-    "liquid_inertia": 1.0,
-    "shoot_target": false,
-    "reflect_on_hurt": true
-}
-```
-
-#### xp_bottle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_bottle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "grant_xp": {
-            "minXP": 3,
-            "maxXP": 11
-        },
-        "remove_on_hit": {}
-    },
-    "power": 0.5,
-    "gravity": 0.05,
-    "angle_offset": -20.0,
-    "hit_sound": "glass"
-}
-```
-
-## minecraft:pushable
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -41852,1138 +17739,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### chest_minecart
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chest_minecart.json)</small>
+## raid_trigger
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Araid_trigger)</small>
 
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### command_block_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/command_block_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### egg
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/egg.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### ender_crystal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_crystal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### ender_pearl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_pearl.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### eye_of_ender_signal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/eye_of_ender_signal.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### fireworks_rocket
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireworks_rocket.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### fishing_hook
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fishing_hook.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": false,
-    "is_pushable_by_piston": true
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### hopper_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### lingering_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/lingering_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### llama_spit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama_spit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": false,
-    "is_pushable_by_piston": true
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### small_fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/small_fireball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### snowball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snowball.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### splash_potion
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/splash_potion.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### thrown_trident
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/thrown_trident.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### tnt
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": false,
-    "is_pushable_by_piston": true
-}
-```
-
-#### tnt_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### wither_skull
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### wither_skull_dangerous
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skull_dangerous.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### xp_bottle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_bottle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### xp_orb
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_orb.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-## minecraft:raid_trigger
+<Spoiler title="Show">
 
 #### player
 
@@ -43000,7 +17762,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:rail_movement
+</Spoiler>
+
+## rail_movement
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Arail_movement)</small>
+
+<Spoiler title="Show">
 
 #### chest_minecart
 
@@ -43052,7 +17820,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:rail_movement": {}
 ```
 
-## minecraft:rail_sensor
+</Spoiler>
+
+## rail_sensor
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Arail_sensor)</small>
+
+<Spoiler title="Show">
 
 #### command_block_minecart
 
@@ -43154,7 +17928,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:ravager_blocked
+</Spoiler>
+
+## ravager_blocked
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aravager_blocked)</small>
+
+<Spoiler title="Show">
 
 #### ravager
 
@@ -43180,7 +17960,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:rideable
+</Spoiler>
+
+## rideable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Arideable)</small>
+
+<Spoiler title="Show">
 
 #### boat
 
@@ -43379,723 +18165,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "crouching_skip_interact": true,
-    "family_types": [
-        "player"
-    ],
-    "interact_text": "action.interact.ride.horse",
-    "seats": {
-        "position": [
-            0.0,
-            0.925,
-            -0.2
-        ]
-    }
-}
-```
+## scale
 
-#### hoglin
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ascale)</small>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 3,
-    "family_types": [
-        "piglin"
-    ],
-    "seats": [
-        {
-            "position": [
-                0.0,
-                0.9,
-                -0.3
-            ],
-            "lock_rider_rotation": 0
-        },
-        {
-            "position": [
-                0.0,
-                2.4,
-                -0.3
-            ],
-            "lock_rider_rotation": 0
-        },
-        {
-            "position": [
-                0.0,
-                3.9,
-                -0.3
-            ],
-            "lock_rider_rotation": 0
-        }
-    ]
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "player",
-        "zombie"
-    ],
-    "interact_text": "action.interact.mount",
-    "seats": {
-        "position": [
-            0.0,
-            1.1,
-            -0.2
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "crouching_skip_interact": true,
-    "family_types": [
-        "player"
-    ],
-    "interact_text": "action.interact.ride.horse",
-    "seats": {
-        "position": [
-            0.0,
-            1.1,
-            -0.2
-        ]
-    }
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.1,
-            -0.35
-        ],
-        "lock_rider_rotation": 0
-    }
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "player"
-    ],
-    "interact_text": "action.interact.mount",
-    "seats": {
-        "position": [
-            0.0,
-            1.25,
-            -0.3
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "crouching_skip_interact": true,
-    "family_types": [
-        "player"
-    ],
-    "interact_text": "action.interact.ride.horse",
-    "seats": {
-        "position": [
-            0.0,
-            1.1,
-            -0.2
-        ]
-    }
-}
-```
-
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "interact_text": "action.interact.ride.minecart",
-    "pull_in_entities": true,
-    "seats": {
-        "position": [
-            0.0,
-            -0.2,
-            0.0
-        ]
-    }
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.105,
-            0.0
-        ]
-    }
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "player",
-        "zombie"
-    ],
-    "interact_text": "action.interact.mount",
-    "seats": {
-        "position": [
-            0.0,
-            0.975,
-            -0.2
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "crouching_skip_interact": true,
-    "family_types": [
-        "player"
-    ],
-    "interact_text": "action.interact.ride.horse",
-    "seats": {
-        "position": [
-            0.0,
-            0.975,
-            -0.2
-        ]
-    }
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.35,
-            0.0
-        ]
-    }
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.105,
-            0.0
-        ]
-    }
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.63,
-            0.0
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "interact_text": "action.interact.mount",
-    "family_types": [
-        "player"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.63,
-            0.0
-        ]
-    }
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 2,
-    "family_types": [
-        "parrot_tame"
-    ],
-    "pull_in_entities": true,
-    "seats": [
-        {
-            "position": [
-                0.4,
-                -0.2,
-                -0.1
-            ],
-            "min_rider_count": 0,
-            "max_rider_count": 0,
-            "lock_rider_rotation": 0
-        },
-        {
-            "position": [
-                -0.4,
-                -0.2,
-                -0.1
-            ],
-            "min_rider_count": 1,
-            "max_rider_count": 2,
-            "lock_rider_rotation": 0
-        }
-    ]
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "pillager",
-        "vindicator",
-        "evocation_illager"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            2.1,
-            -0.3
-        ]
-    }
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.9,
-            0.0
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.975,
-            0.0
-        ]
-    }
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "player",
-        "skeleton",
-        "zombie"
-    ],
-    "interact_text": "action.interact.ride.horse",
-    "seats": {
-        "position": [
-            0.0,
-            1.2,
-            -0.2
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.54,
-            -0.1
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "skeleton"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.54,
-            0.0
-        ]
-    }
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "priority": 0,
-    "seat_count": 1,
-    "crouching_skip_interact": true,
-    "family_types": [
-        "player"
-    ],
-    "interact_text": "action.interact.ride.strider",
-    "seats": {
-        "position": [
-            0.0,
-            1.6,
-            -0.2
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "priority": 0,
-    "seat_count": 1,
-    "crouching_skip_interact": true,
-    "family_types": [
-        "player",
-        "zombie_pigman"
-    ],
-    "interact_text": "action.interact.ride.strider",
-    "seats": {
-        "position": [
-            0.0,
-            1.65,
-            -0.2
-        ]
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "strider"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.6,
-            0.0
-        ]
-    }
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.675,
-            -0.1
-        ]
-    }
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.1,
-            -0.35
-        ],
-        "lock_rider_rotation": 0
-    }
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "interact_text": "action.interact.ride.horse",
-    "seats": {
-        "position": [
-            0.0,
-            1.2,
-            -0.2
-        ]
-    }
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.1,
-            -0.35
-        ],
-        "lock_rider_rotation": 0
-    }
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.1,
-            -0.35
-        ]
-    }
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.1,
-            -0.35
-        ]
-    }
-}
-```
-
-## minecraft:scale
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -44189,415 +18265,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### fish
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
+## scale_by_age
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ascale_by_age)</small>
 
-```json
-"minecraft:scale": {
-    "value": 1.0
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.53125
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 1.0625
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 1
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 1.0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.4
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 1.2
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.6
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 1.5
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 1.3
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.16
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 1.2
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
-## minecraft:scale_by_age
+<Spoiler title="Show">
 
 #### donkey
 
@@ -44664,7 +18338,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:scheduler
+</Spoiler>
+
+## scheduler
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ascheduler)</small>
+
+<Spoiler title="Show">
 
 #### fox
 
@@ -45355,7 +19035,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:shareables
+</Spoiler>
+
+## shareables
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ashareables)</small>
+
+<Spoiler title="Show">
 
 #### drowned
 
@@ -46906,1358 +20592,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:bread",
-            "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:carrot",
-            "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:potato",
-            "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:beetroot",
-            "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        }
-    ]
-}
-```
+## shooter
 
-#### villager_v2
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ashooter)</small>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:bread",
-            "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:carrot",
-            "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:potato",
-            "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:beetroot",
-            "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:wheat_seeds",
-            "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:beetroot_seeds",
-            "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:wheat",
-            "want_amount": 45,
-            "surplus_amount": 18,
-            "craft_into": "minecraft:bread",
-            "stored_in_inventory": true
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:bread",
-            "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:carrot",
-            "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:potato",
-            "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:beetroot",
-            "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        }
-    ]
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:wooden_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:stone_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:golden_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:iron_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:diamond_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:wooden_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:stone_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:golden_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:iron_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:diamond_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:wooden_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:stone_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:golden_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:iron_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:diamond_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:wooden_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:stone_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:golden_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:iron_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:diamond_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-## minecraft:shooter
+<Spoiler title="Show">
 
 #### blaze
 
@@ -48356,44 +20697,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### skeleton
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
+## sittable
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Asittable)</small>
 
-```json
-"minecraft:shooter": {
-    "def": "minecraft:arrow"
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shooter": {
-    "def": "minecraft:snowball"
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:shooter": {
-    "def": "minecraft:arrow",
-    "aux_val": 19
-}
-```
-
-## minecraft:sittable
+<Spoiler title="Show">
 
 #### cat
 
@@ -48435,7 +20745,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:sittable": {}
 ```
 
-## minecraft:skin_id
+</Spoiler>
+
+## skin_id
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Askin_id)</small>
+
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -48509,39 +20825,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:skin_id": {
-    "value": 2
-}
-```
+## spawn_entity
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aspawn_entity)</small>
 
-```json
-"minecraft:skin_id": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:skin_id": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:skin_id": {
-    "value": 5
-}
-```
-
-## minecraft:spawn_entity
+<Spoiler title="Show">
 
 #### chicken
 
@@ -48562,6 +20852,33 @@ This documentation is stripped from the vanilla files using an automated script.
             "operator": "==",
             "value": 0
         }
+    }
+}
+```
+
+#### ocelot
+
+<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:spawn_entity": {
+    "entities": {
+        "filters": [
+            {
+                "test": "random_chance",
+                "value": 7
+            }
+        ],
+        "min_wait_time": 0,
+        "max_wait_time": 0,
+        "num_to_spawn": 2,
+        "single_use": true,
+        "spawn_entity": "minecraft:ocelot",
+        "spawn_event": "minecraft:entity_born",
+        "spawn_method": "born",
+        "spawn_sound": ""
     }
 }
 ```
@@ -48588,7 +20905,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:spell_effects
+</Spoiler>
+
+## spell_effects
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aspell_effects)</small>
+
+<Spoiler title="Show">
 
 #### player
 
@@ -48602,6 +20925,7 @@ This documentation is stripped from the vanilla files using an automated script.
         {
             "effect": "bad_omen",
             "duration": 6000,
+            "visible": false,
             "display_on_screen_animation": true
         }
     ]
@@ -48666,7 +20990,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:strength
+</Spoiler>
+
+## strength
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Astrength)</small>
+
+<Spoiler title="Show">
 
 #### llama
 
@@ -48717,7 +21047,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:tameable
+</Spoiler>
+
+## tameable
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atameable)</small>
+
+<Spoiler title="Show">
 
 #### cat
 
@@ -48778,7 +21114,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:tamemount
+</Spoiler>
+
+## tamemount
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atamemount)</small>
+
+<Spoiler title="Show">
 
 #### donkey
 
@@ -49012,7 +21354,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:target_nearby_sensor
+</Spoiler>
+
+## target_nearby_sensor
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atarget_nearby_sensor)</small>
+
+<Spoiler title="Show">
 
 #### blaze
 
@@ -49106,7 +21454,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:teleport
+</Spoiler>
+
+## teleport
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ateleport)</small>
+
+<Spoiler title="Show">
 
 #### enderman
 
@@ -49119,9 +21473,9 @@ This documentation is stripped from the vanilla files using an automated script.
     "random_teleports": true,
     "max_random_teleport_time": 30,
     "random_teleport_cube": [
+        64,
         32,
-        32,
-        32
+        64
     ],
     "target_distance": 16,
     "target_teleport_chance": 0.05,
@@ -49129,7 +21483,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:timer
+</Spoiler>
+
+## timer
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atimer)</small>
+
+<Spoiler title="Show">
 
 #### bee
 
@@ -49261,221 +21621,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### hoglin
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
+## trade_resupply
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrade_resupply)</small>
 
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 15,
-    "time_down_event": {
-        "event": "become_zombie_event"
-    }
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 30,
-    "time_down_event": {
-        "event": "minecraft:convert_to_zombie"
-    }
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 15,
-    "time_down_event": {
-        "event": "become_zombie_event"
-    }
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 15,
-    "time_down_event": {
-        "event": "become_zombie_event"
-    }
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "time": [
-        0.0,
-        0.0
-    ],
-    "looping": false,
-    "time_down_event": {
-        "event": "minecraft:clear_add_bad_omen",
-        "target": "self"
-    }
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 2,
-    "randomInterval": false,
-    "time_down_event": {
-        "event": "minecraft:on_half_puff"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 2,
-    "randomInterval": false,
-    "time_down_event": {
-        "event": "minecraft:on_normal_puff"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 0.01,
-    "randomInterval": false,
-    "time_down_event": {
-        "event": "minecraft:on_full_puff"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 3,
-    "randomInterval": false,
-    "time_down_event": {
-        "event": "minecraft:on_deflate"
-    }
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 2,
-    "time_down_event": {
-        "event": "minecraft:start_roar"
-    }
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 20,
-    "time_down_event": {
-        "event": "become_stray_event"
-    }
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "random_time_choices": [
-        {
-            "weight": 50,
-            "value": 2400
-        },
-        {
-            "weight": 50,
-            "value": 3600
-        }
-    ],
-    "time_down_event": {
-        "event": "minecraft:start_despawn",
-        "target": "self"
-    }
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 30,
-    "time_down_event": {
-        "event": "minecraft:convert_to_drowned"
-    }
-}
-```
-
-## minecraft:trade_resupply
+<Spoiler title="Show">
 
 #### villager_v2
 
@@ -49487,7 +21639,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:trade_resupply": {}
 ```
 
-## minecraft:trade_table
+</Spoiler>
+
+## trade_table
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrade_table)</small>
+
+<Spoiler title="Show">
 
 #### villager
 
@@ -49573,47 +21731,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.weapon",
-    "table": "trading/weapon_smith_trades.json",
-    "convert_trades_economy": true
-}
-```
+## trail
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrail)</small>
 
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.tool",
-    "table": "trading/tool_smith_trades.json",
-    "convert_trades_economy": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.butcher",
-    "table": "trading/butcher_trades.json",
-    "convert_trades_economy": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.leather",
-    "table": "trading/leather_worker_trades.json",
-    "convert_trades_economy": true
-}
-```
-
-## minecraft:trail
+<Spoiler title="Show">
 
 #### snow_golem
 
@@ -49632,7 +21756,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:transformation
+</Spoiler>
+
+## transformation
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atransformation)</small>
+
+<Spoiler title="Show">
 
 #### hoglin
 
@@ -49750,160 +21880,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### stray
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
+## trust
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrust)</small>
 
-```json
-"minecraft:transformation": {
-    "into": "minecraft:skeleton",
-    "delay": 0.5
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:witch",
-    "delay": 0.5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:villager_v2",
-    "keep_level": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:zombie_villager"
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:witch",
-    "delay": 0.5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:zombie_villager_v2",
-    "keep_level": true
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:drowned<minecraft:as_adult>",
-    "transformation_sound": "convert_to_drowned",
-    "drop_equipment": true,
-    "delay": {
-        "value": 15
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:drowned<minecraft:as_baby>",
-    "transformation_sound": "convert_to_drowned",
-    "drop_equipment": true,
-    "delay": {
-        "value": 15
-    }
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:zombie_villager_v2",
-    "keep_level": false
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:villager",
-    "begin_transform_sound": "remedy",
-    "transformation_sound": "unfect",
-    "delay": {
-        "value": 100,
-        "block_assist_chance": 0.01,
-        "block_radius": 4,
-        "block_chance": 0.3,
-        "block_types": [
-            "minecraft:bed",
-            "minecraft:iron_bars"
-        ]
-    }
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:transformation": {
-    "into": "minecraft:villager_v2",
-    "begin_transform_sound": "remedy",
-    "transformation_sound": "unfect",
-    "keep_level": true,
-    "delay": {
-        "value": 100,
-        "block_assist_chance": 0.01,
-        "block_radius": 4,
-        "block_chance": 0.3,
-        "block_types": [
-            "minecraft:bed",
-            "minecraft:iron_bars"
-        ]
-    }
-}
-```
-
-## minecraft:trust
+<Spoiler title="Show">
 
 #### fox
 
@@ -49915,7 +21898,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:trust": {}
 ```
 
-## minecraft:trusting
+</Spoiler>
+
+## trusting
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrusting)</small>
+
+<Spoiler title="Show">
 
 #### ocelot
 
@@ -49937,7 +21926,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-## minecraft:type_family
+</Spoiler>
+
+## type_family
+
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atype_family)</small>
+
+<Spoiler title="Show">
 
 #### armor_stand
 
@@ -50060,2070 +22055,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### cave_spider
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+## underwater_movement
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aunderwater_movement)</small>
 
-```json
-"minecraft:type_family": {
-    "family": [
-        "cavespider",
-        "monster",
-        "arthropod",
-        "mob"
-    ]
-}
-```
-
-#### chest_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chest_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "minecart",
-        "inanimate"
-    ]
-}
-```
-
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "chicken",
-        "mob"
-    ]
-}
-```
-
-#### command_block_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/command_block_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "minecart",
-        "inanimate"
-    ]
-}
-```
-
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "cow",
-        "mob"
-    ]
-}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "creeper",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "dolphin",
-        "mob"
-    ]
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "donkey",
-        "mob"
-    ]
-}
-```
-
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "drowned",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "guardian_elder",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "enderman",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "endermite",
-        "arthropod",
-        "monster",
-        "lightweight",
-        "mob"
-    ]
-}
-```
-
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "dragon",
-        "mob"
-    ]
-}
-```
-
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "evocation_illager",
-        "monster",
-        "illager",
-        "mob"
-    ]
-}
-```
-
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "cod",
-        "fish"
-    ]
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "fox",
-        "lightweight",
-        "mob"
-    ]
-}
-```
-
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "ghast",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "squid",
-        "mob"
-    ]
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "goat",
-        "animal"
-    ]
-}
-```
-
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "guardian",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "hoglin",
-        "hoglin_baby",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "hoglin",
-        "hoglin_adult",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "hoglin",
-        "hoglin_adult",
-        "hoglin_huntable",
-        "mob"
-    ]
-}
-```
-
-#### hopper_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "minecart",
-        "inanimate"
-    ]
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "horse",
-        "mob"
-    ]
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "husk",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "irongolem",
-        "mob"
-    ]
-}
-```
-
-#### lightning_bolt
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/lightning_bolt.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "lightning"
-    ]
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "llama",
-        "mob"
-    ]
-}
-```
-
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "magmacube",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "minecart",
-        "inanimate"
-    ]
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "mushroomcow",
-        "mob"
-    ]
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "mule",
-        "mob"
-    ]
-}
-```
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "npc",
-        "mob"
-    ]
-}
-```
-
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "ocelot",
-        "mob"
-    ]
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "panda"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "panda",
-        "panda_aggressive",
-        "mob"
-    ]
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "parrot_wild",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "parrot_tame",
-        "mob"
-    ]
-}
-```
-
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "phantom",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### pig
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "pig",
-        "mob"
-    ]
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "piglin",
-        "piglin_hunter",
-        "monster"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "piglin",
-        "monster"
-    ]
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "piglin",
-        "adult_piglin",
-        "piglin_brute",
-        "monster"
-    ]
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "pillager",
-        "monster",
-        "illager",
-        "mob"
-    ]
-}
-```
-
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "player"
-    ]
-}
-```
-
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "polarbear",
-        "mob"
-    ]
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "pufferfish",
-        "fish"
-    ]
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "rabbit",
-        "lightweight",
-        "mob"
-    ]
-}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "monster",
-        "illager",
-        "ravager",
-        "mob"
-    ]
-}
-```
-
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "salmon",
-        "fish"
-    ]
-}
-```
-
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "sheep",
-        "mob"
-    ]
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "shulker",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "silverfish",
-        "monster",
-        "lightweight",
-        "mob",
-        "arthropod"
-    ]
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "skeleton",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "skeletonhorse",
-        "undead",
-        "mob"
-    ]
-}
-```
-
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "slime",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "snowgolem",
-        "mob"
-    ]
-}
-```
-
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "spider",
-        "monster",
-        "mob",
-        "arthropod"
-    ]
-}
-```
-
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "squid",
-        "mob"
-    ]
-}
-```
-
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "stray",
-        "skeleton",
-        "monster",
-        "mob",
-        "undead"
-    ]
-}
-```
-
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "strider",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "strider",
-        "strider_baby",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "strider",
-        "strider_adult",
-        "mob"
-    ]
-}
-```
-
-#### tnt
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "tnt",
-        "inanimate"
-    ]
-}
-```
-
-#### tnt_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "minecart",
-        "inanimate"
-    ]
-}
-```
-
-#### tripod_camera
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tripod_camera.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "tripodcamera",
-        "inanimate",
-        "mob"
-    ]
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "tropicalfish",
-        "fish"
-    ]
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "turtle",
-        "baby_turtle",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "turtle",
-        "mob"
-    ]
-}
-```
-
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "vex",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "farmer",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "fisherman",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "shepherd",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "fletcher",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "librarian",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "cartographer",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "priest",
-        "cleric",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "blacksmith",
-        "armorer",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "blacksmith",
-        "weaponsmith",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "blacksmith",
-        "toolsmith",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "artisan",
-        "butcher",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "artisan",
-        "leatherworker",
-        "mob"
-    ]
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "farmer",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "fisherman",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "shepherd",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "fletcher",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "librarian",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "cartographer",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "priest",
-        "cleric",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "blacksmith",
-        "armorer",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "blacksmith",
-        "weaponsmith",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "blacksmith",
-        "toolsmith",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "artisan",
-        "butcher",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "artisan",
-        "leatherworker",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "artisan",
-        "stone_mason",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "villager",
-        "peasant",
-        "nitwit",
-        "mob"
-    ]
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "vindicator",
-        "monster",
-        "illager",
-        "mob"
-    ]
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "wandering_trader",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "wandering_trader",
-        "wandering_trader_despawning",
-        "mob"
-    ]
-}
-```
-
-#### witch
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "witch",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "wither",
-        "skeleton",
-        "monster",
-        "undead",
-        "mob"
-    ]
-}
-```
-
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "wither",
-        "monster",
-        "undead",
-        "skeleton",
-        "mob"
-    ]
-}
-```
-
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "wolf",
-        "mob"
-    ]
-}
-```
-
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "zoglin",
-        "zoglin_baby",
-        "undead",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "zoglin",
-        "zoglin_adult",
-        "undead",
-        "mob"
-    ]
-}
-```
-
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "zombiehorse",
-        "undead",
-        "mob"
-    ]
-}
-```
-
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "zombie_pigman",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "farmer",
-        "zombie",
-        "zombie_villager",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "fisherman",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "shepherd",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "fletcher",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "librarian",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "cartographer",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "cleric",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "armorer",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "weaponsmith",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "toolsmith",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "butcher",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "leatherworker",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "unskilled",
-        "zombie",
-        "zombie_villager",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "nitwit",
-        "zombie",
-        "zombie_villager",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "farmer",
-        "zombie",
-        "zombie_villager",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "fisherman",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "shepherd",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "fletcher",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "librarian",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "cartographer",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "cleric",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "armorer",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "weaponsmith",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "toolsmith",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "butcher",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "leatherworker",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "stone_mason",
-        "zombie_villager",
-        "zombie",
-        "undead",
-        "monster",
-        "mob"
-    ]
-}
-```
-
-## minecraft:underwater_movement
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -52217,63 +22155,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-#### salmon
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
+## variant
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Avariant)</small>
 
-```json
-"minecraft:underwater_movement": {
-    "value": 0.12
-}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:underwater_movement": {
-    "value": 0.08
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:underwater_movement": {
-    "value": 0.12
-}
-```
-
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:underwater_movement": {
-    "value": 0.06
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:underwater_movement": {
-    "value": 0.12
-}
-```
-
-## minecraft:variant
+<Spoiler title="Show">
 
 #### axolotl
 
@@ -52347,879 +22235,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-<CodeHeader></CodeHeader>
+</Spoiler>
 
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
+## water_movement
 
-<CodeHeader></CodeHeader>
+<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Awater_movement)</small>
 
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 6
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 7
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 8
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 9
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 10
-}
-```
-
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 6
-}
-```
-
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 6
-}
-```
-
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 5
-}
-```
-
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 6
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 8
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 12
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 10
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 13
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 14
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 9
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 7
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 16
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 15
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 11
-}
-```
-
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 6
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 7
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 8
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 9
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 10
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 11
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 12
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 13
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 14
-}
-```
-
-#### vindicator
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-## minecraft:water_movement
+<Spoiler title="Show">
 
 #### panda
 
@@ -53256,3 +22278,5 @@ This documentation is stripped from the vanilla files using an automated script.
     "drag_factor": 0.9
 }
 ```
+
+</Spoiler>

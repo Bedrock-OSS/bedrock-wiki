@@ -14,9 +14,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | Java       | [Still Active](#java) : 5 < [Discontinued](#java-1) : 12            |
 | C#         | [Still Active](#c) : 1 < [Discontinued](#c-2) : 1                   |
 | Go         | [Still Active](#go) : 1 < [Discontinued](#go-1) : 3                 |
-| Python     | [Still Active](#python) : 1 < [Discontinued](#python-1) : 1         |
+| Python     | [Still Active](#python) : 0 < [Discontinued](#python-1) : 1         |
 | TypeScript | [Still Active](#typescript) : 1 < [Discontinued](#typescript-1) : 1 |
-| C++        | Still Active : 1 < [Discontinued](#c-1) : 3                         |
+| C++        | Still Active](#c++-1) : 1 < [Discontinued](#c++-1) : 3
+| C          | Still Active](#c-1) :1 < [Discontinued](#c-1) : 0                         |
 | D          | Still Active : 0 < [Discontinued](#d) : 1                           |
 | JavaScript | Still Active : 1 < [Discontinued](#javascript) : 5                  |
 | Kotlin     | Still Active : 0 < [Discontinued](#kotlin) : 1                      |
@@ -30,6 +31,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 ### C#
 
 -   [MiNET](https://github.com/NiclasOlofsson/MiNET)
+
+### C
+
+-   [Podrum](https://github.com/Podrum/Podrum)
 
 ### Go
 
@@ -63,10 +68,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
 -   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
-
-### Python
-
--   [Podrum](https://github.com/Podrum/Podrum)
 
 ## Discontinued Software
 

@@ -12,6 +12,7 @@ import Card from './Components/Content/Card.vue'
 import CardLink from './Components/Content/CardLink.vue'
 import Homepage from './Components/Pages/Homepage.vue'
 import NotFound from './Components/Pages/NotFound.vue'
+import MolangGraph from './Components/MoLang/Graph.vue'
 
 import Checklist from './Components/Content/Checklist.vue'
 
@@ -35,6 +36,7 @@ const globalComponents: [string, Component][] = [
 	['Checklist', Checklist],
 	['Homepage', Homepage],
 	['NotFound', NotFound],
+	['MolangGraph', MolangGraph],
 ]
 
 const theme: Theme = {

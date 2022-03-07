@@ -76,6 +76,7 @@ show_toc: false
 'RP/sounds/music_definitions.json',
 
 'RP/texts/languages.json',
+'RP/texts/language_names.json',
 'RP/texts/bg_BG.lang',
 'RP/texts/cs_CZ.lang',
 'RP/texts/da_DK.lang',
