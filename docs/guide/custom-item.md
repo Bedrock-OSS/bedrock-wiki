@@ -131,7 +131,7 @@ With that, we have now fully defined our item's behavior. This is what your file
 	}
 }
 ```
-If you open a world with your addon, you're item should be in the correct menu but invisible and have a strange name.
+If you open a world with your addon, your item should be in the correct menu but invisible and have a strange name.
 
 This is because we haven't defined the visuals yet. However, you should see that it does stack as expected. In the next section, we will define the items texture and assign it to our item.
 
