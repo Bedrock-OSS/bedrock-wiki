@@ -13,9 +13,9 @@
 		"node-fetch": "^2.6.1",
 		"sass": "^1.35.2",
 		"vite-plugin-pwa": "^0.8.1",
-		"vite-plugin-windicss": "^1.2.4",
-		"vitepress": "^0.21.6",
-		"windicss": "^3.1.5"
+		"vite-plugin-windicss": "^1.8.3",
+		"vitepress": "^0.22.3",
+		"windicss": "^3.5.1"
 	},
 	"scripts": {
 		"dev": "vitepress dev docs",
