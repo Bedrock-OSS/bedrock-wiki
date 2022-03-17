@@ -122,4 +122,4 @@ function GamemodeChanger() {
 
 Inside ``if (eventData.message === `!gmc` && eventData.sender.hasTag('Admin'))``, it checking if player send the command and has "Admin" tag. If both condition met, then the command will running
 
-For more information about Gametest, you can check on this [wiki](/docs/scripting/game-tests.md) or from the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
+For more information about Gametest, you can check on this [wiki](/scripting/game-tests.md) or from the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
