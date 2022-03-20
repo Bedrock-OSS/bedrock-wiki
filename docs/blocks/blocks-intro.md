@@ -45,7 +45,7 @@ Block behaviors are structured similarly to entities: they contain a description
 
 -   `"identifier"` under `"description"` is already familiar to us.
 -   `"components"`
-    -   `"minecraft:loot"` defines a loot table path for the block to drop. If this is removed, then the block will drop itself. You can learn more about loot tables [here](/loot/loot_tables).
+    -   `"minecraft:loot"` defines a loot table path for the block to drop. If this is removed, then the block will drop itself. You can learn more about loot tables [here](/loot/loot-tables).
     -   `"minecraft:destroy_time"` defines how long the player will need to mine the block until it breaks. Currently, it isn't possible to set different destroy times for different tools.
     -   `"minecraft:explosion_resistance"` defines the chance for an explosion to break the block. Higher the value, lower the chance.
     -   `"minecraft:friction"` defines how much friction the block has. For example, soulsand has a low value for friction, so it slows the players. Ice has a higher friction value, so it has a slippery effect. The friction of classic blocks such as wood or stone is `0.6`.

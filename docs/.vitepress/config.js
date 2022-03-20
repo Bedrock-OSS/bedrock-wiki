@@ -328,7 +328,8 @@ module.exports = (async function () {
 
 			// vitepress config right now
 			algolia: {
-				apiKey: '10cfe09996bc971de563cfdde5ee438e',
+				appId: 'N9ZHAYJQII',
+				apiKey: 'a664f5a5da631810a08e1a48554fe523',
 				indexName: 'wiki-bedrock',
 			},
 

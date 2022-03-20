@@ -31,10 +31,12 @@ export default {
 <style lang="scss" scoped>
 details {
 	@apply rounded m-1 bg-true-gray-100 border-2 border-gray-300;
+	word-break:break-all;
 }
 
 summary {
 	@apply rounded p-4 bg-true-gray-200;
+
 }
 
 .dark details {

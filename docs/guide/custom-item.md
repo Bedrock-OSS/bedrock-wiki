@@ -131,7 +131,7 @@ With that, we have now fully defined our item's behavior. This is what your file
 	}
 }
 ```
-If you open a world with your addon, you're item should be in the correct menu but invisible and have a strange name.
+If you open a world with your addon, your item should be in the correct menu but invisible and have a strange name.
 
 This is because we haven't defined the visuals yet. However, you should see that it does stack as expected. In the next section, we will define the items texture and assign it to our item.
 
@@ -202,7 +202,9 @@ To finally apply our texture to our item, we add the `minecraft:icon` component 
 ```json
 "components":{
 	"minecraft:max_stack_size": 16,
-	"minecraft:icon" : "wiki.ectoplasm"
+	"minecraft:icon" : {
+		"texture": "wiki.ectoplasm"
+	}
 }
 ```
 Now your texture should appear on your item.
@@ -260,8 +262,10 @@ Your folder structure should look like this:
 			"category": "Items"
 		},
 		"components": {
-            "minecraft:max_stack_size": 16,
-			"minecraft:icon" : "wiki.ectoplasm"
+			"minecraft:max_stack_size": 16,
+			"minecraft:icon": {
+				"texture": "wiki.ectoplasm"
+			}
 		}
 	}
 }
@@ -293,9 +297,9 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 
 -   [x] Setup your pack
 -   [x] Create a custom item
--	[x]	-	How to format the behavior and resource files for an item
--	[x]	-	What components are and how to use them
--	[x]	-	How to set an items texture
+-   [x] How to format the behavior and resource files for an item
+-   [x]	What components are and how to use them
+-   [x]	How to set an items texture
 -   [ ] Create a custom entity
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe
 
