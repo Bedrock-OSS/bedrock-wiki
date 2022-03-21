@@ -101,7 +101,7 @@ create_found_definition("Example Folder", "A sound for testing", "Some category 
 
 ### Outputting proper json
 
-Now that we have our process function and test case, let's update the function to print actual JSON. We will be using the `.format` specifier for python strings, as well as multiline strings. These are hugely helpful for generating JSON! Please read up on these concepts if you aren't familiar.
+Now that we have our process function and test case, let's update the function to print actual JSON. We will be using the `.format` specifier for [python strings](https://www.scaler.com/topics/python/strings-in-python/), as well as multiline strings. These are hugely helpful for generating JSON! Please read up on these concepts if you aren't familiar.
 
 ```py
 def create_sound_definition(folder, sound, category):
