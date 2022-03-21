@@ -277,6 +277,8 @@ And only then you can call them in ac:
 }
 ```
 
+:::warning Warning! Not every particle works there. If you have problems, consider trying another particle. For example, use one from blaze ac. :::
+
 ## BP Animation Controllers
 
 Behavior Pack animation controllers use the same general format as RP Animation Controllers, except instead of triggering animations, they allow you to trigger commands. In general, they introduce two new fields:
