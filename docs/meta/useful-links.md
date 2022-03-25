@@ -87,6 +87,15 @@ Important links have a ⭐.
 -   [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/TimerJS)
 -   [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
 -   [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
+-   [build-mc-project GitHub Action](https://github.com/bridge-core/build-mc-project)
+
+## Raytracing Resources
+-  ⭐ [NVIDIA RTX PBR Texture Guide](https://www.nvidia.com/en-us/geforce/guides/minecraft-rtx-texturing-guide/)
+-  ⭐ [Minecraft with Ray Tracing and Advanced Graphics FAQ](https://help.minecraft.net/hc/en-us/articles/4408865164173-Minecraft-with-Ray-Tracing-and-Advanced-Graphics-FAQ)
+- [r/minecraftRTX Getting Started Guide](https://www.reddit.com/r/minecraftRTX/comments/iq3lkl/getting_startedhelpful_guidesresource_packs/)
+- [RenderBender](https://github.com/SpeedyCodes/RenderBender)
+- [RTX Presets](https://discord.com/channels/691547840463241267/919021996271108108)
+- [`.texture_set.json` Adobe Substance 3D Painter plugin](https://github.com/jasonjgardner/painter-plugin-texture-set-json)
 
 ## Addon Marketplaces & Links
 
