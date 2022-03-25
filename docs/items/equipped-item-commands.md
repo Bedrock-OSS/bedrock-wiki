@@ -62,12 +62,12 @@ After this, we're finished in our server animation, and we'll head into the beha
 
 ## Item behavior
 
-To actually check if our item is equipped, we'll have to use a Molang query that checks for item tags.
+To actually check if our item is equipped, we can use a Molang query that checks for item tags.
 
 You can skip this section if:
 
 - You want check for a vanilla item instead, such as an iron armor piece through the `minecraft:iron_tier` tag
-- You want to check for the item in the main or off hand through the use of identifiers
+- You want to check for the item via `query.is_item_name_any`, which checks for an item identifier in any slot
 
 In our item's behavior, we'll have to add a tag to `components`. For example, if we wanted to add the `example:emerald_tier` tag, we would add the `tag:example:emerald_tier` component:
 
@@ -105,9 +105,9 @@ Now with a short name set, we can run our animation.
 
 Add `scripts` to `description`, and set a Molang query to run. To check for the item, we can use one of the following:
 
-- `query.get_equipped_item_name`, to check for a given item identifier in either the main or off hand. This example will check for a `totem_of_retreat` in either hand, regardless of its namespace:
+- `query.is_item_name_any`, to check for a given item identifier in any slot. This example will check for `example:totem_of_retreat` in either hand:
 ```
-query.get_equipped_item_name(0) == 'totem_of_retreat' || query.get_equipped_item_name(1) == 'totem_of_retreat'
+query.is_item_name_any('slot.weapon.mainhand',0,'example:totem_of_retreat') || query.is_item_name_any('slot.weapon.offhand',0,'example:totem_of_retreat')
 ```
 
 - `query.equipped_item_any_tag`, to check for at least one of any given tag in a given slot. This example will allow an emerald- or phantom- tier armor piece to be used:
