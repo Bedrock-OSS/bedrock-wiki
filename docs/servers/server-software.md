@@ -8,25 +8,25 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ## Software by Language
 
-| Language   | Status                                                              |
-| ---------- | ------------------------------------------------------------------- |
-| PHP        | [Still Active](#php) : 5 < [Discontinued](#php-1) : 31              |
-| Java       | [Still Active](#java) : 5 < [Discontinued](#java-1) : 12            |
-| C#         | [Still Active](#c) : 1 < [Discontinued](#c-2) : 1                   |
-| Go         | [Still Active](#go) : 1 < [Discontinued](#go-1) : 3                 |
-| Python     | [Still Active](#python) : 0 < [Discontinued](#python-1) : 1         |
-| TypeScript | [Still Active](#typescript) : 1 < [Discontinued](#typescript-1) : 1 |
-| C++        | Still Active](#c++-1) : 1 < [Discontinued](#c++-1) : 3
-| C          | Still Active](#c-1) :1 < [Discontinued](#c-1) : 0                         |
-| D          | Still Active : 0 < [Discontinued](#d) : 1                           |
-| JavaScript | Still Active : 1 < [Discontinued](#javascript) : 5                  |
-| Kotlin     | Still Active : 0 < [Discontinued](#kotlin) : 1                      |
-| Rust       | Still Active : 1 < [Discontinued](#rust) : 2                        |
+| Language   | Status                                                               |
+| ---------- | -------------------------------------------------------------------- |
+| PHP        | [Still Active](#php)        : 6 < [Discontinued](#php-1)        : 31 |
+| Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 12 |
+| C#         | [Still Active](#c)          : 1 = [Discontinued](#c-4)          : 1  |
+| Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 3  |
+| Python     | Still Active                : 0 < [Discontinued](#python)       : 1  |
+| TypeScript | [Still Active](#typescript) : 1 = [Discontinued](#typescript-1) : 1  |
+| C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
+| C          | [Still Active](#c-2)        : 1 > [Discontinued](#c-1)          : 0  |
+| D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
+| JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
+| Kotlin     | Still Active                : 0 < [Discontinued](#kotlin)       : 1  |
+| Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 
 ## Active Software
 ### C++
 
-- [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
+-   [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
 
 ### C#
 
@@ -38,7 +38,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ### Go
 
--   [DragonFly](https://github.com/df-mc/dragonfly) ([Discord](https://discord.gg/62zMCB4h))
+-   [DragonFly](https://github.com/df-mc/dragonfly)
 
 ### Java
 
