@@ -169,7 +169,7 @@ If you want to learn more about ore features, you can visit [Generating Custom O
 }
 ```
 
-## Summury
+## Summary
 
 After reading this tutorial you should be able to use block conditions on any feature you want. This was a very basic example as this can be used for far more complex creations and can be used with any feature. 
 
