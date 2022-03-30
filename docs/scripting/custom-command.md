@@ -88,6 +88,8 @@ function GamemodeChanger() {
     }
   })
 }
+
+GamemodeChanger()
 ```
 
 This part we create function to listen our commands. `world.events.beforeChat.subscribe` will check our message before it get send.
@@ -120,6 +122,8 @@ function GamemodeChanger() {
     }
   })
 }
+
+GamemodeChanger()
 ```
 
 Inside ``if (eventData.message === `!gmc` && eventData.sender.hasTag('Admin'))``, it checking if player send the command and has "Admin" tag. If both condition met, then the command will running
