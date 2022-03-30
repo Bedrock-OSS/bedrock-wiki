@@ -82,6 +82,7 @@ function GamemodeChanger() {
       var Player = eventData.sender.name
       world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
     } else if (eventData.message === `!gms`) {
+      eventData.cancel = true
       var Player = eventData.sender.name
       world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
     }
@@ -113,6 +114,7 @@ function GamemodeChanger() {
       var Player = eventData.sender.name
       world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
     } else if (eventData.message === `!gms` && eventData.sender.hasTag('Admin')) {
+      eventData.cancel = true
       var Player = eventData.sender.name
       world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
     }
