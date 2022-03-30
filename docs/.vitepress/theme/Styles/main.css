@@ -30,6 +30,7 @@ pre {
 }
 
 main a {
+	word-break: break-word;
 	@apply text-blue-700 hover:text-blue-500 focus:text-blue-500 hover:underline focus:underline;
 }
 
@@ -44,7 +45,7 @@ p + p {
 * + h5,
 * + h6 {
 	margin-top: 1em !important;
-	word-break:break-all;
+	word-break:break-word;
 }
 
 h1 {
