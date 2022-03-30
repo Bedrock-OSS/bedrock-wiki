@@ -4,13 +4,17 @@ title: Molang Queries
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
 
-:::warning
+:::Note
 This page is not an exhaustive list list! It only contains queries we've written extra information for. The full list of queries can be found [here](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries)!
 :::
 
 ## query.get_equiped_item_name
 
-Formatted like: `query.get_equiped_item_name(hand) = 'name'`
+:::Deprecated
+It is recommended to use the new query (`query.is_item_name_any`) if possible as it is more of an updated version of this query. However, this query will still continue to work in the future for backwards compatibility.
+:::
+
+Formatted like: `query.get_equiped_item_name(hand) = 'item_name'`
 
 Takes one optional hand slot as a parameter (0 or 'main_hand' for main hand, 1 or 'off_hand' for off hand), and a second parameter (0=default) if you would like the equipped item or any non-zero number for the currently rendered item, and returns the name of the item in the requested slot (defaulting to the main hand if no parameter is supplied) if there is one, otherwise returns ''.
 
@@ -20,7 +24,34 @@ Where `name` is the item you want to test for. No namespace, and please notice t
 
 Example: `"query.get_equipped_item_name == 'diamond'"`
 
-Can you test for items in the inventory? No. You can't. You can only test for the two slots defined here.
+**Can you test for items in the inventory? Yes! Using the new query `query.is_item_name_any`.**
+
+## query.is_item_name_any
+
+Formatted like: `query.is_item_name_any('slot.weapon.mainhand', 0, 'namespace:item_name')`
+
+Takes the equipment slot name first, followed by the slot index value, and then the list of item names with namespaces after it. 
+
+Possible equipment slot are as follows:
+| Slot Name              | Slot Counts   | Description  |
+| ---------------------- | ------------- | ------------ |
+| `slot.weapon.mainhand` | 0             | Usually any held items are in here |
+| `slot.weapon.offhand`  | 0             | Offhand slot for things like `Shield`, `Totem of Undying` or a `Map` |
+| `slot.armor.head`      | 0             | Head armor piece |
+| `slot.armor.chest`     | 0             | Chestplate armor piece |
+| `slot.armor.legs`      | 0             | Leggings armor piece |
+| `slot.armor.feet`      | 0             | Boots armor piece |
+| `slot.armor`           | 0             | Horse armor |
+| `slot.saddle`          | 0             | Saddle slot |
+| `slot.hotbar`          | 0 to 8        | Player hotbar slots |
+| `slot.inventory`       | 0+ (varies)   | Entities that has an inventory, like the player, minecart with chests, donkey, etc. |
+| `slot.enderchest`      | 0 to 26       | Ender chest inventory for players only |
+
+### Test for items within the player's inventory
+
+Formatted like: `t.val = 0; t.i = 0; loop(27, {t.val = q.is_item_name_any('slot.inventory', t.i, 'namespace:item_name'); t.val ? {return t.val;}; t.i = t.i+1;});`
+
+Replace `namespace:item_name` with any item you wish to check for. This simply loops through all 27 slots of the inventory and returns `1.0` if it has found any slot that has the specified item provided. Note that the hotbar is in a different slot from the main inventory slot so you will have to check that seperately.
 
 ## query.armor_texture_slot
 
@@ -183,11 +214,11 @@ Basically it's tick timer that starts after entity is first ignited and resets e
 
 ## query.scoreboard
 
-Formatted like: `query.scoreboard('score_name') > 0`
+Formatted like: `query.scoreboard('objective_name') > 0`
 
-Returns 1.0 or 0.0 based on score count, molang operator and number.
+Returns 1.0 or 0.0 if the queried value is within the specified range provided. Or based on score count, molang operator and number.
 
-Note that sometimes it might not work because of unknown reasons.
+Note that sometimes it might not work because of unknown reasons. One of which is that this cannot query scoreboard objective names with uppercase letters. In this case, for example, objective `testfoo` will work but **not** `testFoo`.
 
 ## query.structural_integrity
 
