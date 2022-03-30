@@ -80,10 +80,10 @@ function GamemodeChanger() {
     if (eventData.message === `!gmc`) {
       eventData.cancel = true
       var Player = eventData.sender.name
-      world.getDimension('overworld').runCommands(`gamemode creative ${Player}`)
+      world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
     } else if (eventData.message === `!gms`) {
       var Player = eventData.sender.name
-      world.getDimension('overworld').runCommands(`gamemode survival ${Player}`)
+      world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
     }
   })
 }
@@ -111,10 +111,10 @@ function GamemodeChanger() {
     if (eventData.message === `!gmc` && eventData.sender.hasTag('Admin')) {
       eventData.cancel = true
       var Player = eventData.sender.name
-      world.getDimension('overworld').runCommands(`gamemode creative ${Player}`)
+      world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
     } else if (eventData.message === `!gms` && eventData.sender.hasTag('Admin')) {
       var Player = eventData.sender.name
-      world.getDimension('overworld').runCommands(`gamemode survival ${Player}`)
+      world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
     }
   })
 }
