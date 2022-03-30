@@ -416,7 +416,7 @@ Specific properties:
 | `anims` | array | Name of the animations that will apply to the element |
 | `animation_reset_name` | string |  |
 | `variables` | array or object | Have conditions that change the variables values. |
-| `property_bag` | object | Change some special properties. |
+| `property_bag` | object | Create/edit hardcoded variables e.g `#custom`. The values are not automatically shared with child controls unless referenced through `bindings`|
 | `controls` | array | To add children to the element |
 | `bindings` | array | Bind and work with hardcoded values in the element |
 
