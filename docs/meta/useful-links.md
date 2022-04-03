@@ -90,7 +90,7 @@ Important links have a ⭐.
 -   [build-mc-project GitHub Action](https://github.com/bridge-core/build-mc-project)
 
 ## Raytracing Resources
--  ⭐ [NVIDIA RTX PBR Texture Guide](https://www.nvidia.com/en-us/geforce/guides/minecraft-rtx-texturing-guide/)
+-  ⭐ [Ray Tracing and PBR Texturing guide](https://docs.microsoft.com/en-us/minecraft/creator/documents/rtxgettingstarted)
 -  ⭐ [Minecraft with Ray Tracing and Advanced Graphics FAQ](https://help.minecraft.net/hc/en-us/articles/4408865164173-Minecraft-with-Ray-Tracing-and-Advanced-Graphics-FAQ)
 - [r/minecraftRTX Getting Started Guide](https://www.reddit.com/r/minecraftRTX/comments/iq3lkl/getting_startedhelpful_guidesresource_packs/)
 - [RenderBender](https://github.com/SpeedyCodes/RenderBender)
