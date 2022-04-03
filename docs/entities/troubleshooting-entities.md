@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Entities
 category: General
-nav_order: 2
+nav_order: 3
 tags:
     - help
 ---

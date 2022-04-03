@@ -1,6 +1,7 @@
 ---
-title: Intro to Entity Visuals
-nav_order: 0
+title: Intro to Entities RP
+category: General
+nav_order: 2
 tags:
     - guide
     - beginner
