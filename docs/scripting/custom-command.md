@@ -80,13 +80,16 @@ function GamemodeChanger() {
     if (eventData.message === `!gmc`) {
       eventData.cancel = true
       var Player = eventData.sender.name
-      world.getDimension('overworld').runCommands(`gamemode creative ${Player}`)
+      world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
     } else if (eventData.message === `!gms`) {
+      eventData.cancel = true
       var Player = eventData.sender.name
-      world.getDimension('overworld').runCommands(`gamemode survival ${Player}`)
+      world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
     }
   })
 }
+
+GamemodeChanger()
 ```
 
 This part we create function to listen our commands. `world.events.beforeChat.subscribe` will check our message before it get send.
@@ -111,13 +114,16 @@ function GamemodeChanger() {
     if (eventData.message === `!gmc` && eventData.sender.hasTag('Admin')) {
       eventData.cancel = true
       var Player = eventData.sender.name
-      world.getDimension('overworld').runCommands(`gamemode creative ${Player}`)
+      world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
     } else if (eventData.message === `!gms` && eventData.sender.hasTag('Admin')) {
+      eventData.cancel = true
       var Player = eventData.sender.name
-      world.getDimension('overworld').runCommands(`gamemode survival ${Player}`)
+      world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
     }
   })
 }
+
+GamemodeChanger()
 ```
 
 Inside ``if (eventData.message === `!gmc` && eventData.sender.hasTag('Admin'))``, it checking if player send the command and has "Admin" tag. If both condition met, then the command will running
