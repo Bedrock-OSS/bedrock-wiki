@@ -85,7 +85,7 @@
 					title="Entities"
 					imgsrc="assets/images/homepage/spawn_egg_30.png"
 				>
-					<a href="entities/entities-intro">Beginner's Guide</a>:
+					<a href="entities/entity-intro-bp">Beginner's Guide</a>:
 					Learn about the structure of Behavior Pack Entity files.<br /><br />
 					<a href="entities/troubleshooting-entities"
 						>Troubleshooting</a
