@@ -2,7 +2,7 @@
 title: Scripting
 categories:
     - title: Game Tests
-      color: blue2
+      color: blue
     - title: Legacy Scripting
       color: red
 ---
