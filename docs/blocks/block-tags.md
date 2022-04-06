@@ -57,7 +57,8 @@ Vanilla tags can be applied to custom blocks, and some vanilla blocks are tagged
 | mob_spawner | Spawner |
 | lush_plants_replaceable | |
 | azalea_log_replaceable | |
-
+| not_feature_replaceable | chest, bedrock, end portal frame, mob spawner |
+| text_sign | All kinds of signs |
 ## Vanilla Block Tags
 
 Vanilla block tags are tags built specifically for blocks. They can give some vanilla features to the blocks which are tagged with them.
