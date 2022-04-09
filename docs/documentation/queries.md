@@ -4,14 +4,14 @@ title: Molang Queries
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
 
-:::Note
+:::NOTE
 This page is not an exhaustive list list! It only contains queries we've written extra information for. The full list of queries can be found [here](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries)!
 :::
 
 ## query.get_equiped_item_name
 
-:::Deprecated
-It is recommended to use the new query (`query.is_item_name_any`) if possible as it is more of an updated version of this query. However, this query will still continue to work in the future for backwards compatibility.
+:::WARNING
+**DEPRECATED QUERY:** It is recommended to use the new query (`query.is_item_name_any`) if possible as it is more of an updated version of this query. However, this query will still continue to work in the future for backwards compatibility.
 :::
 
 Formatted like: `query.get_equiped_item_name(hand) = 'item_name'`
