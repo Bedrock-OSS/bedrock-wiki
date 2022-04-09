@@ -101,8 +101,8 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 
 ### namespace:shield
 
--   The item icon will be changed to that of the Vanilla Shield.
--   Adds the shield animation.
+-   The item icon will be permanently changed to that of the Vanilla Shield.
+-   Adds the shield animation and behavior.
 
 ---
 

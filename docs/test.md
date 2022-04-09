@@ -8,6 +8,7 @@ hidden: true
 Hey, what are you doing there? How did you get here?
 
 This is the special place thats used by the developers to develop new features and find bugs. Don't worry if this place is really messy, it doesn't need to look good!
+P.s: Go and contribute to wiki instead of reading this all!
 
 ## Panels
 
@@ -74,3 +75,17 @@ comment
 ```json
 {"var": "value"}
 ```
+
+You can make a space using `>`:
+
+> Moved?
+
+    Not actually moved
+
+> Moved?
+
+Not actually moved
+
+    трсуыешцугщшксодлпыоудловралоурлоаоцдлаодлыоадлцодлцодлкодлодлуокд
+
+Tab works like \`\`

@@ -10,15 +10,17 @@ mention:
 
 ## Introduction
 
-A common concept for add-ons is implementing new armor sets with unique effects, just like the turtle shell and netherite armor. While items have a knockback resistance component, they don't have a component for inflicting mob effects, emitting particles, etc. under certain conditions. However, using server animations, Molang, and item tags, this can easily be done!
+A common concept for add-ons is implementing new armor sets with unique effects, just like the turtle shell and netherite armor. While items have a knockback resistance component, they don't have a component for inflicting mob effects, emitting particles, etc. under certain conditions. However, using server animations, MoLang and item tags, this can easily be done!
 
 Keep in mind that this requires modifying the player behavior, which is a common theme for many add-ons; thus, your add-on may not be compatible with others if you wish to do this.
 
+> However some people found a way not to use player.json. They replace it with dummy entity-rider. Try experimenting yourself!
+
 The use of Holiday Creator Features is also required to add item tags and easily equip our item in armor or off-hand slots.
 
-## Server animation
+## Server Animation
 
-The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. We can start by using the following as a template:
+The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. You can read a bit more [here](/entities/timers.html#animation-based-timers). We can start by using the following as a template:
 
 <CodeHeader>BP/animations/player.json</CodeHeader>
 
@@ -60,7 +62,7 @@ We're not limited to `/effect`, of course. If you want to use some other command
 
 After this, we're finished in our server animation, and we'll head into the behavior file for our item for a quick addition.
 
-## Item behavior
+## Item Behavior
 
 To actually check if our item is equipped, we can use a Molang query that checks for item tags.
 
@@ -74,14 +76,12 @@ In our item's behavior, we'll have to add a tag to `components`. For example, if
 <CodeHeader>BP/items/my_item.json#components</CodeHeader>
 
 ```json
-{
-    "tag:example:emerald_tier": {}
-}
+"tag:example:emerald_tier": {}
 ```
 
 That's it, now your item has whatever tag you assigned it! You can add more tags if you want, but this is all we need for what we're doing.
 
-## Player behavior
+## Player Behavior
 
 Finally, we need to modify the player's behavior to run the server animation. We'll be working entirely within `description`.
 
@@ -153,38 +153,34 @@ With the server animation, player behavior, and item tag all set up, your equipp
 
 ## Additions
 
-### Multiple required items
+### Multiple Required Items
 
 If you want to run a command when multiple of the armor set's pieces are equipped, we can expand our Molang from before:
 
 <CodeHeader>BP/entities/player.json#scripts</CodeHeader>
 
 ```json
-{
-    "animate": [
-        {
-            "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.feet','example:emerald_tier')"
-        }
-    ]
-}
+"animate": [
+    {
+        "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.feet','example:emerald_tier')"
+    }
+]
 ```
 
 This example will check for emerald-tier armor in all four armor slots, and run the animation if they're all equipped.
 
-### Further conditions
+### Further Conditions
 
 The turtle shell doesn't always inflict Water Breathing, but instead only for 10 seconds when a player first enters water. If we want our emerald armor to only run our animation when we have lower health, we can add another query to our Molang:
 
 <CodeHeader>BP/entities/player.json#scripts</CodeHeader>
 
 ```json
-{
-    "animate": [
-        {
-            "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.health <= 5"
-        }
-    ]
-}
+"animate": [
+    {
+        "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.health <= 5"
+    }
+]
 ```
 
 This example will run the animation with 2.5 hearts or less remaining, allowing players to make a quick getaway when they're in danger.
@@ -205,7 +201,7 @@ We can also apply this to requiring multiple armor pieces, with even longer Mola
 
 You can view a list of documented Molang queries at [bedrock.dev](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries).
 
-### Multiple items with effects
+### Multiple Items with Effects
 
 If you want to add more items with unique effects, fret not; this is easily done. You can either create a new server animation file, or add on to the file from before, like such:
 

@@ -5,62 +5,21 @@ tags:
 	- experimental
 ---
 
-Making a custom weapon is pretty simple since the 1.16.100 beta changes, as these allow you to simply define an item entry for it in your `BP/items` folder and provide a corresponding texture in the `RP/textures/items` folder with a bit of config and you have a fully working weapon that you can customize however you see fit.
+Making a custom weapon is pretty simple since the 1.16.100 changes, as these allow you to simply define an item entry for it in your `BP/items` folder and provide a corresponding texture in the `RP/textures/items` folder with a bit of config and you have a fully working weapon that you can customize however you see fit.
 
-:::tip
-Before starting this you should have already read over the [Beginners Guide > Items](/guide/custom-item) page and be familiar with the general layout of an item json file and how to create a custom item, if you are not sure how to do this go give that a quick read before attempting this.
-:::
-
-## Setting the manifest min version
-
-As this is using beta functionality we need to make sure we set in our manifest files in the BP and RP that we require anything `1.16.100` or higher like so.
-
-<CodeHeader>BP/manifest.json</CodeHeader>
-
-```json
-{
-	"format_version": 2,
-	"header": {
-		"name": "My Custom Sword Behaviours",
-		"description": "Adds a custom sword to the game",
-		"uuid": "872849a3-408a-4919-9256-2a6f5a6537f0 ",
-		"version": [0, 1, 0],
-		// We make sure we target the min version with the beta item changes
-		"min_engine_version": [1, 16, 100]
-	},
-	"modules": [
-		{
-			"type": "data",
-			"uuid": "da3c8171-23ac-4da9-8cf7-ad45d6806c4e",
-			"version": [0, 1, 0]
-		}
-	],
-	// We are also depending on the RP as we need textures within there
-	"dependencies": [
-		{
-			"uuid": "8653ca00-05fb-426b-b579-e56f1ec21102",
-			"version": [0, 1, 0]
-		}
-	]
-}
-```
-
-This at least lets us make sure the version of minecraft can understand the format changes for custom weapons.
-
-## Creating a custom sword item json
+## Custom Sword Item
 
 Like with the other item tutorials we will start by making a simple custom sword like so.
 
-<CodeHeader>BP/items/my_sword.json"</CodeHeader>
+<CodeHeader>BP/items/my_sword.json</CodeHeader>
 
 ```json
 {
-	// This version is important as we need to be using beta version
 	"format_version": "1.16.100",
-	// We add in an additional "category" field with "equipment"
 	"minecraft:item": {
 		"description": {
 			"identifier": "wiki:my_sword",
+			// Notice we give it the equipment category
 			"category": "equipment"
 		},
 		"components": {
@@ -123,7 +82,9 @@ Here is an example texture if you do not have your own to use, just `Save As` an
 
 ![](/assets/images/tutorials/custom-weapons/my_sword.png)
 
-## Using the custom sword
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-weapons/my_sword.png">Download texture here</BButton>
+
+## In-game
 
 So now we have a BP containing our items json data and an RP containing the texture, we can make a new level, and make sure we include our BP/RP, however we **also need to enable the Holiday Creator Features** under experimental gameplay.
 
@@ -137,11 +98,11 @@ Then if you put it in your hands you should see it in the game like this.
 
 Now that wasn't too hard was it! and you can make as many custom swords as you want now, however there is far more fun stuff you can do from here if you feel up for it.
 
-## Add tool-like functionality
+## Tool-like Functionality
 
 You can also mix and match other components like `minecraft:digger` to allow you to go through web or bamboo quicker like this:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/items/my_sword.json#components</CodeHeader>
 
 ```json
 "minecraft:digger": {
@@ -163,14 +124,12 @@ You can also mix and match other components like `minecraft:digger` to allow you
 }
 ```
 
-Also add `wiki:my_sword.on_dig_damage` event:
+Also add an event:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/items/my_sword.json</CodeHeader>
 
 ```json
-// This is a separate section to "components"
 "events": {
-    // This is the event we named above
     "wiki:my_sword.on_dig_damage": {
 		"damage":{
 			//This part of event will make sword take damage when it was used to dig block
@@ -186,7 +145,7 @@ Also add `wiki:my_sword.on_dig_damage` event:
 You can also give it a default mining speed by adding `"minecraft:mining_speed": 1.5`, which would give it a generic mining speed letting you use your weapon like a pickaxe.
 (It is currently broken)
 
-## Adding the damage to the icon popup
+## Damage Tooltip
 
 The above was a bare bones approach, but you probably want to be able to show the damage a sword does when the user hovers over it.
 
@@ -196,13 +155,13 @@ So if you add the above component to your item json file when you mouse over you
 
 > You may be thinking "why didnt you just add this above?" and the answer is because we will build off this component to add more cool stuff in the next section, so I wanted to keep it separate.
 
-## Giving the sword a unique ability & durability
+## Unique ability & durability
 
 At this point you could call it a day, but what if you wanted to make a sword that could inflict status effects, or teleport an enemy when they attacked you?
 
 Assuming you wanted to do something like this we will need to build off the `minecraft:weapon` component and raise an event when the weapon hits an entity.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/items/my_sword.json#components</CodeHeader>
 
 ```json
 "minecraft:weapon": {
@@ -216,21 +175,21 @@ Once we add that then every time you hurt an entity it will raise the event `wik
 
 > I could just as easily call the event **"space-noodle"** and it would work fine, but you want it to be easily searchable and self explaining, so keep that in mind
 
-Now that we have an event being raised we can do what we want with it. In this example I am going to do 3 things, I will teleport the player 25% of the time, I will output a text message letting the player know that the swords done something and damaging the sword.
+Now that we have an event being raised we can do what we want with it. In this example I am going to do 3 things:
+1. Teleport the player with 25% chance.
+2. Output a message letting the player know that something happened.
+3. Damage the sword.
 
 So if you go back into your my_sword.json and after your `components` section add a new section like so.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/items/my_sword.json</CodeHeader>
 
 ```json
-// This is a separate section to "components"
 "events": {
-    // This is the event we named above
     "wiki:my_sword.hurt_entity": {
 		"sequence":[
 			//Sequence is needed to run two or more parts of event
 			{
-				// We will randomize the output
 				"randomize": [
 					{
 						// Weights are relative, so this has 1
@@ -240,10 +199,10 @@ So if you go back into your my_sword.json and after your `components` section ad
 							"target": "holder",
 							"max_range": [8,8,8]
 						},
-						// Then output on the console "Your Sword Glows" in green text
+						// Then tell some green text
 						"run_command":{
 							"command":[
-								"tellraw @s{\"rawtext\":[{\"text\":\"§aYour Sword Glows\"}]}"
+								"tellraw @s{\"rawtext\":[{\"text\":\"§aYour Sword Glows§r\"}]}"
 							]
 						}
 					},
@@ -254,11 +213,10 @@ So if you go back into your my_sword.json and after your `components` section ad
 				]
 			},
 			{
+				// I think you haven't forgot what this do
 				"damage":{
-					//This part of event will make sword take damage when it was used to hurt an entity
 					"type":"durability",
 					"target":"self",
-					//By using "self" you define item as target to take damage
 					"amount":1
 				}
 			}

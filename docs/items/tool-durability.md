@@ -14,7 +14,7 @@ mention:
 Now you need to define when will the item get durability damage and also an event that does it.
 What will be discussed on this page:
 
--	event that updates durability
+-	Event that updates durability
 -	`on_hurt_entity` durability update
 -	`on_dig` durability update
 -	`repair_amount` value
