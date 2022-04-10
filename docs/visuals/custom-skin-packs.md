@@ -74,7 +74,7 @@ is used to define the skin texture files. Most of the options are, however, hard
 In this example, I defined two skins. it is possible to define any number.
 
 -   `localization_name` is going to be used in the .lang file. Think of it as the skins identifier.
--   `texture` is the name of the image file, located int eh main skin pack folder.
+-   `texture` is the name of the image file, located in the main skin pack folder.
 -   `type` is only accessible to marketplace partners, so leave it as `free`
 -   `serialize_name` is for marketplace.
 -   `localization_name` is the packs identifier, to be called in `.lang`.
