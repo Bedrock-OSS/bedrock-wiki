@@ -44,7 +44,7 @@ _Note: On Android, the com.mojang folder is located in `Phone>games>com.mojang`_
 
 is used to define the skin texture files. Most of the options are, however, hard-coded/unchangeable. The skin `.png` or other image files are located in the same folder as `manifest.json` and `skins.json`, which is `skin_packs/TutorialSkinpack` in this scenario. My example skin files are named `Niika.png` and `Senn_skin.png` ~~guess where I took the names from~~.
 
-<CodeHeader>skin_packs//TutorialSkinPack/skins.json</CodeHeader>
+<CodeHeader>skin_packs/TutorialSkinPack/skins.json</CodeHeader>
 
 ```json
 {
@@ -58,7 +58,7 @@ is used to define the skin texture files. Most of the options are, however, hard
 		},
 		{
 			"localization_name": "SENN",
-			"geometry": "geometry.humanoid.custom",
+			"geometry": "geometry.humanoid.customSlim",
 			"texture": "Senn_skin.png",
 			"type": "free"
 		}
@@ -68,7 +68,7 @@ is used to define the skin texture files. Most of the options are, however, hard
 }
 ```
 
--   The `geometry` object must be the same as on the example code in every object. Mojang revoked the ability to add custom geometries via skin packs, because the feature was abused.
+-   The `geometry` object must be the same as these two: `geometry.humanoid.custom` which is for normal steve skins geometry and `geometry.humanoid.customSlim` which is for slim alex skins geometry. Mojang revoked the ability to add custom geometries via skin packs, because the feature was abused.
 -   `skins` array is where the object for every skin of yours are in. The skins will be displayed in the same order in minecraft as they are defined here.
 
 In this example, I defined two skins. it is possible to define any number.
