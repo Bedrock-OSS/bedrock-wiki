@@ -13,7 +13,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | PHP        | [Still Active](#php)        : 6 < [Discontinued](#php-1)        : 31 |
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 12 |
 | C#         | [Still Active](#c)          : 1 = [Discontinued](#c-4)          : 1  |
-| Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 3  |
+| Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 3  |
 | Python     | Still Active                : 0 < [Discontinued](#python)       : 1  |
 | TypeScript | [Still Active](#typescript) : 1 = [Discontinued](#typescript-1) : 1  |
 | C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
@@ -39,6 +39,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 ### Go
 
 -   [DragonFly](https://github.com/df-mc/dragonfly)
+-   [Magic-Alpaca](https://github.com/PocketMiner92/Magic-Alpaca)
 
 ### Java
 
