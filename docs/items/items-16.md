@@ -59,7 +59,7 @@ Events in items are used most exactly as they are in entities.
 
 Items do, however, have a slightly different set of event functions that they use.
 
-### `swing`
+### swing
 
 Plays the item swinging animation. (As if to hit.)
 
@@ -73,7 +73,7 @@ Plays the item swinging animation. (As if to hit.)
 }
 ```
 
-### `shoot`
+### shoot
 
 Shoots a projectile when triggered.
 
@@ -99,7 +99,7 @@ Shoots a projectile when triggered.
 }
 ```
 
-### `damage`
+### damage
 
 Applies a damage to a specified target.
 
@@ -125,7 +125,7 @@ Applies a damage to a specified target.
 }
 ```
 
-### `decrement_stack`
+### decrement_stack
 
 Decrements the stack by one.
 
@@ -145,7 +145,7 @@ Decrements the stack by one.
 }
 ```
 
-### `add_mob_effect`
+### add_mob_effect
 
 Adds a mob effect when triggered.
 
@@ -168,7 +168,7 @@ Adds a mob effect when triggered.
 }
 ```
 
-### `remove_mob_effect`
+### remove_mob_effect
 
 Removes a mob effect when triggered.
 
@@ -185,7 +185,7 @@ Removes a mob effect when triggered.
 }
 ```
 
-### `transform_item`
+### transform_item
 
 Transforms the item into the item specified.
 
@@ -218,7 +218,7 @@ Teleports the target to a random location in the specified range.
 }
 ```
 
-### `sequence`
+### sequence
 
 Used to sequence multiple event functions. Works just as in entities.
 
@@ -246,7 +246,7 @@ Used to sequence multiple event functions. Works just as in entities.
 }
 ```
 
-### `randomize`
+### randomize
 
 Used to randomize event functions. Works just as in entities.
 
