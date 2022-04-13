@@ -96,7 +96,7 @@ def create_sound_definition(folder, sound, category):
     print("Sound: " + sound)
     print("Category: " + category)
 
-create_found_definition("Example Folder", "A sound for testing", "Some category :)")
+create_sound_definition("Example Folder", "A sound for testing", "Some category :)")
 ```
 
 ### Outputting proper json
@@ -114,7 +114,7 @@ def create_sound_definition(folder, sound, category):
         }
     """.format(folder, sound, category))
 
-create_found_definition("Example Folder", "A sound for testing", "Some category :)")
+create_sound_definition("Example Folder", "A sound for testing", "Some category :)")
 ```
 
 Instead of printing nonsense, we are printing a JSON object with values where we want them!
@@ -134,13 +134,13 @@ def create_sound_definitions(path):
 
 This code will generate a list of paths. If we pass in the sounds folder containing these files:
 
--   `sounds/dragon/roar.mp4`
--   `sounds/dragon/wing_flap.mp4`
+-   `sounds/dragon/roar.ogg`
+-   `sounds/dragon/wing_flap.ogg`
 
 The result would be:
 
--   `dragon/roar.mp4`
--   `dragon/wing_flap.mp4`
+-   `dragon/roar.ogg`
+-   `dragon/wing_flap.ogg`
 
 ### Structuring our folder
 
@@ -157,7 +157,7 @@ For example:
 We can use string processing to gather all the information we need out of `create_sound_definitions` strings.
 
 ```py
-test = "ui/dragon/roar.mp4"
+test = "ui/dragon/roar.ogg"
 split = test.split("/")
 category = split[0]
 folder = split[1]
