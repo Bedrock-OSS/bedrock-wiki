@@ -3,7 +3,13 @@ title: Spawn Rules
 category: General
 ---
 
-Spawn rules define how vanilla Entities and custom entities spawn. In the next chapter we'll be creating a custom entity, so make sure to prepare a custom spawn rule for it! Check out the vanilla example files for more information. ;)
+Spawn rules define how entities will spawn into the world. You should use spawn rules when you want your custom entity to spawn naturally, just like vanilla entities. The different components allow you to define when, where, and how the entity will spawn in.
+
+In general, it's possible to spawn your custom entity in a very similar way as vanilla entities. e.g, in a herd like a cow, only at night like a vanilla zombie, or only underwater like a fish.
+
+## Example Spawn Rule
+
+Here is an example spawn rule, with an explanation of the fields.
 
 <CodeHeader>BP/spawn_rules/zombie.json</CodeHeader>
 
@@ -65,6 +71,40 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 -   "`minecraft:permute_type`" with "`weight`"s and "`entity_type`"s sets a chance for the spawned entity to mutate into a different one.
 -   "`minecraft:biome_filter`" tests for certain biome tags. Look up the filter syntax and list of biome tags in the documentation or search examples in the vanilla Example pack.
 
+## All Known Components
+
+Here is a list of all known components. We will be adding documentation as we better understand how they are used.
+
+```
+minecraft:weight
+minecraft:density_limit
+minecraft:spawns_on_block_filter
+minecraft:spawns_on_block_prevented_filter
+minecraft:spawns_above_block_filter
+minecraft:herd
+minecraft:permute_type
+minecraft:brightness_filter
+minecraft:height_filter
+minecraft:spawns_on_surface
+minecraft:spawns_underground
+minecraft:spawns_underwater
+minecraft:disallow_spawns_in_bubble
+minecraft:spawns_lava
+minecraft:biome_filter
+minecraft:difficulty_filter
+minecraft:distance_filter
+minecraft:is_experimental
+minecraft:world_age_filter
+minecraft:delay_filter
+minecraft:mob_event_filter
+minecraft:is_persistent
+minecraft:player_in_village_filter
+```
+
+## Documentation
+
+### minecraft:herd
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -79,7 +119,9 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 -   "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity_born`" (as baby). Can be used in any event.
     `"event_skip_count": 2`, for example, means that the first two entities will not be spawned with this event, but all the next ones will.
 
-<CodeHeader>BP/spawn_rules/axolotl.json</CodeHeader>
+### minecraft:spawns_above_block_filter
+
+<CodeHeader></CodeHeader>
     
 ```json
         "minecraft:spawns_above_block_filter": {
@@ -90,7 +132,9 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 
 -   "`minecraft:spawns_above_block_filter`" will detect blocks within a set distance vertically, and if the condition is met, the entity will spawn successfully.
 
-<CodeHeader>BP/spawn_rules/skeleton.json</CodeHeader>
+### minecraft:spawns_on_block_prevented_filter
+
+<CodeHeader></CodeHeader>
 
 ```json
         "minecraft:spawns_on_block_prevented_filter": [
