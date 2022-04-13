@@ -10,11 +10,13 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 :::warning
 This document covers experimental features, for 1.16.100+ format version items. If you would like to learn about stable items, [you can do so here](/items/items-intro).
+
+You can learn more about [experimental toggles here](https://docs.microsoft.com/en-us/minecraft/creator/documents/experimentalfeaturestoggle).
 :::
 
-## Item Events
+# Item Events
 
-### Using Events
+## Using Events
 
 Events in items are used most exactly as they are in entities.
 
@@ -53,11 +55,11 @@ Events in items are used most exactly as they are in entities.
 }
 ```
 
-### Event Functions
+## Event Functions
 
 Items do, however, have a slightly different set of event functions that they use.
 
-> `swing`
+### `swing`
 
 Plays the item swinging animation. (As if to hit.)
 
@@ -71,7 +73,7 @@ Plays the item swinging animation. (As if to hit.)
 }
 ```
 
-> `shoot`
+### `shoot`
 
 Shoots a projectile when triggered.
 
@@ -97,7 +99,7 @@ Shoots a projectile when triggered.
 }
 ```
 
-> `damage`
+### `damage`
 
 Applies a damage to a specified target.
 
@@ -123,7 +125,7 @@ Applies a damage to a specified target.
 }
 ```
 
-> `decrement_stack`
+### `decrement_stack`
 
 Decrements the stack by one.
 
@@ -143,7 +145,7 @@ Decrements the stack by one.
 }
 ```
 
-> `add_mob_effect`
+### `add_mob_effect`
 
 Adds a mob effect when triggered.
 
@@ -166,7 +168,7 @@ Adds a mob effect when triggered.
 }
 ```
 
-> `remove_mob_effect`
+### `remove_mob_effect`
 
 Removes a mob effect when triggered.
 
@@ -183,7 +185,7 @@ Removes a mob effect when triggered.
 }
 ```
 
-> `transform_item`
+### `transform_item`
 
 Transforms the item into the item specified.
 
@@ -199,7 +201,7 @@ Transforms the item into the item specified.
 }
 ```
 
-> `teleport`
+### `teleport`
 
 Teleports the target to a random location in the specified range.
 
@@ -216,7 +218,7 @@ Teleports the target to a random location in the specified range.
 }
 ```
 
-> `sequence`
+### `sequence`
 
 Used to sequence multiple event functions. Works just as in entities.
 
@@ -244,7 +246,7 @@ Used to sequence multiple event functions. Works just as in entities.
 }
 ```
 
-> `randomize`
+### `randomize`
 
 Used to randomize event functions. Works just as in entities.
 
@@ -274,7 +276,7 @@ Used to randomize event functions. Works just as in entities.
 }
 ```
 
-> `run_command`
+### `run_command`
 
 Used to execute commands. Works just as in entities.
 
@@ -295,7 +297,7 @@ Used to execute commands. Works just as in entities.
 
 List of all new item components, with usage examples
 
--   minecraft:ignores_permission
+### minecraft:ignores_permission
 
 <CodeHeader></CodeHeader>
 
@@ -305,7 +307,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:mining_speed
+### minecraft:mining_speed
 
 <CodeHeader></CodeHeader>
 
@@ -315,7 +317,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:damage
+### minecraft:damage
 
 <CodeHeader></CodeHeader>
 
@@ -325,7 +327,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:can_destroy_in_creative
+### minecraft:can_destroy_in_creative
 
 <CodeHeader></CodeHeader>
 
@@ -335,7 +337,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:dye_powder
+### minecraft:dye_powder
 
 <CodeHeader></CodeHeader>
 
@@ -347,7 +349,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:mirrored_art
+### minecraft:mirrored_art
 
 <CodeHeader></CodeHeader>
 
@@ -357,7 +359,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:explodable
+### minecraft:explodable
 
 <CodeHeader></CodeHeader>
 
@@ -367,7 +369,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:should_despawn
+### minecraft:should_despawn
 
 <CodeHeader></CodeHeader>
 
@@ -377,7 +379,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:liquid_clipped
+### minecraft:liquid_clipped
 
 <CodeHeader></CodeHeader>
 
@@ -387,7 +389,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:allow_off_hand
+### minecraft:allow_off_hand
 
 <CodeHeader></CodeHeader>
 
@@ -397,7 +399,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:projectile
+### minecraft:projectile
 
 <CodeHeader></CodeHeader>
 
@@ -410,7 +412,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:block_placer
+### minecraft:block_placer
 
 <CodeHeader></CodeHeader>
 
@@ -423,7 +425,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:entity_placer
+### minecraft:entity_placer
 
 <CodeHeader></CodeHeader>
 
@@ -437,7 +439,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:on_use_on
+### minecraft:on_use_on
 
 <CodeHeader></CodeHeader>
 
@@ -452,7 +454,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:on_use
+### minecraft:on_use
 
 <CodeHeader></CodeHeader>
 
@@ -467,7 +469,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:knockback_resistance
+### minecraft:knockback_resistance
 
 <CodeHeader></CodeHeader>
 
@@ -479,7 +481,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:enchantable
+### minecraft:enchantable
 
 <CodeHeader></CodeHeader>
 
@@ -534,7 +536,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:durability
+### minecraft:durability
 
 <CodeHeader></CodeHeader>
 
@@ -550,7 +552,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:armor
+### minecraft:armor
 
 <CodeHeader></CodeHeader>
 
@@ -562,7 +564,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:wearable
+### minecraft:wearable
 
 <CodeHeader></CodeHeader>
 
@@ -574,7 +576,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:weapon
+### minecraft:weapon
 
 <CodeHeader></CodeHeader>
 
@@ -589,7 +591,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:record
+### minecraft:record
 
 <CodeHeader></CodeHeader>
 
@@ -620,7 +622,7 @@ List of all new item components, with usage examples
 | wait      |
 | ward      |
 
--   minecraft:repairable
+### minecraft:repairable
 
 <CodeHeader></CodeHeader>
 
@@ -641,7 +643,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:cooldown
+### minecraft:cooldown
 
 <CodeHeader></CodeHeader>
 
@@ -654,7 +656,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:use_duration
+### minecraft:use_duration
 
 <CodeHeader></CodeHeader>
 
@@ -664,7 +666,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:digger
+### minecraft:digger
 
 <CodeHeader></CodeHeader>
 
@@ -687,7 +689,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:fertilizer
+### minecraft:fertilizer
 
 <CodeHeader></CodeHeader>
 
@@ -699,7 +701,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:fuel
+### minecraft:fuel
 
 <CodeHeader></CodeHeader>
 
@@ -711,7 +713,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:throwable
+### minecraft:throwable
 
 <CodeHeader></CodeHeader>
 
@@ -725,7 +727,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:icon
+### minecraft:icon
 
 <CodeHeader></CodeHeader>
 
@@ -738,7 +740,7 @@ List of all new item components, with usage examples
 }
 ```
 
--   minecraft:creative_category
+### minecraft:creative_category
 
 <CodeHeader></CodeHeader>
 
@@ -752,7 +754,7 @@ List of all new item components, with usage examples
 
 _Full list of categories can be found [here](/documentation/creative-categories)_
 
--   minecraft:food
+### minecraft:food
 
     _New Syntax_
 
@@ -773,7 +775,7 @@ _Full list of categories can be found [here](/documentation/creative-categories)
 }
 ```
 
--   minecraft:use_animation
+### minecraft:use_animation
 
 <CodeHeader></CodeHeader>
 
@@ -783,7 +785,7 @@ _Full list of categories can be found [here](/documentation/creative-categories)
 }
 ```
 
--   minecraft:render_offsets
+### minecraft:render_offsets
 
     _New Syntax_
 
