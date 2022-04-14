@@ -1,5 +1,6 @@
 ---
 title: Creating addons with JQ
+hidden: true
 ---
 
 ## Introduction

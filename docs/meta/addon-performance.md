@@ -20,10 +20,10 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ### Features
 
--   Biomes generally cause less lag than feature generation
--   Hundreds of iterations per chunk of a multi-block feature have been achieved at a low-performance cost
--   Thousands of iterations per chunk of multi-block features negatively impact gameplay
--   Hundreds of thousands of iterations per chunk of a single-block feature have been achieved at a low-performance cost
+-   Biomes generally cause less lag than feature generation.
+-   Hundreds of iterations per chunk of a multi-block feature have been achieved at a low-performance cost.
+-   Thousands of iterations per chunk of multi-block features negatively impact gameplay.
+-   Hundreds of thousands of iterations per chunk of a single-block feature have been achieved at a low-performance cost.
 -   Thousands of instances of features *per chunk* comes at little cost.
 -   Tens of thousands of feature instances *per chunk* yields a noticeable impact on chunk loading.
 -   Hundreds of thousands of instances of features *per chunk* slows chunk loading to an unbearable crawl.
@@ -33,7 +33,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Materials
 
 -   The minimum needed material type with regards to rendering should always be utilized
-    -   alpha_blend performance is worse than alpha_test, which is worse than opaque
+> `alpha_blend` performance is worse than `alpha_test`, which is worse than `opaque`
 
 ### Quantity and Type
 
@@ -48,9 +48,9 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Quantity and Type
 
 -   Minimize the number of commands run per tick
-    -   /effect and /gamemode run every tick are avoidable and have a significant performance impact
--   Large clones and fills during runtime should be avoided
-    -   Breaking these more extensive operations into multiple commands distributed over multiple ticks will avoid lag spikes
+> `/effect` and `/gamemode` run every tick are avoidable and have a significant performance impact
+-   Large clones, fills and structure loads during runtime should be avoided
+> Breaking these more extensive operations into multiple commands distributed over multiple ticks will avoid lag spikes, consider using structure loading animations
 
 ### Selectors
 
@@ -71,7 +71,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 -   Pathfinding on flying mobs has a significant performance cost
 -   Flying mobs in general encounter performance problems
-    -   Faking flying mobs via animation should be considered if possible
+> Faking flying mobs via animation should be considered if possible
 
 ### Dummy Entities
 
@@ -95,22 +95,24 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Quantity
 
 -   Loaded entities at any given time should be minimized
-    -   Below 30 is optimal
+> Below 30 is optimal
 
 ## Lighting
 
 ### Map Considerations
 
--   Hollow areas will cause lag due to lighting calculations
-    -   Avoid this by filling in unused enclosed areas
+-   Hollow areas will cause lag due to lighting calculations even if you don't see them
+> Avoid this by filling in unused enclosed areas
 -   Keeping the map set to day or night will avoid lighting recalculation
 
 ### Sources
 
 -   Bedrock lighting is calculated dynamically, meaning different light sources have different performance costs
-    -   Light blocks are the most performant because they lack particles, rendering, and particular state logic
-    -   Torches are a minor performance issue because they emit particles, render, and have particular state logic dependent on what block they connect to
-    -   Custom light blocks with minimal components are a reasonable compromise between performance and aesthetics
+> Light blocks are the most performant because they lack particles, rendering, and particular state logic
+
+> Torches are a minor performance issue because they emit particles, render, and have particular state logic dependent on what block they connect to
+
+> Custom light blocks with minimal components are a reasonable compromise between performance and aesthetics
 
 #### Comparison Table
 
@@ -148,8 +150,9 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Quantity
 
 -   No more than 3000 textures should be used
-    -   This is due to limits imposed by Render Dragon
-    -   Render Dragon has a 4096 texture quantity limit, and there are 800 vanilla textures as of 1.16
+> This is due to limits imposed by Render Dragon
+
+> Render Dragon has a 4096 texture quantity limit, and there are 800 vanilla textures as of 1.16
 
 ### Resolution
 
@@ -169,7 +172,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 -   Sound compression is exceptionally beneficial to pack size
 -   This is especially noticeable on older and low power devices, such as the Switch
 -   The FMod simple API utilized by Bedrock decompresses all sounds into WAV before loading into RAM, meaning no CPU performance improvement in this respect
-    -   If audio is streamed, this does not occur
+> If audio is streamed, this does not occur
 
 ### Streaming
 
@@ -191,5 +194,5 @@ This guide is a non-exhaustive list of specific performance considerations separ
 -   Total chunks are of more significant concern than ticking areas
 -   Dynamic areas should be avoided unless necessary
 -   Best practice is to minimizing the ticking area to one chunk if possible
-    -   All always-on Redstone should fit in this ticking chunk
+> All always-on Redstone should fit in this ticking chunk
 -   Unload ticking areas when they are no longer needed, testing via /testforblock

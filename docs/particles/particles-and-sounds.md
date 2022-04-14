@@ -5,6 +5,10 @@ tags:
     - outdated
 ---
 
+:::danger
+Some information from this page was copied [here](/visuals/animation-effects)
+:::
+
 ## Particles in Animation
 
 Minecraft Particles can be used in entity animations. For example, the phantom has an animation which emits the minecraft:phantom_trail particle constantly. Let's try to add a particle to our entity's attack animation.

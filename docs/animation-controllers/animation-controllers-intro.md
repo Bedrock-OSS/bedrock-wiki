@@ -277,7 +277,8 @@ And only then you can call them in ac:
 }
 ```
 
-:::warning Warning! Not every particle works there. If you have problems, consider trying another particle. For example, use one from blaze ac. :::
+:::warning Warning! Not every particle works there. If you have problems, consider trying another particle. For example, use one from blaze ac.
+:::
 
 ## BP Animation Controllers
 

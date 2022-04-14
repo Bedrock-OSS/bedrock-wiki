@@ -34,6 +34,7 @@ Important links have a ⭐.
 -   ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
 -   ⭐ [bridge. Addon Editor](https://bridge-core.github.io/)
 -   ⭐ [VSCode Editor](https://code.visualstudio.com/)
+-   ⭐ [Regolith](https://github.com/Bedrock-OSS/regolith)
 -   [CoreCoder [Code Editor]](https://hanprog.itch.io/core-coder)
 -   [Feature Rule Generator v2 (paid version)](https://machine-builder.itch.io/frg-v2)
 -   [Feature Rule Generator v2 (free version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
@@ -84,10 +85,7 @@ Important links have a ⭐.
 
 -   [GameTests API Wrapper](https://github.com/notbeer/Framework-Wrapper)
 -   [GameTests Plugin-API-Starter-Pack](https://github.com/MajestikButter/Plugin-API-Starter-Pack)
--   [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/TimerJS)
--   [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
--   [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
--   [build-mc-project GitHub Action](https://github.com/bridge-core/build-mc-project)
+-   [Useful for Block Tags](https://mcpedl.com/debug-stick-addon-1/)
 
 ## Raytracing Resources
 -  ⭐ [Ray Tracing and PBR Texturing guide](https://docs.microsoft.com/en-us/minecraft/creator/documents/rtxgettingstarted)

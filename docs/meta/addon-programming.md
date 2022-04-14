@@ -13,6 +13,7 @@ You should consider automating a task if one (or more!) of the following conditi
 -   The desired output is very long
 -   The task is repetitive and can be abstracted
 -   The _input_ often changes, requiring you to edit a single file very often
+-   Input depends on language settings (taking values from .lang)
 
 ## How to get started with programming?
 
@@ -31,8 +32,9 @@ We will be automating the creation of `sound_definitions.json`. We chose this to
 Another good automation topic could be:
 
 -   `texture_list.json`
+-   `contents.json`
 -   creating simple RP/BP item pairs based on textures in textures/items
--   creating the `canPlaceOn` JSON for blocks that need to be placed on lots of surfaces
+-   creating the `canPlaceOn` JSON for blocks that need to be placed on lots of surfaces same for custom tools
 
 ### Inspect the Format
 
