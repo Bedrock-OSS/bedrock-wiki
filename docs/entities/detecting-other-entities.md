@@ -45,7 +45,7 @@ This example you'll be following will make pigs say "oink oink" upon detecting p
 			"animation_length": 0.05,
 			"loop": true,
 			"timeline": {
-				"300": [
+				"0": [
 					"v.x = 0.0; for_each(t.player, query.get_nearby_entities_except_self(16, 'minecraft:player'), { v.x = v.x + 1; }); return v.x > 0.0;"
 				]
 			}
