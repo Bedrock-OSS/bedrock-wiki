@@ -18,7 +18,7 @@ import{_ as o,c as r,a,w as t,b as p,d as n,e,r as i,o as l}from"./404.md.912ffb
 			<span class="token property">&quot;animation_length&quot;</span><span class="token operator">:</span> <span class="token number">0.05</span><span class="token punctuation">,</span>
 			<span class="token property">&quot;loop&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
 			<span class="token property">&quot;timeline&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-				<span class="token property">&quot;300&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+				<span class="token property">&quot;0&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 					<span class="token string">&quot;v.x = 0.0; for_each(t.player, query.get_nearby_entities_except_self(16, &#39;minecraft:player&#39;), { v.x = v.x + 1; }); return v.x &gt; 0.0;&quot;</span>
 				<span class="token punctuation">]</span>
 			<span class="token punctuation">}</span>
