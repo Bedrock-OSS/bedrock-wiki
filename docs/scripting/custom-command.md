@@ -78,13 +78,14 @@ First, we gonna add simple commands, such as `!gmc` to change our Gamemode to Cr
 function GamemodeChanger() {
    world.events.beforeChat.subscribe((eventData) => {
        var Player = eventData.sender.name
-       eventData.cancel = true
        switch (eventData.message) {
            case '!gmc': 
                world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
+	       eventData.cancel = true
            break;
            case '!gms':
                world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
+	       eventData.cancel = true
            break;
        }
    })
