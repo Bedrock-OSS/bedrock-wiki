@@ -1092,6 +1092,11 @@ Some of them only work in specific screens.
 -   `button.skin_unhovered`
 -   `button.leave`
 -   `button.leave_on_device`
+-   `button.text_edit_box_selected`
+-   `button.text_edit_box_deselected`
+-   `button.text_edit_box_hovered`
+-   `button.text_edit_box_clear`
+-   `button.help`
 -   ...
 
 ## Hardcoded Collection Names
