@@ -308,23 +308,27 @@ As you can see not much has changed, we just update the categories/slots to the 
 	"minecraft:attachable": {
 		"description": {
 			"identifier": "wiki:my_helm",
+			// These 2 are default and are required
 			"materials": {
 				"default": "armor",
 				"enchanted": "armor_enchanted"
 			},
 			"textures": {
-				"enchanted": "textures/misc/enchanted_item_glint",
-				// Notice how we just use the main texture
-				"default": "textures/models/armor/custom_main"
+				// This is our CUSTOM armor texture we need to make next
+				"default": "textures/models/armor/custom_main",
+				// This texture doesn't actually exist in our RP
+				// but it will blow up without it so leave it in
+				"enchanted": "textures/misc/enchanted_item_glint"
 			},
-			// Set it to helmet
+			// We tell it what geometry to use for the helmet
 			"geometry": {
-				"default": "geometry.humanoid.armor.helmet"
+				"default": "geometry.player.armor.helmet"
 			},
-			// Hide helm layer
+			// We tell it to hide the helmet layer as we will be showing our armor on top
 			"scripts": {
-				"parent_setup": "variable.helmet_layer_visible = 0.0;"
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
 			},
+			// We tell it what controller to use (default armor one)
 			"render_controllers": ["controller.render.armor"]
 		}
 	}
@@ -402,23 +406,27 @@ The custom boots texture if you need it.
 	"minecraft:attachable": {
 		"description": {
 			"identifier": "wiki:my_boots",
+			// These 2 are default and are required
 			"materials": {
 				"default": "armor",
 				"enchanted": "armor_enchanted"
 			},
 			"textures": {
-				"enchanted": "textures/misc/enchanted_item_glint",
-				// Again main texture, only leggings are different
-				"default": "textures/models/armor/custom_main"
+				// This is our CUSTOM armor texture we need to make next
+				"default": "textures/models/armor/custom_main",
+				// This texture doesn't actually exist in our RP
+				// but it will blow up without it so leave it in
+				"enchanted": "textures/misc/enchanted_item_glint"
 			},
-			// Boots geom
+			// We tell it what geometry to use for the boots
 			"geometry": {
-				"default": "geometry.humanoid.armor.boots"
+				"default": "geometry.player.armor.helmet"
 			},
-			// Hide boots layer
+			// We tell it to hide the boots layer as we will be showing our armor on top
 			"scripts": {
-				"parent_setup": "variable.boot_layer_visible = 0.0;"
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
 			},
+			// We tell it what controller to use (default armor one)
 			"render_controllers": ["controller.render.armor"]
 		}
 	}
