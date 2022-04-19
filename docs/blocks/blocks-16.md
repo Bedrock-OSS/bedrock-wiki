@@ -364,16 +364,6 @@ Block components to trigger block events:
 
 List of all new block components, with usage examples.
 
-### minecraft:breakonpush
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:breakonpush": true
-}
-```
-
 ### minecraft:breathability
 
 <CodeHeader></CodeHeader>
@@ -425,16 +415,6 @@ List of all new block components, with usage examples.
 }
 ```
 
-### minecraft:immovable
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:immovable": true
-}
-```
-
 ### minecraft:material_instances
 
 <CodeHeader></CodeHeader>
@@ -452,16 +432,6 @@ List of all new block components, with usage examples.
 			"ambient_occlusion": true // Defaults to true; refers to whether or not faces have smooth lighting (Undocumented)
 		}
 	}
-}
-```
-
-### minecraft:onlypistonpush
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:onlypistonpush": true
 }
 ```
 
@@ -540,16 +510,6 @@ _This also accepts tags, such as:_
 ```
 
 See [this](/blocks/block-tags) page for a list of vanilla tags and relavent blocks.
-
-### minecraft:preventsjumping
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:preventsjumping": true
-}
-```
 
 ### minecraft:random_ticking
 
