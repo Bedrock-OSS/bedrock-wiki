@@ -801,7 +801,7 @@ If you keep your shortnames consitent, you can actually reference the same rende
 
 Now to tell your entity to use this render controller, we add it to our entity file like so:
 
-<CodeHeader>RP/render_controllers/entity/ghost.rc.json#description</CodeHeader>
+<CodeHeader>RP/entity/ghost.ce.json#description</CodeHeader>
 
 ```json
 "render_controllers": ["controller.render.ghost"]
