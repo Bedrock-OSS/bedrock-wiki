@@ -6,151 +6,204 @@ mention:
   - MedicalJewel105
 ---
 
-Selectors are used in commands to target where you want to execute a command at. The primary target selectors are:
--   `@e` - Target all entities 
--   `@s` - Target yourself, or the origin who the command is executed from
+Target selectors are used in commands to target who you want to execute a command on without explicitly setting a target, such as a player's name. A target selector is comprised of a selector variable, and optionally a list of selector arguments.
+
+## Selector Variables
+
+The selector variable defines the broad list of entities to select. There are six selector variables to choose from:
+-   `@a` - Target all players
 -   `@p` - Target the nearest player
--   `@a` - Target every player
 -   `@r` - Target a random player
+-   `@e` - Target all entities 
+-   `@s` - Target the executor
+-   `@initiator` - Target the player interacting with an NPC
 
-Examples are as follows
-```
-#kill every player
-kill @a 
-#kill every loaded entity
-kill @e 
-#kill a random player
-kill @r
-#kill the executor of the command
-kill @s
-#kill the nearest player
-kill @p
-```
+## Selector Arguments
 
-## Secondary Selectors
+Selector arguments can narrow down a list of target candidates to those who meet certain conditions. In order to use selector arguments, you must first have a selector variable. To start with selector arguments you must add square brackets `[]` to the end of the chosen target selector like this: `kill @e[]`. Multiple selector arguments can be used by separating them with commas.
 
-Now we will take a look at the secondary selectors so you can be specific in regard to what you want to execute the command on. In order to use any of the following secondary selectors, you must first have a primary selector. To start with secondary selectors you must add brackets `[]` to the end of the chosen selector like this `kill @e[]`. There are many secondary selectors you can use so let's start.
+### Type
+Limits the selection of targets by their identifier. Negating the argument selects entities without that identifier. This argument cannot be repeated unless negated, since a given entity can only have one identifier. This argument can be used with the selector `@r` to select entities randomly.
 
--  `kill @e[c=<count>]` Where `<count>` is the number you want. The selector `c` stands for count. It allows you to choose how many entities to select. For example, the command `/kill @e[c=4]` will kill four entities. The selector `c` will target in a specific order depending on how it is used. If the selector used is `@r` then `c` will target randomly E.g. `/kill @r[c=4]` will kill four random players. if `@r` is not used then c will kill from nearest to farthest unless the number given is negative. `kill @e[c=4]` will kill four entities nearest to farthest `kill @e[c=-4]` will still kill four entities but from farthest to nearest.
-- `kill @e[name=<name>]` The selector `name` selects only entities with the name put in the place of `<name>`. If `=!` is used in place of `=` the selector will target entities without the name. 
-- `kill @e[l=<level>]` The selector `l` will target any players with an exp level equal to or greater than the value put in place of `<level>`.
-- `kill @e[lm=<levelm>]` The selector `lm` will target any players with an exp level equal to or lower than the value put in place of `<levelm>`.
-- `kill @e[m=<gamemode>]` The selector `m` will target any players who are in the mode put in place of `<gamemode>`. Possible values are: `survival`, `s`, and `0`, `creative`, `c`, and `1`, `adventure`, `a`, and `2`.  If =! is used in place of = the selector will target players who are not in the selected mode. 
-- `kill @e[tag=<tag>]` The selector `tag` will target any entities with the tag put in place of `<tag>`. If `=!` is used in place of `=` the selector will target entities without the tag. 
-- `kill @e[r=<radius>]` The selector `r` will target any players whose distance in blocks from the location of the command execution is equal to or less than the value put in place of `<radius>`.
-- `kill @e[rm=<radiusm>]` The selector `rm` will target any players whose distance in blocks from the location of the command execution is equal to or greater than the value put in place of `<radiusm>`. 
-- `kill @e[x=<x>,y=<y>,z=<z>]` These selectors must all be present together or not be there for a command to work. They do nothing by themselves but they modify other secondary selectors. They can modify `dx`, `dy`, `dz`, `rm`, `r`, and `c`. All of those previous selectors use a central starting location which can be set using `x`, `y`, and `z`. Otherwise, the starting location will be set to the position of the executor of the command. Tildes ~ can be used in place of numbers for `x`, `y`, and `z`.
-- `kill @e[dx=<dx>,dy=<dy>,dz=<dz>]` These selectors must all be present together or not be there for a command to work. These selectors check if a player is in a volume. Starting at the location of the executor of the command `dx` will add the value put in `<dx>` to the x position to make a point. when `dx`, `dy`, and `dz` are used together they identify a point relative to the executor of the command. All entities within a box drawn between the executor of the command and the point made are selected.
-- `kill @e[type=<type>]` This selector chooses the type of entity to be selected. The names of any entity can be replaced for `<type>` to choose the selection. If `type` is used with `@r` instead of  `@r` selecting players `@r` will select the entity put in the place of `<type>`. This allows you to randomly select an entity of a specific type.  If `=!` is used in place of `=` this selector will target entities other than the type. ‌
-- `kill @e[family=<family>]` This selector will select entities that are in the family put in place of `<family>`. This could be many things, `creeper` for all creepers, `monster` for any monster, `undead` for any undead mob, `mob` for any well... mob. If `=!` is used in place of `=` the selector will target entities not in the family. 
-- `kill @e[scores={<scoreboard>=<score>}]` This selector can read the score that a entity has from a scoreboard. In the place of `<scoreboard>` goes the name of the scoreboard you wish to test. In the place of `<score>` can go many things. If you want to check for a score of 10 just replace `<score>` with a 10. To invert a score selector use `=!` instead of `=`. You have to use `..` for checking between, above, and below a value(s). Think of `..` as the words "between" and "continue" it helps a lot. 
-   - `10..` is any number above or equal to ten.
-   - `..10` is any number below or equal to ten.
-   - `5..10` is any number between five and ten.
-- `kill @e[rx=<xrotation>]` The selector `rx` will target any entities with a rotation around the x axis equal to or less than the value put in place of `<xrotation>`. -90 would be straight up, 0 is straight horizontal, and 90 is down.
-- `kill @e[rxm=<xrotationm>]` The selector `rxm` will target any entities a rotation around the x axis rotation equal to or greater than the value put in place of `<xrotationm>`. -90 would be straight up, 0 is straight horizontal, and 90 is down.
-- `kill @e[ry=<yrotation>]` The selector `ry` will target any entities with a rotation around the y axis equal to or less than the value put in place of `<yrotation>`. -180 is north, -90 is east, 0 is south, 90 is west, 180 is north.
-- `kill @e[rym=<yrotationm>]` The selector `rym` will target any entities with a rotation around the y axis equal to or greater than the value put in place of `<yrotationm>`. -180 is north, -90 is east, 0 is south, 90 is west, 180 is north.
+-   `type=<identifier>`—Include only entities with the given identifier.
+-   `type=!<identifier>`—Exclude any entities with the given identifier.
 
-## Tags
+Examples:
 
-Tags are a way to discriminate towards a player, or group of players and or mobs. Tags can be useful in alot of ways like making a ranks system, and or making a server with a anticheat. Tags can be used in a number of ways, for example, `give @e[tag=steak] cooked_beef` will give everyone with the tag steak, one steak. There are a number of ways you can use tags but we will be looking at the most used options.
+Affect all pigs with levitation:
+-   `/effect @e[type=pig] levitation`
 
-- `kill @e[tag=<tag>]` This is how you would kill all the players with your given tag. Its useful if you are making a minigame, and a player were to lose, you could kill them then set there gamemode into something else with a command block.
-- `kill @e[tag=!<tag>]` This will kill all of the entities that **DONT** have the tag that you specified.
-- `tag @a <add | remove | list> <tag>` This is how you would give, or remove a tag, useing `add` or `remove`. If you want to see what tags a player has then you can do `tag <selector> list`
+Kill all entities that are not arrows and snowballs:
+-   `/kill @e[type=!arrow,type=!snowball]`
 
-## Has Item
+### Count
+Limits the number of selected entities, following selector sorting rules.
 
-:::warning Warning!
-This argument was added in Minecraft Beta 1.18.20.21 and it is not in stable version yet.
-:::
+The selectors `@a`, `@p`, and `@e` sort by increasing distance, while `@r` sorts randomly. For the variables `@p` and `@r`, this argument defaults to 1. Negating this argument reverses the sorting order; random sorting cannot be negated.
 
-`hasitem` filter allows to execute commands on entities that have a special item.
+-   `c=<count>`—Select up to `<count>` entities.
 
-`/give @a[hasitem=[{item=sand,data=-1,quantity=16..64,location=slot.hotbar,slot=!4}]] minecraft:apple`
+Examples:
 
-This command will give apple to every player who has 16-64 sand within the hotbar but not in the fifth slot.
+Clear stone from the closest five players:
+-   `/clear @a[c=5] stone`
 
-### Item 
-`item=<namespace:name>`
+Damage the furthest two skeletons:
+-   `/damage @e[type=skeleton,c=-2] 2`
 
-Defines name of item or block, like in `/give` command.
+### Position
+Changes the position a selector starts its search at. It also modifies where the distance and volume arguments are positioned. Leaving any undefined defaults to the command's current position.
 
-### Data
-`data=<int>`
+[Relative coordinates](/commands/relative-coordinates.html#relative-coordinates) can be used to define a relative offset from the command's position.
 
--   Doesn't support range.
--   Doesn't support invert value.
+-   `x=<value>`, `y=<value>`, and `z=<value>`—Defines a position for the target selector.
 
-Data value of the item/block. If you want to use any data value, use `-1`. Default value is `-1`.  
-**Note: There is a bug in the data where it doesn't detect Data Value correctly [MCPE-151920]**
+Examples:
 
-### Location
-`location=<slot>`
+Teleport the closest player to (140, 64, -200) ten blocks up:
+-   `/teleport @p[x=140, y=64, z=-200] ~ ~10 ~`
 
-Defines slot of entity where to detect, like in `/replaceitem` command. This component isn't required.
+### Distance
+Limits the selection of targets by their spherical distance from the selector. This selects entities by their feet.
 
-**Location Values:**
+-   `rm=<value>` and `r=<value>`—Selects entities between the minimum and maximum number of blocks away, inclusive and respectively.
 
--   `slot.armor`
--   `slot.armor.chest`
--   `slot.armor.feet`
--   `slot.armor.head`
--   `slot.armor.legs`
--   `slot.chest`
--   `slot.enderchest`
--   `slot.equippable`
--   `slot.hotbar`
--   `slot.inventory`
--   `slot.saddle`
--   `slot.weapon.mainhand`
--   `slot.weapon.offhand`
+Examples:
 
-### Slot
-`slot=<value>`
+Kill all chickens between two and six blocks away:
+-   `/kill @e[type=chicken, rm=2, r=6]`
 
-Defines slot's id, like in `/replaceitem` command
+Enchant the held item with Sharpness for all players within one block of (0, 100, 0):
+-   `/enchant @a[x=0, y=100, z=0, r=1] sharpness`
 
--   Supports range integer (`0..10`).
--   Supports invert value (`!0`).
+### Volume
+Limits the selection of targets to those inside of a cuboid volume aligned to the block grid. There are three arguments, each determining the size of the box along their respective axes. If at least one argument is defined, any remaining arguments left undefined are assumed to be 0. This selects entities by their feet.
 
-You must specify the location to use slot:  
-❎ `[hasitem={item=sand, slot=0..8}]`  
-✅ `[hasitem={item=sand, location=slot.hotbar, slot=0..8}]`
+The general formula for calculating the volume between two positions can be viewed as: `dx = x2 - x1; dy = y2 - y1; dz = z2 - z1`.
 
-### Quantity
-`quantity=<value>`
+-   `dx=<value>`, `dy=<value>`, and `dz=<value>`—Selects entities inside the given bounding box.
 
-Defines how much item entity must have.
+Examples:
 
--   Supports range integer (`0..10`).
--   Supports invert value (`!0`).
+List all entities within a 12x30x2 box:
+-   `/say @e[dx=12, dz=30, dy=2]`
 
-### Additional Information
+Add the "lobby" tag to all players between (-400, 0, -350) and (-150, 256, 50): 
+-   `/tag @a[x=-400, y=0, z=-350, dx=250, dy=256, dz=400] add lobby`
 
-`hasitem` can:
+### Scores
+Limits the selection of targets by their score value. This argument is represented as an object, with key-value pairs for a scoreboard objective and a value. The value can represent a range of numbers, using the range syntax. The value of a score can be negated to test if the entity does not have a score value within that range.
 
--   Accept two identical arguments: `[hasitem={item=sand,item=iron_sword}]`
--   Accept array/multiple item: `[hasitem=[{item=sand},{item=iron_sword},{...}]]`
+-   `scores={<objective>=<value>}`—Selects entities whose score under the given objective matches the given value.
 
+The range syntax works as follows:
+-   `N..` is any number greater than or equal to N.
+-   `..N` is any number less than or equal to N.
+-   `N..M` is any number between N and M, inclusive.
 
-### Examples
-Checks for players who have netherite sword in inventory:
--   `testfor @a[hasitem={item=netherite_sword}]`
+Examples:
 
-Clears 2 apples if player has more than 4 apples:
--   `clear @a[hasitem={item=apple,quantity=4..}] apple 2`
+Set the "points" score for all players with a "points" score of ten to 0:
+-   `/scoreboard players set @p[scores={points=10}] points 0`
 
-Checks for players who have 2 sticks and 2 diamonds:
--   `testfor @a[hasitem=[{item=diamond,quantity=2},{item=stick,quantity=2}]]`
--   `testfor @a[hasitem={item=diamond,item=stick,quantity=2}]` (**More simple method**)
+Add the "start" tag to armor stands with both a "started" score of one, and a "timer" score of 20 or less:
+-   `/tag @e[type=armor_stand, scores={started=1, timer=..20}] add start`
 
+### Name
+Limits the selection of targets by name. Negating the argument selects entities whose name does not match.
 
-## Combining Selectors
+-   `name=<name>`—Include only entities with the given name.
+-   `name=!<name>`—Exclude any entities with the given name.
 
-Secondary selectors can be used together by utilizing commas. Make sure to split each selector into its own part. As an example `@e[type=<type>]` and `@e[name=<name>]` can be combined like this: `@e[type=<type>,name=<name>]`. However, with the `score` selector you must format checks to another scoreboard like this, `@e[scores={<scoreboard>=<score>,<scoreboard2>=<score2>}]`.
+Examples:
 
-## Other Useful Information
+List all zombies named Shadow:
+-   `/say @e[type=zombie, name=Shadow]`
 
-There is one more primary selector on bedrock edition which is a very niche case, `@initiator`. When an NPC is set up to have a button run a command, `@initiator` can be used to target the player which clicked the button. Otherwise, `@p` might likely be used and the command might execute on a different player who is nearer to the NPC than the player who clicked the button.
+Give one level to players both not named Steve and not named Alex:
+-   `/xp 1L @a[name=!Steve, name=!Alex]`
+
+### Tag
+Limits the selection of targets by their tags. This argument can be repeated to test for multiple tags, and all filters must pass for an entity to be selected. Negating this argument selects entities without that tag.
+
+-   `tag=<tag>`—Include only entities with the given tag.
+-   `tag=!<tag>`—Exclude any entities with the given tag.
+
+Examples:
+
+Kill all mobs with the tag "marked", and without the tag "exempt":
+-   `/kill @e[tag=marked, tag=!exempt]`
+
+### Family
+Limits the selection of targets by type family. This argument can be repeated to test for multiple families, and all filters must pass for an entity to be selected. Negating this argument selects entities whose type family does not match.
+
+-   `family=<family>`—Include only entities with the given type family.
+-   `family=!<family>`—Exclude any entities with the given type family.
+
+Examples:
+
+Affect all entities in the "monster" family with Regeneration:
+-   `/effect @e[family=monster] regeneration`
+
+### Rotation
+Limits the selection of targets by their rotation. There are two types of rotation: x-rotation, which is vertical rotation around the x-axis; and y-rotation, which is horizontal rotation around the y-axis. X-rotation ranges between -90 and 90 (180° total), going from looking up to down; and y-rotation ranges between -180 and 180 (360° total), starting and ending at North, wrapping around clockwise.
+
+-   `rxm=<value>` and `rx=<value>`—Selects entities whose x-rotation is between the minimum and maximum values, inclusive and respectively.
+-   `rym=<value>` and `ry=<value>`—Selects entities whose y-rotation is between the minimum and maximum values, inclusive and respectively.
+
+Examples:
+
+Affect all players looking at or above the horizon with Blindness for one second:
+-   `/effect @a[rx=0] blindness 1` (0 or less)
+
+Damage all players facing generally south:
+-   `/damage @a[rym=-45, ry=45] 1`
+
+### Level
+Limits the selection of targets by experience levels. Only players can have EXP, so this filters out non-player targets.
+
+-   `lm=<amount>` and `l=<amount>`—Selects players whose EXP levels are between the minimum and maximum values specified, inclusive and respectively.
+
+Examples:
+
+Give all players who have between three and eight levels a diamond:
+-   `/give @a[lm=3, l=8] diamond`
+
+### Game mode
+Limits the selection of targets by game mode. Only players can use game mode, so this filters out non-player targets. Negating the argument selects targets whose game mode does not match.
+
+-   `m=<gamemode>`—Selects players by their game mode.
+
+Possible values include:
+*   `0`, `s`, or `survival` for Survival mode
+*   `1`, `c`, or `creative` for Creative mode
+*   `2`, `a`, or `adventure` for Adventure mode
+*   `d` or `default` for the default game mode
+
+Examples:
+
+List all players in Creative mode:
+-   `/say @a[m=creative]`
+
+Set the game mode to Creative mode for players both not in Survival mode, and not in Adventure mode:
+-   `/gamemode creative @a[m=!survival, m=!adventure]`
+
+### Inventory
+Limits the selection of targets by what items they have in their inventory. This argument is represented as an object, or an array of objects, with up to one each of the following parameters:
+
+-   `item=<string>`—The identifier of the item to test for, and the only required argument. This can accept custom identifiers too.
+-   `quantity=<int>`—The amount of the item to test for. Accepts a [range](/commands/selectors.html#scores) for a value. This argument can also be negated.
+-   `data=<int>`—The data value of the item to test for. Defaults to -1. **Currently not functional:** [MCPE-151920](https://bugs.mojang.com/browse/MCPE-151920)
+-   `location=<string>`—The slot the item should be located in. Accepts the same arguments as the slotType argument in the `/replaceitem` command.
+-   `slot=<int>`—The index of the slot used in the "location" argument, and can only be used with "location". Accepts a range for a value. This argument can be negated.
+
+Examples:
+
+Checks for players who have a netherite sword in their inventory:
+-   `/testfor @a[hasitem={item=netherite_sword}]`
+
+Clears 2 apples for players that have four or more apples:
+-   `/clear @a[hasitem={item=apple,quantity=4..}] apple 2`
+
+Checks for players who have two sticks and two diamonds:
+-   `/testfor @a[hasitem=[{item=diamond,quantity=2},{item=stick,quantity=2}]]`
