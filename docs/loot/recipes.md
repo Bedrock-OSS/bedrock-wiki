@@ -108,7 +108,7 @@ Crafting:
 - `stonecutter`
 - `smithing_table`
 
-Note that if you want to make a smithing recipe, you will need to use `<namespace>:netherite_ingot` for the second slot, though using a different identifier will not work.
+Note that if you want to make a smithing recipe, you will need to use `<namespace>:netherite_ingot` for the second slot, though using a different identifier will not work. **This no longer works after 1.18.30**.
 
 Cooking and Smelting:
 - `furnace`
