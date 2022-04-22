@@ -150,6 +150,11 @@ Return 1.0 or 0.0 based on whether the entity is enchanted.
 
 _Currently, can be only used in materials._
 
+## query.is_eating
+
+This query tracks when certain entities are 'eating'. It's not used for the player. To trigger, use one of the following components:
+ - `minecraft:behavior.eat_carried_item`
+ - `minecraft:behavior.snacking`
 
 ## query.is_ghost
 
