@@ -2,13 +2,21 @@
 title: Subpacks
 ---
 
-## What are subpacks?
+## What are Subpacks?
 
-Subpacks are what cause the gear icon to appear on packs. They are intended for texture resolutions to load on different memory capacities, but can also be used to create file variations in behavior and resource packs which can then be chosen by clicking the gear icon and adjusting the slider.
+Subpacks are a tool which allow you to select between different addon 'configurations'.
 
-## Creating subpacks
+They are intended for texture resolutions to load on different memory capacities, but can also be used to create file variations in behavior and resource packs. These variations can be selected by clicking the gear icon and adjusting the slider.
 
--   To start adding a subpack you need to create a `subpacks` folder inside the root of your BP or RP.
+## How do Subpacks work?
+
+Files placed in you subpack folder will override files placed in your main addon folder, if the subpack is selected. For example, if your addon contains both `rp/textures/entities/ghost.json` and `rp/subpacks/pack1/textures/ghost.json`, the second image file will replace the first, if `subpack1` is selected. 
+
+For more information about how files override each other, please see our page on [overriding vanilla assets.](concepts/overwriting-assets)!
+
+## Creating Subpacks
+
+-   To start adding a subpack you need to create a `subpacks` folder inside the root of your `BP` or `RP`.
 -   Then inside the `subpacks` folder add a folder for each subpack you want to have
     e.g.
 
@@ -70,15 +78,8 @@ Example:
 }
 ```
 
--   `name`
+-   `name`: Defines the name that will show when selecting the subpacks.
 
-Defines the name that will show when selecting the subpacks.
+-   `memory_tier`: Defines how many GB of RAM device needs to have to enable this subpack. 1 memory tier = `0.25 GB`.
 
--   `memory_tier`
-
-Defines what amount GB of RAM device needs to have to enable this subpack.
-1 memory tier = 0.25 GB.
-
--   `folder_name`
-
-This corresponds to the name of the folder to be used in this subpack, for example in the examples above this would be `subpack_1` or `subpack_2`. These names can be anything you want, they don't need to follow the `subpack_n` format.
+-   `folder_name`: This corresponds to the name of the folder to be used in this subpack, for example in the examples above this would be `subpack_1` or `subpack_2`. These names can be anything you want, they don't need to follow the `subpack_n` format.
