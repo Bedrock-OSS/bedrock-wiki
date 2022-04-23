@@ -83,7 +83,7 @@ Shoots a projectile when triggered.
 
     -   `"launch_power"` - The launch power to be multiplied over the base power of the projectile entity. Accepts MoLang values.
 
-    -   `"projectile"` - Takes an identifier of an entity - any entity, not just ones projectile - to use as an entity to 'shoot'.
+    -   `"projectile"` - Takes an identifier of an entity - any entity, not just projectile ones - to use as an entity to 'shoot'.
 
 <CodeHeader></CodeHeader>
 
