@@ -12,7 +12,7 @@ They are intended for texture resolutions to load on different memory capacities
 
 Files placed in you subpack folder will override files placed in your main addon folder, if the subpack is selected. For example, if your addon contains both `rp/textures/entities/ghost.json` and `rp/subpacks/pack1/textures/ghost.json`, the second image file will replace the first, if `subpack1` is selected. 
 
-For more information about how files override each other, please see our page on [overriding vanilla assets.](concepts/overwriting-assets)!
+For more information about how files override each other, please see our page on [overriding vanilla assets.](/concepts/overwriting-assets)
 
 ## Creating Subpacks
 
