@@ -752,7 +752,6 @@ For us to now use these resources, we need to define them with a shortname. This
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"description": {
 			"identifier": "wiki:ghost",
 			"materials": {
 				"default": "entity_alphatest"
@@ -816,7 +815,6 @@ With that our entity file should look like this.
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"description": {
 			"identifier": "wiki:ghost",
 			"materials": {
 				"default": "entity_alphatest"
