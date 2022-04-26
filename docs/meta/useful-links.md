@@ -49,8 +49,8 @@ Important links have a ⭐.
 ## Bedrock Tools Websites
 
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
+-   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-windmill/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
--   [Loot Table Generator](https://hopper.bedrock.dev/)
 -   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
 -   [Manifest Generator](https://bedrock-manifest.web.app/)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
