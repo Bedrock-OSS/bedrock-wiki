@@ -46,12 +46,21 @@ In the behavior pack manifest, you need to add a `javascript` module to set an `
 	"dependencies": [
 		{
 			// Minecraft native module - needed to use the "mojang-minecraft" module
+			"description": "mojang-minecraft",
 			"uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
 			"version": [0, 1, 0]
 		},
 		{
 			// GameTest native module - needed to use the "mojang-gametest" module
+			"description": "mojang-gametest",
 			"uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
+			"version": [0, 1, 0]
+		},
+		{
+			// Minecraft UI native module - needed to use the "mojang-minecraft-ui" module
+			// You must be using Minecraft versions above Beta 1.18.20.21 or Release 1.18.30
+			"description": "mojang-minecraft-ui",
+			"uuid": "2bd50a27-ab5f-4f40-a596-3641627c635e",
 			"version": [0, 1, 0]
 		}
 	]
