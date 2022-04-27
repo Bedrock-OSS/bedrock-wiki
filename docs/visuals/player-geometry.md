@@ -8,7 +8,9 @@ This tutorial will show you how to create player NPCs and add them into your wor
 
 This tutorial is a _graphical_ tutorial. Mechanics are not covered.
 
-`Note:` This will be a very json-heavy document. The json is intended for copy-pasting.
+:::warning
+This will be a very json-heavy document. The json is intended for copy-pasting.
+:::
 
 ## Geometry File
 
@@ -460,7 +462,7 @@ Use this entity file if you would like to have animations for your geometry. Thi
 
 -   walking
 -   looking at player
--   idle animation
+-   idle
 
 If you need a more complete set of animations, consider copying the default player RP-entity file, and trying to work with the animations by hand.
 

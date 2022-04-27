@@ -599,8 +599,26 @@ _or_
 
 ❌ `<img src="my/image.png" />`
 
+✔️ 
+```
+`code`
+```
+
+❌ 
+```
+    code
+```
+
 You can do space before text this way:
 
 `>` text:
 
 > text
+
+Sometimes you need to comment something in .md file.
+
+```
+<!-- Comment! 👀 --> ‹- It is here!
+```
+
+<!-- Comment! 👀 --> ‹- It is here!

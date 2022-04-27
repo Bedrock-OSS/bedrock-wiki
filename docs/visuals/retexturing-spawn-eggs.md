@@ -8,21 +8,21 @@ Custom entities will automatically be given a spawn egg. This spawn egg can be f
 
 In this tutorial we are going to retexture the spawn egg so it looks more like your spawned item, and less like an egg.
 
-## Creating the texture:
+## Creating the Texture
 
 You can easily take a screenshot of your entity using the Blockbench software. Load the mode, and select export screenshot from the drop-down.
 
 If you don't want an image like this, you can also create your own pixel art, or use any image you like.
 
-## Adding the texture:
+## Adding the Texture
 
 Add the texture file under `textures/items/`. I personally suggest creating an `eggs` folder to contain all the spawn egg textures. For example, `textures/items/eggs/my_entity.png`. The file itself should be square.
 
-## Giving the texture a name:
+## Giving the Texture a Name
 
-Now we need to give our texture a short-name. This can be done by adding a new file:
+Now we need to give our texture a short-name. This can be done in item_texture file:
 
-<CodeHeader>textures/item_texture.json</CodeHeader>
+<CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
 {
@@ -40,7 +40,7 @@ Now we need to give our texture a short-name. This can be done by adding a new f
 
 Now we can use our new texture inside of the Resource Pack entity file:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/entity/my_entity.json#description</CodeHeader>
 
 ```json
 "spawn_egg": {
@@ -48,3 +48,5 @@ Now we can use our new texture inside of the Resource Pack entity file:
     "texture_index": 0
 }
 ```
+
+Go and test it now!

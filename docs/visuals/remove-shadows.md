@@ -43,7 +43,7 @@ If you have a dummy entity (invisible) that you need to interact with, you can t
 
 ## Using runtime identifier
 
-Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifers document for more information](/entities/runtime-identifier).
+Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifers document](/entities/runtime-identifier) for more information.
 
 ## Using Materials
 

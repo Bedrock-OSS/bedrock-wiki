@@ -24,7 +24,7 @@ If you use semi-transparent textures (like colored glass), you need to move elem
 
 When learning to texture, your best bet is practicing with references on how others textured similar objects & surfaces. Patterns for wood & metal are different, and you should consider that. Good guides are
 [Masteriano's Texturing Tips](https://www.blockbench.net/wiki/guides/minecraft-style-guide)
-And in general, any on pixel art.
+and in general, any on pixel art.
 
 ## Materials
 
