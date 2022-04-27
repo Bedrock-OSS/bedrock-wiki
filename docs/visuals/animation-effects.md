@@ -43,6 +43,10 @@ If you want to use a sound, you need to define it too.
 }
 ```
 
+:::warning Warning!
+Not every sound works there. If you have problems, consider trying another sound. For example, use this one.
+:::
+
 ## Adding Effects to Animation
 
 You can add particles or sounds to your animation mainly or in Blockbench.
