@@ -28,6 +28,7 @@ Important links have a ⭐.
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
 -   [Dragonly Server Software](https://discord.gg/62zMCB4h)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
+-   [BC Community & Archive](https://discord.gg/SYstTYx5G5)
 
 ## Software (installed)
 
