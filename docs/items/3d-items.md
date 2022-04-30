@@ -970,4 +970,7 @@ In order to place the item in the head slot, use:
 
 ![](/assets/images/tutorials/custom-item-models/hat_attachable.png)
 
-Pack download link: [Link](https://wiki.bedrock.dev/assets/packs/tutorials/custom-item-models/CustomItemModels_attachable.mcaddon)
+<BButton
+    link="/assets/packs/tutorials/custom-item-models/CustomItemModels_attachable.mcaddon" download
+    color=blue
+>Download</BButton>

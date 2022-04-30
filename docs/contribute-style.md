@@ -229,10 +229,22 @@ A Button works like a link, but is more noticeable for the user.
     color=red
 > your button text</BButton>
 
+```html
+<BButton
+    link="/favicon.ico" download
+    color=red
+>Download Wiki Logo</BButton>
+```
+
+<BButton
+    link="/favicon.ico" download
+    color=red
+>Download Wiki Logo</BButton>
+
 | Attribute | Required | Type   | Note                                                                                                            |
 | --------- | -------- | ------ | --------------------------------------------------------------------------------------------------------------- |
-| link      | yes      | String | Link to redirect when clicking on the Button                                                                    |
-| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be grey_ |
+| link      | yes      | String | Link to redirect when clicking on the Button you can also link there content to download from wiki files. If doing this for pictures, add `download` after link value.                          |
+| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'white' as values, otherwise it will be grey_ |
 
 The text between the two HTML-Tags is the text that will appear on the button.
 

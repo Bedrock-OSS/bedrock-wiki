@@ -6,7 +6,7 @@ tags:
     - beginner
 ---
 
-Render controllers are an often-misunderstood part of the `Resource Pack`. But you don't need to be afraid! It would help if you considered render controllers as logic packs that take `short-name` definitions from the RP Entity File and determine how they will be combined/layered/rendered in-game.
+Render controllers are an often-misunderstood part of the resource pack. But you don't need to be afraid! It would help if you considered render controllers as logic packs that take short-name definitions from the RP Entity File and determine how they will be combined/layered/rendered in-game.
 
 ## Defining short-names
 
@@ -72,7 +72,7 @@ A simple render controller looks like this:
 }
 ```
 
-This controller is taking the short-name definitions from the entity file and `rendering` them. For example, the line: `" textures": [ "Texture.default"]` says: "Take the default texture, and apply it to the entity". The render controller doesn't know what the default texture is; it simply applies it.
+This controller is taking the short-name definitions from the entity file and `rendering` them. For example, the line: `"textures": [ "Texture.default"]` says: "Take the default texture, and apply it to the entity". The render controller doesn't know what the default texture is; it simply applies it.
 
 ## Re-using render controllers
 
@@ -80,12 +80,13 @@ Since render controllers work based on short-names, it is possible to re-use the
 
 For example, the render controller above is used for the `minecraft:cow` entity. If you want to use this render controller in your own pack, simply define it as: `"render_controllers": [ "controller.render.cow" ]` in your entity file.
 
-<p class="panel-warning" markdown="1"> 
-  Remember! Render controllers work based on short-names. If you want to use the cow render controller, you need to provide the short-names it is using. In this case, you will need to provide:<br>
-    - `default` geometry<br>
-    - `default` texture<br>
-    - `default` material
-</p>
+:::warning Remember!
+Render controllers work based on short-names. If you want to use the cow render controller, you need to provide the short-names it is using. In this case, you will need to provide:
+
+- `default` geometry
+- `default` texture
+- `default` material
+:::
 
 ## Creating custom render controllers
 
@@ -109,7 +110,7 @@ Texture layering is achieved through the use of render controllers. If you aren'
 
 #### Render Controller
 
-<CodeHeader>RP/render_controllers/controller.render.texture_layering</CodeHeader>
+<CodeHeader>RP/render_controllers/controller.render.texture_layering.json</CodeHeader>
 
 ```json
 {
@@ -136,15 +137,15 @@ Texture layering is achieved through the use of render controllers. If you aren'
 
 You need to define all textures in the entity and also use `villager_v2_masked` material.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/entity/my_entity.json</CodeHeader>
 
 ```json
 "materials": {
-  "default": "villager_v2_masked"
+	"default": "villager_v2_masked"
 },
 "textures": {
-  "top_layer": "textures/top",
-  "bottom_layer": "textures/bottom"
+	"top_layer": "textures/top",
+	"bottom_layer": "textures/bottom"
   //Add more texture short-name definitions here.
 }
 ```
@@ -157,20 +158,20 @@ While I guess hard-coding layered textures are cool, the real fun comes when you
 
 Set multiple top textures, which we will index later.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/entity/my_entity.json#description</CodeHeader>
 
 ```json
 "textures": {
-  "top_1": "textures/top_1",
-  "top_2": "textures/top_2",
-  "top_3": "textures/top_3",
-  "bottom_layer": "textures/bottom"
+	"top_1": "textures/top_1",
+	"top_2": "textures/top_2",
+	"top_3": "textures/top_3",
+	"bottom_layer": "textures/bottom"
 }
 ```
 
 #### Render Controller
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/render_controllers/controller.render.wool_only</CodeHeader>
 
 ```json
 {
@@ -207,15 +208,15 @@ Using arrays and then `query.variant`, we can select the top texture based on th
 
 Now, to select which layer will show up, we can simply set the variant component in the entity:
 
-Remember that components like variants are zero-indexed, which means `0` is our first texture, and then `1` and `2` point to the second and third.
-
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
 
 ```json
 "minecraft:variant": {
-  "value": 0
+	"value": 0
 }
 ```
+
+Remember that components like variants are zero-indexed, which means `0` is our first texture, and then `1` and `2` point to the second and third.
 
 #### Dynamically Changing Texture
 
@@ -223,7 +224,7 @@ If you want to change the texture of an entity during gameplay dynamically, you 
 
 #### Dynamic Layered Textures
 
-Dynamic layered textures can be achieved by adding more lists of textures and other dummy components as indexes. You can [read about dummy components here](/entities/dummy-components)
+Dynamic layered textures can be achieved by adding more lists of textures and other dummy components as indexes. You can read about dummy components [here](/entities/dummy-components).
 
 
 ### Dynamic Alternate Geometries
@@ -235,10 +236,10 @@ Just the same way as in textures, the order in which you write down your geometr
 As we change the variant it will use a different geometry.
 
 Note that unlike textures you can not layer geometries, and such you should not include a "base bottom layer" geometry.
-This still requires the use of `villager_v2_masked` material
+This still requires the use of `villager_v2_masked` material.
 
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/render_controllers/controller.render.player.third_person.json</CodeHeader>
 
 ```json
 {
@@ -276,7 +277,7 @@ This still requires the use of `villager_v2_masked` material
 }
 ```
 
-####Entity
+#### Entity
 
 Remember to include the geometry variants in your entity's file
 
@@ -284,11 +285,10 @@ Remember to include the geometry variants in your entity's file
 <CodeHeader></CodeHeader>
 
 ```json
-
-	"geometry": {
+"geometry": {
 	"default": "geometry.entity.default",
-	"cape": "geometry.entity.custom_1",
-	"spacesuit": "geometry.entity.custom_2"
+	"custom_1": "geometry.entity.custom_1",
+	"custom_2": "geometry.entity.custom_2"
 }
 ```
 

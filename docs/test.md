@@ -1,6 +1,8 @@
 ---
 title: Wiki Developer's Test Page
 hidden: true
+tags:
+-   Dev page
 ---
 
 ## What?
@@ -89,8 +91,13 @@ Actually there is a text:
 
 <!-- Comment! 👀 -->
 
-## Downloadable Image
+## Downloadable Images
 
 <a href="/assets/images/discord/oss.png" download>
-  <img src="/assets/images/discord/oss.png" alt="OSS Image">
+  <img src="/assets/images/misc/dead_bush.png" alt="OSS Image">
 </a>
+
+<BButton
+    link="/favicon.ico" download
+    color=red
+>Download Wiki Logo</BButton>

@@ -74,6 +74,9 @@ button.btn {
 .blue {
 	@apply text-blue-500 hover:text-blue-600 focus:text-blue-600 active:text-blue-800;
 }
+.red {
+	@apply text-red-500 hover:text-red-600 focus:text-red-600 active:text-red-800;
+}
 
 .white {
 	@apply text-light-500 hover:text-light-600 focus:text-light-600 active:text-light-800;
