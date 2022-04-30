@@ -88,3 +88,9 @@ Tab works like `code`
 Actually there is a text:
 
 <!-- Comment! 👀 -->
+
+## Downloadable Image
+
+<a href="/assets/images/discord/oss.png" download>
+  <img src="/assets/images/discord/oss.png" alt="OSS Image">
+</a>
