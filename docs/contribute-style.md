@@ -409,7 +409,7 @@ A WikiImage is an alternative way to add an image in your article.
 
 ```html
 <WikiImage
-	src="assets/images/homepage/wikilogo.png"
+	src="/assets/images/homepage/wikilogo.png"
 	alt="alternative text"
 	pixelated="true"
 	width=420
@@ -417,7 +417,7 @@ A WikiImage is an alternative way to add an image in your article.
 ```
 
 <WikiImage 
-    src='assets/images/homepage/wikilogo.png' 
+    src='/assets/images/homepage/wikilogo.png' 
     alt='alternative text' 
     pixelated=true
     width=420
