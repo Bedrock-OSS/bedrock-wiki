@@ -1,114 +1,144 @@
 ---
 title: Skin Packs
+tags:
+	- guide
+mentions:
+	- MedicalJewel105
 ---
 
-<!-- - [Skin pack Manifest](#Skin pack Manifest)
-- [skins.json](#skins.json)
-- [texts/en_US.lang](#texts/en_US.lang)
-- [What you learned](#What you learned:) -->
+Many people wrongly assume that skin packs are only available for creation to Marketplace Partners. No! It's a very easy process, which can easily be fully automated by python. But that's not it. Let's learn how to make a skin pack!
 
-Many people wrongly assume that skin packs are only available for creation to Marketplace Partners. No! It's a very easy process, which can easily be fully automated by python. But that's not it: let's learn the syntax as usual:
+:::warning
+The `development_skin_packs` doesn't seem to function correctly. You need to use `skin_packs` folder and reload Minecraft every time you made a change.
+:::
 
--   The folder for creating skin packs is `com.mojang/skin_packs/SkinpackName`. For some unknown reason, `com.mojang/development_skin_packs` doesn't seem to function correctly, so you'll have to reload Minecraft every time between testing. You will not need a `pack_icon`, but you will need a `manifest.json` and a `skins.json`, as well as a `.lang` file in the `texts` folder.
+## What is needed
 
-_Note: On Android, the com.mojang folder is located in `Phone>games>com.mojang`_
+Here is what is needed:
 
-## Skin pack Manifest
+<FolderView
+	:paths="[
 
-<CodeHeader>skin_packs/TutorialSkinPack/manifest.json</CodeHeader>
+    'com.mojang/skin_packs/my_skin_pack/texts/en_US.lang',
+	'com.mojang/skin_packs/my_skin_pack/my_skin.png',
+	'com.mojang/skin_packs/my_skin_pack/manifest.json',
+	'com.mojang/skin_packs/my_skin_pack/skins.json'
+
+]"
+></FolderView>
+
+## manifest.json
+
+<CodeHeader>skin_packs/tutorial_skin_pack/manifest.json</CodeHeader>
 
 ```json
 {
-	"format_version": 1,
-	"header": {
-		"name": "Tutorial Skin Pack",
-		"uuid": "a2bd7cb4-ac3b-4e03-a337-8d6ca1c3a0df",
-		"version": [1, 1, 0]
-	},
-	"modules": [
-		{
-			"type": "skin_pack",
-			"uuid": "7bc272b7-b338-40c3-9003-421582127bd0",
-			"version": [1, 1, 0]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "Tutorial Skin Pack",
+        "uuid": "bb9616eb-327c-4a81-9f00-064cae820cd5",
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "type": "skin_pack",
+            "uuid": "e4bc71b6-8f9b-4094-9d47-dc3824f8a3dc",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
 }
 ```
 
--   `format_version` can be 1 in this scenario, as v2 didn't change much for skin packs.
--   `name` is self explanatory. however, it isn't of gret importance.
--   `uuid` and `version` are already familiar to us. Both UUIDs in the manifest need to be different. You can generate them via a generator linked in Links and Contact. As a reminder, you CANNOT use the same UUID TWICE.
+-   `format_version` can be 1 too, as v2 doesn't change much for skin packs.
+-   `name` is self explanatory. However, it isn't of great importance.
+-   `uuid` and `version` are already familiar to us. Both UUIDs in the manifest need to be different. You can generate them via a generator linked in [useful links](/meta/useful-links). As a reminder, you CANNOT use the same UUID TWICE.
 -   `type` in `modules` needs to be set to `skin_pack`, of course.
 
 ## skins.json
 
-is used to define the skin texture files. Most of the options are, however, hard-coded/unchangeable. The skin `.png` or other image files are located in the same folder as `manifest.json` and `skins.json`, which is `skin_packs/TutorialSkinpack` in this scenario. My example skin files are named `Niika.png` and `Senn_skin.png` ~~guess where I took the names from~~.
+This file is used to define textures and shortnames for skins. Most of the options are, however, hard-coded or unchangeable.
 
-<CodeHeader>skin_packs//TutorialSkinPack/skins.json</CodeHeader>
+<CodeHeader>skin_packs/tutorial_skin_pack/skins.json</CodeHeader>
 
 ```json
 {
-	"geometry": "skinpacks/skins.json",
-	"skins": [
-		{
-			"localization_name": "NIIKA",
-			"geometry": "geometry.humanoid.custom",
-			"texture": "Niika.png",
-			"type": "free"
-		},
-		{
-			"localization_name": "SENN",
-			"geometry": "geometry.humanoid.custom",
-			"texture": "Senn_skin.png",
-			"type": "free"
-		}
-	],
-	"serialize_name": "TutorialSkinPack",
-	"localization_name": "TutorialSkinPack"
+    "geometry": "geometry.json",
+    "serialize_name": "Tutorial Skin Pack",
+    "localization_name": "tutorial",
+    "skins": [
+        {
+            "localization_name": "tutorial_skin_1",
+            "geometry": "geometry.humanoid.custom",
+            "texture": "goggled_gecko_no_goggles.png",
+            "type": "free"
+        },
+        {
+            "localization_name": "tutorial_skin_2",
+            "geometry": "geometry.humanoid.customSlim",
+            "texture": "goggled_gecko.png",
+            "type": "free"
+        }
+    ]
 }
 ```
 
--   The `geometry` object must be the same as on the example code in every object. Mojang revoked the ability to add custom geometries via skin packs, because the feature was abused.
--   `skins` array is where the object for every skin of yours are in. The skins will be displayed in the same order in minecraft as they are defined here.
-
-In this example, I defined two skins. it is possible to define any number.
-
--   `localization_name` is going to be used in the .lang file. Think of it as the skins identifier.
--   `texture` is the name of the image file, located int eh main skin pack folder.
--   `type` is only accessible to marketplace partners, so leave it as `free`
+-   The `geometry` object must be the same as on the example code in every object. Mojang removed the ability to add custom geometries via skin packs, because the feature was abused.
 -   `serialize_name` is for marketplace.
--   `localization_name` is the packs identifier, to be called in `.lang`.
+-	`localization_name` is a pack identifier. **Don't use in other skin packs** as it affects translations.
+-   `skins` array, where you define your each skin. The skins will be displayed in the same order in minecraft as they are defined here.
+>-	`localization_name` is going to be used in the .lang file. Think of it as the skins identifier.
+>-	`geometry` you can use `geometry.humanoid.custom` and `geometry.humanoid.customSlim` here.
+>-  `texture` is the name of the image file, located in the main skin pack folder.
+>-	`type` is only accessible to marketplace partners, leave it as `free`, otherwise it will be locked.
 
 ## texts/en_US.lang
 
-Finally, we'll define the names of the skin pack and every skin in the `.lang` file in `skin_packs/Skinpackname/texts/en_US.lang`. Of course "en_US" can be replaced with any language.
+Finally, we'll define the names of the skin pack and every skin in the `.lang` file. Of course "en_US" can be replaced with any language.
+
+<CodeHeader>skin_packs/tutorial_skin_pack/texts/en_US.lang</CodeHeader>
 
 ```
-skinpack.TutorialSkinPack=guide.bedrock.dev Tutorial skin pack
+skinpack.tutorial=Tutorial Skin Pack
 
-skin.TutorialSkinPack.NIIKA=Niika
-skin.TutorialSkinPack.SENN=SENN
+skin.tutorial.tutorial_skin_1=Skin 1
+skin.tutorial.tutorial_skin_2=Skin 2
 ```
 
 The first line defines the pack's name itself. It's done in this format:
 
-`skinpack.pack localization_name=ActualCustomName`
+`skinpack.[pack localization_name]=Actual Pack Name`
 
 The other lines define the skins' names:
 
-`skin.skin localization_name=ActualSkinName`
+`skin.[pack localization_name].[skin localization_name]=Actual Skin Name`
 
-Done! Now, when you open Character Creator, you'll see your skins available to be chosen! These skins aren't affected by the "custom skins switching in multiplayer" v1.14 bug.
+Done! Now, when you open Character Creator, you'll see your skins available to be chosen!
 
-Exporting the pack is easy: simply zip everything in the SkinpackName folder and change the `.zip` extension to `.mcpack`.
+## Troubleshooting
 
-_Note: Skin packs can be instantly generated from a folder with skins with [AJG](https://kaifireborn.itch.io/addon-json-generator)._
+If you play on MC version lower than 1.18.30, you might experience a bug when "Equip" button is not showing. You need to download a special texture pack.
 
----
+![](/assets/images/visuals/skin-packs/troubleshooting-1.png)
 
----
+<BButton
+    link="/assets/packs/visuals/skin-packs/equip_button_fix.mcpack" download
+    color=white
+>Download Equip Button Fix</BButton>
+
+![](/assets/images/visuals/skin-packs/troubleshooting-2.png)
 
 ## What you learned
 
--   Creating a custom Skin Pack and exporting it
--   Defining skin and skinpack names in `.lang`
+<Checklist>
+
+-   [x] How to create a skin pack.
+
+</Checklist>

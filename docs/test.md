@@ -2,7 +2,10 @@
 title: Wiki Developer's Test Page
 hidden: true
 tags:
--   Dev page
+    - Dev page
+mentions:
+    - TheItsNameless
+    - MedicalJewel105
 ---
 
 ## What?
@@ -101,3 +104,5 @@ Actually there is a text:
     link="/favicon.ico" download
     color=red
 >Download Wiki Logo</BButton>
+
+<a href="/assets/images/misc/dead_bush.png" download>Download</a>

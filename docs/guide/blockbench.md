@@ -68,6 +68,8 @@ Go to _File > Save Model_ or _File > Export Bedrock Geometry_. Save the model in
 
 _Meanwhile, why not upgrade the visuals of your own unique entities' or create another one?_
 
+<Spoiler title="Show code">
+
 <CodeHeader>RP/models/entity/ghost.geo.json</CodeHeader>
 
 ```json
@@ -254,6 +256,8 @@ _Meanwhile, why not upgrade the visuals of your own unique entities' or create a
 	}
 }
 ```
+
+</Spoiler>
 
 ## What you have learned
 

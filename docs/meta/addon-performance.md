@@ -147,6 +147,10 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ## Textures
 
+### texture_list.json
+
+-   Tons of textures badly affect game performance. Create a [`texture_list.json`](/concepts/texture-list) file. 
+
 ### Quantity
 
 -   No more than 3000 textures should be used
@@ -196,3 +200,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 -   Best practice is to minimizing the ticking area to one chunk if possible
 > All always-on Redstone should fit in this ticking chunk
 -   Unload ticking areas when they are no longer needed, testing via /testforblock
+
+## Files
+
+-   Tons of files can badly affect game performance. Create a [`contents.json`](/concepts/contents) file.

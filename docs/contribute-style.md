@@ -3,6 +3,7 @@ title: How to edit pages on our wiki
 hidden: true
 mentions:
     - TheItsNameless
+    - MedicalJewel105
 ---
 
 ## Working on the wiki
@@ -229,6 +230,8 @@ A Button works like a link, but is more noticeable for the user.
     color=red
 > your button text</BButton>
 
+<CodeHeader></CodeHeader>
+
 ```html
 <BButton
     link="/favicon.ico" download
@@ -428,6 +431,10 @@ A WikiImage is an alternative way to add an image in your article.
 | width     | no       | Integer | Width of the Image. The height will be scaled automatically.                                                           |
 
 Unlike a markdown image, the image can be pixelated here.
+
+To make a download link for image, use `<a href="wiki_image_path" download>My Text</a>`:
+
+<a href="/assets/images/misc/dead_bush.png" download>My Text</a>
 
 ### CardLink
 
@@ -634,3 +641,4 @@ Sometimes you need to comment something in .md file.
 ```
 
 <!-- Comment! 👀 --> ‹- It is here!
+

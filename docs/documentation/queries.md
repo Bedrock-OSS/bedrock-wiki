@@ -4,27 +4,119 @@ title: Molang Queries
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
 
-:::NOTE
+:::tip
 This page is not an exhaustive list list! It only contains queries we've written extra information for. The full list of queries can be found [here](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries)!
 :::
 
 ## query.get_equiped_item_name
 
-:::WARNING
+:::warning
 **DEPRECATED QUERY:** It is recommended to use the new query (`query.is_item_name_any`) if possible as it is more of an updated version of this query. However, this query will still continue to work in the future for backwards compatibility.
 :::
 
-Formatted like: `query.get_equiped_item_name(hand) = 'item_name'`
+Formatted like: `query.get_equiped_item_name('main_hand') = 'item_name'`
 
 Takes one optional hand slot as a parameter (0 or 'main_hand' for main hand, 1 or 'off_hand' for off hand), and a second parameter (0=default) if you would like the equipped item or any non-zero number for the currently rendered item, and returns the name of the item in the requested slot (defaulting to the main hand if no parameter is supplied) if there is one, otherwise returns ''.
 
-Where `hand` is the hand you would like to query for,
-
-Where `name` is the item you want to test for. No namespace, and please notice the quotes.
+Where `item_name` is the item you want to test for. No namespace, and please notice the quotes.
 
 Example: `"query.get_equipped_item_name == 'diamond'"`
 
 **Can you test for items in the inventory? Yes! Using the new query `query.is_item_name_any`.**
+
+## query.get_name
+
+:::warning
+**DEPRECATED QUERY:** It is recommended to use the new query (`query.is_name_any`) if possible as it is more of an updated version of this query. However, this query will still continue to work in the future for backwards compatibility.
+:::
+
+Formatted like: `query.get_name == 'Name'`
+
+Turns true if actual in-game displayed name matches name (use OnixClient to see names in third view).
+Needs to be used in special conditions.
+
+<Spoiler title="Show">
+
+<CodeHeader>animation_controllers/ac.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ac": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "active": "query.is_alive"
+                        }
+                    ]
+                },
+                "active": {
+                    "transitions": [
+                        {
+                            "default": "(1.0)"
+                        }
+                    ],
+                    "animations": [
+                        {
+                            "anim": "query.get_name == '...'" // You can use it only here!
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
+</Spoiler>
+
+## query.is_name_any
+
+Formatted like: `query.get_name('Name1', 'Name2')`.
+Takes one or more arguments.
+Turns true if actual in-game displayed name matches one of the given names.
+Needs to be used in special conditions.
+
+<Spoiler title="Show">
+
+<CodeHeader>animation_controllers/ac.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ac": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "active": "query.is_alive"
+                        }
+                    ]
+                },
+                "active": {
+                    "transitions": [
+                        {
+                            "default": "(1.0)"
+                        }
+                    ],
+                    "animations": [
+                        {
+                            "anim": "query.is_name_any(...)" // You can use it only here!
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
+</Spoiler>
 
 ## query.is_item_name_any
 

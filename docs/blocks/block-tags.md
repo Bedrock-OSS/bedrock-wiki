@@ -8,7 +8,7 @@ tags:
 Block Tags are used for various block properties. They can be called when testing for block arguments in commands.
 Some tags are prefixed with `can_be`, or `can_hurt`. One would expect these to have a boolean response.
 
-# Application
+## Application
 
 Block tags can be applied exactly as items, as seen below:
 
@@ -30,9 +30,9 @@ Block tags can be applied exactly as items, as seen below:
 }
 ```
 
-# Lists of Block Tags
+## Lists of Block Tags
 
-## Vanilla Tags
+### Vanilla Tags
 
 Vanilla tags can be applied to custom blocks, and some vanilla blocks are tagged internally. This kind of tag doesn't give blocks vanilla features. The only usage of it is to tag blocks to make them have the same tags as the vanilla blocks for queries or tests.
 | VanillaTags | Vanilla Usage |
@@ -59,16 +59,19 @@ Vanilla tags can be applied to custom blocks, and some vanilla blocks are tagged
 | azalea_log_replaceable | |
 | not_feature_replaceable | chest, bedrock, end portal frame, mob spawner |
 | text_sign | All kinds of signs |
-## Vanilla Block Tags
+| minecraft:crop | Beetroot, Carrot, Potato, Wheat |
+| fertilize_area | All types of Flowers, except Tall Flowers & Wither Rose; Crimson Nylium, Warped Nylium, Grass, Moss |
+
+### Vanilla Block Tags
 
 Vanilla block tags are tags built specifically for blocks. They can give some vanilla features to the blocks which are tagged with them.
 
 | VanillaBlockTags | Vanilla Usage                                                        | Description  |
 | ---------------- | -------------------------------------------------------------------- | ------------ |
-| acacia           | Acacia Log                                                           |
+| acacia           | Acacia Log                                                           |              |
 | birch            | Birch Log                                                            |              |
-| dark_oak         | Dark Oak Log                                                         |
-| jungle           | Jungle Log                                                           |
+| dark_oak         | Dark Oak Log                                                         |              |
+| jungle           | Jungle Log                                                           |              |
 | log              | Oak Log, Spruce Log, Birch Log, Jungle Log, Acacia Log, Dark Oak Log | A log block. |
 | oak              | Oak Log                                                              |              |
 | spruce           | Spruce Log                                                           |              |

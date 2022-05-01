@@ -4,14 +4,12 @@ tags:
     - intermediate
 ---
 
-### | Introduction
+## Introduction
 Pretty much everything evaluates to a number; if something doesn't evaluate to a number, you can use an `operator` to make it into one. You can basically just think of MoLang as one big math equation.
 
 An equation evaluates to `true` when any number except `0` is returned. When I reference `returning`, I'm talking about the output of an equation. There is also a `return` statement, but I don't usually use it, and will therefore not be talking about it.
 
-
-
-### | Accessing Values
+## Accessing Values
 There are three main ways to access and use values in MoLang (queries, variables and temp variables)
 
 - **Queries** are read only values returned by the game. You cannot set these values, only read them. (`query.example_query` | `q.example_query`)
@@ -22,9 +20,8 @@ There are three main ways to access and use values in MoLang (queries, variables
 - **Temp. Variables** are practically the same as variables, except they only exist in the current scope. (`temp.example_temp` | `t.example_temp`)
   - A "scope" can refer to the current `for_each` or `loop` *or* just the current expression, if it's not used within either
 
+## Handling values
 
-
-### | Handling values
 - **Logical Operators** can be used to convert non-numbers into 1s or 0s. These include: `==`, `!=`, `<`, `>`, `<=`, `>=`.
   - Example.) "`query.get_equipped_item_name == 'stick'`" Will evaluate to `1`/`true` when holding a stick
 
