@@ -67,7 +67,7 @@ Here is a sample `description`, which shows how the AC can first be defined in `
 "description": {
 	"identifier": "wiki:helicopter",
 	"animations": {
-		"blade_controller": "controller.animation.helicopter.blade",
+		"blade_controller": "controller.animation.helicopter.blade"
 	},
 	"scripts": {
 		"animate": [
