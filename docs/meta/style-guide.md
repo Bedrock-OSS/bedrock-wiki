@@ -158,3 +158,5 @@ Own-line comments can be used for organizational purposes but should not store l
 | BB      | Blockbench                         |
 | BDS     | Bedrock Dedicated Server           |
 | FPV     | First Person View                  |
+| RD      | Render Dragon                      |
+| VSCode  | Visual Studio Code                 |
