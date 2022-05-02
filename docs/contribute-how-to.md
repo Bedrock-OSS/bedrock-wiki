@@ -218,4 +218,4 @@ Now you have all the software installed and learned all the skills you need to e
 <BButton
     link='/contribute-style'
     color=blue
-> How to style our wiki</BButton>
+> How to edit pages on our wiki</BButton>
