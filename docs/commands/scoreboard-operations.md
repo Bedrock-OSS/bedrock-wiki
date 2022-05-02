@@ -9,7 +9,7 @@ Operations are performed using the `/scoreboard players operation` command. The 
 ```
 /scoreboard players operation <targetScore> <objective> <operation> <sourceScore> <objective>
 ```
-The command consists of two score holders: The target score, and the source score. The target score is the value being operated on, and the source score is the value affecting the operation. The result of the operation is written into the target score, and the source score's value is not touched, save for [one operation](/commands/scoreboard-operations.html#swap_operator).
+The command consists of two score holders: The target score, and the source score. The target score is the value being operated on, and the source score is the value affecting the operation. The result of the operation is written into the target score, and the source score's value is not touched, save for [one operation](/commands/scoreboard-operations.html#swap-operator).
 
 ## Mathematical Operators
 Mathematical operators use arithmetic to affect the target score. There are five mathematical operations available: addition, subtraction, multiplication, floor division, and floor modulo division.
@@ -48,7 +48,7 @@ Operator: **/=**
 
 This operation divides the target score by the source score, then stores the quotient into the target score. Because score values can only be integers, the value is floored, or rounded down.
 ```
-/scoreboard players operation A var += B var
+/scoreboard players operation A var /= B var
 ```
 `A = floor(A / B)`, and as such `floor(25 / 10) = 2`.
 
@@ -57,7 +57,7 @@ Operator: **%=**
 
 This operation also divides the target score by the source score, but instead returns the remainder after the division into the target score. This is also floored.
 ```
-/scoreboard players operation A var += B var
+/scoreboard players operation A var %= B var
 ```
 `A = floor(mod(A, B))`, and as such `floor(mod(25, 10)) = 5`.
 
