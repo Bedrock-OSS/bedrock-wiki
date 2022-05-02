@@ -89,7 +89,7 @@ Operator: **>**
 
 This operation returns the largest of the input scores, and stores it into the target score.
 ```
-/scoreboard players operation A var < B var
+/scoreboard players operation A var > B var
 ```
 `A = max(A, B)`, and as such `max(25, 10) = 25`.
 
