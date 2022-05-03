@@ -131,7 +131,7 @@ You need to add the following to your animation:
 
 ### In Blockbench
 
-First let's add a locator for our particle. Go to "Edit" section, select a group, right-click and choose " Add Locator":
+First let's add a locator for our particle. Go to "Edit" section, select a group, right-click and choose "Add Locator":
 
 ![](/assets/images/visuals/animation-effects/add-locator.png)
 
