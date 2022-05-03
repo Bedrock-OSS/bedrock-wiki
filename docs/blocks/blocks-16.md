@@ -826,9 +826,9 @@ In-game, yields the result: `tile.Barrel of Foxes.name`. Using `.lang` files is 
     -   `minecraft:on_fall_on`
 -   It seems that `render_method` in `minecraft:material_instances` affects the block's properties.
     -   If you use `opaque` it will allow redstone to pass through it, grass decay, and allow mobs to spawn on it
-    -             If you use `alpha_test` it won't allow redstone to pass through it, it won't make grass decay, and it won't allow mobs to spawn on it
-    -             `blend` has the same properties as `alpha_test`
-    -             Should you want to have a transparent block but have `opaque` properties:
+    -	If you use `alpha_test` it won't allow redstone to pass through it, it won't make grass decay, and it won't allow mobs to spawn on it
+    -	`blend` has the same properties as `alpha_test`
+    -	Should you want to have a transparent block but have `opaque` properties:
 
 ```json
 "minecraft:material_instances": {
