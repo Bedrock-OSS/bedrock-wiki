@@ -115,8 +115,11 @@ a`kooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 ```json
 {
-    "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"
+    "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
+    "value": 123456,
+    "valid": true //comment
 }
+hello
 ```
 
 <BButton
