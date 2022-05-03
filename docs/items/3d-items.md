@@ -16,7 +16,7 @@ There are two methods for making 3D items. Please choose the one most suitable f
 ## Entity Based 3D Item Models
 
 ::: tip
-This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/visuals/entity-visuals-intro) before starting this tutorial!
+This tutorial assumes you have a basic understanding of MoLang, render controllers, and client entity definitions. Ensure to check out the [render controller tutorial](/visuals/render-controllers) before starting this tutorial!
 :::
 
 ### Concept & Idea
