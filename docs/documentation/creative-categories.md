@@ -97,6 +97,7 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | itemGroup.name.boots |  
 | itemGroup.name.buttons |  
 | itemGroup.name.chalkboard |  
+| itemGroup.name.candles |  
 | itemGroup.name.chest |  
 | itemGroup.name.chestplate |  
 | itemGroup.name.concrete |  
