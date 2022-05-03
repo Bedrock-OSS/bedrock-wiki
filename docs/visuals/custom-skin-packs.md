@@ -130,7 +130,7 @@ If you play on MC version lower than 1.18.30, you might experience a bug when "E
 
 <BButton
     link="/assets/packs/visuals/skin-packs/equip_button_fix.mcpack" download
-    color=white
+    color=default
 >Download Equip Button Fix</BButton>
 
 ![](/assets/images/visuals/skin-packs/troubleshooting-2.png)

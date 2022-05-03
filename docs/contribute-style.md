@@ -247,7 +247,7 @@ A Button works like a link, but is more noticeable for the user.
 | Attribute | Required | Type   | Note                                                                                                            |
 | --------- | -------- | ------ | --------------------------------------------------------------------------------------------------------------- |
 | link      | yes      | String | Link to redirect when clicking on the Button you can also link there content to download from wiki files. If doing this for pictures, add `download` after link value.                          |
-| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'white' as values, otherwise it will be grey_ |
+| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'default' as values, otherwise it will be grey_ |
 
 The text between the two HTML-Tags is the text that will appear on the button.
 

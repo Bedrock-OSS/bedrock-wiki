@@ -146,7 +146,7 @@ The pack icon is an image file which identifies how your addon will look in-game
 
 <BButton
     link="/assets/images/guide/project-setup/pack_icon.png" download
-    color=white
+    color=default
 >Download Image</BButton>
 
 You should place a copy of your desired image into both the RP and the BP. The image needs to be named `pack_icon.png`
