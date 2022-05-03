@@ -610,6 +610,8 @@ This section is only for the readability of your Markdown files. It wont be visi
 |here|and here|
 ```
 
+For tables you can download an [extension](https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter). However always check how it formats it.
+
 ✔️ `<WikiImage src="my/image.png"/>`
 
 _or_

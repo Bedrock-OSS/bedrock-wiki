@@ -3,8 +3,9 @@ title: Entity Texture Animations
 mentions:
     - MedicalJewel105
 tags:
-    - guide
     - intermediate
+category:
+    - Tutorials
 ---
 
 ## Whats on this page?

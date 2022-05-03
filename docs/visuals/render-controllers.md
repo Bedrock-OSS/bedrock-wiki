@@ -1,9 +1,10 @@
 ---
-title: Intro to Entity Visuals
-nav_order: 0
+title: Render Controllers
+nav_order: 3
 tags:
-    - guide
     - beginner
+category:
+    - General
 ---
 
 Render controllers are an often-misunderstood part of the resource pack. But you don't need to be afraid! It would help if you considered render controllers as logic packs that take short-name definitions from the RP Entity File and determine how they will be combined/layered/rendered in-game.
@@ -292,3 +293,14 @@ Remember to include the geometry variants in your entity's file
 }
 ```
 
+## What you have done
+
+Congratulations, you've finished entity visual introduction!
+Now consider looking into other pages.
+
+<Checklist>
+
+-   [x] Learn tips and tricks you should know when modeling for Minecraft Bedrock Edition.
+-   [x] Learn how to render your entity properly in game.
+
+</Checklist>

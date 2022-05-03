@@ -1,9 +1,9 @@
 ---
 title: Skin Packs
-tags:
-	- guide
 mentions:
 	- MedicalJewel105
+category:
+    - General
 ---
 
 Many people wrongly assume that skin packs are only available for creation to Marketplace Partners. No! It's a very easy process, which can easily be fully automated by python. But that's not it. Let's learn how to make a skin pack!

@@ -1,7 +1,8 @@
 ---
-title: Bedrock Modeling Introduction
-tags:
-    - guide
+title: Bedrock Modeling
+nav_order: 2
+category:
+    - General
 ---
 
 This will guide tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.
@@ -115,3 +116,19 @@ To easily change the speed of an animation you can simply multiply the default v
 ```
 
 This will make the animation run 2 times faster. We can tweak the value to any buoyant float, so we can even slow down animations. With 0.5, for example, the animation will run 2 times slower, etc.
+
+## What you have done
+
+Congratulations, now you know some basic modeling tips and tricks.
+
+<Checklist>
+
+-   [x] Learn tips and tricks you should know when modeling for Minecraft Bedrock Edition.
+-   [ ] Learn how to render your entity properly in game.
+
+</Checklist>
+
+<BButton 
+    link="/visuals/render-controllers" 
+    color=blue
+>Render Controllers</BButton>
