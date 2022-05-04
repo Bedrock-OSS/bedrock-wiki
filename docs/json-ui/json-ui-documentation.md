@@ -998,6 +998,14 @@ Some of them only work in specific screens.
 -   `button.loom_result_take_all_place_all`
 -   `button.pattern_select`
 
+#### Villager Trade (`ui/trade_screen.json`)
+
+- `button.cycle_recipe_left`
+- `button.cycle_recipe_right`
+- `button.trade_take_all_place_all`
+- `button.trade_take_half_place_one`
+- `button.trade_coalesce_stack`
+
 ### Others
 
 -   `button.try_menu_exit`
@@ -1399,7 +1407,7 @@ All of them only in specific screens.
 -   `stonecutter_result_items`
 -   `stones`
 
-#### Villager Trade2 (`ui/trade2_screen.json`)
+#### Villager Trade 2 (`ui/trade_2_screen.json`)
 
 -   `trade2_ingredient1_item`
 -   `trade2_ingredient2_item`
