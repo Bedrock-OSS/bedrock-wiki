@@ -998,7 +998,7 @@ Some of them only work in specific screens.
 -   `button.loom_result_take_all_place_all`
 -   `button.pattern_select`
 
-#### Trade (`ui/trade_screen.json`)
+#### Villager Trade (`ui/trade_screen.json`)
 
 - `button.cycle_recipe_left`
 - `button.cycle_recipe_right`
