@@ -51,8 +51,12 @@ Important links have a ⭐.
 
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
 -   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-windmill/)
+-   [Apply Loot Tables to Structures](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
+-   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
+-   [Convert MCSTRUCTURE to MCFUNCTION](https://mcbe-essentials.github.io/structure-to-function/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
+-   [World Packager](https://mcbe-essentials.github.io/world-packager/)
 -   [Manifest Generator](https://bedrock-manifest.web.app/)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
