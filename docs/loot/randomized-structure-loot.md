@@ -95,15 +95,15 @@ Save changes (Ctrl + S)
 
 Open the website and click "Upload". Choose your structure file. 
 
-![LootTable-step1](https://user-images.githubusercontent.com/67883592/167201252-ba0927fc-31f1-470f-b8c6-dfd11eb6b2e5.png)
+![](/assets/images/tutorials/randomised-structure-loot/LootTable-step1.png)
 
 Find your container in the containers list, making use of the information displayed under "Container Options"
 
-![image](https://user-images.githubusercontent.com/67883592/167201650-cb7a9907-a6bc-4604-8f09-d66cae65c8de.png)
+![](/assets/images/tutorials/randomised-structure-loot/LootTable-step2.png)
 
 Under "Loot Table", enter the path to your loot table. Set "Loot Table Seed" to blank or `0` if you want the loot to generate randomly. If you want the loot table to generate consistently, enter a specific value.
 
-![LootTable-step3](https://user-images.githubusercontent.com/67883592/167202148-cfa7bf0d-0c62-47d6-bfcf-4ada8d14655b.png)
+![](/assets/images/tutorials/randomised-structure-loot/LootTable-step3.png)
 
 Download your structure file and place it in `BP/structures`.
 
