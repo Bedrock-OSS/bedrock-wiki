@@ -162,17 +162,17 @@ _OO
 </code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>It is currently unknown what, if anything, this property achieves. Presumably, it would be used with the <a href="#recipe-book">recipe book</a>. Neither using new custom groups nor reusing groups from vanilla definitions appear to achieve anything.</p><h3 id="priority" tabindex="-1">Priority <a class="header-anchor" href="#priority" aria-hidden="true">#</a></h3><p>Crafting recipes support an additional property for handling input collisions, <code>&quot;priority&quot;</code>, which primarily acts as a <a href="#prioritization">tiebreaker</a> when multiple recipes could possibly apply to the given situation. Priorities are provided directly within the crafting recipe type object.</p>`,4),wn=s("#/minecraft:recipe_shaped/"),Tn=o(`<div class="language-json line-numbers-mode"><pre><code><span class="token property">&quot;priority&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
 </code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Crafting recipes with lower priority values take precedence. So, if all else is equal, a recipe with a priority of <code>0</code> would be used over a recipe with priority <code>1</code>. Priorities may be negative if necessary. If <code>&quot;priority&quot;</code> is not provided, a priority of <code>0</code> is implied.</p><h2 id="heating" tabindex="-1">Heating <a class="header-anchor" href="#heating" aria-hidden="true">#</a></h2><p>Furnace recipes are used to transform an item using a heat source over a period of time. A slight misnomer, furnace recipes are used with any interface that involves a heat source, including campfires.</p><p><img src="`+m+'" alt=""></p>',5),An=s("BP/recipes/magic/magic_ash.json"),Sn=o(`<div class="language-json line-numbers-mode"><pre><code><span class="token punctuation">{</span>
 	<span class="token property">&quot;format_version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.17.41&quot;</span><span class="token punctuation">,</span>
-	
+
 	<span class="token property">&quot;minecraft:recipe_furnace&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
 		<span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
 			<span class="token property">&quot;identifier&quot;</span><span class="token operator">:</span> <span class="token string">&quot;wiki:magic_ash&quot;</span>
 		<span class="token punctuation">}</span><span class="token punctuation">,</span>
 		<span class="token property">&quot;tags&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;soul_campfire&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-		
-		<span class="token property">&quot;input&quot;</span><span class="token operator">:</span> <span class="token string">&quot;wiki:bone_fragments&quot;</span>
+
+		<span class="token property">&quot;input&quot;</span><span class="token operator">:</span> <span class="token string">&quot;wiki:bone_fragments&quot;</span><span class="token punctuation">,</span>
 		<span class="token property">&quot;output&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
 			<span class="token property">&quot;item&quot;</span><span class="token operator">:</span> <span class="token string">&quot;wiki:magic_ash&quot;</span><span class="token punctuation">,</span>
-			
+
 			<span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token number">4</span>
 		<span class="token punctuation">}</span>
 	<span class="token punctuation">}</span>
