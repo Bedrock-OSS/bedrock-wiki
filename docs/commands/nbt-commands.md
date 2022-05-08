@@ -1,5 +1,8 @@
 ---
 title: NBT Commands
+category: General
+mention:
+    - MedicalJewel105
 ---
 
 NBT data for the Bedrock edition is minimal. The only values we have access to are:
