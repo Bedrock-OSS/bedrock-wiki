@@ -15,7 +15,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
 | Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 4  |
 | Python     | Still Active                : 0 < [Discontinued](#python)       : 1  |
-| TypeScript | [Still Active](#typescript) : 2 < Discontinued : 0                   |
+| TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
 | C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
 | C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
 | D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
