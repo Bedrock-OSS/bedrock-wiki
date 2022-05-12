@@ -4,19 +4,19 @@ title: Subpacks
 
 ## What are Subpacks?
 
-Subpacks are a tool which allow you to select between different addon 'configurations'.
+Subpacks allow you to select between different addon 'configurations'.
 
 They are intended for texture resolutions to load on different memory capacities, but can also be used to create file variations in behavior and resource packs. These variations can be selected by clicking the gear icon and adjusting the slider.
 
 ## How do Subpacks work?
 
-Files placed in you subpack folder will override files placed in your main addon folder, if the subpack is selected. For example, if your addon contains both `rp/textures/entities/ghost.json` and `rp/subpacks/pack1/textures/ghost.json`, the second image file will replace the first, if `subpack1` is selected. 
+Files placed in you subpack folder will override files placed in your main addon folder, if the subpack is selected. For example, if your addon contains both `RP/textures/entities/ghost.png` and `RP/subpacks/pack_1/textures/ghost.png`, the second image file will replace the first, if subpack `pack_1` is selected. 
 
-For more information about how files override each other, please see our page on [overriding vanilla assets.](/concepts/overwriting-assets)
+For more information about how files override each other, please see our page on [overriding vanilla assets](/concepts/overwriting-assets).
 
 ## Creating Subpacks
 
--   To start adding a subpack you need to create a `subpacks` folder inside the root of your `BP` or `RP`.
+-   To start adding a subpack you need to create a `subpacks` folder inside the root of your `BP`/`RP`.
 -   Then inside the `subpacks` folder add a folder for each subpack you want to have
     e.g.
 
@@ -38,7 +38,7 @@ For more information about how files override each other, please see our page on
 'RP/subpacks/subpack_2/textures/items/example_item.png'
 ]"></FolderView>
 
-## Adding subpacks to manifests
+## Manifest Part
 
 To register the subpacks in the manifest you need to add `subpacks` and this contains an array of subpacks.
 
@@ -78,8 +78,12 @@ Example:
 }
 ```
 
--   `name`: Defines the name that will show when selecting the subpacks.
+-   `name` - name that will show when selecting subpacks.
 
--   `memory_tier`: Defines how many GB of RAM device needs to have to enable this subpack. 1 memory tier = `0.25 GB`.
+-   `memory_tier`- amount of RAM that device must have to enable this subpack. 1 memory tier = 0.25 GB.
 
--   `folder_name`: This corresponds to the name of the folder to be used in this subpack, for example in the examples above this would be `subpack_1` or `subpack_2`. These names can be anything you want, they don't need to follow the `subpack_n` format.
+-   `folder_name` - name of the folder to be used for this subpack, for example in the examples above this would be `subpack_1` or `subpack_2`.
+
+## Known Things
+
+If you add only one subpack, there will be 2 options at the subpacks selection section, however second resolution (no subpack actually) does **not** make content in the root folder override subpacks.

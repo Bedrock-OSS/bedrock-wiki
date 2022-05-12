@@ -1,11 +1,12 @@
 ---
 title: .mcstructure
+category: General
 ---
 
-[int]: https://i.imgur.com/aOoHjFc.png
-[list]: https://i.imgur.com/quP0K47.png
-[compound]: https://i.imgur.com/GXsHWoh.png
-[string]: https://i.imgur.com/D75Q22x.png
+[int]: /assets/images/nbt/int.png
+[list]: /assets/images/nbt/list.png
+[compound]: /assets/images/nbt/compound.png
+[string]: /assets/images/nbt/string.png
 
 ### Saving and Loading
 
@@ -110,7 +111,7 @@ Results from testing to see what happens when modified structure files are loade
 
 ## NBT Editors
 
-You can find download links for some NBT editors [here](/meta/useful-links)
+You can find download links for some NBT editors [here](/meta/useful-links#software-installed).
 
 ---
 

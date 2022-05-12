@@ -11,17 +11,19 @@ For a simple trading UI, `trade_table` + `trade_with_player` components should d
 1. Add `"minecraft:behavior.trade_with_player": {}` to your entity's components.
 2. Copy the following code into a component group of your entity. I'll call mine `"wiki:trader"`;
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/entities/trader.json</CodeHeader>
 
 ```json
 "minecraft:trade_table": {
-  "display_name": "Trading Entity", //String can be replaced with any text to be displayed.
-  "table": "trading/trading_entity_trades.json", //path to the Trade Table file
-  "new_screen": true //If set to false, the UI will display as the pre-Village&Pillage one.
+	"display_name": "Trading Entity", // Text to be displayed.
+	"table": "trading/trading_entity_trades.json", // Path to the trade table file
+	"new_screen": true //If set to false, the UI will display as the pre-Village&Pillage one.
 }
 ```
 
 3. Now make sure the component group is added to the entity via an event. It's a good idea to add it in `minecraft:entity_spawned` event, since it triggers on spawn.
-   If you don't feel confident with events and component groups, make sure you're familiar with entity definition rules/concepts: {LINK TO CUSTOM ENTITY BEHAVIOR DEFINITION SUBGUIDE}.
+If you don't feel confident with events and component groups, make sure you're familiar with entity definition rules/concepts: {LINK TO CUSTOM ENTITY BEHAVIOR DEFINITION SUBGUIDE}.
 
-**Note:** If you add the component in components, it will cause all kinds of problems, including blank trading UIs for all entities in the world. Because of an issue with the trading AI goals, they must be added in component groups. !!!
+:::warning
+If you add the component in components, it will cause all kinds of problems, including blank trading UIs for all entities in the world. Because of an issue with the trading AI goals, they must be added in component groups.
+:::
