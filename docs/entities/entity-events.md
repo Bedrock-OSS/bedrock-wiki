@@ -38,6 +38,10 @@ The most essential and common use of events is directly adding and/or removing c
 
 Following are examples of calling an event on an entity using a component, an animation, an animation controller and another event. Note that certain components can be used to call events on entities other than the entity within which the component exists, and this will be shown in the Advanced Usage section.
 
+:::warning
+All triggered events will be called on the next tick, which means that when using `trigger` inside a sequence, it will be executed last no matter where it is in the sequence.
+:::
+
 The `minecraft:environment_sensor` component is used in the zombie to call the event `minecraft:start_transforming` when the entity is underwater.
 
 <CodeHeader></CodeHeader>
