@@ -3,7 +3,9 @@ title: Leash Position
 category:
     - Tutorials
 mentions:
-	- MedicalJewel105
+    - MedicalJewel105
+tags:
+    - easy
 ---
 
 Have you ever wanted to change position of a leash on your entity?
