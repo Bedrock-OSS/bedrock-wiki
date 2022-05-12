@@ -3,6 +3,8 @@ title: Extending Structure Limits
 category: Tutorials
 mention:
     - MedicalJewel105
+tags:
+    - easy
 ---
 
 [structure]: /assets/images/nbt/structure.png
