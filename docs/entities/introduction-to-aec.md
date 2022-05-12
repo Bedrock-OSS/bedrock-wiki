@@ -39,7 +39,7 @@ For convenience, this article contains a premade structure file you can download
 
 <a href="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/structures/aec.mcstructure?raw=true">📄 Structure file</a>
 
-Refer to this article for editing structure files: [.mcstructure](/concepts/mcstructure)
+Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructure)
 
 ### NBT Format
 
