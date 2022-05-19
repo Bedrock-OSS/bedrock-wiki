@@ -15,63 +15,63 @@ You can learn more about creating materials [here](/visuals/materials).
 
 | Vanilla_Material                                                                        |
 | --------------------------------------------------------------------------------------- |
-| [alpha_block](#alpha_block)                                                             |  
-| [alpha_block_color](#alpha_block_color)                                                 |  
+| [alpha_block](#alpha-block)                                                             |  
+| [alpha_block_color](#alpha-block-color)                                                 |  
 | [banner](#banner)                                                                       |
-| [banner_pole](#banner_pole)                                                             |
-| [beacon_beam](#beacon_beam)                                                             | 
-| [beacon_beam_transparent](#beacon_beam_transparent)                                     | 
-| [charged_creeper](#charged_creeper)                                                     | 
-| [conduit_wind](#conduit_wind)                                                           |
+| [banner_pole](#banner-pole)                                                             |
+| [beacon_beam](#beacon-beam)                                                             | 
+| [beacon_beam_transparent](#beacon-beam-transparent)                                     | 
+| [charged_creeper](#charged-creeper)                                                     | 
+| [conduit_wind](#conduit-wind)                                                           |
 | [entity](#entity)                                                                       |
-| [entity_alphablend](#entity_alphablend)                                                 |
-| [entity_alphablend_nocolorentity_static](#entity_alphablend_nocolorentity_static)       |
-| [entity_alphatest](#entity_alphatest)                                                   |
-| [entity_alphatest_change_color](#entity_alphatest_change_color)                         |
-| [entity_alphatest_change_color_glint](#entity_alphatest_change_color_glint)             | 
-| [entity_alphatest_glint](#entity_alphatest_glint)                                       | 
-| [entity_alphatest_glint_item](#entity_alphatest_glint_item)                             | 
-| [entity_alphatest_multicolor_tint](#entity_alphatest_multicolor_tint)                   | 
-| [entity_beam](#entity_beam)                                                             | 
-| [entity_beam_additive](#entity_beam_additive)                                           | 
-| [entity_change_color](#entity_change_color)                                             | 
-| [entity_change_color_glint](#entity_change_color_glint)                                 | 
-| [entity_custom](#entity_custom)                                                         | 
-| [entity_dissolve_layer0](#entity_dissolve_layer0)                                       | 
-| [entity_dissolve_layer1](#entity_dissolve_layer1)                                       | 
-| [entity_emissive](#entity_emissive)                                                     | 
-| [entity_emissive_alpha](#entity_emissive_alpha)                                         | 
-| [entity_emissive_alpha_one_sided](#entity_emissive_alpha_one_sided)                     | 
-| [entity_flat_color_line](#entity_flat_color_line)                                       | 
-| [entity_glint](#entity_glint)                                                           | 
-| [entity_lead_base](#entity_lead_base)                                                   | 
-| [entity_loyalty_rope](#entity_loyalty_rope)                                             | 
-| [entity_multitexture](#entity_multitexture)                                             | 
-| [entity_multitexture_alpha_test](#entity_multitexture_alpha_test)                       | 
-| [entity_multitexture_alpha_test_color_mask](#entity_multitexture_alpha_test_color_mask) | 
-| [entity_multitexture_color_mask](#entity_multitexture_color_mask)                       | 
-| [entity_multitexture_masked](#entity_multitexture_masked)                               | 
-| [entity_multitexture_multiplicative_blend](#entity_multitexture_multiplicative_blend)   | 
-| [entity_nocull](#entity_nocull)                                                         | 
-| [guardian_ghost](#guardian_ghost)                                                       | 
-| [item_in_hand](#item_in_hand)                                                           | 
-| [item_in_hand_entity_alphatest](#item_in_hand_entity_alphatest)                         | 
-| [item_in_hand_entity_alphatest_color](#item_in_hand_entity_alphatest_color)             | 
-| [item_in_hand_glint](#item_in_hand_glint)                                               | 
-| [item_in_hand_multicolor_tint](#item_in_hand_multicolor_tint)                           | 
+| [entity_alphablend](#entity-alphablend)                                                 |
+| [entity_alphablend_nocolorentity_static](#entity-alphablend-nocolorentity-static)       |
+| [entity_alphatest](#entity-alphatest)                                                   |
+| [entity_alphatest_change_color](#entity-alphatest-change-color)                         |
+| [entity_alphatest_change_color_glint](#entity-alphatest-change-color-glint)             | 
+| [entity_alphatest_glint](#entity-alphatest-glint)                                       | 
+| [entity_alphatest_glint_item](#entity-alphatest-glint-item)                             | 
+| [entity_alphatest_multicolor_tint](#entity-alphatest-multicolor-tint)                   | 
+| [entity_beam](#entity-beam)                                                             | 
+| [entity_beam_additive](#entity-beam-additive)                                           | 
+| [entity_change_color](#entity-change-color)                                             | 
+| [entity_change_color_glint](#entity-change-color-glint)                                 | 
+| [entity_custom](#entity-custom)                                                         | 
+| [entity_dissolve_layer0](#entity-dissolve-layer0)                                       | 
+| [entity_dissolve_layer1](#entity-dissolve-layer1)                                       | 
+| [entity_emissive](#entity-emissive)                                                     | 
+| [entity_emissive_alpha](#entity-emissive-alpha)                                         | 
+| [entity_emissive_alpha_one_sided](#entity-emissive-alpha-one-sided)                     | 
+| [entity_flat_color_line](#entity-flat-color-line)                                       | 
+| [entity_glint](#entity-glint)                                                           | 
+| [entity_lead_base](#entity-lead-base)                                                   | 
+| [entity_loyalty_rope](#entity-loyalty-rope)                                             | 
+| [entity_multitexture](#entity-multitexture)                                             | 
+| [entity_multitexture_alpha_test](#entity-multitexture-alpha-test)                       | 
+| [entity_multitexture_alpha_test_color_mask](#entity-multitexture-alpha-test-color-mask) | 
+| [entity_multitexture_color_mask](#entity-multitexture-color-mask)                       | 
+| [entity_multitexture_masked](#entity-multitexture-masked)                               | 
+| [entity_multitexture_multiplicative_blend](#entity-multitexture-multiplicative-blend)   | 
+| [entity_nocull](#entity-nocull)                                                         | 
+| [guardian_ghost](#guardian-ghost)                                                       | 
+| [item_in_hand](#item-in-hand)                                                           | 
+| [item_in_hand_entity_alphatest](#item-in-hand-entity-alphatest)                         | 
+| [item_in_hand_entity_alphatest_color](#item-in-hand-entity-alphatest-color)             | 
+| [item_in_hand_glint](#item-in-hand-glint)                                               | 
+| [item_in_hand_multicolor_tint](#item-in-hand-multicolor-tint)                           | 
 | [map](#map)                                                                             |
-| [map_decoration](#map_decoration)                                                       | 
-| [map_marker](#map_marker)                                                               | 
-| [moving_block](#moving_block)                                                           | 
-| [moving_block_alpha](#moving_block_alpha)                                               | 
-| [moving_block_alpha_seasons](#moving_block_alpha_seasons)                               | 
-| [moving_block_alpha_single_side](#moving_block_alpha_single_side)                       | 
-| [moving_block_blend](#moving_block_blend)                                               |
-| [moving_block_double_side](#moving_block_double_side)                                   | 
-| [moving_block_seasons](#moving_block_seasons)                                           | 
-| [opaque_block](#opaque_block)                                                           | 
-| [opaque_block_color](#opaque_block_color)                                               |
-| [opaque_block_color_uv2](#opaque_block_color_uv2)                                       |
+| [map_decoration](#map-decoration)                                                       | 
+| [map_marker](#map-marker)                                                               | 
+| [moving_block](#moving-block)                                                           | 
+| [moving_block_alpha](#moving-block-alpha)                                               | 
+| [moving_block_alpha_seasons](#moving-block-alpha-seasons)                               | 
+| [moving_block_alpha_single_side](#moving-block-alpha-single-side)                       | 
+| [moving_block_blend](#moving-block-blend)                                               |
+| [moving_block_double_side](#moving-block-double-side)                                   | 
+| [moving_block_seasons](#moving-block-seasons)                                           | 
+| [opaque_block](#opaque-block)                                                           | 
+| [opaque_block_color](#opaque-block-color)                                               |
+| [opaque_block_color_uv2](#opaque-block-color-uv2)                                       |
 
 ## Properties
 
@@ -105,7 +105,7 @@ The following is a last of each material, along with general known properties. T
 The following section has currently **only** been tested for with single textures. Take it all with a pinch of salt. It is highly recommended to experiment with the materials yourself.
 :::
 
-### alpha_block 
+### alpha_block
 
 -   Backface-culling
 -   Completely Opaque
