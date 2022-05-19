@@ -116,46 +116,54 @@ An example:
 <CodeHeader>BP/entities/example.json#minecraft:entity#events</CodeHeader>
 
 ```json
-      "prefix:event_name": {//Name of the event
-        "sequence": [//Sequence 1 >>> 2 >>> 3 this follows top to bottom order.
-          {
-            "filters": {//filter this checks if the filter conditions are false.
-              "test": "has_tag",
-              "subject": "self",
-              "operator": "not",
-              "value": "tag_name"
+"prefix:event_name":{
+    //Name of the event
+	"sequence":[
+        //Sequence 1 >>> 2 >>> 3 this follows top to bottom order.
+		{
+            "filters":{
+                //filter this checks if the filter conditions are false.
+				"test":"has_tag",
+                "subject":"self",
+                "operator":"not",
+                "value":"tag_name"
             },
-            "add": {//list of component groups to remove.
-              "component_groups": [
-                "prefix:is_false"
-              ]
+            "add":{
+                //list of component groups to remove.
+				"component_groups":[
+                    "prefix:is_false"
+                ]
             },
-            "remove": {//list of component groups to add.
-              "component_groups": [
-                "prefix:is_true"
-              ]
+            "remove":{
+                //list of component groups to add.
+				"component_groups":[
+                    "prefix:is_true"
+                ]
             }
-          },
-          {
-            "filters": {//filter this checks if the filter conditions are true.
-              "test": "has_tag",
-              "subject": "self",
-              "operator": "equals",
-              "value": "tag_name"
+        },
+        {
+            "filters":{
+                //filter this checks if the filter conditions are true.
+				"test":"has_tag",
+                "subject":"self",
+                "operator":"equals",
+                "value":"tag_name"
             },
-            "add": {//list of component groups to add.
-              "component_groups": [
-                "prefix:is_true"
-              ]
+            "add":{
+                //list of component groups to add.
+				"component_groups":[
+                    "prefix:is_true"
+                ]
             },
-            "remove": {//list of component groups to remove.
-              "component_groups": [
-                "prefix:is_false"
-              ]
+            "remove":{
+                //list of component groups to remove.
+				"component_groups":[
+                    "prefix:is_false"
+                ]
             }
-          }
-        ]
-      }
+        }
+    ]
+}
 ```
 
 ### Triggering events
