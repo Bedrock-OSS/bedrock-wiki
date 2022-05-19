@@ -4,6 +4,8 @@ category: Tutorials
 mention:
     - MedicalJewel105
     - Hatchibombotar
+tags:
+    - easy
 ---
 
 Sometimes when creating an add-on you need to run commands on a players first join or on the first time a world has been loaded. We will go through both.

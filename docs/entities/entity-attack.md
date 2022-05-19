@@ -3,6 +3,8 @@ title: Entity Attacks
 category: Tutorials
 mention:
     - Luthorius
+tags:
+    - intermediate
 ---
 
 Entity attacks are a complex subject that require many different things to work correctly:

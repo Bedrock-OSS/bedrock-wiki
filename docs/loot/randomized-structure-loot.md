@@ -2,7 +2,9 @@
 title: Randomized Structure Loot
 category: Tutorials
 mention:
-- MedicalJewel105
+    - MedicalJewel105
+tags:
+    - easy
 ---
 
 Adding loot tables to containers in structure is easy, you need to have a PC and your choice of either [NBT Studio](https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe) (executable) or [Loot Tabler](https://mcbe-essentials.github.io/structure-editor/loot-tabler) (browser application).

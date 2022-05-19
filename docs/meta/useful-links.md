@@ -124,3 +124,4 @@ Important links have a ⭐.
 -   [Windows 10 Non-renderdragon install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
 -   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
 -   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
+-   [Skin Pack Generator](https://github.com/MedicalJewel105/bedrock-skin-pack-generator)

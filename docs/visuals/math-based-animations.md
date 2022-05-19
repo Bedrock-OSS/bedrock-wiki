@@ -16,49 +16,49 @@ Math animations are a powerful alternative to keyframe animations. Generally spe
 },
 ```
 
-As you can see, Math-based animations are complicated and hard to understand. For this reason, they should be treated as a _specialized-alternative_ to key-frames -not a complete replacement.
+As you can see, math-based animations can be quite complicated and difficult to understand. Thus, they should be treated as a _specialized-alternative_ to using key-frames - not a *total* replacement.
 
 This is the cost of the smooth and ideal loop of the animation.
 
 ![](/assets/images/visuals/math-based-animations/animation-1.gif)
 
-## Writing math-animations
+## Writing Math-Animations
 
-### By hand
+### By Hand
 
-Math-based animations can be written by hand. Simply create a new animation file, and write the math expressions. The format is fundamentally similar to keyframe animations. The vanilla resource files can be a valuable source of inspiration, and you should download the vanilla resource pack!
+To write such an animation by hand, simply create an animation file and substitute keyframes for singular arrays of values; strings values are accepted, and it is in a string that one may place a math expression. The Vanilla files can prove an invaluable reference for these types of animations, and it is **strongly** recommended you download and preview them!
 
-For visualizing how a query or equation will behave over time, you should use [Molang Grapher](https://jannisx11.github.io/molang-grapher/) from [Jannis](https://twitter.com/jannisx11). 
+As an important tip for those who wish to *visualise* their processes, the tool, [Molang Grapher](https://jannisx11.github.io/molang-grapher/) from [Jannis](https://twitter.com/jannisx11) may simulate expressions on a proper graph! 
 
 ### In Blockbench
 
-You can write and preview math-based animations in Blockbench.
-If you want to create a math-powered animation, create a keyframe at 0 seconds in your timeline and edit the MoLang expressions in the keyframe panel on the left sidebar. You can also mix and match numeric keyframes with math-based keyframes.
-Omit quotation marks around the expression. They are only required in raw JSON editing!
+Blockbench allows - to a degree - for the creation and live-previewing of most math-based animations.
+To begin, first create a new keyframe at frame 0 in your timeline. You may then add and edit MoLang expressions in the keyframe panel on the left sidebar. Mixing keyframes and math is supported.
+**Remember**, you should always omit quotation marks around expressions; they are only required in raw JSON-editing!
 
-Not all queries are supported in Blockbench due to missing context. If you want to preview an animation that uses a specific query, you can add it to the "Variable Placeholders" section right under the keyframe panel to simulate a value.
-For example, adding `query.modified_distance_moved = time*8` simulates the modified_distance_moved query with a speed of 8 blocks per second.
+Do mind that not all MoLang queries are supported in Blockbench in part due to missing game-context. If you wish to preview an animation that uses a context-specific query, you may add it to the Variable Placeholders section, just underneath the keyframe panel, to simulate a value.
+For example, adding `query.modified_distance_moved = time*8` simulates the `modified_distance_moved` query with a speed of 8 blocks per second.
 
-## Using queries
+## Using Queries
 
-The biggest tool you have access to when writing math-based animations is using `queries`. Queries can be used to add outside information into your math expression.
+The largest and most useful of tools in our mathematical repertoire is the wide array of MoLang "Queries". Queries can be used to add outside information into your math expression.
 
-Common ones include:
+Common Queries include:
 
 -   `query.modified_distance_moved`
 -   `query.modified_move_speed`
 -   `query.anim_time`
 -   `query.life_time`
 
-The reason we want to use queries is it allows us to drive animations from gameplay directly. Things like the attack time or distance moved will enable us to drive gameplay directly and allow animations to match the speed of the action.
+These are utilised in animations to draw things such as the attack-time or distance-moved from the game-world to provide a more dyanamic and synced flow.
 
-### Avoiding animation controllers
+### Avoiding Animation Controllers
 
 By using queries, you can avoid the need to create animation controllers. If the entity's speed is directly related to the speed of the walk animation, then by default, an entity that isn't moving won't be animated.
 
 ## Example
 
-A specific example is using animations to drive the wheels of a car based on the `modified_distance_moved`:
+A specific application example of a Math-Based animation may be found below. The example utilises the MoLang Query, `"query.modified_distance_moved"`:
 
 <CodeHeader></CodeHeader>
 
@@ -68,23 +68,22 @@ A specific example is using animations to drive the wheels of a car based on the
 	"animations": {
 		"animation.car.wheel_spin": {
 			"loop": true,
-			"animation_length": 1.0,
 			"bones": {
+			
 				"front_wheels": {
-					"rotation": ["query.modified_distance_moved * -30", 0, 0]
+					"rotation": [ "query.modified_distance_moved * -30", 0, 0 ]
 				},
+				
 				"back_wheels": {
-					"rotation": ["query.modified_distance_moved * -30", 0, 0]
+					"rotation": [ "query.modified_distance_moved * -30", 0, 0 ]
 				}
+				
 			}
 		}
 	}
 }
 ```
 
-In this example, the bones/groups `front_wheels` and `back_wheels` are rotated based on the `query.modified_distance_moved`, multiplied by some 30.
+In this example, the model's bones, `front_wheels` and `back_wheels`, are rotated on the X-axis based on information passed from `query.modified_distance_moved`, then multiplied by -30.
 
-This means
-
--   A car at rests will not spin
--   A car that is driving will spin proportionally fast to the speed of the car
+This means that a car at *rest* **will not** spin, and a car that is *driving* **will spin** - doing so at a rate proportional to the car's movement speed.
