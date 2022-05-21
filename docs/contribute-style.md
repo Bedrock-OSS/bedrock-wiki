@@ -361,7 +361,7 @@ FolderViews are Components which can be used to show a setup of files, like in o
     'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
     'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
 
-]"
+    ]"
 ></FolderView>
 ```
 
@@ -453,7 +453,8 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 <CardLink 
     imgsrc='assets/images/homepage/wikilogo.png' 
     title='title' 
-    link='https://google.com' />
+    link='https://google.com'
+/>
 
 | Attribute | Required | Type   | Note                                   |
 | --------- | -------- | ------ | -------------------------------------- |

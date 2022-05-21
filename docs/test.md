@@ -126,3 +126,7 @@ hello
     link="https://www.google.com/"
     color=default
 >Download Wiki Logo</BButton>
+
+## MD Snippets
+
+wiki.
