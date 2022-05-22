@@ -8,7 +8,7 @@ Important links have a ⭐.
 
 ## Discord Links
 
--   ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
+-   ⭐ [Bedrock Add-Ons](https://discord.gg/46JUdQb)
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
 -   ⭐ [Minecraft](https://discord.gg/minecraft)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
