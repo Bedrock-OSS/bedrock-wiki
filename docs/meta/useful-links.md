@@ -21,7 +21,7 @@ Important links have a ⭐.
 -   [Minecraft Map Testing](https://discord.gg/QRE99eS)
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
 -   [MCPECore](https://discord.com/invite/N3e6exUQGs)
--   [Bedrock Commands](https://discord.gg/bedrockcommands)
+-   [Bedrock Commands](https://discord.gg/vV29d6rJcj)
 -   [BDSX](https://discord.gg/8UhbaDwFMh)
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
