@@ -129,4 +129,6 @@ hello
 
 ## MD Snippets
 
-wiki.
+`Ctrl + Space`
+
+![](/assets/images/contribute/snippets/snippets.png)

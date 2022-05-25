@@ -129,6 +129,12 @@ To redirect to another page, just look in the file explorer. The main folder is 
 
 Our wiki uses special Vue-Components, which you can use to add things like Buttons, Spoilers, CodeBlocks, etc.
 
+:::tip Snippets
+We have snippets for our components. To see them, start typing `wiki.` in Markdown file and then press `Ctrl + Space`.
+wiki.
+![](/assets/images/contribute/snippets/snippets.png)
+:::
+
 ### Panel
 
 Panels are used to inform or warn the user about some really important stuff. There are three types of Panels: `tip`, `warning` and `danger`.

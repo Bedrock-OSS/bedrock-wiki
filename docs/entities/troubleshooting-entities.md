@@ -10,9 +10,9 @@ tags:
 This page contains troubleshooting information about _entities_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
 :::
 
----
-
-<a name="0.0.0"></a>
+:::warning
+Always remember to check content log!
+:::
 
 ## 0.0.0 - You messed up
 
@@ -20,19 +20,12 @@ Accept that something, somewhere, is wrong. _Nobody_ at _any_ level is immune to
 
 <BButton color="blue" link="#_1-0-0-are-both-packs-active">Continue</BButton>
 
----
-
-<a name="1.0.0"></a>
 
 ## 1.0.0 - Are both packs active?
 
 Make sure both the resource pack and behavior pack are active for the world (an excellent way to avoid accidentally having this issue is to set each pack as a dependency of the other in both packs' manifest.json files so that adding or removing one of the packs automatically adds/removes the other)
 
 <BButton color="blue" link="#_2-0-0-determine-whether-the-issue-is-in-the-rp-or-the-bp">Continue</BButton>
-
----
-
-<a name="2.0.0"></a>
 
 ## 2.0.0 - Determine whether the issue is in the RP or the BP
 
@@ -76,15 +69,7 @@ I see a spawn egg for my entity, but it's just black, and the entity doesn't app
 
 I see a spawn egg for my entity, and it has the colors I chose, but the entity still doesn't appear when I spawn or summon it: <BButton color="blue" link="#step-3-3-0-rp-resources-still-writing-because-this-is-going-to-be-extensive">Go</BButton>
 
----
-
-<a name="3.0.0"></a>
-
 ## 3.0.0 - Locating the specific issue
-
----
-
-<a name="3.1.0"></a>
 
 ## 3.1.0 - BP
 
@@ -95,26 +80,14 @@ This means the game isn't detecting a behavior file for the entity at all. Some 
 -   Syntax error in your behavior file
 -   Misnamed folder
 
----
-
-<a name="3.1.1"></a>
-
 ### 3.1.1 - Syntax error
 
 A single syntax error in a .json file causes the entire file to break and be ignored. To check that your file is free of syntax errors, visit [Json Lint](https://jsonlint.com/), paste the contents of your behavior file into the big box, then click "Validate JSON".
 (NOTE: Although this site will mark // comments as errors, Minecraft DOES allow .json files to contain them)
 
----
-
-<a name="3.1.2"></a>
-
 ### 3.1.2 - Misnamed folder
 
 Ensure the folder containing your behavior files is named "entities" and not "entity". In behavior packs, folders tend to be named "entities" while in resource packs, they'll usually be "entity". I know. It isn't enjoyable.
-
----
-
-<a name="3.2.0"></a>
 
 ## Step 3.2.0 - RP .entity
 
@@ -126,39 +99,22 @@ This means you have a working behavior file, but for whatever reason, the game i
 -   The entity's identifiers don't match
 -   One or more of the resources your .entity file directs to are invalid
 
----
-
-<a name="3.2.1"></a>
-
 ### Step 3.2.1 - Syntax error
 
 A single syntax error in a .json file causes the entire file to break and be ignored. To check that your file is free of syntax errors, visit [Json Lint](https://jsonlint.com/), paste the contents of your behavior file into the big box, then click "Validate JSON".
 (NOTE: Although this site will mark // comments as errors, Minecraft DOES allow .json files to contain them)
-
----
-
-<a name="3.2.2"></a>
 
 ### Step 3.2.2 - Identifiers don't match
 
 The "identifier" in your behavior file must be EXACTLY the same as the one in your .entity file, including the namespace (the part before the colon like `minecraft` in `minecraft:bat`), and neither should be using `minecraft` as the namespace unless it's a default mob.
 
 Your identifiers should also NOT contain any spaces or special characters (aside from the colon between the namespace and ID), and, for rare fringe case bug reasons, you should AVOID having the namespace or ID start with anything other than a lowercase letter. Beginning with a number or capital letter _shouldn't_ be an issue anymore, but this was not always the case in earlier versions of the game, and because of this, bugs have sporadically appeared in the past where starting with a number or capital letter had unexpected effects. Therefore it's better to avoid this if possible.
-<a name="3.2.2"></a>
-
----
-
-<a name="3.2.3"></a>
 
 ### Step 3.2.3 - Invalid resources
 
 The entity's ID in the .entity file does not match the ID you used in the behavior file.
 
----
-
-<a name="3.3.0"></a>
-
-## Step 3.3.0 - RP resources: (still writing because this is going to be extensive)
+## Step 3.3.0 - RP resources: (WIP)
 
 _You DO see a spawn egg for your entity in the creative inventory, and it DOES have the proper colors you specified in the .entity file's "spawn_egg" object, but nothing appears when you spawn/summon it, or there's just a shadow._
 
@@ -166,7 +122,23 @@ This means you have a working `.behavior` and `.entity` file, but something in t
 
 To start with:
 
--   invisible, no shadow -> bad RP reference
--   invisible, yes shadow -> geometry issue
--   visible, weird texture -> texture issue
--   visible, weird visibility stuff -> material issue
+-   invisible, no shadow -> bad RP reference: <BButton link="#_3-3-1-invisible-no-shadow" color=blue >Go</BButton>
+-   invisible, shadow exists -> geometry issue: <BButton link="#_3-3-2-invisible-shadow-exists" color=blue >Go</BButton>
+-   visible, weird texture -> texture issue: <BButton link="#_3-3-3-visible-weird-texture" color=blue >Go</BButton>
+-   visible, weird visibility stuff -> material issue: <BButton link="#_3-3-4-visible-weird-visibility-stuff" color=blue >Go</BButton>
+
+### 3.3.1 - Invisible, no shadow
+
+This can be caused by ... . First make sure your entity is in it's place (not disappearing, for example it does not do instant_despawn).
+
+### 3.3.2 - Invisible, shadow exists
+
+This situation can be caused by wrong geometry or wrong material (if using half-transparent a.k.a glowing textures).
+
+1. Make sure you don't have a spelling error in geometry name, geometry file is valid and geometry offsets are correct.
+2. Make sure you are using the right material. For example, some materials support only emissive textures.
+3. Check your render controllers. Maybe the issue is in it.
+
+### 3.3.3 - Visible, weird texture
+
+### 3.3.4 - Visible, weird visibility stuff

@@ -94,5 +94,13 @@
 			"/>"
 		],
 		"description": "CardLink."
+	},
+	"Page Dumper (Use only if know how)": {
+		"prefix": "wiki.page_dumper",
+		"body": [
+			"<!-- page_dumper_start -->",
+			"<!-- page_dumper_end -->"
+		],
+		"description": "Page dumper. Use only if know how."
 	}
 }

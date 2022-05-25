@@ -5,7 +5,7 @@ tags:
     - experimental
 ---
 
-# Application
+## Application
 
 Block materials essentially control how a block is rendered in the world, much like entity materials. They can be applied with the block component, `material_instances`, with the optional parameter, `render_method`. Using this would look something like the below example, a non-full block:
 
@@ -24,7 +24,7 @@ Block materials essentially control how a block is rendered in the world, much l
 
 _Note: This feature is currently experimental, and, as such, is currently only available for custom blocks._
 
-# List of Materials
+## List of Materials
 
 | Argument     | Slot                                                                                                                                                                                                                                                                     |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
