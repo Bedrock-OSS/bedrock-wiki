@@ -1,6 +1,8 @@
 ---
 title: Block Sounds
 category: Documentation
+mention:
+    - MedicalJewel105
 ---
 
 Block sounds refers to the sound property in your block entry inside `blocks.json`.
