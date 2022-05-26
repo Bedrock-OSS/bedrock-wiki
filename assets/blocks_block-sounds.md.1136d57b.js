@@ -1,13 +1,13 @@
 import{_ as t,c as p,a as o,w as e,b as s,d as n,e as u,r as l,o as c}from"./404.md.bf142133.js";const y='{"title":"Block Sounds","description":"","frontmatter":{"title":"Block Sounds","category":"Documentation","mention":["MedicalJewel105"]},"headers":[],"relativePath":"blocks/block-sounds.md"}',r={},i=s("p",null,[n("Block sounds refers to the sound property in your block entry inside "),s("code",null,"blocks.json"),n(". This property is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound. You can apply sound to your block this way:")],-1),b=n("RP/blocks.json"),k=u(`<div class="language-json line-numbers-mode"><pre><code><span class="token punctuation">{</span>
-    <span class="token property">&quot;format_version&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token number">0</span>
-   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-   <span class="token property">&quot;acacia_button&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token property">&quot;sound&quot;</span><span class="token operator">:</span> <span class="token string">&quot;wood&quot;</span><span class="token punctuation">,</span> <span class="token comment">// Define sound here</span>
-      <span class="token property">&quot;textures&quot;</span><span class="token operator">:</span> <span class="token string">&quot;acacia_planks&quot;</span>
-   <span class="token punctuation">}</span>
+    <span class="token property">&quot;format_version&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token number">0</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;acacia_button&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;sound&quot;</span><span class="token operator">:</span><span class="token string">&quot;wood&quot;</span><span class="token punctuation">,</span> <span class="token comment">// Define sound here</span>
+        <span class="token property">&quot;textures&quot;</span><span class="token operator">:</span><span class="token string">&quot;acacia_planks&quot;</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>The following are valid values for the sound property:</p><div class="language-json line-numbers-mode"><pre><code><span class="token punctuation">[</span>
     <span class="token string">&quot;amethyst_block&quot;</span><span class="token punctuation">,</span>
