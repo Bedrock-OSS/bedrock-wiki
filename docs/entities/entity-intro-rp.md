@@ -277,7 +277,7 @@ This still requires the use of `villager_v2_masked` material
 }
 ```
 
-####Entity
+#### Entity
 
 Remember to include the geometry variants in your entity's file
 
