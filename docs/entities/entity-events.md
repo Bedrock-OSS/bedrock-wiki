@@ -345,15 +345,15 @@ We are also able to specify filters and a target for the event. The target param
 
 ```json
 "wiki:on_interact": {
-  "trigger": {
-    "filters": {
-      "test": "is_family",
-      "subject": "self",
-      "value": "pig"
-    },
-    "event": "wiki:interacted",
-    "target": "other"
-  }
+    "trigger": {
+        "filters": {
+            "test": "is_family",
+            "subject": "self",
+            "value": "pig"
+        },
+        "event": "wiki:interacted",
+        "target": "other"
+    }
 }
 ```
 :::tip 
@@ -366,20 +366,20 @@ Combining this with the sequence parameter, this allows us to run an event in mu
 
 ```json
 "wiki:on_interact":{
-  "sequence":[
-    {
-      "trigger": {
-        "event": "wiki:interacted",
-        "target": "other"
-      }
-    },
-    {
-      "trigger": {
-        "event": "wiki:interacted_with",
-        "target": "self"
-      }
-    }
-  ]
+    "sequence":[
+        {
+            "trigger": {
+            "event": "wiki:interacted",
+            "target": "other"
+            }
+        },
+        {
+            "trigger": {
+            "event": "wiki:interacted_with",
+            "target": "self"
+            }
+        }
+    ]
 }
 ```
 
@@ -398,14 +398,14 @@ Some components allow the player to call an event based on parameters set. Here 
 
 ```json
 "minecraft:environment_sensor": {
-  "triggers": {
-    "filters": {
-      "test": "is_underwater",
-      "operator": "==",
-      "value": true
-    },
-    "event": "minecraft:start_transforming"
-  }
+    "triggers": {
+        "filters": {
+            "test": "is_underwater",
+            "operator": "==",
+            "value": true
+            },
+        "event": "minecraft:start_transforming"
+    }
 }
 ```
 
@@ -416,10 +416,10 @@ This behavior-based animation is used to call the event `wiki:start_pouncing` af
 
 ```json
 "animation.entity.pounce_timer": {
-  "timeline": {
-    "10.0": "@s wiki:start_pouncing"
-  },
-  "animation_length": 15.0
+    "timeline": {
+        "10.0": "@s wiki:start_pouncing"
+    },
+    "animation_length": 10.1
 }
 ```
 
@@ -538,26 +538,68 @@ The component `minecraft:damage_sensor` inside the pillager calls the event `min
 
 ```json
 "minecraft:damage_sensor": {
-  "triggers": {
-    "on_damage": {
-      "filters": {
-        "all_of": [
-          {
-            "test": "has_damage",
-            "value": "fatal"
-          },
-          {
-            "test": "is_family",
-            "subject": "other",
-            "value": "player"
-          }
-        ]
-      },
-      "event": "minecraft:gain_bad_omen",
-      "target": "other"
+    "triggers": {
+        "on_damage": {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "has_damage",
+                        "value": "fatal"
+                    },
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                    }
+                ]
+            },
+            "event": "minecraft:gain_bad_omen",
+            "target": "other"
+        }
     }
-  }
 }
 ```
 
 Some components have these `targets` and each has certain ones that can be used. For example, `minecraft:interact` can have the target as either `self` or `other` where other is the entity that interacted with the entity. All valid components should have `self` and `target` as options where target is the targetted entity. 
+
+### Built-in Events
+In general, using the component groups from vanilla mobs will not work. For example, the `minecraft:convert_to_drowned` will not be called in your entity unless you use one of the methods above to call it. However, there are a few events that called automatically when the conditions are met:
+-   `minecraft:entity_spawned` : called when the entity is spawned in. Useful for setting up inital component groups.
+-   `minecraft:entity_born`    : called when the entity is spawned in through breeding.
+-   `minecraft:entity_transformed` : called when another entity transforms into this one. 
+-   `minecraft:on_prime`        : called when the entity's fuse is lit and is ready to explode.
+
+A good example of these in use is with the cow. This shows how we can always ensure the cow has either `minecraft:cow_adult` or `minecraft:cow_baby` as soon as it is spawned/transformed.
+
+<CodeHeader>BP/entities/cow.json#events</CodeHeader>
+
+```json
+"events": {
+    "minecraft:entity_spawned": {
+        "randomize": [
+            {
+                "weight": 95,
+                "add": {
+                    "component_groups": ["minecraft:cow_adult"]
+                }
+            },
+            {
+                "weight": 5,
+                "add": {
+                    "component_groups": ["minecraft:cow_baby"]
+                }
+            }
+    ]
+    },
+    "minecraft:entity_born": {
+        "add": {
+            "component_groups": ["minecraft:cow_baby"]
+        }
+    },
+    "minecraft:entity_transformed": {
+        "add": {
+            "component_groups": ["minecraft:cow_adult"]   
+        }
+    }
+}
+```
