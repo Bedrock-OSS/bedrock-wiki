@@ -4,6 +4,8 @@ title: Sound Definitions
 
 ## ambient
 
+#### ambient
+---
 `ambient.basalt_deltas.additions`
 
 `ambient.basalt_deltas.loop`
@@ -36,6 +38,8 @@ title: Sound Definitions
 
 `ambient.warped_forest.mood`
 
+#### firework
+---
 `firework.blast`
 
 `firework.large_blast`
@@ -46,6 +50,8 @@ title: Sound Definitions
 
 `firework.twinkle`
 
+#### portal
+---
 `portal.travel`
 
 `portal.trigger`
@@ -53,8 +59,12 @@ title: Sound Definitions
 
 ## block
 
+#### ambient
+---
 `ambient.candle`
 
+#### beacon
+---
 `beacon.activate`
 
 `beacon.ambient`
@@ -63,6 +73,8 @@ title: Sound Definitions
 
 `beacon.power`
 
+#### block
+---
 `block.bamboo.break`
 
 `block.bamboo.fall`
@@ -177,6 +189,8 @@ title: Sound Definitions
 
 `block.turtle_egg.drop`
 
+#### break
+---
 `break.amethyst_block`
 
 `break.amethyst_cluster`
@@ -205,6 +219,8 @@ title: Sound Definitions
 
 `break.tuff`
 
+#### bubble
+---
 `bubble.down`
 
 `bubble.downinside`
@@ -215,6 +231,8 @@ title: Sound Definitions
 
 `bubble.upinside`
 
+#### bucket
+---
 `bucket.empty_fish`
 
 `bucket.empty_lava`
@@ -229,8 +247,12 @@ title: Sound Definitions
 
 `bucket.fill_water`
 
+#### cake
+---
 `cake.add_candle`
 
+#### cauldron
+---
 `cauldron.adddye`
 
 `cauldron.cleanarmor`
@@ -249,12 +271,18 @@ title: Sound Definitions
 
 `cauldron.takewater`
 
+#### cauldron_drip
+---
 `cauldron_drip.lava.pointed_dripstone`
 
 `cauldron_drip.water.pointed_dripstone`
 
+#### chime
+---
 `chime.amethyst_block`
 
+#### conduit
+---
 `conduit.activate`
 
 `conduit.ambient`
@@ -265,6 +293,8 @@ title: Sound Definitions
 
 `conduit.short`
 
+#### dig
+---
 `dig.ancient_debris`
 
 `dig.azalea_leaves`
@@ -337,16 +367,24 @@ title: Sound Definitions
 
 `dig.wood`
 
+#### drip
+---
 `drip.lava.pointed_dripstone`
 
 `drip.water.pointed_dripstone`
 
+#### extinguish
+---
 `extinguish.candle`
 
+#### fire
+---
 `fire.fire`
 
 `fire.ignite`
 
+#### hit
+---
 `hit.amethyst_block`
 
 `hit.amethyst_cluster`
@@ -443,20 +481,30 @@ title: Sound Definitions
 
 `hit.wood`
 
+#### item
+---
 `item.bone_meal.use`
 
 `item.book.put`
 
+#### liquid
+---
 `liquid.lava`
 
 `liquid.lavapop`
 
 `liquid.water`
 
+#### lodestone_compass
+---
 `lodestone_compass.link_compass_to_lodestone`
 
+#### pick_berries
+---
 `pick_berries.cave_vines`
 
+#### place
+---
 `place.amethyst_block`
 
 `place.amethyst_cluster`
@@ -497,8 +545,12 @@ title: Sound Definitions
 
 `place.tuff`
 
+#### portal
+---
 `portal.portal`
 
+#### random
+---
 `random.anvil_break`
 
 `random.anvil_land`
@@ -531,6 +583,8 @@ title: Sound Definitions
 
 `random.shulkerboxopen`
 
+#### respawn_anchor
+---
 `respawn_anchor.ambient`
 
 `respawn_anchor.charge`
@@ -539,18 +593,30 @@ title: Sound Definitions
 
 `respawn_anchor.set_spawn`
 
+#### smithing_table
+---
 `smithing_table.use`
 
+#### step
+---
 `step.candle`
 
+#### tile
+---
 `tile.piston.in`
 
 `tile.piston.out`
 
+#### tilt_down
+---
 `tilt_down.big_dripleaf`
 
+#### tilt_up
+---
 `tilt_up.big_dripleaf`
 
+#### ui
+---
 `ui.cartography_table.take_result`
 
 `ui.loom.select_pattern`
@@ -559,6 +625,8 @@ title: Sound Definitions
 
 `ui.stonecutter.take_result`
 
+#### use
+---
 `use.ancient_debris`
 
 `use.basalt`
@@ -640,13 +708,19 @@ title: Sound Definitions
 
 ## bottle
 
+#### bottle
+---
 `bottle.dragonbreath`
 
 
 ## hostile
 
+#### entity
+---
 `entity.zombie.converted_to_drowned`
 
+#### mob
+---
 `mob.blaze.breathe`
 
 `mob.blaze.death`
@@ -1036,6 +1110,8 @@ title: Sound Definitions
 
 ## music
 
+#### music
+---
 `music.game`
 
 `music.game.basalt_deltas`
@@ -1083,20 +1159,30 @@ title: Sound Definitions
 
 ## neutral
 
+#### component
+---
 `component.jump_to_block`
 
+#### copper
+---
 `copper.wax.off`
 
 `copper.wax.on`
 
+#### leashknot
+---
 `leashknot.break`
 
 `leashknot.place`
 
+#### minecart
+---
 `minecart.base`
 
 `minecart.inside`
 
+#### mob
+---
 `mob.agent.spawn`
 
 `mob.armor_stand.break`
@@ -1473,6 +1559,8 @@ title: Sound Definitions
 
 `mob.wolf.whine`
 
+#### raid
+---
 `raid.horn`
 
 `scrape`
@@ -1480,6 +1568,8 @@ title: Sound Definitions
 
 ## player
 
+#### armor
+---
 `armor.equip_chain`
 
 `armor.equip_diamond`
@@ -1494,10 +1584,16 @@ title: Sound Definitions
 
 `armor.equip_netherite`
 
+#### bucket
+---
 `bucket.fill_powder_snow`
 
+#### camera
+---
 `camera.take_picture`
 
+#### crossbow
+---
 `crossbow.loading.end`
 
 `crossbow.loading.middle`
@@ -1512,12 +1608,18 @@ title: Sound Definitions
 
 `crossbow.shoot`
 
+#### damage
+---
 `damage.fallbig`
 
 `damage.fallsmall`
 
+#### elytra
+---
 `elytra.loop`
 
+#### fall
+---
 `fall.amethyst_block`
 
 `fall.amethyst_cluster`
@@ -1612,6 +1714,8 @@ title: Sound Definitions
 
 `fall.wood`
 
+#### game
+---
 `game.player.attack.nodamage`
 
 `game.player.attack.strong`
@@ -1620,6 +1724,8 @@ title: Sound Definitions
 
 `game.player.hurt`
 
+#### item
+---
 `item.shield.block`
 
 `item.spyglass.stop_using`
@@ -1642,6 +1748,8 @@ title: Sound Definitions
 
 `item.trident.thunder`
 
+#### jump
+---
 `jump.ancient_debris`
 
 `jump.azalea`
@@ -1718,6 +1826,8 @@ title: Sound Definitions
 
 `jump.wood`
 
+#### land
+---
 `land.ancient_debris`
 
 `land.azalea`
@@ -1794,6 +1904,8 @@ title: Sound Definitions
 
 `land.wood`
 
+#### mob
+---
 `mob.player.hurt_drown`
 
 `mob.player.hurt_freeze`
@@ -1802,8 +1914,12 @@ title: Sound Definitions
 
 `mob.sheep.shear`
 
+#### particle
+---
 `particle.soul_escape`
 
+#### random
+---
 `random.bow`
 
 `random.bowhit`
@@ -1834,6 +1950,8 @@ title: Sound Definitions
 
 `random.totem`
 
+#### step
+---
 `step.amethyst_block`
 
 `step.amethyst_cluster`
@@ -1926,11 +2044,15 @@ title: Sound Definitions
 
 `step.wood`
 
+#### vr
+---
 `vr.stutterturn`
 
 
 ## record
 
+#### note
+---
 `note.banjo`
 
 `note.bass`
@@ -1965,6 +2087,8 @@ title: Sound Definitions
 
 `note.xylophone`
 
+#### record
+---
 `record.11`
 
 `record.13`
@@ -1994,8 +2118,12 @@ title: Sound Definitions
 
 ## ui
 
+#### item
+---
 `item.book.page_turn`
 
+#### random
+---
 `random.click`
 
 `random.screenshot`
@@ -2005,6 +2133,8 @@ title: Sound Definitions
 
 ## weather
 
+#### ambient
+---
 `ambient.weather.lightning.impact`
 
 `ambient.weather.rain`
@@ -2014,8 +2144,12 @@ title: Sound Definitions
 
 ## No category
 
+#### record
+---
 `record.otherside`
 
+#### sign
+---
 `sign.dye.use`
 
 `sign.ink_sac.use`
