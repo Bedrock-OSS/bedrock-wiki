@@ -1,16 +1,9 @@
 ---
-<<<<<<<< HEAD:docs/visuals/render-controllers.md
-title: Render Controllers
-nav_order: 3
-========
 title: Intro to Entities RP
 category: General
 nav_order: 2
->>>>>>>> 65f3b520d5754afca39d219da5ffb085e197222f:docs/entities/entity-intro-rp.md
 tags:
     - beginner
-category:
-    - General
 ---
 
 Render controllers are an often-misunderstood part of the resource pack. But you don't need to be afraid! It would help if you considered render controllers as logic packs that take short-name definitions from the RP Entity File and determine how they will be combined/layered/rendered in-game.
