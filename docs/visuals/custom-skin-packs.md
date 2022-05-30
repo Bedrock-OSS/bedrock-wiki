@@ -134,11 +134,3 @@ If you play on MC version lower than 1.18.30, you might experience a bug when "E
 >Download Equip Button Fix</BButton>
 
 ![](/assets/images/visuals/skin-packs/troubleshooting-2.png)
-
-## What you learned
-
-<Checklist>
-
--   [x] How to create a skin pack.
-
-</Checklist>

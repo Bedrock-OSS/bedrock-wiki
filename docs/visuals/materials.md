@@ -26,7 +26,7 @@ Most materials inherit the settings of previously defined materials, then furthe
 
 ```json
 "<New material ID>:<ID of material to use as a base>": {
-  <defines, states, and other settings>
+    <defines, states, and other settings>
 },
 ```
 
@@ -40,7 +40,7 @@ Some material files contain extensive branching trees of materials. For example,
 
 ```json
 "villager_v2_masked:entity_multitexture_masked": {
-  "depthFunc": "LessEqual"
+    "depthFunc": "LessEqual"
 },
 ```
 
@@ -50,21 +50,21 @@ Scrolling up in the file, we can find "entity_multitexture_masked" inheriting th
 <CodeHeader></CodeHeader>
 
 ```json
-"entity_multitexture_masked:entity_alphatest": {
-  "+defines": [
-    "MASKED_MULTITEXTURE"
-  ],
-  "+samplerStates": [
-    {
-      "samplerIndex": 0,
-      "textureWrap": "Clamp"
-    },
-    {
-      "samplerIndex": 1,
-      "textureWrap": "Clamp"
-    }
-  ]
-},
+"entity_multitexture_masked:entity_alphatest":{
+    "+defines":[
+        "MASKED_MULTITEXTURE"
+    ],
+    "+samplerStates":[
+        {
+            "samplerIndex":0,
+            "textureWrap":"Clamp"
+        },
+        {
+            "samplerIndex":1,
+            "textureWrap":"Clamp"
+        }
+    ]
+}
 ```
 
 "entity_alphatest" can then be followed to "entity_nocull"
@@ -72,16 +72,18 @@ Scrolling up in the file, we can find "entity_multitexture_masked" inheriting th
 <CodeHeader></CodeHeader>
 
 ```json
-"entity_alphatest:entity_nocull": {
-  "+defines": [ "ALPHA_TEST" ],
-  "+samplerStates": [
-    {
-      "samplerIndex": 1,
-      "textureWrap": "Repeat"
-    }
-  ],
-  "msaaSupport": "Both"
-},
+"entity_alphatest:entity_nocull":{
+    "+defines":[
+        "ALPHA_TEST"
+    ],
+    "+samplerStates":[
+        {
+            "samplerIndex":1,
+            "textureWrap":"Repeat"
+        }
+    ],
+    "msaaSupport":"Both"
+}
 ```
 
 which can be followed to plain "entity"
@@ -89,9 +91,11 @@ which can be followed to plain "entity"
 <CodeHeader></CodeHeader>
 
 ```json
-"entity_nocull:entity": {
-  "+states": [ "DisableCulling" ]
-},
+"entity_nocull:entity":{
+    "+states":[
+        "DisableCulling"
+    ]
+}
 ```
 
 which can then finally be followed to "entity_static"
@@ -99,10 +103,13 @@ which can then finally be followed to "entity_static"
 <CodeHeader></CodeHeader>
 
 ```json
-"entity:entity_static": {
-  "+defines": [ "USE_OVERLAY" ],
-  "msaaSupport": "Both"
+"entity:entity_static":{
+    "+defines":[
+        "USE_OVERLAY"
+    ],
+    "msaaSupport":"Both"
 },
+
 ```
 
 "entity_static" doesn't have a colon followed by another material, indicating that it's the bottom of this inheritance tree.
@@ -110,49 +117,78 @@ which can then finally be followed to "entity_static"
 <CodeHeader></CodeHeader>
 
 ```json
-"entity_static": {
-  "vertexShader": "shaders/entity.vertex",
-  "vrGeometryShader": "shaders/entity.geometry",
-  "fragmentShader": "shaders/entity.fragment",
-  "vertexFields": [
-    { "field": "Position" },
-    { "field": "Normal" },
-    { "field": "UV0" }
-  ],
-  "variants": [
-    {
-      "skinning": {
-        "+defines": [ "USE_SKINNING" ],
-        "vertexFields": [
-          { "field": "Position" },
-          { "field": "BoneId0" },
-          { "field": "Normal" },
-          { "field": "UV0" }
-        ]
-      }
-    },
-    {
-      "skinning_color": {
-        "+defines": [ "USE_SKINNING", "USE_OVERLAY" ],
-        "+states": [ "Blending" ],
-        "vertexFields": [
-          { "field": "Position" },
-          { "field": "BoneId0" },
-          { "field": "Color" },
-          { "field": "Normal" },
-          { "field": "UV0" }
-        ]
-      }
-    }
-  ],
-  "msaaSupport": "Both",
-  "+samplerStates": [
-    {
-      "samplerIndex": 0,
-      "textureFilter": "Point"
-    }
-  ]
-},
+"entity_static":{
+    "vertexShader":"shaders/entity.vertex",
+    "vrGeometryShader":"shaders/entity.geometry",
+    "fragmentShader":"shaders/entity.fragment",
+    "vertexFields":[
+        {
+            "field":"Position"
+        },
+        {
+            "field":"Normal"
+        },
+        {
+            "field":"UV0"
+        }
+    ],
+    "variants":[
+        {
+            "skinning":{
+                "+defines":[
+                    "USE_SKINNING"
+                ],
+                "vertexFields":[
+                    {
+                        "field":"Position"
+                    },
+                    {
+                        "field":"BoneId0"
+                    },
+                    {
+                        "field":"Normal"
+                    },
+                    {
+                        "field":"UV0"
+                    }
+                ]
+            }
+        },
+        {
+            "skinning_color":{
+                "+defines":[
+                    "USE_SKINNING",
+                    "USE_OVERLAY"
+                ],
+                "+states":[
+                    "Blending"
+                ],
+                "vertexFields":[
+                    {
+                        "field":"Position"
+                    },
+                    {
+                        "field":"BoneId0"
+                    },
+                    {
+                        "field":"Color"
+                    },
+                    {
+                        "field":"Normal"
+                    },
+                    {
+                        "field":"UV0"
+                    }
+                ]
+            }
+        }
+    ],
+    "msaaSupport":"Both",
+    "+samplerStates":[
+        {
+            "samplerIndex":0,
+            "textureFilter":"Point"
+        }
+    ]
+}
 ```
-
-

@@ -291,15 +291,3 @@ Remember to include the geometry variants in your entity's file
 	"custom_2": "geometry.entity.custom_2"
 }
 ```
-
-## What you have done
-
-Congratulations, you've finished entity visual introduction!
-Now consider looking into other pages.
-
-<Checklist>
-
--   [x] Learn tips and tricks you should know when modeling for Minecraft Bedrock Edition.
--   [x] Learn how to render your entity properly in game.
-
-</Checklist>
