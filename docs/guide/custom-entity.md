@@ -871,7 +871,7 @@ Now that we have animations and animation controllers referenced, we need to dec
 }
 ```
 
-Here, `scripts` tell the entity to perform certain actions at certain times. The `animate` key will run any animation or controllers every tick. This means that each tick our animation controller will check whether to transition to a new state and perform any animations in the state they are in.
+Here, `scripts` tell the entity to perform certain actions at certain times. The `animate` key will run any animation or controller referenced every tick. This means that each tick our animation controller will check whether to transition to a new state and perform any animations in the state they are in.
 
 With this our animations should be working correctly. 
 
