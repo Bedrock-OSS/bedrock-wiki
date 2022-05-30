@@ -1,12 +1,6 @@
 ---
-<<<<<<<< HEAD:docs/visuals/render-controllers.md
 title: Render Controllers
 nav_order: 3
-========
-title: Intro to Entities RP
-category: General
-nav_order: 2
->>>>>>>> 65f3b520d5754afca39d219da5ffb085e197222f:docs/entities/entity-intro-rp.md
 tags:
     - beginner
 category:
