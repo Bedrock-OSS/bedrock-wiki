@@ -161,5 +161,6 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | itemGroup.name.wood              |
 | itemGroup.name.wool              |
 | itemGroup.name.woolCarpet        |
+
 *Last updated for 1.18.30*
 <!-- page_dumper_end -->
