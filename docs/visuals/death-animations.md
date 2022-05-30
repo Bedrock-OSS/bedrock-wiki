@@ -108,7 +108,7 @@ This part will explain how to customize death animation.
 
 You can remove/customize entity damage color overlay.
 
-Before starting, you must have the basics of render controller so check out the [tutorial](/visuals/render-controllers) of render controllers.
+Before starting, you must have the basics of render controller so check out the [tutorial](entities/entity-intro-rp) of render controllers.
 
 To remove the damage overlay color of any entity you want when it gets damaged, we will use `is_hurt_color` and remove the damage overlay color when an entity receives damage from lava or fire use `on_fire_color`.
 First, you need to make the rgba values to 0

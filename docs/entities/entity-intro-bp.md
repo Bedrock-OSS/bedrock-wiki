@@ -1,9 +1,10 @@
 ---
-title: Intro to Entities
+title: Intro to Entities BP
 category: General
 nav_order: 1
 tags:
     - guide
+    - beginner
 ---
 
 Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means and how to use them.
@@ -77,11 +78,11 @@ All component groups are custom-created. You cannot use component groups from ot
 
 In vanilla Minecraft entities, component groups are namespaced with `minecraft:`, like `minecraft:cat_persian` above. But it is important to remember that they are _not components_. When you create your component groups, you can use whatever name/namespace:name combination you want. For example, `wiki:example_group` above. [Here](/concepts/namespaces)'s more info on namespaces.
 
-When a component is placed into a group, is it _not_ automatically added to your entity. It won't do anything at all until the group is added. When the group is added, the component will become active and start affecting the behavior of your entity.
+When a component is placed into a group, is it _not_ automatically added to your entity. It won't do anything at all until the group is added. When the group is added, the component will become active and start affecting the behavior of your entity. You can also have multiple component groups added at once.
 
 ## Events
 
-Events are a special syntax for adding and removing component groups. By adding/removing groups, we can create dynamic behavior for our entities.
+Events are a special syntax for adding and removing component groups that can be called by components when certain criteria are met. By adding/removing groups, we can create dynamic behavior for our entities.
 
 An example:
 
@@ -106,91 +107,57 @@ Like component groups, events are 100% custom-created inside each entity. You ca
 
 The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible.
 
-### Conditional Events
+Events are activated inside of certain components when some criteria is met. Below is an example:
 
-Conditional events are events using "filters" to return a component group depending on your filter (see the example below).
-We are testing if a tag exists and if it doesn't return the "prefix:is_false" component, but if it does exist, return "prefix:is_true".
-
-An example:
-
-<CodeHeader>BP/entities/example.json#minecraft:entity#events</CodeHeader>
+<CodeHeader>BP/entities/example.json#minecraft:entity</CodeHeader>
 
 ```json
-"prefix:event_name":{
-    //Name of the event
-	"sequence":[
-        //Sequence 1 >>> 2 >>> 3 this follows top to bottom order.
-		{
-            "filters":{
-                //filter this checks if the filter conditions are false.
-				"test":"has_tag",
-                "subject":"self",
-                "operator":"not",
-                "value":"tag_name"
-            },
-            "add":{
-                //list of component groups to remove.
-				"component_groups":[
-                    "prefix:is_false"
-                ]
-            },
-            "remove":{
-                //list of component groups to add.
-				"component_groups":[
-                    "prefix:is_true"
-                ]
+"components": {
+    "minecraft:interact": {
+        "interactions": [
+            {
+                "on_interact": {
+                    "filters": [
+                        {
+                            "test":"is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }
+                    ],
+                    "target": "self",
+                    "event": "wiki:on_interact"
+                }
             }
-        },
-        {
-            "filters":{
-                //filter this checks if the filter conditions are true.
-				"test":"has_tag",
-                "subject":"self",
-                "operator":"equals",
-                "value":"tag_name"
-            },
-            "add":{
-                //list of component groups to add.
-				"component_groups":[
-                    "prefix:is_true"
-                ]
-            },
-            "remove":{
-                //list of component groups to remove.
-				"component_groups":[
-                    "prefix:is_false"
-                ]
-            }
+        ]
+    }
+},
+"component_groups": {
+    "wiki:interacted": {
+        "minecraft:scale": {
+            "value": 2
         }
-    ]
+    }
+},
+"events":{
+    "wiki:on_interact":{
+        "add": {
+            "component_groups": [ "wiki:interacted" ]
+        }
+    }
 }
 ```
+Here, when the entity is interacted with by the player, it will activate the `"wiki:on_interact"` event. The event will then add the component group `"wiki:interacted"`. This will then apply the component `"minecraft:scale"`.
 
-### Triggering events
+For a more in depth tutorial on what events can do check out our page on entity events. 
 
-Many components can trigger events. Particularly, components like the [environment sensor](https://docs.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_environment_sensor) or [timer](https://docs.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_timer).
-
-`Note:` You can also use the `/event <target> <prefix:event_name>` to trigger an event directly off an entity. In the below example, we run the "minecraft:become_charged" event to turn all creepers in loaded chunks into charged creepers.
-
-An example.
-
-<CodeHeader></CodeHeader>
-
-```
-## Command usage to send an event to all creepers.
-/event entity @e[type=creeper] minecraft:become_charged
-```
-
-The flow is:
-
--   Add the component to the entity
--   Component triggers event or `/event` triggers event
--   Which adds component group
--   Which adds the component
--   Which affects the entity in some form or another.
+<BButton link="/entities/entity-events">Entity Events</BButton>
 
 ## Uses in vanilla
 
-Component groups and events are the primary tools that vanilla entities use to create custom and adaptable behavior. For a specific example, look at the zombie.
+Component groups and events are the primary tools that vanilla entities use to create custom and adaptable behavior. Here are some vanilla features that are created using component groups and events:
 
-The zombie is programmed to turn into a `drowned` if it spends too long under the water. Look at the component groups and events, and see if you can work out how this is done!
+- The zombie is programmed to turn into a `drowned` if it spends too long under the water.
+
+- The fox has two component groups `minecraft:fox_red` and `minecraft:fox_active` to have the two color variants depending on where they spawn.
+
+- The enderman will become agressive to the player when looked at.

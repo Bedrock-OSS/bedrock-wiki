@@ -23,7 +23,7 @@ const URL_MAP: Record<string, string> = {
 		'animation-controllers/animation-controllers-intro',
 	'concepts/biomes': 'world-generation/biomes',
 	'concepts/blocks': 'blocks/blocks-intro',
-	'concepts/components-events-groups': 'entities/entities-intro',
+	'concepts/components-events-groups': 'entities/entity-intro-bp',
 	'concepts/entity-properties': 'entities/entity-properties',
 	'concepts/items': 'items/items-16',
 	'concepts/json-ui': 'json-ui/json-ui-intro',
@@ -91,8 +91,11 @@ const URL_MAP: Record<string, string> = {
 
 	'world-generation/randomized-structure-loot':
 		'loot/randomized-structure-loot',
-	'visuals/render-controllers': 'visuals/entity-visuals-intro',
+	'visuals/render-controllers': 'entities/entity-intro-rp',
 	'items/item-categories': 'items/creative-categories',
+
+	'visuals/entity-visuals-intro': 'entities/entity-intro-rp',
+	'entities/entities-intro': 'entities/entity-intro-bp'
 }
 onMounted(() => {
 	let path = document.location.pathname
