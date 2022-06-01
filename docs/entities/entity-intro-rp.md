@@ -291,3 +291,29 @@ Remember to include the geometry variants in your entity's file
 	"custom_2": "geometry.entity.custom_2"
 }
 ```
+
+## Common Mistakes
+
+In render controllers, you can have multiple references to textures but only 1 reference to a geometry. This applies to arrays too.
+
+```json
+"arrays": {
+    "textures": {
+        "array.skin": [],
+        "array.dress": []
+    },
+    "geometries": {
+        "array.geo": []
+    }
+}
+```
+
+Followed by:
+
+```json
+"textures": [
+    "array.skin[query.variant]",
+    "array.dress[query.skin_id]"
+],
+"geometry": "array.geo[query.mark_variant]"
+```
