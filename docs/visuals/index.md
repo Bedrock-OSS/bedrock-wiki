@@ -5,6 +5,8 @@ categories:
       color: blue
     - title: Tutorials
       color: green
+    - title: Ideas
+      color: orange
 ---
 
 Welcome to the Entity Visuals section!
