@@ -16,21 +16,21 @@ If you are on Playstation you don't need to follow this guide.
 
 Right-click on your desktop and create a new shortcut:
 
-Image
+![](/assets/images/VR/install/vr_desktop.png)
 
 As location you fill in `minecraft://Mode/?OpenXR=true`.
 
-Image
+![](/assets/images/VR/install/vr_shortcut_path.png)
 
 You can name it how ever you want, in the end you should have a shortcut looking like this:
 
-Image
+![](/assets/images/VR/install/vr_shortcut_icon.png)
 
 ## Opening Minecraft in VR
 
 First make sure you connected your headset probably:
 
-Image
+![](/assets/images/VR/install/vr_headset.png)
 
 When your headset is all setup it is time to open the shortcut.
 
