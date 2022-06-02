@@ -1,5 +1,5 @@
 ---
-title: Blocks
+title: Virtual Reality 
 categories:
     - title: General
       color: blue
