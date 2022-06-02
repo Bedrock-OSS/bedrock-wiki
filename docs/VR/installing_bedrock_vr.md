@@ -39,6 +39,7 @@ When your headset is all setup it is time to open the shortcut.
 <Checklist>
 
 -   [x] Setup Minecraft VR
+-   [ ] Setup your VR rescource pack
 -   [ ] Create custom hands
 -   [ ] Create a custom living room
 
