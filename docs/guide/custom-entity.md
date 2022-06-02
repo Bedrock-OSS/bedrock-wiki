@@ -67,7 +67,7 @@ We recommend leaving the settings as they are here as any changes will make it h
 
 ### Components
 
-An entity has alot more behaviors than just an item, so we need to define more components for it.
+An entity has a lot more behaviors than just an item, so we need to define more components for it.
 We will break down the types of components will use into categories and then look at them closer.
 
 ### Stat Components
