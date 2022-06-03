@@ -391,6 +391,7 @@ Specific properties:
 | `force_render_below`       | boolean | Renders previous screen below current screen                              |
 | `always_accepts_input`     | boolean | Accepts input from the user                                               |
 | `close_on_player_hurt`     | boolean | Closes the screen if the player is hurted                                 |
+| `cache_screen`             | boolean |                                                                           |                                                                       
 
 ## Properties
 
@@ -653,6 +654,7 @@ If you have multiple variables use `"variables": [{}]`
 | `control_id`                 | string  |                                                     |
 | `#panel_title`               | string  |                                                     |
 | `#should_host`               | boolean |                                                     |
+| `force_update`               | boolean |                                                     |
 
 ## Settings
 
