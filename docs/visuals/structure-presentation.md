@@ -42,7 +42,7 @@ You can export your structure as a 3D model. If 3D export button is not working 
 <BButton
 	link="/assets/packs/visuals/structure-presentation/3d-export-fix.mcpack" download
 	color=blue
-></BButton>
+>Download Pack</BButton>
 
 ![](/assets/images/visuals/structure-presentation/model-render.png)
 
