@@ -114,7 +114,7 @@ The roll count for a weighted random pool may be altered based on the player's l
 ```
 
 ##### Entry Weighting
-The w
+The weight is the chance of this entry being chosen. The higher the weight in comparison to other entries in this "entries" array, the higher the chance of the entry being chosen.
 
 ```json
 "weight": 3
