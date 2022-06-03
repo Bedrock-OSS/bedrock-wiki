@@ -19,7 +19,9 @@ You should create a shortcut to the `com.mojang` folder on your Desktop or on yo
 
 ### Android
 
-`Phone > games > com.mojang`
+Android 11 or older: `Phone > games > com.mojang`
+
+Android 12 and newer: `Phone > Android > data > com.mojang.minecraftpe > files > games > com.mojang`
 
 ### iOS
 
