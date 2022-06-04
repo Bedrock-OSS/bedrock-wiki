@@ -1,5 +1,5 @@
 ---
-title: texture_list
+title: texture_list.json
 ---
 
 ## General Overview

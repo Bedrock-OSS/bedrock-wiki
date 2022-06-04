@@ -51,6 +51,13 @@ To contribute to our wiki, you don't need to be part of Bedrock OSS. The members
 			>
 				Bedrock OSS is a programming-focused creators discord for Bedrock, where all wiki edits are discussed. <br /><br />Here you can report wiki issues, collaborate on new articles, or simply get in touch with the authors of various pages.
 			</CardLink>
+			<CardLink
+				title="Page Editing"
+				imgsrc="favicon.ico"
+				link="/contribute-style"
+			>
+				Keeping the style is very important, it allows us to keep guides easy to learn and attractive. Let's write all pages in one style. <br /><br />Here you can learn how to use special components and style our wiki.
+			</CardLink>
 		</div>
 	</div>
 </div>

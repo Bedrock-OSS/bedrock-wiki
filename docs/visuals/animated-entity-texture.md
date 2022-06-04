@@ -3,8 +3,9 @@ title: Entity Texture Animations
 mentions:
     - MedicalJewel105
 tags:
-    - guide
     - intermediate
+category:
+    - Tutorials
 ---
 
 ## Whats on this page?
@@ -67,7 +68,7 @@ Or you can add this to existing ones, check default material file.
 
 <BButton
     link="/assets/packs/visuals/animated-entity-texture/entity.material" download
-    color=white
+    color=default
 >Download default entity.material file</BButton>
 
 :::warning
@@ -115,5 +116,5 @@ Now, it is time to test your creation!
 
 <BButton
     link="/assets/packs/visuals/animated-entity-texture/animated-entity.zip" download
-    color=white
+    color=default
 >Download</BButton>

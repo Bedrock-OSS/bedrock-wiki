@@ -129,6 +129,12 @@ To redirect to another page, just look in the file explorer. The main folder is 
 
 Our wiki uses special Vue-Components, which you can use to add things like Buttons, Spoilers, CodeBlocks, etc.
 
+:::tip Snippets
+We have snippets for our components. To see them, start typing `wiki.` in Markdown file and then press `Ctrl + Space`.
+wiki.
+![](/assets/images/contribute/snippets/snippets.png)
+:::
+
 ### Panel
 
 Panels are used to inform or warn the user about some really important stuff. There are three types of Panels: `tip`, `warning` and `danger`.
@@ -247,7 +253,7 @@ A Button works like a link, but is more noticeable for the user.
 | Attribute | Required | Type   | Note                                                                                                            |
 | --------- | -------- | ------ | --------------------------------------------------------------------------------------------------------------- |
 | link      | yes      | String | Link to redirect when clicking on the Button you can also link there content to download from wiki files. If doing this for pictures, add `download` after link value.                          |
-| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'white' as values, otherwise it will be grey_ |
+| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'default' as values, otherwise it will be grey_ |
 
 The text between the two HTML-Tags is the text that will appear on the button.
 
@@ -361,7 +367,7 @@ FolderViews are Components which can be used to show a setup of files, like in o
     'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
     'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
 
-]"
+    ]"
 ></FolderView>
 ```
 
@@ -453,7 +459,8 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 <CardLink 
     imgsrc='assets/images/homepage/wikilogo.png' 
     title='title' 
-    link='https://google.com' />
+    link='https://google.com'
+/>
 
 | Attribute | Required | Type   | Note                                   |
 | --------- | -------- | ------ | -------------------------------------- |
@@ -609,6 +616,8 @@ This section is only for the readability of your Markdown files. It wont be visi
 |---|---|
 |here|and here|
 ```
+
+For tables you can download an [extension](https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter). However always check how it formats it.
 
 ✔️ `<WikiImage src="my/image.png"/>`
 

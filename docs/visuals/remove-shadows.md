@@ -2,6 +2,8 @@
 title: Remove Entity Shadows
 tags:
     - intermediate
+category:
+    - Tutorials
 ---
 
 There are quite a few ways to remove shadows from entities, and nearly all of them have undesirable effects. There is no foolproof way to perfectly remove shadows from specific entities, without causing side effects. 

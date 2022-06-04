@@ -1,6 +1,6 @@
 ---
 title: Coordinate System
-
+category: General
 mention:
  - MedicalJewel105
 ---

@@ -1,6 +1,7 @@
 ---
 title: Intro to Blocks
 category: General
+nav_order: 1
 tags:
     - guide
 ---
@@ -203,11 +204,14 @@ As you might have already guessed, flipbook texture shortnames are defined in a 
 -   `"atlas_tile"` is the shortname definition. As you know, we already applied `"flashing"` texture shortname to the `wiki:flashing` block in `RP/blocks.json`.
 -   `"ticks_per_frame"` defines how quickly the different textures will fade into the block, in other words, the speed of the animation.
 
+You can read more about flipbook textures [here](/blocks/flipbook-textures).
+
 A **flipbook texture** file is created like this:
 
 -   The image width is 16;
 -   Image height is `16*3`, as we have three different block textures/**frames** to fade. If you wanted a flipbook with 12 different textures, the height would be `16*12`.
-    **Done!** All of our blocks work perfectly.
+
+**Done!** All of our blocks work perfectly.
 
 <video width="320" height="240" controls>
   <source src="/assets/images/guide/custom_blocks_done.mp4" type="video/mp4">

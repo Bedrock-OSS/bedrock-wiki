@@ -1,5 +1,6 @@
 ---
 title: Scoreboard Operations
+category: General
 ---
 
 Scoreboards can be used to perform complex operations, similar to [Molang](/concepts/molang.html). Operations come in two flavors: mathematical, and logical.

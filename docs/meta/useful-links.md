@@ -8,7 +8,7 @@ Important links have a ⭐.
 
 ## Discord Links
 
--   ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
+-   ⭐ [Bedrock Add-Ons](https://discord.gg/46JUdQb)
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
 -   ⭐ [Minecraft](https://discord.gg/minecraft)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
@@ -21,7 +21,7 @@ Important links have a ⭐.
 -   [Minecraft Map Testing](https://discord.gg/QRE99eS)
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
 -   [MCPECore](https://discord.com/invite/N3e6exUQGs)
--   [Bedrock Commands](https://discord.gg/bedrockcommands)
+-   [Bedrock Commands](https://discord.gg/vV29d6rJcj)
 -   [BDSX](https://discord.gg/8UhbaDwFMh)
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
@@ -51,8 +51,12 @@ Important links have a ⭐.
 
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
 -   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-windmill/)
+-   [Apply Loot Tables to Structures](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
+-   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
+-   [Convert MCSTRUCTURE to MCFUNCTION](https://mcbe-essentials.github.io/structure-to-function/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
+-   [World Packager](https://mcbe-essentials.github.io/world-packager/)
 -   [Manifest Generator](https://bedrock-manifest.web.app/)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
@@ -120,3 +124,4 @@ Important links have a ⭐.
 -   [Windows 10 Non-renderdragon install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
 -   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
 -   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
+-   [Skin Pack Generator](https://github.com/MedicalJewel105/bedrock-skin-pack-generator)

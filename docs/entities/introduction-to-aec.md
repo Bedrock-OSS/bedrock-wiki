@@ -2,7 +2,7 @@
 title: Introduction to AOE Clouds
 category: Tutorials
 tags:	
-		- intermediate
+	- intermediate
 ---
 
 **Area-of-effect clouds**, also known as AOE clouds and `minecraft:area_effect_cloud` internally, are special entities that have many unique properties. Normally these entities are created through throwing lingering potions, but with structures and some NBT editing magic we can manipulate them in very powerful ways for map-making.
@@ -39,7 +39,7 @@ For convenience, this article contains a premade structure file you can download
 
 <a href="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/structures/aec.mcstructure?raw=true">📄 Structure file</a>
 
-Refer to this article for editing structure files: [.mcstructure](/concepts/mcstructure)
+Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructure)
 
 ### NBT Format
 

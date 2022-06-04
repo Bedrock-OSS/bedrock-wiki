@@ -201,7 +201,7 @@ Transforms the item into the item specified.
 }
 ```
 
-### `teleport`
+### teleport
 
 Teleports the target to a random location in the specified range.
 
@@ -276,7 +276,7 @@ Used to randomize event functions. Works just as in entities.
 }
 ```
 
-### `run_command`
+### run_command
 
 Used to execute commands. Works just as in entities.
 

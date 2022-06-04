@@ -1,0 +1,106 @@
+{
+	"CodeHeader": {
+		"prefix": "wiki.codeheader",
+		"body": [
+			"<CodeHeader>$1</CodeHeader>",
+			"",
+			"```${2:json}",
+			"$3",
+			"```"
+		],
+		"description": "CodeHeader with code panel."
+	},
+	"Button": {
+		"prefix": "wiki.button",
+		"body": [
+			"<BButton",
+			"    link=\"$1\"",
+			"    color=$2",
+			">$3</BButton>"
+		],
+		"description": "Button."
+	},
+	"Checklist": {
+		"prefix": "wiki.checklist",
+		"body": [
+			"<Checklist>",
+			"",
+			" -   $1",
+			"",
+			"</Checklist>"
+		],
+		"description": "Checklist."
+	},
+	"Spoiler": {
+		"prefix": "wiki.spoiler",
+		"body": [
+			"<Spoiler title=\"$1\">",
+			"",
+			"$2",
+			"",
+			"</Spoiler>"
+		],
+		"description": "Spoiler."
+	},
+	"Label": {
+		"prefix": "wiki.label",
+		"body": [
+			"<Label",
+			"    name=\"$1\"",
+			"    color=\"$2\"",
+			"></Label>"
+		],
+		"description": "Label."
+	},
+	"FolderView": {
+		"prefix": "wiki.folderview",
+		"body": [
+			"<FolderView",
+			"    :paths=\"[",
+			"    '$1'",
+			"    ]\"",
+			"></FolderView>"
+		],
+		"description": "Empty folderview."
+	},
+	"YouTubeEmbed": {
+		"prefix": "wiki.ytembed",
+		"body": [
+			"<YouTubeEmbed",
+			"    id=\"$1\"",
+			"/>"
+		],
+		"description": "YouTube embed."
+	},
+	"WikiImage": {
+		"prefix": "wiki.image",
+		"body": [
+			"<WikiImage",
+			"    src=\"${1:/assets/images/}\"",
+			"    alt=\"$2\"",
+			"    pixelated=\"${3:true}\"",
+			"    width=$4",
+			"/>"
+		],
+		"description": "WikiImage."
+	},
+	"CardLink": {
+		"prefix": "wiki.cardlink",
+		"body": [
+			"<CardLink",
+			"    imgsrc=\"${1:/assets/images/}\"",
+			"    title=\"$2\"",
+			"    link=\"$3\"",
+			"/>"
+		],
+		"description": "CardLink."
+	},
+	"Page Dumper (Use only if know how)": {
+		"prefix": "wiki.page_dumper",
+		"body": [
+			"<!-- page_dumper_start -->",
+			"<!-- page_dumper_end -->"
+		],
+		"description": "Page dumper. Use only if know how."
+	}
+}

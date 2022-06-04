@@ -1,5 +1,6 @@
 ---
 title: Understanding Selectors
+category: General
 mention:
   - Science-geek42
   - Brougud

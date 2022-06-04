@@ -391,6 +391,7 @@ Specific properties:
 | `force_render_below`       | boolean | Renders previous screen below current screen                              |
 | `always_accepts_input`     | boolean | Accepts input from the user                                               |
 | `close_on_player_hurt`     | boolean | Closes the screen if the player is hurted                                 |
+| `cache_screen`             | boolean |                                                                           |                                                                       
 
 ## Properties
 
@@ -653,6 +654,7 @@ If you have multiple variables use `"variables": [{}]`
 | `control_id`                 | string  |                                                     |
 | `#panel_title`               | string  |                                                     |
 | `#should_host`               | boolean |                                                     |
+| `force_update`               | boolean |                                                     |
 
 ## Settings
 
@@ -997,6 +999,14 @@ Some of them only work in specific screens.
 
 -   `button.loom_result_take_all_place_all`
 -   `button.pattern_select`
+
+#### Villager Trade (`ui/trade_screen.json`)
+
+- `button.cycle_recipe_left`
+- `button.cycle_recipe_right`
+- `button.trade_take_all_place_all`
+- `button.trade_take_half_place_one`
+- `button.trade_coalesce_stack`
 
 ### Others
 
@@ -1399,7 +1409,7 @@ All of them only in specific screens.
 -   `stonecutter_result_items`
 -   `stones`
 
-#### Villager Trade2 (`ui/trade2_screen.json`)
+#### Villager Trade 2 (`ui/trade_2_screen.json`)
 
 -   `trade2_ingredient1_item`
 -   `trade2_ingredient2_item`

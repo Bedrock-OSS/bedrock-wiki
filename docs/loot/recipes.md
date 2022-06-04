@@ -514,17 +514,17 @@ Furnace recipes are used to transform an item using a heat source over a period 
 ```json
 {
 	"format_version": "1.17.41",
-	
+
 	"minecraft:recipe_furnace": {
 		"description": {
 			"identifier": "wiki:magic_ash"
 		},
 		"tags": ["soul_campfire"],
-		
-		"input": "wiki:bone_fragments"
+
+		"input": "wiki:bone_fragments",
 		"output": {
 			"item": "wiki:magic_ash",
-			
+
 			"count": 4
 		}
 	}

@@ -67,7 +67,7 @@ We recommend leaving the settings as they are here as any changes will make it h
 
 ### Components
 
-An entity has alot more behaviors than just an item, so we need to define more components for it.
+An entity has a lot more behaviors than just an item, so we need to define more components for it.
 We will break down the types of components will use into categories and then look at them closer.
 
 ### Stat Components
@@ -322,7 +322,7 @@ When the entity is picking something to do, it searches all its behaviors from l
 
 With that we have completed our entity behavior file. 
 
-More complex entities can also have different _states_, where they will behave differently depending on what they are doing. For example, a wild wolf will walk around freely, but once it is tamed it will follow the player. An _event_ (being tamed) caused the wolf to change _states_. This feature allows us to create dynamic entities which can do differently actions for different events. You can learn more about this in our guide [here](/entities/entities-intro).
+More complex entities can also have different _states_, where they will behave differently depending on what they are doing. For example, a wild wolf will walk around freely, but once it is tamed it will follow the player. An _event_ (being tamed) caused the wolf to change _states_. This feature allows us to create dynamic entities which can do differently actions for different events. You can learn more about this in our guide [here](/entities/entity-intro-bp).
 
 If you open your world and try to summon in your entity, it should behave like we expect but only be a shadow on the ground. You might also find it mentioned using a lang code similar to how it happened with our item.
 

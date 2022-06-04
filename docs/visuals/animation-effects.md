@@ -1,7 +1,9 @@
 ---
 title: Effects in Animations
 mentions:
--	MedicalJewel105
+	- MedicalJewel105
+category:
+	- General
 ---
 
 ## Effects in Animations
@@ -148,3 +150,15 @@ You can attach a sound to animation the same way.
 Now save your animation and launch the game!
 
 ![](/assets/images/visuals/animation-effects/showcase.png)
+
+## Offscreen Updating
+
+You can set `"should_update_bones_and_effects_offscreen"` to `true` inside entity rp scripts for particle and sound effects to update offscreen, by default both of them will stop playing if the entity isn't being rendered on display.
+
+<CodeHeader>RP/entity/my_entity.json#description</CodeHeader>
+
+```json
+"scripts": {
+	"should_update_bones_and_effects_offscreen": true
+}
+```

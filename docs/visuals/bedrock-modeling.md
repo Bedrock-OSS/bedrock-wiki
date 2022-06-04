@@ -1,7 +1,8 @@
 ---
-title: Bedrock Modeling Introduction
-tags:
-    - guide
+title: Bedrock Modeling
+nav_order: 2
+category:
+    - General
 ---
 
 This will guide tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.

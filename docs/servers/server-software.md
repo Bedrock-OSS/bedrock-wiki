@@ -12,16 +12,16 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | ---------- | -------------------------------------------------------------------- |
 | PHP        | [Still Active](#php)        : 6 < [Discontinued](#php-1)        : 31 |
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 12 |
-| C#         | [Still Active](#c)          : 1 = [Discontinued](#c-4)          : 1  |
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 3  |
-| Python     | Still Active                : 0 < [Discontinued](#python)       : 1  |
-| TypeScript | [Still Active](#typescript) : 1 = [Discontinued](#typescript-1) : 1  |
-| C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
-| C          | [Still Active](#c-2)        : 1 > [Discontinued](#c-1)          : 0  |
-| D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
+| TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
 | JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
-| Kotlin     | Still Active                : 0 < [Discontinued](#kotlin)       : 1  |
+| C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
+| C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
+| C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
+| Python     | Still Active                : 0 < [Discontinued](#python)       : 2  |
+| D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
+| Kotlin     | Still Active                : 0 < [Discontinued](#kotlin)       : 1  |
 
 ## Active Software
 ### C++
@@ -39,7 +39,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 ### Go
 
 -   [DragonFly](https://github.com/df-mc/dragonfly)
--   [Magic-Alpaca](https://github.com/PocketMiner92/Magic-Alpaca)
+-   [Magic-Alpaca](https://github.com/HGISTCOOL/Magic-Alpaca)
 
 ### Java
 
@@ -52,6 +52,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 ### TypeScript
 
 -   [BDSX](https://github.com/bdsx/bdsx)
+-   [JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)
 
 ### JavaScript
 
@@ -156,14 +157,11 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 ### Python
 
 -   [AlphaMC](https://github.com/Suppert/AlphaMC)
+-   [PodrumLegacy](https://github.com/Podrum/PodrumLegacy)
 
 ### Rust
 
 -   [Limonite](https://github.com/iTXTech/limonite)
-
-### TypeScript
-
--   [JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)
 
 ## Licensing
 

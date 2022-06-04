@@ -106,3 +106,39 @@ Actually there is a text:
 >Download Wiki Logo</BButton>
 
 <a href="/assets/images/misc/dead_bush.png" download>Download</a>
+
+## Code panel edit
+
+a`koooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooood`a
+
+<CodeHeader>silver_dagger.json</CodeHeader>
+
+```json
+{
+    "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
+    "value": 123456,
+    "valid": true //comment
+}
+hello
+```
+
+<BButton
+    link="https://www.google.com/"
+    color=default
+>Download Wiki Logo</BButton>
+
+## MD Snippets
+
+`Ctrl + Space`
+
+![](/assets/images/contribute/snippets/snippets.png)
+
+## After h4 space
+
+#### h4
+
+normal usage
+
+#### h4-2
+---
+edited

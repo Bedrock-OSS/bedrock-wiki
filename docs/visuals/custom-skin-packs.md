@@ -1,9 +1,9 @@
 ---
 title: Skin Packs
-tags:
-	- guide
 mentions:
 	- MedicalJewel105
+category:
+    - General
 ---
 
 Many people wrongly assume that skin packs are only available for creation to Marketplace Partners. No! It's a very easy process, which can easily be fully automated by python. But that's not it. Let's learn how to make a skin pack!
@@ -130,15 +130,7 @@ If you play on MC version lower than 1.18.30, you might experience a bug when "E
 
 <BButton
     link="/assets/packs/visuals/skin-packs/equip_button_fix.mcpack" download
-    color=white
+    color=default
 >Download Equip Button Fix</BButton>
 
 ![](/assets/images/visuals/skin-packs/troubleshooting-2.png)
-
-## What you learned
-
-<Checklist>
-
--   [x] How to create a skin pack.
-
-</Checklist>

@@ -7,11 +7,11 @@ mentions:
 
 ## About this Guide
 
-This guild will walk you through how to get started editing the wiki. While it is possible to edit the wiki "in-place" on the github website, this guide will instead teach you the proper technique. This is a valuable and transferable skill, and will set you up for additional knowledge beyond just editing the wiki.
+This guide will walk you through how to get started editing the wiki. While it is possible to edit the wiki "in-place" on the github website, this guide will instead teach you the proper technique. This is a valuable and transferable skill, and will set you up for additional knowledge beyond just editing the wiki.
 
 This article will teach you how to use GitHub Desktop, the easiest way to manage your local Repositories. Its possible to do this without GitHub Desktop just by using Git, but this is more advanced than just using GitHub Desktop and we won't be covering this in this guide.
 
-If you already know some of the steps we cover in this guide, feel free to use the Table Of contents on the right side to skip to the sections you don't know!
+If you already know some of the steps we cover in this guide, feel free to use the Table of Contents on the right side to skip to the sections you don't know!
 
 And if you want to learn more about our fancy styling-features, continue with our [Contribute-Style-Guide](/contribute-style)!
 
@@ -32,9 +32,9 @@ If you see this the first time, it might look a little overwhelming, but don't w
 To edit our wiki, you need to download and install the following software:
 -   GitHub Desktop
 -   NodeJS
--   VisualStudioCode
+-   Visual Studio Code
 
-If you wan't to edit the wiki more frequently, you might want to start using Git, as its more powerful than GitHub Desktop. But don't worry, GitHub Desktop is enough for us!
+If you want to edit the wiki more frequently, you might want to start using Git, as its more powerful than GitHub Desktop. But don't worry, GitHub Desktop is enough for us!
 
 ### Visual Studio Code
 
@@ -96,7 +96,7 @@ For now, you can close GitHub Desktop.
 
 ### NodeJS
 
-With [NodeJS](https://www.nodejs.org) we can view the wiki locally, as it would appear on the web. Its great to get typos or errors, before you push it and we get an error on merging it.
+With [NodeJS](https://www.nodejs.org) we can view the wiki locally, as it would appear on the web. Its great to get typos or errors before you push it and we get an error on merging it.
 
 ![](/assets/images/contribute/setting_up_software/nodejs/njs_download.png)
 
@@ -213,9 +213,9 @@ And now this problem is solved! You can continue safely, commit to your branch a
 
 ## Conclusion
 
-Now you have all the software installed and learned all the skills you need to edit our wiki! If you wan't to learn more about styling your articles, please read our Guide on
+Now you have all the software installed and learned all the skills you need to edit our wiki! If you wan't to learn more about styling your articles, please read our guide on
 
 <BButton
     link='/contribute-style'
     color=blue
-> How to style our wiki</BButton>
+> How to edit pages on our wiki</BButton>
