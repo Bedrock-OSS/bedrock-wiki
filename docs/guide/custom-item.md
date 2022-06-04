@@ -211,7 +211,7 @@ Now your texture should appear on your item.
 
 ### Item Name
 
-The last thing to add is a nice name to your item. Currently it will look like `item.wiki:ectoplasm.name`.
+The last thing to add is a nice name to your item. Currently it will look like `item.wiki:ectoplasm`.
 This is the lang-code your item name and is used to allow for localisation. 
 To set it, we just have to define it in our `.lang` files.
 
@@ -222,7 +222,7 @@ Since this is just affecting the visuals of our item, we only need to add it to 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
 ```
-item.wiki:ectoplasm.name=Ectoplasm
+item.wiki:ectoplasm=Ectoplasm
 ```
 
 Now when you enter your world, your item should have a name. 
