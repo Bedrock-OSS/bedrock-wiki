@@ -30,7 +30,7 @@ I will be reviewing three different types of blocks that have different layouts:
 
 Navigate to your `blocks.json`. Ensure that it is properly named.
 
-<CodeHeader>RP/textures/blocks.json</CodeHeader>
+<CodeHeader>RP/blocks.json</CodeHeader>
 
 ```json
 {
