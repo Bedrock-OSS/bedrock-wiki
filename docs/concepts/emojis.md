@@ -2,6 +2,10 @@
 title: Emojis & Symbols
 ---
 
+:::warning
+The emojis and symbols on this page are incompatible with Nintendo Switch platform!
+:::
+
 Minecraft has a bunch of hard-coded [Private Use Unicode symbols](https://en.wikipedia.org/wiki/Private_Use_Areas) that it automatically converts to Emoji-like symbols.
 These can be used anywhere where normal letters can - signs, books, item names, chat, etc.
 
