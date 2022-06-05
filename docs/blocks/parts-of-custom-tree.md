@@ -1014,4 +1014,4 @@ Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Stru
 <BButton
     link="/assets/packs/tutorials/parts-of-custom-tree/poct_bp.mcpack" download
     color=blue
->RP</BButton>
+>BP</BButton>
