@@ -177,5 +177,5 @@ Now that your addon has all of the required content, we need to import it to Min
 3. When asked for the name of the file, ensure that `.zip` is changed to `.mcaddon`.
 4. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
 
-If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Sucessfully imported "<your pack name>"`.
+If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Sucessfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](./troubleshooting).
 
