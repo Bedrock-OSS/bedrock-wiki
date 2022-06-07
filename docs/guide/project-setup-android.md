@@ -171,5 +171,11 @@ pack.description=This addon is made by a Wiki Contributer!
 
 ## Importing Your Addon 
 
-Now that your addon has all of the required content, we need to import it to Minecraft. To do this, you'll need to head over to your file manager.
+Now that your addon has all of the required content, we need to import it to Minecraft. To do this, we need to create a file with the extension `.mcaddon`.
+1. Open your preferred file manager and navigate to the folder containing your behaviour and resource packs.
+2. Using multi-select, select both packs and create a ZIP file.
+3. When asked for the name of the file, ensure that `.zip` is changed to `.mcaddon`.
+4. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
+
+If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Sucessfully imported "<your pack name>"`.
 
