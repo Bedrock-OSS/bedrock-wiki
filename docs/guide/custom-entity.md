@@ -800,7 +800,7 @@ The file is called `ghost.rc.json` and is under `RP/render_controllers/`:
 ```
 
 This follows a similar structure to the animation controller and animation file, with our render controller identifier being `controller.render.ghost`. 
-This tells the game that the resource rendered should be the resource with shortname `default`. Render controllers can also allow you to display different textures or apply different materials to different parts of our model. Under `materials`, we use `"*"` to mean that we apply this material to all _bones_ in our model (i.e. each cube in our model.) For more information on render controllers, you can check our page [here](/entities/entity-intro-rp).
+This tells the game that the resource rendered should be the resource with shortname `default`. Render controllers can also allow you to display different textures or apply different materials to different parts of our model. Under `materials`, we use `"*"` to mean that we apply this material to all _bones_ in our model (i.e. each cube in our model.) For more information on render controllers, you can check our page [here](/entities/render-controllers).
 
 :::tip
 If you keep your shortnames consitent, you can actually reference the same render controller for multiple entities.

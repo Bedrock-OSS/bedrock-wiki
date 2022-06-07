@@ -1,7 +1,6 @@
 ---
-title: Intro to Entities RP
+title: Render Controllers
 category: General
-nav_order: 2
 tags:
     - beginner
 ---

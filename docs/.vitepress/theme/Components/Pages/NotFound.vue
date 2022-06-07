@@ -91,10 +91,10 @@ const URL_MAP: Record<string, string> = {
 
 	'world-generation/randomized-structure-loot':
 		'loot/randomized-structure-loot',
-	'visuals/render-controllers': 'entities/entity-intro-rp',
+	'visuals/render-controllers': 'entities/render-controllers',
 	'items/item-categories': 'items/creative-categories',
 
-	'visuals/entity-visuals-intro': 'entities/entity-intro-rp',
+	'visuals/entity-visuals-intro': 'entities/render-controllers',
 	'entities/entities-intro': 'entities/entity-intro-bp'
 }
 onMounted(() => {
