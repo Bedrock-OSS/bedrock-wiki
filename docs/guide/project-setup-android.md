@@ -146,8 +146,8 @@ Remember when we said we'll define the pack name and description in code form ea
 <codeHeader>../BP/texts/en_US.lang</codeHeader>
 
 ```lang
-pack.name=My First Addon's Behaviour Pack!
-pack.description=This adds ??? and was created by ???
+pack.name=§2My §lFIRST §r§2Addon's Behaviour Pack!
+pack.description=This addon is made by a Wiki Contributer!
 ```
 
 <codeHeader>../BP/texts/languages.json</codeHeader>
@@ -159,8 +159,8 @@ pack.description=This adds ??? and was created by ???
 <codeHeader>../RP/texts/en_US.lang</codeHeader>
 
 ```lang
-pack.name=My First Addon's Resource Pack!
-pack.description=This adds ??? and was created by ???
+pack.name=§2My §lFIRST §r§2Addon's Resource Pack!
+pack.description=This addon is made by a Wiki Contributer!
 ```
 
 <codeHeader>../RP/texts/languages.json</codeHeader>
