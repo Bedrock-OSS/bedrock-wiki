@@ -299,7 +299,7 @@ import{_ as l,c,a,w as t,e,b as s,d as n,r,o as u}from"./404.md.e6363509.js";var
 			<span class="token punctuation">}</span><span class="token punctuation">,</span>
 			<span class="token comment">// We tell it what geometry to use for the boots</span>
 			<span class="token property">&quot;geometry&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-				<span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token string">&quot;geometry.player.armor.helmet&quot;</span>
+				<span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token string">&quot;geometry.player.armor.boots&quot;</span>
 			<span class="token punctuation">}</span><span class="token punctuation">,</span>
 			<span class="token comment">// We tell it to hide the boots layer as we will be showing our armor on top</span>
 			<span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
