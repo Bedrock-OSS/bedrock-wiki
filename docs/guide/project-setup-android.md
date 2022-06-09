@@ -182,13 +182,13 @@ If done correctly, Minecraft will display a banner for both packs. First is `Imp
 
 ## Creating In-Game Test Environment
 
-The best tool available for debugging your addon is the Content Log in-game and is highly recommended that you turn it on. When you load your world with the Content Log and your addon, any error will appear. You can also view the Content Log in-game in the Setting menu or, if you've connected a keyboard and mouse to your device, the keyboard shortcut `Ctrl+H`. The Content Log File can be located at `/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`. You can learn more about the Content Log [here](/guide/troubleshooting)
+The best tool available for debugging your addon is the Content Log in-game and is highly recommended that you turn it on. When you load your world with the Content Log and your addon, any error will appear. You can also view the Content Log in-game in the Setting menu or, if you've connected a keyboard and mouse to your device, the keyboard shortcut `Ctrl+H`. Note the path shown in the settings as this is where you will always find current and past logs in outside the game: `storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`. You can learn more about the Content Log [here](/guide/troubleshooting).
 ![image](https://user-images.githubusercontent.com/55290878/172888562-0eddda4c-a6ce-4c3e-ab69-41fac8f17e93.png)
 
 
 With the content log enabled, it's time to create a new world for testing your addon.
 1. Navigate to `Play > Create new > Create new world...`
-2. If you're planning on adding blocks, biomes, or other material that isn't normally in the game, ensure the following are enabled and your gamemode is set to `Creative` Custom Biomes is optional unless you're planning on creating biomes.
+2. If you're planning on adding blocks, biomes, or other material that isn't normally in the game, ensure the following are enabled and your gamemode is set to `Creative`. Custom Biomes is optional unless you're planning on creating biomes.
 ![image](https://user-images.githubusercontent.com/55290878/172888683-bff0d28b-40d5-47c3-a1f9-1ea2c8813e7e.png)
 3. Now activate your behaviour and resource packs. Under their respective categories, tap on the pack and then `apply`.
 4. Tap `Create`!
