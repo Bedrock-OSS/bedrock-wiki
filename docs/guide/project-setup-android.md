@@ -179,3 +179,39 @@ Now that your addon has all of the required content, we need to import it to Min
 
 If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Sucessfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](./troubleshooting).
 
+## Creating In-Game Test Environment
+
+The best tool available for debugging your addon is the Content Log in-game and is highly recommended that you turn it on. When you load your world with the Content Log and your addon, any error will appear. You can also view the Content Log in-game in the Setting menu or, if you've connected a keyboard and mouse to your device, the keyboard shortcut `Ctrl+H`. The Content Log File can be located at `/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`. You can learn more about the Content Log [here](/guide/troubleshooting)
+1. Open Minecraft and navigate to `Settings > Creator`
+2. Enable both Content Log File and the GUI.
+
+With the content log enabled, it's time to create a new world for testing your addon.
+1. Navigate to `Play > Create new > Create new world...`
+2. If you're planning on adding blocks, biomes, or other material that isn't normally in the game, ensure the following are enabled.
+- Gamemode is `Creative`
+- [x] Vanilla Experiments
+- [x] Holiday Creator Features 
+- [-] Custom Biomes (not required if you're not creating biomes)
+- [x] Upcoming Creator Features 
+- [x] GameTest Framework
+- [x] Activate Cheats
+3. Now activate your behaviour and resource packs. Under their respective categories, tap on the pack and then `apply`.
+4. Tap `Create`!
+
+## Your progress so far 
+
+You have successfully created your first addon! Give yourself a pat on the back. Remember in the future testing your work requires importing the packs and you may need to increase the version numbers in the manifest each time. The `"version": [0, 0, 1]` lines. Each number can go up however high you need to. If that means over 100, so be it. You're becoming a content creator on your Android device! You should also remember that future guides will represent `/Minecraft Packs/MyFirstAddon/AddonBP` as `BP` and `/Minecraft Packs/MyFirstAddon/AddonRP` as `RP`.
+
+Here's how your project should look, after completing this guide:
+
+<FolderView :paths="[
+	'/Minecraft Packs/MyFirstAddon/AddonBP/texts/en_US.lang',
+	'/Minecraft Packs/MyFirstAddon/AddonBP/texts/languages.json',
+	'/Minecraft Packs/MyFirstAddon/AddonBP/manifest.json',
+	'/Minecraft Packs/MyFirstAddon/AddonBP/pack_icon.png',
+	
+	'/Minecraft Packs/MyFirstAddon/AddonRP/texts/en_US.lang',
+	'/Minecraft Packs/MyFirstAddon/AddonRP/texts/languages.json',
+	'/Minecraft Packs/MyFirstAddon/AddonRP/manifest.json',
+	'/Minecraft Packs/MyFirstAddon/AddonRP/pack_icon.png',
+]"></FolderView>
