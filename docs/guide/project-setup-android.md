@@ -231,6 +231,7 @@ Here's how your project should look, after completing this guide:
 ## Your progress so far
 
 <Checklist>
+
 - [x] Setup your pack
 - [ ] Create a custom item
 - [ ] Create a custom entity
