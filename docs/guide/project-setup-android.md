@@ -191,7 +191,7 @@ With the content log enabled, it's time to create a new world for testing your a
 - Gamemode is `Creative`
 - [x] Vanilla Experiments
 - [x] Holiday Creator Features 
-- [-] Custom Biomes (not required if you're not creating biomes)
+- [ ] Custom Biomes (not required if you're not creating biomes)
 - [x] Upcoming Creator Features 
 - [x] GameTest Framework
 - [x] Activate Cheats
