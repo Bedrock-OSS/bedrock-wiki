@@ -205,6 +205,7 @@ You have successfully created your first addon! Give yourself a pat on the back.
 Here's how your project should look, after completing this guide:
 
 <FolderView :paths="[
+
 	'/Minecraft Packs/MyFirstAddon/AddonBP/texts/en_US.lang',
 	'/Minecraft Packs/MyFirstAddon/AddonBP/texts/languages.json',
 	'/Minecraft Packs/MyFirstAddon/AddonBP/manifest.json',
@@ -214,4 +215,5 @@ Here's how your project should look, after completing this guide:
 	'/Minecraft Packs/MyFirstAddon/AddonRP/texts/languages.json',
 	'/Minecraft Packs/MyFirstAddon/AddonRP/manifest.json',
 	'/Minecraft Packs/MyFirstAddon/AddonRP/pack_icon.png',
+	
 ]"></FolderView>
