@@ -198,7 +198,7 @@ With the content log enabled, it's time to create a new world for testing your a
 3. Now activate your behaviour and resource packs. Under their respective categories, tap on the pack and then `apply`.
 4. Tap `Create`!
 
-## Your progress so far 
+## Final Notes
 
 You have successfully created your first addon! Give yourself a pat on the back. Remember in the future testing your work requires importing the packs and you may need to increase the version numbers in the manifest each time. The `"version": [0, 0, 1]` lines. Each number can go up however high you need to. If that means over 100, so be it. You're becoming a content creator on your Android device! You should also remember that future guides will represent `/Minecraft Packs/MyFirstAddon/AddonBP` as `BP` and `/Minecraft Packs/MyFirstAddon/AddonRP` as `RP`.
 
@@ -217,3 +217,23 @@ Here's how your project should look, after completing this guide:
 	'/Minecraft Packs/MyFirstAddon/AddonRP/pack_icon.png',
 	
 ]"></FolderView>
+
+:::tip What you have learned:
+
+- What and where your `com.mojang` folder is and what it contains
+- How to setup your mobile workspace
+- What a `manifest.json` file is
+- What are, and how to use UUID's
+- How to create icons for your addons
+- What a `.lang` file is
+:::
+
+## Your progress so far
+
+<Checklist>
+- [x] Setup your pack
+- [ ] Create a custom item
+- [ ] Create a custom entity
+- [ ] Create a custom block
+
+</Checklist>
