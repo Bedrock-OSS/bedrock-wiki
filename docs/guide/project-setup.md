@@ -38,6 +38,9 @@ We will develop our addon in `development_behavior_packs` and `development_resou
 :::tip
 In this guide, BP refers to the folder you created in `development_behavior_packs` ("the behavior pack"), and RP refers to the folder you created in `development_resource_packs` ("the resource pack")
 :::
+:::info
+It is possible to develop a pack or two on Android. To view the Amdroid-specific setup guide, click [here](./project-setup-android)
+:::
 
 First of all, you will need to create the proper folders in suitable locations and set up your workspace.
 _The remainder of this guide assumes you are using VSCode. You may also follow along with other editors._
