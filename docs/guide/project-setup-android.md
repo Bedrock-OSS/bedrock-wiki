@@ -141,7 +141,7 @@ Notice how other packs have a icon? It's a image file which can quickly identify
 
 ## Language Files 
 
-Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your addon. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can [learn more about how Minecraft handles location here](https://wiki.bedrock.dev/concepts/text-and-translations.html). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you reset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
+Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your addon. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can [learn more about how Minecraft handles location here](https://wiki.bedrock.dev/concepts/text-and-translations.html). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you `§r`eset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
 
 <codeHeader>../BP/texts/en_US.lang</codeHeader>
 
@@ -191,7 +191,7 @@ With the content log enabled, it's time to create a new world for testing your a
 - Gamemode is `Creative`
 - [x] Vanilla Experiments
 - [x] Holiday Creator Features 
-- [ ] Custom Biomes (not required if you're not creating biomes)
+- [ ] Custom Biomes (required only if you're creating biomes)
 - [x] Upcoming Creator Features 
 - [x] GameTest Framework
 - [x] Activate Cheats
