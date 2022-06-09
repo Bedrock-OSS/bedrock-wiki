@@ -48,6 +48,8 @@ If your device is rooted, you can follow the main project setup using the `/Andr
 :::
 
 Before we begin, you need a workspace. Using your file manager, navigate to your Internal Storage (`/`) and create a folder that will contain your packs. For this example, our full directory is `/Minecraft Packs/MyFirstAddon`. From there, you'll need one folder for both your behaviour and resource packs (e.g.: `../MyFirstAddon/addonBP` and `../MyFirstAddon/addonRP`).
+![image](https://user-images.githubusercontent.com/55290878/172889420-5639acfd-c546-4a00-90ed-5dae187e2278.png)
+
 
 Now that you have the workplace setup, code editors should have a way for you to open a folder as a workplace. In this guide, we'll be walking through Acode.
 1. Open Acode.
@@ -175,26 +177,21 @@ Now that your addon has all of the required content, we need to import it to Min
 1. Open your preferred file manager and navigate to the folder containing your behaviour and resource packs.
 2. Using multi-select, select both packs and create a ZIP file.
 3. When asked for the name of the file, ensure that `.zip` is changed to `.mcaddon`.
-4. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
+![image](https://user-images.githubusercontent.com/55290878/172889083-c1b34f44-2467-48ba-b0e8-db5839ac7456.png)
+5. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
 
 If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Sucessfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](./troubleshooting).
 
 ## Creating In-Game Test Environment
 
 The best tool available for debugging your addon is the Content Log in-game and is highly recommended that you turn it on. When you load your world with the Content Log and your addon, any error will appear. You can also view the Content Log in-game in the Setting menu or, if you've connected a keyboard and mouse to your device, the keyboard shortcut `Ctrl+H`. The Content Log File can be located at `/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`. You can learn more about the Content Log [here](/guide/troubleshooting)
-1. Open Minecraft and navigate to `Settings > Creator`
-2. Enable both Content Log File and the GUI.
+![image](https://user-images.githubusercontent.com/55290878/172888562-0eddda4c-a6ce-4c3e-ab69-41fac8f17e93.png)
+
 
 With the content log enabled, it's time to create a new world for testing your addon.
 1. Navigate to `Play > Create new > Create new world...`
-2. If you're planning on adding blocks, biomes, or other material that isn't normally in the game, ensure the following are enabled.
-- Gamemode is `Creative`
-- [x] Vanilla Experiments
-- [x] Holiday Creator Features 
-- [ ] Custom Biomes (required only if you're creating biomes)
-- [x] Upcoming Creator Features 
-- [x] GameTest Framework
-- [x] Activate Cheats
+2. If you're planning on adding blocks, biomes, or other material that isn't normally in the game, ensure the following are enabled and your gamemode is set to `Creative` Custom Biomes is optional unless you're planning on creating biomes.
+![image](https://user-images.githubusercontent.com/55290878/172888683-bff0d28b-40d5-47c3-a1f9-1ea2c8813e7e.png)
 3. Now activate your behaviour and resource packs. Under their respective categories, tap on the pack and then `apply`.
 4. Tap `Create`!
 
