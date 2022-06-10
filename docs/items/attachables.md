@@ -1,5 +1,5 @@
 ---
-title: 3D Items
+title: Attachables Tutorial
 category: Tutorials
 tags:
 	- beginner
@@ -15,12 +15,13 @@ When we design a custom item or block, Minecraft will build a model from a templ
 
 Ever wanted sticks to look like spyglasses? Or to wield a big chainsaw with a spinning chain? Attachables are the way to accomplish that!
 
-What we will go over in this tutorial:
+By the end of this tutorial, you should be able to:
 
 <Checklist>
 
--   [ ] Making a geometry compatible for attachables
--   [ ] Setting up animations to display a model in Minecraft
+-   [ ] Understand how attachable definitions are made
+-   [ ] Make or edit a geometry to be compatible for attachables
+-   [ ] Set up animations to display the geometry in Minecraft
 
 </Checklist>
 
@@ -95,7 +96,7 @@ In the attachable file, change the geometry name to `"geometry.steve_head"` and 
 }
 ```
 
-It is important to make sure your model can work with attachables. Our first step is modifying the root bone of the geometry to be be bound to the slot the item is placed in. Take careful note of line 16 in the Steve head model below:
+It is important to make sure your model can work with attachables. Our first step is modifying the root bone of the geometry to be bound to the slot the item is placed in. Take careful note of line 16 in the Steve head model below:
 
 <CodeHeader>RP/models/entity/steve_head.geo.json</CodeHeader>
 
@@ -126,7 +127,7 @@ It is important to make sure your model can work with attachables. Our first ste
 	]
 }
 ```
-While the `"parent"` property accepts a string and will make any child bones inherit transformations from the parent bone, the `"binding"` property accepts MoLang and sets the specified bone as the root that this geometry should inherit; the position of the model is moved to this bone too. This will have consequences in the next section where we make animations.
+While the `"parent"` property accepts a string and will make any child bones inherit transformations from the specified bone, the `"binding"` property accepts MoLang and sets the specified bone as the root that this geometry should inherit; the position of the model is moved to this bone too. This will have consequences in the next section where we make animations.
 
 Here we are converting the contextual variable `c.item_slot` to its corresponding bone name in the geometry. The conversions are `'main_hand'` → "rightItem", `'off_hand'` → "leftItem", and `'head'` → "head".
 
@@ -162,7 +163,9 @@ Attached below is a template to assist with setting up these animations, using a
 
 <BButton link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/AttachableRotations.zip?raw=true">📁 Player geometry and animations</BButton>
 
-*(These files already have our Steve head model imported for this tutorial and it serves as an example.)*
+::: tip
+These files already have our Steve head model imported for this tutorial and it serves as an example.
+:::
 
 Here are some instructions on how to use these files:
 - Edit the geometry file to include the bones and cubes from your custom model.
@@ -174,23 +177,25 @@ Here are some instructions on how to use these files:
 
 *For the right hand slot, the root should be at (6, 15, 1).*
 
-- In the Animations tab, import the provided animations.
+- In the Animations tab, import the provided animations, and play them.
 
-You may then make new animations to position your model as desired. Be sure to play the template animations while you make adjustments, as these will ensure what you see in Blockbench matches what comes out in Minecraft.
+You may then make new animations to position your model as desired. Some example first- and third-person animations for our Steve head model are supplied as well. Be sure to play the template animations while you make adjustments, as these will ensure what you see in Blockbench matches what comes out in Minecraft.
 
 ![](/assets/images/tutorials/attachables/blockbench-view-two.png)
+
+### First-person Animations
 
 For creating first person animations, create a new camera angle with the following values to replicate the first-person view in Minecraft:
 
 ![](/assets/images/tutorials/attachables/camera-configuration.png)
 
-*You can pull this up by clicking on "Preview" → "Save Angle...".*
+*You can pull this up by clicking on ≡ "Preview" → "Save Angle...".*
 
 ![](/assets/images/tutorials/attachables/blockbench-view-three.png)
 
 ## Conclusion
 
-After the geometry is modified and the animations are saved, the item in-game should appear exactly as it does in Blockbench.
+After the geometry is modified and the animations are saved, the item in-game should appear exactly as it does in Blockbench. You can then add any additional animations, models, textures, and whatever else you want to the attachable definition to customize it however you want.
 
 ![](/assets/images/tutorials/attachables/attachable-step-two.png)
 
