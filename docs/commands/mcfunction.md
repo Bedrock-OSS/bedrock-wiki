@@ -57,46 +57,7 @@ While this is a valuable file when you're trying to stray away from using repeat
 
 ### Useful tick.json Creations
 
-In this section you can find useful creations by our community.
-
-**Looping Timer**
-
-Here you can find timer that executes function with name `my_function` on players with 10 sec delay.
-
-<CodeHeader>BP/functions/timer.mcfunction</CodeHeader>
-
-```
-# Setup
-scoreboard objectives add timer dummy
-
-# Loop
-scoreboard players add @a timer 1
-
-# Main
-execute @a[scores={timer=200}] ~~~ function my_function
-
-# Timer Update
-scoreboard players set @a[scores={timer=200..}] timer 0
-```
-
-Note that the order of loop and timer update is important.
-
-**Hello World**
-
-This function tellraws something to every player, who joined the game for the first time.
-It also has a 4 seconds delay so world is fully loaded.
-
-<CodeHeader>BP/functions/hello_world.mcfunction</CodeHeader>
-
-```
-# Setup
-scoreboard objectives add hello_world dummy
-
-# Loop
-scoreboard players set @a[tag=!hello_world] hello_world 81
-tag @a add hello_world
-scoreboard players add @a[scores={hello_world=!0}] hello_world -1
-
-# Main
-execute @a[scores={hello_world=1}] ~~~ tellraw @s {"rawtext":[{"text":"Did you know that MJ105 made this Hello World function?"}]}
-```
+<BButton
+	link="/commands/tick_json-creations"
+	color=blue
+>View</BButton>

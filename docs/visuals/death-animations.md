@@ -380,19 +380,7 @@ And then despawn it through adding component group with instant_despawn through 
 
 ### Detecting Death with Commands
 
-Death detection with commands might be useful because it don't use `player.json`
-
-<CodeHeader>BP/functions/detecting_death.mcfunction</CodeHeader>
-
-```
-tag @a add dead
-tag @e[type=player] remove dead
-execute @a[tag=dead, tag=!last_dead] ~ ~ ~ summon hatchibombotar:grave
-tag @a[tag=dead, tag=!last_dead] add last_dead
-tag @a[tag=!dead, tag=last_dead] remove last_dead
-```
-This works because @a targets all players whereas @e[type=player] only targets alive players.
-
-You can do whatever you want with that summoned entity
-
-Don't forget to add this function into [tick.json](/commands/mcfunction.html#running-functions-through-tick-json).
+<BButton
+	link="/commands/tick_json-creations#death-detection"
+	color=blue
+>View</BButton>
