@@ -572,7 +572,7 @@ If you have multiple variables use `"variables": [{}]`
 
 ## Animations
 
-`anim_type` and its possible values are `color`, `wait`, `size`, `offset`, `uv`, `alpha` and `flipbook`.
+`anim_type` and its possible values are `color`, `wait`, `size`, `offset`, `uv`, `alpha`, `flipbook` and `aseprite_flip_book`.
 
 | Property Name               | Type            | Description                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
