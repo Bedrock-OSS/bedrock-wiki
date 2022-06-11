@@ -100,6 +100,7 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | itemGroup.name.candles           |
 | itemGroup.name.chalkboard        |
 | itemGroup.name.chest             |
+| itemGroup.name.chestboat         |
 | itemGroup.name.chestplate        |
 | itemGroup.name.concrete          |
 | itemGroup.name.concretePowder    |
@@ -119,6 +120,7 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | itemGroup.name.glass             |
 | itemGroup.name.glassPane         |
 | itemGroup.name.glazedTerracotta  |
+| itemGroup.name.goatHorn          |
 | itemGroup.name.grass             |
 | itemGroup.name.helmet            |
 | itemGroup.name.hoe               |
@@ -144,6 +146,7 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | itemGroup.name.record            |
 | itemGroup.name.sandstone         |
 | itemGroup.name.sapling           |
+| itemGroup.name.sculk             |
 | itemGroup.name.seed              |
 | itemGroup.name.shovel            |
 | itemGroup.name.shulkerBox        |
@@ -162,5 +165,5 @@ As you can see, the `minecraft:creative_category` component accepts 2 optional c
 | itemGroup.name.wool              |
 | itemGroup.name.woolCarpet        |
 
-*Last updated for 1.18.30*
+*Last updated for 1.19.0*
 <!-- page_dumper_end -->

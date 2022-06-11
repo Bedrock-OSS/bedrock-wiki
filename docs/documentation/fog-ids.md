@@ -123,6 +123,7 @@ title: Fog IDs
 | minecraft:fog_jungle_hills                     | jungle_hills                     | 
 | minecraft:fog_jungle_mutated                   | jungle_mutated                   | 
 | minecraft:fog_lukewarm_ocean                   | lukewarm_ocean                   | 
+| minecraft:fog_mangrove_swamp                   | mangrove_swamp                   | 
 | minecraft:fog_mega_spruce_taiga                | mega_spruce_taiga                | 
 | minecraft:fog_mega_spruce_taiga_mutated        | mega_spruce_taiga_mutated        | 
 | minecraft:fog_mega_taiga                       | mega_taiga                       | 
@@ -153,5 +154,5 @@ title: Fog IDs
 | minecraft:fog_the_end                          | the_end                          | 
 | minecraft:fog_warm_ocean                       | warm_ocean                       | 
 | minecraft:fog_warped_forest                    | warped_forest                    | 
-*Last updated for 1.18.30*
+*Last updated for 1.19.0*
 <!-- page_dumper_end -->

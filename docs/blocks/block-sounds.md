@@ -52,6 +52,8 @@ The following are valid values for the sound property:
     "deepslate_bricks",
     "dirt_with_roots",
     "dripstone_block",
+    "frog_spawn",
+    "froglight",
     "fungus",
     "glass",
     "grass",
@@ -63,10 +65,14 @@ The following are valid values for the sound property:
     "lantern",
     "large_amethyst_bud",
     "lodestone",
+    "mangrove_roots",
     "medium_amethyst_bud",
     "metal",
     "moss_block",
     "moss_carpet",
+    "mud",
+    "mud_bricks",
+    "muddy_mangrove_roots",
     "nether_brick",
     "nether_gold_ore",
     "nether_sprouts",
@@ -74,11 +80,17 @@ The following are valid values for the sound property:
     "netherite",
     "netherrack",
     "nylium",
+    "packed_mud",
     "pointed_dripstone",
     "powder_snow",
     "roots",
     "sand",
     "scaffolding",
+    "sculk",
+    "sculk_catalyst",
+    "sculk_sensor",
+    "sculk_shrieker",
+    "sculk_vein",
     "shroomlight",
     "slime",
     "small_amethyst_bud",
@@ -94,5 +106,5 @@ The following are valid values for the sound property:
     "wood"
 ]
 ```
-*Last updated for 1.18.30*
+*Last updated for 1.19.0*
 <!-- page_dumper_end -->

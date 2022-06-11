@@ -5,7 +5,8 @@ mentions:
     - MedicalJewel105
 ---
 
-This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server. *Last updated for 1.18.30*
+This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
+ *Last updated for 1.19.0*
 
 ## Biome tag per Biome
 
