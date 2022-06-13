@@ -574,6 +574,8 @@ If you have multiple variables use `"variables": [{}]`
 
 `anim_type` and its possible values are `color`, `wait`, `size`, `offset`, `uv`, `alpha`, `flipbook` and `aseprite_flip_book`.
 
+For more information about the `aseprite_flip_book` animation type, please see our page on [Aseprite Animations](/json-ui/aseprite-animations)
+
 | Property Name               | Type            | Description                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `initial_uv`                | array           | `[0, 0]`                                                                                                                                                                                                                                                                                                                                                         |
