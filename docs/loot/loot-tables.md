@@ -114,7 +114,7 @@ The roll count for a weighted random pool may be altered based on the player's l
 ```
 
 ##### Entry Weighting
-The w
+The weight is the chance of this entry being chosen. The higher the weight in comparison to other entries in this "entries" array, the higher the chance of the entry being chosen.
 
 ```json
 "weight": 3
@@ -223,9 +223,68 @@ When selected, empty entries won't yield any loot for that roll.
 Empty entries can generally be mimicked using [a roll count](#) whose range includes 0, [random chance conditions](#), or [count functions](#) that could randomly select 0. Their primary advantage is readability when using [weighted random pools](#): denoting by weight when a roll won't yield an entry may be easier to understand.
 
 ### Functions
+Functions are what makes loot tables so powerful. They can do a wide range of tasks for each entry in your loot table. For example, they can change the amount of an item is dropped, what enchantments are present (even on items that normally cannot be enchanted), the item name, it's lore, and it can even write books! View [item functions](https://wiki.bedrock.dev/loot/item-functions.html) for a full list of functions and how they're used.
 
+<CodeHeader>artifacts.json/pools/entries</CodeHeader>
+
+```json
+{
+	"type": "item",
+	"name": "minecraft:dirt",
+	"weight": 10,
+	"functions" [
+		{
+			"function": "set_count",
+			"count": {
+				"min": 16,
+				"max": 64
+			}
+		},
+		{
+			"function": "set_name",
+			"name": "Pile of dirt"
+		}
+	]
+}
+```
 
 ### Conditions
+Conditions check to see if a certain criteria is met. Examples: "Was Zombie killed by Player", "Did the sword have the Looting enchantment on it? If so, what level?"
 
+<CodeHeader>artifacts.json/pools/entries</CodeHeader>
+
+```json
+{
+	"conditions": [
+		{
+			"condition": "killed_by_player"
+		},
+		{
+			"condition": "random_chance_with_looting",
+			"chance": 0.025,
+			"looting_multiplier": 0.01
+		}
+	],
+	"rolls": 1,
+	"entries": [
+		{
+			"type": "item",
+			"name": "minecraft:iron_ingot",
+			"weight": 1
+		},
+		{
+			"type": "item",
+			"name": "minecraft:carrot",
+			"weight": 1
+		},
+		{
+			"type": "item",
+			"name": "minecraft:potato",
+			"weight": 1
+		}
+	]
+}
+```
 
 ## Overrides
+

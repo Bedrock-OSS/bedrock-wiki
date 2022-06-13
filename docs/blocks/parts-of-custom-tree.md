@@ -23,7 +23,7 @@ Vanilla-like custom trees are possible. Make their parts by following this tutor
 
 -   Issues:
     -   Due to some Minecraft bugs leaves will decay after reloading chunks
-    -   If you made a structure with these blocks, it will crash the game when generated using features. Minecrfat bug.
+    -   If you made a structure with these blocks, it will crash the game when generated using features. Minecraft bug.
 
 :::tip
 To make leaves decay, you need to use `/fill` command that will replace custom_leaves with custom_leaves. It is needed for switching decaying to true because on player placing it sets decaying to false.
@@ -1014,4 +1014,4 @@ Custom Leaves, Custom Log, Custom Stripped Log, Custom Sapling, Custom Tree Stru
 <BButton
     link="/assets/packs/tutorials/parts-of-custom-tree/poct_bp.mcpack" download
     color=blue
->RP</BButton>
+>BP</BButton>

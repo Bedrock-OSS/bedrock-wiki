@@ -1,21 +1,20 @@
 ---
 title: Vanilla Usage Components
 category: Documentation
+mentions:
+    - MedicalJewel105
 ---
 
-This documentation is stripped from the vanilla files using an [automated script](https://github.com/Bedrock-OSS/bedrock-harvester). If there is an issue, you can tell us about it in [Bedrock OSS](https://discord.gg/XjV87YN) Discord server. Please note that examples are shown from not more than 8 files to keep the page fast to load.
+This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
+Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed. *Last updated for 1.19.0*
 
 ## addrider
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aaddrider)</small>
-
 <Spoiler title="Show">
 
-#### cave_spider
+cave_spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_jockey</CodeHeader>
 
 ```json
 "minecraft:addrider": {
@@ -23,7 +22,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_stray_jockey</CodeHeader>
 
 ```json
 "minecraft:addrider": {
@@ -31,7 +30,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_wither_jockey</CodeHeader>
 
 ```json
 "minecraft:addrider": {
@@ -39,11 +38,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ravager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:pillager_rider</CodeHeader>
 
 ```json
 "minecraft:addrider": {
@@ -51,7 +48,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:pillager_rider_for_raid</CodeHeader>
 
 ```json
 "minecraft:addrider": {
@@ -60,7 +57,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:evoker_rider_for_raid</CodeHeader>
 
 ```json
 "minecraft:addrider": {
@@ -69,20 +66,21 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+spider
+
+<CodeHeader>#component_groups/minecraft:spider_jockey</CodeHeader>
 
 ```json
 "minecraft:addrider": {
-    "entity_type": "minecraft:pillager",
-    "spawn_event": "minecraft:spawn_as_illager_captain"
+    "entity_type": "minecraft:skeleton"
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_stray_jockey</CodeHeader>
 
 ```json
 "minecraft:addrider": {
-    "entity_type": "minecraft:vindicator"
+    "entity_type": "minecraft:skeleton.stray"
 }
 ```
 
@@ -90,13 +88,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## admire_item
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aadmire_item)</small>
-
 <Spoiler title="Show">
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -111,15 +105,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## ageable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aageable)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_baby</CodeHeader>
 
 ```json
 "minecraft:ageable": {
@@ -133,11 +123,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/bee_baby</CodeHeader>
 
 ```json
 "minecraft:ageable": {
@@ -151,7 +139,8 @@ This documentation is stripped from the vanilla files using an [automated script
         "minecraft:double_plant:4",
         "minecraft:double_plant:5",
         "minecraft:flowering_azalea",
-        "minecraft:azalea_leaves_flowered"
+        "minecraft:azalea_leaves_flowered",
+        "minecraft:mangrove_propagule"
     ],
     "grow_up": {
         "event": "minecraft:ageable_grow_up",
@@ -160,11 +149,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_baby</CodeHeader>
 
 ```json
 "minecraft:ageable": {
@@ -180,11 +167,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
+chicken
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:chicken_baby</CodeHeader>
 
 ```json
 "minecraft:ageable": {
@@ -202,11 +187,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
+cow
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cow_baby</CodeHeader>
 
 ```json
 "minecraft:ageable": {
@@ -219,11 +202,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_baby</CodeHeader>
 
 ```json
 "minecraft:ageable": {
@@ -239,11 +220,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_baby</CodeHeader>
 
 ```json
 "minecraft:ageable": {
@@ -285,11 +264,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_baby</CodeHeader>
 
 ```json
 "minecraft:ageable": {
@@ -309,15 +286,33 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## ambient_sound_interval
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aambient_sound_interval)</small>
-
 <Spoiler title="Show">
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:ambient_sound_interval": {
+    "value": 5.0,
+    "range": 5.0,
+    "event_name": "ambient",
+    "event_names": [
+        {
+            "event_name": "ambient.tame",
+            "condition": "query.is_using_item"
+        },
+        {
+            "event_name": "ambient",
+            "condition": "!query.is_using_item"
+        }
+    ]
+}
+```
+
+bee
+
+<CodeHeader>#component_groups/look_for_food</CodeHeader>
 
 ```json
 "minecraft:ambient_sound_interval": {
@@ -327,7 +322,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/default_sound</CodeHeader>
 
 ```json
 "minecraft:ambient_sound_interval": {
@@ -337,11 +332,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### evocation_illager
+evocation_illager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:ambient_sound_interval": {
@@ -351,11 +344,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_ambient_normal</CodeHeader>
 
 ```json
 "minecraft:ambient_sound_interval": {
@@ -363,7 +354,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_ambient_sleep</CodeHeader>
 
 ```json
 "minecraft:ambient_sound_interval": {
@@ -371,7 +362,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_ambient_night</CodeHeader>
 
 ```json
 "minecraft:ambient_sound_interval": {
@@ -381,11 +372,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:ambient_sound_interval": {
@@ -395,17 +384,51 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ravager
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
+## anger_level
+
+<Spoiler title="Show">
+
+warden
 
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:ambient_sound_interval": {
-    "value": 4.0,
-    "range": 8.0,
-    "event_name": "ambient.in.raid"
+"minecraft:anger_level": {
+    "max_anger": 150,
+    "angry_threshold": 80,
+    "remove_targets_below_angry_threshold": true,
+    "angry_boost": 20,
+    "anger_decrement_interval": 1.0,
+    "default_annoyingness": 35,
+    "default_projectile_annoyingness": 10,
+    "on_increase_sounds": [
+        {
+            "sound": "listening_angry",
+            "condition": "query.anger_level(this) >= 40"
+        },
+        {
+            "sound": "listening",
+            "condition": "query.anger_level(this) >= 0"
+        }
+    ],
+    "nuisance_filter": {
+        "all_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "not",
+                "value": "warden"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "not",
+                "value": "inanimate"
+            }
+        ]
+    }
 }
 ```
 
@@ -413,15 +436,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## angry
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aangry)</small>
-
 <Spoiler title="Show">
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/angry_bee</CodeHeader>
 
 ```json
 "minecraft:angry": {
@@ -440,11 +459,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
+cave_spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_angry</CodeHeader>
 
 ```json
 "minecraft:angry": {
@@ -457,11 +474,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_angry</CodeHeader>
 
 ```json
 "minecraft:angry": {
@@ -475,11 +490,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### enderman
+enderman
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:enderman_angry</CodeHeader>
 
 ```json
 "minecraft:angry": {
@@ -491,11 +504,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### hoglin
+hoglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/angry_hoglin</CodeHeader>
 
 ```json
 "minecraft:angry": {
@@ -514,11 +525,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_angry</CodeHeader>
 
 ```json
 "minecraft:angry": {
@@ -531,7 +540,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_angry_wolf</CodeHeader>
 
 ```json
 "minecraft:angry": {
@@ -544,7 +553,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_defend_trader</CodeHeader>
 
 ```json
 "minecraft:angry": {
@@ -560,13 +569,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## annotation.break_door
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aannotation.break_door)</small>
-
 <Spoiler title="Show">
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -574,9 +579,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:annotation.break_door": {}
 ```
 
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
+husk
 
 <CodeHeader></CodeHeader>
 
@@ -584,11 +587,9 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:annotation.break_door": {}
 ```
 
-#### vindicator
+vindicator
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {
@@ -597,9 +598,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
+zombie
 
 <CodeHeader></CodeHeader>
 
@@ -607,9 +606,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:annotation.break_door": {}
 ```
 
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
+zombie_villager
 
 <CodeHeader></CodeHeader>
 
@@ -617,9 +614,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:annotation.break_door": {}
 ```
 
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
+zombie_villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -631,13 +626,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## annotation.open_door
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aannotation.open_door)</small>
-
 <Spoiler title="Show">
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -645,9 +636,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:annotation.open_door": {}
 ```
 
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
+piglin_brute
 
 <CodeHeader></CodeHeader>
 
@@ -655,9 +644,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:annotation.open_door": {}
 ```
 
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+villager
 
 <CodeHeader></CodeHeader>
 
@@ -665,9 +652,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:annotation.open_door": {}
 ```
 
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -679,15 +664,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## area_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aarea_attack)</small>
-
 <Spoiler title="Show">
 
-#### pufferfish
+pufferfish
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:full_puff</CodeHeader>
 
 ```json
 "minecraft:area_attack": {
@@ -715,13 +696,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aattack)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -731,11 +708,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/easy_attack</CodeHeader>
 
 ```json
 "minecraft:attack": {
@@ -743,7 +718,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/normal_attack</CodeHeader>
 
 ```json
 "minecraft:attack": {
@@ -753,7 +728,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/hard_attack</CodeHeader>
 
 ```json
 "minecraft:attack": {
@@ -763,11 +738,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
+blaze
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/melee_mode</CodeHeader>
 
 ```json
 "minecraft:attack": {
@@ -775,11 +748,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
+cave_spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_poison_easy</CodeHeader>
 
 ```json
 "minecraft:attack": {
@@ -789,7 +760,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_poison_normal</CodeHeader>
 
 ```json
 "minecraft:attack": {
@@ -799,7 +770,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_poison_hard</CodeHeader>
 
 ```json
 "minecraft:attack": {
@@ -813,15 +784,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## attack_cooldown
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aattack_cooldown)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/attack_cooldown</CodeHeader>
 
 ```json
 "minecraft:attack_cooldown": {
@@ -833,11 +800,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### goat
+goat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/attack_cooldown</CodeHeader>
 
 ```json
 "minecraft:attack_cooldown": {
@@ -852,11 +817,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### hoglin
+hoglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/attack_cooldown</CodeHeader>
 
 ```json
 "minecraft:attack_cooldown": {
@@ -871,11 +834,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/attack_cooldown</CodeHeader>
 
 ```json
 "minecraft:attack_cooldown": {
@@ -894,13 +855,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## attack_damage
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aattack_damage)</small>
-
 <Spoiler title="Show">
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -910,15 +867,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
+ocelot
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:attack_damage": {
-    "value": 4
+    "value": 3
 }
 ```
 
@@ -926,13 +881,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## balloonable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aballoonable)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -942,9 +893,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -954,9 +903,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -964,11 +911,9 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:balloonable": {}
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:balloonable": {
@@ -976,9 +921,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
+chest_boat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:balloonable": {}
+```
+
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -988,9 +939,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -998,19 +947,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:balloonable": {}
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:balloonable": {}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -1022,15 +959,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## barter
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abarter)</small>
-
 <Spoiler title="Show">
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/piglin_adult</CodeHeader>
 
 ```json
 "minecraft:barter": {
@@ -1043,9 +976,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.admire_item
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.admire_item)</small>
-
 <Spoiler title="Show">
+
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -1072,13 +1005,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.avoid_block
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.avoid_block)</small>
-
 <Spoiler title="Show">
 
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
+hoglin
 
 <CodeHeader></CodeHeader>
 
@@ -1110,9 +1039,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -1142,15 +1069,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.avoid_mob_type
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.avoid_mob_type)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_wild</CodeHeader>
 
 ```json
 "minecraft:behavior.avoid_mob_type": {
@@ -1170,9 +1093,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -1202,9 +1123,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -1236,9 +1155,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
+evocation_illager
 
 <CodeHeader></CodeHeader>
 
@@ -1260,9 +1177,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
+cod
 
 <CodeHeader></CodeHeader>
 
@@ -1293,9 +1208,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -1347,11 +1260,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
+guardian
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:guardian_passive</CodeHeader>
 
 ```json
 "minecraft:behavior.avoid_mob_type": {
@@ -1371,9 +1282,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
+hoglin
 
 <CodeHeader></CodeHeader>
 
@@ -1414,13 +1323,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.barter
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.barter)</small>
-
 <Spoiler title="Show">
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -1434,13 +1339,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.beg
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.beg)</small>
-
 <Spoiler title="Show">
 
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
+wolf
 
 <CodeHeader></CodeHeader>
 
@@ -1473,15 +1374,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.breed
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.breed)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.breed": {
@@ -1490,11 +1387,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/bee_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.breed": {
@@ -1503,9 +1398,29 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+<CodeHeader>#component_groups/minecraft:cat_adult</CodeHeader>
+
+```json
+"minecraft:behavior.breed": {
+    "priority": 3,
+    "speed_multiplier": 1.0
+}
+```
+
+chicken
+
+<CodeHeader>#component_groups/minecraft:chicken_adult</CodeHeader>
+
+```json
+"minecraft:behavior.breed": {
+    "priority": 3,
+    "speed_multiplier": 1.0
+}
+```
+
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -1516,11 +1431,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cow_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.breed": {
@@ -1529,24 +1440,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 1.0
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.breed": {
@@ -1555,11 +1451,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.breed": {
@@ -1568,32 +1462,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 0.6
-}
-```
-
 </Spoiler>
 
 ## behavior.celebrate
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.celebrate)</small>
-
 <Spoiler title="Show">
 
-#### evocation_illager
+evocation_illager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.celebrate": {
@@ -1615,11 +1492,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.celebrate": {
@@ -1641,11 +1516,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ravager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.celebrate": {
@@ -1667,11 +1540,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### vindicator
+vindicator
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.celebrate": {
@@ -1693,11 +1564,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### witch
+witch
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.celebrate": {
@@ -1723,15 +1592,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.celebrate_survive
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.celebrate_survive)</small>
-
 <Spoiler title="Show">
 
-#### villager
+villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.celebrate_survive": {
@@ -1748,11 +1613,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.celebrate_survive": {
@@ -1773,13 +1636,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.charge_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.charge_attack)</small>
-
 <Spoiler title="Show">
 
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
+vex
 
 <CodeHeader></CodeHeader>
 
@@ -1793,15 +1652,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.charge_held_item
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.charge_held_item)</small>
-
 <Spoiler title="Show">
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/ranged_unit</CodeHeader>
 
 ```json
 "minecraft:behavior.charge_held_item": {
@@ -1812,9 +1667,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
+pillager
 
 <CodeHeader></CodeHeader>
 
@@ -1831,13 +1684,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.circle_around_anchor
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.circle_around_anchor)</small>
-
 <Spoiler title="Show">
 
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
+phantom
 
 <CodeHeader></CodeHeader>
 
@@ -1868,15 +1717,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.controlled_by_player
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.controlled_by_player)</small>
-
 <Spoiler title="Show">
 
-#### pig
+pig
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:pig_saddled</CodeHeader>
 
 ```json
 "minecraft:behavior.controlled_by_player": {
@@ -1884,11 +1729,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### strider
+strider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_saddled</CodeHeader>
 
 ```json
 "minecraft:behavior.controlled_by_player": {
@@ -1899,17 +1742,46 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.defend_trusted_target
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.defend_trusted_target)</small>
+## behavior.croak
 
 <Spoiler title="Show">
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+frog
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.croak": {
+    "priority": 9,
+    "interval": [
+        10,
+        20
+    ],
+    "duration": 4.5,
+    "filters": {
+        "all_of": [
+            {
+                "test": "in_water",
+                "value": false
+            },
+            {
+                "test": "in_lava",
+                "value": false
+            }
+        ]
+    }
+}
+```
+
+</Spoiler>
+
+## behavior.defend_trusted_target
+
+<Spoiler title="Show">
+
+fox
+
+<CodeHeader>#component_groups/minecraft:trusting_fox</CodeHeader>
 
 ```json
 "minecraft:behavior.defend_trusted_target": {
@@ -1929,15 +1801,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.defend_village_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.defend_village_target)</small>
-
 <Spoiler title="Show">
 
-#### iron_golem
+iron_golem
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:village_created</CodeHeader>
 
 ```json
 "minecraft:behavior.defend_village_target": {
@@ -1967,15 +1835,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.delayed_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.delayed_attack)</small>
-
 <Spoiler title="Show">
 
-#### ravager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hostile</CodeHeader>
 
 ```json
 "minecraft:behavior.delayed_attack": {
@@ -1993,17 +1857,34 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.dragonchargeplayer
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonchargeplayer)</small>
+## behavior.dig
 
 <Spoiler title="Show">
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
+warden
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.dig": {
+    "priority": 1,
+    "duration": 5.5,
+    "idle_time": 60.0,
+    "vibration_is_disturbance": true,
+    "suspicion_is_disturbance": true,
+    "digs_in_daylight": false
+}
+```
+
+</Spoiler>
+
+## behavior.dragonchargeplayer
+
+<Spoiler title="Show">
+
+ender_dragon
+
+<CodeHeader>#component_groups/dragon_flying</CodeHeader>
 
 ```json
 "minecraft:behavior.dragonchargeplayer": {
@@ -2015,11 +1896,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.dragondeath
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragondeath)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+ender_dragon
+
+<CodeHeader>#component_groups/dragon_death</CodeHeader>
 
 ```json
 "minecraft:behavior.dragondeath": {
@@ -2031,11 +1912,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.dragonflaming
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonflaming)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+ender_dragon
+
+<CodeHeader>#component_groups/dragon_sitting</CodeHeader>
 
 ```json
 "minecraft:behavior.dragonflaming": {
@@ -2047,11 +1928,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.dragonholdingpattern
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonholdingpattern)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+ender_dragon
+
+<CodeHeader>#component_groups/dragon_flying</CodeHeader>
 
 ```json
 "minecraft:behavior.dragonholdingpattern": {
@@ -2063,11 +1944,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.dragonlanding
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonlanding)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+ender_dragon
+
+<CodeHeader>#component_groups/dragon_sitting</CodeHeader>
 
 ```json
 "minecraft:behavior.dragonlanding": {
@@ -2079,11 +1960,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.dragonscanning
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonscanning)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+ender_dragon
+
+<CodeHeader>#component_groups/dragon_sitting</CodeHeader>
 
 ```json
 "minecraft:behavior.dragonscanning": {
@@ -2095,11 +1976,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.dragonstrafeplayer
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragonstrafeplayer)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+ender_dragon
+
+<CodeHeader>#component_groups/dragon_flying</CodeHeader>
 
 ```json
 "minecraft:behavior.dragonstrafeplayer": {
@@ -2111,11 +1992,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.dragontakeoff
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.dragontakeoff)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+ender_dragon
+
+<CodeHeader>#component_groups/dragon_flying</CodeHeader>
 
 ```json
 "minecraft:behavior.dragontakeoff": {
@@ -2127,13 +2008,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.drink_potion
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.drink_potion)</small>
-
 <Spoiler title="Show">
 
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
+wandering_trader
 
 <CodeHeader></CodeHeader>
 
@@ -2238,15 +2115,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.drop_item_for
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.drop_item_for)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_gift_for_owner</CodeHeader>
 
 ```json
 "minecraft:behavior.drop_item_for": {
@@ -2298,13 +2171,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.eat_block
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.eat_block)</small>
-
 <Spoiler title="Show">
 
-#### sheep
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
+sheep
 
 <CodeHeader></CodeHeader>
 
@@ -2334,13 +2203,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.eat_carried_item
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.eat_carried_item)</small>
-
 <Spoiler title="Show">
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -2353,15 +2218,53 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.enderman_leave_block
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.enderman_leave_block)</small>
+## behavior.eat_mob
 
 <Spoiler title="Show">
 
-#### enderman
+frog
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.eat_mob": {
+    "priority": 7,
+    "run_speed": 2.0,
+    "eat_animation_time": 0.3,
+    "pull_in_force": 0.75,
+    "reach_mob_distance": 1.75,
+    "eat_mob_sound": "tongue",
+    "loot_table": "loot_tables/entities/frog.json"
+}
+```
+
+</Spoiler>
+
+## behavior.emerge
+
+<Spoiler title="Show">
+
+warden
+
+<CodeHeader>#component_groups/emerging</CodeHeader>
+
+```json
+"minecraft:behavior.emerge": {
+    "duration": 7.0,
+    "on_done": {
+        "event": "minecraft:emerged",
+        "target": "self"
+    }
+}
+```
+
+</Spoiler>
+
+## behavior.enderman_leave_block
+
+<Spoiler title="Show">
+
+enderman
 
 <CodeHeader></CodeHeader>
 
@@ -2375,9 +2278,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.enderman_take_block
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.enderman_take_block)</small>
-
 <Spoiler title="Show">
+
+enderman
 
 <CodeHeader></CodeHeader>
 
@@ -2391,13 +2294,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.equip_item
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.equip_item)</small>
-
 <Spoiler title="Show">
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -2407,9 +2306,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -2419,9 +2316,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
+husk
 
 <CodeHeader></CodeHeader>
 
@@ -2431,9 +2326,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -2443,9 +2336,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
+pillager
 
 <CodeHeader></CodeHeader>
 
@@ -2455,9 +2346,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
+skeleton
 
 <CodeHeader></CodeHeader>
 
@@ -2467,9 +2356,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
+stray
 
 <CodeHeader></CodeHeader>
 
@@ -2479,9 +2366,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
+wither_skeleton
 
 <CodeHeader></CodeHeader>
 
@@ -2495,21 +2380,17 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.explore_outskirts
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.explore_outskirts)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/job_specific_goals</CodeHeader>
 
 ```json
 "minecraft:behavior.explore_outskirts": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/wander_schedule_villager</CodeHeader>
 
 ```json
 "minecraft:behavior.explore_outskirts": {
@@ -2534,17 +2415,29 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.find_cover
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.find_cover)</small>
+## behavior.fertilize_farm_block
 
 <Spoiler title="Show">
 
-#### fox
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+<CodeHeader>#component_groups/work_schedule_farmer</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:behavior.fertilize_farm_block": {
+    "priority": 8
+}
+```
+
+</Spoiler>
+
+## behavior.find_cover
+
+<Spoiler title="Show">
+
+fox
+
+<CodeHeader>#component_groups/minecraft:fox_thunderstorm</CodeHeader>
 
 ```json
 "minecraft:behavior.find_cover": {
@@ -2554,7 +2447,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_day</CodeHeader>
 
 ```json
 "minecraft:behavior.find_cover": {
@@ -2568,15 +2461,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.find_mount
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.find_mount)</small>
-
 <Spoiler title="Show">
 
-#### husk
+husk
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:zombie_husk_jockey</CodeHeader>
 
 ```json
 "minecraft:behavior.find_mount": {
@@ -2585,11 +2474,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### parrot
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:parrot_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.find_mount": {
@@ -2602,11 +2489,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/piglin_jockey</CodeHeader>
 
 ```json
 "minecraft:behavior.find_mount": {
@@ -2617,11 +2502,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie
+zombie
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:zombie_jockey</CodeHeader>
 
 ```json
 "minecraft:behavior.find_mount": {
@@ -2632,11 +2515,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_villager
+zombie_villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/jockey</CodeHeader>
 
 ```json
 "minecraft:behavior.find_mount": {
@@ -2645,11 +2526,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_villager_v2
+zombie_villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/jockey</CodeHeader>
 
 ```json
 "minecraft:behavior.find_mount": {
@@ -2662,13 +2541,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.find_underwater_treasure
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.find_underwater_treasure)</small>
-
 <Spoiler title="Show">
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -2685,13 +2560,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.flee_sun
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.flee_sun)</small>
-
 <Spoiler title="Show">
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -2702,9 +2573,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
+skeleton
 
 <CodeHeader></CodeHeader>
 
@@ -2715,9 +2584,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
+stray
 
 <CodeHeader></CodeHeader>
 
@@ -2728,11 +2595,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_villager
+zombie_villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/from_abandoned_village</CodeHeader>
 
 ```json
 "minecraft:behavior.flee_sun": {
@@ -2741,11 +2606,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_villager_v2
+zombie_villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/from_abandoned_village</CodeHeader>
 
 ```json
 "minecraft:behavior.flee_sun": {
@@ -2758,13 +2621,19 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.float
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.float)</small>
-
 <Spoiler title="Show">
 
-#### bat
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.float": {
+    "priority": 7
+}
+```
+
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -2774,9 +2643,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -2786,9 +2653,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -2798,9 +2663,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -2810,9 +2673,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -2822,9 +2683,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -2834,21 +2693,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.float": {
-    "priority": 0
-}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -2862,13 +2707,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.float_wander
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.float_wander)</small>
-
 <Spoiler title="Show">
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -2885,9 +2726,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
+ghast
 
 <CodeHeader></CodeHeader>
 
@@ -2902,13 +2741,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.follow_caravan
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_caravan)</small>
-
 <Spoiler title="Show">
 
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
+llama
 
 <CodeHeader></CodeHeader>
 
@@ -2931,15 +2766,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.follow_mob
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_mob)</small>
-
 <Spoiler title="Show">
 
-#### parrot
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:parrot_wild</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_mob": {
@@ -2954,15 +2785,26 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.follow_owner
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_owner)</small>
-
 <Spoiler title="Show">
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.follow_owner": {
+    "priority": 6,
+    "speed_multiplier": 8,
+    "start_distance": 16,
+    "stop_distance": 4,
+    "can_teleport": false,
+    "ignore_vibration": false
+}
+```
+
+cat
+
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_owner": {
@@ -2973,11 +2815,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ocelot
+ocelot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ocelot_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_owner": {
@@ -2988,11 +2828,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### parrot
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:parrot_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_owner": {
@@ -3003,11 +2841,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wolf
+wolf
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:wolf_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_owner": {
@@ -3022,15 +2858,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.follow_parent
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_parent)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_parent": {
@@ -3039,11 +2871,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/bee_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_parent": {
@@ -3052,9 +2882,18 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
+chicken
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+<CodeHeader>#component_groups/minecraft:chicken_baby</CodeHeader>
+
+```json
+"minecraft:behavior.follow_parent": {
+    "priority": 5,
+    "speed_multiplier": 1.1
+}
+```
+
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -3065,20 +2904,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 5,
-    "speed_multiplier": 1.1
-}
-```
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cow_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_parent": {
@@ -3087,11 +2913,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_parent": {
@@ -3100,11 +2924,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_parent": {
@@ -3113,11 +2935,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_parent": {
@@ -3130,15 +2950,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.follow_target_captain
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.follow_target_captain)</small>
-
 <Spoiler title="Show">
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:patrol_follower</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_target_captain": {
@@ -3149,11 +2965,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### vindicator
+vindicator
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:patrol_follower</CodeHeader>
 
 ```json
 "minecraft:behavior.follow_target_captain": {
@@ -3166,17 +2980,61 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.go_home
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.go_home)</small>
+## behavior.go_and_give_items_to_noteblock
 
 <Spoiler title="Show">
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.go_and_give_items_to_noteblock": {
+    "priority": 3,
+    "run_speed": 8,
+    "throw_sound": "item_thrown",
+    "on_item_throw": [
+        {
+            "event": "pickup_item_delay",
+            "target": "self"
+        }
+    ]
+}
+```
+
+</Spoiler>
+
+## behavior.go_and_give_items_to_owner
+
+<Spoiler title="Show">
+
+allay
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.go_and_give_items_to_owner": {
+    "priority": 4,
+    "run_speed": 8,
+    "throw_sound": "item_thrown",
+    "on_item_throw": [
+        {
+            "event": "pickup_item_delay",
+            "target": "self"
+        }
+    ]
+}
+```
+
+</Spoiler>
+
+## behavior.go_home
+
+<Spoiler title="Show">
+
+bee
+
+<CodeHeader>#component_groups/return_to_home</CodeHeader>
 
 ```json
 "minecraft:behavior.go_home": {
@@ -3224,18 +3082,18 @@ This documentation is stripped from the vanilla files using an [automated script
             "target": "self"
         }
     ],
-    "on_failed": {
-        "event": "find_hive_event",
-        "target": "self"
-    }
+    "on_failed": [
+        {
+            "event": "find_hive_event",
+            "target": "self"
+        }
+    ]
 }
 ```
 
-#### piglin_brute
+piglin_brute
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/go_back_to_spawn</CodeHeader>
 
 ```json
 "minecraft:behavior.go_home": {
@@ -3243,18 +3101,18 @@ This documentation is stripped from the vanilla files using an [automated script
     "interval": 200,
     "speed_multiplier": 0.6,
     "goal_radius": 4.0,
-    "on_failed": {
-        "event": "go_back_to_spawn_failed",
-        "target": "self"
-    }
+    "on_failed": [
+        {
+            "event": "go_back_to_spawn_failed",
+            "target": "self"
+        }
+    ]
 }
 ```
 
-#### turtle
+turtle
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:pregnant</CodeHeader>
 
 ```json
 "minecraft:behavior.go_home": {
@@ -3262,10 +3120,12 @@ This documentation is stripped from the vanilla files using an [automated script
     "speed_multiplier": 1.0,
     "interval": 700,
     "goal_radius": 4.0,
-    "on_home": {
-        "event": "minecraft:go_lay_egg",
-        "target": "self"
-    }
+    "on_home": [
+        {
+            "event": "minecraft:go_lay_egg",
+            "target": "self"
+        }
+    ]
 }
 ```
 
@@ -3273,13 +3133,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.guardian_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.guardian_attack)</small>
-
 <Spoiler title="Show">
 
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+elder_guardian
 
 <CodeHeader></CodeHeader>
 
@@ -3289,11 +3145,17 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+guardian
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.guardian_attack": {
+    "priority": 4
+}
+```
+
+<CodeHeader>#component_groups/minecraft:guardian_aggressive</CodeHeader>
 
 ```json
 "minecraft:behavior.guardian_attack": {
@@ -3305,15 +3167,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.harvest_farm_block
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.harvest_farm_block)</small>
-
 <Spoiler title="Show">
 
-#### villager
+villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/behavior_peasant</CodeHeader>
 
 ```json
 "minecraft:behavior.harvest_farm_block": {
@@ -3322,25 +3180,19 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/job_specific_goals</CodeHeader>
 
 ```json
 "minecraft:behavior.harvest_farm_block": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/work_schedule_farmer</CodeHeader>
 
 ```json
 "minecraft:behavior.harvest_farm_block": {
-    "priority": 8,
-    "max_seconds_before_search": 1.0,
-    "search_cooldown_max_seconds": 8.0,
-    "seconds_until_new_task": 0.5,
-    "speed_multiplier": 0.5
+    "priority": 7
 }
 ```
 
@@ -3348,9 +3200,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.hide
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.hide)</small>
-
 <Spoiler title="Show">
+
+villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -3367,15 +3219,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.hold_ground
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.hold_ground)</small>
-
 <Spoiler title="Show">
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:patrol_captain</CodeHeader>
 
 ```json
 "minecraft:behavior.hold_ground": {
@@ -3390,7 +3238,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:patrol_follower</CodeHeader>
 
 ```json
 "minecraft:behavior.hold_ground": {
@@ -3409,13 +3257,19 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.hurt_by_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.hurt_by_target)</small>
-
 <Spoiler title="Show">
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+<CodeHeader>#component_groups/track_attacker</CodeHeader>
+
+```json
+"minecraft:behavior.hurt_by_target": {
+    "priority": 1
+}
+```
+
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -3425,9 +3279,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -3437,21 +3289,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 1
-}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -3461,9 +3299,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -3473,9 +3309,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -3485,9 +3319,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+enderman
 
 <CodeHeader></CodeHeader>
 
@@ -3497,9 +3329,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
+evocation_illager
 
 <CodeHeader></CodeHeader>
 
@@ -3513,21 +3343,17 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.inspect_bookshelf
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.inspect_bookshelf)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/job_specific_goals</CodeHeader>
 
 ```json
 "minecraft:behavior.inspect_bookshelf": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/work_schedule_librarian</CodeHeader>
 
 ```json
 "minecraft:behavior.inspect_bookshelf": {
@@ -3542,15 +3368,56 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.jump_to_block
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.jump_to_block)</small>
+## behavior.investigate_suspicious_location
 
 <Spoiler title="Show">
 
-#### goat
+warden
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.investigate_suspicious_location": {
+    "priority": 5,
+    "speed_multiplier": 0.7
+}
+```
+
+</Spoiler>
+
+## behavior.jump_to_block
+
+<Spoiler title="Show">
+
+frog
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.jump_to_block": {
+    "priority": 10,
+    "search_width": 8,
+    "search_height": 4,
+    "minimum_path_length": 2,
+    "minimum_distance": 1,
+    "scale_factor": 0.6,
+    "max_velocity": 1,
+    "cooldown_range": [
+        5,
+        7
+    ],
+    "preferred_blocks": [
+        "minecraft:waterlily",
+        "minecraft:big_dripleaf"
+    ],
+    "preferred_blocks_chance": 0.5,
+    "forbidden_blocks": [
+        "minecraft:water"
+    ]
+}
+```
+
+goat
 
 <CodeHeader></CodeHeader>
 
@@ -3573,15 +3440,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.knockback_roar
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.knockback_roar)</small>
-
 <Spoiler title="Show">
 
-#### ravager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/roaring</CodeHeader>
 
 ```json
 "minecraft:behavior.knockback_roar": {
@@ -3615,15 +3478,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.lay_down
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.lay_down)</small>
-
 <Spoiler title="Show">
 
-#### panda
+panda
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:panda_lazy</CodeHeader>
 
 ```json
 "minecraft:behavior.lay_down": {
@@ -3637,15 +3496,40 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.lay_egg
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.lay_egg)</small>
-
 <Spoiler title="Show">
 
-#### turtle
+frog
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
+<CodeHeader>#component_groups/pregnant</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:behavior.lay_egg": {
+    "priority": 2,
+    "speed_multiplier": 1.0,
+    "search_range": 10,
+    "search_height": 3,
+    "goal_radius": 1.7,
+    "target_blocks": [
+        "minecraft:water"
+    ],
+    "target_materials_above_block": [
+        "Air"
+    ],
+    "allow_laying_from_below": true,
+    "use_default_animation": false,
+    "lay_seconds": 2,
+    "egg_type": "minecraft:frog_spawn",
+    "lay_egg_sound": "lay_spawn",
+    "on_lay": {
+        "event": "laid_egg",
+        "target": "self"
+    }
+}
+```
+
+turtle
+
+<CodeHeader>#component_groups/minecraft:wants_to_lay_egg</CodeHeader>
 
 ```json
 "minecraft:behavior.lay_egg": {
@@ -3665,13 +3549,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.leap_at_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.leap_at_target)</small>
-
 <Spoiler title="Show">
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -3682,11 +3562,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
+cave_spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_hostile</CodeHeader>
 
 ```json
 "minecraft:behavior.leap_at_target": {
@@ -3696,9 +3574,17 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ocelot
+<CodeHeader>#component_groups/minecraft:spider_angry</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
+```json
+"minecraft:behavior.leap_at_target": {
+    "priority": 4,
+    "yd": 0.4,
+    "must_be_on_ground": false
+}
+```
+
+ocelot
 
 <CodeHeader></CodeHeader>
 
@@ -3709,11 +3595,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### spider
+spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_angry</CodeHeader>
 
 ```json
 "minecraft:behavior.leap_at_target": {
@@ -3723,9 +3607,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
+wolf
 
 <CodeHeader></CodeHeader>
 
@@ -3740,13 +3622,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.look_at_entity
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.look_at_entity)</small>
-
 <Spoiler title="Show">
 
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
+evocation_illager
 
 <CodeHeader></CodeHeader>
 
@@ -3762,11 +3640,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ravager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hostile</CodeHeader>
 
 ```json
 "minecraft:behavior.look_at_entity": {
@@ -3781,9 +3657,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
+vex
 
 <CodeHeader></CodeHeader>
 
@@ -3804,13 +3678,21 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.look_at_player
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.look_at_player)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.look_at_player": {
+    "priority": 8,
+    "target_distance": 6.0,
+    "probability": 0.02
+}
+```
+
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -3822,9 +3704,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -3834,9 +3714,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -3848,9 +3726,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -3862,9 +3738,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -3876,9 +3750,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -3889,11 +3761,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_swimming_navigation</CodeHeader>
 
 ```json
 "minecraft:behavior.look_at_player": {
@@ -3902,31 +3772,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.look_at_player": {
-    "priority": 7,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
 </Spoiler>
 
 ## behavior.look_at_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.look_at_target)</small>
-
 <Spoiler title="Show">
 
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
+wither
 
 <CodeHeader></CodeHeader>
 
@@ -3940,13 +3792,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.look_at_trading_player
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.look_at_trading_player)</small>
-
 <Spoiler title="Show">
 
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+villager
 
 <CodeHeader></CodeHeader>
 
@@ -3956,9 +3804,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -3968,9 +3814,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
+wandering_trader
 
 <CodeHeader></CodeHeader>
 
@@ -3984,15 +3828,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.make_love
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.make_love)</small>
-
 <Spoiler title="Show">
 
-#### villager
+villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/adult</CodeHeader>
 
 ```json
 "minecraft:behavior.make_love": {
@@ -4000,11 +3840,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/adult</CodeHeader>
 
 ```json
 "minecraft:behavior.make_love": {
@@ -4016,13 +3854,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.melee_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.melee_attack)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -4036,11 +3870,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/angry_bee</CodeHeader>
 
 ```json
 "minecraft:behavior.melee_attack": {
@@ -4054,11 +3886,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
+blaze
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/melee_mode</CodeHeader>
 
 ```json
 "minecraft:behavior.melee_attack": {
@@ -4066,11 +3896,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
+cave_spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_hostile</CodeHeader>
 
 ```json
 "minecraft:behavior.melee_attack": {
@@ -4081,7 +3909,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_angry</CodeHeader>
 
 ```json
 "minecraft:behavior.melee_attack": {
@@ -4091,9 +3919,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -4106,11 +3932,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.melee_attack": {
@@ -4119,11 +3943,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
+drowned
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:melee_mode</CodeHeader>
 
 ```json
 "minecraft:behavior.melee_attack": {
@@ -4138,21 +3960,17 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.mingle
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.mingle)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/job_specific_goals</CodeHeader>
 
 ```json
 "minecraft:behavior.mingle": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/gather_schedule_villager</CodeHeader>
 
 ```json
 "minecraft:behavior.mingle": {
@@ -4169,13 +3987,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.mount_pathing
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.mount_pathing)</small>
-
 <Spoiler title="Show">
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -4188,9 +4002,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -4203,9 +4015,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -4218,9 +4028,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -4233,11 +4041,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_wild</CodeHeader>
 
 ```json
 "minecraft:behavior.mount_pathing": {
@@ -4248,11 +4054,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_wild</CodeHeader>
 
 ```json
 "minecraft:behavior.mount_pathing": {
@@ -4263,11 +4067,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### husk
+husk
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:zombie_husk_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.mount_pathing": {
@@ -4278,9 +4080,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
+llama
 
 <CodeHeader></CodeHeader>
 
@@ -4297,13 +4097,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_indoors
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_indoors)</small>
-
 <Spoiler title="Show">
 
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+villager
 
 <CodeHeader></CodeHeader>
 
@@ -4314,9 +4110,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -4332,15 +4126,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_outdoors
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_outdoors)</small>
-
 <Spoiler title="Show">
 
-#### villager
+villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.move_outdoors": {
@@ -4350,11 +4140,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:celebrate</CodeHeader>
 
 ```json
 "minecraft:behavior.move_outdoors": {
@@ -4368,13 +4156,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_through_village
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_through_village)</small>
-
 <Spoiler title="Show">
 
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -4390,15 +4174,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_to_block
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_block)</small>
-
 <Spoiler title="Show">
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/look_for_food</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_block": {
@@ -4415,6 +4195,12 @@ This documentation is stripped from the vanilla files using an [automated script
         0.25,
         0
     ],
+    "target_block_filters": {
+        "test": "is_waterlogged",
+        "subject": "block",
+        "operator": "==",
+        "value": false
+    },
     "target_blocks": [
         "minecraft:red_flower",
         "minecraft:yellow_flower",
@@ -4424,7 +4210,8 @@ This documentation is stripped from the vanilla files using an [automated script
         "minecraft:double_plant:12",
         "minecraft:double_plant:13",
         "minecraft:flowering_azalea",
-        "minecraft:azalea_leaves_flowered"
+        "minecraft:azalea_leaves_flowered",
+        "minecraft:mangrove_propagule"
     ],
     "on_stay_completed": [
         {
@@ -4435,7 +4222,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/find_hive</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_block": {
@@ -4461,15 +4248,25 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_to_land
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_land)</small>
-
 <Spoiler title="Show">
 
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
+frog
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.move_to_land": {
+    "priority": 6,
+    "search_range": 30,
+    "search_height": 8,
+    "search_count": 80,
+    "goal_radius": 2
+}
+```
+
+turtle
+
+<CodeHeader>#component_groups/minecraft:adult</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_land": {
@@ -4484,13 +4281,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_to_liquid
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_liquid)</small>
-
 <Spoiler title="Show">
 
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
+strider
 
 <CodeHeader></CodeHeader>
 
@@ -4509,15 +4302,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_to_random_block
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_random_block)</small>
-
 <Spoiler title="Show">
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:patrol_captain</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_random_block": {
@@ -4528,11 +4317,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### vindicator
+vindicator
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:patrol_captain</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_random_block": {
@@ -4547,15 +4334,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_to_village
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_village)</small>
-
 <Spoiler title="Show">
 
-#### evocation_illager
+evocation_illager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_village": {
@@ -4564,11 +4347,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_village": {
@@ -4578,11 +4359,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ravager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_village": {
@@ -4592,11 +4371,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### vindicator
+vindicator
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_village": {
@@ -4606,11 +4383,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### witch
+witch
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/witch.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_village": {
@@ -4624,13 +4399,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_to_water
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_to_water)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -4644,9 +4415,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -4658,9 +4427,20 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### turtle
+frog
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
+<CodeHeader>#component_groups/pregnant</CodeHeader>
+
+```json
+"minecraft:behavior.move_to_water": {
+    "priority": 3,
+    "search_range": 20,
+    "search_height": 5,
+    "goal_radius": 1.5
+}
+```
+
+turtle
 
 <CodeHeader></CodeHeader>
 
@@ -4673,7 +4453,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:baby</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_water": {
@@ -4688,15 +4468,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_towards_dwelling_restriction
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_towards_dwelling_restriction)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_wild</CodeHeader>
 
 ```json
 "minecraft:behavior.move_towards_dwelling_restriction": {
@@ -4704,9 +4480,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -4717,15 +4491,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+villager_v2
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:behavior.move_towards_dwelling_restriction": {
-    "priority": 10,
+    "priority": 11,
     "speed_multiplier": 0.6
 }
 ```
@@ -4734,13 +4506,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_towards_home_restriction
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_towards_home_restriction)</small>
-
 <Spoiler title="Show">
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -4750,9 +4518,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+elder_guardian
 
 <CodeHeader></CodeHeader>
 
@@ -4763,9 +4529,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+guardian
 
 <CodeHeader></CodeHeader>
 
@@ -4773,6 +4537,17 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:behavior.move_towards_home_restriction": {
     "priority": 5,
     "speed_multiplier": 1.0
+}
+```
+
+wandering_trader
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.move_towards_home_restriction": {
+    "priority": 6,
+    "speed_multiplier": 0.6
 }
 ```
 
@@ -4780,13 +4555,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.move_towards_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.move_towards_target)</small>
-
 <Spoiler title="Show">
 
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -4802,15 +4573,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.nap
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.nap)</small>
-
 <Spoiler title="Show">
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_day</CodeHeader>
 
 ```json
 "minecraft:behavior.nap": {
@@ -4876,13 +4643,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.nearest_attackable_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.nearest_attackable_target)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -4919,6 +4682,11 @@ This documentation is stripped from the vanilla files using an [automated script
                                 "test": "is_family",
                                 "subject": "other",
                                 "value": "fish"
+                            },
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "tadpole"
                             }
                         ]
                     }
@@ -4961,11 +4729,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/take_nearest_target</CodeHeader>
 
 ```json
 "minecraft:behavior.nearest_attackable_target": {
@@ -4983,9 +4749,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -5006,11 +4770,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_wild</CodeHeader>
 
 ```json
 "minecraft:behavior.nearest_attackable_target": {
@@ -5048,11 +4810,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
+cave_spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_hostile</CodeHeader>
 
 ```json
 "minecraft:behavior.nearest_attackable_target": {
@@ -5086,7 +4846,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_angry</CodeHeader>
 
 ```json
 "minecraft:behavior.nearest_attackable_target": {
@@ -5120,9 +4880,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -5144,9 +4902,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -5264,15 +5020,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.nearest_prioritized_attackable_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.nearest_prioritized_attackable_target)</small>
-
 <Spoiler title="Show">
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_red</CodeHeader>
 
 ```json
 "minecraft:behavior.nearest_prioritized_attackable_target": {
@@ -5349,7 +5101,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_arctic</CodeHeader>
 
 ```json
 "minecraft:behavior.nearest_prioritized_attackable_target": {
@@ -5426,11 +5178,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin_brute
+piglin_brute
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/alert_for_attack_targets</CodeHeader>
 
 ```json
 "minecraft:behavior.nearest_prioritized_attackable_target": {
@@ -5465,15 +5215,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.ocelot_sit_on_block
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.ocelot_sit_on_block)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.ocelot_sit_on_block": {
@@ -5482,11 +5228,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ocelot
+ocelot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ocelot_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.ocelot_sit_on_block": {
@@ -5499,13 +5243,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.ocelotattack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.ocelotattack)</small>
-
 <Spoiler title="Show">
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -5525,9 +5265,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ocelot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
+ocelot
 
 <CodeHeader></CodeHeader>
 
@@ -5551,13 +5289,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.offer_flower
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.offer_flower)</small>
-
 <Spoiler title="Show">
 
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -5571,26 +5305,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.open_door
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.open_door)</small>
-
 <Spoiler title="Show">
 
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.open_door": {
-    "priority": 6,
-    "close_door_after": true
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
+villager
 
 <CodeHeader></CodeHeader>
 
@@ -5605,15 +5322,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.owner_hurt_by_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.owner_hurt_by_target)</small>
-
 <Spoiler title="Show">
 
-#### wolf
+wolf
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:wolf_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.owner_hurt_by_target": {
@@ -5625,11 +5338,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.owner_hurt_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.owner_hurt_target)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+wolf
+
+<CodeHeader>#component_groups/minecraft:wolf_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.owner_hurt_target": {
@@ -5641,15 +5354,22 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.panic
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.panic)</small>
-
 <Spoiler title="Show">
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.panic": {
+    "priority": 1,
+    "speed_multiplier": 2.0
+}
+```
+
+bee
+
+<CodeHeader>#component_groups/escape_fire</CodeHeader>
 
 ```json
 "minecraft:behavior.panic": {
@@ -5659,9 +5379,17 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+<CodeHeader>#component_groups/countdown_to_perish</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+```json
+"minecraft:behavior.panic": {
+    "priority": 1,
+    "speed_multiplier": 1.25,
+    "force": true
+}
+```
+
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -5672,9 +5400,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -5685,9 +5411,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -5698,11 +5422,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.panic": {
@@ -5711,9 +5433,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+donkey
 
 <CodeHeader></CodeHeader>
 
@@ -5724,41 +5444,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.25
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 2,
-    "speed_multiplier": 1.25
-}
-```
-
 </Spoiler>
 
 ## behavior.pet_sleep_with_owner
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.pet_sleep_with_owner)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.pet_sleep_with_owner": {
@@ -5774,13 +5468,27 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.pickup_items
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.pickup_items)</small>
-
 <Spoiler title="Show">
 
-#### drowned
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+<CodeHeader>#component_groups/pickup_item</CodeHeader>
+
+```json
+"minecraft:behavior.pickup_items": {
+    "priority": 2,
+    "max_dist": 64,
+    "search_height": 32,
+    "goal_radius": 2.2,
+    "speed_multiplier": 6,
+    "pickup_based_on_chance": false,
+    "can_pickup_any_item": false,
+    "can_pickup_to_hand_or_equipment": false,
+    "pickup_same_items_as_in_hand": true
+}
+```
+
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -5798,9 +5506,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -5813,9 +5519,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
+husk
 
 <CodeHeader></CodeHeader>
 
@@ -5833,9 +5537,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -5851,9 +5553,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
+pillager
 
 <CodeHeader></CodeHeader>
 
@@ -5866,9 +5566,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
+skeleton
 
 <CodeHeader></CodeHeader>
 
@@ -5883,9 +5581,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
+stray
 
 <CodeHeader></CodeHeader>
 
@@ -5897,22 +5593,6 @@ This documentation is stripped from the vanilla files using an [automated script
     "speed_multiplier": 1.0,
     "pickup_based_on_chance": true,
     "can_pickup_any_item": true
-}
-```
-
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.pickup_items": {
-    "priority": 9,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 0.5,
-    "can_pickup_to_hand_or_equipment": false
 }
 ```
 
@@ -5920,11 +5600,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.play
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.play)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+villager
+
+<CodeHeader>#component_groups/baby</CodeHeader>
 
 ```json
 "minecraft:behavior.play": {
@@ -5933,11 +5613,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/play_schedule_villager</CodeHeader>
 
 ```json
 "minecraft:behavior.play": {
@@ -5950,13 +5628,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.play_dead
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.play_dead)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -5992,13 +5666,33 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.player_ride_tamed
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.player_ride_tamed)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+<CodeHeader>#component_groups/minecraft:donkey_tamed</CodeHeader>
+
+```json
+"minecraft:behavior.player_ride_tamed": {}
+```
+
+horse
+
+<CodeHeader>#component_groups/minecraft:horse_saddled</CodeHeader>
+
+```json
+"minecraft:behavior.player_ride_tamed": {}
+```
+
+mule
+
+<CodeHeader>#component_groups/minecraft:mule_saddled</CodeHeader>
+
+```json
+"minecraft:behavior.player_ride_tamed": {}
+```
+
+skeleton_horse
 
 <CodeHeader></CodeHeader>
 
@@ -6006,41 +5700,9 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
-#### horse
+zombie_horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.player_ride_tamed": {}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.player_ride_tamed": {}
-```
-
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.player_ride_tamed": {}
-```
-
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.player_ride_tamed": {}
@@ -6050,13 +5712,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.raid_garden
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.raid_garden)</small>
-
 <Spoiler title="Show">
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -6077,9 +5735,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
+rabbit
 
 <CodeHeader></CodeHeader>
 
@@ -6098,15 +5754,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.ram_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.ram_attack)</small>
-
 <Spoiler title="Show">
 
-#### goat
+goat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/ram_default</CodeHeader>
 
 ```json
 "minecraft:behavior.ram_attack": {
@@ -6132,7 +5784,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/ram_screamer</CodeHeader>
 
 ```json
 "minecraft:behavior.ram_attack": {
@@ -6162,13 +5814,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.random_breach
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_breach)</small>
-
 <Spoiler title="Show">
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -6185,15 +5833,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.random_fly
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_fly)</small>
-
 <Spoiler title="Show">
 
-#### parrot
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:parrot_wild</CodeHeader>
 
 ```json
 "minecraft:behavior.random_fly": {
@@ -6211,13 +5855,27 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.random_hover
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_hover)</small>
-
 <Spoiler title="Show">
 
-#### bee
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.random_hover": {
+    "priority": 9,
+    "xz_dist": 8,
+    "y_dist": 8,
+    "y_offset": -1,
+    "interval": 1,
+    "hover_height": [
+        1,
+        4
+    ]
+}
+```
+
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -6239,13 +5897,19 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.random_look_around
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_look_around)</small>
-
 <Spoiler title="Show">
 
-#### blaze
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.random_look_around": {
+    "priority": 8
+}
+```
+
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -6255,9 +5919,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -6267,9 +5929,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -6279,9 +5939,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -6291,9 +5949,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -6303,9 +5959,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -6315,9 +5969,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+donkey
 
 <CodeHeader></CodeHeader>
 
@@ -6327,29 +5979,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.random_look_around": {
-    "priority": 9
-}
-```
-
 </Spoiler>
 
 ## behavior.random_look_around_and_sit
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_look_around_and_sit)</small>
-
 <Spoiler title="Show">
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -6368,13 +6004,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.random_sitting
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_sitting)</small>
-
 <Spoiler title="Show">
 
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
+panda
 
 <CodeHeader></CodeHeader>
 
@@ -6388,7 +6020,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:panda_lazy</CodeHeader>
 
 ```json
 "minecraft:behavior.random_sitting": {
@@ -6404,13 +6036,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.random_stroll
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_stroll)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -6421,9 +6049,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -6434,9 +6060,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -6447,9 +6071,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -6460,9 +6082,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -6473,9 +6093,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -6486,9 +6104,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -6499,9 +6115,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+donkey
 
 <CodeHeader></CodeHeader>
 
@@ -6516,13 +6130,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.random_swim
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.random_swim)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -6535,9 +6145,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -6549,9 +6157,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+elder_guardian
 
 <CodeHeader></CodeHeader>
 
@@ -6563,9 +6169,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
+cod
 
 <CodeHeader></CodeHeader>
 
@@ -6579,9 +6183,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+guardian
 
 <CodeHeader></CodeHeader>
 
@@ -6594,9 +6196,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
+pufferfish
 
 <CodeHeader></CodeHeader>
 
@@ -6610,9 +6210,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
+salmon
 
 <CodeHeader></CodeHeader>
 
@@ -6626,19 +6224,14 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
+tadpole
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:behavior.random_swim": {
-    "priority": 3,
-    "speed_multiplier": 1.0,
-    "xz_dist": 16,
-    "y_dist": 4,
-    "interval": 0
+    "priority": 2,
+    "interval": 100
 }
 ```
 
@@ -6646,15 +6239,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.ranged_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.ranged_attack)</small>
-
 <Spoiler title="Show">
 
-#### blaze
+blaze
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/ranged_mode</CodeHeader>
 
 ```json
 "minecraft:behavior.ranged_attack": {
@@ -6669,11 +6258,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
+drowned
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ranged_mode</CodeHeader>
 
 ```json
 "minecraft:behavior.ranged_attack": {
@@ -6685,9 +6272,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
+ghast
 
 <CodeHeader></CodeHeader>
 
@@ -6700,11 +6285,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_angry</CodeHeader>
 
 ```json
 "minecraft:behavior.ranged_attack": {
@@ -6715,11 +6298,31 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
+<CodeHeader>#component_groups/minecraft:llama_angry_wolf</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+```json
+"minecraft:behavior.ranged_attack": {
+    "priority": 2,
+    "attack_radius": 64,
+    "charge_shoot_trigger": 2,
+    "charge_charged_trigger": 1
+}
+```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_defend_trader</CodeHeader>
+
+```json
+"minecraft:behavior.ranged_attack": {
+    "priority": 2,
+    "attack_radius": 64,
+    "charge_shoot_trigger": 2,
+    "charge_charged_trigger": 1
+}
+```
+
+piglin
+
+<CodeHeader>#component_groups/ranged_unit</CodeHeader>
 
 ```json
 "minecraft:behavior.ranged_attack": {
@@ -6733,11 +6336,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ranged_attack</CodeHeader>
 
 ```json
 "minecraft:behavior.ranged_attack": {
@@ -6748,48 +6349,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.ranged_attack": {
-    "attack_interval_min": 1,
-    "attack_interval_max": 3,
-    "attack_radius": 15
-}
-```
-
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 0,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 15.0
-}
-```
-
 </Spoiler>
 
 ## behavior.receive_love
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.receive_love)</small>
-
 <Spoiler title="Show">
 
-#### villager
+villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/adult</CodeHeader>
 
 ```json
 "minecraft:behavior.receive_love": {
@@ -6797,11 +6365,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/adult</CodeHeader>
 
 ```json
 "minecraft:behavior.receive_love": {
@@ -6813,25 +6379,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.restrict_open_door
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.restrict_open_door)</small>
-
 <Spoiler title="Show">
 
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.restrict_open_door": {
-    "priority": 5
-}
-```
-
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
+villager
 
 <CodeHeader></CodeHeader>
 
@@ -6845,13 +6395,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.rise_to_liquid_level
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.rise_to_liquid_level)</small>
-
 <Spoiler title="Show">
 
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
+strider
 
 <CodeHeader></CodeHeader>
 
@@ -6866,17 +6412,30 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.roll
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.roll)</small>
+## behavior.roar
 
 <Spoiler title="Show">
 
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
+warden
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.roar": {
+    "priority": 2,
+    "duration": 4.2
+}
+```
+
+</Spoiler>
+
+## behavior.roll
+
+<Spoiler title="Show">
+
+panda
+
+<CodeHeader>#component_groups/minecraft:panda_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.roll": {
@@ -6885,7 +6444,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:panda_playful</CodeHeader>
 
 ```json
 "minecraft:behavior.roll": {
@@ -6898,13 +6457,31 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.run_around_like_crazy
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.run_around_like_crazy)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+<CodeHeader>#component_groups/minecraft:donkey_adult</CodeHeader>
+
+```json
+"minecraft:behavior.run_around_like_crazy": {
+    "priority": 1,
+    "speed_multiplier": 1.2
+}
+```
+
+horse
+
+<CodeHeader>#component_groups/minecraft:horse_adult</CodeHeader>
+
+```json
+"minecraft:behavior.run_around_like_crazy": {
+    "priority": 1,
+    "speed_multiplier": 1.2
+}
+```
+
+llama
 
 <CodeHeader></CodeHeader>
 
@@ -6915,37 +6492,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.run_around_like_crazy": {
-    "priority": 1,
-    "speed_multiplier": 1.2
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.run_around_like_crazy": {
-    "priority": 1,
-    "speed_multiplier": 1.2
-}
-```
-
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_adult</CodeHeader>
 
 ```json
 "minecraft:behavior.run_around_like_crazy": {
@@ -6958,15 +6507,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.scared
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.scared)</small>
-
 <Spoiler title="Show">
 
-#### panda
+panda
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:panda_worried</CodeHeader>
 
 ```json
 "minecraft:behavior.scared": {
@@ -6979,13 +6524,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.send_event
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.send_event)</small>
-
 <Spoiler title="Show">
 
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
+evocation_illager
 
 <CodeHeader></CodeHeader>
 
@@ -7031,13 +6572,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.share_items
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.share_items)</small>
-
 <Spoiler title="Show">
 
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+villager
 
 <CodeHeader></CodeHeader>
 
@@ -7059,15 +6596,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+villager_v2
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:behavior.share_items": {
-    "priority": 9,
+    "priority": 10,
     "max_dist": 3,
     "goal_radius": 2.0,
     "speed_multiplier": 0.5,
@@ -7087,13 +6622,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.silverfish_merge_with_stone
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.silverfish_merge_with_stone)</small>
-
 <Spoiler title="Show">
 
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
+silverfish
 
 <CodeHeader></CodeHeader>
 
@@ -7107,11 +6638,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.silverfish_wake_up_friends
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.silverfish_wake_up_friends)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+silverfish
+
+<CodeHeader>#component_groups/minecraft:silverfish_angry</CodeHeader>
 
 ```json
 "minecraft:behavior.silverfish_wake_up_friends": {
@@ -7123,15 +6654,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.skeleton_horse_trap
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.skeleton_horse_trap)</small>
-
 <Spoiler title="Show">
 
-#### skeleton_horse
+skeleton_horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:skeleton_trap</CodeHeader>
 
 ```json
 "minecraft:behavior.skeleton_horse_trap": {
@@ -7145,21 +6672,17 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.sleep
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.sleep)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/job_specific_goals</CodeHeader>
 
 ```json
 "minecraft:behavior.sleep": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/bed_schedule_villager</CodeHeader>
 
 ```json
 "minecraft:behavior.sleep": {
@@ -7177,13 +6700,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.slime_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.slime_attack)</small>
-
 <Spoiler title="Show">
 
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+magma_cube
 
 <CodeHeader></CodeHeader>
 
@@ -7193,9 +6712,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
+slime
 
 <CodeHeader></CodeHeader>
 
@@ -7209,13 +6726,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.slime_float
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.slime_float)</small>
-
 <Spoiler title="Show">
 
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+magma_cube
 
 <CodeHeader></CodeHeader>
 
@@ -7227,9 +6740,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
+slime
 
 <CodeHeader></CodeHeader>
 
@@ -7245,13 +6756,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.slime_keep_on_jumping
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.slime_keep_on_jumping)</small>
-
 <Spoiler title="Show">
 
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+magma_cube
 
 <CodeHeader></CodeHeader>
 
@@ -7262,9 +6769,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
+slime
 
 <CodeHeader></CodeHeader>
 
@@ -7279,13 +6784,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.slime_random_direction
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.slime_random_direction)</small>
-
 <Spoiler title="Show">
 
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+magma_cube
 
 <CodeHeader></CodeHeader>
 
@@ -7298,9 +6799,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
+slime
 
 <CodeHeader></CodeHeader>
 
@@ -7317,13 +6816,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.snacking
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.snacking)</small>
-
 <Spoiler title="Show">
 
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
+panda
 
 <CodeHeader></CodeHeader>
 
@@ -7340,7 +6835,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:panda_lazy</CodeHeader>
 
 ```json
 "minecraft:behavior.snacking": {
@@ -7359,11 +6854,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.sneeze
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.sneeze)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+panda
+
+<CodeHeader>#component_groups/minecraft:panda_baby</CodeHeader>
 
 ```json
 "minecraft:behavior.sneeze": {
@@ -7410,7 +6905,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:panda_sneezing</CodeHeader>
 
 ```json
 "minecraft:behavior.sneeze": {
@@ -7459,15 +6954,63 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.squid_dive
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_dive)</small>
+## behavior.sniff
 
 <Spoiler title="Show">
 
-#### glow_squid
+warden
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.sniff": {
+    "priority": 6,
+    "duration": 4.16,
+    "sniffing_radius": 24.0,
+    "suspicion_radius_horizontal": 6.0,
+    "suspicion_radius_vertical": 20.0,
+    "cooldown_range": [
+        5.0,
+        10.0
+    ]
+}
+```
+
+</Spoiler>
+
+## behavior.sonic_boom
+
+<Spoiler title="Show">
+
+warden
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.sonic_boom": {
+    "priority": 3,
+    "duration": 3.0,
+    "speed_multiplier": 1.2,
+    "attack_damage": 10,
+    "attack_range_horizontal": 15,
+    "attack_range_vertical": 20,
+    "attack_cooldown": 2,
+    "knockback_vertical_strength": 0.5,
+    "knockback_horizontal_strength": 2.5,
+    "knockback_height_cap": 0.5,
+    "duration_until_attack_sound": 1.7,
+    "charge_sound": "sonic_charge",
+    "attack_sound": "sonic_boom"
+}
+```
+
+</Spoiler>
+
+## behavior.squid_dive
+
+<Spoiler title="Show">
+
+glow_squid
 
 <CodeHeader></CodeHeader>
 
@@ -7477,9 +7020,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
+squid
 
 <CodeHeader></CodeHeader>
 
@@ -7493,13 +7034,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.squid_flee
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_flee)</small>
-
 <Spoiler title="Show">
 
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
+glow_squid
 
 <CodeHeader></CodeHeader>
 
@@ -7509,9 +7046,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
+squid
 
 <CodeHeader></CodeHeader>
 
@@ -7525,13 +7060,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.squid_idle
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_idle)</small>
-
 <Spoiler title="Show">
 
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
+glow_squid
 
 <CodeHeader></CodeHeader>
 
@@ -7541,9 +7072,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
+squid
 
 <CodeHeader></CodeHeader>
 
@@ -7557,13 +7086,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.squid_move_away_from_ground
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_move_away_from_ground)</small>
-
 <Spoiler title="Show">
 
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
+glow_squid
 
 <CodeHeader></CodeHeader>
 
@@ -7573,9 +7098,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
+squid
 
 <CodeHeader></CodeHeader>
 
@@ -7589,13 +7112,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.squid_out_of_water
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.squid_out_of_water)</small>
-
 <Spoiler title="Show">
 
-#### glow_squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/glow_squid.json)</small>
+glow_squid
 
 <CodeHeader></CodeHeader>
 
@@ -7605,9 +7124,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### squid
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/squid.json)</small>
+squid
 
 <CodeHeader></CodeHeader>
 
@@ -7621,13 +7138,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.stalk_and_pounce_on_target
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stalk_and_pounce_on_target)</small>
-
 <Spoiler title="Show">
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -7653,17 +7166,32 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## behavior.stay_while_sitting
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stay_while_sitting)</small>
+## behavior.stay_near_noteblock
 
 <Spoiler title="Show">
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.stay_near_noteblock": {
+    "priority": 5,
+    "speed": 8,
+    "start_distance": 16,
+    "stop_distance": 4
+}
+```
+
+</Spoiler>
+
+## behavior.stay_while_sitting
+
+<Spoiler title="Show">
+
+cat
+
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.stay_while_sitting": {
@@ -7671,11 +7199,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ocelot
+ocelot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ocelot_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.stay_while_sitting": {
@@ -7683,11 +7209,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### parrot
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:parrot_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.stay_while_sitting": {
@@ -7695,9 +7219,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
+wolf
 
 <CodeHeader></CodeHeader>
 
@@ -7711,15 +7233,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.stomp_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stomp_attack)</small>
-
 <Spoiler title="Show">
 
-#### polar_bear
+polar_bear
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:adult_hostile</CodeHeader>
 
 ```json
 "minecraft:behavior.stomp_attack": {
@@ -7735,13 +7253,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.stomp_turtle_egg
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stomp_turtle_egg)</small>
-
 <Spoiler title="Show">
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -7756,9 +7270,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
+husk
 
 <CodeHeader></CodeHeader>
 
@@ -7773,9 +7285,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
+zombie
 
 <CodeHeader></CodeHeader>
 
@@ -7790,9 +7300,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_pigman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_pigman.json)</small>
+zombie_pigman
 
 <CodeHeader></CodeHeader>
 
@@ -7807,9 +7315,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
+zombie_villager
 
 <CodeHeader></CodeHeader>
 
@@ -7824,9 +7330,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
+zombie_villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -7845,15 +7349,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.stroll_towards_village
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.stroll_towards_village)</small>
-
 <Spoiler title="Show">
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_night</CodeHeader>
 
 ```json
 "minecraft:behavior.stroll_towards_village": {
@@ -7870,13 +7370,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.summon_entity
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.summon_entity)</small>
-
 <Spoiler title="Show">
 
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
+evocation_illager
 
 <CodeHeader></CodeHeader>
 
@@ -7963,13 +7459,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.swell
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swell)</small>
-
 <Spoiler title="Show">
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -7985,13 +7477,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.swim_idle
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swim_idle)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -8003,9 +7491,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
+cod
 
 <CodeHeader></CodeHeader>
 
@@ -8017,9 +7503,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
+salmon
 
 <CodeHeader></CodeHeader>
 
@@ -8031,9 +7515,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
+tropicalfish
 
 <CodeHeader></CodeHeader>
 
@@ -8049,13 +7531,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.swim_wander
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swim_wander)</small>
-
 <Spoiler title="Show">
 
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
+cod
 
 <CodeHeader></CodeHeader>
 
@@ -8069,9 +7547,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
+pufferfish
 
 <CodeHeader></CodeHeader>
 
@@ -8085,9 +7561,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
+salmon
 
 <CodeHeader></CodeHeader>
 
@@ -8101,9 +7575,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
+tropicalfish
 
 <CodeHeader></CodeHeader>
 
@@ -8121,13 +7593,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.swim_with_entity
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swim_with_entity)</small>
-
 <Spoiler title="Show">
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -8159,13 +7627,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.swoop_attack
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.swoop_attack)</small>
-
 <Spoiler title="Show">
 
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
+phantom
 
 <CodeHeader></CodeHeader>
 
@@ -8185,15 +7649,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.take_flower
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.take_flower)</small>
-
 <Spoiler title="Show">
 
-#### villager
+villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/baby</CodeHeader>
 
 ```json
 "minecraft:behavior.take_flower": {
@@ -8201,11 +7661,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/baby</CodeHeader>
 
 ```json
 "minecraft:behavior.take_flower": {
@@ -8217,13 +7675,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.target_when_pushed
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.target_when_pushed)</small>
-
 <Spoiler title="Show">
 
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -8257,13 +7711,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.tempt
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.tempt)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -8278,9 +7728,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -8299,16 +7747,15 @@ This documentation is stripped from the vanilla files using an [automated script
         "minecraft:double_plant:4",
         "minecraft:double_plant:5",
         "minecraft:flowering_azalea",
-        "minecraft:azalea_leaves_flowered"
+        "minecraft:azalea_leaves_flowered",
+        "minecraft:mangrove_propagule"
     ]
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_wild</CodeHeader>
 
 ```json
 "minecraft:behavior.tempt": {
@@ -8323,7 +7770,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:behavior.tempt": {
@@ -8337,9 +7784,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -8356,9 +7801,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -8372,11 +7815,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_tamed</CodeHeader>
 
 ```json
 "minecraft:behavior.tempt": {
@@ -8397,9 +7838,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -8420,21 +7859,17 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.trade_interest
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.trade_interest)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/trade_components</CodeHeader>
 
 ```json
 "minecraft:behavior.trade_interest": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/farmer</CodeHeader>
 
 ```json
 "minecraft:behavior.trade_interest": {
@@ -8447,9 +7882,20 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wandering_trader
+<CodeHeader>#component_groups/fisherman</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
+```json
+"minecraft:behavior.trade_interest": {
+    "priority": 5,
+    "within_radius": 6.0,
+    "interest_time": 45.0,
+    "remove_item_time": 1.0,
+    "carried_item_switch_time": 2.0,
+    "cooldown": 2.0
+}
+```
+
+wandering_trader
 
 <CodeHeader></CodeHeader>
 
@@ -8468,13 +7914,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.trade_with_player
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.trade_with_player)</small>
-
 <Spoiler title="Show">
 
-#### villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
+villager
 
 <CodeHeader></CodeHeader>
 
@@ -8484,9 +7926,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -8496,9 +7936,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
+wandering_trader
 
 <CodeHeader></CodeHeader>
 
@@ -8512,13 +7950,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.wither_random_attack_pos_goal
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.wither_random_attack_pos_goal)</small>
-
 <Spoiler title="Show">
 
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
+wither
 
 <CodeHeader></CodeHeader>
 
@@ -8532,9 +7966,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.wither_target_highest_damage
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.wither_target_highest_damage)</small>
-
 <Spoiler title="Show">
+
+wither
 
 <CodeHeader></CodeHeader>
 
@@ -8548,21 +7982,36 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## behavior.work
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abehavior.work)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/job_specific_goals</CodeHeader>
 
 ```json
 "minecraft:behavior.work": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/work_schedule_villager</CodeHeader>
+
+```json
+"minecraft:behavior.work": {
+    "priority": 7,
+    "active_time": 250,
+    "speed_multiplier": 0.5,
+    "goal_cooldown": 200,
+    "sound_delay_min": 100,
+    "sound_delay_max": 200,
+    "can_work_in_rain": false,
+    "work_in_rain_tolerance": 100,
+    "on_arrival": {
+        "event": "minecraft:resupply_trades",
+        "target": "self"
+    }
+}
+```
+
+<CodeHeader>#component_groups/work_schedule_fisher</CodeHeader>
 
 ```json
 "minecraft:behavior.work": {
@@ -8583,15 +8032,42 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## block_climber
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ablock_climber)</small>
+## behavior.work_composter
 
 <Spoiler title="Show">
 
-#### endermite
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
+<CodeHeader>#component_groups/job_specific_goals</CodeHeader>
+
+```json
+"minecraft:behavior.work_composter": {}
+```
+
+<CodeHeader>#component_groups/work_schedule_farmer</CodeHeader>
+
+```json
+"minecraft:behavior.work_composter": {
+    "priority": 9,
+    "active_time": 250,
+    "speed_multiplier": 0.5,
+    "goal_cooldown": 200,
+    "can_work_in_rain": false,
+    "work_in_rain_tolerance": 100,
+    "on_arrival": {
+        "event": "minecraft:resupply_trades",
+        "target": "self"
+    }
+}
+```
+
+</Spoiler>
+
+## block_climber
+
+<Spoiler title="Show">
+
+endermite
 
 <CodeHeader></CodeHeader>
 
@@ -8599,9 +8075,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:block_climber": {}
 ```
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -8609,9 +8083,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:block_climber": {}
 ```
 
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
+player
 
 <CodeHeader></CodeHeader>
 
@@ -8619,9 +8091,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:block_climber": {}
 ```
 
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
+rabbit
 
 <CodeHeader></CodeHeader>
 
@@ -8629,9 +8099,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:block_climber": {}
 ```
 
-#### silverfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/silverfish.json)</small>
+silverfish
 
 <CodeHeader></CodeHeader>
 
@@ -8643,19 +8111,22 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## block_sensor
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ablock_sensor)</small>
-
 <Spoiler title="Show">
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:block_sensor": {
     "sensor_radius": 16,
+    "sources": [
+        {
+            "test": "has_silk_touch",
+            "subject": "other",
+            "value": false
+        }
+    ],
     "on_break": [
         {
             "block_list": [
@@ -8668,11 +8139,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/piglin_adult</CodeHeader>
 
 ```json
 "minecraft:block_sensor": {
@@ -8703,15 +8172,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## boostable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aboostable)</small>
-
 <Spoiler title="Show">
 
-#### pig
+pig
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:pig_saddled</CodeHeader>
 
 ```json
 "minecraft:boostable": {
@@ -8727,11 +8192,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### strider
+strider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_saddled</CodeHeader>
 
 ```json
 "minecraft:boostable": {
@@ -8751,13 +8214,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## boss
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aboss)</small>
-
 <Spoiler title="Show">
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
+ender_dragon
 
 <CodeHeader></CodeHeader>
 
@@ -8768,9 +8227,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wither
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
+wither
 
 <CodeHeader></CodeHeader>
 
@@ -8785,13 +8242,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## break_blocks
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abreak_blocks)</small>
-
 <Spoiler title="Show">
 
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
+ravager
 
 <CodeHeader></CodeHeader>
 
@@ -8838,13 +8291,20 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## breathable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abreathable)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:breathable": {
+    "totalSupply": 15,
+    "suffocateTime": 0
+}
+```
+
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -8858,9 +8318,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -8871,9 +8329,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -8884,9 +8340,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -8897,9 +8351,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -8910,9 +8362,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -8923,22 +8373,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -8953,15 +8388,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## breedable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abreedable)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_adult</CodeHeader>
 
 ```json
 "minecraft:breedable": {
@@ -8982,11 +8413,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/bee_adult</CodeHeader>
 
 ```json
 "minecraft:breedable": {
@@ -9008,16 +8437,15 @@ This documentation is stripped from the vanilla files using an [automated script
         "minecraft:double_plant:4",
         "minecraft:double_plant:5",
         "minecraft:flowering_azalea",
-        "minecraft:azalea_leaves_flowered"
+        "minecraft:azalea_leaves_flowered",
+        "minecraft:mangrove_propagule"
     ]
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_adult</CodeHeader>
 
 ```json
 "minecraft:breedable": {
@@ -9039,11 +8467,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
+chicken
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:chicken_adult</CodeHeader>
 
 ```json
 "minecraft:breedable": {
@@ -9065,11 +8491,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
+cow
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cow_adult</CodeHeader>
 
 ```json
 "minecraft:breedable": {
@@ -9086,11 +8510,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_tamed</CodeHeader>
 
 ```json
 "minecraft:breedable": {
@@ -9122,11 +8544,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_adult</CodeHeader>
 
 ```json
 "minecraft:breedable": {
@@ -9146,27 +8566,24 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
+frog
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:breedable": {
     "require_tame": false,
-    "breed_items": "wheat",
+    "causes_pregnancy": true,
     "breeds_with": {
-        "mate_type": "minecraft:goat",
-        "baby_type": "minecraft:goat",
+        "mate_type": "minecraft:frog",
+        "baby_type": "minecraft:tadpole",
         "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
+            "event": "become_pregnant"
         }
     },
-    "mutation_factor": {
-        "variant": 0
-    }
+    "breed_items": [
+        "slime_ball"
+    ]
 }
 ```
 
@@ -9174,15 +8591,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## bribeable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abribeable)</small>
-
 <Spoiler title="Show">
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_adult</CodeHeader>
 
 ```json
 "minecraft:bribeable": {
@@ -9197,13 +8610,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## buoyant
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Abuoyant)</small>
-
 <Spoiler title="Show">
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -9221,7 +8630,23 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:floating</CodeHeader>
+
+```json
+"minecraft:buoyant": {
+    "base_buoyancy": 1.0,
+    "apply_gravity": true,
+    "simulate_waves": true,
+    "big_wave_probability": 0.03,
+    "big_wave_speed": 10.0,
+    "liquid_blocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+    ]
+}
+```
+
+<CodeHeader>#component_groups/minecraft:above_bubble_column_down</CodeHeader>
 
 ```json
 "minecraft:buoyant": {
@@ -9236,9 +8661,56 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### xp_orb
+chest_boat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/xp_orb.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:buoyant": {
+    "base_buoyancy": 1.0,
+    "apply_gravity": true,
+    "simulate_waves": true,
+    "big_wave_probability": 0.03,
+    "big_wave_speed": 10.0,
+    "liquid_blocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+    ]
+}
+```
+
+<CodeHeader>#component_groups/minecraft:floating</CodeHeader>
+
+```json
+"minecraft:buoyant": {
+    "base_buoyancy": 1.0,
+    "apply_gravity": true,
+    "simulate_waves": true,
+    "big_wave_probability": 0.03,
+    "big_wave_speed": 10.0,
+    "liquid_blocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+    ]
+}
+```
+
+<CodeHeader>#component_groups/minecraft:above_bubble_column_down</CodeHeader>
+
+```json
+"minecraft:buoyant": {
+    "base_buoyancy": 1.0,
+    "apply_gravity": true,
+    "simulate_waves": false,
+    "liquid_blocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+    ],
+    "drag_down_on_buoyancy_removed": 0.7
+}
+```
+
+xp_orb
 
 <CodeHeader></CodeHeader>
 
@@ -9256,13 +8728,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## burns_in_daylight
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aburns_in_daylight)</small>
-
 <Spoiler title="Show">
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -9270,9 +8738,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:burns_in_daylight": {}
 ```
 
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+magma_cube
 
 <CodeHeader></CodeHeader>
 
@@ -9280,9 +8746,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:burns_in_daylight": false
 ```
 
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
+phantom
 
 <CodeHeader></CodeHeader>
 
@@ -9290,9 +8754,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:burns_in_daylight": {}
 ```
 
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
+skeleton
 
 <CodeHeader></CodeHeader>
 
@@ -9300,9 +8762,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:burns_in_daylight": {}
 ```
 
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
+stray
 
 <CodeHeader></CodeHeader>
 
@@ -9310,9 +8770,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:burns_in_daylight": {}
 ```
 
-#### zombie
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
+zombie
 
 <CodeHeader></CodeHeader>
 
@@ -9320,9 +8778,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:burns_in_daylight": {}
 ```
 
-#### zombie_villager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
+zombie_villager
 
 <CodeHeader></CodeHeader>
 
@@ -9330,9 +8786,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:burns_in_daylight": {}
 ```
 
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
+zombie_villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -9344,13 +8798,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## can_climb
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_climb)</small>
-
 <Spoiler title="Show">
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -9358,9 +8808,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_climb": {}
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -9368,9 +8816,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_climb": {}
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -9378,9 +8824,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_climb": {}
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -9388,9 +8832,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_climb": {}
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -9398,9 +8840,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_climb": {}
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -9408,9 +8848,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_climb": {}
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -9418,9 +8856,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_climb": {}
 ```
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -9432,13 +8868,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## can_fly
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_fly)</small>
-
 <Spoiler title="Show">
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -9446,9 +8878,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_fly": {}
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -9456,9 +8886,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_fly": {}
 ```
 
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -9466,9 +8894,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_fly": {}
 ```
 
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
+ghast
 
 <CodeHeader></CodeHeader>
 
@@ -9476,9 +8902,15 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:can_fly": {}
 ```
 
-#### wither
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:can_fly": {}
+```
+
+wither
 
 <CodeHeader></CodeHeader>
 
@@ -9490,43 +8922,33 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## can_power_jump
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acan_power_jump)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_saddled</CodeHeader>
 
 ```json
 "minecraft:can_power_jump": {}
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_saddled</CodeHeader>
 
 ```json
 "minecraft:can_power_jump": {}
 ```
 
-#### mule
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_saddled</CodeHeader>
 
 ```json
 "minecraft:can_power_jump": {}
 ```
 
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
+skeleton_horse
 
 <CodeHeader></CodeHeader>
 
@@ -9538,15 +8960,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## celebrate_hunt
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acelebrate_hunt)</small>
-
 <Spoiler title="Show">
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/piglin_adult</CodeHeader>
 
 ```json
 "minecraft:celebrate_hunt": {
@@ -9573,13 +8991,20 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## collision_box
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acollision_box)</small>
-
 <Spoiler title="Show">
 
-#### armor_stand
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:collision_box": {
+    "width": 0.35,
+    "height": 0.6
+}
+```
+
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -9590,9 +9015,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### arrow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/arrow.json)</small>
+arrow
 
 <CodeHeader></CodeHeader>
 
@@ -9603,9 +9026,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -9616,9 +9037,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -9629,9 +9048,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -9642,9 +9059,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -9655,9 +9070,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -9668,28 +9081,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:collision_box": {
-    "width": 0.6,
-    "height": 0.7
-}
-```
-
 </Spoiler>
 
 ## color
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acolor)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+cat
+
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:color": {
@@ -9697,11 +9097,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### sheep
+sheep
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:sheep_white</CodeHeader>
 
 ```json
 "minecraft:color": {
@@ -9709,7 +9107,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:sheep_brown</CodeHeader>
 
 ```json
 "minecraft:color": {
@@ -9717,7 +9115,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:sheep_black</CodeHeader>
 
 ```json
 "minecraft:color": {
@@ -9725,31 +9123,35 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+tropicalfish
+
+<CodeHeader>#component_groups/minecraft:tropicalfish_base_white</CodeHeader>
 
 ```json
 "minecraft:color": {
-    "value": 8
+    "value": 0
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:tropicalfish_base_orange</CodeHeader>
 
 ```json
 "minecraft:color": {
-    "value": 7
+    "value": 1
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:tropicalfish_base_magenta</CodeHeader>
 
 ```json
 "minecraft:color": {
-    "value": 6
+    "value": 2
 }
 ```
 
-<CodeHeader></CodeHeader>
+wolf
+
+<CodeHeader>#component_groups/minecraft:wolf_tame</CodeHeader>
 
 ```json
 "minecraft:color": {
@@ -9761,15 +9163,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## color2
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acolor2)</small>
-
 <Spoiler title="Show">
 
-#### tropicalfish
+tropicalfish
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:tropicalfish_pattern_white</CodeHeader>
 
 ```json
 "minecraft:color2": {
@@ -9777,7 +9175,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:tropicalfish_pattern_orange</CodeHeader>
 
 ```json
 "minecraft:color2": {
@@ -9785,7 +9183,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:tropicalfish_pattern_magenta</CodeHeader>
 
 ```json
 "minecraft:color2": {
@@ -9793,57 +9191,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 6
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:color2": {
-    "value": 7
-}
-```
-
 </Spoiler>
 
 ## combat_regeneration
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acombat_regeneration)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -9855,13 +9209,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## conditional_bandwidth_optimization
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aconditional_bandwidth_optimization)</small>
-
 <Spoiler title="Show">
 
-#### area_effect_cloud
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/area_effect_cloud.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -9869,9 +9219,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
-#### armor_stand
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+area_effect_cloud
 
 <CodeHeader></CodeHeader>
 
@@ -9879,9 +9227,15 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
-#### arrow
+armor_stand
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/arrow.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+arrow
 
 <CodeHeader></CodeHeader>
 
@@ -9895,9 +9249,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -9905,9 +9257,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -9915,9 +9265,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -9925,9 +9273,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:conditional_bandwidth_optimization": {}
 ```
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -9956,29 +9302,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:conditional_bandwidth_optimization": {}
-```
-
 </Spoiler>
 
 ## custom_hit_test
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Acustom_hit_test)</small>
-
 <Spoiler title="Show">
 
-#### hoglin
+hoglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hoglin_baby</CodeHeader>
 
 ```json
 "minecraft:custom_hit_test": {
@@ -9996,7 +9328,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hoglin_adult</CodeHeader>
 
 ```json
 "minecraft:custom_hit_test": {
@@ -10014,11 +9346,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zoglin
+zoglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/zoglin_baby</CodeHeader>
 
 ```json
 "minecraft:custom_hit_test": {
@@ -10036,7 +9366,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/zoglin_adult</CodeHeader>
 
 ```json
 "minecraft:custom_hit_test": {
@@ -10058,15 +9388,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## damage_over_time
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adamage_over_time)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_dried</CodeHeader>
 
 ```json
 "minecraft:damage_over_time": {
@@ -10075,11 +9401,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_dried</CodeHeader>
 
 ```json
 "minecraft:damage_over_time": {
@@ -10092,13 +9416,39 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## damage_sensor
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adamage_sensor)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:damage_sensor": {
+    "triggers": [
+        {
+            "on_damage": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_owner",
+                            "subject": "other",
+                            "value": true
+                        }
+                    ]
+                }
+            },
+            "deals_damage": false
+        }
+    ]
+}
+```
+
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -10112,9 +9462,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -10127,9 +9475,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -10142,9 +9488,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -10157,9 +9501,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -10172,9 +9514,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -10187,9 +9527,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -10209,32 +9547,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": false
-    }
-}
-```
-
 </Spoiler>
 
 ## despawn
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adespawn)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -10244,9 +9563,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -10256,9 +9573,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -10268,9 +9583,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -10280,9 +9593,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -10292,9 +9603,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -10304,9 +9613,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -10316,9 +9623,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -10332,15 +9637,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## drying_out_timer
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adrying_out_timer)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_on_land</CodeHeader>
 
 ```json
 "minecraft:drying_out_timer": {
@@ -10358,11 +9659,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_on_land</CodeHeader>
 
 ```json
 "minecraft:drying_out_timer": {
@@ -10384,13 +9683,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## dweller
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Adweller)</small>
-
 <Spoiler title="Show">
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -10406,11 +9701,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### evocation_illager
+evocation_illager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:dweller": {
@@ -10419,16 +9712,14 @@ This documentation is stripped from the vanilla files using an [automated script
     "update_interval_base": 60,
     "update_interval_variant": 40,
     "can_find_poi": false,
-    "can_migrate": false,
+    "can_migrate": true,
     "first_founding_reward": 0
 }
 ```
 
-#### iron_golem
+iron_golem
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:village_created</CodeHeader>
 
 ```json
 "minecraft:dweller": {
@@ -10442,11 +9733,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:dweller": {
@@ -10455,16 +9744,14 @@ This documentation is stripped from the vanilla files using an [automated script
     "update_interval_base": 60,
     "update_interval_variant": 40,
     "can_find_poi": false,
-    "can_migrate": false,
+    "can_migrate": true,
     "first_founding_reward": 0
 }
 ```
 
-#### ravager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_configuration</CodeHeader>
 
 ```json
 "minecraft:dweller": {
@@ -10473,14 +9760,12 @@ This documentation is stripped from the vanilla files using an [automated script
     "update_interval_base": 60,
     "update_interval_variant": 40,
     "can_find_poi": false,
-    "can_migrate": false,
+    "can_migrate": true,
     "first_founding_reward": 0
 }
 ```
 
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -10496,7 +9781,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/farmer</CodeHeader>
 
 ```json
 "minecraft:dweller": {
@@ -10511,7 +9796,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/fisherman</CodeHeader>
 
 ```json
 "minecraft:dweller": {
@@ -10530,17 +9815,17 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## economy_trade_table
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aeconomy_trade_table)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+villager_v2
+
+<CodeHeader>#component_groups/trade_components</CodeHeader>
 
 ```json
 "minecraft:economy_trade_table": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/farmer</CodeHeader>
 
 ```json
 "minecraft:economy_trade_table": {
@@ -10559,7 +9844,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/fisherman</CodeHeader>
 
 ```json
 "minecraft:economy_trade_table": {
@@ -10578,98 +9863,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.shepherd",
-    "table": "trading/economy_trades/shepherd_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
+wandering_trader
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:economy_trade_table": {
-    "display_name": "entity.villager.fletcher",
-    "table": "trading/economy_trades/fletcher_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.librarian",
-    "table": "trading/economy_trades/librarian_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.cartographer",
-    "table": "trading/economy_trades/cartographer_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:economy_trade_table": {
-    "display_name": "entity.villager.cleric",
-    "table": "trading/economy_trades/cleric_trades.json",
-    "new_screen": true,
-    "persist_trades": true,
-    "cured_discount": [
-        -100,
-        -100
-    ],
-    "max_cured_discount": [
-        -500,
-        -500
-    ]
+    "display_name": "entity.wandering_trader.name",
+    "table": "trading/economy_trades/wandering_trader_trades.json",
+    "new_screen": true
 }
 ```
 
@@ -10677,15 +9879,65 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## entity_sensor
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aentity_sensor)</small>
-
 <Spoiler title="Show">
 
-#### pufferfish
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
+<CodeHeader>#component_groups/minecraft:parrot_not_riding_player</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:entity_sensor": {
+    "sensor_range": 2.0,
+    "relative_range": false,
+    "event_filters": {
+        "all_of": [
+            {
+                "test": "is_riding",
+                "subject": "self",
+                "operator": "equals",
+                "value": true
+            },
+            {
+                "test": "has_component",
+                "subject": "self",
+                "operator": "equals",
+                "value": "minecraft:behavior.look_at_player"
+            }
+        ]
+    },
+    "event": "minecraft:on_riding_player"
+}
+```
+
+<CodeHeader>#component_groups/minecraft:parrot_riding_player</CodeHeader>
+
+```json
+"minecraft:entity_sensor": {
+    "sensor_range": 2.0,
+    "relative_range": false,
+    "event_filters": {
+        "all_of": [
+            {
+                "test": "is_riding",
+                "subject": "self",
+                "operator": "equals",
+                "value": false
+            },
+            {
+                "test": "has_component",
+                "subject": "self",
+                "operator": "not",
+                "value": "minecraft:behavior.look_at_player"
+            }
+        ]
+    },
+    "event": "minecraft:on_not_riding_player"
+}
+```
+
+pufferfish
+
+<CodeHeader>#component_groups/minecraft:normal_puff</CodeHeader>
 
 ```json
 "minecraft:entity_sensor": {
@@ -10721,7 +9973,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:half_puff_secondary</CodeHeader>
 
 ```json
 "minecraft:entity_sensor": {
@@ -10757,7 +10009,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:deflate_sensor</CodeHeader>
 
 ```json
 "minecraft:entity_sensor": {
@@ -10800,15 +10052,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## environment_sensor
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aenvironment_sensor)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_in_water</CodeHeader>
 
 ```json
 "minecraft:environment_sensor": {
@@ -10825,7 +10073,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_on_land_in_rain</CodeHeader>
 
 ```json
 "minecraft:environment_sensor": {
@@ -10850,11 +10098,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/shelter_detection</CodeHeader>
 
 ```json
 "minecraft:environment_sensor": {
@@ -10892,7 +10138,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/abort_shelter_detection</CodeHeader>
 
 ```json
 "minecraft:environment_sensor": {
@@ -10917,11 +10163,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
+cave_spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_neutral</CodeHeader>
 
 ```json
 "minecraft:environment_sensor": {
@@ -10936,7 +10180,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_hostile</CodeHeader>
 
 ```json
 "minecraft:environment_sensor": {
@@ -10951,11 +10195,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_swimming_navigation</CodeHeader>
 
 ```json
 "minecraft:environment_sensor": {
@@ -10981,7 +10223,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_on_land_in_rain</CodeHeader>
 
 ```json
 "minecraft:environment_sensor": {
@@ -11010,13 +10252,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## equip_item
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aequip_item)</small>
-
 <Spoiler title="Show">
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -11024,9 +10262,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:equip_item": {}
 ```
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -11034,9 +10270,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:equip_item": {}
 ```
 
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
+husk
 
 <CodeHeader></CodeHeader>
 
@@ -11044,9 +10278,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:equip_item": {}
 ```
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -11054,9 +10286,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:equip_item": {}
 ```
 
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
+pillager
 
 <CodeHeader></CodeHeader>
 
@@ -11064,9 +10294,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:equip_item": {}
 ```
 
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
+skeleton
 
 <CodeHeader></CodeHeader>
 
@@ -11074,9 +10302,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:equip_item": {}
 ```
 
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
+stray
 
 <CodeHeader></CodeHeader>
 
@@ -11084,9 +10310,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:equip_item": {}
 ```
 
-#### wither_skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wither_skeleton.json)</small>
+wither_skeleton
 
 <CodeHeader></CodeHeader>
 
@@ -11098,15 +10322,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## equipment
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aequipment)</small>
-
 <Spoiler title="Show">
 
-#### drowned
+drowned
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mode_switcher</CodeHeader>
 
 ```json
 "minecraft:equipment": {
@@ -11120,7 +10340,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:melee_mode</CodeHeader>
 
 ```json
 "minecraft:equipment": {
@@ -11134,11 +10354,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:fox_with_item</CodeHeader>
 
 ```json
 "minecraft:equipment": {
@@ -11152,9 +10370,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
+husk
 
 <CodeHeader></CodeHeader>
 
@@ -11164,11 +10380,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/ranged_unit</CodeHeader>
 
 ```json
 "minecraft:equipment": {
@@ -11176,7 +10390,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/melee_unit</CodeHeader>
 
 ```json
 "minecraft:equipment": {
@@ -11184,11 +10398,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin_brute
+piglin_brute
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/melee_unit</CodeHeader>
 
 ```json
 "minecraft:equipment": {
@@ -11196,9 +10408,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
+pillager
 
 <CodeHeader></CodeHeader>
 
@@ -11212,15 +10422,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## equippable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aequippable)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_tamed</CodeHeader>
 
 ```json
 "minecraft:equippable": {
@@ -11242,9 +10448,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
+horse
 
 <CodeHeader></CodeHeader>
 
@@ -11278,11 +10482,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_tamed</CodeHeader>
 
 ```json
 "minecraft:equippable": {
@@ -11298,11 +10500,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### mule
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_tamed</CodeHeader>
 
 ```json
 "minecraft:equippable": {
@@ -11326,17 +10526,37 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## experience_reward
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aexperience_reward)</small>
+## exhaustion_values
 
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+player
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:exhaustion_values": {
+    "heal": 6,
+    "jump": 0.05,
+    "sprint_jump": 0.2,
+    "mine": 0.005,
+    "attack": 0.1,
+    "damage": 0.1,
+    "walk": 0.0,
+    "sprint": 0.01,
+    "swim": 0.01
+}
+```
+
+</Spoiler>
+
+## experience_reward
+
+<Spoiler title="Show">
+
+axolotl
+
+<CodeHeader>#component_groups/axolotl_adult</CodeHeader>
 
 ```json
 "minecraft:experience_reward": {
@@ -11345,11 +10565,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/bee_adult</CodeHeader>
 
 ```json
 "minecraft:experience_reward": {
@@ -11358,9 +10576,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -11370,11 +10586,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_adult</CodeHeader>
 
 ```json
 "minecraft:experience_reward": {
@@ -11383,9 +10597,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -11395,11 +10607,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
+chicken
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:chicken_adult</CodeHeader>
 
 ```json
 "minecraft:experience_reward": {
@@ -11408,11 +10618,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
+cow
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cow_adult</CodeHeader>
 
 ```json
 "minecraft:experience_reward": {
@@ -11421,9 +10629,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -11437,11 +10643,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## explode
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aexplode)</small>
-
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
+creeper
+
+<CodeHeader>#component_groups/minecraft:exploding</CodeHeader>
 
 ```json
 "minecraft:explode": {
@@ -11453,7 +10659,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:charged_exploding</CodeHeader>
 
 ```json
 "minecraft:explode": {
@@ -11465,11 +10671,21 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ender_crystal
+<CodeHeader>#component_groups/minecraft:forced_exploding</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_crystal.json)</small>
+```json
+"minecraft:explode": {
+    "fuse_length": 1.5,
+    "fuse_lit": true,
+    "power": 3,
+    "causes_fire": false,
+    "destroy_affected_by_griefing": true
+}
+```
 
-<CodeHeader></CodeHeader>
+ender_crystal
+
+<CodeHeader>#component_groups/crystal_exploding</CodeHeader>
 
 ```json
 "minecraft:explode": {
@@ -11481,11 +10697,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fireball
+fireball
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fireball.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:exploding</CodeHeader>
 
 ```json
 "minecraft:explode": {
@@ -11498,9 +10712,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### tnt
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt.json)</small>
+tnt
 
 <CodeHeader></CodeHeader>
 
@@ -11513,7 +10725,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/from_explosion</CodeHeader>
 
 ```json
 "minecraft:explode": {
@@ -11527,11 +10739,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### tnt_minecart
+tnt_minecart
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:primed_tnt</CodeHeader>
 
 ```json
 "minecraft:explode": {
@@ -11542,28 +10752,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:explode": {
-    "fuse_length": 0,
-    "fuse_lit": true,
-    "power": 3,
-    "causes_fire": false
-}
-```
-
 </Spoiler>
 
 ## fire_immune
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Afire_immune)</small>
-
 <Spoiler title="Show">
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -11571,9 +10766,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:fire_immune": {}
 ```
 
-#### ender_crystal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_crystal.json)</small>
+ender_crystal
 
 <CodeHeader></CodeHeader>
 
@@ -11581,9 +10774,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:fire_immune": true
 ```
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
+ender_dragon
 
 <CodeHeader></CodeHeader>
 
@@ -11591,9 +10782,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:fire_immune": true
 ```
 
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
+ghast
 
 <CodeHeader></CodeHeader>
 
@@ -11601,9 +10790,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:fire_immune": {}
 ```
 
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+magma_cube
 
 <CodeHeader></CodeHeader>
 
@@ -11611,9 +10798,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:fire_immune": {}
 ```
 
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
+shulker
 
 <CodeHeader></CodeHeader>
 
@@ -11621,9 +10806,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:fire_immune": true
 ```
 
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
+strider
 
 <CodeHeader></CodeHeader>
 
@@ -11631,9 +10814,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:fire_immune": {}
 ```
 
-#### vex
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vex.json)</small>
+vex
 
 <CodeHeader></CodeHeader>
 
@@ -11645,13 +10826,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## flocking
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aflocking)</small>
-
 <Spoiler title="Show">
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -11678,9 +10855,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
+cod
 
 <CodeHeader></CodeHeader>
 
@@ -11707,9 +10882,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
+pufferfish
 
 <CodeHeader></CodeHeader>
 
@@ -11736,9 +10909,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
+salmon
 
 <CodeHeader></CodeHeader>
 
@@ -11765,9 +10936,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### tropicalfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
+tropicalfish
 
 <CodeHeader></CodeHeader>
 
@@ -11798,13 +10967,19 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## flying_speed
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aflying_speed)</small>
-
 <Spoiler title="Show">
 
-#### bee
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:flying_speed": {
+    "value": 0.1
+}
+```
+
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -11814,9 +10989,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
+ender_dragon
 
 <CodeHeader></CodeHeader>
 
@@ -11830,13 +11003,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## follow_range
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Afollow_range)</small>
-
 <Spoiler title="Show">
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -11846,9 +11015,17 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:follow_range": {
+    "value": 1024
+}
+```
+
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -11859,9 +11036,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -11872,9 +11047,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+elder_guardian
 
 <CodeHeader></CodeHeader>
 
@@ -11885,9 +11058,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+enderman
 
 <CodeHeader></CodeHeader>
 
@@ -11898,9 +11069,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
+evocation_illager
 
 <CodeHeader></CodeHeader>
 
@@ -11910,9 +11079,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
+ghast
 
 <CodeHeader></CodeHeader>
 
@@ -11923,30 +11090,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:follow_range": {
-    "value": 16,
-    "max": 16
-}
-```
-
 </Spoiler>
 
 ## genetics
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Agenetics)</small>
-
 <Spoiler title="Show">
 
-#### goat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
+goat
 
 <CodeHeader></CodeHeader>
 
@@ -11988,9 +11138,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
+panda
 
 <CodeHeader></CodeHeader>
 
@@ -12063,9 +11211,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## giveable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Agiveable)</small>
-
 <Spoiler title="Show">
+
+panda
 
 <CodeHeader></CodeHeader>
 
@@ -12089,15 +11237,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## group_size
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Agroup_size)</small>
-
 <Spoiler title="Show">
 
-#### hoglin
+hoglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hoglin_adult</CodeHeader>
 
 ```json
 "minecraft:group_size": {
@@ -12118,11 +11262,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/piglin_adult</CodeHeader>
 
 ```json
 "minecraft:group_size": {
@@ -12147,15 +11289,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## grows_crop
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Agrows_crop)</small>
-
 <Spoiler title="Show">
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/has_nectar</CodeHeader>
 
 ```json
 "minecraft:grows_crop": {
@@ -12168,13 +11306,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## healable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahealable)</small>
-
 <Spoiler title="Show">
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -12193,9 +11327,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+donkey
 
 <CodeHeader></CodeHeader>
 
@@ -12234,9 +11366,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
+horse
 
 <CodeHeader></CodeHeader>
 
@@ -12275,9 +11405,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
+llama
 
 <CodeHeader></CodeHeader>
 
@@ -12296,9 +11424,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
+mule
 
 <CodeHeader></CodeHeader>
 
@@ -12337,9 +11463,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
+parrot
 
 <CodeHeader></CodeHeader>
 
@@ -12368,9 +11492,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wolf
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
+wolf
 
 <CodeHeader></CodeHeader>
 
@@ -12457,13 +11579,19 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## health
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahealth)</small>
-
 <Spoiler title="Show">
 
-#### armor_stand
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:health": {
+    "value": 20
+}
+```
+
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -12474,9 +11602,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -12486,9 +11612,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -12499,9 +11623,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -12512,9 +11634,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -12525,11 +11645,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_wild</CodeHeader>
 
 ```json
 "minecraft:health": {
@@ -12538,7 +11656,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:health": {
@@ -12547,16 +11665,19 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+## heartbeat
+
+<Spoiler title="Show">
+
+warden
 
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:health": {
-    "value": 12,
-    "max": 12
+"minecraft:heartbeat": {
+    "interval": "2.0 - math.clamp(query.anger_level / 80 * 1.5, 0, 1.5)"
 }
 ```
 
@@ -12564,13 +11685,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## hide
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahide)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
+villager_v2
 
 <CodeHeader></CodeHeader>
 
@@ -12582,13 +11699,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## home
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahome)</small>
-
 <Spoiler title="Show">
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -12602,9 +11715,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+elder_guardian
 
 <CodeHeader></CodeHeader>
 
@@ -12614,9 +11725,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+guardian
 
 <CodeHeader></CodeHeader>
 
@@ -12626,9 +11735,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin_brute
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
+piglin_brute
 
 <CodeHeader></CodeHeader>
 
@@ -12636,27 +11743,31 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:home": {}
 ```
 
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
+turtle
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:home": {}
+```
+
+wandering_trader
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:home": {
+    "restriction_radius": 16
+}
 ```
 
 </Spoiler>
 
 ## horse.jump_strength
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahorse.jump_strength)</small>
-
 <Spoiler title="Show">
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+donkey
 
 <CodeHeader></CodeHeader>
 
@@ -12666,9 +11777,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
+horse
 
 <CodeHeader></CodeHeader>
 
@@ -12681,9 +11790,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
+mule
 
 <CodeHeader></CodeHeader>
 
@@ -12693,9 +11800,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
+skeleton_horse
 
 <CodeHeader></CodeHeader>
 
@@ -12708,9 +11813,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
+zombie_horse
 
 <CodeHeader></CodeHeader>
 
@@ -12727,13 +11830,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## hurt_on_condition
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ahurt_on_condition)</small>
-
 <Spoiler title="Show">
 
-#### armor_stand
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -12754,9 +11853,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### arrow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/arrow.json)</small>
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -12777,9 +11874,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+arrow
 
 <CodeHeader></CodeHeader>
 
@@ -12800,9 +11895,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -12823,9 +11916,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -12846,7 +11937,28 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
+bee
+
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:hurt_on_condition": {
+    "damage_conditions": [
+        {
+            "filters": {
+                "test": "in_lava",
+                "subject": "self",
+                "operator": "==",
+                "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+        }
+    ]
+}
+```
+
+<CodeHeader>#component_groups/perish</CodeHeader>
 
 ```json
 "minecraft:hurt_on_condition": {
@@ -12859,9 +11971,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -12881,70 +11991,37 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
 </Spoiler>
 
 ## input_ground_controlled
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainput_ground_controlled)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_saddled</CodeHeader>
 
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_saddled</CodeHeader>
 
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
-#### mule
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_saddled</CodeHeader>
 
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
+skeleton_horse
 
 <CodeHeader></CodeHeader>
 
@@ -12956,13 +12033,52 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## inside_block_notifier
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainside_block_notifier)</small>
-
 <Spoiler title="Show">
 
-#### boat
+boat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:inside_block_notifier": {
+    "block_list": [
+        {
+            "block": {
+                "name": "minecraft:bubble_column",
+                "states": {
+                    "drag_down": true
+                }
+            },
+            "entered_block_event": {
+                "event": "minecraft:entered_bubble_column_down",
+                "target": "self"
+            },
+            "exited_block_event": {
+                "event": "minecraft:exited_bubble_column",
+                "target": "self"
+            }
+        },
+        {
+            "block": {
+                "name": "minecraft:bubble_column",
+                "states": {
+                    "drag_down": false
+                }
+            },
+            "entered_block_event": {
+                "event": "minecraft:entered_bubble_column_up",
+                "target": "self"
+            },
+            "exited_block_event": {
+                "event": "minecraft:exited_bubble_column",
+                "target": "self"
+            }
+        }
+    ]
+}
+```
+
+chest_boat
 
 <CodeHeader></CodeHeader>
 
@@ -13009,13 +12125,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## insomnia
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainsomnia)</small>
-
 <Spoiler title="Show">
 
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
+player
 
 <CodeHeader></CodeHeader>
 
@@ -13029,15 +12141,38 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## interact
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainteract)</small>
-
 <Spoiler title="Show">
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }
+                    ]
+                }
+            },
+            "give_item": true,
+            "take_item": true,
+            "interact_text": "action.interact.allay"
+        }
+    ]
+}
+```
+
+cow
+
+<CodeHeader>#component_groups/minecraft:cow_adult</CodeHeader>
 
 ```json
 "minecraft:interact": {
@@ -13069,9 +12204,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -13110,11 +12243,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_unchested</CodeHeader>
 
 ```json
 "minecraft:interact": {
@@ -13147,11 +12278,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### goat
+goat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/goat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/interact_default</CodeHeader>
 
 ```json
 "minecraft:interact": {
@@ -13189,7 +12318,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/interact_screamer</CodeHeader>
 
 ```json
 "minecraft:interact": {
@@ -13227,9 +12356,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -13267,11 +12394,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_unchested</CodeHeader>
 
 ```json
 "minecraft:interact": {
@@ -13304,593 +12429,35 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### mooshroom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "bowl"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_component",
-                            "operator": "!=",
-                            "value": "minecraft:transformation"
-                        }
-                    ]
-                },
-                "event": "minecraft:flowerless",
-                "target": "self"
-            },
-            "add_items": {
-                "table": "loot_tables/gameplay/entities/mooshroom_milking.json"
-            },
-            "use_item": true,
-            "play_sounds": "milk_suspiciously",
-            "interact_text": "action.interact.moostew"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:2"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 7
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_allium",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:3"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 3
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_bluet",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:1"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 6
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_orchid",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:9"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 1
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_cornflower",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "yellow_flower"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 5
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_dandelion",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:10"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 4
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_lily",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:8"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 8
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_daisy",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:0"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 0
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_poppy",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "any_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:4"
-                        },
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:5"
-                        },
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:6"
-                        },
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "red_flower:7"
-                        }
-                    ],
-                    "all_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 2
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_tulip",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "wither_rose"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        },
-                        {
-                            "test": "is_mark_variant",
-                            "subject": "self",
-                            "operator": "!=",
-                            "value": 9
-                        }
-                    ]
-                },
-                "event": "minecraft:ate_rose",
-                "target": "self"
-            },
-            "use_item": true,
-            "play_sounds": "eat",
-            "particle_on_start": {
-                "particle_type": "smoke",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.feed"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "shears"
-                        },
-                        {
-                            "test": "has_component",
-                            "operator": "!=",
-                            "value": "minecraft:transformation"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 0
-                        }
-                    ]
-                },
-                "event": "become_cow",
-                "target": "self"
-            },
-            "use_item": false,
-            "hurt_item": 1,
-            "play_sounds": "shear",
-            "spawn_items": {
-                "table": "loot_tables/entities/mooshroom_shear.json"
-            },
-            "particle_on_start": {
-                "particle_type": "largeexplode",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.mooshear"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "shears"
-                        },
-                        {
-                            "test": "has_component",
-                            "operator": "!=",
-                            "value": "minecraft:transformation"
-                        },
-                        {
-                            "test": "is_variant",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": 1
-                        }
-                    ]
-                },
-                "event": "become_cow",
-                "target": "self"
-            },
-            "use_item": false,
-            "hurt_item": 1,
-            "play_sounds": "shear",
-            "spawn_items": {
-                "table": "loot_tables/entities/brown_mooshroom_shear.json"
-            },
-            "particle_on_start": {
-                "particle_type": "largeexplode",
-                "particle_y_offset": 0.25,
-                "particle_offset_towards_interactor": true
-            },
-            "interact_text": "action.interact.mooshear"
-        },
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "bucket:0"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        }
-                    ]
-                }
-            },
-            "use_item": true,
-            "transform_to_item": "bucket:1",
-            "play_sounds": "milk",
-            "interact_text": "action.interact.milk"
-        }
-    ]
-}
-```
-
 </Spoiler>
 
 ## inventory
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ainventory)</small>
-
 <Spoiler title="Show">
 
-#### chest_minecart
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chest_minecart.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:inventory": {
+    "inventory_size": 1
+}
+```
+
+chest_boat
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:inventory": {
+    "container_type": "chest_boat",
+    "inventory_size": 27,
+    "can_be_siphoned_from": true
+}
+```
+
+chest_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -13902,9 +12469,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### command_block_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/command_block_minecart.json)</small>
+command_block_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -13912,11 +12477,9 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:inventory": {}
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_tamed</CodeHeader>
 
 ```json
 "minecraft:inventory": {
@@ -13925,9 +12488,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### hopper_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
+hopper_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -13939,11 +12500,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_tamed</CodeHeader>
 
 ```json
 "minecraft:inventory": {
@@ -13952,11 +12511,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_tamed</CodeHeader>
 
 ```json
 "minecraft:inventory": {
@@ -13966,115 +12523,71 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### mule
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:inventory": {
-    "inventory_size": 16,
-    "container_type": "horse"
-}
-```
-
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:inventory": {
-    "inventory_size": 1,
-    "private": true
-}
-```
-
 </Spoiler>
 
 ## is_baby
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_baby)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_baby</CodeHeader>
 
 ```json
 "minecraft:is_baby": {}
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/bee_baby</CodeHeader>
 
 ```json
 "minecraft:is_baby": {}
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_baby</CodeHeader>
 
 ```json
 "minecraft:is_baby": {}
 ```
 
-#### chicken
+chicken
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:chicken_baby</CodeHeader>
 
 ```json
 "minecraft:is_baby": {}
 ```
 
-#### cow
+cow
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cow_baby</CodeHeader>
 
 ```json
 "minecraft:is_baby": {}
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_baby</CodeHeader>
 
 ```json
 "minecraft:is_baby": {}
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_baby</CodeHeader>
 
 ```json
 "minecraft:is_baby": {}
 ```
 
-#### drowned
+drowned
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:baby_drowned</CodeHeader>
 
 ```json
 "minecraft:is_baby": {}
@@ -14084,25 +12597,19 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_charged
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_charged)</small>
-
 <Spoiler title="Show">
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/has_nectar</CodeHeader>
 
 ```json
 "minecraft:is_charged": {}
 ```
 
-#### creeper
+creeper
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:charged_creeper</CodeHeader>
 
 ```json
 "minecraft:is_charged": {}
@@ -14112,35 +12619,27 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_chested
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_chested)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_chested</CodeHeader>
 
 ```json
 "minecraft:is_chested": {}
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_chested</CodeHeader>
 
 ```json
 "minecraft:is_chested": {}
 ```
 
-#### mule
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_chested</CodeHeader>
 
 ```json
 "minecraft:is_chested": {}
@@ -14150,15 +12649,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_dyeable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_dyeable)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:is_dyeable": {
@@ -14166,11 +12661,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### sheep
+sheep
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:sheep_dyeable</CodeHeader>
 
 ```json
 "minecraft:is_dyeable": {
@@ -14178,11 +12671,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wolf
+wolf
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:wolf_tame</CodeHeader>
 
 ```json
 "minecraft:is_dyeable": {
@@ -14194,13 +12685,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_hidden_when_invisible
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_hidden_when_invisible)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -14208,9 +12695,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -14218,9 +12703,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -14228,9 +12711,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -14238,9 +12719,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -14248,9 +12727,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -14258,9 +12735,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -14268,9 +12743,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -14282,15 +12755,17 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_ignited
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_ignited)</small>
-
 <Spoiler title="Show">
 
-#### tnt_minecart
+tnt_minecart
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
+<CodeHeader>#component_groups/minecraft:primed_tnt</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:is_ignited": {}
+```
+
+<CodeHeader>#component_groups/minecraft:instant_explode_tnt</CodeHeader>
 
 ```json
 "minecraft:is_ignited": {}
@@ -14300,25 +12775,31 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_illager_captain
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_illager_captain)</small>
-
 <Spoiler title="Show">
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:illager_squad_captain</CodeHeader>
 
 ```json
 "minecraft:is_illager_captain": {}
 ```
 
-#### vindicator
+<CodeHeader>#component_groups/minecraft:patrol_captain</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/vindicator.json)</small>
+```json
+"minecraft:is_illager_captain": {}
+```
 
-<CodeHeader></CodeHeader>
+vindicator
+
+<CodeHeader>#component_groups/minecraft:illager_squad_captain</CodeHeader>
+
+```json
+"minecraft:is_illager_captain": {}
+```
+
+<CodeHeader>#component_groups/minecraft:patrol_captain</CodeHeader>
 
 ```json
 "minecraft:is_illager_captain": {}
@@ -14328,55 +12809,43 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_saddled
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_saddled)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_saddled</CodeHeader>
 
 ```json
 "minecraft:is_saddled": {}
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_saddled</CodeHeader>
 
 ```json
 "minecraft:is_saddled": {}
 ```
 
-#### mule
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_saddled</CodeHeader>
 
 ```json
 "minecraft:is_saddled": {}
 ```
 
-#### pig
+pig
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:pig_saddled</CodeHeader>
 
 ```json
 "minecraft:is_saddled": {}
 ```
 
-#### strider
+strider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_saddled</CodeHeader>
 
 ```json
 "minecraft:is_saddled": {}
@@ -14386,85 +12855,65 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_shaking
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_shaking)</small>
-
 <Spoiler title="Show">
 
-#### hoglin
+hoglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/start_zombification</CodeHeader>
 
 ```json
 "minecraft:is_shaking": {}
 ```
 
-#### husk
+husk
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:convert_to_zombie</CodeHeader>
 
 ```json
 "minecraft:is_shaking": {}
 ```
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:convert_to_baby_zombie</CodeHeader>
 
 ```json
 "minecraft:is_shaking": {}
 ```
 
-#### piglin_brute
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/start_zombification</CodeHeader>
 
 ```json
 "minecraft:is_shaking": {}
 ```
 
-#### skeleton
+piglin_brute
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/start_zombification</CodeHeader>
 
 ```json
 "minecraft:is_shaking": {}
 ```
 
-#### strider
+skeleton
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/in_powder_snow</CodeHeader>
 
 ```json
 "minecraft:is_shaking": {}
 ```
 
-#### zombie
+strider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:start_suffocating</CodeHeader>
 
 ```json
 "minecraft:is_shaking": {}
 ```
 
-#### zombie_villager
+zombie
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:convert_to_drowned</CodeHeader>
 
 ```json
 "minecraft:is_shaking": {}
@@ -14474,25 +12923,19 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_sheared
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_sheared)</small>
-
 <Spoiler title="Show">
 
-#### sheep
+sheep
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/sheep.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:sheep_sheared</CodeHeader>
 
 ```json
 "minecraft:is_sheared": {}
 ```
 
-#### snow_golem
+snow_golem
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:snowman_sheared</CodeHeader>
 
 ```json
 "minecraft:is_sheared": {}
@@ -14502,13 +12945,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_stackable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_stackable)</small>
-
 <Spoiler title="Show">
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -14516,9 +12955,15 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_stackable": {}
 ```
 
-#### chest_minecart
+chest_boat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chest_minecart.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:is_stackable": {}
+```
+
+chest_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -14528,9 +12973,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### hopper_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
+hopper_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -14538,9 +12981,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_stackable": {}
 ```
 
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
+minecart
 
 <CodeHeader></CodeHeader>
 
@@ -14548,9 +12989,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:is_stackable": {}
 ```
 
-#### tnt_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
+tnt_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -14562,15 +13001,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_stunned
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_stunned)</small>
-
 <Spoiler title="Show">
 
-#### ravager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/stunned</CodeHeader>
 
 ```json
 "minecraft:is_stunned": {}
@@ -14580,83 +13015,65 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## is_tamed
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ais_tamed)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:is_tamed": {}
 ```
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_tamed</CodeHeader>
 
 ```json
 "minecraft:is_tamed": {}
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_tamed</CodeHeader>
 
 ```json
 "minecraft:is_tamed": {}
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_tamed</CodeHeader>
 
 ```json
 "minecraft:is_tamed": {}
 ```
 
-#### mule
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_tamed</CodeHeader>
 
 ```json
 "minecraft:is_tamed": {}
 ```
 
-#### ocelot
+ocelot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ocelot_tame</CodeHeader>
 
 ```json
 "minecraft:is_tamed": {}
 ```
 
-#### parrot
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:parrot_tame</CodeHeader>
 
 ```json
 "minecraft:is_tamed": {}
 ```
 
-#### skeleton_horse
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
+skeleton_horse
 
 <CodeHeader></CodeHeader>
 
@@ -14668,15 +13085,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## item_controllable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aitem_controllable)</small>
-
 <Spoiler title="Show">
 
-#### pig
+pig
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:pig_saddled</CodeHeader>
 
 ```json
 "minecraft:item_controllable": {
@@ -14684,11 +13097,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### strider
+strider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_saddled</CodeHeader>
 
 ```json
 "minecraft:item_controllable": {
@@ -14700,15 +13111,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## item_hopper
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aitem_hopper)</small>
-
 <Spoiler title="Show">
 
-#### hopper_minecart
+hopper_minecart
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hopper_active</CodeHeader>
 
 ```json
 "minecraft:item_hopper": {}
@@ -14718,13 +13125,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## jump.dynamic
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ajump.dynamic)</small>
-
 <Spoiler title="Show">
 
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
+rabbit
 
 <CodeHeader></CodeHeader>
 
@@ -14736,13 +13139,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## jump.static
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ajump.static)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -14750,9 +13149,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:jump.static": {}
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -14760,9 +13157,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:jump.static": {}
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -14770,9 +13165,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:jump.static": {}
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -14780,9 +13173,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:jump.static": {}
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -14790,9 +13181,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:jump.static": {}
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -14800,9 +13189,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:jump.static": {}
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -14810,9 +13197,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:jump.static": {}
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -14824,13 +13209,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## knockback_resistance
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aknockback_resistance)</small>
-
 <Spoiler title="Show">
 
-#### armor_stand
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -14840,9 +13221,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
+ender_dragon
 
 <CodeHeader></CodeHeader>
 
@@ -14853,21 +13232,17 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### hoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
+hoglin
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:knockback_resistance": {
-    "value": 0.5
+    "value": 0.6
 }
 ```
 
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -14877,27 +13252,33 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
+ravager
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:knockback_resistance": {
-    "value": 0.5
+    "value": 0.75
 }
 ```
 
-#### zoglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zoglin.json)</small>
+warden
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:knockback_resistance": {
-    "value": 0.5
+    "value": 1.0
+}
+```
+
+zoglin
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:knockback_resistance": {
+    "value": 0.6
 }
 ```
 
@@ -14905,13 +13286,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## lava_movement
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Alava_movement)</small>
-
 <Spoiler title="Show">
 
-#### strider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/strider.json)</small>
+strider
 
 <CodeHeader></CodeHeader>
 
@@ -14925,13 +13302,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## leashable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aleashable)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -14943,9 +13316,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -14957,9 +13328,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -14971,9 +13340,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -14985,9 +13352,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -14999,9 +13364,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+chest_boat
 
 <CodeHeader></CodeHeader>
 
@@ -15013,9 +13376,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -15027,9 +13388,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -15045,13 +13404,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## lookat
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Alookat)</small>
-
 <Spoiler title="Show">
 
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+enderman
 
 <CodeHeader></CodeHeader>
 
@@ -15083,13 +13438,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## loot
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aloot)</small>
-
 <Spoiler title="Show">
 
-#### armor_stand
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -15099,9 +13450,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -15111,9 +13460,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -15123,11 +13470,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_adult</CodeHeader>
 
 ```json
 "minecraft:loot": {
@@ -15135,9 +13480,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -15147,11 +13490,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
+chicken
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:chicken_adult</CodeHeader>
 
 ```json
 "minecraft:loot": {
@@ -15159,11 +13500,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
+cow
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cow_adult</CodeHeader>
 
 ```json
 "minecraft:loot": {
@@ -15171,9 +13510,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -15187,15 +13524,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## managed_wandering_trader
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amanaged_wandering_trader)</small>
-
 <Spoiler title="Show">
 
-#### wandering_trader
+wandering_trader
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/managed</CodeHeader>
 
 ```json
 "minecraft:managed_wandering_trader": {}
@@ -15205,15 +13538,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## mark_variant
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amark_variant)</small>
-
 <Spoiler title="Show">
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/countdown_to_perish</CodeHeader>
 
 ```json
 "minecraft:mark_variant": {
@@ -15221,11 +13550,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:markings_none</CodeHeader>
 
 ```json
 "minecraft:mark_variant": {
@@ -15233,7 +13560,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:markings_white_details</CodeHeader>
 
 ```json
 "minecraft:mark_variant": {
@@ -15241,7 +13568,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:markings_white_fields</CodeHeader>
 
 ```json
 "minecraft:mark_variant": {
@@ -15249,25 +13576,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 4
-}
-```
-
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
+llama
 
 <CodeHeader></CodeHeader>
 
@@ -15277,7 +13586,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_wandering_trader</CodeHeader>
 
 ```json
 "minecraft:mark_variant": {
@@ -15285,19 +13594,33 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
+mooshroom
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:mark_variant": {
+    "value": -1
+}
+```
+
+<CodeHeader>#component_groups/minecraft:mooshroom_fed_nothing</CodeHeader>
+
+```json
+"minecraft:mark_variant": {
+    "value": -1
+}
+```
+
 </Spoiler>
 
 ## mob_effect
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amob_effect)</small>
-
 <Spoiler title="Show">
 
-#### pufferfish
+pufferfish
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:full_puff</CodeHeader>
 
 ```json
 "minecraft:mob_effect": {
@@ -15321,17 +13644,41 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
+warden
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:mob_effect": {
+    "effect_range": 20,
+    "effect_time": 13,
+    "mob_effect": "darkness",
+    "cooldown_time": 6,
+    "entity_filter": {
+        "all_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "operator": "not",
+                "test": "has_ability",
+                "subject": "other",
+                "value": "invulnerable"
+            }
+        ]
+    }
+}
+```
+
 </Spoiler>
 
 ## movement
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -15341,9 +13688,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -15353,9 +13698,17 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:movement": {
+    "value": 0.1
+}
+```
+
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -15365,9 +13718,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -15377,9 +13728,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -15389,9 +13738,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -15401,21 +13748,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:movement": {
-    "value": 0.25
-}
-```
-
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -15429,13 +13762,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.amphibious
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.amphibious)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -15445,9 +13774,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### turtle
+frog
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:movement.amphibious": {}
+```
+
+turtle
 
 <CodeHeader></CodeHeader>
 
@@ -15461,13 +13796,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.basic
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.basic)</small>
-
 <Spoiler title="Show">
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -15475,9 +13806,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.basic": {}
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -15485,9 +13814,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.basic": {}
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -15495,9 +13822,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.basic": {}
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -15505,9 +13830,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.basic": {}
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -15515,9 +13838,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.basic": {}
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -15525,9 +13846,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.basic": {}
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -15535,9 +13854,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.basic": {}
 ```
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+donkey
 
 <CodeHeader></CodeHeader>
 
@@ -15549,13 +13866,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.fly
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.fly)</small>
-
 <Spoiler title="Show">
 
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
+parrot
 
 <CodeHeader></CodeHeader>
 
@@ -15567,13 +13880,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.generic
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.generic)</small>
-
 <Spoiler title="Show">
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -15585,13 +13894,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.glide
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.glide)</small>
-
 <Spoiler title="Show">
 
-#### phantom
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/phantom.json)</small>
+phantom
 
 <CodeHeader></CodeHeader>
 
@@ -15606,13 +13911,17 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.hover
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.hover)</small>
-
 <Spoiler title="Show">
 
-#### bee
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:movement.hover": {}
+```
+
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -15624,13 +13933,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.jump
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.jump)</small>
-
 <Spoiler title="Show">
 
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+magma_cube
 
 <CodeHeader></CodeHeader>
 
@@ -15643,7 +13948,18 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:slime_calm</CodeHeader>
+
+```json
+"minecraft:movement.jump": {
+    "jump_delay": [
+        2.0,
+        6.0
+    ]
+}
+```
+
+<CodeHeader>#component_groups/minecraft:slime_aggressive</CodeHeader>
 
 ```json
 "minecraft:movement.jump": {
@@ -15654,9 +13970,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### slime
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/slime.json)</small>
+slime
 
 <CodeHeader></CodeHeader>
 
@@ -15669,7 +13983,18 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:slime_calm</CodeHeader>
+
+```json
+"minecraft:movement.jump": {
+    "jump_delay": [
+        0.5,
+        1.5
+    ]
+}
+```
+
+<CodeHeader>#component_groups/minecraft:slime_aggressive</CodeHeader>
 
 ```json
 "minecraft:movement.jump": {
@@ -15684,13 +14009,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.skip
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.skip)</small>
-
 <Spoiler title="Show">
 
-#### rabbit
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/rabbit.json)</small>
+rabbit
 
 <CodeHeader></CodeHeader>
 
@@ -15702,13 +14023,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## movement.sway
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Amovement.sway)</small>
-
 <Spoiler title="Show">
 
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+elder_guardian
 
 <CodeHeader></CodeHeader>
 
@@ -15716,9 +14033,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.sway": {}
 ```
 
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
+cod
 
 <CodeHeader></CodeHeader>
 
@@ -15728,9 +14043,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+guardian
 
 <CodeHeader></CodeHeader>
 
@@ -15738,9 +14051,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:movement.sway": {}
 ```
 
-#### pufferfish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
+pufferfish
 
 <CodeHeader></CodeHeader>
 
@@ -15750,9 +14061,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### salmon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/salmon.json)</small>
+salmon
 
 <CodeHeader></CodeHeader>
 
@@ -15762,9 +14071,17 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### tropicalfish
+tadpole
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tropicalfish.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:movement.sway": {
+    "sway_amplitude": 0.0
+}
+```
+
+tropicalfish
 
 <CodeHeader></CodeHeader>
 
@@ -15776,15 +14093,27 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## nameable
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anameable)</small>
+## movement_sound_distance_offset
 
 <Spoiler title="Show">
 
-#### armor_stand
+warden
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:movement_sound_distance_offset": {
+    "value": 0.55
+}
+```
+
+</Spoiler>
+
+## nameable
+
+<Spoiler title="Show">
+
+allay
 
 <CodeHeader></CodeHeader>
 
@@ -15792,9 +14121,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:nameable": {}
 ```
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -15802,9 +14129,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:nameable": {}
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -15812,9 +14137,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:nameable": {}
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -15822,9 +14145,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:nameable": {}
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -15832,9 +14153,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:nameable": {}
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -15842,9 +14161,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:nameable": {}
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -15852,9 +14169,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:nameable": {}
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -15866,13 +14181,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## navigation.climb
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.climb)</small>
-
 <Spoiler title="Show">
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -15882,9 +14193,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/spider.json)</small>
+spider
 
 <CodeHeader></CodeHeader>
 
@@ -15898,13 +14207,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## navigation.float
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.float)</small>
-
 <Spoiler title="Show">
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -15914,9 +14219,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
+ghast
 
 <CodeHeader></CodeHeader>
 
@@ -15930,13 +14233,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## navigation.fly
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.fly)</small>
-
 <Spoiler title="Show">
 
-#### parrot
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
+parrot
 
 <CodeHeader></CodeHeader>
 
@@ -15951,13 +14250,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## navigation.generic
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.generic)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -15972,9 +14267,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -15989,7 +14282,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_swimming_navigation</CodeHeader>
 
 ```json
 "minecraft:navigation.generic": {
@@ -16002,7 +14295,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_on_land</CodeHeader>
 
 ```json
 "minecraft:navigation.generic": {
@@ -16015,9 +14308,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -16032,7 +14323,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hunter_mode</CodeHeader>
 
 ```json
 "minecraft:navigation.generic": {
@@ -16045,9 +14336,20 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### elder_guardian
+<CodeHeader>#component_groups/minecraft:wander_mode</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+```json
+"minecraft:navigation.generic": {
+    "is_amphibious": true,
+    "can_path_over_water": false,
+    "can_break_doors": true,
+    "can_swim": false,
+    "can_walk": true,
+    "avoid_sun": true
+}
+```
+
+elder_guardian
 
 <CodeHeader></CodeHeader>
 
@@ -16061,34 +14363,29 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:navigation.generic": {
-    "is_amphibious": false,
-    "can_path_over_water": false,
-    "can_swim": true,
-    "can_walk": false,
-    "can_breach": false,
-    "can_sink": false
-}
-```
-
 </Spoiler>
 
 ## navigation.hover
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.hover)</small>
-
 <Spoiler title="Show">
 
-#### bee
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:navigation.hover": {
+    "can_path_over_water": true,
+    "can_sink": false,
+    "can_pass_doors": false,
+    "can_path_from_air": true,
+    "avoid_water": true,
+    "avoid_damage_blocks": true,
+    "avoid_sun": false
+}
+```
+
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -16108,13 +14405,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## navigation.walk
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anavigation.walk)</small>
-
 <Spoiler title="Show">
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -16126,9 +14419,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -16140,9 +14431,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chicken
 
 <CodeHeader></CodeHeader>
 
@@ -16153,9 +14442,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
+cow
 
 <CodeHeader></CodeHeader>
 
@@ -16167,9 +14454,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -16179,9 +14464,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
+donkey
 
 <CodeHeader></CodeHeader>
 
@@ -16193,9 +14476,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+enderman
 
 <CodeHeader></CodeHeader>
 
@@ -16206,9 +14487,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### endermite
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/endermite.json)</small>
+endermite
 
 <CodeHeader></CodeHeader>
 
@@ -16220,137 +14499,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 </Spoiler>
 
-## npc
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Anpc)</small>
-
-<Spoiler title="Show">
-
-#### npc
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:npc": {
-    "npc_data": {
-        "portrait_offsets": {
-            "translate": [
-                -7,
-                50,
-                0
-            ],
-            "scale": [
-                1.75,
-                1.75,
-                1.75
-            ]
-        },
-        "picker_offsets": {
-            "translate": [
-                0,
-                20,
-                0
-            ],
-            "scale": [
-                1.7,
-                1.7,
-                1.7
-            ]
-        },
-        "skin_list": [
-            {
-                "variant": 0
-            },
-            {
-                "variant": 1
-            },
-            {
-                "variant": 2
-            },
-            {
-                "variant": 3
-            },
-            {
-                "variant": 4
-            },
-            {
-                "variant": 5
-            },
-            {
-                "variant": 6
-            },
-            {
-                "variant": 7
-            },
-            {
-                "variant": 8
-            },
-            {
-                "variant": 9
-            },
-            {
-                "variant": 10
-            },
-            {
-                "variant": 11
-            },
-            {
-                "variant": 12
-            },
-            {
-                "variant": 13
-            },
-            {
-                "variant": 14
-            },
-            {
-                "variant": 15
-            },
-            {
-                "variant": 16
-            },
-            {
-                "variant": 17
-            },
-            {
-                "variant": 18
-            },
-            {
-                "variant": 19
-            },
-            {
-                "variant": 20
-            },
-            {
-                "variant": 21
-            },
-            {
-                "variant": 22
-            },
-            {
-                "variant": 23
-            },
-            {
-                "variant": 24
-            }
-        ]
-    }
-}
-```
-
-</Spoiler>
-
 ## on_death
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_death)</small>
-
 <Spoiler title="Show">
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
+ender_dragon
 
 <CodeHeader></CodeHeader>
 
@@ -16365,15 +14518,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## on_friendly_anger
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_friendly_anger)</small>
-
 <Spoiler title="Show">
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_wandering_trader</CodeHeader>
 
 ```json
 "minecraft:on_friendly_anger": {
@@ -16382,11 +14531,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### panda
+panda
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:panda_aggressive</CodeHeader>
 
 ```json
 "minecraft:on_friendly_anger": {
@@ -16395,11 +14542,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### polar_bear
+polar_bear
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:adult_wild</CodeHeader>
 
 ```json
 "minecraft:on_friendly_anger": {
@@ -16412,13 +14557,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## on_hurt
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_hurt)</small>
-
 <Spoiler title="Show">
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -16429,9 +14570,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ender_crystal
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_crystal.json)</small>
+ender_crystal
 
 <CodeHeader></CodeHeader>
 
@@ -16442,11 +14581,27 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
+<CodeHeader>#component_groups/minecraft:illager_squad_captain</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:on_hurt": {
+    "event": "minecraft:ranged_mode",
+    "target": "self"
+}
+```
+
+<CodeHeader>#component_groups/minecraft:patrol_captain</CodeHeader>
+
+```json
+"minecraft:on_hurt": {
+    "event": "minecraft:ranged_mode",
+    "target": "self"
+}
+```
+
+<CodeHeader>#component_groups/minecraft:patrol_follower</CodeHeader>
 
 ```json
 "minecraft:on_hurt": {
@@ -16459,13 +14614,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## on_hurt_by_player
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_hurt_by_player)</small>
-
 <Spoiler title="Show">
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -16476,11 +14627,27 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
+<CodeHeader>#component_groups/minecraft:illager_squad_captain</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:on_hurt_by_player": {
+    "event": "minecraft:ranged_mode",
+    "target": "self"
+}
+```
+
+<CodeHeader>#component_groups/minecraft:patrol_captain</CodeHeader>
+
+```json
+"minecraft:on_hurt_by_player": {
+    "event": "minecraft:ranged_mode",
+    "target": "self"
+}
+```
+
+<CodeHeader>#component_groups/minecraft:patrol_follower</CodeHeader>
 
 ```json
 "minecraft:on_hurt_by_player": {
@@ -16493,13 +14660,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## on_start_landing
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_start_landing)</small>
-
 <Spoiler title="Show">
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
+ender_dragon
 
 <CodeHeader></CodeHeader>
 
@@ -16514,9 +14677,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## on_start_takeoff
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_start_takeoff)</small>
-
 <Spoiler title="Show">
+
+ender_dragon
 
 <CodeHeader></CodeHeader>
 
@@ -16531,13 +14694,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## on_target_acquired
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_target_acquired)</small>
-
 <Spoiler title="Show">
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -16548,11 +14707,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
+cave_spider
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_neutral</CodeHeader>
 
 ```json
 "minecraft:on_target_acquired": {
@@ -16560,9 +14717,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -16573,15 +14728,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_angry</CodeHeader>
 
 ```json
 "minecraft:on_target_acquired": {}
 ```
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -16592,11 +14745,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### enderman
+enderman
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:enderman_calm</CodeHeader>
 
 ```json
 "minecraft:on_target_acquired": {
@@ -16605,11 +14756,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### hoglin
+hoglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hoglin_adult</CodeHeader>
 
 ```json
 "minecraft:on_target_acquired": {
@@ -16618,9 +14767,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
+llama
 
 <CodeHeader></CodeHeader>
 
@@ -16650,13 +14797,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## on_target_escape
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_target_escape)</small>
-
 <Spoiler title="Show">
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -16667,15 +14810,19 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:forced_exploding</CodeHeader>
 
 ```json
 "minecraft:on_target_escape": {}
 ```
 
-#### dolphin
+<CodeHeader>#component_groups/minecraft:forced_charged_exploding</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+```json
+"minecraft:on_target_escape": {}
+```
+
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -16685,9 +14832,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -16698,9 +14843,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
+llama
 
 <CodeHeader></CodeHeader>
 
@@ -16726,9 +14869,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### magma_cube
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/magma_cube.json)</small>
+magma_cube
 
 <CodeHeader></CodeHeader>
 
@@ -16739,11 +14880,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### panda
+panda
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:panda_adult</CodeHeader>
 
 ```json
 "minecraft:on_target_escape": {
@@ -16752,32 +14891,15 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:on_target_escape": {
-    "event": "minecraft:calm",
-    "target": "self"
-}
-```
-
 </Spoiler>
 
 ## on_wake_with_owner
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aon_wake_with_owner)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:on_wake_with_owner": {
@@ -16790,15 +14912,31 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## out_of_control
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aout_of_control)</small>
-
 <Spoiler title="Show">
 
-#### boat
+boat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+<CodeHeader>#component_groups/minecraft:above_bubble_column_down</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:out_of_control": {}
+```
+
+<CodeHeader>#component_groups/minecraft:above_bubble_column_up</CodeHeader>
+
+```json
+"minecraft:out_of_control": {}
+```
+
+chest_boat
+
+<CodeHeader>#component_groups/minecraft:above_bubble_column_down</CodeHeader>
+
+```json
+"minecraft:out_of_control": {}
+```
+
+<CodeHeader>#component_groups/minecraft:above_bubble_column_up</CodeHeader>
 
 ```json
 "minecraft:out_of_control": {}
@@ -16808,13 +14946,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## peek
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Apeek)</small>
-
 <Spoiler title="Show">
 
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
+shulker
 
 <CodeHeader></CodeHeader>
 
@@ -16836,13 +14970,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## persistent
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Apersistent)</small>
-
 <Spoiler title="Show">
 
-#### armor_stand
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -16850,9 +14980,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:persistent": {}
 ```
 
-#### ender_dragon
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
+ender_dragon
 
 <CodeHeader></CodeHeader>
 
@@ -16860,9 +14988,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:persistent": {}
 ```
 
-#### evocation_illager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/evocation_illager.json)</small>
+evocation_illager
 
 <CodeHeader></CodeHeader>
 
@@ -16870,9 +14996,13 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:persistent": {}
 ```
 
-#### iron_golem
+<CodeHeader>#component_groups/minecraft:raid_persistence</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+```json
+"minecraft:persistent": {}
+```
+
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -16880,41 +15010,25 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:persistent": {}
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_persistence</CodeHeader>
 
 ```json
 "minecraft:persistent": {}
 ```
 
-#### npc
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/npc.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_persistence</CodeHeader>
 
 ```json
 "minecraft:persistent": {}
 ```
 
-#### pillager
+ravager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:persistent": {}
-```
-
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_persistence</CodeHeader>
 
 ```json
 "minecraft:persistent": {}
@@ -16924,13 +15038,19 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## physics
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aphysics)</small>
-
 <Spoiler title="Show">
 
-#### area_effect_cloud
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/area_effect_cloud.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:physics": {
+    "has_gravity": false
+}
+```
+
+area_effect_cloud
 
 <CodeHeader></CodeHeader>
 
@@ -16940,9 +15060,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### armor_stand
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -16950,9 +15068,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:physics": {}
 ```
 
-#### arrow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/arrow.json)</small>
+arrow
 
 <CodeHeader></CodeHeader>
 
@@ -16960,9 +15076,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:physics": {}
 ```
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -16970,9 +15084,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:physics": {}
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -16980,9 +15092,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:physics": {}
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -16990,19 +15100,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:physics": {}
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:physics": {}
-```
-
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -17014,20 +15112,16 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## player.exhaustion
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aplayer.exhaustion)</small>
-
 <Spoiler title="Show">
 
-#### player
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
+player
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:player.exhaustion": {
     "value": 0,
-    "max": 4
+    "max": 20
 }
 ```
 
@@ -17035,9 +15129,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## player.experience
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aplayer.experience)</small>
-
 <Spoiler title="Show">
+
+player
 
 <CodeHeader></CodeHeader>
 
@@ -17052,9 +15146,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## player.level
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aplayer.level)</small>
-
 <Spoiler title="Show">
+
+player
 
 <CodeHeader></CodeHeader>
 
@@ -17069,15 +15163,16 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## player.saturation
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aplayer.saturation)</small>
-
 <Spoiler title="Show">
+
+player
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:player.saturation": {
-    "value": 20
+    "value": 5,
+    "max": 20
 }
 ```
 
@@ -17085,13 +15180,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## preferred_path
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Apreferred_path)</small>
-
 <Spoiler title="Show">
 
-#### iron_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/iron_golem.json)</small>
+iron_golem
 
 <CodeHeader></CodeHeader>
 
@@ -17181,11 +15272,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/baby</CodeHeader>
 
 ```json
 "minecraft:preferred_path": {
@@ -17273,7 +15362,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/adult</CodeHeader>
 
 ```json
 "minecraft:preferred_path": {
@@ -17365,13 +15454,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## projectile
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aprojectile)</small>
-
 <Spoiler title="Show">
 
-#### arrow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/arrow.json)</small>
+arrow
 
 <CodeHeader></CodeHeader>
 
@@ -17407,7 +15492,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hard_arrow</CodeHeader>
 
 ```json
 "minecraft:projectile": {
@@ -17441,7 +15526,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:player_arrow</CodeHeader>
 
 ```json
 "minecraft:projectile": {
@@ -17475,43 +15560,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:projectile": {
-    "on_hit": {
-        "impact_damage": {
-            "damage": [
-                3,
-                6
-            ],
-            "knockback": true,
-            "semi_random_diff_damage": false,
-            "destroy_on_hit": true
-        },
-        "stick_in_ground": {
-            "shake_time": 0.35
-        },
-        "arrow_effect": {}
-    },
-    "hit_sound": "bow.hit",
-    "power": 1.6,
-    "gravity": 0.05,
-    "uncertainty_base": 16,
-    "uncertainty_multiplier": 4,
-    "anchor": 1,
-    "should_bounce": true,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ]
-}
-```
-
-#### dragon_fireball
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dragon_fireball.json)</small>
+dragon_fireball
 
 <CodeHeader></CodeHeader>
 
@@ -17550,9 +15599,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### egg
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/egg.json)</small>
+egg
 
 <CodeHeader></CodeHeader>
 
@@ -17586,9 +15633,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ender_pearl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_pearl.json)</small>
+ender_pearl
 
 <CodeHeader></CodeHeader>
 
@@ -17611,7 +15656,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:no_spawn</CodeHeader>
 
 ```json
 "minecraft:projectile": {
@@ -17627,17 +15672,56 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
+fireball
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:projectile": {
+    "on_hit": {
+        "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+                "event": "minecraft:explode",
+                "target": "self"
+            }
+        }
+    },
+    "power": 1.6,
+    "gravity": 0.0,
+    "inertia": 1,
+    "liquid_inertia": 1,
+    "uncertainty_base": 0,
+    "uncertainty_multiplier": 0,
+    "anchor": 1,
+    "offset": [
+        0,
+        -0.1,
+        0
+    ],
+    "reflect_on_hurt": true,
+    "catch_fire": true
+}
+```
+
 </Spoiler>
 
 ## pushable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Apushable)</small>
-
 <Spoiler title="Show">
 
-#### armor_stand
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -17648,9 +15732,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### arrow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/arrow.json)</small>
+arrow
 
 <CodeHeader></CodeHeader>
 
@@ -17661,9 +15743,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -17674,9 +15754,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -17687,9 +15765,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -17700,9 +15776,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -17713,22 +15787,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cat
 
 <CodeHeader></CodeHeader>
 
@@ -17743,15 +15802,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## raid_trigger
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Araid_trigger)</small>
-
 <Spoiler title="Show">
 
-#### player
+player
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_trigger</CodeHeader>
 
 ```json
 "minecraft:raid_trigger": {
@@ -17766,13 +15821,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## rail_movement
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Arail_movement)</small>
-
 <Spoiler title="Show">
 
-#### chest_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chest_minecart.json)</small>
+chest_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -17780,9 +15831,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:rail_movement": {}
 ```
 
-#### command_block_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/command_block_minecart.json)</small>
+command_block_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -17790,9 +15839,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:rail_movement": {}
 ```
 
-#### hopper_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
+hopper_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -17800,9 +15847,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:rail_movement": {}
 ```
 
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
+minecart
 
 <CodeHeader></CodeHeader>
 
@@ -17810,9 +15855,7 @@ This documentation is stripped from the vanilla files using an [automated script
 "minecraft:rail_movement": {}
 ```
 
-#### tnt_minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
+tnt_minecart
 
 <CodeHeader></CodeHeader>
 
@@ -17824,15 +15867,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## rail_sensor
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Arail_sensor)</small>
-
 <Spoiler title="Show">
 
-#### command_block_minecart
+command_block_minecart
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/command_block_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:command_block_active</CodeHeader>
 
 ```json
 "minecraft:rail_sensor": {
@@ -17847,7 +15886,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:command_block_inactive</CodeHeader>
 
 ```json
 "minecraft:rail_sensor": {
@@ -17862,11 +15901,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### hopper_minecart
+hopper_minecart
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hopper_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hopper_active</CodeHeader>
 
 ```json
 "minecraft:rail_sensor": {
@@ -17876,7 +15913,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:hopper_inactive</CodeHeader>
 
 ```json
 "minecraft:rail_sensor": {
@@ -17886,9 +15923,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### minecart
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/minecart.json)</small>
+minecart
 
 <CodeHeader></CodeHeader>
 
@@ -17898,17 +15933,21 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### tnt_minecart
+tnt_minecart
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/tnt_minecart.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:primed_tnt</CodeHeader>
 
 ```json
 "minecraft:rail_sensor": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:instant_explode_tnt</CodeHeader>
+
+```json
+"minecraft:rail_sensor": {}
+```
+
+<CodeHeader>#component_groups/minecraft:inactive</CodeHeader>
 
 ```json
 "minecraft:rail_sensor": {
@@ -17932,13 +15971,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## ravager_blocked
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aravager_blocked)</small>
-
 <Spoiler title="Show">
 
-#### ravager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ravager.json)</small>
+ravager
 
 <CodeHeader></CodeHeader>
 
@@ -17964,13 +15999,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## rideable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Arideable)</small>
-
 <Spoiler title="Show">
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -18017,11 +16048,54 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+<CodeHeader>#component_groups/minecraft:can_ride</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
+```json
+"minecraft:rideable": {
+    "seat_count": 2,
+    "interact_text": "action.interact.ride.boat",
+    "pull_in_entities": true,
+    "seats": [
+        {
+            "position": [
+                0.0,
+                -0.2,
+                0.0
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 1,
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 90
+        },
+        {
+            "position": [
+                0.2,
+                -0.2,
+                0.0
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 2,
+            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "lock_rider_rotation": 90
+        },
+        {
+            "position": [
+                -0.6,
+                -0.2,
+                0.0
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 2,
+            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "lock_rider_rotation": 90
+        }
+    ]
+}
+```
 
-<CodeHeader></CodeHeader>
+cat
+
+<CodeHeader>#component_groups/minecraft:cat_wild</CodeHeader>
 
 ```json
 "minecraft:rideable": {
@@ -18039,9 +16113,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cave_spider
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cave_spider.json)</small>
+cave_spider
 
 <CodeHeader></CodeHeader>
 
@@ -18061,7 +16133,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_jockey</CodeHeader>
 
 ```json
 "minecraft:rideable": {
@@ -18079,7 +16151,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:spider_stray_jockey</CodeHeader>
 
 ```json
 "minecraft:rideable": {
@@ -18090,78 +16162,58 @@ This documentation is stripped from the vanilla files using an [automated script
     "seats": {
         "position": [
             0.0,
-            0.25,
+            0.3,
             -0.1
         ]
     }
 }
 ```
 
-#### chicken
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
+chest_boat
 
 <CodeHeader></CodeHeader>
 
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.4,
-            0.0
-        ]
-    }
+    "interact_text": "action.interact.ride.boat",
+    "pull_in_entities": true,
+    "seats": [
+        {
+            "position": [
+                0.2,
+                -0.2,
+                0.0
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 1,
+            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "lock_rider_rotation": 90
+        }
+    ]
 }
 ```
 
-#### cow
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:can_ride</CodeHeader>
 
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.105,
-            0.0
-        ]
-    }
-}
-```
-
-#### donkey
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "player",
-        "zombie"
-    ],
-    "interact_text": "action.interact.mount",
-    "seats": {
-        "position": [
-            0.0,
-            0.925,
-            -0.2
-        ]
-    }
+    "interact_text": "action.interact.ride.boat",
+    "pull_in_entities": true,
+    "seats": [
+        {
+            "position": [
+                0.2,
+                -0.2,
+                0.0
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 1,
+            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "lock_rider_rotation": 90
+        }
+    ]
 }
 ```
 
@@ -18169,15 +16221,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## scale
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ascale)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
+axolotl
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/axolotl_baby</CodeHeader>
 
 ```json
 "minecraft:scale": {
@@ -18185,11 +16233,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
+bee
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/bee_baby</CodeHeader>
 
 ```json
 "minecraft:scale": {
@@ -18197,11 +16243,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_baby</CodeHeader>
 
 ```json
 "minecraft:scale": {
@@ -18209,7 +16253,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_adult</CodeHeader>
 
 ```json
 "minecraft:scale": {
@@ -18217,11 +16261,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### chicken
+chicken
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:chicken_baby</CodeHeader>
 
 ```json
 "minecraft:scale": {
@@ -18229,11 +16271,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cow
+cow
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cow.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cow_baby</CodeHeader>
 
 ```json
 "minecraft:scale": {
@@ -18241,11 +16281,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
+dolphin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dolphin_baby</CodeHeader>
 
 ```json
 "minecraft:scale": {
@@ -18253,11 +16291,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
+drowned
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:baby_drowned</CodeHeader>
 
 ```json
 "minecraft:scale": {
@@ -18269,15 +16305,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## scale_by_age
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ascale_by_age)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_baby</CodeHeader>
 
 ```json
 "minecraft:scale_by_age": {
@@ -18286,11 +16318,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_baby</CodeHeader>
 
 ```json
 "minecraft:scale_by_age": {
@@ -18299,11 +16329,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### mule
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_baby</CodeHeader>
 
 ```json
 "minecraft:scale_by_age": {
@@ -18312,11 +16340,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### skeleton_horse
+skeleton_horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton_horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:skeleton_horse_baby</CodeHeader>
 
 ```json
 "minecraft:scale_by_age": {
@@ -18325,11 +16351,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_horse
+zombie_horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_baby</CodeHeader>
 
 ```json
 "minecraft:scale_by_age": {
@@ -18342,13 +16366,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## scheduler
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ascheduler)</small>
-
 <Spoiler title="Show">
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -18410,11 +16430,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/work_schedule</CodeHeader>
 
 ```json
 "minecraft:scheduler": {
@@ -18510,7 +16528,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/basic_schedule</CodeHeader>
 
 ```json
 "minecraft:scheduler": {
@@ -18606,7 +16624,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/child_schedule</CodeHeader>
 
 ```json
 "minecraft:scheduler": {
@@ -18668,384 +16686,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scheduler": {
-    "min_delay_secs": 0,
-    "max_delay_secs": 10,
-    "scheduled_events": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 2000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 13000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_wander_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 13000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 14000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_home_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 14000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 24000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_bed_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 0
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 2000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_bed_villager"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scheduler": {
-    "min_delay_secs": 0,
-    "max_delay_secs": 10,
-    "scheduled_events": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 0
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 8000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_work_fisher"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 8000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 10000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_gather_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 10000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 11000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_work_fisher"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 11000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 12000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_home_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 12000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 24000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_bed_villager"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scheduler": {
-    "min_delay_secs": 0,
-    "max_delay_secs": 10,
-    "scheduled_events": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 0
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 8000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_work_librarian"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 8000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 10000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_gather_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 10000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 11000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_work_librarian"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 11000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 12000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_home_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 12000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 24000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_bed_villager"
-        }
-    ]
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:scheduler": {
-    "min_delay_secs": 0,
-    "max_delay_secs": 10,
-    "scheduled_events": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 0
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 8000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_work_farmer"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 8000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 10000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_gather_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 10000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 11000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_work_farmer"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 11000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 12000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_home_villager"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": ">=",
-                        "value": 12000
-                    },
-                    {
-                        "test": "hourly_clock_time",
-                        "operator": "<",
-                        "value": 24000
-                    }
-                ]
-            },
-            "event": "minecraft:schedule_bed_villager"
-        }
-    ]
-}
-```
-
 </Spoiler>
 
 ## shareables
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ashareables)</small>
-
 <Spoiler title="Show">
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -19272,9 +16919,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fox
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
+fox
 
 <CodeHeader></CodeHeader>
 
@@ -19482,9 +17127,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### husk
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
+husk
 
 <CodeHeader></CodeHeader>
 
@@ -19699,9 +17342,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
+piglin
 
 <CodeHeader></CodeHeader>
 
@@ -20071,9 +17712,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
+pillager
 
 <CodeHeader></CodeHeader>
 
@@ -20090,9 +17729,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### skeleton
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
+skeleton
 
 <CodeHeader></CodeHeader>
 
@@ -20313,9 +17950,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### stray
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/stray.json)</small>
+stray
 
 <CodeHeader></CodeHeader>
 
@@ -20536,11 +18171,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### villager
+villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/behavior_peasant</CodeHeader>
 
 ```json
 "minecraft:shareables": {
@@ -20573,13 +18206,15 @@ This documentation is stripped from the vanilla files using an [automated script
             "item": "minecraft:wheat_seeds",
             "want_amount": 64,
             "surplus_amount": 64,
-            "stored_in_inventory": true
+            "stored_in_inventory": true,
+            "pickup_only": true
         },
         {
             "item": "minecraft:beetroot_seeds",
             "want_amount": 64,
             "surplus_amount": 64,
-            "stored_in_inventory": true
+            "stored_in_inventory": true,
+            "pickup_only": true
         },
         {
             "item": "minecraft:wheat",
@@ -20596,15 +18231,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## shooter
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ashooter)</small>
-
 <Spoiler title="Show">
 
-#### blaze
+blaze
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/ranged_mode</CodeHeader>
 
 ```json
 "minecraft:shooter": {
@@ -20612,11 +18243,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
+drowned
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ranged_mode</CodeHeader>
 
 ```json
 "minecraft:shooter": {
@@ -20624,11 +18253,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ender_dragon
+ender_dragon
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ender_dragon.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/dragon_flying</CodeHeader>
 
 ```json
 "minecraft:shooter": {
@@ -20637,9 +18264,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ghast
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ghast.json)</small>
+ghast
 
 <CodeHeader></CodeHeader>
 
@@ -20649,9 +18274,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
+llama
 
 <CodeHeader></CodeHeader>
 
@@ -20661,11 +18284,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/ranged_unit</CodeHeader>
 
 ```json
 "minecraft:shooter": {
@@ -20673,11 +18294,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pillager
+pillager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pillager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ranged_attack</CodeHeader>
 
 ```json
 "minecraft:shooter": {
@@ -20685,9 +18304,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### shulker
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/shulker.json)</small>
+shulker
 
 <CodeHeader></CodeHeader>
 
@@ -20701,45 +18318,35 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## sittable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Asittable)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
 
 ```json
 "minecraft:sittable": {}
 ```
 
-#### ocelot
+ocelot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ocelot_tame</CodeHeader>
 
 ```json
 "minecraft:sittable": {}
 ```
 
-#### parrot
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:parrot_tame</CodeHeader>
 
 ```json
 "minecraft:sittable": {}
 ```
 
-#### wolf
+wolf
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:wolf_tame</CodeHeader>
 
 ```json
 "minecraft:sittable": {}
@@ -20749,15 +18356,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## skin_id
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Askin_id)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/villager_skin_0</CodeHeader>
 
 ```json
 "minecraft:skin_id": {
@@ -20765,7 +18368,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/villager_skin_1</CodeHeader>
 
 ```json
 "minecraft:skin_id": {
@@ -20773,7 +18376,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/villager_skin_2</CodeHeader>
 
 ```json
 "minecraft:skin_id": {
@@ -20781,35 +18384,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+zombie_villager_v2
 
-```json
-"minecraft:skin_id": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:skin_id": {
-    "value": 4
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:skin_id": {
-    "value": 5
-}
-```
-
-#### zombie_villager_v2
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/villager_skin_0</CodeHeader>
 
 ```json
 "minecraft:skin_id": {
@@ -20817,7 +18394,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/villager_skin_1</CodeHeader>
 
 ```json
 "minecraft:skin_id": {
@@ -20825,19 +18402,23 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
+<CodeHeader>#component_groups/villager_skin_2</CodeHeader>
+
+```json
+"minecraft:skin_id": {
+    "value": 2
+}
+```
+
 </Spoiler>
 
 ## spawn_entity
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aspawn_entity)</small>
-
 <Spoiler title="Show">
 
-#### chicken
+chicken
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/chicken.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:chicken_adult</CodeHeader>
 
 ```json
 "minecraft:spawn_entity": {
@@ -20856,11 +18437,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### ocelot
+ocelot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:wild_child_ocelot_spawn</CodeHeader>
 
 ```json
 "minecraft:spawn_entity": {
@@ -20883,9 +18462,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wandering_trader
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wandering_trader.json)</small>
+wandering_trader
 
 <CodeHeader></CodeHeader>
 
@@ -20909,15 +18486,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## spell_effects
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aspell_effects)</small>
-
 <Spoiler title="Show">
 
-#### player
+player
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/player.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:add_bad_omen</CodeHeader>
 
 ```json
 "minecraft:spell_effects": {
@@ -20932,13 +18505,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:clear_bad_omen_spell_effect</CodeHeader>
 
 ```json
 "minecraft:spell_effects": {}
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:raid_trigger</CodeHeader>
 
 ```json
 "minecraft:spell_effects": {
@@ -20946,11 +18519,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_villager
+zombie_villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/to_villager</CodeHeader>
 
 ```json
 "minecraft:spell_effects": {
@@ -20968,11 +18539,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### zombie_villager_v2
+zombie_villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/zombie_villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/to_villager</CodeHeader>
 
 ```json
 "minecraft:spell_effects": {
@@ -20994,15 +18563,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## strength
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Astrength)</small>
-
 <Spoiler title="Show">
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strength_1</CodeHeader>
 
 ```json
 "minecraft:strength": {
@@ -21011,7 +18576,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strength_2</CodeHeader>
 
 ```json
 "minecraft:strength": {
@@ -21020,7 +18585,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strength_3</CodeHeader>
 
 ```json
 "minecraft:strength": {
@@ -21029,37 +18594,29 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
+</Spoiler>
+
+## suspect_tracking
+
+<Spoiler title="Show">
+
+warden
+
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:strength": {
-    "value": 4,
-    "max": 5
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:strength": {
-    "value": 5,
-    "max": 5
-}
+"minecraft:suspect_tracking": {}
 ```
 
 </Spoiler>
 
 ## tameable
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atameable)</small>
-
 <Spoiler title="Show">
 
-#### cat
+cat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:cat_wild</CodeHeader>
 
 ```json
 "minecraft:tameable": {
@@ -21075,11 +18632,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### parrot
+parrot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/parrot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:parrot_wild</CodeHeader>
 
 ```json
 "minecraft:tameable": {
@@ -21097,11 +18652,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### wolf
+wolf
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/wolf.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:wolf_wild</CodeHeader>
 
 ```json
 "minecraft:tameable": {
@@ -21118,15 +18671,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## tamemount
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atamemount)</small>
-
 <Spoiler title="Show">
 
-#### donkey
+donkey
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/donkey.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:donkey_wild</CodeHeader>
 
 ```json
 "minecraft:tamemount": {
@@ -21184,11 +18733,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### horse
+horse
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/horse.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:horse_wild</CodeHeader>
 
 ```json
 "minecraft:tamemount": {
@@ -21246,11 +18793,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### llama
+llama
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/llama.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:llama_wild</CodeHeader>
 
 ```json
 "minecraft:tamemount": {
@@ -21292,11 +18837,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### mule
+mule
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mule.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mule_wild</CodeHeader>
 
 ```json
 "minecraft:tamemount": {
@@ -21358,15 +18901,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## target_nearby_sensor
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atarget_nearby_sensor)</small>
-
 <Spoiler title="Show">
 
-#### blaze
+blaze
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/mode_switcher</CodeHeader>
 
 ```json
 "minecraft:target_nearby_sensor": {
@@ -21384,9 +18923,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### creeper
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/creeper.json)</small>
+creeper
 
 <CodeHeader></CodeHeader>
 
@@ -21410,17 +18947,21 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:forced_exploding</CodeHeader>
 
 ```json
 "minecraft:target_nearby_sensor": {}
 ```
 
-#### drowned
+<CodeHeader>#component_groups/minecraft:forced_charged_exploding</CodeHeader>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+```json
+"minecraft:target_nearby_sensor": {}
+```
 
-<CodeHeader></CodeHeader>
+drowned
+
+<CodeHeader>#component_groups/minecraft:mode_switcher</CodeHeader>
 
 ```json
 "minecraft:target_nearby_sensor": {
@@ -21437,11 +18978,22 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+guardian
 
 <CodeHeader></CodeHeader>
+
+```json
+"minecraft:target_nearby_sensor": {
+    "inside_range": 3.0,
+    "outside_range": 4.0,
+    "on_inside_range": {
+        "event": "minecraft:target_too_close",
+        "target": "self"
+    }
+}
+```
+
+<CodeHeader>#component_groups/minecraft:guardian_aggressive</CodeHeader>
 
 ```json
 "minecraft:target_nearby_sensor": {
@@ -21458,13 +19010,9 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## teleport
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Ateleport)</small>
-
 <Spoiler title="Show">
 
-#### enderman
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/enderman.json)</small>
+enderman
 
 <CodeHeader></CodeHeader>
 
@@ -21487,15 +19035,25 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## timer
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atimer)</small>
-
 <Spoiler title="Show">
 
-#### bee
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+<CodeHeader>#component_groups/pickup_item_delay</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:timer": {
+    "looping": false,
+    "time": 3,
+    "time_down_event": {
+        "event": "pickup_item_delay_complete"
+    }
+}
+```
+
+bee
+
+<CodeHeader>#component_groups/escape_fire</CodeHeader>
 
 ```json
 "minecraft:timer": {
@@ -21512,7 +19070,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/countdown_to_perish</CodeHeader>
 
 ```json
 "minecraft:timer": {
@@ -21529,7 +19087,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/take_nearest_target</CodeHeader>
 
 ```json
 "minecraft:timer": {
@@ -21542,53 +19100,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+boat
 
-```json
-"minecraft:timer": {
-    "looping": true,
-    "time": 180,
-    "time_down_event": {
-        "event": "find_flower_timeout"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 180,
-    "time_down_event": {
-        "event": "find_hive_timeout",
-        "target": "self"
-    }
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": [
-        5,
-        20
-    ],
-    "randomInterval": true,
-    "time_down_event": {
-        "event": "find_hive_event",
-        "target": "self"
-    }
-}
-```
-
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:above_bubble_column_down</CodeHeader>
 
 ```json
 "minecraft:timer": {
@@ -21601,11 +19115,24 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
+chest_boat
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+<CodeHeader>#component_groups/minecraft:above_bubble_column_down</CodeHeader>
 
-<CodeHeader></CodeHeader>
+```json
+"minecraft:timer": {
+    "looping": false,
+    "time": 3,
+    "time_down_event": {
+        "event": "minecraft:sink",
+        "target": "self"
+    }
+}
+```
+
+guardian
+
+<CodeHeader>#component_groups/minecraft:guardian_passive</CodeHeader>
 
 ```json
 "minecraft:timer": {
@@ -21621,19 +19148,29 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
+hoglin
+
+<CodeHeader>#component_groups/start_zombification</CodeHeader>
+
+```json
+"minecraft:timer": {
+    "looping": false,
+    "time": 15,
+    "time_down_event": {
+        "event": "become_zombie_event"
+    }
+}
+```
+
 </Spoiler>
 
 ## trade_resupply
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrade_resupply)</small>
-
 <Spoiler title="Show">
 
-#### villager_v2
+villager_v2
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager_v2.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/trade_resupply_component_group</CodeHeader>
 
 ```json
 "minecraft:trade_resupply": {}
@@ -21643,15 +19180,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## trade_table
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrade_table)</small>
-
 <Spoiler title="Show">
 
-#### villager
+villager
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/villager.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/farmer</CodeHeader>
 
 ```json
 "minecraft:trade_table": {
@@ -21661,7 +19194,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/fisherman</CodeHeader>
 
 ```json
 "minecraft:trade_table": {
@@ -21671,7 +19204,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/shepherd</CodeHeader>
 
 ```json
 "minecraft:trade_table": {
@@ -21681,67 +19214,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.fletcher",
-    "table": "trading/fletcher_trades.json",
-    "convert_trades_economy": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.librarian",
-    "table": "trading/librarian_trades.json",
-    "convert_trades_economy": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.cartographer",
-    "table": "trading/cartographer_trades.json",
-    "convert_trades_economy": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.cleric",
-    "table": "trading/cleric_trades.json",
-    "convert_trades_economy": true
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:trade_table": {
-    "display_name": "entity.villager.armor",
-    "table": "trading/armorer_trades.json",
-    "convert_trades_economy": true
-}
-```
-
 </Spoiler>
 
 ## trail
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrail)</small>
-
 <Spoiler title="Show">
 
-#### snow_golem
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/snow_golem.json)</small>
+snow_golem
 
 <CodeHeader></CodeHeader>
 
@@ -21760,15 +19239,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## transformation
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atransformation)</small>
-
 <Spoiler title="Show">
 
-#### hoglin
+hoglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/hoglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/become_zombie</CodeHeader>
 
 ```json
 "minecraft:transformation": {
@@ -21778,11 +19253,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### husk
+husk
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/husk.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:convert_to_zombie</CodeHeader>
 
 ```json
 "minecraft:transformation": {
@@ -21795,7 +19268,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:convert_to_baby_zombie</CodeHeader>
 
 ```json
 "minecraft:transformation": {
@@ -21808,11 +19281,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### mooshroom
+mooshroom
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/mooshroom.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:mooshroom_become_cow</CodeHeader>
 
 ```json
 "minecraft:transformation": {
@@ -21820,11 +19291,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pig
+pig
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pig.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:pig_transform</CodeHeader>
 
 ```json
 "minecraft:transformation": {
@@ -21833,11 +19302,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin
+piglin
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/become_zombie</CodeHeader>
 
 ```json
 "minecraft:transformation": {
@@ -21849,11 +19316,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### piglin_brute
+piglin_brute
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/piglin_brute.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/become_zombie</CodeHeader>
 
 ```json
 "minecraft:transformation": {
@@ -21864,11 +19329,9 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### skeleton
+skeleton
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/skeleton.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/become_stray</CodeHeader>
 
 ```json
 "minecraft:transformation": {
@@ -21884,15 +19347,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## trust
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrust)</small>
-
 <Spoiler title="Show">
 
-#### fox
+fox
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fox.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:trusting_fox</CodeHeader>
 
 ```json
 "minecraft:trust": {}
@@ -21902,15 +19361,11 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## trusting
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atrusting)</small>
-
 <Spoiler title="Show">
 
-#### ocelot
+ocelot
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/ocelot.json)</small>
-
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:ocelot_wild</CodeHeader>
 
 ```json
 "minecraft:trusting": {
@@ -21930,13 +19385,22 @@ This documentation is stripped from the vanilla files using an [automated script
 
 ## type_family
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Atype_family)</small>
-
 <Spoiler title="Show">
 
-#### armor_stand
+allay
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/armor_stand.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:type_family": {
+    "family": [
+        "allay",
+        "mob"
+    ]
+}
+```
+
+armor_stand
 
 <CodeHeader></CodeHeader>
 
@@ -21950,9 +19414,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -21965,9 +19427,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bat.json)</small>
+bat
 
 <CodeHeader></CodeHeader>
 
@@ -21980,9 +19440,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### bee
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/bee.json)</small>
+bee
 
 <CodeHeader></CodeHeader>
 
@@ -21996,7 +19454,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/countdown_to_perish</CodeHeader>
 
 ```json
 "minecraft:type_family": {
@@ -22009,9 +19467,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### blaze
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/blaze.json)</small>
+blaze
 
 <CodeHeader></CodeHeader>
 
@@ -22025,9 +19481,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### boat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/boat.json)</small>
+boat
 
 <CodeHeader></CodeHeader>
 
@@ -22040,32 +19494,13 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "cat",
-        "mob"
-    ]
-}
-```
-
 </Spoiler>
 
 ## underwater_movement
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Aunderwater_movement)</small>
-
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+axolotl
 
 <CodeHeader></CodeHeader>
 
@@ -22075,9 +19510,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### dolphin
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/dolphin.json)</small>
+dolphin
 
 <CodeHeader></CodeHeader>
 
@@ -22087,9 +19520,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### drowned
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/drowned.json)</small>
+drowned
 
 <CodeHeader></CodeHeader>
 
@@ -22099,7 +19530,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:baby_drowned</CodeHeader>
 
 ```json
 "minecraft:underwater_movement": {
@@ -22107,9 +19538,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### elder_guardian
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/elder_guardian.json)</small>
+elder_guardian
 
 <CodeHeader></CodeHeader>
 
@@ -22119,9 +19548,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### fish
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/fish.json)</small>
+cod
 
 <CodeHeader></CodeHeader>
 
@@ -22131,9 +19558,17 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### guardian
+frog
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/guardian.json)</small>
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:underwater_movement": {
+    "value": 0.15
+}
+```
+
+guardian
 
 <CodeHeader></CodeHeader>
 
@@ -22143,109 +19578,125 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### pufferfish
+</Spoiler>
 
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/pufferfish.json)</small>
+## variant
 
-<CodeHeader></CodeHeader>
+<Spoiler title="Show">
+
+axolotl
+
+<CodeHeader>#component_groups/axolotl_lucy</CodeHeader>
 
 ```json
-"minecraft:underwater_movement": {
-    "value": 0.13
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+<CodeHeader>#component_groups/axolotl_cyan</CodeHeader>
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+<CodeHeader>#component_groups/axolotl_gold</CodeHeader>
+
+```json
+"minecraft:variant": {
+    "value": 2
+}
+```
+
+cat
+
+<CodeHeader>#component_groups/minecraft:cat_white</CodeHeader>
+
+```json
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+<CodeHeader>#component_groups/minecraft:cat_tuxedo</CodeHeader>
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+<CodeHeader>#component_groups/minecraft:cat_red</CodeHeader>
+
+```json
+"minecraft:variant": {
+    "value": 2
+}
+```
+
+fox
+
+<CodeHeader>#component_groups/minecraft:fox_red</CodeHeader>
+
+```json
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+<CodeHeader>#component_groups/minecraft:fox_arctic</CodeHeader>
+
+```json
+"minecraft:variant": {
+    "value": 1
 }
 ```
 
 </Spoiler>
 
-## variant
-
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Avariant)</small>
+## vibration_damper
 
 <Spoiler title="Show">
 
-#### axolotl
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/axolotl.json)</small>
+warden
 
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:variant": {
-    "value": 0
-}
+"minecraft:vibration_damper": {}
 ```
 
+</Spoiler>
+
+## vibration_listener
+
+<Spoiler title="Show">
+
+allay
+
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:variant": {
-    "value": 1
-}
+"minecraft:vibration_listener": {}
 ```
 
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
+warden
 
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-#### cat
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/cat.json)</small>
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
+"minecraft:vibration_listener": {}
 ```
 
 </Spoiler>
 
 ## water_movement
 
-<small>[View docs](https://bedrock.dev/docs/stable/Entities#minecraft%3Awater_movement)</small>
-
 <Spoiler title="Show">
 
-#### panda
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/panda.json)</small>
+panda
 
 <CodeHeader></CodeHeader>
 
@@ -22255,9 +19706,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### polar_bear
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/polar_bear.json)</small>
+polar_bear
 
 <CodeHeader></CodeHeader>
 
@@ -22267,9 +19716,7 @@ This documentation is stripped from the vanilla files using an [automated script
 }
 ```
 
-#### turtle
-
-<small>[View file](https://github.com/bedrock-dot-dev/packs/tree/master/stable/behavior/entities/turtle.json)</small>
+turtle
 
 <CodeHeader></CodeHeader>
 
@@ -22280,3 +19727,4 @@ This documentation is stripped from the vanilla files using an [automated script
 ```
 
 </Spoiler>
+

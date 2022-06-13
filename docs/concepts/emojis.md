@@ -2,6 +2,10 @@
 title: Emojis & Symbols
 ---
 
+:::warning
+Modifying texture of vanilla emojis and symbols on this page are incompatible with Nintendo Switch platform!
+:::
+
 Minecraft has a bunch of hard-coded [Private Use Unicode symbols](https://en.wikipedia.org/wiki/Private_Use_Areas) that it automatically converts to Emoji-like symbols.
 These can be used anywhere where normal letters can - signs, books, item names, chat, etc.
 
@@ -22,7 +26,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Craft Toggle On  |                         | U+E0A0  | ![](/assets/images/concepts/emojis/general/craft_toggle_on.png)  |
 | Craft Toggle Off |                         | U+E0A1  | ![](/assets/images/concepts/emojis/general/craft_toggle_off.png) |
 
-### Mobile (iOS/Android/Fire TV)
+### Mobile (iOS/Android)
 
 | Name        | Letter (Copy/Paste This) | Unicode | Image                                                      |
 | ----------- | ------------------------ | ------- | ---------------------------------------------------------- |
@@ -43,7 +47,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Right Click  |                         | U+E061  | ![](/assets/images/concepts/emojis/pc/right_click.png)  |
 | Middle Click |                         | U+E062  | ![](/assets/images/concepts/emojis/pc/middle_click.png) |
 
-### Xbox (One/Series X/Series S)
+### Xbox
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                      |
 | ------------------ | ------------------------ | ------- | ---------------------------------------------------------- |
@@ -85,7 +89,7 @@ There will be instructions for creating custom emoji at the bottom.
 | D-pad Down         |                         | U+E04E  | ![](/assets/images/concepts/emojis/switch/dpad_down.png)     |
 | D-pad Left         |                         | U+E04D  | ![](/assets/images/concepts/emojis/switch/dpad_left.png)     |
 
-### Playstation (4/5)
+### PlayStation (4/5)
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                             |
 | ------------------ | ------------------------ | ------- | ----------------------------------------------------------------- |
@@ -190,7 +194,7 @@ The next two characters are the position inside the image like `<row><column>`, 
 
 So after you are done, it might look like `0xE102` (`0x` + `E1` + `02`).
 
-Copy this code into the following field, and press convert. The symbol on the right-hand side can be copy/pasted into MC.
+Copy this code into the following field, and press <kbd>Convert</kbd>. The symbol on the right-hand side can be copy/pasted into MC.
 
 <div markdown="0">
 <form>

@@ -420,7 +420,7 @@ The custom boots texture if you need it.
 			},
 			// We tell it what geometry to use for the boots
 			"geometry": {
-				"default": "geometry.player.armor.helmet"
+				"default": "geometry.player.armor.boots"
 			},
 			// We tell it to hide the boots layer as we will be showing our armor on top
 			"scripts": {

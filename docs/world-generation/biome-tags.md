@@ -1,9 +1,12 @@
 ---
 title: Biome Tags
 category: Documentation
-mention:
+mentions:
     - MedicalJewel105
 ---
+
+This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
+ *Last updated for 1.19.0*
 
 ## Biome tag per Biome
 
@@ -161,5 +164,3 @@ mention:
 | the_end                     | the_end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 
 | warm                        | beach, deep_warm_ocean, warm_ocean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | 
 | warped_forest               | warped_forest                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | 
-
-*Last updated for 1.18.30*
