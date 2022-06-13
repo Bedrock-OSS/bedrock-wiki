@@ -4,8 +4,6 @@ mentions:
     - MedicalJewel105
     - Hatchibombotar
 category: General
-tags:
-    - Normal
 ---
 
 On this page you can find some of the tick.json creations by our community.
@@ -13,24 +11,27 @@ You can read about tick.json [here](/commands/mcfunction#creating-tick-json)
 
 ## Death Detection
 
-Death detection with commands might be useful because it don't use `player.json`
+Death detection with commands that does not use `player.json`
 
 <CodeHeader>BP/functions/death_detection.mcfunction</CodeHeader>
 
 ```
 tag @a add dead
-tag @e[type=player] remove dead
-execute @a[tag=dead, tag=!last_dead] ~ ~ ~ summon hatchibombotar:grave
-tag @a[tag=dead, tag=!last_dead] add last_dead
-tag @a[tag=!dead, tag=last_dead] remove last_dead
+tag @e[type=player] remove dead # Removes dead tag from alive players.
+
+execute @a[tag=dead, tag=!already_dead] ~~~ function my_function
+
+tag @a[tag=dead, tag=!already_dead] add already_dead
+tag @a[tag=!dead, tag=already_dead] remove already_dead
 ```
 This works because @a targets all players whereas `@e[type=player]` only targets alive players.
-You can do whatever you want with that summoned entity.
-Credit to [Hatchibombotar](https://github.com/Hatchibombotar).
+You can do whatever you want with the output command, in the above example, it runs the `my_function` function.
+
+Example: [Graves Addon by Hatchibombotar](https://github.com/Hatchibombotar/graves-addon/blob/main/Graves_BP/functions/graves/death_detection.mcfunction).
 
 ## Looping Timer
 
-Here you can find timer that executes function with name `my_function` on players with 10 sec delay.
+Here you can find timer that executes function with name `my_function` on players with a 10 sec delay.
 
 <CodeHeader>BP/functions/timer.mcfunction</CodeHeader>
 
@@ -55,7 +56,9 @@ It also has a 4 seconds delay so world is fully loaded.
 <CodeHeader>BP/functions/hello_world.mcfunction</CodeHeader>
 
 ```
+# Setup
 scoreboard objectives add hello_world dummy
+
 scoreboard players set @a[tag=!hello_world] hello_world 81
 tag @a add hello_world
 scoreboard players add @a[scores={hello_world=!0}] hello_world -1
@@ -77,11 +80,14 @@ Here, we are running it from one player, this could be from any **entity** thoug
 <CodeHeader>BP/functions/load_commands.mcfunction</CodeHeader>
 
 ```
+# setup
 scoreboard objectives add loaded dummy
-scoreboard players add global loaded 0
-scoreboard players operation @s loaded = global loaded
+
+# check if the value that the player value has is set to 1, otherwise runs commands
+scoreboard players operation @s loaded = value loaded
 execute @s[scores={loaded=0}] ~ ~ ~ say The world is loaded!
-scoreboard players set global loaded 1
+
+scoreboard players set value loaded 1
 ```
 
-The above function seems rather complicated, but it is actually quite simple. The first two lines check that a scoreboard called `loaded` has been created and that a player called `global` exists on it. The third line copies the value that the player `global` has. The fourth line executes commands after the world is loaded, and the last line sets the value of loaded to 1.
+The above function checks if the player value has the loaded score set to 0, then runs functions if that is true. It sets it to 1 afterwards to make sure it does not run again.

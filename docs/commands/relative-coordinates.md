@@ -24,4 +24,8 @@ Local coordinates are similar to relative coordinates, but represent a position 
 Like relative coordinates, you can insert numbers to produce an offset of the current position, in local space. If there is no entity to copy rotation from, the x- and y-rotations are assumed to be 0.
 Examples:
   - ``^10 ^ ^``: Current position with a 10-block offset to the left.
-  - ``^ ^1.62 ^1``: Current position with a 1.62-block offset upward and a 1-block offset forward.
+  - ``^ ^1.5 ^1``: Current position with a 1.5-block offset upward and a 1-block offset forward.
+
+## Additional Notes
+
+- The player's eye level is 1.62 blocks above their feet. (~ ~1.62 ~)
