@@ -1,5 +1,6 @@
 ---
 title: JSON UI Documentation
+nav_order: 2
 mention:
     - KalmeMarq
 ---
@@ -572,7 +573,9 @@ If you have multiple variables use `"variables": [{}]`
 
 ## Animations
 
-`anim_type` and its possible values are `color`, `wait`, `size`, `offset`, `uv`, `alpha` and `flipbook`.
+`anim_type` and its possible values are `color`, `wait`, `size`, `offset`, `uv`, `alpha`, `flipbook` and `aseprite_flip_book`.
+
+For more information about the `aseprite_flip_book` animation type, please see our page on [Aseprite Animations](/json-ui/aseprite-animations)
 
 | Property Name               | Type            | Description                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
