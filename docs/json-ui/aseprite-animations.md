@@ -4,7 +4,7 @@ title: Aseprite Animations
 ---
 
 ## What is Aseprite?
-Aseprite is a purchasable art application designed with pixel-art in mind. 
+[Aseprite](https://www.aseprite.org/) is a purchasable art application designed with pixel-art in mind. 
 It contains many tools that can help make skin and resource pack creation easier. 
 Aseprite also has significant documentation and tutorials to help artists of all skill levels use the application effectively.
 
@@ -16,10 +16,10 @@ Aseprite will put these in the correct order and make it an animation.
 <FolderView
 :paths="[
 
-    'frameimage1.png'
-    'frameimage2.png'
-    'frameimage3.png'
-    'frameimage4.png'
+    'frameimage1.png',
+    'frameimage2.png',
+    'frameimage3.png',
+    'frameimage4.png',
     'frameimage5.png'
 
 ]"
