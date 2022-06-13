@@ -20,7 +20,7 @@ Entity attacks are a complex subject that require many different things to work 
 
 Before a mob can attack, it will need various [movement components](/entities/entity-movement).
 
-Before starting to create your entity attacks, you should ensure that your entity can walk around, and navigate its saroundings.
+Before starting to create your entity attacks, you should ensure that your entity can walk around, and navigate its surroundings.
 
 :::warning
 Even if you are making an unmoving entity (like turret), you still need to add navigation component, so your entity can find the entity to shoot.
