@@ -16,10 +16,10 @@ Aseprite will put these in the correct order and make it an animation.
 <FolderView
 :paths="[
 
-    'frameimage1.png'
-    'frameimage2.png'
-    'frameimage3.png'
-    'frameimage4.png'
+    'frameimage1.png',
+    'frameimage2.png',
+    'frameimage3.png',
+    'frameimage4.png',
     'frameimage5.png'
 
 ]"
