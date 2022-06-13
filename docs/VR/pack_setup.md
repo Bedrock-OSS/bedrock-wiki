@@ -9,7 +9,7 @@ To start making your addon you should download this template.
 This template contains all the required assets for a start on making the VR pack.
 
 <BButton
-    link="/assets/packs/tutorials/vr/VRpackTemplate.zip" download
+    link="/assets/packs/vr/VRpackTemplateRP.zip" download
     color=blue
 >Get the template!</BButton>
 
