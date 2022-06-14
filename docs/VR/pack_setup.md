@@ -22,19 +22,19 @@ Dont delete `contents.json` and `textures_list.json` from the template.
 The template contains 2 editable folders; `holograms` and `textures`, 
 these folders contain the models and textures for the vr objects.
 
-![](/assets/images/VR/setup/vr-template-contents.png)
+![](/assets/images/vr/setup/vr-template-contents.png)
 
 ## Holograms
 
 This folder contains all the models the VR version of Minecraft uses, for example the VR hands.
 
-![](/assets/images/VR/setup/vr-template-holograms.png)
+![](/assets/images/vr/setup/vr-template-holograms.png)
 
 ## Textures
 
 This folder stores all textures for the models.
 
-![](/assets/images/VR/setup/vr-template-textures.png)
+![](/assets/images/vr/setup/vr-template-textures.png)
 
 ## Merging the VR template with your own pack
 
