@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./404.md.25f5d31e.js";const p='{"title":"Virtual Reality","description":"","frontmatter":{"title":"Virtual Reality","categories":[{"title":"General","color":"blue"}]},"headers":[],"relativePath":"vr/index.md"}',r={};function o(i,c,n,l,s,_){return a(),t("div")}var f=e(r,[["render",o]]);export{p as __pageData,f as default};
