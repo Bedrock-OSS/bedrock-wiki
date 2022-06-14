@@ -16,7 +16,7 @@ If you are on Playstation you don't need to follow this guide.
 
 Right-click on your desktop and create a new shortcut:
 
-![](/assets/images/vr/install/vr_desktop.png)
+![](/assets/images/vr/install/_vr_desktop.png)
 
 As location you fill in `minecraft://Mode/?OpenXR=true`.
 
