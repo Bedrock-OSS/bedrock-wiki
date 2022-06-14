@@ -499,6 +499,7 @@ List of all new item components, with usage examples
 | Slot Name     |
 | ------------- |
 | bow           |
+| crossbow           |
 | armor_feet    |
 | armor_torso   |
 | armor_head    |
