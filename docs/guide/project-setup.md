@@ -36,6 +36,14 @@ We will develop our addon in `development_behavior_packs` and `development_resou
 ## Your Workspace
 
 :::tip
+Project setup is different for android and other platforms. Consider looking into our guide for android platform.
+:::
+<BButton
+	link="./project-setup-android"
+	color=blue
+>Android guide</BButton>
+
+:::tip
 In this guide, BP refers to the folder you created in `development_behavior_packs` ("the behavior pack"), and RP refers to the folder you created in `development_resource_packs` ("the resource pack")
 :::
 
@@ -62,7 +70,7 @@ Wrongly named files/folders is a common source of errors. Please check your work
 
 The manifest is a file that identifies your pack to Minecraft. Every pack has one manifest. A folder with a correctly formatted manifest will show up in Minecraft, and we consider this the "minimal" pack before we can add additional content.
 
-Manifest files are written in `json`. If this isn't familiar to you, you can [learn more about json here.](./understanding-json)
+Manifest files are written in `json`. If this isn't familiar to you, you can learn more about json [here](./understanding-json).
 
 First, create a new file in your BP folder by right-clicking on the folder and selecting `New File`. Call the file `manifest.json`. To begin, you can copy paste the following code into the file.
 
@@ -155,7 +163,7 @@ You should place a copy of your desired image into both the RP and the BP. The i
 
 ## Language Files
 
-The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. [You can learn more about how Minecraft handles localization here.](/concepts/text-and-translations)
+The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. You can learn more about how Minecraft handles localization [here](/concepts/text-and-translations).
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
@@ -199,7 +207,7 @@ Content log is the most useful tool you have for debugging your addons. Please d
 
 Content Log is an extremely important debugging tool, which you should always have on.
 
-Turn on both content log settings in `settings > creator`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI in-game by pressing `ctrl+h`. [Learn more about the content log here.](/guide/troubleshooting)
+Turn on both content log settings in `settings > creator`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI in-game by pressing `ctrl+h`. Learn more about the content log [here](/guide/troubleshooting).
 
 ## Creating your testing world
 
