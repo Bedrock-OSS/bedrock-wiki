@@ -189,7 +189,7 @@ List all players in Creative mode:
 Set the game mode to Creative mode for players both not in Survival mode, and not in Adventure mode:
 -   `/gamemode creative @a[m=!survival, m=!adventure]`
 
-### Inventory
+### Items
 Limits the selection of targets by what items they have in their inventory. This argument is represented as an object, or an array of objects, with up to one each of the following parameters:
 
 -   `item=<string>`—The identifier of the item to test for, and the only required argument. This can accept custom identifiers too.

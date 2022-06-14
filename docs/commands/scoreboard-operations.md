@@ -101,4 +101,10 @@ This operation swaps the target score and source scores with each other. This is
 ```
 /scoreboard players operation A var >< B var
 ```
+The above command would swap the values of A and B e.g.
+
+Before: A = 10; B = 25;
+
+After: A = 25; B = 10;
+
 This can be seen as three operations: `temp = A; A = B; B = temp;`, and as such `A var = 10` and `B var = 25`.
