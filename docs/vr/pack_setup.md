@@ -1,5 +1,5 @@
 ---
-title: Setting up the pack
+title: Setting Up the Pack
 category: General
 mentions:
     - TheDoctor15

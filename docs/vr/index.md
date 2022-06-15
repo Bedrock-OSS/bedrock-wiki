@@ -7,7 +7,5 @@ categories:
       color: green
 ---
 <!-- 
-     - title: Tutorials
-       color: green
      - title: Documentation
        color: red -->
