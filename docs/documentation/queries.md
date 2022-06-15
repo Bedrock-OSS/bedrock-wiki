@@ -8,6 +8,95 @@ The bedrock documentation for Molang is notoriously bad. This page will attempt 
 This page is not an exhaustive list list! It only contains queries we've written extra information for. The full list of queries can be found [here](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries)!
 :::
 
+## query.armor_texture_slot
+
+Formatted like: `query.armor_texture_slot(x) = y`.
+
+Where `x` and `y` are both integer arguments, from the following table:
+
+### X
+
+| Argument | Slot       |
+| -------- | ---------- |
+| 0        | Helmet     |
+| 1        | Chestplace |
+| 2        | Leggings   |
+| 3        | Boots      |
+
+### Y
+
+| Argument | Type                  |
+| -------- | --------------------- |
+| -1       | none                  |
+| 0        | Leather armor piece   |
+| 1        | Chain armor piece     |
+| 2        | Iron armor piece      |
+| 3        | Diamond armor piece   |
+| 4        | Gold armor piece      |
+| 5        | Elytra                |
+| 6        | Turtle helmet         |
+| 7        | Netherite armor piece |
+
+### Example
+
+`query.armor_texture_slot(3) == 1`: queries for Iron Boots.
+
+## query.armor_material_slot
+
+Formatted like: `query.armor_material_slot(x) = y`.
+
+Where `x` and `y` are both integer arguments, from the following table:
+
+### X
+
+| Argument | Slot       |
+| -------- | ---------- |
+| 0        | Helmet     |
+| 1        | Chestplace |
+| 2        | Leggings   |
+| 3        | Boots      |
+
+### Y
+
+Unknown, possibly:
+
+| Argument | Slot                       |
+| -------- | -------------------------- |
+| 0        | Default armor material     |
+| 1        | Enchanted armor material   |
+| 2        | Leather armor material     |
+| 3        | Leather enchanted material |
+
+## query.armor_color_slot
+
+_Notice: As of version `1.16.100.51`, this query is crashing minecraft. It might be fixed in later versions._
+
+Formatted like: `color = query.armor_color_slot(slot, channel)`.
+
+Where `slot` and `channel` are both integer arguments, from the following tables:
+
+### Slot
+
+| Argument | Slot       |
+| -------- | ---------- |
+| 0        | Helmet     |
+| 1        | Chestplace |
+| 2        | Leggings   |
+| 3        | Boots      |
+
+### Channel
+
+| Argument | Slot          |
+| -------- | ------------- |
+| 0        | Red channel   |
+| 1        | Green channel |
+| 2        | Blue channel  |
+| 3        | Alpha channel |
+
+### Color
+
+Query returns color value in specified channel.
+
 ## query.get_equiped_item_name
 
 :::warning
@@ -145,95 +234,6 @@ Formatted like: `t.val = 0; t.i = 0; loop(27, {t.val = q.is_item_name_any('slot.
 
 Replace `namespace:item_name` with any item you wish to check for. This simply loops through all 27 slots of the inventory and returns `1.0` if it has found any slot that has the specified item provided. Note that the hotbar is in a different slot from the main inventory slot so you will have to check that seperately.
 
-## query.armor_texture_slot
-
-Formatted like: `query.armor_texture_slot(x) = y`.
-
-Where `x` and `y` are both integer arguments, from the following table:
-
-### X
-
-| Argument | Slot       |
-| -------- | ---------- |
-| 0        | Helmet     |
-| 1        | Chestplace |
-| 2        | Leggings   |
-| 3        | Boots      |
-
-### Y
-
-| Argument | Type                  |
-| -------- | --------------------- |
-| -1       | none                  |
-| 0        | Leather armor piece   |
-| 1        | Chain armor piece     |
-| 2        | Iron armor piece      |
-| 3        | Diamond armor piece   |
-| 4        | Gold armor piece      |
-| 5        | Elytra                |
-| 6        | Turtle helmet         |
-| 7        | Netherite armor piece |
-
-### Example
-
-`query.armor_texture_slot(3) == 1`: queries for Iron Boots.
-
-## query.armor_material_slot
-
-Formatted like: `query.armor_material_slot(x) = y`.
-
-Where `x` and `y` are both integer arguments, from the following table:
-
-### X
-
-| Argument | Slot       |
-| -------- | ---------- |
-| 0        | Helmet     |
-| 1        | Chestplace |
-| 2        | Leggings   |
-| 3        | Boots      |
-
-### Y
-
-Unknown, possibly:
-
-| Argument | Slot                       |
-| -------- | -------------------------- |
-| 0        | Default armor material     |
-| 1        | Enchanted armor material   |
-| 2        | Leather armor material     |
-| 3        | Leather enchanted material |
-
-## query.armor_color_slot
-
-_Notice: As of version `1.16.100.51`, this query is crashing minecraft. It might be fixed in later versions._
-
-Formatted like: `color = query.armor_color_slot(slot, channel)`.
-
-Where `slot` and `channel` are both integer arguments, from the following tables:
-
-### Slot
-
-| Argument | Slot       |
-| -------- | ---------- |
-| 0        | Helmet     |
-| 1        | Chestplace |
-| 2        | Leggings   |
-| 3        | Boots      |
-
-### Channel
-
-| Argument | Slot          |
-| -------- | ------------- |
-| 0        | Red channel   |
-| 1        | Green channel |
-| 2        | Blue channel  |
-| 3        | Alpha channel |
-
-### Color
-
-Query returns color value in specified channel.
-
 ## query.is_enchanted
 
 Formatted like: `is_enchanted = query.is_enchanted`.
@@ -291,6 +291,10 @@ Value example:
 -   Player is walking on fire: 1.0
 -   Player is sprinting on fire: 1.0
 -   Player is sprinting and jumping on fire: 0.525
+
+## query.log
+
+Content log is NOT debug log, they're different files. `query.log` outputs to the debug log only.
 
 ## query.on_fire_time
 
