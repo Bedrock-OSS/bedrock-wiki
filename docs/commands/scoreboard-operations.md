@@ -108,3 +108,19 @@ Before: A = 10; B = 25;
 After: A = 25; B = 10;
 
 This can be seen as three operations: `temp = A; A = B; B = temp;`, and as such `A var = 10` and `B var = 25`.
+
+## Useful Creations
+
+### Check If Values are Equal
+
+If you want to check in scoreboard, whether one value equals another value, you can copy first value to temporary value, subtract the other and compare temporary value to zero. Given values A and B:
+
+<CodeHeader></CodeHeader>
+
+```
+scoreboard objectives add temp dummy
+scoreboard players operation @e temp = @s A
+scoreboard players operation @e temp -= @s B
+execute @e[scores={temp=0}] ~~~ say A equals B
+scoreboard objectives remove temp
+```
