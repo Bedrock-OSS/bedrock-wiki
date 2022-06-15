@@ -123,6 +123,11 @@ load the pack into minecraft and try it out if it looks like this you succeeded 
 
 ![](/assets/images/vr/tutorial-hand-right/export-done.png)
 
+<BButton
+    link="/assets/packs/vr/VRtutorialPack.zip" download
+    color=blue
+>Get the end results!</BButton>
+
 ## Your progress so far
 
 <Checklist>
