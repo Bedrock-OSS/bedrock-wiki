@@ -111,7 +111,7 @@ This can be seen as three operations: `temp = A; A = B; B = temp;`, and as such 
 
 ## Useful Creations
 
-### Check If Values are Equal
+#### Check If Values are Equal
 
 If you want to check in scoreboard, whether one value equals another value, you can copy first value to temporary value, subtract the other and compare temporary value to zero. Given values A and B:
 
@@ -124,3 +124,7 @@ scoreboard players operation @e temp -= @s B
 execute @e[scores={temp=0}] ~~~ say A equals B
 scoreboard objectives remove temp
 ```
+
+#### Scoreboard Initialization
+
+If you want to initialize a scoreboard value to 0, but only if it doesn't exists, you can use `scoreboard players add <selector> <name> 0`. It will set the value to 0, if it doesn't exist on the entity and do nothing, if it already exist.
