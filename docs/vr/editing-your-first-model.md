@@ -59,7 +59,7 @@ First we need to figure out the dimensions of this object.
 This image shows us that 3 pixels is equivalent to 18.75 meters in Blender, an arm is 12 pixels long so this means an arm is `4 * 18.75 = 75 meters` in Blender.
 When editing the dimensions it will look like this:
 
-![](/assets/images/vr/tutorial-hand-right/model-dimensions-1.png)
+![](/assets/images/vr/tutorial-hand-right/model-dimensions.png)
 
 If we import it into minecraft the arm will be to far away. This is because the original model is made for a hand not an arm. So we need to move it `3 * 18.75 = 56.25 meters` down.
 
