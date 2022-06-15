@@ -114,3 +114,4 @@ Not everything can be overwritten, the following is a list of things that cannot
 
 -   Vanilla items (Not all)
 -   Vanilla blocks
+-   Vanilla fogs (create a fog with another namespace and change it everywhere it is used)
