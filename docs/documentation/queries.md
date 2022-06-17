@@ -1,5 +1,6 @@
 ---
 title: Molang Queries
+toc_max_level: 2
 ---
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
@@ -370,6 +371,125 @@ Returns yaw of the head from `-179.9` to `179.9`. the values wrap around so like
 ## query.target_x_rotation and query.target_y_rotation
 
 Identical to the respective `query.head_*_rotation`, however has no optional argument for selecting head.
+
+## query.time_of_day
+
+Returns the time of day (midnight=0.0, sunrise=0.25, noon=0.5, sunset=0.75) of the dimension the entity is in.
+Day time is calculated via this formula:
+
+`f(x) = (x*0.25/2400)mod 1`
+
+query.time_of_day - day time table
+
+<Spoiler title="Show">
+
+| `query.time_of_day` | Day Time |
+|---------------------|----------|
+| 0.00                | 18000    |
+| 0.01                | 18240    |
+| 0.02                | 18480    |
+| 0.03                | 18720    |
+| 0.04                | 18960    |
+| 0.05                | 19200    |
+| 0.06                | 19440    |
+| 0.07                | 19680    |
+| 0.08                | 19920    |
+| 0.09                | 20162    |
+| 0.10                | 20400    |
+| 0.11                | 20640    |
+| 0.12                | 20880    |
+| 0.13                | 21120    |
+| 0.14                | 21360    |
+| 0.15                | 21602    |
+| 0.16                | 21840    |
+| 0.17                | 22080    |
+| 0.18                | 22322    |
+| 0.19                | 22560    |
+| 0.20                | 22800    |
+| 0.21                | 23040    |
+| 0.22                | 23280    |
+| 0.23                | 23520    |
+| 0.24                | 23760    |
+| 0.25                | 0        |
+| 0.26                | 240      |
+| 0.27                | 480      |
+| 0.28                | 720      |
+| 0.29                | 960      |
+| 0.30                | 1202     |
+| 0.31                | 1440     |
+| 0.32                | 1680     |
+| 0.33                | 1922     |
+| 0.34                | 2160     |
+| 0.35                | 2400     |
+| 0.36                | 2642     |
+| 0.37                | 2880     |
+| 0.38                | 3120     |
+| 0.39                | 3360     |
+| 0.40                | 3600     |
+| 0.41                | 3840     |
+| 0.42                | 4080     |
+| 0.43                | 4320     |
+| 0.44                | 4560     |
+| 0.45                | 4800     |
+| 0.46                | 5040     |
+| 0.47                | 5280     |
+| 0.48                | 5520     |
+| 0.49                | 5760     |
+| 0.50                | 6000     |
+| 0.51                | 6240     |
+| 0.52                | 6480     |
+| 0.53                | 6720     |
+| 0.54                | 6960     |
+| 0.55                | 7200     |
+| 0.56                | 7440     |
+| 0.57                | 7680     |
+| 0.58                | 7920     |
+| 0.59                | 8160     |
+| 0.60                | 8402     |
+| 0.61                | 8640     |
+| 0.62                | 8880     |
+| 0.63                | 9120     |
+| 0.64                | 9360     |
+| 0.65                | 9600     |
+| 0.66                | 9842     |
+| 0.67                | 10080    |
+| 0.68                | 10320    |
+| 0.69                | 10560    |
+| 0.70                | 10800    |
+| 0.71                | 11040    |
+| 0.72                | 11282    |
+| 0.73                | 11520    |
+| 0.74                | 11760    |
+| 0.75                | 12000    |
+| 0.76                | 12240    |
+| 0.77                | 12480    |
+| 0.78                | 12720    |
+| 0.79                | 12962    |
+| 0.80                | 13200    |
+| 0.81                | 13440    |
+| 0.82                | 13680    |
+| 0.83                | 13920    |
+| 0.84                | 14160    |
+| 0.85                | 14402    |
+| 0.86                | 14640    |
+| 0.87                | 14880    |
+| 0.88                | 15120    |
+| 0.89                | 15360    |
+| 0.90                | 15600    |
+| 0.91                | 15842    |
+| 0.92                | 16080    |
+| 0.93                | 16320    |
+| 0.94                | 16560    |
+| 0.95                | 16800    |
+| 0.96                | 17040    |
+| 0.97                | 17282    |
+| 0.98                | 17520    |
+| 0.99                | 17760    |
+| 1.00                | 18000    |
+
+Credit: [Analysis of query.time_of_day.md](https://gist.github.com/DoubleF3lix/a03afde0a979dfa41e8525ee92f12ca5)
+
+</Spoiler>
 
 ## query.eye_target_x_rotation and query.eye_target_y_rotation
 
