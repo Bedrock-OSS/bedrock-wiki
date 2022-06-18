@@ -76,7 +76,7 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 
 ### namespace:lapis_lazuli
 
--   Makes the Item usable with Enchantment Tables, to enchant you items in place of Lapis Lazuli.
+-   Makes the Item usable with Enchantment Tables, to enchant your items in place of Lapis Lazuli.
 
 ---
 
