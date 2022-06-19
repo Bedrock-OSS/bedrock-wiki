@@ -205,6 +205,13 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ---
 
+### minecraft:evocation_fang
+
+-   Damages entities on contact.
+-   Disables collision at all.
+
+---
+
 ### minecraft:falling_block
 
 -   Breaks the entity also makes it fall.
@@ -371,7 +378,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ### minecraft:xp_orb
 
--   Disables collision (you can place blocks at it's position)
+-   Disables collision at all
 -   On contact with player increases xp
 
 ### minecraft:zombie
