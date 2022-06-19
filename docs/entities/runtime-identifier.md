@@ -226,6 +226,12 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ---
 
+### minecraft:llama_spit
+
+    Adds llama spit's particles
+
+---
+
 ### minecraft:minecart
 
 -   Disables entity shadow.
@@ -365,7 +371,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ### minecraft:xp_orb
 
--   Disables collision (you can place blocks at its position)
+-   Disables collision (you can place blocks at it's position)
 -   On contact with player increases xp
 
 ### minecraft:zombie
