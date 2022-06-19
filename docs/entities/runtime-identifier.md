@@ -363,6 +363,11 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
+### minecraft:xp_orb
+
+-   Disables collision (you can place blocks at its position)
+-   On contact with player increases xp
+
 ### minecraft:zombie
 
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
