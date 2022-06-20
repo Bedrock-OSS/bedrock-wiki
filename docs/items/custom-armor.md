@@ -444,6 +444,8 @@ Thats it, you now have a whole suit of custom armor you can swagger around in, a
 
 This is a bit more advanced but lets say you want your custom armor to act like it's a set from an RPG game. We can add some code to check if we have the set equipped and do some great stuff with it.
 
+Note that for effects yoy can use tick.json and functions with hasitem selector argument to avoid using player.json.
+
 In this example we will just add a chance to teleport the attacker somewhere nearby and put a blurb on the console for flavour.
 
 As we want this to trigger when the player is hit we need to add some logic to the `player.json` file. This is a huge file and we unfortunately need to make sure it has all the default content in there as well due to the way it will overwrite the default player components etc.
