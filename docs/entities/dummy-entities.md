@@ -31,7 +31,7 @@ You can use whatever behaviors you like, but here is a good template. The import
 		"description": {
 			"identifier": "wiki:dummy",
 			"is_summonable": true,
-			"is_spawnable": true,
+			"is_spawnable": false,
 			"is_experimental": false
 		},
 		"components": {
@@ -61,6 +61,8 @@ You can use whatever behaviors you like, but here is a good template. The import
 	}
 }
 ```
+
+If you want to disable collision at all (so you can place a block at it's position), you can use arrow runtime identifier, however, there can be some side effects.
 
 ### Resource Entity
 
@@ -129,4 +131,4 @@ You can use whatever behaviors you like, but here is a good template. The import
 
 ### Texture (Optional)
 
-You can either leave the texture location blank, or open the model in block-bench and create a blank texture.
+You can either leave the texture location blank, or open the model in blockbench and create a blank texture.
