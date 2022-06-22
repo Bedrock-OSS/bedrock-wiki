@@ -295,6 +295,27 @@ Add following components to your block's code:
 }
 ```
 
+## 3.3.0 - Block Renders Odd in Inventory
+
+Problem: You have a block with custom geometry and it renders strange in inventory, like this:
+
+![](/assets/images/blocks/block_tr/inventory_render_cubes.png)
+
+Solution: In inventory, block's geometry is rendered by cubes, from the bottom to the top, where first ones overlap next. To render your block correctly, you'll need to change the order of the cubes in blockbench.
+
+```
+cube_middle      cube_bottom
+cube_top     ->  cube_middle
+cube_bottom      cube_top
+```
+
+## 3.4.0 - Block Looks Smaller in Inventory
+
+Problem: You have a block with `"minecraft:unit_cube": {}` component and it looks smaller than vanilla blocks in inventory.
+
+Solution: Block can get its visuals in two ways, either by applying textures in the blocks.json OR by giving the block a model and material instances.
+Using the blocks.json causes the block to appear full sized in your inventory, but forces it to use opaque as a material and doesn't allow rotations through the component/change anything about the appearance. So what you do is use the fact that, if your block has no materials and model active from components or permutations, it will take the textures from the blocks.json causing the normal full sized block model. If you wanna make use of the rotation component you can't just apply it, you need to give it material instances, unit_cube or a custom model and the rotation component. This will make it rotatable and work fine, while the default state which uses the blocks.json shows normally in the end you only can use this for full 16³ blocks which are non transparent, but it's a neat life hack to make it not seem off.
+
 ## 4.0.0 - Common Content Log Errors
 
 This section will describe common content log errors and how to debug them.
@@ -309,11 +330,16 @@ Solution: Check your `entity_collision` or `pick_collision` components and do th
 -   Make sure the y isn't less than 0.
 -   Make sure the size isn't bigger than 16x16x16.
 
-## 4.2.0 - [Blocks][warning]
+## 4.2.0 - [Blocks][error]
 
-Problem: Your content log shows `geometry.your_block contains an X amount of boxes outside the warning bounds of (*insert numbers*) to (*insert numbers*)`
+Problem: Your content log shows `geometry.your_block contains an X boxes outside the warning error of (*insert numbers*) to (*insert numbers*)`
 
-Solution: Don't worry. It's nothing to worry about. It's just telling you that you geometry is bigger than 16x16x16. You can either make the geometry smaller or just ignore it.
+Solution: Your geometry is bigger than 16x16x16. You can either make the geometry smaller or use geo fixer.
+
+<BButton
+	link="https://github.com/Bedrock-OSS/wiki-addon/tree/main/geometry_fixer"
+	color=blue
+>Download</BButton>
 
 ---
 
