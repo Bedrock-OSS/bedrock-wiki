@@ -44,7 +44,6 @@ Important links have a ⭐.
 -   [World Converter (paid)](https://www.universalminecraftconverter.com/download)
 -   [Chunker (World Converter)](https://chunker.app/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
--   [Resource Pack Converter (for Android)](https://play.google.com/store/apps/details?id=net.theluckycoder.resourcepackconverter)
 -   [BedrockLauncher (Bedrock version switcher)](https://bedrocklauncher.github.io/)
 
 ## Bedrock Tools Websites
