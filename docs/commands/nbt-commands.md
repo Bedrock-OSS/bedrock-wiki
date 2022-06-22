@@ -26,7 +26,7 @@ Note: The game interprets mob skulls as blocks that can be destroyed. These two 
 
 ### CanPlaceOn Everything
 
-This is the code for a block that can be placed on everything in the game: _(1.18.31)_
+This is the code for a block that can be placed on everything in the game:
 
 **Please, note that if there is at least one invalid block, this won't work!**
 
