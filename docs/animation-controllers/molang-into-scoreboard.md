@@ -14,21 +14,31 @@ Here we set value of `molang_to_score` variable to scoreboard `molang`.
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animations": {
-		"animation.molang_into_scoreboard": {
-			"animation_length": <last time+0.01>,
-			"anim_time_update": "<condition>",
-            "timeline": {
-                "0": ["/scoreboard players set @s molang 0"],
-                "1": ["/scoreboard players set @s molang 1"],
-                "2": ["/scoreboard players set @s molang 2"],
-                "3": ["/scoreboard players set @s molang 3"],
-                "4": ["/scoreboard players set @s molang 4"]
-                ...
-            }
-		}
-	}
+   "format_version":"1.10.0",
+   "animations":{
+      "animation.molang_into_scoreboard":{
+         "animation_length":<last time+0.1>,
+         "anim_time_update":"<condition+0.1>",
+         "timeline":{
+            "0":[
+               "/scoreboard players set @s molang 0"
+            ],
+            "1":[
+               "/scoreboard players set @s molang 1"
+            ],
+            "2":[
+               "/scoreboard players set @s molang 2"
+            ],
+            "3":[
+               "/scoreboard players set @s molang 3"
+            ],
+            "4":[
+               "/scoreboard players set @s molang 4"
+            ],
+            ...
+         }
+      }
+   }
 }
 ```
 
