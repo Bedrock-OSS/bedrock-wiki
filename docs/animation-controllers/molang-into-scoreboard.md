@@ -1,6 +1,6 @@
 ---
 title: MoLang into Scoreboard
-mentions:
+mention:
     - SirLich
     - MedicalJewel105
 ---
