@@ -16,13 +16,13 @@ Make sure you have the `Holiday Creator Features` toggle turned on. This will al
 
 ## The Model
 
-Minecraft uses the default pivot points of [0,0,0]. This means that if your model consits of specific pivot points, your model will look detached in-game. In order to combat this, we can use the blockbench plugin called "Bedrock Pivot Fix 2". This will align your elements to the default pivot point without moving your elements.
+Minecraft uses the default pivot points of [0,0,0]. This means that if your model consists of specific pivot points, your model will look detached in-game. In order to combat this, we can use the blockbench plugin called "Bedrock Pivot Fix 2". This will align your elements to the default pivot point without moving your elements.
 
-## Regular Roation
+## Regular Rotation
 
 ### Permutations
 
-Rotating blocks make use of the permutations that were intoduced in 1.16.100. The each permutation contains the `minecraft:rotation` component, and when the condition is true, it will rotate the block to that direction.
+Rotating blocks make use of the permutations that were introduced in 1.16.100. Each permutation contains the `minecraft:rotation` component, and when the condition is true, the component within the respective permutation will activate and rotate the block to that direction. The 2, 3, 4, and 5 values are used here because the query we'll be using in our event will return those numbers and we'll be storing them to our property.
 
 ```json
 {
@@ -55,7 +55,7 @@ Rotating blocks make use of the permutations that were intoduced in 1.16.100. Th
 }
 ```
 
-### Events
+### Event
 
 In order to make the block rotate the way the player is facing, we have to use some simple molang to query which way the player is facing.
 
@@ -82,44 +82,7 @@ This event is called upon by using the `minecraft:on_player_placing` component.
 	}
 }
 ```
-### Permutations
 
-Rotating blocks make use of the permutations that were intoduced in 1.16.100. The each permutation contains the `minecraft:rotation` component, and when the condition is true, it will rotate the block to that direction.
-
-```json
-"permutations": [
-	{
-		"condition": "query.block_property('wiki:block_rotation') == 0",
-		"components": {
-			"minecraft:rotation": [
-				0,
-				0,
-				0
-			]
-		}
-	},
-	{
-		"condition": "query.block_property('wiki:block_rotation') == 1",
-		"components": {
-			"minecraft:rotation": [
-				90,
-				0,
-				0
-			]
-		}
-	},
-	{
-		"condition": "query.block_property('wiki:block_rotation') == 2",
-		"components": {
-			"minecraft:rotation": [
-				0,
-				0,
-				90
-			]
-		}
-	}
-]
-```
 ## JSON Part
 
 ### The Block Code
@@ -195,26 +158,64 @@ Rotating blocks make use of the permutations that were intoduced in 1.16.100. Th
 
 ## Log Rotation
 Block Rotation identical to how vanilla logs rotate.
-### Component
 
-The component `minecraft:on_player_placing` triggers the event.
+### Permutations
 
+Rotating blocks make use of the permutations that were introduced in 1.16.100. Each permutation contains the `minecraft:rotation` component, and when the condition is true, the component within the respective permutation will activate and rotate the block to that direction.
 
 ```json
-"minecraft:on_player_placing": {
-	"event": "wiki:update_rotation"
-}
+"permutations": [
+	{
+		"condition": "query.block_property('wiki:block_rotation') == 0",
+		"components": {
+			"minecraft:rotation": [
+				0,
+				0,
+				0
+			]
+		}
+	},
+	{
+		"condition": "query.block_property('wiki:block_rotation') == 1",
+		"components": {
+			"minecraft:rotation": [
+				90,
+				0,
+				0
+			]
+		}
+	},
+	{
+		"condition": "query.block_property('wiki:block_rotation') == 2",
+		"components": {
+			"minecraft:rotation": [
+				0,
+				0,
+				90
+			]
+		}
+	}
+]
 ```
 
 ### Event
 
-This event is called upon by using the `minecraft:on_player_placing` component.
-
+In order to make the block rotate the way a vanilla log would, we need to use a molang expression that uses a query to get what face of a block we're placing our block on and convert it to 0, 1, or 2.
 
 ```json
 "wiki:update_rotation": {
 	"set_block_property": {
 		"wiki:block_rotation": "math.floor(query.block_face/2)"
+	}
+}
+```
+
+This event is called upon by using the `minecraft:on_player_placing` component.
+
+```json
+{
+	"minecraft:on_player_placing": {
+		"event": "wiki:update_rotation"
 	}
 }
 ```
