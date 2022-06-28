@@ -5,73 +5,166 @@ mention:
     - KalmeMarq
 ---
 
-## Element Types
+## UI Elements
 
-### Panel
+### Element Types
 
-`"type": "panel"`, like `<div>` in HTML, is a usual container.
+|      Name       |                                           Description                                           |                                                                                                                                                                                                                                Allowed Properties                                                                                                                                                                                                                                 |
+| --------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| panel           | A container, like `<div>` in HTML                                                               | [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                                                                                                 |
+| stack_panel     | Similar to `panel` but stacks its children depending on `orientation` property value            | [Stack Panel](/json-ui/json-ui-documentation.html#stack-panel) <br> [Collection](/json-ui/json-ui-documentation.html#collection) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                           |
+| grid            | Grid of elements                                                                                | [Grid](/json-ui/json-ui-documentation.html#grid) <br> [Collection](/json-ui/json-ui-documentation.html#collection) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                         |
+| label           | Text element                                                                                    | [Text](/json-ui/json-ui-documentation.html#text) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                                           |
+| image           | Sprite element. Draws a texture.                                                                | [Sprite](/json-ui/json-ui-documentation.html#sprite) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                                       |
+| input_panel     | A `panel` that accepts input                                                                    | [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Sound](/json-ui/json-ui-documentation.html#sound) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                         |
+| button          | A button and it can have 4 states (default, hover, pressed and locked)                          | [Button](/json-ui/json-ui-documentation.html#button) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Sound](/json-ui/json-ui-documentation.html#sound) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                               |
+| toggle          | A toggle and it has 2 states (checked or unchecked). Each state has a hover and locked variant  | [Toggle](/json-ui/json-ui-documentation.html#toggle) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Sound](/json-ui/json-ui-documentation.html#sound) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                               |
+| dropdown        | A toggle for dropdown purposes                                                                  | [Dropdown](/json-ui/json-ui-documentation.html#dropdown) <br> [Toggle](/json-ui/json-ui-documentation.html#toggle) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Sound](/json-ui/json-ui-documentation.html#sound) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding) |
+| slider          | Range input element                                                                             | [Slider](/json-ui/json-ui-documentation.html#slider) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Sound](/json-ui/json-ui-documentation.html#sound) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                               |
+| slider_box      | The slider button that you use to change the slider value                                       | [Slider Box](/json-ui/json-ui-documentation.html#slider-box) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                       |
+| edit_box        | Text field element. By default it's single-lined                                                | [Text Edit](/json-ui/json-ui-documentation.html#text-edit) <br> [Button](/json-ui/json-ui-documentation.html#button) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                       |
+| scroll_view     | Creates a scrolling panel element                                                               | [Scroll View](/json-ui/json-ui-documentation.html#scroll-view) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                     |
+| scrollbar_track | The scrollbar track                                                                             | [Input](/json-ui/json-ui-documentation.html#input) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout)                                                                                                                                                                                                                                                                                                          |
+| scrollbar_box   | The scrollbar "thumb"/button. The draggable scrolling handle. By default is oriented vertically | [Input](/json-ui/json-ui-documentation.html#input) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout)                                                                                                                                                                                                                                                                                                          |
+| factory         | A element generator                                                                             | [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout)                                                                                                                                                                                                                                                                                                                                                                  |
+| screen          | Screen element                                                                                  | [Screen](/json-ui/json-ui-documentation.html#screen) [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                                            |
+| custom          | Special renderer element that is created in the code because it's too complex for JSON UI       | [Custom Render](/json-ui/json-ui-documentation.html#custom-render) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                         |
+| selection_wheel |                                                                                                 | [Selection Wheel](/json-ui/json-ui-documentation.html#selection-wheel) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Sound](/json-ui/json-ui-documentation.html#sound) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                             |
+
+#### Legacy Element Types (No longer work)
+
+|      Name      |                       Description                        |                                                                                                                                                                                                                               Allowed Properties                                                                                                                                                                                                                               |
+| -------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| tab            | The way tabs were made before the addition of toggles    | [Tab](/json-ui/json-ui-documentation.html#tab-legacy) <br> [Button](/json-ui/json-ui-documentation.html#button) <br> [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Sound](/json-ui/json-ui-documentation.html#sound) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding) |
+| carousel_label |                                                          | [Carousel Text](/json-ui/json-ui-documentation.html#carousel-text-legacy) <br> [Text](/json-ui/json-ui-documentation.html#text) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                         |
+| grid_item      | A `panel` but specifically to be an item/child of a grid | [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                                                                                              |
+| scrollbar      |                                                          | [Input](/json-ui/json-ui-documentation.html#input) <br> [Focus](/json-ui/json-ui-documentation.html#focus) <br> [Control](/json-ui/json-ui-documentation.html#control) <br> [Layout](/json-ui/json-ui-documentation.html#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                              |
+
+## Properties
+
+### Control
+
+|       Property Name       |         Type         | Default Value |                                                                                            Description                                                                                             |
+| ------------------------- | :------------------: | :-----------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| visible                   |       boolean        |    `true`     | If the UI element should be visible                                                                                                                                                                |
+| enabled                   |       boolean        |    `true`     | If true and if the UI element or any of its children have the locked state then they will be in the locked                                                                                         |
+| layer                     |         int          |      `0`      | Z-Index/Layer (like zindex in CSS) relative to parent element. Higher layers will render above                                                                                                     |
+| alpha                     |        float         |     `1.0`     | Alpha/transparency of the element. It will only affect the UI element. Its children will be unaffected. If you want the alpha to apply for both the parent and children also use `propagate_alpha` |
+| propagate_alpha           |       boolean        |    `false`    | If `alpha` should not only apply to the parent if possible but also all its children                                                                                                               |
+| clips_children            |       boolean        |    `false`    | Cuts off visually and interactively everything beyond the bounderies of the UI element                                                                                                             |
+| allow_clipping            |       boolean        |    `true`     | If `clips_children` works in the UI element. Otherwise, it won't have any effect                                                                                                                   |
+| clip_offset               |    Vector [x, y]     |   `[0, 0]`    | Offset from the start of the clipping                                                                                                                                                              |
+| clip_state_change_event   |        string        |               |                                                                                                                                                                                                    |
+| enable_scissor_test       |       boolean        |               | [https://www.khronos.org/opengl/wiki/Scissor_Test](https://www.khronos.org/opengl/wiki/Scissor_Test)                                                                                               |
+| property_bag              |        object        |               | [Property bag](/json-ui/json-ui-documentation#property-bag) contains properties/variables that are more related with the data than the actually structure and look of the UI element               |
+| selected                  |       boolean        |               | If the text box is selected by default                                                                                                                                                             |
+| use_child_anchors         |       boolean        |    `false`    | Use the `anchor_from` and`anchor_to` of the child of the UI element                                                                                                                                |
+| controls                  |        array         |               | For adding children to the element                                                                                                                                                                 |
+| anims                     |       string[]       |               | Array of the animation names                                                                                                                                                                       |
+| disable_anim_fast_forward |       boolean        |               |                                                                                                                                                                                                    |
+| animation_reset_name      |        string        |               |                                                                                                                                                                                                    |
+| ignored                   |       boolean        |    `false`    | If the UI element should be ignored                                                                                                                                                                |
+| variables                 |   array or object    |               | A bunch of conditions that change the variables values                                                                                                                                             |
+| modifications             |        array         |               | Allows to modify the UI files of resource packs below (vanilla being the most bottom one)                                                                                                          |
+| grid_position             | Vector [row, column] |               | Position that the control will take inside the grid. This also allows to modify specific grid items of a hardcoded grid                                                                            |
+| collection_index          |         int          |               | Index that the control takes in the collection                                                                                                                                                     |
+
+#### Legacy (no longer works)
+
+| Property Name |   Type   | Default Value |                                                                                     Description                                                                                     |
+| ------------- | :------: | :-----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| z_order       |   int    |       0       | First version the the `layer` property                                                                                                                                              |
+| scroll_report | string[] |               | Array of the name of the controls to notify when content inside of the scroll panel changes                                                                                         |
+| alignment     |   enum   |               | Possible values: <br> `top_left` <br> `top_middle` <br> `top_left` <br> `left_middle` <br> `center` <br> `right_middle` <br> `bottom_left` <br> `bottom_middle` <br> `bottom_right` |
+
+### Layout
+
+|       Property Name        |          Type          |      Default Value       |                                                                                                                                                                                                                                                                                                                                                                                                                    Description                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------- | :--------------------: | :----------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| size                       | Vector [width, height] | `["default", "default"]` | Size of the UI element. <br> Possible values: <br> `"default"` (Default value which is `"100%"`) <br> `0` (Number of pixels) <br> `"0px"` (Number of pixels. It's the same as 0 but it's put inside a string with px at the end. It's used when you want to sum or subtract a percentage based value with a specific number of pixels. (e.g. `"75% + 12px"`)) <br> `"0%"` (Percentage of relative to the parent element) <br> `"0%c"` (Percentage of the total width/height of the element children) <br> `"0%cm"` (Percentage of the width/height of the biggest visible child of that element) <br> `"0%sm"` (Percentage of the width/height of the sibling element) <br> `"0%y"` (Percentage of the element height) <br> `"0%x"` (Percentage of the element width) <br> `"fill"` (Expands to the remaining width/height of the parent element) |
+| max_size                   | Vector [width, height] | `["default", "default"]` | Maximum size of the UI element can have                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| min_size                   | Vector [width, height] | `["default", "default"]` | Minimum size of the UI element can have                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| offset                     |     Vector [x, y]      |         `[0, 0]`         | Position of the UI element relative to the parent UI element. It's TopLeft based meaning the coordinates [0, 0] start at the top left of the screen. <br> `10`- pixels <br> `"10px"` - pixels <br> `"50%"` - Width/height of the parent element <br> `"50%x"` - Width of the element <br> `"50%y"` - Height of the element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| anchor_from                |          enum          |         `center`         | Anchor point in the parent element. <br> Possible values: <br> `top_left` <br> `top_middle` <br> `top_left` <br> `left_middle` <br> `center` <br> `right_middle` <br> `bottom_left` <br> `bottom_middle` <br> `bottom_right`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| anchor_to                  |          enum          |         `center`         | Anchor point in the element. <br> Possible values: <br> `top_left` <br> `top_middle` <br> `top_left` <br> `left_middle` <br> `center` <br> `right_middle` <br> `bottom_left` <br> `bottom_middle` <br> `bottom_right`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| inherit_max_sibling_width  |        boolean         |         `false`          | Use the maximum width of the sibling element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| inherit_max_sibling_height |        boolean         |         `false`          | Use the maximum height of the sibling element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| use_anchored_offset        |        boolean         |                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| contained                  |        boolean         |                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| draggable                  |        boolean         |         `false`          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| follows_cursor             |        boolean         |         `false`          | Follows the cursor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+
+### Data Binding
+
+| Property Name |                                           Type                                            | Default Value |                    Description                     |
+| ------------- | :---------------------------------------------------------------------------------------: | :-----------: | -------------------------------------------------- |
+| bindings      | Vector of [binding object](/json-ui/json-ui-documentation.html#data-binding-array-object) |               | Bind and work with hardcoded values in the element |
+
+
+#### Data Binding Array Object
+
+Data Binding allows to bind hardcoded values/variables to an element property.
+
+|       Property Name       |  Type   | Default Value |                                                                                Description                                                                                |
+| ------------------------- | :-----: | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ignored                   | boolean |    `false`    | If binding should be ignored                                                                                                                                              |
+| binding_type              |  enum   |               | Possible values: <br> `global` <br> `view` <br> `collection` <br> `collection_details` <br> `none`                                                                        |
+| binding_name              | string  |               | Stores the value of the data binding name or condition with it                                                                                                            |
+| binding_name_override     | string  |               | Name of the UI element property that will apply the stored value in `binding_name`                                                                                        |
+| binding_collection_name   | string  |               | Name of the collection of items to be used                                                                                                                                |
+| binding_collection_prefix | string  |               |                                                                                                                                                                           |
+| binding_condition         |  enum   |               | Condition for the data binding to happen. <br> Possible values: <br> `always` <br> `always_when_visible` <br> `visible` <br> `once` <br> `none` <br> `visibility_changed` |
+| source_control_name       | string  |               | Name of the UI element to observe its property values                                                                                                                     |
+| source_property_name      | string  |               | Store the value of the property value of the UI element refered in `source_control_name`                                                                                  |
+| target_property_name      | string  |               | The UI element property that the stored value in `source_property_name` will be applied to                                                                                |
+| resolve_sibling_scope     | boolean |               |                                                                                                                                                                           |
 
 ### Stack Panel
 
-`"type": "stack_panel"` is a `panel` that stacks children depending on `orientation` property value.
-
-Specific properties:
-
-| Property Name | Type    | Description                                  |
-| ------------- | ------- | -------------------------------------------- |
-| `orientation` | boolean | Possible values: `vertical` and `horizontal` |
-
-### Input Panel
-
-`"type": "input_panel"` is a `panel` that can detect input.
-
-Specific properties:
-
-| Property Name                        | Type    | Description        |
-| ------------------------------------ | ------- | ------------------ |
-| `modal`                              | boolean |                    |
-| `inline_modal`                       | boolean |                    |
-| `hover_enabled`                      | boolean |                    |
-| `prevent_touch_input`                | boolean |                    |
-| `gesture_tracking_button`            | string  | Button (action) id |
-| `always_handle_controller_direction` | boolean |                    |
+| Property Name | Type  | Default Value |                                                Description                                                 |
+| ------------- | :---: | :-----------: | ---------------------------------------------------------------------------------------------------------- |
+| orientation   | enum  |  `vertical`   | Direction the elements stack inside `stack_panel`. <br> Possible values: <br> `vertical` <br> `horizontal` |
 
 ### Grid
 
-`"type": "grid"` is an element that draws a grid of elements.
+|       Property Name       |          Type          | Default Value |                                                             Description                                                             |
+| ------------------------- | :--------------------: | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| grid_dimensions           | Vector [rows, columns] |               | Number of columns and rows the grid has                                                                                             |
+| maximum_grid_items        |          int           |               | Maximum number of items the grid will generate                                                                                      |
+| grid_dimension_binding    |         string         |               | Binding name for grid dimensions                                                                                                    |
+| grid_rescaling_type       |          enum          |               | Grid rescaling orientation. <br> Possible values: <br> `vertical` <br> `horizontal` <br> `none`                                     |
+| grid_fill_direction       |          enum          |               | Possible values: <br> `vertical` <br> `horizontal` <br> `none`                                                                      |
+| grid_item_template        |         string         |               | An element capable of handling collections <br> (e.g. `"common.container_item"`, `"container_items"`, `"inventory_items"` and etc.) |
+| precached_grid_item_count |          int           |               |                                                                                                                                     |
 
-Specific properties:
+### Text
 
-| Property Name            |  Type  | Description                                                                                                                         |
-| ------------------------ | :----: | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `grid_dimensions`        | array  | Number of rows and columns in form of `[x_size, y_size]`                                                                            |
-| `maximum_grid_items`     | number | Numbers of items the grid has. An alternative to `grid_dimensions`                                                                  |
-| `grid_rescaling_type`    | string | Grid rescaling orientation <br> Possible values: `"vertical"` and `"horizontal"`                                                    |
-| `grid_fill_direction`    | string | Possible values: `"vertical"` and `"horizontal"`                                                                                    |
-| `grid_item_template`     | string | An element capable of handling collections <br> (e.g. `"common.container_item"`, `"container_items"`, `"inventory_items"` and etc.) |
-| `grid_dimension_binding` | string | Binding name for grid dimensions                                                                                                    |
+|      Property Name      |       Type       |   Default Value   |                                                      Description                                                      |
+| ----------------------- | :--------------: | :---------------: | --------------------------------------------------------------------------------------------------------------------- |
+| text                    |      string      |                   | Text content                                                                                                          |
+| color                   | Vector [r, g, b] | `[1.0, 1.0, 1.0]` | Text color. RGB value from 0.0 to 1.0                                                                                                          |
+| locked_color            | Vector [r, g, b] |                   | Text color when a parent has `enabled: false`                                                                         |
+| shadow                  |     boolean      |      `false`      | Text shadow                                                                                                           |
+| hide_hyphen             |     boolean      |      `false`      | Hide hyphen caused by word breaking                                                                                   |
+| notify_on_ellipses      |     string[]     |                   | Array of names of the controls to notify when text gets or loses ellipses                                             |
+| enable_profanity_filter |     boolean      |      `false`      | If "bad" words should be censored                                                                                     |
+| locked_alpha            |      float       |                   | Alpha/transparency of label when a parent has `enabled: false`                                                        |
+| font_size               |       enum       |     `normal`      | Size of the text. <br> Possible values: <br> `small` <br> `normal` <br> `large` <br> `extra_large`                    |
+| font_scale_factor       |      float       |       `1.0`       | Scale of the text                                                                                                     |
+| localize                |     boolean      |      `false`      | If ```text``` should be able to be translated                                                                         |
+| line_padding            |      number      |                   | Space between lines                                                                                                   |
+| font_type               |       enum       |     `default`     | Font of the text. <br> Possible values: <br> `default` <br> `rune` <br> `unicode` <br> `smooth` <br> `MinecraftTen` <br> or any other custom font                                                                                                      |
+| backup_font_type        |       enum       |     `default`     | Font used if `font_type` didn't work                                                                                  |
+| text_alignment          |       enum       |                   | Text alignment direction. If it's not defined it will adjust automatically based on `anchor_from` and ```anchor_to``` |
 
-### Label
+#### Legacy (no longer works)
 
-`"type": "label"` is a text element. Its properties are:
+| Property Name |  Type   | Default Value |                             Description                             |
+| ------------- | :-----: | :-----------: | ------------------------------------------------------------------- |
+| wrap          | boolean |     `false`     | Break text into lines if text is bigger than width of the element |
+| clip          | boolean |     `false`     |                                                                     |
 
-Specific properties:
-
-| Property Name             |      Type       | Description                                                                                                                                             |
-| ------------------------- | :-------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `text`                    |     string      | Text to display                                                                                                                                         |
-| `color`                   | string or array | Text color, an array of R,G,B with values from 0.0 to 1.0 <br> (e.g. `[0.0, 0.6, 1.0]`)                                                                 |
-| `locked_color`            | string or array | Same as `color`. It will be applied instead of `color` if the parent element is locked                                                                  |
-| `text_alignment`          |     string      | Text alignment <br> Possible values: `"left"`, `"right"` and `"center".`                                                                                |
-| `line_padding`            |     number      | Space in pixels between lines                                                                                                                           |
-| `font_type`               |     string      | Possible values: `default`, `smooth`, `rune` (enchantment font), `MinecraftSeven`, `MinecraftTen`, `MinecraftTenEmoticon` or a custom font type/family. |
-| `font_size`               |     string      | Possible values: `small`, `normal`, `large` and `extra-large`                                                                                           |
-| `font_scale_factor`       |     number      | It scales the size of the text. It's better to use this rather than `font_size`                                                                         |
-| `shadow`                  |     boolean     | Adds a shadow to text                                                                                                                                   |
-| `localize`                |     boolean     | Translate the text using the \*\_\*.lang files                                                                                                          |
-| `enable_profanity_filter` |     boolean     | Filters bad words included on the `profanity_filter.wlist` file                                                                                         |
-| `hide_hyphen`             |     boolean     | Hide all hyphens in the text                                                                                                                            |
-| `notify_on_ellipses`      |      array      | Name of the objects it will receive #using_ellipses when the text has '...'                                                                             |
+<br>
 
 Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
 
@@ -99,355 +192,96 @@ Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
 }
 ```
 
-### Image
+### Sprite
 
-`"type": "image"` is a textured element. Its properties are:
-
-Specific properties:
-
-| Property Name          |       Type        | Description                                                                                                                                                                          |
-| ---------------------- | :---------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `texture`              |      string       | Required, a path string <br> (e.g. `"textures/ui/title"`)                                                                                                                            |
-| `tiled`                | boolean or string | Tiles the image. Can be a boolean or a string with possible values being `x` and `y` (which orientation it tiles)                                                                    |
-| `tiled_scale`          |       array       | Sets the scale of the tiles (if tiled property is true)                                                                                                                              |
-| `bilinear`             |      boolean      | Applies bilinear filtering to the image                                                                                                                                              |
-| `grayscale`            |      boolean      | Makes image black and white                                                                                                                                                          |
-| `fill`                 |      boolean      |                                                                                                                                                                                      |
-| `color`                |  array or string  | Same as the `color` from `label` type. Only works if the texture is fully white or black                                                                                             |
-| `$fit_to_width`        |      boolean      |                                                                                                                                                                                      |
-| `keep_ratio`           |      boolean      | Keep the image ratio                                                                                                                                                                 |
-| `clip_direction`       |      string       | When `#clip_ratio` is used, tells in which direction will clip go (`down` will tell to clip from the top to the bottom) <br> Possible values: `"up"`,`"down"`,`"left"` and `"right"` |
-| `uv`                   |       array       | `[x_offset, y_offset]`                                                                                                                                                               |
-| `uv_size`              |       array       | `[width, height]`                                                                                                                                                                    |
-| `nineslice_size`       |  number or array  | `[x, y]` or `[x1, y1, x2, y2]`                                                                                                                                                       |
-| `base_size`            |       array       | `[base_width, base_height]`                                                                                                                                                          |
-| `zip_folder`           |      string       | Used with hardcoded paths                                                                                                                                                            |
-| `texture_file_system`  |      string       | Used with hardcoded paths                                                                                                                                                            |
-| `force_texture_reload` |      boolean      | Reload image when the texture path is changed                                                                                                                                        |
+|        Property Name        |                     Type                      | Default Value |                                                                                       Description                                                                                        |
+| --------------------------- | :-------------------------------------------: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| texture                     |                    string                     |               | Image path starting from pack root. (e.g. `"textures/ui/White"`)                                                                                                                         |
+| allow_debug_missing_texture |                    boolean                    |    `true`     | Display the missing_texture if the texture is not found                                                                                                                                  |
+| uv                          |                 Vector [u, v]                 |               | Start position of the texture mapping                                                                                                                                                    |
+| uv_size                     |            Vector [width, height]             |               | Size of the texture mapping                                                                                                                                                              |
+| texture_file_system         |                    string                     |               |                                                                                                                                                                                          |
+| nineslice_size              | int, Vector [x, y] or Vector [x0, y0, x1, y1] |               | 9-slice. A method that divides an texture into 9 pieces. When resized the corners will stay in place and the rest will stretch                                                           |
+| tiled                       |                boolean or enum                |               | If the texture will tile when the size of the UI element is bigger than the texture size. <br> Possible values: <br> `true`/`false` <br> `x` <br> `y`                                    |
+| tiled_scale                 |                Vector [sX, sY]                |    `false`    | Scale of the tile textures                                                                                                                                                               |
+| clip_direction              |                     enum                      |               | Start point position for the `clip_ratio`. If `down`, the image will begin to appear from the bottom. <br> Possible values: <br> `left` <br> `right` <br> `up` <br> `down` <br> `center` |
+| clip_ratio                  |                     float                     |               | How much to clip. From 0.0 to 1.0                                                                                                                                                        |
+| clip_pixelperfect           |                    boolean                    |               | If the clip should try to be the most pixel accurate possible                                                                                                                            |
+| keep_ratio                  |                    boolean                    |    `false`    | Keep ratio when resizing image                                                                                                                                                           |
+| bilinear                    |                    boolean                    |    `false`    | Use the bilinear function when resizing the image                                                                                                                                        |
+| fill                        |                    boolean                    |    `false`    | Scratch the image to the size                                                                                                                                                            |
+| $fit_to_width               |                    boolean                    |               |                                                                                                                                                                                          |
+| zip_folder                  |                    string                     |               |                                                                                                                                                                                          |
+| grayscale                   |                    boolean                    |    `false`    | Render image in black and white                                                                                                                                                          |
+| force_texture_reload        |                    boolean                    |               | Reload image when the texture path is changed                                                                                                                                            |
+| base_size                   |            Vector [width, height]             |               |                                                                                                                                                                                          |
 
 To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with binding condition `"always"`. Progress arrow and fuel images in furnace UI work like this.
 
-### Button
-
-`"type": "button"` is a button and it can have 4 states (default, hover, pressed and locked). It's recommended to use ready templates if you're not very experienced with them.
-
-Specific properties:
-
-| Property Name     |  Type  | Description                                                                                                 |
-| ----------------- | :----: | ----------------------------------------------------------------------------------------------------------- |
-| `default_control` | string | Name of the child that will be displayed only in default state.                                             |
-| `hover_control`   | string | Name of the child that will be displayed only in hover state.                                               |
-| `pressed_control` | string | Name of the child that will be displayed only in pressed state.                                             |
-| `locked_control`  | string | Name of the child that will be displayed only in locked state.                                              |
-| `sound_name`      | string | Name of the sound defined in the `sounds/sound_definitions.json` file that plays when the button is clicked |
-| `sound_volume`    | number |                                                                                                             |
-| `sound_pitch`     | number |                                                                                                             |
-
-### Toggle
-
-`"type": "toggle"` is a toggle and it has 2 states (checked or unchecked). Each state has a hover and locked varient. It's recommended to use ready templates if you're not very experienced with them.
-Their toggle state can be binded to something by using `"#toggle_state"`.
-
-Specific properties:
-
-| Property Name                    |  Type   | Description                                                                                                 |
-| -------------------------------- | :-----: | ----------------------------------------------------------------------------------------------------------- |
-| `toggle_name`                    | string  |                                                                                                             |
-| `toggle_default_state`           | boolean |                                                                                                             |
-| `radio_toggle_group`             | boolean |                                                                                                             |
-| `toggle_group_forced_index`      | number  |                                                                                                             |
-| `toggle_group_default_selected`  | number  | Index of the default toggle of the its group                                                                |
-| `toggle_grid_collection_name`    | string  | Name of the collection the toggle belongs to                                                                |
-| `enable_directional_toggling`    | boolean |                                                                                                             |
-| `toggle_on_button`               | string  | Toggle (action) id                                                                                          |
-| `toggle_off_button`              | string  | Toggle (action) id                                                                                          |
-| `reset_on_focus_lost`            | boolean |                                                                                                             |
-| `checked_control`                | string  | Name of the child that will be displayed only in checked state                                              |
-| `unchecked_control`              | string  | Name of the child that will be displayed only in unchecked state                                            |
-| `checked_hover_control`          | string  | Name of the child that will be displayed only in checked and hovered state                                  |
-| `unchecked_hover_control`        | string  | Name of the child that will be displayed only in unchecked and hovered state                                |
-| `checked_locked_control`         | string  | Name of the child that will be displayed only in locked state                                               |
-| `unchecked_locked_control`       | string  | Name of the child that will be displayed only in locked state                                               |
-| `checked_locked_hover_control`   | string  | Does not work                                                                                               |
-| `unchecked_locked_hover_control` | string  | Does not work                                                                                               |
-| `sound_name`                     | string  | Name of the sound defined in the `sounds/sound_definitions.json` file that plays when the toggle is clicked |
-| `sound_volume`                   | number  |                                                                                                             |
-| `sound_pitch`                    | number  |                                                                                                             |
-
-Specific TTS:
-
-| Property Name    |  Type  | Description |
-| ---------------- | :----: | ----------- |
-| `tts_toggle_on`  | string |             |
-| `tts_toggle_off` | string |             |
-
-Specific property bag:
-
-| Property Name   |  Type   | Description |
-| --------------- | :-----: | ----------- |
-| `#toggle_state` | boolean |             |
-
-### Slider
-
-`"type": "slider"` is a slider.
-
-Specific properties:
-
-| Property Name                  |  Type   | Description                                                                     |
-| ------------------------------ | :-----: | ------------------------------------------------------------------------------- |
-| `slider_name`                  | string  |                                                                                 |
-| `slider_direction`             | string  | The orientation of the slider <br> Possible values: `vertical` and `horizontal` |
-| `slider_steps`                 | number  | Number of possible values                                                       |
-| `slider_track_button`          | string  | Button (action) id                                                              |
-| `slider_small_decrease_button` | string  | Button (action) id                                                              |
-| `slider_small_increase_button` | string  | Button (action) id                                                              |
-| `slider_selected_button`       | string  | Button (action) id                                                              |
-| `slider_deselected_button`     | string  | Button (action) id                                                              |
-| `slider_collection_name`       | string  | Name of the collection the slider belongs to                                    |
-| `default_control`              | string  | Name of the child that will be displayed only in default state                  |
-| `hover_control`                | string  | Name of the child that will be displayed only in hover state                    |
-| `background_control`           | string  | Name of the object used as the slider background only in default state          |
-| `background_hover_control`     | string  | Name of the object used as the slide background only in hover state             |
-| `progress_control`             | string  | Name of the object used as the progress background only in default state        |
-| `progress_hover_control`       | string  | Name of the object used as the progress background only in hover state          |
-| `slider_box_control`           | string  | Name of the child that will be used as the scroll "thumb"/button                |
-| `slider_select_on_hover`       | boolean | Focus slider when it's hovered                                                  |
-
-Specific TTS:
-
-| Property Name       |  Type  | Description |
-| ------------------- | :----: | ----------- |
-| `tts_value_changed` | string |             |
-
-Specific property bag:
-
-| Property Name   |  Type  | Description |
-| --------------- | :----: | ----------- |
-| `#slider_steps` | number |             |
-| `#slider_value` | number |             |
-
-Specific factory name and control ids:
-
-| Factory Name          | Control IDs                                                                                  |
-| --------------------- | -------------------------------------------------------------------------------------------- |
-| `slider_step_factory` | slider_step <br> slider_step_hover <br> slider_step_progress <br> slider_step_progress_hover |
-
-### Slider Box
-
-`"type": "slider_box"` is the slider button that you use to change the slider value.
-
-Specific properties:
-
-| Property Name     |  Type  | Description                                                    |
-| ----------------- | :----: | -------------------------------------------------------------- |
-| `default_control` | string | Name of the child that will be displayed only in default state |
-| `hover_control`   | string | Name of the child that will be displayed only in hover state   |
-| `indent_control`  | string | Name of the child that will be displayed only in indent state  |
-| `locked_control`  | string | Name of the child that will be displayed only in locked state  |
-
-### Edit Box
-
-`"type": "edit_box"` is a text field element. By default it's single-lined.
-
-Specific properties:
-
-| Property Name                        |  Type   | Description                                                          |
-| ------------------------------------ | :-----: | -------------------------------------------------------------------- |
-| `text_box_name`                      | string  |                                                                      |
-| `text_edit_box_grid_collection_name` | string  | Name of the collection the `edit_box` belongs to                     |
-| `text_type`                          | string  | Type of characters that the user is allowed to type in th text field |
-| `max_length`                         | number  | Max number of characters allow in the text field                     |
-| `enabled_newline`                    | boolean | Allows multiline text                                                |
-| `default_control`                    | string  | Name of the child that will be displayed only in default state       |
-| `hover_control`                      | string  | Name of the child that will be displayed only in hover state         |
-| `pressed_control`                    | string  | Name of the child that will be displayed only in pressed state       |
-| `locked_control`                     | string  | Name of the child that will be displayed only in locked state        |
-| `text_control`                       | string  | Name of the child that will be used for display the text             |
-| `place_holder_control`               | string  | Name of the child that will be used for display the placeholder text |
-| `virtual_keyboard_buffer_control`    | string  |                                                                      |
-
-### Scroll View
-
-`"type": "scroll_view"` creates a scrolling panel element.
-
-Specific properties:
-
-| Property Name                |  Type   | Description                                                  |
-| ---------------------------- | :-----: | ------------------------------------------------------------ |
-| `scroll_speed`               | number  | Scrolling speed                                              |
-| `always_handle_scrolling`    | boolean |                                                              |
-| `jump_to_bottom_on_update`   | boolean |                                                              |
-| `touch_mode`                 | boolean |                                                              |
-| `scrollbar_track_button`     | string  | Button (action) ID                                           |
-| `scrollbar_touch_button`     | string  | Button (action) ID                                           |
-| `scrollbar_track`            | string  | Name of the child to be used as the scrollbar track          |
-| `scrollbar_box`              | string  | Name of the child to be used as the scrollbar "thumb"/button |
-| `scroll_content`             | string  | Name of the child that will have the scrolling panel content |
-| `scroll_view_port`           | string  | Name of the child to be used as the scrolling panel viewport |
-| `scroll_box_and_track_panel` | string  | Name of the child that contains the scroll bar and track     |
-
-### Scroll Track
-
-`"type": "scroll_track"` is the scrollbar track.
-
-### Scrollbar Box
-
-`"type": "scrollbar_box"` is the scrollbar "thumb"/button. The draggable scrolling handle. By default is oriented vertically.
-
-Specific properties:
-
-| Property Name |  Type   | Description                                                             |
-| ------------- | :-----: | ----------------------------------------------------------------------- |
-| `draggable`   | string  | Scrolling orientation <br> Possible values: `vertical` and `horizontal` |
-| `contained`   | boolean |                                                                         |
-
-### Dropdown
-
-`"type": "dropdown"` is a toggle for dropdown purposes.
-
-Specific properties (includes toggle properties):
-
-| Property Name              |  Type  | Description |
-| -------------------------- | :----: | ----------- |
-| `dropdown_name`            | string |             |
-| `dropdown_content_control` | string |             |
-| `dropdown_area`            | string |             |
-
-### Factory
-
-`"type": "factory"`
-
-Specific properties:
-
--   `control_ids` - `{}`
-
-### Custom
-
-`"type": "custom"`
-
-Specific properties:
-
-| Property Name |  Type  | Description                    |
-| ------------- | :----: | ------------------------------ |
-| `renderer`    | string | Name of the hardcoded renderer |
-
-Renderers (values for `renderer` property):
-
-| Renderer Name              | Description                                                                                                    |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `flying_item_renderer`     | The flying item when you change an item from a slot to another                                                 |
-| `inventory_item_renderer`  | Renders an item icon. It only work in screens when ingame                                                      |
-| `credits_renderer`         | The credits and end poem                                                                                       |
-| `vignette_renderer`        | A vignette                                                                                                     |
-| `name_tag_renderer`        | It's something like the playername above the player head or the name above animals when used a nametag on them |
-| `paper_doll_renderer`      | A skin model                                                                                                   |
-| `debug_screen_renderer`    | The debug text that appears on the beta versions                                                               |
-| `enchanting_book_renderer` | The enchantment table book. It opens when there's an item to be enchanted                                      |
-| `gradient_renderer`        | Draws a gradient                                                                                               |
-| `live_horse_renderer`      | The horse/donkey/... model                                                                                     |
-| `live_player_renderer`     | The player model                                                                                               |
-| `hud_player_renderer`      | The player model that imitates what the player is doing                                                        |
-| `hotbar_renderer`          | Gets the hotbar slot image for each slot                                                                       |
-| `hotbar_cooldown_renderer` | Draws the item cooldown                                                                                        |
-| `heart_renderer`           | Draws the player                                                                                               |
-| `horse_heart_renderer`     | Draws the horse/donkey/... health                                                                              |
-| `armor_renderer`           | Draws the player armor                                                                                         |
-| `horse_jump_renderer`      | Draws the horse jumping progress bar                                                                           |
-| `hunger_renderer`          | Draws the player hunger                                                                                        |
-| `bubbles_renderer`         | Draws the respiration bubbles                                                                                  |
-| `mob_effects_renderer`     | Draws the effects that are applied to the player                                                               |
-| `cursor_renderer`          | Draws the crosshair in the center of the screen                                                                |
-| `progress_indicator`       | Not used                                                                                                       |
-| `camera_renderer`          | Used for the camera item                                                                                       |
-| `web_view_renderer`        | Shows a website                                                                                                |
-| `banner_pattern_renderer`  | Renders a banner                                                                                               |
-| `actor_portrait_renderer`  | Draws an portrait                                                                                              |
-| `trial_time_renderer`      | In the trial version of the game it renders the time left to be able to use the world                          |
-| `progress_bar_renderer`    | Draws a progress bar. It has more than one type                                                                |
-| `3d_structure_renderer`    | Renders the structure block structure                                                                          |
-| `splash_text_renderer`     | Gets and renders a random splash text from the `splashes.json` file                                            |
-| `hover_text_renderer`      | Draws a tooltip                                                                                                |
-| `ui_holo_cursor`           |                                                                                                                |
-| `panorama_renderer`        | It's not the panoramas that appear behind the menus. It's the panorama of the worlds on the store.             |
-
-Specific properties, property bag, etc depends of the renderer being used.
-
-### Screen
-
-`screen`
-
-Specific properties:
-
-| Property Name              |  Type   | Description                                                               |
-| -------------------------- | :-----: | ------------------------------------------------------------------------- |
-| `send_telemetry`           | boolean |                                                                           |
-| `screen_not_flushable`     | boolean |                                                                           |
-| `is_modal`                 | boolean | It's a screen modal                                                       |
-| `is_showing_menu`          | boolean |                                                                           |
-| `render_game_behind`       | boolean | Doesn't prevent screen below of being able to receive input from the user |
-| `low_frequency_rendering`  | boolean | Uses less memory to render the screen                                     |
-| `should_steal_mouse`       | boolean | Removes the mouse pointer/cursor                                          |
-| `render_only_when_topmost` | boolean | If false it will always render/draw the screen below all of others        |
-| `screen_draws_last`        | boolean | It's the last screen to be drawn/rendered                                 |
-| `force_render_below`       | boolean | Renders previous screen below current screen                              |
-| `always_accepts_input`     | boolean | Accepts input from the user                                               |
-| `close_on_player_hurt`     | boolean | Closes the screen if the player is hurted                                 |
-| `cache_screen`             | boolean |                                                                           |                                                                       
-
-## Properties
-
-### Common Properties
-
-| Property Name | Type | Description |
-|---|---|---|
-| `size` | array | Width and height of the element `[width, height]`.   Possible values:   `default` (Default value)   `0` (Number of pixels)   `"0px"` (Number of pixels. It's the same as `0` but it's put inside a string with `px` at the end. It's used when you want to sum a percentage based value with a specific number of pixels. (e.g. `"75% + 12px"`))   `"0%"` (Percentage of relative to the parent element)   `"0%c"` (Percentage of the total width/height of the element children)   `"0%cm"` (Percentage of the width/height of the biggest child of that element)   `"0%sm"` (Percentage of the width/height of the sibling element)   `"0%y"` (Percentage of the element height)   `"0%x"` (Percentage of the element width)   `"fill"` (Expands to the size of the parent element) |
-| `max_size` | array | Max width and height for the element |
-| `min_size` | array | Min width and height the element can have |
-| `anchor_from` and `anchor_to` | string | Position origin of the element. Possible values: `top_left`, `top_middle`, `top_right`, `left_middle`, `center` (default value), `right_middle`, `bottom_left`, `bottom_middle` and `bottom_right` |
-| `offset` | array | How far in pixels or percentage from the position origin the element is (`[x_offset, y_offset]`). Possible values include `0`, `"0px"`, `"0%"`, `"0%c"`, `"100%cm"`, `"0%y"` and `"0%x` |
-| `clips_children` | boolean | Hides everything inside that is outside of the width and height of the element |
-| `allow_clipping` | boolean | Allows to `clips_children` to clip the element. if false `clips_children` won't affect the element |
-| `layer` | number | (positive or negative). the layer (like `zindex` in CSS) of the element relative to it's parent and so on. An element with a greater layer will be in front of an element with a lower layer. |
-| `visible` | boolean | If false, element takes place, but isn't rendered (unlike ignored). It's by default true so you don't have to mention it every time you create a new element |
-| `ignored` | boolean | Ignores element like if it isn't there (unlike not visible) |
-| `enabled` | boolean | If false it will disable all input elements inside of it. |
-| `alpha` | number | From 0.0 to 1.0. Opacity of the image or text. If it's defined in any other type it won't affect any image/text child inside of it. For that you need to enable `propagate_alpha` |
-| `locked_alpha` | number | same as `alpha`. It will be applied instead of `alpha` if the parent element is locked |
-| `propagate_alpha` | boolean | Propagate the alpha property to any image or text child |
-| `disable_anim_fast_forward` | boolean |  |
-| `anims` | array | Name of the animations that will apply to the element |
-| `animation_reset_name` | string |  |
-| `variables` | array or object | Have conditions that change the variables values. |
-| `property_bag` | object | Create/edit hardcoded variables e.g `#custom`. The values are not automatically shared with child controls unless referenced through `bindings`|
-| `controls` | array | To add children to the element |
-| `bindings` | array | Bind and work with hardcoded values in the element |
-
-
-### Focus Properties
-
-| Property Name                  |  Type   | Description                                                                                                                  |
-| ------------------------------ | :-----: | ---------------------------------------------------------------------------------------------------------------------------- |
-| `focus_identifier`             | string  |                                                                                                                              |
-| `focus_enabled`                | boolean |                                                                                                                              |
-| `focus_wrap_enabled`           | boolean |                                                                                                                              |
-| `focus_magnet_enabled`         | boolean |                                                                                                                              |
-| `default_focus_precedence`     | number  |                                                                                                                              |
-| `focus_container`              | boolean |                                                                                                                              |
-| `use_last_focus`               | boolean |                                                                                                                              |
-| `focus_change_up`              | string  | Possible values: `FOCUS_OVERRIDE_STOP` or the `focus_identifier` of the object you want to focus when on `button.menu_up`    |
-| `focus_change_down`            | string  | Possible values: `FOCUS_OVERRIDE_STOP` or the `focus_identifier` of the object you want to focus when on `button.menu_down`  |
-| `focus_change_left`            | string  | Possible values: `FOCUS_OVERRIDE_STOP` or the `focus_identifier` of the object you want to focus when on `button.menu_left`  |
-| `focus_change_right`           | string  | Possible values: `FOCUS_OVERRIDE_STOP` or the `focus_identifier` of the object you want to focus when on `button.menu_right` |
-| `focus_nagivation_mode_up`     | string  | Possible values: `none`, `stop`, `custom` and `contained`                                                                    |
-| `focus_nagivation_mode_down`   | string  | Possible values: `none`, `stop`, `custom` and `contained`                                                                    |
-| `focus_nagivation_mode_left`   | string  | Possible values: `none`, `stop`, `custom` and `contained`                                                                    |
-| `focus_nagivation_mode_right`  | string  | Possible values: `none`, `stop`, `custom` and `contained`                                                                    |
-| `focus_container_custom_up`    |  array  |                                                                                                                              |
-| `focus_container_custom_down`  |  array  |                                                                                                                              |
-| `focus_container_custom_left`  |  array  |                                                                                                                              |
-| `focus_container_custom_right` |  array  |                                                                                                                              |
-
-For `focus_container_custom_*`
+### Input
+
+|           Property Name            |                                            Type                                             | Default Value | Description |
+| ---------------------------------- | :-----------------------------------------------------------------------------------------: | :-----------: | ----------- |
+| button_mappings                    | Vector of [mapping object](/json-ui/json-ui-documentation.html#button-mapping-array-object) |               |             |
+| modal                              |                                           boolean                                           |               |             |
+| inline_modal                       |                                           boolean                                           |               |             |
+| always_listen_to_input             |                                           boolean                                           |               |             |
+| always_handle_pointer              |                                           boolean                                           |               |             |
+| always_handle_controller_direction |                                           boolean                                           |               |             |
+| hover_enabled                      |                                           boolean                                           |               |             |
+| prevent_touch_input                |                                           boolean                                           |               |             |
+| consume_event                      |                                           boolean                                           |               |             |
+| consume_hover_events               |                                           boolean                                           |               |             |
+| gesture_tracking_button            |                                           string                                            |               |             |
+
+#### Button Mapping Array Object
+
+|          Property Name           |  Type   | Default Value |                                    Description                                     |
+| -------------------------------- | :-----: | :-----------: | ---------------------------------------------------------------------------------- |
+| ignored                          | boolean |    `false`    | If mapping should be ignored                                                       |
+| from_button_id                   | string  |               | ID of the action that fires the event                                              |
+| to_button_id                     | string  |               | ID of the action to be executed when event is fired                                |
+| mapping_type                     |  enum   |               | Possible values: <br> `global` <br> `pressed` <br> `double_pressed` <br> `focused` |
+| scope                            |  enum   |               | Possible values: <br> `view` <br> `controller`                                     |
+| input_mode_condition             |  enum   |               | Possible values: <br> `not_gaze` <br> `not_gamepad` <br> `gamepad_and_not_gaze`    |
+| ignore_input_scope               | boolean |               |                                                                                    |
+| consume_event                    | boolean |               |                                                                                    |
+| handle_select                    | boolean |               |                                                                                    |
+| handle_deselect                  | boolean |               |                                                                                    |
+| button_up_right_of_first_refusal | boolean |               |                                                                                    |
+
+### Focus
+
+|        Property Name         |                                                     Type                                                      | Default Value |                                                                                           Description                                                                                           |
+| ---------------------------- | :-----------------------------------------------------------------------------------------------------------: | :-----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| default_focus_precedence     |                                                      int                                                      |               |                                                                                                                                                                                                 |
+| focus_enabled                |                                                    boolean                                                    |               | If the arrow keys or controller can focus the element                                                                                                                                           |
+| focus_wrap_enabled           |                                                    boolean                                                    |               |                                                                                                                                                                                                 |
+| focus_magnet_enabled         |                                                    boolean                                                    |               |                                                                                                                                                                                                 |
+| focus_identifier             |                                                    string                                                     |               | Focus identifier for this element                                                                                                                                                               |
+| focus_change_down            |                                                    string                                                     |               | Identifier (`focus_identifier`) of the focusable element that will recieve focus when on button.menu_down. If you want to prevent the focus to escape from the bottom use `FOCUS_OVERRIDE_STOP` |
+| focus_change_up              |                                                    string                                                     |               | Identifier (`focus_identifier`) of the focusable element that will recieve focus when on button.menu_up. If you want to prevent the focus to escape from the top use `FOCUS_OVERRIDE_STOP`      |
+| focus_change_left            |                                                    string                                                     |               | Identifier (`focus_identifier`) of the focusable element that will recieve focus when on button.menu_left. If you want to prevent the focus to escape from the left use `FOCUS_OVERRIDE_STOP`   |
+| focus_change_right           |                                                    string                                                     |               | Identifier (`focus_identifier`) of the focusable element that will recieve focus when on button.menu_right. If you want to prevent the focus to escape from the right use `FOCUS_OVERRIDE_STOP` |
+| focus_mapping                |                                                     array                                                     |               |                                                                                                                                                                                                 |
+| focus_container              |                                                    boolean                                                    |               |                                                                                                                                                                                                 |
+| use_last_focus               |                                                    boolean                                                    |               |                                                                                                                                                                                                 |
+| focus_navigation_mode_left   |                                                     enum                                                      |               | Possible values: `none` <br> `stop` <br> `custom` <br> `contained`                                                                                                                              |
+| focus_navigation_mode_right  |                                                     enum                                                      |               | Possible values: `none` <br> `stop` <br> `custom` <br> `contained`                                                                                                                              |
+| focus_navigation_mode_down   |                                                     enum                                                      |               | Possible values: `none` <br> `stop` <br> `custom` <br> `contained`                                                                                                                              |
+| focus_navigation_mode_up     |                                                     enum                                                      |               | Possible values: `none` <br> `stop` <br> `custom` <br> `contained`                                                                                                                              |
+| focus_container_custom_left  | Vector of [focus container custom object](/json-ui/json-ui-documentation#focus-container-custom-array-object) |               |                                                                                                                                                                                                 |
+| focus_container_custom_right | Vector of [focus container custom object](/json-ui/json-ui-documentation#focus-container-custom-array-object) |               |                                                                                                                                                                                                 |
+| focus_container_custom_down  | Vector of [focus container custom object](/json-ui/json-ui-documentation#focus-container-custom-array-object) |               |                                                                                                                                                                                                 |
+| focus_container_custom_up    | Vector of [focus container custom object](/json-ui/json-ui-documentation#focus-container-custom-array-object) |               |                                                                                                                                                                                                 |
+
+
+#### Focus Container Custom Array Object
+
+|       Property Name        |  Type  |                                                          Description                                                           |
+| -------------------------- | :----: | ------------------------------------------------------------------------------------------------------------------------------ |
+| other_focus_container_name | string | Name of the UI control that will receive focus when on button.menu_left, button.menu_right, button.menu_up or button.menu_down |
+| focus_id_inside            | string | Identifier (`focus_identifier`) of the focusable child control of the `other_focus_container_name` that will recieve the focus |
 
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 
@@ -475,56 +309,350 @@ For `focus_container_custom_*`
 ...
 ```
 
-### TTS Properties
+### Button
 
-| Property Name                     |  Type   | Description |
-| --------------------------------- | :-----: | ----------- |
-| `tts_name`                        | string  |             |
-| `tts_control_header`              | string  |             |
-| `tts_section_header`              | string  |             |
-| `tts_control_type_order_priority` | number  |             |
-| `tts_index_priority`              | number  |             |
-| `tts_override_control_value`      | string  |             |
-| `tts_ignore_count`                | boolean |             |
-| `tts_inherit_siblings`            | boolean |             |
+|  Property Name  |  Type  | Default Value |                                Description                                 |
+| --------------- | :----: | :-----------: | -------------------------------------------------------------------------- |
+| default_control | string |               | Name of the child control that will be displayed only in the default state |
+| hover_control   | string |               | Name of the child control that will be displayed only in the hover state   |
+| pressed_control | string |               | Name of the child control that will be displayed only in the pressed state |
+| locked_control  | string |               | Name of the child control that will be displayed only in the locked state  |
 
-### Bindings Property
+### Toggle
 
-Binding allows to bind hardcoded values/variables to an element property.
+|         Property Name          |  Type   | Default Value |                                        Description                                        |
+| ------------------------------ | :-----: | :-----------: | ----------------------------------------------------------------------------------------- |
+| radio_toggle_group             | boolean |               |                                                                                           |
+| toggle_name                    | string  |               | Identifier for the toggle group it belongs to. It can be a custom one.                    |
+| toggle_default_state           | boolean |               |                                                                                           |
+| toggle_group_forced_index      |   int   |               | Index of the toggle in its group                                                          |
+| toggle_group_default_selected  |   int   |               | Index of the default toggle of the its group                                              |
+| reset_on_focus_lost            | boolean |               |                                                                                           |
+| toggle_on_hover                | string  |               |                                                                                           |
+| toggle_on_button               | string  |               |                                                                                           |
+| toggle_off_button              | string  |               |                                                                                           |
+| enable_directional_toggling    | boolean |               |                                                                                           |
+| toggle_grid_collection_name    | string  |               | Name of the collection the toggle belongs to                                              |
+| checked_control                | string  |               | Name of the child control that will be displayed only in the checked state                |
+| unchecked_control              | string  |               | Name of the child control that will be displayed only in the unchecked state              |
+| checked_hover_control          | string  |               | Name of the child control that will be displayed only in the checked hover state          |
+| unchecked_hover_control        | string  |               | Name of the child control that will be displayed only in the unchecked hover state        |
+| checked_locked_control         | string  |               | Name of the child control that will be displayed only in the checked locked state         |
+| unchecked_locked_control       | string  |               | Name of the child control that will be displayed only in the unchecked locked state       |
+| checked_locked_hover_control   | string  |               | Name of the child control that will be displayed only in the checked locked hover state   |
+| unchecked_locked_hover_control | string  |               | Name of the child control that will be displayed only in the unchecked locked hover state |
 
-| Name                        |  Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
-| --------------------------- | :-----: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `binding_type`              | string  | Possible values: `"collection"`, `"collection_details"`, `"view"` and `"global"`                                                                                                                                                                                                                                                                                                                                        |
-| `binding_name`              | string  |                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `source_control_name`       | string  | Name of the object to be evaluated                                                                                                                                                                                                                                                                                                                                                                                      |
-| `source_property_name`      | string  | Property name from the `source_control_name` object                                                                                                                                                                                                                                                                                                                                                                     |
-| `target_property_name`      | string  | Property that its value will be override by the `source_property_name` value                                                                                                                                                                                                                                                                                                                                            |
-| `binding_name_override`     | string  | Property that its value will be override by the `binding_name` value                                                                                                                                                                                                                                                                                                                                                    |
-| `binding_collection_name`   | string  |                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `binding_collection_prefix` | string  |                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `binding_condition`         | string  | It's for deciding when binding happens, it may take any boolean variable <br> Possible values: <br> `always` (Binding works constantly) <br> `always_when_visible` (Binding works when visible and does it constantly) <br> `once` (Happens only once when the element is created) <br> `visibility_changed` (Happens only when the visibility of the element has changed) <br> `visible` (When the element is visible) |
-| `resolve_sibling_scope`     | boolean |                                                                                                                                                                                                                                                                                                                                                                                                                         |
+### Dropdown
 
-### Button Mappings Property
+|      Property Name       |  Type  | Default Value |                             Description                              |
+| ------------------------ | :----: | :-----------: | -------------------------------------------------------------------- |
+| dropdown_name            | string |               | Identifier for the dropdown                                          |
+| dropdown_content_control | string |               | Name of the child control that will behave as the root content panel |
+| dropdown_area            | string |               | Name of the child control that will behave as the inside content     |
 
-Button mappings can be applied to any kind of input elements (`button`, `toggle`, `slider` and `input_panel`).
+### Sound
 
-| Name                               |  Type   | Description                                                                                                                                |
-| ---------------------------------- | :-----: | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `from_button_id`                   | string  | Button (action) id that fires                                                                                                              |
-| `to_button_id`                     | string  | button (action) id that results                                                                                                            |
-| `handle_select`                    | boolean |                                                                                                                                            |
-| `handle_deselect`                  | boolean |                                                                                                                                            |
-| `mapping_type`                     | string  | Possible values: <br> `pressed` (Mouse click) <br> `double_pressed` (Double mouse click) <br> `focused` (Element is focused) <br> `global` |
-| `scope`                            | string  | Possible values: `view` and `controller`                                                                                                   |
-| `input_mode_condition`             | string  | Possible values: `gamepad_and_not_gaze` and `not_gaze`                                                                                     |
-| `button_up_right_of_first_refusal` | boolean |                                                                                                                                            |
+| Property Name |                                       Type                                       |                                                     Description                                                     |
+| ------------- | :------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------- |
+| sound_name    |                                      string                                      | Name of the sound defined in the `RP/sounds/sound_definitions.json` file that plays when the pressed event is fired |
+| sound_volume  |                                      float                                       | Volume of the sound                                                                                                 |
+| sound_pitch   |                                      float                                       | Pitch of the sound                                                                                                  |
+| sounds        | Vector of [sound object](/json-ui/json-ui-documentation.html#sound-array-object) | Array of the sounds to play when the pressed event is fired                                                         |
+
+#### Sound Array Object
+
+|       Property Name       |  Type  |                                                     Description                                                     |
+| ------------------------- | :----: | ------------------------------------------------------------------------------------------------------------------- |
+| sound_name                | string | Name of the sound defined in the `RP/sounds/sound_definitions.json` file that plays when the pressed event is fired |
+| sound_volume              | float  | Volume of the sound                                                                                                 |
+| sound_pitch               | float  | Pitch of the sound                                                                                                  |
+| min_seconds_between_plays | float  | Seconds of wait before the sound can be played again                                                                |
+
+
+### Collection
+
+|  Property Name  |  Type  |            Description            |
+| --------------- | :----: | --------------------------------- |
+| collection_name | string | Name of the collection to be used |
+
+### Text Edit
+
+|           Property Name            |  Type   | Default Value |                                                                        Description                                                                         |
+| ---------------------------------- | :-----: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| text_box_name                      | string  |               | Identifier for text box                                                                                                                                    |
+| text_edit_box_grid_collection_name | string  |               | Name of the collection the `edit_box` belongs to                                                                                                           |
+| constrain_to_rect                  | boolean |               |                                                                                                                                                            |
+| enabled_newline                    | boolean |               | Allows multiline text                                                                                                                                      |
+| text_type                          |  enum   |               | Type of characters that the user is allowed to type in th text field. <br> Possible values: <br> `ExtendedASCII` <br> `IdentifierChars` <br> `NumberChars` |
+| max_length                         |   int   |               | Maximum number of characters allow in the text field                                                                                                       |
+| text_control                       | string  |               | Name of the child control that will be used for displaying the text                                                                                        |
+| place_holder_control               | string  |               | Name of the child control that will be used for display the placeholder text                                                                               |
+| can_be_deselected                  | boolean |               |                                                                                                                                                            |
+| always_listening                   | boolean |               |                                                                                                                                                            |
+| virtual_keyboard_buffer_control    | string  |               |                                                                                                                                                            |
+
+### Slider
+
+|        Property Name         |  Type   | Default Value |                                                 Description                                                  |
+| ---------------------------- | :-----: | :-----------: | ------------------------------------------------------------------------------------------------------------ |
+| slider_track_button          | string  |               | ID of the action for the slider track                                                                        |
+| slider_small_decrease_button | string  |               | ID of the action for the decrease slider                                                                     |
+| slider_small_increase_button | string  |               | ID of the action for the increase slider                                                                     |
+| slider_steps                 |   int   |               | nHow many steps (or values) does the slider have                                                             |
+| slider_direction             |  enum   |               | Orientation of the slider movement. <br> Possible values: <br> `vertical` <br> `horizontal`                  |
+| slider_timeout               | number  |               |                                                                                                              |
+| slider_collection_name       | string  |               | Name of the collection the slider belongs to                                                                 |
+| slider_name                  | string  |               | Identifier for the slider                                                                                    |
+| slider_select_on_hover       | boolean |               | Focus slider when it's hovered                                                                               |
+| slider_selected_button       | string  |               | ID of the action for when the slider is selected                                                             |
+| slider_deselected_button     | string  |               | ID of the action for when the slider is deselected                                                           |
+| slider_box_control           | string  |               | Name of the child control that will behave as the slider thumb                                               |
+| background_control           | string  |               | Name of the child control that will behave as the slider background                                          |
+| background_hover_control     | string  |               | Name of the child control that will behave as the slider background on hover                                 |
+| progress_control             | string  |               | Name of the child control that will behave as the slider background overlay for the slider progress          |
+| progress_hover_control       | string  |               | Name of the child control that will behave as the slider background overlay for the slider progress on hover |
+
+### Slider Box
+
+|  Property Name  |  Type  | Default Value |                              Description                              |
+| --------------- | :----: | :-----------: | --------------------------------------------------------------------- |
+| default_control | string |               | Name of the child control that will be displayed in the default state |
+| hover_control   | string |               | Name of the child control that will be displayed in the hover state   |
+| locked_control  | string |               | Name of the child control that will be displayed in the locked state  |
+
+### Scroll View
+
+|       Property Name        |  Type   | Default Value |                                            Description                                            |
+| -------------------------- | :-----: | :-----------: | ------------------------------------------------------------------------------------------------- |
+| scrollbar_track_button     | string  |               | ID of the action for the track button                                                             |
+| scrollbar_touch_button     | string  |               | ID of the action for the touch input                                                              |
+| scroll_speed               | number  |               | Scrolling speed                                                                                   |
+| gesture_control_enabled    | boolean |               |                                                                                                   |
+| always_handle_scrolling    | boolean |               |                                                                                                   |
+| touch_mode                 | boolean |               |                                                                                                   |
+| scrollbar_box              | string  |               | Name of child UI element or nested UI element that will behave as the scrollbar thumb.            |
+| scrollbar_track            | string  |               | Name of child UI element or nested UI element that will behave as the scrollbar track             |
+| scroll_view_port           | string  |               | Name of child UI element that will behave as the view port                                        |
+| scroll_content             | string  |               | Name of child UI element that will behave as the content root parent                              |
+| scroll_box_and_track_panel | string  |               | Name of child UI element that will contain the scrollbox and track controls                       |
+| jump_to_bottom_on_update   | boolean |               | Jump to the bottom when the scrolling panel has an update. For example, adds more children to it. |
+
+### Custom Render
+
+| Property Name | Type  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------- | :---: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| renderer      | enum  | Possible values: <br> `hover_text_renderer` <br> `3d_structure_renderer` <br> `splash_text_renderer` <br> `ui_holo_cursor` <br> `trial_time_renderer` <br> `panorama_renderer` <br> `actor_portrait_renderer` <br> `banner_pattern_renderer` <br> `live_player_renderer` <br> `web_view_renderer` <br> `hunger_renderer` <br> `bubbles_renderer` <br> `mob_effects_renderer` <br> `cursor_renderer` <br> `progress_indicator_renderer` <br> `camera_renderer` <br> `horse_jump_renderer` <br> `armor_renderer` <br> `horse_heart_renderer` <br> `heart_renderer` <br> `hotbar_cooldown_renderer` <br> `hotbar_renderer` <br> `hud_player_renderer` <br> `live_horse_renderer` <br> `holographic_postrenderer` <br> `enchanting_book_renderer` <br> `debug_screen_renderer` <br> `gradient_renderer` <br> `paper_doll_renderer` <br> `name_tag_renderer` <br> `flying_item_renderer` <br> `inventory_item_renderer` <br> `credits_renderer` <br> `vignette_renderer` <br> `progress_bar_renderer` <br> `debug_overlay_renderer` <br> `background_renderer` <br> `bohr_model_renderer` <br> `experience_renderer` (Legacy, no longer works) <br> `menu_background_renderer` (Legacy, no longer works) |
+
+
+####  Renderers
+
+|         Renderer Name         |                                                  Description                                                   |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `flying_item_renderer`        | The flying item when you change an item from a slot to another                                                 |
+| `inventory_item_renderer`     | Renders an item icon. It only work in screens when ingame                                                      |
+| `credits_renderer`            | The credits and end poem                                                                                       |
+| `vignette_renderer`           | A vignette                                                                                                     |
+| `name_tag_renderer`           | It's something like the playername above the player head or the name above animals when used a nametag on them |
+| `paper_doll_renderer`         | A skin model                                                                                                   |
+| `debug_screen_renderer`       | The debug text that appears on the beta/preview versions                                                       |
+| `enchanting_book_renderer`    | The enchantment table book. It opens when there's an item to be enchanted                                      |
+| `gradient_renderer`           | Draws a gradient                                                                                               |
+| `live_horse_renderer`         | The horse/donkey/llama... model                                                                                |
+| `live_player_renderer`        | The player model                                                                                               |
+| `hud_player_renderer`         | The player model that imitates what the player is doing                                                        |
+| `hotbar_renderer`             | Gets the hotbar slot image for each slot                                                                       |
+| `hotbar_cooldown_renderer`    | Draws the item cooldown                                                                                        |
+| `heart_renderer`              | Draws the player health                                                                                        |
+| `horse_heart_renderer`        | Draws the horse/donkey/... health                                                                              |
+| `armor_renderer`              | Draws the player armor                                                                                         |
+| `horse_jump_renderer`         | Draws the horse jumping progress bar                                                                           |
+| `hunger_renderer`             | Draws the player hunger                                                                                        |
+| `bubbles_renderer`            | Draws the respiration bubbles                                                                                  |
+| `mob_effects_renderer`        | Draws the effects that are applied to the player                                                               |
+| `cursor_renderer`             | Draws the crosshair in the center of the screen                                                                |
+| `progress_indicator_renderer` | Not used                                                                                                       |
+| `camera_renderer`             | Used for the camera item                                                                                       |
+| `web_view_renderer`           | Shows a website view                                                                                           |
+| `banner_pattern_renderer`     | Renders a banner                                                                                               |
+| `actor_portrait_renderer`     | Draws an portrait                                                                                              |
+| `trial_time_renderer`         | In the trial version of the game it renders the time left to be able to use the world                          |
+| `progress_bar_renderer`       | Draws a progress bar. It has more than one type                                                                |
+| `3d_structure_renderer`       | Renders the structure block structure                                                                          |
+| `splash_text_renderer`        | Gets and renders a random splash text from the `splashes.json` file                                            |
+| `hover_text_renderer`         | Draws a tooltip                                                                                                |
+| `ui_holo_cursor`              |                                                                                                                |
+| `panorama_renderer`           | It's not the panoramas that appear behind the menus. It's the panorama of the worlds on the store.             |
+
+
+#### Specific Properties
+
+|    Property Name     |        Type         |                   Renderer                    |                          Description                          |
+| -------------------- | :-----------------: | --------------------------------------------- | ------------------------------------------------------------- |
+| gradient_direction   |        enum         | `gradient_renderer`                           | Possible values: <br> `vertical` <br> `horizontal`            |
+| color1               | Vector [r, g, b, a] | `gradient_renderer`                           |                                                               |
+| color2               | Vector [r, g, b, a] | `gradient_renderer`                           |                                                               |
+| text_color           | Vector [r, g, b, a] | `name_tag_renderer`                           |                                                               |
+| background_color     | Vector [r, g, b, a] | `name_tag_renderer`                           |                                                               |
+| primary_color        | Vector [r, g, b, a] | `progress_bar_renderer`                       |                                                               |
+| secondary_color      | Vector [r, g, b, a] | `progress_bar_renderer`                       |                                                               |
+| camera_tilt_degrees  |       number        | `paper_doll_renderer`                         |                                                               |
+| starting_rotation    |       number        | `paper_doll_renderer`                         |                                                               |
+| use_selected_skin    |       boolean       | `paper_doll_renderer`                         |                                                               |
+| use_uuid             |       boolean       | `paper_doll_renderer`                         |                                                               |
+| use_skin_gui_scale   |       boolean       | `paper_doll_renderer`                         |                                                               |
+| use_player_paperdoll |       boolean       | `paper_doll_renderer`                         |                                                               |
+| rotation             |        enum         | `paper_doll_renderer` and `panorama_renderer` | Possible values: <br> `auto` <br> `gesture_x` <br> `custom_y` |
+| end_event            |       string        | `credits_renderer`                            |                                                               |
+
+### Screen
+
+|            Property Name            |  Type   |                                Description                                |
+| ----------------------------------- | :-----: | ------------------------------------------------------------------------- |
+| render_only_when_topmost            | boolean | Only render the screen if it's the most top screen in the screen stack    |
+| screen_not_flushable                | boolean |                                                                           |
+| always_accepts_input                | boolean |                                                                           |
+| render_game_behind                  | boolean | Doesn't prevent screen below of being able to receive input from the user |
+| absorbs_input                       | boolean |                                                                           |
+| is_showing_menu                     | boolean |                                                                           |
+| is_modal                            | boolean | It's a screen modal                                                       |
+| should_steal_mouse                  | boolean | Captures the cursor and hides it                                          |
+| low_frequency_rendering             | boolean | Uses less memory to render the screen                                     |
+| screen_draws_last                   | boolean | It's the last screen to be drawn/rendered                                 |
+| vr_mode                             | boolean |                                                                           |
+| force_render_below                  | boolean | Renders bottom screens below current screen in the screen stack           |
+| send_telemetry                      | boolean |                                                                           |
+| close_on_player_hurt                | boolean | Close the screen is the player takes damage                               |
+| cache_screen                        | boolean |                                                                           |
+| load_screen_immediately             | boolean |                                                                           |
+| gamepad_cursor                      | boolean |                                                                           |
+| gamepad_cursor_deflection_mode      | boolean |                                                                           |
+| should_be_skipped_during_automation | boolean |                                                                           |
+
+### Selection Wheel
+
+|       Property Name       |   Type   | Description |
+| ------------------------- | :------: | ----------- |
+| inner_radius              |  number  |             |
+| outer_radius              |  number  |             |
+| state_controls            | string[] |             |
+| slice_count               | integer  |             |
+| button_name               |  string  |             |
+| iterate_left_button_name  |  string  |             |
+| iterate_right_button_name |  string  |             |
+| initial_button_slice      | integer  |             |
+
+### TTS
+|            Property Name            |  Type   |                                        Description                                         |
+| ----------------------------------- | :-----: | ------------------------------------------------------------------------------------------ |
+| tts_name                            | string  |                                                                                            |
+| tts_control_header                  | string  |                                                                                            |
+| tts_section_header                  | string  |                                                                                            |
+| tts_control_type_order_priority     | integer |                                                                                            |
+| tts_index_priority                  | integer |                                                                                            |
+| tts_toggle_on                       | string  | Use by the `toggle` type                                                                   |
+| tts_toggle_off                      | string  | Use by the `toggle` type                                                                   |
+| tts_override_control_value          | string  |                                                                                            |
+| tts_inherit_siblings                | boolean |                                                                                            |
+| tts_value_changed                   | string  |                                                                                            |
+| ttsSectionContainer                 | boolean |                                                                                            |
+| tts_ignore_count                    | boolean |                                                                                            |
+| tts_skip_message                    | boolean |                                                                                            |
+| tts_value_order_priority            | integer |                                                                                            |
+| tts_play_on_unchanged_focus_control | boolean |                                                                                            |
+| tts_ignore_subsections              | boolean |                                                                                            |
+| text_tts                            | string  |                                                                                            |
+| use_priority                        | boolean | If the `priority` property will be use to determine the TTS priority of each child control |
+| priority                            | boolean | Order/index of priority that the element has on TTS                                        |
+
+### Tab (Legacy)
+
+| Property Name |  Type  | Default Value |                        Description                        |
+| ------------- | :----: | :-----------: | --------------------------------------------------------- |
+| tab_index     |  int   |               | ID of tab in its group                                    |
+| tab_group     |  int   |               | ID of the group the tab belongs to                        |
+| tab_control   | string |               | Name of the control that will show when the tab is active |
+
+### Carousel Text (Legacy)
+
+| Property Name |         Type         | Default Value |           Description           |
+| ------------- | :------------------: | :-----------: | ------------------------------- |
+| always_rotate |       boolean        |               |                                 |
+| rotate_speed  |        number        |               |                                 |
+| hover_color   | Vector [r, g, b, a], |               | `color` when element is hovered |
+| hover_alpha   |        float         |               | `alpha` when element is hovered |
+| pressed_color | Vector [r, g, b, a], |               | `color` when element is pressed |
+| pressed_alpha |        float         |               | `alpha` when element is pressed |
+
+## Properties Additional Information
+
+### Anchor Properties
+
+Anchors allows the elements to align to a certain point where position, size, scale, animations, etc will take as the point for transformation.
+In JSON UI, there's two properties `anchor_from` and `anchor_to` that together achieve this.
+
+Most people use them by giving them the same value: 
+
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
+
+```json
+{
+  "element": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left"
+  }
+}
+```
+
+<WikiImage
+	src="/assets/images/json-ui/json-ui-documentation/anchor_same_value.png"
+	alt="Anchors with the same value"
+	pixelated="true"
+	width=782
+/>
+
+However, what happens when they have different values? Let's look at happens when `anchor_from: center` and `anchor_from: top_left`. It's the best example to demonstrate what's really happening.
+
+<CodeHeader>RP/ui/example_file.json</CodeHeader>
+
+```json
+{
+  "element": {
+    "anchor_from": "center",
+    "anchor_to": "top_left"
+  }
+}
+```
+
+<WikiImage
+	src="/assets/images/json-ui/json-ui-documentation/anchor_center_top_left.png"
+	alt="Anchor from center to top left"
+	pixelated="true"
+	width=782
+/>
+
+The top left point of the element is in the center point of the parent element.
+
+Another example:
+
+<WikiImage
+	src="/assets/images/json-ui/json-ui-documentation/anchor_ce_rm_tm_tl.png"
+	alt="Anchor from center to right middle and anchor from top middle to top left"
+	pixelated="true"
+	width=782
+/>
+
+The blue box top left point is in the top middle point of the parent element. As for the black box, the right midde point is in the center of the parent.
+
+
+Basically `anchor_to` is the anchor point in the element that will be attached to the `anchor_from` in  the parent element.
 
 ### Variables Property
 
 | Name       |  Type  | Description |
 | ---------- | :----: | ----------- |
 | `requires` | string | condition   |
+
+<br>
 
 If you only have one variable to use, you should just use `"variables": {}`
 
@@ -571,236 +699,230 @@ If you have multiple variables use `"variables": [{}]`
 }
 ```
 
+## Property Bag
+
+|                Name                |        Type         |                     Requirements                     |                           Description                           |
+| ---------------------------------- | :-----------------: | ---------------------------------------------------- | --------------------------------------------------------------- |
+| #filtered_light_multiplier         |        float        | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
+| #banner_patterns                   |       string        | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
+| #banner_colors                     |       string        | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
+| #item_id_aux                       |         int         | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
+| #item_custom_color                 |         int         | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
+| #disabled_filter_visible           |       boolean       | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
+| #item_pickup_time                  |        float        | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
+| #look_at_cursor                    |       boolean       | type[custom] <br> renderer[hud_player_renderer]      |                                                                 |
+| entity_type                        |        enum         | type[custom] <br> renderer[paper_doll_renderer]      | Possible values: <br> `player` <br> `npc`                       |
+| #skin_idx                          |         int         | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #player_uuid                       |       string        | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #skin_rotation                     |       boolean       | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #custom_rot_y                      |        float        | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #gesture_delta_source              |       string        | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #gesture_mouse_delta_x             |       string        | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #pack_id                           |         int         | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #force_skin_update                 |       string        | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #progress_bar_visible              |       boolean       | type[custom] <br> renderer[paper_doll_renderer]      |                                                                 |
+| #progress_bar_total_amount         |        float        | type[custom] <br> renderer[progress_bar_renderer]    |                                                                 |
+| #progress_bar_current_amount       |        float        | type[custom] <br> renderer[progress_bar_renderer]    |                                                                 |
+| is_durability                      |       boolean       | type[custom] <br> renderer[progress_bar_renderer]    |                                                                 |
+| round_value                        |       boolean       | type[custom] <br> renderer[progress_bar_renderer]    |                                                                 |
+| #hover_text                        |       string        | type[custom] <br> renderer[hover_text_renderer]      |                                                                 |
+| #open                              |       boolean       | type[custom] <br> renderer[enchanting_book_renderer] |                                                                 |
+| flying_item_count                  |         int         | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_id_aux                 |         int         | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_custom_color           |         int         | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_origin_position_x      |        float        | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_origin_position_y      |        float        | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_origin_scale           |        float        | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_destination_position_x |        float        | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_destination_position_y |        float        | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_destination_scale      |        float        | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_banner_patterns        |       string        | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| flying_item_banner_colors          |       string        | type[custom] <br> renderer[flying_item_renderer]     |                                                                 |
+| #use_heart_offset                  |       boolean       | type[custom] <br> renderer[armor_renderer]           |                                                                 |
+| opacity_override                   |        float        | type[custom] <br> renderer[vignette_renderer]        |                                                                 |
+| #playername                        |       string        | type[custom] <br> renderer[name_tag_renderer]        |                                                                 |
+| #x_padding                         |       number        | type[custom] <br> renderer[name_tag_renderer]        |                                                                 |
+| #entity_id                         |    string or int    | type[custom] <br> renderer[live_horse_renderer]      |                                                                 |
+| #hyperlink                         |       string        | type[button]                                         |                                                                 |
+| #anchored_offset_value_x           |       number        | `use_anchored_offset` property                       |                                                                 |
+| #anchored_offset_value_y           |       number        | `use_anchored_offset` property                       |                                                                 |
+| #size_binding_x                    |       number        | `use_anchored_offset` property                       |                                                                 |
+| #size_binding_y                    |       number        | `use_anchored_offset` property                       |                                                                 |
+| #has_focus                         |       boolean       | type[custom] <br> renderer[3d_structure_renderer]    |                                                                 |
+| #block_position                    |  Vector [x, y, z]   | type[custom] <br> renderer[3d_structure_renderer]    |                                                                 |
+| #top_right_block                   |  Vector [x, y, z]   | type[custom] <br> renderer[3d_structure_renderer]    |                                                                 |
+| #bottom_left_block                 |  Vector [x, y, z]   | type[custom] <br> renderer[3d_structure_renderer]    |                                                                 |
+| #include_entities                  |       boolean       | type[custom] <br> renderer[3d_structure_renderer]    |                                                                 |
+| #remove_blocks                     |       boolean       | type[custom] <br> renderer[3d_structure_renderer]    |                                                                 |
+| #include_players                   |       boolean       | type[custom] <br> renderer[3d_structure_renderer]    |                                                                 |
+| #slider_steps                      |       number        | type[slider]                                         |                                                                 |
+| #slider_value                      |       number        | type[slider]                                         |                                                                 |
+| #property_field                    |       string        | type[edit_box]                                       |                                                                 |
+| #hover_slice                       |         int         | type[selection_wheel]                                |                                                                 |
+| #toggle_state                      |       boolean       | type[toggle]                                         |                                                                 |
+| #start_selected                    |       boolean       |                                                      |                                                                 |
+| #tts_dialog_title                  |       string        |                                                      |                                                                 |
+| #tts_dialog_body                   |       string        |                                                      |                                                                 |
+| force_update                       |       boolean       |                                                      |                                                                 |
+| #sub_command                       |       string        |                                                      |                                                                 |
+| #panel_title                       |       string        |                                                      |                                                                 |
+| #index                             |         int         |                                                      |                                                                 |
+| #collection_prefix                 |       string        |                                                      |                                                                 |
+| #collection_name                   |       string        |                                                      |                                                                 |
+| #visible                           |       boolean       |                                                      |                                                                 |
+| #common                            | Vector [r, g, b, a] |                                                      |                                                                 |
+| #uncommon                          | Vector [r, g, b, a] |                                                      |                                                                 |
+| #rare                              | Vector [r, g, b, a] |                                                      |                                                                 |
+| #epic                              | Vector [r, g, b, a] |                                                      |                                                                 |
+| #legendary                         | Vector [r, g, b, a] |                                                      |                                                                 |
+| reset_group                        |        enum         |                                                      | Possible values: <br> `video` <br> `audio` <br> `accessibility` |
+| #text                              |       string        |                                                      |                                                                 |
+| timer_duration                     |       number        |                                                      |                                                                 |
+| #should_host                       |       boolean       |                                                      |                                                                 |
+| is_local                           |       boolean       |                                                      |                                                                 |
+| #is_left                           |       boolean       |                                                      |                                                                 |
+| #is_skins                          |       boolean       |                                                      |                                                                 |
+| #is_featured                       |       boolean       |                                                      |                                                                 |
+| #image_name                        |       string        |                                                      |                                                                 |
+| #is_dropdown                       |       boolean       |                                                      |                                                                 |
+| #timer_field_count_to_show         |       number        |                                                      |                                                                 |
+| #owned_incompatible_prompt_color   |  Vector [r, g, b]   |                                                      |                                                                 |
+| #modal_title_text                  |       string        |                                                      |                                                                 |
+| #modal_label_text                  |       string        |                                                      |                                                                 |
+| #buttons_visible                   |       boolean       |                                                      |                                                                 |
+| #no_buttons_visible                |       boolean       |                                                      |                                                                 |
+| #single_button_visible             |       boolean       |                                                      |                                                                 |
+| #two_buttons_visible               |       boolean       |                                                      |                                                                 |
+| is_fixed_inventory                 |       boolean       |                                                      |                                                                 |
+| experimental_radio_button_state    |       string        |                                                      |                                                                 |
+| classic_radio_button_state         |       string        |                                                      |                                                                 |
+
 ## Animations
 
-`anim_type` and its possible values are `color`, `wait`, `size`, `offset`, `uv`, `alpha`, `flip_book` and `aseprite_flip_book`.
+|  Animation Property Name  |     Type      |                                                                                                                                                                                                                                                                                       Description                                                                                                                                                                                                                                                                                        |
+| ------------------------- | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| anim_type                 |     enum      | Possible values: <br> `alpha` <br> `clip` <br> `color` <br> `flip_book` <br> `offset` <br> `size` <br> `uv` <br> `wait` <br> `aseprite_flip_book`                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| duration                  |    number     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| next                      |    string     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| destroy_at_end            |    string     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| play_event                |    string     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| end_event                 |    string     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| start_event               |    string     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| reset_event               |    string     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| easing                    |     enum      | Possible values: <br> `linear` <br> `spring` <br> `in_quad` <br> `out_quad` <br> `in_out_quad` <br> `in_cubic` <br> `out_cubic` <br> `in_out_cubic` <br> `in_quart` <br> `out_quart` <br> `in_out_quart` <br> `in_quint` <br> `out_quint` <br> `in_out_quint` <br> `in_sine` <br> `out_sine` <br> `in_out_sine` <br> `in_expo` <br> `out_expo` <br> `in_out_expo` <br> `in_circ` <br> `out_circ` <br> `in_out_circ` <br> `in_bounce` <br> `out_bounce` <br> `in_out_bounce` <br> `in_back` <br> `out_back` <br> `in_out_back` <br> `in_elastic` <br> `out_elastic` <br> `in_out_elastic` |
+| from                      |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| to                        |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| initial_uv                | Vector [u, v] |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| fps                       |      int      | Frames per second                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| frame_count               |      int      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| frame_step                |    number     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| reversible                |    boolean    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| resettable                |    boolean    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| scale_from_starting_alpha |    boolean    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| activated                 |    boolean    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 For more information about the `aseprite_flip_book` animation type, please see our page on [Aseprite Animations](/json-ui/aseprite-animations)
 
-| Property Name               | Type            | Description                                                                                                                                                                                                                                                                                                                                                      |
-|-----------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `initial_uv`                | array           | `[0, 0]`                                                                                                                                                                                                                                                                                                                                                         |
-| `frame_count`               | number          |                                                                                                                                                                                                                                                                                                                                                                  |
-| `frame_steps`               | number          |                                                                                                                                                                                                                                                                                                                                                                  |
-| `reversible`                | boolean         |                                                                                                                                                                                                                                                                                                                                                                  |
-| `scale_from_starting_alpha` | boolean         |                                                                                                                                                                                                                                                                                                                                                                  |
-| `fps`                       | number          | Number of frames per second                                                                                                                                                                                                                                                                                                                                      |
-| `easing`                    | string          | Possible values:<br>- `linear`<br>- `spring`<br>- `in_quad`<br>- `out_quad`<br>- `in_out_quad`<br>- `in_cubic`<br>- `out_cubic`<br>- `in_out_cubic`<br>- `in_quart`<br>- `out_quart`<br>- `in_out_quart`<br>- `in_quint`<br>- `out_quint`<br>- `in_out_quint`<br>- `in_sine`<br>- `out_sine`<br>- `in_out_sine`<br>- `in_expo`<br>- `out_expo`<br>- `in_out_expo`<br>- `in_circ`<br>- `out_circ`<br>- `in_out_circ`<br>- `in_bounce`<br>- `out_bounce`<br>- `in_out_bounce`<br>- `in_back`<br>- `out_back`<br>- `in_out_back`<br>- `in_elastic`<br>- `out_elastic`<br>- `in_out_elastic`
- |
-| `duration`                  | number          | Number. Duration of the animation in seconds                                                                                                                                                                                                                                                                                                                     |
-| `from`                      | array or number | Number (`anim_type` alpha) or a `size`/`offset` array (`anim_type` size/offset)                                                                                                                                                                                                                                                                                  |
-| `to`                        | array or number | (`anim_type` alpha) or a `size`/`offset` array (`anim_type` size/offset)                                                                                                                                                                                                                                                                                         |
-| `destroy_at_end`            | string          | Name of the object to destroy (stop rendering/ignored) when the animation ends. Doesn't require namespace                                                                                                                                                                                                                                                        |
-| `next`                      | string          | Name of the animation that will play after this ends                                                                                                                                                                                                                                                                                                             |
-| `activated`                 | boolean         | Whether the animation should play                                                                                                                                                                                                                                                                                                                                |
-| `resettable`                | boolean         |                                                                                                                                                                                                                                                                                                                                                                  |
-| `reset_event`               | string          | Name of the event when the animation resets                                                                                                                                                                                                                                                                                                                      |
-| `play_event`                | string          | Name of the event when the animation starts                                                                                                                                                                                                                                                                                                                      |
-| `end_event`                 | string          | Name of the event when the animation ends                                                                                                                                                                                                                                                                                                                        |
+## Global Variables
 
-## Binding Property Names
+|                Variable                |                                           Note                                            |
+| -------------------------------------- | ----------------------------------------------------------------------------------------- |
+| $store_disabled                        |                                                                                           |
+| $game_pad                              | There's a controller connected to the device                                              |
+| $mouse                                 | There's a mouse connected to the device                                                   |
+| $touch                                 |                                                                                           |
+| $trial                                 | It's in the trial version of the game                                                     |
+| $build_platform_UWP                    |                                                                                           |
+| $win10_edition                         |                                                                                           |
+| $ignore_add_servers                    |                                                                                           |
+| $disable_gamertag_controls             |                                                                                           |
+| $console_edition                       |                                                                                           |
+| $osx_edition                           |                                                                                           |
+| $pocket_edition                        |                                                                                           |
+| $education_edition                     |                                                                                           |
+| $world_archive_support                 |                                                                                           |
+| $file_picking_supported                |                                                                                           |
+| $desktop_screen                        | If the classic UI is selected                                                             |
+| $pocket_screen                         | If the pocket UI is selected                                                              |
+| $is_holographic                        |                                                                                           |
+| $gear_vr                               |                                                                                           |
+| $oculus_rift                           |                                                                                           |
+| $is_living_room_mode                   |                                                                                           |
+| $is_reality_mode                       |                                                                                           |
+| $realms_beta                           |                                                                                           |
+| $fire_tv                               |                                                                                           |
+| $is_ios                                |                                                                                           |
+| $apple_tv                              |                                                                                           |
+| $is_windows_10_mobile                  |                                                                                           |
+| $image_picking_not_supported           |                                                                                           |
+| $pre_release                           |                                                                                           |
+| $ios                                   |                                                                                           |
+| $is_console                            |                                                                                           |
+| $can_quit                              |                                                                                           |
+| $is_settopbox                          |                                                                                           |
+| $microsoft_os                          |                                                                                           |
+| $apple_os                              |                                                                                           |
+| $google_os                             |                                                                                           |
+| $nx_os                                 |                                                                                           |
+| $horizontal_safezone_size              |                                                                                           |
+| $vertical_safezone_size                |                                                                                           |
+| $can_splitscreen                       |                                                                                           |
+| $is_secondary_client                   |                                                                                           |
+| $multiplayer_requires_live_gold        |                                                                                           |
+| $xbox_one                              |                                                                                           |
+| $is_pregame                            | If it's a out-game screen. It's in-game when you are playing in a world, server or realms |
+| $is_win10_arm                          |                                                                                           |
+| $vibration_supported                   |                                                                                           |
+| $is_mobile_vr                          |                                                                                           |
+| $is_xboxlive_enabled                   |                                                                                           |
+| $device_must_be_removed_for_xbl_signin |                                                                                           |
+| $is_publish                            | It's public and not a developer version                                                   |
+| $is_desktop                            |                                                                                           |
+| $is_ps4                                |                                                                                           |
+| $is_on_3p_server                       |                                                                                           |
+| $ignore_3rd_party_servers              |                                                                                           |
+| $is_berwick                            |                                                                                           |
 
--   `#visible`
--   `#enabled`
--   `#toggle_state`
--   `#text`
--   `#texture`
--   `#zip_folder`
--   `#texture_file_system`
--   `#clip_ratio`
--   `#grayscale`
--   `#alpha`
--   `#propagateAlpha`
--   `#focus_identifier`
--   `#focus_change_up`
--   `#focus_change_down`
--   `#focus_change_left`
--   `#focus_change_right`
--   `#focus_enabled`
--   `#default_focus_precedence`
--   `#modal`
--   `#maximum_grid_items`
--   `#collection_length`
--   `#button_navigation`
--   `#item_id_aux`
--   `#color`
--   `#progress_bar_visible`
--   `#progress_bar_total_amount`
--   `#progress_bar_current_amount`
-
-## Property Bag Property Names
-
-| Name                         |  Type   | Description                                         |
-| ---------------------------- | :-----: | --------------------------------------------------- |
-| `#visible`                   | boolean |                                                     |
-| `#hyperlink`                 | string  | Url                                                 |
-| `#tts_dialog_title`          | string  |                                                     |
-| `#tts_dialog_body`           | string  |                                                     |
-| `#property_field`            | string  |                                                     |
-| `#flying_item_renderer`      | boolean |                                                     |
-| `#item_id_aux`               | number  | Item icon id aux                                    |
-| `#collection_name`           | string  |                                                     |
-| `#collection_index`          | number  |                                                     |
-| `#playername`                | string  |                                                     |
-| `#x_padding`                 | number  |                                                     |
-| `#hover_slice`               | number  |                                                     |
-| `#common`                    |  array  | Same as `color`                                     |
-| `#uncommon`                  |  array  | Same as `color`                                     |
-| `#rare`                      |  array  | Same as `color`                                     |
-| `#epic`                      |  array  | Same as `color`                                     |
-| `#legendary`                 |  array  | Same as `color`                                     |
-| `#is_featured`               | boolean |                                                     |
-| `#anchored_offset_value_x`   |  array  | When using `use_anchored_offset` (boolean) property |
-| `#anchored_offset_value_y`   |  array  | When using `use_anchored_offset` (boolean) property |
-| `#timer_field_count_to_show` | number  |                                                     |
-| `#visible_after_x_ratings`   | boolean |                                                     |
-| `control_id`                 | string  |                                                     |
-| `#panel_title`               | string  |                                                     |
-| `#should_host`               | boolean |                                                     |
-| `force_update`               | boolean |                                                     |
-
-## Settings
-
-### Sliders
-
-| Name                      | Slider Name                     | Value Binding Name               | TTS Value (`tts_value_changed`) | Slider Text                                   | Enabled Binding Name                     |
-| ------------------------- | ------------------------------- | -------------------------------- | ------------------------------- | --------------------------------------------- | ---------------------------------------- |
-| Brightness                | `gamma`                         | `#gamma`                         | `#gamma_text_value`             | `#gamma_slider_label`                         | `#gamma_enabled`                         |
-| Brightness (VR)           | `vr_gamma`                      | `#vr_gamma`                      | `#vr_gamma_text_value`          | `#vr_gamma_slider_label`                      | `#vr_gamma_enabled`                      |
-| HUD Opacity               | `interface_opacity`             | `#interface_opacity`             | `#interface_opacity_text_value` | `#interface_opacity_slider_label`             | `#interface_opacity_enabled`             |
-| HUD Opacity (Splitscreen) | `splitscreen_interface_opacity` | `#splitscreen_interface_opacity` | `#interface_opacity_text_value` | `#splitscreen_interface_opacity_slider_label` | `#splitscreen_interface_opacity_enabled` |
-| Field Of View             | `field_of_view`                 | `#field_of_view`                 | `#field_of_view_text_value`     | `#field_of_view_slider_label`                 | `#field_of_view_enabled`                 |
-
-### Toggles
-
-| Name                                    | Toggle Name                           | State Binding Name                     | Enabled Binding Name                           |
-| --------------------------------------- | ------------------------------------- | -------------------------------------- | ---------------------------------------------- |
-| Invert Y Axis (Mouse)                   | `keyboard_mouse_invert_y_axis`        | `#keyboard_mouse_invert_y_axis`        | `#keyboard_mouse_invert_y_axis_enabled`        |
-| Auto Jump (Mouse)                       | `keyboard_mouse_autojump`             | `#keyboard_mouse_autojump`             | `#keyboard_mouse_autojump_enabled`             |
-| Show Full Keyboard Options              | `keyboard_show_full_keyboard_options` | `#keyboard_show_full_keyboard_options` | `#keyboard_show_full_keyboard_options_enabled` |
-| Hide Keyboard Tooltips                  | `hide_keyboard_tooltips`              | `#hide_keyboard_tooltips`              | `#hide_keyboard_tooltips_enabled`              |
-| Content File Log                        | `content_log_file`                    | `#content_log_file`                    | `#content_log_file_enabled`                    |
-| Content Gui Log                         | `content_log_gui`                     | `#content_log_gui`                     | `#content_log_gui_enabled`                     |
-| Use SSO                                 | `ad_use_single_sign_on`               | `#ad_use_single_sign_on`               |                                                |
-| Auto Update OFF                         | `#auto_update_mode_off`               | `#auto_update_mode_off`                |                                                |
-| Auto Update ON with Cellular            | `#auto_update_mode_on_with_cellular`  | `#auto_update_mode_on_with_cellular`   |                                                |
-| Auto Update on WiFi Only                | `#auto_update_mode_on_wifi_only`      | `#auto_update_mode_on_wifi_only`       |                                                |
-| Auto Update Enabled                     | `auto_update_enabled`                 | `#auto_update_enabled`                 |                                                |
-| Cross Platform Enabled                  | `crossplatform_toggle`                | `#crossplatform_toggle`                | `#crossplatform_toggle_enabled`                |
-| Allow Cellular Data                     | `allow_cellular_data`                 | `#allow_cellular_data`                 | `#allow_cellular_data_enabled`                 |
-| Websocket Encryption                    | `websocket_encryption`                | `#websocket_encryption`                | `#websocket_encryption_enabled`                |
-| Only Trusted Skins Allowed              | `only_trusted_skins_allowed`          | `#only_trusted_skins_allowed`          | `#only_trusted_skins_allowed_enabled`          |
-| Storage Location External               | `#storage_location_radio_external`    | `#storage_location_radio_external`     | `#file_storage_location_enabled`               |
-| Storage Location App                    | `#storage_location_radio_package`     | `#storage_location_radio_package`      | `#file_storage_location_enabled`               |
-| First Person Perspective                | `#thirdperson_radio_first`            | `#thirdperson_radio_first`             | `#third_person_dropdown_enabled`               |
-| Third Person Back Perspective           | `#thirdperson_radio_third_back`       | `#thirdperson_radio_third_back`        | `#third_person_dropdown_enabled`               |
-| Third Person Front Perspective          | `#thirdperson_radio_third_front`      | `#thirdperson_radio_third_front`       | `#third_person_dropdown_enabled`               |
-| Fullscreen                              | `full_screen`                         | `#full_screen`                         | `#full_screen_enabled`                         |
-| Hide Hand                               | `hide_hand`                           | `#hide_hand`                           | `#hide_hand_enabled`                           |
-| Hide Hand (VR)                          | `vr_hide_hand`                        | `#vr_hide_hand`                        | `#vr_hide_hand_enabled`                        |
-| Hide Paperdoll                          | `hide_paperdoll`                      | `#hide_paperdoll`                      | `#hide_paperdoll_enabled`                      |
-| Hide HUD                                | `hide_hud`                            | `#hide_hud`                            | `#hide_hud_enabled`                            |
-| Hide HUD (VR)                           | `vr_hide_hud`                         | `#vr_hide_hud`                         | `#vr_hide_hud_enabled`                         |
-| Screen Animations                       | `screen_animations`                   | `#screen_animations`                   | `#screen_animations_enabled`                   |
-| Split Screen Horizontally               | `#split_screen_radio_horizontal`      | `#split_screen_radio_horizontal`       | `#split_screen_dropdown_enabled`               |
-| Split Screen Vertically                 | `#split_screen_radio_vertical`        | `#split_screen_radio_vertical`         | `#split_screen_dropdown_enabled`               |
-| Show Auto Save Icon                     | `show_auto_save_icon`                 | `#show_auto_save_icon`                 | `#show_auto_save_icon_enabled`                 |
-| Outline Selection                       | `classic_box_selection`               | `#classic_box_selection`               | `#classic_box_selection_enabled`               |
-| Outline Selection (VR)                  | `vr_classic_box_selection`            | `#vr_classic_box_selection`            | `#vr_classic_box_selection_enabled`            |
-| Show Players Names Ingame               | `ingame_player_names`                 | `#ingame_player_names`                 | `#ingame_player_names_enabled`                 |
-| Show Players Names Ingame (Splitscreen) | `splitscreen_ingame_player_names`     | `#splitscreen_ingame_player_names`     | `#splitscreen_ingame_player_names_enabled`     |
-| View Bobbing                            | `view_bobbing`                        | `#view_bobbing`                        | `#view_bobbing_enabled`                        |
-| Camera Shake                            | `camera_shake`                        | `#camera_shake`                        | `#camera_shake_enabled`                        |
-| Fancy Leaves                            | `transparent_leaves`                  | `#transparent_leaves`                  | `#transparent_leaves_enabled`                  |
-| Fancy Leaves (VR)                       | `vr_transparent_leaves`               | `#vr_transparent_leaves`               | `#vr_transparent_leaves_enabled`               |
-| Fancy Bubbles                           | `bubble_particles`                    | `#bubble_particles`                    | `#bubble_particles_enabled`                    |
-| Render Clouds                           | `render_clouds`                       | `#render_clouds`                       | `#render_clouds_enabled`                       |
-| Fancy Clouds                            | `fancy_skies`                         | `#fancy_skies`                         | `#fancy_skies_enabled`                         |
-| Smooth Lighting                         | `smooth_lighting`                     | `#smooth_lighting`                     | `#smooth_lighting_enabled`                     |
-| Smooth Lighting (VR)                    | `graphics_toggle`                     | `#graphics_toggle`                     | `#graphics_toggle_enabled`                     |
-| Graphics                                | `graphics_toggle`                     | `#graphics_toggle`                     | `#graphics_toggle_enabled`                     |
-| Field of View                           | `field_of_view_toggle`                | `#field_of_view_toggle`                | `#field_of_view_toggle_enabled`                |
-| Classic UI Profile                      | `#ui_profile_radio_classic`           | `#ui_profile_radio_classic`            | `#ui_profile_dropdown_enabled`                 |
-| Pocket UI Profile                       | `#ui_profile_radio_pocket`            | `#ui_profile_radio_pocket`             | `#ui_profile_dropdown_enabled`                 |
-| Texel Anti-Aliasing                     | `texel_aa`                            | `#texel_aa`                            | `#texel_aa_enabled`                            |
-| 3D Rendering (VR)                       | `vr_3d_rendering`                     | `#vr_3d_rendering`                     | `#vr_3d_rendering_enabled`                     |
-| Mirror Texture (VR)                     | `vr_mirror_texture`                   | `#vr_mirror_texture`                   | `#vr_mirror_texture_enabled`                   |
-| Hand Pointer Visible (VR)               | `vr_hand_pointer`                     | `#vr_hand_pointer`                     | `#vr_hand_pointer_enabled`                     |
-| Hands Visible (VR)                      | `vr_hands_visible`                    | `#vr_hands_visible`                    | `#vr_hands_visible_enabled`                    |
-| Enable Auto TTS                         | `enable_auto_text_to_speech`          | `#enable_auto_text_to_speech`          | `#enable_auto_text_to_speech_enabled`          |
-| Enable UI TTS                           | `enable_ui_text_to_speech`            | `#enable_ui_text_to_speech`            | `#enable_ui_text_to_speech_enabled`            |
-| Enable Chat TTS                         | `enable_chat_text_to_speech`          | `#enable_chat_text_to_speech`          | `#enable_chat_text_to_speech_enabled`          |
-| Enable Open Chat Message                | `enable_open_chat_message`            | `#enable_open_chat_message`            | `#enable_open_chat_message_enabled`            |
-| Camera Shake                            | `camera_shake`                        | `#camera_shake`                        | `#camera_shake_enabled`                        |
-| Languages (Collection)                  | `languages`                           | `#language_initial_selected`           |                                                |
-
-## Hardcoded Variables
-
-| Variable                                 | Note                                    |
-| ---------------------------------------- | --------------------------------------- |
-| `$trial`                                 | It's in the trial version of the game   |
-| `$is_publish`                            | It's public and not a developer version |
-| `$is_pregame`                            | It's "outgame" not ingame               |
-| `$is_xbox_live_enabled`                  |                                         |
-| `$desktop_screen`                        | if the classic UI is selected           |
-| `$pocket_screen`                         | if the pocket UI is selected            |
-| `$win10_edition`                         |                                         |
-| `$pocket_edition`                        |                                         |
-| `$education_edition`                     |                                         |
-| `$education_edition_china`               |                                         |
-| `$console_edition`                       |                                         |
-| `$osx_edition`                           |                                         |
-| `$nx_edition`                            |                                         |
-| `$fire_tv`                               |                                         |
-| `$gear_vr`                               |                                         |
-| `$supports_cross_platform_play_toggle`   |                                         |
-| `$ignore_profile_switch_account_button`  |                                         |
-| `$ignore_profile_sso_toggle`             |                                         |
-| `$is_settopbox`                          |                                         |
-| `$is_reality_mode`                       |                                         |
-| `$storage_location_switch_enabled`       |                                         |
-| `$thirdpartyconsole`                     |                                         |
-| `$is_ps4`                                |                                         |
-| `$psvr`                                  |                                         |
-| `$supports_hand_controllers`             |                                         |
-| `$is_ios` or `$ios`                      |                                         |
-| `$is_android`                            |                                         |
-| `$is_win10_arm`                          |                                         |
-| `$display_copyright_info`                |                                         |
-| `$is_windows_10_mobile`                  |                                         |
-| `$device_must_be_removed_for_xbl_signin` |                                         |
-| `$build_platform_UWP`                    |                                         |
-| `$requires_xbl_signin_to_play`           |                                         |
-| `$supports_user_configured_safezone`     |                                         |
-| `$can_splitscreen`                       |                                         |
-| ...                                      |                                         |
-
-## Hardcoded Hyperlinks (`#hyperlink`)
+## Hardcoded Hyperlinks
 
 `#hyperlink` doesn't allow custom urls. These are the ones that will work:
 
--   `https://aka.ms/MCBanned`
+-   `http://education.minecraft.net/eula`
+-   `http://pocketbeta.minecraft.net/p/how-to-join-and-leave-beta.html`
+-   `http://aka.ms/minecraftrealmsfb`
+-   `http://aka.ms/minecraftrealmsterms`
+-   `http://aka.ms/minecraftfb`
+-   `http://aka.ms/minecraftedusupport`
+-   `https://aka.ms/blockxboxmessages`
+-   `http://aka.ms/minecraftfbbeta`
+-   `https://minecraft.net/attribution`
+-   `http://aka.ms/mcedulogs`
+-   `https://minecraft.net/licensed-content/`
 -   `https://education.minecraft.net/eula`
--   `https://aka.ms/meeterms`
--   `https://aka.ms/privacy`
--   `https://itunes.apple.com/us/app/minecraft/id479516143?mt=8`
--   `https://aka.ms/MCMultiplayerHelp`
 -   `https://aka.ms/mcedulogs`
+-   `https://aka.ms/minecraftrealmsterms`
 -   `https://aka.ms/minecraftfb`
 -   `https://aka.ms/minecraftfbbeta`
 -   `https://aka.ms/minecraftedusupport`
+-   `https://itunes.apple.com/us/app/minecraft/id479516143?mt=8`
+-   `https://account.xbox.com/Settings`
+-   `https://aka.ms/meeterms`
+-   `https://aka.ms/privacy`
+-   `https://aka.ms/MCBanned`
+-   `https://aka.ms/MCMultiplayerHelp`
+-   `https://aka.ms/meeeula`
+-   `https://aka.ms/mee_privacy`
 -   `https://www.minecraft.net/attribution/?hideChrome`
 -   `https://aka.ms/switchattribution`
 -   `https://www.minecraft.net/licensed-content/?hideChrome`
 -   `https://aka.ms/switchcontent`
 -   `https://social.xbox.com/changegamertag`
--   `https://account.xbox.com/Settings`
 
 ## Hardcoded Button IDs
 
 Some of them only work in specific screens.
 
-### Buttons IDs (`from_button_id`):
+### Buttons IDs:
 
 -   `button.menu_exit`
 -   `button.menu_cancel` (`Escape` key or Controller `B`)
@@ -1469,7 +1591,7 @@ Some of them only work in specific screens.
 -   `#trial_purchase_link_visible`
 -   `#show_popup_dismiss_button`
 
-### Book (`ui/book_screen.json`)
+#### Book (`ui/book_screen.json`)
 
 -   `#screenshot_path`
 -   `#is_photo_page`
@@ -1623,9 +1745,6 @@ Some of them only work in specific screens.
 
 -   `#realm_button_text`
 -   `#realm_trial_available`
--   ...
-
-...
 
 #### Anvil (`ui/anvil_screen.json`)
 
@@ -1765,6 +1884,81 @@ Some of them only work in specific screens.
 -   `#button_enabled`
 -   `#using_touch`
 -   `#close_button_visible`
+
+## Settings
+
+### Sliders
+
+|           Name            |           Slider Name           |        Value Binding Name        | TTS Value (`tts_value_changed`) |                  Slider Text                  |           Enabled Binding Name           |
+| ------------------------- | ------------------------------- | -------------------------------- | ------------------------------- | --------------------------------------------- | ---------------------------------------- |
+| Brightness                | `gamma`                         | `#gamma`                         | `#gamma_text_value`             | `#gamma_slider_label`                         | `#gamma_enabled`                         |
+| Brightness (VR)           | `vr_gamma`                      | `#vr_gamma`                      | `#vr_gamma_text_value`          | `#vr_gamma_slider_label`                      | `#vr_gamma_enabled`                      |
+| HUD Opacity               | `interface_opacity`             | `#interface_opacity`             | `#interface_opacity_text_value` | `#interface_opacity_slider_label`             | `#interface_opacity_enabled`             |
+| HUD Opacity (Splitscreen) | `splitscreen_interface_opacity` | `#splitscreen_interface_opacity` | `#interface_opacity_text_value` | `#splitscreen_interface_opacity_slider_label` | `#splitscreen_interface_opacity_enabled` |
+| Field Of View             | `field_of_view`                 | `#field_of_view`                 | `#field_of_view_text_value`     | `#field_of_view_slider_label`                 | `#field_of_view_enabled`                 |
+
+### Toggles
+
+|                  Name                   |              Toggle Name              |           State Binding Name           |              Enabled Binding Name              |
+| --------------------------------------- | ------------------------------------- | -------------------------------------- | ---------------------------------------------- |
+| Invert Y Axis (Mouse)                   | `keyboard_mouse_invert_y_axis`        | `#keyboard_mouse_invert_y_axis`        | `#keyboard_mouse_invert_y_axis_enabled`        |
+| Auto Jump (Mouse)                       | `keyboard_mouse_autojump`             | `#keyboard_mouse_autojump`             | `#keyboard_mouse_autojump_enabled`             |
+| Show Full Keyboard Options              | `keyboard_show_full_keyboard_options` | `#keyboard_show_full_keyboard_options` | `#keyboard_show_full_keyboard_options_enabled` |
+| Hide Keyboard Tooltips                  | `hide_keyboard_tooltips`              | `#hide_keyboard_tooltips`              | `#hide_keyboard_tooltips_enabled`              |
+| Content File Log                        | `content_log_file`                    | `#content_log_file`                    | `#content_log_file_enabled`                    |
+| Content Gui Log                         | `content_log_gui`                     | `#content_log_gui`                     | `#content_log_gui_enabled`                     |
+| Use SSO                                 | `ad_use_single_sign_on`               | `#ad_use_single_sign_on`               |                                                |
+| Auto Update OFF                         | `#auto_update_mode_off`               | `#auto_update_mode_off`                |                                                |
+| Auto Update ON with Cellular            | `#auto_update_mode_on_with_cellular`  | `#auto_update_mode_on_with_cellular`   |                                                |
+| Auto Update on WiFi Only                | `#auto_update_mode_on_wifi_only`      | `#auto_update_mode_on_wifi_only`       |                                                |
+| Auto Update Enabled                     | `auto_update_enabled`                 | `#auto_update_enabled`                 |                                                |
+| Cross Platform Enabled                  | `crossplatform_toggle`                | `#crossplatform_toggle`                | `#crossplatform_toggle_enabled`                |
+| Allow Cellular Data                     | `allow_cellular_data`                 | `#allow_cellular_data`                 | `#allow_cellular_data_enabled`                 |
+| Websocket Encryption                    | `websocket_encryption`                | `#websocket_encryption`                | `#websocket_encryption_enabled`                |
+| Only Trusted Skins Allowed              | `only_trusted_skins_allowed`          | `#only_trusted_skins_allowed`          | `#only_trusted_skins_allowed_enabled`          |
+| Storage Location External               | `#storage_location_radio_external`    | `#storage_location_radio_external`     | `#file_storage_location_enabled`               |
+| Storage Location App                    | `#storage_location_radio_package`     | `#storage_location_radio_package`      | `#file_storage_location_enabled`               |
+| First Person Perspective                | `#thirdperson_radio_first`            | `#thirdperson_radio_first`             | `#third_person_dropdown_enabled`               |
+| Third Person Back Perspective           | `#thirdperson_radio_third_back`       | `#thirdperson_radio_third_back`        | `#third_person_dropdown_enabled`               |
+| Third Person Front Perspective          | `#thirdperson_radio_third_front`      | `#thirdperson_radio_third_front`       | `#third_person_dropdown_enabled`               |
+| Fullscreen                              | `full_screen`                         | `#full_screen`                         | `#full_screen_enabled`                         |
+| Hide Hand                               | `hide_hand`                           | `#hide_hand`                           | `#hide_hand_enabled`                           |
+| Hide Hand (VR)                          | `vr_hide_hand`                        | `#vr_hide_hand`                        | `#vr_hide_hand_enabled`                        |
+| Hide Paperdoll                          | `hide_paperdoll`                      | `#hide_paperdoll`                      | `#hide_paperdoll_enabled`                      |
+| Hide HUD                                | `hide_hud`                            | `#hide_hud`                            | `#hide_hud_enabled`                            |
+| Hide HUD (VR)                           | `vr_hide_hud`                         | `#vr_hide_hud`                         | `#vr_hide_hud_enabled`                         |
+| Screen Animations                       | `screen_animations`                   | `#screen_animations`                   | `#screen_animations_enabled`                   |
+| Split Screen Horizontally               | `#split_screen_radio_horizontal`      | `#split_screen_radio_horizontal`       | `#split_screen_dropdown_enabled`               |
+| Split Screen Vertically                 | `#split_screen_radio_vertical`        | `#split_screen_radio_vertical`         | `#split_screen_dropdown_enabled`               |
+| Show Auto Save Icon                     | `show_auto_save_icon`                 | `#show_auto_save_icon`                 | `#show_auto_save_icon_enabled`                 |
+| Outline Selection                       | `classic_box_selection`               | `#classic_box_selection`               | `#classic_box_selection_enabled`               |
+| Outline Selection (VR)                  | `vr_classic_box_selection`            | `#vr_classic_box_selection`            | `#vr_classic_box_selection_enabled`            |
+| Show Players Names Ingame               | `ingame_player_names`                 | `#ingame_player_names`                 | `#ingame_player_names_enabled`                 |
+| Show Players Names Ingame (Splitscreen) | `splitscreen_ingame_player_names`     | `#splitscreen_ingame_player_names`     | `#splitscreen_ingame_player_names_enabled`     |
+| View Bobbing                            | `view_bobbing`                        | `#view_bobbing`                        | `#view_bobbing_enabled`                        |
+| Camera Shake                            | `camera_shake`                        | `#camera_shake`                        | `#camera_shake_enabled`                        |
+| Fancy Leaves                            | `transparent_leaves`                  | `#transparent_leaves`                  | `#transparent_leaves_enabled`                  |
+| Fancy Leaves (VR)                       | `vr_transparent_leaves`               | `#vr_transparent_leaves`               | `#vr_transparent_leaves_enabled`               |
+| Fancy Bubbles                           | `bubble_particles`                    | `#bubble_particles`                    | `#bubble_particles_enabled`                    |
+| Render Clouds                           | `render_clouds`                       | `#render_clouds`                       | `#render_clouds_enabled`                       |
+| Fancy Clouds                            | `fancy_skies`                         | `#fancy_skies`                         | `#fancy_skies_enabled`                         |
+| Smooth Lighting                         | `smooth_lighting`                     | `#smooth_lighting`                     | `#smooth_lighting_enabled`                     |
+| Smooth Lighting (VR)                    | `graphics_toggle`                     | `#graphics_toggle`                     | `#graphics_toggle_enabled`                     |
+| Graphics                                | `graphics_toggle`                     | `#graphics_toggle`                     | `#graphics_toggle_enabled`                     |
+| Field of View                           | `field_of_view_toggle`                | `#field_of_view_toggle`                | `#field_of_view_toggle_enabled`                |
+| Classic UI Profile                      | `#ui_profile_radio_classic`           | `#ui_profile_radio_classic`            | `#ui_profile_dropdown_enabled`                 |
+| Pocket UI Profile                       | `#ui_profile_radio_pocket`            | `#ui_profile_radio_pocket`             | `#ui_profile_dropdown_enabled`                 |
+| Texel Anti-Aliasing                     | `texel_aa`                            | `#texel_aa`                            | `#texel_aa_enabled`                            |
+| 3D Rendering (VR)                       | `vr_3d_rendering`                     | `#vr_3d_rendering`                     | `#vr_3d_rendering_enabled`                     |
+| Mirror Texture (VR)                     | `vr_mirror_texture`                   | `#vr_mirror_texture`                   | `#vr_mirror_texture_enabled`                   |
+| Hand Pointer Visible (VR)               | `vr_hand_pointer`                     | `#vr_hand_pointer`                     | `#vr_hand_pointer_enabled`                     |
+| Hands Visible (VR)                      | `vr_hands_visible`                    | `#vr_hands_visible`                    | `#vr_hands_visible_enabled`                    |
+| Enable Auto TTS                         | `enable_auto_text_to_speech`          | `#enable_auto_text_to_speech`          | `#enable_auto_text_to_speech_enabled`          |
+| Enable UI TTS                           | `enable_ui_text_to_speech`            | `#enable_ui_text_to_speech`            | `#enable_ui_text_to_speech_enabled`            |
+| Enable Chat TTS                         | `enable_chat_text_to_speech`          | `#enable_chat_text_to_speech`          | `#enable_chat_text_to_speech_enabled`          |
+| Enable Open Chat Message                | `enable_open_chat_message`            | `#enable_open_chat_message`            | `#enable_open_chat_message_enabled`            |
+| Camera Shake                            | `camera_shake`                        | `#camera_shake`                        | `#camera_shake_enabled`                        |
+| Languages (Collection)                  | `languages`                           | `#language_initial_selected`           |                                                |
 
 ## Item ID Aux (`#item_id_aux`)
 
