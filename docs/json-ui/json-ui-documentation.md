@@ -65,7 +65,7 @@ Specific properties:
 | `text_alignment`          |     string      | Text alignment <br> Possible values: `"left"`, `"right"` and `"center".`                                                                                |
 | `line_padding`            |     number      | Space in pixels between lines                                                                                                                           |
 | `font_type`               |     string      | Possible values: `default`, `smooth`, `rune` (enchantment font), `MinecraftSeven`, `MinecraftTen`, `MinecraftTenEmoticon` or a custom font type/family. |
-| `font_size`               |     string      | Possible values: `small`, `normal`, `large` and `extra-large`                                                                                           |
+| `font_size`               |     string      | Possible values: `small`, `normal`, `large` and `extra_large`                                                                                           |
 | `font_scale_factor`       |     number      | It scales the size of the text. It's better to use this rather than `font_size`                                                                         |
 | `shadow`                  |     boolean     | Adds a shadow to text                                                                                                                                   |
 | `localize`                |     boolean     | Translate the text using the \*\_\*.lang files                                                                                                          |
