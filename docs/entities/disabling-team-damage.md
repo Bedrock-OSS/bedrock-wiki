@@ -129,10 +129,10 @@ The process uses:
 <CodeHeader>BP/functions/wiki-apply_team.mcfunction</CodeHeader>
 
 ```
-execute @s[tag=team1] ~ ~ ~ tag @p[rm=0,r=1,type=arrow,tag=] team1
-execute @s[tag=team2] ~ ~ ~ tag @p[rm=0,r=1,type=arrow,tag=] team2
-execute @s[tag=team3] ~ ~ ~ tag @p[rm=0,r=1,type=arrow,tag=] team3
-execute @s[tag=team4] ~ ~ ~ tag @p[rm=0,r=1,type=arrow,tag=] team4
+execute @s[tag=team1] ~ ~ ~ tag @e[rm=0,r=1,c=1,type=arrow,tag=] add team1
+execute @s[tag=team2] ~ ~ ~ tag @e[rm=0,r=1,c=1,type=arrow,tag=] add team2
+execute @s[tag=team3] ~ ~ ~ tag @e[rm=0,r=1,c=1,type=arrow,tag=] add team3
+execute @s[tag=team4] ~ ~ ~ tag @e[rm=0,r=1,c=1,type=arrow,tag=] add team4
 
 ```
 
