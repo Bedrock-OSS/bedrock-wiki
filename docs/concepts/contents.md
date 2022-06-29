@@ -12,7 +12,7 @@ mentions:
 
 ## contents.json
 
-`contents.json` is a file located in `RP|BP/contents.json`. This file contains list of **all** files in pack.
+`contents.json` is a file located in `RP|BP/contents.json`. This file contains a list of **all** the files in the pack.
 Example:
 
 <CodeHeader>RP/contents.json</CodeHeader>
@@ -67,7 +67,7 @@ Example:
 
 ## What for this file is
 
-This file *probably* optimizes the pack content, making it easier to achieve files for MC, like `texture_list.json`.
+This file *probably* optimizes the pack content, making it easier for the game to process the files, like `texture_list.json`.
 Mojang and marketplace content creators use this file.
 
 ## Automatizing the Process
@@ -86,5 +86,5 @@ That means that you only need to create a contents.json file with empty brackets
 
 Some additional information:
 
--	Development or normal folders, it don't matter. This file is auto-filled everywhere, even in skin packs (it can crash minecraft when generating it for skin pack).
+-	Development or normal folders, it doesn not matter. This file is auto-filled everywhere, even in skin packs (it can crash minecraft when generating it for skin pack).
 -	There is no need to make separate contents.json for subpacks. Just make one file in the main folder.
