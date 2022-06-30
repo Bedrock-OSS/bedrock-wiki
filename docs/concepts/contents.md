@@ -5,7 +5,7 @@ mentions:
     - Osaxely
 ---
 
-``contents.json`` is a file that is *probably* used for the game to process the pack files more easily. It is *probably* intended for marketplace content creators and Mojang, it is not required to have this file in the pack for the pack to work properly.
+`contents.json` is a file that is *probably* used for the game to process the pack files more easily. It is *probably* intended for marketplace content creators and Mojang, it is not required to have this file in the pack for the pack to work properly.
 
 You will find there some instructions about the usage of this file.
 
@@ -64,9 +64,10 @@ Example:
 ></FolderView>
 
 ## Automatizing the process
-The ``contents.json`` file can be generated automatically by the game itself, it is very recommended to decrease the risks of making mistakes. However, the file must be prepared first. Create a new empty file called ``contents.json`` in the root directory of your add-on, and add empty brackets.
 
-<CodeHeader>``BP|RP/contents.json``</CodeHeader>
+The `contents.json` file can be generated automatically by the game itself, it is very recommended to decrease the risks of making mistakes. However, the file must be prepared first. Create a new empty file called `contents.json` in the root directory of your add-on, and add empty brackets.
+
+<CodeHeader>BP|RP/contents.json</CodeHeader>
 
 ```json
 {}
@@ -74,6 +75,7 @@ The ``contents.json`` file can be generated automatically by the game itself, it
 The file content will be automatically written next time the game is launched.
 
 ## Additional information
+
 -	The automatic process can be achieved no matter what is the location of the pack (Development folders or normal folders).
--	Do not make multiple ``contents.json`` for subpacks, the file at the root of the pack is sufficient.
+-	Do not make multiple `contents.json` for subpacks, the file at the root of the pack is sufficient.
 -	This file is not required for the addon to work properly.
