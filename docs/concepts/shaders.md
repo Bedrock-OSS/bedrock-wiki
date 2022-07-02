@@ -3,7 +3,7 @@ title: Shaders
 ---
 
 :::warning
-The shaders on this page are incompatible with [Render Dragon](https://help.minecraft.net/hc/en-us/articles/360052771272-About-the-1-16-200-Update-for-Windows-10-). That means that they will not work on Windows 10 or Console devices!
+The shaders on this page are incompatible with [Render Dragon](https://help.minecraft.net/hc/en-us/articles/360052771272-About-the-1-16-200-Update-for-Windows-10-). That means that they will not work on Windows and Console devices past 1.16.200, nor other devices past 1.18.30!
 :::
 
 ## Overview
