@@ -203,3 +203,7 @@ Copy this code into the following field, and press <kbd>Convert</kbd>. The symbo
 <a onclick="document.getElementById('result').value = String.fromCodePoint(parseInt(document.getElementById('hexValue').value, 16))" style="text-decoration: none; color: white; background: rgb(91, 33, 182); padding: 0.5em; border-radius: 0.4em; cursor: pointer;">Convert</a>
 </form>
 </div>
+
+### Glyph Separation Space
+
+Sometimes, it appears that if you put 2 glyphs near to each other, there will be a couple of empty pixels between them. The only fix for it is to scale the glyph itself.
