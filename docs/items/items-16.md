@@ -898,7 +898,6 @@ Niche Features
     -   `"saddle"` - Currently has no known function.
     -   `minecraft:shears` - Currently has no known function.
     -   `minecraft:bucket` - Currently has no known function.
-    -   `minecraft:shooter` - Currently broken.
     -   `minecraft:digger` - `use_efficiency` - Parameter Currently has no known function.
 
 > Current Limitations
