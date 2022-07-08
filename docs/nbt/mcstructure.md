@@ -57,7 +57,7 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 > > > > >
 > > > > > > ![String][string] `name`: The block's identifier, such as `minecraft:planks`.  
 > > > > > > ![Compound][compound] `states`: The block's states as keys and values. Examples: `wood_type:"acacia"`, `bite_counter:3`, `open_bit:1b`. The values are the appropriate NBT type for the state: strings for enum values, integers for scalar numbers, and bytes for boolean values.  
-> > > > > > ![Integer][int] `version`: Compatibility versioning number for this block (currently `17825806` as of writing, in 1.16).
+> > > > > > ![Integer][int] `version`: Compatibility versioning number for this block (currently `17959425` as of writing, in 1.19).
 > > > >
 > > > > ![Compound][compound] `block_position_data`: Contains additional data for individual blocks in the structure. Each key is an integer index into the flattened list of blocks inside of `block_indices`. Layer is unspecified as it is irrelevant.
 > > > >
