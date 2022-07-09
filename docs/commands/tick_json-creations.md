@@ -91,3 +91,26 @@ scoreboard players set value loaded 1
 ```
 
 The above function checks if the player value has the loaded score set to 0, then runs functions if that is true. It sets it to 1 afterwards to make sure it does not run again.
+
+## NOT hasitem detection
+
+Ever wanted to check if player doesn't have an item?
+
+<CodeHeader>BP/functions/detect.mcfunction</CodeHeader>
+
+```
+# Setup
+scoreboard objectives add detect dummy
+scoreboard players add @a detect 0
+# Main
+scoreboard players set @a[hasitem={item=mj105:flashlight,location=slot.weapon.mainhand}] detect 4
+scoreboard players add @a[scores={detect=!0}] detect -1
+# Trigger
+execute @a[scores={detect=1}] ~~~ function single_trigger
+execute @a[scores={detect=0}] ~~~ function multiple_trigger
+```
+
+This sets up `detect` scoreboard with 0 value.
+Then it adds 4 (recommended use this amount) to this scoreboard if player has item you want. This scoreboard is lowered every tick.
+When value of scoreboard drops to 1, you can do something with player. It will be a singe trigger.
+If you call a function on a player, whose `detect` value is 0, function will be run every time this player doesn't have specified item.
