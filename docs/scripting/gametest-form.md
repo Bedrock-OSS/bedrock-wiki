@@ -58,11 +58,9 @@ form.body("This is Action Form Body");
 ```
 
 #### Button
-Button is the main function of the form. The form can have so many button for the player to choose.
+Button is the main function of the form. The form can have so many button for the player to choose. Button has 2 arguments. First argument is the label, show the text of the button. 
 
-Button has 2 arguments. First argument is the button text. Show the text of the button. 
-
-Second argument is the placeholder text, for some type of description/info. Third argument is default value.  argument is button icon. Show the picture/icon of the button. To use it, you need to define the texture path. You can use resource pack to show icon (Example `textures/items/compass`). Custom texture need `.png` at the end of the path
+Second argument argument is button icon. Show the picture/icon of the button. To use it, you need to define the texture path. You can use resource pack to show icon (Example `textures/items/compass`). Custom texture need `.png` at the end of the path
 
 ```js
 // No icon
@@ -73,7 +71,9 @@ form.button("Button 2", "textures/items/compass");
 form.button("Button 3", "textures/icon/btn_icon_3.png");
 ```
 
-> Even the form can have infinite button, but the maximum number of button is 256 buttons. You must not have more than 256 buttons or your form may break.
+:::warning
+Even the form can have infinite button, but the maximum number of button is 256 buttons. You must not have more than 256 buttons or your form may break.
+:::
 
 #### Example
 This is the example of using the Action Form.
@@ -122,7 +122,9 @@ form.button1("Button 1: Yes");
 form.button2("Button 2: No")
 ```
 
-> Because the Message Form only have 2 buttons, it's recommended to have "Yes/OK" option on "button1" and "No/Cancel" option on "button2". You can see the problem in the "Show and Respond" section
+:::tip
+Because the Message Form only have 2 buttons, it's recommended to have "Yes/OK" option on "button1" and "No/Cancel" option on "button2". You can see the problem in the "Show and Respond" section
+:::
 
 #### Example
 This is the example of using Message Form
@@ -237,7 +239,9 @@ world.events.beforeItemUse.subscribe(event => {
 })
 ```
 
-> The form open when no UI is open. Meaning if you want to open the form with custom command/chat message, you can't open the form because chat UI is open. You need to use damage to close the chat UI, then open the form. Best thing is use another event.
+:::warning
+The form open when no UI is open. Meaning if you want to open the form with custom command/chat message, you can't open the form because chat UI is open. You need to use damage to close the chat UI, then open the form. Best thing is use another event.
+:::
 
 Inside the if statement is where our form is show. Using `.show()`, the form will open. Inside show function, you need player class as an argument. After we show the form, we can use `.then()` to save the respond of player.
 
