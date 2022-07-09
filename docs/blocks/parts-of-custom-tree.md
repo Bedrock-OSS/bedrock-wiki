@@ -48,210 +48,218 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
 
 ```json
 {
-  "format_version": "1.16.100",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_leaves",
-      "properties": {
-        "wiki:decay_tier":[4, 3, 2, 1, 0], //the distance in blocks to find the log
-        "wiki:not_decay":[false, true], //used when placed by the player or with features
-        "wiki:solid":[false, true] //optional; makes the leaves non-transparent when surrounded
-      }
-    },
-    "events": {
-	"wiki:on_destroyed": { //defines the loot for the tool
-				"sequence": [
-					{
-						"condition": "query.get_equipped_item_name == 'shears'",
-						"spawn_loot": {
-							"table": "loot_tables/blocks/custom_leaves_block.json"
-						}
-					},
-					{
-						"condition": "query.get_equipped_item_name != 'shears'",
-						"spawn_loot": {
-							"table": "loot_tables/blocks/custom_leaves_loot.json"
-						}
-					}
-				]
-			},
-      "check":{ //checks for the log
-          "sequence": [
-            {
-              "condition": "q.block_property('wiki:not_decay') == false",
-       				"set_block_property": {
-        					 "wiki:decay_tier": "(q.block_neighbor_has_any_tag(0,0,-1,'wiki:custom_log') || q.block_neighbor_has_any_tag(0,0,1,'wiki:custom_log') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:custom_log') || q.block_neighbor_has_any_tag(1,0,0,'wiki:custom_log') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:custom_log') || q.block_neighbor_has_any_tag(0,1,0,'wiki:custom_log')) ? 4 : ((q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_4')) ? 3 : ( (q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_3 ') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_3')) ? 2 : ( (q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_2')) ? 1 : 0 ) ) )"
-                  }
-         				},
-									{
-      							"set_block_property": {
-												"wiki:solid": "q.block_neighbor_has_any_tag(0,0,-1,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(0,0,1,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(0,1,0,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(0,-1,0,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(-1,0,0,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(1,0,0,'wiki:custom_log','stone','wiki:custom_leaves')"
-											}
-									}
-            ]
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_leaves",
+            "properties": {
+                "wiki:decay_tier": [
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
+                ], //the distance in blocks to find the log
+                "wiki:not_decay": [
+                    false,
+                    true
+                ], //used when placed by the player or with features
+                "wiki:solid": [
+                    false,
+                    true
+                ] //optional; makes the leaves non-transparent when surrounded
+            }
         },
-        "wiki:stop_decay":{ //when placed
-          "set_block_property": {
-            "wiki:not_decay": true
-          }
-        },
-       "wiki:decay":{ //when decayed
-          "die": {}
-				}
-    },
-    "permutations": [ //nothing great here, just the stages.
-      {
-        "condition": "query.block_property('wiki:decay_tier') == 0",
-          "components": {
-            "minecraft:ticking": {
-              "looping": true,
-              "range": [
-                0,
-                0
-              ],
-              "on_tick": {
-                "event": "check"
-              }
+        "events": {
+            "wiki:on_destroyed": { //defines the loot for the tool
+                "sequence": [
+                    {
+                        "condition": "query.get_equipped_item_name == 'shears'",
+                        "spawn_loot": {
+                            "table": "loot_tables/blocks/custom_leaves_block.json"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name != 'shears'",
+                        "spawn_loot": {
+                            "table": "loot_tables/blocks/custom_leaves_loot.json"
+                        }
+                    }
+                ]
             },
-            "minecraft:unit_cube": {},
-            "tag:wiki:decay_tier_0": {},
-  					  "minecraft:random_ticking": {
-     				  "on_tick": {
-       				  "event": "wiki:decay"
-      					 }
- 					    }
-          }
-      },
-      {
-        "condition": "query.block_property('wiki:decay_tier') == 1",
-        "components": {
-          "minecraft:ticking": {
-            "looping": true,
-            "range": [
-              0,
-              0
-            ],
-            "on_tick": {
-              "event": "check"
-          
+            "check": { //checks for the log
+                "sequence": [
+                    {
+                        "condition": "q.block_property('wiki:not_decay') == false",
+                        "set_block_property": {
+                            "wiki:decay_tier": "(q.block_neighbor_has_any_tag(0,0,-1,'wiki:custom_log') || q.block_neighbor_has_any_tag(0,0,1,'wiki:custom_log') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:custom_log') || q.block_neighbor_has_any_tag(1,0,0,'wiki:custom_log') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:custom_log') || q.block_neighbor_has_any_tag(0,1,0,'wiki:custom_log')) ? 4 : ((q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_4')) ? 3 : ( (q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_3 ') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_3')) ? 2 : ( (q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_2')) ? 1 : 0 ) ) )"
+                        }
+                    },
+                    {
+                        "set_block_property": {
+                            "wiki:solid": "q.block_neighbor_has_any_tag(0,0,-1,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(0,0,1,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(0,1,0,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(0,-1,0,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(-1,0,0,'wiki:custom_log','stone','wiki:custom_leaves') && q.block_neighbor_has_any_tag(1,0,0,'wiki:custom_log','stone','wiki:custom_leaves')"
+                        }
+                    }
+                ]
+            },
+            "wiki:stop_decay": { //when placed
+                "set_block_property": {
+                    "wiki:not_decay": true
+                }
+            },
+            "wiki:decay": { //when decayed
+                "die": {}
             }
-          },
-          "minecraft:unit_cube": {},
-          "tag:wiki:decay_tier_1": {}
-      }
-      },
-      {
-        "condition": "query.block_property('wiki:decay_tier') == 2",
-        "components": {
-          "minecraft:ticking": {
-            "looping": true,
-            "range": [
-              0,
-              0
-            ],
-            "on_tick": {
-              "event": "check"
-          
+        },
+        "permutations": [ //nothing great here, just the stages.
+            {
+                "condition": "query.block_property('wiki:decay_tier') == 0",
+                "components": {
+                    "minecraft:ticking": {
+                        "looping": true,
+                        "range": [
+                            0,
+                            0
+                        ],
+                        "on_tick": {
+                            "event": "check"
+                        }
+                    },
+                    "minecraft:unit_cube": {},
+                    "tag:wiki:decay_tier_0": {},
+                    "minecraft:random_ticking": {
+                        "on_tick": {
+                            "event": "wiki:decay"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('wiki:decay_tier') == 1",
+                "components": {
+                    "minecraft:ticking": {
+                        "looping": true,
+                        "range": [
+                            0,
+                            0
+                        ],
+                        "on_tick": {
+                            "event": "check"
+                        }
+                    },
+                    "minecraft:unit_cube": {},
+                    "tag:wiki:decay_tier_1": {}
+                }
+            },
+            {
+                "condition": "query.block_property('wiki:decay_tier') == 2",
+                "components": {
+                    "minecraft:ticking": {
+                        "looping": true,
+                        "range": [
+                            0,
+                            0
+                        ],
+                        "on_tick": {
+                            "event": "check"
+                        }
+                    },
+                    "minecraft:unit_cube": {},
+                    "tag:wiki:decay_tier_2": {}
+                }
+            },
+            {
+                "condition": "query.block_property('wiki:decay_tier') == 3",
+                "components": {
+                    "minecraft:ticking": {
+                        "looping": true,
+                        "range": [
+                            0,
+                            0
+                        ],
+                        "on_tick": {
+                            "event": "check"
+                        }
+                    },
+                    "minecraft:unit_cube": {},
+                    "tag:wiki:decay_tier_3": {}
+                }
+            },
+            {
+                "condition": "query.block_property('wiki:decay_tier') == 4",
+                "components": {
+                    "minecraft:ticking": {
+                        "looping": true,
+                        "range": [
+                            0,
+                            0
+                        ],
+                        "on_tick": {
+                            "event": "check"
+                        }
+                    },
+                    "minecraft:unit_cube": {},
+                    "tag:wiki:decay_tier_4": {}
+                }
+            },
+            {
+                "condition": "query.block_property('wiki:solid') == true",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_leaves",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
             }
-          },
-          "minecraft:unit_cube": {},
-          "tag:wiki:decay_tier_2": {}
-      }
-      },
-      {
-        "condition": "query.block_property('wiki:decay_tier') == 3",
-        "components": {
-          "minecraft:ticking": {
-            "looping": true,
-            "range": [
-              0,
-              0
-            ],
-            "on_tick": {
-              "event": "check"
-          
+        ],
+        "components": { //main components
+            "minecraft:creative_category": {
+                "group": "itemGroup.name.leaves",
+                "category": "nature"
+            },
+            "minecraft:on_player_placing": {
+                "event": "wiki:stop_decay",
+                "target": "self"
+            },
+            "minecraft:on_player_destroyed": {
+                "event": "wiki:on_destroyed"
+                //Triggers event that spawns different loot
+            },
+            "minecraft:ticking": {
+                "looping": true,
+                "range": [
+                    0,
+                    0
+                ],
+                "on_tick": {
+                    "event": "check"
+                }
+            }, //we need both of these to work with world generation
+            "minecraft:random_ticking": {
+                "on_tick": {
+                    "event": "check",
+                    "target": "block"
+                }
+            },
+            "tag:wiki:custom_leaves": {},
+            "minecraft:breathability": "air",
+            "minecraft:destroy_time": 0.3,
+            "minecraft:map_color": "#FFFFFF",
+            "minecraft:explosion_resistance": 1.0,
+            "minecraft:block_light_absorption": 0.0,
+            "minecraft:block_light_emission": 0.0,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "custom_leaves",
+                    "render_method": "blend",
+                    "ambient_occlusion": true,
+                    "face_dimming": true
+                }
             }
-          },
-          "minecraft:unit_cube": {},
-          "tag:wiki:decay_tier_3": {}
-      }
-      },
-      {
-        "condition": "query.block_property('wiki:decay_tier') == 4",
-        "components": {
-          "minecraft:ticking": {
-            "looping": true,
-            "range": [
-              0,
-              0
-            ],
-            "on_tick": {
-              "event": "check"
-            }
-          },
-          "minecraft:unit_cube": {},
-          "tag:wiki:decay_tier_4": {}
         }
-      },
-     {
-        "condition": "query.block_property('wiki:solid') == true",
-        "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "custom_leaves",
-          "render_method": "opaque"
-        }
-      }
-        }
-      }
-    ],
-    "components": { //main components
-      "minecraft:creative_category": {
-        "group": "itemGroup.name.leaves",
-        "category": "nature"
-    },
-"minecraft:on_player_placing": {
-  "event": "wiki:stop_decay",
-  "target": "self"
-},
-"minecraft:on_player_destroyed": {
-				"event": "wiki:on_destroyed"
-				//Triggers event that spawns different loot
-			},
-"minecraft:ticking": {
-  "looping": true,
-  "range": [
-    0,
-    0
-  ],
-  "on_tick": {
-    "event": "check"
-  }
-}, //we need both of these to work with world generation
-      "minecraft:random_ticking": {
-        "on_tick": {
-          "event": "check",
-          "target": "block"
-        }
-      },
-      "tag:wiki:custom_leaves": {},
-      "minecraft:breathability": "air",
-      "minecraft:destroy_time": 0.3,
-      "minecraft:map_color": "#FFFFFF",
-      "minecraft:explosion_resistance": 1.0,
-      "minecraft:block_light_absorption": 0.0,
-      "minecraft:block_light_emission": 0.0,
-
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "custom_leaves",
-          "render_method": "blend",
-          "ambient_occlusion": true,
-          "face_dimming": true
-        }
-      }
     }
-  }
 }
 ```
 
@@ -270,7 +278,11 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
         "description": {
             "identifier": "wiki:custom_log",
             "properties": {
-                "wiki:facing_direction": [0, 1, 2]
+                "wiki:facing_direction": [
+                    0,
+                    1,
+                    2
+                ]
             }
             //Log direction properties
         },
@@ -279,7 +291,11 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
                 "condition": "query.block_property('wiki:facing_direction') == 0",
                 //If query.block_property('wiki:facing_direction') == 0 sets no rotation and on_interact component
                 "components": {
-                    "minecraft:rotation": [0, 0, 0],
+                    "minecraft:rotation": [
+                        0,
+                        0,
+                        0
+                    ],
                     "minecraft:on_interact": {
                         "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
                         "event": "wiki:become_stripped_0"
@@ -291,7 +307,11 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
                 "condition": "query.block_property('wiki:facing_direction') == 1",
                 //If query.block_property('wiki:facing_direction') == 1 sets rotation and on_interact component
                 "components": {
-                    "minecraft:rotation": [90, 0, 0],
+                    "minecraft:rotation": [
+                        90,
+                        0,
+                        0
+                    ],
                     "minecraft:on_interact": {
                         "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
                         "event": "wiki:become_stripped1"
@@ -303,7 +323,11 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
                 "condition": "query.block_property('wiki:facing_direction') == 2",
                 //If query.block_property('wiki:facing_direction') == 2 sets rotation and on_interact component
                 "components": {
-                    "minecraft:rotation": [0, 0, 90],
+                    "minecraft:rotation": [
+                        0,
+                        0,
+                        90
+                    ],
                     "minecraft:on_interact": {
                         "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
                         "event": "wiki:become_stripped2"
@@ -313,11 +337,11 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
             }
         ],
         "components": {
-			"tag:wiki:custom_log": {},
-			"minecraft:creative_category": {
-				"category": "nature",
-				"group": "itemGroup.name.log"
-			},
+            "tag:wiki:custom_log": {},
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.log"
+            },
             "minecraft:material_instances": {
                 "*": {
                     "texture": "custom_log",
@@ -352,9 +376,9 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
                     {
                         "run_command": {
                             "command": [
-								"setblock ~~~ wiki:custom_stripped_log",
-								"playsound hit.wood @a ~~~"
-							]
+                                "setblock ~~~ wiki:custom_stripped_log",
+                                "playsound hit.wood @a ~~~"
+                            ]
                         }
                     },
                     //Sets custom stripped log with special rotation and plays sound
@@ -373,9 +397,9 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
                     {
                         "run_command": {
                             "command": [
-								"structure load custom_stripped_log1 ~~~",
-								"playsound hit.wood @a ~~~"
-							]
+                                "structure load custom_stripped_log1 ~~~",
+                                "playsound hit.wood @a ~~~"
+                            ]
                         }
                     },
                     //Loads structure (custom stripped log with special rotation) and plays sound
@@ -394,9 +418,9 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
                     {
                         "run_command": {
                             "command": [
-								"structure load custom_stripped_log2 ~~~",
-								"playsound hit.wood @a ~~~"
-							]
+                                "structure load custom_stripped_log2 ~~~",
+                                "playsound hit.wood @a ~~~"
+                            ]
                         }
                     },
                     //Loads structure (custom stripped log with special rotation) and plays sound
@@ -507,200 +531,226 @@ For the sapling we will need structures of out tree to make the sapling semi-rea
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:custom_sapling",
-			"properties": {
-				"wiki:growing": [0, 1, 2]
-			}
-			//Properties of sapling growing
-		},
-		"permutations": [
-			{
-				"condition": "query.block_property('wiki:growing') == 0",
-				"components": {
-					"minecraft:on_interact": {
-						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
-						"event": "bone_meal_1"
-					},
-					"minecraft:ticking": {
-						"range": [120, 180],
-						"on_tick": {
-							"event": "grow_1"
-						}
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('wiki:growing') == 1",
-				"components": {
-					"minecraft:on_interact": {
-						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
-						"event": "bone_meal_2"
-					},
-					"minecraft:ticking": {
-						"range": [120, 180],
-						"on_tick": {
-							"event": "grow_2"
-						}
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('wiki:growing') == 2",
-				"components": {
-					"minecraft:on_interact": {
-						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
-						"event": "bone_meal_3"
-					},
-					"minecraft:ticking": {
-						"range": [120, 180],
-						"on_tick": {
-							"event": "grow_3"
-						}
-					}
-				}
-			}
-		],
-		"components": {
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "custom_sapling",
-					"render_method": "alpha_test",
-					//Add this two components to remove shadow from this block:
-					"face_dimming": false,
-					"ambient_occlusion": false
-				}
-			},
-			"minecraft:pick_collision": {
-				"origin": [-6, 0, -6],
-				"size": [12, 13, 12]
-			},
-			"minecraft:loot": "loot_tables/blocks/custom_sapling.json",
-			//Add loot component so it will drop sapling placer
-			"minecraft:geometry": "geometry.custom_sapling",
-			"minecraft:destroy_time": 0.01,
-			"minecraft:entity_collision": false,
-			"minecraft:breathability": "air",
-			"minecraft:block_light_absorption": 0,
-			"minecraft:placement_filter": {
-				"conditions": [
-					{
-						"block_filter": [
-							"minecraft:dirt",
-							"minecraft:grass",
-							"minecraft:podzol"
-						],
-						"allowed_faces": ["up"]
-					}
-				]
-			},
-			//Allows to place block only on this blocks
-			"minecraft:ticking": {
-				"range": [1, 1],
-				"on_tick": {
-					"event": "grow_0"
-				}
-			}
-			//Starts to grow
-		},
-		"events": {
-			"grow_0": {
-				"set_block_property": {
-					"wiki:growing": 0
-				}
-				//Sets growing stage to 0
-			},
-			"grow_1": {
-				"sequence": [
-					{
-						"run_command": {
-							"command": [
-								"particle minecraft:crop_growth_emitter ~~~"
-							]
-						}
-						//Adds particles
-					},
-					{
-						"set_block_property": {
-							"wiki:growing": 1
-						}
-						//Sets growing stage to 1
-					}
-				]
-			},
-			"grow_2": {
-				"sequence": [
-					{
-						"run_command": {
-							"command": [
-								"particle minecraft:crop_growth_emitter ~~~"
-							]
-						}
-						//Adds particles
-					},
-					{
-						"set_block_property": {
-							"wiki:growing": 2
-							//Sets growing stage to 2
-						}
-					}
-				]
-			},
-			"grow_3": {
-				"run_command": {
-					"command": [
-						"particle minecraft:crop_growth_emitter ~~~",
-						"structure load custom_tree ~-2 ~ ~-2"
-					]
-				}
-				//Particles and structure loads. Magic!
-			},
-			"bone_meal_1": {
-				"sequence": [
-					{
-						"decrement_stack": {}
-						//Clears item that were used to interact
-					},
-					{
-						"trigger": {
-							"event": "grow_1"
-						}
-						//Runs grow_1 event
-					}
-				]
-			},
-			"bone_meal_2": {
-				"sequence": [
-					{
-						"decrement_stack": {}
-						//Clears item that were used to interact
-					},
-					{
-						"trigger": {
-							"event": "grow_2"
-						}
-						//Runs grow_2 event
-					}
-				]
-			},
-			"bone_meal_3": {
-				"sequence": [
-					{
-						"decrement_stack": {}
-						//Clears item that were used to interact
-					},
-					{
-						"trigger": {
-							"event": "grow_3"
-						}
-						//Runs grow_3 event
-					}
-				]
-			}
-		}
-	}
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_sapling",
+            "properties": {
+                "wiki:growing": [
+                    0,
+                    1,
+                    2
+                ]
+            }
+            //Properties of sapling growing
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property('wiki:growing') == 0",
+                "components": {
+                    "minecraft:on_interact": {
+                        "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+                        "event": "bone_meal_1"
+                    },
+                    "minecraft:ticking": {
+                        "range": [
+                            120,
+                            180
+                        ],
+                        "on_tick": {
+                            "event": "grow_1"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('wiki:growing') == 1",
+                "components": {
+                    "minecraft:on_interact": {
+                        "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+                        "event": "bone_meal_2"
+                    },
+                    "minecraft:ticking": {
+                        "range": [
+                            120,
+                            180
+                        ],
+                        "on_tick": {
+                            "event": "grow_2"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('wiki:growing') == 2",
+                "components": {
+                    "minecraft:on_interact": {
+                        "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+                        "event": "bone_meal_3"
+                    },
+                    "minecraft:ticking": {
+                        "range": [
+                            120,
+                            180
+                        ],
+                        "on_tick": {
+                            "event": "grow_3"
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "custom_sapling",
+                    "render_method": "alpha_test",
+                    //Add this two components to remove shadow from this block:
+                    "face_dimming": false,
+                    "ambient_occlusion": false
+                }
+            },
+            "minecraft:pick_collision": {
+                "origin": [
+                    -6,
+                    0,
+                    -6
+                ],
+                "size": [
+                    12,
+                    13,
+                    12
+                ]
+            },
+            "minecraft:loot": "loot_tables/blocks/custom_sapling.json",
+            //Add loot component so it will drop sapling placer
+            "minecraft:geometry": "geometry.custom_sapling",
+            "minecraft:destroy_time": 0.01,
+            "minecraft:entity_collision": false,
+            "minecraft:breathability": "air",
+            "minecraft:block_light_absorption": 0,
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "minecraft:dirt",
+                            "minecraft:grass",
+                            "minecraft:podzol"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            //Allows to place block only on this blocks
+            "minecraft:ticking": {
+                "range": [
+                    1,
+                    1
+                ],
+                "on_tick": {
+                    "event": "grow_0"
+                }
+            }
+            //Starts to grow
+        },
+        "events": {
+            "grow_0": {
+                "set_block_property": {
+                    "wiki:growing": 0
+                }
+                //Sets growing stage to 0
+            },
+            "grow_1": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "particle minecraft:crop_growth_emitter ~~~"
+                            ]
+                        }
+                        //Adds particles
+                    },
+                    {
+                        "set_block_property": {
+                            "wiki:growing": 1
+                        }
+                        //Sets growing stage to 1
+                    }
+                ]
+            },
+            "grow_2": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "particle minecraft:crop_growth_emitter ~~~"
+                            ]
+                        }
+                        //Adds particles
+                    },
+                    {
+                        "set_block_property": {
+                            "wiki:growing": 2
+                            //Sets growing stage to 2
+                        }
+                    }
+                ]
+            },
+            "grow_3": {
+                "run_command": {
+                    "command": [
+                        "particle minecraft:crop_growth_emitter ~~~",
+                        "structure load custom_tree ~-2 ~ ~-2"
+                    ]
+                }
+                //Particles and structure loads. Magic!
+            },
+            "bone_meal_1": {
+                "sequence": [
+                    {
+                        "decrement_stack": {}
+                        //Clears item that were used to interact
+                    },
+                    {
+                        "trigger": {
+                            "event": "grow_1"
+                        }
+                        //Runs grow_1 event
+                    }
+                ]
+            },
+            "bone_meal_2": {
+                "sequence": [
+                    {
+                        "decrement_stack": {}
+                        //Clears item that were used to interact
+                    },
+                    {
+                        "trigger": {
+                            "event": "grow_2"
+                        }
+                        //Runs grow_2 event
+                    }
+                ]
+            },
+            "bone_meal_3": {
+                "sequence": [
+                    {
+                        "decrement_stack": {}
+                        //Clears item that were used to interact
+                    },
+                    {
+                        "trigger": {
+                            "event": "grow_3"
+                        }
+                        //Runs grow_3 event
+                    }
+                ]
+            }
+        }
+    }
 }
 ```
 
@@ -714,25 +764,25 @@ For the sapling we will need structures of out tree to make the sapling semi-rea
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:custom_sapling_placer",
-			"category": "nature"
-		},
-		"components": {
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.sapling"
-			},
-			"minecraft:max_stack_size": 64,
-			"minecraft:block_placer": {
-				"block": "wiki:custom_sapling"
-			},
-			"minecraft:icon": {
-				"texture": "custom_sapling_placer"
-			}
-		}
-	}
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:custom_sapling_placer",
+            "category": "nature"
+        },
+        "components": {
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.sapling"
+            },
+            "minecraft:max_stack_size": 64,
+            "minecraft:block_placer": {
+                "block": "wiki:custom_sapling"
+            },
+            "minecraft:icon": {
+                "texture": "custom_sapling_placer"
+            }
+        }
+    }
 }
 ```
 
@@ -748,18 +798,18 @@ This loot will spawn leaves block (when you breaak it using shears)
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "item",
-					"name": "wiki:custom_leaves",
-					"weight": 1
-				}
-			]
-		}
-	]
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wiki:custom_leaves",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -769,28 +819,28 @@ Leaves default loot
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "item",
-					"name": "minecraft:apple",
-					"weight": 1
-				},
-				{
-					"type": "item",
-					"name": "wiki:custom_sapling_placer",
-					"weight": 5
-				},
-				{
-					"type": "empty",
-					//Nothing wil drop
-					"weight": 10
-				}
-			]
-		}
-	]
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:apple",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "wiki:custom_sapling_placer",
+                    "weight": 5
+                },
+                {
+                    "type": "empty",
+                    //Nothing wil drop
+                    "weight": 10
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -800,18 +850,18 @@ This loot will spawn log block
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "item",
-					"name": "wiki:custom_log",
-					"weight": 1
-				}
-			]
-		}
-	]
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wiki:custom_log",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -821,18 +871,18 @@ This loot will spawn stripped log
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "item",
-					"name": "wiki:custom_stripped_log",
-					"weight": 1
-				}
-			]
-		}
-	]
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wiki:custom_stripped_log",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -842,18 +892,18 @@ This will spawn custom_sapling_placer
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "item",
-					"name": "wiki:custom_sapling_placer",
-					"weight": 1
-				}
-			]
-		}
-	]
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wiki:custom_sapling_placer",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -883,163 +933,163 @@ Tree Features are a really great way to get actual custom trees. You need some u
 {
     "format_version": "1.13.0",
     "minecraft:tree_feature": {
-      "description": {
-        "identifier": "wiki:custom_tree_feature"
-      },
-      "trunk": {
-        "trunk_height": {
-          "range_min": 6,
-          "range_max": 10
+        "description": {
+            "identifier": "wiki:custom_tree_feature"
         },
-        "height_modifier": {
-          "range_min": -2,
-          "range_max": 4
+        "trunk": {
+            "trunk_height": {
+                "range_min": 6,
+                "range_max": 10
+            },
+            "height_modifier": {
+                "range_min": -2,
+                "range_max": 4
+            },
+            "trunk_block": {
+                "name": "minecraft:log",
+                "states": {
+                    "old_log_type": "spruce"
+                }
+            }
         },
-        "trunk_block": {
-          "name": "minecraft:log",
-          "states": {
-            "old_log_type": "spruce"
-          }
-        }
-      },
-      "spruce_canopy": {
-        "lower_offset": {
-          "range_min": 2,
-          "range_max": 4
+        "spruce_canopy": {
+            "lower_offset": {
+                "range_min": 2,
+                "range_max": 4
+            },
+            "upper_offset": {
+                "range_min": 0,
+                "range_max": 4
+            },
+            "max_radius": {
+                "range_min": 3,
+                "range_max": 5
+            },
+            "leaf_block": {
+                "name": "wiki:custom_leaves"
+            }
         },
-        "upper_offset": {
-          "range_min": 0,
-          "range_max": 4
-        },
-        "max_radius": {
-          "range_min": 3,
-          "range_max": 5
-        },
-        "leaf_block": {
-          "name": "wiki:custom_leaves"
-        }
-      },
-      "base_block": [
-        "minecraft:dirt",
-        {
-          "name": "minecraft:dirt",
-          "states": {
-            "dirt_type": "coarse"
-          }
-        }
-      ],
-      "may_grow_on": [
-        "minecraft:dirt",
-        "minecraft:grass",
-        "minecraft:podzol",
-        "minecraft:dirt_with_roots",
-        "minecraft:moss_block",
-        {
-          "name": "minecraft:dirt",
-          "states": {
-            "dirt_type": "coarse"
-          }
-        },
-        {
-          "name": "minecraft:farmland",
-          "states": {
-            "moisturized_amount": 0
-          }
-        },
-        {
-          "name": "minecraft:farmland",
-          "states": {
-            "moisturized_amount": 1
-          }
-        },
-        {
-          "name": "minecraft:farmland",
-          "states": {
-            "moisturized_amount": 2
-          }
-        },
-        {
-          "name": "minecraft:farmland",
-          "states": {
-            "moisturized_amount": 3
-          }
-        },
-        {
-          "name": "minecraft:farmland",
-          "states": {
-            "moisturized_amount": 4
-          }
-        },
-        {
-          "name": "minecraft:farmland",
-          "states": {
-            "moisturized_amount": 5
-          }
-        },
-        {
-          "name": "minecraft:farmland",
-          "states": {
-            "moisturized_amount": 6
-          }
-        },
-        {
-          "name": "minecraft:farmland",
-          "states": {
-            "moisturized_amount": 7
-          }
-        }
-      ],
-      "may_replace": [
-        "minecraft:air",
-        {
-          "name": "minecraft:leaves",
-          "states": {
-            "old_leaf_type": "oak"
-          }
-        },
-        {
-          "name": "minecraft:leaves",
-          "states": {
-            "old_leaf_type": "spruce"
-          }
-        },
-        {
-          "name": "minecraft:leaves",
-          "states": {
-            "old_leaf_type": "birch"
-          }
-        },
-        {
-          "name": "minecraft:leaves",
-          "states": {
-            "old_leaf_type": "jungle"
-          }
-        },
-        {
-          "name": "minecraft:leaves2",
-          "states": {
-            "new_leaf_type": "acacia"
-          }
-        },
-        {
-          "name": "minecraft:leaves2",
-          "states": {
-            "new_leaf_type": "dark_oak"
-          }
-        }
-      ],
-      "may_grow_through": [
-        "minecraft:dirt",
-        "minecraft:grass",
-        {
-          "name": "minecraft:dirt",
-          "states": {
-            "dirt_type": "coarse"
-          }
-        }
-      ]
+        "base_block": [
+            "minecraft:dirt",
+            {
+                "name": "minecraft:dirt",
+                "states": {
+                    "dirt_type": "coarse"
+                }
+            }
+        ],
+        "may_grow_on": [
+            "minecraft:dirt",
+            "minecraft:grass",
+            "minecraft:podzol",
+            "minecraft:dirt_with_roots",
+            "minecraft:moss_block",
+            {
+                "name": "minecraft:dirt",
+                "states": {
+                    "dirt_type": "coarse"
+                }
+            },
+            {
+                "name": "minecraft:farmland",
+                "states": {
+                    "moisturized_amount": 0
+                }
+            },
+            {
+                "name": "minecraft:farmland",
+                "states": {
+                    "moisturized_amount": 1
+                }
+            },
+            {
+                "name": "minecraft:farmland",
+                "states": {
+                    "moisturized_amount": 2
+                }
+            },
+            {
+                "name": "minecraft:farmland",
+                "states": {
+                    "moisturized_amount": 3
+                }
+            },
+            {
+                "name": "minecraft:farmland",
+                "states": {
+                    "moisturized_amount": 4
+                }
+            },
+            {
+                "name": "minecraft:farmland",
+                "states": {
+                    "moisturized_amount": 5
+                }
+            },
+            {
+                "name": "minecraft:farmland",
+                "states": {
+                    "moisturized_amount": 6
+                }
+            },
+            {
+                "name": "minecraft:farmland",
+                "states": {
+                    "moisturized_amount": 7
+                }
+            }
+        ],
+        "may_replace": [
+            "minecraft:air",
+            {
+                "name": "minecraft:leaves",
+                "states": {
+                    "old_leaf_type": "oak"
+                }
+            },
+            {
+                "name": "minecraft:leaves",
+                "states": {
+                    "old_leaf_type": "spruce"
+                }
+            },
+            {
+                "name": "minecraft:leaves",
+                "states": {
+                    "old_leaf_type": "birch"
+                }
+            },
+            {
+                "name": "minecraft:leaves",
+                "states": {
+                    "old_leaf_type": "jungle"
+                }
+            },
+            {
+                "name": "minecraft:leaves2",
+                "states": {
+                    "new_leaf_type": "acacia"
+                }
+            },
+            {
+                "name": "minecraft:leaves2",
+                "states": {
+                    "new_leaf_type": "dark_oak"
+                }
+            }
+        ],
+        "may_grow_through": [
+            "minecraft:dirt",
+            "minecraft:grass",
+            {
+                "name": "minecraft:dirt",
+                "states": {
+                    "dirt_type": "coarse"
+                }
+            }
+        ]
     }
-  }
+}
   ```
 
 </Spoiler>
@@ -1051,40 +1101,46 @@ Tree Features are a really great way to get actual custom trees. You need some u
 {
     "format_version": "1.13.0",
     "minecraft:feature_rules": {
-      "description": {
-        "identifier": "wiki:custom_tree_feature_rule",
-        "places_feature": "wiki:custom_tree_feature"
-      },
-      "conditions": {
-        "placement_pass": "surface_pass",
-        "minecraft:biome_filter": [
-          {
-            "test": "has_biome_tag",
-            "operator": "==",
-            "value": "taiga"
-          },
-          {
-            "test": "has_biome_tag",
-            "operator": "!=",
-            "value": "mega"
-          }
-        ]
-      },
-      "distribution": {
-        "iterations": 1,
-        "coordinate_eval_order": "zxy",
-        "x": {
-            "extent": [0, 16],
-            "distribution": "uniform"
+        "description": {
+            "identifier": "wiki:custom_tree_feature_rule",
+            "places_feature": "wiki:custom_tree_feature"
         },
-        "y": "query.heightmap(variable.worldx, variable.worldz)",
-        "z": {
-            "extent": [0, 16],
-            "distribution": "uniform"
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "taiga"
+                },
+                {
+                    "test": "has_biome_tag",
+                    "operator": "!=",
+                    "value": "mega"
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 1,
+            "coordinate_eval_order": "zxy",
+            "x": {
+                "extent": [
+                    0,
+                    16
+                ],
+                "distribution": "uniform"
+            },
+            "y": "query.heightmap(variable.worldx, variable.worldz)",
+            "z": {
+                "extent": [
+                    0,
+                    16
+                ],
+                "distribution": "uniform"
+            }
         }
-      }
     }
-  }
+}
 ```
 
 
@@ -1112,30 +1168,30 @@ Make terrain_texture.json and textures.
 
 ```json
 {
-	"num_mip_levels": 4,
-	"padding": 8,
-	"resource_pack_name": "Parts of Custom Tree",
-	"texture_data": {
-		"custom_leaves": {
-			"textures": "textures/blocks/leaves_oak"
-		},
-		"custom_log": {
-			"textures": "textures/blocks/log_oak"
-		},
-		"custom_log_top": {
-			"textures": "textures/blocks/log_oak_top"
-		},
-		"custom_stripped_log": {
-			"textures": "textures/blocks/stripped_oak_log"
-		},
-		"custom_stripped_log_top": {
-			"textures": "textures/blocks/stripped_oak_log_top"
-		},
-		"custom_sapling": {
-			"textures": "textures/blocks/sapling_oak"
-		}
-	},
-	"texture_name": "atlas.terrain"
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "Parts of Custom Tree",
+    "texture_data": {
+        "custom_leaves": {
+            "textures": "textures/blocks/leaves_oak"
+        },
+        "custom_log": {
+            "textures": "textures/blocks/log_oak"
+        },
+        "custom_log_top": {
+            "textures": "textures/blocks/log_oak_top"
+        },
+        "custom_stripped_log": {
+            "textures": "textures/blocks/stripped_oak_log"
+        },
+        "custom_stripped_log_top": {
+            "textures": "textures/blocks/stripped_oak_log_top"
+        },
+        "custom_sapling": {
+            "textures": "textures/blocks/sapling_oak"
+        }
+    },
+    "texture_name": "atlas.terrain"
 }
 ```
 
@@ -1189,13 +1245,13 @@ Make item_texture file
 
 ```json
 {
-	"resource_pack_name": "Parts of Custom Tree",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"custom_sapling_placer": {
-			"textures": "textures/blocks/sapling_oak"
-		}
-	}
+    "resource_pack_name": "Parts of Custom Tree",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "custom_sapling_placer": {
+            "textures": "textures/blocks/sapling_oak"
+        }
+    }
 }
 ```
 
@@ -1205,19 +1261,23 @@ Add sounds to blocks
 
 ```json
 {
-	"format_version": [1, 1, 0],
-	"wiki:custom_leaves": {
-		"sound": "grass"
-	},
-	"wiki:custom_log": {
-		"sound": "wood"
-	},
-	"wiki:custom_stripped_log": {
-		"sound": "wood"
-	},
-	"wiki:custom_sapling": {
-		"sound": "grass"
-	}
+    "format_version": [
+        1,
+        1,
+        0
+    ],
+    "wiki:custom_leaves": {
+        "sound": "grass"
+    },
+    "wiki:custom_log": {
+        "sound": "wood"
+    },
+    "wiki:custom_stripped_log": {
+        "sound": "wood"
+    },
+    "wiki:custom_sapling": {
+        "sound": "grass"
+    }
 }
 ```
 
@@ -1227,11 +1287,9 @@ What you have created:
 
 <Checklist>
 
--   [ ] Custom Trees with Decaying Leaves
-
--   [ ] Working Sapling
-
--   [ ] Rotatable and Stripable Logs
+-   [x] Custom Trees with Decaying Leaves
+-   [x] Working Sapling
+-   [x] Rotatable and Stripable Logs
 
 </Checklist>
 
