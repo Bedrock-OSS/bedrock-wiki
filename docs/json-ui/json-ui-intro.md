@@ -2,33 +2,41 @@
 title: Intro to JSON UI
 nav_order: 1
 tags:
-    - guide
+  - guide
 mention:
-    - sermah
-    - KalmeMarq
+  - sermah
+  - KalmeMarq
 ---
 
 ## Introduction
 
 :::tip
-This page is dedicated into introducing you into the basics of JSON UI. For a more detailed documentation, you may check the other page [here](https://wiki.bedrock.dev/json-ui/json-ui-documentation.html).
+This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the other page regarding JSON UI [here](https://wiki.bedrock.dev/json-ui/json-ui-documentation.html).
 :::
 
-The game's user interface is data-driven and can be modified. With this it allows us to modify how certain user interfaces would render and, to some extent, behave. To get started, all vanilla UI files are stored in `resource_pack/ui/...` folder.
+The game's user interface is data-driven and can be modified. It allows us to modify how certain user interfaces would render and, to some extent, behave. To get started, all vanilla UI files are stored in `RP/ui/...` folder.
 
-JSON UI contains the following files:
+JSON UI may contain the following files:
 
 ### System files
+
 These are built-in files used in JSON UI:
+
 - `_global_variables.json` - used for denoting default variables for later use
 - `_ui_defs.json` - for referencing the files used on the UI
+
 ### Screens
+
 These are files which contains elements that are called to render a screen:
+
 - `hud_screen.json` - shows the main gameplay screen where in-game features such as the hotbar is rendered
 - `inventory_screen.json` - shows the player's inventory screen
 - etc.
+
 ### Templates
+
 These are files which stores JSON UI elements to be used by other namespaces, such as screens:
+
 - `ui_common.json` - contains elements such as the button which is referenced on most other namespaces such buttons for the settings screen
 - `ui_templates_*.json` - contains elements that are neatly orgnaized to be used by other namespaces
 
@@ -36,26 +44,26 @@ These are files which stores JSON UI elements to be used by other namespaces, su
 
 The `_ui_defs.json` file references all JSON UI files in an array.
 
-You can make new files, for example we'll add `resource_pack/ui/button.json` and `resource_pack/my_ui/main_menu.json`. In the file, we would list them as such:
+You can make new files, for example we'll add `RP/ui/button.json` and `RP/my_ui/main_menu.json`. In the file, we would list them as such:
 
-<CodeHeader>resource_pack/ui/_ui_defs.json</CodeHeader>
+<CodeHeader>RP/ui/\_ui_defs.json</CodeHeader>
 
 ```jsonc
 {
-  "ui_defs": [ "ui/button.json", "my_ui/main_menu.json" ]
+  "ui_defs": ["ui/button.json", "my_ui/main_menu.json"]
 }
 ```
 
 - Make sure to append the full filepath of the UI you are referencing - including the file extension (e.g. `*.json`), from the resource pack root folder!
 - Only reference new UI files you have added in your pack. You don't need to reference vanilla files nor other third-party JSON UI files, as it automatically gets merged with other packs.
-- You may use custom file paths outside the `resource_pack/ui/...` folder, or reference files in a sub-folder within the `resource_pack/ui/...` folder.
+- You may use custom file paths outside the `RP/ui/...` folder, or reference files in a sub-folder within the `RP/ui/...` folder.
 - You may append custom file extensions other than `*.json` - so long as the file contents are valid and written in JSON.
 
 ## Global Variables
 
 We can denote a variable `"$info_text_color"` and its value of `[0.8, 0.8, 0.8]` within the `_global_variables.json` file as such:
 
-<CodeHeader>RP/ui/_global_variables.json</CodeHeader>
+<CodeHeader>RP/ui/\_global_variables.json</CodeHeader>
 
 ```jsonc
 {
@@ -90,7 +98,7 @@ Other elements in different JSON UI files can then reference this variable to be
 ```
 
 - You can add denote more variables, seperated in a comma, within the `_global_variables.json` file.
-- Variables stored in this file are constant and *one-sided*. And therefore, you cannot modify the default variable in one namespace to be then used by the other.
+- Variables stored in this file are constant and _one-sided_. And therefore, you cannot modify the default variable in one namespace to be then used by the other.
 
 ## Namespaces
 
@@ -115,14 +123,15 @@ We can then reference the same element above into a different namespace `two`:
 ```jsonc
 {
   "namespace": "two",
-  
+
   "fizzbuzz@stuff.foobar": {...}
 }
 ```
 
 When referencing elements from different namespaces, it must have the following format:
+
 ```jsonc
-  "[element_name]@[namespace_reference].[element_name_reference]"
+"[element_name]@[namespace_reference].[element_name_reference]"
 ```
 
 ## Screens
@@ -149,20 +158,22 @@ Here the element `type` is `label` so it will render a text of `Hello World` whe
 ```
 
 ### Types
-The following are the list of element types, which are possible values for the `type` property: 
+
+The following are the list of element types, which are possible values for the `type` property:
+
 - `label` - for creating text objects
 - `image` - for rendering images from a filepath provided
 - `button` - for creating interactive and clickable elements
 - `panel` - an empty container where you can store all other elements that may overlap to each other
 - `stack_panel` - an empty container where you can store all other elements in a stack that doesn't overlap to each other
 - `grid` - uses another element as a template, and then renders it repeatedly in multiple rows and columns
-- `factory` - renders an element based off of another element, is capable of calling hardcoded values and variables 
+- `factory` - renders an element based off of another element, is capable of calling hardcoded values and variables
 - `custom` - is paired with another property `renderer` which renders hardcoded JSON UI elements
-- `screen` - elements that are called by the game directly, usually root panel elements 
+- `screen` - elements that are called by the game directly, usually root panel elements
 
 ## Animations
 
-When using the `anim_type` property in place of the `type` property, you can create animations to animate other elements. 
+When using the `anim_type` property in place of the `type` property, you can create animations to animate other elements.
 
 Animation elements can then be referenced on other non-animation element types, such as `label` and `panel`.
 
@@ -199,7 +210,9 @@ Animation elements can then be referenced on other non-animation element types, 
 ```
 
 ### Types
+
 The following are the list of element types, which are possible values for the `anim_type` property:
+
 - `alpha` - accepts float values, animates the opacity of the element
 - `offset` - accepts an array, animates the position of the element relative to its anchor
 - `size` - accepts an array, animates the size in ( width, height )
@@ -222,7 +235,7 @@ You can use operators in JSON UI, along with `$variables` and `#bindings` into c
 | Less or equal than    | < or =   | `(#value < 2 or #value = 2)`                                                  |
 | Logical AND           | and      | `($is_school and $is_open)`                                                   |
 | Logical OR            | or       | `($is_cool or $is_awesome)`                                                   |
-| Logical NOT           | not      | `(not #name)` `(not (#name = 'text'))` `(not $name)`			   |
+| Logical NOT           | not      | `(not #name)` `(not (#name = 'text'))` `(not $name)`                          |
 
 ## Variables
 
@@ -298,7 +311,7 @@ Here it's directly assigning the `#hardtext` value to the `text` property.
     "text": "#hardtext",
     "bindings": [
       {
-				"binding_name": "#hardtext"
+        "binding_name": "#hardtext"
       }
     ]
   }
@@ -316,8 +329,8 @@ Or alternatively, it may sometimes look like as follows:
     "text": "#text",
     "bindings": [
       {
-				"binding_name": "#hardtext",
-				"binding_name_override": "#text"
+        "binding_name": "#hardtext",
+        "binding_name_override": "#text"
       }
     ]
   }
@@ -478,7 +491,7 @@ Here's a more complicated example of conditional rendering with variables. In th
   "black_conditional_image": {
     "type": "image",
     "texture": "textures/ui/Black",
-    "size": [ 16, 16 ],
+    "size": [16, 16],
     "layer": 10,
     "ignored": "(not ($actionbar_text = 'hello world'))"
   },
@@ -488,7 +501,7 @@ Here's a more complicated example of conditional rendering with variables. In th
     "factory": {
       "name": "hud_actionbar_text_factory",
       "control_ids": {
-				"hud_actionbar_text": "black_conditional_image@hud.black_conditional_image"
+        "hud_actionbar_text": "black_conditional_image@hud.black_conditional_image"
       }
     }
   },
@@ -496,11 +509,11 @@ Here's a more complicated example of conditional rendering with variables. In th
   "root_panel": {
     "modifications": [
       {
-				"array_name": "controls",
-				"operation": "insert_front",
-				"value": {
-					"black_conditional_image_factory@hud.black_conditional_image_factory": {}
-				}
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "black_conditional_image_factory@hud.black_conditional_image_factory": {}
+        }
       }
     ]
   }
@@ -663,16 +676,16 @@ Modifying the above JSON into an unintrusive UI file used in a resource pack sho
   "hud_title_text/title_frame/title": {
     "modifications": [
       {
-				"array_name": "bindings",
-				"operation": "insert_back",
-				"value": {
-					"binding_type": "view",
-					"source_property_name": "(not (#text = 'hello world'))",
-					"target_property_name": "#visible"
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": {
+          "binding_type": "view",
+          "source_property_name": "(not (#text = 'hello world'))",
+          "target_property_name": "#visible"
         }
       }
     ]
-	}
+  }
 }
 ```
 
@@ -682,44 +695,44 @@ Like before, here's a more complicated example of conditional rendering with bin
 
 ```json
 {
-	"black_conditional_image": {
-		"type": "image",
-		"texture": "textures/ui/Black",
-		"size": [16, 16],
-		"layer": 10,
-		"bindings": [
-			{
-				"binding_name": "#hud_title_text_string"
-			},
-			{
-				"binding_type": "view",
-				"source_property_name": "(#hud_title_text_string = 'hello world')",
-				"target_property_name": "#visible"
-			}
-		]
-	},
+  "black_conditional_image": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "size": [16, 16],
+    "layer": 10,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hud_title_text_string = 'hello world')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
 
-	"black_conditional_image_factory": {
-		"type": "panel",
-		"factory": {
-			"name": "hud_title_text_factory",
-			"control_ids": {
-				"hud_title_text": "black_conditional_image@hud.black_conditional_image"
-			}
-		}
-	},
+  "black_conditional_image_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "black_conditional_image@hud.black_conditional_image"
+      }
+    }
+  },
 
-	"root_panel": {
-		"modifications": [
-			{
-				"array_name": "controls",
-				"operation": "insert_front",
-				"value": {
-					"black_conditional_image_factory@hud.black_conditional_image_factory": {}
-				}
-			}
-		]
-	}
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "black_conditional_image_factory@hud.black_conditional_image_factory": {}
+        }
+      }
+    ]
+  }
 }
 ```
 
@@ -731,73 +744,76 @@ Here's an example of a button element with the `button_mappings` property:
 
 ```jsonc
 {
-	"sample_button@common.button": {
-		"$pressed_button_name": "button_id",
-		"button_mappings": [
-			{
-				"to_button_id": "$pressed_button_name",
-				"mapping_type": "pressed"
-			},
-			{
-				"from_button_id": "button.menu_select",
-				"to_button_id": "$pressed_button_name",
-				"mapping_type": "pressed"
-			},
-			{
-				"from_button_id": "button.menu_ok",
-				"to_button_id": "$pressed_button_name",
-				"mapping_type": "focused"
-			},
-			{
-				"from_button_id": "button.menu_up",
-				"to_button_id": "$pressed_button_name",
-				"mapping_type": "global"
-			}
-		]
-	}
+  "sample_button@common.button": {
+    "$pressed_button_name": "button_id",
+    "button_mappings": [
+      {
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_up",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "global"
+      }
+    ]
+  }
 }
 ```
 
 ### Mapping types
+
 Defines the scope of the specified button mapping:
+
 - `focused` - means when the button is hovered onto first
 - `pressed` - means when the button is interacted with
--	`global` - means when the button is rendered
+- `global` - means when the button is rendered
 
 As long as the `from_button_id` is inputted with it's appropriate `mapping_type`, it will meet the conditions and therefore trigger the `to_button_id` property.
 
 ### Common button IDs
+
 These are the list of common button IDs you can use in `from_button_id` property.
 
 **For mouse and keyboard:**
-| Button ID						 							| Description														 |
+| Button ID | Description |
 | --------------------------------- | -------------------------------------- |
-| `button.menu_select` 							| Mouse left click											 |
-| `button.menu_secondary_select`		| Mouse right click											 |
-| `button.menu_ok`									| ENTER key															 |
-| `button.menu_exit`								| ESC key																 |
-| `button.menu_cancel`							| ESC key																 |
-| `button.menu_up`									| UP ARROW key													 |
-| `button.menu_down`								| DOWN ARROW key												 |
-| `button.menu_left`								| LEFT ARROW key												 |
-| `button.menu_right`								| RIGHT ARROW key												 |
-| `button.menu_autocomplete`				| TAB key																 |
+| `button.menu_select` | Mouse left click |
+| `button.menu_secondary_select` | Mouse right click |
+| `button.menu_ok` | ENTER key |
+| `button.menu_exit` | ESC key |
+| `button.menu_cancel` | ESC key |
+| `button.menu_up` | UP ARROW key |
+| `button.menu_down` | DOWN ARROW key |
+| `button.menu_left` | LEFT ARROW key |
+| `button.menu_right` | RIGHT ARROW key |
+| `button.menu_autocomplete` | TAB key |
 
 **For controllers:**
-| Button ID						 							| Description														 |
+| Button ID | Description |
 | --------------------------------- | -------------------------------------- |
-| `button.controller_select `				| X/A button														 |
-| `button.menu_secondary_select`		| Y button															 |
-| `button.menu_exit`     						| B button														   |
-| `button.menu_cancel`							| B button														   |
-| `button.menu_up`									| UP DPAD key														 |
-| `button.menu_down`								| DOWN DPAD key													 |
-| `button.menu_left`								| LEFT DPAD key													 |
-| `button.menu_right`								| RIGHT DPAD key												 |
+| `button.controller_select ` | X/A button |
+| `button.menu_secondary_select` | Y button |
+| `button.menu_exit` | B button |
+| `button.menu_cancel` | B button |
+| `button.menu_up` | UP DPAD key |
+| `button.menu_down` | DOWN DPAD key |
+| `button.menu_left` | LEFT DPAD key |
+| `button.menu_right` | RIGHT DPAD key |
 
 ## Modifications
 
-To modify JSON UI in a non-intrusive way, you can use the `modifications` property to modify previously existing JSON UI elements from other packs (usually vanilla JSON UI files). Doing this makes sure only necessary parts are modified unless otherwise intended, to improve compatibility with other packs that modify the JSON UI. 
+To modify JSON UI in a non-intrusive way, you can use the `modifications` property to modify previously existing JSON UI elements from other packs (usually vanilla JSON UI files). Doing this makes sure only necessary parts are modified unless otherwise intended, to improve compatibility with other packs that modify the JSON UI.
 
 | Modification    | Description                                 |
 | --------------- | ------------------------------------------- |
