@@ -11,7 +11,7 @@ mention:
 ## Introduction
 
 :::tip
-This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the other page regarding JSON UI [here](https://wiki.bedrock.dev/json-ui/json-ui-documentation.html).
+This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the **JSON UI Documentation** page instead.
 :::
 
 The game's user interface is data-driven and can be modified. It allows us to modify how certain user interfaces would render and, to some extent, behave. To get started, all vanilla UI files are stored in `RP/ui/...` folder.
@@ -48,7 +48,7 @@ You can make new files, for example we'll add `RP/ui/button.json` and `RP/my_ui/
 
 <CodeHeader>RP/ui/\_ui_defs.json</CodeHeader>
 
-```jsonc
+```json
 {
   "ui_defs": ["ui/button.json", "my_ui/main_menu.json"]
 }
@@ -65,7 +65,7 @@ We can denote a variable `"$info_text_color"` and its value of `[0.8, 0.8, 0.8]`
 
 <CodeHeader>RP/ui/\_global_variables.json</CodeHeader>
 
-```jsonc
+```json
 {
   "$info_text_color": [0.8, 0.8, 0.8]
 }
@@ -75,7 +75,7 @@ Other elements in different JSON UI files can then reference this variable to be
 
 <CodeHeader>vanilla/my_ui/file1.json</CodeHeader>
 
-```jsonc
+```json
 {
   "some_info": {
     ...
@@ -87,7 +87,7 @@ Other elements in different JSON UI files can then reference this variable to be
 
 <CodeHeader>vanilla/my_ui/file2.json</CodeHeader>
 
-```jsonc
+```json
 {
   "info": {
     ...
@@ -108,7 +108,7 @@ For instance, we have an element `foobar` in the namespace `one`:
 
 <CodeHeader>vanilla/ui/file_a.json</CodeHeader>
 
-```jsonc
+```json
 {
   "namespace": "one",
 
@@ -120,7 +120,7 @@ We can then reference the same element above into a different namespace `two`:
 
 <CodeHeader>vanilla/ui/file_b.json</CodeHeader>
 
-```jsonc
+```json
 {
   "namespace": "two",
 
@@ -130,7 +130,7 @@ We can then reference the same element above into a different namespace `two`:
 
 When referencing elements from different namespaces, it must have the following format:
 
-```jsonc
+```json
 "[element_name]@[namespace_reference].[element_name_reference]"
 ```
 
@@ -179,7 +179,7 @@ Animation elements can then be referenced on other non-animation element types, 
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "namespace": "example_nm",
 
@@ -247,7 +247,7 @@ The symbol `$` is added at the beginning of each string to denote it as a variab
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "test_element": {
     ...
@@ -276,7 +276,7 @@ You can also derive variables from another element as such:
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "foobar": {
     ...
@@ -304,7 +304,7 @@ Here it's directly assigning the `#hardtext` value to the `text` property.
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "label": {
     "type": "label",
@@ -322,7 +322,7 @@ Or alternatively, it may sometimes look like as follows:
 
 <CodeHeader>vanilla/ui/example_file.json</CodeHeader>
 
-```jsonc
+```json
 {
   "label": {
     "type": "label",
@@ -374,7 +374,7 @@ We have to tell the source element where the value will come from, tell which pr
 
 <CodeHeader></CodeHeader>
 
-```jsonc
+```json
 {
   "panel": {
     ...
@@ -406,7 +406,7 @@ Variables can be used to render UI controls conditionally. Recall that UI variab
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 ...
   "hud_actionbar_text": {
@@ -438,7 +438,7 @@ The `ignored` property is used to conditionally render a UI control when working
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 ...
   "hud_actionbar_text": {
@@ -472,7 +472,7 @@ Modifying the above JSON into an unintrusive UI file used in a resource pack sho
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
   "hud_actionbar_text/actionbar_message": {
     "ignored": "($actionbar_text = 'hello world')"
@@ -486,7 +486,7 @@ Here's a more complicated example of conditional rendering with variables. In th
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
   "black_conditional_image": {
     "type": "image",
@@ -528,7 +528,7 @@ Following the above example with the actionbar, you might logically assume that 
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 ...
   "hud_title_text": {
@@ -597,7 +597,7 @@ You will need to add another binding object to the text to control its visibilit
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
 ...
   "hud_title_text": {
@@ -671,7 +671,7 @@ Modifying the above JSON into an unintrusive UI file used in a resource pack sho
 
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
-```jsonc
+```json
 {
   "hud_title_text/title_frame/title": {
     "modifications": [
@@ -742,7 +742,7 @@ Like before, here's a more complicated example of conditional rendering with bin
 
 Here's an example of a button element with the `button_mappings` property:
 
-```jsonc
+```json
 {
   "sample_button@common.button": {
     "$pressed_button_name": "button_id",
