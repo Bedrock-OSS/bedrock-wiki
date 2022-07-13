@@ -3,7 +3,7 @@ title: Wiki Developer's Test Page
 hidden: true
 tags:
     - Dev page
-mentions:
+mentioned:
     - TheItsNameless
     - MedicalJewel105
     - SirLich
