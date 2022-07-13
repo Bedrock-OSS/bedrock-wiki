@@ -1,6 +1,7 @@
 ---
 title: Aseprite Animations
-
+category: Documentation
+nav_order: 2
 ---
 
 ## What is Aseprite?
