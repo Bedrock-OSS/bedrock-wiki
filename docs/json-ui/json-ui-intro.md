@@ -1,5 +1,6 @@
 ---
 title: Intro to JSON UI
+category: General
 nav_order: 1
 tags:
   - guide
