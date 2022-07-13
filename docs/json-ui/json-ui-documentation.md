@@ -1,6 +1,7 @@
 ---
 title: JSON UI Documentation
-nav_order: 2
+category: Documentation
+nav_order: 1
 mention:
     - KalmeMarq
 ---
