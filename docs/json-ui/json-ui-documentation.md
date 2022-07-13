@@ -1133,6 +1133,42 @@ Some of them only work in specific screens.
 - `button.trade_take_half_place_one`
 - `button.trade_coalesce_stack`
 
+#### Play (`ui/play_screen.json`)
+
+- `button.menu_sign_in_to_view_realms`
+- `button.menu_realms_world_item_edit`
+- `button.menu_realms_feed`
+- `button.menu_realms_world_item_remove`
+- `button.menu_network_world_item`
+- `button.menu_network_server_world_edit`
+- `button.connect_to_third_party_server`
+- `button.view_third_party_server_offers`
+- `button.description_read_toggle`
+- `button.news_read_toggle`
+- `button.local_world_upload`
+- `button.menu_start_local_world`
+- `button.convert_legacy_world`
+- `button.menu_local_world_item_edit`
+- `button.menu_legacy_world_item_delete`
+- `button.import_beta_retail_local_world`
+- `button.import_beta_retail_legacy_world`
+- `button.menu_network_add_friend`
+- `button.menu_network_join_by_code`
+- `button.menu_quick_play`
+- `button.new_world_upload`
+- `button.menu_local_world_create`
+- `button.create_on_realms_button`
+- `button.archived_world_upload`
+- `button.menu_import_level`
+- `button.menu_sync_legacy_worlds`
+- `button.realms_warning_more_info`
+- `button.menu_realm_world_trial`
+- `button.menu_realm_nintendo_first_realm_purchase_button`
+- `button.no_local_worlds_launch_help`
+- `button.menu_network_join_by_code_popup_join`
+- `button.join_server_anyway`
+- `button.cancel_join_server`
+
 ### Others
 
 -   `button.try_menu_exit`
