@@ -30,7 +30,7 @@ There are three main ways to access and use values in MoLang (queries, variables
     - Example.) "`query.is_sneaking || query.is_jumping`" // Evaluates to `1`/`true` when either jumping *or* sneaking
 
 - **Parentheses**, `( )`, are also a major help when grouping values or performing math operations.
-  - Example.) "`query.is_sneaking && (query.get_equipped_item_name == `stick` || query.get_equipped_item_name == `diamond`)`" Will evaluate to `1`/`true` when sneaking *and* holding either a stick *or* a diamond
+  - Example.) "`query.is_sneaking && (query.get_equipped_item_name == "stick" || query.get_equipped_item_name == "diamond")`" Will evaluate to `1`/`true` when sneaking *and* holding either a stick *or* a diamond
 
 - **Conditional Operators** can be used as `if/else` statements. 
   - A *binary* conditional operator refers to just using `?`. When this is used, it'll output your value or `0` depending on whether the given input value is `true`. 
