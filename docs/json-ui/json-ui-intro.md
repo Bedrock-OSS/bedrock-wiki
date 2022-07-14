@@ -39,7 +39,7 @@ These are files which contains elements that are called to render a screen:
 These are files which stores JSON UI elements to be used by other namespaces, such as screens:
 
 - `ui_common.json` - contains elements such as the button which is referenced on most other namespaces such buttons for the settings screen
-- `ui_templates_*.json` - contains elements that are neatly orgnaized to be used by other namespaces
+- `ui_template_*.json` - contains elements that are neatly orgnaized to be used by other namespaces
 
 ## UI Defs
 
@@ -125,7 +125,7 @@ We can then reference the same element above into a different namespace `two`:
 {
   "namespace": "two",
 
-  "fizzbuzz@stuff.foobar": {...}
+  "fizzbuzz@one.foobar": {...}
 }
 ```
 
@@ -160,7 +160,7 @@ Here the element `type` is `label` so it will render a text of `Hello World` whe
 
 ### Types
 
-The following are the list of element types, which are possible values for the `type` property:
+The following are some of the element types, which are possible values for the `type` property:
 
 - `label` - for creating text objects
 - `image` - for rendering images from a filepath provided
@@ -219,6 +219,10 @@ The following are the list of element types, which are possible values for the `
 - `size` - accepts an array, animates the size in ( width, height )
 - `flip_book` - accepts integer values, animates the image in flipbook texture or frame by frame
 - `uv` - accepts an array, animates the image depending on the UV texture
+- `color` - accepts float RGB values from 0.0 to 1.0, animates the color of the element
+- `wait` - accepts number values, used for waiting/staying purposes
+- `aseprite_flip_book` - like a `flip_book` animation, uses sprite sheets. More info [here](/json-ui/aseprite-animations)
+- `clip`
 
 ## Using Operators
 
