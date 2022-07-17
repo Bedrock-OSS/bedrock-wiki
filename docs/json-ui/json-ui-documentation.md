@@ -1876,6 +1876,14 @@ Some of them only work in specific screens.
 -   `#is_right_tab_stonecutter`
 -   `#is_left_tab_stones`
 
+#### Death (`ui/death_screen.json`)
+
+- `#death_reason_text`
+- `#respawn_visible`
+- `#quit_enabled`
+- `#quit_visible`
+- `#buttons_and_deathmessage_visible`
+
 #### Villager Trade2 (`ui/trade2_screen.json`)
 
 -   `#name_label`
