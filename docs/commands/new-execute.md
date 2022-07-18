@@ -7,12 +7,12 @@ tags:
 ---
 
 ## Introduction
-With the release of 1.19.10, the Upcoming Creator Features experimental toggle gave the `/execute` command a syntax overhaul. While the syntax is now more verbose and longer to write, it allows much finer control over the contextual components of commands and adds support for conditions to commands, superseding the use of commands like `/testfor`, `/testforblock`, and `/testforblock`.
+With the release of 1.19.10, the Upcoming Creator Features experimental toggle gave the `/execute` command a syntax overhaul. While the syntax is now more verbose and longer to write, it allows much finer control over the contextual components of commands and adds support for conditions to commands, superseding the use of commands like `/testfor`, `/testforblock`, and `/testforblocks`.
 
 Before we dive into the syntax and how to write it, we need to understand how the old `/execute` command worked, and what changed and why. This will make explaining the concepts found in the syntax easier.
 
 ## Execute, and Why it Changed
-As you may be familiar with it, the `/execute` comamnd's old syntax was as follows:
+As you may be familiar with it, the `/execute` command's old syntax was as follows:
 ```
 /execute <target> <position> <command>
 /execute <target> <position> detect <position> <block> <data value> <command>
@@ -51,7 +51,7 @@ Prevents running a command based on a condition. If the condition is true then t
 
 *   `if entity <target>`
 
-Acts like `/testfor`. Returns true if the target(s) exist.
+Acts like `/testfor`. Returns true if the targets exist.
 
 *   `if block <position> <block> <data value>`
 
@@ -89,9 +89,9 @@ The old functionality of `/execute` can be replicated with `as <target> at @s`. 
 # Chaining multiple '/execute's
 /execute @e[type=sheep] ~ ~ ~ execute @e[type=item,r=5] ~ ~ ~ detect ~ ~-1 ~ stone 0 kill @s
 
-/execute at @e[type=sheep] as @e[type=item,r=5] at @s if block ~ ~-1 ~ stone 0 run kill @s
+/execute at @e[type=sheep] run execute as @e[type=item,r=5] at @s if block ~ ~-1 ~ stone 0 run kill @s
 ```
-(Note that we don't use `as @e[type=sheep] at @s` because we don't need to execute as the sheep.)
+(Note that we don't use `as @e[type=sheep] at @s` because we don't need to execute as the sheep. `run execute` is usually never needed either, but due to a bug ([MCPE-156283](https://bugs.mojang.com/browse/MCPE-156283)) we are using it here as a workaround.)
 
 Now for some examples of things that were either not possible or were much more difficult before.
 
