@@ -31,7 +31,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Name        | Letter (Copy/Paste This) | Unicode | Image                                                      |
 | ----------- | ------------------------ | ------- | ---------------------------------------------------------- |
 | Jump        |                         | U+E084  | ![](/assets/images/concepts/emojis/mobile/jump.png)        |
-| Couch       |                         | U+E085  | ![](/assets/images/concepts/emojis/mobile/crouch.png)      |
+| Crouch      |                         | U+E085  | ![](/assets/images/concepts/emojis/mobile/crouch.png)      |
 | Fly Up      |                         | U+E086  | ![](/assets/images/concepts/emojis/mobile/fly_up.png)      |
 | Fly Down    |                         | U+E087  | ![](/assets/images/concepts/emojis/mobile/fly_down.png)    |
 | Left Arrow  |                         | U+E081  | ![](/assets/images/concepts/emojis/mobile/left_arrow.png)  |
