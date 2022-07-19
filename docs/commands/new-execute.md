@@ -12,7 +12,7 @@ With the release of 1.19.10, the Upcoming Creator Features experimental toggle g
 Before we dive into the syntax and how to write it, we need to understand how the old `/execute` command worked, and what changed and why. This will make explaining the concepts found in the syntax easier.
 
 ## Execute, and Why it Changed
-As you may be familiar with it, the `/execute` command's old syntax was as follows:
+The old `/execute` command's syntax used to be this:
 ```
 /execute <target> <position> <command>
 /execute <target> <position> detect <position> <block> <data value> <command>
@@ -93,7 +93,7 @@ The old functionality of `/execute` can be replicated with `as <target> at @s`. 
 ```
 (Note that we don't use `as @e[type=sheep] at @s` because we don't need to execute as the sheep. `run execute` is usually never needed either, but due to a bug ([MCPE-156283](https://bugs.mojang.com/browse/MCPE-156283)) we are using it here as a workaround.)
 
-Now for some examples of things that were either not possible or were much more difficult before.
+Now for some examples of things that were either not possible or were more difficult before the new syntax was introduced.
 
 ```
 # Testing a fake player's score
