@@ -232,6 +232,7 @@ You can use operators in JSON UI, along with `$variables` and `#bindings` into c
 | --------------------- | -------- | ----------------------------------------------------------------------------- |
 | Addition              | +        | `"100% + 420px"` `($text + ' my')` `($index + 2)` `('#' + $bdg_nm + '_name')` |
 | Subtraction           | -        | `"100% - 69px"` `($text - ' my')` `($index - 13)`                             |
+| Multiplication        | *        | `($var * 9)` `(#value * 5)`                                                   |
 | Division              | /        | `($var / 12)` `(#value / 2)`                                                  |
 | Equal to              | =        | `($var = 12)` `($var = 'this_text')` `(#name = 'Wither')`                     |
 | Greater than          | >        | `(#value > 13)`                                                               |
