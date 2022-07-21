@@ -6,7 +6,8 @@ mentions:
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Note that not more than 8 examples are shown for each component to keep this page fast to load. Namespace `minecraft` was also removed. *Last updated for 1.19.0*
+Note that not more than 8 examples are shown for each component to keep this page fast to load. Namespace `minecraft` was also removed.
+If you want to see full page, you can do it [here](/items/vui-full). *Last updated for 1.19.10*
 
 ## block
 
@@ -393,7 +394,10 @@ sweet_berries
         "dirt",
         "podzol",
         "moss_block",
-        "mycelium"
+        "mycelium",
+        "mud",
+        "muddy_mangrove_roots",
+        "dirt_with_roots"
     ]
 }
 ```

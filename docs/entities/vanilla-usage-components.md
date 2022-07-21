@@ -6,7 +6,8 @@ mentions:
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed. *Last updated for 1.19.0*
+Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed.
+If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.10*
 
 ## addrider
 
@@ -553,11 +554,20 @@ llama
 }
 ```
 
-<CodeHeader>#component_groups/minecraft:llama_defend_trader</CodeHeader>
+panda
+
+<CodeHeader>#component_groups/minecraft:panda_angry</CodeHeader>
 
 ```json
 "minecraft:angry": {
-    "duration": 10,
+    "duration": 500,
+    "broadcast_anger": true,
+    "broadcast_range": 41,
+    "broadcast_filters": {
+        "test": "is_family",
+        "operator": "==",
+        "value": "panda_aggressive"
+    },
     "calm_event": {
         "event": "minecraft:on_calm",
         "target": "self"
@@ -1872,7 +1882,11 @@ warden
     "idle_time": 60.0,
     "vibration_is_disturbance": true,
     "suspicion_is_disturbance": true,
-    "digs_in_daylight": false
+    "digs_in_daylight": false,
+    "on_start": {
+        "event": "on_digging_event",
+        "target": "self"
+    }
 }
 ```
 
@@ -2001,6 +2015,40 @@ ender_dragon
 ```json
 "minecraft:behavior.dragontakeoff": {
     "priority": 0
+}
+```
+
+</Spoiler>
+
+## behavior.drink_milk
+
+<Spoiler title="Show">
+
+wandering_trader
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.drink_milk": {
+    "priority": 5,
+    "filters": {
+        "all_of": [
+            {
+                "test": "is_daytime",
+                "value": true
+            },
+            {
+                "test": "is_visible",
+                "subject": "self",
+                "value": false
+            },
+            {
+                "test": "is_avoiding_mobs",
+                "subject": "self",
+                "value": false
+            }
+        ]
+    }
 }
 ```
 
@@ -2744,6 +2792,25 @@ ghast
 <Spoiler title="Show">
 
 llama
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.follow_caravan": {
+    "priority": 3,
+    "speed_multiplier": 2.1,
+    "entity_count": 10,
+    "entity_types": {
+        "filters": {
+            "test": "is_family",
+            "subject": "other",
+            "value": "llama"
+        }
+    }
+}
+```
+
+trader_llama
 
 <CodeHeader></CodeHeader>
 
@@ -5477,7 +5544,7 @@ allay
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 2,
-    "max_dist": 64,
+    "max_dist": 32,
     "search_height": 32,
     "goal_radius": 2.2,
     "speed_multiplier": 6,
@@ -6309,17 +6376,6 @@ llama
 }
 ```
 
-<CodeHeader>#component_groups/minecraft:llama_defend_trader</CodeHeader>
-
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 2,
-    "attack_radius": 64,
-    "charge_shoot_trigger": 2,
-    "charge_charged_trigger": 1
-}
-```
-
 piglin
 
 <CodeHeader>#component_groups/ranged_unit</CodeHeader>
@@ -6346,6 +6402,18 @@ pillager
     "attack_interval_min": 1.0,
     "attack_interval_max": 1.0,
     "attack_radius": 8.0
+}
+```
+
+shulker
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.ranged_attack": {
+    "attack_interval_min": 1,
+    "attack_interval_max": 3,
+    "attack_radius": 15
 }
 ```
 
@@ -6495,6 +6563,17 @@ llama
 mule
 
 <CodeHeader>#component_groups/minecraft:mule_adult</CodeHeader>
+
+```json
+"minecraft:behavior.run_around_like_crazy": {
+    "priority": 1,
+    "speed_multiplier": 1.2
+}
+```
+
+trader_llama
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:behavior.run_around_like_crazy": {
@@ -10524,6 +10603,24 @@ mule
 }
 ```
 
+trader_llama
+
+<CodeHeader>#component_groups/minecraft:llama_tamed</CodeHeader>
+
+```json
+"minecraft:equippable": {
+    "slots": [
+        {
+            "slot": 1,
+            "item": "carpet",
+            "accepted_items": [
+                "carpet"
+            ]
+        }
+    ]
+}
+```
+
 </Spoiler>
 
 ## exhaustion_values
@@ -11487,6 +11584,25 @@ parrot
                     "amplifier": 0
                 }
             ]
+        }
+    ]
+}
+```
+
+trader_llama
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:healable": {
+    "items": [
+        {
+            "item": "wheat",
+            "heal_amount": 2
+        },
+        {
+            "item": "hay_block",
+            "heal_amount": 10
         }
     ]
 }
@@ -12645,6 +12761,14 @@ mule
 "minecraft:is_chested": {}
 ```
 
+trader_llama
+
+<CodeHeader>#component_groups/minecraft:llama_chested</CodeHeader>
+
+```json
+"minecraft:is_chested": {}
+```
+
 </Spoiler>
 
 ## is_dyeable
@@ -13586,14 +13710,6 @@ llama
 }
 ```
 
-<CodeHeader>#component_groups/minecraft:llama_wandering_trader</CodeHeader>
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
 mooshroom
 
 <CodeHeader></CodeHeader>
@@ -13609,6 +13725,14 @@ mooshroom
 ```json
 "minecraft:mark_variant": {
     "value": -1
+}
+```
+
+<CodeHeader>#component_groups/minecraft:mooshroom_brown_fed_poppy</CodeHeader>
+
+```json
+"minecraft:mark_variant": {
+    "value": 0
 }
 ```
 
@@ -14520,17 +14644,6 @@ ender_dragon
 
 <Spoiler title="Show">
 
-llama
-
-<CodeHeader>#component_groups/minecraft:llama_wandering_trader</CodeHeader>
-
-```json
-"minecraft:on_friendly_anger": {
-    "event": "minecraft:defend_wandering_trader",
-    "target": "self"
-}
-```
-
 panda
 
 <CodeHeader>#component_groups/minecraft:panda_aggressive</CodeHeader>
@@ -14549,6 +14662,17 @@ polar_bear
 ```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:on_anger",
+    "target": "self"
+}
+```
+
+trader_llama
+
+<CodeHeader>#component_groups/minecraft:llama_wandering_trader</CodeHeader>
+
+```json
+"minecraft:on_friendly_anger": {
+    "event": "minecraft:defend_wandering_trader",
     "target": "self"
 }
 ```
@@ -15010,14 +15134,6 @@ iron_golem
 "minecraft:persistent": {}
 ```
 
-llama
-
-<CodeHeader>#component_groups/minecraft:llama_persistence</CodeHeader>
-
-```json
-"minecraft:persistent": {}
-```
-
 pillager
 
 <CodeHeader>#component_groups/minecraft:raid_persistence</CodeHeader>
@@ -15029,6 +15145,14 @@ pillager
 ravager
 
 <CodeHeader>#component_groups/minecraft:raid_persistence</CodeHeader>
+
+```json
+"minecraft:persistent": {}
+```
+
+snow_golem
+
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:persistent": {}
@@ -18472,7 +18596,7 @@ wandering_trader
         {
             "min_wait_time": 0,
             "max_wait_time": 0,
-            "spawn_entity": "llama",
+            "spawn_entity": "trader_llama",
             "spawn_event": "minecraft:from_wandering_trader",
             "single_use": true,
             "num_to_spawn": 2,
@@ -18566,6 +18690,35 @@ zombie_villager_v2
 <Spoiler title="Show">
 
 llama
+
+<CodeHeader>#component_groups/minecraft:strength_1</CodeHeader>
+
+```json
+"minecraft:strength": {
+    "value": 1,
+    "max": 5
+}
+```
+
+<CodeHeader>#component_groups/minecraft:strength_2</CodeHeader>
+
+```json
+"minecraft:strength": {
+    "value": 2,
+    "max": 5
+}
+```
+
+<CodeHeader>#component_groups/minecraft:strength_3</CodeHeader>
+
+```json
+"minecraft:strength": {
+    "value": 3,
+    "max": 5
+}
+```
+
+trader_llama
 
 <CodeHeader>#component_groups/minecraft:strength_1</CodeHeader>
 
@@ -18871,6 +19024,50 @@ mule
         {
             "item": "appleEnchanted",
             "temper_mod": 10
+        }
+    ],
+    "auto_reject_items": [
+        {
+            "item": "horsearmorleather"
+        },
+        {
+            "item": "horsearmoriron"
+        },
+        {
+            "item": "horsearmorgold"
+        },
+        {
+            "item": "horsearmordiamond"
+        },
+        {
+            "item": "saddle"
+        }
+    ],
+    "tame_event": {
+        "event": "minecraft:on_tame",
+        "target": "self"
+    }
+}
+```
+
+trader_llama
+
+<CodeHeader>#component_groups/minecraft:llama_wild</CodeHeader>
+
+```json
+"minecraft:tamemount": {
+    "min_temper": 0,
+    "max_temper": 30,
+    "feed_text": "action.interact.feed",
+    "ride_text": "action.interact.mount",
+    "feed_items": [
+        {
+            "item": "wheat",
+            "temper_mod": 3
+        },
+        {
+            "item": "hay_block",
+            "temper_mod": 6
         }
     ],
     "auto_reject_items": [
