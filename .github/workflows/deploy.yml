@@ -17,6 +17,7 @@ jobs:
       - name: Install and Build 🔧
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_OPTIONS: "--max-old-space-size=8192"
         run: |
           npm install
           npm run build
