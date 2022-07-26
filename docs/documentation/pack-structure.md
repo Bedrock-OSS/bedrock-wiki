@@ -123,10 +123,7 @@ show_toc: false
 'RP/textures/environment/overworld_cubemap/cubemap_3.png',
 'RP/textures/environment/overworld_cubemap/cubemap_4.png',
 'RP/textures/environment/overworld_cubemap/cubemap_5.png',
-'RP/textures/environment/overworld_cubemap/cubemap_6.png',
 
-
-                    
 'RP/textures/blocks/example.png',
 'RP/textures/entity/example.png',
 'RP/textures/items/example.png',
