@@ -41,6 +41,7 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 -   Disables entity shadows.
 -   Punching the entity will cause it to instantly despawn.
 -   Equipment placeable on/removable from entity.
+-   Makes the entity drop an armor stand item on death.
 
 ---
 
