@@ -108,7 +108,7 @@ While looking up for something in vanilla flipbook texture file, you can notice 
 Here is explanation for them:
 
 | Component          | Value   | Meaning                                                                          |
-| ------------------ | ------- | ---------------------------------------------------------------------------------|
+| ------------------ | ------- | -------------------------------------------------------------------------------- |
 | flipbook_texture   | string  | Path to texture.                                                                 |
 | atlas_tile         | string  | The shortname defined in the terrain_textures.json.                              |
 | atlas_index        | integer | The index of the texture array inside the definition of that shortname.*         |
