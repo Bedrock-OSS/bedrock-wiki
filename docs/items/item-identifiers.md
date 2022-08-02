@@ -1,7 +1,13 @@
 ---
 title: Vanilla Item Identifiers
 category: Documentation
+tags:
+    - deprecated
 ---
+
+:::danger
+This method no longer works after 1.18.30.
+:::
 
 An `identifier` is a required parameter that sits inside the description of the item's behaviour file.
 It accepts Vanilla Minecraft names, like so, `<namespace>:<vanilla item>`, which will apply certain hardcoded item behaviours, depending on the identifier used.
