@@ -455,6 +455,7 @@ Most core behaviors of projectiles are handled via the `minecraft:projectile` co
 
 ### `minecraft:splash_potion` & `minecraft:lingering_potion`
 * `minecraft:variant` is overloaded for entities using this runtime identifier. While the `is_variant` entity filter will reflect the correct variant as normal, `query.variant` will return a different value (on both the server and the client) based on the `potionId` top-level NBT field on the entity. The type of effect `potionId` [represents](https://wiki.bedrock.dev/documentation/projectiles.html#potion-ids), regardless of effect strength, determines the value:
+
 | Effect          | `query.variant` Value |
 |-----------------|-----------------------|
 | Slowness        | `0`                   |
@@ -1805,6 +1806,7 @@ Items and XP orbs are “picked up” by eligible nearby entities automatically.
 #### Notable Queries
 * `query.texture_frame_index`
 	* Returns integers inclusively between `0` and `10` depending on the value of the NBT tag `experience value`:
+
 | `experience value` minimum | `experience value` maximum | Return value |
 |----------------------------|----------------------------|--------------|
 | `-2147483648`              | `2`                        | `0`          |
