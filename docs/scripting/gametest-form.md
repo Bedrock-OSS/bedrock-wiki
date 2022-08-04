@@ -87,6 +87,8 @@ form.button("Murder Mystery", "textures/items/iron_sword");
 form.button("Bedwars", "textures/minigames/bedwars.png");
 ```
 
+![image](https://user-images.githubusercontent.com/65847850/182815430-6eb9bd98-5991-4b32-9a83-f0500070f67b.png)
+
 ### MessageFormData
 Message form is the form that consist only 2 buttons with large description (body). This form is great for Yes/No question or OK/Cancel form.
 
@@ -136,6 +138,8 @@ form.body("Are you sure you want to run this command:\n/gamerule randomtickspeed
 form.button1("Yes, do it!");
 form.button2("No, leave it as default!");
 ```
+
+![image](https://user-images.githubusercontent.com/65847850/182815711-042076a8-8618-4f99-88cc-82e33092e25e.png)
 
 ### ModalFormData
 Modal Form has the most type input from another 2 form. It has text field, slider, dropdown, and toggle. Modal form is useful for some type of complicated form. Modal form doesn't have body property.
@@ -217,7 +221,7 @@ form.toggle("Toggle", true);
 This is example of Modal Form with all the component
 
 ```js
-let form = new MessageFormData()
+let form = new ModalFormData()
 let effectList = [ "Regeneration", "Protection", "Poison", "Wither" ]
 form.title("Effect Generator");
 form.textField("Target", "Target of Effect")
@@ -225,6 +229,9 @@ form.dropdown("Effect Type", effectList)
 form.slider("Effect Level", 0, 255, 1)
 form.toggle("Hide Effect Particle", true)
 ```
+
+![image](https://user-images.githubusercontent.com/65847850/182816512-bbfc51ea-40f7-48c1-8a93-ac0cc0fbc606.png)
+
 
 ## Show and Respond
 After we create the form, we need to show the form to the player and save the respond to run another task. But we need some event to show our form. The most used event is using `itemUse` event, that read when player use (right-click) an item.
