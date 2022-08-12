@@ -10,7 +10,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
-| PHP        | [Still Active](#php)        : 6 < [Discontinued](#php-1)        : 32 |
+| PHP        | [Still Active](#php)        : 7 < [Discontinued](#php-1)        : 32 |
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 12 |
 | TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
 | JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
@@ -69,6 +69,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
 -   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
+-   [Elco-MP](https://github.com/elco-mp/Elco-MP)
 
 ## Discontinued Software
 
