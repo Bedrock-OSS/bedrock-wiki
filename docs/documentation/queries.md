@@ -518,7 +518,7 @@ variable.yNorm = query.movement_direction(1) / variable.mag;
 variable.zNorm = query.movement_direction(2) / variable.mag;
 ```
 
-For more information on normalized vectors you can play around with this <a href=https://www.desmos.com/calculator/hhoamwgve2>Desmos graph<a> 
+For more information on normalized vectors you can play around with this <a href=https://www.desmos.com/calculator/hhoamwgve2>Desmos graph</a> 
 
 | Argument | Axis |
 | -------- | ---- |
