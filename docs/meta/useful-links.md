@@ -26,7 +26,7 @@ Important links have a ⭐.
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
--   [Dragonly Server Software](https://discord.gg/62zMCB4h)
+-   [Dragonfly Server Software](https://discord.gg/U4kFWHhTNR)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
 -   [BC Community & Archive](https://discord.gg/SYstTYx5G5)
 
