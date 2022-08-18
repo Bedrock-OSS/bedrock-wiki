@@ -145,7 +145,7 @@ import{_ as p,c as o,a,w as e,e as n,r,o as l,d as t}from"./404.md.84de77bb.js";
       <span class="token punctuation">{</span>
         <span class="token property">&quot;binding_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;view&quot;</span><span class="token punctuation">,</span>
         <span class="token property">&quot;source_control_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my_toggle&quot;</span><span class="token punctuation">,</span> <span class="token comment">// the name of the source element</span>
-        <span class="token property">&quot;source_property_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#toggle_state&quot;</span> <span class="token comment">// We want this property value which tells in which state the toggle is in</span>
+        <span class="token property">&quot;source_property_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#toggle_state&quot;</span><span class="token punctuation">,</span> <span class="token comment">// We want this property value which tells in which state the toggle is in</span>
         <span class="token property">&quot;target_property_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#visible&quot;</span> <span class="token comment">// the target property to be overrided</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
