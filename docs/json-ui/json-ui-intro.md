@@ -388,7 +388,7 @@ We have to tell the source element where the value will come from, tell which pr
       {
         "binding_type": "view",
         "source_control_name": "my_toggle", // the name of the source element
-        "source_property_name": "#toggle_state" // We want this property value which tells in which state the toggle is in
+        "source_property_name": "#toggle_state", // We want this property value which tells in which state the toggle is in
         "target_property_name": "#visible" // the target property to be overrided
       }
     ]
