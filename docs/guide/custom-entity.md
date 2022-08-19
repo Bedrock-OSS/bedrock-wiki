@@ -334,7 +334,7 @@ Next we will learn how to create our resource or client file and how to assign o
 Applying visuals to an entity is very different to an item. Since there are alot more pieces, we have a separate file dedicated to defining the resources.
 This is the called entity _client file_ which we will name `ghost.ce.json`. These files go in the folder `RP/entity/`. 
 
-In this section, we will use the example resources created for our ghost entity to demonstrate how to add them to an entity. In the next section of the guide, we explain how to use Blockbecnch, a dedicated 3D editor, to create your own entity geometry and animations.
+In this section, we will use the example resources created for our ghost entity to demonstrate how to add them to an entity. In the next section of the guide, we explain how to use Blockbench, a dedicated 3D editor, to create your own entity geometry and animations.
 
 ### Model
 
