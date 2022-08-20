@@ -98,7 +98,7 @@ In the attachable file, change the geometry name to `"geometry.steve_head"` and 
 
 It is important to make sure your model can work with attachables. Our first step is to upgrade the model file format to "1.16.0" if it is not already. If the model is a legacy file, then convert that to a more modern format before continuing.
 
-Next up is modifying the root bone of the geometry to be bound to the slot the item is placed in. Take careful note of line 16 in the Steve head model below:
+Next up is modifying the root bone of the geometry to be bound to the slot the item is placed in. Take careful note of the key on line 16 in the Steve head model below:
 
 <CodeHeader>RP/models/entity/steve_head.geo.json</CodeHeader>
 
@@ -129,7 +129,7 @@ Next up is modifying the root bone of the geometry to be bound to the slot the i
 	]
 }
 ```
-While the `"parent"` property on a bone accepts a string and will make the target bone the parent of the source bone, the `"binding"` property accepts Molang and sets the target bone as the *root position* that the source bone and its children should inherit. This will have consequences in the next section where we make animations.
+While the `"parent"` key on a bone accepts a string and will make the target bone the parent of the source bone, the `"binding"` key accepts Molang and sets the target bone as the *root position* that the source bone and its children should inherit. This will have consequences in the next section where we make animations.
 
 For the value of `"binding"` we are using the Molang query `query.item_slot_to_bone_name`, with the contextual variable `c.item_slot` as an argument. This converts the name of the slot to its corresponding bone name in the player's geometry. The conversions are `'main_hand'` → "rightitem" and `'off_hand'` → "leftitem".
 
