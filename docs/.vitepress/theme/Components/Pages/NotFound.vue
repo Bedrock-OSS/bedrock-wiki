@@ -52,6 +52,8 @@ const URL_MAP: Record<string, string> = {
 	'knowledge/using-schemas': 'meta/using-schemas',
 	'knowledge/version-control': 'meta/version-control',
 
+	'items/3d-items': 'items/attachables',
+
 	'scripting/saving_loading': 'scripting/saving-loading',
 
 	'troubleshooting/entities': 'entities/troubleshooting-entities',
@@ -65,7 +67,7 @@ const URL_MAP: Record<string, string> = {
 	'tutorials/controlling-flying-entities': 'entities/flying-entities',
 	'tutorials/craftable-spawneggs': 'loot/craftable-spawneggs',
 	'tutorials/custom-armor': 'entities/custom-armor',
-	'tutorials/item-models': 'items/3d-items',
+	'tutorials/item-models': 'items/attachables',
 	'tutorials/disabling-particles': 'visuals/disabling-particles',
 	'tutorials/disabling-team-damage': 'entities/disabling-team-damage',
 	'tutorials/egg-drops': 'loot/egg-drops',

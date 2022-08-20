@@ -4,6 +4,8 @@ category: General
 tags: 
     - easy
     - experimental
+mention:
+    - JaylyDev
 ---
 
 ## Introduction
@@ -105,9 +107,9 @@ The old functionality of `/execute` can be replicated with `as <target> at @s`. 
 # Chaining multiple '/execute's
 /execute @e[type=sheep] ~ ~ ~ execute @e[type=item,r=5] ~ ~ ~ detect ~ ~-1 ~ stone 0 kill @s
 
-/execute at @e[type=sheep] run execute as @e[type=item,r=5] at @s if block ~ ~-1 ~ stone 0 run kill @s
+/execute at @e[type=sheep] as @e[type=item,r=5] at @s if block ~ ~-1 ~ stone 0 run kill @s
 ```
-(Note that we don't use `as @e[type=sheep] at @s` because we don't need to execute as the sheep. `run execute` is usually never needed either, but due to a bug ([MCPE-156283](https://bugs.mojang.com/browse/MCPE-156283)) we are using it here as a workaround.)
+(Note that we don't use `as @e[type=sheep] at @s` because we don't need to execute as the sheep.)
 
 Now for some examples of things that were either not possible or were more difficult before the new syntax was introduced.
 
