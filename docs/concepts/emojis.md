@@ -25,6 +25,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Immersive Reader |                         | U+E104  | ![](/assets/images/concepts/emojis/general/immersive_reader.png) |
 | Craft Toggle On  |                         | U+E0A0  | ![](/assets/images/concepts/emojis/general/craft_toggle_on.png)  |
 | Craft Toggle Off |                         | U+E0A1  | ![](/assets/images/concepts/emojis/general/craft_toggle_off.png) |
+| CrossHair        |                         | U+E017  | ![](/assets/images/concepts/emojis/general/crosshair.png)        |
 
 ### Mobile (iOS/Android)
 
@@ -38,6 +39,10 @@ There will be instructions for creating custom emoji at the bottom.
 | Right Arrow |                         | U+E083  | ![](/assets/images/concepts/emojis/mobile/right_arrow.png) |
 | Up Arrow    |                         | U+E080  | ![](/assets/images/concepts/emojis/mobile/up_arrow.png)    |
 | Down Arrow  |                         | U+E082  | ![](/assets/images/concepts/emojis/mobile/down_arrow.png)  |
+| New Jump    |                         | U+E014  | ![](/assets/images/concepts/emojis/mobile/newjump.png)     |
+| Attack      |                         | U+E015  | ![](/assets/images/concepts/emojis/mobile/attack.png)      |
+| JoyStick    |                         | U+E016  | ![](/assets/images/concepts/emojis/mobile/joystick.png)    |
+| Place       |                         | U+E018  | ![](/assets/images/concepts/emojis/mobile/place.png)       |
 
 ### PC (Windows 10/MacOS/Chrome OS)
 
