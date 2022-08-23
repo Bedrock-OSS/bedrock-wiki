@@ -54,9 +54,13 @@ bridge. includes a regular text editor for experienced addon creators and a tree
 
 ### Mobile Editors
 
--   **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
--   **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
--   **iOS & Android:** [_bridge. v2_](https://bridge-core.app/)
+#### Android
+-  [ACode Editor](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
+-  [bridge. v2](https://bridge-core.app/)
+
+#### iOS
+-  [Kodex](https://apps.apple.com/us/app/kodex/id1038574481)
+-  [bridge. v2](https://bridge-core.app/)
 
 ## Blockbench
 
