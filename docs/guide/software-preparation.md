@@ -44,27 +44,19 @@ Many packages exist for VSCode that make editing addons easier:
 
 ### bridge.
 
-bridge. v2 is the next generation of bridge., it is a powerful add-on editor designed to speed up your development process. It provides a rich editing experience for all files inside behavior and resource packs (JavaScript, JSON, functions and more) and provides a powerful work environment and allows you to choose between the tree editor or raw text editor. A summary of bridge. v2's most notable features can be found [here](https://github.com/bridge-core/editor/blob/main/README.md). Unleash the full power of add-ons with [bridge. extensions](https://bridge-core.app/extension-docs/) and make use of rich auto-completions provided as you navigate through a file. Creating Minecraft add-ons was never more convenient!
+[bridge.](https://bridge-core.app/) is a light-weight, dedicated IDE for Minecraft addons. It features [innovative features](https://bridge-core.app/guide/features/) such as [entity and block previews](https://bridge-core.app/guide/features/index.html#file-previews), [rich auto-completions and file validations](https://bridge-core.app/guide/features/index.html#auto-completions-and-validation) and [advanced file creation with presets](https://bridge-core.app/guide/features/index.html#advanced-file-creation).
+bridge. includes a regular text editor for experienced addon creators and a tree editor to make it easy for beginners to get started with editing JSON files.
 
-[⚙️ Visit bridge. v2](https://editor.bridge-core.app)
-
-<Spoiler title="Configuring bridge.">
-
-To get started with setting up bridge., check out our [getting started guide](https://bridge-core.app/editor-docs/getting-started/).
-
-Tips when following the guide with bridge.:
-
--   To create individual files you can open the new file window with `ctrl + n` and look in the `Simple Files` category. The other categories can be used to create multiple files to create a whole block or entity for example.
--   To see your files in a traditional folder structure, disable `PackSpider` in `Settings > General` the settings can be accessed by pressing `ctrl + ,`.
-
-For further guidance on the editor, feel free to contact us on [Twitter](https://twitter.com/bridgeEditor). bridge. also has an [official Discord server](https://discord.gg/wcRJZN3), where you can hear the latest bridge. news, get help with the editor and extensions and get addon help.
-
-</Spoiler>
+#### Next Steps
+- [Read more on why you should use bridge.](https://bridge-core.app/guide/why-bridge.html)
+- [Read our guide on getting started with bridge.](https://bridge-core.app/guide/index.html)
+- [Try out bridge. online](https://editor.bridge-core.app/)
 
 ### Mobile Editors
 
 -   **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
 -   **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
+-   **iOS & Android:** [_bridge. v2_](https://bridge-core.app/)
 
 ## Blockbench
 
