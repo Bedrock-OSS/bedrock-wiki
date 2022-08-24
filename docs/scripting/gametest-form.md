@@ -87,11 +87,8 @@ form.button("Murder Mystery", "textures/items/iron_sword");
 form.button("Bedwars", "textures/minigames/bedwars.png");
 ```
 
-<<<<<<< Updated upstream
-=======
 ![image](/assets/images/gametest/gametest-form/action-form.png)
 
->>>>>>> Stashed changes
 ### MessageFormData
 Message form is the form that consist only 2 buttons with large description (body). This form is great for Yes/No question or OK/Cancel form.
 
@@ -142,12 +139,9 @@ form.button1("Yes, do it!");
 form.button2("No, leave it as default!");
 ```
 
-<<<<<<< Updated upstream
-=======
 ![image](/assets/images/gametest/gametest-form/message-form.png)
 
 
->>>>>>> Stashed changes
 ### ModalFormData
 Modal Form has the most type input from another 2 form. It has text field, slider, dropdown, and toggle. Modal form is useful for some type of complicated form. Modal form doesn't have body property.
 
@@ -237,13 +231,10 @@ form.slider("Effect Level", 0, 255, 1)
 form.toggle("Hide Effect Particle", true)
 ```
 
-<<<<<<< Updated upstream
-=======
 ![image](/assets/images/gametest/gametest-form/modal-form.png)
 
 
 
->>>>>>> Stashed changes
 ## Show and Respond
 After we create the form, we need to show the form to the player and save the respond to run another task. But we need some event to show our form. The most used event is using `itemUse` event, that read when player use (right-click) an item.
 
