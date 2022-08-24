@@ -40,7 +40,7 @@ Another good automation topic could be:
 
 The first thing you need to do is inspect the format of the file you want to create. Here is a simple `sound_definitions.json` file:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/sounds/sound_definitions.json</CodeHeader>
 
 ```json
 {
@@ -57,7 +57,7 @@ The first thing you need to do is inspect the format of the file you want to cre
 
 The next step, is to look at the file, and select a _chunk_. Our goal will be to generate this chunk programmatically, based on some _input_. In this case, our chunk is a single sound_definition:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/sounds/sound_definitions.json</CodeHeader>
 
 ```json
 "$folder.$sound:": {
@@ -73,6 +73,7 @@ Now, we can annotate this JSON with the _variables_ we want to inject. In other 
 ### Creating a Python Script
 
 Now is the time to create your script. I use a `projects` folder, following this [version control tutorial](/meta/version-control). That means I will be placing my script inside `projects/scripts`, but please place it anywhere convenient.
+Note: We are not chasing a perfect code, we just want to make it simple and more or less understandable.
 
 You can test your python script by quickly adding a `hello_world` print and running it. At this point, I also paste in my prepared JSON snippet, as a comment:\
 
@@ -123,26 +124,34 @@ Instead of printing nonsense, we are printing a JSON object with values where we
 
 ### Using create_sound_definition
 
-Our goal is to look into the file system and make calls to `create_sound_definition`. Let's make a new function, called `create_sound_definitions` which will handle this task. We will need to import some python modules.
+Our goal is to look into the file system and make calls to `create_sound_definition`. Let's make a new function, called `create_sound_paths` which will handle this task. We will need to import some python modules.
 
 ```py
 import os
 
-def create_sound_definitions(path):
-    paths = [x[0] for x in os.walk(directory)]
-    for path in paths:
-        print(path)
+def create_sound_paths(directory):
+    paths = []
+    for path, subdirs, files in os.walk(directory):
+        for name in files:
+            paths.append(os.path.join(path, name))
+    print(paths)
 ```
 
 This code will generate a list of paths. If we pass in the sounds folder containing these files:
 
--   `sounds/dragon/roar.ogg`
--   `sounds/dragon/wing_flap.ogg`
+<FolderView
+    :paths="[
+    'sounds/dragon/roar.ogg',
+    'sounds/dragon/wing_flap.ogg'
+    ]"
+></FolderView>
 
 The result would be:
 
 -   `dragon/roar.ogg`
 -   `dragon/wing_flap.ogg`
+
+Later we will replace print with return, so we could do `sound_paths = create_sound_paths(directory)`
 
 ### Structuring our folder
 
@@ -159,12 +168,44 @@ For example:
 We can use string processing to gather all the information we need out of `create_sound_definitions` strings.
 
 ```py
-test = "ui/dragon/roar.ogg"
+test = "sounds/ui/dragon/roar.ogg"
 split = test.split("/")
-category = split[0]
-folder = split[1]
-sound = split[2]
+print(split)
+category = split[1] # started from 1 to skip 'sounds'
+folder = split[2]
+sound = split[3]
 ```
 
-### Sorry, I will write more soon!
- This page is still under heavy development
+This works on android and linux, to make it compatible with windows, add `test = path.replace('\\', '/')` after first line
+
+### Path processing
+
+Now we will put string processing into a loop to go over all paths. Let's combine parts of our code:
+
+<CodeHeader>projects/scripts/make_sound_definitions.py</CodeHeader>
+
+```py
+import os
+
+def create_sound_definition(folder, sound, category):
+    print("""
+        "{0}.{2}:": {
+            "category": "{2}",
+            "sounds": [
+                "sounds/{0}/{1}"
+            ]
+        }
+    """.format(folder, sound, category))
+
+def create_sound_paths(directory):
+    paths = []
+    for path, subdirs, files in os.walk(directory):
+        for name in files:
+            paths.append(os.path.join(path, name))
+    return paths # now we can do sound_paths = create_sound_paths('...') and it will be a list
+
+os.chdir('') # insert full path to your RP, use / instead of \ on windows
+sound_paths = create_sound_paths('sounds')
+for path in sound_paths:
+
+```

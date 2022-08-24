@@ -7,7 +7,7 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` was removed. *Last updated for 1.19.10*
+Includes all examples. Namespace `minecraft` was removed. *Last updated for 1.19.20*
 
 ## addrider
 
@@ -1385,7 +1385,7 @@ zombie_pigman
 
 drowned
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -1393,7 +1393,7 @@ drowned
 
 husk
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -1412,7 +1412,7 @@ vindicator
 
 zombie
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -1420,7 +1420,7 @@ zombie
 
 zombie_villager
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -1428,7 +1428,7 @@ zombie_villager
 
 zombie_villager_v2
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -1986,7 +1986,7 @@ wolf
 
 ```json
 "minecraft:attack": {
-    "damage": 4
+    "damage": 3
 }
 ```
 
@@ -2192,7 +2192,7 @@ boat
 
 cat
 
-<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:balloonable": {
@@ -2428,7 +2428,7 @@ trader_llama
 
 wolf
 
-<CodeHeader>#component_groups/minecraft:wolf_tame</CodeHeader>
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:balloonable": {
@@ -9897,7 +9897,7 @@ piglin
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 7,
     "within_radius": 16.0,
-    "persist_time": 2.0,
+    "persist_time": 0.0,
     "entity_types": [
         {
             "filters": {
@@ -9978,7 +9978,8 @@ piglin
                     }
                 ]
             },
-            "max_dist": 16
+            "max_dist": 16,
+            "reevaluate_description": true
         },
         {
             "filters": {
@@ -11672,17 +11673,6 @@ piglin
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.1
-}
-```
-
-polar_bear
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 2,
-    "speed_multiplier": 2.0
 }
 ```
 
@@ -16216,7 +16206,19 @@ ravager
         "vine",
         "waterlily",
         "wheat",
-        "yellow_flower"
+        "yellow_flower",
+        "azalea",
+        "flowering_azalea",
+        "azalea_leaves",
+        "azalea_leaves_flowered",
+        "cave_vines",
+        "cave_vines_body_with_berries",
+        "cave_vines_head_with_berries",
+        "small_dripleaf_block",
+        "big_dripleaf",
+        "spore_blossom",
+        "hanging_roots",
+        "mangrove_leaves"
     ]
 }
 ```
@@ -26826,6 +26828,93 @@ witch
 ```json
 "minecraft:follow_range": {
     "value": 64
+}
+```
+
+</Spoiler>
+
+## game_event_movement_tracking
+
+<Spoiler title="Show">
+
+allay
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+bat
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+bee
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+chicken
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+ender_dragon
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+parrot
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+phantom
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+vex
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_move": false,
+    "emit_swim": false
 }
 ```
 
@@ -41410,6 +41499,16 @@ villager_v2
 }
 ```
 
+warden
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:preferred_path": {
+    "max_fall_blocks": 20
+}
+```
+
 </Spoiler>
 
 ## projectile
@@ -41673,6 +41772,11 @@ fireball
 ```json
 "minecraft:projectile": {
     "on_hit": {
+        "impact_damage": {
+            "damage": 6,
+            "knockback": false,
+            "semi_random_diff_damage": false
+        },
         "definition_event": {
             "affect_projectile": true,
             "event_trigger": {
@@ -43944,7 +44048,7 @@ pig
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
-    "interact_text": "action.interact.mount",
+    "interact_text": "action.interact.ride.horse",
     "family_types": [
         "player"
     ],
@@ -51708,6 +51812,7 @@ villager_v2
     "family": [
         "villager",
         "peasant",
+        "unskilled",
         "mob"
     ]
 }

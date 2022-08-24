@@ -106,5 +106,5 @@ The following are valid values for the sound property:
     "wood"
 ]
 ```
-*Last updated for 1.19.10*
+*Last updated for 1.19.20*
 <!-- page_dumper_end -->

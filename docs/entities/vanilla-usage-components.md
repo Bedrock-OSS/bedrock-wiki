@@ -7,7 +7,7 @@ mentions:
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed.
-If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.10*
+If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.20*
 
 ## addrider
 
@@ -583,7 +583,7 @@ panda
 
 drowned
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -591,7 +591,7 @@ drowned
 
 husk
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -610,7 +610,7 @@ vindicator
 
 zombie
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -618,7 +618,7 @@ zombie
 
 zombie_villager
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -626,7 +626,7 @@ zombie_villager
 
 zombie_villager_v2
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/can_break_doors</CodeHeader>
 
 ```json
 "minecraft:annotation.break_door": {}
@@ -923,7 +923,7 @@ boat
 
 cat
 
-<CodeHeader>#component_groups/minecraft:cat_tame</CodeHeader>
+<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:balloonable": {
@@ -8361,7 +8361,19 @@ ravager
         "vine",
         "waterlily",
         "wheat",
-        "yellow_flower"
+        "yellow_flower",
+        "azalea",
+        "flowering_azalea",
+        "azalea_leaves",
+        "azalea_leaves_flowered",
+        "cave_vines",
+        "cave_vines_body_with_berries",
+        "cave_vines_head_with_berries",
+        "small_dripleaf_block",
+        "big_dripleaf",
+        "spore_blossom",
+        "hanging_roots",
+        "mangrove_leaves"
     ]
 }
 ```
@@ -11184,6 +11196,93 @@ ghast
 "minecraft:follow_range": {
     "value": 64,
     "max": 64
+}
+```
+
+</Spoiler>
+
+## game_event_movement_tracking
+
+<Spoiler title="Show">
+
+allay
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+bat
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+bee
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+chicken
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+ender_dragon
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+parrot
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+phantom
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_flap": true
+}
+```
+
+vex
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:game_event_movement_tracking": {
+    "emit_move": false,
+    "emit_swim": false
 }
 ```
 
@@ -15574,6 +15673,16 @@ villager_v2
 }
 ```
 
+warden
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:preferred_path": {
+    "max_fall_blocks": 20
+}
+```
+
 </Spoiler>
 
 ## projectile
@@ -15803,6 +15912,11 @@ fireball
 ```json
 "minecraft:projectile": {
     "on_hit": {
+        "impact_damage": {
+            "damage": 6,
+            "knockback": false,
+            "semi_random_diff_damage": false
+        },
         "definition_event": {
             "affect_projectile": true,
             "event_trigger": {
