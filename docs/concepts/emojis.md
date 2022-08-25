@@ -41,16 +41,20 @@ There will be instructions for creating custom emoji at the bottom.
 | Down Arrow  |                         | U+E082  | ![](/assets/images/concepts/emojis/mobile/down_arrow.png)  |
 | New Jump    |                         | U+E014  | ![](/assets/images/concepts/emojis/mobile/newjump.png)     |
 | Attack      |                         | U+E015  | ![](/assets/images/concepts/emojis/mobile/attack.png)      |
-| JoyStick    |                         | U+E016  | ![](/assets/images/concepts/emojis/mobile/joystick.png)    |
+| Joy Stick   |                         | U+E016  | ![](/assets/images/concepts/emojis/mobile/joystick.png)    |
 | Place       |                         | U+E018  | ![](/assets/images/concepts/emojis/mobile/place.png)       |
 
 ### PC (Windows 10/MacOS/Chrome OS)
 
-| Name         | Letter (Copy/Paste This) | Unicode | Image                                                   |
-| ------------ | ------------------------ | ------- | ------------------------------------------------------- |
-| Left Click   |                         | U+E060  | ![](/assets/images/concepts/emojis/pc/left_click.png)   |
-| Right Click  |                         | U+E061  | ![](/assets/images/concepts/emojis/pc/right_click.png)  |
-| Middle Click |                         | U+E062  | ![](/assets/images/concepts/emojis/pc/middle_click.png) |
+| Name               | Letter (Copy/Paste This) | Unicode | Image                                                         |
+| ------------------ | ------------------------ | ------- | ------------------------------------------------------------- |
+| Left Click         |                         | U+E060  | ![](/assets/images/concepts/emojis/pc/left_click.png)         |
+| Right Click        |                         | U+E061  | ![](/assets/images/concepts/emojis/pc/right_click.png)        |
+| Middle Click       |                         | U+E062  | ![](/assets/images/concepts/emojis/pc/middle_click.png)       |
+| Small Left Click   |                         | U+E070  | ![](/assets/images/concepts/emojis/pc/small_left_click.png)   |
+| Small Right Click  |                         | U+E071  | ![](/assets/images/concepts/emojis/pc/small_right_click.png)   |
+| Small Middle Click |                         | U+E072  | ![](/assets/images/concepts/emojis/pc/small_middle_click.png) |
+| Small Mouse        |                         | U+E073  | ![](/assets/images/concepts/emojis/pc/small_mouse.png)        |
 
 ### Xbox
 
