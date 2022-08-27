@@ -257,6 +257,8 @@ Inside the if statement is where our form is show. Using `.show()`, the form wil
 ```js
 form.show(event.source).then(r => {
   // The code after player respond/close the form
+}).catch((e) => {
+  console.error(e, e.stack);
 })
 ```
 
@@ -268,6 +270,8 @@ form.show(event.source).then(r => {
   if (r.isCanceled) return;
 
   // The code
+}).catch(e => {
+  console.error(e, e.stack);
 })
 ```
 
@@ -298,6 +302,8 @@ form.show(event.source).then(r => {
       // You don't need to use "break" on default case
       // Remember to place the default on very bottom
   }
+}).catch(e => {
+  console.error(e, e.stack);
 })
 ```
 
@@ -313,6 +319,8 @@ form.show(event.source).then(r => {
   };
 
   // Do something when player press "button1"
+}).catch(e => {
+  console.error(e, e.stack);
 })
 ```
 
@@ -349,5 +357,7 @@ form.show(event.source).then(r => {
   let [ textField, dropdown, slider, toggle ] = r.formValues
 
   // Do something
+}).catch(e => {
+  console.error(e, e.stack);
 })
 ```
