@@ -26,6 +26,7 @@ Here is a sample animation controller:
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.death": {
+		"initial_state":"default",
 			"states": {
 				"default": {
 					"transitions": [
@@ -54,6 +55,7 @@ In the case of player entities, an additional transition must be added to the se
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.death": {
+		"initial_state":"default",
 			"states": {
 				"default": {
 					"transitions": [
