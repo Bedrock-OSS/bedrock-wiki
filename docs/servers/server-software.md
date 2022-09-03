@@ -14,7 +14,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 13 |
 | TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
 | JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
-| Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 4  |
+| Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
@@ -39,6 +39,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 ### Go
 
 -   [DragonFly](https://github.com/df-mc/dragonfly)
+-   [Saddle](https://github.com/saddlemc/saddle)
 
 ### Java
 
