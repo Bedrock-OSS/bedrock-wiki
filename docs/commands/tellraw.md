@@ -112,11 +112,11 @@ language files:
 <CodeHeader></CodeHeader>
 
 ```
-example.langcode.2=The winner is: %%s. With a score of %%s
+example.langcode.2=The winner is: %s. With a score of %s
 ```
 
 <CodeHeader></CodeHeader>
 
 ```json
-/tellraw @a {"translate": [{"text": "example.langcode.2", "with": {"rawtext": [{"selector": "@a[r=5,c=1]"}, {"text": "§6With a score of: "}, {"score":{"name": "@s","objective": "value"}}]}}]}
+/tellraw @a {"rawtext":[{"translate":"example.langcode.2","with":{"rawtext":[{"selector":"@a[r=5,c=1]"},{"text":"§6With a score of: "},{"score":{"name":"@s","objective":"value"}}]}}]}
 ```
