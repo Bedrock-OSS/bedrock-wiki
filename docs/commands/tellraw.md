@@ -101,7 +101,7 @@ The command:
 <CodeHeader></CodeHeader>
 
 ```json
-tellraw @a { "rawtext": [ { "translate": "example.langcode.1" } ] }
+/tellraw @a { "rawtext": [ { "translate": "example.langcode.1" } ] }
 ```
 
 
