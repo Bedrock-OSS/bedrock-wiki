@@ -59,6 +59,8 @@ show_toc: false
 
 'RP/fogs/example_fog_setting.json',
 
+'RP/materials/example.material
+                    
 'RP/models/entity/example.geo.json',
 'RP/models/blocks/example.geo.json',
 
