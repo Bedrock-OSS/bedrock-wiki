@@ -12,9 +12,9 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | ---------- | -------------------------------------------------------------------- |
 | PHP        | [Still Active](#php)        : 6 < [Discontinued](#php-1)        : 34 |
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 13 |
+| Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
 | JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
-| Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
