@@ -61,7 +61,7 @@ show_toc: false
 
 'RP/items/example.item.json',
 
-'RP/materials/example.material
+'RP/materials/example.material',
                     
 'RP/models/entity/example.geo.json',
 'RP/models/blocks/example.geo.json',
