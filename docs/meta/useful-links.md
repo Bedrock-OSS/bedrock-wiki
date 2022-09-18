@@ -79,11 +79,17 @@ Important links have a ⭐.
 
 ## Behavior & Resource Packs
 
+These packs are maintained and published by Mojang.
+
 -   ⭐ [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
 -   ⭐ [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
 -   [Vanilla Resource Pack (BETA)](https://aka.ms/MinecraftBetaResources)
 -   [Vanilla Behavior Pack (BETA)](https://aka.ms/MinecraftBetaBehaviors)
 -   [Pack Archive (old versions)](https://bedrock.dev/packs)
+
+These packs are published by the open-source community
+
+-   [Enchantment Details](https://github.com/supercam19/EnchantmentDetails)
 
 ## Scripting Resources
 
