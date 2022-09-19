@@ -87,6 +87,8 @@ form.button("Murder Mystery", "textures/items/iron_sword");
 form.button("Bedwars", "textures/minigames/bedwars.png");
 ```
 
+![image](/assets/images/gametest/gametest-form/action-form.png)
+
 ### MessageFormData
 Message form is the form that consist only 2 buttons with large description (body). This form is great for Yes/No question or OK/Cancel form.
 
@@ -136,6 +138,9 @@ form.body("Are you sure you want to run this command:\n/gamerule randomtickspeed
 form.button1("Yes, do it!");
 form.button2("No, leave it as default!");
 ```
+
+![image](/assets/images/gametest/gametest-form/message-form.png)
+
 
 ### ModalFormData
 Modal Form has the most type input from another 2 form. It has text field, slider, dropdown, and toggle. Modal form is useful for some type of complicated form. Modal form doesn't have body property.
@@ -226,6 +231,10 @@ form.slider("Effect Level", 0, 255, 1)
 form.toggle("Hide Effect Particle", true)
 ```
 
+![image](/assets/images/gametest/gametest-form/modal-form.png)
+
+
+
 ## Show and Respond
 After we create the form, we need to show the form to the player and save the respond to run another task. But we need some event to show our form. The most used event is using `itemUse` event, that read when player use (right-click) an item.
 
@@ -248,6 +257,8 @@ Inside the if statement is where our form is show. Using `.show()`, the form wil
 ```js
 form.show(event.source).then(r => {
   // The code after player respond/close the form
+}).catch((e) => {
+  console.error(e, e.stack);
 })
 ```
 
@@ -259,6 +270,8 @@ form.show(event.source).then(r => {
   if (r.isCanceled) return;
 
   // The code
+}).catch(e => {
+  console.error(e, e.stack);
 })
 ```
 
@@ -289,6 +302,8 @@ form.show(event.source).then(r => {
       // You don't need to use "break" on default case
       // Remember to place the default on very bottom
   }
+}).catch(e => {
+  console.error(e, e.stack);
 })
 ```
 
@@ -304,6 +319,8 @@ form.show(event.source).then(r => {
   };
 
   // Do something when player press "button1"
+}).catch(e => {
+  console.error(e, e.stack);
 })
 ```
 
@@ -340,5 +357,7 @@ form.show(event.source).then(r => {
   let [ textField, dropdown, slider, toggle ] = r.formValues
 
   // Do something
+}).catch(e => {
+  console.error(e, e.stack);
 })
 ```

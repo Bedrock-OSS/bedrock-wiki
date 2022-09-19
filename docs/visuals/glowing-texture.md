@@ -13,16 +13,15 @@ To make your entity's texture glow, you need to open your texture in an advanced
 
 - Open your entity's texture file.
 
- _Don't mind strange bones rotation, mojang likes to render models correctly through animations._
+ _Don't mind strange bones rotation, Mojang likes to render models correctly through animations._
 
-- Find the __Eraser__ tool and set it's opacity/alpha to something low like 71 or 23.
+- Find the __Eraser__ tool and set its opacity/alpha to something low like 71 or 23.
 
 ![](/assets/images/visuals/glowing-texture/eraser.png)
 
 ![](/assets/images/visuals/glowing-texture/opacity.png)
 
-- Then, erase the part of the texture you want it to glow.
-The less visible a pixel is the more it glows, but be sure it is not 100% erased.
+- Then, erase the part of the texture you want it to glow. The less visible a pixel is the more it glows, but be sure it is not 100% erased.
 
 ![](/assets/images/visuals/glowing-texture/erase-pixels.png)
 

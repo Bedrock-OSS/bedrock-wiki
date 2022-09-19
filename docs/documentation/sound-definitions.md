@@ -6,7 +6,7 @@ mentions:
 
 Sounds from `sound_definitions.json` sorted by categories and subcategories based on their names.
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-*Last updated for 1.19.10*
+*Last updated for 1.19.20*
 
 ## ambient
 
@@ -829,24 +829,6 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 #### entity
 ---
 `entity.zombie.converted_to_drowned`
-
-#### horn
----
-`horn.call.0`
-
-`horn.call.1`
-
-`horn.call.2`
-
-`horn.call.3`
-
-`horn.call.4`
-
-`horn.call.5`
-
-`horn.call.6`
-
-`horn.call.7`
 
 #### mob
 ---
@@ -2291,6 +2273,24 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `vr.stutterturn`
 
 ## record
+
+#### horn
+---
+`horn.call.0`
+
+`horn.call.1`
+
+`horn.call.2`
+
+`horn.call.3`
+
+`horn.call.4`
+
+`horn.call.5`
+
+`horn.call.6`
+
+`horn.call.7`
 
 #### note
 ---

@@ -107,6 +107,7 @@ The _final_ durability will be durability of the first axe + durability of the s
 
 ## on_tool_used
 
+(This might not work now)
 `on_tool_used` is special event that can be called using tags.
 Tags work kinda like runtime identifiers for entities.
 Known tags:
