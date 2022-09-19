@@ -284,21 +284,57 @@ module.exports = (async function () {
 		},
 
 		head: [
-			// Enable to make the bedrock wiki installable
-			// [
-			// 	'link',
-			// 	{
-			// 		rel: 'manifest',
-			// 		type: 'application/json',
-			// 		href: '/manifest.webmanifest',
-			// 	},
-			// ],
-			// [
-			// 	'script',
-			// 	{
-			// 		src: '/registerSW.js',
-			// 	},
-			// ],
+			[
+				'link',
+				{
+					rel: 'manifest',
+					type: 'application/manifest+json',
+					href: '/manifest.webmanifest',
+				},
+			],
+			[
+				'link',
+				{
+					rel: 'icon',
+					href: '/favicon.ico',
+				},
+			],
+			[
+				'apple-touch-icon',
+				{
+					rel: 'icon',
+					href: '/assets/images/favicons/apple-touch-icon.png',
+					sizes: '180x180'
+				},
+			],
+			[
+				'mask-icon',
+				{
+					rel: 'icon',
+					href: '/assets/images/favicons/safari-pinned-tab.svg',
+					color: '#60c3fa'
+				},
+			],
+			[
+				'meta',
+				{
+					name: 'viewport',
+					content: 'width=device-width,initial-scale=1'
+				}
+			],
+			[
+				'meta',
+				{
+					name: 'theme-color',
+					content: '#60c3fa'
+				}
+			],
+			[
+				'script',
+				{
+					src: '/registerSW.js',
+				},
+			],
 			[
 				'script',
 				{},
