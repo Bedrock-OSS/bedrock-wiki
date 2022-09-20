@@ -86,7 +86,6 @@ Important links have a ⭐.
 - [Build a gameplay experience with TypeScript](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted): TypeScript is Microsoft's copy of JavaScript, it's popular and becoming more popular! Writing mods in TypeScript allows you to add any functionality you can imagine to your mod!
 - [mojang-minecraft Module](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft): This module and the others near it are how we can access Minecraft values with our TypeScript code. It's technical, but a great resource.
 - [List and summary of commands (Minecraft fandom)](https://minecraft.fandom.com/wiki/Commands#List_and_summary_of_commands): Most mods will run some commands. This community-supported wiki is the best resource for learning each and every command.
-- [Bedrock OSS](https://github.com/Bedrock-OSS): Bedrock OSS is a great centralized community around building Minecraft mods. The Discord is popular, the wiki is awesome, and the supported projects are top-notch. And it's getting better all the time!
 
 ## Sample ehavior & Resource Packs
 
