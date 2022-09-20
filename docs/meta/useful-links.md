@@ -77,7 +77,16 @@ Important links have a ⭐.
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
 -   [Documentation Graveyard (removed components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 
-## Behavior & Resource Packs
+### Getting Started With Your First Add-On
+
+- [Getting Started with Add-On Development for Bedrock Edition](https://learn.microsoft.com/en-us/minecraft/creator/documents/gettingstarted): These guides show you exactly how to build your first resource pack and your first behavior pack from start to finish.
+- [Molang: a Beginner's Guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/molangbeginnersguide): Molang is a Minecraft programming language that can be useful for writing some advanced add-ons.
+- [Introduction to the GameTest Framework](https://learn.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted): This is the best way to test games, and it uses JavaScript, the most popular programming language in the world!
+- [Build a gameplay experience with TypeScript](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted): TypeScript is Microsoft's copy of JavaScript. Writing add-ons in TypeScript allows you to add any functionality you can imagine!
+- [mojang-minecraft Module](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft): This module and the others near it are how we can access Minecraft values with our TypeScript code. It's technical, but a great resource.
+- [List and summary of commands (Minecraft fandom)](https://minecraft.fandom.com/wiki/Commands#List_and_summary_of_commands): Most add-ons will run some commands. This community-supported wiki is the best resource for learning each and every command.
+
+## Sample behavior & Resource Packs
 
 These packs are maintained and published by Mojang.
 
