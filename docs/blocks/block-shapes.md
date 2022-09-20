@@ -5,7 +5,7 @@ category: Documentation
 
 :::warning Deprecated
 
-Block Shapes are no longer officially supported and cannot be used with custom blocks.
+Block Shapes are no longer officially supported and cannot be used with custom blocks, however they can still be used with vanilla ones.
 
 :::
 
