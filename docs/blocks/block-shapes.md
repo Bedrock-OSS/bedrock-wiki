@@ -3,7 +3,13 @@ title: Block Shapes
 category: Documentation
 ---
 
-Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accesible files.
+:::warning Deprecated
+
+Block Shapes are no longer officially supported and cannot be used with custom blocks.
+
+:::
+
+Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accessible files.
 
 ## Application
 
