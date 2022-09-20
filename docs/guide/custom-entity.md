@@ -325,7 +325,7 @@ With that we have completed our entity behavior file.
 
 More complex entities can also have different _states_, where they will behave differently depending on what state they are in. For example, a wild wolf will walk around freely, but once it is tamed it will follow the player. An _event_ (being tamed) caused the wolf to change _states_. This feature allows us to create dynamic entities which can perform different actions when different events occurs. You can learn more about this in our guide [here](/entities/entity-intro-bp).
 
-If you open your world and try to summon in your entity using `/summon wiki:ghost`, it should behave like we expect but there will only be a shadow on the ground. You might also find it mentioned using a lang code similar to how it happened with our item.
+If you open your world and try to summon in your entity using `/summon wiki:ghost`, it should behave like we expect but there will only be a shadow on the ground. You might also see its name as a translation key, similar to how it happened with our item.
 
 Next we will learn how to create our resource or client file and how to assign our texture, geometry and animations.
 
@@ -940,7 +940,7 @@ With that, we have completed our entity client file.
 
 ### Entity name
 
-The final steps are to add our entity's name to the lang files. You may have also noticed that if you created a spawn egg, it will also have a lang code name; we will also add this. Within `en_US.lang`, make sure you add names for both the entity and entity spawn egg item. They should look similar to this:
+The final steps are to add our entity's name to the language files. You may have also noticed that if you created a spawn egg, it will also have a translation key for a name; we will also add this. Within `en_US.lang`, make sure you add names for both the entity and entity spawn egg item. They should look similar to this:
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 

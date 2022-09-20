@@ -125,7 +125,7 @@ All of the dialog properties that will be displayed to the user can also be tran
 }
 ```
 
-The translation key used should then be specified in the resource pack's `lang` files. In this case, `entity.endermite.name` would translate to "Endermite."
+The translation key used should then be specified in the resource pack's language files. In this case, `entity.endermite.name` would translate to "Endermite."
 
 ## Opening Dialogs
 
