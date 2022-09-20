@@ -80,7 +80,7 @@ You can use the following to use selector to display names.
 
 ## Translate text
 
-To have a language dependant text you can use the translate component and [Lang-Codes](/concepts/text-and-translations). please note you will need relavent information in each of the desired .lang files for this to work.
+To have a language dependant text you can use the translate component and [translation keys](/concepts/text-and-translations). please note you will need relavent information in each of the desired .lang files for this to work.
 
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>

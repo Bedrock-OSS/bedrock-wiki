@@ -52,7 +52,7 @@ These two variations of ItemLock are mutually exclusive. Itemlock works in both 
 
 The texture to overwrite is `16x16`, and is located in `RP/textures/ui/item_lock_red.png` and `RP/textures/ui/item_lock_yellow.png`
 
-The lang codes if you want to change how KeepOnDeath displays:
+The following translation keys can be overwritten if you want to change how these components display:
 
 ```
 item.itemLock.cantDrop=:hollow_star: Can't Drop Items can't be:

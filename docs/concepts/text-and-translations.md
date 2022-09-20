@@ -9,115 +9,71 @@ mention:
   - Fabrimat
 ---
 
-Bedrock Minecraft allows us to display text on the screen through many different methods, typically through Lang-codes, defined in .lang files in the `texts` directory of a resource pack. This page will go into the process of creating, displaying and translating custom text.
+Minecraft is a game with fully localized text in languages all over the world. To achieve this, Minecraft employs a system where internal **translation keys** are assigned values on a per-language basis. Minecraft will generate translation keys for custom entities, items, and blocks, and it is up to us to assign them a localized name in our resource pack.
 
-## Lang-Codes
+## Language Files
 
-Are effectively just variables used to contain text. They are defined in `.lang` files, and are used for their advantages such as potentially decreasing overall pack size, providing translations, and make it so that all of your texts are stored in one place, proving for easy access, proof-reading, and ammendments.
+### File Location
 
-### The Structure
+Language files typically go within the resource pack in the "texts" folder as files with the `.lang` file extension. These files can be placed in the behavior pack, but the only translatable text it can change is the pack manifest's name and description.
 
-The `.lang` can be found under `RP/texts`, and inside these files are where the codes are defined.
+<FolderView :paths="[
+  'RP/texts/en_US.lang',
+  'RP/texts/languages.json',
+  'RP/manifest.json'
+]"
+></FolderView>
 
-Locate `vanilla_resources/texts/en_US.lang` and take a look at it. Here is all of the text that you will ever see in Minecraft! You'll notice that there is a **lot** of them, all separated into different categories.
+Minecraft supports 29 languages currently, as described in [§ Vanilla Languages](/concepts/text-and-translations#vanilla-languages).
 
-### Creating Lang-Codes
+### Format
 
-They are extremely simple to create, it’s just the code, followed by the desired text.
+The format for a language file is rather straightforward. Translations are supplied as key-value pairs separated by an equals sign (`=`), the key being a translation key and the value being a string. Values cannot contain newline characters.
 
-<CodeHeader></CodeHeader>
-
+```toml
+wiki.example_translation.line_1=The first line!
+wiki.example_translation.line_2=Some more information following the first line.
 ```
-langcode.wiki.custom.1=A Custom Lang-Code for the Wiki!
-langcode.wiki.custom.2=A Custom Lang-Code for the Wiki!
+
+Comments may be added with two pound signs (`##`), either as line comments or in-line comments. All text after the pound signs are a comment until the next line.
+
+:::warning
+Trailing spaces are not trimmed for in-line comments. If you want to indent a comment, use the Tab character.
+:::
+
+```toml
+## Translator note: I thought this would be funny to put here.
+item.flint_and_steel.name=Flint and Steve	##[sic]
 ```
 
-The Lang-Code itself is typically formatted in a similar fashion to the above
+A translation can contain substitutions in place of text. Substitutions can either be ordered (`%1`, `%2`, etc.) or not ordered (`%s`). Vanilla translations have their values filled in by the game, while players can manually set the substitutions' values with commands that use the raw JSON text format, like with [`/tellraw`](/commands/tellraw).
 
-### Overriding vanilla Lang-Codes
+```toml
+commands.op.success=Opped: %s
+immersive_reader.book_page_header=Page %1 of %2
+```
 
-It is completely allowed and encouraged to override vanilla language strings. For example, if you want to rename `Iron Ingots` to `Iron Rods`, you can do so within .lang files:
+### Usage
 
-`item.iron_ingot.name=Iron Rod`
+Localization can be done just about anywhere text can be used, including (but not limited to):
 
-### Undefined Lang-Codes
+-   Pack name and description
+-   Entity, item, or block names
+-   Pages in a book
+-   Lines on a sign
+-   `/tellraw` and `/titleraw` commands
+-   Text in dialogue
 
-Sometimes, undefined lang codes will show up in-game. When this happens, they will show the entire lang code instead of a string. A widespread place where you will see this is with an entity name, and in your hotbar/inventory:
-
-`entity.wiki:my_entity.name`
-
-When you see similar codes, you can simply copy them down into your `.lang` files. For example:
-
-`entity.wiki:my_entity.name=MY VERY COOL ENTITY`
-
-Blocks are the same as entities, just replacing `entity.` with `tile.`, though the 1.16.100+ items translation are different:
-
-`item.wiki:my_item=My Item`
-
-You will see these because of the way Minecraft handles the subjects, entities, blocks, and items alike all have their own identifiers in Behaviour Packs, so specific lang codes based off of that are generated for these, as they are required, unlike generic text. Booting up the game is the easiest way of finding out what the required Lang-Codes are for your addon.
-
-### What's with the %s?
-
-Some lang-codes contain the concept of arguments. These are things the game passes into your lang-code. You represent these arguments with `%s. These normally occur in dynamic strings, like commands:
-
-Example: (`/say`)
-`chat.type.announcement=[%s] %s`
-
-In the example above, the first `%s` is replaced by the entity's name doing the `/say`. The second `%s` is replaced by the string after they say.
-
-### Useful Vanilla-Overrides
-
-Remove the `[Entity Name]` from `/say` commands: `chat.type.announcement=%2`
-
-### Where to use them
-
-Lang-codes can be used in any of the following places:
-
--   pack name
--   pack description
--   entity name
--   item name
--   block name
--   books
--   signs
--   tellraw commands
--   dialogues
-
-As you can see, lang-codes can be used pretty much wherever you write text in your addon.
-
-When using lang codes in addons, you can usually use the string.
-
-In game (signs, books, etc), use [tellraw](/commands/tellraw): `{"rawtext":[{"translate" : "my.lang.code"}]}`
-
-You can also create a text directory and .lang files in Behaviour Packs, but only to define pack.title and pack.description for the BP.
+Some text cannot be translated however, such as for an item renamed in an anvil.
 
 ## Localization
 
-Now you know about .lang files in general, you can look into internationalisation of you text. Translations that show depending on what language the player is using. In the `RP/texts` directory, there are quite a number of .lang files, each representing and containing a different language, and their name is based on the language and nation, for example en_GB (English, Great Britain), en_US (English, United States), de_DE (Deutsch, Deutschland), etc. All of the Lang-Codes are present in each individual .lang file, and contain text related to the language stated in the files name.
-
-For example, you could state this: 
-
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
-
-```
-langcode.wiki:my_text.words=My Block
-```
-
-And also this:
-
-<CodeHeader>RP/texts/de_DE.lang</CodeHeader>
-
-```json
-langcode.wiki:my_text.words=Meinblock
-```
-
-The result would be that anyone using English (United States) would see the text "My Block" when `langcode.wiki:my_text.words` is used, but also anyone wih German selected as their language would see "Meinblock".
-
 :::tip
-If you do not plan on creating translations for your packs, it is advised that if you are working in English, you create both a `en_GB.lang` *and* `en_US.lang`, with identical content
+It is good practice create a copy of your language file for each major language your pack supports. For example, to support full English one should create both an `en_US.lang` and an `en_GB.lang` file, to cover English in both the United States and Great Britain countries, respectively.
 :::
 
-When editing lang file you have also to add a `languages.json` file in the `RP/texts` folder containing an array with each of the languages you plan to change:
+When editing language files one must also add a `languages.json` file in the `texts` folder containing an array with each of the languages you plan to change. This lets Minecraft know that it should apply localization for these languages.
+
 <CodeHeader>RP/texts/languages.json</CodeHeader>
 
 ```json
@@ -128,9 +84,41 @@ When editing lang file you have also to add a `languages.json` file in the `RP/t
 ]
 ```
 
+### Custom Languages
+
+With a global resource pack, custom languages may be introduced through the `languages.json` and `language_names.json` files. Once the pack is applied globally the language can be changed in the "Language" tab of the in-game settings.
+
+For the following examples, lets assume that we have 2 fully functional language files, one named `xx_XX.lang`, and another named `yy_YY.lang`.
+
+<CodeHeader>RP/texts/languages.json</CodeHeader>
+
+```json
+[
+  "xx_XX",
+  "yy_YY"
+]
+```
+
+`language_names.json` is an array as well, but this time to define the names to display for the languages.
+
+<CodeHeader>RP/texts/language_names.json</CodeHeader>
+
+```json
+[
+  [ "xx_XX", "New Language (Custom Language #1)" ],
+  [ "yy_YY", "Wiki-Speak (Custom Language #2)" ]
+]
+```
+
+:::warning
+ Whenever using a custom language, make sure to unequip the language before you disable the Resource Pack which it is stored in, or else Minecraft will crash.
+:::
+
 ### Vanilla Languages
 
-| .lang File | Language              | Country        |
+The following is a table of the 29 languages Minecraft supports by default.
+
+| File ID    | Language              | Country        |
 | ---------- | --------------------- | -------------- |
 | id_ID      | Indonesian            | Indonesia      |
 | da_DK      | Danish                | Denmark        |
@@ -161,39 +149,3 @@ When editing lang file you have also to add a `languages.json` file in the `RP/t
 | zh_CN      | Chinese (Simplified)  | China          |
 | zh_TW      | Chinese (Traditional) | Taiwan         |
 | ko_KR      | Korean                | Korea          |
-
-## Custom Languages
-
-You may have noticed that there are 2 files in `RP/texts` that are not `.lang`. One is `languages.json` and the other `language_names.json`, these can be used to add more languages to the game, being selectable in the "languages" tab of the in-game settings when the Resource Pack is applied globaly, in addition to the 29 pre-existing vanilla languages.
-
-For the following examples, lets assume that we have 2 fully functional .lang files, one names `xx_XX.lang`, and anothe `yy_YY.lang`
-
-### Languages
-
-Simply just an array of `.lang` files for Minecraft to register as available languages.
-
-<CodeHeader>RP/texts/languages.json</CodeHeader>
-
-```json
-[
-  "xx_XX",
-  "yy_YY"
-]
-```
-
-### Language Names
-
-Another array, but this time defines the name to show for the languages
-
-<CodeHeader>RP/texts/language_names.json</CodeHeader>
-
-```json
-[
-  [ "xx_XX", "New Language (Custom Language #1)" ],
-  [ "yy_YY", "Wiki-Speak (Custom Language #2)" ]
-]
-```
-
-:::warning
- It is good practice whenever using a custom language, to make sure that if you disable the Resource Pack which it is stored in, that you change the selected language to a vanilla one, else Minecraft **will** crash.
-:::

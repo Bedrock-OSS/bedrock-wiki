@@ -197,7 +197,7 @@ To add another texture for another item, we can just add another entry to `item_
 
 ## Setting Item Names
 
-Your items should now show up in-game, but they have weird names consisting of their identifiers. For example, `wiki:gem` shows up as `item.wiki:gem.name`. To fix this, we need a `.lang` file in `RP/texts/`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`.
+Your items should now show up in-game, but their names are made up of translation keys containing the identifiers of our items. For example, `wiki:gem` shows up as `item.wiki:gem.name`. To fix this, we need a `.lang` file in `RP/texts/`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`.
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
@@ -206,7 +206,7 @@ item.wiki:gem.name=Gem
 item.wiki:meal.name=Meal
 ```
 
-You can learn more about .lang [here](/concepts/text-and-translations)
+You can learn more about language files [here](/concepts/text-and-translations).
 
 ## Folder Layout
 If followed correctly, this is how your project should look. 
@@ -234,6 +234,6 @@ If followed correctly, this is how your project should look.
 -   How to create a simple item
 -   How to create a custom food
 -   How to link textures using shortnames in `item_textures.json`
--   How to define names in the `.lang` file
+-   How to define names in the language file
 
 :::
