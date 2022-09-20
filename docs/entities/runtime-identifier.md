@@ -330,6 +330,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
+-   Inflicts Wither status effect with both melee and ranged attacks if Variant is 1 or greater.
 
 ---
 
