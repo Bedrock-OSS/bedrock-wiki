@@ -244,25 +244,25 @@ Configure which mask test function to use on the front or back of the grid. In a
 <!-- Test if this looks ok -->
 
 - `stencilFunc`: The method used when stencilRef is compared with the mask buffer, the following values are supported：
-- - `Always`: Always pass
-- -	`Equal`： Passed when stencilRef is equal to the buffer value
-- -	`NotEqual` ：Passed when stencilRef is not equal to the buffer value
-- -	`Less`：Passed when stencilRef is less than the buffer value
-- -	`Greater`：Passed when stencilRef is greater than the buffer value
-- -	`GreaterEqual`：Passed when stencilRef is greater than or equal to the buffer value
-- -	`LessEqual`：Passed when stencilRef is less than or equal to the buffer value
+  - `Always`: Always pass
+  -	`Equal`： Passed when stencilRef is equal to the buffer value
+  -	`NotEqual` ：Passed when stencilRef is not equal to the buffer value
+  -	`Less`：Passed when stencilRef is less than the buffer value
+  -	`Greater`：Passed when stencilRef is greater than the buffer value
+  -	`GreaterEqual`：Passed when stencilRef is greater than or equal to the buffer value
+  -	`LessEqual`：Passed when stencilRef is less than or equal to the buffer value
 
 - `stencilFailOp`：The processing performed when the stencilFunc comparison function fails to return, supports the following values：
-- -	`Keep`： Keep the original value of the buffer
-- -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
+  -	`Keep`： Keep the original value of the buffer
+  -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
 
 - `stencilDepthFailOp` : The stencilFunc comparison function returns success, but the processing performed when the depth test fails, supports the following values：
-- -	`Keep`： Keep the original value of the buffer
-- -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
+  -	`Keep`： Keep the original value of the buffer
+  -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
 
 - `stencilPassOp`: The stencilFunc comparison function returns successfully, and the processing executed when the depth test is successful, supports the following values：
-- -	`Keep`： Keep the original value of the buffer
-- -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
+  -	`Keep`： Keep the original value of the buffer
+  -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
 
 Associated states rendering environment configuration:
 
