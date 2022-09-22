@@ -1,3 +1,9 @@
+---
+hidden: true
+show_toc: false
+show_contributors: false
+title: Hacktoberfest
+---
 ## Hacktoberfest
 
 Each year there is a hacktoberfest event where you can get a free t-shirt by contributing to open source projects. This year the event is from October 1st to October 31st. You can find more information about the event [here](https://hacktoberfest.com/).
