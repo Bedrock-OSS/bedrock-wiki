@@ -7,7 +7,7 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` was also removed. *Last updated for 1.19.20*
+Includes all examples. Namespace `minecraft` was also removed. *Last updated for 1.19.30*
 
 ## biome_filter
 

@@ -7,7 +7,7 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` was removed. *Last updated for 1.19.20*
+Includes all examples. Namespace `minecraft` was removed. *Last updated for 1.19.30*
 
 ## addrider
 
@@ -135,7 +135,7 @@ strider
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:strider",
-    "spawn_event": "spawn_baby"
+    "spawn_event": "minecraft:spawn_baby_strider_jockey"
 }
 ```
 
@@ -7105,6 +7105,18 @@ mule
 }
 ```
 
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.look_at_player": {
+    "priority": 0,
+    "look_distance": 6.0,
+    "probability": 0.02
+}
+```
+
 ocelot
 
 <CodeHeader></CodeHeader>
@@ -7774,7 +7786,7 @@ hoglin
     "priority": 4,
     "speed_multiplier": 1,
     "track_target": true,
-    "reach_multiplier": 2.5,
+    "reach_multiplier": 2.15,
     "cooldown_time": 2
 }
 ```
@@ -7956,6 +7968,7 @@ zoglin
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
+    "reach_multiplier": 2.15,
     "speed_multiplier": 1.4,
     "track_target": true
 }
@@ -8539,7 +8552,7 @@ turtle
 
 strider
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_pathing_behaviors</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_liquid": {
@@ -13318,7 +13331,7 @@ stray
 
 strider
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_pathing_behaviors</CodeHeader>
 
 ```json
 "minecraft:behavior.random_stroll": {
@@ -13925,7 +13938,7 @@ villager
 
 strider
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_pathing_behaviors</CodeHeader>
 
 ```json
 "minecraft:behavior.rise_to_liquid_level": {
@@ -18700,8 +18713,8 @@ fireball
 
 ```json
 "minecraft:collision_box": {
-    "width": 0.31,
-    "height": 0.31
+    "width": 1.0,
+    "height": 1.0
 }
 ```
 
@@ -18819,8 +18832,8 @@ hoglin
 
 ```json
 "minecraft:collision_box": {
-    "width": 0.9,
-    "height": 0.9
+    "width": 1.4,
+    "height": 1.4
 }
 ```
 
@@ -18960,6 +18973,17 @@ mule
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 1.6
+}
+```
+
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:collision_box": {
+    "width": 0.6,
+    "height": 2.1
 }
 ```
 
@@ -19555,8 +19579,8 @@ zoglin
 
 ```json
 "minecraft:collision_box": {
-    "width": 0.9,
-    "height": 0.9
+    "width": 1.4,
+    "height": 1.4
 }
 ```
 
@@ -21840,6 +21864,19 @@ mooshroom
             "on_damage_sound_event": "convert_mooshroom"
         }
     ]
+}
+```
+
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:damage_sensor": {
+    "triggers": {
+        "cause": "all",
+        "deals_damage": false
+    }
 }
 ```
 
@@ -24722,25 +24759,46 @@ strider
 
 ```json
 "minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "any_of": [
-                {
-                    "test": "in_lava",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": true
-                },
-                {
-                    "test": "in_lava",
-                    "subject": "other",
-                    "operator": "==",
-                    "value": true
-                }
-            ]
+    "triggers": [
+        {
+            "filters": {
+                "any_of": [
+                    {
+                        "test": "in_lava",
+                        "subject": "self",
+                        "operator": "==",
+                        "value": true
+                    },
+                    {
+                        "test": "in_lava",
+                        "subject": "other",
+                        "operator": "==",
+                        "value": true
+                    }
+                ]
+            },
+            "event": "stop_suffocating"
         },
-        "event": "stop_suffocating"
-    }
+        {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "is_riding",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": false
+                    },
+                    {
+                        "test": "has_component",
+                        "subject": "self",
+                        "operator": "not",
+                        "value": "minecraft:behavior.move_to_liquid"
+                    }
+                ]
+            },
+            "event": "on_not_riding_parent"
+        }
+    ]
 }
 ```
 
@@ -24748,35 +24806,56 @@ strider
 
 ```json
 "minecraft:environment_sensor": {
-    "triggers": {
-        "filters": {
-            "all_of": [
-                {
-                    "test": "in_lava",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": false
-                },
-                {
-                    "any_of": [
-                        {
-                            "test": "is_riding",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": false
-                        },
-                        {
-                            "test": "in_lava",
-                            "subject": "other",
-                            "operator": "==",
-                            "value": false
-                        }
-                    ]
-                }
-            ]
+    "triggers": [
+        {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "in_lava",
+                        "subject": "self",
+                        "operator": "==",
+                        "value": false
+                    },
+                    {
+                        "any_of": [
+                            {
+                                "test": "is_riding",
+                                "subject": "self",
+                                "operator": "==",
+                                "value": false
+                            },
+                            {
+                                "test": "in_lava",
+                                "subject": "other",
+                                "operator": "==",
+                                "value": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "event": "start_suffocating"
         },
-        "event": "start_suffocating"
-    }
+        {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "is_riding",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": false
+                    },
+                    {
+                        "test": "has_component",
+                        "subject": "self",
+                        "operator": "not",
+                        "value": "minecraft:behavior.move_to_liquid"
+                    }
+                ]
+            },
+            "event": "on_not_riding_parent"
+        }
+    ]
 }
 ```
 
@@ -26345,6 +26424,14 @@ magma_cube
 
 ```json
 "minecraft:fire_immune": {}
+```
+
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:fire_immune": true
 ```
 
 shulker
@@ -35033,6 +35120,16 @@ mule
 }
 ```
 
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:loot": {
+    "table": "loot_tables/empty.json"
+}
+```
+
 ocelot
 
 <CodeHeader>#component_groups/minecraft:ocelot_adult</CodeHeader>
@@ -36467,6 +36564,16 @@ mule
 ```json
 "minecraft:movement": {
     "value": 0.175
+}
+```
+
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:movement": {
+    "value": 0.5
 }
 ```
 
@@ -39430,6 +39537,154 @@ zombie_villager_v2
 
 </Spoiler>
 
+## npc
+
+<Spoiler title="Show">
+
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:npc": {
+    "npc_data": {
+        "portrait_offsets": {
+            "translate": [
+                -7,
+                50,
+                0
+            ],
+            "scale": [
+                1.75,
+                1.75,
+                1.75
+            ]
+        },
+        "picker_offsets": {
+            "translate": [
+                0,
+                20,
+                0
+            ],
+            "scale": [
+                1.7,
+                1.7,
+                1.7
+            ]
+        },
+        "skin_list": [
+            {
+                "variant": 0
+            },
+            {
+                "variant": 1
+            },
+            {
+                "variant": 2
+            },
+            {
+                "variant": 3
+            },
+            {
+                "variant": 4
+            },
+            {
+                "variant": 5
+            },
+            {
+                "variant": 6
+            },
+            {
+                "variant": 7
+            },
+            {
+                "variant": 8
+            },
+            {
+                "variant": 9
+            },
+            {
+                "variant": 10
+            },
+            {
+                "variant": 11
+            },
+            {
+                "variant": 12
+            },
+            {
+                "variant": 13
+            },
+            {
+                "variant": 14
+            },
+            {
+                "variant": 15
+            },
+            {
+                "variant": 16
+            },
+            {
+                "variant": 17
+            },
+            {
+                "variant": 18
+            },
+            {
+                "variant": 19
+            },
+            {
+                "variant": 25
+            },
+            {
+                "variant": 26
+            },
+            {
+                "variant": 27
+            },
+            {
+                "variant": 28
+            },
+            {
+                "variant": 29
+            },
+            {
+                "variant": 30
+            },
+            {
+                "variant": 31
+            },
+            {
+                "variant": 32
+            },
+            {
+                "variant": 33
+            },
+            {
+                "variant": 34
+            },
+            {
+                "variant": 20
+            },
+            {
+                "variant": 21
+            },
+            {
+                "variant": 22
+            },
+            {
+                "variant": 23
+            },
+            {
+                "variant": 24
+            }
+        ]
+    }
+}
+```
+
+</Spoiler>
+
 ## on_death
 
 <Spoiler title="Show">
@@ -40193,6 +40448,14 @@ iron_golem
 "minecraft:persistent": {}
 ```
 
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:persistent": {}
+```
+
 pillager
 
 <CodeHeader>#component_groups/minecraft:raid_persistence</CodeHeader>
@@ -40681,6 +40944,14 @@ mooshroom
 ```
 
 mule
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:physics": {}
+```
+
+npc
 
 <CodeHeader></CodeHeader>
 
@@ -49678,9 +49949,9 @@ enderman
     "random_teleports": true,
     "max_random_teleport_time": 30,
     "random_teleport_cube": [
-        64,
         32,
-        64
+        32,
+        32
     ],
     "target_distance": 16,
     "target_teleport_chance": 0.05,
@@ -51097,6 +51368,19 @@ mule
 "minecraft:type_family": {
     "family": [
         "mule",
+        "mob"
+    ]
+}
+```
+
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:type_family": {
+    "family": [
+        "npc",
         "mob"
     ]
 }

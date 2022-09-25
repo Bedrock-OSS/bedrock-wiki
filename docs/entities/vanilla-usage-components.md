@@ -7,7 +7,7 @@ mentions:
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed.
-If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.20*
+If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.30*
 
 ## addrider
 
@@ -4352,7 +4352,7 @@ turtle
 
 strider
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_pathing_behaviors</CodeHeader>
 
 ```json
 "minecraft:behavior.move_to_liquid": {
@@ -6467,7 +6467,7 @@ villager
 
 strider
 
-<CodeHeader></CodeHeader>
+<CodeHeader>#component_groups/minecraft:strider_pathing_behaviors</CodeHeader>
 
 ```json
 "minecraft:behavior.rise_to_liquid_level": {
@@ -10907,6 +10907,14 @@ magma_cube
 "minecraft:fire_immune": {}
 ```
 
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:fire_immune": true
+```
+
 shulker
 
 <CodeHeader></CodeHeader>
@@ -10916,14 +10924,6 @@ shulker
 ```
 
 strider
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:fire_immune": {}
-```
-
-vex
 
 <CodeHeader></CodeHeader>
 
@@ -14722,6 +14722,154 @@ endermite
 
 </Spoiler>
 
+## npc
+
+<Spoiler title="Show">
+
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:npc": {
+    "npc_data": {
+        "portrait_offsets": {
+            "translate": [
+                -7,
+                50,
+                0
+            ],
+            "scale": [
+                1.75,
+                1.75,
+                1.75
+            ]
+        },
+        "picker_offsets": {
+            "translate": [
+                0,
+                20,
+                0
+            ],
+            "scale": [
+                1.7,
+                1.7,
+                1.7
+            ]
+        },
+        "skin_list": [
+            {
+                "variant": 0
+            },
+            {
+                "variant": 1
+            },
+            {
+                "variant": 2
+            },
+            {
+                "variant": 3
+            },
+            {
+                "variant": 4
+            },
+            {
+                "variant": 5
+            },
+            {
+                "variant": 6
+            },
+            {
+                "variant": 7
+            },
+            {
+                "variant": 8
+            },
+            {
+                "variant": 9
+            },
+            {
+                "variant": 10
+            },
+            {
+                "variant": 11
+            },
+            {
+                "variant": 12
+            },
+            {
+                "variant": 13
+            },
+            {
+                "variant": 14
+            },
+            {
+                "variant": 15
+            },
+            {
+                "variant": 16
+            },
+            {
+                "variant": 17
+            },
+            {
+                "variant": 18
+            },
+            {
+                "variant": 19
+            },
+            {
+                "variant": 25
+            },
+            {
+                "variant": 26
+            },
+            {
+                "variant": 27
+            },
+            {
+                "variant": 28
+            },
+            {
+                "variant": 29
+            },
+            {
+                "variant": 30
+            },
+            {
+                "variant": 31
+            },
+            {
+                "variant": 32
+            },
+            {
+                "variant": 33
+            },
+            {
+                "variant": 34
+            },
+            {
+                "variant": 20
+            },
+            {
+                "variant": 21
+            },
+            {
+                "variant": 22
+            },
+            {
+                "variant": 23
+            },
+            {
+                "variant": 24
+            }
+        ]
+    }
+}
+```
+
+</Spoiler>
+
 ## on_death
 
 <Spoiler title="Show">
@@ -15233,6 +15381,14 @@ iron_golem
 "minecraft:persistent": {}
 ```
 
+npc
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:persistent": {}
+```
+
 pillager
 
 <CodeHeader>#component_groups/minecraft:raid_persistence</CodeHeader>
@@ -15244,14 +15400,6 @@ pillager
 ravager
 
 <CodeHeader>#component_groups/minecraft:raid_persistence</CodeHeader>
-
-```json
-"minecraft:persistent": {}
-```
-
-snow_golem
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:persistent": {}
@@ -19332,9 +19480,9 @@ enderman
     "random_teleports": true,
     "max_random_teleport_time": 30,
     "random_teleport_cube": [
-        64,
         32,
-        64
+        32,
+        32
     ],
     "target_distance": 16,
     "target_teleport_chance": 0.05,
