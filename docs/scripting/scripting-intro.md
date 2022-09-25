@@ -8,7 +8,7 @@ tags:
 
 :::danger Stop!
 
-Scripting API is no longer supported.
+Scripting API is no longer supported. Refer to the new [Game Tests](scripting/game-tests.html).
 
 :::
 

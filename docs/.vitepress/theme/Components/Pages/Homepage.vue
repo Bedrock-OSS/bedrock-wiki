@@ -114,10 +114,10 @@
 					title="Scripting"
 					imgsrc="assets/images/homepage/scripting.png"
 				>
-					<a href="scripting/scripting-intro.html">Beginner's Guide</a
-					>: Learn the basics of the legacy scripting-API<br /><br />
-					<a href="scripting/game-tests.html">Game Test Framework</a>:
-					Learn about the new scripting-API!
+					<a href="scripting/game-tests.html">Beginner's Guide</a
+					>: Learn the basics of the experimental scripting-API.<br /><br />
+					<a href="scripting/custom-command.html">Custom commands</a>:
+					Learn how to make your own custom commands!
 				</Card>
 				<Card
 					title="World Generation"
