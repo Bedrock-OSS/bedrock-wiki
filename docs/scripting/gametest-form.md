@@ -1,6 +1,8 @@
 ---
 title: Gametest Form
 category: Game Tests
+tags:
+    - experimental
 ---
 
 Minecraft 1.18.30 released new wonderful module, `mojang-minecraft-ui`. With that module, we can create form ui without need JSON-UI.
