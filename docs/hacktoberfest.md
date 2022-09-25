@@ -53,7 +53,7 @@ The JSON validation schema files for Minecraft bedrock
 
 ## SirLich
 
-See all participating Blockception projects [here](https://github.com/orgs/SirLich/repositories?q=topic%3Ahacktoberfest)
+See all participating projects by SirLich [here](https://github.com/orgs/SirLich/repositories?q=topic%3Ahacktoberfest)
 
 ### [Reticulator](https://github.com/SirLich/reticulator)
 
@@ -62,3 +62,11 @@ Minecraft Bedrock pack-access library.
 ### [Bedrock Schema Docs](https://github.com/SirLich/bedrock-schema-docs)
 
 Auto generated documentation from the Schemas by Blockception.
+
+## MCDevKit
+
+See all participating MCDevKit projects [here](https://github.com/orgs/MCDevKit/repositories?q=topic%3Ahacktoberfest)
+
+### [jsonte](https://github.com/MCDevKit/jsonte)
+
+JSON Templating Engine for generating JSON files easily for Minecraft Bedrock Addon development.
