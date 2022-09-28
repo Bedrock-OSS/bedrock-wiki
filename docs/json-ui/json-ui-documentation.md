@@ -1269,6 +1269,8 @@ Some of them only work in specific screens.
 -   `button.text_edit_box_hovered`
 -   `button.text_edit_box_clear`
 -   `button.help`
+-   `button.menu_open_uri`
+-   `button.no_interaction`
 -   ...
 
 ## Hardcoded Collection Names
