@@ -22,6 +22,8 @@ For security reasons it doesn't allow you to enable Experimental Features from t
 
 ::: warning
 Always make a backup of your data before editing NBT files!
+
+Experimental features may not be compatible with every device and can cause your world to behave in unexpected way.
 :::
 
 1. Extract the level.dat from your .mcworld, .mctemplate or com.mojang world folder.
