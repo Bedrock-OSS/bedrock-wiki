@@ -46,3 +46,6 @@ Experimental features may not be compatible with every device and can cause your
 
 Finally, save the file and put it back in the world package or directory.
 
+## Tips
+Education Edition is usually one or two versions behind the classic Bedrock Edition, so you'll always know in advance which experimental features will be added to the stable gameplay and which will be modified or removed.
+Try to add only features that will persist over time if you want to use that world in your classroom.
