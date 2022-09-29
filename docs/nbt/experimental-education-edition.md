@@ -5,6 +5,7 @@ mention:
     - Fabrimat
 tags:
     - easy
+    - Last updated for Version 1.18.32 (MCEE)
 ---
 
 [structure]: /assets/images/nbt/structure.png
@@ -27,7 +28,7 @@ Always make a backup of your data before editing NBT files!
 2. Open the file with NBT editor (NBT Studio for example).
 3. Select on the first node which is ![][structure] level.dat
 4. Create a new compound tag called ![][compound] experiments
-5. Select the new node and create a new ![][byte] byte with the name of the feature you need with a value of 1, which on 1.18.31 are:
+5. Select the new node and create a new ![][byte] byte with the name of the feature you need with a value of 1, which on 1.18.32 are:
     - data_driven_biomes
     - data_driven_items
     - experimental_molang_features
