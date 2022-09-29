@@ -42,6 +42,7 @@ Experimental features may not be compatible with every device and can cause your
 
 ![](/assets/images/nbt/experiments-education-edition/byte-add.png)
 
+![](/assets/images/nbt/experiments-education-edition/experiments-file.png)
+
 Finally, save the file and put it back in the world package or directory.
 
-![](/assets/images/nbt/experiments-education-edition/experiments-file.png)
