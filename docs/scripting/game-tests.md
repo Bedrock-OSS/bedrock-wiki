@@ -8,6 +8,9 @@ tags:
 ::: tip
 The GameTest framework requires you to activate **"Enable GameTest Framework"** or **"GameTest Framework"** in your world settings, and you must be using **Minecraft 1.16.210.60 beta or above**.
 :::
+::: warning
+As of Beta 1.19.40.23 the whole scripting APIs will receive some breaking changes. 
+:::
 
 GameTests are a new feature that allows developers to create unit tests to make it easier to test if game mechanics work. They are built with javascript files in the behavior pack folder, and each file can register multiple GameTests. Each registered GameTest must also have a .mcstructure file in the `BP/structures` folder.
 The API can also be used for creations outside of creating unit tests by just using the `"mojang-minecraft"` module, though this is currently limited.
