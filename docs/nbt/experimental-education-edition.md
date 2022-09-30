@@ -5,7 +5,7 @@ mention:
     - Fabrimat
 tags:
     - easy
-    - Last updated for Version 1.18.32 (MCEE)
+    - Last updated for Version 1.18.32 (MEE)
 ---
 
 [structure]: /assets/images/nbt/structure.png
