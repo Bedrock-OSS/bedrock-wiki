@@ -1,6 +1,8 @@
 ---
 title: Simple Custom Commands
 category: Game Tests
+tags:
+    - experimental
 ---
 
 Who doesn't want any custom command? Me neither. With Gametest, you can create your custom command. This article, we will create your own custom command using Gametest.
