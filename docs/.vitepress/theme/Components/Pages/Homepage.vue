@@ -56,6 +56,20 @@
 		</div>
 		<div class="m-0 p-0 pb-4 w-full">
 			<div
+			class="pb-5">
+				<CardLink
+					title="Hacktoberfest!"
+					imgsrcLight="assets/images/homepage/hfest_light.png"
+					imgsrcDark="assets/images/homepage/hfest_dark.png"
+					link="hacktoberfest.html"
+				>
+					Hacktoberfest is DigitalOcean’s annual event that encourages people to contribute to open source throughout October.<br />
+					The Bedrock Community stands strong behind Open Source, and we need your help!<br />
+					Check out <a href="hacktoberfest.html">how to contribute</a> and make the difference becoming a part of our community.
+
+				</CardLink>
+			</div>
+			<div
 				class="
 					grid grid-cols-1
 					lg:grid-cols-2
@@ -67,7 +81,7 @@
 			>
 				<CardLink
 					title="Beginner's Guide"
-					imgsrc="assets/images/homepage/crafting_table_0.png"
+					imgsrcLight="assets/images/homepage/crafting_table_0.png"
 					link="guide/introduction"
 				>
 					Step-by-step tutorials, intended as your first-contact with
@@ -75,7 +89,7 @@
 				</CardLink>
 				<CardLink
 					title="Discord"
-					imgsrc="assets/images/homepage/discord.png"
+					imgsrcLight="assets/images/homepage/discord.png"
 					link="/discord"
 				>
 					Join the discord to learn about addons, and seek help from
@@ -83,7 +97,7 @@
 				</CardLink>
 				<Card
 					title="Entities"
-					imgsrc="assets/images/homepage/spawn_egg_30.png"
+					imgsrcLight="assets/images/homepage/spawn_egg_30.png"
 				>
 					<a href="entities/entity-intro-bp">Beginner's Guide</a>:
 					Learn about the structure of Behavior Pack Entity files.<br /><br />
@@ -94,7 +108,7 @@
 				</Card>
 				<Card
 					title="Items"
-					imgsrc="assets/images/homepage/iron_pickaxe_0.png"
+					imgsrcLight="assets/images/homepage/iron_pickaxe_0.png"
 				>
 					<a href="items/items-intro">Beginner's Guide</a>: A "Hello
 					world" guide in creating your first item.<br /><br />
@@ -103,7 +117,7 @@
 				</Card>
 				<Card
 					title="Blocks"
-					imgsrc="assets/images/homepage/diamond_ore_0.png"
+					imgsrcLight="assets/images/homepage/diamond_ore_0.png"
 				>
 					<a href="blocks/blocks-intro">Beginner's Guide</a>: A "Hello
 					world" guide in making blocks.<br /><br />
@@ -112,7 +126,7 @@
 				</Card>
 				<Card
 					title="Scripting"
-					imgsrc="assets/images/homepage/scripting.png"
+					imgsrcLight="assets/images/homepage/scripting.png"
 				>
 					<a href="scripting/scripting-intro.html">Beginner's Guide</a
 					>: Learn the basics of the legacy scripting-API<br /><br />
@@ -121,7 +135,7 @@
 				</Card>
 				<Card
 					title="World Generation"
-					imgsrc="assets/images/homepage/buildplate.png"
+					imgsrcLight="assets/images/homepage/buildplate.png"
 				>
 					<a href="world-generation/world-generation-intro"
 						>Beginner's Guide</a
@@ -130,7 +144,7 @@
 				</Card>
 				<CardLink
 					title="Contribute"
-					imgsrc="assets/images/homepage/writable_book_0.png"
+					imgsrcLight="assets/images/homepage/writable_book_0.png"
 					link="contribute"
 				>
 					This wiki is built and maintained by a community! If you
