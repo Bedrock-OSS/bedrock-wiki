@@ -274,11 +274,11 @@ In the event:
 - `shoot` will shoot our entity
 - `swing` will run the swing animation on the player
 - `decrement_stack` will remove one item from the player's inventory
-- `run_command` will execute some command when the item is shot, like playing sounds
+- `run_command` will execute commands when the item is shot, like playing sounds
 
 
 ## The Entity
-The entity file is the same as the Stable version:
+The entity file is the same as the Stable version.
 
 <Spoiler title="BP/entities/throwable_item_entity.se.json">
 
