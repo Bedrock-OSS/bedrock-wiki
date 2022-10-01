@@ -70,3 +70,27 @@ See all participating MCDevKit projects [here](https://github.com/orgs/MCDevKit/
 ### [jsonte](https://github.com/MCDevKit/jsonte)
 
 JSON Templating Engine for generating JSON files easily for Minecraft Bedrock Addon development.
+
+## bridge.
+
+See all participating bridge. projects [here](https://github.com/orgs/bridge-core/repositories?q=topic%3Ahacktoberfest)
+
+### [bridge. v2 editor](https://github.com/bridge-core/editor)
+
+bridge. is an IDE designed for creating Minecraft Bedrock Add-Ons.
+
+### [Dash Compiler](https://github.com/bridge-core/dash-compiler)
+
+The Dash compiler is a fast, reliable and platform agnostic compiler for Minecraft Bedrock Edition.
+
+### [Deno Dash Compiler](https://github.com/bridge-core/deno-dash-compiler)
+
+A standalone implementation of the Dash compiler inside of [Deno](https://deno.land/).
+
+### [Molang Parser](https://github.com/bridge-core/molang)
+
+A fast Molang parser for JavaScript and TypeScript applications.
+
+### [bridge. Documentation](https://github.com/bridge-core/docs)
+
+A collection of docs aiming to introduce users to bridge. and its features, and get started with creating extensions for bridge.
