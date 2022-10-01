@@ -12,7 +12,7 @@ This tutorial assumes you have a basic understanding of MoLang, animation contro
 Items like the Splash Potion or the Trident are special items that can be thrown. Currently, there are two ways to accomplish something similar in your add-on, one that can be done in the stable release and one that needs the `Holiday Creator Features` experimental toggle to be enabled.
 
 # Stable method
-This method lets you detect the usage of an item through the `minecraft:food` component from an animation controller, and modifying the player.json you can then spawn an entity when that happens.
+This method lets you detect the usage of an item through the `minecraft:food` component from an animation controller, and modifying the `player.json` you can then spawn an entity when that happens.
 :::tip
 Sadly it's not an actual "throw something on item click" but something more like "spawn something on item click", for an actual throwable item get to the [Experimental method](#experimental-method).
 :::
@@ -162,7 +162,7 @@ Always make sure that your `player.json` file is updated to the latest version a
 You can do that [here](https://bedrock.dev/packs)
 :::
 :::warning
-Do not edit/remove existing parts of the `player.json` file unless you know what you are doing, as i could (and probably will) break the gameplay.
+Do not edit/remove existing parts of the `player.json` file unless you know what you are doing, as it could (and probably will) break the game.
 :::
 
 Now, you have to register the animation controller to the `player.json` file:
@@ -190,6 +190,7 @@ Now, you have to register the animation controller to the `player.json` file:
 ```
 
 Then, you need to add all the events and component groups to the `player.json` file:
+<CodeHeader>BP/entities/player.json#minecraft:entity</CodeHeader>
 ```json
 "component_groups": {
   "wiki:throw_entity": { // Contains a component that will spawn the entity
