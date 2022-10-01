@@ -1,7 +1,8 @@
 <template>
 	<div class="card">
         <div class="flex justify-start items-center flex-row flex-nowrap mb-4">
-            <img :src="imgLink" class="object-contain mr-4 filter drop-shadow" style="max-height: 56px;">
+			<img v-if='currentTheme === "dark"' :src="imgsrcDark" class="object-contain mr-4 filter drop-shadow" style="max-height: 56px;">
+			<img v-if='currentTheme === "light"' :src="imgsrcLight" class="object-contain mr-4 filter drop-shadow" style="max-height: 56px;">
             <h2 style="margin: 0 !important;">{{ title }}</h2>
         </div>
         <p><slot/></p>
@@ -21,6 +22,6 @@ const props = defineProps<{
 	imgsrcDark?: string
 
 }>();
-
-const imgLink = import.meta.env.BASE_URL + (currentTheme.value === "dark" && props.imgsrcDark ? props.imgsrcDark : props.imgsrcLight);
+const imgsrcLight = import.meta.env.BASE_URL + props.imgsrcLight;
+const imgsrcDark = import.meta.env.BASE_URL + (props.imgsrcDark ? props.imgsrcDark : props.imgsrcLight);
 </script>
