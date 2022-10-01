@@ -12,12 +12,16 @@
 
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { useTheme } from '../../Composables/theme'
+
+const { currentTheme } = useTheme()
 
 const props = defineProps<{
-	imgsrc: string,
+	title: string,
 	link: string,
-    title: string
+	imgsrcLight: string,
+	imgsrcDark?: string
+
 }>();
-const imgLink = import.meta.env.BASE_URL + props.imgsrc;
+const imgLink = import.meta.env.BASE_URL + (currentTheme.value === "dark" && props.imgsrcDark ? props.imgsrcDark : props.imgsrcLight);
 </script>
