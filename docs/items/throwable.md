@@ -217,3 +217,113 @@ Then, you need to add all the events and component groups to the `player.json` f
   }
 }
 ```
+
+# Experimental method
+This method requires the `Holiday Creator Features` experimental toggle to be enabled.
+
+## The Item
+
+<CodeHeader>BP/items/throwable_item.item.json</CodeHeader>
+```json
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:throwable_item"
+        },
+        "components": {
+            "minecraft:max_stack_size": 16,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "throw"
+                }
+            },
+            "minecraft:icon": {
+                "texture": "apple"
+            }
+        },
+        "events": {
+            "throw": {
+                "shoot": {
+                    "projectile": "wiki:throwable_item_entity",
+                    "launch_power": 2,
+                    "angle_offset": 1
+                },
+                "swing": {},
+                "decrement_stack": {},
+                "run_command": {
+                    "command": [
+                        "playsound fire.ignite",
+                        "playsound mob.witch.throw"
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+We can notice several things here:
+- `format_version` must be `1.16.100`
+- `minecraft:on_use` will call an event everytime the item is used (right-clicked)
+
+In the event:
+- `shoot` will shoot our entity
+- `swing` will run the swing animation on the player
+- `decrement_stack` will remove one item from the player's inventory
+- `run_command` will execute some command when the item is shot, like playing sounds
+
+
+## The Entity
+The entity file is the same as the Stable version:
+
+<Spoiler title="BP/entities/throwable_item_entity.se.json">
+
+<CodeHeader>BP/entities/throwable_item_entity.se.json</CodeHeader>
+```json
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "wiki:throwable_item_entity",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"grant_xp": {
+						"minXP": 3,
+						"maxXP": 5
+					},
+					"impact_damage": {
+						"damage": 16
+					},
+					"remove_on_hit": {}
+				},
+				"power": 0.7,
+				"gravity": 0.03,
+				"angle_offset": -20.0,
+				"hit_sound": "glass"
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80.0,
+					"max_dropped_ticks": 10,
+					"use_motion_prediction_hints": true
+				}
+			}
+		}
+	}
+}
+```
+</Spoiler>
