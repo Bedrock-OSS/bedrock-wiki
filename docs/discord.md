@@ -27,21 +27,21 @@ Please feel free to join us to ask questions, get involved in Bedrock Addons, or
 		>
 			<CardLink
 				title="Bedrock Addons"
-				imgsrc="assets/images/homepage/wikilogo.png"
+				imgsrcLight="assets/images/homepage/wikilogo.png"
 				link="https://discord.gg/46JUdQb"
 			>
 				Bedrock Addons is a centralized creators discord for learning about and creating addons.<br /><br />Here you can learn about addons, ask questions, and participate in events.
 			</CardLink>
 			<CardLink
 				title="Bedrock OSS"
-				imgsrc="assets/images/discord/oss.png"
+				imgsrcLight="assets/images/discord/oss.png"
 				link="https://discord.gg/XjV87YN"
 			>
 				Bedrock OSS is a programming-focused creators discord for Bedrock. <br /><br />Here you can report wiki issues, collaborate on new articles, and get help with Bedrock tools, such as bridge. or Blockceptions VSCode addon.
 			</CardLink>
 			<CardLink
 				title="Additional Servers"
-				imgsrc="assets/images/homepage/discord.png"
+				imgsrcLight="assets/images/homepage/discord.png"
 				link="/meta/useful-links#discord-links"
 			>
 				We maintain an active list of community discords as well, which you can find on our Useful Links page.

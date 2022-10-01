@@ -449,15 +449,15 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 <CodeHeader></CodeHeader>
 
 ```html
-<CardLink
-	imgsrc="assets/images/homepage/wikilogo.png"
+<CardLink 
+  imgsrcLight="assets/images/homepage/wikilogo.png"
 	title="title"
 	link="https://google.com"
 />
 ```
 
-<CardLink 
-    imgsrc='assets/images/homepage/wikilogo.png' 
+<CardLink
+    imgsrcLight='assets/images/homepage/wikilogo.png' 
     title='title' 
     link='https://google.com'
 />
