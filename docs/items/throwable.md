@@ -13,6 +13,9 @@ Items like the Splash Potion or the Trident are special items that can be thrown
 
 # Stable method
 This method lets you detect the usage of an item through the `minecraft:food` component from an animation controller, and modifying the player.json you can then spawn an entity when that happens.
+:::tip
+Sadly it's not an actual "throw something on item click" but something more like "spawn something on item click", for an actual throwable item get to the [Experimental method](#experimental-method).
+:::
 
 ## The Item
 First, you'll want to make the actual item:
