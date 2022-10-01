@@ -9,14 +9,14 @@ tags:
 This tutorial assumes you have a basic understanding of MoLang, animation controllers and entity definitions.
 :::
 
-Items like the Splash Potion or the Trident are special items that can be thrown. Currently, there are two ways to accomplish something similar in our add-on, one that can be done in the stable release and one that needs the `Holiday Creator Features` experimental toggle to be enabled.
+Items like the Splash Potion or the Trident are special items that can be thrown. Currently, there are two ways to accomplish something similar in your add-on, one that can be done in the stable release and one that needs the `Holiday Creator Features` experimental toggle to be enabled.
 
 # Stable method
 This method lets you detect the usage of an item through the `minecraft:food` component from an animation controller, and modifying the player.json you can then spawn an entity when that happens.
 
 ## The Item
-First, you'll want to make the actual item itself:
-`BP/items/throwable_item.item.json`
+First, you'll want to make the actual item:
+<CodeHeader>BP/items/throwable_item.item.json</CodeHeader>
 ```json
 {
   "format_version": "1.16.0",
@@ -40,7 +40,7 @@ We can notice several things here:
 - `minecraft:food` is used to allow player to actually "use" the item, so we can detect it
 
 Because the format version is `1.16.0`, your item needs an RP definition too:
-`RP/items/throwable_item.item.json`
+<CodeHeader>RP/items/throwable_item.item.json</CodeHeader>
 ```json
 {
   "format_version": "1.16.0",
@@ -60,7 +60,7 @@ Because the format version is `1.16.0`, your item needs an RP definition too:
 
 The entity will be the actual thrown item, and it will behave like a projectile.
 
-`BP/entities/throwable_item_entity.se.json`
+<CodeHeader>BP/entities/throwable_item_entity.se.json</CodeHeader>
 ```json
 {
 	"format_version": "1.16.0",
@@ -115,7 +115,7 @@ You can then customize its behavior by editing the `minecraft:projectile` compon
 ## The Animation Controller
 
 The animation controller is responsible for detecting the usage of the item and for telling the player entity to spawn a throwable entity.
-`BP/animation_controllers/throwables.ac.json`
+<CodeHeader>BP/animation_controllers/throwables.ac.json</CodeHeader>
 ```json
 {
   "format_version": "1.10.0",
@@ -153,6 +153,7 @@ The animation controller is responsible for detecting the usage of the item and 
 }
 ```
 
+### Player.json
 :::tip
 Always make sure that your `player.json` file is updated to the latest version available, depending on the game version you are working on.
 You can do that [here](https://bedrock.dev/packs)
@@ -162,7 +163,7 @@ Do not edit/remove existing parts of the `player.json` file unless you know what
 :::
 
 Now, you have to register the animation controller to the `player.json` file:
-`BP/entities/player.json`
+<CodeHeader>BP/entities/player.json</CodeHeader>
 ```json
 {
   "format_version": "1.18.20",
