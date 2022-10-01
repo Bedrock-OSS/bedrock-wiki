@@ -22,6 +22,7 @@ const props = defineProps<{
 	imgsrcDark?: string
 
 }>();
+// Hotfix for making it work.
 const imgsrcLight = import.meta.env.BASE_URL + props.imgsrcLight;
 const imgsrcDark = import.meta.env.BASE_URL + (props.imgsrcDark ? props.imgsrcDark : props.imgsrcLight);
 </script>
