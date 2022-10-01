@@ -32,28 +32,28 @@ To contribute to our wiki, you don't need to be part of Bedrock OSS. The members
 		>
 			<CardLink
 				title="GitHub"
-				imgsrc="assets/images/misc/github.png"
+				imgsrcLight="assets/images/misc/github.png"
 				link="https://github.com/Bedrock-OSS/bedrock-wiki"
 			>
 			The Wiki is hosted and edited on GitHub, and we process edits through the pull-request process.<br><br>You are more than welcome to directly suggest edits for our approval.
 			</CardLink>
 			<CardLink
 				title="Learn How"
-				imgsrc="assets/images/misc/compass.png"
+				imgsrcLight="assets/images/misc/compass.png"
 				link="/contribute-how-to"
 			>
 				Don't quite know what to do?<br><br>For more information on how to contribute to the wiki, including setting up your working environment and using GitHub, view our guide!
 			</CardLink>
 			<CardLink
 				title="Contact Us"
-				imgsrc="assets/images/discord/oss.png"
+				imgsrcLight="assets/images/discord/oss.png"
 				link="https://discord.gg/XjV87YN"
 			>
 				Bedrock OSS is a programming-focused creators discord for Bedrock, where all wiki edits are discussed. <br /><br />Here you can report wiki issues, collaborate on new articles, or simply get in touch with the authors of various pages.
 			</CardLink>
 			<CardLink
 				title="Page Editing"
-				imgsrc="favicon.ico"
+				imgsrcLight="favicon.ico"
 				link="/contribute-style"
 			>
 				Keeping the style is very important, it allows us to keep guides easy to learn and attractive. Let's write all pages in one style. <br /><br />Here you can learn how to use special components and style our wiki.
