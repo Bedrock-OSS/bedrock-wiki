@@ -31,7 +31,7 @@ Now, let's take a look at those subcommands. They are as follows:
 ```
 /execute as <origin: target> -> execute
 ```
-Changes the target of the command, or who @s will select. Affects rotation due to a potential bug ([MCPE-156277](https://bugs.mojang.com/browse/MCPE-156277)). This does not change the position of the command, or its dimension. If multiple targets are specified, then a command is ran once for each of them, and @s selects each entity in turn.
+Changes the target of the command, or who @s will select. This does not change the position, rotation, or dimention of the command. If multiple targets are specified, then a command is ran once for each of them, and @s selects each entity in turn.
 
 ### `/execute at`
 
