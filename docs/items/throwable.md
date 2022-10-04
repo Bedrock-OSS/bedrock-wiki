@@ -12,14 +12,15 @@ This tutorial assumes you have a basic understanding of MoLang, animation contro
 Items like the Splash Potion or the Trident are special items that can be thrown. Currently, there are two ways to accomplish something similar in your add-on, one that can be done in the stable release and one that needs the `Holiday Creator Features` experimental toggle to be enabled.
 
 ## Stable method
+
 This method lets you detect the usage of an item through the `minecraft:food` component from an animation controller, and modifying the `player.json` you can then spawn an entity when that happens.
-:::tip
-Sadly it's not an actual "throw something on item click" but something more like "spawn something on item click", for an actual throwable item get to the [Experimental method](#experimental-method).
-:::
 
 ### The Item
+
 First, you'll want to make the actual item:
+
 <CodeHeader>BP/items/throwable_item.item.json</CodeHeader>
+
 ```json
 {
   "format_version": "1.16.0",
@@ -37,13 +38,17 @@ First, you'll want to make the actual item:
   }
 }
 ```
+
 We can notice several things here:
+
 - `format_version` must be `1.16.0`
 - `minecraft:use_duration` should be a high number, in order to stop the eating sound to play and to prevent the player from eating the item
 - `minecraft:food` is used to allow player to actually "use" the item, so we can detect it
 
 Because the format version is `1.16.0`, your item needs an RP definition too:
+
 <CodeHeader>RP/items/throwable_item.item.json</CodeHeader>
+
 ```json
 {
   "format_version": "1.16.0",
@@ -62,8 +67,10 @@ Because the format version is `1.16.0`, your item needs an RP definition too:
 ### The Entity
 
 The entity will be the actual thrown item, and it will behave like a projectile.
+Make sure to add snowball runtime identifier to make your projectile to actually be shoot, not spawned. You can also experiment with other projectile runtime id's.
 
 <CodeHeader>BP/entities/throwable_item_entity.se.json</CodeHeader>
+
 ```json
 {
 	"format_version": "1.16.0",
@@ -72,7 +79,8 @@ The entity will be the actual thrown item, and it will behave like a projectile.
 			"identifier": "wiki:throwable_item_entity",
 			"is_spawnable": false,
 			"is_summonable": true,
-			"is_experimental": false
+			"is_experimental": false,
+      "runtime_identifier": "minecraft:snowball"
 		},
 		"components": {
 			"minecraft:collision_box": {
@@ -111,6 +119,7 @@ The entity will be the actual thrown item, and it will behave like a projectile.
 	}
 }
 ```
+
 This entity is based on the Vanilla splash potion.
 
 You can then customize its behavior by editing the `minecraft:projectile` component, in this case the thrown item will grant some exp and will damage any entity it will hit.
@@ -118,7 +127,9 @@ You can then customize its behavior by editing the `minecraft:projectile` compon
 ### The Animation Controller
 
 The animation controller is responsible for detecting the usage of the item and for telling the player entity to spawn a throwable entity.
+
 <CodeHeader>BP/animation_controllers/throwables.ac.json</CodeHeader>
+
 ```json
 {
   "format_version": "1.10.0",
@@ -156,17 +167,21 @@ The animation controller is responsible for detecting the usage of the item and 
 }
 ```
 
-#### Player.json
+#### player.json
+
 :::tip
 Always make sure that your `player.json` file is updated to the latest version available, depending on the game version you are working on.
-You can do that [here](https://bedrock.dev/packs)
+You can do that [here](https://bedrock.dev/packs).
 :::
+
 :::warning
 Do not edit/remove existing parts of the `player.json` file unless you know what you are doing, as it could (and probably will) break the game.
 :::
 
 Now, you have to register the animation controller to the `player.json` file:
+
 <CodeHeader>BP/entities/player.json</CodeHeader>
+
 ```json
 {
   "format_version": "1.18.20",
@@ -190,7 +205,9 @@ Now, you have to register the animation controller to the `player.json` file:
 ```
 
 Then, you need to add all the events and component groups to the `player.json` file:
+
 <CodeHeader>BP/entities/player.json#minecraft:entity</CodeHeader>
+
 ```json
 "component_groups": {
   "wiki:throw_entity": { // Contains a component that will spawn the entity
@@ -224,11 +241,13 @@ Then, you need to add all the events and component groups to the `player.json` f
 ```
 
 ## Experimental method
+
 This method requires the `Holiday Creator Features` experimental toggle to be enabled.
 
 ### The Item
 
 <CodeHeader>BP/items/throwable_item.item.json</CodeHeader>
+
 ```json
 {
     "format_version": "1.16.100",
@@ -267,11 +286,14 @@ This method requires the `Holiday Creator Features` experimental toggle to be en
     }
 }
 ```
+
 We can notice several things here:
+
 - `format_version` must be `1.16.100`
 - `minecraft:on_use` will call an event everytime the item is used (right-clicked)
 
 In the event:
+
 - `shoot` will shoot our entity
 - `swing` will run the swing animation on the player
 - `decrement_stack` will remove one item from the player's inventory
@@ -279,11 +301,13 @@ In the event:
 
 
 ### The Entity
+
 The entity file is the same as the Stable version.
 
 <Spoiler title="BP/entities/throwable_item_entity.se.json">
 
 <CodeHeader>BP/entities/throwable_item_entity.se.json</CodeHeader>
+
 ```json
 {
 	"format_version": "1.16.0",
@@ -331,7 +355,9 @@ The entity file is the same as the Stable version.
 	}
 }
 ```
+
 </Spoiler>
 
 ## Conclusion
+
 Once you have your throwable item you can start trying several things, like playing with its power, effects, animations or combining it with an [AOE Cloud](/entities/introduction-to-aec.html). The only limit is your imagination.
