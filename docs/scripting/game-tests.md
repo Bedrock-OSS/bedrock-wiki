@@ -167,3 +167,5 @@ npm install @minecraft/server-ui
 npm install @minecraft/server-admin
 npm install @minecraft/server-net
 ```
+
+If you're having issues with the Script API, consider joining **Bedrock Add-Ons** for support, which you can find alongside a vast array of other resources on the [Useful Links](/meta/useful-links#discord-links) page!
