@@ -80,7 +80,7 @@ Make sure to add snowball runtime identifier to make your projectile to actually
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false,
-      "runtime_identifier": "minecraft:snowball"
+                        "runtime_identifier": "minecraft:snowball"
 		},
 		"components": {
 			"minecraft:collision_box": {
@@ -316,7 +316,8 @@ The entity file is the same as the Stable version.
 			"identifier": "wiki:throwable_item_entity",
 			"is_spawnable": false,
 			"is_summonable": true,
-			"is_experimental": false
+			"is_experimental": false,
+                        "runtime_identifier": "minecraft:snowball"
 		},
 		"components": {
 			"minecraft:collision_box": {
