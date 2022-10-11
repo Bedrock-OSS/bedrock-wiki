@@ -115,8 +115,8 @@ Piskel is a web-based pixel art software with a focus of making pixelated sprite
 
 LibreSprite is a free and open source program for creating and animating your sprites. Based on the last GPLv2 commit of aseprite.
 
-**Pros**: Basic & easy to use, customizable and curated for pixel artists.
-**Cons**: May not work on Mac, maintained only by a small community.
+**+ Pros**: Basic & easy to use, customizable and curated for pixel artists.
+**- Cons**: May not work on Mac, maintained only by a small community.
 
 ## Additional Materials
 
