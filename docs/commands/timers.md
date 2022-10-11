@@ -1,5 +1,5 @@
 ---
-title: Command Timer
+title: Command Timers
 category: General
 tags: 
     - experimental
@@ -15,11 +15,13 @@ This document covers experimental features, for 1.19.10+ mcfunctions.
 When creating mechanics or waiting for a set amount of time, it can be useful to create timers using only mcfunction files.
 
 :::tip
-This page is for using commands to create timers, for entity timers, look at [this page](https://wiki.bedrock.dev/entities/timers.html)
+This page is for using commands to create timers, for entity timers, look at [this page](/entities/timers)
 :::
 
 ## How to make them
+
 ### Start timer
+
 <CodeHeader>BP/functions/timer_start.mcfunction</CodeHeader>
 
 ```
@@ -85,6 +87,6 @@ execute if score value timer matches 0 run say Finished!
 You can also view an example timer pack here:
 
 <BButton
-	link="/assets/packs/tutorials/mcfunction-timers/example_timer_pack.mcpack" download
+	link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/mcfunction_timers.mcaddon"
 	color=gray
 >Download Example Pack</BButton>
