@@ -1,5 +1,5 @@
 ---
-title: Creating Timers
+title: Command Timer
 category: General
 tags: 
     - experimental
@@ -13,6 +13,10 @@ This document covers experimental features, for 1.19.10+ mcfunctions.
 
 ## Introduction
 When creating mechanics or waiting for a set amount of time, it can be useful to create timers using only mcfunction files.
+
+:::tip
+This page is for using commands to create timers, for entity timers, look at [this page](https://wiki.bedrock.dev/entities/timers.html)
+:::
 
 ## How to make them
 ### Start timer
