@@ -21,7 +21,7 @@ By the end of this guide, you will have created an entire addon all by yourself,
 
 In this guide you will find boxes like these:
 :::tip
-Some very important information!
+Some very helpful information!
 :::
 :::warning
 Attention! Watch out for these common mistakes.
@@ -42,7 +42,7 @@ Alongside the step-by-step guide, we have a few other files here, which may be i
 
 ## What to do after finishing the Guide
 
-At the end of guide section, your first addon will be done! To further expand your knowledge, consider doing these:
+At the end of the guide section, your first addon will be done! To further expand your knowledge, consider doing these:
 
 -   Start your project!
--   To dive into the other aspects of adding onto MCBE (Minecraft Bedrock Edition), you can use the different sections' sub guides listed in the Appendix. This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.
+-   To dive into the other aspects of adding onto MCBE (Minecraft Bedrock Edition), you can use the different sections' sub guides listed in the Appendix. This includes but is not limited just to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.
