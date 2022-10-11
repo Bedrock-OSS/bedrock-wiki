@@ -7,7 +7,7 @@ prefix: '4. '
 
 ## The com.mojang folder
 
-The `com.mojang` folder is a special folder where we build our addons. Minecraft understands this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder!
+The `com.mojang` folder is a special folder where Minecraft stores data (Addons, Worlds, Player info...). Minecraft understands this location, and all files we access or create will be placed somewhere in this folder!
 
 You should create a shortcut to the `com.mojang` folder on your Desktop or on your mobile device, so you can easily access it at any time. The exact location of the `com.mojang` folder will depend on your device OS. 
 
@@ -36,7 +36,7 @@ We will develop our addon in `development_behavior_packs` and `development_resou
 ## Your Workspace
 
 :::tip
-Project setup is different for android and other platforms. Consider looking into our guide for android platform.
+Project setup is different for android and other platforms. Consider looking into our guide for android platforms.
 :::
 <BButton
 	link="./project-setup-android"
