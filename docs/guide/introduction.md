@@ -21,7 +21,7 @@ By the end of this guide, you will have created an entire addon all by yourself,
 
 In this guide you will find boxes like these:
 :::tip
-Some very important information!
+Some very helpful information!
 :::
 :::warning
 Attention! Watch out for these common mistakes.
