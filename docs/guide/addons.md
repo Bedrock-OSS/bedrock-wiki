@@ -11,7 +11,7 @@ Addons allow us to modify the contents of our Minecraft Experience by _modifying
 
 Addons are primarily written in [json](./understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
 
-## Behavior Pack Vs. Resource Pack
+## What's the difference between a Behavior Pack & a Resource Pack?
 
 Addons are split into two pack types: Resource Packs, and Behavior Packs. Both can function independently, but they are most commonly used together. When you have both a Resource Pack and Behavior Pack, this is referred to as an _addon_.
 
