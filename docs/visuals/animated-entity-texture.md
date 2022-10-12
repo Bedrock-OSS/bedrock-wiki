@@ -115,6 +115,6 @@ Now, it is time to test your creation!
 ## Download Example
 
 <BButton
-    link="/assets/packs/visuals/animated-entity-texture/animated-entity.zip" download
-    color=default
+    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/animated_entity_texture.mcpack"
+    color=blue
 >Download</BButton>

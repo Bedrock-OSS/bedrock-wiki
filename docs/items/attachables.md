@@ -80,6 +80,11 @@ Making attachables is more involved than making a client entity file though, as 
 
 For this tutorial's demonstration, a model of Steve's head will be used. The same principles can be applied to any custom model you want to use.
 
+<BButton
+	link="/assets/packs/tutorials/ore-loot/my_xp_structure.mcstructure" download
+	color=gray
+>📄 Steve head model</BButton>
+
 <BButton link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/steve_head.geo.json?raw=true">📄 Steve head model</BButton>
 
 In the attachable file, change the geometry name to `"geometry.steve_head"` and the default texture path to `"textures/entity/steve"`:
@@ -163,7 +168,10 @@ With that done, the next step is to set up animations to display the model in fi
 
 Attached below is a template to assist with setting up these animations, using a modified player geometry.
 
-<BButton link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/AttachableRotations.zip?raw=true">📁 Player geometry and animations</BButton>
+<BButton
+	link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/attachable_rotations.zip"
+	color=blue
+>📁 Player geometry and animations</BButton>
 
 ::: tip
 These files already have our Steve head model imported for this tutorial to serve as an example. If you are running into problems, compare your model setup to these!

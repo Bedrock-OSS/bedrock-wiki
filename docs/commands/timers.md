@@ -87,6 +87,6 @@ execute if score value timer matches 0 run say Finished!
 You can also view an example timer pack here:
 
 <BButton
-	link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/mcfunction_timers.mcaddon"
+	link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/mcfunction_timers.mcpack"
 	color=gray
 >Download Example Pack</BButton>

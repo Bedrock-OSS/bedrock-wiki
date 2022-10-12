@@ -521,4 +521,4 @@ Remember: Some experimental features in version 1.17.30 may not work.
 If you made it this far - congrats!
 You're now an official Minecraft Bedrock Edition modder!
 
-If you want the source code from this tutorial, you can download the pack [here](https://wiki.bedrock.dev/assets/packs/scripting/hello-world-tutorial/HelloWorld.mcpack).
+If you want the source code from this tutorial, you can download the pack [here](https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/legacy_scripting_hello_world.mcpack).
