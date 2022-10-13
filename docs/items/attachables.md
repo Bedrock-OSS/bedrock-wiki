@@ -80,11 +80,6 @@ Making attachables is more involved than making a client entity file though, as 
 
 For this tutorial's demonstration, a model of Steve's head will be used. The same principles can be applied to any custom model you want to use.
 
-<BButton
-	link="/assets/packs/tutorials/ore-loot/my_xp_structure.mcstructure" download
-	color=gray
->📄 Steve head model</BButton>
-
 <BButton link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/steve_head.geo.json?raw=true">📄 Steve head model</BButton>
 
 In the attachable file, change the geometry name to `"geometry.steve_head"` and the default texture path to `"textures/entity/steve"`:
