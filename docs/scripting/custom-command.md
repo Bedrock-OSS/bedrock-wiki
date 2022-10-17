@@ -15,7 +15,7 @@ Who doesn't want any custom command? Me neither. With the Script API, you can cr
 ## Setup Pack
 
 :::tip
-Before creating a script, it is recommended to learn the basics of JavaScript, Addons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft)
+Before creating a script, it is recommended to learn the basics of JavaScript, Addons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
 :::
 
 We think you have understood all of these things, so create your pack
