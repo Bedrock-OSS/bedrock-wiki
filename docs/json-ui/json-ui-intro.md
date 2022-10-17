@@ -39,7 +39,7 @@ These are files which contains elements that are called to render a screen:
 These are files which stores JSON UI elements to be used by other namespaces, such as screens:
 
 - `ui_common.json` - contains elements such as the button which is referenced on most other namespaces such buttons for the settings screen
-- `ui_template_*.json` - contains elements that are neatly orgnaized to be used by other namespaces
+- `ui_template_*.json` - contains elements that are neatly organized to be used by other namespaces
 
 ## UI Defs
 
