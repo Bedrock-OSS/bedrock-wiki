@@ -12,7 +12,7 @@ mention:
 ## Introduction
 
 :::tip
-This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the **JSON UI Documentation** page instead.
+This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the [JSON UI Documentation](/json-ui/json-ui-documentation) page instead.
 :::
 
 The game's user interface is data-driven and can be modified. It allows us to modify how certain user interfaces would render and, to some extent, behave. To get started, all vanilla UI files are stored in `RP/ui/...` folder.
