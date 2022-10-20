@@ -421,9 +421,9 @@ Our entity now has its shape, but it also needs a texture. This texture can also
 
 `RP/textures/entity/ghost.png`
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png)
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/guide/guide_RP/textures/entity/ghost.png">Download texture here</BButton>
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png">Download texture here</BButton>
 
 You may recall, when we made our item, we assigned a shortname to our texture to reference later. We will be doing something similar for our entity within our entity file, so make sure you keep the file path to the texture. 
 
