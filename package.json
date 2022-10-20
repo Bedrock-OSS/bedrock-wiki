@@ -11,14 +11,14 @@
 		"gray-matter": "^4.0.3",
 		"node-fetch": "^2.6.1",
 		"sass": "^1.35.2",
-		"vite-plugin-pwa": "^0.8.1",
+		"vite-plugin-pwa": "^0.8.2",
 		"vite-plugin-windicss": "^1.8.3",
 		"vitepress": "^0.22.3",
 		"windicss": "^3.5.1"
 	},
 	"scripts": {
 		"dev": "vitepress dev docs",
-		"build": "node --max-old-space-size=4096 node_modules/vitepress/bin/vitepress.js build docs",
+		"build": "node --max-old-space-size=8192 node_modules/vitepress/bin/vitepress.js build docs",
 		"serve": "vitepress serve docs"
 	},
 	"dependencies": {

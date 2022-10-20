@@ -29,7 +29,7 @@ By the end of this tutorial, you should be able to:
 
 Attachable files are quite similar in design to client entity definitions; they let us define textures, materials, geometries, and animations to display the attachable.
 
-Here's a basic example of an attachable, which we will be using throughout this tutorial, that makes a stick look like a spyglass:
+Here's a basic example of an attachable, which we will be using throughout this tutorial. This makes a stick look like a spyglass:
 
 <CodeHeader>RP/attachables/stick.json</CodeHeader>
 
@@ -93,10 +93,12 @@ In the attachable file, change the geometry name to `"geometry.steve_head"` and 
 },
 "geometry": {
 	"default": "geometry.steve_head"
-}
+},
 ```
 
-It is important to make sure your model can work with attachables. Our first step is modifying the root bone of the geometry to be bound to the slot the item is placed in. Take careful note of line 16 in the Steve head model below:
+It is important to make sure your model can work with attachables. Our first step is to upgrade the model file format to "1.16.0" if it is not already. If the model is a legacy file, then convert that to a more modern format before continuing.
+
+Next up is modifying the root bone of the geometry to be bound to the slot the item is placed in. Take careful note of the key on line 16 in the Steve head model below:
 
 <CodeHeader>RP/models/entity/steve_head.geo.json</CodeHeader>
 
@@ -127,13 +129,13 @@ It is important to make sure your model can work with attachables. Our first ste
 	]
 }
 ```
-While the `"parent"` property accepts a string and will make any child bones inherit transformations from the specified bone, the `"binding"` property accepts MoLang and sets the specified bone as the root that this geometry should inherit; the position of the model is moved to this bone too. This will have consequences in the next section where we make animations.
+While the `"parent"` key on a bone accepts a string and will make the target bone the parent of the source bone, the `"binding"` key accepts Molang and sets the target bone as the *root position* that the source bone and its children should inherit. This will have consequences in the next section where we make animations.
 
-Here we are converting the contextual variable `c.item_slot` to its corresponding bone name in the geometry. The conversions are `'main_hand'` → "rightItem", `'off_hand'` → "leftItem", and `'head'` → "head".
+For the value of `"binding"` we are using the Molang query `query.item_slot_to_bone_name`, with the contextual variable `c.item_slot` as an argument. This converts the name of the slot to its corresponding bone name in the player's geometry. The conversions are `'main_hand'` → "rightitem" and `'off_hand'` → "leftitem".
 
 ![](/assets/images/tutorials/attachables/attachable-step-one.png)
 
-*The head is free-floating for now, but we are about to fix that.*
+*If we look in Minecraft the head floats below our hand. Levitation powers perhaps?*
 
 
 ## Display Settings
@@ -156,30 +158,27 @@ With that done, the next step is to set up animations to display the model in fi
 			"hold_third_person": "!c.is_first_person"
 		}
 	]
-}
+},
 ```
 
 Attached below is a template to assist with setting up these animations, using a modified player geometry.
 
-<BButton link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/AttachableRotations.zip?raw=true">📁 Player geometry and animations</BButton>
+<BButton
+	link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/attachable_rotations.zip"
+	color=blue
+>📁 Player geometry and animations</BButton>
 
 ::: tip
-These files already have our Steve head model imported for this tutorial and it serves as an example.
+These files already have our Steve head model imported for this tutorial to serve as an example. If you are running into problems, compare your model setup to these!
 :::
 
-Here are some instructions on how to use these files:
-- Edit the geometry file to include the bones and cubes from your custom model.
-- Open the geometry in Blockbench, and set your model to be parented under the corresponding bone ("rightItem", "leftItem", or "head").
-- Move the model's root bone position so its origin (0, 0, 0) is located at the same position as the parented bone's pivot.
-  - It may be a good idea to place a locator at the root of your model to make adjustments easier.
+Using a text editor, edit the geometry file to include the bones and cubes from your custom model. Then open the geometry in Blockbench, and set your model to be parented under the bone you wish to set positions for (rightItem or leftItem).
 
 ![](/assets/images/tutorials/attachables/blockbench-view-one.png)
 
-*For the right hand slot, the root should be at (6, 15, 1).*
+In the animations tab, import the Attachable Guide animations you will need. You may then make new animations to position the bones in your model as desired. Some example animations for our Steve head model are supplied as well, for the first-person and third-person held in the right hand.
 
-- In the Animations tab, import the provided animations, and play them.
-
-You may then make new animations to position your model as desired. Some example first- and third-person animations for our Steve head model are supplied as well. Be sure to play the template animations while you make adjustments, as these will ensure what you see in Blockbench matches what comes out in Minecraft.
+Be sure to play the template animations while you make adjustments, as these will ensure what you see in Blockbench matches what comes out in Minecraft. Also make sure you are editing the bones of your model, and not the `rightArm` or `rightItem` bones from the template.
 
 ![](/assets/images/tutorials/attachables/blockbench-view-two.png)
 

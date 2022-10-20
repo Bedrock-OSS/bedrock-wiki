@@ -208,7 +208,7 @@ Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
 | clip_direction              |                     enum                      |               | Start point position for the `clip_ratio`. If `down`, the image will begin to appear from the bottom. <br> Possible values: <br> `left` <br> `right` <br> `up` <br> `down` <br> `center` |
 | clip_ratio                  |                     float                     |               | How much to clip. From 0.0 to 1.0                                                                                                                                                        |
 | clip_pixelperfect           |                    boolean                    |               | If the clip should try to be the most pixel accurate possible                                                                                                                            |
-| keep_ratio                  |                    boolean                    |    `false`    | Keep ratio when resizing image                                                                                                                                                           |
+| keep_ratio                  |                    boolean                    |    `true`    | Keep ratio when resizing image                                                                                                                                                           |
 | bilinear                    |                    boolean                    |    `false`    | Use the bilinear function when resizing the image                                                                                                                                        |
 | fill                        |                    boolean                    |    `false`    | Scratch the image to the size                                                                                                                                                            |
 | $fit_to_width               |                    boolean                    |               |                                                                                                                                                                                          |
@@ -1269,6 +1269,8 @@ Some of them only work in specific screens.
 -   `button.text_edit_box_hovered`
 -   `button.text_edit_box_clear`
 -   `button.help`
+-   `button.menu_open_uri`
+-   `button.no_interaction`
 -   ...
 
 ## Hardcoded Collection Names
@@ -1876,6 +1878,14 @@ Some of them only work in specific screens.
 -   `#is_right_tab_stonecutter`
 -   `#is_left_tab_stones`
 
+#### Death (`ui/death_screen.json`)
+
+- `#death_reason_text`
+- `#respawn_visible`
+- `#quit_enabled`
+- `#quit_visible`
+- `#buttons_and_deathmessage_visible`
+
 #### Villager Trade2 (`ui/trade2_screen.json`)
 
 -   `#name_label`
@@ -2020,3 +2030,5 @@ Aux = ID \* 65536
 
 ID = Aux / 65536
 65536 = Aux / ID
+
+Get all Item IDs [here](https://docs.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonitems).

@@ -130,9 +130,9 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 ## Download .mcstructure
 
 <BButton
-	link="/assets/packs/tutorials/ore-loot/my_xp_structure.mcstructure" download
+	link="/assets/packs/tutorials/ore_loot_tables/my_xp_structure.mcstructure" download
 	color=gray
->Download Structure</BButton>
+>Download structure</BButton>
 
 ## Result
 

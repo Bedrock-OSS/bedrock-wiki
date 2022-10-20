@@ -17,7 +17,7 @@ From this page you will learn:
 
 ## Beginning
 
-Flipbook textures are animated textures. Blocks like fire, water, lava and magma use them. You can use animated texture for your block too!
+Flipbook textures are animated textures. Blocks like fire, water, lava and magma use them. You can use animated texture for your blocks too!
 For the first time let's use magma's animated texture.
 You can simply apply animated magma's texture to your block by changing `texture` value to one, defined in `Vanilla_RP/textures/terrain_texture.json`:
 
@@ -107,20 +107,20 @@ While looking up for something in vanilla flipbook texture file, you can notice 
 
 Here is explanation for them:
 
-| Component          | Value   | Meaning                                                                  |
-| ------------------ | ------- | ------------------------------------------------------------------------ |
-| flipbook_texture   | string  | Path to texture.                                                         |
-| atlas_tile         | string  | The shortname defined in the terrain_textures.json.                      |
-| atlas_index        | integer | The index of the texture array inside the definition of that shortname.* |
-| atlas_tile_variant | integer | Seems to do same as `atlas_index`                                        |
-| ticks_per_frame    | integer | How fast frames should be changed. 20 ticks = 1 second.                  |
-| frames             | list    | List with numbers of frames which defines their order.                   |
-| replicate          | integer | Sets the size of pixels. Default: 1.**                                   |
-| blend_frames       | boolean | Defines should frames transition be smooth or not. Default: true.        |
+| Component          | Value   | Meaning                                                                          |
+| ------------------ | ------- | -------------------------------------------------------------------------------- |
+| flipbook_texture   | string  | Path to texture.                                                                 |
+| atlas_tile         | string  | The shortname defined in the terrain_textures.json.                              |
+| atlas_index        | integer | The index of the texture array inside the definition of that shortname.*         |
+| atlas_tile_variant | integer | The variant of the block's texture array inside the shortname's block variation. |
+| ticks_per_frame    | integer | How fast frames should be changed. 20 ticks = 1 second.                          |
+| frames             | list    | List with numbers of frames which defines their order.                           |
+| replicate          | integer | Sets the size of pixels. Default: 1.**                                           |
+| blend_frames       | boolean | Defines should frames transition be smooth or not. Default: true.                |
 
-\* `atlas_index` and `atlas_tile_variant`
+\* `atlas_index`
 
-These components are for defining texture variant (if you have it).
+A component where you'll define the value of the block index to animate.
 
 Example:
 
@@ -130,12 +130,37 @@ Example:
 "dirt" : {
     "textures" : [ 
         "textures/blocks/dirt", 
-        "textures/blocks/coarse_dirt"
+        "textures/blocks/coarse_dirt" //imagine if this is the path you wanted to animate
     ]
 }
 ```
 
-Then you need can add `"atlas_index": 1` or `"atlas_tile_variant": 1` to have animated texture for the second path.
+Since path 2 has an animated texture, therefore you'll put `"atlas_index": 1"` on the Dirt block's flipbook texture.
+
+\* `atlas_tile_variant`
+
+A component where you'll define the value of the block variant (which is registered to the Variations array) to animate.
+
+Example:
+
+<CodeHeader>RP/textures/terrain_texture.json#texture_data</CodeHeader>
+
+```json
+"dirt" : {
+    "textures" : [ 
+           {
+       "variations": [
+           { "path": "textures/blocks/dirt_va" }, //imagine if this is the block variation you wanted to animate
+           { "path": "textures/blocks/dirt0" },
+           { "path": "textures/blocks/dirt1" }
+           ]
+        }
+    ]
+}
+```
+
+Now let's say we wanted path 1 to be animated, now what you'll do here is to put `"atlas_tile_variant": 1"` on the Dirt block's flipbook texture.
+
 
 \*\* `replicate`
 

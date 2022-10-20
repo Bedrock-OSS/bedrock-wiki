@@ -80,7 +80,7 @@ You can use the following to use selector to display names.
 
 ## Translate text
 
-To have a language dependant text you can use the translate component and [Lang-Codes](/concepts/text-and-translations). please note you will need relavent information in each of the desired .lang files for this to work.
+To have a language dependant text you can use the translate component and [translation keys](/concepts/text-and-translations). please note you will need relavent information in each of the desired .lang files for this to work.
 
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
@@ -101,7 +101,7 @@ The command:
 <CodeHeader></CodeHeader>
 
 ```json
-tellraw @a { "rawtext": [ { "translate": "example.langcode.1" } ] }
+/tellraw @a { "rawtext": [ { "translate": "example.langcode.1" } ] }
 ```
 
 
@@ -112,11 +112,11 @@ language files:
 <CodeHeader></CodeHeader>
 
 ```
-example.langcode.2=The winner is: %%s. With a score of %%s
+example.langcode.2=The winner is: %s. With a score of %s
 ```
 
 <CodeHeader></CodeHeader>
 
 ```json
-/tellraw @a {"translate": [{"text": "example.langcode.2", "with": {"rawtext": [{"selector": "@a[r=5,c=1]"}, {"text": "§6With a score of: "}, {"score":{"name": "@s","objective": "value"}}]}}]}
+/tellraw @a {"rawtext":[{"translate":"example.langcode.2","with":{"rawtext":[{"selector":"@a[r=5,c=1]"},{"text":"§6With a score of: "},{"score":{"name":"@s","objective":"value"}}]}}]}
 ```

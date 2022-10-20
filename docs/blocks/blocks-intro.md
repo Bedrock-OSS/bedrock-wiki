@@ -228,7 +228,7 @@ tile.wiki:compass_block.name=A compass in block-form
 tile.wiki:flashing.name=Block of Flashing Matter
 ```
 
-You can learn more about .lang [here](/concepts/text-and-translations)
+You can learn more about translation keys [here](/concepts/text-and-translations).
 
 ---
 

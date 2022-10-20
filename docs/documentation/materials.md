@@ -1,6 +1,8 @@
 ---
 title: Vanilla Materials
 show_toc: false
+tags:
+    - expert
 ---
 
 :::warning

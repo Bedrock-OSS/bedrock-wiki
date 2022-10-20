@@ -26,7 +26,7 @@ Important links have a ⭐.
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
--   [Dragonly Server Software](https://discord.gg/62zMCB4h)
+-   [Dragonfly Server Software](https://discord.gg/U4kFWHhTNR)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
 -   [BC Community & Archive](https://discord.gg/SYstTYx5G5)
 
@@ -49,7 +49,7 @@ Important links have a ⭐.
 ## Bedrock Tools Websites
 
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
--   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-windmill/)
+-   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Apply Loot Tables to Structures](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
 -   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
 -   [Convert MCSTRUCTURE to MCFUNCTION](https://mcbe-essentials.github.io/structure-to-function/)
@@ -77,13 +77,29 @@ Important links have a ⭐.
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
 -   [Documentation Graveyard (removed components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 
-## Behavior & Resource Packs
+### Getting Started With Your First Add-On
+
+- [Getting Started with Add-On Development for Bedrock Edition](https://learn.microsoft.com/en-us/minecraft/creator/documents/gettingstarted): These guides show you exactly how to build your first resource pack and your first behavior pack from start to finish.
+- [Molang: a Beginner's Guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/molangbeginnersguide): Molang is a Minecraft programming language that can be useful for writing some advanced add-ons.
+- [Introduction to the GameTest Framework](https://learn.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted): This is the best way to test games, and it uses JavaScript, the most popular programming language in the world!
+- [Build a gameplay experience with TypeScript](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted): TypeScript is Microsoft's copy of JavaScript. Writing add-ons in TypeScript allows you to add any functionality you can imagine!
+- [mojang-minecraft Module](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft): This module and the others near it are how we can access Minecraft values with our TypeScript code. It's technical, but a great resource.
+- [List and summary of commands (Minecraft fandom)](https://minecraft.fandom.com/wiki/Commands#List_and_summary_of_commands): Most add-ons will run some commands. This community-supported wiki is the best resource for learning each and every command.
+
+## Sample behavior & Resource Packs
+
+These packs are maintained and published by Mojang.
 
 -   ⭐ [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
 -   ⭐ [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
 -   [Vanilla Resource Pack (BETA)](https://aka.ms/MinecraftBetaResources)
 -   [Vanilla Behavior Pack (BETA)](https://aka.ms/MinecraftBetaBehaviors)
 -   [Pack Archive (old versions)](https://bedrock.dev/packs)
+
+These packs are published by the open-source community
+
+-   [wiki-addon](https://github.com/Bedrock-OSS/wiki-addon)
+-   [Enchantment Details](https://github.com/supercam19/EnchantmentDetails)
 
 ## Scripting Resources
 

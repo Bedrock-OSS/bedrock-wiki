@@ -206,6 +206,7 @@ These identifiers are not usable in the object notation, only the string notatio
 - `leaping`
 - `slow_falling`
 - `turtle_master`
+- `wither`
 
 Where supported, `long_` and `strong_` prefixes may be used to designate modified potions, such as `minecraft:potion_type:strong_poison`.
 

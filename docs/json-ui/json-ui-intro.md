@@ -12,7 +12,7 @@ mention:
 ## Introduction
 
 :::tip
-This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the **JSON UI Documentation** page instead.
+This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the [JSON UI Documentation](/json-ui/json-ui-documentation) page instead.
 :::
 
 The game's user interface is data-driven and can be modified. It allows us to modify how certain user interfaces would render and, to some extent, behave. To get started, all vanilla UI files are stored in `RP/ui/...` folder.
@@ -39,7 +39,7 @@ These are files which contains elements that are called to render a screen:
 These are files which stores JSON UI elements to be used by other namespaces, such as screens:
 
 - `ui_common.json` - contains elements such as the button which is referenced on most other namespaces such buttons for the settings screen
-- `ui_templates_*.json` - contains elements that are neatly orgnaized to be used by other namespaces
+- `ui_template_*.json` - contains elements that are neatly organized to be used by other namespaces
 
 ## UI Defs
 
@@ -125,7 +125,7 @@ We can then reference the same element above into a different namespace `two`:
 {
   "namespace": "two",
 
-  "fizzbuzz@stuff.foobar": {...}
+  "fizzbuzz@one.foobar": {...}
 }
 ```
 
@@ -160,7 +160,7 @@ Here the element `type` is `label` so it will render a text of `Hello World` whe
 
 ### Types
 
-The following are the list of element types, which are possible values for the `type` property:
+The following are some of the element types, which are possible values for the `type` property:
 
 - `label` - for creating text objects
 - `image` - for rendering images from a filepath provided
@@ -219,6 +219,10 @@ The following are the list of element types, which are possible values for the `
 - `size` - accepts an array, animates the size in ( width, height )
 - `flip_book` - accepts integer values, animates the image in flipbook texture or frame by frame
 - `uv` - accepts an array, animates the image depending on the UV texture
+- `color` - accepts float RGB values from 0.0 to 1.0, animates the color of the element
+- `wait` - accepts number values, used for waiting/staying purposes
+- `aseprite_flip_book` - like a `flip_book` animation, uses sprite sheets. More info [here](/json-ui/aseprite-animations)
+- `clip`
 
 ## Using Operators
 
@@ -228,6 +232,7 @@ You can use operators in JSON UI, along with `$variables` and `#bindings` into c
 | --------------------- | -------- | ----------------------------------------------------------------------------- |
 | Addition              | +        | `"100% + 420px"` `($text + ' my')` `($index + 2)` `('#' + $bdg_nm + '_name')` |
 | Subtraction           | -        | `"100% - 69px"` `($text - ' my')` `($index - 13)`                             |
+| Multiplication        | *        | `($var * 9)` `(#value * 5)`                                                   |
 | Division              | /        | `($var / 12)` `(#value / 2)`                                                  |
 | Equal to              | =        | `($var = 12)` `($var = 'this_text')` `(#name = 'Wither')`                     |
 | Greater than          | >        | `(#value > 13)`                                                               |
@@ -383,7 +388,7 @@ We have to tell the source element where the value will come from, tell which pr
       {
         "binding_type": "view",
         "source_control_name": "my_toggle", // the name of the source element
-        "source_property_name": "#toggle_state" // We want this property value which tells in which state the toggle is in
+        "source_property_name": "#toggle_state", // We want this property value which tells in which state the toggle is in
         "target_property_name": "#visible" // the target property to be overrided
       }
     ]
@@ -435,7 +440,7 @@ Variables can be used to render UI controls conditionally. Recall that UI variab
 }
 ```
 
-The `ignored` property is used to conditionally render a UI control when working with variables that carry bedrock engine data. Consider the below example. The `ignored` property added is the same as saying "ignore the text label if the actionbar text is equal to `hello world`".
+The `visible` property is used to conditionally render a UI control when working with variables that carry bedrock engine data. Consider the below example. A copy is made of the `$actionbar_text` variable to allow us to modify and perform comparisons on it (cannot be done with the hardcoded variable directly). The copy variable `$atext` is then used in the added `visible` property, which says "make the text label visible if the actionbar text is **not** equal to `hello world`".
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
@@ -460,7 +465,8 @@ The `ignored` property is used to conditionally render a UI control when working
           "localize": false,
           "alpha": "@hud.anim_actionbar_text_alpha_out",
 	  			// Ignore the text label if the actionbar text is equal to "hello world"
-          "ignored": "($actionbar_text = 'hello world')"
+          "$atext": "$actionbar_text",
+	  "visible": "(not ($atext = 'hello world'))"
         }
       }
     ]
@@ -476,14 +482,15 @@ Modifying the above JSON into an unintrusive UI file used in a resource pack sho
 ```json
 {
   "hud_actionbar_text/actionbar_message": {
-    "ignored": "($actionbar_text = 'hello world')"
+    "$atext": "$actionbar_text",
+    "visible": "(not ($atext = 'hello world'))"
   }
 }
 ```
 
-When you log into a world with the resource pack enabled, try executing `/title @s actionbar hello world`. You should notice that no message appears! Running any other actionbar title should show the other messages.
+When you log into a world with the resource pack enabled, try executing `/title @s actionbar hello world`. You should notice that no message appears! Running any other actionbar title should show the other messages. You can also remove `/actionbar_message` in the code above if you wish for the actionbar text and its background to disappear. The background is contained in `hud_actionbar_text`, and making it invisible also makes its child elements (`actionbar_message`) invisible.
 
-Here's a more complicated example of conditional rendering with variables. In this case, it is necessary to use the actionbar factory as it turns out the `$actionbar_text` data is only accessible in the factory controls.
+Here's a more complicated example of conditional rendering with variables. In this case, it is necessary to use the actionbar factory. Factories are element generators, and there are some with specific names such as `hud_actionbar_text_factory` which have hardcoded properties. This factory generates/resets the element inside its `control_id` whenever the actionbar command is run in addition to passing us some useful variables such as `$actionbar_text`, `$tool_tip_text`, etc., data which is only accessible through the factory.
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
@@ -494,7 +501,8 @@ Here's a more complicated example of conditional rendering with variables. In th
     "texture": "textures/ui/Black",
     "size": [16, 16],
     "layer": 10,
-    "ignored": "(not ($actionbar_text = 'hello world'))"
+    "$atext": "$actionbar_text",
+    "visible": "($atext = 'hello world')"
   },
 
   "black_conditional_image_factory": {
@@ -521,7 +529,7 @@ Here's a more complicated example of conditional rendering with variables. In th
 }
 ```
 
-The above example shows a 16x16 black square on the HUD screen when the actionbar text string is equal to `hello world`. You may also apply animations to your image to make it more dynamic. Conditional rendering with variables is not limited to images and labels. You may use any object type in conditional rendering with variables. You can imagine pairing your UI code with the actionbar text allows for a high degree of manipulation of JSON UI (at least in `hud_screen.json`). The `ignored` property has support for UI operators, so you have even more control. Anywhere where there is a variable that carries bedrock engine data allows for conditional rendering with variables.
+The above example shows a 16x16 black square on the HUD screen when the actionbar text string is equal to `hello world`. You may also apply animations to your image to make it more dynamic. Conditional rendering with variables is not limited to images and labels. You may use any object type in conditional rendering with variables. You can imagine pairing your UI code with the actionbar text allows for a high degree of manipulation of JSON UI (at least in `hud_screen.json`). The `visible` property has support for UI operators, so you have even more control. Anywhere where there is a variable that carries bedrock engine data allows for conditional rendering with variables.
 
 ### Conditional Rendering with Bindings
 

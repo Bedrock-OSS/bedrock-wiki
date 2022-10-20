@@ -125,7 +125,7 @@ All of the dialog properties that will be displayed to the user can also be tran
 }
 ```
 
-The translation key used should then be specified in the resource pack's `lang` files. In this case, `entity.endermite.name` would translate to "Endermite."
+The translation key used should then be specified in the resource pack's language files. In this case, `entity.endermite.name` would translate to "Endermite."
 
 ## Opening Dialogs
 
@@ -185,10 +185,10 @@ You can trigger an NPC dialogue from within the player using the /dialogue comma
 
 #### Pros and Cons:
 
-`+` You don't need to worry about hiding away an NPC, if you're just going to run  NPC dialogues provided using scene_tags.
-`+` No NPC means you also don't need to make sure it is in a 'ticking area'.
-`-` Since the dialogue is being triggered from the player, in which it is not intended to, it may become unstable in some cases.
-`-` Other players can click on player and they will see this dialogue.
+`+` You don't need to worry about hiding away an NPC, if you're just going to run  NPC dialogues provided using scene_tags. <br />
+`+` No NPC means you also don't need to make sure it is in a 'ticking area'. <br />
+`-` Since the dialogue is being triggered from the player, in which it is not intended to, it may become unstable in some cases. <br />
+`-` Other players can click on player and they will see this dialogue. <br />
 To avoid this add the `minecraft:interaction` to the entity which will replace the npc interaction. The npc stuff will still work, but if a player clicks on another player, then the npc won't come up
 
 <CodeHeader></CodeHeader>
