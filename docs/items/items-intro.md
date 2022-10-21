@@ -49,7 +49,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 ## Gem Resource File
 
-<CodeHeader>RP/items/gem.item.json"</CodeHeader>
+<CodeHeader>RP/items/gem.item.json</CodeHeader>
 
 ```json
 {
@@ -67,9 +67,9 @@ If you enter the game now, the item will function, but it will be invisible. You
 }
 ```
 
--   Set the same `identifier` under `description`, as in the item's behavior file. This links item's visual to the behavior. 
+-   Set the same `identifier` under `description` as in the item's behavior file. This links the item's appearance to its behavior. 
 -   `category` defines the category of items of the item in the creative inventory. It can be set to "Nature", "Equipment", "Construction" or "Items".
--   `"components"` in the resource file now define how the visuals are displayed. 
+-   `components` in the resource file defines how the item is displayed. 
     -   `minecraft:render_offsets` defines how the item should be rendered. It can be set to pretty much any Vanilla item name, for example, "apple".
     -   `minecraft:icon` defines the item texture's short name. Let's look more into it.
 
@@ -93,16 +93,16 @@ Now let's create the file where texture short names will be defined, `RP/texture
 }
 ```
 
--   `"resource_pack_name"` is just the name of the resource pack. You can set it as your namespace.
--   `"texture_name"` defines what types of textures this files holds. Since this is for items we set it to `"atlas.items"`.
+-   `resource_pack_name` is just the name of the resource pack. You can set it as your namespace.
+-   `texture_name` defines what types of textures this files holds. Since this is for items we set it to `atlas.items`.
 -   In the `texture_data` objects, you'll define all your item texture shortnames.
--   `gem` is the shortname for the `"textures/items/gem"` texture you added. This same `gem` is defined in `minecraft:icon` component of the Resource file of your item.
+-   `gem` is the shortname for the `textures/items/gem` texture you added. This same `gem` is defined in `minecraft:icon` component of the Resource file of your item.
 
 If you did everything correctly, your Gem can now be obtainable by `/give` in-game. If you're having trouble, watch your [Content Log](/guide/troubleshooting#content-log). If the item still malfunctions, check out the example files.
 
 ## Meal BP File
 
-Now let us define a food item. This uses the component `"minecraft:food"` along with some others to create a custom food item. 
+Now let us define a food item. This uses the component `minecraft:food` along with some others to create a custom food item. 
 
 <CodeHeader>BP/items/meal.item.json</CodeHeader>
 
@@ -209,6 +209,7 @@ item.wiki:meal.name=Meal
 You can learn more about language files [here](/concepts/text-and-translations).
 
 ## Folder Layout
+
 If followed correctly, this is how your project should look. 
 
 <FolderView :paths="[
