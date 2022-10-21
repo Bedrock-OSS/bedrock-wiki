@@ -11,6 +11,10 @@ mention:
 
 ## Introduction
 
+:::warning
+JSON UI is being deprecated in favor of [Ore UI](https://github.com/Mojang/ore-ui). Note that any addons using JSON UI will eventually break.
+:::
+
 :::tip
 This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the [JSON UI Documentation](/json-ui/json-ui-documentation) page instead.
 :::
