@@ -118,56 +118,62 @@
 </template>
 
 <script setup lang="ts">
-import { useData, useRoute } from 'vitepress'
+import { Header, useData, useRoute } from 'vitepress'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
-const { page } = useData()
-
 import { ref, watch } from 'vue'
 
-const getHeaders = function () {
-	let grouped = []
-	let lastHeader = null
-	let lastSubHeader = null
+const { page } = useData()
+
+interface extHeader extends Header {
+	children: extHeader[]
+}
+
+const getHeaders = () => {
+	let grouped: extHeader[] = [];
+	// create curHeader as default level 1 header
+	// if there is one level 1 header, this header will be overwritten
+	let curHeader: extHeader = {
+		level: 1,
+		slug: '',
+		title: '',
+		children: [],
+	};
+
+	// do only if page has headers, else simply return empty list
 	if (page.value.headers) {
-		for (const header of page.value.headers) {
+		page.value.headers.forEach((header, index) => {
+			// level 1 -> push previous curHeader and overwrite with new one
 			if (header.level === 1) {
-				lastHeader = header
-				header.children = []
-				grouped.push(header)
-			} else if (header.level === 2) {
-				lastSubHeader = header
-				header.children = []
-				if (!lastHeader) {
-					lastHeader = {
-						slug: '',
-						title: '',
-						children: [],
-					}
-					grouped.push(lastHeader)
-				}
-				lastHeader.children.push(header)
-			} else if (header.level === 3) {
-				if (!lastHeader) {
-					lastHeader = {
-						slug: '',
-						title: '',
-						children: [],
-					}
-					grouped.push(lastHeader)
-				}
-				if (!lastSubHeader) {
-					lastSubHeader = {
-						slug: '',
-						title: '',
-						children: [],
-					}
-					lastHeader.children.push(lastSubHeader)
-				}
-				lastSubHeader.children.push(header)
+				grouped.push({...curHeader});
+
+				curHeader = {...header, children: []};
 			}
-		}
+			// level 2 -> push to previous curHeader
+			else if (header.level === 2) {
+				curHeader.children.push({...header, children: []})
+			}
+			// level 3 -> push to last child of curHeader
+			else if (header.level === 3) {
+				if(curHeader.children.length < 1) {
+					// create header at level 2 to push the new header
+					curHeader.children.push({
+						level: 2,
+						slug: '',
+						title: '',
+						children: []
+					});
+				}
+
+				// push header to last children of curHeader
+				curHeader.children[curHeader.children.length - 1].children.push({...header, children: []})
+			}
+		})
+
+		// push curHeader for the possibility, that the last header was not at level 1
+		grouped.push(curHeader)
 	}
-	return grouped
+
+	return grouped;
 }
 
 let headers = ref(getHeaders())
