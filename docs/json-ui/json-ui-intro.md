@@ -12,7 +12,7 @@ mention:
 ## Introduction
 
 :::warning
-JSON UI is being deprecated in favor of [Ore UI](https://github.com/Mojang/ore-ui). Note that any addons using JSON UI will eventually break.
+JSON UI is being deprecated in favor of [Ore UI](https://github.com/Mojang/ore-ui). Note that any addons using JSON UI will eventually break in the coming years.
 :::
 
 :::tip
