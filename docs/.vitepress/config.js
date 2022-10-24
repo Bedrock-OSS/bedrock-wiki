@@ -349,7 +349,8 @@ module.exports = (async function () {
 				'meta',
 				{
 					property: 'og:image',
-					content: '/favicon.ico',
+					content:
+						'https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png',
 				},
 			],
 			[

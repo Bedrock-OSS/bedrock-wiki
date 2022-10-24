@@ -132,8 +132,6 @@ const data = reactive({ isCookiesAgreed: true })
 onMounted(() => {
 	data.isCookiesAgreed = document.cookie.includes('bedrock-cookies=true')
 
-	console.log(document)
-
 	// create OpenGraph data
 	ogCreate()
 })
