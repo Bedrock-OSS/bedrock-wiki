@@ -304,7 +304,7 @@ module.exports = (async function () {
 				{
 					rel: 'icon',
 					href: '/assets/images/favicons/apple-touch-icon.png',
-					sizes: '180x180'
+					sizes: '180x180',
 				},
 			],
 			[
@@ -312,22 +312,46 @@ module.exports = (async function () {
 				{
 					rel: 'icon',
 					href: '/assets/images/favicons/safari-pinned-tab.svg',
-					color: '#60c3fa'
+					color: '#60c3fa',
 				},
 			],
 			[
 				'meta',
 				{
 					name: 'viewport',
-					content: 'width=device-width,initial-scale=1'
-				}
+					content: 'width=device-width,initial-scale=1',
+				},
 			],
+
 			[
 				'meta',
 				{
 					name: 'theme-color',
-					content: '#60c3fa'
-				}
+					content: '#60c3fa',
+				},
+			],
+			// open graph metadata: used for link previews in eg. discord
+			[
+				'meta',
+				{
+					property: 'og:type',
+					content: 'website',
+				},
+			],
+			[
+				'meta',
+				{
+					property: 'og:site_name',
+					content: 'Bedrock Wiki',
+				},
+			],
+			[
+				'meta',
+				{
+					property: 'og:image',
+					content:
+						'https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png',
+				},
 			],
 			[
 				'script',
