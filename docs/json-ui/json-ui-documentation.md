@@ -342,7 +342,19 @@ To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with
 | unchecked_locked_control       | string  |               | Name of the child control that will be displayed only in the unchecked locked state       |
 | checked_locked_hover_control   | string  |               | Name of the child control that will be displayed only in the checked locked hover state   |
 | unchecked_locked_hover_control | string  |               | Name of the child control that will be displayed only in the unchecked locked hover state |
+### HardCoded Toggles
 
+In some screens,navigation tab group has its mapping default selected tabs,such as settings or inventory.
+I guess these values are right.
+```json
+$search_index - $construction_index
+$survival_layout_index - $construction_index
+$recipe_book_layout_index - $equipment_index
+$creative_layout_index - $items_index
+``````
+And there are some must toggles in setting and inventory,even though you can not get a warning without dev version and open the assert diagnosis,they exactly esist and controlled by a function called *ScreenView::_passViewCommand::<lambda_6d65fd272578d43f1becb6eada4ff32c>::()::<lambda_2ab071547c9a470558c54e4d3cddb5f2>::operator()*,when you totally modify these screens,you may meet this assertion.
+
+For example,in setting that is  accessibility and in inventory,the construction,equipment,items and nature tabs are must.
 ### Dropdown
 
 |      Property Name       |  Type  | Default Value |                             Description                              |
