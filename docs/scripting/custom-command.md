@@ -86,13 +86,13 @@ First, we're gonna add simple commands, such as `!gmc` to change our Gamemode to
 world.events.beforeChat.subscribe(async (eventData) => {
 	const player = eventData.sender;
 	switch (eventData.message) {
-		case '!gmc': 
-			await player.runCommandAsync('gamemode c');
+		case '!gmc':
 			eventData.cancel = true;
+			await player.runCommandAsync('gamemode c');
 			break;
 		case '!gms':
-			await player.runCommandAsync('gamemode s');
 			eventData.cancel = true;
+			await player.runCommandAsync('gamemode s');
 			break;
 		default: break;
 	}
