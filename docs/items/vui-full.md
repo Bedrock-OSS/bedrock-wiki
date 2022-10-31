@@ -7,7 +7,7 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` was removed. *Last updated for 1.19.30*
+Includes all examples. Namespace `minecraft` was removed. *Last updated for 1.19.40*
 
 ## block
 
@@ -826,6 +826,7 @@ sweet_berries
 "minecraft:seed": {
     "crop_result": "sweet_berry_bush",
     "plant_at": [
+        "farmland",
         "grass",
         "dirt",
         "podzol",
