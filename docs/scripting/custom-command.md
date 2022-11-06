@@ -118,13 +118,13 @@ world.events.beforeChat.subscribe(async (eventData) => {
 	const player = eventData.sender;
 	if (!player.hasTag('Admin')) return;
 	switch (eventData.message) {
-		case '!gmc': 
-			await player.runCommandAsync('gamemode c');
+		case '!gmc':
 			eventData.cancel = true;
+			await player.runCommandAsync('gamemode c');
 			break;
 		case '!gms':
-			await player.runCommandAsync('gamemode s');
 			eventData.cancel = true;
+			await player.runCommandAsync('gamemode s');
 			break;
 		default: break;
 	}
