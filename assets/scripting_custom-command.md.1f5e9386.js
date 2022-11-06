@@ -50,13 +50,13 @@ import{_ as r,c as l,a as n,w as e,e as s,b as p,d as a,r as o,o as u}from"./404
 	<span class="token keyword">const</span> player <span class="token operator">=</span> eventData<span class="token punctuation">.</span>sender<span class="token punctuation">;</span>
 	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>player<span class="token punctuation">.</span><span class="token function">hasTag</span><span class="token punctuation">(</span><span class="token string">&#39;Admin&#39;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
 	<span class="token keyword">switch</span> <span class="token punctuation">(</span>eventData<span class="token punctuation">.</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		<span class="token keyword">case</span> <span class="token string">&#39;!gmc&#39;</span><span class="token operator">:</span> 
-			<span class="token keyword">await</span> player<span class="token punctuation">.</span><span class="token function">runCommandAsync</span><span class="token punctuation">(</span><span class="token string">&#39;gamemode c&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">case</span> <span class="token string">&#39;!gmc&#39;</span><span class="token operator">:</span>
 			eventData<span class="token punctuation">.</span>cancel <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+			<span class="token keyword">await</span> player<span class="token punctuation">.</span><span class="token function">runCommandAsync</span><span class="token punctuation">(</span><span class="token string">&#39;gamemode c&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 			<span class="token keyword">break</span><span class="token punctuation">;</span>
 		<span class="token keyword">case</span> <span class="token string">&#39;!gms&#39;</span><span class="token operator">:</span>
-			<span class="token keyword">await</span> player<span class="token punctuation">.</span><span class="token function">runCommandAsync</span><span class="token punctuation">(</span><span class="token string">&#39;gamemode s&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 			eventData<span class="token punctuation">.</span>cancel <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+			<span class="token keyword">await</span> player<span class="token punctuation">.</span><span class="token function">runCommandAsync</span><span class="token punctuation">(</span><span class="token string">&#39;gamemode s&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 			<span class="token keyword">break</span><span class="token punctuation">;</span>
 		<span class="token keyword">default</span><span class="token operator">:</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
