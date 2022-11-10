@@ -164,7 +164,7 @@ let ogCreate = () => {
 
 	Object.entries(ogTags).forEach(([name, content]) => {
 		let meta = document.createElement('meta')
-		meta.property = name
+		meta.name = name
 		meta.content = content
 		document.head.appendChild(meta)
 	})
