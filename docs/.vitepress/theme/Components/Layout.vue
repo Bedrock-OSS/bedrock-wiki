@@ -167,6 +167,14 @@ let ogCreate = () => {
 		meta.setAttribute('property', name)
 		meta.content = content
 		document.head.appendChild(meta)
+
+		// append description seperate
+		if(name ==='og:description') {
+			let meta = document.createElement('meta')
+			meta.name = 'description'
+			meta.content = content
+			document.head.appendChild(meta)
+		}
 	})
 }
 
