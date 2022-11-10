@@ -334,21 +334,21 @@ module.exports = (async function () {
 			[
 				'meta',
 				{
-					property: 'og:type',
+					name: 'og:type',
 					content: 'website',
 				},
 			],
 			[
 				'meta',
 				{
-					property: 'og:site_name',
+					name: 'og:site_name',
 					content: 'Bedrock Wiki',
 				},
 			],
 			[
 				'meta',
 				{
-					property: 'og:image',
+					name: 'og:image',
 					content:
 						'https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png',
 				},
