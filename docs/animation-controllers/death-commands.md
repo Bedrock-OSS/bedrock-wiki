@@ -78,12 +78,9 @@ In the case of player entities, an additional transition must be added to the se
 }
 ```
 
-```
 :::warning 
 Requires Experimental
 :::
-
-```
 
 ## Using minecraft:on_death
 
