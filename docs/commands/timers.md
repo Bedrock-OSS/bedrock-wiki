@@ -26,7 +26,7 @@ This page is for using commands to create timers, for entity timers, look at [th
 
 ```
 scoreboard objectives add timer dummy
-scoreboard players add value timer 100
+scoreboard players set value timer 100
 ```
 To start your timer, you need to create the scoreboard, and set the value that you are going to count down from.
 
