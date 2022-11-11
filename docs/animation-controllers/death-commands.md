@@ -78,6 +78,13 @@ In the case of player entities, an additional transition must be added to the se
 }
 ```
 
+```
+:::warning 
+Requires Experimental
+:::
+
+```
+
 ## Using minecraft:on_death
 
 You can also use the `minecraft:on_death` component in your `entity.json` file in the Behavior Pack, which is a fairly easy way to accomplish a command on death.
