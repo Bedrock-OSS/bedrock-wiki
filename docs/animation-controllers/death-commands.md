@@ -107,3 +107,10 @@ And then, in your events section you add the event;
             }
         }
 ```
+
+```
+:::tip 
+You can add scores and tags to the entity even when is dead using this method.
+
+:::
+```
