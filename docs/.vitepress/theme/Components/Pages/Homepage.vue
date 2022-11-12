@@ -56,20 +56,6 @@
 		</div>
 		<div class="m-0 p-0 pb-4 w-full">
 			<div
-			class="pb-5">
-				<CardLink
-					title="Hacktoberfest!"
-					imgsrcLight="assets/images/homepage/hfest_light.png"
-					imgsrcDark="assets/images/homepage/hfest_dark.png"
-					link="hacktoberfest.html"
-				>
-					Hacktoberfest is DigitalOcean’s annual event that encourages people to contribute to open source throughout October.<br />
-					The Bedrock Community stands strong behind Open Source, and we need your help!<br />
-					Check out <a href="hacktoberfest.html">how to contribute</a> and make the difference becoming a part of our community.
-
-				</CardLink>
-			</div>
-			<div
 				class="
 					grid grid-cols-1
 					lg:grid-cols-2
