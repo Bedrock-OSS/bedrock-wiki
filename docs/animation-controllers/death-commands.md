@@ -78,11 +78,9 @@ In the case of player entities, an additional transition must be added to the se
 }
 ```
 
-```
 :::warning 
 Requires Experimental
 :::
-```
 
 ## Using minecraft:on_death
 
@@ -108,9 +106,7 @@ And then, in your events section you add the event;
         }
 ```
 
-```
 :::tip 
 You can add scores and tags to the entity even when it is dead using this method.
 
 :::
-```
