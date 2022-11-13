@@ -331,28 +331,28 @@ module.exports = (async function () {
 				},
 			],
 			// open graph metadata: used for link previews in eg. discord
-			[
-				'meta',
-				{
-					property: 'og:type',
-					content: 'website',
-				},
-			],
-			[
-				'meta',
-				{
-					property: 'og:site_name',
-					content: 'Bedrock Wiki',
-				},
-			],
-			[
-				'meta',
-				{
-					property: 'og:image',
-					content:
-						'https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png',
-				},
-			],
+			// [
+			// 	'meta',
+			// 	{
+			// 		property: 'og:type',
+			// 		content: 'website',
+			// 	},
+			// ],
+			// [
+			// 	'meta',
+			// 	{
+			// 		property: 'og:site_name',
+			// 		content: 'Bedrock Wiki',
+			// 	},
+			// ],
+			// [
+			// 	'meta',
+			// 	{
+			// 		property: 'og:image',
+			// 		content:
+			// 			'https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png',
+			// 	},
+			// ],
 			[
 				'script',
 				{

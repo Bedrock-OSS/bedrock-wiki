@@ -30,7 +30,7 @@
 
 			<div v-if="showContributors">
 				<h2
-				class=''
+					class=""
 					:class="{
 						'xl:mr-72': showToc,
 					}"
@@ -146,36 +146,139 @@ let ogCreate = () => {
 	// standard values will stay the same
 	// they are defined in config.js
 	// og:type, og:site_name, og:image
-	let ogTags = {
-		'og:url':
-			page.value.relativePath != ''
-				? `https://wiki.bedrock.dev/${page.value.relativePath.slice(
-						0,
-						page.value.relativePath.lastIndexOf('.md')
-				  )}.html`
-				: 'https://wiki.bedrock.dev',
-		'og:title':
-			page.value.title != '' ? page.value.title : 'The Bedrock Wiki',
-		'og:description':
-			page.value.description != ''
-				? page.value.description
-				: 'This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.',
-	}
+	let description =
+		page.value.description != ''
+			? page.value.description
+			: 'This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.'
+	let title = page.value.title != '' ? page.value.title : 'The Bedrock Wiki'
+	let site = 'Bedrock Wiki'
+	let image = `https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png?${Date.parse(
+		// @ts-ignore
+		new Date()
+	)}`
+	let imageAlt = 'The title image of the Bedrock Wiki'
+	let url =
+		page.value.relativePath != ''
+			? `https://wiki.bedrock.dev/${page.value.relativePath.slice(
+					0,
+					page.value.relativePath.lastIndexOf('.md')
+			  )}.html`
+			: 'https://wiki.bedrock.dev'
 
+	let ogTags = {
+		// twitter
+		'twitter:card': 'summary',
+		'twitter:description': description,
+		'twitter:title': title,
+		'twitter:site': site,
+		'twitter:image': image,
+		'twitter:image:alt': imageAlt,
+		// og
+		'og:type': 'website',
+		'og:description': description,
+		'og:title': title,
+		'og:site_name': site,
+		'og:image': image,
+		'og:image:alt': imageAlt,
+		'og:url': url,
+	}
+	// let dogTags = [
+	// 	[['twitter:card'], 'summary'],
+	// 	[['og:type'], 'website'],
+	// 	[
+	// 		['twitter:description', 'og:description'],
+	// 		page.value.description != ''
+	// 			? page.value.description
+	// 			: 'This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.',
+	// 	],
+	// 	[
+	// 		['twitter:title', 'og:title'],
+	// 		page.value.title != '' ? page.value.title : 'The Bedrock Wiki',
+	// 	],
+	// 	[
+	// 		['twitter:image', 'og:image'],
+	// 		// @ts-ignore
+	// 		`https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png?${Date.parse(
+	// 			new Date()
+	// 		)}`,
+	// 	],
+	// 	[
+	// 		['twitter:image:alt', 'og:image:alt'],
+	// 		'The title image of the Bedrock Wiki',
+	// 	],
+	// 	[
+	// 		['og:url'],
+	// 		page.value.relativePath != ''
+	// 			? `https://wiki.bedrock.dev/${page.value.relativePath.slice(
+	// 					0,
+	// 					page.value.relativePath.lastIndexOf('.md')
+	// 			  )}.html`
+	// 			: 'https://wiki.bedrock.dev',
+	// 	],
+	// 	[['twitter:site', 'og:site_name'], 'Bedrock Wiki'],
+	// ]
+	// let ogTags = {
+	// 	'og:url':
+	// 		page.value.relativePath != ''
+	// 			? `https://wiki.bedrock.dev/${page.value.relativePath.slice(
+	// 					0,
+	// 					page.value.relativePath.lastIndexOf('.md')
+	// 			  )}.html`
+	// 			: 'https://wiki.bedrock.dev',
+	// 	'og:title':
+	// 		page.value.title != '' ? page.value.title : 'The Bedrock Wiki',
+	// 	'og:description':
+	// 		page.value.description != ''
+	// 			? page.value.description
+	// 			: 'This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.',
+	// }
 	Object.entries(ogTags).forEach(([name, content]) => {
 		let meta = document.createElement('meta')
 		meta.setAttribute('property', name)
 		meta.content = content
-		document.head.appendChild(meta)
-
-		// append description seperate
-		if(name ==='og:description') {
-			let meta = document.createElement('meta')
-			meta.name = 'description'
-			meta.content = content
-			document.head.appendChild(meta)
-		}
+		document.head.insertBefore(meta, document.head.children[0])
 	})
+
+	// append description seperate
+	let meta: HTMLMetaElement = document.querySelector('[name=description]') || document.createElement('meta')
+	meta.name = 'description'
+	meta.content = description
+	document.head.insertBefore(meta, document.head.children[0])
+
+	// ogTags.forEach((el) => {
+	// 	// @ts-ignore
+	// 	el[0].forEach((tag: string) => {
+	// 		let meta = document.createElement('meta')
+	// 		meta.setAttribute('property', tag)
+	// 		// @ts-ignore
+	// 		meta.content = el[1]
+	// 		document.head.insertBefore(meta, document.head.children[0])
+	// 	})
+	// })
+
+	// append description seperate
+	// let mdeta: HTMLMetaElement =
+	// 	document.querySelector('[name=description]') ||
+	// 	document.createElement('meta')
+	// meta.name = 'description'
+	// // @ts-ignore
+	// meta.content = ogTags[2][1]
+	// document.head.insertBefore(meta, document.head.children[0])
+
+	// Object.entries(ogTags).forEach(([name, content]) => {
+	// 	let meta = document.createElement('meta')
+	// 	meta.setAttribute('property', name)
+	// 	meta.content = content
+	// 	document.head.insertBefore(meta, document.head.children[1])
+
+	// 	// append description seperate
+	// 	if (name === 'og:description') {
+	// 		let meta = document.createElement('meta')
+	// 		meta.name = 'description'
+	// 		meta.content = content
+	// 		document.head.appendChild(meta)
+	// 	}
+	// })
 }
 
 function agreeCookies() {
