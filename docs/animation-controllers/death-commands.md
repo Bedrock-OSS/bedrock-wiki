@@ -77,3 +77,40 @@ In the case of player entities, an additional transition must be added to the se
 	}
 }
 ```
+
+```
+:::warning 
+Requires Experimental
+:::
+```
+
+## Using minecraft:on_death
+
+You can also use the `minecraft:on_death` component in your `entity.json` file in the Behavior Pack, which is a fairly easy way to accomplish a command on death.
+
+You first add it to your components and make it run an event on self;
+```
+"minecraft:on_death" : {
+          "event" : "wiki:on_death",
+          "target" : "self"
+           }
+```
+
+And then, in your events section you add the event;
+
+```
+"wiki:on_death": {
+            "run_command": {
+                "command": [
+                    "say I have died!"
+                ]
+            }
+        }
+```
+
+```
+:::tip 
+You can add scores and tags to the entity even when it is dead using this method.
+
+:::
+```
