@@ -3,38 +3,28 @@
 	<div>
 		<Sidebar />
 
-		<main
-			class="m-8 mt-22 min-h-screen"
-			:class="{
-				'md:ml-80': isVisible,
-			}"
-		>
+		<main class="m-8 mt-22 min-h-screen" :class="{
+			'md:ml-80': isVisible,
+		}">
 			<h1 class="xl:pr-72" v-if="page && page.title" id="top">
 				{{ page.title }}
 			</h1>
 			<Label v-for="tag in tags" :name="tag"> </Label>
 			<TOC v-if="showToc" />
-			<Content
-				:class="{
-					'xl:mr-72': showToc,
-				}"
-			/>
+			<Content :class="{
+				'xl:mr-72': showToc,
+			}" />
 
 			<div v-if="showEditLink">
 				<div class="pt-4" v>
-					<a :href="editLink" target="_blank"
-						>Edit {{ page.title }} on Github.</a
-					>
+					<a :href="editLink" target="_blank">Edit {{ page.title }} on Github.</a>
 				</div>
 			</div>
 
 			<div v-if="showContributors">
-				<h2
-					class=""
-					:class="{
-						'xl:mr-72': showToc,
-					}"
-				>
+				<h2 class="" :class="{
+					'xl:mr-72': showToc,
+				}">
 					Contributors
 				</h2>
 				<Suspense>
@@ -60,42 +50,24 @@
 			<footer class="mainfooter">
 				<div>
 					Bedrock Wiki by
-					<a
-						href="https://github.com/Bedrock-OSS"
-						target="_blank"
-						rel="noopener noreferrer"
-						>Bedrock-OSS</a
-					>.
+					<a href="https://github.com/Bedrock-OSS" target="_blank" rel="noopener noreferrer">Bedrock-OSS</a>.
 				</div>
 				<div>
 					"Minecraft" is a trademark of Mojang AB. Bedrock-OSS,
 					Bedrock Wiki and
-					<a
-						href="https://bedrock.dev"
-						target="_blank"
-						rel="noopener noreferrer"
-						>bedrock.dev</a
-					>
+					<a href="https://bedrock.dev" target="_blank" rel="noopener noreferrer">bedrock.dev</a>
 					are not affiliated in any way with Microsoft or Mojang AB.
 				</div>
 				<ul>
 					<li>
-						<a href="/privacy.html" rel="noopener noreferrer"
-							>Privacy Policy</a
-						>
+						<a href="/privacy.html" rel="noopener noreferrer">Privacy Policy</a>
 					</li>
 					<li>
-						<a href="/discord.html" rel="noopener noreferrer"
-							>Join our Discord!</a
-						>
+						<a href="/discord.html" rel="noopener noreferrer">Join our Discord!</a>
 					</li>
 					<li>
-						<a
-							href="https://github.com/Bedrock-OSS/bedrock-wiki"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Visit our Project Repository!</a
-						>
+						<a href="https://github.com/Bedrock-OSS/bedrock-wiki" target="_blank"
+							rel="noopener noreferrer">Visit our Project Repository!</a>
 					</li>
 					<li>
 						<a href="/contribute.html" rel="noopener norefferer">
@@ -160,27 +132,32 @@ let ogCreate = () => {
 	let url =
 		page.value.relativePath != ''
 			? `https://wiki.bedrock.dev/${page.value.relativePath.slice(
-					0,
-					page.value.relativePath.lastIndexOf('.md')
-			  )}.html`
+				0,
+				page.value.relativePath.lastIndexOf('.md')
+			)}.html`
 			: 'https://wiki.bedrock.dev'
+
+	let order = ['twitter:card', 'twitter:site', 'twitter:url', 'twitter:title', 'twitter:description', 'twitter:image', 'twitter:image:alt','og:type', 'og:site_name', 'og:url', 'og:title', 'og:description', 'og:image', 'og:image:url', 'og:image:secure_url', 'og:image:alt', ]
 
 	let ogTags = {
 		// twitter
 		'twitter:card': 'summary',
-		'twitter:description': description,
-		'twitter:title': title,
 		'twitter:site': site,
+		'twitter:url': url,
+		'twitter:title': title,
+		'twitter:description': description,
 		'twitter:image': image,
 		'twitter:image:alt': imageAlt,
 		// og
 		'og:type': 'website',
-		'og:description': description,
-		'og:title': title,
 		'og:site_name': site,
-		'og:image': image,
-		'og:image:alt': imageAlt,
 		'og:url': url,
+		'og:title': title,
+		'og:description': description,
+		'og:image': image,
+		'og:image:url': image,
+		'og:image:secure_url': image,
+		'og:image:alt': imageAlt,
 	}
 	// let dogTags = [
 	// 	[['twitter:card'], 'summary'],
@@ -232,18 +209,36 @@ let ogCreate = () => {
 	// 			? page.value.description
 	// 			: 'This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.',
 	// }
-	Object.entries(ogTags).forEach(([name, content]) => {
+	order.reverse().forEach(tag => {
 		let meta = document.createElement('meta')
-		meta.setAttribute('property', name)
-		meta.content = content
+		meta.setAttribute('property', tag)
+		// @ts-ignore
+		meta.content = ogTags[tag]
 		document.head.insertBefore(meta, document.head.children[0])
 	})
+	// Object.entries(ogTags).forEach(([name, content]) => {
+	// 	let meta = document.createElement('meta')
+	// 	meta.setAttribute('property', name)
+	// 	meta.content = content
+	// 	document.head.insertBefore(meta, document.head.children[0])
+	// })
 
 	// append description seperate
-	let meta: HTMLMetaElement = document.querySelector('[name=description]') || document.createElement('meta')
-	meta.name = 'description'
-	meta.content = description
-	document.head.insertBefore(meta, document.head.children[0])
+	let metaDescription: HTMLMetaElement = document.querySelector('[name=description]') || document.createElement('meta')
+	metaDescription.name = 'description'
+	metaDescription.content = description
+	document.head.insertBefore(metaDescription, document.head.children[0])
+
+	// append title seperate
+	let metaTitle: HTMLMetaElement = document.querySelector('[name=title]') || document.createElement('meta')
+	metaTitle.name = 'title'
+	metaTitle.content = title
+	document.head.insertBefore(metaTitle, document.head.children[0])
+
+	// edit and append title-element
+	let elTitle: HTMLTitleElement = document.querySelector('title') || document.createElement('title')
+	elTitle.title = title
+	document.head.insertBefore(elTitle, document.head.children[0])
 
 	// ogTags.forEach((el) => {
 	// 	// @ts-ignore

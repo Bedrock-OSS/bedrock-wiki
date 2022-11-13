@@ -1,4 +1,7 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"volar.tsPlugin": true
+	"volar.tsPlugin": true,
+	"[vue]": {
+		"editor.defaultFormatter": "Vue.volar"
+	}
 }
