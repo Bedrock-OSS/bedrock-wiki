@@ -6,7 +6,7 @@ tags:
 ---
 
 ::: tip
-This tutorial assumes you have a basic understanding of MoLang, render controllers, animations, and client entity definitions. Ensure to check out the [client entity tutorial](/entities/entity-intro-rp) before starting this tutorial!
+This tutorial assumes you have a basic understanding of Molang, render controllers, animations, and client entity definitions. Ensure to check out the [client entity tutorial](/entities/entity-intro-rp) before starting this tutorial!
 :::
 
 ## Introduction

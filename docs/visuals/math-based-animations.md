@@ -33,15 +33,15 @@ As an important tip for those who wish to *visualise* their processes, the tool,
 ### In Blockbench
 
 Blockbench allows - to a degree - for the creation and live-previewing of most math-based animations.
-To begin, first create a new keyframe at frame 0 in your timeline. You may then add and edit MoLang expressions in the keyframe panel on the left sidebar. Mixing keyframes and math is supported.
+To begin, first create a new keyframe at frame 0 in your timeline. You may then add and edit Molang expressions in the keyframe panel on the left sidebar. Mixing keyframes and math is supported.
 **Remember**, you should always omit quotation marks around expressions; they are only required in raw JSON-editing!
 
-Do mind that not all MoLang queries are supported in Blockbench in part due to missing game-context. If you wish to preview an animation that uses a context-specific query, you may add it to the Variable Placeholders section, just underneath the keyframe panel, to simulate a value.
+Do mind that not all Molang queries are supported in Blockbench in part due to missing game-context. If you wish to preview an animation that uses a context-specific query, you may add it to the Variable Placeholders section, just underneath the keyframe panel, to simulate a value.
 For example, adding `query.modified_distance_moved = time*8` simulates the `modified_distance_moved` query with a speed of 8 blocks per second.
 
 ## Using Queries
 
-The largest and most useful of tools in our mathematical repertoire is the wide array of MoLang "Queries". Queries can be used to add outside information into your math expression.
+The largest and most useful of tools in our mathematical repertoire is the wide array of Molang "Queries". Queries can be used to add outside information into your math expression.
 
 Common Queries include:
 
@@ -58,7 +58,7 @@ By using queries, you can avoid the need to create animation controllers. If the
 
 ## Example
 
-A specific application example of a Math-Based animation may be found below. The example utilises the MoLang Query, `"query.modified_distance_moved"`:
+A specific application example of a Math-Based animation may be found below. The example utilises the Molang Query, `"query.modified_distance_moved"`:
 
 <CodeHeader></CodeHeader>
 
