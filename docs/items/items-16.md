@@ -81,7 +81,7 @@ Shoots a projectile when triggered.
 
     -   `"angle_offset"` - Does nothing. (Broken)
 
-    -   `"launch_power"` - The launch power to be multiplied over the base power of the projectile entity. Accepts MoLang values.
+    -   `"launch_power"` - The launch power to be multiplied over the base power of the projectile entity. Accepts Molang values.
 
     -   `"projectile"` - Takes an identifier of an entity - any entity, not just projectile ones - to use as an entity to 'shoot'.
 
@@ -515,7 +515,7 @@ List of all new item components, with usage examples
 | shears        |
 | cosmetic_head |
 
--   minecraft:shooter
+### minecraft:shooter
 
 <CodeHeader></CodeHeader>
 
@@ -882,7 +882,7 @@ If your item isn't showing up, these changes might have broken your item.
 Niche Features
 
 -   Components
-    -   `minecraft:icon` - Property `"frame"` may take in MoLang values.
+    -   `minecraft:icon` - Property `"frame"` may take in Molang values.
 
 > Broken/Nonfunctional Features
 

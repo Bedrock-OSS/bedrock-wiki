@@ -827,7 +827,7 @@ All proxy features must therefore point to one or multiple **target features**: 
 
 -   Distribute or reposition a feature any number of times within a [chunk’s feature domain](#)
 -   Act as a gate to conditionally enable a feature to be placed
--   Execute MoLang within the current [feature context](#)
+-   Execute Molang within the current [feature context](#)
 
 Scatter features attempt to place a [target feature](#proxy-features) with each iteration:
 
@@ -864,7 +864,7 @@ A numeric literal:
 The numeric literal form is considered against 100, not 1. A scatter chance of `50`, therefore, has half a chance of success.
 :::
 
-A MoLang expression:
+A Molang expression:
 
 <CodeHeader></CodeHeader>
 
@@ -885,7 +885,7 @@ A fraction object:
 
 All 3 examples have a 12.5% chance for success. Use whichever form feels most appropriate for your case. If scatter chance is omitted, it defaults to a 100% chance for the scatter feature to attempt to place its target.
 
-**Iterations** are the number of attempts a scatter feature will try to place its target. If an instance of a scatter feature would succeed (in other words, if its scatter chance check were successful), _all_ of the iterations given by `"iterations"` will be attempted. Iterations may be represented as integer literals or MoLang expressions. Unlike scatter chance, iterations are required.
+**Iterations** are the number of attempts a scatter feature will try to place its target. If an instance of a scatter feature would succeed (in other words, if its scatter chance check were successful), _all_ of the iterations given by `"iterations"` will be attempted. Iterations may be represented as integer literals or Molang expressions. Unlike scatter chance, iterations are required.
 
 #### Distribution
 
@@ -913,7 +913,7 @@ An integer literal:
 "x": 0
 ```
 
-A MoLang Expression:
+A Molang Expression:
 
 <CodeHeader></CodeHeader>
 
@@ -932,7 +932,7 @@ Or a number of object forms for conveniently distributing a coordinate:
 }
 ```
 
-Literals and MoLang expressions are relative to the [feature origin](#). See [Distribution Types](#distribution-types) for the available pre-constructed distribution systems.
+Literals and Molang expressions are relative to the [feature origin](#). See [Distribution Types](#distribution-types) for the available pre-constructed distribution systems.
 
 Because placement of features is so often relative to the heightmap, the incoming _y_-origin for the scatter feature may be **projected into the heightmap**:
 
@@ -945,12 +945,12 @@ Because placement of features is so often relative to the heightmap, the incomin
 This means that the specified _y_-origin from the scatter feature’s parent is ignored in favor of the _y_-coordinate of the heightmap at an iteration’s _x_-_z_ location ([assuming the _y_-coordinate would be evaluated after the lateral coordinates](#evaluation-order)). The `"y"` property may still be given a value that will represent the offset from the heightmap.
 
 ::: tip NOTE
-Functionally, this is the same as using the MoLang expression `"query.heightmap(v.worldx, v.worldz) + *offset*"`.
+Functionally, this is the same as using the Molang expression `"query.heightmap(v.worldx, v.worldz) + *offset*"`.
 :::
 
 ##### Distribution Types
 
-Custom distribution systems can be constructed using MoLang expressions, but scatter features come pre-equipped with a few common **distribution types** for convenient authoring:
+Custom distribution systems can be constructed using Molang expressions, but scatter features come pre-equipped with a few common **distribution types** for convenient authoring:
 
 -   Uniform
 -   Gaussian
@@ -1042,7 +1042,7 @@ When using multiple grid distributions to form a surface or volume, extents for 
 
 #### Evaluation Order
 
-When a scatter chance is included, it is evaluated before any other properties. If the check against scatter chance fails for that instance of the scatter feature, nothing downstream within that instance is evaluated. No further MoLang is interpreted; no variables within the [feature context](#) are updated. The target feature is entirely disregarded.
+When a scatter chance is included, it is evaluated before any other properties. If the check against scatter chance fails for that instance of the scatter feature, nothing downstream within that instance is evaluated. No further Molang is interpreted; no variables within the [feature context](#) are updated. The target feature is entirely disregarded.
 
 Next, the iteration count is evaluated. Similarly to scatter chance, if the iteration count were not to resolve to a positive number of placement attempts, nothing further is evaluated.
 
@@ -1060,7 +1060,7 @@ By default, the coordinate ordering is _x_ then _z_ then _y_. This covers the ma
 "coordinate_eval_order": "zyx"
 ```
 
-After the coordinates for an iteration have been determined, world generation moves its focus within the target: acknowledging its restrictions, attempting its placement, evaluating its MoLang, and (if possible and relevant) continuing by placing its children and their children and so forth.
+After the coordinates for an iteration have been determined, world generation moves its focus within the target: acknowledging its restrictions, attempting its placement, evaluating its Molang, and (if possible and relevant) continuing by placing its children and their children and so forth.
 
 When finished with the target’s feature tree, if more iterations have yet to be run from the scatter feature, focus returns to the scatter feature beginning with the first-evaluated coordinate and execution is resumed.
 
@@ -1131,7 +1131,7 @@ The **conditions list**, `"conditional_features"`, is an ordered array comprised
 }
 ```
 
-Conditions are given with the required `"condition"` property. Conditions are traditionally represented via MoLang strings, but numbers may be used as well. `0` will always result in that feature entry being disabled. Non-zero values will always cause that entry to succeed. Generally, using `1` can be considered as a catch-all “else” or “default” clause — it should only be used at the very end of the conditions list.
+Conditions are given with the required `"condition"` property. Conditions are traditionally represented via Molang strings, but numbers may be used as well. `0` will always result in that feature entry being disabled. Non-zero values will always cause that entry to succeed. Generally, using `1` can be considered as a catch-all “else” or “default” clause — it should only be used at the very end of the conditions list.
 
 The condition of each feature entry is evaluated by entry order in the conditions list. Once a feature entry [would succeed](#success-determination), no later-listed conditions will be evaluated.
 
@@ -1384,7 +1384,7 @@ Rect layouts are currently bugged and should not be used. No information has bee
 
 Every block across the surface of a chunk can be covered by a feature using **scan surface features**. For this reason, it is strongly recommended to choose a feature that only occupies a column’s space.
 
-The **target feature** to be placed is given with the `"scan_surface_feature"` property. Placement position is the same as [the MoLang query `heightmap`](#), which means that water surfaces are used instead of their floors. It is therefore typically recommended to use [scatter features](#scatter-features) with a _y_ expression utilizing the [`above_top_solid` query](#).
+The **target feature** to be placed is given with the `"scan_surface_feature"` property. Placement position is the same as [the Molang query `heightmap`](#), which means that water surfaces are used instead of their floors. It is therefore typically recommended to use [scatter features](#scatter-features) with a _y_ expression utilizing the [`above_top_solid` query](#).
 
 ### Weighted Random Features
 
