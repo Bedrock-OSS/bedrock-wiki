@@ -291,3 +291,12 @@ Similar to the third-person animation, look in the Attachable Kit file for `atta
 ### Conclusion
 
 Now go through and delete the entire player skeleton from the file, as it will not be needed with the binding system. Be sure to remove the parent key from your model's bone too, and only keep the `"binding": "query.item_slot_to_bone_name(context.item_slot)"`.
+
+## Example Pack
+
+Each of these methods have been compiled into an example pack you may reference, for if you are getting stuck or simply want to see a working example.
+
+<BButton
+    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/attachable-example.mcpack"
+    color=blue
+>Download</BButton>
