@@ -1,0 +1,80 @@
+---
+title: Death Commands
+tags:
+    - recipe
+---
+
+<BButton color="blue" link="render-controllers-intro">Learn more about Render Controllers</BButton>
+
+Entity variants should be defined as an entity with a different looking than usually, and according to what you want to acomplish you could also change its stats.
+
+On this page you will learn how to add your own variants to your entities, changing their model and texture, and how to change them in-game by using commands.
+
+## minecraft:variant
+
+According to Microsoft documentation, `minecraft:variant` is used to differentiate the component group of a variant of an entity from others, such as ocelot, villager and horse. We want to use this component at our `entity.json` located at `BP/entities` to differentiate the default variant, which is the entity with no modifications, between our new variant.
+
+So let's get started by adding this component in our `entity.json` components, just like this:
+
+```
+"minecraft:variant":{
+    "value": 0
+}
+```
+
+After having this done, we want to add a component group in order to change its variant, and it will be done just like this:
+
+```
+"component_groups": {
+    "wiki:variant_change": {
+        "minecraft:variant": {
+            "value": 1
+                    }
+             }
+      }
+}
+```
+
+We have the main part done, now in order to changing the variant in-game we need to make an event call the component group, this is done this way:
+
+```
+"events": {
+   "wiki:my_event": {
+      "add": {
+         "component_groups":[
+           "wiki:variant_change"
+                ]
+           }
+      }
+```
+
+Now we are completly done with the entity's behavior, so we will move to the `entity.client.json` file at `RP/entity/`.
+
+## entity.client.json
+
+In the previosly mentioned file, we need to mention all the textures we want to have, in this example im modifying the vanilla `player.entity.json` file to make it able to use the zombie texture:
+
+```
+"textures": {
+        "default": "textures/entity/steve",
+        "cape": "textures/entity/cape_invisible",
+        "variant_one": "textures/entity/zombie/zombie"
+      }
+```
+
+Remember that in this example, `default`, `cape`, and `variant_one` are our own namespaces, so we can change them to whatever we wish. Next to the namespace is our textures directories.
+
+
+Let's now mention all the geometries we want to list for our entity:
+
+```
+"geometry": {
+        "default": "geometry.humanoid.custom",
+        "cape": "geometry.cape",
+        "variant_one": "geometry.zombie"
+      }
+```
+
+We are now done with the `entity.client.json` file! 
+
+## Render Controller
