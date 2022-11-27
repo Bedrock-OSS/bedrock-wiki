@@ -1,20 +1,20 @@
 ---
-title: MoLang
+title: Molang
 tags:
     - intermediate
 ---
 
 ## Introduction
-Pretty much everything evaluates to a number; if something doesn't evaluate to a number, you can use an `operator` to make it into one. You can basically just think of MoLang as one big math equation.
+Pretty much everything evaluates to a number; if something doesn't evaluate to a number, you can use an `operator` to make it into one. You can basically just think of Molang as one big math equation.
 
 An equation evaluates to `true` when any number except `0` is returned. When I reference `returning`, I'm talking about the output of an equation. There is also a `return` statement, but I don't usually use it, and will therefore not be talking about it.
 
 ## Accessing Values
-There are three main ways to access and use values in MoLang (queries, variables and temp variables)
+There are three main ways to access and use values in Molang (queries, variables and temp variables)
 
 - **Queries** are read only values returned by the game. You cannot set these values, only read them. (`query.example_query` | `q.example_query`)
 
-- **Variables** are read and write values that you can manipulate, these can be set and read through MoLang. (`variable.example_variable` | `v.example_variable`)
+- **Variables** are read and write values that you can manipulate, these can be set and read through Molang. (`variable.example_variable` | `v.example_variable`)
   - There are also hard-coded variables which act practically the same way as queries, but can only be used in certain situations.
 
 - **Temp. Variables** are practically the same as variables, except they only exist in the current scope. (`temp.example_temp` | `t.example_temp`)

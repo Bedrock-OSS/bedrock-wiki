@@ -6,7 +6,7 @@ tags:
 ---
 
 ::: tip
-This tutorial assumes you have a basic understanding of MoLang, animation controllers and entity definitions.
+This tutorial assumes you have a basic understanding of Molang, animation controllers and entity definitions.
 :::
 
 Items like the Splash Potion or the Trident are special items that can be thrown. Currently, there are two ways to accomplish something similar in your add-on, one that can be done in the stable release and one that needs the `Holiday Creator Features` experimental toggle to be enabled.

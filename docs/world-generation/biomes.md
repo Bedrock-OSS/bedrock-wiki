@@ -1056,7 +1056,7 @@ The second value of the array determines height variation. Negative values behav
 The terrain becomes more radical with larger values, which should generally not be used for several reasons:
 
 -   If outside creative mode, player annoyance will be high due to limited mobility options in the early game.
--   Typically useful MoLang queries, such as `"query.heightmap()"`, becomes less helpful as Nether-like shelves of land generate instead of smoother, simpler terrain.
+-   Typically useful Molang queries, such as `"query.heightmap()"`, becomes less helpful as Nether-like shelves of land generate instead of smoother, simpler terrain.
 -   Performance issues may arise with weaker computers.
 
 The maximum and minimum offsets from the average height when using noise parameters depends on the height variation. In general, a ∆ of 1 in the second noise parameter will result in _at most_ a ∆ of +/- 16 blocks in these offsets.
@@ -1211,7 +1211,7 @@ The surface adjustment noise curve uses a default mapping relative to the dimens
 
 Height restrictions can be provided to limit the valid transformation region. These restrictions are independent of limitations using the noise curve and much simpler, too. Height restrictions are provided as an interval and simply target a range of _y_-heights to transform a region. The first value of the `"height_range"` array must be less than the second value or else the adjustment will fail.
 
-Using integers directly will create boring layers of adjustments. However, unlike the properties establishing checks against the noise curve, the `"height_range"` property accepts MoLang expressions for its elements. Using math functions, intervals can be created that are randomly spread for higher quality adjustments. Additionally, a `sea_level` variable is available that returns the sea level of the dimension for that individual instance of generation:
+Using integers directly will create boring layers of adjustments. However, unlike the properties establishing checks against the noise curve, the `"height_range"` property accepts Molang expressions for its elements. Using math functions, intervals can be created that are randomly spread for higher quality adjustments. Additionally, a `sea_level` variable is available that returns the sea level of the dimension for that individual instance of generation:
 
 | Dimension  | Sea level |
 | :--------- | --------: |

@@ -44,7 +44,7 @@ This document covers experimental features, for 1.16.100+ format version blocks.
 
 ### Using Properties:
 
-Properties can be tested for with the MoLang query, `query.block_property`:
+Properties can be tested for with the Molang query, `query.block_property`:
 
 `query.block_property('bedrock_wiki:string_property_example') == 'blue'`
 
@@ -758,7 +758,7 @@ Example of querying a tag:
 
 ## Block Permutations
 
-Block permutations are a way of conditionally applying components to a block with MoLang expressions.
+Block permutations are a way of conditionally applying components to a block with Molang expressions.
 
 bedrock_wiki:
 

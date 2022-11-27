@@ -297,7 +297,7 @@ Next, we need an animation controller that causes the entity to levitate when th
 }
 ```
 
-Now, we need a copy of the player's behavior file, which we will modify slightly. You can find the player's behavior file in the vanilla behavior pack provided by Mojang (found [here](https://aka.ms/behaviorpacktemplate)). Once you have copied the player's behavior file to your own behavior pack, find their `"description"` object and add the animation controller. We also want to ensure that the entity will only respond to the player's jump input when the player is riding it, so we can use a MoLang query in the player's behavior to only activate the animation controller when the player is riding.
+Now, we need a copy of the player's behavior file, which we will modify slightly. You can find the player's behavior file in the vanilla behavior pack provided by Mojang (found [here](https://aka.ms/behaviorpacktemplate)). Once you have copied the player's behavior file to your own behavior pack, find their `"description"` object and add the animation controller. We also want to ensure that the entity will only respond to the player's jump input when the player is riding it, so we can use a Molang query in the player's behavior to only activate the animation controller when the player is riding.
 
 <CodeHeader></CodeHeader>
 

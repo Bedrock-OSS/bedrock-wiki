@@ -123,12 +123,12 @@ To sync through the Resource Pack (client-side), `client_sync` field can be used
 
 ### Manipulating and Accessing Entity Properties
 
-You can access entity properties through MoLang Entity Queries:
+You can access entity properties through Molang Entity Queries:
     -   `query.actor_property`
     -   `query.has_actor_property`
 
 :::warning
-These MoLang Entity Queries are a part of Experimental features
+These Molang Entity Queries are a part of Experimental features
 :::
 
 With entity events, you may set the entity property to a value with the `set_actor_property` event response:
