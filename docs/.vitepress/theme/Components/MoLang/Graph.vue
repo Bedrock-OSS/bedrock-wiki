@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { toRefs, computed, ref, watch } from 'vue'
-import { MoLang } from 'molang'
+import { Molang } from 'molang'
 import { useWindowSize } from '@vueuse/core'
 import { PrismEditor } from 'vue-prism-editor'
 import 'vue-prism-editor/dist/prismeditor.min.css'
-import { highlight } from 'prismjs'
+import Prism from 'prismjs'
 import 'molangjs/syntax/molang-prism-syntax'
+import pkg from 'prismjs'
+const { highlight } = pkg;
 
 const props = withDefaults(
 	defineProps<{
@@ -33,7 +35,7 @@ const { code, fromX, fromY, toX, toY, stepSize, height } = toRefs(props)
 //  Caluculate range between fromX to toX
 const range = computed(() => Math.abs(toX.value - fromX.value))
 
-const molang = new MoLang({})
+const molang = new Molang({})
 
 const xVariables = [
 	'query.anim_time',
@@ -72,8 +74,7 @@ const toPixelY = (y: number) => {
 
 const axes = computed(
 	() =>
-		`M0 ${height.value - getYRoot()} L${width.value} ${
-			height.value - getYRoot()
+		`M0 ${height.value - getYRoot()} L${width.value} ${height.value - getYRoot()
 		} M${getXRoot()} 0 L${getXRoot()} ${height.value}`
 )
 
@@ -110,27 +111,13 @@ const molangHighlight = (code: string) =>
 </script>
 
 <template>
-	<PrismEditor
-		v-if="!hideCode"
-		v-model="userCode"
+	<PrismEditor v-if="!hideCode" v-model="userCode"
 		class="editor px-4 py-2 rounded-md border border-true-gray-200 dark:border-true-gray-600"
-		:highlight="molangHighlight"
-	/>
-	<svg
-		ref="svgElement"
-		class="rounded-md border border-true-gray-200 dark:border-true-gray-600 my-2"
-	>
-		<path
-			class="axes stroke-true-gray-200 dark:stroke-true-gray-600"
-			:d="axes"
-		/>
+		:highlight="molangHighlight" />
+	<svg ref="svgElement" class="rounded-md border border-true-gray-200 dark:border-true-gray-600 my-2">
+		<path class="axes stroke-true-gray-200 dark:stroke-true-gray-600" :d="axes" />
 
-		<path
-			class="graph"
-			transform="scale(1, -1)"
-			transform-origin="center"
-			:d="graphData"
-		/>
+		<path class="graph" transform="scale(1, -1)" transform-origin="center" :d="graphData" />
 	</svg>
 </template>
 
@@ -154,9 +141,11 @@ path {
 	pointer-events: none;
 	fill: none;
 }
+
 path.graph {
 	stroke: #3688ff;
 }
+
 path.axes {
 	stroke-width: 1px;
 }

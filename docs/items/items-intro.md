@@ -10,7 +10,7 @@ tags:
 Items on the stable version of Minecraft (1.10 format version) are missing many new features, available in experimental (1.16 format version). You can learn more about experimental items [here](/items/items-16).
 :::
 
-Items require both a behavior file, to determine the behavior of the item, and a resource file, to determine the look of the item. 
+Items require both a behavior file, to determine the behavior of the item, and a resource file, to determine the look of the item.
 
 For this guide we will create two items: a gem to demonstrate creating a simple item & a meal to demonstrate create an edible item.
 
@@ -43,7 +43,7 @@ For this guide we will create two items: a gem to demonstrate creating a simple 
     -   `minecraft:stacked_by_data` defines whether this item with different aux values will be able to stack. For example the item "minecraft:dye" with aux value 0, which is an Ink Sack (`/give @s dye 1 0`), doesn't stack with "minecraft:dye" with aux value 12, which is a Cocoa Bean (`/give @s dye 1 12`).
     -   `"minecraft:foil"` defines whether the item will have the enchantment glint on it. An enchanted Shovel has this component set to true, but a disenchanted one to false.
     -   `minecraft:max_stack_size` sets how many items can stack in a single inventory slot. It cannot be larger than 64. Set this to 1 for an unstackable item.
-    -   `minecraft:max_damage` defines the item's durability. This is used for tools and weapons. 
+    -   `minecraft:max_damage` defines the item's durability. This is used for tools and weapons.
 
 If you enter the game now, the item will function, but it will be invisible. You can test the functionality of your item by running `/give @s wiki:gem`. Let's now define the item's visuals in the RP folder.
 
@@ -67,9 +67,9 @@ If you enter the game now, the item will function, but it will be invisible. You
 }
 ```
 
--   Set the same `identifier` under `description` as in the item's behavior file. This links the item's appearance to its behavior. 
+-   Set the same `identifier` under `description` as in the item's behavior file. This links the item's appearance to its behavior.
 -   `category` defines the category of items of the item in the creative inventory. It can be set to "Nature", "Equipment", "Construction" or "Items".
--   `components` in the resource file defines how the item is displayed. 
+-   `components` in the resource file defines how the item is displayed.
     -   `minecraft:render_offsets` defines how the item should be rendered. It can be set to pretty much any Vanilla item name, for example, "apple".
     -   `minecraft:icon` defines the item texture's short name. Let's look more into it.
 
@@ -102,7 +102,7 @@ If you did everything correctly, your Gem can now be obtainable by `/give` in-ga
 
 ## Meal BP File
 
-Now let us define a food item. This uses the component `minecraft:food` along with some others to create a custom food item. 
+Now let us define a food item. This uses the component `minecraft:food` along with some others to create a custom food item.
 
 <CodeHeader>BP/items/meal.item.json</CodeHeader>
 
@@ -173,11 +173,13 @@ Now let us define a food item. This uses the component `minecraft:food` along wi
 ```
 
 Here we have an extra component:
+
 -   `minecraft:use_animation` defines what animation to use when the player is using the item (Can be set to "bow", "eat", "drink", "crossbow", "camera").
 
 ## Meal Textures and Shortnames
 
 To add another texture for another item, we can just add another entry to `item_texture.json`.
+
 <CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
@@ -210,20 +212,17 @@ You can learn more about language files [here](/concepts/text-and-translations).
 
 ## Folder Layout
 
-If followed correctly, this is how your project should look. 
+If followed correctly, this is how your project should look.
 
 <FolderView :paths="[
-
-'BP/items/gem.item.json',
-'BP/items/meal.item.json',
-
-'RP/items/gem.item.json',
-'RP/items/meal.item.json',
-'RP/texts/en_US.lang',
-'RP/textures/item_texture.json',
-'RP/textures/items/gem.png',
-'RP/textures/items/meal.png',
-
+	'BP/items/gem.item.json',
+	'BP/items/meal.item.json',
+	'RP/items/gem.item.json',
+	'RP/items/meal.item.json',
+	'RP/texts/en_US.lang',
+	'RP/textures/item_texture.json',
+	'RP/textures/items/gem.png',
+	'RP/textures/items/meal.png',
 ]"></FolderView>
 
 ---

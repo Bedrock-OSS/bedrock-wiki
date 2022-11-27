@@ -10,7 +10,7 @@ They are intended for texture resolutions to load on different memory capacities
 
 ## How do Subpacks work?
 
-Files placed in you subpack folder will override files placed in your main addon folder, if the subpack is selected. For example, if your addon contains both `RP/textures/entities/ghost.png` and `RP/subpacks/pack_1/textures/ghost.png`, the second image file will replace the first, if subpack `pack_1` is selected. 
+Files placed in you subpack folder will override files placed in your main addon folder, if the subpack is selected. For example, if your addon contains both `RP/textures/entities/ghost.png` and `RP/subpacks/pack_1/textures/ghost.png`, the second image file will replace the first, if subpack `pack_1` is selected.
 
 For more information about how files override each other, please see our page on [overriding vanilla assets](/concepts/overwriting-assets).
 
@@ -21,9 +21,8 @@ For more information about how files override each other, please see our page on
     e.g.
 
 <FolderView :paths="[
-
-'RP/subpacks/subpack_1',
-'RP/subpacks/subpack_2'
+	'RP/subpacks/subpack_1',
+	'RP/subpacks/subpack_2'
 ]"></FolderView>
 
 -   Inside each of these folders you can add the content of each subpack.
@@ -31,11 +30,10 @@ For more information about how files override each other, please see our page on
     e.g.
 
 <FolderView :paths="[
-
-'RP/subpacks/subpack_1/textures/blocks/dirt.png',
-'RP/subpacks/subpack_1/textures/items/example_item.png',
-'RP/subpacks/subpack_2/textures/blocks/dirt.png',
-'RP/subpacks/subpack_2/textures/items/example_item.png'
+	'RP/subpacks/subpack_1/textures/blocks/dirt.png',
+	'RP/subpacks/subpack_1/textures/items/example_item.png',
+	'RP/subpacks/subpack_2/textures/blocks/dirt.png',
+	'RP/subpacks/subpack_2/textures/items/example_item.png'
 ]"></FolderView>
 
 ## Manifest Part

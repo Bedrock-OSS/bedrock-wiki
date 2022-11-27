@@ -5,7 +5,7 @@ show_toc: false
 show_contributors: false
 ---
 
-The Bedrock Wiki is supported by two active discord communities, which you are encouraged to join. Additionally, we maintain an actively updated list of community discords for Bedrock tools, content, or simply socialization. 
+The Bedrock Wiki is supported by two active discord communities, which you are encouraged to join. Additionally, we maintain an actively updated list of community discords for Bedrock tools, content, or simply socialization.
 
 Please feel free to join us to ask questions, get involved in Bedrock Addons, or to contribute to this site!
 

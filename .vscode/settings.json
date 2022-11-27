@@ -3,5 +3,6 @@
 	"volar.tsPlugin": true,
 	"[vue]": {
 		"editor.defaultFormatter": "Vue.volar"
-	}
+	},
+	"editor.formatOnSave": true
 }

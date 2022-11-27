@@ -19,17 +19,17 @@ export default defineConfig({
 					{
 						src: 'assets/images/favicons/android-chrome-192x192.png',
 						sizes: '192x192',
-						type: 'image/png'
+						type: 'image/png',
 					},
 					{
 						src: 'assets/images/favicons/android-chrome-256x256.png',
 						sizes: '256x256',
-						type: 'image/png'
-					}
-				]
-			}
+						type: 'image/png',
+					},
+				],
+			},
 		}),
-        // @ts-ignore
+		// @ts-ignore
 		errorUtility(),
 	],
 })
