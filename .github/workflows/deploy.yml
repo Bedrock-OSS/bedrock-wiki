@@ -14,10 +14,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 15
-      - name: Install and Build 🔧
+      - name: Check eslint, Install and Build 🔧
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          npx eslint .
           npm install
           npm run build
       - name: Deploy 🚀
