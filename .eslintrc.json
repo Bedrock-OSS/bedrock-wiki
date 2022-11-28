@@ -21,5 +21,6 @@
 		"quotes": ["error", "single"],
 		"semi": ["error", "never"],
 		"@typescript-eslint/ban-ts-comment": "off"
-	}
+	},
+	"ignorePatterns": ["**/dist/**", "*.json", "*.css", "*.html"]
 }
