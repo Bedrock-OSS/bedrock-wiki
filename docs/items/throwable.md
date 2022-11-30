@@ -139,8 +139,9 @@ The animation controller is responsible for detecting the usage of the item and 
         "default": {
           "transitions": [
             {
-              // The 'name' to use is the item identifier without the namespace
-              "throw_item": "q.get_equipped_item_name == 'throwable_item' && q.item_remaining_use_duration > 0.0"
+              // Current "query.is_item_name_any" takes 3 arguments, first is slot name, second is slot number, third is item we want to test if exists
+              "throw_item": "query.is_item_name_any('slot.weapon.mainhand', 0, 'wiki:throwable_item') && query.is_using_item"
+	      // "query.is_using_item" returns 'true' or 'false', in our case if player uses item it is going to return 'true'
             }
           ],
           "on_entry": [
