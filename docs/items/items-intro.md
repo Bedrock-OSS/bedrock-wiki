@@ -61,7 +61,8 @@ If you enter the game now, the item will function, but it will be invisible. You
 		},
 		"components": {
 			"minecraft:icon": "gem",
-			"minecraft:render_offsets": "tools"
+			"minecraft:render_offsets": "tools",
+			"minecraft:hover_text_color": "light_purple"
 		}
 	}
 }
@@ -71,6 +72,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 -   `category` defines the category of items of the item in the creative inventory. It can be set to "Nature", "Equipment", "Construction" or "Items".
 -   `components` in the resource file defines how the item is displayed. 
     -   `minecraft:render_offsets` defines how the item should be rendered. It can be set to pretty much any Vanilla item name, for example, "apple".
+    -   `minecraft:hover_text_color` changes the rarity color of the item (the color of the item name when hovered over). In this example, we'll make the gem's rarity color be light purple.
     -   `minecraft:icon` defines the item texture's short name. Let's look more into it.
 
 ## Gem Textures and Shortnames
@@ -166,6 +168,7 @@ Now let us define a food item. This uses the component `minecraft:food` along wi
 		"components": {
 			"minecraft:icon": "meal",
 			"minecraft:use_animation": "eat",
+			"minecraft:hover_text_color": "aqua",
 			"minecraft:render_offsets": "apple"
 		}
 	}
