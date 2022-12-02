@@ -139,7 +139,7 @@ The animation controller is responsible for detecting the usage of the item and 
         "default": {
           "transitions": [
             {
-              // Current "query.is_item_name_any" takes 3 arguments, first is slot name, second is slot number, third is item we want to test if exists
+              // Current "query.is_item_name_any" takes 3 arguments, first is slot name, second is slot id, third is the item we want to check for
               "throw_item": "query.is_item_name_any('slot.weapon.mainhand', 0, 'wiki:throwable_item') && query.is_using_item"
 	      // "query.is_using_item" returns 'true' or 'false', in our case if player uses item it is going to return 'true'
             }
