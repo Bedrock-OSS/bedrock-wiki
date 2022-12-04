@@ -2,13 +2,13 @@
 	<div class="card">
 		<div class="flex justify-start items-center flex-row flex-nowrap mb-4">
 			<img
-				v-if="currentTheme === &quot;dark&quot;"
+				v-if="currentTheme === 'dark'"
 				:src="imgsrcDark"
 				class="object-contain mr-4 filter drop-shadow"
 				style="max-height: 56px;"
 			>
 			<img
-				v-if="currentTheme === &quot;light&quot;"
+				v-if="currentTheme === 'light'"
 				:src="imgsrcLight"
 				class="object-contain mr-4 filter drop-shadow"
 				style="max-height: 56px;"

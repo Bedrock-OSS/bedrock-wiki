@@ -42,7 +42,6 @@
 
 			<div v-if="showContributors">
 				<h2
-					class=""
 					:class="{
 						'xl:mr-72': showToc,
 					}"
