@@ -31,7 +31,6 @@
 			<div v-if="showEditLink">
 				<div
 					class="pt-4"
-					v
 				>
 					<a
 						:href="editLink"
