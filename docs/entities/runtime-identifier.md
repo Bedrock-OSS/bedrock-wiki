@@ -189,11 +189,6 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 ### minecraft:ender_pearl
 
 -   Breaks the behavior of entity.
-
----
-
-### minecraft:ender_pearl
-
 -   Summons particles when entity receives damage.
 
 ---
@@ -236,7 +231,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:llama_spit
 
-    Adds llama spit's particles
+- Adds llama spit's particles
 
 ---
 

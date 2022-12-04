@@ -498,22 +498,24 @@ List of all new item components, with usage examples
 
 | Slot Name     |
 | ------------- |
-| bow           |
-| crossbow           |
 | armor_feet    |
 | armor_torso   |
 | armor_head    |
 | armor_legs    |
-| hoe           |
 | axe           |
-| pickaxe       |
-| shovel        |
-| sword         |
+| bow           |
+| cosmetic_head |
+| crossbow      |
 | elytra        |
 | fishing_rod   |
 | flintsteel    |
+| hoe           |
+| pickaxe       |
 | shears        |
-| cosmetic_head |
+| shield        |
+| shovel        |
+| sword         |
+
 
 ### minecraft:shooter
 
