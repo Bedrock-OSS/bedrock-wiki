@@ -6,9 +6,9 @@ tags:
     - intermediate
 ---
 
-## Requires Format Version 1.16.100 or below
+## Requires Format Version 1.16.100 or Lower
 
-The behavior format version now requires 1.16.100 or below for the `minecraft:behavior.rise_to_liquid_leve` and `minecraft:buoyant` methods to work.
+The behavior format version now requires 1.16.100 or lower for the `minecraft:behavior.rise_to_liquid_leve` and `minecraft:buoyant` methods to work.
 If you find a new method that works in the newer format versions, you should consider helping to contribute by updating the wiki.
 
 ## Using Runtime Identifiers
