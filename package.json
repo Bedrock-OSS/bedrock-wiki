@@ -13,7 +13,8 @@
 		"fastbuild": "run-script-os",
 		"fastbuild:win32": "SET fastBuild=true && node --max-old-space-size=8192 node_modules/vitepress/bin/vitepress.js build docs",
 		"fastbuild:darwin:linux": "fastBuild=true && node --max-old-space-size=8192 node_modules/vitepress/bin/vitepress.js build docs",
-		"serve": "vitepress serve docs"
+		"serve": "vitepress serve docs",
+		"lint": "npx eslint docs/.vitepress/**"
 	},
 	"dependencies": {
 		"@types/prismjs": "^1.26.0",

@@ -5,12 +5,13 @@
 	},
 	"extends": [
 		"eslint:recommended",
-		"plugin:vue/vue3-essential",
+		"plugin:vue/vue3-recommended",
 		"plugin:@typescript-eslint/recommended"
 	],
 	"overrides": [],
-	"parser": "@typescript-eslint/parser",
+	"parser": "vue-eslint-parser",
 	"parserOptions": {
+		"parser": "@typescript-eslint/parser",
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
@@ -20,7 +21,21 @@
 		"linebreak-style": ["error", "unix"],
 		"quotes": ["error", "single"],
 		"semi": ["error", "never"],
-		"@typescript-eslint/ban-ts-comment": "off"
+		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"vue/html-indent": ["error", "tab"],
+		"@typescript-eslint/no-var-requires": "off",
+		"no-control-regex": "off",
+		"vue/multi-word-component-names": "off",
+		"@typescript-eslint/no-unused-vars": "off",
+		"vue/no-unused-components": "off"
 	},
-	"ignorePatterns": ["**/dist/**", "*.json", "*.css", "*.html"]
+	"ignorePatterns": [
+		"!/docs/.vitepress",
+		"**/dist/**",
+		"*.json",
+		"*.css",
+		"*.html",
+		"*.d.ts"
+	]
 }
