@@ -6,6 +6,11 @@ tags:
     - intermediate
 ---
 
+## Requires Format Version 1.16.100
+
+The behavior format version now requires 1.16.100 for the `minecraft:behavior.rise_to_liquid_leve` and `minecraft:buoyant` methods to work.
+If you find a new method that works in the newer format versions, you should consider helping to contribute by updating the wiki.
+
 ## Using Runtime Identifiers
 
 You can read more about runtime identifiers [here](/entities/runtime-identifier). Using runtime identifiers, you can implement most of the boat's hard-coded behaviors. However, your boat won't rotate with you, and it will always face North.
