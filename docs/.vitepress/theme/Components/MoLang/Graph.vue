@@ -7,7 +7,7 @@ import 'vue-prism-editor/dist/prismeditor.min.css'
 import Prism from 'prismjs'
 import 'molangjs/syntax/molang-prism-syntax'
 import pkg from 'prismjs'
-const { highlight } = pkg;
+const { highlight } = pkg
 
 const props = withDefaults(
 	defineProps<{
@@ -111,13 +111,27 @@ const molangHighlight = (code: string) =>
 </script>
 
 <template>
-	<PrismEditor v-if="!hideCode" v-model="userCode"
+	<PrismEditor
+		v-if="!hideCode"
+		v-model="userCode"
 		class="editor px-4 py-2 rounded-md border border-true-gray-200 dark:border-true-gray-600"
-		:highlight="molangHighlight" />
-	<svg ref="svgElement" class="rounded-md border border-true-gray-200 dark:border-true-gray-600 my-2">
-		<path class="axes stroke-true-gray-200 dark:stroke-true-gray-600" :d="axes" />
+		:highlight="molangHighlight"
+	/>
+	<svg
+		ref="svgElement"
+		class="rounded-md border border-true-gray-200 dark:border-true-gray-600 my-2"
+	>
+		<path
+			class="axes stroke-true-gray-200 dark:stroke-true-gray-600"
+			:d="axes"
+		/>
 
-		<path class="graph" transform="scale(1, -1)" transform-origin="center" :d="graphData" />
+		<path
+			class="graph"
+			transform="scale(1, -1)"
+			transform-origin="center"
+			:d="graphData"
+		/>
 	</svg>
 </template>
 

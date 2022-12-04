@@ -1,5 +1,8 @@
 <template>
-	<div class="algolia-search-box" id="docsearch" />
+	<div
+		id="docsearch"
+		class="algolia-search-box"
+	/>
 </template>
 
 <script setup lang="ts">

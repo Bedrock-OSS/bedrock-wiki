@@ -1,20 +1,33 @@
 <template>
-	<div ref="codeHeader" class="tile flex items-center mt-8 p-2 pb-1.5 overflow-auto break-all">
+	<div
+		ref="codeHeader"
+		class="tile flex items-center mt-8 p-2 pb-1.5 overflow-auto break-all"
+	>
 		<span class="flex">
 			<FileIcon class="mr-2" />
 			<span class="opacity-50"><slot /></span>
 		</span>
 
-		<span @click="copyCodeSnippet" class="
+		<span
+			class="
 			flex items-center cursor-pointer ml-auto py-px px-1
 			rounded-md opacity-50 bg-true-gray-400 bg-opacity-0
 			hover:opacity-75 focus:opacity-75 hover:bg-opacity-40 focus:bg-opacity-40
 			active:opacity-90 active:bg-opacity-80
-			">
-			<span style="width: max-content;" class="pl-1 mr-1.5" v-if="!isMobile">Copy</span>
+			"
+			@click="copyCodeSnippet"
+		>
+			<span
+				v-if="!isMobile"
+				style="width: max-content;"
+				class="pl-1 mr-1.5"
+			>Copy</span>
 
-			<CopyIcon style="display: inline-block" title="Copy Snippet" />
-			<CheckIcon style="display: none"/>
+			<CopyIcon
+				style="display: inline-block"
+				title="Copy Snippet"
+			/>
+			<CheckIcon style="display: none" />
 		</span>
 	</div>
 </template>

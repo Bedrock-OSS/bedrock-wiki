@@ -1,16 +1,30 @@
 <!--Volar complains here but everything is working fine-->
 <template>
-	<a class="item flex flex-nowrap items-center px-2 rounded-md"
-		:class="[{ section: props.item.section }, props.item.color]" v-bind="linkProps" @click="onNavigation">
-		<span v-if="props.item.prefix != null" class="font-bold pr-2">{{
-				props.item.prefix
+	<a
+		class="item flex flex-nowrap items-center px-2 rounded-md"
+		:class="[{ section: props.item.section }, props.item.color]"
+		v-bind="linkProps"
+		@click="onNavigation"
+	>
+		<span
+			v-if="props.item.prefix != null"
+			class="font-bold pr-2"
+		>{{
+			props.item.prefix
 		}}</span>
 
 		<div class="text-sm">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
 
-		<span class="ml-auto space-x-2" v-if="!!props.item.tags?.length">
-			<NavLinkTag v-for="tag in props.item.tags" :tag="tag" />
+		<span
+			v-if="!!props.item.tags?.length"
+			class="ml-auto space-x-2"
+		>
+			<NavLinkTag
+				v-for="(tag, i) in props.item.tags"
+				:key="i"
+				:tag="tag"
+			/>
 		</span>
 	</a>
 </template>

@@ -2,7 +2,7 @@
 	<details>
 		<summary>{{ title }}</summary>
 		<div class="p-4">
-			<slot></slot>
+			<slot />
 		</div>
 	</details>
 </template>
@@ -12,18 +12,19 @@ import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
 
 export default {
 	name: 'VueSpoiler',
+	components: {
+		ChevronLeftIcon
+	},
+	props: {
+		title: {
+			type: String,
+			default: () => '',
+		}
+	},
 	data: () => {
 		return {
 			expanded: false,
 			no_title: true,
-		}
-	},
-    components: {
-        ChevronLeftIcon
-    },
-	props: {
-		title: {
-			default: () => '',
 		}
 	}
 }

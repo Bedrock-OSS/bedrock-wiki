@@ -34,7 +34,7 @@ function formatLink(path: string) {
 Gets the categories from within the frontmatter of an index.md file, and returns them as list.
  */
 function getCategoryOrder(frontMatter: matter.GrayMatterFile<string>) {
-	let data: { [Key: string]: number } = {}
+	const data: { [Key: string]: number } = {}
 	if (!frontMatter.data.categories) {
 		return data
 	}
@@ -50,7 +50,7 @@ function getCategoryOrder(frontMatter: matter.GrayMatterFile<string>) {
 }
 
 function getCategories(frontMatter: matter.GrayMatterFile<string>) {
-	let data: {
+	const data: {
 		text: any
 		data: any
 		tags: any
@@ -98,7 +98,7 @@ let order: { [Key: string]: number }
 Recursively generate the navigation links for the sidebar.
 */
 function generateSidebar(base: string, dir: string) {
-	let data: {
+	const data: {
 		text: any
 		data: { [key: string]: any }
 		children?: any
@@ -109,11 +109,11 @@ function generateSidebar(base: string, dir: string) {
 		link?: string
 		activeMatch?: string
 	}[] = []
-	let files = fs.readdirSync(dir)
+	const files = fs.readdirSync(dir)
 
 	files.forEach(function (file) {
 		let joinedPath = path.join(dir, file)
-		let stats = fs.statSync(joinedPath)
+		const stats = fs.statSync(joinedPath)
 		// Handle top level directories
 		if (
 			stats.isDirectory() &&
@@ -143,7 +143,7 @@ function generateSidebar(base: string, dir: string) {
 
 			order = getCategoryOrder(frontMatter)
 
-			let children = generateSidebar(base, joinedPath).concat(
+			const children = generateSidebar(base, joinedPath).concat(
 				getCategories(frontMatter)
 			)
 
@@ -154,11 +154,11 @@ function generateSidebar(base: string, dir: string) {
 				) => {
 					// Default to max int, so without nav order you will show second
 					// Multiply by category value if it exists
-					let navA =
+					const navA =
 						(dataA.nav_order || 50) +
 							(order[dataA.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
-					let navB =
+					const navB =
 						(dataB.nav_order || 50) +
 							(order[dataB.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
@@ -172,11 +172,11 @@ function generateSidebar(base: string, dir: string) {
 					return navA - navB
 				}
 			),
-				data.push({
-					text: frontMatter.data.title,
-					data: frontMatter.data,
-					children: children,
-				})
+			data.push({
+				text: frontMatter.data.title,
+				data: frontMatter.data,
+				children: children,
+			})
 
 			if (frontMatter.data.title === void 0) {
 				throw new Error(
@@ -247,10 +247,10 @@ function generateSidebar(base: string, dir: string) {
 		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
 			// Default to max int, so without nav order you will show second
 			// Multiply by category value if it exists
-			let navA =
+			const navA =
 				(dataA.nav_order || 50) + (order[dataA.category] || 0) * 100 ||
 				Number.MAX_SAFE_INTEGER
-			let navB =
+			const navB =
 				(dataB.nav_order || 50) + (order[dataB.category] || 0) * 100 ||
 				Number.MAX_SAFE_INTEGER
 
@@ -266,7 +266,7 @@ function generateSidebar(base: string, dir: string) {
 }
 
 function getSidebar() {
-	let docsPath = path.join(process.cwd(), 'docs')
+	const docsPath = path.join(process.cwd(), 'docs')
 	return generateSidebar(docsPath, docsPath)
 }
 
@@ -277,7 +277,7 @@ const req = async (url2: string) => {
 	attempts++
 	if (!process.env.GITHUB_TOKEN)
 		return { message: 'Unable to get GITHUB_TOKEN' }
-	let res = await fetch(
+	const res = await fetch(
 		`https://api.github.com/repos/Bedrock-OSS/bedrock-wiki/${url2}`,
 		{
 			headers: {
@@ -286,7 +286,7 @@ const req = async (url2: string) => {
 			},
 		}
 	)
-	let response = res
+	const response = res
 	limit = response.headers.get('X-RateLimit-Limit') || ''
 	return response.json()
 }
@@ -302,8 +302,8 @@ const getAuthors = async () => {
 		// @ts-ignore
 		.map((e) => e.path)
 	console.log('Getting data for the files ' + files)
-	let contributors = {}
-	let authors = []
+	const contributors = {}
+	const authors = []
 
 	// TODO: Fix this
 	return contributors
@@ -426,7 +426,7 @@ module.exports = (async function () {
 			[
 				'script',
 				{},
-				`!function(){try {var d=document.documentElement.classList;d.remove('light','dark');var e=localStorage.getItem('docTheme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);m.media!==t||m.matches?d.add('dark'):d.add('light')}else if(e) d.add(e)}catch(e){}}()`,
+				'!function(){try {var d=document.documentElement.classList;d.remove(\'light\',\'dark\');var e=localStorage.getItem(\'docTheme\');if(\'system\'===e||(!e&&true)){var t=\'(prefers-color-scheme: dark)\',m=window.matchMedia(t);m.media!==t||m.matches?d.add(\'dark\'):d.add(\'light\')}else if(e) d.add(e)}catch(e){}}()',
 			],
 			[
 				'script',

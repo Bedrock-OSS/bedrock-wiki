@@ -3,28 +3,50 @@
 	<div>
 		<Sidebar />
 
-		<main class="m-8 mt-22 min-h-screen" :class="{
-			'md:ml-80': isVisible,
-		}">
-			<h1 class="xl:pr-72" v-if="page && page.title" id="top">
+		<main
+			class="m-8 mt-22 min-h-screen"
+			:class="{
+				'md:ml-80': isVisible,
+			}"
+		>
+			<h1
+				v-if="page && page.title"
+				id="top"
+				class="xl:pr-72"
+			>
 				{{ page.title }}
 			</h1>
-			<Label v-for="tag in tags" :name="tag"> </Label>
+			<Label
+				v-for="(tag, i) in tags"
+				:key="i"
+				:name="tag"
+			/>
 			<TOC v-if="showToc" />
-			<Content :class="{
-				'xl:mr-72': showToc,
-			}" />
+			<Content
+				:class="{
+					'xl:mr-72': showToc,
+				}"
+			/>
 
 			<div v-if="showEditLink">
-				<div class="pt-4" v>
-					<a :href="editLink" target="_blank">Edit {{ page.title }} on Github.</a>
+				<div
+					class="pt-4"
+					v
+				>
+					<a
+						:href="editLink"
+						target="_blank"
+					>Edit {{ page.title }} on Github.</a>
 				</div>
 			</div>
 
 			<div v-if="showContributors">
-				<h2 class="" :class="{
-					'xl:mr-72': showToc,
-				}">
+				<h2
+					class=""
+					:class="{
+						'xl:mr-72': showToc,
+					}"
+				>
 					Contributors
 				</h2>
 				<Suspense>
@@ -38,39 +60,64 @@
 					</template>
 				</Suspense>
 			</div>
-			<div class="float" :hidden="data.isCookiesAgreed">
+			<div
+				class="float"
+				:hidden="data.isCookiesAgreed"
+			>
 				<!-- Cookie policy -->
 				<span>
 					We use cookies to improve your experience. By continuing to
 					use this site, you agree to our use of cookies. See our
 					<a href="/privacy">Privacy Policy</a> for more information.
 				</span>
-				<Button @click="agreeCookies"> Got it! </Button>
+				<Button @click="agreeCookies">
+					Got it!
+				</Button>
 			</div>
 			<footer class="mainfooter">
 				<div>
 					Bedrock Wiki by
-					<a href="https://github.com/Bedrock-OSS" target="_blank" rel="noopener noreferrer">Bedrock-OSS</a>.
+					<a
+						href="https://github.com/Bedrock-OSS"
+						target="_blank"
+						rel="noopener noreferrer"
+					>Bedrock-OSS</a>.
 				</div>
 				<div>
 					"Minecraft" is a trademark of Mojang AB. Bedrock-OSS,
 					Bedrock Wiki and
-					<a href="https://bedrock.dev" target="_blank" rel="noopener noreferrer">bedrock.dev</a>
+					<a
+						href="https://bedrock.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+					>bedrock.dev</a>
 					are not affiliated in any way with Microsoft or Mojang AB.
 				</div>
 				<ul>
 					<li>
-						<a href="/privacy.html" rel="noopener noreferrer">Privacy Policy</a>
+						<a
+							href="/privacy.html"
+							rel="noopener noreferrer"
+						>Privacy Policy</a>
 					</li>
 					<li>
-						<a href="/discord.html" rel="noopener noreferrer">Join our Discord!</a>
+						<a
+							href="/discord.html"
+							rel="noopener noreferrer"
+						>Join our Discord!</a>
 					</li>
 					<li>
-						<a href="https://github.com/Bedrock-OSS/bedrock-wiki" target="_blank"
-							rel="noopener noreferrer">Visit our Project Repository!</a>
+						<a
+							href="https://github.com/Bedrock-OSS/bedrock-wiki"
+							target="_blank"
+							rel="noopener noreferrer"
+						>Visit our Project Repository!</a>
 					</li>
 					<li>
-						<a href="/contribute.html" rel="noopener norefferer">
+						<a
+							href="/contribute.html"
+							rel="noopener norefferer"
+						>
 							Learn how to contribute!
 						</a>
 					</li>
@@ -286,6 +333,8 @@ const routeData = computed(() => {
 	// Hack for error from navLinks when visiting 404 page
 	// We are manually populating the route.data object with data that fits to the 404 page
 	// @ts-ignore
+	
+	// eslint-disable-next-line vue/no-side-effects-in-computed-properties
 	route.data = {
 		frontmatter: {
 			title: '404',
