@@ -1,14 +1,13 @@
 ---
+title: Contributing to the Bedrock Wiki
 hidden: true
 show_toc: false
 show_contributors: false
-title: Contributing to the Bedrock Wiki
 ---
 
-Hello there! 
+Hello there!
 
 Have you spotted a typo? Got stuck following one of our guides? Want to contribute something new? Then you've come to the right place!
-
 
 ## Contributing
 

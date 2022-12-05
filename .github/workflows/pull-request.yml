@@ -24,6 +24,9 @@ jobs:
 
             - name: Install 🔧
               run: npm ci
+            
+            - name: Check eslint 🔧
+              run: npm run lint
 
             - name: Build 🔧
               run: npm run build

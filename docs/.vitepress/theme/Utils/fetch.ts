@@ -1,8 +1,8 @@
-export function universalFetch(url: string, headers: any) {
+export async function universalFetch(url: string, headers: any) {
 	if (import.meta.env.SSR) {
-		return import('node-fetch').then((nodeFetch) =>
-			(<any>nodeFetch)(url, headers)
-		)
+		return await import('node-fetch').then((fetch) => {
+			return fetch.default(url, headers)
+		})
 	}
 
 	return fetch(url, headers)

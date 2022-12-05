@@ -7,7 +7,7 @@ mentions:
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed.
-If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.40*
+If you want to see full page, you can do it [here](/entities/vuc-full). _Last updated for 1.19.40_
 
 ## addrider
 
@@ -20280,4 +20280,3 @@ turtle
 ```
 
 </Spoiler>
-

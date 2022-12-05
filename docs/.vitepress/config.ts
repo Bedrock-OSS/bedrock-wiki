@@ -1,39 +1,80 @@
-require('molangjs/syntax/molang-prism-syntax')
-
-const fs = require('fs')
-const path = require('path')
-const matter = require('gray-matter')
-const fetch = require('node-fetch')
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import fetch from 'node-fetch'
 
 const baseUrl = '/'
 
-function formatLink(path) {
+// define whether big pages should be built.
+// fastBuild should only be used when testing, since it will not compile some of the wikis content.
+const excludeFiles = [
+	'entities/vanilla-usage-components.md',
+	'entities/vanilla-usage-spawn-rules.md',
+	'entities/vuc-full.md',
+	'entities/vusr-full.md',
+]
+
+const fastBuild = process.env.fastBuild === 'true ' // SPACE has to be there, since the SET var=val command adds a space at the end!
+
+if (fastBuild && process.env.NODE_ENV == 'production') {
+	console.log(
+		`\nINFO: fastBuild selected. the files:\n${JSON.stringify(
+			excludeFiles,
+			null,
+			4
+		)}\nwill not be compiled!\n`
+	)
+}
+
+function formatLink(path: string) {
 	return path.split(/\\|\//g).join('/').replace('.md', '')
 }
 
 /*
 Gets the categories from within the frontmatter of an index.md file, and returns them as list.
  */
-function getCategoryOrder(frontMatter) {
-	data = {}
+function getCategoryOrder(frontMatter: matter.GrayMatterFile<string>) {
+	const data: { [Key: string]: number } = {}
 	if (!frontMatter.data.categories) {
 		return data
 	}
 
-	frontMatter.data.categories.forEach(function (category, index) {
+	frontMatter.data.categories.forEach(function (
+		category: { title: string | number },
+		index: number
+	) {
 		data[category.title] = index + 1
 	})
 
 	return data
 }
 
-function getCategories(frontMatter) {
-	data = []
+function getCategories(frontMatter: matter.GrayMatterFile<string>) {
+	const data: {
+		text: any
+		data: any
+		tags: any
+		prefix: any
+		section: boolean
+		color: any
+		link: string
+		activeMatch: string
+	}[] = []
 	if (!frontMatter.data.categories) {
 		return data
 	}
 
-	frontMatter.data.categories.forEach(function (category, index) {
+	frontMatter.data.categories.forEach(function (
+		category: {
+			nav_order: number
+			category: any
+			title: any
+			tags: any
+			prefix: any
+			color: any
+		},
+		index: any
+	) {
 		category.nav_order = -1
 		category.category = category.title
 		data.push({
@@ -51,16 +92,28 @@ function getCategories(frontMatter) {
 	return data
 }
 
+let order: { [Key: string]: number }
+
 /*
 Recursively generate the navigation links for the sidebar.
 */
-function generateSidebar(base, dir) {
-	let data = []
-	let files = fs.readdirSync(dir)
+function generateSidebar(base: string, dir: string) {
+	const data: {
+		text: any
+		data: { [key: string]: any }
+		children?: any
+		tags?: any
+		prefix?: any
+		section?: any
+		color?: any
+		link?: string
+		activeMatch?: string
+	}[] = []
+	const files = fs.readdirSync(dir)
+
 	files.forEach(function (file) {
 		let joinedPath = path.join(dir, file)
-		let stats = fs.statSync(joinedPath)
-
+		const stats = fs.statSync(joinedPath)
 		// Handle top level directories
 		if (
 			stats.isDirectory() &&
@@ -79,16 +132,18 @@ function generateSidebar(base, dir) {
 					path.join(joinedPath, 'index.md')
 				)
 				console.log(
+					// @ts-ignore
 					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
 				throw new Error(
+					// @ts-ignore
 					`File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
 			}
 
 			order = getCategoryOrder(frontMatter)
 
-			children = generateSidebar(base, joinedPath).concat(
+			const children = generateSidebar(base, joinedPath).concat(
 				getCategories(frontMatter)
 			)
 
@@ -99,11 +154,11 @@ function generateSidebar(base, dir) {
 				) => {
 					// Default to max int, so without nav order you will show second
 					// Multiply by category value if it exists
-					navA =
+					const navA =
 						(dataA.nav_order || 50) +
 							(order[dataA.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
-					navB =
+					const navB =
 						(dataB.nav_order || 50) +
 							(order[dataB.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
@@ -117,11 +172,11 @@ function generateSidebar(base, dir) {
 					return navA - navB
 				}
 			),
-				data.push({
-					text: frontMatter.data.title,
-					data: frontMatter.data,
-					children: children,
-				})
+			data.push({
+				text: frontMatter.data.title,
+				data: frontMatter.data,
+				children: children,
+			})
 
 			if (frontMatter.data.title === void 0) {
 				throw new Error(
@@ -144,9 +199,11 @@ function generateSidebar(base, dir) {
 			} catch (e) {
 				joinedPath = path.relative(process.cwd(), joinedPath)
 				console.log(
+					// @ts-ignore
 					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
 				throw new Error(
+					// @ts-ignore
 					`File ${joinedPath} has invalid frontmatter! ${e.message}`
 				)
 			}
@@ -190,10 +247,10 @@ function generateSidebar(base, dir) {
 		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
 			// Default to max int, so without nav order you will show second
 			// Multiply by category value if it exists
-			navA =
+			const navA =
 				(dataA.nav_order || 50) + (order[dataA.category] || 0) * 100 ||
 				Number.MAX_SAFE_INTEGER
-			navB =
+			const navB =
 				(dataB.nav_order || 50) + (order[dataB.category] || 0) * 100 ||
 				Number.MAX_SAFE_INTEGER
 
@@ -209,16 +266,18 @@ function generateSidebar(base, dir) {
 }
 
 function getSidebar() {
-	let docsPath = path.join(process.cwd(), 'docs')
+	const docsPath = path.join(process.cwd(), 'docs')
 	return generateSidebar(docsPath, docsPath)
 }
+
 let attempts = 0
-let limit = 0
-const req = async (url2) => {
+let limit = ''
+
+const req = async (url2: string) => {
 	attempts++
 	if (!process.env.GITHUB_TOKEN)
 		return { message: 'Unable to get GITHUB_TOKEN' }
-	let res = await fetch(
+	const res = await fetch(
 		`https://api.github.com/repos/Bedrock-OSS/bedrock-wiki/${url2}`,
 		{
 			headers: {
@@ -227,46 +286,51 @@ const req = async (url2) => {
 			},
 		}
 	)
-	let response = await res
-	limit = response.headers.get('X-RateLimit-Limit')
+	const response = res
+	limit = response.headers.get('X-RateLimit-Limit') || ''
 	return response.json()
 }
 const getAuthors = async () => {
 	let files = await req('git/trees/wiki?recursive=1')
+	// @ts-ignore
 	if (!files.tree) return files
+	// @ts-ignore
 	files = files.tree
-		.filter(({ path }) => path.match('docs/(?!public|.vite.*$).*.md'))
+		.filter(({ path }: { path: string }) =>
+			path.match('docs/(?!public|.vite.*$).*.md')
+		)
+		// @ts-ignore
 		.map((e) => e.path)
 	console.log('Getting data for the files ' + files)
-	let contributors = {}
-	let authors = []
+	const contributors = {}
+	const authors = []
 
 	// TODO: Fix this
 	return contributors
 
-	await new Promise((resolve, reject) => {
-		for (let i = 0; i < files.length; i++) {
-			req(`commits?path=${files[i]}`).then((commit) => {
-				if (!commit[0]) {
-					// Github token rate limit?
-					console.log(
-						`GitHub token rate limit reached after ${attempts} requests (limit: ${limit})`
-					)
-					return commit
-				}
-				if (!commit[0].author) return commit
-				contributors[files[i]] = commit
-					.map((e) => e.author)
-					.filter(
-						(v, i, a) => a.findIndex((t) => t.login == v.login) == i
-					)
-				authors.push(contributors[files[i]].login)
-				if (i == files.length - 1) resolve()
-			})
-		}
-	})
+	// await new Promise((resolve, reject) => {
+	// 	for (let i = 0; i < files.length; i++) {
+	// 		req(`commits?path=${files[i]}`).then((commit) => {
+	// 			if (!commit[0]) {
+	// 				// Github token rate limit?
+	// 				console.log(
+	// 					`GitHub token rate limit reached after ${attempts} requests (limit: ${limit})`
+	// 				)
+	// 				return commit
+	// 			}
+	// 			if (!commit[0].author) return commit
+	// 			contributors[files[i]] = commit
+	// 				.map((e) => e.author)
+	// 				.filter(
+	// 					(v, i, a) => a.findIndex((t) => t.login == v.login) == i
+	// 				)
+	// 			authors.push(contributors[files[i]].login)
+	// 			if (i == files.length - 1) resolve()
+	// 		})
+	// 	}
+	// })
 
-	return contributors
+	// return contributors
 }
 
 module.exports = (async function () {
@@ -278,7 +342,7 @@ module.exports = (async function () {
 
 		markdown: {
 			lineNumbers: true,
-			config: (md) => {
+			config: (md: { use: (arg0: any) => void }) => {
 				md.use(require('./theme/Utils/full-headers'))
 			},
 		},
@@ -331,28 +395,28 @@ module.exports = (async function () {
 				},
 			],
 			// open graph metadata: used for link previews in eg. discord
-			[
-				'meta',
-				{
-					property: 'og:type',
-					content: 'website',
-				},
-			],
-			[
-				'meta',
-				{
-					property: 'og:site_name',
-					content: 'Bedrock Wiki',
-				},
-			],
-			[
-				'meta',
-				{
-					property: 'og:image',
-					content:
-						'https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png',
-				},
-			],
+			// [
+			// 	'meta',
+			// 	{
+			// 		property: 'og:type',
+			// 		content: 'website',
+			// 	},
+			// ],
+			// [
+			// 	'meta',
+			// 	{
+			// 		property: 'og:site_name',
+			// 		content: 'Bedrock Wiki',
+			// 	},
+			// ],
+			// [
+			// 	'meta',
+			// 	{
+			// 		property: 'og:image',
+			// 		content:
+			// 			'https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png',
+			// 	},
+			// ],
 			[
 				'script',
 				{
@@ -362,7 +426,7 @@ module.exports = (async function () {
 			[
 				'script',
 				{},
-				`!function(){try {var d=document.documentElement.classList;d.remove('light','dark');var e=localStorage.getItem('docTheme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);m.media!==t||m.matches?d.add('dark'):d.add('light')}else if(e) d.add(e)}catch(e){}}()`,
+				'!function(){try {var d=document.documentElement.classList;d.remove(\'light\',\'dark\');var e=localStorage.getItem(\'docTheme\');if(\'system\'===e||(!e&&true)){var t=\'(prefers-color-scheme: dark)\',m=window.matchMedia(t);m.media!==t||m.matches?d.add(\'dark\'):d.add(\'light\')}else if(e) d.add(e)}catch(e){}}()',
 			],
 			[
 				'script',
@@ -424,5 +488,9 @@ module.exports = (async function () {
 
 			contributors: await getAuthors(),
 		},
+		srcExclude: fastBuild ? excludeFiles : [],
+		ignoreDeadLinks: true,
 	}
 })()
+
+// exports.excludeFiles = excludeFiles
