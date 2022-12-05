@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import fetch from 'node-fetch'
+import { Content, TransformContext } from 'vitepress'
 
 const baseUrl = '/'
 
@@ -490,7 +491,84 @@ module.exports = (async function () {
 		},
 		srcExclude: fastBuild ? excludeFiles : [],
 		ignoreDeadLinks: true,
+		async transformHead(ctx: TransformContext) {
+			// open graph metadata: used for link previews in eg. discord
+
+			const fm = ctx.pageData.frontmatter
+
+			const description =
+			fm.description !== undefined
+				? fm.description
+				: 'This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.'
+
+			const title = fm.title !== undefined ? fm.title : 'The Bedrock Wiki'
+
+			const site = 'Bedrock Wiki'
+
+			const image = `https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png?${Date.parse(
+				// @ts-ignore
+				new Date()
+			)}`
+
+			const imageAlt = 'The title image of the Bedrock Wiki'
+
+			const url =
+			ctx.pageData.relativePath !== undefined
+				? `https://wiki.bedrock.dev/${ctx.pageData.relativePath.slice(
+					0,
+					ctx.pageData.relativePath.lastIndexOf('.md')
+				)}.html`
+				: 'https://wiki.bedrock.dev'
+	
+			const data = {
+				// twitter
+				'twitter:card': 'summary',
+				'twitter:title': title,
+				'twitter:description': description,
+				'twitter:image': image,
+				'twitter:image:alt': imageAlt,
+				'twitter:site': site,
+				// og
+				'og:type': 'website',
+				'og:title': title,
+				'og:description': description,
+				'og:image': image,
+				'og:image:alt': imageAlt,
+				'og:url': url,
+				'og:site_name': site
+			}
+			// eslint-disable-next-line prefer-const
+			let out: (string | {name: string, content: string})[][] = []
+			Object.entries(data).forEach(([name, content]) => {
+				out.push(['meta', {
+					name: name,
+					content: content
+				}])
+			})
+
+			return out
+
+			/*
+			twitter:card
+			og:type
+
+			twitter:description
+			og:description
+
+			twitter:title
+			og:title
+
+			twitter:image
+			og:image
+
+			twitter:image:alt
+			og:image:alt
+
+			og:url
+
+			twitter:site
+			og:site_name
+			*/
+		},
 	}
 })()
-
-// exports.excludeFiles = excludeFiles
