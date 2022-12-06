@@ -20,7 +20,7 @@
 		<component
 			:is="isVisible ? MenuOpenIcon : MenuIcon"
 			class="menu-icon mr-3 cursor-pointer"
-			@pointerdown.prevent="toggle"
+			@pointerdown.prevent="toggle()"
 		/>
 
 		<a
