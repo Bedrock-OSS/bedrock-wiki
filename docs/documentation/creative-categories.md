@@ -64,7 +64,7 @@ Block Categories are defined via `menu_category`, your custom block will not sho
 }
 ```
 
-As you can see, `menu_category` accepts 2 optional children, the `category` child & the `group` child. A list of groups & categories can be found below.
+As you can see, `menu_category` accepts 2 optional children, the `category` child & the `group` child. A list of groups & categories can be found below. You can also use `is_hidden_in_commands` to make the block not show in commands.
 
 ## List of Creative Tabs
 
