@@ -132,8 +132,7 @@ The best place to get help with this guide is to join the [discord server](/disc
 
 Minecraft's vanilla files are a good source of reference material. You should download these packs, and store them on a convenient location on your computer. When you need an example of an item, or entity, or animation, you can reference these files for inspiration.
 
--   [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
--   [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
+-   [Vanilla packs](https://github.com/Mojang/bedrock-samples/releases)
 
 ### Documentation
 
