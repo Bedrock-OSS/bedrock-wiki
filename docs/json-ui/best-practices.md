@@ -8,7 +8,7 @@ mention:
   - LukasPAH
 ---
 
-:::info
+:::tip Info
 This content of this article assumes that you are somewhat familiar with the JSON-UI system. If you are new to JSON-UI, be sure to familiarize yourself by reading the [JSON-UI Intro](/json-ui/json-ui-intro) and the [JSON-UI Documentation](/json-ui/json-ui-documentation).
 :::
 
