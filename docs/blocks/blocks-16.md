@@ -820,6 +820,7 @@ bedrock_wiki:
 .. Will, in-game, yield the result: `tile.Barrel of Foxes.name`. Using language files is strongly recommended.
 
 -   You can define a specific block property in the `/fill` and `/setblock` commands where the data value would be, just as shown in the following example;
+
 `/fill ~ ~ ~ ~ ~ ~ wiki:my_block ["wiki:my_property": 1]`
 `/setblock ~ ~ ~ wiki:my_block ["wiki:my_property": 1]`
 
