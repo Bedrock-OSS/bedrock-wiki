@@ -199,7 +199,7 @@ To make creating these animations easier, please do the following:
 
 - Download the following player skeleton model. We will use this as a visual aid for positioning your model.
 <BButton
-  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/attachable_guide.animation.json?raw=true"
+  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/player_skeleton.geo.json?raw=true"
 	color=blue
 >📄 Player Skeleton File</BButton>
 
@@ -207,7 +207,7 @@ To make creating these animations easier, please do the following:
 - Set your model's root bone(s) to be a child of the 'rightItem' bone in the player skeleton.
 - Download the following animation file import the `wiki.third_person_guide` animation. This will be used later to make positioning easier.
 <BButton
-  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/attachable_guide.animation.json?raw=true"
+  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/attachable_guide.animation.json?raw=true"
 	color=blue
 >📄 Attachable Guide File</BButton>
 
@@ -220,6 +220,12 @@ Be sure you are editing your animations when making your changes. Select it firs
 :::
 
 Play both animations, and position your model however you want. Save the animations to your resource pack.
+
+An example animation file for this positioning:
+<BButton
+  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/skeleton_head.animation.json?raw=true"
+	color=blue
+>📄 Animation File</BButton>
 
 ### First-person Animations
 
