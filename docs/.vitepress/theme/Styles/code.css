@@ -1,6 +1,6 @@
 code {
 	@apply rounded-sm m-0 bg-true-gray-200 px-1;
-	word-break:break-all;
+	word-break: break-all;
 }
 
 .dark code {
@@ -25,6 +25,12 @@ div[class*='language-'] {
 	hyphens: none;
 	font-size: 14px;
 	line-height: 24px;
+}
+
+/* hide copy-button and lang */
+[class*='language-'] button,
+[class*='language-'] .lang {
+	display: none;
 }
 
 /* Line numbers mode */

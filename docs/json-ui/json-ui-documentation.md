@@ -2023,18 +2023,18 @@ Some of them only work in specific screens.
 
 | Name              |  ID  | Aux Values |
 | ----------------- | :--: | :--------: |
-| diamond           | 304  |  17301504  |
-| emerald           | 502  |  25427968  |
-| gold_ingot        | 306  |  17432576  |
-| iron_ingot        | 305  |  17367040  |
-| netherite_ingot   | 592  |  48627712  |
-| red_banner        |      |  29229057  |
-| saddle            | 369  |  21561344  |
+| diamond           | 304  |  19922944  |
+| emerald           | 512  |  33554432  |
+| gold_ingot        | 306  |  20054016  |
+| iron_ingot        | 305  |  19988480  |
+| netherite_ingot   | 603  |  39518208  |
+| banner            | 567  |  37158912  |
+| saddle            | 371  |  24313856  |
 | cartography_table | -200 | -13107200  |
 | chest             |  54  |  3538944   |
 | crafting_table    |  58  |  3801088   |
 | loom              | -204 | -13369344  |
-| stonecutter       | -197 | -12910592  |
+| stonecutter_block | -197 | -12910592  |
 
 #### How to calculate block item aux value:
 

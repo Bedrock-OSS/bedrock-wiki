@@ -56,7 +56,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ### JavaScript
 
--   [BlueBird](https://github.com/BlueBirdMC/BlueBird)
+-   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [GreenFrogMCBE](https://github.com/andriycraft/GreenFrogMCBE)
 
 ### Rust

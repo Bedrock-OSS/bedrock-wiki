@@ -52,13 +52,15 @@
 						text-lg
 						break-all
 					"
-					>{{ title }}</a
-				>
+				>{{ title }}</a>
 				<div>
-					<ol id="toc" class="pl-0">
+					<ol
+						id="toc"
+						class="pl-0"
+					>
 						<li
 							v-for="header in headers"
-							key="header.title"
+							:key="header.title"
 							class="py-0.5"
 						>
 							<a
@@ -70,12 +72,14 @@
 									break-all
 								"
 								:href="'#' + header.slug"
-								>{{ header.title }}</a
+							>{{ header.title }}</a>
+							<ol
+								v-if="maxTocLevel > 1"
+								class="pl-2"
 							>
-							<ol v-if="maxTocLevel > 1" class="pl-2">
 								<li
 									v-for="child in header.children"
-									key="child.title"
+									:key="child.title"
 									class="py-0.5"
 								>
 									<a
@@ -86,12 +90,14 @@
 											break-all
 										"
 										:href="'#' + child.slug"
-										>{{ child.title }}</a
+									>{{ child.title }}</a>
+									<ol
+										v-if="maxTocLevel > 2"
+										class="pl-2"
 									>
-									<ol v-if="maxTocLevel > 2" class="pl-2">
 										<li
 											v-for="grandchild in child.children"
-											key="grandchild.title"
+											:key="grandchild.title"
 											class="py-0.5"
 										>
 											<a
@@ -103,8 +109,7 @@
 													break-all
 												"
 												:href="'#' + grandchild.slug"
-												>{{ grandchild.title }}</a
-											>
+											>{{ grandchild.title }}</a>
 										</li>
 									</ol>
 								</li>
@@ -129,7 +134,7 @@ interface extHeader extends Header {
 }
 
 const getHeaders = () => {
-	let grouped: extHeader[] = [];
+	let grouped: extHeader[] = []
 	// create curHeader as default level 1 header
 	// if there is one level 1 header, this header will be overwritten
 	let curHeader: extHeader = {
@@ -137,16 +142,16 @@ const getHeaders = () => {
 		slug: '',
 		title: '',
 		children: [],
-	};
+	}
 
 	// do only if page has headers, else simply return empty list
 	if (page.value.headers) {
 		page.value.headers.forEach((header, index) => {
 			// level 1 -> push previous curHeader and overwrite with new one
 			if (header.level === 1) {
-				grouped.push({...curHeader});
+				grouped.push({...curHeader})
 
-				curHeader = {...header, children: []};
+				curHeader = {...header, children: []}
 			}
 			// level 2 -> push to previous curHeader
 			else if (header.level === 2) {
@@ -161,7 +166,7 @@ const getHeaders = () => {
 						slug: '',
 						title: '',
 						children: []
-					});
+					})
 				}
 
 				// push header to last children of curHeader
@@ -173,7 +178,7 @@ const getHeaders = () => {
 		grouped.push(curHeader)
 	}
 
-	return grouped;
+	return grouped
 }
 
 let headers = ref(getHeaders())

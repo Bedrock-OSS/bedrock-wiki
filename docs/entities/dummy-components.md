@@ -3,7 +3,12 @@ title: Dummy Components
 category: Documentation
 ---
 
-Dummy components are useless components that are only used for data storage. Dummy components **don't** do anything on their own. They need to be paired with secondary mechanics to have any function. Dummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
+:::warning Deprecation Warning
+
+'Dummy Components' is an older concept, which has been primarily replaced by [actor properties](https://learn.microsoft.com/en-us/minecraft/creator/documents/introductiontoentityproperties). You should consider using actor properties when possible.
+:::
+
+Dummy components are "useless" components that are only used for data storage. Dummy components **don't** do anything on their own. They need to be paired with secondary mechanics to have any function. Dummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
 
 Good examples are `variant` and `mark_variant`. These components can be set with an Integer value. In the vanilla resource pack, this Integer is used to pick the textures for the Cat, and Horse. Another good example is `is_tamed`, which is used by the Horse to handle whether he is ridable or not.
 

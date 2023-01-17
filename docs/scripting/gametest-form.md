@@ -248,7 +248,7 @@ Let's say our form must be open with stick that's named "Form Opener". You can u
 
 ```js
 world.events.beforeItemUse.subscribe(event => {
-	if (event.item.id === "minecraft:stick" && event.item.nameTag === "Form Opener") {
+	if (event.item.typeId === "minecraft:stick" && event.item.nameTag === "Form Opener") {
 		// Form
 	};
 });

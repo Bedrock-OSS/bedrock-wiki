@@ -340,7 +340,7 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/NGeNhZpvz
 
 ## Marketplace
 
--   Q:Will gametests be available for marketplace content? If yes, is there an approximate date?
+-   **Q:** Will gametests be available for marketplace content? If yes, is there an approximate date?
 
 -   **A:** Currently our focus is on testing scenarios. While we have lots of future thoughts and plans, we don't want to get folks making plans or counting on anything we can't promise yet.
 

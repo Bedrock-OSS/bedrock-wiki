@@ -5,6 +5,10 @@ tags:
     - experimental
 ---
 
+:::warning
+This document covers outdated information as well as experimental permutations. For up to date and stable information check [official docs](https://learn.microsoft.com/en-us/minecraft/creator/documents/introductiontoentityproperties).
+:::
+
 Documentation on the new Entity Properties, also known as Actor Properties, introduced in the 1.16.230.52 Minecraft: Bedrock Edition beta version.
 Entity Properties were implemented to save data or store values on entities efficiently without needing the use of components or attributes (For example, "minecraft:variant") in server-side of the entity (Behavior Pack), similar to Block Properties.
 

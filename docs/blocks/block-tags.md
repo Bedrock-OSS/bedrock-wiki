@@ -47,10 +47,10 @@ Vanilla tags can be applied to custom blocks, and some vanilla blocks are tagged
 | iron_pick_diggable | Coal Ore, Deepslate Coal Ore, Deepslate Diamond Ore, Deepslate Emerald Ore, Deepslate Gold Ore, Deepslate Iron Ore, Deepslate Redstone Ore, Diamond Ore, Emerald Ore, Gold ore, Iron Ore, Lapis Lazuli Ore, Redstone Ore, Block of Raw Iron, Block of Raw Gold |
 | stone_pick_diggable | |
 | wood_pick_diggable | |
-| dirt | Dirt, Coarse Dirt, Farmland |
+| dirt | Farmland |
 | sand | Red Sand, Sand |
 | gravel | Gravel |
-| grass | Grass Block |
+| grass | Grass Block, Dirt, Coarse Dirt, Dirt Path |
 | snow | Snow |
 | rail | Rail, Powered Rail, Detector Rail, Activator Rail |
 | water | Water |
