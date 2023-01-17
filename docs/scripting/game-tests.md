@@ -67,8 +67,23 @@ AKA "mojang-net"
 
 **Version**
 
-- Before 1.19.20 - `[ 0, 1, 0 ]`
-- 1.19.20+ - `"1.0.0-beta"`
+-   Before 1.19.20 - `[ 0, 1, 0 ]`
+-   1.19.20+ - `"1.0.0-beta"`
+-   1.19.50+ - Available versions
+	- @minecraft/server:
+		- `1.1.0-beta`: Latest beta API module with lots of experimental features to manipulating a Minecraft world, including entities, blocks, dimensions, and more. Requires the Beta APIs experiment to be turned on.
+		- `1.0.0`: Latest stable API module, do not require the Beta APIs experiment to be turned on. This initial API set is narrow, but more APIs into non-beta modules over the coming months.
+		- `0.1.0`: Alpha API module. Requires the Beta APIs experiment to be turned on.
+	- @minecraft/server-ui:
+		- `1.0.0-beta`: Latest beta API module to create and display a simple dialog-based user experiences. Requires the Beta APIs experiment to be turned on.
+		- `0.1.0`: Alpha API module. Requires the Beta APIs experiment to be turned on.
+	- @minecraft/server-gametest:
+		- `1.0.0-beta`: Latest beta API module that provides testing content experiences in Minecraft. Requires the Beta APIs experiment to be turned on.
+	- @minecraft/server-net:
+		- `1.0.0-beta`: Latest beta API module. Requires the Beta APIs experiment to be turned on and only works in Bedrock dedicated servers.
+	- @minecraft/server-admin:
+		- `1.0.0-beta`: Latest beta API module. Requires the Beta APIs experiment to be turned on and only works in Bedrock dedicated servers.
+
 
 As of release 1.19.30, you can also specify dependencies using `module_name`:
 
@@ -77,7 +92,7 @@ As of release 1.19.30, you can also specify dependencies using `module_name`:
 ```json
 {
 	"module_name": "@minecraft/server",
-	"version": "1.0.0-beta"
+	"version": "1.1.0-beta"
 }
 ```
 
@@ -99,7 +114,6 @@ The entry point contains scripts and/or imports to other script files.
 
 ```js
 import './MyGameTest.js';
-import './OtherGameTest.js';
 ```
 
 <CodeHeader>BP/scripts/gametests/MyGameTest.js</CodeHeader>
@@ -107,24 +121,19 @@ import './OtherGameTest.js';
 ```js
 // This file demonstrates that the code is working by
 // Spamming the chat with "Hello World"
- 
+
 // Import world component from "@minecraft/server"
 import { world } from '@minecraft/server';
-// Import variables from other javascript file
-import defaultExport, { export1 } from "./OtherGameTest.js";
 
-// Spams the chat with "Hello World"
+// Subscribe to an event that calls every Minecraft tick
 world.events.tick.subscribe(() => {
-	// Runs command in overworld dimension
-	world.getDimension("overworld").runCommand(`say Hello World`);
+	// Spams the chat with "Hello World" with world.say function in API
+	world.say("Hello World");
+
+	// or run a command in overworld dimension
+	// using native API methods are recommended
+	world.getDimension("overworld").runCommandAsync("say Hello World");
 });
-```
-
-<CodeHeader>BP/scripts/gametests/OtherGameTest.js</CodeHeader>
-
-```js
-export default function defaultExport (param) {};
-export const export1 = "export1";
 ```
 
 GameTests can be used with the `/gametest` command.
@@ -138,6 +147,8 @@ GameTests can be used with the `/gametest` command.
 -   `/gametest create <testName: string> [width: int] [height: int] [depth: int]` - Creates a blank GameTest area with the specified dimensions.
 -   `/reload` - Reloads all function and script files from all behavior packs. (1.19+)
 
+(1.19.40+) Vanilla GameTests are removed from the Minecraft game files, so you cannot run any gametests without adding your own custom behavior pack. They tried to hide over [**here**](https://github.com/microsoft/minecraft-gametests/tree/main/behavior_packs/vanilla_gametest)...
+
 ## Reference Documentation
 
 Official documentation on are hosted on Microsoft Learn and can be found here:
@@ -148,24 +159,25 @@ Official documentation on are hosted on Microsoft Learn and can be found here:
 -   [`@minecraft/server-admin`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft-server-admin/mojang-minecraft-server-admin)
 -   [`@minecraft/server-net`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-net/mojang-net)
 
-Official typescript declarations can be found here:
+Official typescript declarations for latest Beta API modules in Minecraft Preview can be found here:
 
--   [`@minecraft/server`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0-beta.11940b23)
--   [`@minecraft/server-gametest`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.11940b23)
--   [`@minecraft/server-ui`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.0.0-beta.11940b23)
--   [`@minecraft/server-admin`](https://www.npmjs.com/package/@minecraft/server-admin/v/1.0.0-beta.11940b23)
--   [`@minecraft/server-net`](https://www.npmjs.com/package/@minecraft/server-net/v/1.0.0-beta.11940b23)
+-   [`@minecraft/server`](https://www.npmjs.com/package/@minecraft/server/v/beta)
+-   [`@minecraft/server-gametest`](https://www.npmjs.com/package/@minecraft/server-gametest/v/beta)
+-   [`@minecraft/server-ui`](https://www.npmjs.com/package/@minecraft/server-ui/v/beta)
+-   [`@minecraft/server-admin`](https://www.npmjs.com/package/@minecraft/server-admin/v/beta)
+-   [`@minecraft/server-net`](https://www.npmjs.com/package/@minecraft/server-net/v/beta)
 
 These allow for enhanced auto-completions and validation when used inside of your editor.
-- bridge. v2: ships with GameTest support built-in.
-- Visual Studio Code: install Node.js and npm, then run the following in command line:
+
+-   bridge. v2: ships with GameTest support built-in.
+-   Visual Studio Code: install Node.js and npm, then run the following in command line:
 
 ```
-npm install @minecraft/server
-npm install @minecraft/server-gametest
-npm install @minecraft/server-ui
-npm install @minecraft/server-admin
-npm install @minecraft/server-net
+npm install @minecraft/server@beta
+npm install @minecraft/server-gametest@beta
+npm install @minecraft/server-ui@beta
+npm install @minecraft/server-admin@beta
+npm install @minecraft/server-net@beta
 ```
 
 If you're having issues with the Script API, consider joining **Bedrock Add-Ons** for support, which you can find alongside a vast array of other resources on the [Useful Links](/meta/useful-links#discord-links) page!

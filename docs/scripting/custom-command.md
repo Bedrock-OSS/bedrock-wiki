@@ -7,7 +7,7 @@ mentions:
 	- cda94581
 ---
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.40.23
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.60.26
 :::
 
 Who doesn't want any custom command? Me neither. With the Script API, you can create your custom command. In this article, we will create your own custom command using the Script API.
@@ -52,7 +52,7 @@ We think you have understood all of these things, so create your pack
 		{
 			// Minecraft native module - needed to use the "@minecraft/server" module
 			"module_name": "@minecraft/server",
-			"version": "1.0.0-beta"
+			"version": "1.1.0-beta"
 		}
     ]
 }
@@ -103,7 +103,7 @@ This is the main function to listen our commands. `world.events.beforeChat.subsc
 - A `switch` statement lists through the possible options for the value, and if it matches, runs the code until the `break` statement
 - `eventData.cancel = true` will cancel the message to actually sended to another player
 - `const player = eventData.sender` declares a variable `player` to be used later
-- `await player.runCommandAsync('gamemode c')` runs the command on the sender. `runCommandAsync()` is recommended over `runCommand()` whenever possible
+- `await player.runCommandAsync('gamemode c')` runs the command on the sender.
 
 ## Limited Command Usage by Tags
 
