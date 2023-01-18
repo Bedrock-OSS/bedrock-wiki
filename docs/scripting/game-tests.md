@@ -11,7 +11,7 @@ mentions:
 The Script API requires you to activate **"Beta APIs"**, **"Enable GameTest Framework"**, or **"GameTest Framework"** in your world settings, and you must be using **Minecraft 1.16.210.60 beta or above**.
 :::
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.40.23
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.60.26
 :::
 
 The Script API (formerly GameTests, and not to be confused with the [Legacy Scripting API](/scripting/scripting-intro)) is a beta feature that allows for a new variety of creations, as well as unit tests ("GameTests") to make it easier to test if game mechanics work. These are built with JavaScript files in the behavior pack folder.
@@ -20,7 +20,7 @@ The Script API (formerly GameTests, and not to be confused with the [Legacy Scri
 
 In the behavior pack manifest, you need to add a `javascript` module (below 1.19.0) or `script` module (1.19.0+) and set an `entry` point for your GameTests.
 
-<CodeHeader>Minecraft 1.19.0+</CodeHeader>
+<CodeHeader>BP/manifest.json#modules[0]</CodeHeader>
 
 ```json
 {
@@ -32,7 +32,7 @@ In the behavior pack manifest, you need to add a `javascript` module (below 1.19
 }
 ```
 
-<CodeHeader>Minecraft version below 1.19.0</CodeHeader>
+<!-- <CodeHeader>Minecraft version below 1.19.0</CodeHeader>
 
 ```json
 {
@@ -41,7 +41,7 @@ In the behavior pack manifest, you need to add a `javascript` module (below 1.19
 	"type": "javascript",
 	"entry": "scripts/gametests/Main.js"
 }
-```
+``` -->
 
 Additionally, dependencies will need to be set based on modules used
 
@@ -67,22 +67,42 @@ AKA "mojang-net"
 
 **Version**
 
--   Before 1.19.20 - `[ 0, 1, 0 ]`
--   1.19.20+ - `"1.0.0-beta"`
--   1.19.50+ - Available versions
+Script API modules have their own versions, since 1.19.20 they follow semantic versioning (that follows the format of X.Y.Z) to determine new features release in the API.
+
+-   Before 1.19.20
+	
+	All API modules uses `[ 0, 1, 0 ]`. GameTest Framework experiment must be activated to use in world.
+
+-   1.19.20+
+	
+	All API modules have their versions incremented to `"1.0.0-beta"`, new features/changes are available in the beta version, and `0.1.0` having old developments and features in the API. GameTest Framework experiment must be activated to use in world.
+
+-   1.19.50+
+	
+	Stable API modules, these do not require the Beta APIs experiment to be turned on. This initial API set is narrow, but more APIs into non-beta modules over the coming months.
+
 	- @minecraft/server:
-		- `1.1.0-beta`: Latest beta API module with lots of experimental features to manipulating a Minecraft world, including entities, blocks, dimensions, and more. Requires the Beta APIs experiment to be turned on.
-		- `1.0.0`: Latest stable API module, do not require the Beta APIs experiment to be turned on. This initial API set is narrow, but more APIs into non-beta modules over the coming months.
-		- `0.1.0`: Alpha API module. Requires the Beta APIs experiment to be turned on.
+		- `1.0.0`
+
+	Beta API modules, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
+	
+	- @minecraft/server:
+		- `1.1.0-beta`
+		- `0.1.0` (module is named `mojang-minecraft`, not `@minecraft/server` when importing module)
+
 	- @minecraft/server-ui:
-		- `1.0.0-beta`: Latest beta API module to create and display a simple dialog-based user experiences. Requires the Beta APIs experiment to be turned on.
-		- `0.1.0`: Alpha API module. Requires the Beta APIs experiment to be turned on.
+		- `1.0.0-beta`
+		- `0.1.0` (module is named `mojang-minecraft-ui`, not `@minecraft/server-ui` when importing module)
+		
 	- @minecraft/server-gametest:
-		- `1.0.0-beta`: Latest beta API module that provides testing content experiences in Minecraft. Requires the Beta APIs experiment to be turned on.
+		- `1.0.0-beta`
+
 	- @minecraft/server-net:
-		- `1.0.0-beta`: Latest beta API module. Requires the Beta APIs experiment to be turned on and only works in Bedrock dedicated servers.
+		- `1.0.0-beta` (Bedrock dedidcated server only, must enable in `permission.json`)
+
 	- @minecraft/server-admin:
-		- `1.0.0-beta`: Latest beta API module. Requires the Beta APIs experiment to be turned on and only works in Bedrock dedicated servers.
+		- `1.0.0-beta` (Bedrock dedidcated server only)
+
 
 
 As of release 1.19.30, you can also specify dependencies using `module_name`:
