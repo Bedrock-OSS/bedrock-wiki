@@ -1,6 +1,6 @@
 ---
 title: Simple Custom Commands
-category: Script API
+category: Tutorials
 tags:
     - experimental
 mentions:

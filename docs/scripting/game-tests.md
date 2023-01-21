@@ -1,6 +1,6 @@
 ---
-title: Script API
-category: Script API
+title: GameTests
+category: Tutorials
 tags:
     - experimental
 mentions:

@@ -1,6 +1,6 @@
 ---
-title: Script Form
-category: Script API
+title: Script Forms
+category: Tutorials
 tags:
 	- experimental
 mentions:
