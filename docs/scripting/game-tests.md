@@ -192,12 +192,20 @@ These allow for enhanced auto-completions and validation when used inside of you
 -   bridge. v2: ships with GameTest support built-in.
 -   Visual Studio Code: install Node.js and npm, then run the following in command line:
 
-```
+Latest beta API modules:
+
+```bash
 npm install @minecraft/server@beta
 npm install @minecraft/server-gametest@beta
 npm install @minecraft/server-ui@beta
 npm install @minecraft/server-admin@beta
 npm install @minecraft/server-net@beta
+```
+
+Latest stable API modules:
+
+```bash
+npm install @minecraft/server
 ```
 
 If you're having issues with the Script API, consider joining **Bedrock Add-Ons** for support, which you can find alongside a vast array of other resources on the [Useful Links](/meta/useful-links#discord-links) page!

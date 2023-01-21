@@ -1,15 +1,7 @@
 ---
 title: TypeScript
-category: Legacy Scripting
+category: Game Tests
 ---
-
-:::danger Stop!
-
-This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/game-tests.html).
-
-:::
-
-[//]: # 'Documentation is heavily based on https://minecraft-addon-tools.github.io/tutorials/getting-started'
 
 [TypeScript](https://www.typescriptlang.org/) is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.
 
@@ -21,7 +13,140 @@ TypeScript is a language which requires compilation into JavaScript. Minecraft h
 
 First, the TypeScript files need to be compiled into JavaScript, which is all accomplished by utilizing the [TypeScript Compiler](https://www.npmjs.com/package/typescript). Then the files can be utilized by Minecraft's scripting system.
 
-Since there is already a build step, we might as well incorporate some other systems to allow for file separation and code sharing between the `client` and `server`. Minecraft's scripting system will only act on the `server.js` and `client.js` scripts within their respective folders utilizing what is assumed to be, Mojang's own JavaScript interpreter. Therefore, any logic split across multiple files must be merged into a single large file. This is where tooling such as [webpack](https://webpack.js.org/) and [browserify](https://browserify.org/) come in handy.
+Since there is already a build step, we might as well incorporate some other systems to allow for file separation and code sharing. Minecraft's scripting system will only act on the script files within their respective folders utilizing what is assumed to be, Mojang's own JavaScript interpreter. Therefore, any logic split across multiple files must be merged into a single large file. This is where tooling such as [webpack](https://webpack.js.org/) and [browserify](https://browserify.org/) come in handy.
+
+## Script API
+
+## Prerequisites
+
+1. Minecraft Bedrock Edition (Windows 10)
+2. a code editor like Visual Studio Code (although Notepad will technically be sufficient, I will be assuming the usage of VSCode going forward)
+3. basic knowledge of Javascript (this tutorial will not be teaching you how to code in Javascript and presumes a baseline knowledge of it)
+4. [Node.js](https://nodejs.org/en/) is required for installing tooling and compiling TypeScript into JavaScript.
+5. Knowledge of TypeScript
+
+## Setup Guide
+
+This guide is for setting up a Script API TypeScript project using TypeScript compiler.
+
+### Getting Started
+
+Open a terminal (Command Prompt for Windows) and navigate to where the project should be located. It can be anywhere. For Windows 10 you can also `Shift + RClick` in file explorer and select `Open in PowerShell`.
+
+Next we need to install the template generator for creating the addon. To do this, enter the following commands.
+
+The following command install TypeScript globally.
+
+```bash
+npm install -g typescript
+```
+
+The following command creates a package.json file in current directory. See [here](https://docs.npmjs.com/cli/v9/commands/npm-init) for more infomation.
+
+```bash
+npm init -y
+```
+
+The following commands install Script API modules. Beta APIs is used in this example.
+
+```bash
+npm install @minecraft/server@beta
+npm install @minecraft/server-ui@beta
+npm install @minecraft/server-gametest@beta
+npm install @minecraft/server-admin@beta
+npm install @minecraft/server-net@beta
+```
+
+::: tip
+
+If you receive an error such as `command npm not found`, ensure you have Node.js installed and added to the PATH.
+
+:::
+
+Now the project can be initialized. The next step is to create a TypeScript project by creating a `tsconfig.json` file in your current directory, with the following details which simulates the Minecraft Scripting API file system.
+
+<CodeHeader>tsconfig.json</CodeHeader>
+
+```json
+{
+  "compilerOptions": {
+    // Specify what type of code is generated.
+    "module": "ES2020",
+    "target": "ES2021",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    // Specify the folder entry for your TS files
+    "baseUrl": "./scripts",
+    "rootDir": "./scripts",
+    // Specify the folder output for generated JS files.
+    "outDir": "./packs/behaviors/scripts"
+  }
+}
+```
+
+Now that you created the project, it can be opened in your IDE of choice. If you are utilizing VS Code, you can `cd` into your project directory and run `code .` to open your project.
+
+### Project Structure
+
+<div markdown="0" class="folder-structure">
+    <ul>
+        <li><span class="folder">node_modules</span></li>
+        <li><span class="folder">packs</span>
+            <ul>
+                <li><span class="folder"><a href="/schemas/behavior-folder" target="__blank">behaviors</a></span>
+                    <ul>
+                        <li><span class="file">manifest.json</span></li>
+                        <li><span class="image">pack_icon.png</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder"><a href="/schemas/resource-folder" target="__blank">resources</a></span>
+                    <ul>
+                        <li><span class="file">manifest.json</span></li>
+                        <li><span class="image">pack_icon.png</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="folder">scripts</span>
+            <ul>
+                <li><span class="file">Main.ts</span></li>
+            </ul>
+        </li>
+        <li><span class="file">package-lock.json</span></li>
+        <li><span class="file">package.json</span></li>
+        <li><span class="file">tsconfig.json</span></li>
+    </ul>
+</div>
+
+Unless you know what you are doing, the only part of the project to be concerned with is everything within the `packs` folder. That is where all the development should take place.
+
+### Commands
+
+The following commands are most utilized when developing a project.
+
+```bash
+tsc
+```
+
+`tsc` will compile all your TS files in scripts folder to your behavior packs folder.
+
+```bash
+tsc --watch
+```
+
+`--watch` will watch for any changes you make within the `scripts` directory and automatically reinstall the addon.
+
+To run the code in Minecraft, zip the behavior pack and import it to a Minecraft world.
+
+## Legacy Scripting
+
+:::danger Stop!
+
+This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/game-tests.html).
+
+:::
+
+[//]: # 'Documentation is heavily based on https://minecraft-addon-tools.github.io/tutorials/getting-started'
 
 You do not need to know how to utilize these tools since there are already [libraries](#typescript-supported-libraries) that utilize them for you without any effort on your behalf. It is just important to understand the tooling making these sorts of libraries possible.
 
