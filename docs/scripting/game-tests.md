@@ -28,7 +28,7 @@ In the behavior pack manifest, you need to add a `javascript` module (below 1.19
 	"version": [1, 0, 0],
 	"type": "script",
 	"language": "javascript",
-	"entry": "scripts/gametests/Main.js"
+	"entry": "scripts/Main.js"
 }
 ```
 
@@ -119,13 +119,13 @@ As of release 1.19.30, you can also specify dependencies using the `module_name`
 
 The entry point contains scripts and/or imports to other script files.
 
-<CodeHeader>BP/scripts/gametests/Main.js</CodeHeader>
+<CodeHeader>BP/scripts/Main.js</CodeHeader>
 
 ```js
 import './MyGameTest.js';
 ```
 
-<CodeHeader>BP/scripts/gametests/MyGameTest.js</CodeHeader>
+<CodeHeader>BP/scripts/MyGameTest.js</CodeHeader>
 
 ```js
 // This file demonstrates that the code is working by

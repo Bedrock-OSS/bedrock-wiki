@@ -20,7 +20,7 @@ show_toc: false
     'BP/recipes/example.recipe.json',
     'BP/scripts/client/exampleClient.js',
     'BP/scripts/server/exampleServer.js',
-    'BP/scripts/gametests/exampleTest.js',
+    'BP/scripts/exampleTest.js',
     'BP/spawn_rules/example.spawn.json',
     'BP/texts/languages.json',
     'BP/texts/\*.lang',
