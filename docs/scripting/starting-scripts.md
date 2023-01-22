@@ -1,8 +1,6 @@
 ---
 title: Starting Scripting
 category: General
-tags:
-    - experimental
 mentions:
 	- cda94581
 ---
