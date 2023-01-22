@@ -32,17 +32,6 @@ In the behavior pack manifest, you need to add a `javascript` module (below 1.19
 }
 ```
 
-<!-- <CodeHeader>Minecraft version below 1.19.0</CodeHeader>
-
-```json
-{
-	"uuid": "239c134f-67bf-4738-9bcc-8c69d31b1f72",
-	"version": [1, 0, 0],
-	"type": "javascript",
-	"entry": "scripts/gametests/Main.js"
-}
-``` -->
-
 Additionally, dependencies will need to be set based on modules used.
 
 **@minecraft/server** - `b26a4d4c-afdf-4690-88f8-931846312678`  
@@ -79,12 +68,12 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
 
 -   1.19.50+
 	
-	Stable API modules, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
+	**Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
 	- @minecraft/server:
 		- `1.0.0`
 
-	Beta API modules, requires the Beta APIs experiment to be turned on in world settings. Many experimental features available in this version of the API, but breaking changes are common.
+	**Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
 	
 	- @minecraft/server:
 		- `1.1.0-beta`

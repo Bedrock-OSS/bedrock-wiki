@@ -268,12 +268,12 @@ form.show(event.source).then(r => {
 });
 ```
 
-When player closes the form, the function inside the `.then()` will run, even if no input was given. This can cause unintended code to run when player just closes the form. To prevent that, you will need to cancel the script using `.isCanceled`.
+When player closes the form, the function inside the `.then()` will run, even if no input was given. This can cause unintended code to run when player just closes the form. To prevent that, you will need to cancel the script using `.canceled`.
 
 ```js
 form.show(event.source).then(r => {
 	// This will stop the code when the player closes the form
-	if (r.isCanceled) return;
+	if (r.canceled) return;
 
 	// The code when the player responds to the form
 }).catch(e => {
@@ -289,7 +289,7 @@ Action form saves the input inside `.selection`. It returns a number of the butt
 ```js
 form.show(event.source).then(r => {
 	// This will stop the code when the player closes the form
-	if (r.isCanceled) return;
+	if (r.canceled) return;
 
 	let response = r.selection;
 	switch (response) {
@@ -314,11 +314,11 @@ form.show(event.source).then(r => {
 ```
 
 ### ModalFormData
-Same as an action form, Message form will save the input inside `.selection`. However, something is odd about this form. `.button1` returns 1, but `.button2` returns 0. Using `.isCanceled` will not work, but closing the form will return 0. This is why button2 must be used for the "No/Cancel" option.
+Same as an action form, Message form will save the input inside `.selection`. However, something is odd about this form. `.button1` returns 1, but `.button2` returns 0. Using `.canceled` will not work, but closing the form will return 0. This is why button2 must be used for the "No/Cancel" option.
 
 ```js
 form.show(event.source).then(r => {
-	// ".isCanceled" does not work, but returns 0 to ".selection"
+	// ".canceled" does not work, but returns 0 to ".selection"
 	if (r.selection === 0) {
 		// Do something when the player closes the form or presses "button2"
 		return;
@@ -357,7 +357,7 @@ form.toggle(...);
 
 form.show(event.source).then(r => {
 	// This will stop the code when the player closes the form
-	if (r.isCanceled) return;
+	if (r.canceled) return;
 
 	// This will assign every input their own variable
 	let [ textField, dropdown, slider, toggle ] = r.formValues;
