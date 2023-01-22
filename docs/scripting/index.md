@@ -1,8 +1,12 @@
 ---
 title: Scripting
 categories:
-    - title: Script API
+    - title: General
       color: blue
-    - title: Legacy Scripting
+    - title: Tutorials
+      color: green
+    - title: Documentation
       color: red
+    - title: Legacy Scripting
+      color: orange
 ---

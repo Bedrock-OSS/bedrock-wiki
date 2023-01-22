@@ -3,7 +3,7 @@ title: Intro to Scripting
 category: Legacy Scripting
 nav_order: 1
 tags:
-    - guide
+    - outdated
 ---
 
 :::danger Stop!

@@ -2,8 +2,7 @@
 title: Saving and Loading Data
 category: Legacy Scripting
 tags:
-    - intermediate
-    - recipe
+    - outdated
 ---
 
 :::danger Stop!
