@@ -116,7 +116,7 @@ import defaultExport, { export1 } from "./OtherGameTest.js";
 // Spams the chat with "Hello World"
 world.events.tick.subscribe(() => {
 	// Runs command in overworld dimension
-	world.getDimension("overworld").runCommand(`say Hello World`);
+	world.getDimension("overworld").runCommandAsync(`say Hello World`);
 });
 ```
 
