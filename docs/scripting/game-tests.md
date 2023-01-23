@@ -56,7 +56,7 @@ AKA "mojang-net"
 
 **Version**
 
-Script API modules all have their own versions and since 1.19.20 they follow semantic versioning (which follows the format of X.Y.Z) to determine new features that have released into the API.
+Script API modules all have their own versions and since 1.19.20 they follow semantic versioning (which follows the format of X.Y.Z) to determine new features that have released into the API. You can learn how Minecraft script module versioning works [here](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptversioning)
 
 -   Before 1.19.20
 	
