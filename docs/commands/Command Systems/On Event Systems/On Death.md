@@ -9,7 +9,7 @@ This system will run your desired commands on the event that a player dies.
 
 ## System
 
-*Command Line / mcfunction:*
+*mcfunction / Command Line:*
 ```mcfunction
 /scoreboard players set @a [scores={alive=!2}] alive 0
 /scoreboard players set @e [type=player] alive 1
