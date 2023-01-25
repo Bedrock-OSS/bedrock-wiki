@@ -16,6 +16,7 @@ This system will run your desired commands on the event that a player dies.
 ## Setup
 
 *To be typed in chat:*
+
 `/scoreboard objectives add alive dummy`
 
 ## System

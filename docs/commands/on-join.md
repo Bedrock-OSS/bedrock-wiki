@@ -16,6 +16,7 @@ This system will run your desired commands on the event that a players joins the
 ## Setup
 
 *To be typed in chat:*
+
 `/scoreboard objectives add joined dummy`
 
 ## System
