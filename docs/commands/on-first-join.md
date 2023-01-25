@@ -28,7 +28,7 @@ Just make sure to follow the given order and properly add the selector argument 
 
 ## Explanation
 
-When the player joins the world for the first time, they will not have the joined tag.
+When the player joins the world for the first time, they will not have the joined tag.<br>
 Once we run our desired commands for players without the tag, they will be given the tag immediately and the commands will not repeat for them again unless we remove their tag with:<br>
 `/tag <player> remove joined`<br>
 <br>
