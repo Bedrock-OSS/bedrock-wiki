@@ -1,8 +1,8 @@
 ---
 title: Commands
 categories:
-    - title: General
+    - title: Command Systems
       color: blue
     - title: On Event Systems
-      color: green
+      color: blue
 ---
