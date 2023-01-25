@@ -2,8 +2,8 @@
 title: On Death
 category: On Event Systems
 mention:
-	- BedrockCommands
-	- EziGotFliped
+    - BedrockCommands
+    - EziGotFliped
 nav_order: 4
 ---
 
