@@ -1,3 +1,13 @@
+---
+title: On Death
+category: On Event Systems
+mention:
+	- BedrockCommands
+mention:
+	- EziGotFliped
+nav_order: 4
+---
+
 ## Introduction
 
 This system will run your desired commands on the event that a player dies.
