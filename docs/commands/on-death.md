@@ -9,7 +9,7 @@ nav_order: 4
 
 ## Introduction
 
-[Sourced By Bedrock Commands | Community & Archive](https://discord.gg/SYstTYx5G5)
+[Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
 This system will run your desired commands on the event that a player dies.
 
