@@ -9,7 +9,7 @@ nav_order: 2
 
 ## Introduction
 
-[Sourced By Bedrock Commands | Community & Archive](https://discord.gg/SYstTYx5G5)
+[Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
 This system will run your desired commands on the event that a players joins the world.
 
@@ -33,7 +33,8 @@ This system will run your desired commands on the event that a players joins the
 /scoreboard players set @a joined 1
 ```
 
-![commandBlockChain](/assets/images/commands/commandBlockChain.png)
+![export1674579202856](https://user-images.githubusercontent.com/99989764/215549016-7b3a9869-dea2-4e32-9e20-78da4c74edf1.png)
+
 
 Here we have used a `/tp` command as an example but you can use any command you prefer and as many as you require.
 
