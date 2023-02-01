@@ -23,7 +23,7 @@ This system will run your desired commands on the event that a players joins the
 
 <CodeHeader>mcfunction</CodeHeader>
 
-```
+```yaml
 /scoreboard players add @a joined 0
 
 #Your Commands Here (example)
