@@ -23,7 +23,7 @@ This system will run your desired commands on the event that a player dies.
 
 <CodeHeader>mcfunction</CodeHeader>
 
-```
+```yaml
 /scoreboard players set @a [scores={alive=!2}] alive 0
 /scoreboard players set @e [type=player] alive 1
 
