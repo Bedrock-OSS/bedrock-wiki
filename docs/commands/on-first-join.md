@@ -17,7 +17,7 @@ This system will run your desired commands on the event that a player joins the 
 
 <CodeHeader>mcfunction</CodeHeader>
 
-```
+```yaml
 #Your Commands Here (examples)
 /give @a [tag=!joined] stone_pickaxe
 /give @a [tag=!joined] bread 16 1
