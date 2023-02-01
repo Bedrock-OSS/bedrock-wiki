@@ -14,4 +14,8 @@ You are advised to learn JavaScript free from online courses available online, s
 Minecraft Bedrock Edition uses a their own version of JavaScript, which is based on QuickJS. It uses the ECMAScript module (ESM) system for organizing and loading code, which allows for a more modular and organized approach to writing scripts for the game.
 <!-- Thanks ChatGPT -->
 
-Some Script API projects are hosted on GitHub, if you want to see Script API projects consider checking this [page](https://github.com/topics/gametest)
+[Script API Projects](https://github.com/topics/gametest) - Some Script API projects are hosted on GitHub. Some of them are worth checking out.
+
+[Script API Examples](https://github.com/JaylyDev/ScriptAPI) - JavaScript code snippets that uses Script API modules only
+
+[Sample GameTests from Microsoft](https://github.com/microsoft/minecraft-gametests) - Sample GameTest behavior files for Minecraft Bedrock Edition. Minecraft supports GameTests - a combination of JavaScript + MCStructures - for validating facets of Minecraft behavior. 

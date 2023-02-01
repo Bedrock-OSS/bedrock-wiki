@@ -8,7 +8,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.60.26
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.70
 :::
 
 In version 1.18.30, Minecraft released wonderful new script module, `@minecraft/server-ui` (formerly named `mojang-minecraft-ui`). With this module, we can create form UIs without the need for JSON UI-wrangling.

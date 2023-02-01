@@ -7,7 +7,7 @@ mentions:
 	- cda94581
 ---
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.60.26
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.70
 :::
 
 Who doesn't want cool custom commands? With the Script API, you can create your custom commands. In this article, we will be creating custom commands using the Script API.
@@ -18,7 +18,7 @@ Who doesn't want cool custom commands? With the Script API, you can create your 
 Before creating a script, it is recommended to learn the basics of JavaScript, Addons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
 :::
 
-Assuming you have understood all of these things, let's start creating the pack.
+Assuming you have understood the basics of scripting, let's start creating the pack.
 
 <CodeHeader>manifest.json</CodeHeader>
 
@@ -54,7 +54,7 @@ Assuming you have understood all of these things, let's start creating the pack.
 			"module_name": "@minecraft/server",
 			"version": "1.1.0-beta"
 		}
-    ]
+  ]
 }
 ```
 
@@ -70,7 +70,7 @@ In our manifest, we have added script module. The `entry` is where our script fi
 
 ## Creating Custom Commands
 
-Now comes the fun part- creating our custom commands. First, we will add the module.
+Now comes the fun part - creating our custom commands. First, we will add the module.
 
 <CodeHeader>BP/scripts/index.js</CodeHeader>
 
