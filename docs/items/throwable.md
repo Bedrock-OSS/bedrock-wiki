@@ -201,6 +201,14 @@ Now, you have to register the animation controller to the `player.json` file:
         "throwables_controller": "controller.animation.player.throwables" // ID as referenced in animation controller file
       }
     },
+    "components": {
+        "minecraft:breathable": { // keeps breath timer bubbles from appearing 
+          "total_supply": 15,
+          "suffocate_time": -1,
+          "inhale_time": 3.75,
+          "generates_bubbles": false
+    	}
+    },
     ...
   }
 ```
