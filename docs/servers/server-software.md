@@ -47,7 +47,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
 -   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
--   [PowerNukkitX](https://github.com/PowerNukkit/PowerNukkitX)
+-   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)
 
 ### TypeScript
 
