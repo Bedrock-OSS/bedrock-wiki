@@ -8,7 +8,6 @@ mentioned:
     - MedicalJewel105
     - SirLich
     - SmokeyStack
-description: A page with a description just for being a page with a description.
 ---
 
 ## What?

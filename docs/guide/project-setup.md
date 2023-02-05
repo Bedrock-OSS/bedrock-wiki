@@ -7,13 +7,13 @@ prefix: '4. '
 
 ## The com.mojang folder
 
-The `com.mojang` folder is a special folder where Minecraft stores data (Addons, Worlds, Player info...). Minecraft understands this location, and all files we access or create will be placed somewhere in this folder!
+The `com.mojang` folder is a special folder where we build our addons. Minecraft understands this location, and addon-files placed here will appear in-game. All files we access or create will be placed somewhere in this folder!
 
-You should create a shortcut to the `com.mojang` folder on your Desktop or on your mobile device, so you can easily access it at any time. The exact location of the `com.mojang` folder will depend on your device OS.
+You should create a shortcut to the `com.mojang` folder on your Desktop or on your mobile device, so you can easily access it at any time. The exact location of the `com.mojang` folder will depend on your device OS. 
 
 ### Windows
 
-_Tip: You can type %appdata% into the searchbar to jump directly into the 'C:\Users\USERNAME\AppData\' folder._
+*Tip: You can type %appdata% into the searchbar to jump directly into the 'C:\Users\USERNAME\AppData\' folder.*
 
 `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
 
@@ -36,9 +36,8 @@ We will develop our addon in `development_behavior_packs` and `development_resou
 ## Your Workspace
 
 :::tip
-Project setup is different for android and other platforms. Consider looking into our guide for android platforms.
+Project setup is different for android and other platforms. Consider looking into our guide for android platform.
 :::
-
 <BButton
 	link="./project-setup-android"
 	color=blue
@@ -234,27 +233,29 @@ Now we create a world to test your new add-on!
 Remember that in future, we will represent `com.mojang/development_behavior_packs/guide_RP/` as `RP`, and `com.mojang/development_behavior_packs/guide_BP/` as `BP`.
 
 <FolderView :paths="[
-	'com.mojang/development_resource_packs/guide_RP/manifest.json',
-	'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
-	'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
-	'com.mojang/development_resource_packs/guide_RP/texts/languages.json',
-	'com.mojang/development_behavior_packs/guide_BP/manifest.json',
-	'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
-	'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
-	'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
+
+'com.mojang/development_resource_packs/guide_RP/manifest.json',
+'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+'com.mojang/development_resource_packs/guide_RP/texts/languages.json',
+
+'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
+'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
+'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
+
 ]"></FolderView>
 
 ## What you have learned
 
 :::tip What you have learned:
 
--   What the com.mojang folder is, where it is and what folders it contains
--   How to setup your workspace
--   What a `manifest.json` file is
--   How to use UUIDs
--   How to create an icon for your addon
--   What a `.lang` file is
-
+-	What the com.mojang folder is, where it is and what folders it contains
+-	How to setup your workspace
+-	What a `manifest.json` file is
+-	How to use UUIDs
+-	How to create an icon for your addon
+-	What a `.lang` file is
 :::
 
 ## Your progress so far

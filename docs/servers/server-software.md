@@ -14,7 +14,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 13 |
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
-| JavaScript | [Still Active](#javascript) : 2 < [Discontinued](#javascript-1) : 5  |
+| JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
 | C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
@@ -47,7 +47,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
 -   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
--   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)
+-   [PowerNukkitX](https://github.com/PowerNukkit/PowerNukkitX)
 
 ### TypeScript
 
@@ -56,8 +56,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ### JavaScript
 
--   [BlueBird](https://github.com/BlueBirdMC/Server)
--   [GreenFrogMCBE](https://github.com/andriycraft/GreenFrogMCBE)
+-   [BlueBird](https://github.com/BlueBirdMC/BlueBird)
 
 ### Rust
 

@@ -674,9 +674,7 @@ In trade tables, if no ID is provided, the trader's entity type will be assigned
 
 ## Overrides
 
-Because trade tables do not use in-data identifiers, they are overridden simply by replacing a prior trade table with a new one. You can learn more about [asset overrides here](/concepts/overwriting-assets)
-
-Below are the currently used vanilla trade tables for each trader:
+Because trade tables do not use in-data identifiers, they are overridden simply by replacing a prior trade table with a new one. Below are the currently used vanilla trade tables for each trader:
 |Trader|Path|
 |-|-|
 |Stone Mason|`BP/trading/economy_trades/stone_mason_trades.json`|

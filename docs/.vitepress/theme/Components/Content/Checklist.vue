@@ -1,76 +1,58 @@
 <template>
-	<label
-		v-for="el, i in elementsObjects"
-		:key="i"
-		class="checklist-label"
-	>
-		<input
-			type="checkbox"
-			:checked="el.checked === true"
-			disabled
-		>
-		<span
-			class="checkbox"
-			:class="{ 'checkbox-checked': el.checked }"
-		/>
-		<div
-			v-if="el.checked"
-			class="tickmark-checked"
-		><img src="/assets/images/icons/tick.png"></div>
-		<div
-			v-else
-			class="tickmark-unchecked"
-		/>
-		<span
-			class="checklist-content"
-		>
-			{{ el.content }}
-		</span>
-	</label>
+    <label v-for="i in elementsObjects" class="checklist-label">
+        <input type="checkbox" :checked="i.checked === true" disabled />
+        <span
+            class="checkbox"
+            :class="{ 'checkbox-checked': i.checked }"
+        ></span>
+        <div v-if="i.checked" class="tickmark-checked"><img src="/assets/images/icons/tick.png" /></div>
+        <div v-else class="tickmark-unchecked"></div>
+        <span v-html="i.content" class="checklist-content"></span>
+    </label>
 </template>
 
 <script setup lang="ts">
-import { useSlots, ref } from 'vue'
+    import { useSlots, ref } from 'vue';
 
     interface IElement {
-        checked: boolean;
-        content: string;
+        checked: Boolean;
+        content: String;
     }
 
-const slots = useSlots()
+    const slots = useSlots();
 
-let elementsObjects = ref<IElement[]>([])
+    let elementsObjects = ref<IElement[]>([]);
 
-// get content of slots
-// @ts-ignore
-slots.default()[0].children.forEach(element => {
-	element = element.children
-	if (typeof element === 'object') {
-		let new_element = ''
-		// @ts-ignore
-		element.forEach( e => {
-			// if element uses some markdown formatting, the formatting will be added manually
-			if (typeof e.type === 'symbol') {
-				new_element += e.children
-			}
-			else {
-				// if element uses exactly TWO formattings, they both will be added.
-				// currently, its not possible to add more than two. I dont know if its even necessary two add this, as the only use of two formattings i am aware of is ***text***.
-				if (typeof e.children === 'object') {
-					new_element += `<${e.type}><${e.children[0].type}>` + e.children[0].children + `</${e.children[0].type}></${e.type}>`
-				}
-				else {
-					new_element +=  `<${e.type}>` + e.children + `</${e.type}>`
-				}
-			}
-		})
-		element = new_element
-	}
-	elementsObjects.value.push({
-		content: element.startsWith('[x]') ? element.replace('[x]', '') : element.replace('[ ]', ''),
-		checked: element.startsWith('[x]')
-	})
-})
+    // get content of slots
+    // @ts-ignore
+    slots.default()[0].children.forEach(element => {
+        element = element.children
+        if (typeof element === 'object') {
+            let new_element = ''
+            // @ts-ignore
+            element.forEach( e => {
+                // if element uses some markdown formatting, the formatting will be added manually
+                if (typeof e.type === 'symbol') {
+                    new_element += e.children
+                }
+                else {
+                    // if element uses exactly TWO formattings, they both will be added.
+                    // currently, its not possible to add more than two. I dont know if its even necessary two add this, as the only use of two formattings i am aware of is ***text***.
+                    if (typeof e.children === 'object') {
+                        new_element += `<${e.type}><${e.children[0].type}>` + e.children[0].children + `</${e.children[0].type}></${e.type}>`
+                    }
+                    else {
+                        new_element +=  `<${e.type}>` + e.children + `</${e.type}>`
+                    }
+                }
+            })
+            element = new_element
+        }
+        elementsObjects.value.push({
+            content: element.startsWith('[x]') ? element.replace('[x]', '') : element.replace('[ ]', ''),
+            checked: element.startsWith('[x]')
+        })
+    });
 </script>
 
 <style scoped>

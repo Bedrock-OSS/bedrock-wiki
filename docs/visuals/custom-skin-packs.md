@@ -18,10 +18,12 @@ Here is what is needed:
 
 <FolderView
 	:paths="[
+
     'com.mojang/skin_packs/my_skin_pack/texts/en_US.lang',
 	'com.mojang/skin_packs/my_skin_pack/my_skin.png',
 	'com.mojang/skin_packs/my_skin_pack/manifest.json',
 	'com.mojang/skin_packs/my_skin_pack/skins.json'
+
 ]"
 ></FolderView>
 
@@ -90,12 +92,12 @@ This file is used to define textures and shortnames for skins. Most of the optio
 
 -   The `geometry` object must be the same as on the example code in every object. Mojang removed the ability to add custom geometries via skin packs, because the feature was abused.
 -   `serialize_name` is for marketplace.
--   `localization_name` is a pack identifier. **Don't use in other skin packs** as it affects translations.
+-	`localization_name` is a pack identifier. **Don't use in other skin packs** as it affects translations.
 -   `skins` array, where you define your each skin. The skins will be displayed in the same order in minecraft as they are defined here.
-    > -   `localization_name` is going to be used in the .lang file. Think of it as the skins identifier.
-    > -   `geometry` you can use `geometry.humanoid.custom` and `geometry.humanoid.customSlim` here.
-    > -   `texture` is the name of the image file, located in the main skin pack folder.
-    > -   `type` is only accessible to marketplace partners, leave it as `free`, otherwise it will be locked.
+>-	`localization_name` is going to be used in the .lang file. Think of it as the skins identifier.
+>-	`geometry` you can use `geometry.humanoid.custom` and `geometry.humanoid.customSlim` here.
+>-  `texture` is the name of the image file, located in the main skin pack folder.
+>-	`type` is only accessible to marketplace partners, leave it as `free`, otherwise it will be locked.
 
 ## texts/en_US.lang
 

@@ -7,7 +7,7 @@ mentions:
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed.
-If you want to see full page, you can do it [here](/entities/vuc-full). _Last updated for 1.19.40_
+If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.30*
 
 ## addrider
 
@@ -3909,7 +3909,7 @@ villager
 
 villager_v2
 
-<CodeHeader>#component_groups/make_and_receive_love</CodeHeader>
+<CodeHeader>#component_groups/adult</CodeHeader>
 
 ```json
 "minecraft:behavior.make_love": {
@@ -5687,26 +5687,7 @@ villager_v2
 ```json
 "minecraft:behavior.play": {
     "priority": 8,
-    "speed_multiplier": 0.32,
-    "friend_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "villager"
-                    },
-                    {
-                        "test": "is_baby",
-                        "subject": "other",
-                        "operator": "==",
-                        "value": true
-                    }
-                ]
-            }
-        }
-    ]
+    "speed_multiplier": 0.32
 }
 ```
 
@@ -6454,7 +6435,7 @@ villager
 
 villager_v2
 
-<CodeHeader>#component_groups/make_and_receive_love</CodeHeader>
+<CodeHeader>#component_groups/adult</CodeHeader>
 
 ```json
 "minecraft:behavior.receive_love": {
@@ -10436,7 +10417,7 @@ wither_skeleton
 
 drowned
 
-<CodeHeader>#component_groups/minecraft:ranged_equipment</CodeHeader>
+<CodeHeader>#component_groups/minecraft:mode_switcher</CodeHeader>
 
 ```json
 "minecraft:equipment": {
@@ -10450,7 +10431,7 @@ drowned
 }
 ```
 
-<CodeHeader>#component_groups/minecraft:melee_equipment</CodeHeader>
+<CodeHeader>#component_groups/minecraft:melee_mode</CodeHeader>
 
 ```json
 "minecraft:equipment": {
@@ -10671,7 +10652,7 @@ player
     "attack": 0.1,
     "damage": 0.1,
     "walk": 0.0,
-    "sprint": 0.1,
+    "sprint": 0.01,
     "swim": 0.01
 }
 ```
@@ -14881,81 +14862,6 @@ npc
             },
             {
                 "variant": 24
-            },
-            {
-                "variant": 35
-            },
-            {
-                "variant": 36
-            },
-            {
-                "variant": 37
-            },
-            {
-                "variant": 38
-            },
-            {
-                "variant": 39
-            },
-            {
-                "variant": 40
-            },
-            {
-                "variant": 41
-            },
-            {
-                "variant": 42
-            },
-            {
-                "variant": 43
-            },
-            {
-                "variant": 44
-            },
-            {
-                "variant": 50
-            },
-            {
-                "variant": 51
-            },
-            {
-                "variant": 52
-            },
-            {
-                "variant": 53
-            },
-            {
-                "variant": 54
-            },
-            {
-                "variant": 45
-            },
-            {
-                "variant": 46
-            },
-            {
-                "variant": 47
-            },
-            {
-                "variant": 48
-            },
-            {
-                "variant": 49
-            },
-            {
-                "variant": 55
-            },
-            {
-                "variant": 56
-            },
-            {
-                "variant": 57
-            },
-            {
-                "variant": 58
-            },
-            {
-                "variant": 59
             }
         ]
     }
@@ -20280,3 +20186,4 @@ turtle
 ```
 
 </Spoiler>
+

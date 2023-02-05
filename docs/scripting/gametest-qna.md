@@ -125,7 +125,7 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/NGeNhZpvz
 
 ## World Generation
 
--   **Q:** Any plans for exposing the world noise in GameTests? Noise libraries exist for JS, but what's needed is the noise used in biome generation/the Molang query.
+-   **Q:** Any plans for exposing the world noise in GameTests? Noise libraries exist for JS, but what's needed is the noise used in biome generation/the MoLang query.
 
 -   **A:** We haven't taken a hard look at how we want to allow world generation to exist in scripting. Chunks generation runs on task threads and currently our gametest implementation doesn't allow for migration to other threads safely.
     We have some ideas to create something similar to web workers, but haven't gone further than conversations yet.
@@ -242,7 +242,7 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/NGeNhZpvz
 
 ## Molang
 
--   **Q:** Can you test Molang through the GameTest API?
+-   **Q:** Can you test MoLang through the GameTest API?
 
 -   **A:** You can test entity behavior in a variety of ways. And of course entities can have Molang in their animation controllers and conditions for entity state transitions.
 
@@ -340,7 +340,7 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/NGeNhZpvz
 
 ## Marketplace
 
--   **Q:** Will gametests be available for marketplace content? If yes, is there an approximate date?
+-   Q:Will gametests be available for marketplace content? If yes, is there an approximate date?
 
 -   **A:** Currently our focus is on testing scenarios. While we have lots of future thoughts and plans, we don't want to get folks making plans or counting on anything we can't promise yet.
 

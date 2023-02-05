@@ -1,24 +1,17 @@
 ---
 title: Simple Custom Commands
-category: Script API
-tags:
-    - experimental
-mentions:
-	- cda94581
+category: Game Tests
 ---
-::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.40.23
-:::
 
-Who doesn't want any custom command? Me neither. With the Script API, you can create your custom command. In this article, we will create your own custom command using the Script API.
+Who doesn't want any custom command? Me neither. With Gametest, you can create your custom command. This article, we will create your own custom command using Gametest.
 
 ## Setup Pack
 
 :::tip
-Before creating a script, it is recommended to learn the basics of JavaScript, Addons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
+Before creating GameTest Script, it is recommended to learn the basic of JavaScript, Addons, or some Gametest. To see what the feature of Gametest can do, see the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft)
 :::
 
-We think you have understood all of these things, so create your pack
+We think you have understood all of these things, so create own pack
 
 <CodeHeader>manifest.json</CodeHeader>
 
@@ -27,9 +20,9 @@ We think you have understood all of these things, so create your pack
 	"format_version": 2,
 	"header": {
 		"name": "Custom Commands",
-		"description": "Custom Commands using the Script API",
+		"description": "Custom Commands using Gametest",
 		"uuid": "c8c3239f-027f-4e80-890f-880eba65027d",
-		"min_engine_version": [1, 19, 40],
+		"min_engine_version": [1, 18, 10],
 		"version": [1, 0, 0]
 	},
 	"modules": [
@@ -41,30 +34,29 @@ We think you have understood all of these things, so create your pack
 		},
 		{
 			"description": "Gametest Module",
-			"type": "script",
-			"language": "javascript",
-			"entry": "scripts/index.js",
+			"type": "javascript",
+			"entry": "scripts/Index.js",
 			"uuid": "f626740d-50a6-49f1-a24a-834983b72134",
 			"version": [1, 0, 0]
 		}
 	],
 	"dependencies": [
 		{
-			// Minecraft native module - needed to use the "@minecraft/server" module
-			"module_name": "@minecraft/server",
-			"version": "1.0.0-beta"
+			// Minecraft native module - needed to use the "mojang-minecraft" module
+			"uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
+			"version": [0, 1, 0]
 		}
     ]
 }
 ```
 
-On our manifest, we added script module. The `entry` is where our script is stored. This is typically within the `scripts` folder of the behavior pack. The dependency is for the module on our Script.
+On our manifest, we add Javascript Module for our Gametest. The `entry` is where our script is use. You can save it somewhere, but let it where it be. The dependency is for the module on our Script.
 
 <FolderView
 	:paths="[
 		'BP/manifest.json',
 		'BP/pack_icon.png',
-        'BP/scripts/index.js'
+        'BP/scripts/Index.js'
 	]"
 />
 
@@ -72,65 +64,70 @@ On our manifest, we added script module. The `entry` is where our script is stor
 
 Now this is the fun part, creating our custom commands. First, we gonna add the module
 
-<CodeHeader>BP/scripts/index.js</CodeHeader>
+<CodeHeader>BP/scripts/Index.js</CodeHeader>
 
 ```js
-import { world } from '@minecraft/server';
+import { world } from 'mojang-minecraft'
 ```
 
-First, we're gonna add simple commands, such as `!gmc` to change our Gamemode to Creative and `!gms` to change into Survival.
+First, we gonna add simple commands, such as `!gmc` to change our Gamemode to Creative and `!gms` to change into Survival.
 
-<CodeHeader>BP/scripts/index.js</CodeHeader>
+<CodeHeader>BP/scripts/Index.js</CodeHeader>
 
 ```js
-world.events.beforeChat.subscribe(async (eventData) => {
-	const player = eventData.sender;
-	switch (eventData.message) {
-		case '!gmc':
-			eventData.cancel = true;
-			await player.runCommandAsync('gamemode c');
-			break;
-		case '!gms':
-			eventData.cancel = true;
-			await player.runCommandAsync('gamemode s');
-			break;
-		default: break;
-	}
-});
+function GamemodeChanger() {
+   world.events.beforeChat.subscribe((eventData) => {
+       var Player = eventData.sender.name
+       switch (eventData.message) {
+           case '!gmc': 
+               world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
+	       eventData.cancel = true
+           break;
+           case '!gms':
+               world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
+	       eventData.cancel = true
+           break;
+       }
+   })
+ }
+
+GamemodeChanger()
 ```
 
-This is the main function to listen our commands. `world.events.beforeChat.subscribe()` will check our message before it gets sent.
-- A `switch` statement lists through the possible options for the value, and if it matches, runs the code until the `break` statement
-- `eventData.cancel = true` will cancel the message to actually sended to another player
-- `const player = eventData.sender` declares a variable `player` to be used later
-- `await player.runCommandAsync('gamemode c')` runs the command on the sender. `runCommandAsync()` is recommended over `runCommand()` whenever possible
+This part we create function to listen our commands. `world.events.beforeChat.subscribe` will check our message before it get send.
+
+- Inside if statement `(eventData.message === '!gmc')`, checking if player type the `!gmc`, which is our custom command identifier
+- `eventData.cancel = true`. This will cancel the message to actually sended to another player
+- `var Player = eventData.sender.name`. Decliare a variable "`Player`" as the Player name
+- ``world.getDimension('overworld').runCommands(`gamemode creative ${Player}`)``. Run the commands
+
 
 ## Limited Command Usage by Tags
 
-The function will always be checking if the player typed the special message to activate command, even if the player shouldn't have access. To prevent this, we can use tags to limit to specific people.
+The function will always checking if player typing the special message to activate command, even the player that not access to the command itself or not OP. To prevent this, we can use tags to limited to the person that have the tags can run the commands.
 
-For example, let's make our commands usable only to the Admin that has the `Admin` tag.
+For example, let our commands can be use only to the Admin that has `Admin` tags.
 
-<CodeHeader>BP/scripts/index.js</CodeHeader>
+<CodeHeader>BP/scripts/Index.js</CodeHeader>
 
 ```js
-world.events.beforeChat.subscribe(async (eventData) => {
-	const player = eventData.sender;
-	if (!player.hasTag('Admin')) return;
-	switch (eventData.message) {
-		case '!gmc':
-			eventData.cancel = true;
-			await player.runCommandAsync('gamemode c');
-			break;
-		case '!gms':
-			eventData.cancel = true;
-			await player.runCommandAsync('gamemode s');
-			break;
-		default: break;
-	}
-});
+function GamemodeChanger() {
+  world.events.beforeChat.subscribe((eventData) => {
+    if (eventData.message === `!gmc` && eventData.sender.hasTag('Admin')) {
+      eventData.cancel = true
+      var Player = eventData.sender.name
+      world.getDimension('overworld').runCommand(`gamemode creative ${Player}`)
+    } else if (eventData.message === `!gms` && eventData.sender.hasTag('Admin')) {
+      eventData.cancel = true
+      var Player = eventData.sender.name
+      world.getDimension('overworld').runCommand(`gamemode survival ${Player}`)
+    }
+  })
+}
+
+GamemodeChanger()
 ```
 
-In plain text, `if (!eventData.sender.hasTag('Admin')) return;` means: "If the player does NOT (`!`) have the 'Admin' tag, stop any further running of the script (`return`)"
+Inside ``if (eventData.message === `!gmc` && eventData.sender.hasTag('Admin'))``, it checking if player send the command and has "Admin" tag. If both condition met, then the command will running
 
-For more information about the Script API, you can check on this [wiki](/scripting/game-tests.md) or from the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
+For more information about Gametest, you can check on this [wiki](/scripting/game-tests.md) or from the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)

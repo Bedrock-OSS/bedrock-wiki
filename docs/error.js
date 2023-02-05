@@ -1,12 +1,14 @@
+import path from 'path'
+
 // const createMarkdownToVueRenderFn = require('vitepress/dist/node/markdownToVue.js')
 
 export default function errorUtility() {
 	// let markdownToVue
-	// let config
+    // let config
 	return {
 		name: 'error-utility',
 		renderError(err) {
-			console.log(`::error file=docs/error.js::${err.message}`)
+            console.log(`::error file=docs/error.js::${err.message}`)
 		},
 		// configResolved(resolvedConfig) {
 		// 	config = resolvedConfig

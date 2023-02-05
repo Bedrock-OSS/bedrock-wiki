@@ -11,8 +11,8 @@
 		:open="open"
 	>
 		<summary
-			class="list-none outline-none"
 			@click.prevent.exact="emit('click')"
+			class="list-none outline-none"
 		>
 			<span>{{ props.item.text }}</span>
 
@@ -21,11 +21,11 @@
 
 		<div>
 			<NavLink
-				v-for="i in props.item.children"
-				:key="i.link"
-				class="block"
-				:item="i"
+				v-for="item in props.item.children"
 				@change="(val) => (val ? emit('active') : undefined)"
+				class="block"
+				:key="item.link"
+				:item="item"
 			/>
 		</div>
 	</details>

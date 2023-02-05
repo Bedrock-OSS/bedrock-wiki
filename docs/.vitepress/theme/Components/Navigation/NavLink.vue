@@ -6,25 +6,15 @@
 		v-bind="linkProps"
 		@click="onNavigation"
 	>
-		<span
-			v-if="props.item.prefix != null"
-			class="font-bold pr-2"
-		>{{
+		<span v-if="props.item.prefix != null" class="font-bold pr-2">{{
 			props.item.prefix
 		}}</span>
 
 		<div class="text-sm">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
 
-		<span
-			v-if="!!props.item.tags?.length"
-			class="ml-auto space-x-2"
-		>
-			<NavLinkTag
-				v-for="(tag, i) in props.item.tags"
-				:key="i"
-				:tag="tag"
-			/>
+		<span class="ml-auto space-x-2" v-if="!!props.item.tags?.length">
+			<NavLinkTag v-for="tag in props.item.tags" :tag="tag" />
 		</span>
 	</a>
 </template>
@@ -35,10 +25,9 @@ import NavLinkTag from './NavLinkTag.vue'
 import ExternalIcon from '../Icons/ExternalIcon.vue'
 
 import { toRefs, watchEffect } from 'vue'
-import { useNavLink } from '../../Composables/navLink'
+import { useNavLink } from 'vitepress/dist/client/theme-default/composables/navLink'
 import { useIsMobile } from '../../Composables/isMobile'
 import { useSidebarState } from '../../Composables/sidebar'
-
 
 const emit = defineEmits(['change'])
 
@@ -74,11 +63,9 @@ watchEffect(() => {
 	width: 16px;
 	margin-left: 4px;
 }
-
 .item {
 	@apply transition-colors px-2 py-1 m-1;
 }
-
 .item:hover,
 .item.active {
 	@apply bg-true-gray-200;
@@ -87,7 +74,6 @@ watchEffect(() => {
 .item.active {
 	@apply text-purple-800;
 }
-
 .dark .item.active {
 	@apply text-purple-300;
 }

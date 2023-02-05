@@ -6,19 +6,19 @@
 		:href="link"
 	>
 		<component
-			:is="icon"
 			v-if="icon"
 			class="btn-icon"
 			:class="[iconColor]"
+			:is="icon"
 		/>
 		<div>
 			<slot />
 		</div>
 		<component
-			:is="iconRight"
 			v-if="iconRight"
 			class="btn-icon"
 			:class="[iconColor]"
+			:is="iconRight"
 		/>
 	</component>
 </template>

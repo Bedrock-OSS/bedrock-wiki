@@ -81,7 +81,7 @@ Shoots a projectile when triggered.
 
     -   `"angle_offset"` - Does nothing. (Broken)
 
-    -   `"launch_power"` - The launch power to be multiplied over the base power of the projectile entity. Accepts Molang values.
+    -   `"launch_power"` - The launch power to be multiplied over the base power of the projectile entity. Accepts MoLang values.
 
     -   `"projectile"` - Takes an identifier of an entity - any entity, not just projectile ones - to use as an entity to 'shoot'.
 
@@ -498,26 +498,24 @@ List of all new item components, with usage examples
 
 | Slot Name     |
 | ------------- |
+| bow           |
+| crossbow           |
 | armor_feet    |
 | armor_torso   |
 | armor_head    |
 | armor_legs    |
+| hoe           |
 | axe           |
-| bow           |
-| cosmetic_head |
-| crossbow      |
+| pickaxe       |
+| shovel        |
+| sword         |
 | elytra        |
 | fishing_rod   |
 | flintsteel    |
-| hoe           |
-| pickaxe       |
 | shears        |
-| shield        |
-| shovel        |
-| sword         |
+| cosmetic_head |
 
-
-### minecraft:shooter
+-   minecraft:shooter
 
 <CodeHeader></CodeHeader>
 
@@ -884,7 +882,7 @@ If your item isn't showing up, these changes might have broken your item.
 Niche Features
 
 -   Components
-    -   `minecraft:icon` - Property `"frame"` may take in Molang values.
+    -   `minecraft:icon` - Property `"frame"` may take in MoLang values.
 
 > Broken/Nonfunctional Features
 

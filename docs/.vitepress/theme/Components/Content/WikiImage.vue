@@ -4,7 +4,7 @@
 		:alt="props.alt"
 		:class="{ 'pixelated-image' : props.pixelated === 'true' }"
 		:width="props.width"
-	>
+	/>
 </template>
 
 <script setup lang="ts">

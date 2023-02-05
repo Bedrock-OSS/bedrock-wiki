@@ -509,7 +509,7 @@ Returns one of the 3 components from the normalized vector of the entity movemen
 
 **Note**: As of writing the documentation, the value returned from any of the axis will change depending on the speed of the entity (If the entity is on the ground the value will be less than the value of the entity if it were in the air even if it is moving in the same direction).
 
-To get the actual normalized velocity vector of the entity movement you will have to normalize the values. Here is the Molang setup:
+To get the actual normalized velocity vector of the entity movement you will have to normalize the values. Here is the MoLang setup:
 
 ```
 variable.mag = math.sqrt( math.pow( query.movement_direction(0), 2 ) + math.pow( query.movement_direction(1), 2) + math.pow( query.movement_direction(2), 2));

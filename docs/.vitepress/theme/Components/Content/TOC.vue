@@ -52,15 +52,13 @@
 						text-lg
 						break-all
 					"
-				>{{ title }}</a>
+					>{{ title }}</a
+				>
 				<div>
-					<ol
-						id="toc"
-						class="pl-0"
-					>
+					<ol id="toc" class="pl-0">
 						<li
 							v-for="header in headers"
-							:key="header.title"
+							key="header.title"
 							class="py-0.5"
 						>
 							<a
@@ -72,14 +70,12 @@
 									break-all
 								"
 								:href="'#' + header.slug"
-							>{{ header.title }}</a>
-							<ol
-								v-if="maxTocLevel > 1"
-								class="pl-2"
+								>{{ header.title }}</a
 							>
+							<ol v-if="maxTocLevel > 1" class="pl-2">
 								<li
 									v-for="child in header.children"
-									:key="child.title"
+									key="child.title"
 									class="py-0.5"
 								>
 									<a
@@ -90,14 +86,12 @@
 											break-all
 										"
 										:href="'#' + child.slug"
-									>{{ child.title }}</a>
-									<ol
-										v-if="maxTocLevel > 2"
-										class="pl-2"
+										>{{ child.title }}</a
 									>
+									<ol v-if="maxTocLevel > 2" class="pl-2">
 										<li
 											v-for="grandchild in child.children"
-											:key="grandchild.title"
+											key="grandchild.title"
 											class="py-0.5"
 										>
 											<a
@@ -109,7 +103,8 @@
 													break-all
 												"
 												:href="'#' + grandchild.slug"
-											>{{ grandchild.title }}</a>
+												>{{ grandchild.title }}</a
+											>
 										</li>
 									</ol>
 								</li>
@@ -123,61 +118,55 @@
 </template>
 
 <script setup lang="ts">
-import { Header, useData, useRoute } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon.vue'
-import { ref, watch } from 'vue'
-
 const { page } = useData()
 
-interface extHeader extends Header {
-	children: extHeader[]
-}
+import { ref, watch } from 'vue'
 
-const getHeaders = () => {
-	let grouped: extHeader[] = []
-	// create curHeader as default level 1 header
-	// if there is one level 1 header, this header will be overwritten
-	let curHeader: extHeader = {
-		level: 1,
-		slug: '',
-		title: '',
-		children: [],
-	}
-
-	// do only if page has headers, else simply return empty list
+const getHeaders = function () {
+	let grouped = []
+	let lastHeader = null
+	let lastSubHeader = null
 	if (page.value.headers) {
-		page.value.headers.forEach((header, index) => {
-			// level 1 -> push previous curHeader and overwrite with new one
+		for (const header of page.value.headers) {
 			if (header.level === 1) {
-				grouped.push({...curHeader})
-
-				curHeader = {...header, children: []}
-			}
-			// level 2 -> push to previous curHeader
-			else if (header.level === 2) {
-				curHeader.children.push({...header, children: []})
-			}
-			// level 3 -> push to last child of curHeader
-			else if (header.level === 3) {
-				if(curHeader.children.length < 1) {
-					// create header at level 2 to push the new header
-					curHeader.children.push({
-						level: 2,
+				lastHeader = header
+				header.children = []
+				grouped.push(header)
+			} else if (header.level === 2) {
+				lastSubHeader = header
+				header.children = []
+				if (!lastHeader) {
+					lastHeader = {
 						slug: '',
 						title: '',
-						children: []
-					})
+						children: [],
+					}
+					grouped.push(lastHeader)
 				}
-
-				// push header to last children of curHeader
-				curHeader.children[curHeader.children.length - 1].children.push({...header, children: []})
+				lastHeader.children.push(header)
+			} else if (header.level === 3) {
+				if (!lastHeader) {
+					lastHeader = {
+						slug: '',
+						title: '',
+						children: [],
+					}
+					grouped.push(lastHeader)
+				}
+				if (!lastSubHeader) {
+					lastSubHeader = {
+						slug: '',
+						title: '',
+						children: [],
+					}
+					lastHeader.children.push(lastSubHeader)
+				}
+				lastSubHeader.children.push(header)
 			}
-		})
-
-		// push curHeader for the possibility, that the last header was not at level 1
-		grouped.push(curHeader)
+		}
 	}
-
 	return grouped
 }
 

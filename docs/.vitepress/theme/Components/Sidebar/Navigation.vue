@@ -2,17 +2,14 @@
 	<div class="lg:hidden px-2 mt-3 mb-4">
 		<NavLink
 			v-for="item in navLinks"
-			:key="item.link"
 			:item="item"
+			:key="item.link"
 			:section="item.section"
 			:color="item.color"
 		/>
 	</div>
 	<div class="border-t">
-		<template
-			v-for="(item, i) in props.items"
-			:key="i"
-		>
+		<template v-for="(item, i) in props.items">
 			<Category
 				:item="item"
 				:open="i === active || i === open"

@@ -56,7 +56,7 @@ This example you'll be following will make pigs say "oink oink" upon detecting p
 
 The first parameter that `query.get_nearby_entities_except_self` needs to work is the radius in blocks it will detect other entities in. The other is the identifier of the mob you want to make it detect.
 
-Now that's good and all, but on the off chance, you want to make the pig detect players with some attribute that can be detected with Molang, use this.
+Now that's good and all, but on the off chance, you want to make the pig detect players with some attribute that can be detected with MoLang, use this.
 
 <CodeHeader>BP/animations/detection_animation.json</CodeHeader>
 
