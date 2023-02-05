@@ -116,7 +116,7 @@
 					title="Scripting"
 					imgsrc-light="assets/images/homepage/scripting.png"
 				>
-					<a href="scripting/game-tests.html">Beginner's Guide</a>: Learn the basics of the experimental scripting-API<br><br>
+					<a href="scripting/starting-scripts.html">Beginner's Guide</a>: Learn the basics of the experimental scripting-API<br><br>
 					<a href="scripting/custom-command.html">Custom commands</a>:
 					Learn how to make your own custom commands!
 				</Card>

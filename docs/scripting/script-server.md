@@ -12,7 +12,9 @@ The Script API is currently in active development, and breaking changes are freq
 In Scripting API, most of the core feaures are implemented in the `@minecraft/server` module, with lots of methods to interact a Minecraft world, including entities, blocks, dimensions, and more programmatically. This article contains a basic introduction to some of the core API mechanics, for more detailed infomation please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
 
 ## Setup
-Like other modules, you will need to add the dependency into your `manifest.json`
+Script modules requires you will need to add the dependency into your `manifest.json`
+
+<CodeHeader>BP/manifest.json</CodeHeader>
 
 ```json
 {
@@ -68,6 +70,44 @@ import { system } from "@minecraft/server";
 system.events.beforeWatchdogTerminate.subscribe((event) => {
 	event.cancel = true;
 	console.warn('Canceled critical exception of type ' + event.terminateReason);
+});
+```
+
+**ScriptEvents**
+
+ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block.
+
+`/scriptevent` - Triggers a script event with an ID and message.
+
+```
+/scriptevent <messageId: string> <message: string>
+```
+
+- `messageId` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
+- `message` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
+
+**Example**:
+
+Command input:
+
+```
+/scriptevent wiki:test Hello World
+```
+
+What event listener returns:
+
+```js
+import { system } from "@minecraft/server";
+
+system.events.scriptEventReceive.subscribe((event) => {
+  const {
+  	id,           // returns string (wiki:test)
+  	initiator,    // returns Entity
+    message,      // returns string (Hello World)
+    sourceBlock,  // returns Block
+    sourceEntity, // returns Entity
+    sourceType,   // returns MessageSourceType
+  } = event;
 });
 ```
 
@@ -133,3 +173,88 @@ system.runTimeout(() => {
 	world.sendMessage("Stopped");
 }, 20);
 ```
+
+## Saving and Loading
+
+Script API provides its own storage system called dynamic properties to save and load data in a world, specifically in the db folder using behavior pack's module UUID.
+
+![image](/assets/images/gametest/script-server/dynamic_properties.png)
+
+In order to save data, the property must be initialised first. There are multiple ways to declare dynamic properties, either on an entity type or world, each option have their own limitation:
+
+- Entity type: you can saved up to 1,000 bytes worth of text data in an entity of the entity type.
+- World: you can saved up to 10,000 bytes worth of text data in a world.
+
+These are the following methods to save and load dynamic properties:
+
+**Loading dynamic properties from world**:
+
+1. Declare dynamic properties
+
+```js
+import { DynamicPropertiesDefinition, world } from "@minecraft/server";
+
+world.events.worldInitialize.subscribe((event) => {
+  let def = new DynamicPropertiesDefinition();
+
+  def.defineNumber("eventStrength");
+  def.defineString("eventRoles", 40);
+  def.defineBoolean("eventHasHero");
+
+  event.propertyRegistry.registerWorldDynamicProperties(def);
+});
+```
+
+::: warning
+Registering a dynamic property does not set a value on the property. Unless the value of the property is saved in world already, when getting the property for the first time, the method returns nothing.
+:::
+
+2. Get or set the value of the dynamic property
+
+```js
+import { world } from "@minecraft/server";
+
+// get dynamic property
+world.getDynamicProperty("eventStrength");
+// set dynamic property
+world.setDynamicProperty("eventStrength", 10);
+```
+
+**Loading dynamic properties from an entity**:
+
+1. Declare dynamic properties, but this time register properties to an entity type.
+
+```js
+import { DynamicPropertiesDefinition, world } from "@minecraft/server";
+
+world.events.worldInitialize.subscribe((e) => {
+	let def = new DynamicPropertiesDefinition();
+
+	def.defineNumber("rpgStrength");
+	def.defineString("rpgRole", 16);
+	def.defineBoolean("rpgIsHero");
+
+	// declare properties on skeletons
+	e.propertyRegistry.registerEntityTypeDynamicProperties(def, MinecraftEntityTypes.skeleton);
+});
+```
+
+::: warn
+Registering a dynamic property does not set a value on the property. Unless the value of the property is saved in world already, when getting the property for the first time, the method returns nothing.
+:::
+
+2. Get or set the value of the dynamic property
+
+```js
+import { world } from "@minecraft/server";
+
+// get the skeleton entity
+const skeleton = world.getDimension('overworld')
+                      .spawnEntity('minecraft:skeleton', { x: 0, y: 0, z: 0 });
+
+// get dynamic property
+skeleton.getDynamicProperty('rpgStrength');
+
+// set dynamic property
+skeleton.setDynamicProperty('rpgStrength', 50);
+```     

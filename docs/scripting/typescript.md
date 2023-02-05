@@ -142,7 +142,7 @@ To run the code in Minecraft, zip the behavior pack and import it to a Minecraft
 
 :::danger Stop!
 
-This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/game-tests.html).
+This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/starting-scripts.html).
 
 :::
 

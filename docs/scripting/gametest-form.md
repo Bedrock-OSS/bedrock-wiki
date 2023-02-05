@@ -18,10 +18,14 @@ Like other modules, you will need to add the dependency into your `manifest.json
 
 ```json
 {
-"dependencies": [
+	"dependencies": [
 		{
 			"module_name": "@minecraft/server-ui",
 			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.1.0-beta"
 		}
 	]
 }
