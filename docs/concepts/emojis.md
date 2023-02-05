@@ -27,7 +27,6 @@ There will be instructions for creating custom emoji at the bottom.
 | Craft Toggle Off |                         | U+E0A1  | ![](/assets/images/concepts/emojis/general/craft_toggle_off.png) |
 | CrossHair        |                         | U+E017  | ![](/assets/images/concepts/emojis/general/crosshair.png)        |
 
-
 ### Mobile (iOS/Android)
 
 | Name              | Letter (Copy/Paste This) | Unicode | Image                                                          |
@@ -53,10 +52,6 @@ There will be instructions for creating custom emoji at the bottom.
 | Small Up Arrow    |                         | U+E055  | ![](/assets/images/concepts/emojis/mobile/smalluparrow.png)    |
 | Small Up Down     |                         | U+E057  | ![](/assets/images/concepts/emojis/mobile/smalldownarrow.png)  |
 | Small Inventory   |                         | U+E05B  | ![](/assets/images/concepts/emojis/mobile/smallinventory.png)  |
-
-
-
-
 
 ### PC (Windows 10/MacOS/Chrome OS)
 
@@ -196,12 +191,10 @@ Your filepath should look like this:
 
 <FolderView
 	:paths="[
-
     'RP',
     'RP/font',
     'RP/font/glyph_E0.png',
     'RP/font/glyph_E1.png'
-
 ]"
 ></FolderView>
 

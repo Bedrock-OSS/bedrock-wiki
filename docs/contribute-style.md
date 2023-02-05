@@ -52,7 +52,6 @@ List of tags:
 -   intermediate
 -   expert
 
-
 ## Viewing the Wiki locally
 
 Its really hard to know how your article will look when its finished and published. To help with that, you can use a tool called `npm`!
@@ -68,6 +67,31 @@ To view the wiki locally, type `npm run dev` and press enter and wait until its 
 Hover over the part where it says `"http://localhost:3000/"` and press ctrl and left-click. Your browser will open with the wiki.
 
 Done! Every time you change and save a file in VSCode it will automatically be updated in your browser.
+
+## Viewing the built page
+
+The above tool shows you how the Wiki will look when it is built. But sometimes there are some errors arriving which you only get if you `build` the page.
+
+Building the pages means compiling every markdown-page to a `.html`-page, which will be hosted on our servers. If you just use `npm run dev`, the pages are not compiled that way and there may be some errors which are not showing in the developer view.
+
+To build a page, follow the above process, except for the step where you need to type `npm run dev`. Instead, type `npm run build` which will build the page.
+
+:::tip
+Using `npm run build`, node will compile **all** pages inside the wiki, even some pages which are *really* big. If you are not editing any of these pages:
+
+```json
+[
+	'entities/vanilla-usage-components.md',
+	'entities/vanilla-usage-spawn-rules.md',
+	'entities/vuc-full.md',
+	'entities/vusr-full.md',
+]
+```
+
+you might run `npm run fastbuild`, which builds every pages except these pages. Then continue normally.
+:::
+
+This might take a while. If the process finishes without any errors, you can view the built Wiki by running `npm run serve`. You need to open the link given in the Terminal and you are done!
 
 ## Working with Markdown
 
@@ -225,8 +249,8 @@ A Button works like a link, but is more noticeable for the user.
 <CodeHeader></CodeHeader>
 
 ```html
-<BButton 
-    link="https://youtube.com" 
+<BButton
+    link="https://youtube.com"
     color=red
 >your button text</BButton>
 ```
@@ -234,7 +258,7 @@ A Button works like a link, but is more noticeable for the user.
 <BButton
     link='https://youtube.com'
     color=red
-> your button text</BButton>
+>your button text</BButton>
 
 <CodeHeader></CodeHeader>
 
@@ -250,10 +274,10 @@ A Button works like a link, but is more noticeable for the user.
     color=red
 >Download Wiki Logo</BButton>
 
-| Attribute | Required | Type   | Note                                                                                                            |
-| --------- | -------- | ------ | --------------------------------------------------------------------------------------------------------------- |
-| link      | yes      | String | Link to redirect when clicking on the Button you can also link there content to download from wiki files. If doing this for pictures, add `download` after link value.                          |
-| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'default' as values, otherwise it will be grey_ |
+| Attribute | Required | Type   | Note                                                                                                                                                                   |
+| --------- | -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| link      | yes      | String | Link to redirect when clicking on the Button you can also link there content to download from wiki files. If doing this for pictures, add `download` after link value. |
+| color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'default' as values, otherwise it will be grey_                                             |
 
 The text between the two HTML-Tags is the text that will appear on the button.
 
@@ -281,7 +305,6 @@ The Checklist can be used to tell the reader about certain things that need to b
 
 </Checklist>
 
-
 To add new entries to the Checklist, you need to create a Markdown List, and start each entry with `[x]` or `[ ]`.
 
 If you start the entry with `[x]`, this entry will be checked.
@@ -306,9 +329,7 @@ and here
 </Spoiler>
 ```
 
-<Spoiler 
-title='title'>
-
+<Spoiler title='title'>
 text here
 
 and here
@@ -330,17 +351,16 @@ A Label is a small icon with uppercase letters that can be used to give your art
 <CodeHeader></CodeHeader>
 
 ```html
-<Label 
+<Label
     name="name"
     color="green"
 >label</Label>
 ```
 
 <Label
-name='name'
-color='green'
-
->label</Label>
+    name='name'
+    color='green'
+> label</Label>
 
 | Attribute | Required | Type   | Note                                                                                                    |
 | --------- | -------- | ------ | ------------------------------------------------------------------------------------------------------- |
@@ -358,29 +378,23 @@ FolderViews are Components which can be used to show a setup of files, like in o
 ```html
 <FolderView
 	:paths="[
-
     'com.mojang/development_resource_packs/guide_RP/manifest.json',
     'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
     'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
-
     'com.mojang/development_behavior_packs/guide_BP/manifest.json',
     'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
     'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
-
     ]"
 ></FolderView>
 ```
 
 <FolderView :paths="[
-
 'com.mojang/development_resource_packs/guide_RP/manifest.json',
 'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
 'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
-
 'com.mojang/development_behavior_packs/guide_BP/manifest.json',
 'com.mojang/development_behavior_packs/guide_RP/pack_icon.png',
 'com.mojang/development_behavior_packs/guide_RP/texts/en_US.lang',
-
 ]"></FolderView>
 
 | Attribute | Required | Type                                | Note                                                                   |
@@ -389,6 +403,10 @@ FolderViews are Components which can be used to show a setup of files, like in o
 
 The `:paths` Attribute is a String, that contains a List of all separate file paths. This String must be written with double quotes! Each file path must be written entirely and has to be wrapped inside single quotes.
 
+:::warning
+Remember to not put ANY new-lines inside the list! This will throw an error when compiling the page.
+:::
+
 ### YouTubeEmbed
 
 A YouTubeEmbed can be used to embed a YouTube Video in your article.
@@ -396,8 +414,8 @@ A YouTubeEmbed can be used to embed a YouTube Video in your article.
 <CodeHeader></CodeHeader>
 
 ```html
-<YouTubeEmbed 
-    id="dQw4w9WgXcQ" 
+<YouTubeEmbed
+    id="dQw4w9WgXcQ"
 />
 ```
 
@@ -450,14 +468,14 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 
 ```html
 <CardLink
-	imgsrc="assets/images/homepage/wikilogo.png"
+  imgsrcLight="assets/images/homepage/wikilogo.png"
 	title="title"
 	link="https://google.com"
 />
 ```
 
-<CardLink 
-    imgsrc='assets/images/homepage/wikilogo.png' 
+<CardLink
+    imgsrcLight='assets/images/homepage/wikilogo.png' 
     title='title' 
     link='https://google.com'
 />
@@ -568,7 +586,7 @@ Example:
             "minecraft:icon": {
 				"texture": "copper_coin"
 			}
-            // Make notes about a group of specific components (icon and use_duration in our case) used above this way. 
+            // Make notes about a group of specific components (icon and use_duration in our case) used above this way.
 		}
 	}
 }
@@ -582,7 +600,6 @@ Example:
 
 ...
 
-
 ### Markdown Formatting
 
 This section is only for the readability of your Markdown files. It wont be visible in the wiki.
@@ -591,12 +608,14 @@ This section is only for the readability of your Markdown files. It wont be visi
 2.  Prettify Markdown tables. Use spaces and `-` to extend all rows to the same lengths. Use one space before and after each cells content.
 3.  Don't use HTML-Tags, even if they are possible. You can use them, if you know what you are doing, but only if its absolutely unavoidable. If you have an Idea for a new Component, that could be useful for everyone, let us know and maybe we will add it!
 
-✔️ 
+✔️
+
 ```
 -   list
 ```
 
-❌ 
+❌
+
 ```
 - list
 ```
@@ -627,12 +646,14 @@ _or_
 
 ❌ `<img src="my/image.png" />`
 
-✔️ 
+✔️
+
 ```
 `code`
 ```
 
-❌ 
+❌
+
 ```
     code
 ```
@@ -650,4 +671,3 @@ Sometimes you need to comment something in .md file.
 ```
 
 <!-- Comment! 👀 --> ‹- It is here!
-

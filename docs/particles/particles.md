@@ -33,10 +33,7 @@ To create a particle, you need a resource pack, a texture, and a particle defini
 
 <FolderView
 :paths="[
-
     'RP/particles/snowflake.json',
     'RP/textures/particles/snowflake.png'
-
 ]"
-
 > </FolderView>

@@ -1,5 +1,8 @@
 <template>
-	<span v-if="valid" :class="`${colour} label`">{{ title }}</span>
+	<span
+		v-if="valid"
+		:class="`${colour} label`"
+	>{{ title }}</span>
 </template>
 
 <script setup lang="ts">
@@ -37,5 +40,4 @@ switch (props.tag) {
 	default:
 		valid = false
 		break
-}
 </script>

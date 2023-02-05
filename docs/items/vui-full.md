@@ -7,29 +7,19 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` was removed. *Last updated for 1.19.30*
+Includes all examples. Namespace `minecraft` and some formatting have been removed to make the page load quickly. *Last updated for 1.19.40*
 
 ## block
 
-<Spoiler title="Show">
-
 camera
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:block": "minecraft:camera"
 ```
 
-</Spoiler>
-
 ## camera
 
-<Spoiler title="Show">
-
 camera
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:camera": {
@@ -41,15 +31,9 @@ camera
 }
 ```
 
-</Spoiler>
-
 ## foil
 
-<Spoiler title="Show">
-
 appleEnchanted
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:foil": true
@@ -57,21 +41,13 @@ appleEnchanted
 
 golden_apple
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:foil": false
 ```
 
-</Spoiler>
-
 ## food
 
-<Spoiler title="Show">
-
 apple
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -81,8 +57,6 @@ apple
 ```
 
 appleEnchanted
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -120,8 +94,6 @@ appleEnchanted
 
 baked_potato
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -130,8 +102,6 @@ baked_potato
 ```
 
 beef
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -142,8 +112,6 @@ beef
 
 beetroot
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -152,8 +120,6 @@ beetroot
 ```
 
 beetroot_soup
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -165,8 +131,6 @@ beetroot_soup
 
 bread
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -176,8 +140,6 @@ bread
 
 carrot
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -186,8 +148,6 @@ carrot
 ```
 
 chicken
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -205,8 +165,6 @@ chicken
 ```
 
 chorus_fruit
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -226,8 +184,6 @@ chorus_fruit
 
 clownfish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -236,8 +192,6 @@ clownfish
 ```
 
 cooked_beef
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -248,8 +202,6 @@ cooked_beef
 
 cooked_chicken
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -258,8 +210,6 @@ cooked_chicken
 ```
 
 cooked_fish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -270,8 +220,6 @@ cooked_fish
 
 cooked_porkchop
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -280,8 +228,6 @@ cooked_porkchop
 ```
 
 cooked_rabbit
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -292,8 +238,6 @@ cooked_rabbit
 
 cooked_salmon
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -302,8 +246,6 @@ cooked_salmon
 ```
 
 cookie
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -314,8 +256,6 @@ cookie
 
 dried_kelp
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -324,8 +264,6 @@ dried_kelp
 ```
 
 fish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -336,8 +274,6 @@ fish
 
 glow_berries
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -347,8 +283,6 @@ glow_berries
 ```
 
 golden_apple
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -374,8 +308,6 @@ golden_apple
 
 golden_carrot
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -384,8 +316,6 @@ golden_carrot
 ```
 
 honey_bottle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -401,8 +331,6 @@ honey_bottle
 
 melon
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -411,8 +339,6 @@ melon
 ```
 
 mushroom_stew
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -424,8 +350,6 @@ mushroom_stew
 
 muttonCooked
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -435,8 +359,6 @@ muttonCooked
 
 muttonRaw
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -445,8 +367,6 @@ muttonRaw
 ```
 
 poisonous_potato
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -465,8 +385,6 @@ poisonous_potato
 
 porkchop
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 3,
@@ -476,8 +394,6 @@ porkchop
 
 potato
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -486,8 +402,6 @@ potato
 ```
 
 pufferfish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -515,8 +429,6 @@ pufferfish
 
 pumpkin_pie
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 8,
@@ -525,8 +437,6 @@ pumpkin_pie
 ```
 
 rabbit
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -537,8 +447,6 @@ rabbit
 
 rabbit_stew
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 10,
@@ -548,8 +456,6 @@ rabbit_stew
 ```
 
 rotten_flesh
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -568,8 +474,6 @@ rotten_flesh
 
 salmon
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -578,8 +482,6 @@ salmon
 ```
 
 spider_eye
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -598,8 +500,6 @@ spider_eye
 
 suspicious_stew
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 6,
@@ -611,8 +511,6 @@ suspicious_stew
 
 sweet_berries
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 2,
@@ -621,29 +519,17 @@ sweet_berries
 }
 ```
 
-</Spoiler>
-
 ## hand_equipped
 
-<Spoiler title="Show">
-
 appleEnchanted
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:hand_equipped": false
 ```
 
-</Spoiler>
-
 ## max_damage
 
-<Spoiler title="Show">
-
 clownfish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_damage": 0
@@ -651,15 +537,11 @@ clownfish
 
 cooked_fish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_damage": 0
 ```
 
 cooked_salmon
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_damage": 0
@@ -667,15 +549,11 @@ cooked_salmon
 
 fish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_damage": 0
 ```
 
 pufferfish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_damage": 0
@@ -683,21 +561,13 @@ pufferfish
 
 salmon
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_damage": 0
 ```
 
-</Spoiler>
-
 ## max_stack_size
 
-<Spoiler title="Show">
-
 beetroot_soup
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_stack_size": 1
@@ -705,15 +575,11 @@ beetroot_soup
 
 honey_bottle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_stack_size": 16
 ```
 
 mushroom_stew
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_stack_size": 1
@@ -721,29 +587,19 @@ mushroom_stew
 
 rabbit_stew
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 suspicious_stew
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_stack_size": 1
 ```
 
-</Spoiler>
-
 ## seed
 
-<Spoiler title="Show">
-
 beetroot_seeds
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -753,8 +609,6 @@ beetroot_seeds
 
 carrot
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "carrots"
@@ -762,8 +616,6 @@ carrot
 ```
 
 glow_berries
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -779,8 +631,6 @@ glow_berries
 
 melon_seeds
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "melon_stem"
@@ -788,8 +638,6 @@ melon_seeds
 ```
 
 nether_wart
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -800,8 +648,6 @@ nether_wart
 
 potato
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "potatoes"
@@ -809,8 +655,6 @@ potato
 ```
 
 pumpkin_seeds
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -820,12 +664,11 @@ pumpkin_seeds
 
 sweet_berries
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "sweet_berry_bush",
     "plant_at": [
+        "farmland",
         "grass",
         "dirt",
         "podzol",
@@ -840,23 +683,15 @@ sweet_berries
 
 wheat_seeds
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "wheat"
 }
 ```
 
-</Spoiler>
-
 ## stacked_by_data
 
-<Spoiler title="Show">
-
 appleEnchanted
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -864,15 +699,11 @@ appleEnchanted
 
 clownfish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 cooked_fish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -880,15 +711,11 @@ cooked_fish
 
 cooked_salmon
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 fish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -896,15 +723,11 @@ fish
 
 golden_apple
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 pufferfish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -912,29 +735,19 @@ pufferfish
 
 salmon
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:stacked_by_data": true
 ```
 
-</Spoiler>
-
 ## use_duration
 
-<Spoiler title="Show">
-
 apple
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
 ```
 
 appleEnchanted
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -942,15 +755,11 @@ appleEnchanted
 
 baked_potato
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 beef
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -958,15 +767,11 @@ beef
 
 beetroot
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 beetroot_soup
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -974,15 +779,11 @@ beetroot_soup
 
 bread
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 camera
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 100000
@@ -990,15 +791,11 @@ camera
 
 carrot
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 chicken
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1006,15 +803,11 @@ chicken
 
 chorus_fruit
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 clownfish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1022,15 +815,11 @@ clownfish
 
 cooked_beef
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 cooked_chicken
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1038,15 +827,11 @@ cooked_chicken
 
 cooked_fish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 cooked_porkchop
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1054,15 +839,11 @@ cooked_porkchop
 
 cooked_rabbit
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 cooked_salmon
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1070,15 +851,11 @@ cooked_salmon
 
 cookie
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 dried_kelp
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 16
@@ -1086,15 +863,11 @@ dried_kelp
 
 fish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 glow_berries
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1102,15 +875,11 @@ glow_berries
 
 golden_apple
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 golden_carrot
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1118,15 +887,11 @@ golden_carrot
 
 honey_bottle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 40
 ```
 
 melon
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1134,15 +899,11 @@ melon
 
 mushroom_stew
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 muttonCooked
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1150,15 +911,11 @@ muttonCooked
 
 muttonRaw
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 poisonous_potato
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1166,15 +923,11 @@ poisonous_potato
 
 porkchop
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 potato
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1182,15 +935,11 @@ potato
 
 pufferfish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 pumpkin_pie
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1198,15 +947,11 @@ pumpkin_pie
 
 rabbit
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 rabbit_stew
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1214,15 +959,11 @@ rabbit_stew
 
 rotten_flesh
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 salmon
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1230,15 +971,11 @@ salmon
 
 spider_eye
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 suspicious_stew
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1246,11 +983,7 @@ suspicious_stew
 
 sweet_berries
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
-
-</Spoiler>
 

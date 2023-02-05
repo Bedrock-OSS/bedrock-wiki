@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.wiki.third_person_guide": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"position": [-6, -9, -1]
+				},
+				"leftItem": {
+					"position": [6, -9, -1]
+				}
+			}
+		},
+		"animation.wiki.first_person_guide.right_hand": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": [95, -45, 115],
+					"position": [13.5, -10, 12]
+				},
+				"rightItem": {
+					"position": [-6, -9, -1]
+				}
+			}
+		}
+	}
+}
