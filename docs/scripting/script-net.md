@@ -1,5 +1,5 @@
 ---
-title: Script HTTP API
+title: Script Requests API
 category: Tutorials
 tags:
 	- experimental
