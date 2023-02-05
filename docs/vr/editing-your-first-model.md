@@ -127,7 +127,7 @@ Load the pack into minecraft and try it out if it looks like this you succeeded 
 ![](/assets/images/vr/tutorial-hand-right/export-done.png)
 
 <BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/vr_edit_model.mcpack"
+    link="/assets/packs/vr/VRtutorialPack.zip" download
     color=blue
 >Get guide end results!</BButton>
 

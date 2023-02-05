@@ -1,8 +1,5 @@
 <template>
-	<div
-		v-if="contributors && contributors.length > 0"
-		class="inline-block"
-	>
+	<div v-if="contributors && contributors.length > 0" class="inline-block">
 		<div class="space-x-2 md:-space-x-2 md:hover:space-x-2">
 			<a
 				v-for="c in contributors"
@@ -25,7 +22,7 @@
 					"
 					:alt="c.login"
 					:title="c.login"
-				>
+				/>
 			</a>
 		</div>
 	</div>
@@ -51,7 +48,7 @@ const getContributors = async function () {
 	if (import.meta.env.MODE == 'development')
 		return await getContributorsLegacy()
 	if (!contrs || !JSON.stringify(contrs).includes('SirLich')) {
-		console.error('couldn\'t fetch contributors:', contrs)
+		console.error("couldn't fetch contributors:", contrs)
 		return await getContributorsLegacy()
 	}
 	const ret: GitHubAuthor[] | null = contrs[path]

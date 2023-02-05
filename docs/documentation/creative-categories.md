@@ -45,17 +45,19 @@ Item categories applied with the item component `creative_category` direct it ex
 
 ## For Blocks
 
-Block Categories are defined via `menu_category`, your custom block will not show up in the Creative Inventory if you don't have this, here's an example:
+Block Categories are defined via the `minecraft:creative_category` component, your custom block will not show up in the Creative Inventory if you don't have this component, here's an example:
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"format_version": "1.19.50",
+	"format_version": "1.17.20",
 	"minecraft:block": {
 		"description": {
-			"identifier": "wiki:balsa",
-			"menu_category": {
+			"identifier": "wiki:balsa"
+		},
+		"components": {
+			"minecraft:creative_category": {
 				"category": "nature",
 				"group": "itemGroup.name.wood"
 			}
@@ -64,7 +66,7 @@ Block Categories are defined via `menu_category`, your custom block will not sho
 }
 ```
 
-As you can see, `menu_category` accepts 2 optional children, the `category` child & the `group` child. A list of groups & categories can be found below. You can also use `is_hidden_in_commands` to make the block not show in commands.
+As you can see, the `minecraft:creative_category` component accepts 2 optional children, the `category` child & the `group` child. A list of groups & categories can be found below.
 
 ## List of Creative Tabs
 
@@ -81,7 +83,7 @@ As you can see, `menu_category` accepts 2 optional children, the `category` chil
 
 ## List of Creative Categories
 
-> _For use with the `group` parameter_
+> _For use with the `creative_category` component_
 
 <!-- page_dumper_start -->
 | Creative Categories:             |
@@ -163,5 +165,5 @@ As you can see, `menu_category` accepts 2 optional children, the `category` chil
 | itemGroup.name.wool              |
 | itemGroup.name.woolCarpet        |
 
-*Last updated for 1.19.50*
+*Last updated for 1.19.30*
 <!-- page_dumper_end -->

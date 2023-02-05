@@ -177,7 +177,7 @@ Remember that this key just *defines* a shortname for our animation and do not r
 :::
 
 ## Scripts
-The scripts key defines certain scripts which the entity runs at certain times. This allows us to run animations, set up variables and even control the size of our entity. Additionally, we can use *Molang* to define these. For a more in depth look at Molang, you can check our page [here](/concepts/molang). Overall, Molang is essentially a type of math equation which uses variables. 
+The scripts key defines certain scripts which the entity runs at certain times. This allows us to run animations, set up variables and even control the size of our entity. Additionally, we can use *MoLang* to define these. For a more in depth look at MoLang, you can check our page [here](/concepts/molang). Overall, MoLang is essentially a type of math equation which uses variables. 
 
 <CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
 
@@ -191,10 +191,10 @@ The scripts key defines certain scripts which the entity runs at certain times. 
 }
 ```
 
-Some useful things in Molang are:
+Some useful things in MoLang are:
 - queries. These are values which change depending on the condition. For example the `query.time_of_day` or `q.time_of_day` query returns the time of day. 
 - variables. These are valus can you edit to hold values to use later. For example, you can set the variable `variable.my_number` or `v.my_number` to be say 2. 
-- evaluating. In Molang, we can use operators to return values. For example, we can return the value 1 if `q.time_of_day` is greater than `v.my_number` by writing `q.time_of_day > v.my_number`. 
+- evaluating. In MoLang, we can use operators to return values. For example, we can return the value 1 if `q.time_of_day` is greater than `v.my_number` by writing `q.time_of_day > v.my_number`. 
 
 ### Initailize
 This script runs when the entity is first intialize, that is when it spawns in and each time it is loaded. This means each time you log into your world it will run anything in this script. This is useful for setting default values for custom variables. 
@@ -218,16 +218,16 @@ This script runs every frame after `pre_animation`. This is where you run animat
 }
 ```
 
-Here, `attack_controller` is the shortname for our animation controller. Each frame it will run our animation controller and any transitions that occur in the controller. Additionally, within animate we can define how quickly our animation plays using Molang. Remember that Molang evaluates to a value and here we have a query, `q.modified_move_speed`. This query returns the speed the entity is moving, returning `1` for a normal walking speed. So with this, our `walk` animation plays according to the speed that the entity is moving. 
+Here, `attack_controller` is the shortname for our animation controller. Each frame it will run our animation controller and any transitions that occur in the controller. Additionally, within animate we can define how quickly our animation plays using MoLang. Remember that MoLang evaluates to a value and here we have a query, `q.modified_move_speed`. This query returns the speed the entity is moving, returning `1` for a normal walking speed. So with this, our `walk` animation plays according to the speed that the entity is moving. 
 
-If we were instead to have `"walk": 2`, then walk animation would always play at twice the speed. We can also define this inside an animation controller which can give more control about when to play these animations. For more information on using Molang with animations check out our page [here](/visuals/math-based-animations).
+If we were instead to have `"walk": 2`, then walk animation would always play at twice the speed. We can also define this inside an animation controller which can give more control about when to play these animations. For more information on using MoLang with animations check out our page [here](/visuals/math-based-animations).
 
 If your animations aren't playing then it is a good idea to check if they are defined in `animate` using the correct shortname. 
 
 ### Scale
 Scale controls the size of the model. This is slightly different to the component `minecraft:scale` which you can define in an entity's behavior file. The component `minecraft:scale` scales the model and hitbox of an entity, whereas `scale` in the entity's resource file only scales the model. Depending on your case, either might be more useful. 
 
-Another difference of `scale` is that you can use Molang and there are 3 additional components: `scaleX`, `scaleY` and `scaleZ`.
+Another difference of `scale` is that you can use MoLang and there are 3 additional components: `scaleX`, `scaleY` and `scaleZ`.
 
 <CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
 
@@ -255,7 +255,7 @@ A use case of this may be having an atmospheric entity which has a random size.
 }
 ```
 
-This code will make it so each time the entity is loaded, it will have a random size between the values we chose. Here `math.random_integer` is a Molang function which chooses a random integer between the numbers provided. 
+This code will make it so each time the entity is loaded, it will have a random size between the values we chose. Here `math.random_integer` is a MoLang function which chooses a random integer between the numbers provided. 
 
 ## Sound Effects
 Sounds effects are sound files which can be played in game at certain times. This key again defines shortnames for sound effects which can be used by the entity in animations. This can be useful for creating more dynamic sounds when an entity interacts with the world. For example, you may want the entity to play 3 sounds as it attacks.

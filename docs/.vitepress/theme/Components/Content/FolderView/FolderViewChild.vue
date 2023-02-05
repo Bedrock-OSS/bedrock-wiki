@@ -2,9 +2,9 @@
 	<div>
 		<div class="flex">
 			<div
+				@click="toggleChildren"
 				:style="indent"
 				:class="{ collapsed: collapsed }"
-				@click="toggleChildren"
 			>
 				{{ getDisplay() }}
 			</div>
@@ -12,39 +12,45 @@
 
 		<div :class="{ hidden: collapsed }">
 			<FolderViewChild
-				v-for="(node, i) in getNodes()"
-				:key="i"
+				v-for="node in getNodes()"
 				:depth="depth + 1"
 				:nodes="node"
 				:name="node.name"
-			/>
+			>
+			</FolderViewChild>
 		</div>
 	</div>
 </template>
+
+<style>
+.collapsed {
+	opacity: 0.5;
+	font-style: italic;
+}
+.hidden {
+	display: none;
+}
+</style>
 
 <script lang="js">
 
 export default {
 	name: 'FolderViewChild',
-	components: {
-	},
 	props: {
-		// eslint-disable-next-line vue/require-prop-types
 		nodes: {
-			// eslint-disable-next-line @typescript-eslint/no-empty-function
 			default: () => {},
 		},
 		depth: {
-			type: Number,
 			default: () => 0
 		},
 		name : {
-			type: String,
 			default: () => '???',
 		}
 	},
 	data() {
-		return { collapsed: false }
+		return { collapsed: false };
+	},
+	components: {
 	},
 	computed: {
 		indent() {
@@ -55,12 +61,12 @@ export default {
 
 		toggleChildren() {
 			if (this.isFolder()) {
-				this.collapsed = !this.collapsed
+				this.collapsed = !this.collapsed;
 			}
 		},
 		getDisplay() {
 			if (this.depth === -1) {
-				return ''
+				return ""
 			}
 
 			return this.getIcon(this.name) + this.getName(this.name)
@@ -69,7 +75,7 @@ export default {
 			return Object.keys(this.nodes.children).length > 0
 		},
 		getNodes() {
-			return Object.values(this.nodes.children)
+			return Object.values(this.nodes.children);
 		},
 		getIcon(path) {
 			if (this.isFolder())
@@ -77,7 +83,7 @@ export default {
 				return '📁'
 			}
 
-			let type = path.split('.').pop()
+			let type = path.split(".").pop()
 
 			if (type === 'js' || type === 'json' || type === 'mcfunction') {
 				return '📝'
@@ -94,18 +100,8 @@ export default {
 			}
 		},
 		getName(path) {
-			return path.split('/')[0]
+			return path.split('/')[0];
 		}
 	},
-}
+};
 </script>
-
-<style>
-.collapsed {
-	opacity: 0.5;
-	font-style: italic;
-}
-.hidden {
-	display: none;
-}
-</style>

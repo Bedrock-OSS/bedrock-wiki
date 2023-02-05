@@ -115,12 +115,36 @@ ol {
 	font-weight: 650;
 }
 
+.dark .brown {
+	background-color: #8f4700;
+}
+
+.brown {
+	background-color: #bf8867;
+}
+
+.dark .purple {
+	@apply bg-purple-800;
+}
+
+.purple {
+	@apply bg-purple-300;
+}
+
 .dark .green {
 	@apply bg-green-800;
 }
 
 .green {
 	@apply bg-green-300;
+}
+
+.dark .yellow {
+	@apply bg-yellow-800;
+}
+
+.yellow {
+	@apply bg-yellow-300;
 }
 
 .dark .red {

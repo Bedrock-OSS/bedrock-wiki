@@ -77,47 +77,41 @@ Choose a program that feels comfortable and easy for you to use. Many Addon crea
 
 ### Krita
 Krita is a powerful open-source art programed with the goal of giving free powerful digital art tools to artists. Krita has more than enough features to cover your Minecraft needs and works on a MAC or PC.
-**+ Pros:** Plenty of features including a pixel brush with an intuitive user interface.
-**- Cons:** Requires a little time to become familar with the tools.
+Pros: Plenty of features including a pixel brush with an intuitive user interface.
+Cons: Requires a little time to become familar with the tools.
 
 [Download Krita](https://krita.org/en/) 
 
 ### GIMP
 Gimp is similar to Krita in that it is a free and open source digital art program that has a vast arrays of tools. Where Krita focuses more on illustration, GIMP focuses more on image manipulation (think Photoshop). Gimp also works on MAC or PC.
-**+ Pros:** GIMP has more than enough tools for editing Minecraft art
-**- Cons:** The interface is not intuitive. Even though GIMP is powerful, it requires a steep learning curve.
+Pros: GIMP has more than enough tools for editing Minecraft art
+Cons: The interface is not intuitive. Even though GIMP is powerful, it requires a steep learning curve.
 
 [Download Gimp](https://www.gimp.org/)
 
 ### Paint․net
 Paint․net is a simple yet powerful image editing and art software. Paint․net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use. 
-**+ Pros:** Easy to use and learn.
-**- Cons:** Only works on Windows. 
+Pros: Easy to use and learn.
+Cons: Only works on Windows. 
 
 [Download Paint.net](https://www.getpaint.net)
 
 ### Pixilart
 Pixilart is a web-based pixel art software. It is extremely simple to use since it is focused on pixel art. It also has a powerful resize option that may come in handy, so that you can resize your art without losing the pixelart details.
 
-**+ Pros:** Easy to use and learn. Curated specifically for pixel art.
-**- Cons:** Must have internet connection. May be missing tools you want.
+Pros: Easy to use and learn. Curated specifically for pixel art.
+Cons: Must have internet connection. May be missing tools you want.
 
 [Use Pixilart](https://www.pixilart.com/)
 
 ### Piskel
 Piskel is a web-based pixel art software with a focus of making pixelated sprites (or video game charater animations). This tool, similar to Pixilart, is simple to use. This is also a great tool for making flipbooks (Minecraft block or skin animations).
 
-**+ Pros:** Easy to use and learn. Perfect for flipbook animations
-**- Cons:** Must have internet connection. Only offers the most basic tools.
+Pros: Easy to use and learn. Perfect for flipbook animations
+Cons: Must have internet connection. Only offers the most basic tools.
 
 [Download Piskel](https://www.piskelapp.com/)
 
-### Libresprite
-
-LibreSprite is a free and open source program for creating and animating your sprites. Based on the last GPLv2 commit of aseprite.
-
-**+ Pros**: Basic & easy to use, customizable and curated for pixel artists.
-**- Cons**: May not work on Mac, maintained only by a small community.
 
 ## Additional Materials
 
@@ -133,7 +127,8 @@ The best place to get help with this guide is to join the [discord server](/disc
 
 Minecraft's vanilla files are a good source of reference material. You should download these packs, and store them on a convenient location on your computer. When you need an example of an item, or entity, or animation, you can reference these files for inspiration.
 
--   [Vanilla packs](https://github.com/Mojang/bedrock-samples/releases)
+-   [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
+-   [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
 
 ### Documentation
 

@@ -88,7 +88,7 @@
 		"prefix": "wiki.cardlink",
 		"body": [
 			"<CardLink",
-			"    imgsrcLight=\"${1:/assets/images/}\"",
+			"    imgsrc=\"${1:/assets/images/}\"",
 			"    title=\"$2\"",
 			"    link=\"$3\"",
 			"/>"

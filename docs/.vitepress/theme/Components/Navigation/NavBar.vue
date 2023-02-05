@@ -20,30 +20,24 @@
 		<component
 			:is="isVisible ? MenuOpenIcon : MenuIcon"
 			class="menu-icon mr-3 cursor-pointer"
-			@pointerdown.prevent="toggle()"
+			@pointerdown.prevent="toggle"
 		/>
 
-		<a
-			:href="site.base"
-			class="flex flex-row justify-between items-center"
-		>
+		<a :href="site.base" class="flex flex-row justify-between items-center">
 			<WikiLogo class="mr-2" />
 			<div class="font-semibold text-lg pb-0.5">
 				<span class="hidden sm:inline">Bedrock </span><span>Wiki</span>
 			</div>
 		</a>
-		<span class="flex-grow" />
+		<span class="flex-grow"></span>
 		<NavLink
-			v-for="item in navLinks"
-			:key="item.link"
 			class="hidden lg:flex"
+			v-for="item in navLinks"
 			:item="item"
+			:key="item.link"
 		/>
 		<DarkMode />
-		<AlgoliaSearchBox
-			v-if="!!algoliaConfig"
-			:options="algoliaConfig"
-		/>
+		<AlgoliaSearchBox v-if="!!algoliaConfig" :options="algoliaConfig" />
 	</header>
 </template>
 

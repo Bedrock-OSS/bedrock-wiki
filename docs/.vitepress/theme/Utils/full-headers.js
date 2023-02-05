@@ -4,7 +4,7 @@ const { remove: removeDiacritics } = require('diacritics')
 const rControl = /[\u0000-\u001f]/g
 const rSpecial = /[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?/]+/g
 
-const slugify = (str: any) => {
+const slugify = (str) => {
 	return (
 		removeDiacritics(str)
 			// Remove control characters
@@ -12,9 +12,9 @@ const slugify = (str: any) => {
 			// Replace special characters
 			.replace(rSpecial, '-')
 			// Remove continuous separators
-			.replace(/-{2,}/g, '-')
+			.replace(/\-{2,}/g, '-')
 			// Remove prefixing and trailing separators
-			.replace(/^-+|-+$/g, '')
+			.replace(/^\-+|\-+$/g, '')
 			// ensure it doesn't start with a number (#121)
 			.replace(/^(\d)/, '_$1')
 			// lowercase
@@ -22,22 +22,14 @@ const slugify = (str: any) => {
 	)
 }
 
-function extractHeaderPlugin(md: any, include = ['h1', 'h2', 'h3']) {
-	md.renderer.rules.heading_open = (
-		tokens: any,
-		i: any,
-		options: any,
-		env: any,
-		self: any
-	) => {
+function extractHeaderPlugin(md, include = ['h1', 'h2', 'h3']) {
+	md.renderer.rules.heading_open = (tokens, i, options, env, self) => {
 		const token = tokens[i]
 		if (include.includes(token.tag)) {
 			const title = tokens[i + 1].content
-			const idAttr = token.attrs.find(
-				([name]: [string]): boolean => name === 'id'
-			)
+			const idAttr = token.attrs.find(([name]) => name === 'id')
 			const slug = idAttr && idAttr[1]
-			const data = md.__data || (md.__data = {})
+			const data = md.__data
 			const headers = data.headers || (data.headers = [])
 			headers.push({
 				level: parseInt(token.tag.slice(1), 10),

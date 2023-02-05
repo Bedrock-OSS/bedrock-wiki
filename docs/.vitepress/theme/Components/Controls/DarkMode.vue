@@ -12,8 +12,8 @@
 			"
 		/>
 		<select
-			v-model="themeId"
 			name="theme"
+			v-model="themeId"
 			class="
 				appearance-none
 				outline-none
@@ -33,15 +33,9 @@
 				block
 			"
 		>
-			<option value="light">
-				Light
-			</option>
-			<option value="dark">
-				Dark
-			</option>
-			<option value="system">
-				System
-			</option>
+			<option value="light">Light</option>
+			<option value="dark">Dark</option>
+			<option value="system">System</option>
 		</select>
 		<ChevronLeftIcon
 			class="
@@ -69,14 +63,12 @@ const { themeId } = useTheme()
 
 const CurrentThemeIcon = computed(() => {
 	switch (themeId.value) {
-	case 'system':
-		return DesktopMacIcon
-	case 'dark':
-		return DarkThemeIcon
-	case 'light':
-		return LightThemeIcon
-	default:
-		return DarkThemeIcon
+		case 'system':
+			return DesktopMacIcon
+		case 'dark':
+			return DarkThemeIcon
+		case 'light':
+			return LightThemeIcon
 	}
 })
 </script>

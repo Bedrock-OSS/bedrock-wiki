@@ -1,8 +1,5 @@
 <template>
-	<div
-		id="docsearch"
-		class="algolia-search-box"
-	/>
+	<div class="algolia-search-box" id="docsearch" />
 </template>
 
 <script setup lang="ts">
@@ -71,18 +68,18 @@ function initialize(userOptions: any) {
 			container: '#docsearch',
 
 			navigator: {
-				navigate: ({ itemUrl }: { itemUrl: string }) => {
+				navigate: ({ suggestionUrl }: { suggestionUrl: string }) => {
 					const { pathname: hitPathname } = new URL(
-						window.location.origin + itemUrl
+						window.location.origin + suggestionUrl
 					)
 					// Router doesn't handle same-page navigation so we use the native
 					// browser location API for anchor navigation
 					if (route.path === hitPathname) {
 						window.location.assign(
-							window.location.origin + itemUrl
+							window.location.origin + suggestionUrl
 						)
 					} else {
-						router.go(itemUrl)
+						router.go(suggestionUrl)
 					}
 				},
 			},
@@ -129,7 +126,6 @@ function initialize(userOptions: any) {
 						},
 						children,
 					},
-					__v: null
 				}
 			},
 		})
