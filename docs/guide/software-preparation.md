@@ -1,6 +1,7 @@
 ---
 title: Software and preparation
 category: Guide
+description: How to setup your developement environment
 nav_order: 3
 prefix: '3. '
 ---

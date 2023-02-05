@@ -1,6 +1,7 @@
 ---
 title: Project Setup
 category: Guide
+description: How to setup your project
 nav_order: 4
 prefix: '4. '
 ---

@@ -1,6 +1,7 @@
 ---
 title: Understanding JSON
 category: Extra
+description: A first peek into JSON
 nav_order: 1
 prefix: 'a. '
 ---

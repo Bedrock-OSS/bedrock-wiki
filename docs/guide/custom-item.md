@@ -1,6 +1,7 @@
 ---
 title: 'Create a custom Item'
 category: Guide
+description: How to create your first custom Item
 nav_order: 5
 prefix: '5. '
 ---
