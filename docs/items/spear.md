@@ -1,6 +1,8 @@
 ---
 title: Custom Spear
 category: Tutorials
+tags:
+- javascript
 mentions:
 -   XxPoggyisLitxX
 ---
