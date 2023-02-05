@@ -28,7 +28,7 @@ GameTests can be used with the `/gametest` command.
 
 # Get started with GameTest
 
-To get started, you'll want to begin with your own behavior pack and decent knowledge of scripting and API. If you're getting started check out [this article](./starting-scripts.md)
+To get started, you'll want to begin with your own behavior pack and decent knowledge of scripting and API. If you're getting started check out [this article](/scripting/starting-scripts)
 
 To use the GameTest Framework, `@minecraft/server-gametest` module is required. The GameTest API module also requires the `@minecraft/server` module, so in your dependency in your manifest.json requires the following:
 

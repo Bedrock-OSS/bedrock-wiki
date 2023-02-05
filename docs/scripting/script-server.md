@@ -178,7 +178,7 @@ system.runTimeout(() => {
 
 Script API provides its own storage system called dynamic properties to save and load data in a world, specifically in the db folder using behavior pack's module UUID.
 
-![image](/assets/images/gametest/script-server/dynamic_properties.png)
+![dynamic_properties](/assets/images/gametest/script-server/dynamic_properties.png)
 
 In order to save data, the property must be initialised first. There are multiple ways to declare dynamic properties, either on an entity type or world, each option have their own limitation:
 

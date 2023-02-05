@@ -34,39 +34,34 @@ Like other modules, you will need to add the dependency into your `manifest.json
 
 # Enable module in Bedrock Dedicated Server
 
-1. Download Bedrock Server from https://www.minecraft.net/en-us/download/server/bedrock
+1. Download the Bedrock Server from the [Minecraft website](https://www.minecraft.net/en-us/download/server/bedrock)
 
 2. Extract the zip file on a folder.
 
-This is the tree for default BDS:
+This is the tree for default Bedrock Dedicated Server:
 
-<!-- Someone help me convert this to vite folder-structure please-->
-
-```
-Bedrock Server
-├───behavior_packs
-├───config
-│   └───default
-│       └───permissions.json
-├───definitions
-├───development_behavior_packs
-├───development_resource_packs
-├───development_skin_packs
-├───resource_packs
-├───structures
-├───worlds
-│   └───Bedrock level
-│       ├───behavior_packs
-│       ├───db
-│       └───resource_packs
-└───world_templates
-```
+<FolderView :paths="[
+	'BedrockServer/behavior_packs',
+	'BedrockServer/config/default/permissions.json',
+	'BedrockServer/definitions',
+	'BedrockServer/development_behavior_packs',
+	'BedrockServer/development_resource_packs',
+	'BedrockServer/development_skin_packs',
+	'BedrockServer/resource_packs',
+	'BedrockServer/structures',
+        'BedrockServer/worlds/BedrockLevel/behavior_packs',
+        'BedrockServer/worlds/BedrockLevel/db',
+        'BedrockServer/worlds/BedrockLevel/resource_packs',
+        'BedrockServer/world_templates',
+]"></FolderView>
 
 3. In the `permissions.json` file located in `config/<pack_id>/permissions.json` or `config/default/permissions.json`, enable `@minecraft/server-net` module by adding `"@minecraft/server-net"` in the `allowed_modules` key.
 
 > Modify files in default folder allows every add-ons with server-net module enabled in dependencies have access to @minecraft/server-net module.
 > 
 > It is recommended to assign appropriate permissons for each script behavior pack.
+
+<CodeHeader>BedrockServer/config/default/permissions.json</CodeHeader>
 
 ```json
 {

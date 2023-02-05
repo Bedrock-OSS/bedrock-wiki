@@ -12,7 +12,7 @@ tags:
 
 What people often run into when starting out with Minecraft Scripting is the problem with timing, the standards for timing code as you may have noticed are the `setTimeout` and `setInterval` functions and their cancel functions.
 
-These standardized methods are used by the frame system where you can set the delay to millisecond precision, but minecraft uses a tick to process changes in the world, right? That's why even these methods are not and will not be available, instead we got the [`rutTimeout`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/system#runtimeout) and [`rutInterval`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/system#runinterval) system methods from version 1.19.70, which delay to the precision of one tick, you can read more about on [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/system) or [Wiki Tutorial](./script-server.md#scheduling)
+These standardized methods are used by the frame system where you can set the delay to millisecond precision, but minecraft uses a tick to process changes in the world, right? That's why even these methods are not and will not be available, instead we got the [`rutTimeout`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/system#runtimeout) and [`rutInterval`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/system#runinterval) system methods from version 1.19.70, which delay to the precision of one tick, you can read more about on [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/system) or [Wiki Tutorial](/scripting/script-server#scheduling)
 
 - **Eval permission**
 
