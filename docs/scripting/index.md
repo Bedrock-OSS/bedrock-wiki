@@ -1,7 +1,7 @@
 ---
 title: Scripting
 categories:
-    - title: Game Tests
+    - title: Script API
       color: blue
     - title: Legacy Scripting
       color: red

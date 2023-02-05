@@ -94,7 +94,7 @@ After that all, we need to edit a render controller.
 
 Here we will add `uv_anim` component with offset and scale properties:
 
-<CodeHeader>RP/entity/cow.entity.json#description</CodeHeader>
+<CodeHeader>RP/render_controllers/cow.render_controllers.json#controller.render.cow</CodeHeader>
 
 ```json
 "uv_anim": {
@@ -115,6 +115,6 @@ Now, it is time to test your creation!
 ## Download Example
 
 <BButton
-    link="/assets/packs/visuals/animated-entity-texture/animated-entity.zip" download
-    color=default
+    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/animated_entity_texture.mcpack"
+    color=blue
 >Download</BButton>

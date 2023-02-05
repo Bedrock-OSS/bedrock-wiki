@@ -17,13 +17,11 @@ There are two main files that we edit when we want to add sounds. Note how `soun
 Sound files themselves are added inside of the `sounds` folder, and can be any of the following formats.
 
 <FolderView :paths="[
-
-'RP/sounds.json',
-'RP/sounds/sound_definitions.json',
-'RP/sounds/example.wav',
-'RP/sounds/example.ogg',
-'RP/sounds/example.fsb',
-
+	'RP/sounds.json',
+	'RP/sounds/sound_definitions.json',
+	'RP/sounds/example.wav',
+	'RP/sounds/example.ogg',
+	'RP/sounds/example.fsb',
 ]"></FolderView>
 
 ## sound_definitions.json
@@ -70,7 +68,6 @@ For example, `mob.ghast.affectionate_scream` sets `"min_distance": 100.0`, but c
 
 To make a sound which can be heard far away but also drops in volume continuously over distance, one can add e.g. `"volume": 0.01`and use large `<volume>` values in the playsound command. The high value for the `/playsound` volume will produce a large audible range (e.g. a volume of 4 is 64 blocks as calculated above), while the low volume will prevent the played sound from capping at 1.0 too soon.
 
-
 ### Top Level Keys
 
 In the example above, I showed two `top-level` fields: `category` and `sounds`. Sounds will be discussed in further detail below, but the other `top-level` keys will be discussed here:
@@ -99,7 +96,7 @@ The distance from the sound source after which sound volume is attenuated. Defau
 #### max_distance
 
 The distance from the sound source after which the sound volume is the quietest (if in range). It must be a float (eg. 1.0), or the property will be ignored.
-	
+
 ### Sound definitions
 
 In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds but does not have much power. For starts, I can add multiple sounds to the list. These sounds will be randomized when played:

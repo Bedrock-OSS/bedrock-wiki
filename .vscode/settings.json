@@ -1,4 +1,13 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"volar.tsPlugin": true
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"eslint.format.enable": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true
+	},
+	"editor.formatOnSave": true,
+	"eslint.validate": ["javascript", "typescript", "vue"]
 }

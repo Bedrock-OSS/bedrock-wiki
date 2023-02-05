@@ -1,9 +1,11 @@
 <template>
 	<div class="notfound max-w-screen-md mx-auto">
 		<div class="flex flex-col mx-auto items-center">
-			<h1 class="!block">404 - Page not found!</h1>
+			<h1 class="!block">
+				404 - Page not found!
+			</h1>
 			<p>Don't type <code>/spawnpoint</code> here.</p>
-			<img src="/assets/images/misc/dead_bush.png" />
+			<img src="/assets/images/misc/dead_bush.png">
 		</div>
 	</div>
 </template>

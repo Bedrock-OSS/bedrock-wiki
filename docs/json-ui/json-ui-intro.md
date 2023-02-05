@@ -11,8 +11,12 @@ mention:
 
 ## Introduction
 
+:::warning
+JSON UI is being deprecated in favor of [Ore UI](https://github.com/Mojang/ore-ui). Note that any addons using JSON UI will eventually break in the coming years.
+:::
+
 :::tip
-This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the **JSON UI Documentation** page instead.
+This page is outlined with information containing the basics of JSON UI. For a more detailed documentation, you may check the [JSON UI Documentation](/json-ui/json-ui-documentation) page instead.
 :::
 
 The game's user interface is data-driven and can be modified. It allows us to modify how certain user interfaces would render and, to some extent, behave. To get started, all vanilla UI files are stored in `RP/ui/...` folder.
@@ -39,7 +43,7 @@ These are files which contains elements that are called to render a screen:
 These are files which stores JSON UI elements to be used by other namespaces, such as screens:
 
 - `ui_common.json` - contains elements such as the button which is referenced on most other namespaces such buttons for the settings screen
-- `ui_template_*.json` - contains elements that are neatly orgnaized to be used by other namespaces
+- `ui_template_*.json` - contains elements that are neatly organized to be used by other namespaces
 
 ## UI Defs
 
