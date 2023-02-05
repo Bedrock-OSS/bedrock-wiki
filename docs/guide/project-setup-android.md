@@ -52,7 +52,7 @@ Now that you have the workplace setup, code editors should have a way for you to
 1. Open Acode.
 2. Tap the file browser button (3 bars in the top-left), followed by "Open folder"
 3. Tap "Add a storage", followed by "select folder"
-4. This should have opened your device's file browser. Navigate to the *main* folder for your projects (for us, `/Minecraft Packs`) then tap "Use this folder". If your device asked you to allow Acode access, tap "Allow".
+4. This should have opened your device's file browser. Navigate to the _main_ folder for your projects (for us, `/Minecraft Packs`) then tap "Use this folder". If your device asked you to allow Acode access, tap "Allow".
 5. You should be back in Acode now. Tap "OK" and your folder should now be in the list. Tap on it and then "Select Folder" on the bottom of the screen.
 6. Now when you open the file browser (3 bars in top-left), you should see your folder in the list. You now have quick access to your addon's behaviour and resource pack folders. The file browser uses tree view to display your active workspace.
 
@@ -118,15 +118,15 @@ Now create another `manifest.json` file in your addon's resource pack folder. Ag
 }
 ```
 
-## Manifest Breakdown 
+## Manifest Breakdown
 
-- `format_version` defines the version the syntax your manifest is written in. Version 2 is the most recent stable version. Always use this version.
-- `name` is name of your pack. We will be defining the this in "code form" later so they can easily be translated into other languages, should you create a pack with multiple languages.
-- `description` is a short description about your pack that will show up under the `name` in-game. This will also be defined later in "code form".
-- `uuid` is required to help identify your pack from other packs and will have a breakdown of it's own below. Once explained, you'll need to replace all of the `...` with them.
-- `version` is literally the version of your addon. Upon completing your addon, you can always change this to `[1, 0, 0]`. However, it'll be easier to use the hotfix spot while making your changes on mobile.
-- `min_engine_version` tells Minecraft what the minimum version it needs to be in order for your pack to work. For example, if your pack has a crafting recipe that involves concrete, your pack can't run on Minecraft 1.5 because concrete doesn't exist in that version.
-- Under `modules`, you have the `type` field. This tells Minecraft what your pack is. So `data` in your BP tells the game that pack is a behaviour pack and `resources` in your RP tells the game that pack is a resource pack.
+-   `format_version` defines the version the syntax your manifest is written in. Version 2 is the most recent stable version. Always use this version.
+-   `name` is name of your pack. We will be defining the this in "code form" later so they can easily be translated into other languages, should you create a pack with multiple languages.
+-   `description` is a short description about your pack that will show up under the `name` in-game. This will also be defined later in "code form".
+-   `uuid` is required to help identify your pack from other packs and will have a breakdown of it's own below. Once explained, you'll need to replace all of the `...` with them.
+-   `version` is literally the version of your addon. Upon completing your addon, you can always change this to `[1, 0, 0]`. However, it'll be easier to use the hotfix spot while making your changes on mobile.
+-   `min_engine_version` tells Minecraft what the minimum version it needs to be in order for your pack to work. For example, if your pack has a crafting recipe that involves concrete, your pack can't run on Minecraft 1.5 because concrete doesn't exist in that version.
+-   Under `modules`, you have the `type` field. This tells Minecraft what your pack is. So `data` in your BP tells the game that pack is a behaviour pack and `resources` in your RP tells the game that pack is a resource pack.
 
 ## UUID Breakdown
 
@@ -134,7 +134,7 @@ A UUID, or **U**niversally **U**nique **ID**entifier, both identifies your pack 
 
 You should **NEVER** use the same UUID twice! Use the [Online UUID Generator Tool](https://www.uuidgenerator.net/version4) to generate the UUID's needed for your manifest files. Every manifest file uses two different UUID's. So to ensure your packs will work correctly, get 4 different UUID's to replace all of the `...` in both manifests. When finished, each UUID entry should look similar like this: `"uuid": "5c830391-0937-44d6-9774-406de66b6984`
 
-## Pack Icon 
+## Pack Icon
 
 Notice how other packs have a icon? It's a image file which can quickly identify how your addon will appear in-game. Got a low-resolution square image as a PNG? You can use it! Otherwise, you can use this example icon.
 
@@ -147,13 +147,13 @@ Notice how other packs have a icon? It's a image file which can quickly identify
 
 You must place a copy of your desired image in both the behaviour and resource packs. In order for the image to be read correctly, the name must be `pack_icon.png`.
 
-## Language Files 
+## Language Files
 
-Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your addon. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can  You can learn more about how Minecraft handles localization [here](/concepts/text-and-translations). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you `§r`eset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
+Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your addon. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can You can learn more about how Minecraft handles localization [here](/concepts/text-and-translations). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you `§r`eset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
 
 <codeHeader>BP/texts/en_US.lang</codeHeader>
 
-```lang
+```
 pack.name=§2My §lFIRST §r§2Addon's Behaviour Pack!
 pack.description=This addon is made by a Wiki Contributer!
 ```
@@ -166,7 +166,7 @@ pack.description=This addon is made by a Wiki Contributer!
 
 <codeHeader>RP/texts/en_US.lang</codeHeader>
 
-```lang
+```
 pack.name=§2My §lFIRST §r§2Addon's Resource Pack!
 pack.description=This addon is made by a Wiki Contributor!
 ```
@@ -177,15 +177,15 @@ pack.description=This addon is made by a Wiki Contributor!
 ["en_US"]
 ```
 
-## Importing Your Addon 
+## Importing Your Addon
 
 Now that your addon has all of the required content, we need to import it to Minecraft. To do this, we need to create a file with the extension `.mcaddon`.
 
 1. Open your preferred file manager and navigate to the folder containing your behaviour and resource packs.
 2. Using multi-select, select both packs and create a ZIP file.
 3. When asked for the name of the file, ensure that `.zip` is changed to `.mcaddon`.
-![](/assets/images/guide/project-setup-android/zip-addon.png)
-5. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
+   ![](/assets/images/guide/project-setup-android/zip-addon.png)
+4. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
 
 If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Sucessfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](./troubleshooting).
 
@@ -223,38 +223,36 @@ Now we create a world to test your new add-on!
 Remember that in future, we will represent `com.mojang/development_behavior_packs/guide_RP/` as `RP`, and `com.mojang/development_behavior_packs/guide_BP/` as `BP`.
 
 <FolderView :paths="[
-
-'com.mojang/development_resource_packs/guide_RP/manifest.json',
-'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
-'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
-'com.mojang/development_resource_packs/guide_RP/texts/languages.json',
-
-'com.mojang/development_behavior_packs/guide_BP/manifest.json',
-'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
-'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
-'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
-
+	'com.mojang/development_resource_packs/guide_RP/manifest.json',
+	'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+	'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+	'com.mojang/development_resource_packs/guide_RP/texts/languages.json',
+	'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+	'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
+	'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
+	'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
 ]"></FolderView>
 
 ## What you have learned
 
 :::tip What you have learned:
 
-- What and where your `com.mojang` folder is and what it contains
-- How to setup your mobile workspace
-- What a `manifest.json` file is
-- What are UUID's and how to use them
-- How to create icons for your addons
-- What a `.lang` file is
+-   What and where your `com.mojang` folder is and what it contains
+-   How to setup your mobile workspace
+-   What a `manifest.json` file is
+-   What are UUID's and how to use them
+-   How to create icons for your addons
+-   What a `.lang` file is
+
 :::
 
 ## Your progress so far
 
 <Checklist>
 
-- [x] Setup your pack
-- [ ] Create a custom item
-- [ ] Create a custom entity
-- [ ] Create a custom block
+-   [x] Setup your pack
+-   [ ] Create a custom item
+-   [ ] Create a custom entity
+-   [ ] Create a custom block
 
 </Checklist>

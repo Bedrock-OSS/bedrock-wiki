@@ -342,7 +342,19 @@ To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with
 | unchecked_locked_control       | string  |               | Name of the child control that will be displayed only in the unchecked locked state       |
 | checked_locked_hover_control   | string  |               | Name of the child control that will be displayed only in the checked locked hover state   |
 | unchecked_locked_hover_control | string  |               | Name of the child control that will be displayed only in the unchecked locked hover state |
+### HardCoded Toggles
 
+In some screens,navigation tab group has its mapping default selected tabs,such as settings or inventory.
+I guess these values are right.
+```json
+$search_index - $construction_index
+$survival_layout_index - $construction_index
+$recipe_book_layout_index - $equipment_index
+$creative_layout_index - $items_index
+``````
+And there are some must toggles in setting and inventory,even though you can not get a warning without dev version and open the assert diagnosis,they exactly esist and controlled by a function called *ScreenView::_passViewCommand::<lambda_6d65fd272578d43f1becb6eada4ff32c>::()::<lambda_2ab071547c9a470558c54e4d3cddb5f2>::operator()*,when you totally modify these screens,you may meet this assertion.
+
+For example,in setting that is  accessibility and in inventory,the construction,equipment,items and nature tabs are must.
 ### Dropdown
 
 |      Property Name       |  Type  | Default Value |                             Description                              |
@@ -1269,6 +1281,8 @@ Some of them only work in specific screens.
 -   `button.text_edit_box_hovered`
 -   `button.text_edit_box_clear`
 -   `button.help`
+-   `button.menu_open_uri`
+-   `button.no_interaction`
 -   ...
 
 ## Hardcoded Collection Names
@@ -2009,18 +2023,18 @@ Some of them only work in specific screens.
 
 | Name              |  ID  | Aux Values |
 | ----------------- | :--: | :--------: |
-| diamond           | 304  |  17301504  |
-| emerald           | 502  |  25427968  |
-| gold_ingot        | 306  |  17432576  |
-| iron_ingot        | 305  |  17367040  |
-| netherite_ingot   | 592  |  48627712  |
-| red_banner        |      |  29229057  |
-| saddle            | 369  |  21561344  |
+| diamond           | 304  |  19922944  |
+| emerald           | 512  |  33554432  |
+| gold_ingot        | 306  |  20054016  |
+| iron_ingot        | 305  |  19988480  |
+| netherite_ingot   | 603  |  39518208  |
+| banner            | 567  |  37158912  |
+| saddle            | 371  |  24313856  |
 | cartography_table | -200 | -13107200  |
 | chest             |  54  |  3538944   |
 | crafting_table    |  58  |  3801088   |
 | loom              | -204 | -13369344  |
-| stonecutter       | -197 | -12910592  |
+| stonecutter_block | -197 | -12910592  |
 
 #### How to calculate block item aux value:
 

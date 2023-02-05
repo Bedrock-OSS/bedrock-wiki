@@ -6,6 +6,12 @@ tags:
     - recipe
 ---
 
+:::danger Stop!
+
+This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/game-tests.html).
+
+:::
+
 Saving and loading data in Bedrock is tricky because scripts cannot access the local file system directly.
 
 Nonetheless, we can save data by [tagging](https://www.youtube.com/watch?v=tjragqkAlMc) a [dummy entity](/entities/dummy-entities).

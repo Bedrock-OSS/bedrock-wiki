@@ -1,5 +1,8 @@
 <template>
-	<span v-if="valid" :class="`${colour} label`">{{ title }}</span>
+	<span
+		v-if="valid"
+		:class="`${colour} label`"
+	>{{ title }}</span>
 </template>
 
 <script setup lang="ts">
@@ -14,28 +17,23 @@ let title = ''
 let colour = ''
 
 switch (props.tag) {
-	case 'guide': {
-		title = 'GUIDE'
-		colour = 'green'
-		break
-	}
-	case 'outdated': {
-		title = 'OUTDATED'
-		colour = 'red'
-		break
-	}
-	case 'help': {
-		title = 'HELP'
-		colour = 'blue'
-		break
-	}
-	case 'javascript': {
-		title = 'JS'
-		colour = 'yellow'
-		break
-	}
-	default:
-		valid = false
-		break
+case 'guide': {
+	title = 'GUIDE'
+	colour = 'green'
+	break
+}
+case 'outdated': {
+	title = 'OUTDATED'
+	colour = 'red'
+	break
+}
+case 'help': {
+	title = 'HELP'
+	colour = 'blue'
+	break
+}
+default:
+	valid = false
+	break
 }
 </script>

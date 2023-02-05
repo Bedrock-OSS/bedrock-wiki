@@ -10,7 +10,7 @@ mention:
 
 ## Introduction
 
-A common concept for add-ons is implementing new armor sets with unique effects, just like the turtle shell and netherite armor. While items have a knockback resistance component, they don't have a component for inflicting mob effects, emitting particles, etc. under certain conditions. However, using server animations, MoLang and item tags, this can easily be done!
+A common concept for add-ons is implementing new armor sets with unique effects, just like the turtle shell and netherite armor. While items have a knockback resistance component, they don't have a component for inflicting mob effects, emitting particles, etc. under certain conditions. However, using server animations, Molang and item tags, this can easily be done!
 
 Keep in mind that this requires modifying the player behavior, which is a common theme for many add-ons; thus, your add-on may not be compatible with others if you wish to do this.
 

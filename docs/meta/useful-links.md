@@ -49,7 +49,7 @@ Important links have a ⭐.
 ## Bedrock Tools Websites
 
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
--   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-windmill/)
+-   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Apply Loot Tables to Structures](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
 -   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
 -   [Convert MCSTRUCTURE to MCFUNCTION](https://mcbe-essentials.github.io/structure-to-function/)

@@ -9,8 +9,6 @@ export function colorFromTag(tag) {
 		return 'green'
 	} else if (tag == 'help') {
 		return 'blue'
-	} else if (tag == 'javascript') {
-		return 'yellow'
 	} else if (tag == 'easy') {
 		return 'blue'
 	} else if (tag == 'beginner') {
