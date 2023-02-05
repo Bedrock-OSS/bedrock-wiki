@@ -1,5 +1,5 @@
 ---
-title: Simple Custom Commands
+title: Simple Chat Commands
 category: Tutorials
 tags:
     - experimental
