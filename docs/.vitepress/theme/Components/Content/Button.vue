@@ -78,6 +78,10 @@ button.btn {
 	@apply text-red-500 hover:text-red-600 focus:text-red-600 active:text-red-800;
 }
 
+.yellow {
+	@apply text-yellow-500 hover:text-yellow-600 focus:text-yellow-600 active:text-yellow-800;
+}
+
 .default {
 	@apply text-dark-500 hover:text-dark-600 focus:text-dark-600 active:text-dark-800;
 }

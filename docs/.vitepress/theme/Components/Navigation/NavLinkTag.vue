@@ -29,6 +29,11 @@ switch (props.tag) {
 		colour = 'blue'
 		break
 	}
+	case 'javascript': {
+		title = 'JS'
+		colour = 'yellow'
+		break
+	}
 	default:
 		valid = false
 		break

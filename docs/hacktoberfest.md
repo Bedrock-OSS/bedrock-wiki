@@ -34,10 +34,16 @@ The Bedrock Wiki is a knowledge-sharing website for Technical Bedrock, containin
 
 Regolith is an Add-on Compiler for the Bedrock Edition of Minecraft. 
 
+### [Regolith Filters](https://github.com/Bedrock-OSS/regolith-filters)
+
+ The standard library for Regolith filters. 
 
 ### [Bedrock Loot Gen](https://github.com/Bedrock-OSS/bedrock-loot-gen)
 Website for creating Bedrock Edition loot tables.
 
+### [FaqBot](https://github.com/Bedrock-OSS/bedrock-scripting-faq-bot)
+
+A bot for the Bedrock Add-Ons Discord server.
 
 ## Blockception
 
