@@ -371,15 +371,18 @@ Block event-trigger components:
 
 ## Block Description Components
 
-```json
+<CodeHeader></CodeHeader>
 
-		"description": {
-			    "menu_category": {
-                "category": "items", //required
-                "group": "itemGroup.name.bed", //optional
-                "is_hidden_in_commands": true //optional
-            }
-		}
+```json
+{
+	"description": {
+		"menu_category": {
+            "category": "items", //required
+            "group": "itemGroup.name.bed", //optional
+            "is_hidden_in_commands": true //optional
+        }
+	}
+}
 ```
 
 For a list of many categories, see [this](/documentation/creative-categories)
@@ -470,7 +473,7 @@ You need do add the material instance onto any face/bone of a cube within BlockB
 }
 ```
 
-### minecraft:pick_collision
+### minecraft:selection_box
 
 The hitbox of the block when hovering on the block.
 
@@ -502,10 +505,12 @@ The entity collision box.
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:collision_box":{
-				"origin": [-8, 0, -8],
-				  "size": [16, 16, 16]
-			}
+{
+	"minecraft:collision_box":{
+		"origin": [-8, 0, -8],
+		"size": [16, 16, 16]
+	}
+}
 ```
 
 Or..
@@ -585,14 +590,16 @@ Ticks when the values between x and y values randomly inside `interval_range`.
 <CodeHeader></CodeHeader>
 
 ```json
-				"minecraft:queued_ticking": {
-                "looping": true,
-                "interval_range": [20, 20], //range changed to this.
-                "on_tick": {
-                    "event": "set_particles_and_effect",
-                    "target": "block"
-                }
-            }
+{
+	"minecraft:queued_ticking": {
+    	"looping": true,
+        "interval_range": [20, 20], //range changed to this.
+        "on_tick": {
+            "event": "set_particles_and_effect",
+            "target": "block"
+        }
+	}
+}
 ```
 
 ### minecraft:rotation
@@ -904,10 +911,12 @@ bedrock_wiki:
 Use `alpha_test`
 
 ```json
-"minecraft:material_instances": {
-	"*": {
+{
+	"minecraft:material_instances": {
+		"*": {
         	"render_method": "alpha_test"
     	}
+	}
 }
 ```
 
