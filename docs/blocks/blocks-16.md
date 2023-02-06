@@ -382,7 +382,7 @@ Block event-trigger components:
 		}
 ```
 
-For a list of meny categories, see [this](/documentation/creative-categories)
+For a list of many categories, see [this](/documentation/creative-categories)
 
 ## Block Components
 
@@ -730,7 +730,7 @@ Runs an event when The Player placed the block.
 
 ### minecraft:on_player_destroyed
 
-Runs an event when The Player destroyed the block.
+Runs an event when The Player destroys the block.
 _currently bugged as of 1.19.50_
 
 <CodeHeader></CodeHeader>
