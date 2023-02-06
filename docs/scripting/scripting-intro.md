@@ -3,12 +3,12 @@ title: Intro to Scripting
 category: Legacy Scripting
 nav_order: 1
 tags:
-    - guide
+    - outdated
 ---
 
 :::danger Stop!
 
-This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/game-tests.html).
+This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/starting-scripts.html).
 
 :::
 

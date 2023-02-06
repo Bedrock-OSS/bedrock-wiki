@@ -2,13 +2,12 @@
 title: Saving and Loading Data
 category: Legacy Scripting
 tags:
-    - intermediate
-    - recipe
+    - outdated
 ---
 
 :::danger Stop!
 
-This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/game-tests.html).
+This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/starting-scripts.html).
 
 :::
 
