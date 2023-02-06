@@ -5,13 +5,15 @@ tags:
     - experimental
 ---
 
-Better documentation on the new block format introduced in the Minecraft Beta 1.16.100.
+Better documentation on the new block format introduced in the Minecraft Beta 1.16.100 and newer versions.
 
 :::warning
 This document covers experimental features, for 1.16.100+ format version blocks. If you would like to learn about stable blocks, you can do it [here](/blocks/blocks-intro).
 :::
 
 ## Block Properties
+
+Block properties are block states for all your custom blocks.
 
 ### Defining Properties:
 
@@ -230,7 +232,7 @@ Decrements the player's current item stack.
 
 ### die
 
-Kills the specified target in context (Destroying the block, if specified).
+Kills the specified target in context, making the block dissapear with no loot. (Destroying the block, if specified).
 
 <CodeHeader></CodeHeader>
 
@@ -311,7 +313,7 @@ Sequences event functions
 				}
 			},
 			{
-				"condition": "query.block_property('bedrock_wiki:my_prop') == true",
+				"condition": "query.block_property('bedrock_wiki:my_prop') == true", //Optional
 				"trigger": {
 					"event": "bedrock_wiki:my_entity_event",
 					"target": "other"
@@ -333,7 +335,7 @@ Randomizes event functions
 	"bedrock_wiki:randomize_events": {
 		"randomize": [
 			{
-				"weight": 1,
+				"weight": 1, //Defines the rarity
 				"set_block_property": {
 					"bedrock_wiki:boolean_property_example": false
 				}
@@ -367,23 +369,29 @@ Block event-trigger components:
 
 -   `minecraft:ticking` and `minecraft:random_ticking` may be used to trigger events after a time either set or random, respectively
 
+## Block Description Components
+
+```json
+
+		"description": {
+			    "menu_category": {
+                "category": "items", //required
+                "group": "itemGroup.name.bed", //optional
+                "is_hidden_in_commands": true //optional
+            }
+		}
+```
+
+For a list of meny categories, see [this](/documentation/creative-categories)
+
 ## Block Components
 
 List of experimental block components, with usage examples.
 
-### minecraft:breathability
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:breathability": "solid" // Also accepts 'air'
-}
-```
-
 ### minecraft:display_name
 
-(*See the Additional Notes at the bottom of this page*)
+(_See the Additional Notes at the bottom of this page_)
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -392,38 +400,21 @@ List of experimental block components, with usage examples.
 }
 ```
 
-### minecraft:entity_collision
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:entity_collision": {
-		"origin": [ -8, 0, -8 ],
-		"size": [ 16, 16, 16 ]
-	}
-}
-```
-Or..
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:entity_collision": false
-}
-```
-
 ### minecraft:geometry
 
+The Model the block will use.
+
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:geometry": "geometry.wiki" // Geometry identifier from geo file in 'RP/models/entity' folder
+	"minecraft:geometry": "geometry.wiki" // Geometry identifier from geo file in 'RP/models/entity' or 'RP/models/blocks' folder
 }
 ```
 
 ### minecraft:material_instances
+
+It's mainly used to set a texture to you block.
 
 <CodeHeader></CodeHeader>
 
@@ -443,6 +434,27 @@ Or..
 }
 ```
 
+Or...
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:material_instances": {
+		"bone_1": {
+			"texture": "texture_name", // References texture defined in terrain_textures.json
+			"render_method": "blend", // Options 'blend', 'opaque', 'alpha_test',
+			"face_dimming": true, // Defaults to true; refers to whether or not block is affected by lighting (Undocumented)
+			"ambient_occlusion": true // Defaults to true; refers to whether or not faces have smooth lighting (Undocumented)
+		}
+	}
+}
+```
+
+:::tip
+You need do add the material instance onto any face/bone of a cube within BlockBench.
+:::
+
 ### minecraft:part_visibility
 
 <CodeHeader></CodeHeader>
@@ -460,26 +472,55 @@ Or..
 
 ### minecraft:pick_collision
 
+The hitbox of the block when hovering on the block.
+
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:pick_collision": {
+	"minecraft:selection_box": {
 		"origin": [ -8, 0, -8 ],
 		"size": [ 16, 16, 16 ]
 	}
 }
 ```
+
 Or..
+
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:pick_collision": false
+	"minecraft:selection_box": false
+}
+```
+
+### minecraft:collision_box
+
+The entity collision box.
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:collision_box":{
+				"origin": [-8, 0, -8],
+				  "size": [16, 16, 16]
+			}
+```
+
+Or..
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:collision_box": false
 }
 ```
 
 ### minecraft:placement_filter
+
+Allows to make the block only be placed on specified blocks.
 
 <CodeHeader></CodeHeader>
 
@@ -489,7 +530,7 @@ Or..
 		"conditions": [
 			{
 				"block_filter": [ "minecraft:dirt" ],
-				"allowed_faces": [ "up" ]
+				"allowed_faces": [ "up" ] //Can be up, down or side.
 			}
 		]
 	}
@@ -521,6 +562,8 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 
 ### minecraft:random_ticking
 
+Allows for behavior like random crop growth.
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -529,13 +572,32 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 		"on_tick": {
 			"event": "block_event",
 			"target": "self",
-			"condition": "query.block_property('bedrock_wiki:block_property') == true"
+			"condition": "query.block_property('bedrock_wiki:block_property') == true" //Optional
 		}
 	}
 }
 ```
 
+### minecraft:queued_ticking
+
+Ticks when the values between x and y values randomly inside `interval_range`.
+
+<CodeHeader></CodeHeader>
+
+```json
+				"minecraft:queued_ticking": {
+                "looping": true,
+                "interval_range": [20, 20], //range changed to this.
+                "on_tick": {
+                    "event": "set_particles_and_effect",
+                    "target": "block"
+                }
+            }
+```
+
 ### minecraft:rotation
+
+Allows for rotating the block.
 
 <CodeHeader></CodeHeader>
 
@@ -545,23 +607,7 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 }
 ```
 
-### minecraft:ticking
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:ticking": {
-		"looping": true,
-		"range": [4, 4],
-		"on_tick": {
-			"event": "block_event",
-			"target": "self",
-			"condition": "query.block_property('bedrock_wiki:block_property') == true"
-		}
-	}
-}
-```
+For block rotations like logs, see [this](/blocks/rotatable-blocks)
 
 ### minecraft:unit_cube
 
@@ -569,11 +615,13 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 
 ```json
 {
-	"minecraft:unit_cube": {}
+	"minecraft:unit_cube": {} //Forces the block to be a cube
 }
 ```
 
 ### minecraft:unwalkable
+
+Makes the block unwakable.
 
 <CodeHeader></CodeHeader>
 
@@ -585,6 +633,8 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 
 ### minecraft:crafting_table
 
+Turns your block into a new/custom Crafting Table.
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -592,12 +642,14 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 	"minecraft:crafting_table": {
 		"custom_description": "Example Crafting Table", // Name shown in GUI
 		"grid_size": 3, // Currently only supports 3
-		"crafting_tags": ["crafting_table", "custom_crafting_tag"]
+		"crafting_tags": ["crafting_table", "custom_crafting_tag"] //Tags to be used within the recipe file
 	}
 }
 ```
 
 ### minecraft:on_step_on
+
+Runs an event when an entity stepped on the block.
 
 <CodeHeader></CodeHeader>
 
@@ -606,12 +658,14 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 	"minecraft:on_step_on": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('bedrock_wiki:block_property') == true"
+		"condition": "query.block_property('bedrock_wiki:block_property') == true" //Optional
 	}
 }
 ```
 
 ### minecraft:on_step_off
+
+Runs an event when an entity stepped off of the block.
 
 <CodeHeader></CodeHeader>
 
@@ -620,12 +674,14 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 	"minecraft:on_step_off": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('bedrock_wiki:block_property') == true"
+		"condition": "query.block_property('bedrock_wiki:block_property') == true" //Optional
 	}
 }
 ```
 
 ### minecraft:on_fall_on
+
+Runs an event when an entity fell on the block.
 
 <CodeHeader></CodeHeader>
 
@@ -634,13 +690,15 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 	"minecraft:on_fall_on": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('bedrock_wiki:block_property') == true",
+		"condition": "query.block_property('bedrock_wiki:block_property') == true", //Optional
 		"min_fall_distance": 5
 	}
 }
 ```
 
 ### minecraft:on_placed
+
+Runs an event when an entity placed the block.
 
 <CodeHeader></CodeHeader>
 
@@ -649,12 +707,14 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 	"minecraft:on_placed": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('bedrock_wiki:block_property') == true"
+		"condition": "query.block_property('bedrock_wiki:block_property') == true" //Optional
 	}
 }
 ```
 
 ### minecraft:on_player_placing
+
+Runs an event when The Player placed the block.
 
 <CodeHeader></CodeHeader>
 
@@ -663,12 +723,15 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 	"minecraft:on_player_placing": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('bedrock_wiki:block_property') == true"
+		"condition": "query.block_property('bedrock_wiki:block_property') == true" //Optional
 	}
 }
 ```
 
 ### minecraft:on_player_destroyed
+
+Runs an event when The Player destroyed the block.
+_currently bugged as of 1.19.50_
 
 <CodeHeader></CodeHeader>
 
@@ -677,12 +740,14 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 	"minecraft:on_player_destroyed": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('bedrock_wiki:block_property') == true"
+		"condition": "query.block_property('bedrock_wiki:block_property') == true" //Optional
 	}
 }
 ```
 
 ### minecraft:on_interact
+
+Runs an event when The Player uses the block.
 
 <CodeHeader></CodeHeader>
 
@@ -691,7 +756,7 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relavent bloc
 	"minecraft:on_interact": {
 		"event": "block_event",
 		"target": "self",
-		"condition": "query.block_property('bedrock_wiki:block_property') == true"
+		"condition": "query.block_property('bedrock_wiki:block_property') == true" //Optional
 	}
 }
 ```
@@ -806,7 +871,7 @@ bedrock_wiki:
 -   Vanilla blocks are hard-coded. You may not override or access them.
 -   Following components may only have one at any given time:
     -   `"minecraft:ticking"`
-    -   `"minecraft:random_ticking"`
+    -   `"minecraft:queued_ticking"`
 -   It is not recommended to use `minecraft:display_name`. As an example..
 
 <CodeHeader></CodeHeader>
@@ -821,20 +886,20 @@ bedrock_wiki:
 
 -   A maximum of `16` values per block property may be used.
 -   The following components may not exceed the default (16x) block size limitations:
-    -   `minecraft:entity_collision`
-    -   `minecraft:pick_collision`
+    -   `minecraft:collision_box`
+    -   `minecraft:selection_box`
 -   Custom blocks' tags are ignored by Vanilla items.
 -   Block faces will unconditionally darken if intersecting another block.
 -   Blocks will always be dropped when mined with the `Silk Touch` enchantment.
--   The following event triggers require `entity_collision` to be 4 or higher on the Y-axis:
+-   The following event triggers require `collision_box` to be 4 or higher on the Y-axis:
     -   `minecraft:on_step_on`
     -   `minecraft:on_step_off`
     -   `minecraft:on_fall_on`
 -   Different parameters for `render_method` in `minecraft:material_instances` will - similar to entity runtime identifiers - affect certain properties of the block:
     -   Inputting `opaque` will allow Redstone to pass through, Grass to decay, and on it, Mobs' spawning
-    -	Inputting `alpha_test` will **not** allow Redstone to pass through, Grass to decay, or Mobs to spawn on it
-    	-	`blend` has the same properties as `alpha_test`
-    -	Creating a transparent block exhibiting `opaque` properties:
+    -   Inputting `alpha_test` will **not** allow Redstone to pass through, Grass to decay, or Mobs to spawn on it
+        -   `blend` has the same properties as `alpha_test`
+    -   Creating a transparent block exhibiting `opaque` properties:
 
 Use `alpha_test`
 
