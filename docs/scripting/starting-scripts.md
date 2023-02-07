@@ -35,25 +35,25 @@ In the behavior pack manifest, you need to add a `script` module (1.19.0+) or `j
 
 Additionally, dependencies will need to be set based on modules used.
 
-**@minecraft/server** - `b26a4d4c-afdf-4690-88f8-931846312678`  
-Formerly known as "Minecraft", "mojang-minecraft"
+-	**`@minecraft/server`** - `b26a4d4c-afdf-4690-88f8-931846312678`
+	-	Formerly known as "Minecraft", "mojang-minecraft"
 
-**@minecraft/server-gametest** - `6f4b6893-1bb6-42fd-b458-7fa3d0c89616`  
-Formerly known as "GameTest", "mojang-gametest"
+-	**`@minecraft/server-gametest`** - `6f4b6893-1bb6-42fd-b458-7fa3d0c89616`
+	-	Formerly known as "GameTest", "mojang-gametest"
 
-**@minecraft/server-ui** - `2bd50a27-ab5f-4f40-a596-3641627c635e`  
-Beta 1.18.20.21+ (Release 1.18.30+)  
-Formerly known as "mojang-minecraft-ui"
+-	**`@minecraft/server-ui`** - `2bd50a27-ab5f-4f40-a596-3641627c635e`
+	-	Beta 1.18.20.21+ (Release 1.18.30+)
+	-	Formerly known as "mojang-minecraft-ui"
 
-**@minecraft/server-admin** - `53d7f2bf-bf9c-49c4-ad1f-7c803d947920`  
-BDS module for configuration of variables and secrets. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.  
-Release 1.19.10+  
-Formerly known as "mojang-minecraft-server-admin"
+-	**`@minecraft/server-admin`** - `53d7f2bf-bf9c-49c4-ad1f-7c803d947920`
+	-	BDS module for configuration of variables and secrets. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
+	-	Release 1.19.10+
+	-	Formerly known as "mojang-minecraft-server-admin"
 
-**@minecraft/server-net** - `777b1798-13a6-401c-9cba-0cf17e31a81b`  
-BDS module for executing HTTP-based requests. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.  
-Release 1.19.10+  
-Formerly known as "mojang-net"
+-	**`@minecraft/server-net`** - `777b1798-13a6-401c-9cba-0cf17e31a81b`
+	-	BDS module for executing HTTP-based requests. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
+	-	Release 1.19.10+
+	-	Formerly known as "mojang-net"
 
 ## Script Versioning
 
@@ -63,7 +63,7 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
 	
 	All API modules use `[ 0, 1, 0 ]`. GameTest Framework experiment must be activated to use in world.
 
--   1.19.20+
+-	1.19.20+
 	
 	All API modules have their versions incremented to `"1.0.0-beta"`, new features/changes are available in the beta version, and `0.1.0` has old developments and features in the API. GameTest Framework experiment must be activated to use in world.
 
@@ -71,27 +71,27 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
 	
 	**Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
-	- @minecraft/server:
+	-	`@minecraft/server`:
 		- `1.0.0`
 
 	**Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
 	
-	- @minecraft/server:
-		- `1.1.0-beta`
-		- `0.1.0` (use `mojang-minecraft`, NOT `@minecraft/server` when importing module for this version)
+	-	`@minecraft/server`:
+		-	`1.1.0-beta`
+		-	`0.1.0` (use `mojang-minecraft`, NOT `@minecraft/server` when importing module for this version)
 
-	- @minecraft/server-ui:
-		- `1.0.0-beta`
-		- `0.1.0` (use `mojang-minecraft-ui`, NOT `@minecraft/server-ui` when importing module for this version)
+	-	`@minecraft/server-ui`:
+		-	`1.0.0-beta`
+		-	`0.1.0` (use `mojang-minecraft-ui`, NOT `@minecraft/server-ui` when importing module for this version)
 		
-	- @minecraft/server-gametest:
-		- `1.0.0-beta`
+	-	`@minecraft/server-gametest`:
+		-	`1.0.0-beta`
 
-	- @minecraft/server-net:
-		- `1.0.0-beta` (Bedrock dedidcated server module only, must enable in `permission.json`)
+	-	`@minecraft/server-net`:
+		-	`1.0.0-beta` (Bedrock dedidcated server module only, must enable in `permission.json`)
 
-	- @minecraft/server-admin:
-		- `1.0.0-beta` (Bedrock dedidcated server module only)
+	-	`@minecraft/server-admin`:
+		-	`1.0.0-beta` (Bedrock dedidcated server module only)
 
 As of release 1.19.30, you can also specify dependencies using the `module_name`:
 
@@ -148,9 +148,9 @@ system.runInterval(() => {
 
 ## Reference Documentation
 
-Official documentation on are hosted on Microsoft Learn and can be found here:
+Official documentation are hosted on Microsoft Learn and can be found here:
 
--   [`@minecraft/server`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft)
+-	[`@minecraft/server`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft)
 -   [`@minecraft/server-gametest`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/mojang-gametest)
 -   [`@minecraft/server-ui`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft-ui/mojang-minecraft-ui)
 -   [`@minecraft/server-admin`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft-server-admin/mojang-minecraft-server-admin)
@@ -166,8 +166,8 @@ Official typescript declarations for the latest Beta API modules in Minecraft Pr
 
 These allow for enhanced auto-completions and validation when used inside of your editor.
 
--   bridge. v2: ships with GameTest support built-in.
--   Visual Studio Code: install Node.js and npm, then run the following in command line:
+-   bridge. v2: Ships with GameTest support built-in.
+-   Visual Studio Code: Install Node.js and npm, then run the following in command line:
 
 Latest beta API modules:
 

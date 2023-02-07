@@ -32,7 +32,7 @@ Like other modules, you will need to add the dependency into your `manifest.json
 }
 ```
 
-# Enable module in Bedrock Dedicated Server
+## Enable module in Bedrock Dedicated Server
 
 1. Download the Bedrock Server from the [Minecraft website](https://www.minecraft.net/en-us/download/server/bedrock)
 
@@ -86,7 +86,7 @@ Minecraft API supports the following HTTP request methods:
 - [`POST`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST)
 - [`PUT`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT)
 
-# Simple HTTP Request
+## Simple HTTP Request
 
 `http.get(url)` - Performs a simple HTTP get request in behavior packs.
 
@@ -109,7 +109,7 @@ http.get('http://example.com/').then((response) => {
 
 ## Advanced HTTP Request
 
-# http.request
+### http.request
 
 Makes a request to a web server.
 
