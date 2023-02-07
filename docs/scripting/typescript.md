@@ -88,35 +88,17 @@ Now that you created the project, it can be opened in your IDE of choice. If you
 
 ### Project Structure
 
-<div markdown="0" class="folder-structure">
-    <ul>
-        <li><span class="folder">node_modules</span></li>
-        <li><span class="folder">packs</span>
-            <ul>
-                <li><span class="folder"><a href="/schemas/behavior-folder" target="__blank">behaviors</a></span>
-                    <ul>
-                        <li><span class="file">manifest.json</span></li>
-                        <li><span class="image">pack_icon.png</span></li>
-                    </ul>
-                </li>
-                <li><span class="folder"><a href="/schemas/resource-folder" target="__blank">resources</a></span>
-                    <ul>
-                        <li><span class="file">manifest.json</span></li>
-                        <li><span class="image">pack_icon.png</span></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><span class="folder">scripts</span>
-            <ul>
-                <li><span class="file">Main.ts</span></li>
-            </ul>
-        </li>
-        <li><span class="file">package-lock.json</span></li>
-        <li><span class="file">package.json</span></li>
-        <li><span class="file">tsconfig.json</span></li>
-    </ul>
-</div>
+<FolderView :paths="[
+	'node_modules',
+	'packs/behaviors/manifest.json',
+	'packs/behaviors/pack_icon.png',
+  'packs/resources/pack_icon.png',
+  'packs/resources/pack_icon.png',
+  'scripts/Main.ts',
+  'package-lock.json',
+  'package.json',
+  'tsconfig.json',
+]"></FolderView>
 
 Unless you know what you are doing, the only part of the project to be concerned with is everything within the `packs` folder. That is where all the development should take place.
 
@@ -199,45 +181,19 @@ Now that you created the project, it can be opened in your IDE of choice. If you
 
 ### Project Structure
 
-<div markdown="0" class="folder-structure">
-    <ul>
-        <li><span class="folder">node_modules</span></li>
-        <li><span class="folder">packs</span>
-            <ul>
-                <li><span class="folder"><a href="/schemas/behavior-folder" target="__blank">behaviors</a></span>
-                    <ul>
-                        <li><span class="file">manifest.json</span></li>
-                        <li><span class="image">pack_icon.png</span></li>
-                        <li><span class="folder">scripts</span>
-                            <ul>
-                                <li><span class="folder">client</span>
-                                    <ul>
-                                        <li><span class="file">client.ts</span></li>
-                                    </ul>
-                                </li>
-                                <li><span class="folder">server</span>
-                                    <ul>
-                                        <li><span class="file">server.ts</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><span class="folder"><a href="/schemas/resource-folder" target="__blank">resources</a></span>
-                    <ul>
-                        <li><span class="file">manifest.json</span></li>
-                        <li><span class="image">pack_icon.png</span></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><span class="file">gulpfile.js</span></li>
-        <li><span class="file">package-lock.json</span></li>
-        <li><span class="file">package.json</span></li>
-        <li><span class="file">tsconfig.json</span></li>
-    </ul>
-</div>
+<FolderView :paths="[
+	'node_modules',
+	'packs/behaviors/manifest.json',
+	'packs/behaviors/pack_icon.png',
+  'packs/behaviors/scripts/client/client.ts',
+  'packs/behaviors/scripts/server/server.ts',
+  'packs/resources/pack_icon.png',
+  'packs/resources/pack_icon.png',
+  'gulpfile.js',
+  'package-lock.json',
+  'package.json',
+  'tsconfig.json',
+]"></FolderView>
 
 Unless you know what you are doing, the only part of the project to be concerned with is everything within the `packs` folder. That is where all the development should take place.
 
