@@ -88,10 +88,10 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
 		-	`1.0.0-beta`
 
 	-	`@minecraft/server-net`:
-		-	`1.0.0-beta` (Bedrock dedidcated server module only, must enable in `permission.json`)
+		-	`1.0.0-beta` (Bedrock Dedicated Server module only, must enable in `permission.json`)
 
 	-	`@minecraft/server-admin`:
-		-	`1.0.0-beta` (Bedrock dedidcated server module only)
+		-	`1.0.0-beta` (Bedrock Dedicated Server module only)
 
 As of release 1.19.30, you can also specify dependencies using the `module_name`:
 
