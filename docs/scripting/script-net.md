@@ -2,7 +2,7 @@
 title: Script Requests API
 category: Tutorials
 tags:
-	- experimental
+    - experimental
 ---
 
 ::: warning

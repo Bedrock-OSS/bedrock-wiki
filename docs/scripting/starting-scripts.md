@@ -11,7 +11,7 @@ The Script API is currently in active development, and breaking changes are freq
 
 ## Overview
 
-The Script API (formerly GameTests, and not to be confused with the [Legacy Scripting API](/scripting/scripting-intro)) is a beta feature that allows for a new variety of creations, these are built with JavaScript files in the behavior pack folder.
+The Script API (formerly GameTests, and not to be confused with the [Legacy Scripting API](/scripting/scripting-intro)) is a feature that allows for a new variety of creations, these are built with JavaScript files in the behavior pack folder. Some parts of the Script API are not experimental.
 
 This page will give you an introduction to the 80% of React concepts that you will use on a daily basis.
 
@@ -61,7 +61,7 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
 
 -   Before 1.19.20
 	
-	All API modules uses `[ 0, 1, 0 ]`. GameTest Framework experiment must be activated to use in world.
+	All API modules use `[ 0, 1, 0 ]`. GameTest Framework experiment must be activated to use in world.
 
 -   1.19.20+
 	
@@ -124,7 +124,7 @@ The entry point contains scripts and/or imports to other script files.
 
 ## Writing scripts with JS
 
-Minecraft's scripting engine only runs JavaScript only, like any other JavaScript projects. Check out [Scripting with TypeScript](./typescript#script-api) for compiling TS directly to JavaScript.
+Minecraft's scripting engine only runs JavaScript, like any other JavaScript projects. Check out [Scripting with TypeScript](./typescript#script-api) for compiling TS directly to JavaScript.
 
 <CodeHeader>BP/scripts/Main.js</CodeHeader>
 
@@ -148,7 +148,7 @@ system.runInterval(() => {
 
 ## Reference Documentation
 
-Official documentations on are hosted on Microsoft Learn and can be found here:
+Official documentation on are hosted on Microsoft Learn and can be found here:
 
 -   [`@minecraft/server`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft)
 -   [`@minecraft/server-gametest`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/mojang-gametest)
@@ -156,7 +156,7 @@ Official documentations on are hosted on Microsoft Learn and can be found here:
 -   [`@minecraft/server-admin`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft-server-admin/mojang-minecraft-server-admin)
 -   [`@minecraft/server-net`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-net/mojang-net)
 
-Official typescript declarations for latest Beta API modules in Minecraft Preview can be found here:
+Official typescript declarations for the latest Beta API modules in Minecraft Preview can be found here:
 
 -   [`@minecraft/server`](https://www.npmjs.com/package/@minecraft/server/v/beta)
 -   [`@minecraft/server-gametest`](https://www.npmjs.com/package/@minecraft/server-gametest/v/beta)

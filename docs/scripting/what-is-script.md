@@ -4,7 +4,7 @@ category: General
 tags:
     - experimental
 mentions:
-	- ConsoleTerm
+    - ConsoleTerm
 ---
 
 ::: warning
@@ -22,12 +22,12 @@ Summary: An API is a kind of mutual or one-sided interaction between two or more
 
 Maybe you have already heard Script API somewhere, it is important to know what is hidden under this name.
 
-A lot of people imagine different things like Codes, Scripts, Programming Languages, (`Mysterious Experiments in Minecraft? :]` ), but in reality it is only, API is not a programming language, script, code, or program, it is a set of functions that allow us to APIs give us the possibility to interact with Minecraft as such, we can receive events, read blocks, entities, create particles, through scripts! This API is also well documented in [official web site](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server)!
+A lot of people imagine different things like Codes, Scripts, Programming Languages, (`Mysterious Experiments in Minecraft? :]` ), but in reality it is only an API. APIs are a set of functions that allow us to interact with Minecraft as such. We can receive events, read blocks, entities, create particles, and more! This API is also well documented in [official web site](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server)!
 
 ## API Modules?
 
 The API is divided into other sub-modules according to functionality, some API functions may not be so safe for basic users, so they are only allowed on servers or they cannot work on some divices, for that we have different packages of API functions that we can call Modules.
 
-Modules should be named as what you can do with them.
+Modules should be named after the functionality they contain.
 
 [Original Credits](https://github.com/JaylyDev/ScriptAPI/tree/main/docs/MinecraftApi#readme) - Written by [ConMaster2112](https://github.com/ConsoleTerm)

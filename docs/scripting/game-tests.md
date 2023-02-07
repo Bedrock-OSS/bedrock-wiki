@@ -24,13 +24,13 @@ GameTests can be used with the `/gametest` command.
 -   `/gametest create <testName: string> [width: int] [height: int] [depth: int]` - Creates a blank GameTest area with the specified dimensions.
 -   `/reload` - Reloads all function and script files from all behavior packs. (1.19+)
 
-(1.19.40+) Vanilla GameTests are removed from the Minecraft game files, so you cannot run any gametests without adding your own custom behavior pack. They tried to hide over [**here**](https://github.com/microsoft/minecraft-gametests/tree/main/behavior_packs/vanilla_gametest)...
+(1.19.40+) Vanilla GameTests are removed from the Minecraft game files, so you cannot run any gametests without adding your own custom behavior pack. You can find them in the [**official repo**](https://github.com/microsoft/minecraft-gametests/tree/main/behavior_packs/vanilla_gametest).
 
 # Get started with GameTest
 
-To get started, you'll want to begin with your own behavior pack and decent knowledge of scripting and API. If you're getting started check out [this article](/scripting/starting-scripts)
+To get started, you'll want to begin with your own behavior pack and decent knowledge of scripting and API. If you're getting started check out [this article](/scripting/starting-scripts).
 
-To use the GameTest Framework, `@minecraft/server-gametest` module is required. The GameTest API module also requires the `@minecraft/server` module, so in your dependency in your manifest.json requires the following:
+To use the GameTest Framework, the `@minecraft/server-gametest` module is required. The GameTest API module also requires the `@minecraft/server` module, so in your dependency in your manifest.json requires the following:
 
 <CodeHeader>BP/manifest.json/</CodeHeader>
 

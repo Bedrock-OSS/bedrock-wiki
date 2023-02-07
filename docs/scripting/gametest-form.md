@@ -11,7 +11,7 @@ mentions:
 The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.70
 :::
 
-In version 1.18.30, Minecraft released wonderful new script module, `@minecraft/server-ui` (formerly named `mojang-minecraft-ui`). With this module, we can create form UIs without the need for JSON UI-wrangling.
+In version 1.18.30, Minecraft released a wonderful new script module, `@minecraft/server-ui` (formerly named `mojang-minecraft-ui`). With this module, we can create form UIs without the need for JSON UI-wrangling.
 
 ## Setup
 Like other modules, you will need to add the dependency into your `manifest.json`
@@ -246,7 +246,7 @@ form.toggle("Hide Effect Particle", true)
 ![image](/assets/images/gametest/gametest-form/modal-form.png)
 
 ## Show and Respond
-After we create the form, we will need to show the form to the player and save the response to run other tasks. We will need some event to show our form. The most used event is using `itemUse` event, that reads when player uses (right-clicks) with an item.
+After we create the form, we will need to show the form to the player and save the response to run other tasks. We will need some event to show our form. The most used event is using `itemUse` event, that reads when a player uses (right-clicks) an item.
 
 Let's say our form must be opened with a stick that is named "Form Opener". You can use any event with any configurations in order to open your own form.
 

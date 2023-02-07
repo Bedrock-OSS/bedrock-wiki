@@ -10,7 +10,7 @@ mentions:
 The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.70
 :::
 
-Who doesn't want cool custom commands? With the Script API, you can create your custom commands. In this article, we will be creating custom commands using the Script API.
+Who doesn't want cool custom commands? With the Script API, you can create your own. In this article, we will be creating them using the Script API.
 
 ## Setup Pack
 

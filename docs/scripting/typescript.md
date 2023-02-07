@@ -20,7 +20,7 @@ Since there is already a build step, we might as well incorporate some other sys
 ## Prerequisites
 
 1. Minecraft Bedrock Edition (Windows 10)
-2. a code editor like Visual Studio Code (although Notepad will technically be sufficient, I will be assuming the usage of VSCode going forward)
+2. A code editor like Visual Studio Code (although Notepad will technically be sufficient, we will be assuming the usage of VSCode going forward)
 3. basic knowledge of Javascript (this tutorial will not be teaching you how to code in Javascript and presumes a baseline knowledge of it)
 4. [Node.js](https://nodejs.org/en/) is required for installing tooling and compiling TypeScript into JavaScript.
 5. Knowledge of TypeScript

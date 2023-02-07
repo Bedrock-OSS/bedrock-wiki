@@ -12,7 +12,7 @@ The Script API is currently in active development, and breaking changes are freq
 In Scripting API, most of the core feaures are implemented in the `@minecraft/server` module, with lots of methods to interact a Minecraft world, including entities, blocks, dimensions, and more programmatically. This article contains a basic introduction to some of the core API mechanics, for more detailed infomation please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
 
 ## Setup
-Script modules requires you will need to add the dependency into your `manifest.json`
+You will need to add the Script module as a dependency in your `manifest.json`.
 
 <CodeHeader>BP/manifest.json</CodeHeader>
 
@@ -33,7 +33,7 @@ In Scripting API, the `@minecraft/server` module uses their own event-driven arc
 
 **World Events**
 
-World events API provides many event listeners that fires when a specific type of event happens to a Minecraft world, events such as `beforeChat`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
+World events API provides many event listeners that fires when a specific type of events happen in/to a Minecraft world, events such as `beforeChat`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
 
 ::: tip
 Check out Microsoft docs to see what world events are available in Minecraft: [Events documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/events)
@@ -176,7 +176,7 @@ system.runTimeout(() => {
 
 ## Saving and Loading
 
-Script API provides its own storage system called dynamic properties to save and load data in a world, specifically in the db folder using behavior pack's module UUID.
+Script API provides its own storage system called dynamic properties to save and load data in a world, specifically in the db folder using a behavior pack's module UUID.
 
 ![dynamic_properties](/assets/images/gametest/script-server/dynamic_properties.png)
 

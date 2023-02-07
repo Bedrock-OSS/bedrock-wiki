@@ -7,7 +7,7 @@ This article teaches you the basic workflow for debugging any JavaScript issue.
 
 ## Error Reference
 
-These errors can be a helpful debugging your code, but the reported problem isn't always immediately clear. Most of the errors are common in most JavaScript engines, so most of the following errors can be found with a search on a search engine (e.g. Google Search).
+These errors can be a helpful debugging your code, but the reported problem isn't always immediately clear. Most of these errors are common in JavaScript engines, so they can be found with a search on a search engine (e.g. Google Search).
 
 You can learn more about each Error class in `MDN` by clicking the link below each error names.
 
