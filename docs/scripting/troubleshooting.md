@@ -59,7 +59,7 @@ loop(0);
 ```
 
 ### InternalError: interrupted
- 
+
 Occurs when runtime has a negligible cost. This happens depend on how your script is setup.
 
 ### TypeError: no setter for property
@@ -91,7 +91,7 @@ This error occurs when you input the wrong type of value into an optional parame
 ### TypeError: Object did not have a native handle
 
 ::: warning
-This error is not documented publicly, so the explaination is an estimate. 
+This error is not documented publicly, so the explaination is an estimate.
 :::
 
 The error throws when the script tries to fetch a native handle from a JavaScript object, but the handle instance was cleared.
@@ -99,7 +99,7 @@ The error throws when the script tries to fetch a native handle from a JavaScrip
 ### ReferenceError: Native object bound to prototype does not exist.
 
 ::: warning
-This error is not documented publicly, so the explaination is an estimate. 
+This error is not documented publicly, so the explaination is an estimate.
 :::
 
 This error throws when a method is not supported by native codebase due to unexpected reasons. In some circumstances restarting the game should fix the issue.
@@ -145,7 +145,7 @@ Example:
 ```
 - Error name: SyntaxError
 - Error message: unexpected character
-- Where the error cause: line 16 in file `index.js` 
+- Where the error cause: line 16 in file `index.js`
 
 
 ---

@@ -38,4 +38,4 @@ The provided code is very accurate for the standard Minecraft mob size of 1 bloc
 
 ## Explanation
 
-The variable detects when the player is looking at the entity by checking if the rotation angle required for the entity to look at the player is opposite the rotation angle required for the player to look at the entity. The horizontal and vertical angle sensitivity are modified by the distance of the entity from the camera to maintain accuracy. 
+The variable detects when the player is looking at the entity by checking if the rotation angle required for the entity to look at the player is opposite the rotation angle required for the player to look at the entity. The horizontal and vertical angle sensitivity are modified by the distance of the entity from the camera to maintain accuracy.

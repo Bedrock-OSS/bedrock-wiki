@@ -7,7 +7,7 @@ tags:
     - expert
 ---
 
-To start making your addon you should download this template. 
+To start making your addon you should download this template.
 This template contains all the required assets for a start on making the VR pack.
 
 <BButton
@@ -21,7 +21,7 @@ Dont delete `contents.json` and `textures_list.json` from the template.
 
 ## What does the template contain?
 
-The template contains 2 editable folders; `holograms` and `textures`, 
+The template contains 2 editable folders; `holograms` and `textures`,
 these folders contain the models and textures for the vr objects.
 
 ![](/assets/images/vr/setup/vr-template-contents.png)

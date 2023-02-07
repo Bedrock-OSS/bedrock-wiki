@@ -39,7 +39,7 @@ We are able to define how our custom item will behave by using behavior componen
 <Spoiler title="Example Components">
 <CodeHeader>components/</CodeHeader>
 ```json
-"minecraft:food": 
+"minecraft:food":
 "minecraft:foil": true,
 "minecraft:max_stack_size": 16
 ```

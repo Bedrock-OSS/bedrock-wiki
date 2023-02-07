@@ -202,7 +202,7 @@ Now, you have to register the animation controller to the `player.json` file:
       }
     },
     "components": {
-        "minecraft:breathable": { // keeps breath timer bubbles from appearing 
+        "minecraft:breathable": { // keeps breath timer bubbles from appearing
           "total_supply": 15,
           "suffocate_time": -1,
           "inhale_time": 3.75,

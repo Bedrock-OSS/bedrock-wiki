@@ -1747,7 +1747,7 @@ Items and XP orbs are “picked up” by eligible nearby entities automatically.
 * Can be absorbed by hoppers and hopper minecarts
 * Will automatically stack (if appropriate) with other `minecraft:item` entities or entities using that runtime identifier
 	* When stacking, the combined item counts will be merged into one of the two merging stacks; the other entity will despawn
-* For non-players, pick up range is determined by the behavior being used to pick up the items. 
+* For non-players, pick up range is determined by the behavior being used to pick up the items.
 * For players, the pick up range varies according to their collision box size, approximately the sum of:
 	* Half the item collision box (0.125)
 	* Half the player collision box (0.3 by default)

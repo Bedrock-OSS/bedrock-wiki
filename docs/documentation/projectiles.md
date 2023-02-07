@@ -244,6 +244,6 @@ _Exact behavior unknown. Right now it crashes minecraft probably because of wron
 ### thrown_potion_effect
 
 _Exact behavior unknown. Right now it crashes minecraft probably because it's only valid for thrown potions_
- 
+
 ## Aditional Information
 When it comes to creating a custom projectile, such as an arrow or trident variant, or something entirely your own, you may want to consider defining a [runtime identifier](/entities/runtime-identifier) to ensure that it acts as intended. Not doing so may result in unintended behaviour, from odd visuals to incorrect knockback direction and arrows that you can kill with your bare hands.

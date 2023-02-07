@@ -66,7 +66,7 @@ item.itemLock.popupNotice.cantDrop=:hollow_star: Can't Drop Items can't be: drop
 item.itemLock.popupNotice.cantMove=:solid_star: Can't Move Items can't be: moved, dropped, removed, crafted with
 ```
 If you want to hide description and red/yellow triangle, you can simply do:
-`/gamerule showtags false` 
+`/gamerule showtags false`
 
 ## KeepOnDeath
 

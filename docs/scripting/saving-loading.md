@@ -25,7 +25,7 @@ For saving tags, you can either use one tag, a JSON string for all your data, or
 
 If your data is meant to be displayed to the user, make sure they've entered the world first! For example, you could have a listener for `"minecraft:client_entered_world"`
 
-In Bedrock, we can create or listen to events, but we don't send events directly to a specific consumer.  
+In Bedrock, we can create or listen to events, but we don't send events directly to a specific consumer.
  Just remember to have the listener and broadcast events set up everywhere they need to be. For example, if I want data loaded for the client to handle, I'd do:
 client -> server -> client
 

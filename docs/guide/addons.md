@@ -52,8 +52,8 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 
 ## What to do now?
 
-<BButton 
-    link="/guide/software-preparation.html" 
+<BButton
+    link="/guide/software-preparation.html"
     color=blue
 >Check out software and preparation page!</BButton>
 

@@ -183,7 +183,7 @@ The following is a list of pre-defined short names for Vanilla particles that ca
 
 | Short names           | Notes                                                      |
 | --------------------- | ---------------------------------------------------------- |
-| mobspellambient       | Color determined by any present potion ID in the component |   
+| mobspellambient       | Color determined by any present potion ID in the component |
 | villagerangry         |                                                            |
 | bubble                | Only shows underwater                                      |
 | evaporation           |                                                            |
@@ -203,7 +203,7 @@ The following is a list of pre-defined short names for Vanilla particles that ca
 | villagerhappy         |                                                            |
 | heart                 |                                                            |
 | mobspellinstantaneous | Color determined by any present potion ID in the component |
-| iconcrack             | 
+| iconcrack             |                                                            |
 | slime                 |                                                            |
 | snowballpoof          |                                                            |
 | largesmoke            |                                                            |

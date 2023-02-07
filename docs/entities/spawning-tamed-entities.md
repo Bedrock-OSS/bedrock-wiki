@@ -151,9 +151,7 @@ We'll also need to make some adjustment to our custom projectile entity so that 
                     "impact_damage":{
                         "damage":0
                     },
-                    "stick_in_ground":{
-                        
-                    },
+                    "stick_in_ground":{},
                     "definition_event":{
                         "event_trigger":{
                             "event":"wiki:on_hit"

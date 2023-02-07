@@ -149,7 +149,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ### texture_list.json
 
--   Tons of textures badly affect game performance. Create a [`texture_list.json`](/concepts/textures-list) file. 
+-   Tons of textures badly affect game performance. Create a [`texture_list.json`](/concepts/textures-list) file.
 
 ### Quantity
 

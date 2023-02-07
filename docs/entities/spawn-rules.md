@@ -122,7 +122,7 @@ minecraft:player_in_village_filter
 ### minecraft:spawns_above_block_filter
 
 <CodeHeader></CodeHeader>
-    
+
 ```json
         "minecraft:spawns_above_block_filter": {
           "blocks": "minecraft:stone",

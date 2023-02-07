@@ -354,7 +354,7 @@ Sometimes, you can simplify and consolidate multiple controls into a single elem
         "$texture": "textures/ui/example_3",
         "$binding_text": "3"
     },
-    
+
     "image_4@image_template": {
         "$texture": "textures/ui/example_4",
         "$binding_text": "4"

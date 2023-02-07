@@ -148,7 +148,7 @@ Events are activated inside of certain components when some criteria is met. Bel
 ```
 Here, when the entity is interacted with by the player, it will activate the `"wiki:on_interact"` event. The event will then add the component group `"wiki:interacted"`. This will then apply the component `"minecraft:scale"`.
 
-For a more in depth tutorial on what events can do check out our page on entity events. 
+For a more in depth tutorial on what events can do check out our page on entity events.
 
 <BButton link="/entities/entity-events">Entity Events</BButton>
 

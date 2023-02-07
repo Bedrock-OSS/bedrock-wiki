@@ -194,9 +194,7 @@ Here an example file in the BP
                     "spawn_item":"egg",
                     "single_use":true
                 },
-                "minecraft:is_sheared":{
-                    
-                },
+                "minecraft:is_sheared":{},
                 "minecraft:timer":{
                     "looping":true,
                     "time":[
@@ -209,9 +207,7 @@ Here an example file in the BP
                 }
             },
             "wiki:despawn":{
-                "minecraft:instant_despawn":{
-                    
-                }
+                "minecraft:instant_despawn":{}
             }
         },
         "components":{
@@ -229,9 +225,7 @@ Here an example file in the BP
                 "value":8,
                 "max":8
             },
-            "minecraft:physics":{
-                
-            },
+            "minecraft:physics":{},
             "minecraft:pushable":{
                 "is_pushable":true,
                 "is_pushable_by_piston":true

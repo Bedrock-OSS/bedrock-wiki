@@ -440,9 +440,9 @@ A WikiImage is an alternative way to add an image in your article.
 />
 ```
 
-<WikiImage 
-    src='/assets/images/homepage/wikilogo.png' 
-    alt='alternative text' 
+<WikiImage
+    src='/assets/images/homepage/wikilogo.png'
+    alt='alternative text'
     pixelated=true
     width=420
 />
@@ -475,8 +475,8 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 ```
 
 <CardLink
-    imgsrcLight='assets/images/homepage/wikilogo.png' 
-    title='title' 
+    imgsrcLight='assets/images/homepage/wikilogo.png'
+    title='title'
     link='https://google.com'
 />
 

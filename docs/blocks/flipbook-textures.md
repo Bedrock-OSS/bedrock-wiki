@@ -128,8 +128,8 @@ Example:
 
 ```json
 "dirt" : {
-    "textures" : [ 
-        "textures/blocks/dirt", 
+    "textures" : [
+        "textures/blocks/dirt",
         "textures/blocks/coarse_dirt" //imagine if this is the path you wanted to animate
     ]
 }
@@ -147,7 +147,7 @@ Example:
 
 ```json
 "dirt" : {
-    "textures" : [ 
+    "textures" : [
            {
        "variations": [
            { "path": "textures/blocks/dirt_va" }, //imagine if this is the block variation you wanted to animate

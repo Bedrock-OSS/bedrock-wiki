@@ -78,7 +78,7 @@ In the case of player entities, an additional transition must be added to the se
 }
 ```
 
-:::warning 
+:::warning
 Requires Experimental
 :::
 
@@ -106,7 +106,7 @@ And then, in your events section you add the event;
         }
 ```
 
-:::tip 
+:::tip
 You can add scores and tags to the entity even when it is dead using this method.
 
 :::

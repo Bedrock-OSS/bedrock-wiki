@@ -212,7 +212,7 @@ Needs to be used in special conditions.
 
 Formatted like: `query.is_item_name_any('slot.weapon.mainhand', 0, 'namespace:item_name')`
 
-Takes the equipment slot name first, followed by the slot index value, and then the list of item names with namespaces after it. 
+Takes the equipment slot name first, followed by the slot index value, and then the list of item names with namespaces after it.
 
 Possible equipment slot are as follows:
 | Slot Name              | Slot Counts   | Description  |
@@ -518,7 +518,7 @@ variable.yNorm = query.movement_direction(1) / variable.mag;
 variable.zNorm = query.movement_direction(2) / variable.mag;
 ```
 
-For more information on normalized vectors you can play around with this <a href=https://www.desmos.com/calculator/hhoamwgve2>Desmos graph</a> 
+For more information on normalized vectors you can play around with this <a href=https://www.desmos.com/calculator/hhoamwgve2>Desmos graph</a>
 
 | Argument | Axis |
 | -------- | ---- |

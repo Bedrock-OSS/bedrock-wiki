@@ -11,7 +11,7 @@ mentions:
 The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.70
 :::
 
-The GameTest Framework allows us to create unit tests ("GameTests") which make it easier to test if game mechanics work. 
+The GameTest Framework allows us to create unit tests ("GameTests") which make it easier to test if game mechanics work.
 
 GameTests can be used with the `/gametest` command.
 
@@ -65,7 +65,7 @@ GameTest.register(
          */
         const location = { x: 0, y: 0, z: 0 };
         const cow = test.spawn("minecraft:cow", location); // returns Entity instance
-        
+
         test.succeedWhen(() => {
           test.assertEntityPresentInArea("minecraft:cow", true);
         });

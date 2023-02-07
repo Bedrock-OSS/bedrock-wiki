@@ -46,7 +46,7 @@ script-watchdog-hang-exception=true
 
 ## Watchdog Messages
 
-These watchdog messages are thrown with `[Watchdog]` label in error or warning. They're displayed in a warning or an error. These error should never be ignored. 
+These watchdog messages are thrown with `[Watchdog]` label in error or warning. They're displayed in a warning or an error. These error should never be ignored.
 
 ### Slow-running script detected in behavior pack '%s' (x ms average)
 
@@ -85,11 +85,11 @@ These watchdog messages are thrown with `[Watchdog]` label in error or warning. 
 ### Unhandled critical exception of type '%s' in behavior pack '%s'
 
   Produces a content log error when an unhandled critical exception occurs.
-  
+
   There are multiple reason that a watchdog is deciding to terminate execution of a behavior pack's script.
   - `hang`: script is not responsive due to a hang or infinite loop.
   - `stackOverflow`: a long, and potentially infinite chain of function calls.
-  
+
 ## Cancel Watchdog Termination
 
 Using Minecraft's scripting API, you are able to connect to a callback that will be called when a script runtime is being terminated due to a violation of the performance watchdog system.

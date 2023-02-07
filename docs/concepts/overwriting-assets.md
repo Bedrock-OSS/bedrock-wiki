@@ -16,10 +16,10 @@ This layered structure is very useful, because it allows us to access the files 
 
 If the vanilla assets change, for example if [JAPPA](https://twitter.com/JasperBoerstra?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) updates the stone texture, your addon will also receive the update, since you are relying on the actual dynamic, vanilla resources.
 
-You should try to use this system of layering as often as you can. If you don't *need* to copy/paste something into your addon, don't. 
+You should try to use this system of layering as often as you can. If you don't *need* to copy/paste something into your addon, don't.
 
 :::warning
-It is never OK to make an addon inside of a copy of the vanilla resource/behavior pack. This will make the download for your addon incredibly huge, and will reduce performance. Always begin with a blank addon, then copy/paste the files you want to overwrite. 
+It is never OK to make an addon inside of a copy of the vanilla resource/behavior pack. This will make the download for your addon incredibly huge, and will reduce performance. Always begin with a blank addon, then copy/paste the files you want to overwrite.
 :::
 
 ## Overwriting Assets

@@ -16,8 +16,8 @@ From this page you will learn how to make an animated texture for an entity. Ani
 
 This page is based on content by [AgentMindStorm](https://www.youtube.com/channel/UC-ljddYkFdTQl-MVEaVvbuQ).
 
-<YouTubeEmbed 
-    id="F6e-w1rCEi4" 
+<YouTubeEmbed
+    id="F6e-w1rCEi4"
 />
 
 ## Textures

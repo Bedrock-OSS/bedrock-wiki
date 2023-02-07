@@ -68,10 +68,10 @@ bridge. includes a regular text editor for experienced addon creators and a tree
 
 ## Image Editors
 
-When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn. 
+When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn.
 
 :::tip
-Choose a program that feels comfortable and easy for you to use. Many Addon creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you! 
+Choose a program that feels comfortable and easy for you to use. Many Addon creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you!
 :::
 
 ### Krita
@@ -79,7 +79,7 @@ Krita is a powerful open-source art programed with the goal of giving free power
 **+ Pros:** Plenty of features including a pixel brush with an intuitive user interface.
 **- Cons:** Requires a little time to become familar with the tools.
 
-[Download Krita](https://krita.org/en/) 
+[Download Krita](https://krita.org/en/)
 
 ### GIMP
 Gimp is similar to Krita in that it is a free and open source digital art program that has a vast arrays of tools. Where Krita focuses more on illustration, GIMP focuses more on image manipulation (think Photoshop). Gimp also works on MAC or PC.
@@ -89,9 +89,9 @@ Gimp is similar to Krita in that it is a free and open source digital art progra
 [Download Gimp](https://www.gimp.org/)
 
 ### Paint․net
-Paint․net is a simple yet powerful image editing and art software. Paint․net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use. 
+Paint․net is a simple yet powerful image editing and art software. Paint․net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use.
 **+ Pros:** Easy to use and learn.
-**- Cons:** Only works on Windows. 
+**- Cons:** Only works on Windows.
 
 [Download Paint.net](https://www.getpaint.net)
 

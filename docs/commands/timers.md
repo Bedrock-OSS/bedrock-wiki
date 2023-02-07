@@ -1,7 +1,7 @@
 ---
 title: Command Timers
 category: General
-tags: 
+tags:
     - experimental
 mention:
     - Hatchibombotar

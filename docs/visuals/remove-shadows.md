@@ -6,9 +6,9 @@ category:
     - Tutorials
 ---
 
-There are quite a few ways to remove shadows from entities, and nearly all of them have undesirable effects. There is no foolproof way to perfectly remove shadows from specific entities, without causing side effects. 
+There are quite a few ways to remove shadows from entities, and nearly all of them have undesirable effects. There is no foolproof way to perfectly remove shadows from specific entities, without causing side effects.
 
-This document will showcase some of the various ways to remove shadows, and any possible effects from doing this. 
+This document will showcase some of the various ways to remove shadows, and any possible effects from doing this.
 
 ## Small Collision Box
 

@@ -70,7 +70,7 @@ form.body("This is Action Form Body");
 ```
 
 #### Button
-Button is the main function of the form. The form can have many buttons for the player to choose. Each button has 2 arguments. The first argument is the label, the text that shows up on the button. 
+Button is the main function of the form. The form can have many buttons for the player to choose. Each button has 2 arguments. The first argument is the label, the text that shows up on the button.
 
 The second argument is optional and is the button icon, which shows a picture/icon on the button. To use it, you need to define the texture path. You can use the vanilla resource pack to show icons (Example `textures/items/compass`). Custom textures will need `.png` at the end of the path, as well as a valid resource pack on the world.
 

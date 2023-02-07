@@ -1,7 +1,7 @@
 ---
 title: New Execute
 category: General
-tags: 
+tags:
     - easy
 mention:
     - JaylyDev

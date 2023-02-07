@@ -14,7 +14,7 @@ Enchantment identifiers are used in the `/enchant` command and in item functions
 |           Name          |        Identifier       | Maximum Level | Treasure | Curse |
 | ----------------------- | ----------------------- | ------------- | -------- | ----- |
 | Silk Touch              | `silk_touch`            |       1       |    ❌    |  ❌  |
-| Fortune                 | `fortune`               |       3       |    ❌    |  ❌  | 
+| Fortune                 | `fortune`               |       3       |    ❌    |  ❌  |
 | Efficiency              | `efficiency`            |       5       |    ❌    |  ❌  |
 | Luck of the Sea         | `luck_of_the_sea`       |       3       |    ❌    |  ❌  |
 | Lure                    | `lure`                  |       3       |    ❌    |  ❌  |

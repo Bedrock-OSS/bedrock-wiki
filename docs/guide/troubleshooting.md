@@ -45,7 +45,7 @@ Content log can be turned on in in `Settings > Creator`. The content log will sh
 
 The content log is saved in `.txt` format inside your files:
 
- - *Windows*: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs` 
+ - *Windows*: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
  - *Android:* `/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`
 
 

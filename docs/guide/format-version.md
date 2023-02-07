@@ -5,7 +5,7 @@ prefix: 'e. '
 nav_order: 5
 ---
 
-Format versions are an important part of Minecraft: Bedrock Edition's Addon System. They appear at the top of most files, formatted like this: `"format_version": "1.16.100"`. You can think of this as the "version number" of the file, and the number you select here is really important! The format version you select will define which syntax and features are available to you, in that particular file. 
+Format versions are an important part of Minecraft: Bedrock Edition's Addon System. They appear at the top of most files, formatted like this: `"format_version": "1.16.100"`. You can think of this as the "version number" of the file, and the number you select here is really important! The format version you select will define which syntax and features are available to you, in that particular file.
 
 :::tip
 Selecting the wrong format version is a common source of errors. When troubleshooting, people may ask you questions like 'what format version is your item'. Ensure that you know how to answer that question.
@@ -25,9 +25,9 @@ A well known example is the item/blocks system, where `1.16.100` denotes experim
 
 ## Format Version is not Game Version
 
-It is really important to understand that format version is *per subsystem*, and is generally not equal to the base game version. This simply means that every type of file (item, rp entity, bp entity, recipe) will use a different versioning system. 
+It is really important to understand that format version is *per subsystem*, and is generally not equal to the base game version. This simply means that every type of file (item, rp entity, bp entity, recipe) will use a different versioning system.
 
-For example: `"format_version": "1.8.0"` in an RP entity file means "use version `1.8.0` of the *item system*". It does *not* mean "use version `1.8.0` of the *addon system*". 
+For example: `"format_version": "1.8.0"` in an RP entity file means "use version `1.8.0` of the *item system*". It does *not* mean "use version `1.8.0` of the *addon system*".
 
 For this reason, some file types will have very "old" format versions. Do not be tempted to replace this version with the latest game version, such as `1.17.0`.
 
@@ -39,7 +39,7 @@ This system is useful, as it means you are less likely to generate a broken file
 
 ## Picking a Format Version
 
-Generally speaking, there is a cool tricky to pick the correct format version, for any file type. 
+Generally speaking, there is a cool tricky to pick the correct format version, for any file type.
 
 For example, imagine you are creating a Recipe file:
 
@@ -51,30 +51,30 @@ This simple trick will help you select a valid format version for your file.
 
 ## Format Versions per Asset Type
 
-This section will list the format versions used in the vanilla game, alongside how many times it appears. 
+This section will list the format versions used in the vanilla game, alongside how many times it appears.
 
  - The '⭐' is the recommended *stable* version.
  - The '🚀' is the recommended *experimental* version, where applicable.
 
 ### Resource Pack
 
-**Entity**: 
+**Entity**:
  - `1.10.0` : 82 ⭐
- - `1.8.0` : 74 
+ - `1.8.0` : 74
 
-**Animation Controller**: 
+**Animation Controller**:
  - `1.10.0` : 56 ⭐
 
-**Animation**: 
+**Animation**:
  - `1.8.0` : 120
  - `1.10.0` : 6 ⭐
 
-**Attachables**: 
+**Attachables**:
  - `1.10.0` : 29 ⭐
- - `1.8.0` : 25     
- - `1.10` : 1       
+ - `1.8.0` : 25
+ - `1.10` : 1
 
-**Models**: 
+**Models**:
  - `1.8.0` : 92
  - `1.12.0` : 19
  - `1.10.0` : 4
@@ -107,12 +107,12 @@ This section will list the format versions used in the vanilla game, alongside h
  - `1.14` : 1
  - `1.16.100`: 0 🚀
 
-**Recipes**: 
+**Recipes**:
  - `1.12` : 991
  - `1.16` : 194 ⭐
- - `1.14` : 2  
+ - `1.14` : 2
 
-**Spawn Rules**: 
+**Spawn Rules**:
  - `1.8.0` : 48 ⭐
- - `1.17.0` : 1  
+ - `1.17.0` : 1
  - `1.11.0` : 1

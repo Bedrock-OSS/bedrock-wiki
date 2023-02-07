@@ -55,11 +55,11 @@ Minecraft Bedrock will send out a message to all listed servers (and the local n
 After this message, the server will respond with something called an unconnected pong. The reason these messages are unconnected is because the client has not established a connection to the server. This is the format of an unconnected pong:
 
 `0xc1 | client alive time in ms (recorded from previous ping) | server GUID | string length | Edition (MCPE or MCEE for Education Edition);MOTD line 1;Protocol Version;Version Name;Player Count;Max Player Count;Server Unique ID;MOTD line 2;Game mode;Game mode (numeric);Port (IPv4);Port (IPv6);`
-    
+
 Example:
-    
+
 `MCPE;Dedicated Server;527;1.19.1;0;10;13253860892328930865;Bedrock level;Survival;1;19132;19133;`
-    
+
 The client doesn't seem to use the gamemode or the numeric value for the gamemode.
 
 ### Open Connection Request 1
@@ -70,7 +70,7 @@ The client sends this when attempting to join the server
 
 The null padding seems to be used to discover the maximum packet size the network can handle.
 
-The client will send this to the server with decreasing null padding until the server responds with a 
+The client will send this to the server with decreasing null padding until the server responds with a
 
 ## Open Connection Reply 1
 
@@ -85,10 +85,10 @@ This is the first half of the handshake between the client and the server.
 The client responds with this after they recieve the open connection reply 1 packet.
 
 `0x07 | magic | server address | RakNet Null Padding Size | client GUID`
-    
+
 ### Open Connection Reply 2
 
-This is the last part of the handshake between the client and the server. 
+This is the last part of the handshake between the client and the server.
 
 `0x08 | magic | server GUID | client address | Null Padding Size | use encryption`
 

@@ -15,7 +15,7 @@ The selector variable defines the broad list of entities to select. There are si
 -   `@a` - Target all players
 -   `@p` - Target the nearest player
 -   `@r` - Target a random player
--   `@e` - Target all entities 
+-   `@e` - Target all entities
 -   `@s` - Target the executor
 -   `@initiator` - Target the player interacting with an NPC
 
@@ -89,7 +89,7 @@ Examples:
 List all entities within a 12x30x2 box:
 -   `/say @e[dx=12, dz=30, dy=2]`
 
-Add the "lobby" tag to all players between (-400, 0, -350) and (-150, 256, 50): 
+Add the "lobby" tag to all players between (-400, 0, -350) and (-150, 256, 50):
 -   `/tag @a[x=-400, y=0, z=-350, dx=250, dy=256, dz=400] add lobby`
 
 ### Scores

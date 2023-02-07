@@ -3,7 +3,7 @@ title: Functions
 category: General
 mention:
 	- SirLich
-tags: 
+tags:
 	- easy
 ---
 

@@ -7,7 +7,7 @@ tags:
     - beginner
 ---
 
-Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This page aims to cover how to call events within the entity and other entities as well as the format of an event. 
+Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This page aims to cover how to call events within the entity and other entities as well as the format of an event.
 
 ## Event Layout
 
@@ -45,7 +45,7 @@ The most essential and common use of events is directly adding and/or removing c
 ```
 
 :::tip
-When you add a component group, if a currently active component group has the same component inside it, it will be overwritten by the group most recently added. 
+When you add a component group, if a currently active component group has the same component inside it, it will be overwritten by the group most recently added.
 :::
 
 ### Randomize
@@ -79,7 +79,7 @@ The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95%
 }
 ```
 
-Note that the `randomize` will only select one option out of the pool of options. 
+Note that the `randomize` will only select one option out of the pool of options.
 
 ### Sequence/Filters
 
@@ -358,7 +358,7 @@ We are also able to specify filters and a target for the event. The target param
     }
 }
 ```
-:::tip 
+:::tip
 Events are able to retain entity context from the component they were called in. For example, the if an event is triggered using a `minecraft:interact` component, we are able to apply the filter to the player who interacted with the entity. However, if the method that called the event does not have this context, using target will not work.
 :::
 
@@ -457,7 +457,7 @@ This behavior-based animation controller is used to call the event `wiki:running
 Here the `@s` is used to apply the event onto the entities self. Animation controllers are incredibly powerful and can be used to create even more custom behavior, though they are more advanced. Check out our page [here](/animation-controllers/animation-controllers-intro) for more information
 
 Within an event, as well as adding & removing component groups we can also `trigger` other events to occur.
-This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`. 
+This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`.
 
 <CodeHeader></CodeHeader>
 
@@ -562,13 +562,13 @@ The component `minecraft:damage_sensor` inside the pillager calls the event `min
 }
 ```
 
-Some components have these `targets` and each has certain ones that can be used. For example, `minecraft:interact` can have the target as either `self` or `other` where other is the entity that interacted with the entity. All valid components should have `self` and `target` as options where target is the targetted entity. 
+Some components have these `targets` and each has certain ones that can be used. For example, `minecraft:interact` can have the target as either `self` or `other` where other is the entity that interacted with the entity. All valid components should have `self` and `target` as options where target is the targetted entity.
 
 ### Built-in Events
 In general, using the component groups from vanilla mobs will not work. For example, the `minecraft:convert_to_drowned` will not be called in your entity unless you use one of the methods above to call it. However, there are a few events that called automatically when the conditions are met:
 -   `minecraft:entity_spawned` : called when the entity is spawned in. Useful for setting up inital component groups.
 -   `minecraft:entity_born`    : called when the entity is spawned in through breeding.
--   `minecraft:entity_transformed` : called when another entity transforms into this one. 
+-   `minecraft:entity_transformed` : called when another entity transforms into this one.
 -   `minecraft:on_prime`        : called when the entity's fuse is lit and is ready to explode.
 
 A good example of these in use is with the cow. This shows how we can always ensure the cow has either `minecraft:cow_adult` or `minecraft:cow_baby` as soon as it is spawned/transformed.
@@ -600,7 +600,7 @@ A good example of these in use is with the cow. This shows how we can always ens
     },
     "minecraft:entity_transformed": {
         "add": {
-            "component_groups": ["minecraft:cow_adult"]   
+            "component_groups": ["minecraft:cow_adult"]
         }
     }
 }

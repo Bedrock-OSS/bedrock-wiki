@@ -199,7 +199,7 @@ Entries are the selectable units of a pool. Three different types of entries are
 ```
 
 #### Item Entries
-Item entries are the fundamental entry type for selecting loot. Item entries refer to 
+Item entries are the fundamental entry type for selecting loot. Item entries refer to
 
 ```json
 

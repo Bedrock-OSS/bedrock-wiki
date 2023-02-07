@@ -33,7 +33,7 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 
 ### namespace:banner
 
--   The item icon and model will be changed to that of the Vanilla Banner. 
+-   The item icon and model will be changed to that of the Vanilla Banner.
 
 ---
 

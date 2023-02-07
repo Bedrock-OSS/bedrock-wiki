@@ -116,7 +116,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 -   Breaks the entity.
 -   Punching entity will make it despawn.
 -   Spawns strangely.
--   Drops minecart.  
+-   Drops minecart.
 
 ---
 

@@ -54,7 +54,7 @@ The following code creates a label element that, when added to the root panel, d
 		{
 			"binding_type": "view",
 			"source_control_name": "data_control",   						// reads bindings from the "data_control" child element
-			//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding 
+			//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding
 			"source_property_name": "(#preserved_text - $update_string)",   // remove string update text from the text to be displayed
 			"target_property_name": "#text"
 		}

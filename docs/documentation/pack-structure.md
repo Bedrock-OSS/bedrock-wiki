@@ -39,7 +39,7 @@ show_toc: false
     'RP/entity/example.ce.json',
     'RP/fogs/example_fog_setting.json',
     'RP/items/example.item.json',
-    'RP/materials/example.material',              
+    'RP/materials/example.material',
     'RP/models/entity/example.geo.json',
     'RP/models/blocks/example.geo.json',
     'RP/particles/example.particle.json',

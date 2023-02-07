@@ -276,9 +276,7 @@ This event is called upon by using the `minecraft:on_player_placing` component.
                     "face_dimming":true
                 }
             },
-            "minecraft:unit_cube":{
-                
-            },
+            "minecraft:unit_cube":{},
             "minecraft:on_player_placing":{
                 "event":"wiki:update_rotation"
             }

@@ -95,7 +95,7 @@ Save changes (Ctrl + S)
 ## Loot Tabler (Browser Application)
 ### Adding the Loot Table
 
-Open the website and click "Upload". Choose your structure file. 
+Open the website and click "Upload". Choose your structure file.
 
 ![](/assets/images/tutorials/randomised-structure-loot/LootTable-step1.png)
 

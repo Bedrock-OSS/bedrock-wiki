@@ -4,7 +4,7 @@ title: Bedrock Server Software
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
 
-Alongside the Vanilla BDS offering, many community projects exist, in a variaty of languages. 
+Alongside the Vanilla BDS offering, many community projects exist, in a variaty of languages.
 
 ## Software by Language
 

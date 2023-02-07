@@ -12,9 +12,9 @@ category: General
 
 The **Export** button creates `.mcstructure` files in a structure block. The files must be placed in a behavior pack to load them in-game with a load structure block. The path determines the structure identifier, which is typed into the structure block to load the structure.
 
-**Examples:**  
-`BP/structures/house.mcstructure` → `mystructure:house`  
-`BP/structures/dungeon/entrance.mcstructure` → `dungeon:entrance`  
+**Examples:**
+`BP/structures/house.mcstructure` → `mystructure:house`
+`BP/structures/dungeon/entrance.mcstructure` → `dungeon:entrance`
 `BP/structures/stuff/towers/diamond.mcstructure` → `stuff:towers/diamond`
 
 The first subfolder defines the namespace, and subsequent folders define the path, ending with the structure file's name.
@@ -31,18 +31,18 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 
 `mcstructure` files are uncompressed [NBT files](https://wiki.vg/NBT#Specification). Like all Bedrock Edition NBT files, they are stored in little-endian format. The tag structure is as follows:
 
-> ![Integer][int] `format_version`: Currently always set to `1`.  
+> ![Integer][int] `format_version`: Currently always set to `1`.
 > ![List][list] `size`: List of three integers describing the size of the structure's bounds.
 >
-> > ![Integer][int] Size of the structure in the X direction.  
-> > ![Integer][int] Size of the structure in the Y direction.  
+> > ![Integer][int] Size of the structure in the X direction.
+> > ![Integer][int] Size of the structure in the Y direction.
 > > ![Integer][int] Size of the structure in the Z direction.
 >
 > ![Compound][compound] `structure`: Actual data compound.
 >
 > > ![List][list] `block_indices`: List containing two sublists, one for each layer. These contain the blocks in the structure. Each block is stored as an integer index into the palette (see below). Proceeds in ZYX order from the lowest corner to the highest one. For example, if the structure size is `[2,3,4]`, then the 24 (product of the dimensions) values in each layer list represent the blocks located at `[(0,0,0), (0,0,1), (0,0,2), (0,0,3), (0,1,0), (0,1,1), (0,1,2), (0,1,3), (0,2,0), (0,2,1), (0,2,2), (0,2,3), (1,0,0), (1,0,1), (1,0,2), (1,0,3), (1,1,0), (1,1,1), (1,1,2), (1,1,3), (1,2,0), (1,2,1), (1,2,2), (1,2,3)]` relative to the origin. Index values equal to `-1` indicate no block, causing any existing block to remain upon loading. This occurs when structure voids are saved, and is the case for most blocks in the second layer. Both layers share the same palette.
 > >
-> > > ![List][list] of ![Integer][int] Indices for blocks in the primary layer.  
+> > > ![List][list] of ![Integer][int] Indices for blocks in the primary layer.
 > > > ![List][list] of ![Integer][int] Indices for blocks in the secondary layer. This layer is usually empty, except for water when the block here is waterlogged.
 > >
 > > ![List][list] of ![Compound][compound] `entities`: List of entities as NBT, stored exactly the same as entities in the world file itself. Tags like `Pos` and `UniqueID` are saved, but replaced upon loading.
@@ -55,8 +55,8 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 > > > >
 > > > > > ![Compound][compound] A single block state.
 > > > > >
-> > > > > > ![String][string] `name`: The block's identifier, such as `minecraft:planks`.  
-> > > > > > ![Compound][compound] `states`: The block's states as keys and values. Examples: `wood_type:"acacia"`, `bite_counter:3`, `open_bit:1b`. The values are the appropriate NBT type for the state: strings for enum values, integers for scalar numbers, and bytes for boolean values.  
+> > > > > > ![String][string] `name`: The block's identifier, such as `minecraft:planks`.
+> > > > > > ![Compound][compound] `states`: The block's states as keys and values. Examples: `wood_type:"acacia"`, `bite_counter:3`, `open_bit:1b`. The values are the appropriate NBT type for the state: strings for enum values, integers for scalar numbers, and bytes for boolean values.
 > > > > > > ![Integer][int] `version`: Compatibility versioning number for this block (currently `17959425` as of writing, in 1.19).
 > > > >
 > > > > ![Compound][compound] `block_position_data`: Contains additional data for individual blocks in the structure. Each key is an integer index into the flattened list of blocks inside of `block_indices`. Layer is unspecified as it is irrelevant.
@@ -67,8 +67,8 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 >
 > ![List][list] `structure_world_origin`: List of three integers describing where in the world the structure was initially saved. Equal to the position of the saving structure block, plus its offset settings. This is used to determine where entities should be placed when loading. An entity's new absolute position is equal to its old position, minus these values, plus the origin of the structure's loading position.
 >
-> > ![Integer][int] Structure origin X position.  
-> > ![Integer][int] Structure origin Y position.  
+> > ![Integer][int] Structure origin X position.
+> > ![Integer][int] Structure origin Y position.
 > > ![Integer][int] Structure origin Z position.
 
 ### What Happens If...

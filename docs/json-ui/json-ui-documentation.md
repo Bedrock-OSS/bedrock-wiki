@@ -603,7 +603,7 @@ For example,in setting that is  accessibility and in inventory,the construction,
 Anchors allows the elements to align to a certain point where position, size, scale, animations, etc will take as the point for transformation.
 In JSON UI, there's two properties `anchor_from` and `anchor_to` that together achieve this.
 
-Most people use them by giving them the same value: 
+Most people use them by giving them the same value:
 
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 

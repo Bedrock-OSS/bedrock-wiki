@@ -57,9 +57,8 @@ This is the tree for default Bedrock Dedicated Server:
 
 3. In the `permissions.json` file located in `config/<pack_id>/permissions.json` or `config/default/permissions.json`, enable `@minecraft/server-net` module by adding `"@minecraft/server-net"` in the `allowed_modules` key.
 
-> Modify files in default folder allows every add-ons with server-net module enabled in dependencies have access to @minecraft/server-net module.
-> 
-> It is recommended to assign appropriate permissons for each script behavior pack.
+-   Modify files in default folder allows every add-ons with server-net module enabled in dependencies have access to @minecraft/server-net module.
+-   It is recommended to assign appropriate permissons for each script behavior pack.
 
 <CodeHeader>BedrockServer/config/default/permissions.json</CodeHeader>
 
