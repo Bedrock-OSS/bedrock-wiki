@@ -7,7 +7,7 @@ mentions:
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed.
-If you want to see full page, you can do it [here](/entities/vuc-full). _Last updated for 1.19.40_
+If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.60*
 
 ## addrider
 
@@ -676,6 +676,83 @@ villager_v2
 
 <Spoiler title="Show">
 
+magma_cube
+
+<CodeHeader>#component_groups/minecraft:slime_large</CodeHeader>
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 6,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            }
+        ]
+    }
+}
+```
+
+<CodeHeader>#component_groups/minecraft:slime_medium</CodeHeader>
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 4,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            }
+        ]
+    }
+}
+```
+
+<CodeHeader>#component_groups/minecraft:slime_small</CodeHeader>
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 3,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            }
+        ]
+    }
+}
+```
+
 pufferfish
 
 <CodeHeader>#component_groups/minecraft:full_puff</CodeHeader>
@@ -684,6 +761,7 @@ pufferfish
 "minecraft:area_attack": {
     "damage_range": 0.2,
     "damage_per_tick": 2,
+    "damage_cooldown": 0.5,
     "cause": "contact",
     "entity_filter": {
         "any_of": [
@@ -696,6 +774,68 @@ pufferfish
                 "test": "is_family",
                 "subject": "other",
                 "value": "monster"
+            }
+        ]
+    }
+}
+```
+
+slime
+
+<CodeHeader>#component_groups/minecraft:slime_large</CodeHeader>
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 4,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "snowgolem"
+            }
+        ]
+    }
+}
+```
+
+<CodeHeader>#component_groups/minecraft:slime_medium</CodeHeader>
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 2,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "snowgolem"
             }
         ]
     }
@@ -5364,7 +5504,15 @@ iron_golem
 
 ```json
 "minecraft:behavior.offer_flower": {
-    "priority": 5
+    "priority": 5,
+    "filters": {
+        "all_of": [
+            {
+                "test": "is_daytime",
+                "value": true
+            }
+        ]
+    }
 }
 ```
 
@@ -5687,7 +5835,7 @@ villager_v2
 ```json
 "minecraft:behavior.play": {
     "priority": 8,
-    "speed_multiplier": 0.32,
+    "speed_multiplier": 0.6,
     "friend_types": [
         {
             "filters": {
@@ -7755,7 +7903,15 @@ villager
 
 ```json
 "minecraft:behavior.take_flower": {
-    "priority": 7
+    "priority": 7,
+    "filters": {
+        "all_of": [
+            {
+                "test": "is_daytime",
+                "value": true
+            }
+        ]
+    }
 }
 ```
 
@@ -7765,7 +7921,15 @@ villager_v2
 
 ```json
 "minecraft:behavior.take_flower": {
-    "priority": 9
+    "priority": 9,
+    "filters": {
+        "all_of": [
+            {
+                "test": "is_daytime",
+                "value": true
+            }
+        ]
+    }
 }
 ```
 
@@ -8020,7 +8184,31 @@ villager
 
 ```json
 "minecraft:behavior.trade_with_player": {
-    "priority": 1
+    "priority": 1,
+    "filters": {
+        "all_of": [
+            {
+                "all_of": [
+                    {
+                        "test": "in_water",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "any_of": [
+                    {
+                        "test": "on_ground",
+                        "value": true
+                    },
+                    {
+                        "test": "is_sleeping",
+                        "value": true
+                    }
+                ]
+            }
+        ]
+    }
 }
 ```
 
@@ -8030,7 +8218,31 @@ villager_v2
 
 ```json
 "minecraft:behavior.trade_with_player": {
-    "priority": 2
+    "priority": 2,
+    "filters": {
+        "all_of": [
+            {
+                "all_of": [
+                    {
+                        "test": "in_water",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "any_of": [
+                    {
+                        "test": "on_ground",
+                        "value": true
+                    },
+                    {
+                        "test": "is_sleeping",
+                        "value": true
+                    }
+                ]
+            }
+        ]
+    }
 }
 ```
 
@@ -8040,7 +8252,31 @@ wandering_trader
 
 ```json
 "minecraft:behavior.trade_with_player": {
-    "priority": 1
+    "priority": 1,
+    "filters": {
+        "all_of": [
+            {
+                "all_of": [
+                    {
+                        "test": "in_water",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "any_of": [
+                    {
+                        "test": "on_ground",
+                        "value": true
+                    },
+                    {
+                        "test": "is_sleeping",
+                        "value": true
+                    }
+                ]
+            }
+        ]
+    }
 }
 ```
 
@@ -10233,8 +10469,8 @@ bee
                         ]
                     },
                     {
-                        "test": "has_component",
-                        "value": "minecraft:is_charged",
+                        "test": "bool_property",
+                        "domain": "minecraft:has_nectar",
                         "operator": "!="
                     },
                     {
@@ -11192,8 +11428,8 @@ enderman
 
 ```json
 "minecraft:follow_range": {
-    "value": 32,
-    "max": 32
+    "value": 64,
+    "max": 64
 }
 ```
 
@@ -12479,6 +12715,50 @@ creeper
 
 donkey
 
+<CodeHeader>#component_groups/minecraft:donkey_tamed</CodeHeader>
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.equip"
+        }
+    ]
+}
+```
+
 <CodeHeader>#component_groups/minecraft:donkey_unchested</CodeHeader>
 
 ```json
@@ -12490,9 +12770,49 @@ donkey
                 "filters": {
                     "all_of": [
                         {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
                             "test": "is_family",
                             "subject": "other",
                             "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.saddle"
+        },
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
                         },
                         {
                             "test": "has_equipment",
@@ -12507,6 +12827,50 @@ donkey
             },
             "use_item": true,
             "interact_text": "action.interact.attachchest"
+        }
+    ]
+}
+```
+
+<CodeHeader>#component_groups/minecraft:donkey_chested</CodeHeader>
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.saddle"
         }
     ]
 }
@@ -12585,79 +12949,6 @@ goat
             "transform_to_item": "bucket:1",
             "play_sounds": "milk.screamer",
             "interact_text": "action.interact.milk"
-        }
-    ]
-}
-```
-
-iron_golem
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_equipment",
-                            "domain": "hand",
-                            "subject": "other",
-                            "value": "iron_ingot"
-                        },
-                        {
-                            "test": "is_missing_health",
-                            "value": true
-                        }
-                    ]
-                }
-            },
-            "use_item": true,
-            "health_amount": 25,
-            "play_sounds": "irongolem.repair",
-            "interact_text": "action.interact.repair"
-        }
-    ]
-}
-```
-
-llama
-
-<CodeHeader>#component_groups/minecraft:llama_unchested</CodeHeader>
-
-```json
-"minecraft:interact": {
-    "interactions": [
-        {
-            "play_sounds": "armor.equip_generic",
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        },
-                        {
-                            "test": "has_equipment",
-                            "domain": "hand",
-                            "subject": "other",
-                            "value": "chest"
-                        }
-                    ]
-                },
-                "event": "minecraft:on_chest",
-                "target": "self"
-            },
-            "use_item": true,
-            "interact_text": "action.interact.attachchest"
         }
     ]
 }
@@ -12832,14 +13123,6 @@ drowned
 ## is_charged
 
 <Spoiler title="Show">
-
-bee
-
-<CodeHeader>#component_groups/has_nectar</CodeHeader>
-
-```json
-"minecraft:is_charged": {}
-```
 
 creeper
 
@@ -19322,23 +19605,6 @@ llama
             "temper_mod": 6
         }
     ],
-    "auto_reject_items": [
-        {
-            "item": "horsearmorleather"
-        },
-        {
-            "item": "horsearmoriron"
-        },
-        {
-            "item": "horsearmorgold"
-        },
-        {
-            "item": "horsearmordiamond"
-        },
-        {
-            "item": "saddle"
-        }
-    ],
     "tame_event": {
         "event": "minecraft:on_tame",
         "target": "self"
@@ -20133,6 +20399,23 @@ guardian
 
 </Spoiler>
 
+## variable_max_auto_step
+
+<Spoiler title="Show">
+
+enderman
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:variable_max_auto_step": {
+    "base_value": 1.0625,
+    "jump_prevented_value": 0.5625
+}
+```
+
+</Spoiler>
+
 ## variant
 
 <Spoiler title="Show">
@@ -20280,3 +20563,4 @@ turtle
 ```
 
 </Spoiler>
+

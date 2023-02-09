@@ -7,7 +7,7 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` and some formatting have been removed to make the page load quickly. *Last updated for 1.19.40*
+Includes all examples. Namespace `minecraft` and some formatting have been removed to make the page load quickly. *Last updated for 1.19.60*
 
 ## addrider
 
@@ -1266,12 +1266,84 @@ villager_v2
 
 ## area_attack
 
+magma_cube
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 6,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            }
+        ]
+    }
+}
+```
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 4,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            }
+        ]
+    }
+}
+```
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 3,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            }
+        ]
+    }
+}
+```
+
 pufferfish
 
 ```json
 "minecraft:area_attack": {
     "damage_range": 0.2,
     "damage_per_tick": 2,
+    "damage_cooldown": 0.5,
     "cause": "contact",
     "entity_filter": {
         "any_of": [
@@ -1284,6 +1356,64 @@ pufferfish
                 "test": "is_family",
                 "subject": "other",
                 "value": "monster"
+            }
+        ]
+    }
+}
+```
+
+slime
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 4,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "snowgolem"
+            }
+        ]
+    }
+}
+```
+
+```json
+"minecraft:area_attack": {
+    "damage_range": 0.15,
+    "damage_per_tick": 2,
+    "damage_cooldown": 0.5,
+    "cause": "entity_attack",
+    "entity_filter": {
+        "any_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "irongolem"
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "value": "snowgolem"
             }
         ]
     }
@@ -9627,7 +9757,15 @@ iron_golem
 
 ```json
 "minecraft:behavior.offer_flower": {
-    "priority": 5
+    "priority": 5,
+    "filters": {
+        "all_of": [
+            {
+                "test": "is_daytime",
+                "value": true
+            }
+        ]
+    }
 }
 ```
 
@@ -10219,7 +10357,7 @@ villager_v2
 ```json
 "minecraft:behavior.play": {
     "priority": 8,
-    "speed_multiplier": 0.32,
+    "speed_multiplier": 0.6,
     "friend_types": [
         {
             "filters": {
@@ -12696,7 +12834,15 @@ villager
 
 ```json
 "minecraft:behavior.take_flower": {
-    "priority": 7
+    "priority": 7,
+    "filters": {
+        "all_of": [
+            {
+                "test": "is_daytime",
+                "value": true
+            }
+        ]
+    }
 }
 ```
 
@@ -12704,7 +12850,15 @@ villager_v2
 
 ```json
 "minecraft:behavior.take_flower": {
-    "priority": 9
+    "priority": 9,
+    "filters": {
+        "all_of": [
+            {
+                "test": "is_daytime",
+                "value": true
+            }
+        ]
+    }
 }
 ```
 
@@ -13233,7 +13387,31 @@ villager
 
 ```json
 "minecraft:behavior.trade_with_player": {
-    "priority": 1
+    "priority": 1,
+    "filters": {
+        "all_of": [
+            {
+                "all_of": [
+                    {
+                        "test": "in_water",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "any_of": [
+                    {
+                        "test": "on_ground",
+                        "value": true
+                    },
+                    {
+                        "test": "is_sleeping",
+                        "value": true
+                    }
+                ]
+            }
+        ]
+    }
 }
 ```
 
@@ -13241,7 +13419,31 @@ villager_v2
 
 ```json
 "minecraft:behavior.trade_with_player": {
-    "priority": 2
+    "priority": 2,
+    "filters": {
+        "all_of": [
+            {
+                "all_of": [
+                    {
+                        "test": "in_water",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "any_of": [
+                    {
+                        "test": "on_ground",
+                        "value": true
+                    },
+                    {
+                        "test": "is_sleeping",
+                        "value": true
+                    }
+                ]
+            }
+        ]
+    }
 }
 ```
 
@@ -13249,7 +13451,31 @@ wandering_trader
 
 ```json
 "minecraft:behavior.trade_with_player": {
-    "priority": 1
+    "priority": 1,
+    "filters": {
+        "all_of": [
+            {
+                "all_of": [
+                    {
+                        "test": "in_water",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "any_of": [
+                    {
+                        "test": "on_ground",
+                        "value": true
+                    },
+                    {
+                        "test": "is_sleeping",
+                        "value": true
+                    }
+                ]
+            }
+        ]
+    }
 }
 ```
 
@@ -15760,6 +15986,13 @@ magma_cube
 
 ```json
 "minecraft:collision_box": {
+    "width": 2.08,
+    "height": 2.08
+}
+```
+
+```json
+"minecraft:collision_box": {
     "width": 1.04,
     "height": 1.02
 }
@@ -15980,6 +16213,13 @@ skeleton_horse
 ```
 
 slime
+
+```json
+"minecraft:collision_box": {
+    "width": 2.08,
+    "height": 2.08
+}
+```
 
 ```json
 "minecraft:collision_box": {
@@ -19939,8 +20179,8 @@ bee
                         ]
                     },
                     {
-                        "test": "has_component",
-                        "value": "minecraft:is_charged",
+                        "test": "bool_property",
+                        "domain": "minecraft:has_nectar",
                         "operator": "!="
                     },
                     {
@@ -22285,8 +22525,8 @@ enderman
 
 ```json
 "minecraft:follow_range": {
-    "value": 32,
-    "max": 32
+    "value": 64,
+    "max": 64
 }
 ```
 
@@ -25495,9 +25735,91 @@ donkey
                 "filters": {
                     "all_of": [
                         {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
                             "test": "is_family",
                             "subject": "other",
                             "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.equip"
+        }
+    ]
+}
+```
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.saddle"
+        },
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
                         },
                         {
                             "test": "has_equipment",
@@ -25512,6 +25834,48 @@ donkey
             },
             "use_item": true,
             "interact_text": "action.interact.attachchest"
+        }
+    ]
+}
+```
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.saddle"
         }
     ]
 }
@@ -25591,6 +25955,128 @@ goat
 }
 ```
 
+horse
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "none_of": [
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "self",
+                                    "domain": "inventory",
+                                    "value": "leather_horse_armor"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "self",
+                                    "domain": "inventory",
+                                    "value": "iron_horse_armor"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "self",
+                                    "domain": "inventory",
+                                    "value": "golden_horse_armor"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "self",
+                                    "domain": "inventory",
+                                    "value": "diamond_horse_armor"
+                                }
+                            ]
+                        },
+                        {
+                            "any_of": [
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "player",
+                                    "domain": "hand",
+                                    "value": "leather_horse_armor"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "player",
+                                    "domain": "hand",
+                                    "value": "iron_horse_armor"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "player",
+                                    "domain": "hand",
+                                    "value": "golden_horse_armor"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "player",
+                                    "domain": "hand",
+                                    "value": "diamond_horse_armor"
+                                }
+                            ]
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 1,
+            "interact_text": "action.interact.equiphorsearmor"
+        },
+        {
+            "play_sounds": "saddle",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.saddle"
+        }
+    ]
+}
+```
+
 iron_golem
 
 ```json
@@ -25643,6 +26129,11 @@ llama
                             "value": "player"
                         },
                         {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        },
+                        {
                             "test": "has_equipment",
                             "domain": "hand",
                             "subject": "other",
@@ -25655,6 +26146,83 @@ llama
             },
             "use_item": true,
             "interact_text": "action.interact.attachchest"
+        },
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "carpet"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "carpet"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.equipcarpet"
+        }
+    ]
+}
+```
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "carpet"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "carpet"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.equipcarpet"
         }
     ]
 }
@@ -26254,6 +26822,11 @@ mule
                             "test": "is_family",
                             "subject": "other",
                             "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
                         }
                     ]
                 },
@@ -26262,6 +26835,83 @@ mule
             },
             "use_item": true,
             "interact_text": "action.interact.attachchest"
+        },
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.saddle"
+        }
+    ]
+}
+```
+
+```json
+"minecraft:interact": {
+    "interactions": [
+        {
+            "play_sounds": "armor.equip_generic",
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "inventory",
+                            "operator": "not",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "has_equipment",
+                            "subject": "other",
+                            "domain": "hand",
+                            "value": "saddle"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
+                        }
+                    ]
+                },
+                "target": "self"
+            },
+            "equip_item_slot": 0,
+            "interact_text": "action.interact.saddle"
         }
     ]
 }
@@ -27439,12 +28089,6 @@ zombie_villager_v2
 ```
 
 ## is_charged
-
-bee
-
-```json
-"minecraft:is_charged": {}
-```
 
 creeper
 
@@ -34052,7 +34696,9 @@ pillager
 player
 
 ```json
-"minecraft:physics": {}
+"minecraft:physics": {
+    "push_towards_closest_space": true
+}
 ```
 
 polar_bear
@@ -37394,13 +38040,7 @@ husk
 
 ```json
 "minecraft:scale": {
-    "value": 0.53125
-}
-```
-
-```json
-"minecraft:scale": {
-    "value": 1.0625
+    "value": 0.5
 }
 ```
 
@@ -41873,23 +42513,6 @@ llama
             "temper_mod": 6
         }
     ],
-    "auto_reject_items": [
-        {
-            "item": "horsearmorleather"
-        },
-        {
-            "item": "horsearmoriron"
-        },
-        {
-            "item": "horsearmorgold"
-        },
-        {
-            "item": "horsearmordiamond"
-        },
-        {
-            "item": "saddle"
-        }
-    ],
     "tame_event": {
         "event": "minecraft:on_tame",
         "target": "self"
@@ -44692,6 +45315,17 @@ turtle
 ```json
 "minecraft:underwater_movement": {
     "value": 0.12
+}
+```
+
+## variable_max_auto_step
+
+enderman
+
+```json
+"minecraft:variable_max_auto_step": {
+    "base_value": 1.0625,
+    "jump_prevented_value": 0.5625
 }
 ```
 

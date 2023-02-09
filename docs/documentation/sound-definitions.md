@@ -6,7 +6,7 @@ mentions:
 
 Sounds from `sound_definitions.json` sorted by categories and subcategories based on their names.
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-*Last updated for 1.19.40*
+*Last updated for 1.19.60*
 
 ## ambient
 
@@ -276,6 +276,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `break.medium_amethyst_bud`
 
+`break.nether_wood`
+
 `break.pointed_dripstone`
 
 `break.sculk`
@@ -355,6 +357,48 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 #### chime
 ---
 `chime.amethyst_block`
+
+#### click_off
+---
+`click_off.metal_pressure_plate`
+
+`click_off.nether_wood_button`
+
+`click_off.nether_wood_pressure_plate`
+
+`click_off.stone_pressure_plate`
+
+`click_off.wooden_pressure_plate`
+
+#### click_on
+---
+`click_on.metal_pressure_plate`
+
+`click_on.nether_wood_button`
+
+`click_on.nether_wood_pressure_plate`
+
+`click_on.stone_pressure_plate`
+
+`click_on.wooden_pressure_plate`
+
+#### close
+---
+`close.fence_gate`
+
+`close.iron_door`
+
+`close.iron_trapdoor`
+
+`close.nether_wood_door`
+
+`close.nether_wood_fence_gate`
+
+`close.nether_wood_trapdoor`
+
+`close.wooden_door`
+
+`close.wooden_trapdoor`
 
 #### conduit
 ---
@@ -524,6 +568,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `hit.nether_wart`
 
+`hit.nether_wood`
+
 `hit.netherite`
 
 `hit.netherrack`
@@ -586,6 +632,24 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 ---
 `lodestone_compass.link_compass_to_lodestone`
 
+#### open
+---
+`open.fence_gate`
+
+`open.iron_door`
+
+`open.iron_trapdoor`
+
+`open.nether_wood_door`
+
+`open.nether_wood_fence_gate`
+
+`open.nether_wood_trapdoor`
+
+`open.wooden_door`
+
+`open.wooden_trapdoor`
+
 #### pick_berries
 ---
 `pick_berries.cave_vines`
@@ -621,6 +685,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `place.medium_amethyst_bud`
 
 `place.moss`
+
+`place.nether_wood`
 
 `place.pointed_dripstone`
 
@@ -1904,6 +1970,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `fall.nether_wart`
 
+`fall.nether_wood`
+
 `fall.netherite`
 
 `fall.netherrack`
@@ -2234,6 +2302,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `step.nether_wart`
 
+`step.nether_wood`
+
 `step.netherite`
 
 `step.netherrack`
@@ -2371,6 +2441,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `random.screenshot`
 
 `random.toast`
+
+`random.wood_click`
 
 ## weather
 

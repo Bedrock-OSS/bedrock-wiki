@@ -64,6 +64,7 @@ The following are valid values for the sound property:
     "ladder",
     "lantern",
     "large_amethyst_bud",
+    "lever",
     "lodestone",
     "mangrove_roots",
     "medium_amethyst_bud",
@@ -77,6 +78,7 @@ The following are valid values for the sound property:
     "nether_gold_ore",
     "nether_sprouts",
     "nether_wart",
+    "nether_wood",
     "netherite",
     "netherrack",
     "nylium",
@@ -106,5 +108,5 @@ The following are valid values for the sound property:
     "wood"
 ]
 ```
-*Last updated for 1.19.40*
+*Last updated for 1.19.60*
 <!-- page_dumper_end -->
