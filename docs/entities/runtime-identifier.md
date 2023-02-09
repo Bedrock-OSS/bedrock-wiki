@@ -305,13 +305,25 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ### minecraft:shulker_bullet
 
--   The entity will leave a trail of `minecraft:shulker_bullet` particles
+-   The entity will leave a trail of `minecraft:shulker_bullet` particles.
 
 ---
 
 ### minecraft:slime
 
--   The entity will create slime particles when falling
+-   The entity will create slime particles when falling.
+
+---
+
+### minecraft:snowball
+
+-   Removes hitbox.
+-   You can't interact with entity anymore.
+-   Spawns at player's head.
+-   Entity ignores gravity.
+-   Removes entity shadow.
+-   Entity only faces South.
+-   Cannot make step sounds.
 
 ---
 
