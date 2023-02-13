@@ -15,7 +15,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
 | JavaScript | [Still Active](#javascript) : 3 < [Discontinued](#javascript-1) : 5  |
-| C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
+| C++        | [Still Active](#c)          : 2 < [Discontinued](#c-3)          : 3  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
 | C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
@@ -27,6 +27,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 ### C++
 
 -   [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
+-   [BedrockPowder](https://github.com/BedrockPowder/BedrockPowder)
 
 ### C#
 
