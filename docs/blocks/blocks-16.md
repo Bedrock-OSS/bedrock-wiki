@@ -158,7 +158,7 @@ Sets the block's property.
 {
 	"bedrock_wiki:change_color": {
 		"set_block_property": {
-			"bedrock_wiki:string_property_example": "red"
+			"bedrock_wiki:string_property_example": "'red'"
 		}
 	}
 }
