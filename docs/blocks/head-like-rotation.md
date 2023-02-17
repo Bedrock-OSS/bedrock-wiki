@@ -14,7 +14,7 @@ This tutorial guides you through making a block with proper head-like rotation (
 
 :::warning BEGINNERS BEWARE!
 
-This tutorial assumes good knowledge of [blocks 1.16.100+](/blocks/blocks-16), [advanced Molang](/documentation/advanced-molang) and creating models in applications such as [Blockbench](https://blockbench.net).
+This tutorial assumes good knowledge of [experimental blocks](/blocks/blocks-16), [advanced Molang](/documentation/advanced-molang) and creating models in applications such as [Blockbench](https://blockbench.net).
 
 :::
 
@@ -37,10 +37,10 @@ To allow for more specific rotation, your block's model will need a few extra bo
 
 There are 4 bones required for specific ground rotation, each with different Y axis rotations:
 
--   `up0` (Y rotation = 0)
--   `up1` (Y rotation = 22.5)
--   `up2` (Y rotation = 45)
--   `up3` (Y rotation = 67.5)
+-   `up_0` (Y rotation = 0)
+-   `up_22_5` (Y rotation = 22.5)
+-   `up_45` (Y rotation = 45)
+-   `up_67_5` (Y rotation = 67.5)
 
 **These rotations are in a clockwise direction.**
 
@@ -82,7 +82,7 @@ The following model for a "shell" block can be used as a reference:
           "pivot": [0, 0, 0]
         },
         {
-          "name": "up0",
+          "name": "up_0",
           "parent": "shell",
           "pivot": [0, 0, 0],
           "cubes": [
@@ -101,7 +101,7 @@ The following model for a "shell" block can be used as a reference:
           ]
         },
         {
-          "name": "up1",
+          "name": "up_22_5",
           "parent": "shell",
           "pivot": [0, 0, 0],
           "rotation": [0, 22.5, 0],
@@ -121,7 +121,7 @@ The following model for a "shell" block can be used as a reference:
           ]
         },
         {
-          "name": "up2",
+          "name": "up_45",
           "parent": "shell",
           "pivot": [0, 0, 0],
           "rotation": [0, 45, 0],
@@ -141,7 +141,7 @@ The following model for a "shell" block can be used as a reference:
           ]
         },
         {
-          "name": "up3",
+          "name": "up_67_5",
           "parent": "shell",
           "pivot": [0, 0, 0],
           "rotation": [0, 67.5, 0],
@@ -224,14 +224,11 @@ Below is the base "shell" block we will be adding advanced rotation to.
 			},
 			"minecraft:placement_filter": {
 				"conditions": [
-					{
-						// Prevent block from being placed on `down` face
-						"allowed_faces": [
-							"up",
-							"side"
-						]
-					}
-				]
+                    {
+                        // Prevent block from being placed on `down` face
+                        "allowed_faces": ["up", "side"]
+                    }
+                ]
 			}
 		}
 	}
@@ -245,7 +242,7 @@ For head-like rotation, you need to add 2 properties to your block's `descriptio
 ```json
 "properties": {
 	// Face block is placed on
-	"wiki:face": ["up", "north", "south", "west", "east"],
+	"wiki:face": [0, 1, 2, 3, 4],
 	// Specific rotation of block when placed on `up` face
 	"wiki:rotation": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 }
@@ -294,7 +291,7 @@ Create the following component and event in your block:
 	"wiki:set_placement": {
 		"set_block_property": {
 			// Set the face placed on
-			"wiki:face": "q.block_face == 2 ? 'north' : q.block_face == 3 ? 'south' : q.block_face == 4 ? 'west' : q.block_face == 5 ? 'east' : 'up'",
+			"wiki:face": "q.block_face - 1",
 			// Now use the long Molang expression from before to set the rotation property
 			"wiki:rotation": "q.block_face == 1 ? { t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != Math.abs(q.head_y_rotation(0))); t.block_rotation = Math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation; };"
 		}
@@ -309,11 +306,11 @@ Not all bones in your model should be visible - that would look slightly unusual
 ```json
 "minecraft:part_visibility": {
 	"conditions": {
-		"up0": "q.block_property('wiki:face') == 'up' && (q.block_property('wiki:rotation') == 0 || q.block_property('wiki:rotation') == 4 || q.block_property('wiki:rotation') == 8 || q.block_property('wiki:rotation') == 12)",
-		"up1": "q.block_property('wiki:face') == 'up' && (q.block_property('wiki:rotation') == 1 || q.block_property('wiki:rotation') == 5 || q.block_property('wiki:rotation') == 9 || q.block_property('wiki:rotation') == 13)",
-		"up2": "q.block_property('wiki:face') == 'up' && (q.block_property('wiki:rotation') == 2 || q.block_property('wiki:rotation') == 6 || q.block_property('wiki:rotation') == 10 || q.block_property('wiki:rotation') == 14)",
-		"up3": "q.block_property('wiki:face') == 'up' && (q.block_property('wiki:rotation') == 3 || q.block_property('wiki:rotation') == 7 || q.block_property('wiki:rotation') == 11 || q.block_property('wiki:rotation') == 15)",
-		"side": "q.block_property('wiki:face') != 'up'"
+		"up_0": "!q.block_property('wiki:face') && (q.block_property('wiki:rotation') == 0 || q.block_property('wiki:rotation') == 4 || q.block_property('wiki:rotation') == 8 || q.block_property('wiki:rotation') == 12)",
+		"up_22_5": "!q.block_property('wiki:face') && (q.block_property('wiki:rotation') == 1 || q.block_property('wiki:rotation') == 5 || q.block_property('wiki:rotation') == 9 || q.block_property('wiki:rotation') == 13)",
+		"up_45": "!q.block_property('wiki:face')  && (q.block_property('wiki:rotation') == 2 || q.block_property('wiki:rotation') == 6 || q.block_property('wiki:rotation') == 10 || q.block_property('wiki:rotation') == 14)",
+		"up_67_5": "!q.block_property('wiki:face') && (q.block_property('wiki:rotation') == 3 || q.block_property('wiki:rotation') == 7 || q.block_property('wiki:rotation') == 11 || q.block_property('wiki:rotation') == 15)",
+		"side": "q.block_property('wiki:face')"
 	}
 }
 ```
@@ -327,19 +324,19 @@ Insert the following permutations into your block JSON (in the presented order):
 ```json
 "permutations": [
 	{
-		"condition": "(q.block_property('wiki:face') == 'up' && q.block_property('wiki:rotation') >= 4) || q.block_property('wiki:face') == 'east'",
+		"condition": "(!q.block_property('wiki:face') && q.block_property('wiki:rotation') >= 4) || q.block_property('wiki:face') == 4",
 		"components": {
 			"minecraft:rotation": [0, -90, 0]
 		}
 	},
 	{
-		"condition": "(q.block_property('wiki:face') == 'up' && q.block_property('wiki:rotation') >= 8) || q.block_property('wiki:face') == 'south'",
+		"condition": "(!q.block_property('wiki:face') && q.block_property('wiki:rotation') >= 8) || q.block_property('wiki:face') == 2",
 		"components": {
 			"minecraft:rotation": [0, 180, 0]
 		}
 	},
 	{
-		"condition": "(q.block_property('wiki:face') == 'up' && q.block_property('wiki:rotation') >= 12) || q.block_property('wiki:face') == 'west'",
+		"condition": "(!q.block_property('wiki:face') && q.block_property('wiki:rotation') >= 12) || q.block_property('wiki:face') == 3",
 		"components": {
 			"minecraft:rotation": [0, 90, 0]
 		}
@@ -353,7 +350,7 @@ If you would like your block to have a different collision/selection box when pl
 "permutations": [
 	...
 	{
-		"condition": "q.block_property('wiki:face') != 'up'",
+		"condition": "q.block_property('wiki:face')",
 		"components": {
 			"minecraft:collision_box": {
 				"origin": [-3, 5, 5],
@@ -378,98 +375,95 @@ Our block JSON file after the above steps should look similar to the code below:
 
 ```json
 {
-	"format_version": "1.19.60",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:shell",
-			"menu_category": {
-				"category": "nature"
-			},
-			"properties": {
-				"wiki:face": ["up", "north", "south", "west", "east"],
-				"wiki:rotation": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-			}
-		},
-		"components": {
-			"minecraft:collision_box": {
-				"origin": [-3, 0, -3],
-				"size": [6, 3, 6]
-			},
-			"minecraft:selection_box": {
-				"origin": [-3, 0, -3],
-				"size": [6, 3, 6]
-			},
-			"minecraft:geometry": "geometry.shell",
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "shell"
-				}
-			},
-			"minecraft:placement_filter": {
-				"conditions": [
-					{
-						"allowed_faces": [
-							"up",
-							"side"
-						]
-					}
-				]
-			},
-			"minecraft:on_player_placing": {
-				"event": "wiki:set_placement"
-			},
-			"minecraft:part_visibility": {
-				"conditions": {
-					"up0": "q.block_property('wiki:face') == 'up' && (q.block_property('wiki:rotation') == 0 || q.block_property('wiki:rotation') == 4 || q.block_property('wiki:rotation') == 8 || q.block_property('wiki:rotation') == 12)",
-					"up1": "q.block_property('wiki:face') == 'up' && (q.block_property('wiki:rotation') == 1 || q.block_property('wiki:rotation') == 5 || q.block_property('wiki:rotation') == 9 || q.block_property('wiki:rotation') == 13)",
-					"up2": "q.block_property('wiki:face') == 'up' && (q.block_property('wiki:rotation') == 2 || q.block_property('wiki:rotation') == 6 || q.block_property('wiki:rotation') == 10 || q.block_property('wiki:rotation') == 14)",
-					"up3": "q.block_property('wiki:face') == 'up' && (q.block_property('wiki:rotation') == 3 || q.block_property('wiki:rotation') == 7 || q.block_property('wiki:rotation') == 11 || q.block_property('wiki:rotation') == 15)",
-					"side": "q.block_property('wiki:face') != 'up'"
-				}
-			}
-		},
-		"events": {
-			"wiki:set_placement": {
-				"set_block_property": {
-					"wiki:face": "q.block_face == 2 ? 'north' : q.block_face == 3 ? 'south' : q.block_face == 4 ? 'west' : q.block_face == 5 ? 'east' : 'up'",
-					"wiki:rotation": "q.block_face == 1 ? { t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != Math.abs(q.head_y_rotation(0))); t.block_rotation = Math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation; };"
-				}
-			}
-		},
-		"permutations": [
-			{
-				"condition": "(q.block_property('wiki:face') == 'up' && q.block_property('wiki:rotation') >= 4) || q.block_property('wiki:face') == 'east'",
-				"components": {
-					"minecraft:rotation": [0, -90, 0]
-				}
-			},
-			{
-				"condition": "(q.block_property('wiki:face') == 'up' && q.block_property('wiki:rotation') >= 8) || q.block_property('wiki:face') == 'south'",
-				"components": {
-					"minecraft:rotation": [0, 180, 0]
-				}
-			},
-			{
-				"condition": "(q.block_property('wiki:face') == 'up' && q.block_property('wiki:rotation') >= 12) || q.block_property('wiki:face') == 'west'",
-				"components": {
-					"minecraft:rotation": [0, 90, 0]
-				}
-			},
-			{
-				"condition": "q.block_property('wiki:face') != 'up'",
-				"components": {
-					"minecraft:collision_box": {
-						"origin": [-3, 5, 5],
-						"size": [6, 6, 3]
-					},
-					"minecraft:selection_box": {
-						"origin": [-3, 5, 5],
-						"size": [6, 6, 3]
-					}
-				}
-			}
-		]
-	}
+  "format_version": "1.19.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:shell",
+      "menu_category": {
+        "category": "nature"
+      },
+      "properties": {
+        "wiki:face": [0, 1, 2, 3, 4],
+        "wiki:rotation": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "origin": [-3, 0, -3],
+        "size": [6, 3, 6]
+      },
+      "minecraft:selection_box": {
+        "origin": [-3, 0, -3],
+        "size": [6, 3, 6]
+      },
+      "minecraft:geometry": "geometry.shell",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "shell"
+        }
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up", "side"]
+          }
+        ]
+      },
+      "minecraft:on_player_placing": {
+        "event": "wiki:set_placement"
+      },
+      "minecraft:part_visibility": {
+        "conditions": {
+          "up_0": "!q.block_property('wiki:face') && (q.block_property('wiki:rotation') == 0 || q.block_property('wiki:rotation') == 4 || q.block_property('wiki:rotation') == 8 || q.block_property('wiki:rotation') == 12)",
+          "up_22_5": "!q.block_property('wiki:face') && (q.block_property('wiki:rotation') == 1 || q.block_property('wiki:rotation') == 5 || q.block_property('wiki:rotation') == 9 || q.block_property('wiki:rotation') == 13)",
+          "up_45": "!q.block_property('wiki:face') && (q.block_property('wiki:rotation') == 2 || q.block_property('wiki:rotation') == 6 || q.block_property('wiki:rotation') == 10 || q.block_property('wiki:rotation') == 14)",
+          "up_67_5": "!q.block_property('wiki:face') && (q.block_property('wiki:rotation') == 3 || q.block_property('wiki:rotation') == 7 || q.block_property('wiki:rotation') == 11 || q.block_property('wiki:rotation') == 15)",
+          "side": "q.block_property('wiki:face')"
+        }
+      }
+    },
+    "events": {
+      "wiki:set_placement": {
+        "set_block_property": {
+          "wiki:face": "q.block_face - 1",
+          "wiki:rotation": "q.block_face == 1 ? { t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != Math.abs(q.head_y_rotation(0))); t.block_rotation = Math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation; };"
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "(!q.block_property('wiki:face') && q.block_property('wiki:rotation') >= 4) || q.block_property('wiki:face') == 4",
+        "components": {
+          "minecraft:rotation": [0, -90, 0]
+        }
+      },
+      {
+        "condition": "(!q.block_property('wiki:face') && q.block_property('wiki:rotation') >= 8) || q.block_property('wiki:face') == 2",
+        "components": {
+          "minecraft:rotation": [0, 180, 0]
+        }
+      },
+      {
+        "condition": "(!q.block_property('wiki:face') && q.block_property('wiki:rotation') >= 12) || q.block_property('wiki:face') == 3",
+        "components": {
+          "minecraft:rotation": [0, 90, 0]
+        }
+      },
+      {
+        "condition": "q.block_property('wiki:face')",
+        "components": {
+          "minecraft:collision_box": {
+            "origin": [-3, 5, 5],
+            "size": [6, 6, 3]
+          },
+          "minecraft:selection_box": {
+            "origin": [-3, 5, 5],
+            "size": [6, 6, 3]
+          }
+        }
+      }
+    ]
+  }
 }
 ```
 </Spoiler>
