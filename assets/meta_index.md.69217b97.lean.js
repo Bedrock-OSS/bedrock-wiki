@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./404.md.286bf167.js";const m=JSON.parse('{"title":"Meta","description":"","frontmatter":{"title":"Meta"},"headers":[],"relativePath":"meta/index.md"}'),n={name:"meta/index.md"};function r(o,s,c,i,d,p){return a(),t("div")}const f=e(n,[["render",r]]);export{m as __pageData,f as default};
