@@ -102,7 +102,7 @@ Other elements in different JSON UI files can then reference this variable to be
 }
 ```
 
-- You can add denote more variables, seperated in a comma, within the `_global_variables.json` file.
+- You can add more variables with their values in place, seperated in a comma, within the `_global_variables.json` file.
 - Variables stored in this file are constant and _one-sided_. And therefore, you cannot modify the default variable in one namespace to be then used by the other.
 
 ## Namespaces
@@ -367,7 +367,7 @@ This happens a lot with the `visible` and `enabled` properties. Here's an exampl
   "play_button": {
     "bindings": [
       {
-        "binding_name": "#play_button_enabled"
+        "binding_name": "#play_button_enabled",
         "binding_name_override": "#enabled"
       }
     ]
@@ -453,8 +453,8 @@ The `visible` property is used to conditionally render a UI control when working
 ...
   "hud_actionbar_text": {
     "type": "image",
-    "size": [ "100%c + 12px", "100%c + 5px" ],
-    "offset": [ 0, "50%-68px" ],
+    "size": ["100%c + 12px", "100%c + 5px"],
+    "offset": [0, "50%-68px"],
     "texture": "textures/ui/hud_tip_text_background",
     "alpha": "@hud.anim_actionbar_text_background_alpha_out",
     "controls": [
@@ -468,9 +468,9 @@ The `visible` property is used to conditionally render a UI control when working
           "text": "$actionbar_text",
           "localize": false,
           "alpha": "@hud.anim_actionbar_text_alpha_out",
-	  			// Ignore the text label if the actionbar text is equal to "hello world"
+          // Ignore the text label if the actionbar text is equal to "hello world"
           "$atext": "$actionbar_text",
-	  "visible": "(not ($atext = 'hello world'))"
+          "visible": "(not ($atext = 'hello world'))"
         }
       }
     ]
@@ -765,14 +765,14 @@ Here's an example of a button element with the `button_mappings` property:
         "mapping_type": "pressed"
       },
       {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "$pressed_button_name",
-        "mapping_type": "pressed"
-      },
-      {
         "from_button_id": "button.menu_ok",
         "to_button_id": "$pressed_button_name",
         "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
       },
       {
         "from_button_id": "button.menu_up",
@@ -789,10 +789,37 @@ Here's an example of a button element with the `button_mappings` property:
 Defines the scope of the specified button mapping:
 
 - `focused` - means when the button is hovered onto first
-- `pressed` - means when the button is interacted with
-- `global` - means when the button is rendered
+- `pressed` - means when the button is clicked or pressed
+- `global` - means when the button exists and is called on the screen
 
-As long as the `from_button_id` is inputted with it's appropriate `mapping_type`, it will meet the conditions and therefore trigger the `to_button_id` property.
+As long as the `from_button_id` is inputted with it's appropriate `mapping_type`, it will meet the conditions and therefore trigger the `to_button_id` property:
+```json
+{
+  "sample_button@common.button": {
+    "$pressed_button_name": "button_id",
+    "button_mappings": [
+      // Trigger this button only if you're hovering the mouse into it first
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "focused"
+      },
+      // Trigger this button if it's clicked or pressed
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      // Trigger this button if the `button.menu_up` KEY is pressed from anywhere
+      {
+        "from_button_id": "button.menu_up",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}
+```
 
 ### Common button IDs
 
@@ -800,7 +827,7 @@ These are the list of common button IDs you can use in `from_button_id` property
 
 **For mouse and keyboard:**
 | Button ID | Description |
-| --------------------------------- | -------------------------------------- |
+| --------- | ----------- |
 | `button.menu_select` | Mouse left click |
 | `button.menu_secondary_select` | Mouse right click |
 | `button.menu_ok` | ENTER key |
@@ -814,7 +841,7 @@ These are the list of common button IDs you can use in `from_button_id` property
 
 **For controllers:**
 | Button ID | Description |
-| --------------------------------- | -------------------------------------- |
+| --------- | ----------- |
 | `button.controller_select ` | X/A button |
 | `button.menu_secondary_select` | Y button |
 | `button.menu_exit` | B button |
@@ -823,6 +850,8 @@ These are the list of common button IDs you can use in `from_button_id` property
 | `button.menu_down` | DOWN DPAD key |
 | `button.menu_left` | LEFT DPAD key |
 | `button.menu_right` | RIGHT DPAD key |
+
+It's a good practice in creating UIs to also add support for various different controls across different platforms with different control methods.
 
 ## Modifications
 
@@ -845,7 +874,9 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
 ### Examples
 
 #### Front/Back
+Modify anchored from the top (start) or to the bottom (end) of the list.
 
+Prefix the new `foo` control from the top of the list:
 ```json
 {
   "array_name": "controls",
@@ -857,7 +888,7 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   ]
 }
 ```
-
+Append the new `foo` control to the bottom of the list:
 ```json
 {
   "array_name": "controls",
@@ -869,7 +900,7 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   ]
 }
 ```
-
+Move the existing `foo` control to the top of the list:
 ```json
 {
   "array_name": "controls",
@@ -881,17 +912,7 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   ]
 }
 ```
-
-```json
-{
-  "array_name": "bindings",
-  "operation": "move_front",
-  "where": {
-    "binding_name": "#example_binding_2"
-  }
-}
-```
-
+Move the existing `foo` control to the bottom of the list:
 ```json
 {
   "array_name": "controls",
@@ -903,7 +924,17 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   ]
 }
 ```
-
+Move the existing `#example_binding_2` binding to the top of the list:
+```json
+{
+  "array_name": "bindings",
+  "operation": "move_front",
+  "where": {
+    "binding_name": "#example_binding_2"
+  }
+}
+```
+Move the existing `#example_binding_2` binding to the bottom of the list:
 ```json
 {
   "array_name": "bindings",
@@ -915,7 +946,9 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
 ```
 
 #### After/Before
+Modify anchored below (after) or above (before) an existing control or binding from the list.
 
+Add the new `foo` control below the `second_target` control from the list:
 ```json
 {
   "control_name": "second_target",
@@ -927,7 +960,19 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   ]
 }
 ```
-
+Add the new `foo` control above the `second_target` control from the list:
+```json
+{
+  "control_name": "second_target",
+  "operation": "insert_before",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+Add the new `#my_binding_1` binding below the `#example_binding_2` binding from the list:
 ```json
 {
   "array_name": "bindings",
@@ -942,19 +987,7 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   ]
 }
 ```
-
-```json
-{
-  "control_name": "second_target",
-  "operation": "insert_before",
-  "value": [
-    {
-      "foo@example.bar": {}
-    }
-  ]
-}
-```
-
+Add the new `#my_binding_1` binding above the `#example_binding_2` binding from the list:
 ```json
 {
   "array_name": "bindings",
@@ -969,7 +1002,7 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   ]
 }
 ```
-
+Move the existing `foo` control below the `second_target` control from the list:
 ```json
 {
   "control_name": "second_target",
@@ -981,7 +1014,19 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   ]
 }
 ```
-
+Move the existing `foo` control above the `second_target` control from the list:
+```json
+{
+  "control_name": "second_target",
+  "operation": "move_before",
+  "value": [
+    {
+      "foo@example.bar": {}
+    }
+  ]
+}
+```
+Move the existing `#example_binding_1` binding below the `#example_binding_2` binding from the list:
 ```json
 {
   "array_name": "bindings",
@@ -994,19 +1039,7 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   }
 }
 ```
-
-```json
-{
-  "control_name": "second_target",
-  "operation": "move_before",
-  "value": [
-    {
-      "foo@example.bar": {}
-    }
-  ]
-}
-```
-
+Move the existing `#example_binding_1` binding above the `#example_binding_2` binding from the list:
 ```json
 {
   "array_name": "bindings",
@@ -1021,7 +1054,9 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
 ```
 
 #### Swap/Replace/Remove
+Modify anchored to at least one existing controls or bindings: 
 
+Swap the position of the existing `#example_binding_1` and `#example_binding_2` bindings:
 ```json
 {
   "array_name": "bindings",
@@ -1034,7 +1069,7 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   }
 }
 ```
-
+Replace the existing `#example_binding_1` binding to the new `#replacement_binding` binding:
 ```json
 {
   "array_name": "bindings",
@@ -1047,7 +1082,7 @@ To modify JSON UI in a non-intrusive way, you can use the `modifications` proper
   }
 }
 ```
-
+Remove the existing `#example_binding_1` binding:
 ```json
 {
   "array_name": "bindings",
