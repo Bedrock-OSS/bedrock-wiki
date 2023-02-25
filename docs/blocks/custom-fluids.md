@@ -4,7 +4,6 @@ category: Tutorials
 tags:
     - experimental
     - intermediate
-    - guide
 mention:
     - Provedule
 ---
@@ -55,7 +54,7 @@ Below is the `source fluid block` code. To replicate the json, copy and quick re
       },
       "minecraft:ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ],
+        "range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "fluids:flow"
         }
@@ -230,7 +229,7 @@ Below is the JSON for the `outer fluid block 1`. To replicate the json, copy and
     "components": {
       "minecraft:ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ],
+        "range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "fluids:flow"
         }
@@ -328,7 +327,7 @@ Below is the JSON for the `outer fluid block 2`. To replicate the json, copy and
     "components": {
       "minecraft:ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ],
+        "range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "fluids:flow"
         }
@@ -426,7 +425,7 @@ Below is the JSON for the `outer fluid block 3`. To replicate the json, copy and
     "components": {
       "minecraft:ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ],
+        "range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "fluids:flow"
         }
@@ -512,29 +511,48 @@ Below is the JSON for the `falling fluid block`. To replicate the json, copy and
   "format_version": "1.16.100",
   "minecraft:block": {
     "description": {
-      "identifier": "fluids:fluid_template3"
+      "identifier": "fluids:fluid_template_down",
+      "properties": {
+        "fluids:x": [ 0, 1 ],
+        "fluids:nx": [ 0, 1 ],
+        "fluids:z": [ 0, 1 ],
+        "fluids:nz": [ 0, 1 ],
+        "fluids:top": [ 0, 1 ],
+        "fluids:bottom": [ 0, 1 ]
+      }
     },
     "components": {
       "minecraft:ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ],
+        "range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "fluids:flow"
         }
       },
+      "minecraft:loot": "loot_tables/blocks/null.json",
+      "minecraft:pick_collision": false,
       "minecraft:material_instances": {
         "*": {
           "texture": "fluid_template",
           "render_method": "blend"
         }
       },
-      "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:pick_collision": false,
-      "tag:template3": {},
+      "minecraft:part_visibility": {
+        "rules": {
+          "x": "query.block_property('fluids:x') == 0",
+          "nx": "query.block_property('fluids:nx') == 0",
+          "z": "query.block_property('fluids:z') == 0",
+          "nz": "query.block_property('fluids:nz') == 0",
+          "top": "query.block_property('fluids:top') == 0",
+          "bottom": "query.block_property('fluids:bottom') == 0"
+        }
+      },
       "tag:template": {},
+      "tag:template_full": {},
+      "tag:template_down": {},
       "tag:fluid": {},
       "minecraft:block_light_absorption": 0.0,
-      "minecraft:geometry": "geometry.fluid3",
+      "minecraft:geometry": "geometry.fluid",
       "minecraft:destroy_time": 100.0,
       "minecraft:entity_collision": false,
       "minecraft:explosion_resistance": false,
@@ -547,28 +565,42 @@ Below is the JSON for the `falling fluid block`. To replicate the json, copy and
       "fluids:flow": {
         "sequence": [
           {
-            "condition": "query.block_neighbor_has_any_tag(1, 0, 0, 'template2') || query.block_neighbor_has_any_tag(0, 0, 1, 'template2') || query.block_neighbor_has_any_tag(-1, 0, 0, 'template2') || query.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
+            "trigger": {
+              "event": "fluids:check_side",
+              "target": "self"
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
+            "run_command": {
+              "target": "self",
+              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ fluids:fluid_template unless block ~ ~-1 ~ fluids:fluid_template1 unless block ~ ~-1 ~ fluids:fluid_template2 unless block ~ ~-1 ~ fluids:fluid_template3 unless block ~ ~-1 ~ fluids:fluid_template_down run setblock ~ ~ ~ fluids:fluid_template_down" ]
+            }
+          },
+
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
             "run_command": {
               "target": "self",
               "command": [ "execute if block ~ ~-1 ~ air run setblock ~ ~-1 ~ fluids:fluid_template_down" ]
             }
           },
           {
-            "condition": "query.block_neighbor_has_any_tag(1, 0, 0, 'template2') || query.block_neighbor_has_any_tag(0, 0, 1, 'template2') || query.block_neighbor_has_any_tag(-1, 0, 0, 'template2') || query.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
             "run_command": {
               "target": "self",
               "command": [ "execute if block ~ ~-1 ~ fluids:fluid_template1 run setblock ~ ~-1 ~ fluids:fluid_template_down" ]
             }
           },
           {
-            "condition": "query.block_neighbor_has_any_tag(1, 0, 0, 'template2') || query.block_neighbor_has_any_tag(0, 0, 1, 'template2') || query.block_neighbor_has_any_tag(-1, 0, 0, 'template2') || query.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
             "run_command": {
               "target": "self",
               "command": [ "execute if block ~ ~-1 ~ fluids:fluid_template2 run setblock ~ ~-1 ~ fluids:fluid_template_down" ]
             }
           },
           {
-            "condition": "query.block_neighbor_has_any_tag(1, 0, 0, 'template2') || query.block_neighbor_has_any_tag(0, 0, 1, 'template2') || query.block_neighbor_has_any_tag(-1, 0, 0, 'template2') || query.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
             "run_command": {
               "target": "self",
               "command": [ "execute if block ~ ~-1 ~ fluids:fluid_template3 run setblock ~ ~-1 ~ fluids:fluid_template_down" ]
@@ -576,10 +608,125 @@ Below is the JSON for the `falling fluid block`. To replicate the json, copy and
           },
 
           {
-            "condition": "!query.block_neighbor_has_any_tag(1, 0, 0, 'template2') && !query.block_neighbor_has_any_tag(0, 0, 1, 'template2') && !query.block_neighbor_has_any_tag(-1, 0, 0, 'template2') && !query.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
+            "run_command": {
+              "target": "self",
+              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ fluids:fluid_template_down unless block ~ ~-1 ~ fluids:fluid_template1 unless block ~ ~-1 ~ fluids:fluid_template2 unless block ~ ~-1 ~ fluids:fluid_template3 if block ~1 ~ ~ air run setblock ~1 ~ ~ fluids:fluid_template1" ]
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
+            "run_command": {
+              "target": "self",
+              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ fluids:fluid_template_down unless block ~ ~-1 ~ fluids:fluid_template1 unless block ~ ~-1 ~ fluids:fluid_template2 unless block ~ ~-1 ~ fluids:fluid_template3 if block ~ ~ ~1 air run setblock ~ ~ ~1 fluids:fluid_template1" ]
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
+            "run_command": {
+              "target": "self",
+              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ fluids:fluid_template_down unless block ~ ~-1 ~ fluids:fluid_template1 unless block ~ ~-1 ~ fluids:fluid_template2 unless block ~ ~-1 ~ fluids:fluid_template3 if block ~-1 ~ ~ air run setblock ~-1 ~ ~ fluids:fluid_template1" ]
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
+            "run_command": {
+              "target": "self",
+              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ fluids:fluid_template_down unless block ~ ~-1 ~ fluids:fluid_template1 unless block ~ ~-1 ~ fluids:fluid_template2 unless block ~ ~-1 ~ fluids:fluid_template3 if block ~ ~ ~-1 air run setblock ~ ~ ~-1 fluids:fluid_template1" ]
+            }
+          },
+
+          {
+            "condition": "!query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
             "run_command": {
               "target": "self",
               "command": [ "setblock ~ ~ ~ air" ]
+            }
+          }
+        ]
+      },
+
+      "fluids:check_side": {
+        "sequence": [
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
+            "set_block_property": {
+              "fluids:nz": 1
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 0, 1, 'template_full')",
+            "set_block_property": {
+              "fluids:z": 1
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(1, 0, 0, 'template_full')",
+            "set_block_property": {
+              "fluids:x": 1
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(-1, 0, 0, 'template_full')",
+            "set_block_property": {
+              "fluids:nx": 1
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template_full')",
+            "set_block_property": {
+              "fluids:top": 1
+            }
+          },
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, -1, 0, 'template_full')",
+            "set_block_property": {
+              "fluids:bottom": 1
+            }
+          },
+
+          {
+            "condition": "!query.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
+            "set_block_property": {
+              "fluids:nz": 0
+            }
+          },
+          {
+            "condition": "!query.block_neighbor_has_any_tag(0, 0, 1, 'template_full')",
+            "set_block_property": {
+              "fluids:z": 0
+            }
+          },
+          {
+            "condition": "!query.block_neighbor_has_any_tag(1, 0, 0, 'template_full')",
+            "set_block_property": {
+              "fluids:x": 0
+            }
+          },
+          {
+            "condition": "!query.block_neighbor_has_any_tag(-1, 0, 0, 'template_full')",
+            "set_block_property": {
+              "fluids:nx": 0
+            }
+          },
+          {
+            "condition": "!query.block_neighbor_has_any_tag(0, 1, 0, 'template_full')",
+            "set_block_property": {
+              "fluids:top": 0
+            }
+          },
+          {
+            "condition": "!query.block_neighbor_has_any_tag(0, -1, 0, 'template_full')",
+            "set_block_property": {
+              "fluids:bottom": 0
+            }
+          },
+
+          {
+            "condition": "query.block_neighbor_has_any_tag(0, 1, 0, 'template')",
+            "run_command": {
+              "target": "self",
+              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ fluids:fluid_template unless block ~ ~-1 ~ fluids:fluid_template1 unless block ~ ~-1 ~ fluids:fluid_template2 unless block ~ ~-1 ~ fluids:fluid_template3 unless block ~ ~-1 ~ fluids:fluid_template_down run setblock ~ ~ ~ fluids:fluid_template_down" ]
             }
           }
         ]
@@ -626,10 +773,10 @@ To pickup or place your custom fluid you need a custom bucket item. Although any
 
 ## Scripts
 
-The fluids use scripts to add the ability for the player to float/sink in the water. The scripts also add fog. To add your fluid to the script, put the ID of your new fluids in the `fluidsIDs` string array.
+The fluids use a script to add the ability for the player to float/sink in the fluid. The script also adds fog. To add your fluid to the script, put the ID of your new fluids in the `fluidsIDs` string array.
 
-<CodeHeader>BH\blocks\fluid_template\fluid_template_down.json</CodeHeader>
-<Spoiler title="Falling Fluid JSON">
+<CodeHeader>BH\scripts\fluids\main.js</CodeHeader>
+<Spoiler title="Script">
 
 ```javascript
 import * as mc from "@minecraft/server"
@@ -673,8 +820,8 @@ mc.world.events.tick.subscribe(() => {
 
 ## Resources
 
-To define the textures for the fluids you need to do there two thing:
-1) Make a texture and in terrain textures copy/rename the "fluid_template" to "fluid_`your fluid name`"
+To define the textures for the fluids you need to do two thing:
+1) Make a 16x16+ texture and in terrain textures copy/rename the "fluid_template" to "fluid_`your fluid name`"
 2) Make a texture and in item textures copy/rename the "template_bucket" to "`your fluid name`_bucket"
 
 ## Download / Other
@@ -688,7 +835,7 @@ By the end your BH folder should look like this
     'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template1.json',
     'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template2.json',
     'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template3.json',
-    'com.mojang/development_behavior_packs/items/template_bucket',
+    'com.mojang/development_behavior_packs/items/template_bucket.json',
     'com.mojang/development_behavior_packs/scripts/fluids/main.js',
     ]"
 ></FolderView>
@@ -698,6 +845,7 @@ By the end your BH folder should look like this
 If anything goes wrong, or if you require all of the template files, they are available for download here. The file includes everything necessary for a functional fluid, as well as a `.txt` document that details how to create a new one.
 
 <BButton
-    link="/packs/tutorials/custom_fluids/MoreFluidsTemplate.zip" download
+    link="/assets/packs/tutorials/custom_fluids/MoreFluidsTemplate.zip"
+	  download="More Fluids Template.zip"
     color=blue
 >Download Fluid Template</BButton>
