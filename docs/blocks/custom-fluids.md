@@ -28,7 +28,7 @@ Semi-fluids consist of five blocks: three blocks form the outer parts of the flu
 
 ## Source Fluid Block
 
-Below is the source fluid block code. To replicate the json, copy and quick replace `template` with your fluid's name.
+Below is the `source fluid block` code. To replicate the json, copy and quick replace `template` with your fluid's name. When the source block detects air in its surroundings, it replaces it with the `outer fluid block 1`. If the source block detects air beneath it, it will also place a `falling fluid block` underneath.
 
 <CodeHeader>BH\blocks\fluid_template\fluid_template.json</CodeHeader>
 <Spoiler title="Fluid Source JSON">
@@ -213,15 +213,9 @@ Below is the source fluid block code. To replicate the json, copy and quick repl
 
 </Spoiler>
 
-<FolderView
-	:paths="[
-    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template.json',
-    ]"
-></FolderView>
-
 ## Outer Fluid Block 1
 
-Below is the JSON for the outer fluid block 1. To replicate the json, copy and quick replace `template` with your fluid's name.
+Below is the JSON for the `outer fluid block 1`. To replicate the json, copy and quick replace `template` with your fluid's name. This block has the same function as the source block but it can't be picked up and it places `outer fluid block 2` instead.
 
 <CodeHeader>BH\blocks\fluid_template\fluid_template1.json</CodeHeader>
 <Spoiler title="Outer Fluid 1 JSON">
@@ -319,7 +313,7 @@ Below is the JSON for the outer fluid block 1. To replicate the json, copy and q
 
 ## Outer Fluid Block 2
 
-Below is the JSON for the outer fluid block 2. To replicate the json, copy and quick replace `template` with your fluid's name.
+Below is the JSON for the `outer fluid block 2`. To replicate the json, copy and quick replace `template` with your fluid's name. This block has the same function as the `outer fluid block 2` but it places `outer fluid block 3` instead.
 
 <CodeHeader>BH\blocks\fluid_template\fluid_template2.json</CodeHeader>
 <Spoiler title="Outer Fluid 2 JSON">
@@ -417,7 +411,7 @@ Below is the JSON for the outer fluid block 2. To replicate the json, copy and q
 
 ## Outer Fluid Block 3
 
-Below is the JSON for the outer fluid block 3. To replicate the json, copy and quick replace `template` with your fluid's name.
+Below is the JSON for the `outer fluid block 3`. To replicate the json, copy and quick replace `template` with your fluid's name. This block solely places the falling fluid block. Moreover, all fluid blocks check for the existence of at least one fluid block from a higher tier next to them. If none is found, the block deletes itself.
 
 <CodeHeader>BH\blocks\fluid_template\fluid_template3.json</CodeHeader>
 <Spoiler title="Outer Fluid 3 JSON">
@@ -508,7 +502,7 @@ Below is the JSON for the outer fluid block 3. To replicate the json, copy and q
 
 ## Falling Fluid Block
 
-Below is the JSON for the falling fluid block. To replicate the json, copy and quick replace `template` with your fluid's name.
+Below is the JSON for the `falling fluid block`. To replicate the json, copy and quick replace `template` with your fluid's name. If this block detects air below it, it will place another `falling fluid block`. However, if it detects another block beneath it, it will behave like the `source fluid block`.
 
 <CodeHeader>BH\blocks\fluid_template\fluid_template_down.json</CodeHeader>
 <Spoiler title="Falling Fluid JSON">
@@ -599,7 +593,7 @@ Below is the JSON for the falling fluid block. To replicate the json, copy and q
 
 ## Fluid Bucket
 
-To pickup or place your custom fluid you need a custom bucket item. Although any item can pickup the fluid, you fluid can be customized to require this custom bucket. Below is the JSON for the custom bucket. To replicate the json, copy and quick replace `template` with your fluid's name.
+To pickup or place your custom fluid you need a custom bucket item. Although any item can pickup the fluid, your fluid can be customized to require this custom bucket. Below is the JSON for the custom bucket. To replicate the json, copy and quick replace `template` with your fluid's name.
 
 <CodeHeader>BH\items\template_bucket.json</CodeHeader>
 <Spoiler title="Template Bucket JSON">
@@ -629,3 +623,81 @@ To pickup or place your custom fluid you need a custom bucket item. Although any
 ```
 
 </Spoiler>
+
+## Scripts
+
+The fluids use scripts to add the ability for the player to float/sink in the water. The scripts also add fog. To add your fluid to the script, put the ID of your new fluids in the `fluidsIDs` string array.
+
+<CodeHeader>BH\blocks\fluid_template\fluid_template_down.json</CodeHeader>
+<Spoiler title="Falling Fluid JSON">
+
+```javascript
+import * as mc from "@minecraft/server"
+
+let fluidsIDs = [
+"fluids:fluid_template",
+"fluids:fluid_template_down",
+"fluids:fluid_template1",
+"fluids:fluid_template2",
+"fluids:fluid_template3"
+]
+
+mc.world.events.tick.subscribe(() => {
+    const players = Array.from(mc.world.getPlayers())
+    for (let p = 0; p < players.length; p++) {
+        for (let i = 0; i < fluidsIDs.length; i++) {
+            if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), Math.floor(players[p].location.y+1), Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+                if (!players[p].isSneaking) {
+                    players[p].addEffect(mc.MinecraftEffectTypes.levitation, 4, 1, false)
+                }
+                players[p].addEffect(mc.MinecraftEffectTypes.slowFalling, 4, 2, false)
+            } else if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), Math.floor(players[p].location.y), Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+                players[p].addEffect(mc.MinecraftEffectTypes.slowFalling, 4, 2, false)
+            }
+        }
+    }
+    for (let p = 0; p < players.length; p++) {
+        for (let i = 0; i < fluidsIDs.length; i++) {
+            if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), players[p].location.y+1.7, Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+                players[p].runCommandAsync("fog @s push fluid:water_fog fluid_fog")
+                break
+            } else {
+                players[p].runCommandAsync("fog @s remove fluid_fog")
+            }
+        }
+    }
+})
+```
+
+</Spoiler>
+
+## Resources
+
+To define the textures for the fluids you need to do there two thing:
+1) Make a texture and in terrain textures copy/rename the "fluid_template" to "fluid_`your fluid name`"
+2) Make a texture and in item textures copy/rename the "template_bucket" to "`your fluid name`_bucket"
+
+## Download / Other
+
+By the end your BH folder should look like this
+
+<FolderView
+	:paths="[
+    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template.json',
+    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template_down.json',
+    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template1.json',
+    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template2.json',
+    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template3.json',
+    'com.mojang/development_behavior_packs/items/template_bucket',
+    'com.mojang/development_behavior_packs/scripts/fluids/main.js',
+    ]"
+></FolderView>
+
+(`fluid_template` or `template` can be replaced)
+
+If anything goes wrong, or if you require all of the template files, they are available for download here. The file includes everything necessary for a functional fluid, as well as a `.txt` document that details how to create a new one.
+
+<BButton
+    link="/packs/tutorials/custom_fluids/MoreFluidsTemplate.zip" download
+    color=blue
+>Download Fluid Template</BButton>
