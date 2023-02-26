@@ -9,7 +9,7 @@ mention:
 ---
 
 :::warning
-**Requires** a basic knowledge of blocks and commands, including permutations, events, properties, components, and the new execute command.
+**Requires** a basic knowledge of blocks, scripts, and commands, including permutations, events, properties, components, and the new execute command.
 :::
 
 Creating fluids that are identical to vanilla fluids is not currently possible, but it is possible to make something similar. This template/tutorial is designed to assist you in creating a custom semi-fluid.
@@ -19,7 +19,7 @@ Creating fluids that are identical to vanilla fluids is not currently possible, 
 Semi-fluids consist of five blocks: three blocks form the outer parts of the fluid, one block acts as the main source of the fluid, and the final block represents the falling part of the fluid. Additionally, execute commands are utilized to identify blocks and establish rules for the fluid flow. Throughout the remainder of this guide, semi-fluids will be referred to as fluids.
 
 <WikiImage
-	src="/assets/images/blocks/custom-fluids/fluidDisplay.png"
+	src="/assets/images/blocks/custom-fluids/fluid_display.png"
 	alt="alternative text"
 	pixelated="true"
 	width=540
@@ -29,7 +29,7 @@ Semi-fluids consist of five blocks: three blocks form the outer parts of the flu
 
 Below is the `source fluid block` code. To replicate the json, copy and quick replace `template` with your fluid's name. When the source block detects air in its surroundings, it replaces it with the `outer fluid block 1`. If the source block detects air beneath it, it will also place a `falling fluid block` underneath.
 
-<CodeHeader>BH\blocks\fluid_template\fluid_template.json</CodeHeader>
+<CodeHeader>BH/blocks/fluid_template/fluid_template.json</CodeHeader>
 <Spoiler title="Fluid Source JSON">
 
 ```json
@@ -216,7 +216,7 @@ Below is the `source fluid block` code. To replicate the json, copy and quick re
 
 Below is the JSON for the `outer fluid block 1`. To replicate the json, copy and quick replace `template` with your fluid's name. This block has the same function as the source block but it can't be picked up and it places `outer fluid block 2` instead.
 
-<CodeHeader>BH\blocks\fluid_template\fluid_template1.json</CodeHeader>
+<CodeHeader>BH/blocks/fluid_template/fluid_template1.json</CodeHeader>
 <Spoiler title="Outer Fluid 1 JSON">
 
 ```json
@@ -314,7 +314,7 @@ Below is the JSON for the `outer fluid block 1`. To replicate the json, copy and
 
 Below is the JSON for the `outer fluid block 2`. To replicate the json, copy and quick replace `template` with your fluid's name. This block has the same function as the `outer fluid block 2` but it places `outer fluid block 3` instead.
 
-<CodeHeader>BH\blocks\fluid_template\fluid_template2.json</CodeHeader>
+<CodeHeader>BH/blocks/fluid_template/fluid_template2.json</CodeHeader>
 <Spoiler title="Outer Fluid 2 JSON">
 
 ```json
@@ -845,7 +845,7 @@ By the end your BH folder should look like this
 If anything goes wrong, or if you require all of the template files, they are available for download here. The file includes everything necessary for a functional fluid, as well as a `.txt` document that details how to create a new one.
 
 <BButton
-    link="/assets/packs/tutorials/custom_fluids/MoreFluidsTemplate.zip"
+    link="/assets/packs/tutorials/custom_fluids/more_fluids_template.zip"
 	  download="More Fluids Template.zip"
     color=blue
 >Download Fluid Template</BButton>
