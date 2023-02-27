@@ -34,7 +34,7 @@ Below is the `source fluid block` code. To replicate the json, copy and quick re
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.19.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:fluid_template",
@@ -52,9 +52,9 @@ Below is the `source fluid block` code. To replicate the json, copy and quick re
         "event": "wiki:pick_up", // can be removed if fluid doesn't need to be picked up
         "target": "other" // add "condition" to make the fluid be picked up by certain buckets/items
       },
-      "minecraft:ticking": {
+      "minecraft:queued_ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ], //fluid speed
+        "interval_range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "wiki:flow"
         }
@@ -67,7 +67,7 @@ Below is the `source fluid block` code. To replicate the json, copy and quick re
         }
       },
       "minecraft:part_visibility": {
-        "rules": {
+        "conditions": {
           "x": "q.block_property('wiki:x') == 0",
           "nx": "q.block_property('wiki:nx') == 0",
           "z": "q.block_property('wiki:z') == 0",
@@ -79,14 +79,14 @@ Below is the `source fluid block` code. To replicate the json, copy and quick re
       "tag:template": {},
       "tag:template_full": {},
       "tag:fluid": {},
-      "minecraft:block_light_absorption": 0.0,
+      "minecraft:light_dampening": 0.0,
       "minecraft:geometry": "geometry.fluid",
-      "minecraft:destroy_time": false,
-      "minecraft:entity_collision": false,
-      "minecraft:explosion_resistance": false,
+      "minecraft:destructible_by_mining": false,
+      "minecraft:collision_box": false,
+      "minecraft:destructible_by_explosion": false,
       "minecraft:flammable": {
-        "burn_odds": 0,
-        "flame_odds": 0
+        "destroy_chance_modifier": 0,
+        "catch_chance_modifier": 0
       }
     },
     "events": {
@@ -221,15 +221,15 @@ Below is the JSON for the `outer fluid block 1`. To replicate the json, copy and
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.19.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:fluid_template1"
     },
     "components": {
-      "minecraft:ticking": {
+      "minecraft:queued_ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ], //fluid speed
+        "interval_range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "wiki:flow"
         }
@@ -241,18 +241,18 @@ Below is the JSON for the `outer fluid block 1`. To replicate the json, copy and
         }
       },
       "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:pick_collision": false,
+      "minecraft:selection_box": false,
       "tag:template1": {},
       "tag:template": {},
       "tag:fluid": {},
-      "minecraft:block_light_absorption": 0.0,
+      "minecraft:light_dampening": 0.0,
       "minecraft:geometry": "geometry.fluid1",
-      "minecraft:destroy_time": 100.0,
-      "minecraft:entity_collision": false,
-      "minecraft:explosion_resistance": false,
+      "minecraft:destructible_by_mining": false,
+      "minecraft:collision_box": false,
+      "minecraft:destructible_by_explosion": false,
       "minecraft:flammable": {
-        "burn_odds": 0,
-        "flame_odds": 0
+        "destroy_chance_modifier": 0,
+        "catch_chance_modifier": 0
       }
     },
     "events": {
@@ -319,15 +319,15 @@ Below is the JSON for the `outer fluid block 2`. To replicate the json, copy and
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.19.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:fluid_template2"
     },
     "components": {
-      "minecraft:ticking": {
+      "minecraft:queued_ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ], //fluid speed
+        "interval_range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "wiki:flow"
         }
@@ -339,15 +339,15 @@ Below is the JSON for the `outer fluid block 2`. To replicate the json, copy and
         }
       },
       "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:pick_collision": false,
+      "minecraft:selection_box": false,
       "tag:template": {},
       "tag:template2": {},
       "tag:fluid": {},
-      "minecraft:block_light_absorption": 0.0,
+      "minecraft:light_dampening": 0.0,
       "minecraft:geometry": "geometry.fluid2",
-      "minecraft:destroy_time": 100.0,
-      "minecraft:entity_collision": false,
-      "minecraft:explosion_resistance": false,
+      "minecraft:destructible_by_mining": false,
+      "minecraft:collision_box": false,
+      "minecraft:destructible_by_explosion": false,
       "minecraft:flammable": {
         "burn_odds": 0,
         "flame_odds": 0
@@ -417,15 +417,15 @@ Below is the JSON for the `outer fluid block 3`. To replicate the json, copy and
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.19.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:fluid_template3"
     },
     "components": {
-      "minecraft:ticking": {
+      "minecraft:queued_ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ], //fluid speed
+        "interval_range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "wiki:flow"
         }
@@ -437,15 +437,15 @@ Below is the JSON for the `outer fluid block 3`. To replicate the json, copy and
         }
       },
       "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:pick_collision": false,
+      "minecraft:selection_box": false,
       "tag:template3": {},
       "tag:template": {},
       "tag:fluid": {},
-      "minecraft:block_light_absorption": 0.0,
+      "minecraft:light_dampening": 0.0,
       "minecraft:geometry": "geometry.fluid3",
-      "minecraft:destroy_time": 100.0,
-      "minecraft:entity_collision": false,
-      "minecraft:explosion_resistance": false,
+      "minecraft:destructible_by_mining": false,
+      "minecraft:collision_box": false,
+      "minecraft:destructible_by_explosion": false,
       "minecraft:flammable": {
         "burn_odds": 0,
         "flame_odds": 0
@@ -508,7 +508,7 @@ Below is the JSON for the `falling fluid block`. To replicate the json, copy and
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.19.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:fluid_template_down",
@@ -522,15 +522,15 @@ Below is the JSON for the `falling fluid block`. To replicate the json, copy and
       }
     },
     "components": {
-      "minecraft:ticking": {
+      "minecraft:queued_ticking": {
         "looping": true,
-        "range": [ 0.2, 0.2 ], //fluid speed
+        "interval_range": [ 0.2, 0.2 ], //fluid speed
         "on_tick": {
           "event": "wiki:flow"
         }
       },
       "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:pick_collision": false,
+      "minecraft:selection_box": false,
       "minecraft:material_instances": {
         "*": {
           "texture": "fluid_template",
@@ -538,7 +538,7 @@ Below is the JSON for the `falling fluid block`. To replicate the json, copy and
         }
       },
       "minecraft:part_visibility": {
-        "rules": {
+        "conditions": {
           "x": "q.block_property('wiki:x') == 0",
           "nx": "q.block_property('wiki:nx') == 0",
           "z": "q.block_property('wiki:z') == 0",
@@ -551,11 +551,11 @@ Below is the JSON for the `falling fluid block`. To replicate the json, copy and
       "tag:template_full": {},
       "tag:template_down": {},
       "tag:fluid": {},
-      "minecraft:block_light_absorption": 0.0,
+      "minecraft:light_dampening": 0.0,
       "minecraft:geometry": "geometry.fluid",
-      "minecraft:destroy_time": 100.0,
-      "minecraft:entity_collision": false,
-      "minecraft:explosion_resistance": false,
+      "minecraft:destructible_by_mining": false,
+      "minecraft:collision_box": false,
+      "minecraft:destructible_by_explosion": false,
       "minecraft:flammable": {
         "burn_odds": 0,
         "flame_odds": 0
@@ -747,7 +747,7 @@ To pickup or place your custom fluid you need a custom bucket item. Although any
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.19.60",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:template_bucket",
@@ -845,7 +845,7 @@ By the end your BH folder should look like this
 If anything goes wrong, or if you require all of the template files, they are available for download here. The file includes everything necessary for a functional fluid, as well as a `.txt` document that details how to create a new one.
 
 <BButton
-    link="/assets/packs/tutorials/custom_fluids/more_fluids_template.zip"
+    link="/assets/packs/tutorials/custom_fluids/more_fluids_template_file.zip"
 	  download="More Fluids Template.zip"
     color=blue
 >Download Fluid Template</BButton>
