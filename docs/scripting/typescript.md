@@ -76,11 +76,13 @@ Now the project can be initialized. The next step is to create a TypeScript proj
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     // Specify the folder entry for your TS files
-    "baseUrl": "./scripts",
-    "rootDir": "./scripts",
+    "baseUrl": "./src",
+    "rootDir": "./src",
     // Specify the folder output for generated JS files.
-    "outDir": "./packs/behaviors/scripts"
-  }
+    "outDir": "./scripts"
+  },
+  "exclude": [ "node_modules" ],
+  "include": [ "src" ]
 }
 ```
 
@@ -90,17 +92,16 @@ Now that you created the project, it can be opened in your IDE of choice. If you
 
 <FolderView :paths="[
 	'node_modules',
-	'packs/behaviors/manifest.json',
-	'packs/behaviors/pack_icon.png',
-  'packs/resources/pack_icon.png',
-  'packs/resources/pack_icon.png',
-  'scripts/Main.ts',
+  'scripts/Main.js',
+  'src/Main.ts',
+	'manifest.json',
+	'pack_icon.png',
   'package-lock.json',
   'package.json',
   'tsconfig.json',
 ]"></FolderView>
 
-Unless you know what you are doing, the only part of the project to be concerned with is everything within the `packs` folder. That is where all the development should take place.
+Unless you know what you are doing, the only part of the project to be concerned with is everything within the `src` folder. That is where all the development should take place.
 
 ### Commands
 
@@ -116,9 +117,15 @@ tsc
 tsc --watch
 ```
 
-`--watch` will watch for any changes you make within the `scripts` directory and automatically reinstall the addon.
+`--watch` will watch for any changes you make within the `src` directory and automatically reinstall the addon.
 
-To run the code in Minecraft, zip the behavior pack and import it to a Minecraft world.
+To run the code in Minecraft, zip the behavior pack and import it to a Minecraft world. In your behavior pack should only include these files in the following, and the rest of the files do not have to be included in `.mcpack` compressed file.
+
+<FolderView :paths="[
+  'scripts/Main.js',
+	'manifest.json',
+	'pack_icon.png',
+]"></FolderView>
 
 ## Legacy Scripting
 
