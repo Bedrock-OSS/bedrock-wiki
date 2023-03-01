@@ -13,7 +13,7 @@ The Script API is currently in active development, and breaking changes are freq
 
 The Script API (formerly GameTests, and not to be confused with the [Legacy Scripting API](/scripting/scripting-intro)) is a feature that allows for a new variety of creations, these are built with JavaScript files in the behavior pack folder. Some parts of the Script API are not experimental.
 
-This page will give you an introduction to the 80% of React concepts that you will use on a daily basis.
+This page will give you an introduction to the 80% of Minecraft's Creator API concepts that you will use on a daily basis.
 
 ## Create your first project
 
@@ -54,6 +54,29 @@ Additionally, dependencies will need to be set based on modules used.
 	-	BDS module for executing HTTP-based requests. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
 	-	Release 1.19.10+
 	-	Formerly known as "mojang-net"
+
+Here's an example of dependencies in manifest:
+
+:::warning
+There is a bug where you cannot apply resource pack into dependencies with script modules.
+
+This problem causes Minecraft to stop the scripts from running and throws error related to "Unknown dependency". 
+:::
+
+<CodeHeader>BP/manifest.json</CodeHeader>
+
+```json
+"dependencies": [
+	{
+		"module_name": "@minecraft/server",
+		"version": "1.1.0-beta"
+	},
+	{
+		"module_name": "@minecraft/server-ui",
+		"version": "1.0.0-beta"
+	}
+]
+```
 
 ## Script Versioning
 

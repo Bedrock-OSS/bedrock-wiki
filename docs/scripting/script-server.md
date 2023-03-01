@@ -1,7 +1,7 @@
 ---
 title: Script Core Features
-category: Tutorials
-tags:
+ca- tegory: Tutorials
+tag:
 	- experimental
 ---
 
@@ -43,8 +43,8 @@ In order to subscribe to an event, get the `events` property from world object. 
 
 ```js
 import { world } from "@minecraft/server";
-
-// subscribing to a blockBreak event
+- 
+/ subscribing to a blockBreak event
 // - fires when a player breaks a block
 world.events.blockBreak.subscribe((event) => {
 	const player = event.player; // Player that broke the block
@@ -75,15 +75,14 @@ system.events.beforeWatchdogTerminate.subscribe((event) => {
 
 **ScriptEvents**
 
-ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block.
-
+ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block.- 
 `/scriptevent` - Triggers a script event with an ID and message.
 
 ```
 /scriptevent <messageId: string> <message: string>
-```
-
-- `messageId` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
+- ```
+-
+-`messageId` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
 - `message` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
 
 **Example**:
@@ -125,8 +124,7 @@ import { system } from "@minecraft/server";
 
 There are two methods for it:
 
-**Scheduling timers**
-
+**Scheduling timers**- 
 `system.run(callback)` - Runs a specified function at the tick after the current tick. This is frequently used to implement delayed behaviors and game loops.
 
 ```js
@@ -135,8 +133,7 @@ import { system, world } from "@minecraft/server";
 system.run(() => {
 	world.sendMessage("This runs a tick after the last tick");
 });
-```
-
+```- 
 `system.runInterval(callback, tickInterval?)` - Runs a function repeatedly, starting after the interval of time, then repeating continuously at that interval.
 
 ```js
@@ -145,8 +142,7 @@ import { system, world } from "@minecraft/server";
 system.runInterval(() => {
 	world.sendMessage("This message runs every 20 ticks");
 }, 20);
-```
-
+```- 
 `system.runTimeout(callback, tickDelay?)` - Runs a function once after the interval of time.
 
 ```js
@@ -157,8 +153,7 @@ system.runTimeout(() => {
 }, 20);
 ```
 
-**Clearing timers**
-
+**Clearing timers**- 
 `system.clearRun(runId): void` - Cancels the execution of a function run that was previously scheduled via the `run`, `runTimeout` or `runInterval` function.
 
 ```js
@@ -176,85 +171,179 @@ system.runTimeout(() => {
 
 ## Saving and Loading
 
-Script API provides its own storage system called dynamic properties to save and load data in a world, specifically in the db folder using a behavior pack's module UUID.
+
+With the @minecraft/server module, developers can define their own custom properties, known as dynamic properties, that can be used and stored within Minecraft. These data are stored specifically in the db folder using a behavior pack's module UUID.
 
 ![dynamic_properties](/assets/images/gametest/script-server/dynamic_properties.png)
 
-In order to save data, the property must be initialised first. There are multiple ways to declare dynamic properties, either on an entity type or world, each option have their own limitation:
+In order to save data, the property must be initialised first. There are multiple ways to declare dynamic properties, either on an entity type or world. You can define as many numbers and booleans as you would like, however Minecraft API only allows each - behavior pack to save a limited bytes of string.- 
+-If you register property in EntityType, each entity can save up to 1,000 bytes of text data.
+- If you register property in World, each entity can save up to 10,000 bytes of text data.
 
-- Entity type: you can saved up to 1,000 bytes worth of text data in an entity of the entity type.
-- World: you can saved up to 10,000 bytes worth of text data in a world.
+The `DynamicPropertiesDefinition` class is used in conjunction with the `PropertyRegistry` class to define dynamic properties that can be used on entities of a specified type or at the global World-level. The `defineBoolean`, `defineNumber`, and `defineString` methods are used to define new boolean, number, and string dynamic properties, respectively.
 
-These are the following methods to save and load dynamic properties:
+To register dynamic properties in Minecraft, developers can subscribe to the `worldInitialize` event provided by the `world` object in the `@minecraft/server` module. Here's an example of how to do that:
 
-**Loading dynamic properties from world**:
+```typescript
+import { DynamicPropertiesDefinition, MinecraftEntityTypes, world } from "@minecraft/server";
 
-1. Declare dynamic properties
+world.events.worldInitialize.subscribe((event) => {
+  const propertiesDefinition = new DynamicPropertiesDefinition();
+  propertiesDefinition.defineBoolean('isAngry');
+  event.propertyRegistry.registerEntityTypeDynamicProperties(propertiesDefinition, MinecraftEntityTypes.zombie);
+});
+```
 
-```js
+In this example, we are defining a boolean dynamic property called `isAngry` and registering it for all zombie entities in the world. The registerEntityTypeDynamicProperties method is used to register the dynamic property for a particular entity type, in this case, `MinecraftEntityTypes.zombie`.
+
+Similarly, you can use the `registerWorldDynamicProperties` method to register globally available dynamic properties for a world. Here's an example of how to register a number dynamic property called `playerScore` for the entire world:
+
+```typescript
 import { DynamicPropertiesDefinition, world } from "@minecraft/server";
 
 world.events.worldInitialize.subscribe((event) => {
-  let def = new DynamicPropertiesDefinition();
-
-  def.defineNumber("eventStrength");
-  def.defineString("eventRoles", 40);
-  def.defineBoolean("eventHasHero");
-
-  event.propertyRegistry.registerWorldDynamicProperties(def);
+  const propertiesDefinition = new DynamicPropertiesDefinition();
+  propertiesDefinition.defineNumber('playerScore');
+  event.propertyRegistry.registerWorldDynamicProperties(propertiesDefinition);
 });
 ```
+In this example, we are defining a number dynamic property called `playerScore` and registering it globally for the entire world using the `registerWorldDynamicProperties` method.
 
-::: warning
-Registering a dynamic property does not set a value on the property. Unless the value of the property is saved in world already, when getting the property for the first time, the method returns nothing.
+**Get and Set Dynamic Properties**
+
+To get and set dynamic properties, you can use the `getDynamicProperty` and `setDynamicProperty` methods.
+
+:::tip
+It is important to note that registering a dynamic property does not set a value on the property. Unless the value of the property is saved in the world already, when getting the property for the first time, the method returns nothing.
 :::
 
-2. Get or set the value of the dynamic property
+With this in mind, here are some examples of how to get and set dynamic properties in Minecraft:
+
+```typescript
+import { MinecraftEntityTypes, world } from "@minecraft/server";
+
+world.events.entityHit.subscribe(({ hitEntity }) => {
+  if (hitEntity.typeId !== MinecraftEntityTypes.zombie.id) return; // only zombies that got hit
+  hitEntity.setDynamicProperty('isAngry', true); // set boolean property with value
+  const isAngry = hitEntity.getDynamicProperty<boolean>('isAngry'); // get boolean property
+});
+```
+In this example, we are setting a boolean dynamic property called `isAngry` on a zombie entity that got hit. We then get the value of the `isAngry` property using the `getDynamicProperty` method.
+
+Here is an example of how to get and set dynamic properties at the global World-level:
+
+```typescript
+import { world } from "@minecraft/server";
+
+world.setDynamicProperty('playerScore', 100); // set number property with value
+const playerScore = world.getDynamicProperty('playerScore'); // get number property
+```
+
+In this example, we are setting a number dynamic property called `playerScore` globally for the entire world using the `setDynamicProperty` method. We then get the value of the `playerScore` property using the `getDynamicProperty` method.
+
+## Running Commands
+
+`Entity.runCommandAsync()` or `Dimension.runCommandAsync()` allows the API to run a particular command asynchronously from the context of the broader dimension.
+Note that there is a maximum queue of 128 asynchronous commands that can be run in a given tick.
+
+Usually, it executes the command in the next tick.
+To run command parallel with the script, you have to surround your code in a asynchronous function.
 
 ```js
 import { world } from "@minecraft/server";
 
-// get dynamic property
-world.getDynamicProperty("eventStrength");
-// set dynamic property
-world.setDynamicProperty("eventStrength", 10);
+(async () => {
+	await world.getDimension("overworld").runCommandAsync("say Using say command on dimension.");
+
+	world.sendMessage("This runs after runCommandAsync is executed");
+})();
 ```
 
-**Loading dynamic properties from an entity**:
+Returns a `Promise<CommandResult>`. Throws an error **synchronously** if the queue is full.
 
-1. Declare dynamic properties, but this time register properties to an entity type.
+**Avoid run commands in script**
 
-```js
-import { DynamicPropertiesDefinition, world } from "@minecraft/server";
+Normally we recommend avoiding using commands because asynchronous programs add more complexity and make the code more unreadable, and errors do not throw synchronously unless you catch the error. However, the following command features are not implemented in scripting API.
 
-world.events.worldInitialize.subscribe((e) => {
-	let def = new DynamicPropertiesDefinition();
+**Ender chest and offhand slot** 
 
-	def.defineNumber("rpgStrength");
-	def.defineString("rpgRole", 16);
-	def.defineBoolean("rpgIsHero");
+Script API does not provide any methods to get/set infomation of player's ender chest and off hand slot. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
 
-	// declare properties on skeletons
-	e.propertyRegistry.registerEntityTypeDynamicProperties(def, MinecraftEntityTypes.skeleton);
-});
-```
+**tickingarea**
 
-::: warn
-Registering a dynamic property does not set a value on the property. Unless the value of the property is saved in world already, when getting the property for the first time, the method returns nothing.
-:::
+Script API can't access ticking areas.
 
-2. Get or set the value of the dynamic property
+**kick**
 
-```js
-import { world } from "@minecraft/server";
+Script API can't kick player.
 
-// get the skeleton entity
-const skeleton = world.getDimension('overworld')
-                      .spawnEntity('minecraft:skeleton', { x: 0, y: 0, z: 0 });
+**setblock**
 
-// get dynamic property
-skeleton.getDynamicProperty('rpgStrength');
+Script API can't destroy block `/setblock ... destroy`
 
-// set dynamic property
-skeleton.setDynamicProperty('rpgStrength', 50);
-```     
+**titleraw**
+
+Script API can't display translations in title, subtitle or actionbar in rawtext json. Consider using `%` (e.g. `%death.fell.accident.water%`)
+
+**Player's abilities**
+
+- Script API you can't set abilities for each player.
+- You can't read player's abilites.
+
+**execute**
+
+Script API new execute can be useful to run command with lot of if/unless condition for simplicity or maybe performance.
+
+Sometimes this `/execute` used to trigger `/loot` command, as `runCommandAsync` cannot trigger loots in the API.
+
+**Minecraft functions**
+
+Script API cannot run Minecraft function files without the use of `/function`.
+
+**gamerule**
+
+- Script API cannot set any game rules.
+- Cannot read game rules' value.
+
+**locate**
+
+- Script API cannot get structure's location.
+- Cannot get biome's location.
+
+**loot**
+
+Script API even though the loot is broken from the start, but it's useful for drop or set the item to players/world.
+
+**weather**
+
+- Script API can't get weather directly.
+- Can't set weather.
+
+**difficulty**
+
+Script API can't set world difficulty.
+
+**playanimation**
+
+Script API can't play client entity animation.
+
+**mobevent**
+
+Script API can't enable/disable mobevent.
+
+**camerashake**
+
+Script API can't add/stop camera shake for player.
+
+**fog**
+
+Script API can't manage active fog settings for player.
+
+**stopsound**
+
+Script API can't stop playing a sound.
+
+**dialogue**
+
+- Script API can't open the NPC dialogue to player.
+- Can't change the dialogue displayed by an NPC.
