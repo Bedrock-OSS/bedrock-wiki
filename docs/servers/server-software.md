@@ -10,12 +10,12 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
-| PHP        | [Still Active](#php)        : 6 < [Discontinued](#php-1)        : 34 |
+| PHP        | [Still Active](#php)        : 5 < [Discontinued](#php-1)        : 35 |
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 13 |
-| Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
-| TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
 | JavaScript | [Still Active](#javascript) : 3 < [Discontinued](#javascript-1) : 5  |
+| Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | C++        | [Still Active](#c)          : 2 < [Discontinued](#c-3)          : 3  |
+| TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
 | C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
@@ -59,7 +59,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 -   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [GreenFrogMCBE](https://github.com/andriycraft/GreenFrogMCBE)
--   [LeafMCBE](https://github.com/hvlxh/LeafMCBE)
+-   [LeafMCBE](https://github.com/LeafMCBE/Server)
 
 ### Rust
 
@@ -67,7 +67,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ### PHP
 
--   [Altay](https://github.com/TuranicTeam/Altay)
 -   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
 -   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
@@ -161,6 +160,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [WolfMC](https://github.com/Wolf-MC/WolfMC)
 -   [Elco-MP](https://github.com/elco-mp/Elco-MP)
 -   [OpenTouch](https://github.com/pooooooon/OpenTouch)
+-   [Altay](https://github.com/TuranicTeam/Altay)
 
 ### Python
 
