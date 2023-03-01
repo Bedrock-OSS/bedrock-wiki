@@ -1,7 +1,7 @@
 ---
 title: Script Core Features
-ca- tegory: Tutorials
-tag:
+category: Tutorials
+tags:
 	- experimental
 ---
 
@@ -44,7 +44,7 @@ In order to subscribe to an event, get the `events` property from world object. 
 ```js
 import { world } from "@minecraft/server";
 - 
-/ subscribing to a blockBreak event
+// subscribing to a blockBreak event
 // - fires when a player breaks a block
 world.events.blockBreak.subscribe((event) => {
 	const player = event.player; // Player that broke the block
@@ -80,9 +80,9 @@ ScriptEvents, not to be confused with world events or system events, allows us t
 
 ```
 /scriptevent <messageId: string> <message: string>
-- ```
--
--`messageId` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
+```
+
+- `messageId` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
 - `message` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
 
 **Example**:
@@ -124,7 +124,7 @@ import { system } from "@minecraft/server";
 
 There are two methods for it:
 
-**Scheduling timers**- 
+**Scheduling timers**
 `system.run(callback)` - Runs a specified function at the tick after the current tick. This is frequently used to implement delayed behaviors and game loops.
 
 ```js
@@ -133,7 +133,8 @@ import { system, world } from "@minecraft/server";
 system.run(() => {
 	world.sendMessage("This runs a tick after the last tick");
 });
-```- 
+```
+ 
 `system.runInterval(callback, tickInterval?)` - Runs a function repeatedly, starting after the interval of time, then repeating continuously at that interval.
 
 ```js
@@ -142,7 +143,8 @@ import { system, world } from "@minecraft/server";
 system.runInterval(() => {
 	world.sendMessage("This message runs every 20 ticks");
 }, 20);
-```- 
+```
+ 
 `system.runTimeout(callback, tickDelay?)` - Runs a function once after the interval of time.
 
 ```js
@@ -153,7 +155,7 @@ system.runTimeout(() => {
 }, 20);
 ```
 
-**Clearing timers**- 
+**Clearing timers**
 `system.clearRun(runId): void` - Cancels the execution of a function run that was previously scheduled via the `run`, `runTimeout` or `runInterval` function.
 
 ```js

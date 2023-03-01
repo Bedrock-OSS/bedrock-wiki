@@ -91,7 +91,7 @@ Now that you created the project, it can be opened in your IDE of choice. If you
 ### Project Structure
 
 <FolderView :paths="[
-	'node_modules'
+	'node_modules',
   'scripts/Main.js',
   'src/Main.ts',
 	'manifest.json',
