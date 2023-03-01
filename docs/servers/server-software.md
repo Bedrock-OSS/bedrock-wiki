@@ -59,7 +59,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 -   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [GreenFrogMCBE](https://github.com/andriycraft/GreenFrogMCBE)
--   [LeafMCBE](https://github.com/hvlxh/LeafMCBE)
+-   [LeafMCBE](https://github.com/LeafMCBE/Server)
 
 ### Rust
 
