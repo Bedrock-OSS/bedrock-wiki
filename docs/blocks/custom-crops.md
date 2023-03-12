@@ -521,7 +521,7 @@ Permutations:
 ```
 You can add more permutations depending on how many stages you want your crop to have. But don't forget to also change the events and properties limit.
 
-Here is the entire custom crop file ( `carrots_new.json` ) for referance.
+Here is the entire custom crop file ( `carrots_new.json` ) for reference.
 <CodeHeader>BH/blocks/carrots_new.json</CodeHeader>
 <Spoiler title="Crop Block JSON">
 
