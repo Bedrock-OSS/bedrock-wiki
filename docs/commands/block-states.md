@@ -4,7 +4,6 @@ category: General
 mention:
     - BedrockCommands
     - EziGotFliped
-nav_order: 6
 ---
 
 <Label
