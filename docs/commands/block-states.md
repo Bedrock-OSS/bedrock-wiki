@@ -36,7 +36,7 @@ For your convenience; download the excel sheet below to find the full list of au
 
 <BButton
     link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/10987839/Aux-Value_to_Block-States_Map.xlsx"
-    color=red
+    color=white
 >Download</BButton>
 
 ## Block State Examples
