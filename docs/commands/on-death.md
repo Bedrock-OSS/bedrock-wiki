@@ -5,7 +5,8 @@ mention:
     - BedrockCommands
     - EziGotFliped
 nav_order: 4
-tags: system
+tags:
+    - system
 ---
 
 ## Introduction
