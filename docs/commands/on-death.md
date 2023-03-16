@@ -7,6 +7,11 @@ mention:
 nav_order: 4
 ---
 
+<Label
+    name="system"
+    color="blue"
+>label</Label>
+
 ## Introduction
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
