@@ -4,12 +4,8 @@ category: General
 mention:
     - BedrockCommands
     - EziGotFliped
+tags: info
 ---
-
-<Label
-    name="info"
-    color="green"
->label</Label>
 
 ## Introduction
 
