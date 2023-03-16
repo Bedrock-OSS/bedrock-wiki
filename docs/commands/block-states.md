@@ -13,13 +13,19 @@ tags:
 [Sourced by Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
 Block States or Block Properties are additonal data that defines how the block appears or behaves. Such as the direction it is facing, it's color, it's variant, whether it is powered or unpowered and so on.
+
 This is used in a multitude of commands such as `/clone`, `/execute`, `/fill`, `/setblock` and `/testforblock`
 
 In Bedrock Edition we used Aux values (also known as Metadata) to define a block. However; as of 1.19.70 and beyond this is no longer supported and have been fully replaced with Block States instead.
 
-Aux Value Example: `/setblock ~ ~ ~ wool 1`
+<CodeHeader>example</CodeHeader>
 
-It's Block State equivelant: `/setblock ~ ~ ~ wool ["color":"orange"]`
+```yaml
+#Aux Value Example:
+/setblock ~ ~ ~ wool 1
+#It's Block State equivelant:
+/setblock ~ ~ ~ wool ["color":"orange"]
+```
 
 - Any command block using aux values will continue to function as it is however block states will need to be adopted when updating them.
 - Similarly any commands using aux values in behaviour or function packs with `min_engine_version` 1.19.63 or below will also continue to function however block states must be adopted if the `min_engine_version` is updated to 1.19.70 or above.
@@ -29,14 +35,12 @@ A list of all the block states currently available within Bedrock can be found a
 https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/examples/blockstateslist
 
 ## Converting Aux Values to Block States
-For your convenience; download the excel sheet below to find the full list of aux values and their equivelant block states in Bedrock.
+For your convenience; download the excel sheet below to find the full list of aux values and their equivelant block states in Bedrock. *Shared by kayla@Mojang*
 
 <BButton
     link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/10987839/Aux-Value_to_Block-States_Map.xlsx"
     color=white
 >Download</BButton>
-
-*Shared by kayla@Mojang*
 
 ## Block State Examples
 
