@@ -5,12 +5,8 @@ mention:
     - BedrockCommands
     - EziGotFliped
 nav_order: 4
+tags: system
 ---
-
-<Label
-    name="system"
-    color="blue"
->label</Label>
 
 ## Introduction
 
