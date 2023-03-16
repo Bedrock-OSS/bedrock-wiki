@@ -35,6 +35,8 @@ For your convenience; download the excel sheet below to find the full list of au
     color=white
 >Download</BButton>
 
+*Shared by kayla@Mojang*
+
 ## Block State Examples
 
 <CodeHeader>Examples</CodeHeader>
