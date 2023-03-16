@@ -27,6 +27,16 @@ case 'outdated': {
 	colour = 'red'
 	break
 }
+case 'info': {
+	title = 'INFO'
+	colour = 'green'
+	break
+}
+case 'system': {
+	title = 'SYSTEM'
+	colour = 'blue'
+	break
+}
 case 'help': {
 	title = 'HELP'
 	colour = 'blue'
