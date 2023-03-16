@@ -4,7 +4,8 @@ category: General
 mention:
     - BedrockCommands
     - EziGotFliped
-tags: info
+tags:
+    - info
 ---
 
 ## Introduction
