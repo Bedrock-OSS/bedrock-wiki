@@ -27,7 +27,7 @@ This system will run your desired commands on the event that a player joins the 
 /tag @a [tag=!joined] add joined
 ```
 
-![export1674579137294](https://user-images.githubusercontent.com/99989764/215548493-cd2472a1-2b40-41c3-897d-483ad2480867.png)
+![commandBlockChain3](/assets/images/commands/commandBlockChain/3)
 
 
 Here we have used 2 `/give` commands as example but you can use any command you prefer and as many as you require.
