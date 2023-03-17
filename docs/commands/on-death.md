@@ -37,7 +37,7 @@ This system will run your desired commands on the event that a player dies.
 /scoreboard players set @a [scores={alive=0}] alive 2
 ```
 
-![export1674579202856](https://user-images.githubusercontent.com/99989764/215547613-71c11776-5baa-4076-9f2b-d46b529a9531.png)
+![commandBlockChain4](/assets/images/commands/commandBlockChain/4)
 
 
 Here we have used an `/execute - say` command as an example but you can use any command you prefer and as many as you require.
