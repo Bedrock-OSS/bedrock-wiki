@@ -35,7 +35,7 @@ This system will run your desired commands on the event that a players joins the
 /scoreboard players set @a joined 1
 ```
 
-![commandBlockChain4](/assets/images/commands/commandBlockChain/4)
+![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
 
 Here we have used a `/tp` command as an example but you can use any command you prefer and as many as you require.
