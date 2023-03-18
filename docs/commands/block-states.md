@@ -23,8 +23,10 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 ```yaml
 #Aux Value Example:
 /setblock ~ ~ ~ wool 1
+/setblock ~ ~ ~ wool 0
 #It's Block State equivelant:
 /setblock ~ ~ ~ wool ["color":"orange"]
+/setblock ~ ~ ~ wool []
 ```
 
 - Any command block using aux values will continue to function as it is however block states will need to be adopted when updating them.
@@ -49,7 +51,7 @@ For your convenience; download the excel sheet below to find the full list of au
 ```yaml
 /setblock ~ ~ ~ wool ["color":"white"]
 /setblock ~ ~ ~ wheat ["growth":0]
-/setblock ~ ~ ~ wood ["wood_type":"brich","stripped_bit":true]
+/setblock ~ ~ ~ wood ["wood_type":"birch","stripped_bit":true]
 ```
 
 - Block states are enclosed in sqaure brackets ` [ ] `
