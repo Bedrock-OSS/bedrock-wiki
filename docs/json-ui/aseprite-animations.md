@@ -1,7 +1,6 @@
 ---
 title: Aseprite Animations
-category: Documentation
-nav_order: 2
+category: Tutorials
 ---
 
 ## What is Aseprite?
@@ -47,20 +46,16 @@ The `aseprite_flip_book` animation type can only be used for the `uv` property i
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
 ```json
 {
-   "image_element": {
-	  "type": "image",
-	  "texture": "textures/ui/my_sprite_file",
-	  "uv_size": [ 32, 32 ],
-	  "uv": "@example_namespace.image_uv_animation"
-   },
+	"image_element": {
+		"type": "image",
+		"texture": "textures/ui/my_sprite_file",
+		"uv_size": [32, 32],
+		"uv": "@example_namespace.image_uv_animation"
+	},
 
-"image_uv_animation": {
-"anim_type": "aseprite_flip_book",
-"initial_uv": [ 0, 0 ]
+	"image_uv_animation": {
+		"anim_type": "aseprite_flip_book",
+		"initial_uv": [0, 0]
+	}
 }
-}
-
-```
-
-
 ```
