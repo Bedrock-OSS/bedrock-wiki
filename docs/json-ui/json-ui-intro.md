@@ -749,6 +749,37 @@ Like before, here's a more complicated example of conditional rendering with bin
 }
 ```
 
+## String Formatting
+
+You can get specific part of a string by using `%.#s` format where `#` is a number by multiplying it to a string. An example:
+
+```json
+{
+  "label_element": {
+    "type": "label",
+    "text": "#text",
+    "layer": 2,
+    "bindings": [
+       {
+           "binding_type": "global",
+           "binding_name": "#hud_title_text_string"
+       },
+       {
+           "binding_type": "view",
+           "source_property_name": "(%.3s * #hud_title_text_string)",
+           "target_property_name": "#text"
+       }
+    ]
+  }
+}
+```
+
+In the above example we are getting the first 3 characters of the title text. So if the title text is `abcdefghi`, the label will only have `abc` in it. Another example is where we have a variable: `"$var": "abcdefghijklmn"`,
+`'%.5s' * $var` this will return abcde.
+`$var - ('%.7s' * $var)` will return `hijklm`.
+
+Remember that the usage of this format is limited.
+
 ## Buttons Mappings
 
 `button_mappings` allows you to modify what would be pressed when a certain control is inputted. This control can either be from a keyboard and mouse, touch, or controller.
