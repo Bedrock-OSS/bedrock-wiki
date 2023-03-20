@@ -38,6 +38,7 @@ https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockrefer
 
 ## Converting Aux Values to Block States
 For your convenience; download the excel sheet below to find the full list of aux values and their equivelant block states in Bedrock. *Shared by kayla@Mojang*
+ You can also use this [lookup table](https://auxval-to-blockstates.netlify.app/)
 
 <BButton
     link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/10987839/Aux-Value_to_Block-States_Map.xlsx"
