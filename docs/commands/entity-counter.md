@@ -53,7 +53,7 @@ You can edit this as well to suit your need.
 - The first two commands in the system sets the FakePlayer name's score to 0 (here `onlinePlayers) and from each loaded entity we want to track (here `type=player`) it will add a score to the specified FakePlayer name (here `onlinePlayers`)
 
 Now based on the values obtained we can use the `/execute if score` command to run our desired commands when certain values are met.
-- ` n ` any number n
-- ` n.. ` any number n or above
-`..n`: any number n or below
-`n1..n2`: any number n1 to any number n2
+- **` n `** any number n
+- **` n.. `** any number n or above
+- **` ..n `** any number n or below
+- **` n1..n2 `** any number n1 to any number n2
