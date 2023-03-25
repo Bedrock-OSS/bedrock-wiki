@@ -41,18 +41,18 @@ For your convenience; download any of the excel sheet below to find the full lis
 <BButton
     link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/10987839/Aux-Value_to_Block-States_Map.xlsx"
     color=white
->Download</BButton>
+>Download Sheet 1</BButton>
 
-Note; the above sheet was quickly generated and contains some minor errors. Boolean values `0` should be replaced with `false` and `1` should be replaced with `true`
+Note; the above sheet was quickly generated and contains some minor errors. Boolean values `0` should be replaced with `false` and `1` should be replaced with `true` since the game doesn't recognise the syntax otherwise.
 
 Alternate, sheet: *Shared by @ItsRichHearts*
 
 <BButton
   link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/11069804/All.Block-Item.List.Bedrock.pdf"
     color=white
->Download</BButton>
+>Download Sheet 2</BButton>
 
-You may also use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) instead instead without downloading any files.
+You may also use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) instead not needing to download any files.
 
 ## Block State Examples & Syntax
 
