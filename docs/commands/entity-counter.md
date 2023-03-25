@@ -54,6 +54,6 @@ You can edit this as well to suit your need.
 
 Now based on the values obtained we can use the `/execute if score` command to run our desired commands when certain values are met.
 - **` n `** any number n
-- **` n.. `** any number n or above
-- **` ..n `** any number n or below
+- **` n.. `** any number n and above
+- **` ..n `** any number n and below
 - **` n1..n2 `** any number n1 to any number n2
