@@ -27,9 +27,26 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 /setblock ~ ~ ~ wool ["color":"orange"]
 ```
 
-Note; leaving the brackets blank will default to 0
 - Any command block using aux values will continue to function as it is however block states will need to be adopted when updating them.
 - Similarly any commands using aux values in behaviour or function packs with `min_engine_version` 1.19.63 or below will also continue to function however block states must be adopted if the `min_engine_version` is updated to 1.19.70 or above.
+
+## Block State Examples & Syntax
+
+<CodeHeader>Examples</CodeHeader>
+
+```yaml
+/setblock ~ ~ ~ wool ["color":"white"]
+/setblock ~ ~ ~ wheat ["growth":0]
+/setblock ~ ~ ~ wood ["wood_type":"birch","stripped_bit":true]
+/setblock ~ ~ ~ wool []
+```
+
+- Block states are enclosed in sqaure brackets ` [ ] `
+- When specifying multiple block states a comma ` , ` is used to separate them.
+- Quotation marks ` " " ` are used around strings such as `"birch", "spruce" etc..`
+- Integer values `0, 1, 2..` and boolean values `true/false` do not use quotation marks.
+- Leaving the brackets blank is also a correct syntax, it will simply default to 0.
+- `wool 0` is white wool hence you may simply write it as `wool []` instead of `wool ["color":"white"]`
 
 ## Block States List
 A list of all the block states currently available within Bedrock can be found at:
@@ -53,21 +70,3 @@ Alternate, sheet: *Shared by @ItsRichHearts*
 >Download Sheet 2</BButton>
 
 You may also use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) instead not needing to download any files.
-
-## Block State Examples & Syntax
-
-<CodeHeader>Examples</CodeHeader>
-
-```yaml
-/setblock ~ ~ ~ wool ["color":"white"]
-/setblock ~ ~ ~ wheat ["growth":0]
-/setblock ~ ~ ~ wood ["wood_type":"birch","stripped_bit":true]
-/setblock ~ ~ ~ wool []
-```
-
-- Block states are enclosed in sqaure brackets ` [ ] `
-- When specifying multiple block states a comma ` , ` is used to separate them.
-- Quotation marks ` " " ` are used around strings such as `"birch", "spruce" etc..`
-- Integer values `0, 1, 2..` and boolean values `true/false` do not use quotation marks.
-- Leaving the brackets blank is also a correct syntax, it will simply default to 0.
-- `wool 0` is white wool hence you may simply write it as `wool []` instead of `wool ["color":"white"]`
