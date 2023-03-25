@@ -45,6 +45,7 @@ Here we have used a FakePlayer name `onlinePlayers` and targeting `@e [type=play
 Similarly we're running a `/title` command as an example;
 - a) when there are 4 or more players `4..`
 - b) when there are 3 players or less `..3`
+- 
 You can edit this as well to suit your need.
 
 ## Explanation
