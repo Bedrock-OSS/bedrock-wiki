@@ -1,5 +1,5 @@
 ---
-title: On Player Death
+title: On Player Leave
 category: On Event Systems
 mention:
     - BedrockCommands
