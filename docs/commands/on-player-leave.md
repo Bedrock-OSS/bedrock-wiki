@@ -4,7 +4,7 @@ category: On Event Systems
 mention:
     - BedrockCommands
     - EziGotFliped
-nav_order: 4
+nav_order: 3
 tags:
     - system
 ---
