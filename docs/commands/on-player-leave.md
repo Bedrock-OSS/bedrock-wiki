@@ -16,7 +16,7 @@ tags:
 This system will run your desired commands on the event that a player leaves the world.
 
 :::tip
-Note; you cannot execute commands on the players that leave but you can use [On Player Death](https://wiki.bedrock.dev/commands/on-player-death.html) system to execute when they join back.
+Note; you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](https://wiki.bedrock.dev/commands/on-player-join.html) system to execute when they join back.
 :::
 
 ## Setup
@@ -49,20 +49,25 @@ Just make sure to follow the given order and properly use the `/execute if score
 
 ## Explanation
 
-**` new `** this FakePlayer name means the total number of players on the world in the current game tick.
+- **` new `** this FakePlayer name means the total number of players on the world in the current gametick.
+- **` old `** this FakePlayer name means the total number of players that were on the world in the previous gametick but also saves the values to be used in the *next* gametick.
 
-**` old `** this FakePlayer name means the total number of players that were on the world in the previous game tick.
+These values are obtained using the [Entity Counter](https://wiki.bedrock.dev/commands/entity-counter.html) system. It may be beneficial to refer to that doc for better understanding this one.
 
-ㅤThese values are obtained using the <#992671972205019236> system.
-
-By subtracting 'old' total from 'new' total we will be able to check if player count has:
+By subtracting 'old' total from 'new' total we will be able to identify if player count has:
 - decreased ` ..-1 `
 - increased ` 1.. `
 - or if it's unchanged ` 0 `
 
 If it has decreased; we know that 1 or more players have left the game.
-With this knowledge we can run our desired commands from the 'new' FakePlayer name with -1 score or less in the objective **total**
+With this knowledge we can run our desired commands from 'new' if it's score is -1 or less.
+- ie, if there were 10 players and someone leaves:
+  - that is ` new - old `
+  - which is ` 9-10=-1 `
+  - hence we will detect by ` ..-1 `
 
-The 'new' total value is obtained first, subtraction is performed after that to run your desired commands and lastly the 'old' total value is obtained.
+- The 'new' total value is obtained first, subtraction is performed after that to run your desired commands and lastly the 'old' total value is obtained to be used in the next gametick.
 
-> Note; all commands listed in a command-line will only run in a sequence but it all still happens in the same tick regardless of the number of commands involved.
+:::tip
+All commands involved in a command-block-chain or function will only run in a sequence one after the other but it all still happens in the same tick regardless of the number of commands involved. We are able to achieve this system due to the fact that commands run along the end of a gametick after all events such as player log in, log out, death etc.. occur.
+:::
