@@ -1,5 +1,5 @@
 ---
-title: On Join
+title: On Player Join
 category: On Event Systems
 mention:
     - BedrockCommands
