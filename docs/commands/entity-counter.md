@@ -54,4 +54,4 @@ Now based on the values obtained we can use the `/execute if score` command to r
 - **` n `** any number n
 - **` n.. `** any number n and above
 - **` ..n `** any number n and below
-- **` n1..n2 `** any number n1 to any number n2
+- **` n1..n2 `** any number n1 to any number n2.
