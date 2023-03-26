@@ -176,7 +176,7 @@ All textures need to define a **shortname** and we'll do it the same way as we d
 
 The only difference from `item_textures.json` is that "`atlas.items`" is now changed to "`atlas.terrain`".
 
-`"padding"` and `"num_mip_leavels"` mean the quality of how the texture is displayed, especially noticeable on higher resolution textures. The performance will be better if it's lower, but the textures will appear glitchy from further distances.
+`"padding"` and `"num_mip_levels"` mean the quality of how the texture is displayed, especially noticeable on higher resolution textures. The performance will be better if it's lower, but the textures will appear glitchy from further distances.
 
 Next, all our texture shortnames have been defined. These shortnames were already used in `RP/blocks.json`, as you might remember. If you load the game now, you'll be able to see the 3 new custom blocks you just added, with all the texture functionality.
 

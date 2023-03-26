@@ -50,7 +50,7 @@ Common Queries include:
 -   `query.anim_time`
 -   `query.life_time`
 
-These are utilised in animations to draw things such as the attack-time or distance-moved from the game-world to provide a more dyanamic and synced flow.
+These are utilised in animations to draw things such as the attack-time or distance-moved from the game-world to provide a more dynamic and synced flow.
 
 ### Avoiding Animation Controllers
 

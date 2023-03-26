@@ -22,7 +22,7 @@ Conceptually, items are made up of two parts:
 First, we will learn how to create a new simple item & define its behaviors. In the next section we will assign a texture to this item, so you can see it in game.
 
 :::warning
-This guide requires expirimental features toggled on.
+This guide requires experimental features toggled on.
 :::
 
 ## Item Behavior
@@ -85,10 +85,10 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 }
 ```
 
-Most files in your pack will have 2 top level defintions, `"format_version"` and `"minecraft:<file_type>"`.
+Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
 The format version defines which version of the Addon system Minecraft will use to read this file. For our item, we will be using `1.16.100` to allow us to use the experimental features. For more information on format version you can check [here](/guide/format-version).
 
-The second defintions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
+The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
 
 Let us look closer at the `"description"`:
 
@@ -180,7 +180,7 @@ All item shortnames are stored in one file called `item_texture.json` which is i
 }
 ```
 
-Here we have 3 top level defintions, `texture_data` is where we will define our shortnames, the other two define the type of file this is.
+Here we have 3 top level definitions, `texture_data` is where we will define our shortnames, the other two define the type of file this is.
 The `resource_pack_name` is simply our resource pack's name and `texture_name` is what kind of texture file this is. Since this is for _items_, this will always be set to `atlas.items`.
 
 Under `texture_data` will our list of item shortname definitions. An example definition looks like this:

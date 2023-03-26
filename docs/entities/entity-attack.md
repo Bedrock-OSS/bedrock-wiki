@@ -445,7 +445,7 @@ These component groups won't actually do anything by themselves. Another compone
 <CodeHeader></CodeHeader>
 
 ```json
-"wiki:ranged_swap": {   //When triggered, adds component froup for melee and removes ranged component group
+"wiki:ranged_swap": {   //When triggered, adds component group for melee and removes ranged component group
   "remove": {
     "component_groups": [
       "wiki:melee_components"

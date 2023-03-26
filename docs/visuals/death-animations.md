@@ -21,7 +21,7 @@ Please note that this will remove all death effects, including sound, particles,
 
 ### minecraft:instant_despawn
 
-If you want to make entity just dissapear, you can add component group with `"minecraft:instant_despawn":{}` and run an event which will add this component group.
+If you want to make entity just disappear, you can add component group with `"minecraft:instant_despawn":{}` and run an event which will add this component group.
 
 Please note that this will remove all death effects, including sound, particles, loot, and the visual death of the entity.
 

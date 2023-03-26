@@ -37,7 +37,7 @@ Please feel free to join us to ask questions, get involved in Bedrock Addons, or
 				imgsrcLight="assets/images/discord/oss.png"
 				link="https://discord.gg/XjV87YN"
 			>
-				Bedrock OSS is a programming-focused creators discord for Bedrock. <br /><br />Here you can report wiki issues, collaborate on new articles, and get help with Bedrock tools, such as bridge. or Blockceptions VSCode addon.
+				Bedrock OSS is a programming-focused creators discord for Bedrock. <br /><br />Here you can report wiki issues, collaborate on new articles, and get help with Bedrock tools, such as bridge. or Blockception's VSCode addon.
 			</CardLink>
 			<CardLink
 				title="Additional Servers"

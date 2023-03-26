@@ -77,7 +77,7 @@ You can learn more about creating materials [here](/visuals/materials).
 
 ## Properties
 
-Materials can have a range of different properties which affect their appearence, including:
+Materials can have a range of different properties which affect their appearance, including:
 
 ### Backface-Culling
 
@@ -89,7 +89,7 @@ Enables analogue translucency, usage of the alpha channel of textures.
 
 ### Emissive
 
-Causes the texture to not be affected by dim lighting, and appear to glow. If there is usage of the alpha channel, the emissiveness is in direct proportion to how transparent each individual pixel is.
+Causes the texture to not be affected by dim lighting, and appear to glow. If there is usage of the alpha channel, the emissivity is in direct proportion to how transparent each individual pixel is.
 
 ### Set Translucency
 
@@ -384,7 +384,7 @@ Inconsistently renders objects with transparency behind.
 
 ### moving_block_double_side
 
--   Completely Opaqe
+-   Completely Opaque
 
 ### moving_block_seasons
 

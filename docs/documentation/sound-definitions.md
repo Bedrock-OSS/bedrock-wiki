@@ -118,9 +118,9 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `block.cartography_table.use`
 
-`block.chorusflower.death`
+`block.cornflower.death`
 
-`block.chorusflower.grow`
+`block.cornflower.grow`
 
 `block.click`
 

@@ -119,9 +119,17 @@ This section contains troubleshooting information for experimental items. Rememb
 
 Find the issue you have, then read the prompts.
 
--   [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
--   [My textures are missing!](#my-textures-are-missing-1)
--   [My item is huge!](#my-item-is-huge)
+- [Start Here](#start-here)
+- [1.10 vs 1.16 Items?](#110-vs-116-items)
+  - [Continue](#continue)
+- [Stable Items](#stable-items)
+  - [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item)
+  - [My textures are missing!](#my-textures-are-missing)
+- [Experimental Items](#experimental-items)
+  - [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
+  - [My Textures Are Missing!](#my-textures-are-missing-1)
+  - [My item is Huge](#my-item-is-huge)
+- [What now?](#what-now)
 
 ### I cannot /give myself my custom item!
 

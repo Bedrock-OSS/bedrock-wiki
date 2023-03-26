@@ -39,7 +39,7 @@ Bedrock-OSS collects your data for the purpose of improving the site and evaluat
 -   Page visited is used to evaluate the popularity of pages and influence future work on the site
 -   Screen resolution is used to help prioritize development for different target devices
 
-Bedrock-OSS does not share your data with any other entities except in broad numbers, such as the total number of views a page has recieved in a week.
+Bedrock-OSS does not share your data with any other entities except in broad numbers, such as the total number of views a page has received in a week.
 
 ## How do we store your data?
 
