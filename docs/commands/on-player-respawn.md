@@ -38,7 +38,7 @@ This system will run your desired commands on the event that a player respawns f
 
 Here we have used an `/execute - say` command as an example but you can use any command you prefer and as many as you require.
 
-Just make sure to follow the given order and properly add the selector argument ` scores={respawn=0} ` as shown for your desired commands.
+Just make sure to follow the given order and properly use the selector argument ` @e [scores={respawn=1}] ` as shown for your desired commands.
 
 ## Explanation
 
