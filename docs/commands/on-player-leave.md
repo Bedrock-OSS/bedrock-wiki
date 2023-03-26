@@ -32,8 +32,10 @@ Note; you cannot execute commands on the *players* that leave using selectors. H
 /execute as @a run scoreboard players add new total 1
 /scoreboard players operation new total -= old total
 
-#Your Commands: (example)
+
+#Your Commands Here (example)
 /execute if score new total matches ..-1 run say a player has left the world
+
 
 /scoreboard players reset old total
 /execute as @a run scoreboard players add old total 1
