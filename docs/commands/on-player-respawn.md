@@ -43,11 +43,9 @@ Just make sure to follow the given order and properly add the selector argument 
 ## Explanation
 
 - **` respawn=0 `** this means the player is alive or had already respawned.
-- **` respawn=1 `** this means the player died and is now respawning, ie. respawned *just now* in the current gametick.
-
- **` @a `** selector will target all players alive/dead so we use it to mark everyone as 1 'respawning'
-
-**` @e `** selector on the other hand will only target players who are alive, so we can use this to mark all alive players 0 'respawned'
+- **` respawn=1 `** this means the player died and is now respawning, ie. respawned *just now*, in the current gametick.
+- **` @a `** selector will target all players alive/dead so we use it to mark everyone as 1 'respawning'
+- **` @e `** selector on the other hand will only target players who are alive, so we can use this to mark all alive players 0 'respawned'
 
 Now that *respawning* players are 1 and *respawned* players are 0 we can use this knowledge to run our desired commands on the players respawning.
 
