@@ -5,7 +5,7 @@ mention:
 	- MedicalJewel105
 ---
 
-## Why this page exists?
+## Why this page exists
 
 Representing features of your add-on has same importance as features' quality. If people like representation of your add-on, most likely they will try it and love it. In this page representation of structures will be discussed.
 
