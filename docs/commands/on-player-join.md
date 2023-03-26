@@ -1,5 +1,5 @@
 ---
-title: On Join
+title: On Player Join
 category: On Event Systems
 mention:
     - BedrockCommands
@@ -28,8 +28,10 @@ This system will run your desired commands on the event that a players joins the
 ```yaml
 /scoreboard players add @a joined 0
 
+
 #Your Commands Here (example)
 /tp @a[scores={joined=0}] 0 65 0
+
 
 /scoreboard players reset * joined
 /scoreboard players set @a joined 1
