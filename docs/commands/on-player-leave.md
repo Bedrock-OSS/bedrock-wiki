@@ -63,7 +63,7 @@ If it has decreased; we know that 1 or more players have left the game.
 With this knowledge we can run our desired commands from 'new' if it's score is -1 or less.
 - ie, if there were 10 players and someone leaves:
   - that is ` new - old `
-  - which is ` 9-10=-1 `
+  - which is ` 9 - 10 = -1 `
   - hence we will detect by ` ..-1 `
 
 - The 'new' total value is obtained first, subtraction is performed after that to run your desired commands and lastly the 'old' total value is obtained to be used in the next gametick.
