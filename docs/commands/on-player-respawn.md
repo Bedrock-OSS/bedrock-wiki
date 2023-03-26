@@ -26,37 +26,31 @@ This system will run your desired commands on the event that a player respawns f
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players set @a [scores={alive=!2}] alive 0
-/scoreboard players set @e [type=player] alive 1
-
-
 #Your Commands Here (example)
-/execute as @a [scores={alive=0}] run say I died
+/execute as @e [scores={respawn=1}] run say I died and respawned.
 
 
-/scoreboard players set @a [scores={alive=0}] alive 2
+/scoreboard players set @a respawn 1
+/scoreboard players set @e [type=player] respawn 0
 ```
-
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
 
 Here we have used an `/execute - say` command as an example but you can use any command you prefer and as many as you require.
 
-Just make sure to follow the given order and properly add the selector argument ` scores={alive=0} ` as shown for your desired commands.
+Just make sure to follow the given order and properly add the selector argument ` scores={respawn=0} ` as shown for your desired commands.
 
 ## Explanation
 
-- **` alive=0 `** this means player is dead.
-- **` alive=1 `** this means player is alive.
-- **` alive=2 `** this means player is dead and we have run our desired commands on/from them.
+- **` respawn=0 `** this means the player is alive or had already respawned.
+- **` respawn=1 `** this means the player died and is now respawning, ie. respawned *just now* in the current gametick.
 
+ **` @a `** selector will target all players alive/dead so we use it to mark everyone as 1 'respawning'
 
-- **` @a `** selector will target all players alive/dead so we use it to mark everyone as 0 'dead.'
-    - Note; we will ignore 2 or it will end up making the commands execute on dead players again. We only want our commands to execute once.
+**` @e `** selector on the other hand will only target players who are alive, so we can use this to mark all alive players 0 'respawned'
 
+Now that *respawning* players are 1 and *respawned* players are 0 we can use this knowledge to run our desired commands on the players respawning.
 
-- **` @e `** selector on the other hand will only target players who are alive, so we can use this to mark all alive players 1 'alive.'
+In the system, your desired commands must come before the other 2 commands because players change from death state to alive state along the start of the gametick before commands are run.
 
-
-- Now that dead players are 0 and alive players are 1 we can use this knowledge to run our desired commands on the dead players.
-    - Keep in mind we need to set their score to 2 after or otherwise the commands will keep executing till they respawn.
+Hence; if we were to put them at the end then the other 2 commands would set respawning players score to 0 first and then the commands you want to run won't be able to select those players as our selector argument is ` @e [scores={respawn=1}] ` not 0. Using 0 would not work as then it would repeat endlessly even on players who have already respawned.
