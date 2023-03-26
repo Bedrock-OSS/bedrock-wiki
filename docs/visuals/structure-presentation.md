@@ -25,7 +25,7 @@ This is the simplest method because it is quick and easy. It also lets you showc
 
 ![](/assets/images/visuals/structure-presentation/in-game.png)
 
-### In Structure Block
+### In a Structure Block
 
 This method avoids some of the disadvantages of a screenshot in the world, you are able to focus entirely on the structure without other blocks in the view.
 
