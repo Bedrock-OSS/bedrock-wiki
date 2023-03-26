@@ -7,7 +7,7 @@ mention:
 
 ## Why this page exists
 
-Representing features of your add-on has same importance as features' quality. If people like representation of your add-on, most likely they will try it and love it. In this page representation of structures will be discussed.
+Presenting features of an add-on clearly has same importance in showcasing add-on quality. If people like representation of your add-on, most likely they will try it and love it. In this page representation of structures will be discussed.
 
 ## Presentation Methods
 
