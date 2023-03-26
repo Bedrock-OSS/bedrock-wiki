@@ -33,7 +33,7 @@ This system will run your desired commands on the event that a player respawns f
 /scoreboard players set @a respawn 1
 /scoreboard players set @e [type=player] respawn 0
 ```
-![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
+![commandBlockChain3](/assets/images/commands/commandBlockChain/3.png)
 
 
 Here we have used an `/execute - say` command as an example but you can use any command you prefer and as many as you require.
