@@ -15,7 +15,7 @@ tags:
 
 This system will run your desired commands on the event that a player leaves the world.
 
-Note; you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](https://wiki.bedrock.dev/commands/on-player-join.html) system to execute when they join back.
+> Note; you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](https://wiki.bedrock.dev/commands/on-player-join.html) system to execute when they join back.
 
 ## Setup
 
@@ -68,5 +68,7 @@ With this knowledge we can run our desired commands from 'new' if it's score is 
 
 - The 'new' total value is obtained first, subtraction is performed after that to run your desired commands and lastly the 'old' total value is obtained to be used in the next gametick.
 
+:::tip
 All commands involved in a command-block-chain or function will only run in a sequence one after the other but it all still happens in the same tick regardless of the number of commands involved. We are able to achieve this system due to the fact that commands run along the end of a gametick after all events such as player log in, log out, death etc.. occur.
 ![gametick](/assets/images/commands/gametick.png)
+:::
