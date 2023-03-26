@@ -7,7 +7,7 @@ mention:
 
 ## Why this page exists
 
-Presenting features of an add-on clearly has same importance in showcasing add-on quality. If people can understand an add-on and it's features they might be more likely to try it. This page will demonstrate a way of presenting structures.
+Presenting features of an add-on clearly has same importance in showcasing quality. If people can understand an add-on and it's features they might be more likely to try it. This page will demonstrate a way of presenting structures.
 
 ## Presentation Methods
 
