@@ -232,7 +232,7 @@ Decrements the player's current item stack.
 
 ### die
 
-Kills the specified target in context, making the block dissapear with no loot. (Destroying the block, if specified).
+Kills the specified target in context, making the block disappear with no loot. (Destroying the block, if specified).
 
 <CodeHeader></CodeHeader>
 
@@ -563,7 +563,7 @@ _This also accepts tags, such as:_
 }
 ```
 
-See [this](/blocks/block-tags) page for a list of vanilla tags and relavent blocks.
+See [this](/blocks/block-tags) page for a list of vanilla tags and relevant blocks.
 
 ### minecraft:random_ticking
 
@@ -628,7 +628,7 @@ For block rotations like logs, see [this](/blocks/rotatable-blocks)
 
 ### minecraft:unwalkable
 
-Makes the block unwakable.
+Makes the block unwalkable.
 
 <CodeHeader></CodeHeader>
 

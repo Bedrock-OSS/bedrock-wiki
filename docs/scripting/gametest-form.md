@@ -155,7 +155,7 @@ form.button2("No, leave it as default!");
 
 
 ### ModalFormData
-Modal Form has the most types of input avaiable in the form. It has text fields, sliders, dropdowns, and toggles. Modal forms are useful for complicated forms, such as an effect giver. Modal forms don't have a body property.
+Modal Form has the most types of input available in the form. It has text fields, sliders, dropdowns, and toggles. Modal forms are useful for complicated forms, such as an effect giver. Modal forms don't have a body property.
 
 ```js
 let form = new ModalFormData();

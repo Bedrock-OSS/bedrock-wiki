@@ -236,7 +236,7 @@ Before calling sound or particle in ac, you need to define them in client entity
 
 ```json
 "sound_effects": {
-    "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound definited in sound_definitions just like animation sounds.
+    "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound defined in sound_definitions just like animation sounds.
 },
 "particle_effects": {
     "fuse_lit": "wiki:tnt_fuse_lit_particle"

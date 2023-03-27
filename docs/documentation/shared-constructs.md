@@ -8,7 +8,7 @@ mention:
 - Ciosciaa
 ---
 
-A few JSON constructs are expressable in multiple locations in the add-ons system.
+A few JSON constructs are expressible in multiple locations in the add-ons system.
 
 ## Range Objects
 Range objects define a spread between two numbers.

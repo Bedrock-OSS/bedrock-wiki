@@ -153,7 +153,7 @@ To do this you need to add the `"minecraft:weapon": {}` component, even if its j
 
 So if you add the above component to your item json file when you mouse over your sword you will now see **+10 Attack Damage** listed in its tooltip.
 
-> You may be thinking "why didnt you just add this above?" and the answer is because we will build off this component to add more cool stuff in the next section, so I wanted to keep it separate.
+> You may be thinking "why didn't you just add this above?" and the answer is because we will build off this component to add more cool stuff in the next section, so I wanted to keep it separate.
 
 ## Unique ability & durability
 

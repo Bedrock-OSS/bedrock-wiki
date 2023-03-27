@@ -13,7 +13,7 @@ The Script API is currently in active development, and breaking changes are freq
 This module can only be used on Bedrock Dedicated Server.
 :::
 
-In Scripting API, you can send and receive HTTP-based requests to interact with the internet. For more detailed infomation please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-net/minecraft-server-net).
+In Scripting API, you can send and receive HTTP-based requests to interact with the internet. For more detailed information please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-net/minecraft-server-net).
 
 ## Setup
 
@@ -58,7 +58,7 @@ This is the tree for default Bedrock Dedicated Server:
 3. In the `permissions.json` file located in `config/<pack_id>/permissions.json` or `config/default/permissions.json`, enable `@minecraft/server-net` module by adding `"@minecraft/server-net"` in the `allowed_modules` key.
 
 -   Modify files in default folder allows every add-ons with server-net module enabled in dependencies have access to @minecraft/server-net module.
--   It is recommended to assign appropriate permissons for each script behavior pack.
+-   It is recommended to assign appropriate permissions for each script behavior pack.
 
 <CodeHeader>BedrockServer/config/default/permissions.json</CodeHeader>
 
@@ -131,7 +131,7 @@ const request = new HttpRequest("http://localhost:8000/"); // You must put a url
 
 **Set HTTP method**
 
-More infomation on HTTP request methods: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+More information on HTTP request methods: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 
 **GET**
 
@@ -194,7 +194,7 @@ request.headers = [
 
 **Set request body**
 
-Content of the body of the HTTP request, this infomation will be sent to a web server.
+Content of the body of the HTTP request, this information will be sent to a web server.
 
 ```js
 request.body = 'Message';

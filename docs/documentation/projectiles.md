@@ -16,14 +16,14 @@ _This information was last tested on **1.18.2**._
 | anchor                    | Integer          |               |                                                                                                                                                   |
 | angle_offset              | Decimal          | 0             | Determines the angle at which the projectile is thrown                                                                                            |
 | catch_fire                | Boolean          | false         | If true, the entity hit will be set on fire                                                                                                       |
-| crit_particle_on_hurt     | Boolean          | false         | If true, the projectile will produce critical hit particles when it happens                                                             |
+| crit_particle_on_hurt     | Boolean          | false         | If true, the projectile will produce critical hit particles when it happens                                                                       |
 | destroy_on_hurt           | Boolean          | false         | If true, this entity will be destroyed when hit                                                                                                   |
 | filter                    | String           |               | Entity Definitions defined here can't be hurt by the projectile                                                                                   |
 | fire_affected_by_griefing | Boolean          | false         | If true, whether the projectile causes fire is affected by the mob griefing game rule                                                             |
 | gravity                   | Decimal          | 0.05          | The gravity applied to this entity when thrown. The higher the value, the faster the entity falls                                                 |
 | hit_ground_sound          | String           |               | The sound that plays when the projectile hits ground                                                                                              |
 | hit_sound                 | String           |               | The sound that plays when the projectile hits an entity                                                                                           |
-| homing                    | Boolean          | false         | If true, the projectile homes in to the nearest. **Does not work on 1.18.2** entity                                                                                            |
+| homing                    | Boolean          | false         | If true, the projectile homes in to the nearest. **Does not work on 1.18.2** entity                                                               |
 | inertia                   | Decimal          | 0.99          | The fraction of the projectile's speed maintained every frame while traveling in air                                                              |
 | is_dangerous              | Boolean          | false         | If true, the projectile will be treated as dangerous to the players                                                                               |
 | knockback                 | Boolean          | true          | If true, the projectile will knock back the entity it hits                                                                                        |
@@ -46,7 +46,7 @@ _This information was last tested on **1.18.2**._
 | stop_on_hurt              | Boolean          |               |                                                                                                                                                   |
 | uncertainty_base          | Decimal          | 0             | The base accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel \* uncertaintyMultiplier                               |
 | uncertainty_multiplier    | Decimal          | 0             | Determines how much difficulty affects accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel \* uncertaintyMultiplier |
-| hit_water                 | Boolean          | false         | If true, liquid blocks will be treated as solid. **Requires "Education Edition" toggle active** |
+| hit_water                 | Boolean          | false         | If true, liquid blocks will be treated as solid. **Requires "Education Edition" toggle active**                                                   |
 
 ## on_hit
 
@@ -84,20 +84,20 @@ _Exact behavior unknown_
 
 Deals damage on hit.
 
-| Name                           | Type                             | Description                                                          |
-| ------------------------------ | -------------------------------- | ---------------------------------------------------------------------|
-| damage                         | Integer/Integer Array [min, max] | Damage dealt to entity on hit                                                                  |
-| semi_random_diff_damage        | Boolean                          |                                                                    |
-| max_critical_damage            | Decimal                          |                                                                    |
-| min_critical_damage            | Decimal                          |                                                                    |
-| power_multiplier               | Decimal                          |                                                                    |
-| channeling                     | Boolean                          |                                                                    |
-| set_last_hurt_requires_damage  | Boolean                          |                                                                    |
-| destroy_on_hit_requires_damage | Boolean                          |                                                                    |
-| filter                         | String                           | Entity to affect. Much more primative than filters used elsewhare, as it cannot "test" for anything other than an identifier |
-| destroy_on_hit                 | Boolean                          |                                                                    |
-| knockback                      | Boolean                          |                                                                    |
-| catch_fire                     | Boolean                          | Dictates wether or not targets will be engulfed in flames                                                               |
+| Name                           | Type                             | Description                                                                                                                  |
+| ------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| damage                         | Integer/Integer Array [min, max] | Damage dealt to entity on hit                                                                                                |
+| semi_random_diff_damage        | Boolean                          |                                                                                                                              |
+| max_critical_damage            | Decimal                          |                                                                                                                              |
+| min_critical_damage            | Decimal                          |                                                                                                                              |
+| power_multiplier               | Decimal                          |                                                                                                                              |
+| channeling                     | Boolean                          |                                                                                                                              |
+| set_last_hurt_requires_damage  | Boolean                          |                                                                                                                              |
+| destroy_on_hit_requires_damage | Boolean                          |                                                                                                                              |
+| filter                         | String                           | Entity to affect. Much more primitive than filters used elsewhere, as it cannot "test" for anything other than an identifier |
+| destroy_on_hit                 | Boolean                          |                                                                                                                              |
+| knockback                      | Boolean                          |                                                                                                                              |
+| catch_fire                     | Boolean                          | Dictates wether or not targets will be engulfed in flames                                                                    |
 
 ### definition_event
 
@@ -112,11 +112,11 @@ Calls an event on hit.
 | splash_area        | Decimal | Area of entities                                    |
 | event_trigger      | Object  | Event to trigger. Structure below.                  |
 
-| Name    | Type   | Description                            |
-| ------- | ------ | -------------------------------------- |
-| event   | String | Event to trigger                       |
-| target  | String | Target of the event                    |
-| filters | Object | Crieteria required in order to trigger |
+| Name    | Type   | Description                           |
+| ------- | ------ | ------------------------------------- |
+| event   | String | Event to trigger                      |
+| target  | String | Target of the event                   |
+| filters | Object | Criteria required in order to trigger |
 
 ### stick_in_ground
 
@@ -130,16 +130,16 @@ Sticks the projectile into the ground.
 
 Spawns an area of effect cloud of potion effect.
 
-| Name                | Type                    | Description                                             |
-| ------------------- | ----------------------- | ------------------------------------------------------- |
-| radius              | Decimal                 | Radius of the cloud                                     |
-| radius_on_use       | Decimal                 |                                                         |
-| potion              | Integer                 | Lingering Potion ID                                     |
-| particle            | String                  | [Vanilla Particles](/particles/vanilla-particles) emitter of the cloud. Only accepts Vanilla Particles. **dragonbreath** enables the usage of Bottles to obtain Dragon's Breath.       |
-| duration            | Integer                 | Duration of the cloud in seconds                        |
-| color               | Integer array [r, g, b] | Color of the particles                                  |
-| affect_owner        | Boolean                 | Is potion effect affecting the shooter. Does not appear to apply to the player                |
-| reapplication_delay | Integer                 | Delay in ticks between application of the potion effect |
+| Name                | Type                    | Description                                                                                                                                                                      |
+| ------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| radius              | Decimal                 | Radius of the cloud                                                                                                                                                              |
+| radius_on_use       | Decimal                 |                                                                                                                                                                                  |
+| potion              | Integer                 | Lingering Potion ID                                                                                                                                                              |
+| particle            | String                  | [Vanilla Particles](/particles/vanilla-particles) emitter of the cloud. Only accepts Vanilla Particles. **dragonbreath** enables the usage of Bottles to obtain Dragon's Breath. |
+| duration            | Integer                 | Duration of the cloud in seconds                                                                                                                                                 |
+| color               | Integer array [r, g, b] | Color of the particles                                                                                                                                                           |
+| affect_owner        | Boolean                 | Is potion effect affecting the shooter. Does not appear to apply to the player                                                                                                   |
+| reapplication_delay | Integer                 | Delay in ticks between application of the potion effect                                                                                                                          |
 
 #### Potion IDs
 
@@ -185,12 +185,12 @@ Spawns an entity on hit.
 
 Spawns particles on hit.
 
-| Name          | Type    | Description                                                                             |
-| ------------- | ------- | --------------------------------------------------------------------------------------- |
-| particle_type | String  | [Vanilla Particles](/particles/vanilla-particles) to use                                |
-| num_particles | Integer | Number of particles                                                                     |
-| on_entity_hit | Boolean | Whether it should spawn particles on entity hit                                         |
-| on_other_hit  | Boolean | Whether it should spawn particles on other hit                                          |
+| Name          | Type    | Description                                              |
+| ------------- | ------- | -------------------------------------------------------- |
+| particle_type | String  | [Vanilla Particles](/particles/vanilla-particles) to use |
+| num_particles | Integer | Number of particles                                      |
+| on_entity_hit | Boolean | Whether it should spawn particles on entity hit          |
+| on_other_hit  | Boolean | Whether it should spawn particles on other hit           |
 
 
 ### mob_effect
@@ -245,5 +245,5 @@ _Exact behavior unknown. Right now it crashes minecraft probably because of wron
 
 _Exact behavior unknown. Right now it crashes minecraft probably because it's only valid for thrown potions_
 
-## Aditional Information
+## Additional Information
 When it comes to creating a custom projectile, such as an arrow or trident variant, or something entirely your own, you may want to consider defining a [runtime identifier](/entities/runtime-identifier) to ensure that it acts as intended. Not doing so may result in unintended behaviour, from odd visuals to incorrect knockback direction and arrows that you can kill with your bare hands.

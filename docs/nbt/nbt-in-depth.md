@@ -15,21 +15,21 @@ Now let's look at the table of NBT tags for NBT types and how they are marked in
 As it was said, NBT works on a binary level, so you need to know that the smallest data type is a byte, which is 8 bits in size. And individual types can contain multiple bytes, but they can never be 1/2 byte extra or less, not possible! : )
 We also cannot say how the tags should be named, because everyone can call NBT tags differently, but they must always have the same binary base (`id`), id is represented by one byte.
 
-|       Name           |   Binary ID   |    Binary  Size   |         Description       |
-|:--------------------:|--------------:|:------------------|:--------------------------|
-|      Byte            | 0x01          | 1 byte (8-bits)   | One byte size type        |
-|Int16 (short)         | 0x02          | 2 bytes (16-bits) | A two-byte type           |
-|Int32 (intiger)       | 0x03          | 4 bytes (32-bits) | A four-byte type          |
-|Int64 (long)          | 0x04          | 8 bytes (64-bits) | An eight-byte type        |
-|     Float            | 0x05          | 4 bytes (32-bits) | A four-byte type with regular decimal precision    |
-|    Double            | 0x06          | 8 bytes (64-bits) |  An eight-byte type with higher decimal precision  |
-|    String            | 0x08          | Predefined        | A string type that has a predefined size. Text uses UTF-8 encoding                 |
-|    List              | 0x09          | Predefined        | A list type with a predefined size and defining type for the elements in the list  |
-|  Compoud             | 0x0A (10)     | Undefined         | Type compound, the compound does not have a predefined size, so it is necessary to read the keys and values until we do not encounter the tag for ending the compound. |
-|End of the Compoud    | 0x00          | 0 bytes           | This tag is not a type but only a tag and can only be used depending on the compound. It marks the end of a compound  |
-|    Byte List         | 0x07          | Predefined        | List type of Byte and predefined size, not commonly used by Minecraft BE  |
-|    Int List          | 0x0B (11)     | Predefined        | List type of Int and predefined size, not commonly used by Minecraft BE   |
-|    Long List         | 0x0C (12)     | Predefined        | List type of Long and predefined size, not commonly used by Minecraft BE  |
+|        Name        | Binary ID | Binary  Size      | Description                                                                                                                                                            |
+| :----------------: | --------: | :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|        Byte        |      0x01 | 1 byte (8-bits)   | One byte size type                                                                                                                                                     |
+|   Int16 (short)    |      0x02 | 2 bytes (16-bits) | A two-byte type                                                                                                                                                        |
+|  Int32 (intiger)   |      0x03 | 4 bytes (32-bits) | A four-byte type                                                                                                                                                       |
+|    Int64 (long)    |      0x04 | 8 bytes (64-bits) | An eight-byte type                                                                                                                                                     |
+|       Float        |      0x05 | 4 bytes (32-bits) | A four-byte type with regular decimal precision                                                                                                                        |
+|       Double       |      0x06 | 8 bytes (64-bits) | An eight-byte type with higher decimal precision                                                                                                                       |
+|       String       |      0x08 | Predefined        | A string type that has a predefined size. Text uses UTF-8 encoding                                                                                                     |
+|        List        |      0x09 | Predefined        | A list type with a predefined size and defining type for the elements in the list                                                                                      |
+|      Compoud       | 0x0A (10) | Undefined         | Type compound, the compound does not have a predefined size, so it is necessary to read the keys and values until we do not encounter the tag for ending the compound. |
+| End of the Compoud |      0x00 | 0 bytes           | This tag is not a type but only a tag and can only be used depending on the compound. It marks the end of a compound                                                   |
+|     Byte List      |      0x07 | Predefined        | List type of Byte and predefined size, not commonly used by Minecraft BE                                                                                               |
+|      Int List      | 0x0B (11) | Predefined        | List type of Int and predefined size, not commonly used by Minecraft BE                                                                                                |
+|     Long List      | 0x0C (12) | Predefined        | List type of Long and predefined size, not commonly used by Minecraft BE                                                                                               |
 
 You may notice that there is no boolean value like in JSON and that means we will express true false values as 1 and 0 using Byte.
 
@@ -51,7 +51,7 @@ When reading a list, we must first read the list ([type](#reading-types)), wheth
 ### Reading Compouds
 Compound has all properties named so when reading an property it is always necessary to read its name as well. The procedure for reading Compoud is rather simple. First, we read the type, the type can be anything, but if it is equal to an empty byte, then it is the end of the compound and then we jut stop reading, but if the type is not equal to the Compoud Ending tag, then the significant type of the property that we will read. The read property is always followed by the name (key), which needs to be read as a [string](#reading-strings), and after the string is read, then we can read value.
 
-## Minecrft BE NBT files
+## Minecraft BE NBT files
 When reading Minecraft NBT files, it is always important to be careful if there is no Bedrock Header at the beginning of the file, see [Bedrock NBT Header](#bedrock-nbt-file-header), but not all MCBE NBT files contain this header, for example `.mcstructure` also does not contain a Bedrock NBT header, unlike `level.dat`.
 You also need to pay attention to the root element in the file, i.e. the list or compoud,
 The root element also looks like a property, so you need to read the name of this root property, although Bedrock does not use these names, so these names are empty, but they are there.

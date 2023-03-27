@@ -14,7 +14,7 @@ Creating your own tree with decaying leaves are possible. Follow this tutorial a
 -   Features:
 
     -   Decaying leaves
-    -                       Tree Feature compatable
+    -                       Tree Feature compatible
     -   If leaves were broken using shears, they will drop the block
     -   Leaves doesn't decay if placed by player
     -   Logs are strippable and rotatable
@@ -481,7 +481,7 @@ Here all components are the same
 
 ## Making Custom Sapling
 
-For the sapling we will need structures of out tree to make the sapling semi-realistick. `/place feature` would be great.
+For the sapling we will need structures of out tree to make the sapling semi-realistic. `/place feature` would be great.
 
 <Spoiler title="Code">
 
@@ -726,7 +726,7 @@ For the sapling we will need structures of out tree to make the sapling semi-rea
 
 <CodeHeader>BP/loot_tables/blocks/custom_leaves_block.json</CodeHeader>
 
-This loot will spawn leaves block (when you breaak it using shears)
+This loot will spawn leaves block (when you break it using shears)
 
 ```json
 {
@@ -1211,7 +1211,7 @@ What you have created:
 
 -   [x] Custom Trees with Decaying Leaves
 -   [x] Working Sapling
--   [x] Rotatable and Stripable Logs
+-   [x] Rotatable and strippable Logs
 
 </Checklist>
 

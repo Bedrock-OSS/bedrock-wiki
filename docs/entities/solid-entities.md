@@ -14,7 +14,7 @@ Not all techniques are ideal for all scenarios. Experiment, and figure out what 
 
 ## Runtime Identifiers
 
-[Runtime identifiers](/entities/runtime-identifier) can be used to achieve solid entities, but currently only 2, each with a specific shape, and their own side effects. Neither colision shapes are possible to change or scale.
+[Runtime identifiers](/entities/runtime-identifier) can be used to achieve solid entities, but currently only 2, each with a specific shape, and their own side effects. Neither collision shapes are possible to change or scale.
 
 ### Boat
 
@@ -53,7 +53,7 @@ Not all techniques are ideal for all scenarios. Experiment, and figure out what 
 }
 ```
 
--   1x1 block sized solid colision.
+-   1x1 block sized solid collision.
 -   Sticks to block grid.
 -   Teleports randomly when supporting block removed.
 

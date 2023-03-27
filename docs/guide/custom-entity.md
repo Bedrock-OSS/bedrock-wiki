@@ -26,7 +26,7 @@ First, we will cover how to create an entity & define its behavior. Next, we wil
 
 ## Entity Behavior
 
-Like with items, we need a file to tell our entity how to behave which points an identifier to certain components which define behavior. This file will be very similar to our item behavior file except with alot more components.
+Like with items, we need a file to tell our entity how to behave which points an identifier to certain components which define behavior. This file will be very similar to our item behavior file except with a lot more components.
 
 We define our server file in our BP, under the `BP/entities/` folder. We will call this file `ghost.se.json`. Here the `.se` stands for _server entity_. This is for clarity and is recommend in the [Style Guide](/meta/style-guide).
 
@@ -76,7 +76,7 @@ For more information on components in entities, you can check out our page [here
 
 ### Stat Components
 
-These are the components that you will generally have on every entity. This define some core attribrutes to your entity.
+These are the components that you will generally have on every entity. This define some core attributes to your entity.
 
 <CodeHeader>BP/entities/ghost.se.json#minecraft:entity#components</CodeHeader>
 
@@ -136,7 +136,7 @@ The `minecraft:movement.basic` component allows our entity to walk by moving ove
 
 The navigation component is a pathfinder which defines what paths we allow our entity to follow. For example skeletons will try not to walk in sunlight, so their pathing stops them from taking paths that would put them in sunlight. Additionally, parrots can fly so they can path into the air unlike walking mobs.
 
-These components have alot of different settings which allow for interesting pathing. The settings we've chosen let our ghost walk along the ground, avoid stepping into sunlight, pass through doorways and open doors.
+These components have a lot of different settings which allow for interesting pathing. The settings we've chosen let our ghost walk along the ground, avoid stepping into sunlight, pass through doorways and open doors.
 
 ### Behavior Components
 
@@ -337,7 +337,7 @@ Next we will learn how to create our resource or client file and how to assign o
 
 ## Entity Resource
 
-Applying visuals to an entity is very different to an item. Since there are alot more pieces, we have a separate file dedicated to defining the resources.
+Applying visuals to an entity is very different to an item. Since there are a lot more pieces, we have a separate file dedicated to defining the resources.
 This is the called entity _client file_ which we will name `ghost.ce.json`. These files go in the folder `RP/entity/`.
 
 In this section, we will use the example resources created for our ghost entity to demonstrate how to add them to an entity. In the next section of the guide, we explain how to use Blockbench, a dedicated 3D editor, to create your own entity geometry and animations.
@@ -457,7 +457,7 @@ An animation file can contain one or multiple animations within it. Our animatio
 Each animation is defined by the key, so here our three animation identifiers are `animation.ghost.idle`, `animation.ghost.attack` and `animation.ghost.move`.
 
 :::tip NOTE
-If you have mutliple animation files for one entity, consider moving them all into one file to keep your folders easy to read and navigate.
+If you have multiple animation files for one entity, consider moving them all into one file to keep your folders easy to read and navigate.
 If not, ensure that when you are referencing the animation in your entity file, you use the animation identifier and _not_ the file name.
 :::
 
@@ -666,7 +666,7 @@ We can also make a similar controller for our `move` and `idle` animation.
 ```
 
 This follows a similar pattern with some additions.
-We now have `inital_state` which tells the controller which state to start on. If none is listed then it will start on the state `default`.
+We now have `initial_state` which tells the controller which state to start on. If none is listed then it will start on the state `default`.
 You'll also notice our queries look slightly different. Here the query `query.modified_move_speed` returns a value, so in order to return a boolean (i.e. true or false) we look at when the value is above or below `0.1`. For more in depth information on animation controllers, you can read [here](/animation-controllers/animation-controllers-intro).
 
 Now that we have our animation controllers, we can add them to our animation controller file. Similarly to animations, the key is the identifier for our animation controller; `controller.animation.ghost.attack` and `controller.animation.ghost.walk`.
@@ -731,7 +731,7 @@ With that, we have created all the resources we need for our entity. We will now
 ### Entity Client File
 
 The client file contains all the references to the visual components of our entity.
-Our client file will go in `RP/entity/` and we name this file `ghost.ce.json`. This file will have all our information under the `decription` key. We begin with the familar formatting:
+Our client file will go in `RP/entity/` and we name this file `ghost.ce.json`. This file will have all our information under the `description` key. We begin with the familiar formatting:
 
 <CodeHeader>RP/entity/ghost.ce.json</CodeHeader>
 
@@ -810,7 +810,7 @@ This follows a similar structure to the animation controller and animation file,
 This tells the game that the resource rendered should be the resource with shortname `default`. Render controllers can also allow you to display different textures or apply different materials to different parts of our model. Under `materials`, we use `"*"` to mean that we apply this material to all _bones_ in our model (i.e. each cube in our model.) For more information on render controllers, you can check our page [here](/entities/render-controllers).
 
 :::tip
-If you keep your shortnames consitent, you can actually reference the same render controller for multiple entities.
+If you keep your shortnames consistent, you can actually reference the same render controller for multiple entities.
 :::
 
 Now to tell your entity to use this render controller, we add it to our entity file like so:
@@ -885,7 +885,7 @@ With this our animations should be working correctly.
 
 #### Spawn Egg
 
-The final step to finalise our entity client file, is to create a spawn egg for our entity. Luckily, our file can gnerate one for us with the key `spawn_egg`.
+The final step to finalise our entity client file, is to create a spawn egg for our entity. Luckily, our file can generate one for us with the key `spawn_egg`.
 
 <CodeHeader>RP/entity/ghost.ce.json#description</CodeHeader>
 

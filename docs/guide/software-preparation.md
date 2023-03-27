@@ -30,7 +30,7 @@ VSCode is a general purpose text-editor and IDE. With VSCode, you will be able t
 
 Many packages exist for VSCode that make editing addons easier:
 
--   [Blockceptions Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
+-   [Blockception's Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
 -   [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
 -   [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
 -   [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
@@ -104,7 +104,7 @@ Pixilart is a web-based pixel art software. It is extremely simple to use since 
 [Use Pixilart](https://www.pixilart.com/)
 
 ### Piskel
-Piskel is a web-based pixel art software with a focus of making pixelated sprites (or video game charater animations). This tool, similar to Pixilart, is simple to use. This is also a great tool for making flipbooks (Minecraft block or skin animations).
+Piskel is a web-based pixel art software with a focus of making pixelated sprites (or video game character animations). This tool, similar to Pixilart, is simple to use. This is also a great tool for making flipbooks (Minecraft block or skin animations).
 
 **+ Pros:** Easy to use and learn. Perfect for flipbook animations
 **- Cons:** Must have internet connection. Only offers the most basic tools.

@@ -17,17 +17,17 @@ You can find a list of Minecraft Bedrock server softwares [here](/servers/server
 
 ## Data Types
 
-| Type           | Size    | Range           | Notes                                                          |
-|----------------|---------|-----------------|----------------------------------------------------------------|
-| Byte           | 1       | 0-255           | An unsigned integer                                            |
-| Long           | 8       | -2^63 to 2^63-1 | Signed 64 bit integer                                          |
-| Magic          | 16      |                 | 00ffff00fefefefefdfdfdfd12345678 - Will always be those bytes  |
-| Short          | 2       | -32768 to 32767 |                                                                |
-| Unsigned Short | 2       | 0 to 65535	     |                                                                |
-| String         | N/A     | N/A             | A string prefixed by a short which depicts the length.         |
-| Boolean        | 1       | 0-1             | 0x00 is False while 0x01 is True                               |
-| Address        | 7       |                 | 1 byte for the ip version 4/6, 4 for the IP and 2 for the port |
-| uint24le       | 3       |                 | 3-byte little-endian unsigned integer                          |
+| Type           | Size | Range           | Notes                                                          |
+| -------------- | ---- | --------------- | -------------------------------------------------------------- |
+| Byte           | 1    | 0-255           | An unsigned integer                                            |
+| Long           | 8    | -2^63 to 2^63-1 | Signed 64 bit integer                                          |
+| Magic          | 16   |                 | 00ffff00fefefefefdfdfdfd12345678 - Will always be those bytes  |
+| Short          | 2    | -32768 to 32767 |                                                                |
+| Unsigned Short | 2    | 0 to 65535      |                                                                |
+| String         | N/A  | N/A             | A string prefixed by a short which depicts the length.         |
+| Boolean        | 1    | 0-1             | 0x00 is False while 0x01 is True                               |
+| Address        | 7    |                 | 1 byte for the ip version 4/6, 4 for the IP and 2 for the port |
+| uint24le       | 3    |                 | 3-byte little-endian unsigned integer                          |
 
 ## Contents
 
@@ -46,7 +46,7 @@ You can find a list of Minecraft Bedrock server softwares [here](/servers/server
 
 ### Unconnected Pings
 
-Minecraft Bedrock will send out a message to all listed servers (and the local netowrk) to check if any games are available and retrieve the MOTD from the game. These messages are known as unconnected pings and are structured in this format:
+Minecraft Bedrock will send out a message to all listed servers (and the local network) to check if any games are available and retrieve the MOTD from the game. These messages are known as unconnected pings and are structured in this format:
 
 `0x01 | client alive time in ms (unsigned long long) | magic | client GUID`
 
@@ -82,7 +82,7 @@ This is the first half of the handshake between the client and the server.
 
 ### Open Connection Request 2
 
-The client responds with this after they recieve the open connection reply 1 packet.
+The client responds with this after they receive the open connection reply 1 packet.
 
 `0x07 | magic | server address | RakNet Null Padding Size | client GUID`
 
