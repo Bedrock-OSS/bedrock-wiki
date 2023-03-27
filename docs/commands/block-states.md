@@ -62,7 +62,7 @@ For your convenience; download any of the excel sheet below to find the full lis
 
 Note; the above sheet was quickly generated and contains some minor errors. Boolean values `0` should be replaced with `false` and `1` should be replaced with `true` since the game doesn't recognize the syntax otherwise.
 
-Alternate sheet: *Shared by @ItsRichHearts*
+Alternate sheet: *Shared by @ItsRichHeart*
 
 <BButton
   link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/11069804/All.Block-Item.List.Bedrock.pdf"
