@@ -49,8 +49,8 @@ Just make sure to follow the given order and properly use the `/execute if score
 
 ## Explanation
 
-- **` new `** this FakePlayer name means the total number of players on the world in the current gametick.
-- **` old `** this FakePlayer name means the total number of players that were on the world in the previous gametick but also saves the values to be used in the *next* gametick.
+- **` new `** this FakePlayer name means the total number of players on the world in the current game tick.
+- **` old `** this FakePlayer name means the total number of players that were on the world in the previous game tick but also saves the values to be used in the *next* game tick.
 
 These values are obtained using the [Entity Counter](https://wiki.bedrock.dev/commands/entity-counter.html) system. It may be beneficial to refer to that doc for better understanding this one.
 
@@ -66,7 +66,9 @@ With this knowledge we can run our desired commands from 'new' if it's score is 
   - which is ` 9 - 10 = -1 `
   - hence we will detect by ` ..-1 `
 
-- The 'new' total value is obtained first, subtraction is performed after that to run your desired commands and lastly the 'old' total value is obtained to be used in the next gametick.
+- The 'new' total value is obtained first, subtraction is performed after that to run your desired commands and lastly the 'old' total value is obtained to be used in the next game tick.
+
+All commands involved in a command-block-chain or function will only run in a sequence one after the other but it all still happens in the same tick regardless of the number of commands involved. We are able to achieve this system due to the fact that commands run along the end of a game tick after all events such as player log in, log out, death etc. occur.
 
 :::tip
 All commands involved in a command-block-chain or function will only run in a sequence one after the other but it all still happens in the same tick regardless of the number of commands involved. We are able to achieve this system due to the fact that commands run along the end of a gametick after all events such as player log in, log out, death etc.. occur.

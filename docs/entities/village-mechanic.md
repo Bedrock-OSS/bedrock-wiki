@@ -324,18 +324,18 @@ All of this is usable by custom entities:
 - `minecraft:behavior.move_to_village`
 Used by Pillager this may keep the entity to stay in the village.
 - `minecraft:behavior.stroll_towards_village`
-Used by fox to seach a village and go there.
+Used by fox to search a village and go there.
 - `minecraft:behavior.inspect_bookshelf`
 Used by librarian villager allows an entity to look at and inspect a bookshelf.
 - `minecraft:behavior.explore_outskirts`
 Allows entity to explore beyond the bounds of village (use schedule and component group to keep the entity return to the village).
 - `minecraft:behavior.defend_village_target`
-Use this on melee attack. Ranged attack can accidently shoot any entity with inhabitant dwelling role.
+Use this on melee attack. Ranged attack can accidentally shoot any entity with inhabitant dwelling role.
 
 All of this can be used by custom entities and have relation to villager or village:
-| Behavior | Uses | Note |
-| --------- | ------- | ------ |
-| `minecraft:behavior.defend_village_target` | Allows entity to attack other entity that hurt the entity who had "dweller_role": "inhabitant". | Recommended to use only on entities with melee attack.|
-| `minecraft:behavior.hide` | Used by villager to hide and stay at defined POI. | Currently, there is no documentation for the POI type that's why I recommend not to change `"poi_type": "bed"`. |
-| `minecraft:behavior.move_to_village` | Used by Illager and also witch. Allows entity to travel to a random x,y,z coordinate in a village. | - |
-| `"minecraft:behavior.nap"` | Used by Fox to take a nap. | Similar with sleep but offers more flexibility also has built-in wake up system by detecting specific entity. |
+| Behavior                                   | Uses                                                                                               | Note                                                                                                            |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `minecraft:behavior.defend_village_target` | Allows entity to attack other entity that hurt the entity who had "dweller_role": "inhabitant".    | Recommended to use only on entities with melee attack.                                                          |
+| `minecraft:behavior.hide`                  | Used by villager to hide and stay at defined POI.                                                  | Currently, there is no documentation for the POI type that's why I recommend not to change `"poi_type": "bed"`. |
+| `minecraft:behavior.move_to_village`       | Used by Illager and also witch. Allows entity to travel to a random x,y,z coordinate in a village. | -                                                                                                               |
+| `"minecraft:behavior.nap"`                 | Used by Fox to take a nap.                                                                         | Similar with sleep but offers more flexibility also has built-in wake up system by detecting specific entity.   |

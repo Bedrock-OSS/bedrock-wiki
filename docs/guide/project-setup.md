@@ -57,7 +57,7 @@ Let's create your first add-on workspace in Visual Studio Code now.
 2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**
 3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP`**.
 4. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
-5. Press `File > Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
+5. Press `File > Save Workspace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
 
 ## BP Manifest
 

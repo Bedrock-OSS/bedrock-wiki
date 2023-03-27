@@ -12,7 +12,7 @@ tags:
 
 [Sourced by Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-Block States or Block Properties are additonal data that defines how the block appears or behaves. Such as the direction it is facing, it's color, it's variant, whether it is powered or unpowered and so on.
+Block States or Block Properties are additional data that defines how the block appears or behaves. Such as the direction it is facing, it's color, it's variant, whether it is powered or unpowered and so on.
 
 This is used in a multitude of commands such as `/clone`, `/execute`, `/fill`, `/setblock` and `/testforblock`
 
@@ -23,7 +23,7 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 ```yaml
 #Aux Value Example:
 /setblock ~ ~ ~ wool 1
-#It's Block State equivelant:
+#It's Block State equivalent:
 /setblock ~ ~ ~ wool ["color":"orange"]
 ```
 
@@ -41,7 +41,7 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 /setblock ~ ~ ~ wool []
 ```
 
-- Block states are enclosed in sqaure brackets ` [ ] `
+- Block states are enclosed in square brackets ` [ ] `
 - When specifying multiple block states a comma ` , ` is used to separate them.
 - Quotation marks ` " " ` are used around strings such as `"birch", "spruce" etc..`
 - Integer values `0, 1, 2..` and boolean values `true/false` do not use quotation marks.
@@ -53,14 +53,14 @@ A list of all the block states currently available within Bedrock can be found a
 https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/examples/blockstateslist
 
 ## Converting Aux Values to Block States
-For your convenience; download any of the excel sheet below to find the full list of block IDs, their aux values and equivelant block states in Bedrock. *Shared by kayla@Mojang*
+For your convenience; download any of the excel sheet below to find the full list of block IDs, their aux values and equivalent block states in Bedrock. *Shared by kayla@Mojang*
 
 <BButton
     link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/10987839/Aux-Value_to_Block-States_Map.xlsx"
     color=white
 >Download Sheet 1</BButton>
 
-Note; the above sheet was quickly generated and contains some minor errors. Boolean values `0` should be replaced with `false` and `1` should be replaced with `true` since the game doesn't recognise the syntax otherwise.
+Note; the above sheet was quickly generated and contains some minor errors. Boolean values `0` should be replaced with `false` and `1` should be replaced with `true` since the game doesn't recognize the syntax otherwise.
 
 Alternate sheet: *Shared by @ItsRichHeart*
 

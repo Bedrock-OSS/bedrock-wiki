@@ -11,7 +11,7 @@ Entity events are one of the fundamental building blocks of behavior alongside c
 
 ## Event Layout
 
-Events allow us to add and remove component groups from our entity allowing us to change the behavior of our entity when certain conditions are met. They are called events because we can activate them when events happen such as a timer running out, a player interacting with the entity or an environmental change occuring. When an event is activated it will read through the keys and determined whether to add or remove component groups.
+Events allow us to add and remove component groups from our entity allowing us to change the behavior of our entity when certain conditions are met. They are called events because we can activate them when events happen such as a timer running out, a player interacting with the entity or an environmental change occurring. When an event is activated it will read through the keys and determined whether to add or remove component groups.
 
 An event can have six different keys which can add or remove component groups:
 - add
@@ -83,7 +83,7 @@ Note that the `randomize` will only select one option out of the pool of options
 
 ### Sequence/Filters
 
-Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. Filters allow us to make conditional events which will only add/remove component groups if a conditon is met. The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
+Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. Filters allow us to make conditional events which will only add/remove component groups if a condition is met. The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
 
 <CodeHeader></CodeHeader>
 
@@ -132,7 +132,7 @@ Additionally, `sequence` allows us to run multiple parameters in sequence. It ev
 Entries in a sequence are not exclusive; if a filter in one of them passes, it does not prevent the other entries from running. In the case above, there is no filter in the first entry and so it automatically runs. This does not stop the other entries from being checked and subsequently running if valid.
 :::
 
-Below is an extensive example of using the sequence to combine filters, randomising and add & removing component groups:
+Below is an extensive example of using the sequence to combine filters, randomizing and add & removing component groups:
 
 <Spoiler title="Sequence Example">
 
@@ -339,7 +339,7 @@ This event is run when the entity is hit by a player or projectile. There is a 6
 ### Trigger
 
 Trigger is a parameter which can be used inside of an entity event to run other events based on filters to a chosen target.
-We can use this to trigger another event within the entity, and combining this with `sequence` can allow us to organise our events neatly.
+We can use this to trigger another event within the entity, and combining this with `sequence` can allow us to organize our events neatly.
 
 We are also able to specify filters and a target for the event. The target parameter is discussed in depth later. If the following event is called by the `minecraft:interact` component, then if the entity interacted with has the family tag `pig`, it will run the event `wiki:interacted` in the player that interacted with the entity.
 
@@ -562,11 +562,11 @@ The component `minecraft:damage_sensor` inside the pillager calls the event `min
 }
 ```
 
-Some components have these `targets` and each has certain ones that can be used. For example, `minecraft:interact` can have the target as either `self` or `other` where other is the entity that interacted with the entity. All valid components should have `self` and `target` as options where target is the targetted entity.
+Some components have these `targets` and each has certain ones that can be used. For example, `minecraft:interact` can have the target as either `self` or `other` where other is the entity that interacted with the entity. All valid components should have `self` and `target` as options where target is the targeted entity.
 
 ### Built-in Events
 In general, using the component groups from vanilla mobs will not work. For example, the `minecraft:convert_to_drowned` will not be called in your entity unless you use one of the methods above to call it. However, there are a few events that called automatically when the conditions are met:
--   `minecraft:entity_spawned` : called when the entity is spawned in. Useful for setting up inital component groups.
+-   `minecraft:entity_spawned` : called when the entity is spawned in. Useful for setting up initial component groups.
 -   `minecraft:entity_born`    : called when the entity is spawned in through breeding.
 -   `minecraft:entity_transformed` : called when another entity transforms into this one.
 -   `minecraft:on_prime`        : called when the entity's fuse is lit and is ready to explode.

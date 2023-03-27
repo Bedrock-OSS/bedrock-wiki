@@ -299,7 +299,7 @@ This method requires the `Holiday Creator Features` experimental toggle to be en
 We can notice several things here:
 
 - `format_version` must be `1.16.100`
-- `minecraft:on_use` will call an event everytime the item is used (right-clicked)
+- `minecraft:on_use` will call an event every time the item is used (right-clicked)
 
 In the event:
 

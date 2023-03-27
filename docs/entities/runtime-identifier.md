@@ -179,7 +179,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 -   Adds the Ender Dragon death effect to the entity.
 -   Inherits Ender Dragon hitbox.
--   Destroys blocks within hitbox, including blocks below the entity. To prevent it from falling to bedrock either, add a indutructible block below it, remove gravity from the entity or disable the `mobGriefing` gamerule.
+-   Destroys blocks within hitbox, including blocks below the entity. To prevent it from falling to bedrock either, add a indestructible block below it, remove gravity from the entity or disable the `mobGriefing` gamerule.
 -   Damages players within 2 blocks of hitbox.
 -   Increases distance it is rendered.
 -   Only able to be killed using /kill.
