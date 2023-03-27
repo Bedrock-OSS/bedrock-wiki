@@ -102,7 +102,7 @@ Other elements in different JSON UI files can then reference this variable to be
 }
 ```
 
-- You can add more variables with their values in place, seperated in a comma, within the `_global_variables.json` file.
+- You can add more variables with their values in place, separated in a comma, within the `_global_variables.json` file.
 - Variables stored in this file are constant and _one-sided_. And therefore, you cannot modify the default variable in one namespace to be then used by the other.
 
 ## Namespaces
@@ -393,7 +393,7 @@ We have to tell the source element where the value will come from, tell which pr
         "binding_type": "view",
         "source_control_name": "my_toggle", // the name of the source element
         "source_property_name": "#toggle_state", // We want this property value which tells in which state the toggle is in
-        "target_property_name": "#visible" // the target property to be overrided
+        "target_property_name": "#visible" // the target property to be overridden
       }
     ]
   },
@@ -479,7 +479,7 @@ The `visible` property is used to conditionally render a UI control when working
 }
 ```
 
-Modifying the above JSON into an unintrusive UI file used in a resource pack should look identical to this:
+Modifying the above JSON into an unobtrusive UI file used in a resource pack should look identical to this:
 
 <CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
 
@@ -680,7 +680,7 @@ You will need to add another binding object to the text to control its visibilit
 }
 ```
 
-Modifying the above JSON into an unintrusive UI file used in a resource pack should look identical to this:
+Modifying the above JSON into an unobtrusive UI file used in a resource pack should look identical to this:
 
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
 
@@ -857,30 +857,30 @@ As long as the `from_button_id` is inputted with it's appropriate `mapping_type`
 These are the list of common button IDs you can use in `from_button_id` property.
 
 **For mouse and keyboard:**
-| Button ID | Description |
-| --------- | ----------- |
-| `button.menu_select` | Mouse left click |
+| Button ID                      | Description       |
+| ------------------------------ | ----------------- |
+| `button.menu_select`           | Mouse left click  |
 | `button.menu_secondary_select` | Mouse right click |
-| `button.menu_ok` | ENTER key |
-| `button.menu_exit` | ESC key |
-| `button.menu_cancel` | ESC key |
-| `button.menu_up` | UP ARROW key |
-| `button.menu_down` | DOWN ARROW key |
-| `button.menu_left` | LEFT ARROW key |
-| `button.menu_right` | RIGHT ARROW key |
-| `button.menu_autocomplete` | TAB key |
+| `button.menu_ok`               | ENTER key         |
+| `button.menu_exit`             | ESC key           |
+| `button.menu_cancel`           | ESC key           |
+| `button.menu_up`               | UP ARROW key      |
+| `button.menu_down`             | DOWN ARROW key    |
+| `button.menu_left`             | LEFT ARROW key    |
+| `button.menu_right`            | RIGHT ARROW key   |
+| `button.menu_autocomplete`     | TAB key           |
 
 **For controllers:**
-| Button ID | Description |
-| --------- | ----------- |
-| `button.controller_select ` | X/A button |
-| `button.menu_secondary_select` | Y button |
-| `button.menu_exit` | B button |
-| `button.menu_cancel` | B button |
-| `button.menu_up` | UP DPAD key |
-| `button.menu_down` | DOWN DPAD key |
-| `button.menu_left` | LEFT DPAD key |
-| `button.menu_right` | RIGHT DPAD key |
+| Button ID                      | Description    |
+| ------------------------------ | -------------- |
+| `button.controller_select `    | X/A button     |
+| `button.menu_secondary_select` | Y button       |
+| `button.menu_exit`             | B button       |
+| `button.menu_cancel`           | B button       |
+| `button.menu_up`               | UP DPAD key    |
+| `button.menu_down`             | DOWN DPAD key  |
+| `button.menu_left`             | LEFT DPAD key  |
+| `button.menu_right`            | RIGHT DPAD key |
 
 It's a good practice in creating UIs to also add support for various different controls across different platforms with different control methods.
 

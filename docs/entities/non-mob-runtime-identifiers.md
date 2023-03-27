@@ -148,7 +148,7 @@ By default, `minecraft:portal` and `minecraft:end_portal` will teleport entities
 | Health               | The entity uses health, configurable via the `minecraft:health` component. Health can be evaluated using entity filters, components, and `query.health`. Health is serialized via NBT.<br><br>Structural integrity is always reported as `0` for entities using this hit point system. |
 | Structural integrity | The entity uses a hardcoded structural integrity system that cannot be configured. Structural integrity can only be queried, via `query.structural_integrity`. `minecraft:damage_sensor` has no functionality with entities that use structural integrity. Structural integrity is not serialized.<br><br>`query.hurt_time` and `query.hurt_direction` work with these entities.<br><br>With [one exception](#minecraft:armor_stand), health is always reported as `0` for entities using this hit point system. |
 | Item                 | The entity uses a special hit point system that serializes data into the `Health` top-level NBT field. This hit point system is only configurable via NBT. Configurations to `minecraft:health` are ignored. `minecraft:damage_sensor` has no functionality with entities that use item health.<br><br>Both health and structural integrity are always reported as `0` for entities using this hit point system. |
-| None                 | The entity does not use hit points, at least not in a convential sense. It may despawn on being hit or be immune to such damage.<br><br>Both health and structural integrity are always reported as `0` for entities using this hit point system. |
+| None                 | The entity does not use hit points, at least not in a conventional sense. It may despawn on being hit or be immune to such damage.<br><br>Both health and structural integrity are always reported as `0` for entities using this hit point system. |
 
 Assuming the entity is damageable, `/damage` is able to work for “health”, “structural integrity”, and “item” systems. For entities using the “item” system, although `/damage` functionally works and updates the `Health` NBT field correctly, feedback is always erroneously given saying the damage could not be applied.
 
@@ -1381,7 +1381,7 @@ Block-like entities act as stationary fake blocks or otherwise act as a workarou
 * The nearest `minecraft:ender_crystal` or entity using its runtime identifier to an Ender Dragon will heal it if the dragon is close enough.
 	* A channeling beam is displayed from this entity to that dragon.
 	* Can target and heal multiple dragons simultaneously if more than one would be present
-	* A dragon can only be healed by one Ender crystal (or entity using its runtime identifer) at a time.
+	* A dragon can only be healed by one Ender crystal (or entity using its runtime identifier) at a time.
 * Cannot be used to resurrect the Ender Dragon
 
 #### NBT Extensions
@@ -1682,7 +1682,7 @@ A few entity types are predominantly used for applying damage or status effects 
 * `ActorLimitedLifetimeComponent` in `internalComponent`
 
 #### Effects
-* When spawned, emits dozens of instances of `minecraft:evocation_fang_particle` in a recatangular prism laterally the same as the specified collision box and vertically bounded from 1 to 2 blocks above the entity’s position.
+* When spawned, emits dozens of instances of `minecraft:evocation_fang_particle` in a rectangular prism laterally the same as the specified collision box and vertically bounded from 1 to 2 blocks above the entity’s position.
 
 #### Server Attributes
 | Attribute                       | Value            | Additional Notes                          |
@@ -1890,7 +1890,7 @@ A few entities exclusively handle visual effects that may or may not act as game
 	* Manually emits approximately 4 particles per second over this time span
 	* Won’t replay particles when unloading and reloading chunks
 	* Cancelled early if the entity would die or despawn
-	* Although similar in behavior to the `minecraft:sparkler_emitter` definition, changing that effect definition is not reflected in these particles. Presumbaly, the effect is actually hardcoded.
+	* Although similar in behavior to the `minecraft:sparkler_emitter` definition, changing that effect definition is not reflected in these particles. Presumably, the effect is actually hardcoded.
 
 #### Server Attributes
 | Attribute                       | Value            | Additional Notes                                             |
@@ -2056,7 +2056,7 @@ The core behavior of `minecraft:elder_guardian_ghost` (applying mining fatigue a
 | Damageable                      | ❌                | Can be damaged via `/damage` by a player in creative mode, causing the entity to despawn |
 | Flammable                       | ✅                |                                                              |
 | Can be knocked back             | ⚠️                | Can be knocked back by explosions but not entity attacks     |
-| Effectible                      | ❌                | `/effect` erreoneously indicate success                      |
+| Effectible                      | ❌                | `/effect` erroneously indicate success                      |
 | Selectable                      | ✅                |                                                              |
 | Hookable                        | ❌                |                                                              |
 | Targetable                      | ✅                |                                                              |

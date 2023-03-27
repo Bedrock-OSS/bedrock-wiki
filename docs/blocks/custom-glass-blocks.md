@@ -82,7 +82,7 @@ By The End You Should Be Able To Create Something Like This!
 		"description": {
 			"identifier": "wiki:custom_vertical_connecting_glass",
 			"properties": {
-				//properties needed for connected textures, also contols up and down culling
+				//properties needed for connected textures, also controls up and down culling
 				"wiki:connected_state": [0, 1, 2, 3],
 				//properties to remove culling, depending on the direction in which a block is placed
 				"wiki:north": [0, 1],

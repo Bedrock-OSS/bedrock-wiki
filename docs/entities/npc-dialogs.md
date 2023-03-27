@@ -28,7 +28,7 @@ NPC dialog data is stored in dialog files, which are stored in the `dialogue` fo
 }
 ```
 
-In this file, there is an array of scenes. Each scene is a seperate dialog. You can put every dialog in one file, or you can put each one in a seperate file. Within each scene object are a number of properties that can be set to control the dialog:
+In this file, there is an array of scenes. Each scene is a separate dialog. You can put every dialog in one file, or you can put each one in a separate file. Within each scene object are a number of properties that can be set to control the dialog:
 
 #### scene_tag
 
@@ -161,7 +161,7 @@ This full example will create a custom item that will allow the player to telepo
 
 ### Creating the NPC
 
-Even if the NPC will never be visible, an NPC entity is always needed for the `/dialogue` command. To do this, you will need to summon the NPC and put it in a ticking area so that it is accesssible from anywhere:
+Even if the NPC will never be visible, an NPC entity is always needed for the `/dialogue` command. To do this, you will need to summon the NPC and put it in a ticking area so that it is accessible from anywhere:
 
 <CodeHeader>functions/setup.mcfunction</CodeHeader>
 

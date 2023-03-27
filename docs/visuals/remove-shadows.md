@@ -41,11 +41,11 @@ You can also add the [custom hit test component](https://bedrock.dev/docs/stable
 
 ## Teleport underground
 
-If you have a dummy entity (invisible) that you need to interact with, you can telport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
+If you have a dummy entity (invisible) that you need to interact with, you can teleport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
 
 ## Using runtime identifier
 
-Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifers document](/entities/runtime-identifier) for more information.
+Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifiers document](/entities/runtime-identifier) for more information.
 
 ## Using Materials
 

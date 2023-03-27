@@ -19,7 +19,7 @@ For development on Android, you'll need a combination of 3 applications.
 
 These file managers are known to have ZIP archiving and view-only access to the `Android/data` folder:
 
-1. [**X-Plore**](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore) - a powerful file manager with dual-pane tree view, a built-in text editor (not code), several file compression formats (ZIP, 7zip, RAR, etc.), and more. On rooted devices, X-Plore has edit acess to `Android/data` and root directories.
+1. [**X-Plore**](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore) - a powerful file manager with dual-pane tree view, a built-in text editor (not code), several file compression formats (ZIP, 7zip, RAR, etc.), and more. On rooted devices, X-Plore has edit access to `Android/data` and root directories.
 2. [**Total Commander**](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander) - not as powerful out of the box compared to X-Plore, but contains some of the same features including dual pane, ZIP and RAR archives, and view-only access to `Android/data`. Total Commander has list view instead of tree and many other features that require plugins (apps from Google Play) to use.
 
 ### Code Editors
@@ -129,7 +129,7 @@ Now create another `manifest.json` file in your addon's resource pack folder. Ag
 
 ## UUID Breakdown
 
-A UUID, or **U**niversally **U**nique **ID**entifier, both identifies your pack for other programs (Minecraft, for example) and seperates your pack from someone else's pack for the program it's for. A version 4 UUID (UUID-4) is usually in the format `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` and made of a random string of letters and numbers. For example: `5c830391-0937-44d6-9774-406de66b6984`.
+A UUID, or **U**niversally **U**nique **ID**entifier, both identifies your pack for other programs (Minecraft, for example) and separates your pack from someone else's pack for the program it's for. A version 4 UUID (UUID-4) is usually in the format `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` and made of a random string of letters and numbers. For example: `5c830391-0937-44d6-9774-406de66b6984`.
 
 You should **NEVER** use the same UUID twice! Use the [Online UUID Generator Tool](https://www.uuidgenerator.net/version4) to generate the UUID's needed for your manifest files. Every manifest file uses two different UUID's. So to ensure your packs will work correctly, get 4 different UUID's to replace all of the `...` in both manifests. When finished, each UUID entry should look similar like this: `"uuid": "5c830391-0937-44d6-9774-406de66b6984`
 
@@ -154,7 +154,7 @@ Remember when we said we'll define the pack name and description in code form ea
 
 ```
 pack.name=§2My §lFIRST §r§2Addon's Behaviour Pack!
-pack.description=This addon is made by a Wiki Contributer!
+pack.description=This addon is made by a Wiki Contributor!
 ```
 
 <codeHeader>BP/texts/languages.json</codeHeader>
@@ -186,7 +186,7 @@ Now that your addon has all of the required content, we need to import it to Min
    ![](/assets/images/guide/project-setup-android/zip-addon.png)
 4. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
 
-If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Sucessfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](./troubleshooting).
+If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Successfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](./troubleshooting).
 
 ## Turn on Content Log
 

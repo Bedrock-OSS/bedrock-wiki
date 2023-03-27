@@ -64,7 +64,7 @@ You can find the BP player entity file in the vanilla behavior pack provided by 
 
 ## pretamed_wolf.json
 
-Afterwards, we'll need to create a simple custom entity that will have the `minecraft:arrow` runtime identifier (other projectile runtime identifiers work as well), an empty projectile component, and a trasnfomation component to turn into a tamed wolf.
+Afterwards, we'll need to create a simple custom entity that will have the `minecraft:arrow` runtime identifier (other projectile runtime identifiers work as well), an empty projectile component, and a transformation component to turn into a tamed wolf.
 
 <CodeHeader>BP/entities/pretamed_wolf.json</CodeHeader>
 

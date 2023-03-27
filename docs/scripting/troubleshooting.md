@@ -41,7 +41,7 @@ This error occurs when the combined memory usage exceeds 250 megabytes.
 
 This saves and shuts down the world by Watchdog termination and cannot be canceled using `BeforeWatchdogTerminateEvent`.
 
-The memory limit can be adjusted in `server.properities` by modifying `script-watchdog-memory-limit`. (Setting this value to 0 disables the limit.)
+The memory limit can be adjusted in `server.properties` by modifying `script-watchdog-memory-limit`. (Setting this value to 0 disables the limit.)
 
 ### InternalError: stack overflow
 
@@ -72,13 +72,13 @@ This is common when attempting to set property on native objects from native mod
 
 This occurs when an iteration happens over a value that is not an iterable object.
 
-Click [**here**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/is_not_iterable) for more infomation.
+Click [**here**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/is_not_iterable) for more information.
 
 ### TypeError: not a function
 
 This occurs when there was an attempt to call a value from a function, but the value is not actually a function. This is very common as script API constantly remove or rename methods without mentioning them in Minecraft changelog.
 
-Click [**here**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) for more infomation.
+Click [**here**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) for more information.
 
 ### TypeError: Native Type Conversion Failed
 
@@ -91,7 +91,7 @@ This error occurs when you input the wrong type of value into an optional parame
 ### TypeError: Object did not have a native handle
 
 ::: warning
-This error is not documented publicly, so the explaination is an estimate.
+This error is not documented publicly, so the explanation is an estimate.
 :::
 
 The error throws when the script tries to fetch a native handle from a JavaScript object, but the handle instance was cleared.
@@ -99,7 +99,7 @@ The error throws when the script tries to fetch a native handle from a JavaScrip
 ### ReferenceError: Native object bound to prototype does not exist.
 
 ::: warning
-This error is not documented publicly, so the explaination is an estimate.
+This error is not documented publicly, so the explanation is an estimate.
 :::
 
 This error throws when a method is not supported by native codebase due to unexpected reasons. In some circumstances restarting the game should fix the issue.

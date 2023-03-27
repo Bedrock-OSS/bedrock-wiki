@@ -128,7 +128,7 @@ A render controller simply controls how your entity will be rendered. This file 
 	}
 }
 ```
-Here, this render controller says to always use the `default` material, texture and geomtry. You can get much more complex render controllers which allow for switching textures or making certain parts of the geomtry invisible. This is explained on our render controller page [here](/entities/render-controllers).
+Here, this render controller says to always use the `default` material, texture and geometry. You can get much more complex render controllers which allow for switching textures or making certain parts of the geometry invisible. This is explained on our render controller page [here](/entities/render-controllers).
 
 To tell our entity which render controller to use, we just add the render controller identifier to our file.
 
@@ -140,7 +140,7 @@ To tell our entity which render controller to use, we just add the render contro
 ]
 ```
 
-The most basic entity file requires these 4 keys in order to propely render an entity.
+The most basic entity file requires these 4 keys in order to properly render an entity.
 
 ## Animations
 Animations describe how our entity may move. This can include walking animations, attacks or the way entities look at the player. They are defined by code which describe how a geometry moves at certain times or using maths equations. You need a geometry in order for your animations to work.
@@ -156,7 +156,7 @@ Animations describe how our entity may move. This can include walking animations
 	}
 }
 ```
-Each animation is defined by its idenfitier. Our animation key is then another shortname definition for our animations.
+Each animation is defined by its identifier. Our animation key is then another shortname definition for our animations.
 
 <CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
 
@@ -193,11 +193,11 @@ The scripts key defines certain scripts which the entity runs at certain times. 
 
 Some useful things in Molang are:
 - queries. These are values which change depending on the condition. For example the `query.time_of_day` or `q.time_of_day` query returns the time of day.
-- variables. These are valus can you edit to hold values to use later. For example, you can set the variable `variable.my_number` or `v.my_number` to be say 2.
+- variables. These are values can you edit to hold values to use later. For example, you can set the variable `variable.my_number` or `v.my_number` to be say 2.
 - evaluating. In Molang, we can use operators to return values. For example, we can return the value 1 if `q.time_of_day` is greater than `v.my_number` by writing `q.time_of_day > v.my_number`.
 
-### Initailize
-This script runs when the entity is first intialize, that is when it spawns in and each time it is loaded. This means each time you log into your world it will run anything in this script. This is useful for setting default values for custom variables.
+### Initialize
+This script runs when the entity is first initialize, that is when it spawns in and each time it is loaded. This means each time you log into your world it will run anything in this script. This is useful for setting default values for custom variables.
 
 ### Pre Animation
 This script runs every frame before the animations play. This is useful for computing variables that will be used in animations that need to be calculated before the animation runs.
@@ -239,7 +239,7 @@ Another difference of `scale` is that you can use Molang and there are 3 additio
 }
 ```
 
-Here, our entity will scale depending on what variant it has detemined by `minecraft:variant` component. This may be benefical if you want to keep the hitbox the same but have the entity look larger.
+Here, our entity will scale depending on what variant it has determined by `minecraft:variant` component. This may be beneficial if you want to keep the hitbox the same but have the entity look larger.
 Additionally, the model will be squashed in the `y` direction by a factor of 2 and stretched in the `x` direction by a factor of 2.
 
 A use case of this may be having an atmospheric entity which has a random size.

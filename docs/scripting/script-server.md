@@ -9,7 +9,7 @@ tags:
 The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.70
 :::
 
-In Scripting API, most of the core feaures are implemented in the `@minecraft/server` module, with lots of methods to interact a Minecraft world, including entities, blocks, dimensions, and more programmatically. This article contains a basic introduction to some of the core API mechanics, for more detailed infomation please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
+In Scripting API, most of the core features are implemented in the `@minecraft/server` module, with lots of methods to interact a Minecraft world, including entities, blocks, dimensions, and more programmatically. This article contains a basic introduction to some of the core API mechanics, for more detailed information please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
 
 ## Setup
 You will need to add the Script module as a dependency in your `manifest.json`.
@@ -269,7 +269,7 @@ Normally we recommend avoiding using commands because asynchronous programs add 
 
 **Ender chest and offhand slot** 
 
-Script API does not provide any methods to get/set infomation of player's ender chest and off hand slot. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
+Script API does not provide any methods to get/set information of player's ender chest and off hand slot. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
 
 **tickingarea**
 
@@ -290,7 +290,7 @@ Script API can't display translations in title, subtitle or actionbar in rawtext
 **Player's abilities**
 
 - Script API you can't set abilities for each player.
-- You can't read player's abilites.
+- You can't read player's abilities.
 
 **execute**
 

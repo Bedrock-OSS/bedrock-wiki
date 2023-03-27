@@ -26,7 +26,7 @@ A lot of people imagine different things like Codes, Scripts, Programming Langua
 
 ## API Modules?
 
-The API is divided into other sub-modules according to functionality, some API functions may not be so safe for basic users, so they are only allowed on servers or they cannot work on some divices, for that we have different packages of API functions that we can call Modules.
+The API is divided into other sub-modules according to functionality, some API functions may not be so safe for basic users, so they are only allowed on servers or they cannot work on some devices, for that we have different packages of API functions that we can call Modules.
 
 Modules should be named after the functionality they contain.
 

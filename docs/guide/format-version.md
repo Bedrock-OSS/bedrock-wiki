@@ -13,7 +13,7 @@ Selecting the wrong format version is a common source of errors. When troublesho
 
 ## Why do format versions exist?
 
-Format versions exist to *version* the Addon system, and allow Mincraft to introduce new features into the addon system, without breaking old Addons. For example, a `1.8.0` format version RP Entity file has very different syntax than a `1.10.0` format version RP Entity file. By using the 'format_version' key in the json *you* can decide which version you want to use.
+Format versions exist to *version* the Addon system, and allow Minecraft to introduce new features into the addon system, without breaking old Addons. For example, a `1.8.0` format version RP Entity file has very different syntax than a `1.10.0` format version RP Entity file. By using the 'format_version' key in the json *you* can decide which version you want to use.
 
 By using format versions *per file*, Minecraft gives you a lot of control over how your addon will be interpreted by the game. It is completely possible and expected to mix different format versions in your addon.
 

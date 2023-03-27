@@ -41,7 +41,7 @@ The following command install TypeScript globally.
 npm install -g typescript
 ```
 
-The following command creates a package.json file in current directory. See [here](https://docs.npmjs.com/cli/v9/commands/npm-init) for more infomation.
+The following command creates a package.json file in current directory. See [here](https://docs.npmjs.com/cli/v9/commands/npm-init) for more information.
 
 ```bash
 npm init -y

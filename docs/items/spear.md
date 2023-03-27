@@ -36,7 +36,7 @@ Making custom spears is a really simple task. It was not simple for Koala Boy th
 
 ## Item
 
-It can go without saying that you'd obviosly need an item to make a spear, however we don't use some "basic" behaviors. Let's get an item file and let's add the following componets. Let's start with the main components:
+It can go without saying that you'd obviously need an item to make a spear, however we don't use some "basic" behaviors. Let's get an item file and let's add the following components. Let's start with the main components:
 
 <CodeHeader>BP/items/spear.json</CodeHeader>
 
@@ -347,7 +347,7 @@ world.events.itemReleaseCharge.subscribe(ev => {
     for (const player of world.getPlayers()){
     //Basic variables to get the player inventory and held item.
       let inv = player.getComponent( 'inventory' ).container
-      //Our ItemStact to save our item. This also saves item data.
+      //Our itemStack to save our item. This also saves item data.
       const itemStack = inv.getItem(player.selectedSlot);
     //If the item we're holding is our spear, we run code.
       if (itemStack?.typeId === 'wiki:iron_spear') {
