@@ -33,7 +33,7 @@ Each new line in a function file represents a new command. You may start a line 
 All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible.
 Commands in a function are still run in the same order, however.
 
-It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.70 execute syntax.
+It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
 
 Running commands with a specified delay is difficult, but not entirely impossible. Setting a tick delay would involve using Command Timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file.
 
