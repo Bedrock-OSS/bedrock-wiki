@@ -7,7 +7,7 @@ mention:
     - jordanparki7
 nav_order: 1
 tags:
-    - guide
+    - info
 ---
 
 ## Introduction
