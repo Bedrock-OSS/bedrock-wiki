@@ -2,62 +2,86 @@
 title: Functions
 category: General
 mention:
+	- Bedrock Commands
 	- SirLich
-tags:
-	- easy
+	- cda94581
+	- jordanparki7
 ---
+## Introduction
+Functions are `.mcfunction` files which contain multiple lines of commands. They are run with the `/function` command in-game.
+
+Functions are created in a **Behavior Pack**, nested within the **functions** folder. A function pack creates a system using solely function files.
+
+## Function Pack Folder Structure
+
+<FolderView
+	:paths="[
+    'BP',
+    'BP/functions',
+    'BP/functions/thiscode.mcfunction',
+    'BP/functions/moreofthiscode.mcfunction',
+    'BP/functions/tick.json',
+    'BP/functions/nested',
+    'BP/functions/nested/thiscodeisnested.mcfunction',
+]"
+></FolderView>
+
+## Guidance
+
+Each new line in a function file represents a new command. You may start a line with # to add comments. Commands in a function do not need to begin with a slash `/`, however doing so will not cause any errors.
+
+All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible.
+Commands in a function are still run in the same order, however.
+
+It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.70 execute syntax.
+
+Running commands with a specified delay is difficult, but not entirely impossible. Setting a tick delay would involve using Command Timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file.
+
+## Creating a Function
+
+1. Locate the com.mojang folder and navigate to development_behavior_packs
+
+> The development folders are used for quick reloading of packs, as the packs aren't cached to a specified world.
+
+2. Create a folder (of any name) for the function pack. This will be referred to as Behavior Pack or BP.
+
+3. Create a functions folder. Any file within this folder that ends with .mcfunction will be registered as a function in-game, which can be run with `/function <function_name>`.
+
+Nested functions are allowed, simply list the file path in relation to the functions folder as shown in the function pack folder structure.
+
+Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
+
+> Note that functions are versioned; they will run in the version listed in the manifest.json
+
+## Execution
+
+Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick. 
+
+Nested functions, for example `BP/functions/folder/function1.mcfunction` can be run using the nested folder path, in this case `/function folder/function1`
+
+## tick.json
+
+The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block.) It is located in the `BP/functions` folder.
+
+<CodeHeader>BP/functions/tick.json</CodeHeader>
+```
+{
+  "values": [
+    "function_1",
+    "function_2"
+  ]
+}
+```
+> Be aware that functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
+
+Functions are useful in many ways to reduce to time spent going from command block to command block debugging a system. They also help with packaging systems for use in multiple worlds and provide many functions that can change how everything works.
+
 
 :::tip
 Minecraft can **not** run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
 :::
 
-`mcfunction` files are stored in your BP as `BP/functions/my_function.mcfunction`. You can add as many functions as you like.
-
-Functions are used to group multiple Minecraft Commands (such as `/say` or `/teleport`) into manageable chunks (or functions). Commands inside a function file do not begin with `/`.
-
-Example:
-<CodeHeader>BP/functions/my_function.mcfunction</CodeHeader>
-
-```
-tag @s add dev
-gamemode creative
-effect @s night_vision 100000 1 true
-
-# You can write comments like this
-say hey!
-```
-
-Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick. Nested functions will also run in the same tick as the parent function.
-
-Function files can be nested, for example: `BP/functions/teleport/home.mcfunction` will create a new function called `teleport/home`, which can be called in game like `/function teleport/home`.
-
-Function files can be reloaded without leaving the game with the `/reload` command.
-
-## Running functions through tick.json
-
-`tick.json` is a server-side file located as `BP/functions/tick.json` that lets you execute function files.
-
-Functions will be run for each tick as if placed in a repeating command block.
-
-### Creating tick.json
-
-Create a file called tick.json in your root function folder. The format is this:
-
-<CodeHeader>BP/functions/tick.json</CodeHeader>
-
-```json
-{
-	"values": ["function_file_name_one", "function_file_name_two"]
-}
-```
 
 ### Known Issues
 
-While this is a valuable file when you're trying to stray away from using repeating command blocks in-game, it's known for executing function files before the world has fully loaded in. This might cause unintended command behavior and crashes, and it's recommended to wait for a more official release of this file.
-
-### Useful tick.json Creations
-
-<BButton
-	link="/commands/tick_json-creations"
-	color=blue
->View</BButton>
+While `tick.json` is a valuable file when you're trying to stray away from using repeating command blocks in-game, it may execute function files before the world has fully loaded in. This might cause unintended command behavior.
