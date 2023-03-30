@@ -62,7 +62,7 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 
 - **Strings** are unique 'text' inputs. You can simply understand it as multiple choice questions.
     - What color is this wool? `"white"`, `"orange"`, `"brown"` etc..
-    - What tree type is this log? `"spruce"`, `"birch"`, `"acacia"` etc..
+    - What wood type is this log? `"spruce"`, `"birch"`, `"acacia"` etc..
     - `["wood_type":"spruce"]`
  
  
@@ -92,3 +92,25 @@ Alternate sheet: *Shared by @ItsRichHeart*
 >Download Sheet 2</BButton>
 
 You may also use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) instead not needing to download any files.
+
+## Known Issue
+
+Detecting blocks using commands such as `/execute` or `/testforblock` requires __all__ or __none__ of the block states specified else the command returns an error.
+
+Example; detecting a pressed stone button on ground facing up:
+<CodeHeader></CodeHeader>
+
+```yaml
+#✅ Accepted:
+/execute if block ~~~ stone_button [“button_pressed_bit”:true,”facing_direction”:1] run say success
+/execute if block ~~~ stone_button run say success
+
+# ❌ Not Accepted:
+/execute if block ~~~ stone_button [“button_pressed_bit”:true] run say success
+/execute if block ~~~ stone_button [“facing_direction”:1] run say success
+```
+Though block states have replaced aux values, we still cannot detect blocks based on specific filters like we do with selector arguments yet.
+
+### Related Bug Reports
+- [MCPE-133360](https://bugs.mojang.com/browse/MCPE-133360)
+- [MCPE-168391](https://bugs.mojang.com/browse/MCPE-168391)
