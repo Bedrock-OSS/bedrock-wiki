@@ -48,9 +48,31 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 - Leaving the brackets blank is also a correct syntax, it will simply default to 0.
 - `wool 0` is white wool hence you may simply write it as `wool []` instead of `wool ["color":"white"]`
 
+### Notes For Beginners
+
+- **Integers** simply mean numbers. They are used to define a block from a 'range' of values.
+    - Example: Redstone power 1 to 15
+    - `["redstone_power":10]`
+
+- **Boolean** is a programming term which refers to `true/false` values. You can simply understand it as yes or no questions.
+    - Is this piston powered? `yes/no`
+    - Is this button pressed? `yes/no`
+    - Is this log stripped? `yes/no`
+    - `["stripped_bit":true]`
+
+- **Strings** are unique 'text' inputs. You can simply understand it as multiple choice questions.
+    - What color is this wool? `"white"`, `"orange"`, `"brown"` etc..
+    - What tree type is this log? `"spruce"`, `"birch"`, `"acacia"` etc..
+    - `["wood_type":"spruce"]`
+ 
+ 
 ## Block States List
 A list of all the block states currently available within Bedrock can be found at:
 https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/examples/blockstateslist
+
+Note; in the site block states may be written as one word but make sure to separate them with underscores `_` when typing in commands.
+
+Example: `buttonPressedBit` → `"button_pressed_bit"`
 
 ## Converting Aux Values to Block States
 For your convenience; download any of the excel sheet below to find the full list of block IDs, their aux values and equivalent block states in Bedrock. *Shared by kayla@Mojang*
