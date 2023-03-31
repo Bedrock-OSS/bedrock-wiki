@@ -2,12 +2,11 @@
 title: Intro to Command Blocks
 category: General
 mention:
-    - BedrockCommands
-    - EziGotFliped
-    - jordanparki7
+ - BedrockCommands
+ - EziGotFliped
 nav_order: 1
 tags:
-    - info
+ - info
 ---
 
 ## Introduction
@@ -21,8 +20,8 @@ They can only be placed or destroyed by a player with the Operator permission le
 ## Obtaining
 
 1. Open your world settings.
-2. Turn"Enable Cheats" setting ON.
-3. Type the following command into the chat: `/give @s command_block`
+2. Under Cheats toggle "Activate Cheats" setting ON.
+3. Run `/give @s command_block` command in chat.
 
 ## Command Block Types
 
@@ -30,15 +29,15 @@ They can only be placed or destroyed by a player with the Operator permission le
 
 ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **Chain** runs the command in a sequence. ie. only after the previous command block it is comnecting from was run.
 
-![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **Repeat** runs the command every game tick. There are approx 20 ticks per second. A delay can be applied to adjust how often the command is executed, (explained [here](/intro-to-command-blocks.md#tick-delay).)
+![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **Repeat** runs the command every game tick. There are approx 20 ticks per second. A delay can be applied to adjust how often the command is executed, (explained [here](/intro-to-command-blocks.html#command-block-tick-delay).)
 
 ## Command Block Conditions
 
 **Conditional** command blocks will run the command only if the previous command block it was connecting from had an output that was `true` (successful)
 > Conditional command block states are shown by a small indent into the command block's texture, as shown below:
-> - ![pasteCommandButton](/assets/images/commands/impulseConditionalCommandBlock.png) < Impulse Conditional Command Block
-> - ![repeatingConditionalCommandBlock](/assets/images/commands/repeatingConditionalCommandBlock.png) < Repeating Conditional Command Block
-> - ![chainConditionalCommandBlock](/assets/images/commands/chainConditionalCommandBlock.png) < Chain Conditional Command Block
+> - ![pasteCommandButton](/assets/images/commands/impulseConditionalCommandBlock.png) Impulse Conditional Command Block
+> - ![chainConditionalCommandBlock](/assets/images/commands/chainConditionalCommandBlock.png) Chain Conditional Command Block
+> - ![repeatingConditionalCommandBlock](/assets/images/commands/repeatingConditionalCommandBlock.png) Repeating Conditional Command Block
 
 **Unconditional** command blocks will run the command regardless. Whether the previous command block it was connecting from had an output that was `true` (succesful), `false` (failed) or even if it came with a syntax error the command block will still run the command.
 
@@ -97,7 +96,7 @@ The arrow/facing direction can be observed from the command block texture.
 
 ## Troubleshooting
 
-If you have any issues with command blocks or don't quite know why they aren't running, you should read the [Troubleshooting Commands](https://wiki.bedrock.dev/commands/troubleshooting-commands.html) page.
+If you have any issues with command blocks or don't quite know why they aren't running, you should read the [Troubleshooting Commands](/commands/troubleshooting-commands.html) page.
 
 ## What you have learned
 :::tip What you have learned:
