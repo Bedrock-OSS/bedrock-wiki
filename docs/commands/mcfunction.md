@@ -1,11 +1,10 @@
 ---
 title: Functions
 category: General
-mention:
-	- Bedrock Commands
-	- SirLich
-	- cda94581
-	- jordanparki7
+mentions:
+ - Bedrock Commands
+ - cda94581
+nav_order: 3
 ---
 ## Introduction
 Functions are `.mcfunction` files which contain multiple lines of commands. They are run with the `/function` command in-game.
@@ -74,7 +73,7 @@ The final file within a function is the **tick.json** file. This specifies funct
 ```
 > Be aware that functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
 
-Functions are useful in many ways to reduce to time spent going from command block to command block debugging a system. They also help with packaging systems for use in multiple worlds and provide many functions that can change how everything works.
+Functions are useful in many ways to reduce the time spent going from command block to command block debugging a system. They also help with packaging systems for use in multiple worlds and provide many functions that can change how everything works.
 
 
 :::tip
