@@ -3,7 +3,7 @@ title: Intro to Command Blocks
 category: General
 mention:
  - BedrockCommands
- - EziGotFliped
+ - zheaEvyline
 nav_order: 1
 tags:
  - info
