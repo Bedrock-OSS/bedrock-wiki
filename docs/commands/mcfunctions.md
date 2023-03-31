@@ -90,5 +90,5 @@ Enabling the [Content Log](https://wiki.bedrock.dev/guide/troubleshooting.html#c
 
 The list of errors will be in the content log history and also display in the Content Log GUI each time you load the world or run `/reload` to apply changes after editing the files.
 
-[contentLogToggles](public/assets/images/commands/contentLogToggles.png)
-[contentLogHistory](public/assets/images/commands/contentLogHistroy.png)
+[contentLogToggles](/assets/images/commands/contentLogToggles.png)
+[contentLogHistory](/assets/images/commands/contentLogHistroy.png)
