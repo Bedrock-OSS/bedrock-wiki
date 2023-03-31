@@ -84,6 +84,7 @@ The final file within a function is the **tick.json** file. This specifies funct
 While `tick.json` is a valuable file when you're trying to stray away from using repeating command blocks in-game, it may execute function files before the world has fully loaded in. This might cause unintended command behavior.
 
 ## Troubleshooting Functions
+
 Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands in the function.
 
 Enabling the [Content Log](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) in creator settings will allow you to see if there are any errors in your function pack, in which function the error is in, at which line and exactly what the syntax error for that command is.
