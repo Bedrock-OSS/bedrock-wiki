@@ -5,6 +5,8 @@ mentions:
  - Bedrock Commands
  - cda94581
 nav_order: 3
+tags:
+ - info
 ---
 ## Introduction
 Functions are `.mcfunction` files which contain multiple lines of commands. They are run with the `/function` command in-game.
