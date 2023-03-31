@@ -88,7 +88,11 @@ Minecraft can **not** run more than 10,000 lines of functions in one function fi
 While `tick.json` is a valuable file when you're trying to stray away from using repeating command blocks in-game, it may execute function files before the world has fully loaded in. This might cause unintended command behavior.
 
 ## Troubleshooting Functions
-Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands within the function. It is useful to enable [content log errors](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) to easily find these issues.
+Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands in the function.
+
+Enabling the [Content Log](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) in creator settings will allow you to see if there are any errors in your function pack, which function the error is in, exaclty at which line and what is the syntax error for that command.
+
+The list of errors will be in the content log history and also display in the Content Log GUI each time you load the world or run `/reload` after making changes.
 
 [contentLogToggles](public/assets/images/commands/contentLogToggles.png)
 [contentLogGUI](public/assets/images/commands/contentLogGUI.png)
