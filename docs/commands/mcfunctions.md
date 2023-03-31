@@ -36,7 +36,7 @@ Commands in a function are still run in the same order, however.
 
 It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
 
-Running commands with a specified delay is difficult, but not entirely impossible. Setting a tick delay would involve using Command Timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file.
+Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](https://wiki.bedrock.dev/commands/scoreboard-timers.html) system to learn how to set it up.
 
 ## Creating a Function
 
@@ -88,4 +88,7 @@ Minecraft can **not** run more than 10,000 lines of functions in one function fi
 While `tick.json` is a valuable file when you're trying to stray away from using repeating command blocks in-game, it may execute function files before the world has fully loaded in. This might cause unintended command behavior.
 
 ## Troubleshooting Functions
-Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands within the function. It is useful to enable [content log errors](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) to easily find these issues. 
+Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands within the function. It is useful to enable [content log errors](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) to easily find these issues.
+
+[contentLogToggles](public/assets/images/commands/contentLogToggles.png)
+[contentLogGUI](public/assets/images/commands/contentLogGUI.png)
