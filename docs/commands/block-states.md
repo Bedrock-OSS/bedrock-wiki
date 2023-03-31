@@ -3,7 +3,7 @@ title: Block States
 category: General
 mention:
     - BedrockCommands
-    - EziGotFliped
+    - zheaEvyline
 tags:
     - info
 ---
