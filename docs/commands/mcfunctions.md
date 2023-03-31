@@ -90,9 +90,9 @@ While `tick.json` is a valuable file when you're trying to stray away from using
 ## Troubleshooting Functions
 Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands in the function.
 
-Enabling the [Content Log](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) in creator settings will allow you to see if there are any errors in your function pack, which function the error is in, exaclty at which line and what is the syntax error for that command.
+Enabling the [Content Log](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) in creator settings will allow you to see if there are any errors in your function pack, in which function the error is in, at which line and exactly what the syntax error for that command is.
 
-The list of errors will be in the content log history and also display in the Content Log GUI each time you load the world or run `/reload` after making changes.
+The list of errors will be in the content log history and also display in the Content Log GUI each time you load the world or run `/reload` to apply changes after editing the files.
 
 [contentLogToggles](public/assets/images/commands/contentLogToggles.png)
-[contentLogGUI](public/assets/images/commands/contentLogGUI.png)
+[contentLogHistory](public/assets/images/commands/contentLogHistroy.png)
