@@ -13,6 +13,8 @@ Functions are `.mcfunction` files which contain multiple lines of commands. They
 
 Functions are created in a **Behavior Pack**, nested within the **functions** folder. A function pack creates a system using solely function files.
 
+Functions are useful in many ways to reduce the time spent going from command block to command block debugging a system. They also help with packaging systems for use in multiple worlds and provide many functions that can change how everything works.
+
 ## Function Pack Folder Structure
 
 <FolderView
@@ -38,19 +40,21 @@ It is not possible to run conditional commands. Those will still need to utilize
 
 Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](https://wiki.bedrock.dev/commands/scoreboard-timers.html) system to learn how to set it up.
 
+:::tip
+Minecraft can **not** run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
+:::
+
 ## Creating a Function
 
 1. Locate the com.mojang folder and navigate to development_behavior_packs
-
-> The development folders are used for quick reloading of packs, as the packs aren't cached to a specified world.
+    - The development folders are used for quick reloading of packs, as the packs aren't cached to a specified world.
 
 2. Create a folder (of any name) for the function pack. This will be referred to as Behavior Pack or BP.
 
 3. Create a functions folder. Any file within this folder that ends with .mcfunction will be registered as a function in-game, which can be run with `/function <function_name>`.
+    - Nested functions are allowed, simply list the file path in relation to the functions folder as shown in the function pack folder structure.
 
-Nested functions are allowed, simply list the file path in relation to the functions folder as shown in the function pack folder structure.
-
-Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
+4. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
 
 > Note that functions are versioned; they will run in the version listed in the manifest.json
 
@@ -74,14 +78,6 @@ The final file within a function is the **tick.json** file. This specifies funct
 }
 ```
 > Be aware that functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
-
-Functions are useful in many ways to reduce the time spent going from command block to command block debugging a system. They also help with packaging systems for use in multiple worlds and provide many functions that can change how everything works.
-
-
-:::tip
-Minecraft can **not** run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
-:::
-
 
 ## Known Issues
 
