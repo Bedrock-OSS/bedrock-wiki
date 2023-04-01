@@ -16,7 +16,7 @@ tags:
 This system allows you to run your desired commands at specific intervals with any amount of delay you wish to add.
 
 - **Some Examples:**
-    - Sending a message in chat every 20 minutes.
+    - Sending a message in chat every 2 hour.
     - Running a 'lag clear' function every 10 minutes.
     - Effecting players with 'speed' 30 seconds.
  
@@ -34,13 +34,22 @@ It is also recommended to use this system while working with command blocks as w
 /scoreboard objectives add events dummy
 ```
 
-Once you have created these two objectives you will need to define the interval for each repeating event you need on your world in the `ticks` objective like so:
+Once you have created these two objectives you will need to define the interval for each repeating event you need on your world in the `ticks` objective.
+
+To do that first you must to know 1 second is approximately 20 game ticks in Minecraft. Based on this knowledge you will need to do some basic calculations to obtain the ticks equivalent for each interval you want to define.
 <CodeHeader></CodeHeader>
 
 ```yaml
-/scoreboard players set 20m ticks
+# 2h = 20t × 60s × 60m × 2 = 144000t
+/scoreboard players set 20m ticks 144000
 
+#10m = 20t × 60s × 10 = 12000t
+/scoreboard players set 10m ticks 12000
+
+#30s = 20t × 30s = 600t
+/scoreboard players set 30s ticks 600
 ```
+We will now use this scoreboard data to make our timers work as intended.
 
 ## System
 
