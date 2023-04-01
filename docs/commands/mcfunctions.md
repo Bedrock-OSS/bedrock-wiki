@@ -77,7 +77,7 @@ The final file within a function is the **tick.json** file. This specifies funct
   ]
 }
 ```
-> Be aware that functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
+> Note; functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
 
 ## Known Issues
 
