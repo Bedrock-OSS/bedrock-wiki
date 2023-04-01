@@ -89,7 +89,7 @@ Your functions may not appear within the command suggestions when using `/functi
 
 Enabling the [Content Log](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) in creator settings will allow you to see if there are any errors in your function pack, in which function the error is in, at which line and exactly what the syntax error for that command is.
 
-The list of errors will be in the content log history and also display in the Content Log GUI each time you load the world or run `/reload` to apply changes after editing the files.
+The list of errors will be in the content log history and also display in the Content Log GUI each time you load the world or run `/reload` to reflect changes after editing the files.
 
 [contentLogToggles](/assets/images/commands/contentLogToggles.png)
 
