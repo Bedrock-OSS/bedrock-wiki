@@ -41,13 +41,13 @@ To do that, first you must know that **1 second is approximately 20 game ticks i
 <CodeHeader></CodeHeader>
 
 ```yaml
-#2h = 20t × 60s × 60m × 2 = 144000t
+# 2h = 20(t) × 60(s) × 60(m) × 2(h) = 144000t
 /scoreboard players set 20m ticks 144000
 
-#10m = 20t × 60s × 10 = 12000t
+#10m = 20(t) × 60(s) × 10(m) = 12000t
 /scoreboard players set 10m ticks 12000
 
-#30s = 20t × 30s = 600t
+#30s = 20(t) × 30(s) = 600t
 /scoreboard players set 30s ticks 600
 ```
 We will now use this scoreboard data to make our timers function.
@@ -85,12 +85,12 @@ Just make sure to follow the given order and properly use the `/execute if score
     - `lagClear`
     - `speedEffect`
 - **` ticks `** on this objective we define all the intervals for our events and also run our scoreboard timer.
-    - `2h` interval (static score 144000)
+    - ` 2h` interval (static score 144000)
     - `10m` interval (static score 12000)
     - `30s` interval (static score 600)
-    - `timer` timer (variable score n+1)
+    - `timer` clock (variable score n+1)
 
-- **Command 1:** this command adds +1 score every tick to FakePlayer name `timer` indicating a tick has passed in the game. This is basically our scoreboard timer which we will use for all the repeating events on our world.
+- **Command 1:** this command adds +1 score every tick to FakePlayer name `timer` indicating a tick has passed in the game. This is basically our scoreboard timer/clock which we will use for all the repeating events on our world.
 
 - **Command 2:** here we copy `timer` score to all our events using the ` * ` wildcard selector. This will allow us to perform operations to determine if the interval has been reached to run the commands for that particular event. Example:
     - If `timer` score is 1200 that means 1200 game ticks have passed.
@@ -99,13 +99,13 @@ Just make sure to follow the given order and properly use the `/execute if score
 - **Command 3:** we will use the ` %= ` modulo operation to check if our event score is divisible by it's corresponding interval. A number is said to be divisible when the remainder is 0.
     - Chat Message: `1200/144000` Q=0, R=1200, *hence interval not reached.*
     - Lag Clear: `1200/12000` Q=0, R=1200, *hence interval not reached.*
-    - Speed Effect: `1200/600` Q=2, R=0, *hence interval has reached and event commands can be executed.
+    - Speed Effect: `1200/600` Q=2, R=0, *hence interval has reached and event commands can be executed.*
 Here we can note that the first 2 events are yet to happen but the 3rd event is happening for the second time.
 :::tip
 In Minecraft; scoreboard division is only calculated up to whole numbers and decimal values are ignored.
 ![longDivision](/assets/images/commands/longDivision.png)
 :::
 
-- **Command 4:** the remainder value obtained from the calculation is applied to the corresponding event FakePlayer name. Based on this knowledge we run this command if it's score is 0.
+- **Command 4:** the remainder value obtained from the calculation is applied to the corresponding event FakePlayer name. Based on this knowledge we can run our command if it's score is equal to 0.
 
 The rest of the commands are identical in structure and only the event labels and interval values are changed.
