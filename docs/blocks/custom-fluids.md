@@ -806,10 +806,10 @@ mc.world.events.tick.subscribe(() => {
     for (let p = 0; p < players.length; p++) {
         for (let i = 0; i < fluidsIDs.length; i++) {
             if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), players[p].location.y+1.7, Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
-                players[p].runCommandAsync("fog @s push fluid:water_fog fluid_fog")
+                players[p].runCommand("fog @s push fluid:water_fog fluid_fog")
                 break
             } else {
-                players[p].runCommandAsync("fog @s remove fluid_fog")
+                players[p].runCommand("fog @s remove fluid_fog")
             }
         }
     }
