@@ -133,5 +133,7 @@ If nothing seems to work simply break and place that command block again.
 :::
 
 To put what you have learned into practice, try making this simple [Entity Counter](https://wiki.bedrock.dev/commands/entity-counter.html) system.
+> Note; when setting up command block systems always the first command will be ![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **`Unconditional Always Active`** and the rest will be ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **`Unconditional Always Active`** (all 0 ticks delay) *unless specified otherwise.*
+![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
-**Read Next: [Understanding Selectors](/commands/understanding-selectors.html)**
+**Read Next: [Understanding Selectors](/commands/selectors.html)**
