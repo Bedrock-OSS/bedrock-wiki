@@ -19,7 +19,7 @@ This system allows you to run your desired commands at specific intervals with a
 - **Some Examples:**
     - Sending a message in chat every 2 hour.
     - Running a 'lag clear' function every 10 minutes.
-    - Effecting players with 'speed' 30 seconds.
+    - Effecting players with 'speed' every 30 seconds.
  
  This system is especially useful when you need to set up multiple timers on your world. When working with command blocks you may use the [Tick Delay](https://wiki.bedrock.dev/commands/intro-to-command-blocks.html#command-block-tick-delay) option to delay the time taken for your commands to run. However; when working with functions you will need to use a system like this.
 
