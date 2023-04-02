@@ -56,22 +56,24 @@ We will now use this scoreboard data to make our timers work as intended.
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players reset new total
-/execute as @a run scoreboard players add new total 1
-/scoreboard players operation new total -= old total
+/scoreboard players add timer ticks 1
+/scoreboard players operation * events = timer ticks
 
+#Chat Message (every 2h)
+/scoreboard players operation chatMessage events %= 2h ticks
+/execute if score chatMessage events matches 0 run say Technoblade never dies!
 
-#Your Commands Here (example)
-/execute if score new total matches ..-1 run say a player has left the world
+#Lag Clear (every 10m)
+/scoreboard players operation lagClear events %= 10m ticks
+/execute if score lagClear events matches 0 run function clear_lag
 
-
-/scoreboard players reset old total
-/execute as @a run scoreboard players add old total 1
+#Speed Effect (every 30s)
+/scoreboard players operation speedEffect events %= 30s ticks
+/execute if score speedEffect events matches 0 run effect @a speed 10 2 true
 ```
+![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
 
-![commandBlockChain6](/assets/images/commands/commandBlockChain/6.png)
-
-Here we have used a **`/say`** command as an example but you can use any command you prefer and as many as you require.
+Here we have taken 3 examples to give you an idea how to do it but ou can add any timer you need and as many as you require.
 
 Just make sure to follow the given order and properly use the `/execute if score` command as shown to run the commands you need.
 
