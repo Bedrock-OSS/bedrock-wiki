@@ -7,6 +7,7 @@ mention:
 nav_order: 5
 tags:
     - system
+    - intermediate
 ---
 
 ## Introduction
@@ -95,5 +96,16 @@ Just make sure to follow the given order and properly use the `/execute if score
     - If `timer` score is 1200 that means 1200 game ticks have passed.
     - And this command makes it so all our events FakePlayer names: `chatMessage`, `lagClear`, `speedEffect` scores also 1200.
 
-- **Command 3:** we will use the ` %= ` modulo operation to check if our event score is divisible by it's corresponding interval. A number is said to be divisible when the remainder is 0 which would mean the interval score has been reached to run our commands.
-    - Chat Message: `1200/144000=0.008` 
+- **Command 3:** we will use the ` %= ` modulo operation to check if our event score is divisible by it's corresponding interval. A number is said to be divisible when the remainder is 0.
+    - Chat Message: `1200/144000` Q=0, R=1200, *hence interval not reached.*
+    - Lag Clear: `1200/12000` Q=0, R=1200, *hence interval not reached.*
+    - Speed Effect: `1200/600` Q=2, R=0, *hence interval has reached and event commands can be executed.
+Here we can note that the first 2 events are yet to happen but the 3rd event is happening for the second time.
+:::tip
+In Minecraft; scoreboard division is only calculated up to whole numbers and decimal values are ignored.
+![longDivision](/assets/images/commands/longDivision.png)
+:::
+
+- **Command 4:** the remainder value obtained from the calculation is applied to the corresponding event FakePlayer name. Based on this knowledge we run this command if it's score is 0.
+
+The rest of the commands are identical in structure and only the event labels and interval values are changed.
