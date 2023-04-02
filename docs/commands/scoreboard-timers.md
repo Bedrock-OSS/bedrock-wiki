@@ -73,7 +73,7 @@ We will now use this scoreboard data to make our timers work as intended.
 ```
 ![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
 
-Here we have taken 3 examples to give you an idea how to do it but ou can add any timer you need and as many as you require.
+Here we have taken 3 examples to give you an idea how to do it but you can add any timer you need and as many as you require.
 
 Just make sure to follow the given order and properly use the `/execute if score` command as shown to run the commands you need.
 
