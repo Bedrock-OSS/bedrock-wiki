@@ -113,3 +113,34 @@ In Minecraft; scoreboard division is only calculated up to whole numbers and dec
 - **Command 4:** the remainder value obtained from the calculation is applied to the corresponding event FakePlayer name. Based on this knowledge we can run our command if it's score is equal to 0.
 
 The rest of the commands are identical in structure and only the event labels and interval values are changed.
+
+## Defining Events With Limited Intervals
+
+To limit how many times an event occurs, you will need to create a new objective called `intervals` and define how many times the event should occur like so:
+<CodeHeader></CodeHeader>
+
+```yaml
+/scoreboard objectives set chatMessage intervals 5
+/scoreboard objectives set speedEffect intervals 10
+```
+
+
+Once you have done that, modify your system from above like so:
+
+<CodeHeader>mcfunction</CodeHeader>
+
+```yaml
+/scoreboard players add timer ticks 1
+/scoreboard players operation * events = timer ticks
+
+#Chat Message (every 10m)
+/scoreboard players operation chatMessage events %= 2h ticks
+/execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run say Technoblade never dies!
+/execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run scoreboard players remove chatMessage intervals 1
+
+#Speed Effect (every 30s)
+/scoreboard players operation speedEffect events %= 30s ticks
+/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
+/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
+```
+![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
