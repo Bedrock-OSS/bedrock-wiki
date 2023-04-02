@@ -37,7 +37,7 @@ It is recommended to use this system while working with command blocks as well i
 
 Once you have created these two objectives you will need to define the interval for each repeating event you need on your world in the `ticks` objective.
 
-To do that, first you must to know **1 second is approximately 20 game ticks in Minecraft**. Based on this knowledge, you will need to do some basic calculations to obtain the ticks equivalent for each interval you want to define.
+To do that, first you must know that **1 second is approximately 20 game ticks in Minecraft**. Based on this knowledge, you will need to do some basic calculations to obtain the ticks equivalent for each interval you want to define.
 <CodeHeader></CodeHeader>
 
 ```yaml
