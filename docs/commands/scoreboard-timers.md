@@ -90,11 +90,14 @@ Just make sure to follow the given order and properly use the `/execute if score
     - `30s` interval (static score 600)
     - `timer` clock (variable score n+1)
 
+
 - **Command 1:** this command adds +1 score every tick to FakePlayer name `timer` indicating a tick has passed in the game. This is basically our scoreboard timer/clock which we will use for all the repeating events on our world.
+
 
 - **Command 2:** here we copy `timer` score to all our events using the ` * ` wildcard selector. This will allow us to perform operations to determine if the interval has been reached to run the commands for that particular event. Example:
     - If `timer` score is 1200 that means 1200 game ticks have passed.
     - And this command makes it so all our events FakePlayer names: `chatMessage`, `lagClear`, `speedEffect` scores also 1200.
+
 
 - **Command 3:** we will use the ` %= ` modulo operation to check if our event score is divisible by it's corresponding interval. A number is said to be divisible when the remainder is 0.
     - Chat Message: `1200/144000` Q=0, R=1200, *hence interval not reached.*
@@ -105,6 +108,7 @@ Here we can note that the first 2 events are yet to happen but the 3rd event is 
 In Minecraft; scoreboard division is only calculated up to whole numbers and decimal values are ignored.
 ![longDivision](/assets/images/commands/longDivision.png)
 :::
+
 
 - **Command 4:** the remainder value obtained from the calculation is applied to the corresponding event FakePlayer name. Based on this knowledge we can run our command if it's score is equal to 0.
 
