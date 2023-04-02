@@ -105,7 +105,7 @@ The arrow/facing direction can be observed from the command block texture.
 **❌ Incorrect Placement**
 ![incorrectCommandBlockPlacement](/assets/images/commands/incorrectCommandBlockPlacement.png)
 
-## Troubleshooting
+## Troubleshooting Command Blocks
 
 - In world settings, under **Cheats**, make sure command blocks have not been disabled.
 
