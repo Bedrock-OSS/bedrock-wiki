@@ -83,7 +83,7 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 </Spoiler>
 <Spoiler title="Sample `🖼 pack_icon.png` Files">
 	
-![pack_icon.png](/assets/images/commands/functions/pack_icon.png)
+![pack_icon.png](/assets/images/commands/pack_icon.png)
 
 </Spoiler>
 
