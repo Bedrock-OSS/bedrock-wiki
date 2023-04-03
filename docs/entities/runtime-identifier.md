@@ -312,6 +312,8 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ### minecraft:slime
 
 -   The entity will create slime particles when falling.
+-   The entity will spawn slimes of lower tier upon death depending on variant (variants 1 to 5 act as the default slime tiers, values above 5 will act as a default medium slime)
+-   Allows entity to attack and have the slime jumping mechanism active at the same time (without this identifier, the slime couldn't rotate while attacking, the entity would instead jump in a straight path till it loses the target)
 
 ---
 
