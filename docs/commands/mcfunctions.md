@@ -40,23 +40,55 @@ It is not possible to run conditional commands. Those will still need to utilize
 
 Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](https://wiki.bedrock.dev/commands/scoreboard-timers.html) system to learn how to set it up.
 
-:::tip
+:::tip NOTE:
 Minecraft can **not** run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
 :::
 
 ## Creating a Function
 
-1. Locate the com.mojang folder and navigate to development_behavior_packs
+1. Locate the `📁 com.mojang` folder and navigate to `📁 development_behavior_packs`
     - The development folders are used for quick reloading of packs, as the packs aren't cached to a specified world.
 
 2. Create a folder (of any name) for the function pack. This will be referred to as Behavior Pack or BP.
 
-3. Create a functions folder. Any file within this folder that ends with .mcfunction will be registered as a function in-game, which can be run with `/function <function_name>`.
+3. Create a `📄 manifest.json` file and a `🖼 pack_icon.png` file (optional) within the BP folder.
+    - A manifest file contains all the information needed to register a pack, while a pack icon displays visually in the pack menu. A pack icon is typically a 128x128 or a 256x256 image, though any power-of-2 resolution will do, they will be upscaled and downscaled accordingly.
+
+<Spoiler title="Sample `📄 manifest.json` File">
+
+<CodeHeader>BP/manifest.json</CodeHeader>
+
+```json
+{
+    "format_version": 2,
+    "header": {
+        "description": "Write Your Pack Description Here",
+        "name": "Write Your Pack Name Here",
+        "uuid": "00000000-0000-0000-0000-000000000000",
+        "version": [ 1, 0, 0 ],
+        "min_engine_version": [ 1, 19, 73 ]
+    },
+    "modules": [
+        {
+            "description": "§r",
+            "type": "data",
+            "uuid": "00000000-0000-0000-0000-000000000000",
+            "version": [1, 0, 0 ]
+        }
+    ]
+}
+```
+
+Note that the uuid field needs to be replaced with an actual uuid, and the two generated must be different from one another. You can generate a uuid at https://uuidgenerator.net/
+
+</Spoiler>
+
+4. Create a `📁 functions` folder. Any file within this folder that ends with **.mcfunction** will be registered as a function in-game, which can be run with `/function <function_name>`.
     - Nested functions are allowed, simply list the file path in relation to the functions folder as shown in the function pack folder structure.
 
-4. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
+5. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
 
-> Note that functions are versioned; they will run in the version listed in the manifest.json
+> Note that functions are versioned; they will run in the version listed in the `📄 manifest.json`
 
 ## Execution
 
