@@ -82,15 +82,8 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 
 </Spoiler>
 <Spoiler title="Sample `🖼 pack_icon.png` Files">
-
-**Sample 1**
-![packIcon1](/assets/images/commands/functions/packIcons/1.png)
-
-**Sample 2**
-![packIcon2](/assets/images/commands/functions/packIcons/2.png)
-
-**Sample 3**
-![packIcon3](/assets/images/commands/functions/packIcons/3.png)
+	
+![pack_icon.png](/assets/images/commands/functions/pack_icon.png)
 
 </Spoiler>
 
@@ -105,7 +98,7 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 
 Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick. 
 
-Nested functions, for example `BP/functions/folder/function1.mcfunction` can be run using the nested folder path, in this case `/function folder/function1`
+Nested functions, for example `BP/functions/Lobby/items/1.mcfunction` can be run using the nested folder path, in this case `/function Lobby/items/1`
 
 ## tick.json
 
