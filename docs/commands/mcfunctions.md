@@ -29,20 +29,19 @@ Functions are useful in many ways to reduce the time spent going from command bl
 ]"
 ></FolderView>
 
-## Guidance
+## Notes For Beginners
 
-Each new line in a function file represents a new command. You may start a line with # to add comments. Commands in a function do not need to begin with a slash `/`, however doing so will not cause any errors.
+- Each new line in a function file represents a new command. You may start a line with # to add comments. Commands in a function do not need to begin with a slash `/`, however doing so will not cause any errors.
+![functionFile](/assets/images/commands/functions.png)
 
-All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible.
+- All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible.
 Commands in a function are still run in the same order, however.
 
-It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
+- Minecraft can **not** run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
+
+- It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
 
 Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](https://wiki.bedrock.dev/commands/scoreboard-timers.html) system to learn how to set it up.
-
-:::tip NOTE:
-Minecraft can **not** run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
-:::
 
 ## Creating a Function
 
@@ -82,6 +81,18 @@ Minecraft can **not** run more than 10,000 lines of functions in one function fi
 Note that the uuid field needs to be replaced with an actual uuid, and the two generated must be different from one another. You can generate a uuid at https://uuidgenerator.net/
 
 </Spoiler>
+<Spoiler title="Sample `🖼 pack_icon.png` Files">
+
+**Sample 1**
+![packIcon1](/assets/images/commands/functions/packIcons/1.png)
+
+**Sample 2**
+![packIcon2](/assets/images/commands/functions/packIcons/2.png)
+
+**Sample 3**
+![packIcon3](/assets/images/commands/functions/packIcons/3.png)
+
+</Spoiler>
 
 4. Create a `📁 functions` folder. Any file within this folder that ends with **.mcfunction** will be registered as a function in-game, which can be run with `/function <function_name>`.
     - Nested functions are allowed, simply list the file path in relation to the functions folder as shown in the function pack folder structure.
@@ -98,7 +109,7 @@ Nested functions, for example `BP/functions/folder/function1.mcfunction` can be 
 
 ## tick.json
 
-The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block.) It is located in the `BP/functions` folder.
+The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block.) It is located in the `BP/functions` folder. By default functions running in this file execute at origin `0, 0, 0` in the overworld.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```
