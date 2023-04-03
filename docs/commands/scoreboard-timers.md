@@ -14,16 +14,16 @@ tags:
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-This system allows you to run your desired commands at specific intervals with any amount of delay you wish to add.
+This system allows you to run your desired commands at specific intervals with any amount of delay you that wish to add.
 
 - **Some Examples:**
-    - Sending a message in chat every 2 hour.
+    - Sending a message in chat every 2 hours.
     - Running a 'lag clear' function every 10 minutes.
     - Effecting players with 'speed' every 30 seconds.
  
- This system is especially useful when you need to set up multiple timers on your world. When working with command blocks you may use the [Tick Delay](https://wiki.bedrock.dev/commands/intro-to-command-blocks.html#command-block-tick-delay) option to delay the time taken for your commands to run. However; when working with functions you will need to use a system like this.
+ This system is especially useful when you need to set up multiple timers on your world. When working with command blocks, you may use the [Tick Delay](https://wiki.bedrock.dev/commands/intro-to-command-blocks.html#command-block-tick-delay) option to delay the time taken for your commands to run. However, when working with functions you will need to use a system like this.
 
-It is recommended to use this system while working with command blocks as well if you wish to run all your timers in sync with one another. ie. with the same start time.
+It is recommended to use this system while working with command blocks, as well if you wish to run all your timers in sync with one another. ie. with the same start time.
  
 ## Setup
 
@@ -35,7 +35,7 @@ It is recommended to use this system while working with command blocks as well i
 /scoreboard objectives add events dummy
 ```
 
-Once you have created these two objectives you will need to define the interval for each repeating event you need on your world in the `ticks` objective.
+Once you have created these two objectives, you will need to define the interval for each repeating event you need on your world in the `ticks` objective.
 
 To do that, first you must know that **1 second is approximately 20 game ticks in Minecraft**. Based on this knowledge, you will need to do some basic calculations to obtain the ticks equivalent for each interval you want to define.
 <CodeHeader></CodeHeader>
