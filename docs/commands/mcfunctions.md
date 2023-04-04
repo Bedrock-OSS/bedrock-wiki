@@ -102,7 +102,9 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 5. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
 
 :::tip NOTE
-Note that functions are versioned; they will run in the version listed in the `📄 manifest.json`
+Note that functions are versioned; therefore, they will run in the version listed in the `📄 manifest.json`, example:
+- `min_engine_version` 1.19.50 or above will adopt the new execute syntax.
+- `min_engine_version` 1.19.70 or above will require aux values be replaced with block states.
 :::
 
 ## Execution
