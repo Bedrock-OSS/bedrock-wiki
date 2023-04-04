@@ -144,7 +144,7 @@ Once you have done that, modify your system from above like so:
 ```
 ![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
 
-**Executing Commands During Timeframe
+## Executing Commands During Timeframe
 
 To run commands during the timeframe between intervals for a particular system you may do something like this:
 <CodeHeader>mcfunction</CodeHeader>
