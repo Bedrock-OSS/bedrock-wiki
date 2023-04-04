@@ -119,6 +119,14 @@ The final file within a function is the **tick.json** file. This specifies funct
 ```
 > Note; functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
 
+## Sample Function Pack
+
+<CardLink
+  imgsrcLight="assets/images/commands/BClogo.png"
+	title="Download Sample Function Pack"
+	link="[dd](https://drive.google.com/file/d/13vSN6SROxEvL_haT83QFVZgYQrM2oFhs/view?usp=drivesdk)"
+/>
+
 ## Troubleshooting Functions
 
 Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands in the function.
