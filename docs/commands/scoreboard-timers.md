@@ -144,3 +144,36 @@ Once you have done that, modify your system from above like so:
 /execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
 ```
 ![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
+
+## Additional Example
+
+**Running commands while timer is running (till interval is reached)**
+
+<CodeHeader>mcfunction</CodeHeader>
+
+```yaml
+#Speed Effect (every 30s) + Particle (every tick)
+/scoreboard players operation speedEffect events %= 30s ticks
+/execute if score speedEffect intervals matches 1.. as @a at @s run particle minecraft:shulker_bullet ~~~
+/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
+/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
+```
+
+Let's say we had set the intervals for this event to 10, then that means players would also have particle trails for 300 seconds since `10*30s=300`
+
+## Entity Timers
+
+In some cases such as an entity despawn event you will need to run timers for each entity individually rather than a synchronised timer which could cause the event to trigger too soon. In such cases an Async Timer can be helpful.
+
+Let's say we want to:
+- kill all armour stands named "station" 5 minutes after they've been summoned.
+- play a shulker particle around them during that timeframe.
+- play a smoke particle around them in the first 10 seconds.
+- play a pling sound to nearby players when the timer reaches half way.
+- loop the timer if a hostile mob is nearby.
+- stop the timer if a passive mob is nearby.
+
+```yaml
+#Clock
+/scoreboard players add @e [type=armor_stand, name=station] ticks 1
+```
