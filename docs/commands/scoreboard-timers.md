@@ -23,7 +23,7 @@ This system allows you to run your desired commands at specific intervals with a
  
  This system is especially useful when you need to set up multiple timers on your world. When working with command blocks, you may use the [Tick Delay](https://wiki.bedrock.dev/commands/intro-to-command-blocks.html#command-block-tick-delay) option to delay the time taken for your commands to run. However, when working with functions you will need to use a system like this.
 
-It is recommended to use this system while working with command blocks, as well if you wish to run all your timers in sync with one another. ie. with the same start time.
+It is recommended to use this system while working with command blocks, as well if you wish to run all your timers in sync with one another, ie. with the same start time.
  
 ## Setup
 
@@ -74,7 +74,7 @@ We will now use this scoreboard data to make our timers function.
 ```
 ![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
 
-Here we have taken 3 examples to give you an idea on how to do it but you can add any timer you need and as many as you require.
+Here we have taken 3 examples to give you an idea on how to do it, but you can add any timer you need and as many as you require.
 
 Just make sure to follow the given order and properly use the `/execute if score` command as shown to run the commands you need.
 
@@ -96,7 +96,7 @@ Just make sure to follow the given order and properly use the `/execute if score
 
 - **Command 2:** here we copy `timer` score to all our events using the ` * ` wildcard selector. This will allow us to perform operations to determine if the interval has been reached to run the commands for that particular event. Example:
     - If `timer` score is 1200 that means 1200 game ticks have passed.
-    - And this command makes it so all our events FakePlayer names: `chatMessage`, `lagClear`, `speedEffect` scores also 1200.
+    - And this command makes it so all our events FakePlayer names: `chatMessage`, `lagClear`, `speedEffect` scores are also 1200.
 
 
 - **Command 3:** we will use the ` %= ` modulo operation to check if our event score is divisible by it's corresponding interval. A number is said to be divisible when the remainder is 0.
@@ -124,7 +124,6 @@ To limit how many times an event occurs, you will need to create a new objective
 /scoreboard objectives set speedEffect intervals 10
 ```
 
-
 Once you have done that, modify your system from above like so:
 
 <CodeHeader>mcfunction</CodeHeader>
@@ -145,10 +144,9 @@ Once you have done that, modify your system from above like so:
 ```
 ![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
 
-## Additional Example
+**Executing Commands During Timeframe
 
-**Running commands while timer is running (till interval is reached)**
-
+To run commands during the timeframe between intervals for a particular system you may do something like this:
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
@@ -158,22 +156,46 @@ Once you have done that, modify your system from above like so:
 /execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
 /execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
 ```
+As shown in line 3; to run commands while the timer is running, all you need to do is remove the "if score" testing if the interval has been reached. And instead, only test if *any* interval is left, to run our commands.
 
-Let's say we had set the intervals for this event to 10, then that means players would also have particle trails for 300 seconds since `10*30s=300`
+Let's say we had set the intervals for this event to 10, then that means players would also have particle trails for 300 seconds since `10*30s=300s`
 
 ## Entity Timers
 
 In some cases such as an entity despawn event you will need to run timers for each entity individually rather than a synchronised timer which could cause the event to trigger too soon. In such cases an Async Timer can be helpful.
 
 Let's say we want to:
-- kill all armour stands named "station" 5 minutes after they've been summoned.
+- kill all entities named "station" 5 minutes after they've been summoned.
 - play a shulker particle around them during that timeframe.
-- play a smoke particle around them in the first 10 seconds.
+- play a flame particle around them in the first 10 seconds.
 - play a pling sound to nearby players when the timer reaches half way.
-- loop the timer if a hostile mob is nearby.
 - stop the timer if a passive mob is nearby.
+- loop the timer if a hostile mob is nearby.
+
+<CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
 #Clock
-/scoreboard players add @e [type=armor_stand, name=station] ticks 1
+/scoreboard players add @e [name=station, scores={ticks=0..}] ticks 1
+
+#Executing Commands while timer is running
+/execute as @e [name=station, scores={ticks=0..}] at @s run particle minecraft:shulker_bullet ~~~
+
+#Executing commands within a timeframe
+/execute as @e [name=station, scores={ticks=0..200}] at @s run particle minecraft:basic_flame_particle ~~~
+
+#Executing commands at specific intervals
+/execute as @e [name=station, scores={ticks=3600}] at @s run playsound note.pling @a [r=10] 
+
+#Stopping the timer
+/execute as @e [name=station] at @s if entity @e [family=!monster, r=10, c=1] run scoreboard players set @s ticks -1
+
+#Looping the timer
+/execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
+
+#End
+/kill @e [name=station, scores={ticks=6000}]
 ```
+![commandBlockChain7](/assets/images/commands/commandBlockChain/7.png)
+
+As shown; setting the score to 0 when it completes the timeframe will loop the timer and setting the score to -1 will stop/disable it. You can still set the score to 0 to start the timer again.
