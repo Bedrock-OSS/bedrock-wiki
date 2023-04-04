@@ -11,6 +11,9 @@ tags:
  - info
 ---
 ## Introduction
+
+[Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
+
 Functions are `.mcfunction` files which contain multiple lines of commands. They are run with the `/function` command in-game.
 
 Functions are created in a **Behavior Pack**, nested within the **functions** folder. A function pack creates a system using solely function files.
@@ -50,7 +53,7 @@ Commands in a function are still run in the same order, however.
 
 - It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
 
-Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](https://wiki.bedrock.dev/commands/scoreboard-timers.html) system to learn how to set it up.
+- Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](https://wiki.bedrock.dev/commands/scoreboard-timers.html) system to learn how to set it up.
 
 ## Creating a Function
 
@@ -102,7 +105,7 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 5. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
 
 :::tip NOTE
-Note that functions are versioned; therefore, they will run in the version listed in the `📄 manifest.json`, example:
+Functions are versioned; therefore, they will run in the version listed in the `📄 manifest.json`, such as:
 - `min_engine_version` 1.19.50 or above will adopt the new execute syntax.
 - `min_engine_version` 1.19.70 or above will require aux values be replaced with block states.
 :::
