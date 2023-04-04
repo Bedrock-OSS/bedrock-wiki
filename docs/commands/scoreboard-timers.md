@@ -7,7 +7,6 @@ mention:
 nav_order: 5
 tags:
     - system
-    - intermediate
 ---
 
 ## Introduction
@@ -188,7 +187,7 @@ Let's say we want to:
 /execute as @e [name=station, scores={ticks=3600}] at @s run playsound note.pling @a [r=10] 
 
 #Stopping the timer
-/execute as @e [name=station] at @s if entity @e [family=!monster, r=10, c=1] run scoreboard players set @s ticks -1
+/execute as @e [name=station] at @s if entity @e [family=pacified, r=10, c=1] run scoreboard players set @s ticks -1
 
 #Looping the timer
 /execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
