@@ -109,7 +109,7 @@ Nested functions, for example `BP/functions/Lobby/items/1.mcfunction` can be run
 The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block.) It is located in the `BP/functions` folder. By default, functions running in this file execute at origin `0, 0, 0` in the overworld.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
-```
+```json
 {
   "values": [
     "function_1",
@@ -124,7 +124,7 @@ The final file within a function is the **tick.json** file. This specifies funct
 <CardLink
   imgsrcLight="assets/images/commands/BClogo.png"
 	title="Download Sample Function Pack"
-	link="[dd](https://drive.google.com/file/d/13vSN6SROxEvL_haT83QFVZgYQrM2oFhs/view?usp=drivesdk)"
+	link="https://drive.google.com/file/d/13vSN6SROxEvL_haT83QFVZgYQrM2oFhs"
 />
 
 ## Troubleshooting Functions
