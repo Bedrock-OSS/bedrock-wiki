@@ -4,6 +4,8 @@ category: General
 mentions:
  - Bedrock Commands
  - cda94581
+ - zheaEvyline
+ - jordanparki7
 nav_order: 3
 tags:
  - info
@@ -53,7 +55,7 @@ Running commands with a specified delay in a function would involve using scoreb
 3. Create a `📄 manifest.json` file and a `🖼 pack_icon.png` file (optional) within the BP folder.
     - A manifest file contains all the information needed to register a pack, while a pack icon displays visually in the pack menu. A pack icon is typically a 128x128 or a 256x256 image, though any power-of-2 resolution will do, they will be upscaled and downscaled accordingly.
 
-<Spoiler title="Sample `📄 manifest.json` File">
+<Spoiler title="Sample 📄 manifest.json">
 
 <CodeHeader>BP/manifest.json</CodeHeader>
 
@@ -81,7 +83,7 @@ Running commands with a specified delay in a function would involve using scoreb
 Note that the uuid field needs to be replaced with an actual uuid, and the two generated must be different from one another. You can generate a uuid at https://uuidgenerator.net/
 
 </Spoiler>
-<Spoiler title="Sample `🖼 pack_icon.png` Files">
+<Spoiler title="Sample 🖼 pack_icon.png">
 	
 ![pack_icon.png](/assets/images/commands/pack_icon.png)
 
@@ -92,7 +94,9 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 
 5. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
 
-> Note that functions are versioned; they will run in the version listed in the `📄 manifest.json`
+:::tip NOTE
+Note that functions are versioned; they will run in the version listed in the `📄 manifest.json`
+:::
 
 ## Execution
 
@@ -102,7 +106,7 @@ Nested functions, for example `BP/functions/Lobby/items/1.mcfunction` can be run
 
 ## tick.json
 
-The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block.) It is located in the `BP/functions` folder. By default functions running in this file execute at origin `0, 0, 0` in the overworld.
+The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block.) It is located in the `BP/functions` folder. By default, functions running in this file execute at origin `0, 0, 0` in the overworld.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```
