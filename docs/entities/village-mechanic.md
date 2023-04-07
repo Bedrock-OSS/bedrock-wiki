@@ -57,6 +57,17 @@ Allows entity to do random walk.
 }
 ```
 
+Make entity return to inside dwelling bound, in this case inside a village border. Requiring minecraft:dweller component that will be explained below.
+
+<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+
+```json
+"minecraft:behavior.move_towards_dwelling_restriction": {
+    "priority": 4,
+    "speed_multiplier": 1.0
+}
+```
+
 Makes entity navigate around a village by creating a path to patrol. Used by Iron Golem.
 
 <CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
