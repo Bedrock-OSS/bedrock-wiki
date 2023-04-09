@@ -26,11 +26,11 @@ Please feel free to join us to ask questions, get involved in Bedrock Addons, or
 			"
 		>
 			<CardLink
-				title="Bedrock Addons"
-				imgsrcLight="assets/images/homepage/wikilogo.png"
+				title="Bedrock Add-Ons"
+				imgsrcLight="assets/images/discord/bao.png"
 				link="https://discord.gg/46JUdQb"
 			>
-				Bedrock Addons is a centralized creators discord for learning about and creating addons.<br /><br />Here you can learn about addons, ask questions, and participate in events.
+				Bedrock Add-Ons is a centralized creators discord for learning about and creating add-ons.<br /><br />Here you can learn about add-ons, ask questions, and participate in events.
 			</CardLink>
 			<CardLink
 				title="Bedrock OSS"
