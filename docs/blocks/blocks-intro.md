@@ -9,7 +9,7 @@ tags:
 Minecraft Bedrock allows us to add custom blocks into our world with various vanilla-like properties. In latest versions, custom blocks can have multiple stages (like plants), directional facing, and other features. This tutorial will cover how to create some simple blocks for the stable version of Minecraft Bedrock.
 
 :::warning
-Blocks on the stable version of Minecraft (1.10 format version) are missing many new features, available in experimental (1.16 format version). You can learn more about experimental blocks [here](/blocks/blocks-16).
+This page discusses the stable componenets. You can learn more about experimental block componenets [here](/blocks/blocks-16).
 :::
 
 ## Block Behavior File
@@ -20,25 +20,27 @@ Block behaviors are structured similarly to entities: they contain a description
 
 ```json
 {
-	"format_version": "1.12.0",
+	"format_version": "1.19.70",
 	"minecraft:block": {
 		"description": {
-			"identifier": "wiki:blocky",
-			"is_experimental": false,
-			"register_to_creative_menu": true
+			"identifier": "wiki:custom_block"
 		},
 		"components": {
-			"minecraft:loot": "loot_tables/blocks/blocky.json",
-			"minecraft:destroy_time": 3,
-			"minecraft:explosion_resistance": 3,
+			"minecraft:loot": "loot_tables/blocks/custom_block.json",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 3
+			},
 			"minecraft:friction": 0.6,
 			"minecraft:flammable": {
-				"flame_odds": 0,
-				"burn_odds": 0
+				"catch_chance_modifier": 0,
+				"destroy_chance_modifier": 0
 			},
 			"minecraft:map_color": "#FFFFFF",
-			"minecraft:block_light_absorption": 0,
-			"minecraft:block_light_emission": 0.25
+			"minecraft:light_dampening": 0,
+			"minecraft:light_emission": 4
 		}
 	}
 }
