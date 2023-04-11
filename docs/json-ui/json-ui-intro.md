@@ -766,7 +766,7 @@ You can get specific part of a string by using `%.#s` format where `#` is a numb
        },
        {
            "binding_type": "view",
-           "source_property_name": "(%.3s * #hud_title_text_string)",
+           "source_property_name": "('%.3s' * #hud_title_text_string)",
            "target_property_name": "#text"
        }
     ]
