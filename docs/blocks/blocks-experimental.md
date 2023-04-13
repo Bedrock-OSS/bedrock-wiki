@@ -352,25 +352,6 @@ For a list of many categories, see [this](/documentation/creative-categories)
 
 List of experimental block components, with usage examples.
 
-### minecraft:part_visibility
-
-:::warning TODO
-Remove this section as this component is removed
-:::
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"minecraft:part_visibility": {
-		"rules": {
-			"bone_1": "q.block_property('wiki:example_property') == 0", //also accepts `q.has_block_property`
-			"bone_2": "q.block_property('wiki:example_property') == 0"
-		}
-	}
-}
-```
-
 ### minecraft:random_ticking
 
 Allows for behavior like random crop growth.
@@ -408,19 +389,19 @@ Ticks when the values between x and y values randomly inside `interval_range`.
 }
 ```
 
-### minecraft:rotation
+### minecraft:transformation
 
-:::warning TODO
-Remove this section as this component is removed
-:::
-
-Allows for rotating the block.
+Allows for rotation, scaling and translation.
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:rotation": [ 90, 180, 0 ]
+	"minecraft:transformation": {
+        "translation": [0.0, 0.1, -0.1],
+        "scale": [0.5, 1, 1.5],
+    	"rotation": [90, 180, 0]
+	}
 }
 ```
 

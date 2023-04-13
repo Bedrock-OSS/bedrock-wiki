@@ -105,6 +105,22 @@ The Model the block will use. This component applies no face culling.
 }
 ```
 
+Additionally, `bone_visibility` can be used to show/hide certain bones
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:geometry":{
+		"identifier": "geometry.wiki",
+		"bone_visibility": {
+        	"bone1": true,
+        	"bone2": false,
+        }
+	}
+}
+```
+
 ### minecraft:material_instances
 
 It's mainly used to set a texture to you block.
