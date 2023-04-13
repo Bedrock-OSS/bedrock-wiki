@@ -20,7 +20,7 @@ Block behaviors are structured similarly to entities: they contain a description
 
 ```json
 {
-	"format_version": "1.19.70",
+	"format_version": "1.19.80",
 	"minecraft:block": {
 		"description": {
 			"identifier": "wiki:custom_block"

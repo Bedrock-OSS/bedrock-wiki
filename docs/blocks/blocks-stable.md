@@ -1,5 +1,5 @@
 ---
-title: 'Blocks'
+title: 'Stable Block Components'
 category: General
 ---
 
@@ -15,7 +15,7 @@ Block properties are block states for all your custom blocks.
 
 ```json
 {
-	"format_version": "1.19.70",
+	"format_version": "1.19.80",
 	"minecraft:block": {
 		"description": {
 			"identifier": "wiki:custom_block",
@@ -52,7 +52,7 @@ Block permutations are a way of conditionally applying components to a block wit
 
 ```json
 {
-    "format_version": "1.19.70",
+    "format_version": "1.19.80",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",

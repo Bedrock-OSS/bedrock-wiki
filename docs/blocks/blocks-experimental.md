@@ -354,6 +354,10 @@ List of experimental block components, with usage examples.
 
 ### minecraft:part_visibility
 
+:::warning TODO
+Remove this section as this component is removed
+:::
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -405,6 +409,10 @@ Ticks when the values between x and y values randomly inside `interval_range`.
 ```
 
 ### minecraft:rotation
+
+:::warning TODO
+Remove this section as this component is removed
+:::
 
 Allows for rotating the block.
 
