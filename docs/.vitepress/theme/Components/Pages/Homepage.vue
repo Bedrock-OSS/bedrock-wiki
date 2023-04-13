@@ -62,7 +62,7 @@
 					Join the discord to learn about addons, and seek help from
 					other addon creators.
 				</CardLink>
-				<Card
+				<CardLink
 					title="Entities"
 					imgsrc-light="assets/images/homepage/spawn_egg_30.png"
 					link="entities/entity-intro-bp"
@@ -71,8 +71,8 @@
 					Learn about the structure of Behavior Pack Entity files.<br><br>
 					<a href="entities/troubleshooting-entities">Troubleshooting</a>: Learn to troubleshoot common issues when creating
 					entities, such as invisible textures.
-				</Card>
-				<Card
+				</CardLink>
+				<CardLink
 					title="Items"
 					imgsrc-light="assets/images/homepage/iron_pickaxe_0.png"
 					link="items/items-intro"
@@ -81,8 +81,8 @@
 					world" guide in creating your first item.<br><br>
 					<a href="items/items-16">Items 1.16+</a>: Learn about the
 					new experimental items.
-				</Card>
-				<Card
+				</CardLink>
+				<CardLink
 					title="Blocks"
 					imgsrc-light="assets/images/homepage/diamond_ore_0.png"
 					link="blocks/blocks-intro"
@@ -91,8 +91,8 @@
 					world" guide in making blocks.<br><br>
 					<a href="blocks/blocks-16">Blocks 1.16+</a>: Learn about the
 					new experimental blocks.
-				</Card>
-				<Card
+				</CardLink>
+				<CardLink
 					title="Scripting"
 					imgsrc-light="assets/images/homepage/scripting.png"
 					link="scripting/scripting-intro"
@@ -100,15 +100,15 @@
 					<a href="scripting/starting-scripts.html">Beginner's Guide</a>: Learn the basics of the experimental scripting-API<br><br>
 					<a href="scripting/custom-command.html">Custom commands</a>:
 					Learn how to make your own custom commands!
-				</Card>
-				<Card
+				</CardLink>
+				<CardLink
 					title="World Generation"
 					imgsrc-light="assets/images/homepage/buildplate.png"
 					link="world-generation/world-generation-intro"
 				>
 					<a href="world-generation/world-generation-intro">Beginner's Guide</a>: Learn about creation of custom biomes, structures, ores
 					and more.<br><br>
-				</Card>
+				</CardLink>
 				<CardLink
 					title="Contribute"
 					imgsrc-light="assets/images/homepage/writable_book_0.png"
