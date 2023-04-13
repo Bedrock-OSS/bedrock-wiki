@@ -1,5 +1,5 @@
 ---
-title: 'Blocks 1.16.100+'
+title: 'Experimental Block Components'
 category: General
 tags:
     - experimental
