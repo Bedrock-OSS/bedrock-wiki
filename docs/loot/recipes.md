@@ -300,7 +300,7 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 			"SSS",
 			"I I",
 			"I I"
-		]
+		],
 		"key": {
 			"S": "wiki:cloth",
 			"I": "wiki:support"
