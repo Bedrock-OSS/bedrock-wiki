@@ -29,6 +29,7 @@ Important links have a ⭐.
 -   [Dragonfly Server Software](https://discord.gg/U4kFWHhTNR)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
 -   [BC Community & Archive](https://discord.gg/SYstTYx5G5)
+-   [BedrockHub.IO](https://discord.bedrockhub.io)
 
 ## Software (installed)
 
@@ -45,6 +46,8 @@ Important links have a ⭐.
 -   [Chunker (World Converter)](https://chunker.app/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [BedrockLauncher (Bedrock version switcher)](https://bedrocklauncher.github.io/)
+-   [ResourcePack Conveter [App]](https://converter.bedrockhub.io)
+-   [BedrockConnect [App]](https://bedrockconnect.bedrockhub.io)
 
 ## Bedrock Tools Websites
 
