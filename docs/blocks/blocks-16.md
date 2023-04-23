@@ -405,7 +405,7 @@ List of experimental block components, with usage examples.
 
 ### minecraft:geometry
 
-The Model the block will use.
+The Model the block will use. This component applies no face culling.
 
 <CodeHeader></CodeHeader>
 
@@ -618,11 +618,13 @@ For block rotations like logs, see [this](/blocks/rotatable-blocks)
 
 ### minecraft:unit_cube
 
+Forces the block to be a cube with face culling.
+
 <CodeHeader></CodeHeader>
 
 ```json
 {
-	"minecraft:unit_cube": {} //Forces the block to be a cube
+	"minecraft:unit_cube": {}
 }
 ```
 

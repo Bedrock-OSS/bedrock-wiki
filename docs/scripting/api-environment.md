@@ -53,7 +53,7 @@ You will encounter this most often when using events, because in every data even
   - `RegExp` - Standard function constructor for regex instance
   - `JSON` -  Standard Object having stringify and parse methods for JSON interaction
   - `Proxy` - Standard function constructor for build-in proxy handler
-  - `Map`, `Set`, `WeakMap`, `WeakSer` - Standard function constructors for data organisation objects
+  - `Map`, `Set`, `WeakMap`, `WeakSet` - Standard function constructors for data organisation objects
   - `DataView` - Standard function constructor for binary arrays interactions
   - `Promise` - Standard function constructor for async interaction
   - `console` - Standard object having base output methods (`log`, `warn`, `error`, `info`)

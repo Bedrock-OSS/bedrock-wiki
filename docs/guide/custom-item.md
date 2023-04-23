@@ -29,7 +29,7 @@ This guide requires experimental features toggled on.
 
 To make an item we will need a way to identify it and define how we want it to behave. To do this we will be making a file which tell Minecraft to apply certain behaviors to a specific item of our choice.
 
-At the end of this section we will have a fully defined the behavior of our item.
+At the end of this section we will have fully defined the behavior of our item.
 
 ### Components
 
@@ -37,12 +37,13 @@ Different items behave differently; you can eat a porkchop, enchanted items glow
 We are able to define how our custom item will behave by using behavior components.
 
 <Spoiler title="Example Components">
-<CodeHeader>components/</CodeHeader>
+<CodeHeader>components/
 ```json
 "minecraft:food":
 "minecraft:foil": true,
 "minecraft:max_stack_size": 16
 ```
+</CodeHeader>
 </Spoiler>
 
 Components contain information which tells the game what our item should do. For example the component `"minecraft:foil"` determines whether the item should have an enchanted foil to it, so setting it to `true` will apply it.

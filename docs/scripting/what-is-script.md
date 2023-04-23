@@ -8,7 +8,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft beta 1.19.70
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
 :::
 
 ## API

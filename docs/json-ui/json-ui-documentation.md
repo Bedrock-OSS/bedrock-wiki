@@ -1283,6 +1283,7 @@ Some of them only work in specific screens.
 -   `button.help`
 -   `button.menu_open_uri`
 -   `button.no_interaction`
+-   `button.copy_to_clipboard`
 -   ...
 
 ## Hardcoded Collection Names
