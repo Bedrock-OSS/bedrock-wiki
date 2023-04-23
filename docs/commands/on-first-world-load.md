@@ -14,7 +14,7 @@ tags:
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
 This system will run your desired commands on the event that the world is loaded for the first time.
-> Note; a [Function](/commands/functions.html) Pack is required to achieve this system since it is the `tick.json` file which allows us to run commands as soon as the world is initialized.
+> Note; a [Function](/commands/functions.html) Pack is required to achieve this system since it is the `tick.json` file which allows us to run commands as soon as the world is initialised.
 
 ## Folder Structure
 
