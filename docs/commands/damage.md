@@ -1,6 +1,6 @@
 ---
 title: Damage
-category: General
+category: Commands
 tags:
     - info
 mention:
