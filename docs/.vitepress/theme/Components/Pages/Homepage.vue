@@ -65,7 +65,7 @@
 				<CardLink
 					title="Commands"
 					imgsrc-light="assets/images/homepage/commands.png"
-					link="/commands"
+					link="/commands/intro-to-command-blocks.html"
 				>
 					Learn about commands and command block basics.
 					Find popular and useful systems documented by community experts.
