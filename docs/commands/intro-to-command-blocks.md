@@ -137,4 +137,4 @@ To put what you have learned into practice, try making this simple [Entity Count
 > 
 > ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
-**Read Next: [Understanding Selectors](/commands/selectors.html)**
+**(Recommended) Read Next: [Understanding Selectors](/commands/selectors.html)**
