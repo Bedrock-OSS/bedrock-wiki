@@ -4,7 +4,7 @@ category: On Event Systems
 mention:
     - BedrockCommands
     - zheaEvyline
-nav_order: 0
+nav_order: 6
 tags:
     - system
 ---
