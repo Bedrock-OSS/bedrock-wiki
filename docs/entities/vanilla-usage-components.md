@@ -7,7 +7,7 @@ mentions:
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Note that to keep this page fast to load and informative, there are not more than 8 examples for each component and not more than 3 example(s) from each entity are shown. Namespace `minecraft` was also removed.
-If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.60*
+If you want to see full page, you can do it [here](/entities/vuc-full). *Last updated for 1.19.70*
 
 ## addrider
 
@@ -2291,6 +2291,113 @@ wandering_trader
                                 "value": "minecraft:angry"
                             }
                         ]
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
+witch
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.drink_potion": {
+    "priority": 1,
+    "speed_modifier": -0.25,
+    "potions": [
+        {
+            "id": 19,
+            "chance": 0.15,
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "is_underwater",
+                        "subject": "self",
+                        "value": true
+                    },
+                    {
+                        "none_of": [
+                            {
+                                "test": "has_mob_effect",
+                                "subject": "self",
+                                "value": "water_breathing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "chance": 0.15,
+            "filters": {
+                "all_of": [
+                    {
+                        "any_of": [
+                            {
+                                "test": "on_fire",
+                                "subject": "self",
+                                "value": true
+                            },
+                            {
+                                "test": "on_hot_block",
+                                "subject": "self",
+                                "value": true
+                            }
+                        ]
+                    },
+                    {
+                        "none_of": [
+                            {
+                                "test": "has_mob_effect",
+                                "subject": "self",
+                                "value": "fire_resistance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 21,
+            "chance": 0.05,
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "is_missing_health",
+                        "subject": "self",
+                        "value": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 14,
+            "chance": 0.25,
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "has_target",
+                        "subject": "self",
+                        "value": true
+                    },
+                    {
+                        "none_of": [
+                            {
+                                "test": "has_mob_effect",
+                                "subject": "self",
+                                "value": "speed"
+                            }
+                        ]
+                    },
+                    {
+                        "test": "target_distance",
+                        "subject": "self",
+                        "value": 11.0,
+                        "operator": ">="
                     }
                 ]
             }
@@ -8862,6 +8969,9 @@ donkey
 
 ```json
 "minecraft:breedable": {
+    "parent_centric_attribute_blending": [
+        "minecraft:health"
+    ],
     "require_tame": true,
     "inherit_tamed": false,
     "breeds_with": [
