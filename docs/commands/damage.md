@@ -1,7 +1,8 @@
 ---
 title: Damage
 category: General
-tags: info
+tags:
+    - info
 mention:
     - BedrockCommands
     - cda94581
