@@ -789,23 +789,31 @@ let fluidsIDs = [
 "wiki:fluid_template3"
 ]
 
-mc.world.events.tick.subscribe(() => {
+mc.system.runInterval(() => {
     const players = Array.from(mc.world.getPlayers())
     for (let p = 0; p < players.length; p++) {
         for (let i = 0; i < fluidsIDs.length; i++) {
-            if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), Math.floor(players[p].location.y+1), Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+            if (mc.world.getDimension(players[p].dimension.id).getBlock({
+              x: Math.floor(players[p].location.x),
+              y: Math.floor(players[p].location.y+1),
+              z: Math.floor(players[p].location.z)
+            })).typeId == fluidsIDs[i]) {
                 if (!players[p].isSneaking) {
                     players[p].addEffect(mc.MinecraftEffectTypes.levitation, 4, 1, false)
                 }
                 players[p].addEffect(mc.MinecraftEffectTypes.slowFalling, 4, 2, false)
-            } else if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), Math.floor(players[p].location.y), Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+            } else if (mc.world.getDimension(players[p].dimension.id).getBlock(players[p].location)).typeId == fluidsIDs[i]) {
                 players[p].addEffect(mc.MinecraftEffectTypes.slowFalling, 4, 2, false)
             }
         }
     }
     for (let p = 0; p < players.length; p++) {
         for (let i = 0; i < fluidsIDs.length; i++) {
-            if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), players[p].location.y+1.7, Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+            if (mc.world.getDimension(players[p].dimension.id).getBlock({
+              x: Math.floor(players[p].location.x),
+              y: players[p].location.y+1.7,
+              z: Math.floor(players[p].location.z)
+            })).typeId == fluidsIDs[i]) {
                 players[p].runCommand("fog @s push fluid:water_fog fluid_fog")
                 break
             } else {
@@ -821,8 +829,9 @@ mc.world.events.tick.subscribe(() => {
 ## Resources
 
 To define the textures for the fluids you need to do two thing:
-1) Make a 16x16+ texture and in terrain textures copy/rename the "fluid_template" to "fluid_`your fluid name`"
-2) Make a texture and in item textures copy/rename the "template_bucket" to "`your fluid name`_bucket"
+
+1. Make a 16x16+ texture and in terrain textures copy/rename the "fluid*template" to "fluid*`your fluid name`"
+2. Make a texture and in item textures copy/rename the "template_bucket" to "`your fluid name`\_bucket"
 
 ## Download / Other
 

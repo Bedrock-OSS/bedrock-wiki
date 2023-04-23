@@ -33,34 +33,16 @@ In the behavior pack manifest, you need to add a `script` module (1.19.0+) or `j
 }
 ```
 
-Additionally, dependencies will need to be set based on modules used.
-
--	**`@minecraft/server`** - `b26a4d4c-afdf-4690-88f8-931846312678`
-	-	Formerly known as "Minecraft", "mojang-minecraft"
-
--	**`@minecraft/server-gametest`** - `6f4b6893-1bb6-42fd-b458-7fa3d0c89616`
-	-	Formerly known as "GameTest", "mojang-gametest"
-
--	**`@minecraft/server-ui`** - `2bd50a27-ab5f-4f40-a596-3641627c635e`
-	-	Beta 1.18.20.21+ (Release 1.18.30+)
-	-	Formerly known as "mojang-minecraft-ui"
-
--	**`@minecraft/server-admin`** - `53d7f2bf-bf9c-49c4-ad1f-7c803d947920`
-	-	BDS module for configuration of variables and secrets. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
-	-	Release 1.19.10+
-	-	Formerly known as "mojang-minecraft-server-admin"
-
--	**`@minecraft/server-net`** - `777b1798-13a6-401c-9cba-0cf17e31a81b`
-	-	BDS module for executing HTTP-based requests. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
-	-	Release 1.19.10+
-	-	Formerly known as "mojang-net"
-
-Here's an example of dependencies in manifest:
+Additionally, dependencies will need to be set based on modules used. To import API modules, specify dependencies using the `module_name` and `version`. In this example, the `@minecraft/server` module is used.
 
 :::warning
 There is a bug where you cannot apply resource pack into dependencies with script modules.
 
-This problem causes Minecraft to stop the scripts from running and throws error related to "Unknown dependency". 
+This problem causes Minecraft to stop the scripts from running and throws error related to "Unknown dependency".
+:::
+
+::: warning
+Do not add `"uuid"` and `"module_name"` properties into dependency, add one or the other.
 :::
 
 <CodeHeader>BP/manifest.json</CodeHeader>
@@ -70,67 +52,42 @@ This problem causes Minecraft to stop the scripts from running and throws error 
 	{
 		"module_name": "@minecraft/server",
 		"version": "1.2.0-beta"
-	},
-	{
-		"module_name": "@minecraft/server-ui",
-		"version": "1.0.0-beta"
 	}
 ]
 ```
 
-## Script Versioning
+If your project needs other module to run your code, add another dependency that follows the format above.
 
-Script API modules all have their own versions and since 1.19.20 they follow semantic versioning (which follows the format of X.Y.Z) to determine new features that have released into the API. You can learn how Minecraft script module versioning works [here](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptversioning)
+**Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
--   Before 1.19.20
-	
-	All API modules use `[ 0, 1, 0 ]`. GameTest Framework experiment must be activated to use in world.
+-   `@minecraft/server`:
+    -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server/v/1.2.0-rc.1.20.0-preview.21) (Latest version)
+    -   [`1.1.0`](https://www.npmjs.com/package/@minecraft/server/v/1.1.0-rc.1.20.0-preview.21)
+    -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0)
+-   `@minecraft/server-ui`:
+    -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.0.0-rc.1.20.0-preview.21) (Latest version, requires `@minecraft/server@1.2.0`)
 
--	1.19.20+
-	
-	All API modules have their versions incremented to `"1.0.0-beta"`, new features/changes are available in the beta version, and `0.1.0` has old developments and features in the API. GameTest Framework experiment must be activated to use in world.
+**Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
 
--   1.19.50+
-	
-	**Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
+-   `@minecraft/server`:
 
-	-	`@minecraft/server`:
-		-	`1.1.0`
-		- `1.0.0`
+    -   [`1.3.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.3.0-beta.1.20.0-preview.21) (Latest beta)
+    -   `0.1.0` (use `mojang-minecraft`, NOT `@minecraft/server` when importing module for this version)
 
-	**Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
-	
-	-	`@minecraft/server`:
-		-	`1.2.0-beta`
-		-	`0.1.0` (use `mojang-minecraft`, NOT `@minecraft/server` when importing module for this version)
+-   `@minecraft/server-ui`:
+    -   [`1.1.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.1.0-beta.1.20.0-preview.21) (Latest beta)
+    -   `0.1.0` (use `mojang-minecraft-ui`, NOT `@minecraft/server-ui` when importing module for this version)
+-   `@minecraft/server-gametest`:
 
-	-	`@minecraft/server-ui`:
-		-	`1.0.0-beta`
-		-	`0.1.0` (use `mojang-minecraft-ui`, NOT `@minecraft/server-ui` when importing module for this version)
-		
-	-	`@minecraft/server-gametest`:
-		-	`1.0.0-beta`
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.20.0-preview.21) (Latest beta)
 
-	-	`@minecraft/server-net`:
-		-	`1.0.0-beta` (Bedrock Dedicated Server module only, must enable in `permission.json`)
+-   `@minecraft/server-net`:
 
-	-	`@minecraft/server-admin`:
-		-	`1.0.0-beta` (Bedrock Dedicated Server module only)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-net/v/1.0.0-beta.1.20.0-preview.21) (Latest beta, Bedrock Dedicated Server module only, must enable in `permission.json`)
 
-As of release 1.19.30, you can also specify dependencies using the `module_name`:
+-   `@minecraft/server-admin`:
 
-::: warning
-Do not add `"uuid"` and `"module_name"` properties into dependency, add one or the other.
-:::
-
-<CodeHeader>BP/manifest.json#dependencies[0]</CodeHeader>
-
-```json
-{
-	"module_name": "@minecraft/server",
-	"version": "1.2.0-beta"
-}
-```
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-admin/v/1.0.0-beta.1.20.0-preview.21) (Latest beta, Bedrock Dedicated Server module only)
 
 (Beta 1.19.40.23+) In order to use the `eval()` function or `Function()` constructors, you can add the following in the manifest capabilities:
 
@@ -157,7 +114,7 @@ Minecraft's scripting engine only runs JavaScript, like any other JavaScript pro
 // Spamming the chat with "Hello World"
 
 // Import world component from "@minecraft/server"
-import { world } from '@minecraft/server';
+import { world, system } from '@minecraft/server';
 
 // Subscribe to an event that calls every Minecraft tick
 system.runInterval(() => {
@@ -174,7 +131,7 @@ system.runInterval(() => {
 
 Official documentation are hosted on Microsoft Learn and can be found here:
 
--	[`@minecraft/server`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft)
+-   [`@minecraft/server`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft)
 -   [`@minecraft/server-gametest`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/mojang-gametest)
 -   [`@minecraft/server-ui`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft-ui/mojang-minecraft-ui)
 -   [`@minecraft/server-admin`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft-server-admin/mojang-minecraft-server-admin)
@@ -207,4 +164,5 @@ Latest stable API modules:
 
 ```bash
 npm install @minecraft/server
+npm install @minecraft/server-ui
 ```

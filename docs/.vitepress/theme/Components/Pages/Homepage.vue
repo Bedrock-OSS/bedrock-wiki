@@ -95,10 +95,10 @@
 				<CardLink
 					title="Scripting"
 					imgsrc-light="assets/images/homepage/scripting.png"
-					link="scripting/scripting-intro"
+					link="scripting/starting-scripts"
 				>
-					<a href="scripting/starting-scripts.html">Beginner's Guide</a>: Learn the basics of the experimental scripting-API<br><br>
-					<a href="scripting/custom-command.html">Custom commands</a>:
+					<a href="scripting/starting-scripts">Beginner's Guide</a>: Learn the basics of the experimental scripting-API<br><br>
+					<a href="scripting/custom-command">Custom commands</a>:
 					Learn how to make your own custom commands!
 				</CardLink>
 				<CardLink

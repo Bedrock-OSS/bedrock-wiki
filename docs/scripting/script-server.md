@@ -12,6 +12,7 @@ The Script API is currently in active development, and breaking changes are freq
 In Scripting API, most of the core features are implemented in the `@minecraft/server` module, with lots of methods to interact a Minecraft world, including entities, blocks, dimensions, and more programmatically. This article contains a basic introduction to some of the core API mechanics, for more detailed information please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
 
 ## Setup
+
 You will need to add the Script module as a dependency in your `manifest.json`.
 
 <CodeHeader>BP/manifest.json</CodeHeader>
@@ -33,7 +34,7 @@ In Scripting API, the `@minecraft/server` module uses their own event-driven arc
 
 **World Events**
 
-World events API provides many event listeners that fires when a specific type of events happen in/to a Minecraft world, events such as `beforeChat`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
+World events API provides many event listeners that fires when a specific type of events happen in/to a Minecraft world, events such as `chatSend`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
 
 ::: tip
 Check out Microsoft docs to see what world events are available in Minecraft: [Events documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/events)
@@ -43,7 +44,7 @@ In order to subscribe to an event, get the `events` property from world object. 
 
 ```js
 import { world } from "@minecraft/server";
-- 
+-
 // subscribing to a blockBreak event
 // - fires when a player breaks a block
 world.events.blockBreak.subscribe((event) => {
@@ -75,15 +76,15 @@ system.events.beforeWatchdogTerminate.subscribe((event) => {
 
 **ScriptEvents**
 
-ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block.- 
+ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block.-
 `/scriptevent` - Triggers a script event with an ID and message.
 
 ```
 /scriptevent <messageId: string> <message: string>
 ```
 
-- `messageId` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
-- `message` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
+-   `messageId` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
+-   `message` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
 
 **Example**:
 
@@ -134,7 +135,7 @@ system.run(() => {
 	world.sendMessage("This runs a tick after the last tick");
 });
 ```
- 
+
 `system.runInterval(callback, tickInterval?)` - Runs a function repeatedly, starting after the interval of time, then repeating continuously at that interval.
 
 ```js
@@ -144,7 +145,7 @@ system.runInterval(() => {
 	world.sendMessage("This message runs every 20 ticks");
 }, 20);
 ```
- 
+
 `system.runTimeout(callback, tickDelay?)` - Runs a function once after the interval of time.
 
 ```js
@@ -173,14 +174,14 @@ system.runTimeout(() => {
 
 ## Saving and Loading
 
-
 With the @minecraft/server module, developers can define their own custom properties, known as dynamic properties, that can be used and stored within Minecraft. These data are stored specifically in the db folder using a behavior pack's module UUID.
 
 ![dynamic_properties](/assets/images/gametest/script-server/dynamic_properties.png)
 
-In order to save data, the property must be initialised first. There are multiple ways to declare dynamic properties, either on an entity type or world. You can define as many numbers and booleans as you would like, however Minecraft API only allows each - behavior pack to save a limited bytes of string.- 
+In order to save data, the property must be initialised first. There are multiple ways to declare dynamic properties, either on an entity type or world. You can define as many numbers and booleans as you would like, however Minecraft API only allows each - behavior pack to save a limited bytes of string.-
 -If you register property in EntityType, each entity can save up to 1,000 bytes of text data.
-- If you register property in World, each entity can save up to 10,000 bytes of text data.
+
+-   If you register property in World, each entity can save up to 10,000 bytes of text data.
 
 The `DynamicPropertiesDefinition` class is used in conjunction with the `PropertyRegistry` class to define dynamic properties that can be used on entities of a specified type or at the global World-level. The `defineBoolean`, `defineNumber`, and `defineString` methods are used to define new boolean, number, and string dynamic properties, respectively.
 
@@ -209,6 +210,7 @@ world.events.worldInitialize.subscribe((event) => {
   event.propertyRegistry.registerWorldDynamicProperties(propertiesDefinition);
 });
 ```
+
 In this example, we are defining a number dynamic property called `playerScore` and registering it globally for the entire world using the `registerWorldDynamicProperties` method.
 
 **Get and Set Dynamic Properties**
@@ -230,6 +232,7 @@ world.events.entityHit.subscribe(({ hitEntity }) => {
   const isAngry = hitEntity.getDynamicProperty<boolean>('isAngry'); // get boolean property
 });
 ```
+
 In this example, we are setting a boolean dynamic property called `isAngry` on a zombie entity that got hit. We then get the value of the `isAngry` property using the `getDynamicProperty` method.
 
 Here is an example of how to get and set dynamic properties at the global World-level:
@@ -267,7 +270,7 @@ Returns a `Promise<CommandResult>`. Throws an error **synchronously** if the que
 
 Normally we recommend avoiding using commands because asynchronous programs add more complexity and make the code more unreadable, and errors do not throw synchronously unless you catch the error. However, the following command features are not implemented in scripting API.
 
-**Ender chest and offhand slot** 
+**Ender chest and offhand slot**
 
 Script API does not provide any methods to get/set information of player's ender chest and off hand slot. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
 
@@ -289,8 +292,8 @@ Script API can't display translations in title, subtitle or actionbar in rawtext
 
 **Player's abilities**
 
-- Script API you can't set abilities for each player.
-- You can't read player's abilities.
+-   Script API you can't set abilities for each player.
+-   You can't read player's abilities.
 
 **execute**
 
@@ -304,13 +307,13 @@ Script API cannot run Minecraft function files without the use of `/function`.
 
 **gamerule**
 
-- Script API cannot set any game rules.
-- Cannot read game rules' value.
+-   Script API cannot set any game rules.
+-   Cannot read game rules' value.
 
 **locate**
 
-- Script API cannot get structure's location.
-- Cannot get biome's location.
+-   Script API cannot get structure's location.
+-   Cannot get biome's location.
 
 **loot**
 
@@ -318,8 +321,8 @@ Script API even though the loot is broken from the start, but it's useful for dr
 
 **weather**
 
-- Script API can't get weather directly.
-- Can't set weather.
+-   Script API can't get weather directly.
+-   Can't set weather.
 
 **difficulty**
 
@@ -347,5 +350,54 @@ Script API can't stop playing a sound.
 
 **dialogue**
 
-- Script API can't open the NPC dialogue to player.
-- Can't change the dialogue displayed by an NPC.
+-   Script API can't open the NPC dialogue to player.
+-   Can't change the dialogue displayed by an NPC.
+
+## BeforeEvents privilege system
+
+::: tip
+The developers may release an article discussing this topic in Microsoft Learn, for now these are the infomation the community  gathered.
+:::
+
+In 1.20.0, Minecraft Scripting API releases a privilege system for callbacks fired in before events (i.e. `ChatSendBeforeEvent`).
+
+This limits the native functions that are allowed to be executed in the callback, which most of the functions are the native functions that modifies changes to Minecraft (like setting the world time with `World::setTime()`) in the same tick. The purpose of this implementation is to avoid cascading changes in the middle of a game tick.
+
+```js
+world.beforeEvents.chatSend.subscribe(event => {
+	event.cancel = true;
+	world.setTime(TimeOfDay.Night);
+});
+```
+
+In the example code above, the world sets the time and cancels a message from being sent to the chat. It also changes the time of the world to night using `world.setTime()`, which throws error as the native function does not have the privilege to change the state of the world.
+
+To migrate your code to this new system. You must run these native functions that requires privilege in the tick after the tick that fires the event, using the following methods:
+
+1. Use `system.run`:
+
+```js
+world.beforeEvents.chatSend.subscribe(event => {
+	event.cancel = true;
+	system.run(() => {
+		world.setTime(TimeOfDay.Night);
+	});
+});
+```
+
+To migrate code with the new privilege system, the `world.setTime()` function is wrapped inside the `system.run()` method, which delays its execution by a tick. This ensures that the function is not executed in the same tick that the before event fires.
+
+2. Execute function asynchronously:
+
+```js
+world.beforeEvents.chatSend.subscribe(async (event) => {
+	// synchronous code
+	event.cancel = true;
+
+	// asynchronous code
+	await null;
+	world.setTime(TimeOfDay.Night);
+});
+```
+
+The use of `await` is another way to cause the code to run asynchronously without the use of `system.run()`. As the code before `await` are run synchronously, so the event can be canceled with `event.cancel = true`.
