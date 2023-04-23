@@ -5,7 +5,7 @@ mention:
     - BedrockCommands
     - zheaEvyline
 tags:
-    - system
+    - info
 ---
 
 ## Introduction
@@ -20,18 +20,46 @@ Introduced in version `1.0.5`, you can use the `/playsound` command to play soun
 
 ## Definitions
 
-- **` sound `** is the sound effect to start playing. You can find the list of sound effects currently available at:
-https://www.digminecraft.com/lists/sound_list_pe.php
+### Sound
 
-- **` player `** is optional. It refers to the player selectors  `@a`   `@r`  &  `@p` , you may also use their gamertag.
+- It is the sound effect you wish to play.
+- You can find the list of sound IDs currently available at:
+    - https://www.digminecraft.com/lists/sound_list_pe.php
 
-- **` position `** is optional. It refers to the  `x y z` position from where the sound will be played.
+### Player
 
-- **` volume `** is optional. It determines the size of the sphere in which the sound effect can be heard.  `0.0`  is the minimum size.  Sound & audible sphere size increases as value entered for `volume` increases.
+- This is an optional argument.
+- It refers to your typical target selectors (whom you want to play the sound to) ` @a `, ` @r `, ` @p `, ` Technoblade `, etc..
 
-- **` pitch `** is optional. It determines the pitch for the sound effect. It can be a value between  `0.0`  and  `256.0` . The higher the value, the higher the pitch. Values less than or equal to  `0.0`  makes the sound inaudible. Note that pitch affects the speed at which the audio is played. For example, a pitch of `0.5` would mean the audio is played at `0.5x` speed.
+### Position
 
-- **` minimumVolume `** is optional. It determines the minimum volume at which the sound will be heard outside of the audible sphere. It can be a value between  `0.0`  and  `1.0`
+- This is an optional argument.
+- It refers to the  `x y z` position from where the sound will be played, ie. the center of the playsound radius.
+
+### Volume
+
+- This is an optional argument.
+- It determines the size of the sphere in which the sound effect can be heard.
+    - ` 0.0 ` is the minimum size.
+- Sound & audible sphere size increases as `volume` value is increased.
+    - Playaound volume of `1` is equal to an audible sphere of radius 16 blocks.
+    - Similarly; volume of `4` would be equal to 64 blocks.
+
+### Pitch
+
+- This is an optional aegument.
+- It determines the pitch for the sound effect.
+- It can be a value between ` 0.0 ` and ` 256.0 `
+    - The higher the value, the higher the pitch.
+    - Values less than or equal to  `0.0`  makes the sound inaudible.
+
+> Note; pitch affects the speed at which the audio is played. For example, a pitch of `0.5` would mean the audio is played at ` 0.5× ` speed.
+
+### Minimum Volume
+
+- This is an optional argument.
+- It determines the minimum volume at which the sound will be heard outside of the audible sphere.
+- It can be a value between ` 0.0 ` and ` 1.0 `
 
 ## Examples
 
@@ -45,3 +73,6 @@ https://www.digminecraft.com/lists/sound_list_pe.php
 ```
 
 Note; since the playsound command is positonal, it is helpful to use an execute command structure as shown in the second example to prevent the sound effect from cutting off in special cases such as playing a sound effect following a `/tp` command. You may increase volume when covering large distances to reduce failures.
+
+
+**(Recommended) Read Next: [Sounds](/concepts/sounds.html)**
