@@ -67,9 +67,8 @@
 					imgsrc-light="assets/images/homepage/commands.png"
 					link="/commands/intro-to-command-blocks.html"
 				>
-					[Beginner's Guide:](/commands/intro-to-command-blocks.md) Learn about command block basics.
-					
-					[Functions:](/commands/mcfunctions.md) get started with Functions Packs, an easier way to code commands.
+					<a href="commands/intro-to-command-blocks">Beginner's Guide</a>: Learn about command block basics.<br><br>
+					<a href="commands/mcfunctions">Functions</a>: Get started with Functions Packs, an faster way to code commands!
 				</CardLink>
 				<CardLink
 					title="Entities"
