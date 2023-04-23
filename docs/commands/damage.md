@@ -1,7 +1,7 @@
 ---
 title: Damage
 category: General
-tags:
+tags: info
 mention:
     - BedrockCommands
     - cda94581
@@ -15,52 +15,47 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 ## Syntax
 
-There are two ways the damage command can be used:
-
-`damage <Target> <Amount> [Cause]`
-
-`damage <Target> <Amount> <Cause> entity <Damager>`
+- There are two ways the damage command can be used:
+    - `/damage <Target> <Amount> [Cause]`
+    - `/damage <Target> <Amount> <Cause> entity <Damager>`
 
 ## Arguments
 
-Phrases not contained in angle  <>  or square  []  brackets instruct you to type it as-is.
-
-Phrases contained within brackets are variables, these need to be replaced:
-ㅤ- Angle brackets <>  mean the variable is required.
-ㅤ- Square brackets []  mean the variable is optional.
+- Phrases not contained in angle  <>  or square  []  brackets instruct you to type it as-is.
+- Phrases contained within brackets are variables, these need to be replaced:
+    - **` <> `** Angle brackets mean the variable is required.
+    - **` [] `** Square brackets mean the variable is optional.
 
 ## Variables
 
-ㅤ- `Target`  This is your typical entity selector, such as `@s` , `@e` , or `"cda94581"` . Multiple entities may be selected at a time to deal the damage to multiple targets.
+- **` Target `** This is your typical entity selector, such as `@s` , `@e` , or `"cda94581"` . Multiple entities may be selected at a time to deal the damage to multiple targets.
 
-ㅤ- `Amount`  This is a whole number, which specifies the amount of damage to deal to the targets. The minimum value is  `0`  and the maximum value is `2147483647`, or the signed 32-bit integer limit.
+- **` Amount `** This is a whole number, which specifies the amount of damage to deal to the targets. The minimum value is  `0`  and the maximum value is `2147483647`, or the signed 32-bit integer limit.
 
-ㅤ- `Cause`  This specifies the "reason" the damage was dealt. This cause will appear in death messages (`X hit the ground too hard for cause: fall`) be used in damage calculation with armor (`the value dealt in Amount may be different depending on the worn armor`), and used in a large variety of other things, such as in Behavior Pack/Add-ons.
+- **` Cause `** This specifies the "reason" the damage was dealt. This cause will appear in death messages (`X hit the ground too hard for cause: fall`) be used in damage calculation with armor (`the value dealt in Amount may be different depending on the worn armor`), and used in a large variety of other things, such as in Behavior Pack/Add-ons. A full list of all the damage causes can be found [below](/commands/damage.md#damage-cause-list)
 
-> A full list of all the damage causes can be found below
+- **` Damager `** If Cause was something to do with entities `(such as entity_attack)`, this specifies where the damage came from `(the entity that dealt the attack)`. This is limited to only 1 target. An error will be thrown if multiple targets are found from the selector.
 
-ㅤ- `Damager`  If Cause was something to do with entities `(such as entity_attack)`, this specifies where the damage came from `(the entity that dealt the attack)`. This is limited to only 1 target. An error will be thrown if multiple targets are found from the selector.
-
-The  `<Cause>  entity  <Damager>`  is only required when the Cause has to do with another entity `(entity_attack)`. Otherwise, follow the first syntax.
+> Note; the  `<Cause>  entity  <Damager>`  is only required when the Cause has to do with another entity `(entity_attack)`. Otherwise, follow the first syntax.
 
 ## Examples
 
 <CodeHeader>mcfunction</CodeHeader>
 ```yaml
-damage @a 4
-//deal 4 damage to all players
+#Deal 4 damage to all players
+/damage @a 4
 
-damage @e [type=sheep] 3 fire
-//deal 3 damage of cause: fire to all entities of type: sheep
+#Deal 3 'fire' damage to all entities of type 'sheep'
+/damage @e [type=sheep] 3 fire
 
+#Deal 40 'entity attack' damage from a random player to all entities of type 'sheep'
 /damage @a 40 entity_attack entity @r [type=sheep]
-//deal 40 damage of cause: entity_attack to all players by random entity of type: sheep
 ```
 
-## Cause List
+## Damage Cause List
 
 Listed below are all the 'damage sources' in MCBE for the `/damage` command currently available:
-```all
+```
 anvil
 block_explosion
 charging
@@ -91,4 +86,5 @@ suicide
 temperature
 thorns
 void
-wither```
+wither
+```
