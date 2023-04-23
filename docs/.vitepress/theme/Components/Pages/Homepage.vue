@@ -63,6 +63,14 @@
 					other addon creators.
 				</CardLink>
 				<CardLink
+					title="Commands"
+					imgsrc-light="assets/images/homepage/commands.png"
+					link="/commands"
+				>
+					Learn about commands and command block basics.
+					Find popular and useful systems documented by community experts.
+				</CardLink>
+				<CardLink
 					title="Entities"
 					imgsrc-light="assets/images/homepage/spawn_egg_30.png"
 					link="entities/entity-intro-bp"
