@@ -65,7 +65,7 @@
 				<CardLink
 					title="Commands"
 					imgsrc-light="assets/images/homepage/commands.png"
-					link="/commands/intro-to-command-blocks.html"
+					link="/commands/intro-to-command-blocks"
 				>
 					<a href="commands/intro-to-command-blocks">Beginner's Guide</a>: Learn about command block basics.<br><br>
 					<a href="commands/mcfunctions">Functions</a>: Get started with Function Packs, a faster more powerful way to code commands!
