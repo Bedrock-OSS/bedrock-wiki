@@ -50,7 +50,7 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 
 ### Notes For Beginners
 
-- **Integers** simply mean numbers. They are used to define a block from a 'range' of values.
+- **Integers** are whole numbers. They are used to define a block from a 'range' of values.
     - Example: Redstone power 1 to 15
     - `["redstone_power":10]`
 
