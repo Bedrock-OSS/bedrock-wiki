@@ -26,11 +26,11 @@ Functions are useful in many ways to reduce the time spent going from command bl
 	:paths="[
     'BP',
     'BP/functions',
-    'BP/functions/thiscode.mcfunction',
-    'BP/functions/moreofthiscode.mcfunction',
+    'BP/functions/this_code.mcfunction',
+    'BP/functions/more_of_this_code.mcfunction',
     'BP/functions/tick.json',
     'BP/functions/nested',
-    'BP/functions/nested/thiscodeisnested.mcfunction',
+    'BP/functions/nested/this_code_is_nested.mcfunction',
 ]"
 ></FolderView>
 
@@ -114,7 +114,7 @@ Functions are versioned; therefore, they will run in the version listed in the `
 
 Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick. 
 
-Nested functions, for example `BP/functions/Lobby/items/1.mcfunction` can be run using the nested folder path, in this case `/function Lobby/items/1`
+Nested functions, for example `BP/functions/lobby/items/1.mcfunction` can be run using the nested folder path, in this case `/function lobby/items/1`
 
 ## tick.json
 
