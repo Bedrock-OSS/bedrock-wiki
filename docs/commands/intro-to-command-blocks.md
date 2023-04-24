@@ -33,7 +33,7 @@ They can only be placed or destroyed by a player with the Operator permission le
 
 ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **Chain** runs the command in a sequence, ie. only after the previous command block it is connecting from was run.
 
-![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **Repeat** runs the command every game tick. There are approx 20 ticks per second. A delay can be applied to adjust how often the command is executed (explained [below](/intro-to-command-blocks.html#command-block-tick-delay).)
+![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **Repeat** runs the command every game tick. There are approximately 20 ticks per second. A delay can be applied to adjust how often the command is executed, explained [below](/intro-to-command-blocks.html#command-block-tick-delay).
 
 ## Command Block Conditions
 
