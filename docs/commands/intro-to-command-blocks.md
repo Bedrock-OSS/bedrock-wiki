@@ -117,7 +117,7 @@ The arrow/facing direction can be observed from the command block texture.
 
 - Double check the block type, condition & the command syntax. Check 'Previous Output' after powering it once again.
 
-- Just like redstone, command blocks must also be in loaded chunks for them to work. You can use a tickingarea to keep them loaded when players are not nearby. Refer to [/tickingarea](https://www.digminecraft.com/game_commands/tickingarea_command.php) command documentation for more info.
+- Just like redstone, command blocks must also be in loaded chunks for them to work. You can use a tickingarea to keep them loaded when players are not nearby. Refer to [/tickingarea](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand) command documentation for more info.
 
 If nothing seems to work simply break and place that command block again.
 
