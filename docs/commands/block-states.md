@@ -70,7 +70,7 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 A list of all the block states currently available within Bedrock can be found at:
 https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/examples/blockstateslist
 
-Note; in the site block states may be written as one word but make sure to separate them with underscores `_` when typing in commands.
+Note: In the site block states may be written as one word but make sure to separate them with underscores `_` when typing in commands.
 
 Example: `buttonPressedBit` → `"button_pressed_bit"`
 
