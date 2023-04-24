@@ -46,7 +46,7 @@ Important links have a ⭐.
 -   [Chunker (World Converter)](https://chunker.app/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [BedrockLauncher (Bedrock version switcher)](https://bedrocklauncher.github.io/)
--   [ResourcePack Conveter [App]](https://converter.bedrockhub.io)
+-   [ResourcePack Converter [App]](https://converter.bedrockhub.io)
 -   [BedrockConnect [App]](https://bedrockconnect.bedrockhub.io)
 
 ## Bedrock Tools Websites
