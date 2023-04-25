@@ -12,7 +12,7 @@ tags:
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-Introduced in version `1.0.5`, you can use the `/playsound` command to play sound effects to players present anywhere in the world whenever you like.
+You can use the `/playsound` command to play sound effects to players present anywhere in the world whenever you like.
 
 ## Syntax
 
