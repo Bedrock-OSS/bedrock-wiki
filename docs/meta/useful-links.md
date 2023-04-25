@@ -10,9 +10,9 @@ Important links have a ⭐.
 
 -   ⭐ [Bedrock Add-Ons](https://discord.gg/46JUdQb)
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
+-   ⭐ [Minecraft](https://discord.gg/minecraft)
 -   ⭐ [Blockbench](http://discord.gg/fZQbxbg)
 -   ⭐ [bridge.](https://discord.gg/NxKuWuA)
--   ⭐ [Minecraft](https://discord.gg/minecraft)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
 -   [Amulet & MCEdit](https://discord.gg/dSnwqQf)
 -   [Artists Refuge](https://discord.gg/aVXbPCdRr3)
