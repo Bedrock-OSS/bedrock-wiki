@@ -97,6 +97,8 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 	
 ![pack_icon.png](/assets/images/commands/pack_icon.png)
 
+![pack_icon.png](/assets/images/guide/project-setup/pack_icon.png)
+
 </Spoiler>
 
 4. Create a `📁 functions` folder. Any file within this folder that ends with **.mcfunction** will be registered as a function in-game, which can be run with `/function <function_name>`.
