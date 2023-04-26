@@ -94,8 +94,12 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 
 </Spoiler>
 <Spoiler title="Sample 🖼 pack_icon.png">
+
+Sample A:
 	
 ![pack_icon.png](/assets/images/commands/pack_icon.png)
+
+Sample B:
 
 ![pack_icon.png](/assets/images/guide/project-setup/pack_icon.png)
 
@@ -138,7 +142,7 @@ The final file within a function is the **tick.json** file. This specifies funct
 <CardLink
   imgsrcLight="assets/images/commands/BClogo.png"
 	title="Download Sample Function Pack"
-	link="https://drive.google.com/file/d/13vSN6SROxEvL_haT83QFVZgYQrM2oFhs"
+	link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions-sample.mcpack"
 />
 
 ## Troubleshooting Functions
