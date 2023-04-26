@@ -1,5 +1,6 @@
 ---
 title: File Types
+max_toc_level : 4
 mention:
     - Ciosciaa
 ---
