@@ -13,7 +13,7 @@ tags:
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-This system allows you to run your desired commands at specific intervals with any amount of delay you that wish to add.
+This system allows you to run your desired commands at specific intervals with any amount of delay that you wish to add.
 
 - **Some Examples:**
     - Sending a message in chat every 2 hours.
@@ -41,7 +41,7 @@ To do that, first you must know that **1 second is approximately 20 game ticks i
 
 ```yaml
 # 2h = 20(t) × 60(s) × 60(m) × 2(h) = 144000t
-/scoreboard players set 20m ticks 144000
+/scoreboard players set 2h ticks 144000
 
 #10m = 20(t) × 60(s) × 10(m) = 12000t
 /scoreboard players set 10m ticks 12000
