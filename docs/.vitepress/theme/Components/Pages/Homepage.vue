@@ -63,6 +63,14 @@
 					other addon creators.
 				</CardLink>
 				<CardLink
+					title="Commands"
+					imgsrc-light="assets/images/homepage/commands.png"
+					link="/commands/intro-to-command-blocks"
+				>
+					<a href="commands/intro-to-command-blocks">Beginner's Guide</a>: Learn about command block basics.<br><br>
+					<a href="commands/mcfunctions">Functions</a>: Get started with Function Packs, a faster more powerful way to code commands!
+				</CardLink>
+				<CardLink
 					title="Entities"
 					imgsrc-light="assets/images/homepage/spawn_egg_30.png"
 					link="entities/entity-intro-bp"

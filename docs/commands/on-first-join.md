@@ -3,7 +3,7 @@ title: On First Join
 category: On Event Systems
 mention:
     - BedrockCommands
-    - EziGotFliped
+    - zheaEvyline
 nav_order: 1
 tags:
     - system

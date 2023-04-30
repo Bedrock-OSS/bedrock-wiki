@@ -3,7 +3,7 @@ title: Entity Counter
 category: Scoreboard Systems
 mention:
     - BedrockCommands
-    - EziGotFliped
+    - zheaEvyline
 nav_order: 3
 tags:
     - system

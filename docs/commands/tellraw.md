@@ -1,6 +1,6 @@
 ---
 title: Tellraw
-category: General
+category: Commands
 ---
 
 tellraw sends a JSON message to selected or all players being useful for sending plain messages to players ingame
