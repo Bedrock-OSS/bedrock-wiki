@@ -15,7 +15,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | JavaScript | [Still Active](#javascript) : 2 < [Discontinued](#javascript-1) : 5  |
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | C++        | [Still Active](#c)          : 2 < [Discontinued](#c-3)          : 3  |
-| TypeScript | [Still Active](#typescript) : 3 < Discontinued                  : 0  |
+| TypeScript | [Still Active](#typescript) : 2 < [Discontinued](#typescript-1) : 1  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
 | C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
@@ -53,7 +53,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### TypeScript
 
 -   [BDSX](https://github.com/bdsx/bdsx)
--   [LeafMCBE](https://github.com/LeafMCBE/LeafMCBE)
 -   [JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)
 
 ### JavaScript
@@ -119,6 +118,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [NodeMine](https://github.com/NodeMine/NodeMine)
 -   [Numerous-alpaca](https://github.com/numerous-alpaca/numerous-alpaca)
 -   [PocketNode](https://github.com/PocketNode/PocketNode)
+
+### TypeScript
+
+-   [LeafMCBE](https://github.com/LeafMCBE/LeafMCBE)
 
 ### Kotlin
 
