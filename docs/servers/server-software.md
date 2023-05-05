@@ -19,7 +19,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
 | C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
-| Python     | Still Active                : 0 < [Discontinued](#python)       : 2  |
+| Python     | Still Active                : 1 < [Discontinued](#python)       : 2  |
 | D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
 | Kotlin     | Still Active                : 0 < [Discontinued](#kotlin)       : 1  |
 
@@ -71,6 +71,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
 -   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
+
+### Python
+
+- [PieMC-Bedrock](https://github.com/LapisMYT/PieMC_Bedrock)
 
 ## Discontinued Software
 
