@@ -1,60 +1,69 @@
 name: Deploy
-
 on:
-  push:
-    branches:
-      - wiki
+    push:
+        branches:
+            - wiki
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: .nvmrc
-          cache: npm
-          
-      - name: Check eslint, Install and Build 🔧
+    deploy:
+        runs-on: ubuntu-latest
+        name: Deploy 🚀
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm install
-          npm run lint
-          npm run build
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: generated
-          folder: docs/.vitepress/dist
-      - name: Bully someone into fixing it
-        if: ${{ failure() }}
-        uses: Bedrock-OSS/discord-bully@v1.0.8
-        with:
-          webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
-          tenorGifApiKey: ${{ secrets.TENOR_GIF_API_KEY }}
-          failMessage: I blame %author% <:PE_PandaBonk:885395101877166110>
-          failTitle: 'Wiki deployment failed!'
-          failAuthor: 'You messed up'
-          gifFailQuery: fail
-          successTitle: 'Wiki deployment succeeded!'
-          successMessage: Thank you, %author%! <:PE_PandaInLove:885395799029194853>
-          gifSuccessQuery: success
-          successAuthor: 'You did it'
-          failed: 'true'
-      - name: Send a message if previous build failed
-        if: ${{ success() }}
-        uses: Bedrock-OSS/discord-bully@v1.0.8
-        with:
-          webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
-          tenorGifApiKey: ${{ secrets.TENOR_GIF_API_KEY }}
-          failMessage: I blame %author% <:PE_PandaBonk:885395101877166110>
-          failTitle: 'Wiki deployment failed!'
-          failAuthor: 'You messed up'
-          gifFailQuery: fail
-          successTitle: 'Wiki deployment succeeded!'
-          successMessage: Thank you, %author%! <:PE_PandaInLove:885395799029194853>
-          gifSuccessQuery: success
-          successAuthor: 'You did it'
-          failed: 'false'
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  cache: npm
+                  cache-dependency-path: package-lock.json
+                  node-version-file: .nvmrc
+
+            - name: Install Project 🔧
+              run: npm install
+
+            - name: Check Linting 🔎
+              run: npm run lint
+
+            - name: Check Build 🔧
+              run: npm run build
+
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@4.1.0
+              with:
+                  branch: generated
+                  folder: docs/.vitepress/dist
+
+            - name: Bully someone into fixing it
+              if: ${{ failure() }}
+              uses: Bedrock-OSS/discord-bully@v1.0.8
+              with:
+                  webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
+                  tenorGifApiKey: ${{ secrets.TENOR_GIF_API_KEY }}
+                  failMessage: I blame %author% <:PE_PandaBonk:885395101877166110>
+                  failTitle: 'Wiki deployment failed!'
+                  failAuthor: 'You messed up'
+                  gifFailQuery: fail
+                  successTitle: 'Wiki deployment succeeded!'
+                  successMessage: Thank you, %author%! <:PE_PandaInLove:885395799029194853>
+                  gifSuccessQuery: success
+                  successAuthor: 'You did it'
+                  failed: 'true'
+
+            - name: Send a message if previous build failed
+              if: ${{ success() }}
+              uses: Bedrock-OSS/discord-bully@v1.0.8
+              with:
+                  webhook: https://canary.discord.com/api/webhooks/${{ secrets.WEBHOOK_ID }}/${{ secrets.WEBHOOK_TOKEN }}
+                  tenorGifApiKey: ${{ secrets.TENOR_GIF_API_KEY }}
+                  failMessage: I blame %author% <:PE_PandaBonk:885395101877166110>
+                  failTitle: 'Wiki deployment failed!'
+                  failAuthor: 'You messed up'
+                  gifFailQuery: fail
+                  successTitle: 'Wiki deployment succeeded!'
+                  successMessage: Thank you, %author%! <:PE_PandaInLove:885395799029194853>
+                  gifSuccessQuery: success
+                  successAuthor: 'You did it'
+                  failed: 'false'

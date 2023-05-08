@@ -13,20 +13,21 @@ jobs:
         name: Build Check
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout repository
+            - name: Checkout Repository
               uses: actions/checkout@v3
 
-            - name: Install Node
+            - name: Setup Node.js
               uses: actions/setup-node@v3
               with:
-                  node-version-file: .nvmrc
                   cache: npm
+                  cache-dependency-path: package-lock.json
+                  node-version-file: .nvmrc
 
-            - name: Install 🔧
-              run: npm ci
-            
-            - name: Check eslint 🔧
+            - name: Install Project 🔧
+              run: npm install
+
+            - name: Check Linting 🔎
               run: npm run lint
 
-            - name: Build 🔧
+            - name: Check Build 🔧
               run: npm run build
