@@ -1,6 +1,6 @@
 ---
 title: New Execute
-category: General
+category: Commands
 tags:
     - easy
 mention:

@@ -3,7 +3,7 @@ title: On Player Leave
 category: On Event Systems
 mention:
     - BedrockCommands
-    - EziGotFliped
+    - zheaEvyline
 nav_order: 3
 tags:
     - system

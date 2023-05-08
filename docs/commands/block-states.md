@@ -3,7 +3,7 @@ title: Block States
 category: General
 mention:
     - BedrockCommands
-    - EziGotFliped
+    - zheaEvyline
 tags:
     - info
 ---
@@ -48,9 +48,31 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 - Leaving the brackets blank is also a correct syntax, it will simply default to 0.
 - `wool 0` is white wool hence you may simply write it as `wool []` instead of `wool ["color":"white"]`
 
+### Notes For Beginners
+
+- **Integers** are whole numbers. They are used to define a block from a 'range' of values.
+    - Example: Redstone power 1 to 15
+    - `["redstone_power":10]`
+
+- **Boolean** is a programming term which refers to `true/false` values. You can simply understand it as yes or no questions.
+    - Is this piston powered? `yes/no`
+    - Is this button pressed? `yes/no`
+    - Is this log stripped? `yes/no`
+    - `["stripped_bit":true]`
+
+- **Strings** are unique 'text' inputs. You can simply understand it as multiple choice questions.
+    - What color is this wool? `"white"`, `"orange"`, `"brown"` etc..
+    - What wood type is this log? `"spruce"`, `"birch"`, `"acacia"` etc..
+    - `["wood_type":"spruce"]`
+ 
+ 
 ## Block States List
 A list of all the block states currently available within Bedrock can be found at:
 https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/examples/blockstateslist
+
+Note: In the site block states may be written as one word but make sure to separate them with underscores `_` when typing in commands.
+
+Example: `buttonPressedBit` → `"button_pressed_bit"`
 
 ## Converting Aux Values to Block States
 For your convenience; download any of the excel sheet below to find the full list of block IDs, their aux values and equivalent block states in Bedrock. *Shared by kayla@Mojang*
@@ -70,3 +92,25 @@ Alternate sheet: *Shared by @ItsRichHeart*
 >Download Sheet 2</BButton>
 
 You may also use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) instead not needing to download any files.
+
+## Known Issue
+
+Detecting blocks using commands such as `/execute` or `/testforblock` requires __all__ or __none__ of the block states specified else the command returns an error.
+
+Example; detecting a pressed stone button on ground facing up:
+<CodeHeader></CodeHeader>
+
+```yaml
+#✅ Accepted:
+/execute if block ~~~ stone_button [“button_pressed_bit”:true,”facing_direction”:1] run say success
+/execute if block ~~~ stone_button run say success
+
+# ❌ Not Accepted:
+/execute if block ~~~ stone_button [“button_pressed_bit”:true] run say success
+/execute if block ~~~ stone_button [“facing_direction”:1] run say success
+```
+Though block states have replaced aux values, we still cannot detect blocks based on specific filters like we do with selector arguments yet.
+
+### Related Bug Reports
+- [MCPE-133360](https://bugs.mojang.com/browse/MCPE-133360)
+- [MCPE-168391](https://bugs.mojang.com/browse/MCPE-168391)

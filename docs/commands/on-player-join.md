@@ -3,7 +3,7 @@ title: On Player Join
 category: On Event Systems
 mention:
     - BedrockCommands
-    - EziGotFliped
+    - zheaEvyline
 nav_order: 2
 tags:
     - system

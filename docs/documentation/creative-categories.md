@@ -163,5 +163,5 @@ As you can see, `menu_category` accepts 2 optional children, the `category` chil
 | itemGroup.name.wool              |
 | itemGroup.name.woolCarpet        |
 
-*Last updated for 1.19.60*
+*Last updated for 1.19.80*
 <!-- page_dumper_end -->

@@ -9,6 +9,10 @@ tags:
 _Last updated for 1.16.210_
 
 :::warning
+As of 1.18, Custom Biomes are broken for Minecraft Bedrock
+:::
+
+:::warning
 Biome customization is _experimental_. An experimental gameplay toggle must be enabled for each world that uses behavior packs containing biome definitions. What is currently available works well if declared correctly; however, incorrectly declared components and properties may result in crashing as opposed to just logged errors. Furthermore, due to issues caused by the [inheritance model](#inheritance), the schema used for custom biomes is currently not well constructed.
 :::
 
