@@ -3,7 +3,7 @@ title: On Player Respawn
 category: On Event Systems
 mention:
     - BedrockCommands
-    - EziGotFliped
+    - zheaEvyline
 nav_order: 5
 tags:
     - system

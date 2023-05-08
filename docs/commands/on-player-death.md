@@ -3,7 +3,7 @@ title: On Player Death
 category: On Event Systems
 mention:
     - BedrockCommands
-    - EziGotFliped
+    - zheaEvyline
 nav_order: 4
 tags:
     - system
