@@ -37,7 +37,6 @@ Many packages exist for VSCode that make editing addons easier:
 -   [Prettify-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
 -   [Spell Checker (for writing wiki)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 -   [Snowstorm Particle Editor](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm)
--   [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 -   [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
 
 </Spoiler>
