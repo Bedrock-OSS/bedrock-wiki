@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import { ref, watch, defineProps } from 'vue'
+import { ref, watch } from 'vue'
 import { universalFetch } from '../../Utils/fetch'
 
 const { page, site } = useData()

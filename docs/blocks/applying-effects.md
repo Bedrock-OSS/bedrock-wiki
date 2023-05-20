@@ -9,7 +9,7 @@ mention:
 ---
 
 This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block. There are few issues that can encounter during trial-and-error, this guide is a workaround to these issues. List of potential problems is attached on the bottom of this page.
-Please visit [Blocks 1.16.100+](/blocks/blocks-16) first to have better understanding of components used in this tutorial.
+Please visit [blocks](/blocks/blocks-stable) first to have better understanding of components used in this tutorial.
 
 ## Code
 

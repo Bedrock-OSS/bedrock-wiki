@@ -120,7 +120,7 @@ Cooking and Smelting:
 Brewing:
 - `brewing_stand`
 
-Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-16.html#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
+Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-stable.html#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
 
 ::: tip
 To effectively disable a recipe (useful for [overriding](#overrides) a prior recipe), set the tag array to `[""]`.
@@ -219,7 +219,7 @@ Crafting recipes support both crafting tables and stonecutters:
 "tags": ["crafting_table", "stonecutter"]
 ```
 
-`"crafting_table"` applies to both vanilla crafting tables and the player 2 × 2 crafting grid in their inventory. There is currently no way to opt into one but not the other. Crafting recipes additionally support custom tags, linking recipes to a [crafting grid provided by a custom block](/blocks/blocks-16.html#minecraft-crafting-table).
+`"crafting_table"` applies to both vanilla crafting tables and the player 2 × 2 crafting grid in their inventory. There is currently no way to opt into one but not the other. Crafting recipes additionally support custom tags, linking recipes to a [crafting grid provided by a custom block](/blocks/blocks-stable.html#minecraft-crafting-table).
 
 ### Shapeless Recipes
 Shapeless recipes simply bind a collection of inputs to a single output on a crafting grid.
