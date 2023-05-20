@@ -6,195 +6,195 @@ tags:
 ---
 
 ::: tip
-This tutorial assumes you have a basic understanding of blocks and Blockbench.
-Ensure to check out the [blocks guide](/blocks/blocks-intro) before starting this tutorial
+This tutorial assumes you have a basic understanding of blocks.
+Check out the [blocks guide](/blocks/blocks-intro) before starting and ensure your block is using format versions `1.19.80`+.
 :::
 
-## First Steps
+::: warning EXPERIMENTAL
+Requires `Holiday Creator Features` to trigger events.
+:::
 
-Make sure you have the `Holiday Creator Features` toggle turned on. This will allow us to utilize the `1.16.100` components.
+## Rotation Types
 
-## The Model
+- ### [Facing Rotation](#facing-rotation-setup)
+  - Used by carved pumpkins
+  - 4 cardinal directions
 
-Minecraft uses the default pivot points of [0,0,0]. This means that if your model consists of specific pivot points, your model will look detached in-game. In order to combat this, we can use the blockbench plugin called "Bedrock Pivot Fix 2". This will align your elements to the default pivot point without moving your elements.
+- ### [Log/Pillar Rotation](#log-rotation-setup)
+  - Used by logs and basalt
+  - 3 axis-aligned directions
 
-## Regular Rotation
+- ### [Specific Rotation](/blocks/head-like-rotation)
+  - Used by skulls, signs and banners
+  - 16 directions (22.5 degree multiples)
+  - 4 cardinal side-attached directions
+
+## Facing Rotation Setup
 
 ### Permutations
 
-Rotating blocks make use of the permutations that were introduced in 1.16.100. Each permutation contains the `minecraft:rotation` component, and when the condition is true, the component within the respective permutation will activate and rotate the block to that direction. The 2, 3, 4, and 5 values are used here because the query we'll be using in our event will return those numbers and we'll be storing them to our property.
+Rotation makes use of block permutations. Each permutation contains the `minecraft:transformation` component, which allows for cardinal rotation.
+
+The 2, 3, 4, and 5 values are used here because the query we'll be using in our event will return those numbers and we'll be storing them to our property.
 
 ```json
 {
-	"permutations": [
-		{
-			"condition": "query.block_property('wiki:rotation') == 2",
-			"components": {
-				"minecraft:rotation": [0, 0, 0]
-			}
-		},
-		{
-			"condition": "query.block_property('wiki:rotation') == 3",
-			"components": {
-				"minecraft:rotation": [0, 180, 0]
-			}
-		},
-		{
-			"condition": "query.block_property('wiki:rotation') == 4",
-			"components": {
-				"minecraft:rotation": [0, 90, 0]
-			}
-		},
-		{
-			"condition": "query.block_property('wiki:rotation') == 5",
-			"components": {
-				"minecraft:rotation": [0, 270, 0]
-			}
-		}
-	]
+  "permutations": [
+    // Facing north
+    {
+      "condition": "query.block_property('wiki:rotation') == 2",
+      "components": {
+        "minecraft:transformation": { "rotation": [0, 0, 0] }
+      }
+    },
+    // Facing south
+    {
+      "condition": "query.block_property('wiki:rotation') == 3",
+      "components": {
+        "minecraft:transformation": { "rotation": [0, 180, 0] }
+      }
+    },
+    // Facing west
+    {
+      "condition": "query.block_property('wiki:rotation') == 4",
+      "components": {
+        "minecraft:transformation": { "rotation": [0, 90, 0] }
+      }
+    },
+    // Facing east
+    {
+      "condition": "query.block_property('wiki:rotation') == 5",
+      "components": {
+        "minecraft:transformation": { "rotation": [0, -90, 0] }
+      }
+    }
+  ]
 }
 ```
 
 ### Event
 
-In order to make the block rotate the way the player is facing, we have to use some simple molang to query which way the player is facing.
+In order to make the block rotate with the player, we have to use molang to query which way the player is facing.
 
-
-```json
-{
-	"events": {
-		"wiki:set_rotation": {
-			"set_block_property": {
-				"wiki:rotation": "(query.cardinal_facing_2d)"
-			}
-		}
-	}
-}
-```
-
-This event is called upon by using the `minecraft:on_player_placing` component.
-
+The code below sets the `wiki:rotation` property to the cardinal facing direction of the player.
 
 ```json
 {
-	"minecraft:on_player_placing": {
-		"event": "wiki:set_rotation"
-	}
+  "events": {
+    "wiki:set_rotation": {
+      "set_block_property": {
+        "wiki:rotation": "query.cardinal_facing_2d"
+      }
+    }
+  }
 }
 ```
 
-## JSON Part
+### Component
 
-### The Block Code
+This event is triggered by using the `minecraft:on_player_placing` component to manipulate the block as it is placed.
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:cabinet",
-			"properties": {
-				"wiki:rotation": [2, 3, 4, 5]
-			}
-		},
-		"events": {
-			"wiki:set_rotation": {
-				"set_block_property": {
-					"wiki:rotation": "(query.cardinal_facing_2d)"
-				}
-			}
-		},
-		"components": {
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "cabinet",
-					"render_method": "alpha_test"
-				}
-			},
-			"minecraft:pick_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
-			},
-			"minecraft:entity_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
-			},
-			"minecraft:geometry": "geometry.cabinet",
-			"minecraft:block_light_absorption": 0,
-			"minecraft:destroy_time": 3,
-			"minecraft:on_player_placing": {
-				"event": "wiki:set_rotation"
-			}
-		},
-		"permutations": [
-			{
-				"condition": "query.block_property('wiki:rotation') == 2",
-				"components": {
-					"minecraft:rotation": [0, 0, 0]
-				}
-			},
-			{
-				"condition": "query.block_property('wiki:rotation') == 3",
-				"components": {
-					"minecraft:rotation": [0, 180, 0]
-				}
-			},
-			{
-				"condition": "query.block_property('wiki:rotation') == 4",
-				"components": {
-					"minecraft:rotation": [0, 90, 0]
-				}
-			},
-			{
-				"condition": "query.block_property('wiki:rotation') == 5",
-				"components": {
-					"minecraft:rotation": [0, 270, 0]
-				}
-			}
-		]
-	}
+  "minecraft:on_player_placing": {
+    "event": "wiki:set_rotation"
+  }
 }
 ```
 
-## Log Rotation
-Block Rotation identical to how vanilla logs rotate.
+## Facing Rotation Example
+
+<CodeHeader>BP/blocks/cabinet.json</CodeHeader>
+
+```json
+{
+  "format_version": "1.19.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:cabinet",
+      "properties": {
+        "wiki:rotation": [2, 3, 4, 5]
+      }
+    },
+    "components": {
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "cabinet"
+        }
+      },
+      "minecraft:geometry": "geometry.cabinet",
+      "minecraft:light_dampening": 0,
+      "minecraft:on_player_placing": {
+        "event": "wiki:set_rotation"
+      }
+    },
+    "events": {
+      "wiki:set_rotation": {
+        "set_block_property": {
+          "wiki:rotation": "query.cardinal_facing_2d"
+        }
+      }
+    },
+    "permutations": [
+      // Facing north
+      {
+        "condition": "query.block_property('wiki:rotation') == 2",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, 0, 0] }
+        }
+      },
+      // Facing south
+      {
+        "condition": "query.block_property('wiki:rotation') == 3",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, 180, 0] }
+        }
+      },
+      // Facing west
+      {
+        "condition": "query.block_property('wiki:rotation') == 4",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, 90, 0] }
+        }
+      },
+      // Facing east
+      {
+        "condition": "query.block_property('wiki:rotation') == 5",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, -90, 0] }
+        }
+      }
+    ]
+  }
+}
+```
+
+## Log Rotation Setup
+
+Block rotation identical to how vanilla logs rotate.
 
 ### Permutations
 
-Rotating blocks make use of the permutations that were introduced in 1.16.100. Each permutation contains the `minecraft:rotation` component, and when the condition is true, the component within the respective permutation will activate and rotate the block to that direction.
-
 ```json
 "permutations": [
-	{
-		"condition": "query.block_property('wiki:block_rotation') == 0",
-		"components": {
-			"minecraft:rotation": [
-				0,
-				0,
-				0
-			]
-		}
-	},
-	{
-		"condition": "query.block_property('wiki:block_rotation') == 1",
-		"components": {
-			"minecraft:rotation": [
-				90,
-				0,
-				0
-			]
-		}
-	},
-	{
-		"condition": "query.block_property('wiki:block_rotation') == 2",
-		"components": {
-			"minecraft:rotation": [
-				0,
-				0,
-				90
-			]
-		}
-	}
+  {
+    "condition": "query.block_property('wiki:rotation') == 0",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 0, 0] }
+    }
+  },
+  {
+    "condition": "query.block_property('wiki:rotation') == 1",
+    "components": {
+      "minecraft:transformation": { "rotation": [90, 0, 0] }
+    }
+  },
+  {
+    "condition": "query.block_property('wiki:rotation') == 2",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 0, 90] }
+    }
+  }
 ]
 ```
 
@@ -203,10 +203,12 @@ Rotating blocks make use of the permutations that were introduced in 1.16.100. E
 In order to make the block rotate the way a vanilla log would, we need to use a molang expression that uses a query to get what face of a block we're placing our block on and convert it to 0, 1, or 2.
 
 ```json
-"wiki:update_rotation": {
-	"set_block_property": {
-		"wiki:block_rotation": "math.floor(query.block_face/2)"
-	}
+{
+  "wiki:set_rotation": {
+    "set_block_property": {
+      "wiki:rotation": "Math.floor(query.block_face / 2)"
+    }
+  }
 }
 ```
 
@@ -214,112 +216,89 @@ This event is called upon by using the `minecraft:on_player_placing` component.
 
 ```json
 {
-	"minecraft:on_player_placing": {
-		"event": "wiki:update_rotation"
-	}
+  "minecraft:on_player_placing": {
+    "event": "wiki:set_rotation"
+  }
 }
 ```
 
 ### Block Property
 
-
 ```json
-"properties": {
-	"wiki:block_rotation": [
-		0,
-		1,
-		2
-	]
+{
+  "properties": {
+    "wiki:rotation": [0, 1, 2]
+  }
 }
 ```
 
-## JSON Part
+## Log Rotation Example
 
-### The Block Code
+::: warning EXPERIMENTAL
+This example also requires `Holiday Creator Features` to use `minecraft:unit_cube`.
+:::
+
+<CodeHeader>BP/blocks/custom_log.json</CodeHeader>
 
 ```json
 {
-    "format_version":"1.16.100",
-    "minecraft:block":{
-        "description":{
-            "identifier":"wiki:custom_log",
-            "properties":{
-                "wiki:block_rotation":[
-                    0,
-                    1,
-                    2
-                ]
-            }
+  "format_version": "1.19.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:custom_log",
+      "properties": {
+        "wiki:rotation": [0, 1, 2]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 15
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "log_side"
         },
-        "components":{
-            "minecraft:destroy_time":1.5,
-            "minecraft:explosion_resistance":2,
-            "minecraft:friction":1,
-            "minecraft:block_light_absorption":0,
-            "minecraft:material_instances":{
-                "*":{
-                    "texture":"log_side",
-                    "render_method":"opaque",
-                    "ambient_occlusion":false,
-                    "face_dimming":true
-                },
-                "up":{
-                    "texture":"log_top",
-                    "render_method":"opaque",
-                    "ambient_occlusion":false,
-                    "face_dimming":true
-                },
-                "down":{
-                    "texture":"log_top",
-                    "render_method":"opaque",
-                    "ambient_occlusion":false,
-                    "face_dimming":true
-                }
-            },
-            "minecraft:unit_cube":{},
-            "minecraft:on_player_placing":{
-                "event":"wiki:update_rotation"
-            }
+        "end": {
+          "texture": "log_top"
         },
-        "permutations":[
-            {
-                "condition":"query.block_property('wiki:block_rotation') == 0",
-                "components":{
-                    "minecraft:rotation":[
-                        0,
-                        0,
-                        0
-                    ]
-                }
-            },
-            {
-                "condition":"query.block_property('wiki:block_rotation') == 1",
-                "components":{
-                    "minecraft:rotation":[
-                        90,
-                        0,
-                        0
-                    ]
-                }
-            },
-            {
-                "condition":"query.block_property('wiki:block_rotation') == 2",
-                "components":{
-                    "minecraft:rotation":[
-                        0,
-                        0,
-                        90
-                    ]
-                }
-            }
-        ],
-        "events":{
-            "wiki:update_rotation":{
-                "set_block_property":{
-                    "wiki:block_rotation":"math.floor(query.block_face/2)"
-                }
-            }
+        "up": "end",
+        "down": "end"
+      },
+      "minecraft:unit_cube": {},
+      "minecraft:on_player_placing": {
+        "event": "wiki:set_rotation"
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('wiki:rotation') == 0",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, 0, 0] }
         }
+      },
+      {
+        "condition": "query.block_property('wiki:rotation') == 1",
+        "components": {
+          "minecraft:transformation": { "rotation": [90, 0, 0] }
+        }
+      },
+      {
+        "condition": "query.block_property('wiki:rotation') == 2",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, 0, 90] }
+        }
+      }
+    ],
+    "events": {
+      "wiki:set_rotation": {
+        "set_block_property": {
+          "wiki:rotation": "Math.floor(query.block_face / 2)"
+        }
+      }
     }
+  }
 }
 ```
