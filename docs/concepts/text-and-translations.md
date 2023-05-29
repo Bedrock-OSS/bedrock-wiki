@@ -1,12 +1,12 @@
 ---
 title: Text and Localization
 mentions:
-  - ThijsHankelMC
-  - SirLich
-  - aexer0e
-  - MedicalJewel105
-  - Luthorius
-  - Fabrimat
+    - ThijsHankelMC
+    - SirLich
+    - aexer0e
+    - MedicalJewel105
+    - Luthorius
+    - Fabrimat
 ---
 
 Minecraft is a game with fully localized text in languages all over the world. To achieve this, Minecraft employs a system where internal **translation keys** are assigned values on a per-language basis. Minecraft will generate translation keys for custom entities, items, and blocks, and it is up to us to assign them a localized name in our resource pack.

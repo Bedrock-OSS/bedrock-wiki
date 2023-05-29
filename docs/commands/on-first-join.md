@@ -4,6 +4,7 @@ category: On Event Systems
 mentions:
     - BedrockCommands
     - zheaEvyline
+    - SmokeyStack
 nav_order: 1
 tags:
     - system

@@ -77,8 +77,8 @@ This is file what we use here for this example.
 >Download NBT File</BButton>
 
 :::tip Important points to keep in mind
- - The file may contain an NBT Bedrock Header, so be aware that such a situation may occur. See [NBT in Depth](/nbt/nbt-in-depth.md)>[NBT Bedrock Headers](/nbt/nbt-in-depth.md#bedrock-nbt-file-header).
- - The closing null byte does not terminate the reading of the NBT as such, but merely marks the end of the current compound.
- - All the numbers you read need to be read with little-endian, See [NBT in Depth](/nbt/nbt-in-depth.md)>[little-endian](/nbt/nbt-in-depth.md#little-endian).
- - The first root NBT element in a file can only be a compound or a list. The root element/property in NBT files also has its own name, even though it is mostly empty, but it still needs to be read and avoid complications.
+    - The file may contain an NBT Bedrock Header, so be aware that such a situation may occur. See [NBT in Depth](/nbt/nbt-in-depth.md)>[NBT Bedrock Headers](/nbt/nbt-in-depth.md#bedrock-nbt-file-header).
+    - The closing null byte does not terminate the reading of the NBT as such, but merely marks the end of the current compound.
+    - All the numbers you read need to be read with little-endian, See [NBT in Depth](/nbt/nbt-in-depth.md)>[little-endian](/nbt/nbt-in-depth.md#little-endian).
+    - The first root NBT element in a file can only be a compound or a list. The root element/property in NBT files also has its own name, even though it is mostly empty, but it still needs to be read and avoid complications.
 :::

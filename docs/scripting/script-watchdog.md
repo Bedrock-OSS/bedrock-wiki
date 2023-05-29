@@ -84,11 +84,11 @@ These watchdog messages are thrown with `[Watchdog]` label in error or warning. 
 
 ### Unhandled critical exception of type '%s' in behavior pack '%s'
 
-  Produces a content log error when an unhandled critical exception occurs.
+Produces a content log error when an unhandled critical exception occurs.
 
-  There are multiple reason that a watchdog is deciding to terminate execution of a behavior pack's script.
-  - `hang`: script is not responsive due to a hang or infinite loop.
-  - `stackOverflow`: a long, and potentially infinite chain of function calls.
+There are multiple reason that a watchdog is deciding to terminate execution of a behavior pack's script.
+    - `hang`: script is not responsive due to a hang or infinite loop.
+    - `stackOverflow`: a long, and potentially infinite chain of function calls.
 
 ## Cancel Watchdog Termination
 

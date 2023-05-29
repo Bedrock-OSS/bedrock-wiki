@@ -2,7 +2,7 @@
 title: Attachables
 category: Documentation
 tags:
-  - beginner
+    - beginner
 ---
 
 ::: tip

@@ -324,13 +324,13 @@ For a list of many categories, see [here](/documentation/creative-categories)
 - Block faces will unconditionally darken if intersecting another block.
 - Block loot tables are ignored when mined with the `Silk Touch` enchantment, resulting in the block dropping.
 - The following components may not exceed the default (16x) block size limitations:
-  - `minecraft:collision_box`
-  - `minecraft:selection_box`
+    - `minecraft:collision_box`
+    - `minecraft:selection_box`
 -   Different parameters for `render_method` in `minecraft:material_instances` will - similar to entity runtime identifiers - affect certain properties of the block:
-  - Inputting `opaque` will allow Redstone to pass through, Grass to decay, and on it, Mobs' spawning
-  - Inputting `alpha_test` will **not** allow Redstone to pass through, Grass to decay, or Mobs to spawn on it
-    - `blend` has the same properties as `alpha_test`
-  - Creating a transparent block exhibiting `opaque` properties:
+    - Inputting `opaque` will allow Redstone to pass through, Grass to decay, and on it, Mobs' spawning
+    - Inputting `alpha_test` will **not** allow Redstone to pass through, Grass to decay, or Mobs to spawn on it
+        - `blend` has the same properties as `alpha_test`
+    - Creating a transparent block exhibiting `opaque` properties:
 
 Use `alpha_test`
 

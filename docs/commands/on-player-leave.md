@@ -15,7 +15,7 @@ tags:
 
 This system will run your desired commands on the event that a player leaves the world.
 
-> Note; you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](https://wiki.bedrock.dev/commands/on-player-join.html) system to execute when they join back.
+> Note: you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](https://wiki.bedrock.dev/commands/on-player-join.html) system to execute when they join back.
 
 ## Setup
 
@@ -62,9 +62,9 @@ By subtracting 'old' total from 'new' total we will be able to identify if playe
 If it has decreased; we know that 1 or more players have left the game.
 With this knowledge we can run our desired commands from 'new' if it's score is -1 or less.
 - ie, if there were 10 players and someone leaves:
-  - that is ` new - old `
-  - which is ` 9 - 10 = -1 `
-  - hence we will detect by ` ..-1 `
+    - that is ` new - old `
+    - which is ` 9 - 10 = -1 `
+    - hence we will detect by ` ..-1 `
 
 - The 'new' total value is obtained first, subtraction is performed after that to run your desired commands and lastly the 'old' total value is obtained to be used in the next game tick.
 

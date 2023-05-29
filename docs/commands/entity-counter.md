@@ -15,7 +15,7 @@ tags:
 
 This system allows you to track how many players/entities are there on your world and run your desired commands based on the values obtained.
 
-> Note; you cannot track entities in unloaded chunks though players can still be tracked regardless.
+> Note: you cannot track entities in unloaded chunks though players can still be tracked regardless.
 
 ## Setup
 

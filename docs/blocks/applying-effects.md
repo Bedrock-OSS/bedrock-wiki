@@ -6,9 +6,9 @@ tags:
     - easy
 mentions:
     - MysticChair
-	- SirLich
-	- MedicalJewel105
-	- QuazChick
+    - SirLich
+    - MedicalJewel105
+    - QuazChick
 ---
 
 This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block. There are few issues that can encounter during trial-and-error, this guide is a workaround to these issues. List of potential problems is attached on the bottom of this page.

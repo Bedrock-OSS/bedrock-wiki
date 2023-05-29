@@ -4,6 +4,8 @@ category: General
 mentions:
     - BedrockCommands
     - zheaEvyline
+    - SmokeyStack
+    - ThomasOrs
 tags:
     - info
 ---
@@ -82,7 +84,7 @@ For your convenience; download any of the excel sheet below to find the full lis
     color=white
 >Download Sheet 1</BButton>
 
-Note; the above sheet was quickly generated and contains some minor errors. Boolean values `0` should be replaced with `false` and `1` should be replaced with `true` since the game doesn't recognize the syntax otherwise.
+Note: the above sheet was quickly generated and contains some minor errors. Boolean values `0` should be replaced with `false` and `1` should be replaced with `true` since the game doesn't recognize the syntax otherwise.
 
 Alternate sheet: *Shared by @ItsRichHeart*
 

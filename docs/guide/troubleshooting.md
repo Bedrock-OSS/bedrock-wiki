@@ -32,9 +32,9 @@ Errors are not cleared between runs, so the errors you see in the content log ma
 :::
 
 The 'Content Log' is a list of issues found in your pack. Minecraft will generate this list every time your load your world. It can catch issues such as:
- - Wrong texture path
- - Wrong spelled component
- - Incorrect json structure
+    - Wrong texture path
+    - Wrong spelled component
+    - Incorrect json structure
 
 Content log can be turned on in in `Settings > Creator`. The content log will show in-game on load up, and if more errors occur during gameplay.
 
@@ -45,8 +45,8 @@ Content log can be turned on in in `Settings > Creator`. The content log will sh
 
 The content log is saved in `.txt` format inside your files:
 
- - *Windows*: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
- - *Android:* `/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`
+    - *Windows*: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
+    - *Android:* `/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`
 
 
 ## Using Vanilla Resources

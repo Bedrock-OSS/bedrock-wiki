@@ -3,9 +3,9 @@ title: Best Practices
 category: General
 nav_order: 2
 tags:
-  - guide
+    - guide
 mentions:
-  - LukasPAH
+    - LukasPAH
 ---
 
 :::tip Info
