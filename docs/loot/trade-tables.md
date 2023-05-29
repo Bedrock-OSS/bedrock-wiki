@@ -5,7 +5,7 @@ nav_order: 2
 tags:
 - Stable
 - Last updated for Version 1.18.10
-mention:
+mentions:
 - Ciosciaa
 ---
 

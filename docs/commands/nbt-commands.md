@@ -1,7 +1,7 @@
 ---
 title: NBT Commands
 category: General
-mention:
+mentions:
     - MedicalJewel105
 ---
 

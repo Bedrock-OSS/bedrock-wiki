@@ -1,6 +1,6 @@
 ---
 title: Molang into Scoreboard
-mention:
+mentions:
     - SirLich
     - MedicalJewel105
     - shanewolf38

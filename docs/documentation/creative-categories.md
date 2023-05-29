@@ -2,7 +2,7 @@
 title: Creative Categories
 tags:
     - experimental
-mention:
+mentions:
     - Warhead51707
     - yanasakana
 ---

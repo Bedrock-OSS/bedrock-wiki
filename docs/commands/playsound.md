@@ -1,7 +1,7 @@
 ---
 title: Playsound
 category: Commands
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
 tags:

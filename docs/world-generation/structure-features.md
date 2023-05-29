@@ -1,7 +1,7 @@
 ---
 title: Generating Custom Structures
 category: Tutorials
-mention:
+mentions:
 	- DerpMcaddon
 tags:
 	- experimental

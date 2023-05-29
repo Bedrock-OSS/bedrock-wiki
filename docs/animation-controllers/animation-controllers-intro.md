@@ -3,7 +3,7 @@ title: Intro to Animation Controllers
 nav_order: 1
 tags:
     - guide
-mention:
+mentions:
 	- SirLich
 	- solvedDev
 	- Joelant05

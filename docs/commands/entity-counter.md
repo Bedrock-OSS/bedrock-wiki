@@ -1,7 +1,7 @@
 ---
 title: Entity Counter
 category: Scoreboard Systems
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 3

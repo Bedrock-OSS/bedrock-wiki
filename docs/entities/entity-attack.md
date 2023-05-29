@@ -1,7 +1,7 @@
 ---
 title: Entity Attacks
 category: Tutorials
-mention:
+mentions:
     - Luthorius
 tags:
     - intermediate

@@ -1,7 +1,7 @@
 ---
 title: Village Mechanic
 category: Tutorials
-mention:
+mentions:
     - AeroForta
     - MedicalJewel105
 ---

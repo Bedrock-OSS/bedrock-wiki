@@ -1,7 +1,7 @@
 ---
 title: Reading NBT Example
 category: NBT in Depth
-mention:
+mentions:
     - ConsoleTerm
 tags:
     - expert

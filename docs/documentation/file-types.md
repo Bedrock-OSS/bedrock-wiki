@@ -1,7 +1,7 @@
 ---
 title: File Types
 max_toc_level : 3
-mention:
+mentions:
     - Ciosciaa
 ---
 

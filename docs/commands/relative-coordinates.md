@@ -1,7 +1,7 @@
 ---
 title: Coordinate System
 category: General
-mention:
+mentions:
  - MedicalJewel105
 ---
 

@@ -3,7 +3,7 @@ title: Block Conditions for Features
 category: Tutorials
 tags:
     - experimental
-mention:
+mentions:
 	- PavelDobCZ23
 ---
 

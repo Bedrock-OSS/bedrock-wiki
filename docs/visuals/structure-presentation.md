@@ -1,7 +1,7 @@
 ---
 title: Structure Presentation
 category: Ideas
-mention:
+mentions:
 	- MedicalJewel105
 ---
 

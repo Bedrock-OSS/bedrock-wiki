@@ -3,7 +3,7 @@ title: Look at Entity
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - shanewolf38
 ---
 

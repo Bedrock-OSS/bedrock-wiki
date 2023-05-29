@@ -4,7 +4,7 @@ category: Tutorials
 tags:
     - experimental
     - intermediate
-mention:
+mentions:
     - Chikorita-Lover
 ---
 

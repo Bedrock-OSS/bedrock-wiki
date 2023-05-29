@@ -3,7 +3,7 @@ title: Damage
 category: Commands
 tags:
     - info
-mention:
+mentions:
     - BedrockCommands
     - cda94581
 ---

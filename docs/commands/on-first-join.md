@@ -1,7 +1,7 @@
 ---
 title: On First Join
 category: On Event Systems
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 1

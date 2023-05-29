@@ -3,7 +3,7 @@ title: Spawning Tamed Entities
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - Axelpvz2030
 ---
 

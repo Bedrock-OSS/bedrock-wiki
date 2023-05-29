@@ -1,7 +1,7 @@
 ---
 title: Intro to Command Blocks
 category: General
-mention:
+mentions:
  - BedrockCommands
  - zheaEvyline
 nav_order: 1

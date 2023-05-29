@@ -4,7 +4,7 @@ category: General
 nav_order: 1
 tags:
   - guide
-mention:
+mentions:
   - sermah
   - KalmeMarq
 ---

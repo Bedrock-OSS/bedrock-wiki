@@ -1,7 +1,7 @@
 ---
 title: Entity Events
 category: General
-mention:
+mentions:
     - ChibiMango
 tags:
     - beginner

@@ -3,7 +3,7 @@ title: New Execute
 category: Commands
 tags:
     - easy
-mention:
+mentions:
     - JaylyDev
 ---
 

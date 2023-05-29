@@ -2,7 +2,7 @@
 title: Overwriting Assets
 tags:
     - intermediate
-mention:
+mentions:
     - SirLich
 ---
 

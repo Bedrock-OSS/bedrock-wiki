@@ -3,7 +3,7 @@ title: Entity Commands
 nav_order: 2
 tags:
     - intermediate
-mention:
+mentions:
     - SirLich
     - solvedDev
     - Joelant05

@@ -1,7 +1,7 @@
 ---
 title: Understanding Selectors
 category: General
-mention:
+mentions:
   - Science-geek42
   - Brougud
   - MedicalJewel105

@@ -3,7 +3,7 @@ title: Add Hud Elements
 category: Tutorials
 tags:
     - beginner
-mention:
+mentions:
     - shanewolf38
 ---
 

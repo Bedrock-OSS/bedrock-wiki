@@ -1,7 +1,7 @@
 ---
 title: Glowing Entity Texture
 category: Tutorials
-mention:
+mentions:
 	- LeGend077
 ---
 

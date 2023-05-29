@@ -1,7 +1,7 @@
 ---
 title: Experiments in Education Edition
 category: Tutorials
-mention:
+mentions:
     - Fabrimat
 tags:
     - easy

@@ -3,7 +3,7 @@ title: Sleeping Entities
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - MedicalJewel105
 ---
 

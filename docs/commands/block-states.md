@@ -1,7 +1,7 @@
 ---
 title: Block States
 category: General
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
 tags:

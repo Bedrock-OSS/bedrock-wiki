@@ -4,7 +4,7 @@ category: Vanilla Recreations
 tags:
     - experimental
     - intermediate
-mention:
+mentions:
     - Provedule
 ---
 

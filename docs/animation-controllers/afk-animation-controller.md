@@ -2,7 +2,7 @@
 title: AFK Detector
 tags:
     - recipe
-mention:
+mentions:
 	- SirLich
 	- BlueFrog130
 	- SmokeyStack

@@ -2,7 +2,7 @@
 title: JSON UI Documentation
 category: Documentation
 nav_order: 1
-mention:
+mentions:
     - KalmeMarq
 ---
 

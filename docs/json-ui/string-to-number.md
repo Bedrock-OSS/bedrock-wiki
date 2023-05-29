@@ -3,7 +3,7 @@ title: String to Number
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - shanewolf38
 ---
 

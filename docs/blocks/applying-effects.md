@@ -4,7 +4,7 @@ category: Tutorials
 tags:
     - experimental
     - easy
-mention:
+mentions:
     - MysticChair
 ---
 

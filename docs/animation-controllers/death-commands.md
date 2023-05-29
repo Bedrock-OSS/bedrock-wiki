@@ -2,7 +2,7 @@
 title: Death Commands
 tags:
     - recipe
-mention:
+mentions:
 	- SirLich
 	- BlueFrog130
 	- SmokeyStack

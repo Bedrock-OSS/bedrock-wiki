@@ -1,7 +1,7 @@
 ---
 title: About NBT (Named Binary Tag)
 category: NBT in Depth
-mention:
+mentions:
     - ConsoleTerm
 tags:
     - expert

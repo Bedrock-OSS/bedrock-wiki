@@ -4,7 +4,7 @@ category: General
 nav_order: 2
 tags:
   - guide
-mention:
+mentions:
   - LukasPAH
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: On Player Leave
 category: On Event Systems
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 3

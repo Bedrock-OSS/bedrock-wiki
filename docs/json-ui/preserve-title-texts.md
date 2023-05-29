@@ -3,7 +3,7 @@ title: Preserve Title Texts
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - shanewolf38
 ---
 

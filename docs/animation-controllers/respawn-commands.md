@@ -2,7 +2,7 @@
 title: Respawn Commands
 tags:
     - recipe
-mention:
+mentions:
 	- SirLich
 	- solvedDev
 	- Joelant05

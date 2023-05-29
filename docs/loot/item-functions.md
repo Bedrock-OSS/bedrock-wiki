@@ -5,7 +5,7 @@ nav_order: 4
 tags:
 - Stable
 - Last updated for Version 1.18.10
-mention:
+mentions:
 - Ciosciaa
 toc_max_level: 1
 ---

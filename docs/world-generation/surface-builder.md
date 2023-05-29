@@ -1,7 +1,7 @@
 ---
 title: Generating Patches
 category: Tutorials
-mention:
+mentions:
 	- DerpMcaddon
 tags:
 	- experimental

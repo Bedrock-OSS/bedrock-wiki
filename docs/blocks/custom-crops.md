@@ -4,7 +4,7 @@ category: Vanilla Recreations
 tags:
     - experimental
     - easy
-mention:
+mentions:
     - Ivyman1992
     - Provedule
 ---

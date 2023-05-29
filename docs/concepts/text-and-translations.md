@@ -1,6 +1,6 @@
 ---
 title: Text and Localization
-mention:
+mentions:
   - ThijsHankelMC
   - SirLich
   - aexer0e

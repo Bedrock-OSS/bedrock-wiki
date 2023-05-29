@@ -1,7 +1,7 @@
 ---
 title: Block Sounds
 category: Documentation
-mention:
+mentions:
     - MedicalJewel105
 ---
 

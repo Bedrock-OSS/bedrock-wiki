@@ -1,7 +1,7 @@
 ---
 title: Randomized Structure Loot
 category: Tutorials
-mention:
+mentions:
     - MedicalJewel105
 tags:
     - easy

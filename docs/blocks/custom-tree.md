@@ -3,7 +3,7 @@ title: Custom Tree
 category: Vanilla Recreations
 tags:
     - experimental
-mention:
+mentions:
     - MedicalJewel105
 ---
 
