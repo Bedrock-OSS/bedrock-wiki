@@ -6,6 +6,9 @@ tags:
     - expert
 mentions:
     - Eko-byte
+	- SirLich
+	- ThomasOrs
+	- QuazChick
 ---
 
 Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.

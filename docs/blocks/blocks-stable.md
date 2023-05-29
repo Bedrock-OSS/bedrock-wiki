@@ -2,6 +2,9 @@
 title: Stable Blocks
 category: General
 nav_order: 2
+mentions:
+    - SmokeyStack
+    - QuazChick
 ---
 
 Documentation of all stable features of blocks.

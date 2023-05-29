@@ -3,6 +3,7 @@ title: Block Sounds
 category: Documentation
 mentions:
     - MedicalJewel105
+    - TheItsNameless
 ---
 
 Block sounds refers to the sound property in your block entry inside `blocks.json`.

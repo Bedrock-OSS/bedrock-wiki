@@ -4,6 +4,24 @@ category: General
 nav_order: 1
 tags:
     - guide
+mentions:
+    - SirLich
+	- solvedDev
+	- Joelant05
+	- Dreamedc2015
+	- sermah
+	- yanasakana
+	- aexer0e
+	- SmokeyStack
+	- MedicalJewel105
+	- stirante
+	- ChibiMango
+	- Hatchibombotar
+	- FrankyRay
+	- Ciosciaa
+	- Sprunkles137
+	- ThomasOrs
+	- QuazChick
 ---
 
 Minecraft Bedrock allows us to add custom blocks into our world with various vanilla-like properties. In latest versions, custom blocks can have multiple stages (like plants), directional facing, and other features. This tutorial will cover how to create some simple blocks for the stable version of Minecraft Bedrock.
