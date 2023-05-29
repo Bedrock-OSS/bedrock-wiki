@@ -5,6 +5,14 @@ prefix: 'c. '
 nav_order: 3
 tags:
     - help
+mentions:
+    - SirLich
+    - Joelant05
+    - destruc7ion
+    - Dreamedc2015
+    - MedicalJewel105
+    - Luthorius
+    - SmokeyStack
 ---
 
 Creating Addons for Bedrock Minecraft is a relatively straightforward process _once you get the hang of it_. The first time is usually a frustrating, bug-prone process. This document contains some tips and tricks for fixing those dastardly bugs, as well as best practice information.

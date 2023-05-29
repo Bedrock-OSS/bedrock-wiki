@@ -3,6 +3,21 @@ title: 'Create a custom Entity'
 category: Guide
 nav_order: 6
 prefix: '6. '
+mentions:
+    - ThijsHankelMC
+    - TheItsNameless
+    - SmokeyStack
+    - MedicalJewel105
+    - SirLich
+    - ChibiMango
+    - smell-of-curry
+    - Hatchibombotar
+    - Sephodious
+    - LeGend077
+    - Ascent817
+    - BaHuu
+    - Sprunkles317
+    - ThomasOrs
 ---
 
 Similarly to custom items, we can also make custom entities with many similar mechanics to the vanilla entities in the game. These entities can be incredibly powerful allowing you to make your own animals which can be bred and tamed or an aggressive mob that attacks anything it sees.

@@ -3,6 +3,9 @@ title: Project Setup Android
 category: Guide
 mentions:
     - Etanarvazac
+    - MedicalJewel105
+    - TheItsNameless
+    - ThomasOrs
 hidden: true
 ---
 
