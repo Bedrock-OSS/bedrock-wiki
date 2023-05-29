@@ -1,6 +1,11 @@
 ---
 title: Troubleshooting JavaScript
 category: Documentation
+mentions:
+    - Herobrine643928
+    - JaylyDev
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 This article teaches you the basic workflow for debugging any JavaScript issue.

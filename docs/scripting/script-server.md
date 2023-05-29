@@ -3,6 +3,10 @@ title: Script Core Features
 category: Tutorials
 tags:
     - experimental
+mentions:
+    - JaylyDev
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 ::: warning
