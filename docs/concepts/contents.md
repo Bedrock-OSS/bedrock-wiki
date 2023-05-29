@@ -3,6 +3,11 @@ title: contents.json
 mentions:
     - MedicalJewel105
     - Osaxely
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - Jorginhor
+    - TheItsNameless
 ---
 
 `contents.json` is a file that is _probably_ used for the game to process the pack files more easily. It is _probably_ intended for marketplace content creators and Mojang, it is not required to have this file in the pack for the pack to work properly.

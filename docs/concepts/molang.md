@@ -2,6 +2,13 @@
 title: Molang
 tags:
     - intermediate
+mentions:
+    - yanasakana
+    - TheDoctor15
+    - MedicalJewel105
+    - DoubleShotgun
+    - Luthorius
+    - TheItsNameless
 ---
 
 ## Introduction
