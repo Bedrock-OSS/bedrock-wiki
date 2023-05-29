@@ -3,10 +3,12 @@ title: Item Functions
 category: Documentation
 nav_order: 4
 tags:
-- Stable
-- Last updated for Version 1.18.10
+    - Stable
+    - Last updated for Version 1.18.10
 mentions:
-- Ciosciaa
+    - Ciosciaa
+    - MedicalJewel105
+    - ThomasOrs
 toc_max_level: 1
 ---
 

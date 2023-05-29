@@ -3,10 +3,15 @@ title: Recipes
 category: Documentation
 nav_order: 3
 tags:
-- Stable
-- Last updated for Version 1.18.10
+    - Stable
+    - Last updated for Version 1.18.10
 mentions:
-- Ciosciaa
+    - Ciosciaa
+    - SirLich
+    - MedicalJewel105
+    - TheHyperWhale
+    - Luthorius
+    - QuazChick
 ---
 
 Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.

@@ -3,10 +3,12 @@ title: Trade Tables
 category: Documentation
 nav_order: 2
 tags:
-- Stable
-- Last updated for Version 1.18.10
+    - Stable
+    - Last updated for Version 1.18.10
 mentions:
-- Ciosciaa
+    - Ciosciaa
+    - SirLich
+    - TheItsNameless
 ---
 
 Trade tables represent the fundamental data behind trading item transactions for an entity. Trade tables are not standalone; they must be referenced from an [entity component](https://bedrock.dev/docs/stable/Entities#minecraft%3Aeconomy_trade_table). Using the randomizing properties available to trade tables, trade offers, item counts, and cost calculations may vary across entity instances, even if all would point to the same trade table.
