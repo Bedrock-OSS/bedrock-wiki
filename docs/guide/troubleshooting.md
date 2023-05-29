@@ -5,6 +5,14 @@ prefix: 'c. '
 nav_order: 3
 tags:
     - help
+mentions:
+    - SirLich
+    - Joelant05
+    - destruc7ion
+    - Dreamedc2015
+    - MedicalJewel105
+    - Luthorius
+    - SmokeyStack
 ---
 
 Creating Addons for Bedrock Minecraft is a relatively straightforward process _once you get the hang of it_. The first time is usually a frustrating, bug-prone process. This document contains some tips and tricks for fixing those dastardly bugs, as well as best practice information.
@@ -32,9 +40,9 @@ Errors are not cleared between runs, so the errors you see in the content log ma
 :::
 
 The 'Content Log' is a list of issues found in your pack. Minecraft will generate this list every time your load your world. It can catch issues such as:
- - Wrong texture path
- - Wrong spelled component
- - Incorrect json structure
+    - Wrong texture path
+    - Wrong spelled component
+    - Incorrect json structure
 
 Content log can be turned on in in `Settings > Creator`. The content log will show in-game on load up, and if more errors occur during gameplay.
 
@@ -45,8 +53,8 @@ Content log can be turned on in in `Settings > Creator`. The content log will sh
 
 The content log is saved in `.txt` format inside your files:
 
- - *Windows*: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
- - *Android:* `/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`
+    - *Windows*: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
+    - *Android:* `/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`
 
 
 ## Using Vanilla Resources

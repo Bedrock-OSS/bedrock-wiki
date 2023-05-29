@@ -2,7 +2,16 @@
 title: Throwable Items
 category: Tutorials
 tags:
-- intermediate
+    - intermediate
+mentions:
+    - Fabrimat
+    - MedicalJewel105
+    - Luthorius
+    - IlkinQafarov
+    - seeit360
+    - TheItsNameless
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 ::: tip

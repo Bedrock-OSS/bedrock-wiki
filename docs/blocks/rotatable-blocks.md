@@ -3,6 +3,13 @@ title: Rotatable Blocks
 category: Tutorials
 tags:
     - experimental
+mentions:
+    - Ultr4Anubis
+    - SmokeyStack
+    - ihategravel2
+    - MedicalJewel105
+    - MajestikButter
+    - QuazChick
 ---
 
 ::: tip
@@ -17,17 +24,17 @@ Requires `Holiday Creator Features` to trigger events.
 ## Rotation Types
 
 - ### [Facing Rotation](#facing-rotation-setup)
-  - Used by carved pumpkins
-  - 4 cardinal directions
+    - Used by carved pumpkins
+    - 4 cardinal directions
 
 - ### [Log/Pillar Rotation](#log-rotation-setup)
-  - Used by logs and basalt
-  - 3 axis-aligned directions
+    - Used by logs and basalt
+    - 3 axis-aligned directions
 
 - ### [Specific Rotation](/blocks/head-like-rotation)
-  - Used by skulls, signs and banners
-  - 16 directions (22.5 degree multiples)
-  - 4 cardinal side-attached directions
+    - Used by skulls, signs and banners
+    - 16 directions (22.5 degree multiples)
+    - 4 cardinal side-attached directions
 
 ## Facing Rotation Setup
 

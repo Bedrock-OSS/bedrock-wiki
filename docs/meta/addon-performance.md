@@ -1,5 +1,11 @@
 ---
 title: Addon Performance
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - TheItsNameless
+    - SmokeyStack
 ---
 
 ::: warning

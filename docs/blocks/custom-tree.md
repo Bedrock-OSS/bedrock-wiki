@@ -3,8 +3,16 @@ title: Custom Tree
 category: Vanilla Recreations
 tags:
     - experimental
-mention:
+mentions:
     - MedicalJewel105
+    - SmokeyStack
+    - stirante
+    - aexer0e
+    - SirLich
+    - SuperFluffyGame
+    - XxPoggyisLitxX
+    - ThomasOrs
+    - QuazChick
 ---
 
 Creating your own tree with decaying leaves are possible. Follow this tutorial and you'll have your own in no time!

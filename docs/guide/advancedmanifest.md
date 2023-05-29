@@ -3,6 +3,12 @@ title: Advanced Manifest
 category: Extra
 nav_order: 4
 prefix: 'd.'
+mention:
+    - MRBBATES1
+    - Luthorius
+    - SirLich
+    - smell-of-curry
+    - MedicalJewel105
 ---
 
 ::: tip

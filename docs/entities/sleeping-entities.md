@@ -3,8 +3,9 @@ title: Sleeping Entities
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - MedicalJewel105
+    - SirLich
 ---
 
 This tutorial will explain how to make entity sleep.

@@ -1,8 +1,9 @@
 ---
 title: Experiments in Education Edition
 category: Tutorials
-mention:
+mentions:
     - Fabrimat
+    - TheItsNameless
 tags:
     - easy
     - Last updated for Version 1.18.32 (MEE)

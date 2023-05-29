@@ -1,6 +1,13 @@
 ---
 title: GameTest Q&A 2021/08/06
 category: Documentation
+mentions:
+    - GTB3NW
+    - SirLich
+    - MedicalJewel105
+    - Luthorius
+    - IlkinQafarov
+    - Herobrine643928
 ---
 
 This Q&A took place in the [Bedrock Addons discord](https://discord.gg/NGeNhZpvzV). Five Microsoft employees joined us to answer questions about the Gametest framework. Questions were community sourced.

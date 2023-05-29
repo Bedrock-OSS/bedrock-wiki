@@ -5,6 +5,15 @@ nav_order: 2
 tags:
     - guide
     - beginner
+mentions:
+    - SirLich
+    - MedicalJewel105
+    - Overload1252
+    - ChibiMango
+    - Luthorius
+    - TheItsNameless
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 The resource-pack entity file holds references to assets which form the visuals of our entity. Additionally, it contains information on how and when to render these visuals.

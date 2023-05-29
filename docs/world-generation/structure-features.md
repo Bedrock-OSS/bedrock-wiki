@@ -1,10 +1,11 @@
 ---
 title: Generating Custom Structures
 category: Tutorials
-mention:
-	- DerpMcaddon
+mentions:
+    - DerpMcaddon
+    - SirLich
 tags:
-	- experimental
+    - experimental
 ---
 
 Structure feature is one of the most basic feature. It places exported `.mcstructure` file in the world.

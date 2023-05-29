@@ -1,6 +1,12 @@
 ---
 title: Dummy Components
 category: Documentation
+mentions:
+    - SirLich
+    - jigarbov
+    - MedicalJewel105
+    - StealthyExpertX
+    - TheItsNameless
 ---
 
 :::warning Deprecation Warning

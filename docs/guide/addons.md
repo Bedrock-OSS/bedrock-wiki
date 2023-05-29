@@ -3,6 +3,18 @@ title: Addons Explained
 category: Guide
 nav_order: 2
 prefix: '2. '
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - sermah
+    - cda94581
+    - RedSmarty
+    - TheItsNameless
+    - MedicalJewel105
+    - ChibiMango
+    - profeplaysminecraft
+    - retr0cube
+    - SmokeyStack
 ---
 
 ## What are addons?

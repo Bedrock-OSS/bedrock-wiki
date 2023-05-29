@@ -1,6 +1,12 @@
 ---
 title: Aseprite Animations
 category: Tutorials
+mentions:
+    - TheDataLioness
+    - shanewolf38
+    - TheItsNameless
+    - LeGend077
+    - stirante
 ---
 
 ## Introduction to Aseprite

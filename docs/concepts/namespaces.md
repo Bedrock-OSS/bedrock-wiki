@@ -1,5 +1,8 @@
 ---
 title: Namespaces
+mentions:
+    - SirLich
+    - MedicalJewel105
 ---
 
 Namespaces are identifiers that mark content ownership. You can think of them as folders. Namespaces are helpful because they keep naming conflicts from happening.

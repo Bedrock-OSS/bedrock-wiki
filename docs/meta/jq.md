@@ -1,6 +1,10 @@
 ---
 title: Creating addons with JQ
 hidden: true
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
 ---
 
 ## Introduction

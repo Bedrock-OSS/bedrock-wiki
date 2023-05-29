@@ -1,7 +1,7 @@
 ---
 title: Extending Structure Limits
 category: Tutorials
-mention:
+mentions:
     - MedicalJewel105
 tags:
     - easy

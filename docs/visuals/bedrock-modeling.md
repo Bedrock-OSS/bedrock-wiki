@@ -3,6 +3,10 @@ title: Bedrock Modeling
 nav_order: 2
 category:
     - General
+mentions:
+    - SirLich
+    - solvedDev
+    - MedicalJewel105
 ---
 
 This will guide tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.

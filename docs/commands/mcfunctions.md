@@ -2,13 +2,13 @@
 title: Functions
 category: General
 mentions:
- - Bedrock Commands
- - cda94581
- - zheaEvyline
- - jordanparki7
+    - Bedrock Commands
+    - cda94581
+    - zheaEvyline
+    - jordanparki7
 nav_order: 3
 tags:
- - info
+    - info
 ---
 ## Introduction
 
@@ -135,7 +135,7 @@ The final file within a function is the **tick.json** file. This specifies funct
   ]
 }
 ```
-> Note; functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
+> Note: functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
 
 ## Sample Function Pack
 

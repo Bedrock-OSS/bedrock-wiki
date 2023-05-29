@@ -3,7 +3,17 @@ title: Custom Death Animations
 tags:
     - intermediate
 category:
-	- General
+    - General
+mentions:
+    - SirLich
+    - Joelant05
+    - Dreamedc2015
+    - MedicalJewel105
+    - aexer0e
+    - Xterionix
+    - ChibiMango
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Death animation refers to the rotation of the entity as it dies. This is accompanied by a red coloring and followed shortly after by the disappearance of the entity geometry and the appearance of the death particles.

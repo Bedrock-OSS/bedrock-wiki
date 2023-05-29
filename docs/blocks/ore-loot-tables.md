@@ -4,10 +4,14 @@ category: Tutorials
 tags:
     - experimental
     - easy
-mention:
+mentions:
     - SykoUSS
     - ExDrill
     - MedicalJewel105
+    - SmokeyStack
+    - Chikorita-Lover
+    - SirLich
+    - TheItsNameless
 ---
 
 ## Features

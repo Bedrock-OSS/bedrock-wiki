@@ -3,6 +3,9 @@ title: Setting Up the Pack
 category: General
 mentions:
     - TheDoctor15
+    - MedicalJewel105
+    - TheItsNameless
+    - SmokeyStack
 tags:
     - expert
 ---

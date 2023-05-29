@@ -3,8 +3,13 @@ title: New Execute
 category: Commands
 tags:
     - easy
-mention:
+mentions:
     - JaylyDev
+    - Sprunkles137
+    - Hatchibombotar
+    - TheItsNameless
+    - SmokeyStack
+    - zheaEvyline
 ---
 
 ## Introduction

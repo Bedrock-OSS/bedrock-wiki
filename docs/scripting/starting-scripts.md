@@ -2,7 +2,10 @@
 title: Starting Scripting
 category: General
 mentions:
-	- cda94581
+    - cda94581
+    - Herobrine643928
+    - JaylyDev
+    - SmokeyStack
 ---
 
 ::: warning

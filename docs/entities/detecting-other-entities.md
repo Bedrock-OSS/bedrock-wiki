@@ -3,6 +3,13 @@ title: Detecting Other Entities
 category: Tutorials
 tags:
     - intermediate
+mentions:
+    - ANightDazingZoroark
+    - SmokeyStack
+    - MedicalJewel105
+    - SirLich
+    - Luthorius
+    - TheItsNameless
 ---
 
 You might have thought about making your entities fire an event when other entities are nearby. This article details the various known ways to do so.

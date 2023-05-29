@@ -4,6 +4,20 @@ category: General
 tags:
     - experimental
 nav_order: 2
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - yanasakana
+    - sermah
+    - SmokeyStack
+    - PavelDobCZ23
+    - MedicalJewel105
+    - Chikorita-Lover
+    - Apex360
+    - whispydev
+    - Luthorius
+    - TheItsNameless
 ---
 
 Better documentation on the new item format introduced in the 1.16.100.56 Minecraft beta.

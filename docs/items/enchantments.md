@@ -3,10 +3,12 @@ title: Enchantments
 category: Documentation
 nav_order: 5
 tags:
-- Stable
-- Last updated for Version 1.18.10
-mention:
-- Ciosciaa
+    - Stable
+    - Last updated for Version 1.18.10
+mentions:
+    - Ciosciaa
+    - MedicalJewel105
+    - SmokeyStack
 ---
 
 Enchantment identifiers are used in the `/enchant` command and in item functions and conditions.

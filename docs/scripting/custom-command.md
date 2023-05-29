@@ -4,7 +4,17 @@ category: Tutorials
 tags:
     - experimental
 mentions:
-	- cda94581
+    - cda94581
+    - FrankyRay
+    - destruc7ion
+    - jannik-de
+    - riesters
+    - Fabrimat
+    - SmokeyStack
+    - CrackedMatter
+    - JaylyDev
+    - Herobrine643928
+    - ConsoleTerm
 ---
 ::: warning
 The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80

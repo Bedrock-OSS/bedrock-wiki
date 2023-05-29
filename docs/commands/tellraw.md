@@ -1,6 +1,16 @@
 ---
 title: Tellraw
 category: Commands
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - MedicalJewel105
+    - Luthorius
+    - Fabrimat
+    - Sprunkles137
+    - ThomasOrs
+    - zheaEvyline
+    - SmokeyStack
 ---
 
 tellraw sends a JSON message to selected or all players being useful for sending plain messages to players ingame

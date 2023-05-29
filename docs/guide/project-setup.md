@@ -3,6 +3,23 @@ title: Project Setup
 category: Guide
 nav_order: 4
 prefix: '4. '
+mentions:
+    - SirLich
+    - sovledDev
+    - Joelant05
+    - Dreamedc2015
+    - BlueFrog130
+    - sermah
+    - cda94581
+    - MedicalJewel105
+    - TheItsNameless
+    - ThijsHankelMC
+    - TheHyperWhale
+    - stirante
+    - ChibiMango
+    - Etanarvazac
+    - retr0cube
+    - ThomasOrs
 ---
 
 ## The com.mojang folder

@@ -3,9 +3,12 @@ title: Best Practices
 category: General
 nav_order: 2
 tags:
-  - guide
-mention:
-  - LukasPAH
+    - guide
+mentions:
+    - LukasPAH
+    - SmokeyStack
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 :::tip Info

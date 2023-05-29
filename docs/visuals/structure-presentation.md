@@ -1,8 +1,10 @@
 ---
 title: Structure Presentation
 category: Ideas
-mention:
-	- MedicalJewel105
+mentions:
+    - MedicalJewel105
+    - LeGend077
+    - ThomasOrs
 ---
 
 ## Why this page exists
