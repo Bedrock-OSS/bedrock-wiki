@@ -2,10 +2,11 @@
 title: Shared Constructs
 nav_order: 1
 tags:
-- Stable
-- Last updated for Version 1.18.10
+    - Stable
+    - Last updated for Version 1.18.10
 mentions:
-- Ciosciaa
+    - Ciosciaa
+    - ThomasOrs
 ---
 
 A few JSON constructs are expressible in multiple locations in the add-ons system.

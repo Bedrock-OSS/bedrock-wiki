@@ -1,6 +1,20 @@
 ---
 title: Molang Queries
 toc_max_level: 2
+mentions:
+    - SirLich
+    - solvedDev
+    - stirante
+    - SmokeyStack
+    - Dreamedc2015
+    - Ultr4Anubis
+    - MedicalJewel105
+    - TreaBeane
+    - r4isen1920
+    - ChillRx
+    - Luthorius
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.

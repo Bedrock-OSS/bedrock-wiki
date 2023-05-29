@@ -1,6 +1,15 @@
 ---
 title: Pack Folder Structure
 show_toc: false
+mentions:
+    - SirLich
+    - ThijsHankelMC
+    - MedicalJewel105
+    - Esatz77
+    - ChibiMango
+    - TheItsNameless
+    - JaylyDev
+    - SmokeyStack
 ---
 
 <FolderView :paths="[

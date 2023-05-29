@@ -2,6 +2,9 @@
 title: Material Configuration Description
 tags:
     - expert
+mentions:
+    - MedicalJewel105
+    - SmokeyStack
 ---
 
 :::warning

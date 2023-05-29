@@ -1,5 +1,12 @@
 ---
 title: Projectiles
+mentions:
+    - SirLich
+    - stirante
+    - retr0cube
+    - SmokeyStack
+    - Luthorius
+    - ThomasOrs
 ---
 
 ## Overview
