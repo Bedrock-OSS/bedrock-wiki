@@ -1,6 +1,6 @@
 ---
 title: Custom Fluids
-category: Tutorials
+category: Vanilla Recreations
 tags:
     - experimental
     - intermediate

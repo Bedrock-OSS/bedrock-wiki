@@ -1,6 +1,6 @@
 ---
 title: Custom Crops
-category: Tutorials
+category: Vanilla Recreations
 tags:
     - experimental
     - easy

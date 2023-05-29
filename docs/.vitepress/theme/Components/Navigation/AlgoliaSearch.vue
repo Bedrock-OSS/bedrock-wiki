@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { useRoute, useRouter, useData } from 'vitepress'
-import { defineProps, getCurrentInstance, onMounted, watch } from 'vue'
+import { getCurrentInstance, onMounted, watch } from 'vue'
 import type { DefaultTheme } from 'vitepress/dist/client/theme-default/config'
 import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
 
