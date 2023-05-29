@@ -4,6 +4,11 @@ category: Tutorials
 mentions:
     - AeroForta
     - MedicalJewel105
+    - stirante
+    - SmokeyStack
+    - SirLich
+    - Ciosciaa
+    - ThomasOrs
 ---
 
 This article is for anyone who wants to try imitate the village mechanic for their entities

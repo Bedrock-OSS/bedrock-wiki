@@ -3,6 +3,11 @@ title: Entity Attacks
 category: Tutorials
 mentions:
     - Luthorius
+    - TheDoctor15
+    - SirLich
+    - MedicalJewel105
+    - epxzzy
+    - ThomasOrs
 tags:
     - intermediate
 ---

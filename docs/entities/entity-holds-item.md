@@ -5,6 +5,14 @@ tags:
     - intermediate
 mentions:
     - pieterdefour
+    - SirLich
+    - solvedDev
+    - stirante
+    - Joelant05
+    - destruc7ion
+    - Dreamedc2015
+    - sermah
+    - 7dev7urandom
 ---
 
 ::: tip

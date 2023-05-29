@@ -3,6 +3,12 @@ title: Entity Events
 category: General
 mentions:
     - ChibiMango
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+    - SmokeyStack
+    - ThomasOrs
 tags:
     - beginner
 ---

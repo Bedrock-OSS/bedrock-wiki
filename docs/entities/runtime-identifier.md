@@ -1,6 +1,20 @@
 ---
 title: Runtime Identifiers
 category: Documentation
+mentions:
+    - MedicalJewel105
+    - aexer0e
+    - Luthorius
+    - SirLich
+    - TheDoctor15
+    - ChibiMango
+    - stirante
+    - epxzzy
+    - IlkinQafarov
+    - TheItsNameless
+    - SmokeyStack
+    - ThomasOrs
+    - Goatfu
 ---
 
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
