@@ -4,15 +4,15 @@ nav_order: 1
 tags:
     - guide
 mentions:
-	- SirLich
-	- solvedDev
-	- Joelant05
-	- MedicalJewel105
-	- stirante
-	- cda94581
-	- ThijsHankelMC
-	- MetalManiacMc
-	- ThomasOrs
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - MedicalJewel105
+    - stirante
+    - cda94581
+    - ThijsHankelMC
+    - MetalManiacMc
+    - ThomasOrs
 ---
 
 Animation controllers (AC) are state-machines that can be used in both the resource pack, and the behavior pack. In the resource pack, animation controllers (RPAC) are used to play animations, and in the behavior pack (BPAC), they are used to play commands, and command "animations".

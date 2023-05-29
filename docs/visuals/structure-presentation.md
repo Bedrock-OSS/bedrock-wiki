@@ -2,7 +2,7 @@
 title: Structure Presentation
 category: Ideas
 mentions:
-	- MedicalJewel105
+    - MedicalJewel105
 ---
 
 ## Why this page exists

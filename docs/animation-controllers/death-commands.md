@@ -3,13 +3,13 @@ title: Death Commands
 tags:
     - recipe
 mentions:
-	- SirLich
-	- BlueFrog130
-	- SmokeyStack
-	- cda94581
-	- MedicalJewel105
-	- Kaioga5
-	- TheItsNameless
+    - SirLich
+    - BlueFrog130
+    - SmokeyStack
+    - cda94581
+    - MedicalJewel105
+    - Kaioga5
+    - TheItsNameless
 ---
 
 <BButton color="blue" link="animation-controllers-intro">Learn more about Animation Controllers</BButton>
