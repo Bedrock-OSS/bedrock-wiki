@@ -1,6 +1,11 @@
 ---
 title: .mcstructure
 category: General
+mentions:
+    - SirLich
+    - MedicalJewel105
+    - Misledwater79
+    - SmokeyStack
 ---
 
 [int]: /assets/images/nbt/int.png
