@@ -3,6 +3,12 @@ title: Attachables
 category: Documentation
 tags:
     - beginner
+mentions:
+    - Sprunkles317
+    - MedicalJewel105
+    - AdamRaichu
+    - Luthorius
+    - TheItsNameless
 ---
 
 ::: tip

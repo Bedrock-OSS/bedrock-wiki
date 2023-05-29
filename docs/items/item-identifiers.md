@@ -3,6 +3,12 @@ title: Vanilla Item Identifiers
 category: Documentation
 tags:
     - deprecated
+mentions:
+    - TheDoctor15
+    - Medicaljewel105
+    - Luthorius
+    - epxzzy
+    - SmokeyStack
 ---
 
 :::danger

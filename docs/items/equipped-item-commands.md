@@ -6,6 +6,9 @@ tags:
     - intermediate
 mentions:
     - Chikorita-Lover
+    - MedicalJewel105
+    - Luthorius
+    - TheItsNameless
 ---
 
 ## Introduction
