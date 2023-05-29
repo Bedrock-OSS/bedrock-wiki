@@ -5,6 +5,7 @@ tags:
     - beginner
 mentions:
     - shanewolf38
+    - SmokeyStack
 ---
 
 In this tutorial, you will learn how to add elements to the hud screen.
