@@ -5,6 +5,9 @@ tags:
     - experimental
 mentions:
     - DerpMcaddon
+    - SirLich
+    - 7dev7urandom
+    - Chikorita-Lover
 ---
 
 `ore_feature`'s are basic but important features! They can form clusters of blocks by replacing blocks where they are generated. This tutorial will show you how to make mineral ores that naturally generate.

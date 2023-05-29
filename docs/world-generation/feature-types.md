@@ -3,6 +3,11 @@ title: Feature Types
 category: General
 tags:
     - experimental
+mentions:
+    - SirLich
+    - MedicalJewel105
+    - Luthorius
+    - TheItsNameless
 ---
 
 _Last updated for 1.17.10_

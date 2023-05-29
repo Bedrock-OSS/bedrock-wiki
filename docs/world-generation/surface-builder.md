@@ -3,6 +3,7 @@ title: Generating Patches
 category: Tutorials
 mentions:
     - DerpMcaddon
+    - SirLich
 tags:
     - experimental
 ---
