@@ -3,17 +3,15 @@ title: Aseprite Animations
 category: Tutorials
 ---
 
-## What is Aseprite?
+## Introduction to Aseprite
 
-[Aseprite](https://www.aseprite.org/) is a purchasable art application designed with pixel-art in mind.
-It contains many tools that can help make skin and resource pack creation easier.
-Aseprite also has significant documentation and tutorials to help artists of all skill levels use the application effectively.
+[Aseprite](https://www.aseprite.org/) is a paid pixel art application specifically designed for creating skins and resource packs with ease. It offers a wide array of tools, extensive documentation, and tutorials, catering to artists of all skill levels.
+
+[LibreSprite](https://libresprite.github.io/) is a free and open-source alternative to Aseprite. It is a fork of the last open-source licensed version of Aseprite, and this tutorial can also be followed using LibreSprite.
 
 ## Creating an Animation in Aseprite
 
-Let's say our frame images are called: "frameimage" and we have five images from 1 to 5.
-You can import the first one, and Aseprite will recognize there are multiple images with the same name but different numbers.
-Aseprite will put these in the correct order and make it an animation.
+Suppose you have a series of frame images named "frameimage" with sequential numbers from 1 to 5. Import the first image, and Aseprite will automatically recognize the other images with the same name but different numbers. It will then place them in the correct order and create an animation.
 
 <FolderView
 :paths="[
@@ -25,21 +23,13 @@ Aseprite will put these in the correct order and make it an animation.
 ]"
 ></FolderView>
 
-You can navigate through all frames using your `arrow keys` on your keyboard.
-You can play/pause the animation with your `enter` key.
+Use the `arrow keys` to navigate through all frames and the `enter` key to play or pause the animation. Press the `tab` key to open the timeline and select individual frames. Right-click a frame in the timeline to access various settings.
 
-By clicking on `tab` key, you can popup the timeline to select the frame by frame.
-You can right-click the frame in this timeline to change different settings.
+To export the animation, use the shortcut `Ctrl + E` or navigate to `File -> Export to Sprite Sheet`. In the output settings, select the Output file and the JSON Data. You'll see a dropdown menu with Hash and Array options. Ensure the Array option is selected, or the export will not work properly.
 
-To export this animation to the correct files, you can use `Ctrl + E` or `File -> Export to Sprite Sheet.`
-For the output settings, select the Output file and the JSON Data.
-You will also see a dropdown input with a Hash and Array option.
-You have to make sure this is set to array, or this will not work.
+You should now have two files: the SpriteSheet image and a JSON file. Ensure both files have the same name but different extensions.
 
-Now you have your files you need.
-You'll have 2 files now, the SpriteSheet image and a json image.
-
-## Aseprite Animations in JSON-UI
+## Using Aseprite Animations in JSON-UI
 
 The `aseprite_flip_book` animation type can only be used for the `uv` property in an element of the type `image`.
 
@@ -59,3 +49,5 @@ The `aseprite_flip_book` animation type can only be used for the `uv` property i
 	}
 }
 ```
+
+Set the `texture` field to the path of the exported files without the extension. The `uv_size` field should be set to the width and height of a single frame.

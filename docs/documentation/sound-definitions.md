@@ -6,7 +6,7 @@ mentions:
 
 Sounds from `sound_definitions.json` sorted by categories and subcategories based on their names.
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-*Last updated for 1.19.70*
+*Last updated for 1.19.80*
 
 ## ambient
 
@@ -118,9 +118,9 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `block.cartography_table.use`
 
-`block.cornflower.death`
+`block.chorusflower.death`
 
-`block.cornflower.grow`
+`block.chorusflower.grow`
 
 `block.click`
 

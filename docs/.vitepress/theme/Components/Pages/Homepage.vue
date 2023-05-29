@@ -97,8 +97,8 @@
 				>
 					<a href="blocks/blocks-intro">Beginner's Guide</a>: A "Hello
 					world" guide in making blocks.<br><br>
-					<a href="blocks/blocks-16">Blocks 1.16+</a>: Learn about the
-					new experimental blocks.
+					<a href="blocks/blocks-stable">Block Features</a>: Learn about the
+					capabilities of custom blocks.
 				</CardLink>
 				<CardLink
 					title="Scripting"

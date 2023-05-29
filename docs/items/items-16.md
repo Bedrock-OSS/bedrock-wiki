@@ -743,6 +743,8 @@ List of all new item components, with usage examples
 }
 ```
 
+:::warning Frame field no longer works. First texture of an array will be applied. :::
+
 ### minecraft:creative_category
 
 <CodeHeader></CodeHeader>

@@ -7,7 +7,7 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` and some formatting have been removed to make the page load quickly. *Last updated for 1.19.70*
+Includes all examples. Namespace `minecraft` and some formatting have been removed to make the page load quickly. *Last updated for 1.19.80*
 
 ## addrider
 
@@ -3798,6 +3798,11 @@ witch
                             },
                             {
                                 "test": "on_hot_block",
+                                "subject": "self",
+                                "value": true
+                            },
+                            {
+                                "test": "taking_fire_damage",
                                 "subject": "self",
                                 "value": true
                             }
@@ -16183,8 +16188,8 @@ panda
 
 ```json
 "minecraft:collision_box": {
-    "width": 1.7,
-    "height": 1.5
+    "width": 1.3,
+    "height": 1.25
 }
 ```
 
@@ -16255,7 +16260,7 @@ polar_bear
 
 ```json
 "minecraft:collision_box": {
-    "width": 1.3,
+    "width": 1.4,
     "height": 1.4
 }
 ```
@@ -18864,6 +18869,12 @@ wandering_trader
         }
     ]
 }
+```
+
+witch
+
+```json
+"minecraft:damage_sensor": {}
 ```
 
 wither
@@ -25772,6 +25783,11 @@ allay
                             "test": "is_family",
                             "subject": "other",
                             "value": "player"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "value": false
                         }
                     ]
                 }
@@ -37084,6 +37100,7 @@ boat
 ```json
 "minecraft:rideable": {
     "seat_count": 2,
+    "passenger_max_width": 1.375,
     "interact_text": "action.interact.ride.boat",
     "pull_in_entities": true,
     "seats": [
@@ -37127,6 +37144,7 @@ boat
 ```json
 "minecraft:rideable": {
     "seat_count": 2,
+    "passenger_max_width": 1.375,
     "interact_text": "action.interact.ride.boat",
     "pull_in_entities": true,
     "seats": [
@@ -37256,6 +37274,7 @@ chest_boat
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
+    "passenger_max_width": 1.375,
     "interact_text": "action.interact.ride.boat",
     "pull_in_entities": true,
     "seats": [
@@ -37277,6 +37296,7 @@ chest_boat
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
+    "passenger_max_width": 1.375,
     "interact_text": "action.interact.ride.boat",
     "pull_in_entities": true,
     "seats": [

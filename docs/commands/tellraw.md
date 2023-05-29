@@ -92,7 +92,7 @@ example.langcode.1=I am line one
 <CodeHeader>RP/texts/de_DE.lang</CodeHeader>
 
 ```
-example.langcode.1=Ich bin strich eins
+example.langcode.1=Ich bin Zeile eins
 ```
 
 

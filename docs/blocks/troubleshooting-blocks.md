@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Blocks
 category: General
-nav_order: 2
+nav_order: 4
 tags:
     - help
 ---

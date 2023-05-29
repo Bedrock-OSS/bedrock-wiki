@@ -7,7 +7,7 @@ mentions:
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Note that not more than 8 examples are shown for each component to keep this page fast to load. Namespace `minecraft` was also removed.
-If you want to see full page, you can do it [here](/items/vui-full). *Last updated for 1.19.70*
+If you want to see full page, you can do it [here](/items/vui-full). *Last updated for 1.19.80*
 
 ## block
 

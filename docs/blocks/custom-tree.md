@@ -1,6 +1,6 @@
 ---
 title: Custom Tree
-category: Tutorials
+category: Vanilla Recreations
 tags:
     - experimental
 mention:
@@ -14,11 +14,11 @@ Creating your own tree with decaying leaves are possible. Follow this tutorial a
 -   Features:
 
     -   Decaying leaves
-    -                       Tree Feature compatible
+    -   Tree Feature compatible
     -   If leaves were broken using shears, they will drop the block
     -   Leaves doesn't decay if placed by player
     -   Logs are strippable and rotatable
-    -   Stripping logs is compatible with tools from other Add-Ons (if they have the `"tag:minecraft:is_axe":{}` component)
+    -   Stripping logs is compatible with tools from other Add-Ons (if they have the `minecraft:is_axe` tag)
     -   Saplings can be bonemealed and grow the tree (with structures)
 
 -   Issues:
