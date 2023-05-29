@@ -3,6 +3,16 @@ title: Entity Commands
 nav_order: 2
 tags:
     - intermediate
+mention:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - destruc7i0n
+    - Dreamedc2015
+    - MedicalJewel105
+    - aexer0e
+    - cda94581
+    - ThijsHankelMC
 ---
 
 :::warning

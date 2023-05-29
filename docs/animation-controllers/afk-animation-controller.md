@@ -2,6 +2,12 @@
 title: AFK Detector
 tags:
     - recipe
+mention:
+	- SirLich
+	- BlueFrog130
+	- SmokeyStack
+	- Keyyard
+	- Ultr4Anubis
 ---
 
 ### AFK Detector Animation Controller

@@ -2,6 +2,14 @@
 title: Respawn Commands
 tags:
     - recipe
+mention:
+	- SirLich
+	- solvedDev
+	- Joelant05
+	- BlueFrog130
+	- SmokeyStack
+	- MedicalJewel105
+	- cda94581
 ---
 
 <BButton color="blue" link="animation-controllers-intro">Learn more about Animation Controllers</BButton>

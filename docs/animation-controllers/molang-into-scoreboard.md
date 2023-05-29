@@ -4,6 +4,9 @@ mention:
     - SirLich
     - MedicalJewel105
     - shanewolf38
+    - Luthorius
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 The following provides a method to read any Molang (variable, query, etc.) into a score instantly. Ensure that the animation name called in the controllers `convert` state matches the name of the animation (animation.namespace.molang_to_score) as defined in the entity.
