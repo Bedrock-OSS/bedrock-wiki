@@ -2,7 +2,7 @@
 title: Generating Custom Ores
 category: Tutorials
 tags:
-	- experimental
+    - experimental
 mentions:
     - DerpMcaddon
 ---

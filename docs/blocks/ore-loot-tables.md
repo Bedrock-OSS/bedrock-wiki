@@ -8,10 +8,10 @@ mentions:
     - SykoUSS
     - ExDrill
     - MedicalJewel105
-	- SmokeyStack
-	- Chikorita-Lover
-	- SirLich
-	- TheItsNameless
+    - SmokeyStack
+    - Chikorita-Lover
+    - SirLich
+    - TheItsNameless
 ---
 
 ## Features

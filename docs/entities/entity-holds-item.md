@@ -2,7 +2,7 @@
 title: Entity Holds Item
 category: Tutorials
 tags:
-	- intermediate
+    - intermediate
 mentions:
     - pieterdefour
 ---

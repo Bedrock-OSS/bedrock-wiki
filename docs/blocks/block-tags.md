@@ -5,14 +5,14 @@ tags:
     - experimental
 mentions:
     - SirLich
-	- yanasakana
-	- aexer0e
-	- SmokeyStack
-	- MedicalJewel105
-	- Luthorius
-	- Chikorita-Lover
-	- victorsigma
-	- TheItsNameless
+    - yanasakana
+    - aexer0e
+    - SmokeyStack
+    - MedicalJewel105
+    - Luthorius
+    - Chikorita-Lover
+    - victorsigma
+    - TheItsNameless
 ---
 
 Block Tags are used for various block properties. They can be called when testing for block arguments in commands.

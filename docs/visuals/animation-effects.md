@@ -3,7 +3,7 @@ title: Effects in Animations
 mentions:
     - MedicalJewel105
 category:
-	- General
+    - General
 ---
 
 ## Effects in Animations

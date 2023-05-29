@@ -2,7 +2,7 @@
 title: Custom Armor
 category: Tutorials
 tags:
-	- experimental
+    - experimental
 ---
 
 ::: tip

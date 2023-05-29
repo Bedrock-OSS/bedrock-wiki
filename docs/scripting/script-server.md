@@ -2,7 +2,7 @@
 title: Script Core Features
 category: Tutorials
 tags:
-	- experimental
+    - experimental
 ---
 
 ::: warning

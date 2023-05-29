@@ -2,7 +2,7 @@
 title: Custom Weapons
 category: Tutorials
 tags:
-	- experimental
+    - experimental
 ---
 
 Making a custom weapon is pretty simple since the 1.16.100 changes, as these allow you to simply define an item entry for it in your `BP/items` folder and provide a corresponding texture in the `RP/textures/items` folder with a bit of config and you have a fully working weapon that you can customize however you see fit.

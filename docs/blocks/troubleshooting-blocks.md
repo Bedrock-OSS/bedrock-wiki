@@ -6,11 +6,11 @@ tags:
     - help
 mentions:
     - SmokeyStack
-	- SirLich
-	- aexer0e
-	- MedicalJewel105
-	- Sprunkles137
-	- QuazChick
+    - SirLich
+    - aexer0e
+    - MedicalJewel105
+    - Sprunkles137
+    - QuazChick
 ---
 
 ## Learn about Troubleshooting
