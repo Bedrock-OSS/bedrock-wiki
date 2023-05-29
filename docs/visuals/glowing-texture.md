@@ -3,6 +3,7 @@ title: Glowing Entity Texture
 category: Tutorials
 mentions:
     - LeGend077
+    - MedicalJewel105
 ---
 
 In this tutorial, you will learn how to make a glowing texture, like enderman's eyes have for an entity by using materials and textures.

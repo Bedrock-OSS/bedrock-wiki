@@ -3,6 +3,8 @@ title: Structure Presentation
 category: Ideas
 mentions:
     - MedicalJewel105
+    - LeGend077
+    - ThomasOrs
 ---
 
 ## Why this page exists

@@ -4,6 +4,11 @@ tags:
     - beginner
 category:
     - Tutorials
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
 ---
 
 Custom entities will automatically be given a spawn egg. This spawn egg can be found inside of the creative menu, with a name like `item.spawn_egg.entity.wiki:my_entity.name`. If you want to rename your spawn egg as well as set a texture, you can do so in the lang files.
