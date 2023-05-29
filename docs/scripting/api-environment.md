@@ -5,6 +5,7 @@ tags:
     - stable
 ---
 
+Minecraft Bedrock Edition uses a their own version of JavaScript, which is based on QuickJS. It uses the ECMAScript module (ESM) system for organizing and loading code, which allows for a more modular and organized approach to writing scripts for the game.
 
 ## Common problems
 
@@ -44,7 +45,7 @@ You will encounter this most often when using events, because in every data even
   - `escape`, `unescape` - Non-Standard methods please use decodeURI/encodeURI if its possible
   - `NaN`, `Infinity`, `undefined` - Standard variables for incode usage,
   - `__date_clock` - Build-in QuickJS method for getting current time
-  - `(Number`, Boolean, String, Symbol) - Standard function constructor for JS primitives
+  - (`Number`, `Boolean`, `String`, `Symbol`) - Standard function constructor for JS primitives
   - `Math` - Standard Object having primary math functions
   - `Reflect` - Standard Object having build-in methods
   - `eval` - Standard Method for evaluating string as code

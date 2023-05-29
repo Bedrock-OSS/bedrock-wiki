@@ -53,7 +53,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
 		{
 			// Minecraft native module - needed to use the "@minecraft/server" module
 			"module_name": "@minecraft/server",
-			"version": "1.2.0-beta"
+			"version": "1.3.0-beta"
 		}
   ]
 }

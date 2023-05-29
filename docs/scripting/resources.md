@@ -23,4 +23,3 @@ There are somewhat decent amount of resources available online related to script
 
 -   [Script API Starter Project](https://github.com/JaylyDev/scriptapi-starter) - A Visual Studio Code workspace setup specifically for Script API. This project is for writing JavaScript code ([for TypeScript users](scripting/typescript#script-api)).
 
-Minecraft Bedrock Edition uses a their own version of JavaScript, which is based on QuickJS. It uses the ECMAScript module (ESM) system for organizing and loading code, which allows for a more modular and organized approach to writing scripts for the game.

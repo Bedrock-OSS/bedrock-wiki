@@ -48,12 +48,42 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 <CodeHeader>BP/manifest.json</CodeHeader>
 
 ```json
-"dependencies": [
-	{
-		"module_name": "@minecraft/server",
-		"version": "1.2.0-beta"
-	}
-]
+{
+  "format_version": 2,
+  "header": {
+    "name": "Bedrock Addons",
+    "description": "Script API Template",
+    "uuid": "<UUID>",
+    "version": [0, 1, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "<UUID>",
+			// Your entry file
+      "entry": "scripts/Main.js",
+      "version": [0, 1, 0]
+    }
+  ],
+  // to use eval() and Function(), remove it if it's not neccessary
+  "capabilities": ["script_eval"],
+  "dependencies": [
+    {
+			// Enables the use of @minecraft/server module
+			// note that version changes every monthly releases.
+      "module_name": "@minecraft/server",
+      "version": "1.3.0-beta"
+    },
+    {
+			// Enables the use of @minecraft/server-ui module
+      "module_name": "@minecraft/server-ui",
+      "version": "1.1.0-beta"
+    }
+  ]
+}
+
 ```
 
 If your project needs other module to run your code, add another dependency that follows the format above.
@@ -62,7 +92,7 @@ If your project needs other module to run your code, add another dependency that
 
 -   `@minecraft/server`:
     -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server/v/1.2.0-rc.1.20.0-preview.21) (Latest version)
-    -   [`1.1.0`](https://www.npmjs.com/package/@minecraft/server/v/1.1.0-rc.1.20.0-preview.21)
+    -   [`1.1.0`](https://www.npmjs.com/package/@minecraft/server/v/1.1.0)
     -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0)
 -   `@minecraft/server-ui`:
     -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.0.0-rc.1.20.0-preview.21) (Latest version, requires `@minecraft/server@1.2.0`)
@@ -153,11 +183,11 @@ These allow for enhanced auto-completions and validation when used inside of you
 Latest beta API modules:
 
 ```bash
-npm install @minecraft/server@beta
-npm install @minecraft/server-gametest@beta
-npm install @minecraft/server-ui@beta
-npm install @minecraft/server-admin@beta
-npm install @minecraft/server-net@beta
+npm install @minecraft/server@1.3.0-beta.1.20.0-stable
+npm install @minecraft/server-gametest@1.3.0-beta.1.20.0-stable
+npm install @minecraft/server-ui@1.3.0-beta.1.20.0-stable
+npm install @minecraft/server-admin@1.3.0-beta.1.20.0-stable
+npm install @minecraft/server-net@1.3.0-beta.1.20.0-stable
 ```
 
 Latest stable API modules:

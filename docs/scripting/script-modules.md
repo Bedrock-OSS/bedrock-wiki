@@ -66,14 +66,13 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
     **Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
     -   `@minecraft/server`:
-        -   `1.1.0`
         -   `1.0.0`
 
     **Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
 
     -   `@minecraft/server`:
 
-        -   `1.2.0-beta`
+        -   `1.1.0-beta`
         -   `0.1.0` (use `mojang-minecraft`, NOT `@minecraft/server` when importing module for this version)
 
     -   `@minecraft/server-ui`:
@@ -122,7 +121,7 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 ```json
 {
 	"module_name": "@minecraft/server",
-	"version": "1.2.0-beta"
+	"version": "1.3.0-beta"
 }
 ```
 

@@ -38,7 +38,7 @@ To use the GameTest Framework, the `@minecraft/server-gametest` module is requir
 "dependencies": [
     {
         "module_name": "@minecraft/server",
-        "version": "1.2.0-beta"
+        "version": "1.3.0-beta"
     },
     {
         "module_name": "@minecraft/server-gametest",

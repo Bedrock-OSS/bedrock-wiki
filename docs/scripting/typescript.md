@@ -92,7 +92,6 @@ Now that you created the project, it can be opened in your IDE of choice. If you
 
 <FolderView :paths="[
 	'node_modules',
-  'scripts/Main.js',
   'src/Main.ts',
 	'manifest.json',
 	'pack_icon.png',
@@ -102,6 +101,32 @@ Now that you created the project, it can be opened in your IDE of choice. If you
 ]"></FolderView>
 
 Unless you know what you are doing, the only part of the project to be concerned with is everything within the `src` folder. That is where all the development should take place.
+
+### Writing scripts
+
+Now write your first TypeScript code in `src` directory, for example below:
+
+<CodeHeader>BP/src/Main.ts</CodeHeader>
+
+```ts
+import { Player, EntityQueryOptions, GameMode, Vector3 } from '@minecraft/server';
+
+// Example function that uses the provided types
+function findPlayersInSurvivalMode(location: Vector3): Player[] {
+  const options: EntityQueryOptions = {
+    gameMode: GameMode.survival,
+    location: location,
+  };
+
+  const players: Player[] = world.getPlayers(options);
+  return players;
+}
+
+// Example usage
+const playerLocation: Vector3 = { x: 10, y: 20, z: 30 };
+const playersInSurvivalMode: Player[] = findPlayersInSurvivalMode(playerLocation);
+console.log(playersInSurvivalMode);
+```
 
 ### Commands
 
@@ -119,6 +144,40 @@ tsc --watch
 
 `--watch` will watch for any changes you make within the `src` directory and automatically reinstall the addon.
 
+<FolderView :paths="[
+	'node_modules',
+  'scripts/Main.js',
+  'src/Main.ts',
+	'manifest.json',
+	'pack_icon.png',
+  'package-lock.json',
+  'package.json',
+  'tsconfig.json',
+]"></FolderView>
+
+Now the `src/Main.ts` file should have been transpiled to `scripts/Main.js` with the following code:
+
+<CodeHeader>BP/scripts/Main.js</CodeHeader>
+
+```js
+import { GameMode } from '@minecraft/server';
+// Example function that uses the provided types
+function findPlayersInSurvivalMode(location) {
+    const options = {
+        gameMode: GameMode.survival,
+        location: location,
+    };
+    const players = world.getPlayers(options);
+    return players;
+}
+// Example usage
+const playerLocation = { x: 10, y: 20, z: 30 };
+const playersInSurvivalMode = findPlayersInSurvivalMode(playerLocation);
+console.log(playersInSurvivalMode);
+```
+
+### Packaging
+
 To run the code in Minecraft, zip the behavior pack and import it to a Minecraft world. In your behavior pack should only include these files in the following, and the rest of the files do not have to be included in `.mcpack` compressed file.
 
 <FolderView :paths="[
@@ -126,102 +185,3 @@ To run the code in Minecraft, zip the behavior pack and import it to a Minecraft
 	'manifest.json',
 	'pack_icon.png',
 ]"></FolderView>
-
-## Legacy Scripting
-
-:::danger Stop!
-
-This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/starting-scripts.html).
-
-:::
-
-[//]: # 'Documentation is heavily based on https://minecraft-addon-tools.github.io/tutorials/getting-started'
-
-You do not need to know how to utilize these tools since there are already [libraries](#typescript-supported-libraries) that utilize them for you without any effort on your behalf. It is just important to understand the tooling making these sorts of libraries possible.
-
-## Prerequisites
-
-1. [Beginners Guide Prerequisites](/scripting/scripting-intro)
-2. [Node.js](https://nodejs.org/en/) is required for installing tooling and compiling TypeScript into JavaScript.
-3. Knowledge of TypeScript and read through the [Beginners Guide](/scripting/scripting-intro)
-
-## TypeScript-Supported Libraries
-
-| Author                                                            | Package                                                                                         |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [minecraft-addon-tools](https://github.com/minecraft-addon-tools) | [minecraft-addon-toolchain](https://github.com/minecraft-addon-tools/minecraft-addon-toolchain) |
-| [karikera](https://github.com/karikera)                           | [minecraft-addon](https://github.com/karikera/mcaddon-start)                                    |
-
-## Setup Guide
-
-This guide is for setting up and using the [minecraft-addon-toolchain](https://github.com/minecraft-addon-tools/minecraft-addon-toolchain) as it currently provides the most tooling with the easiest setup.
-
-### Getting Started
-
-Open a terminal (Command Prompt for Windows) and navigate to where the project should be located. It can be anywhere. For Windows 10 you can also `Shift + RClick` in file explorer and select `Open in PowerShell`.
-
-Next we need to install the template generator for creating the addon. To do this, enter the following commands.
-
-```bash
-npm install -g yeoman
-```
-
-```bash
-npm install -g generator-minecraft-addon
-```
-
-::: tip
-
-If you receive an error such as `command npm not found`, ensure you have Node.js installed and added to the PATH.
-
-:::
-
-Now the project can be initialized. The next step is to generate the project with all the information you define.
-
-```bash
-yo minecraft-addon
-```
-
-![Creating a project](/assets/images/scripting/typescript/project-create.gif)
-
-Now that you created the project, it can be opened in your IDE of choice. If you are utilizing VS Code, you can `cd` into your project directory and run `code .` to open your project.
-
-### Project Structure
-
-<FolderView :paths="[
-	'node_modules',
-	'packs/behaviors/manifest.json',
-	'packs/behaviors/pack_icon.png',
-  'packs/behaviors/scripts/client/client.ts',
-  'packs/behaviors/scripts/server/server.ts',
-  'packs/resources/pack_icon.png',
-  'packs/resources/pack_icon.png',
-  'gulpfile.js',
-  'package-lock.json',
-  'package.json',
-  'tsconfig.json',
-]"></FolderView>
-
-Unless you know what you are doing, the only part of the project to be concerned with is everything within the `packs` folder. That is where all the development should take place.
-
-### Commands
-
-The following commands are most utilized when developing a project using `minecraft-addon-toolchain`.
-
-```bash
-npm run installaddon
-```
-
-`installaddon` will, as it says, install the addon into the `development` resource/behaviors folders. The pack can then be utilized like any other addon.
-
-```bash
-npm run watch
-```
-
-`watch` will watch for any changes you make within the `packs` directory and automatically reinstall the addon.
-
-```bash
-npm run packageaddon
-```
-
-`packageaddon` will build, package, and zip the addon in a connivent manner. By default, outputs to `out/packaged` directory.
