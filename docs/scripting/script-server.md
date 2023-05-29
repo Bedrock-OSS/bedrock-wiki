@@ -268,7 +268,7 @@ Returns a `Promise<CommandResult>`. Throws an error **synchronously** if the que
 
 **Avoid run commands in script**
 
-Normally we recommend avoiding using commands because asynchronous programs add more complexity and make the code more unreadable, and errors do not throw synchronously unless you catch the error. However, the following command features are not implemented in scripting API.
+Normally we recommend avoiding using commands because it's slow to run a command from Script API, and server performance starts to slow down as more commands are executed over time. However, the following command features are not implemented in scripting API, which leaves us no choice but to use `runCommand` or `runCommandAsync`.
 
 **Ender chest and offhand slot**
 
@@ -395,7 +395,7 @@ world.beforeEvents.chatSend.subscribe(async (event) => {
 	event.cancel = true;
 
 	// asynchronous code
-	await null;
+	await sleep(10); // Pretend you have a sleep function that returns a promise that resolves in 10 ticks
 	world.setTime(TimeOfDay.Night);
 });
 ```

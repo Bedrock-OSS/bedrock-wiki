@@ -33,7 +33,13 @@ This guide is for setting up a Script API TypeScript project using TypeScript co
 
 Open a terminal (Command Prompt for Windows) and navigate to where the project should be located. It can be anywhere. For Windows 10 you can also `Shift + RClick` in file explorer and select `Open in PowerShell`.
 
-Next we need to install the template generator for creating the addon. To do this, enter the following commands.
+If you haven't already. Run `cd` to set the directory the terminal is running on to the directory the project is located in.
+
+```bash
+cd path/to/project
+```
+
+Next we need to install the TypeScript for creating the addon. To do this, enter the following commands.
 
 The following command install TypeScript globally.
 
@@ -41,7 +47,7 @@ The following command install TypeScript globally.
 npm install -g typescript
 ```
 
-The following command creates a package.json file in current directory. See [here](https://docs.npmjs.com/cli/v9/commands/npm-init) for more information.
+The following command creates a package.json file in current directory.
 
 ```bash
 npm init -y
@@ -57,6 +63,14 @@ npm install @minecraft/server-admin@beta
 npm install @minecraft/server-net@beta
 ```
 
+Now your folder structure should include the following directories:
+
+<FolderView :paths="[
+	'node_modules',
+  'package-lock.json',
+  'package.json',
+]"></FolderView>
+
 ::: tip
 
 If you receive an error such as `command npm not found`, ensure you have Node.js installed and added to the PATH.
@@ -70,15 +84,12 @@ Now the project can be initialized. The next step is to create a TypeScript proj
 ```json
 {
   "compilerOptions": {
-    // Specify what type of code is generated.
     "module": "ES2020",
     "target": "ES2021",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
-    // Specify the folder entry for your TS files
     "baseUrl": "./src",
     "rootDir": "./src",
-    // Specify the folder output for generated JS files.
     "outDir": "./scripts"
   },
   "exclude": [ "node_modules" ],
@@ -185,3 +196,5 @@ To run the code in Minecraft, zip the behavior pack and import it to a Minecraft
 	'manifest.json',
 	'pack_icon.png',
 ]"></FolderView>
+
+Congratulations, you have created your first TypeScript project for Script API.
