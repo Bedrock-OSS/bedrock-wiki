@@ -4,8 +4,11 @@ category: Tutorials
 tags:
     - experimental
     - intermediate
-mention:
+mentions:
     - Chikorita-Lover
+    - MedicalJewel105
+    - Luthorius
+    - TheItsNameless
 ---
 
 ## Introduction

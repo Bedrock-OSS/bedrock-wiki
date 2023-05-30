@@ -4,6 +4,13 @@ category: Tutorials
 tags:
     - experimental
     - intermediate
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+    - ThijsHankelMC
 ---
 
 ## Creating the Hitbox

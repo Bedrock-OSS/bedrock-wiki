@@ -3,6 +3,21 @@ title: Software and preparation
 category: Guide
 nav_order: 3
 prefix: '3. '
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - sermah
+    - cda94581
+    - Joelant05
+    - MedicalJewel105
+    - TheItsNameless
+    - TheDoctor15
+    - ChibiMango
+    - profeplaysminecraft
+    - solvedDev
+    - retr0cube
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.

@@ -1,11 +1,13 @@
 ---
 title: Flipbook Textures
 category:
-	- Tutorials
+    - Tutorials
 tags:
     - intermediate
 mentions:
     - MedicalJewel105
+    - SquisSloim
+    - SmokeyStack
 ---
 
 ## What this page covers

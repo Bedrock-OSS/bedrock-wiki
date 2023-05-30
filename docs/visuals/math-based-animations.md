@@ -3,7 +3,17 @@ title: Math-based Animations
 tags:
     - intermediate
 category:
-	- General
+    - General
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - MedicalJewel105
+    - yanasakana
+    - Luthorius
+    - TheItsNameless
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Math animations are a powerful alternative to keyframe animations. Generally speaking, `math-based animations` is the concept of using Molang expressions to animate entity geometry. All vanilla animations are math-based, here is an example:

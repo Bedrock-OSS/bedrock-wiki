@@ -1,5 +1,11 @@
 ---
 title: textures_list.json
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - AFoxyToast
+    - TheItsNameless
 ---
 
 ## General Overview

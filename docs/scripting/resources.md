@@ -1,6 +1,9 @@
 ---
 title: Script Resources
 category: Documentation
+mentions:
+    - JaylyDev
+    - SmokeyStack
 ---
 
 JavaScript is a well-known scripting language over the internet. Learning JavaScript will be helpful to you to build and develop an add-on with Script API.

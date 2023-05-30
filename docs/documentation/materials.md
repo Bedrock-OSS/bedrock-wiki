@@ -3,6 +3,12 @@ title: Vanilla Materials
 show_toc: false
 tags:
     - expert
+mentions:
+    - SirLich
+    - Luthorius
+    - MedicalJewel105
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 :::warning

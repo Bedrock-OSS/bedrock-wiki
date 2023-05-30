@@ -3,9 +3,11 @@ title: Damage
 category: Commands
 tags:
     - info
-mention:
+mentions:
     - BedrockCommands
     - cda94581
+    - jordanparki7
+    - zheaEvyline
 ---
 
 ## Introduction
@@ -37,7 +39,7 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 - **` Damager `** If Cause was something to do with entities `(such as entity_attack)`, this specifies where the damage came from `(the entity that dealt the attack)`. This is limited to only 1 target. An error will be thrown if multiple targets are found from the selector.
 
-> Note; the  `<Cause>  entity  <Damager>`  is only required when the Cause has to do with another entity `(entity_attack)`. Otherwise, follow the first syntax.
+> Note: the  `<Cause>  entity  <Damager>`  is only required when the Cause has to do with another entity `(entity_attack)`. Otherwise, follow the first syntax.
 
 ## Examples
 

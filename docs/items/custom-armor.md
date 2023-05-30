@@ -2,7 +2,19 @@
 title: Custom Armor
 category: Tutorials
 tags:
-	- experimental
+    - experimental
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - sermah
+    - yanasakana
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+    - Brougud
+    - XxPoggyisLitxX
+    - LeGend077
+    - SmokeyStack
 ---
 
 ::: tip

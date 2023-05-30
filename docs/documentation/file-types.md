@@ -1,8 +1,9 @@
 ---
 title: File Types
 max_toc_level : 3
-mention:
+mentions:
     - Ciosciaa
+    - SirLich
 ---
 
 A number of file types exist for *Minecraft*, all for importing content. All *Minecraft* files are ZIP archives renamed to use a `mc…` extension. These archives can currently be divided into three sets:

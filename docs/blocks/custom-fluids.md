@@ -4,8 +4,10 @@ category: Vanilla Recreations
 tags:
     - experimental
     - intermediate
-mention:
+mentions:
     - Provedule
+    - JaylyDev
+    - QuazChick
 ---
 
 :::warning

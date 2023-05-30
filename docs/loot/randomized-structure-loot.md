@@ -1,8 +1,12 @@
 ---
 title: Randomized Structure Loot
 category: Tutorials
-mention:
+mentions:
     - MedicalJewel105
+    - SirLich
+    - SmokeyStack
+    - Ciosciaa
+    - rebrainertv
 tags:
     - easy
 ---

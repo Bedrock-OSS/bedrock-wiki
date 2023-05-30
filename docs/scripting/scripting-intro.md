@@ -4,6 +4,17 @@ category: Legacy Scripting
 nav_order: 1
 tags:
     - outdated
+mentions:
+    - SirLich
+    - destruc7ion
+    - sermah
+    - MedicalJewel105
+    - wower3201
+    - retr0cube
+    - Hatchibombotar
+    - Fabrimat
+    - Herobrine643928
+    - JaylyDev
 ---
 
 :::danger Stop!

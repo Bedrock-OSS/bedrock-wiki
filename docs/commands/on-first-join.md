@@ -1,9 +1,10 @@
 ---
 title: On First Join
 category: On Event Systems
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
+    - SmokeyStack
 nav_order: 1
 tags:
     - system
