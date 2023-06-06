@@ -144,7 +144,8 @@ You will always need a `movement` and `navigation` component if you want your en
 }
 ```
 
-`minecraft:physics` is used to apply gravity and collision to your entity. `minecraft:jump.static` allows your entity to jump up blocks for traversal. Both are used on almost every entity.
+`minecraft:physics` is used to apply gravity and collision to your entity. Note: you can not change this component via using a component group.
+`minecraft:jump.static` allows your entity to jump up blocks for traversal. Both are used on almost every entity.
 
 There are few different types of movement components which allow different types of movement such as `minecraft:movement.swim` used by dolphins, `minecraft:movement.fly` used by parrots and `minecraft:movement.hover` used by bees.
 The `minecraft:movement.basic` component allows our entity to walk by moving over blocks. To make it seem like our entity is actually floating, we will use our geometry .
