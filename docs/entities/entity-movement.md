@@ -192,3 +192,11 @@ You can use `minecraft:target_nearby_sensor` to detect when you have reached the
     }
 }
 ```
+
+## Other
+
+:::tip
+You can trigger entity walking animation via command.
+`/execute as @e[type=...] at @s run tp @s ^^^0.1`
+This way you can control where entity goes and make it look natural.
+:::
