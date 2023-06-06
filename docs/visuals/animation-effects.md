@@ -80,6 +80,23 @@ You need to add the following to your animation:
 }
 ```
 
+You can call more than one particle at the same time:
+
+```json
+"particle_effects": {
+    "0.0": [
+        {
+            "effect": "particle_1",
+            "locator": "locator_1"
+    	},
+	{
+            "effect": "particle_2",
+            "locator": "locator_2"
+    	}
+    ]
+}
+```
+
 <Spoiler title="Example">
 
 <CodeHeader>RP/animations/my_animation.json</CodeHeader>
