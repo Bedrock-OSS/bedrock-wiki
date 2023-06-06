@@ -3,6 +3,11 @@ title: Script Requests API
 category: Tutorials
 tags:
     - experimental
+mentions:
+    - JaylyDev
+    - ConsoleTerm
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 ::: warning

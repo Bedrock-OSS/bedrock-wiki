@@ -3,6 +3,9 @@ title: Editing Your First Model
 category: Tutorials
 mentions:
     - TheDoctor15
+    - MedicalJewel105
+    - TheItsNameless
+    - SmokeyStack
 tags:
     - expert
 ---

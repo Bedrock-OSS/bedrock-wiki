@@ -1,5 +1,13 @@
 ---
 title: Subpacks
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - ChilRx
+    - SmokeyStack
+    - MedicalJewel105
+    - TheItsNameless
 ---
 
 ## What are Subpacks?

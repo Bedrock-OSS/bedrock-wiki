@@ -1,6 +1,14 @@
 ---
 title: Block Shapes
 category: Documentation
+mentions:
+    - SirLich
+    - yanasakana
+    - MedicalJewel105
+    - aexer0e
+    - Luthorius
+    - Fabrimat
+    - TheItsNameless
 ---
 
 :::warning Deprecated

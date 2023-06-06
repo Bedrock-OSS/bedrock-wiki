@@ -1,5 +1,10 @@
 ---
 title: Style Guide
+mentions:
+    - SirLich
+    - solvedDev
+    - MedicalJewel105
+    - ChibiMango
 ---
 
 This document will present the officially supported Bedrock-Wiki style guide for addon-creation. This guide aims to promote best practices while creating addons and create a consistent format for everyone to follow.

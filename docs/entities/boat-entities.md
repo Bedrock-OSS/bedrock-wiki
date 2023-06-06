@@ -4,6 +4,12 @@ category: Tutorials
 tags:
     - recipe
     - intermediate
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - StealthyExpertX
+    - TheItsNameless
 ---
 :::warning Requires Format Version 1.16.100 or Lower
 

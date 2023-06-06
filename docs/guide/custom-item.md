@@ -3,6 +3,19 @@ title: 'Create a custom Item'
 category: Guide
 nav_order: 5
 prefix: '5. '
+mentions:
+    - KaiFireborn
+    - SirLich
+    - cda94581
+    - TheItsNameless
+    - MedicalJewel105
+    - ChibiMango
+    - TheDoctor15
+    - SmokeyStack
+    - unickorn
+    - Sprunkles317
+    - ThomasOrs
+    - davedavis
 ---
 
 In Minecraft, we can create custom items, which can be dropped, traded, crafted, and otherwise used like a normal item. There is a lot of power in the system, including the ability to make food, fuel, and tools.

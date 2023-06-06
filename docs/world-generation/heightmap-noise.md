@@ -4,8 +4,9 @@ category: Tutorials
 tags:
     - experimental
     - tutorial
-mention:
+mentions:
     - Apex360
+    - SirLich
 ---
 
 :::tip

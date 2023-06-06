@@ -5,6 +5,16 @@ nav_order: 1
 tags:
     - guide
     - beginner
+mentions:
+    - SirLich
+    - solvedDev
+    - stirante
+    - Joelant05
+    - destruc7ion
+    - MedicalJewel105
+    - ChibiMango
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means and how to use them.

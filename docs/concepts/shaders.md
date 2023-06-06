@@ -1,5 +1,11 @@
 ---
 title: Shaders
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - yanasakana
+    - MedicalJewel
+    - SIsilicon
 ---
 
 :::warning

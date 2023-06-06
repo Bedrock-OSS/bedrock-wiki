@@ -1,9 +1,10 @@
 ---
 title: Playsound
 category: Commands
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
+    - jordanparki7
 tags:
     - info
 ---
@@ -53,7 +54,7 @@ You can use the `/playsound` command to play sound effects to players present an
     - The higher the value, the higher the pitch.
     - Values less than or equal to  `0.0`  makes the sound inaudible.
 
-> Note; pitch affects the speed at which the audio is played. For example, a pitch of `0.5` would mean the audio is played at ` 0.5× ` speed.
+> Note: pitch affects the speed at which the audio is played. For example, a pitch of `0.5` would mean the audio is played at ` 0.5× ` speed.
 
 ### Minimum Volume
 
@@ -72,7 +73,7 @@ You can use the `/playsound` command to play sound effects to players present an
 /execute as @a at @s playsound random.orb @s ~ ~ ~ 10000
 ```
 
-Note; since the playsound command is positonal, it is helpful to use an execute command structure as shown in the second example to prevent the sound effect from cutting off in special cases such as playing a sound effect following a `/tp` command. You may increase volume when covering large distances to reduce failures.
+Note: since the playsound command is positonal, it is helpful to use an execute command structure as shown in the second example to prevent the sound effect from cutting off in special cases such as playing a sound effect following a `/tp` command. You may increase volume when covering large distances to reduce failures.
 
 
 **(Recommended) Read Next: [Sounds](/concepts/sounds.html)**

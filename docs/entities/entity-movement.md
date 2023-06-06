@@ -1,6 +1,11 @@
 ---
 title: Entity Movement
 category: Tutorials
+mentions:
+    - SirLich
+    - sermah
+    - MedicalJewel105
+    - TheDoctor15
 ---
 
 In Minecraft, entities have the ability to move through the world, either by walking, swimming or flying. To get these behaviors, your entity will generally need quite a few behaviors, broken out into various types.
@@ -187,3 +192,11 @@ You can use `minecraft:target_nearby_sensor` to detect when you have reached the
     }
 }
 ```
+
+## Other
+
+:::tip
+You can trigger entity walking animation via command.
+`/execute as @e[type=...] at @s run tp @s ^^^0.1`
+This way you can control where entity goes and make it look natural.
+:::

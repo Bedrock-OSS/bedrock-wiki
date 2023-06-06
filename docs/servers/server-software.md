@@ -1,5 +1,22 @@
 ---
 title: Bedrock Server Software
+mentions:
+    - SirLich
+    - DevGod6969
+    - NhanAZ
+    - SmokeyStack
+    - Joemanasdawd
+    - mdisprgrm
+    - Superice666
+    - andriycraft
+    - KanadeDev
+    - HUYDGD
+    - TheItsNameless
+    - hvlhx
+    - SmokeyStack
+    - ProtectorYT364
+    - ThomasOrs
+    - lapismyt
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).

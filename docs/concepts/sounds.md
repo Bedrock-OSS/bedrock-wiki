@@ -2,6 +2,16 @@
 title: Sounds
 tags:
     - intermediate
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - aexer0e
+    - MedicalJewel105
+    - Justash01
+    - DasEtwas
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 In bedrock, we can add custom sounds without overwriting any vanilla sounds. This is done by adding files to the resource pack.

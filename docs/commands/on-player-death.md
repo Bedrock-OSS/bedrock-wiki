@@ -1,7 +1,7 @@
 ---
 title: On Player Death
 category: On Event Systems
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 4
@@ -52,7 +52,7 @@ Just make sure to follow the given order and properly add the selector argument 
 
 
 - **` @a `** selector will target all players alive/dead so we use it to mark everyone as 0 'dead.'
-    - Note; we will ignore 2 or it will end up making the commands execute on dead players again. We only want our commands to execute once.
+    - Note: we will ignore 2 or it will end up making the commands execute on dead players again. We only want our commands to execute once.
 
 
 - **` @e `** selector on the other hand will only target players who are alive, so we can use this to mark all alive players 1 'alive.'

@@ -1,7 +1,7 @@
 ---
 title: Scoreboard Timers
 category: Scoreboard Systems
-mention:
+mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 5

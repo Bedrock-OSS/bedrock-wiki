@@ -3,8 +3,9 @@ title: Preserve Title Texts
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - shanewolf38
+    - SmokeyStack
 ---
 
 In this tutorial, you will learn how to preserve binding data and update elements based on titles containing specific strings.
