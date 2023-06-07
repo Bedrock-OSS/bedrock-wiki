@@ -27,12 +27,17 @@ If you are not prepared to go in-depth with the ins and outs, material presets c
 
 Most materials inherit the settings of previously defined materials, then further building off of them. This is written in the following format:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/materials/<name>.material</CodeHeader>
 
 ```json
-"<New material ID>:<ID of material to use as a base>": {
-    <defines, states, and other settings>
-},
+{
+	"materials": {
+		"version": "1.0.0",
+		"<New material ID>:<ID of material to use as a base>": {
+    		<defines, states, and other settings>
+		}
+	}
+}
 ```
 
 :::warning
