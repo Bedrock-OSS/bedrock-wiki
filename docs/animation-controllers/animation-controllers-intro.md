@@ -354,3 +354,36 @@ Because of the way animation controllers are setup, it will only move from state
 ### Resetting
 
 Animation Controllers "reset" when an entity reloads (player join/leave, chunk reload, etc). This means that it will "jump" back to the default state. You should always have logic in your default state that can handle restarting any critical animations.
+
+## Notes
+
+You can create variables (and remap their values) in animation controllers too!
+
+```json
+{
+    "format_version": "1.17.30",
+    "animation_controllers": {
+        "controller.animation.sheep.move": {
+            "states": {
+                "default": {
+                    "variables": {
+                        "ground_speed_curve": {
+                            "input": "query.ground_speed",
+                            "remap_curve": {
+                                "0.0": 0.2,
+                                "1.0": 0.7
+                            }
+                        }
+                    },
+                    "animations": [
+                        "wiggle_nose",
+                        {
+                            "walk": "variable.ground_speed_curve"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+```
