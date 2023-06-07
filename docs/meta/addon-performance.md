@@ -171,6 +171,12 @@ This guide is a non-exhaustive list of specific performance considerations separ
 -   Keep in mind that textures are atlased, and larger textures can mess with atlas generation on lower-end devices
 -   Only make textures as significant as needed to convey the detail needed at the needed distance
 
+## Trades
+
+Villager trades cause performance issues and even crashes on all devices at 60 trades or greater. Avoid tons of trades for one entity.
+Your best bet to resolve this issue is to split your trades in half and move them to another villager or custom entity/npc, 30 trades is a good safe number from testing.
+*probably JSON UI issues*
+
 ## Sounds
 
 ### Count
