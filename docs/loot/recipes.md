@@ -46,13 +46,11 @@ As an example, a "cold steel sword" might be crafted using the following [shaped
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "wiki:cold_steel_sword"
 		},
 		"tags": ["crafting_table", "altar"],
-
 		"pattern": [
 			"X",
 			"X",
@@ -157,7 +155,6 @@ The item object is a more explicit construct for referencing items.
 {
 	"item": "minecraft:planks",
 	"data": 2,
-	
 	"count": 3
 }
 ```
@@ -235,14 +232,12 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_shapeless": {
 		"description": {
 			"identifier": "wiki:brass_door_knob"
 		},
 		"group": "handles",
 		"tags": ["construction_bench"],
-		
 		"ingredients": [
 			"wiki:brass",
 			{
@@ -294,13 +289,11 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "wiki:covered_arch"
 		},
 		"tags": ["crafting_table"],
-
 		"pattern": [
 			"SSS",
 			"I I",
@@ -467,7 +460,6 @@ Shaped crafting recipe outputs behave very similarly to their [shapeless counter
 "result": [
 	{
 		"item": "wiki:covered_arch",
-		
 		"count": 3
 	},
 	"wiki:crafting_scrap"
@@ -520,17 +512,14 @@ Furnace recipes are used to transform an item using a heat source over a period 
 ```json
 {
 	"format_version": "1.17.41",
-
 	"minecraft:recipe_furnace": {
 		"description": {
 			"identifier": "wiki:magic_ash"
 		},
 		"tags": ["soul_campfire"],
-
 		"input": "wiki:bone_fragments",
 		"output": {
 			"item": "wiki:magic_ash",
-
 			"count": 4
 		}
 	}
@@ -552,7 +541,6 @@ Furnace recipes bind exactly one input [item descriptor](#item-descriptors) to e
 "input": "wiki:bone_fragments"
 "output": {
 	"item": "wiki:magic_ash",
-	
 	"count": 4
 }
 ```
@@ -600,13 +588,11 @@ Brewing mixes are simple brewing recipes theoretically designed to isolate the d
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_brewing_mix": {
 		"description": {
 			"identifier": "wiki:paralysis_brew"
 		},
 		"tags": ["brewing_stand"],
-
 		"input": "wiki:amberglass_flask",
 		"reagent": "wiki:viporfly_poison",
 		"output": "wiki:paralysis_brew"
@@ -636,13 +622,11 @@ Brewing containers are designed to pass the data value of an input to the transf
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_brewing_container": {
 		"description": {
 			"identifier": "wiki:illumination_potion"
 		},
 		"tags": ["brewing_stand"],
-
 		"input": "minecraft:potion",
 		"reagent": "wiki:radiant_berries",
 		"output": "wiki:illumination_potion"
