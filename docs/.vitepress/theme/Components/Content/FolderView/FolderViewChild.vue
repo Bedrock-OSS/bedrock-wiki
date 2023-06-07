@@ -79,7 +79,7 @@ export default {
 
 			let type = path.split('.').pop()
 
-			if (type === 'js' || type === 'json' || type === 'mcfunction') {
+			if (type === 'js' || type === 'ts' || type === 'json' || type === 'mcfunction') {
 				return '📝'
 			} else if (type === 'mcstructure') {
 				return '🏛'

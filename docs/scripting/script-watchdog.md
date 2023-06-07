@@ -54,45 +54,40 @@ These watchdog messages are thrown with `[Watchdog]` label in error or warning. 
 
 ### Slow-running script detected in behavior pack '%s' (x ms average)
 
-  Script runtime is delayed by over a certain timeframe.
-
+Script runtime is delayed by over a certain timeframe.
 
 ### x ms script spike detected in behavior pack '%s'
 
-  There is a spike in script runtime.
-
+There is a spike in script runtime.
 
 ### Out of memory exception detected in behavior pack '%s'
 
-  This error occurs when the combined memory usage exceeds.
+This error occurs when the combined memory usage exceeds.
 
-  This saves and shuts down the world by Watchdog termination and cannot be canceled using `BeforeWatchdogTerminateEvent`.
-
+This saves and shuts down the world by Watchdog termination and cannot be canceled using `BeforeWatchdogTerminateEvent`.
 
 ### x ms script hang detected in behavior pack '%s'
 
-  The scripts freezes at a certain location of your script for more than the watchdog threshold for single tick.
+The scripts freezes at a certain location of your script for more than the watchdog threshold for single tick.
 
-  This is usually caused by iteration, such as `while` loop and `for` loop.
-
+This is usually caused by iteration, such as `while` loop and `for` loop.
 
 ### Stack overflow detected in behavior pack '%s'
 
-  Occurs when there is a recursive function (a function that calls itself) without an exit point.
-
+Occurs when there is a recursive function (a function that calls itself) without an exit point.
 
 ### High memory usage detected
 
-  Produces a content log warning when the combined memory usage exceeds the given threshold in megabytes.
-
+Produces a content log warning when the combined memory usage exceeds the given threshold in megabytes.
 
 ### Unhandled critical exception of type '%s' in behavior pack '%s'
 
 Produces a content log error when an unhandled critical exception occurs.
 
-There are multiple reason that a watchdog is deciding to terminate execution of a behavior pack's script.
-    - `hang`: script is not responsive due to a hang or infinite loop.
-    - `stackOverflow`: a long, and potentially infinite chain of function calls.
+There are multiple reasons that a watchdog is deciding to terminate execution of a behavior pack's script.
+
+-   `hang`: script is not responsive due to a hang or infinite loop.
+-   `stackOverflow`: a long, and potentially infinite chain of function calls.
 
 ## Cancel Watchdog Termination
 
@@ -105,6 +100,7 @@ import { system } from '@minecraft/server';
 
 system.events.beforeWatchdogTerminate.subscribe((event) => {
   event.cancel = true;
+  console.warn(`[Watchdog] Canceled critical exception of type '${event.cancelationReason}`);
 });
 ```
 
@@ -112,7 +108,7 @@ system.events.beforeWatchdogTerminate.subscribe((event) => {
 
 Watchdog implementation comes with Minecraft's slash commands, which can be used with the `/script watchdog` command.
 
-- `/script watchdog exportstats`: Exports performance profiling of scripting environment, this includes plugin handles and runtime information.
+-   `/script watchdog exportstats`: Exports performance profiling of scripting environment, this includes plugin handles and runtime information.
 
 ---
 

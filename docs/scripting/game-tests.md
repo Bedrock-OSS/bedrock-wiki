@@ -35,7 +35,7 @@ GameTests can be used with the `/gametest` command.
 
 (1.19.40+) Vanilla GameTests are removed from the Minecraft game files, so you cannot run any gametests without adding your own custom behavior pack. You can find them in the [**official repo**](https://github.com/microsoft/minecraft-gametests/tree/main/behavior_packs/vanilla_gametest).
 
-# Get started with GameTest
+## Get started with GameTest
 
 To get started, you'll want to begin with your own behavior pack and decent knowledge of scripting and API. If you're getting started check out [this article](/scripting/starting-scripts).
 
@@ -47,7 +47,7 @@ To use the GameTest Framework, the `@minecraft/server-gametest` module is requir
 "dependencies": [
     {
         "module_name": "@minecraft/server",
-        "version": "1.2.0-beta"
+        "version": "1.3.0-beta"
     },
     {
         "module_name": "@minecraft/server-gametest",

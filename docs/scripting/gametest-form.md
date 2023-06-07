@@ -34,7 +34,7 @@ Like other modules, you will need to add the dependency into your `manifest.json
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.2.0-beta"
+			"version": "1.3.0-beta"
 		}
 	]
 }

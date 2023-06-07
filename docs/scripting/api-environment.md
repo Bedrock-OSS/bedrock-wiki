@@ -10,6 +10,7 @@ mentions:
     - MuhammadRestu999
 ---
 
+Minecraft: Bedrock Edition uses their own version of JavaScript based on QuickJS. It uses the ECMAScript module (ESM) system for organizing and loading code, which allows for a more modular and organized approach to writing scripts for the game.
 
 ## Common problems
 
@@ -38,30 +39,30 @@ You will encounter this most often when using events, because in every data even
 ## Support
 
 - ***What is supported***
-    - `Object` - Standard function constructor for objects
-    - `Function` - Standard function constructor for functions
-    - `Error` - (`EvalError`, `RangeError`, `ReferenceError`, `SyntaxError`, `TypeError`, `URIError`, `InternalError`, `AggregateError`) - Classes for error construction
-    - `Array` - (`Int8Array`, `UInt8Array`, `Int16Array`, `UInt16Array`, `Int32Array`, `UInt32Array`, `Float32Array`, `Float64Array`, `SharedArrayBuffer`, `ArrayBuffer`, `UInt8ClampedArray`) Standard function constructor for Array objects
-    - `parseInt`, `parseFloat` - Standard methods for parsing string to number
-    - `isNaN`, `isFinite` - Standard Methods for checking number types
-    - `decodeURI`, `encodeURI` - Standard methods for decoding and encoding URI paths
-    - `decodeURIComponent`, `encodeURIComponent` - Standard methods for decoding and encoding URI components
-    - `escape`, `unescape` - Non-Standard methods please use decodeURI/encodeURI if its possible
-    - `NaN`, `Infinity`, `undefined` - Standard variables for incode usage,
-    - `__date_clock` - Build-in QuickJS method for getting current time
-    - `(Number`, Boolean, String, Symbol) - Standard function constructor for JS primitives
-    - `Math` - Standard Object having primary math functions
-    - `Reflect` - Standard Object having build-in methods
-    - `eval` - Standard Method for evaluating string as code
-    - `globalThis` - Standard Object with access to global scoped variables
-    - `Date` - Standard function constructor for date instance
-    - `RegExp` - Standard function constructor for regex instance
-    - `JSON` -  Standard Object having stringify and parse methods for JSON interaction
-    - `Proxy` - Standard function constructor for build-in proxy handler
-    - `Map`, `Set`, `WeakMap`, `WeakSet` - Standard function constructors for data organisation objects
-    - `DataView` - Standard function constructor for binary arrays interactions
-    - `Promise` - Standard function constructor for async interaction
-    - `console` - Standard object having base output methods (`log`, `warn`, `error`, `info`)
+  - `Object` - Standard function constructor for objects
+  - `Function` - Standard function constructor for functions
+  - `Error` - (`EvalError`, `RangeError`, `ReferenceError`, `SyntaxError`, `TypeError`, `URIError`, `InternalError`, `AggregateError`) - Classes for error construction
+  - `Array` - (`Int8Array`, `UInt8Array`, `Int16Array`, `UInt16Array`, `Int32Array`, `UInt32Array`, `Float32Array`, `Float64Array`, `SharedArrayBuffer`, `ArrayBuffer`, `UInt8ClampedArray`) Standard function constructor for Array objects
+  - `parseInt`, `parseFloat` - Standard methods for parsing string to number
+  - `isNaN`, `isFinite` - Standard Methods for checking number types
+  - `decodeURI`, `encodeURI` - Standard methods for decoding and encoding URI paths
+  - `decodeURIComponent`, `encodeURIComponent` - Standard methods for decoding and encoding URI components
+  - `escape`, `unescape` - Non-Standard methods please use decodeURI/encodeURI if its possible
+  - `NaN`, `Infinity`, `undefined` - Standard variables for incode usage,
+  - `__date_clock` - Build-in QuickJS method for getting current time
+  - `Number`, `Boolean`, `String`, `Symbol` - Standard function constructor for JS primitives
+  - `Math` - Standard Object having primary math functions
+  - `Reflect` - Standard Object having build-in methods
+  - `eval` - Standard Method for evaluating string as code
+  - `globalThis` - Standard Object with access to global scoped variables
+  - `Date` - Standard function constructor for date instance
+  - `RegExp` - Standard function constructor for regex instance
+  - `JSON` -  Standard Object having stringify and parse methods for JSON interaction
+  - `Proxy` - Standard function constructor for build-in proxy handler
+  - `Map`, `Set`, `WeakMap`, `WeakSet` - Standard function constructors for data organisation objects
+  - `DataView` - Standard function constructor for binary arrays interactions
+  - `Promise` - Standard function constructor for async interaction
+  - `console` - Standard object having base output methods (`log`, `warn`, `error`, `info`)
 
 - ***What is not supported***
     - `BigInt` - Standard function constructor for big ints
