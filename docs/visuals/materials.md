@@ -27,7 +27,7 @@ If you are not prepared to go in-depth with the ins and outs, material presets c
 
 Most materials inherit the settings of previously defined materials, then further building off of them. This is written in the following format:
 
-<CodeHeader>RP/materials/<name>.material</CodeHeader>
+<CodeHeader>RP/materials/name.material</CodeHeader>
 
 ```json
 {
