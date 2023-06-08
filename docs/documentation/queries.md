@@ -501,7 +501,7 @@ query.time_of_day - day time table
 | 0.99                | 17760    |
 | 1.00                | 18000    |
 
-Credit: [Analysis of query.time_of_day.md](https://gist.github.com/DoubleF3lix/a03afde0a979dfa41e8525ee92f12ca5)
+Credit: [Analysis of query.time_of_day](https://gist.github.com/DoubleF3lix/a03afde0a979dfa41e8525ee92f12ca5)
 
 </Spoiler>
 

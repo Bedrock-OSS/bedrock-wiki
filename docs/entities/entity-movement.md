@@ -29,9 +29,9 @@ The first thing your entity needs is a speed component. This sets how quickly yo
 
 | Component                                                                                                        | Note                             |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| [minecraft:movement](/entities/vanilla-usage-components.html#movement)                                         | Set movement speed (required)    |
-| [minecraft:underwater_movement](/entities/vanilla-usage-components.html#underwater-movement)                   | Set movement speed in the water. |
-| [minecraft:flying_speed](/entities/vanilla-usage-components.html#flying-speed)                                 | Set the speed in the air.        |
+| [minecraft:movement](/entities/vanilla-usage-components#movement)                                         | Set movement speed (required)    |
+| [minecraft:underwater_movement](/entities/vanilla-usage-components#underwater-movement)                   | Set movement speed in the water. |
+| [minecraft:flying_speed](/entities/vanilla-usage-components#flying-speed)                                 | Set the speed in the air.        |
 
 You should always include `minecraft:movement`. Add the other two as needed.
 

@@ -62,8 +62,8 @@ Many packages exist for VSCode that make editing addons easier:
 bridge. includes a regular text editor for experienced addon creators and a tree editor to make it easy for beginners to get started with editing JSON files.
 
 #### Next Steps
-- [Read more on why you should use bridge.](https://bridge-core.app/guide/why-bridge.html)
-- [Read our guide on getting started with bridge.](https://bridge-core.app/guide/index.html)
+- [Read more on why you should use bridge.](https://bridge-core.app/guide/why-bridge)
+- [Read our guide on getting started with bridge.](https://bridge-core.app/guide/index)
 - [Try out bridge. online](https://editor.bridge-core.app/)
 
 ### Mobile Editors

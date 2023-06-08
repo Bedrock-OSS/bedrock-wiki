@@ -12,7 +12,7 @@ mentions:
 toc_max_level: 1
 ---
 
-Item functions modify the nature of an item in [loot tables](./loot-tables.html) and [trade tables](./trade-tables.html).
+Item functions modify the nature of an item in [loot tables](./loot-tables) and [trade tables](./trade-tables).
 
 ```json
 

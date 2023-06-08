@@ -76,4 +76,4 @@ You can use the `/playsound` command to play sound effects to players present an
 Note: since the playsound command is positonal, it is helpful to use an execute command structure as shown in the second example to prevent the sound effect from cutting off in special cases such as playing a sound effect following a `/tp` command. You may increase volume when covering large distances to reduce failures.
 
 
-**(Recommended) Read Next: [Sounds](/concepts/sounds.html)**
+**(Recommended) Read Next: [Sounds](/concepts/sounds)**

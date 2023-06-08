@@ -53,7 +53,7 @@ Commands in a function are still run in the same order, however.
 
 - It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
 
-- Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](https://wiki.bedrock.dev/commands/scoreboard-timers.html) system to learn how to set it up.
+- Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](/commands/scoreboard-timers) system to learn how to set it up.
 
 ## Creating a Function
 
@@ -149,7 +149,7 @@ The final file within a function is the **tick.json** file. This specifies funct
 
 Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands in the function.
 
-Enabling the [Content Log](https://wiki.bedrock.dev/guide/troubleshooting.html#content-log) in creator settings will allow you to see if there are any errors in your function pack, in which function the error is in, at which line and exactly what the syntax error for that command is.
+Enabling the [Content Log](/guide/troubleshooting#content-log) in creator settings will allow you to see if there are any errors in your function pack, in which function the error is in, at which line and exactly what the syntax error for that command is.
 
 The list of errors will be generated every time you load a world or run `/reload` to reflect changes after editing files. The list can be viewed on-screen for a few seconds as well as in the content log history in settings.
 

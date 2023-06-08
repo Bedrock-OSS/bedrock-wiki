@@ -23,7 +23,7 @@ Area-of-effect clouds have several special features we can take advantage of:
 
 The projectile component supports spawning in area-of-effect clouds on hit. Minecraft uses this to spawn in AOE clouds from lingering potions.
 
-[Projectiles Documentation](/documentation/projectiles.html#spawn-aoe-cloud)
+[Projectiles Documentation](/documentation/projectiles#spawn-aoe-cloud)
 
 ## Method 2: NBT Editing
 

@@ -225,7 +225,7 @@ When selected, empty entries won't yield any loot for that roll.
 Empty entries can generally be mimicked using [a roll count](#) whose range includes 0, [random chance conditions](#), or [count functions](#) that could randomly select 0. Their primary advantage is readability when using [weighted random pools](#): denoting by weight when a roll won't yield an entry may be easier to understand.
 
 ### Functions
-Functions are what makes loot tables so powerful. They can do a wide range of tasks for each entry in your loot table. For example, they can change the amount of an item is dropped, what enchantments are present (even on items that normally cannot be enchanted), the item name, it's lore, and it can even write books! View [item functions](https://wiki.bedrock.dev/loot/item-functions.html) for a full list of functions and how they're used.
+Functions are what makes loot tables so powerful. They can do a wide range of tasks for each entry in your loot table. For example, they can change the amount of an item is dropped, what enchantments are present (even on items that normally cannot be enchanted), the item name, it's lore, and it can even write books! View [item functions](/loot/item-functions) for a full list of functions and how they're used.
 
 <CodeHeader>artifacts.json/pools/entries</CodeHeader>
 

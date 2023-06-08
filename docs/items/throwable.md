@@ -379,4 +379,4 @@ The entity file is the same as the Stable version.
 
 ## Conclusion
 
-Once you have your throwable item you can start trying several things, like playing with its power, effects, animations or combining it with an [AOE Cloud](/entities/introduction-to-aec.html). The only limit is your imagination.
+Once you have your throwable item you can start trying several things, like playing with its power, effects, animations or combining it with an [AOE Cloud](/entities/introduction-to-aec). The only limit is your imagination.

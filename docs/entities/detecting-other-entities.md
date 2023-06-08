@@ -70,7 +70,7 @@ This example you'll be following will make pigs say "oink oink" upon detecting p
 }
 ```
 
-The first one is for detecting if the entity is present, and the other for detecting if the entity is not present. The events used in the `/event` part of the `/execute` commands can be used for adding a [dummy component](https://wiki.bedrock.dev/entities/dummy-components) or updating an [actor property](https://learn.microsoft.com/en-us/minecraft/creator/documents/introductiontoentityproperties).
+The first one is for detecting if the entity is present, and the other for detecting if the entity is not present. The events used in the `/event` part of the `/execute` commands can be used for adding a [dummy component](/entities/dummy-components) or updating an [actor property](https://learn.microsoft.com/en-us/minecraft/creator/documents/introductiontoentityproperties).
 
 Next of all, copy paste this BP animation controller. This assumes that you set up the `/event` parts of the `/execute` commands to add or remove `minecraft:is_sheared`. 
 

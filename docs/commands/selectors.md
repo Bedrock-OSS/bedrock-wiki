@@ -58,7 +58,7 @@ Damage the furthest two skeletons:
 ### Position
 Changes the position a selector starts its search at. It also modifies where the distance and volume arguments are positioned. Leaving any undefined defaults to the command's current position.
 
-[Relative coordinates](/commands/relative-coordinates.html#relative-coordinates) can be used to define a relative offset from the command's position.
+[Relative coordinates](/commands/relative-coordinates#relative-coordinates) can be used to define a relative offset from the command's position.
 
 -   `x=<value>`, `y=<value>`, and `z=<value>`—Defines a position for the target selector.
 
@@ -196,7 +196,7 @@ Set the game mode to Creative mode for players both not in Survival mode, and no
 Limits the selection of targets by what items they have in their inventory. This argument is represented as an object, or an array of objects, with up to one each of the following parameters:
 
 -   `item=<string>`—The identifier of the item to test for, and the only required argument. This can accept custom identifiers too.
--   `quantity=<int>`—The amount of the item to test for. Accepts a [range](/commands/selectors.html#scores) for a value. This argument can also be negated.
+-   `quantity=<int>`—The amount of the item to test for. Accepts a [range](/commands/selectors#scores) for a value. This argument can also be negated.
 -   `data=<int>`—The data value of the item to test for. Defaults to -1. **Currently not functional:** [MCPE-151920](https://bugs.mojang.com/browse/MCPE-151920)
 -   `location=<string>`—The slot the item should be located in. Accepts the same arguments as the slotType argument in the `/replaceitem` command.
 -   `slot=<int>`—The index of the slot used in the "location" argument, and can only be used with "location". Accepts a range for a value. This argument can be negated.

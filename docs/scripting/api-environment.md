@@ -26,7 +26,7 @@ Not everyone can encounter this problem because the use of eval and Function met
 
 Some browsers also prohibit the use of these methods, mainly the eval method, when using eval there is a risk of malicious code that can harm the problem in your add-on, which is why it is disabled by default.
 
-To enable these methods that evaluate code, you must mention it in the manifest. What and how you can find here. [Start with Script API](/scripting/starting-scripts.md).
+To enable these methods that evaluate code, you must mention it in the manifest. What and how you can find here. [Start with Script API](/scripting/starting-scripts).
 
 - **Native handles**
 

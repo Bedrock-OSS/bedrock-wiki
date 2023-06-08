@@ -15,7 +15,7 @@ tags:
 
 This system will run your desired commands on the event that a player leaves the world.
 
-> Note: you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](https://wiki.bedrock.dev/commands/on-player-join.html) system to execute when they join back.
+> Note: you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](/commands/on-player-join) system to execute when they join back.
 
 ## Setup
 
@@ -52,7 +52,7 @@ Just make sure to follow the given order and properly use the `/execute if score
 - **` new `** this FakePlayer name means the total number of players on the world in the current game tick.
 - **` old `** this FakePlayer name means the total number of players that were on the world in the previous game tick but also saves the values to be used in the *next* game tick.
 
-These values are obtained using the [Entity Counter](https://wiki.bedrock.dev/commands/entity-counter.html) system. It may be beneficial to refer to that doc for better understanding this one.
+These values are obtained using the [Entity Counter](/commands/entity-counter) system. It may be beneficial to refer to that doc for better understanding this one.
 
 By subtracting 'old' total from 'new' total we will be able to identify if player count has:
 - decreased ` ..-1 `
