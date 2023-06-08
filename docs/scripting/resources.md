@@ -24,5 +24,5 @@ There are somewhat decent amount of resources available online related to script
 
 -   [Script API Examples](https://github.com/JaylyDev/ScriptAPI) - JavaScript code snippets that uses Script API modules only
 
--   [Script API Starter Project](https://github.com/JaylyDev/scriptapi-starter) - A Visual Studio Code workspace setup specifically for Script API. This project is for writing JavaScript code ([for TypeScript users](scripting/typescript#script-api)).
+-   [Script API Starter Project](https://github.com/JaylyDev/scriptapi-starter) - A Visual Studio Code workspace setup specifically for Script API. This project is for writing JavaScript code ([for TypeScript users](/scripting/typescript#script-api)).
 
