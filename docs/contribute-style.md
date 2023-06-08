@@ -148,10 +148,10 @@ You can create links, that redirect you to other pages in the wiki. These are ca
 [Redirect to the contribute page](/contribute)
 
 ```Markdown
-[JSON Arrays](/guide/understanding-json.html#arrays)
+[JSON Arrays](/guide/understanding-json#arrays)
 ```
 
-[JSON Arrays](/guide/understanding-json.html#arrays)
+[JSON Arrays](/guide/understanding-json#arrays)
 
 ```Markdown
 [Go to Working with Markdown header](#working-with-markdown)

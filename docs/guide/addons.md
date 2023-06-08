@@ -21,7 +21,7 @@ mentions:
 
 Addons allow us to modify the contents of our Minecraft Experience by _modifying_ or _removing_ existing content and _adding_ our own. Addons are very powerful and allow us to create custom entities, items, and blocks, as well as things like custom loot tables and crafting recipes. Your imagination is the limit!
 
-Addons are primarily written in [json](./understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
+Addons are primarily written in [json](/understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
 
 ## What's the difference between a Behavior Pack & a Resource Pack?
 

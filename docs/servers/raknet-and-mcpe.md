@@ -10,7 +10,7 @@ mentions:
 Minecraft Bedrock uses a protocol known as [RakNet](http://www.jenkinssoftware.com/)
 Unlike Minecraft Java edition, Bedrock uses UDP on the port 19132
 
-You can find a list of Minecraft Bedrock server softwares [here](/servers/server-software.html#active-software).
+You can find a list of Minecraft Bedrock server softwares [here](/servers/server-software#active-software).
 
 ## RakNet Notes
 

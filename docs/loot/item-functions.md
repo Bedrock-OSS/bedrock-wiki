@@ -12,7 +12,7 @@ mentions:
 toc_max_level: 1
 ---
 
-Item functions modify the nature of an item in [loot tables](./loot-tables) and [trade tables](./trade-tables).
+Item functions modify the nature of an item in [loot tables](/loot-tables) and [trade tables](/trade-tables).
 
 ```json
 
@@ -54,7 +54,7 @@ A handful of functions are available for basic item properties. These functions 
 | Trade table      | ❌      |
 
 ::: tip NOTE
-Trade tables use the [`"quantity"` property](./trade-tables.html#quantity) to set their count.
+Trade tables use the [`"quantity"` property](/trade-tables#quantity) to set their count.
 :::
 
 The `set_count` function sets the count for that item entry.

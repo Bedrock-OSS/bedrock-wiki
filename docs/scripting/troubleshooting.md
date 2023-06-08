@@ -117,7 +117,7 @@ Debugging allows you to find the exact point where you made a mistake on your Ja
 
 - **[Scripting][Inform]**
 
-  you can use `console.log()` or `console.info()` to display JavaScript values, however they are only displayed in [Content Log file](/guide/troubleshooting.html#content-log-file), which you can see them [here](/guide/troubleshooting.html#content-log-file).
+  you can use `console.log()` or `console.info()` to display JavaScript values, however they are only displayed in [Content Log file](/guide/troubleshooting#content-log-file), which you can see them [here](/guide/troubleshooting#content-log-file).
 
   `00:00:00-[Scripting][Inform]-`: This text is triggered when `console.log()` or `console.info()` is used.
 

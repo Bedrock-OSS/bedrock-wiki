@@ -70,7 +70,7 @@ From here on out, all files and folders have very specific names unless otherwis
 When creating a new file in a file manager or some text or code applications, the `.txt` extension is added automatically to the end of the file name. To ensure our files work as intended, be sure to remove `.txt`. Like names, the wrong file extension is also a common reason of an error. If you're using Acode, you'll notice `untitled.txt` is completely highlighted instead of just `untitled`. This is a common practice for naming programming language files.
 :::
 
-The manifest file is the file Minecraft uses to identify your packs. Every pack has one (and only one) manifest. A folder with a correctly formatted manifest will show up in Minecraft. Before we begin adding content, we will ensure our "minimal" pack is visible. Manifests are written in the `JSON` programming language. If you're unfamiliar with JSON, you can learn more about it [here](./understanding-json).
+The manifest file is the file Minecraft uses to identify your packs. Every pack has one (and only one) manifest. A folder with a correctly formatted manifest will show up in Minecraft. Before we begin adding content, we will ensure our "minimal" pack is visible. Manifests are written in the `JSON` programming language. If you're unfamiliar with JSON, you can learn more about it [here](/understanding-json).
 
 Create a new text file in your addon's behaviour pack folder called `manifest.json`. To begin, copy and paste the following code into the `manifest.json` file. A full breakdown of the manifest file is provided after creating these files.
 
@@ -189,7 +189,7 @@ Now that your addon has all of the required content, we need to import it to Min
    ![](/assets/images/guide/project-setup-android/zip-addon.png)
 4. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
 
-If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Successfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](./troubleshooting).
+If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Successfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](/troubleshooting).
 
 ## Turn on Content Log
 

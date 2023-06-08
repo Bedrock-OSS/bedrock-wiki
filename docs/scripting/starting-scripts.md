@@ -138,7 +138,7 @@ The entry point contains scripts and/or imports to other script files.
 
 ## Writing scripts with JS
 
-Minecraft's scripting engine only runs JavaScript, like any other JavaScript projects. Check out [Scripting with TypeScript](./typescript#script-api) for compiling TS directly to JavaScript.
+Minecraft's scripting engine only runs JavaScript, like any other JavaScript projects. Check out [Scripting with TypeScript](/typescript#script-api) for compiling TS directly to JavaScript.
 
 <CodeHeader>BP/scripts/Main.js</CodeHeader>
 

@@ -14,7 +14,7 @@ Feature based surface builder is a feature that puts together a collection of bl
 
 Single block features are going to be the base of our surface builder. They will define which blocks we are going to use. For this tutorial I'll be using Coarse Dirt, Podzol and Cobblestone.
 
-Learn more about single block features [here](/world-generation/feature-types.html#single-block-features)
+Learn more about single block features [here](/world-generation/feature-types#single-block-features)
 
 Coarse Dirt File
 
@@ -89,7 +89,7 @@ Cobblestone File
 
 Weighted random features are going to be our _randomizer_ to select between each type of blocks.
 
-Learn more about weighted random features [here](/world-generation/feature-types.html#weighted-random-features)
+Learn more about weighted random features [here](/world-generation/feature-types#weighted-random-features)
 
 <CodeHeader>BP/features/select_surface_block_feature.json</CodeHeader>
 
@@ -122,7 +122,7 @@ Learn more about weighted random features [here](/world-generation/feature-types
 
 Scatter features are an important part of our surface builder. It will determine the size, shape and number of blocks in one blob.
 
-Learn more about scatter features [here](/world-generation/feature-types.html#scatter-features)
+Learn more about scatter features [here](/world-generation/feature-types#scatter-features)
 
 <CodeHeader>BP/features/scatter_surface_block_feature.json</CodeHeader>
 
