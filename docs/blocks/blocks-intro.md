@@ -187,6 +187,11 @@ As you might have already guessed, flipbook texture shortnames are defined in a 
 -   `"atlas_tile"` is the shortname definition. As you know, we already applied `"flashing"` texture shortname to the `wiki:flashing` block in `RP/blocks.json`.
 -   `"ticks_per_frame"` defines how quickly the different textures will fade into the block, in other words, the speed of the animation.
 
+:::warning
+`blocks.json` (resource pack) completely ignores the namespace. You can put there just anything or don't use namespace at all and it will work. This may cause problems if you create custom block with the same name (but not namespace) as some other vanilla block. 
+:::
+
+
 You can read more about flipbook textures [here](/blocks/flipbook-textures).
 
 A **flipbook texture** file is created like this:

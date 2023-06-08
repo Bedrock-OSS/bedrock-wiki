@@ -448,6 +448,8 @@ Runs an event when an entity stepped on the block.
 }
 ```
 
+Note: you need entity collision not to be set false to trigger event.
+
 ### minecraft:on_step_off
 
 Runs an event when an entity stepped off of the block.
@@ -463,6 +465,8 @@ Runs an event when an entity stepped off of the block.
   }
 }
 ```
+
+Note: you need entity collision not to be set false to trigger event.
 
 ### minecraft:on_fall_on
 

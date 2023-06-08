@@ -116,3 +116,7 @@ This method is no longer supported. With the advent of render-dragon, materials 
 ```
 
 </Spoiler>
+
+#### Geometry + Materials Workaround
+
+You can hide entity shadows if you apply a model on your entity to cover the shadow and use `"banner_pole"` material.

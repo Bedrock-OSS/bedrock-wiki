@@ -123,6 +123,9 @@ Cooking and Smelting:
 Brewing:
 - `brewing_stand`
 
+Education:
+- `material_reducer`
+
 Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-stable.html#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
 
 ::: tip

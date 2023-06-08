@@ -202,3 +202,39 @@ which can then finally be followed to "entity_static"
     ]
 }
 ```
+
+## 1.16.100+ Notes
+
+Warning for anybody who uses custom materials!
+
+Custom material inheriting is no longer valid and causes content log errors the workaround Is to define the material fully custom with just the prefix and material name.
+
+This was not an issue before 1.16.100.
+
+```json
+{
+    "materials": {
+        "version": "1.0.0",
+        "prefix:window_glass:entity": { //now throws a content log error.
+            "+states": [
+                "Blending"
+            ],
+            "defines": [
+                "ENABLE_FOG",
+                "ENABLE_LIGHT",
+                "USE_ONLY_EMISSIVE"
+            ]
+        },
+        "prefix:window_glass:": { //corrects the content log error. Note: may have to also define the old inherited values.
+            "+states": [
+                "Blending"
+            ],
+            "defines": [
+                "ENABLE_FOG",
+                "ENABLE_LIGHT",
+                "USE_ONLY_EMISSIVE"
+            ]
+        }
+    }
+}
+```
