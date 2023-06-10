@@ -2041,13 +2041,13 @@ Some of them only work in specific screens.
 
 | Name              |  ID  | Aux Values |
 | ----------------- | :--: | :--------: |
-| diamond           | 304  |  19922944  |
-| emerald           | 512  |  33554432  |
-| gold_ingot        | 306  |  20054016  |
-| iron_ingot        | 305  |  19988480  |
-| netherite_ingot   | 603  |  39518208  |
-| banner            | 567  |  37158912  |
-| saddle            | 371  |  24313856  |
+| diamond           | 306  |  20054016  |
+| emerald           | 519  |  34013184  |
+| gold_ingot        | 308  |  20185088  |
+| iron_ingot        | 307  |  20119552  |
+| netherite_ingot   | 616  |  40370176  |
+| banner            | 574  |  37617664  |
+| saddle            | 373  |  24444928  |
 | cartography_table | -200 | -13107200  |
 | chest             |  54  |  3538944   |
 | crafting_table    |  58  |  3801088   |
