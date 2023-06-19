@@ -135,7 +135,7 @@ Data Binding allows to bind hardcoded values/variables to an element property.
 | source_control_name       | string  |               | Name of the UI element to observe its property values                                                                                                                     |
 | source_property_name      | string  |               | Store the value of the property value of the UI element refered in `source_control_name`                                                                                  |
 | target_property_name      | string  |               | The UI element property that the stored value in `source_property_name` will be applied to                                                                                |
-| resolve_sibling_scope     | boolean |               |                                                                                                                                                                           |
+| resolve_sibling_scope     | boolean |               | If `true`, allows the selection of a sibling element in the same control instead of its child, for `source_control_name`                                                  |
 
 ### Stack Panel
 
