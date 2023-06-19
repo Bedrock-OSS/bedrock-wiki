@@ -52,6 +52,15 @@ Where `x` and `y` are both integer arguments, from the following table:
 | 6        | Turtle helmet         |
 | 7        | Netherite armor piece |
 
+### Y for horses
+
+| Argument | Type                  |
+| -------- | --------------------- |
+| 1        | Leather armor piece   |
+| 2        | Iron armor piece      |
+| 3        | Gold armor piece      |
+| 4        | Diamond armor piece   |
+
 ### Example
 
 `query.armor_texture_slot(3) == 1`: queries for Iron Boots.
