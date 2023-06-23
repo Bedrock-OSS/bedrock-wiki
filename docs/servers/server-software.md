@@ -135,6 +135,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 -   [DirtServer](https://github.com/Falkirks/DirtServer)
 -   [MineJS](https://github.com/organization/MineJS)
+-   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [NodeMine](https://github.com/NodeMine/NodeMine)
 -   [Numerous-alpaca](https://github.com/numerous-alpaca/numerous-alpaca)
 -   [PocketNode](https://github.com/PocketNode/PocketNode)
@@ -152,7 +153,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [able-mp](https://github.com/AbleUnion/able-mp)
 -   [AtmosPE](https://github.com/AtmosPE/AtmosPE)
 -   [BlueLight](https://github.com/BlueLightJapan/BlueLight)
--   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [ClearSky](https://github.com/ClearSkyTeam/ClearSky)
 -   [ClearSkyTeam/PocketMine-MP](https://github.com/ClearSkyTeam/PocketMine-MP)
 -   [CoreminePE](https://github.com/starfury1927/CoreminePE)
