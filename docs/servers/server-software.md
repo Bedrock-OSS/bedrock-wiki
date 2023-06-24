@@ -27,7 +27,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
-| PHP        | [Still Active](#php)        : 5 < [Discontinued](#php-1)        : 36 |
+| PHP        | [Still Active](#php)        : 6 < [Discontinued](#php-1)        : 36 |
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 13 |
 | JavaScript | [Still Active](#javascript) : 2 < [Discontinued](#javascript-1) : 5  |
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
@@ -88,6 +88,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
 -   [NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)
+-   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
 
 ### Python
 
