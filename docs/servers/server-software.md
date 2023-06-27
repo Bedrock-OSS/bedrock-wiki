@@ -28,7 +28,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
 | PHP        | [Still Active](#php)        : 5 < [Discontinued](#php-1)        : 36 |
-| Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 13 |
+| Java       | [Still Active](#java)       : 4 < [Discontinued](#java-1)       : 14 |
 | JavaScript | [Still Active](#javascript) : 2 < [Discontinued](#javascript-1) : 5  |
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | C++        | [Still Active](#c)          : 2 < [Discontinued](#c-3)          : 3  |
@@ -64,7 +64,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
--   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
 -   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)
 
 ### TypeScript
@@ -131,6 +130,8 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [SpiderMine](https://github.com/QuantumWorks/SpiderMine)
 -   [voxelwind](https://github.com/voxelwind/voxelwind)
 -   [Terracotta](https://github.com/TerracottaMC/Terracotta)
+-   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
+
 
 ### JavaScript
 
