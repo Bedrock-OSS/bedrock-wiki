@@ -1,16 +1,21 @@
 ---
 title: Scoreboard Operations
 category: General
+mentions:
+    - Sprunkles137
+    - Luthorius
+    - MedicalJewel105
+    - Hatchibombotar
 ---
 
-Scoreboards can be used to perform complex operations, similar to [Molang](/concepts/molang.html). Operations come in two flavors: mathematical, and logical.
+Scoreboards can be used to perform complex operations, similar to [Molang](/concepts/molang). Operations come in two flavors: mathematical, and logical.
 
 ## Overview
 Operations are performed using the `/scoreboard players operation` command. The full syntax is laid out below:
 ```
 /scoreboard players operation <targetScore> <objective> <operation> <sourceScore> <objective>
 ```
-The command consists of two score holders: The target score, and the source score. The target score is the value being operated on, and the source score is the value affecting the operation. The result of the operation is written into the target score, and the source score's value is not touched, save for [one operation](/commands/scoreboard-operations.html#swap-operator).
+The command consists of two score holders: The target score, and the source score. The target score is the value being operated on, and the source score is the value affecting the operation. The result of the operation is written into the target score, and the source score's value is not touched, save for [one operation](/commands/scoreboard-operations#swap-operator).
 
 ## Mathematical Operators
 Mathematical operators use arithmetic to affect the target score. There are five mathematical operations available: addition, subtraction, multiplication, floor division, and floor modulo division.

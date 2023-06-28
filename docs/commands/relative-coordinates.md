@@ -1,8 +1,12 @@
 ---
 title: Coordinate System
 category: General
-mention:
- - MedicalJewel105
+mentions:
+    - MedicalJewel105
+    - Sprunkles137
+    - 7dev7urandom
+    - Hatchibombotar
+    - TheItsNameless
 ---
 
 ## The Coordinate System
@@ -18,8 +22,8 @@ _You may already be familiar with coordinates if you've enabled the Show Coordin
 Relative coordinates are represented using tildes in place of real coordinates, and represent a position that is relative to the world coordinates its located at. You may insert numbers after a tilde to add an offset to the current position. These can be mixed with world coordinates, but cannot be mixed with local coordinates.
 
 Examples:
-  - `~ ~ ~`: Current position with no changes.
-  - `~5 ~-2 ~`: Current position with a 5-block X offset and a negative 2-block Y offset.
+    - `~ ~ ~`: Current position with no changes.
+    - `~5 ~-2 ~`: Current position with a 5-block X offset and a negative 2-block Y offset.
 
 ### Rotations
 
@@ -34,8 +38,8 @@ Local coordinates are similar to relative coordinates, but represent a position 
 Like relative coordinates, you can insert numbers to produce an offset of the current position, in local space. If there is no entity to copy rotation from, the x- and y-rotations are assumed to be 0.
 
 Examples:
-  - `^10 ^ ^`: Current position with a 10-block offset to the left.
-  - `^ ^1.5 ^1`: Current position with a 1.5-block offset upward and a 1-block offset forward.
+    - `^10 ^ ^`: Current position with a 10-block offset to the left.
+    - `^ ^1.5 ^1`: Current position with a 1.5-block offset upward and a 1-block offset forward.
 
 ## Additional Notes
 

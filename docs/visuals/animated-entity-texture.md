@@ -2,6 +2,9 @@
 title: Entity Texture Animations
 mentions:
     - MedicalJewel105
+    - IlkinQafarov
+    - TheItsNameless
+    - SmokeyStack
 tags:
     - intermediate
 category:

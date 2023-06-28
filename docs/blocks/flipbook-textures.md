@@ -1,11 +1,13 @@
 ---
 title: Texture Animation
 category:
-	- Tutorials
+    - Tutorials
 tags:
     - intermediate
 mentions:
     - MedicalJewel105
+    - SquisSloim
+    - SmokeyStack
 ---
 
 ## What this page covers

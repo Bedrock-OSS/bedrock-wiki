@@ -3,6 +3,13 @@ title: Fake Blocks
 category: Tutorials
 tags:
     - intermediate
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+    - ThijsHankelMC
 ---
 
 ::: warning EXPERIMENTAL

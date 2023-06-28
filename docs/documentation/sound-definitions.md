@@ -2,6 +2,10 @@
 title: Sound Definitions
 mentions:
     - MedicalJewel105
+    - SirLich
+    - TheDoctor15
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 Sounds from `sound_definitions.json` sorted by categories and subcategories based on their names.

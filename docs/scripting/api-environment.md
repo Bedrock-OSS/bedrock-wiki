@@ -3,8 +3,14 @@ title: Engine Environment
 category: Documentation
 tags:
     - stable
+mentions:
+    - ConsoleTerm
+    - JaylyDev
+    - ThomasOrs
+    - MuhammadRestu999
 ---
 
+Minecraft: Bedrock Edition uses their own version of JavaScript based on QuickJS. It uses the ECMAScript module (ESM) system for organizing and loading code, which allows for a more modular and organized approach to writing scripts for the game.
 
 ## Common problems
 
@@ -20,7 +26,7 @@ Not everyone can encounter this problem because the use of eval and Function met
 
 Some browsers also prohibit the use of these methods, mainly the eval method, when using eval there is a risk of malicious code that can harm the problem in your add-on, which is why it is disabled by default.
 
-To enable these methods that evaluate code, you must mention it in the manifest. What and how you can find here. [Start with Script API](/scripting/starting-scripts.md).
+To enable these methods that evaluate code, you must mention it in the manifest. What and how you can find here. [Start with Script API](/scripting/starting-scripts).
 
 - **Native handles**
 
@@ -44,7 +50,7 @@ You will encounter this most often when using events, because in every data even
   - `escape`, `unescape` - Non-Standard methods please use decodeURI/encodeURI if its possible
   - `NaN`, `Infinity`, `undefined` - Standard variables for incode usage,
   - `__date_clock` - Build-in QuickJS method for getting current time
-  - `(Number`, Boolean, String, Symbol) - Standard function constructor for JS primitives
+  - `Number`, `Boolean`, `String`, `Symbol` - Standard function constructor for JS primitives
   - `Math` - Standard Object having primary math functions
   - `Reflect` - Standard Object having build-in methods
   - `eval` - Standard Method for evaluating string as code
@@ -59,8 +65,8 @@ You will encounter this most often when using events, because in every data even
   - `console` - Standard object having base output methods (`log`, `warn`, `error`, `info`)
 
 - ***What is not supported***
-  - `BigInt` - Standard function constructor for big ints
-  - `setTimeout` - Standard function for timing code runs
-  - `setInterval` - Standard function for timing code runs in intervals
-  - `clearTimeout` - Standard function for canceling setTimeout runs
-  - `clearInterval` - Standard function for canceling setInterval runs
+    - `BigInt` - Standard function constructor for big ints
+    - `setTimeout` - Standard function for timing code runs
+    - `setInterval` - Standard function for timing code runs in intervals
+    - `clearTimeout` - Standard function for canceling setTimeout runs
+    - `clearInterval` - Standard function for canceling setInterval runs

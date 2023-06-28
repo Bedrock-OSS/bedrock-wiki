@@ -3,6 +3,23 @@ title: Project Setup
 category: Guide
 nav_order: 4
 prefix: '4. '
+mentions:
+    - SirLich
+    - sovledDev
+    - Joelant05
+    - Dreamedc2015
+    - BlueFrog130
+    - sermah
+    - cda94581
+    - MedicalJewel105
+    - TheItsNameless
+    - ThijsHankelMC
+    - TheHyperWhale
+    - stirante
+    - ChibiMango
+    - Etanarvazac
+    - retr0cube
+    - ThomasOrs
 ---
 
 ## The com.mojang folder
@@ -71,7 +88,7 @@ Wrongly named files/folders is a common source of errors. Please check your work
 
 The manifest is a file that identifies your pack to Minecraft. Every pack has one manifest. A folder with a correctly formatted manifest will show up in Minecraft, and we consider this the "minimal" pack before we can add additional content.
 
-Manifest files are written in `json`. If this isn't familiar to you, you can learn more about json [here](./understanding-json).
+Manifest files are written in `json`. If this isn't familiar to you, you can learn more about json [here](/understanding-json).
 
 First, create a new file in your BP folder by right-clicking on the folder and selecting `New File`. Call the file `manifest.json`. To begin, you can copy paste the following code into the file.
 
@@ -194,7 +211,7 @@ pack.description=A Ghostly Guide
 
 ## Checking your Work
 
-If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](./troubleshooting)
+If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](/troubleshooting)
 
 ![](/assets/images/guide/project-setup/active_pack.png)
 

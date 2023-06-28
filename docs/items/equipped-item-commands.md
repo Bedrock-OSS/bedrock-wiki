@@ -4,8 +4,11 @@ category: Tutorials
 tags:
     - experimental
     - intermediate
-mention:
+mentions:
     - Chikorita-Lover
+    - MedicalJewel105
+    - Luthorius
+    - TheItsNameless
 ---
 
 ## Introduction
@@ -20,7 +23,7 @@ The use of Holiday Creator Features is also required to add item tags and easily
 
 ## Server Animation
 
-The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. You can read a bit more [here](/entities/timers.html#animation-based-timers). We can start by using the following as a template:
+The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. You can read a bit more [here](/entities/timers#animation-based-timers). We can start by using the following as a template:
 
 <CodeHeader>BP/animations/player.json</CodeHeader>
 

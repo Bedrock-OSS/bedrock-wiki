@@ -3,6 +3,13 @@ title: Entity Properties
 category: General
 tags:
     - experimental
+mentions:
+    - SirLich
+    - sermah
+    - MedicalJewel105
+    - Luthorius
+    - stirante
+    - TheItsNameless
 ---
 
 :::warning

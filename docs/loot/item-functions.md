@@ -3,14 +3,16 @@ title: Item Functions
 category: Documentation
 nav_order: 4
 tags:
-- Stable
-- Last updated for Version 1.18.10
-mention:
-- Ciosciaa
+    - Stable
+    - Last updated for Version 1.18.10
+mentions:
+    - Ciosciaa
+    - MedicalJewel105
+    - ThomasOrs
 toc_max_level: 1
 ---
 
-Item functions modify the nature of an item in [loot tables](./loot-tables.html) and [trade tables](./trade-tables.html).
+Item functions modify the nature of an item in [loot tables](/loot-tables) and [trade tables](/trade-tables).
 
 ```json
 
@@ -52,7 +54,7 @@ A handful of functions are available for basic item properties. These functions 
 | Trade table      | ❌      |
 
 ::: tip NOTE
-Trade tables use the [`"quantity"` property](./trade-tables.html#quantity) to set their count.
+Trade tables use the [`"quantity"` property](/trade-tables#quantity) to set their count.
 :::
 
 The `set_count` function sets the count for that item entry.

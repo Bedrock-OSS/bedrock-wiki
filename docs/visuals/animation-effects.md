@@ -1,9 +1,9 @@
 ---
 title: Effects in Animations
 mentions:
-	- MedicalJewel105
+    - MedicalJewel105
 category:
-	- General
+    - General
 ---
 
 ## Effects in Animations
@@ -77,6 +77,23 @@ You need to add the following to your animation:
     "0.0": {
         "effect": "meow"
 	}
+}
+```
+
+You can call more than one particle at the same time:
+
+```json
+"particle_effects": {
+    "0.0": [
+        {
+            "effect": "particle_1",
+            "locator": "locator_1"
+    	},
+	{
+            "effect": "particle_2",
+            "locator": "locator_2"
+    	}
+    ]
 }
 ```
 

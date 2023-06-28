@@ -2,9 +2,17 @@
 title: Entity Holds Item
 category: Tutorials
 tags:
-	- intermediate
-mention:
+    - intermediate
+mentions:
     - pieterdefour
+    - SirLich
+    - solvedDev
+    - stirante
+    - Joelant05
+    - destruc7ion
+    - Dreamedc2015
+    - sermah
+    - 7dev7urandom
 ---
 
 ::: tip

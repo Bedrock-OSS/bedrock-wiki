@@ -2,8 +2,11 @@
 title: Overwriting Assets
 tags:
     - intermediate
-mention:
+mentions:
     - SirLich
+    - MedicalJewel105
+    - Luthorius
+    - SmokeyStack
 ---
 
 ## Addon Layering

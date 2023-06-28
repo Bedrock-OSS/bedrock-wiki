@@ -1,8 +1,10 @@
 ---
 title: Structure Presentation
 category: Ideas
-mention:
-	- MedicalJewel105
+mentions:
+    - MedicalJewel105
+    - LeGend077
+    - ThomasOrs
 ---
 
 ## Why this page exists
@@ -31,7 +33,7 @@ This method avoids some of the disadvantages of a screenshot in the world, you a
 
 ![](/assets/images/visuals/structure-presentation/structure-block-0.png)
 
-By making [JSON UI](/json-ui/json-ui-intro.md) edits you can change the background color and remove other elements to further improve this method.
+By making [JSON UI](/json-ui/json-ui-intro) edits you can change the background color and remove other elements to further improve this method.
 
 ![](/assets/images/visuals/structure-presentation/structure-block-1.png)
 

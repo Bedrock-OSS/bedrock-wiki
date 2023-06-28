@@ -1,6 +1,20 @@
 ---
 title: Molang Queries
 toc_max_level: 2
+mentions:
+    - SirLich
+    - solvedDev
+    - stirante
+    - SmokeyStack
+    - Dreamedc2015
+    - Ultr4Anubis
+    - MedicalJewel105
+    - TreaBeane
+    - r4isen1920
+    - ChillRx
+    - Luthorius
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
@@ -37,6 +51,15 @@ Where `x` and `y` are both integer arguments, from the following table:
 | 5        | Elytra                |
 | 6        | Turtle helmet         |
 | 7        | Netherite armor piece |
+
+### Y for horses
+
+| Argument | Type                  |
+| -------- | --------------------- |
+| 1        | Leather armor piece   |
+| 2        | Iron armor piece      |
+| 3        | Gold armor piece      |
+| 4        | Diamond armor piece   |
 
 ### Example
 
@@ -246,8 +269,8 @@ _Currently, can be only used in materials._
 ## query.is_eating
 
 This query tracks when certain entities are 'eating'. It's not used for the player. To trigger, use one of the following components:
- - `minecraft:behavior.eat_carried_item`
- - `minecraft:behavior.snacking`
+    - `minecraft:behavior.eat_carried_item`
+    - `minecraft:behavior.snacking`
 
 ## query.is_ghost
 
@@ -487,7 +510,7 @@ query.time_of_day - day time table
 | 0.99                | 17760    |
 | 1.00                | 18000    |
 
-Credit: [Analysis of query.time_of_day.md](https://gist.github.com/DoubleF3lix/a03afde0a979dfa41e8525ee92f12ca5)
+Credit: [Analysis of query.time_of_day](https://gist.github.com/DoubleF3lix/a03afde0a979dfa41e8525ee92f12ca5)
 
 </Spoiler>
 

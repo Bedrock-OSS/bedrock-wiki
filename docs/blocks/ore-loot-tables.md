@@ -3,10 +3,14 @@ title: Ore Loot Tables
 category: Tutorials
 tags:
     - easy
-mention:
+mentions:
     - SykoUSS
     - ExDrill
     - MedicalJewel105
+    - SmokeyStack
+    - Chikorita-Lover
+    - SirLich
+    - TheItsNameless
     - QuazChick
 ---
 

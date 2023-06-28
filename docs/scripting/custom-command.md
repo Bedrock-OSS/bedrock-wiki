@@ -4,8 +4,19 @@ category: Tutorials
 tags:
     - experimental
 mentions:
-	- cda94581
+    - cda94581
+    - FrankyRay
+    - destruc7ion
+    - jannik-de
+    - riesters
+    - Fabrimat
+    - SmokeyStack
+    - CrackedMatter
+    - JaylyDev
+    - Herobrine643928
+    - ConsoleTerm
 ---
+
 ::: warning
 The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
 :::
@@ -52,7 +63,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
 		{
 			// Minecraft native module - needed to use the "@minecraft/server" module
 			"module_name": "@minecraft/server",
-			"version": "1.2.0-beta"
+			"version": "1.3.0-beta"
 		}
   ]
 }
@@ -83,27 +94,28 @@ Next, we will add simple commands, such as `!gmc` to change our gamemode to crea
 <CodeHeader>BP/scripts/index.js</CodeHeader>
 
 ```js
-world.events.beforeChat.subscribe((eventData) => {
+world.beforeEvents.chatSend.subscribe((eventData) => {
 	const player = eventData.sender;
 	switch (eventData.message) {
 		case '!gmc':
 			eventData.cancel = true;
-			player.runCommand('gamemode c');
+			player.runCommandAsync('gamemode c');
 			break;
 		case '!gms':
 			eventData.cancel = true;
-			player.runCommand('gamemode s');
+			player.runCommandAsync('gamemode s');
 			break;
 		default: break;
 	}
 });
 ```
 
-This is the main function to execute our commands. `world.events.beforeChat.subscribe()` will run before chat messages get sent.
-- A `switch` statement runs through the possible options for the value, and if it matches, runs the code until the next `break` statement.
-- `eventData.cancel = true` will cancel the chat message that will be sent- similar to how vanilla commands work.
-- `const player = eventData.sender` declares the variable `player` to be used later.
-- `player.runCommand('gamemode c')` runs the command on the sender of the message.
+This is the main function to execute our commands. `world.beforeEvents.chatSend.subscribe()` will run before chat messages get sent.
+
+-   A `switch` statement runs through the possible options for the value, and if it matches, runs the code until the next `break` statement.
+-   `eventData.cancel = true` will cancel the chat message that will be sent- similar to how vanilla commands work.
+-   `const player = eventData.sender` declares the variable `player` to be used later.
+-   `player.runCommandAsync('gamemode c')` runs the command on the sender of the message.
 
 ## Limited Command Usage by Tags
 
@@ -114,17 +126,19 @@ For example, let's make our commands usable only to players that have the `Admin
 <CodeHeader>BP/scripts/index.js</CodeHeader>
 
 ```js
-world.events.beforeChat.subscribe((eventData) => {
+import { world } from "@minecraft/server";
+
+world.beforeEvents.chatSend.subscribe((eventData) => {
 	const player = eventData.sender;
 	if (!player.hasTag('Admin')) return;
 	switch (eventData.message) {
 		case '!gmc':
 			eventData.cancel = true;
-			player.runCommand('gamemode c');
+			player.runCommandAsync('gamemode c');
 			break;
 		case '!gms':
 			eventData.cancel = true;
-			player.runCommand('gamemode s');
+			player.runCommandAsync('gamemode s');
 			break;
 		default: break;
 	}
@@ -133,4 +147,4 @@ world.events.beforeChat.subscribe((eventData) => {
 
 In plain text, `if (!eventData.sender.hasTag('Admin')) return;` means: "If the player does NOT (`!`) have the 'Admin' tag, stop the script from running past here (`return`)"
 
-For more information about the Script API, you can reference the [wiki](/scripting/starting-scripts.md) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
+For more information about the Script API, you can reference the [wiki](/scripting/starting-scripts) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)

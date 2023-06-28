@@ -4,6 +4,21 @@ category: General
 nav_order: 3
 tags:
     - experimental
+mentions:
+    - SirLich
+    - solvedDev
+    - yanasakana
+    - MedicalJewel105
+    - aexer0e
+    - SmokeyStack
+    - Chikorita-Lover
+    - Luthorius
+    - TheDoctor15
+    - XxPoggyisLitxX
+    - TheItsNameless
+    - ThomasOrs
+    - Kaioga5
+    - QuazChick
 ---
 
 Documentation on block features which require experiments to function.
@@ -465,7 +480,7 @@ Teleport a target randomly around a destination point.
 }
 ```
 
-### trigger
+### minecraft:on_step_off
 
 Triggers an event unto a specified contextual target.
 
@@ -492,25 +507,6 @@ Or...
   }
 }
 ```
-
-## Triggering Events
-
-Block event-trigger components:
-
--   [`minecraft:on_fall_on`](#minecraft-on-fall-on)
--   [`minecraft:on_interact`](#minecraft-on-interact)
--   [`minecraft:on_placed`](#minecraft-on-placed)
--   [`minecraft:on_player_destroyed`](#minecraft-on-player-destroyed)
--   [`minecraft:on_player_placing`](#minecraft-on-player-placing)
--   [`minecraft:on_step_off`](#minecraft-on-step-off)
--   [`minecraft:on_step_on`](#minecraft-on-step-on)
--   [`minecraft:queued_ticking`](#minecraft-queued-ticking) and [`minecraft:random_ticking`](#minecraft-random-ticking) may be used to trigger events after a time either set or random, respectively.
-
-## Block Components
-
-Experimental block components:
-
--   [`minecraft:unit_cube`](#minecraft-unit-cube)
 
 ### minecraft:on_fall_on
 
@@ -539,7 +535,7 @@ Runs an event when an entity fell on the block.
 This component requires the `Holiday Creator Features` experiment to be enabled.
 :::
 
-Runs an event when The Player uses the block.
+Runs an event when he Player uses the block.
 
 <CodeHeader></CodeHeader>
 

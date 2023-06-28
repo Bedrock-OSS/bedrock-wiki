@@ -1,5 +1,20 @@
 ---
 title: Useful Links
+mentions:
+    - SirLich
+    - MedicalJewel105
+    - MetalManiacMc
+    - rebrainertv
+    - jasonjgardner
+    - MADLAD3718
+    - cda94581
+    - Luthorius
+    - NhanAZ
+    - AndreasHGK
+    - mark-wiemer
+    - Noruaric
+    - JaylyDev
+    - zheaEvyline
 ---
 
 There is loads of helpful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
@@ -18,19 +33,13 @@ Important links have a ⭐.
 -   [Artists Refuge](https://discord.gg/aVXbPCdRr3)
 -   [BDSX](https://discord.gg/8UhbaDwFMh)
 -   [Bedrock Commands](https://discord.gg/vV29d6rJcj)
--   [Bedrock Commands Community](https://discord.gg/SYstTYx5G5)
--   [Bedrock Server Owners](https://discord.com/invite/Dsq9Ajdj2c)
 -   [Dragonfly Server Software](https://discord.gg/U4kFWHhTNR)
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
 -   [MCPECore](https://discord.com/invite/N3e6exUQGs)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
--   [Minecraft Map Testing](https://discord.gg/QRE99eS)
 -   [Minecraft RTX](http://discord.gg/vNWc3Hh)
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
--   [Skill Share](https://discord.gg/sZ7fkcN)
--   [Technical Bedrock Archive](https://discord.gg/bCckkKpRFh)
--   [TeckRock](https://discord.gg/BNjvWgX)
 
 ## Software (installed)
 
@@ -63,8 +72,8 @@ Important links have a ⭐.
 -   [Manifest Generator](https://bedrock-manifest.web.app/)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
--   [behavior-builder (beta)](https://stirante.com/behavior/index.html)
--   [controller-builder (beta)](https://stirante.com/controller/index.html)
+-   [behavior-builder (beta)](https://stirante.com/behavior/index)
+-   [controller-builder (beta)](https://stirante.com/controller/index)
 -   [MCPACK Generator](https://mcbe-essentials.github.io/instant-pack/)
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
 -   [Molang Playground](https://bridge-core.github.io/molang-playground/)

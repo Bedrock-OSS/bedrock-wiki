@@ -1,13 +1,15 @@
 ---
 title: About NBT (Named Binary Tag)
 category: NBT in Depth
-mention:
+mentions:
     - ConsoleTerm
+    - SmokeyStack
+    - ThomasOrs
 tags:
     - expert
 ---
 
-NBT (Named Binary Tag) is a name for data encoding format at the binary level, you certainly know format JSON which is based on the text level. Therefore, we will be able to use the JSON format for some examples, you may also notice that minecraft itself uses JSON to represent NBT in commands such as java commands or simplified bedrock commands ( `/give`, `/replaceitem`). See [NBT Commands](/commands/nbt-commands.md) . In this article, we will show NBT in much more detail than you will ever expect, because what you could see in the commands is far from NBT, and we will show you how NBT works and how to read it, also how `Minecraft BE` itself uses it as well.
+NBT (Named Binary Tag) is a name for data encoding format at the binary level, you certainly know format JSON which is based on the text level. Therefore, we will be able to use the JSON format for some examples, you may also notice that minecraft itself uses JSON to represent NBT in commands such as java commands or simplified bedrock commands ( `/give`, `/replaceitem`). See [NBT Commands](/commands/nbt-commands) . In this article, we will show NBT in much more detail than you will ever expect, because what you could see in the commands is far from NBT, and we will show you how NBT works and how to read it, also how `Minecraft BE` itself uses it as well.
 
 ## NBT Tags and Data Types
 NBT, just like JSON, has given types and knows how to read them, for example JSON knows that a compound object starts with the symbol `{` and ends with `}`, it also knows that when it has to read a string, the string always starts with the symbol ", this means that we want to learn to read and understand NBT so you need to know when a composite object starts, and how to read individual types.
@@ -73,8 +75,8 @@ There is no certain procedure for writing, because it is the same mothods as whe
 
 ## Bedrock NBT File header
 The NBT bedrock Header is indicated by two 4-byte numbers, the first is always 8 and the second indicates the size of the nbt structure in bytes. E.g.
- - `08 00 00 00` - `bf 00 00 00`
- - < always 8 > < always the size of the NBT structure - exclude headers 8 bytes>
+    - `08 00 00 00` - `bf 00 00 00`
+    - < always 8 > < always the size of the NBT structure - exclude headers 8 bytes>
 
 ## Little-Endian
 Little-Endian is the common method of writing numbers in bytes to streams or files.

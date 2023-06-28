@@ -3,6 +3,10 @@ title: 'Intro to Particles'
 category: General
 tags:
     - guide
+mentions:
+    - SirLich
+    - MedicalJewel105
+    - TheItsNameless
 ---
 
 ## Particle Systems

@@ -1,6 +1,16 @@
 ---
 title: Tellraw
 category: Commands
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - MedicalJewel105
+    - Luthorius
+    - Fabrimat
+    - Sprunkles137
+    - ThomasOrs
+    - zheaEvyline
+    - SmokeyStack
 ---
 
 tellraw sends a JSON message to selected or all players being useful for sending plain messages to players ingame
@@ -92,7 +102,7 @@ example.langcode.1=I am line one
 <CodeHeader>RP/texts/de_DE.lang</CodeHeader>
 
 ```
-example.langcode.1=Ich bin strich eins
+example.langcode.1=Ich bin Zeile eins
 ```
 
 

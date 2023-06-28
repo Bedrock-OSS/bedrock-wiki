@@ -3,8 +3,10 @@ title: Block Conditions for Features
 category: Tutorials
 tags:
     - experimental
-mention:
-	- PavelDobCZ23
+mentions:
+    - PavelDobCZ23
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Sometimes you might need to place any feature conditionally depending on what blocks are below or above it for example. Not many features have the option to conditionally place them like so, but with a simple trick we can use it on anything we want.

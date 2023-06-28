@@ -3,6 +3,16 @@ title: Intro to Animation Controllers
 nav_order: 1
 tags:
     - guide
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - MedicalJewel105
+    - stirante
+    - cda94581
+    - ThijsHankelMC
+    - MetalManiacMc
+    - ThomasOrs
 ---
 
 Animation controllers (AC) are state-machines that can be used in both the resource pack, and the behavior pack. In the resource pack, animation controllers (RPAC) are used to play animations, and in the behavior pack (BPAC), they are used to play commands, and command "animations".
@@ -344,3 +354,36 @@ Because of the way animation controllers are setup, it will only move from state
 ### Resetting
 
 Animation Controllers "reset" when an entity reloads (player join/leave, chunk reload, etc). This means that it will "jump" back to the default state. You should always have logic in your default state that can handle restarting any critical animations.
+
+## Notes
+
+You can create variables (and remap their values) in animation controllers too!
+
+```json
+{
+    "format_version": "1.17.30",
+    "animation_controllers": {
+        "controller.animation.sheep.move": {
+            "states": {
+                "default": {
+                    "variables": {
+                        "ground_speed_curve": {
+                            "input": "query.ground_speed",
+                            "remap_curve": {
+                                "0.0": 0.2,
+                                "1.0": 0.7
+                            }
+                        }
+                    },
+                    "animations": [
+                        "wiggle_nose",
+                        {
+                            "walk": "variable.ground_speed_curve"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+```

@@ -5,6 +5,24 @@ nav_order: 1
 tags:
     - guide
     - beginner
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - Dreamedc2015
+    - sermah
+    - yanasakana
+    - aexer0e
+    - SmokeyStack
+    - MedicalJewel105
+    - stirante
+    - ChibiMango
+    - Hatchibombotar
+    - FrankyRay
+    - Ciosciaa
+    - Sprunkles137
+    - ThomasOrs
+    - QuazChick
 ---
 
 Minecraft Bedrock allows us to add custom blocks into our world with various vanilla-like properties. In latest versions, custom blocks can have multiple stages (like plants), directional facing, and other features. This tutorial will cover how to create some simple blocks for the stable version of Minecraft Bedrock.
@@ -254,6 +272,11 @@ Let's create another file: `RP/textures/flipbook_textures.json`.
 -   `"flipbook_texture"` is the path to your texture file, which is named `"flashing_flipbook"` in this scenario.
 -   `"atlas_tile"` is the shortname definition. As you know, we already applied `"flashing"` texture shortname to the `wiki:flashing` block in `RP/blocks.json`.
 -   `"ticks_per_frame"` defines how quickly the different textures will fade into the block, in other words, the speed of the animation.
+
+:::warning
+`blocks.json` (resource pack) completely ignores the namespace. You can put there just anything or don't use namespace at all and it will work. This may cause problems if you create custom block with the same name (but not namespace) as some other vanilla block. 
+:::
+
 
 You can read more about flipbook textures [here](/blocks/flipbook-textures).
 

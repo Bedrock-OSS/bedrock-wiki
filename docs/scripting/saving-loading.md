@@ -3,11 +3,20 @@ title: Saving and Loading Data
 category: Legacy Scripting
 tags:
     - outdated
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - destruc7ion
+    - Paty007gr
+    - Fabrimat
+    - Herobrine643928
+    - JaylyDev
+    - SmokeyStack
 ---
 
 :::danger Stop!
 
-This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/starting-scripts.html).
+This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/starting-scripts).
 
 :::
 

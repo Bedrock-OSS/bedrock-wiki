@@ -1,6 +1,9 @@
 ---
 title: Script Resources
 category: Documentation
+mentions:
+    - JaylyDev
+    - SmokeyStack
 ---
 
 JavaScript is a well-known scripting language over the internet. Learning JavaScript will be helpful to you to build and develop an add-on with Script API.
@@ -19,8 +22,7 @@ There are somewhat decent amount of resources available online related to script
 
 -   ⭐ [Official Script API Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/) - Microsoft's official documentation of high-level introduction of experimental Script API
 
--   [Script API Projects](https://github.com/topics/gametest) - Some Script API projects are hosted on GitHub. Some of them are worth checking out.
-
 -   [Script API Examples](https://github.com/JaylyDev/ScriptAPI) - JavaScript code snippets that uses Script API modules only
 
-Minecraft Bedrock Edition uses a their own version of JavaScript, which is based on QuickJS. It uses the ECMAScript module (ESM) system for organizing and loading code, which allows for a more modular and organized approach to writing scripts for the game.
+-   [Script API Starter Project](https://github.com/JaylyDev/scriptapi-starter) - A Visual Studio Code workspace setup specifically for Script API. This project is for writing JavaScript code ([for TypeScript users](/scripting/typescript#script-api)).
+

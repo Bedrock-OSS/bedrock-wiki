@@ -2,7 +2,10 @@
 title: Custom Spear
 category: Tutorials
 mentions:
--   XxPoggyisLitxX
+    - XxPoggyisLitxX
+    - SirLich
+    - TheItsNamless
+    - ThomasOrs
 ---
 
 ::: tip

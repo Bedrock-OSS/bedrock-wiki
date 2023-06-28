@@ -4,6 +4,13 @@ category: General
 nav_order: 4
 tags:
     - help
+mentions:
+    - SmokeyStack
+    - yanasakana
+    - SirLich
+    - MedicalJewel105
+    - TheDoctor15
+    - ThomasOrs
 ---
 
 :::tip
@@ -121,14 +128,14 @@ Find the issue you have, then read the prompts.
 
 - [Start Here](#start-here)
 - [1.10 vs 1.16 Items?](#110-vs-116-items)
-  - [Continue](#continue)
+    - [Continue](#continue)
 - [Stable Items](#stable-items)
-  - [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item)
-  - [My textures are missing!](#my-textures-are-missing)
+    - [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item)
+    - [My textures are missing!](#my-textures-are-missing)
 - [Experimental Items](#experimental-items)
-  - [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
-  - [My Textures Are Missing!](#my-textures-are-missing-1)
-  - [My item is Huge](#my-item-is-huge)
+    - [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
+    - [My Textures Are Missing!](#my-textures-are-missing-1)
+    - [My item is Huge](#my-item-is-huge)
 - [What now?](#what-now)
 
 ### I cannot /give myself my custom item!

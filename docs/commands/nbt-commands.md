@@ -1,8 +1,14 @@
 ---
 title: NBT Commands
 category: General
-mention:
+mentions:
     - MedicalJewel105
+    - SirLich
+    - Veka0
+    - StuartDA
+    - Sprunkles137
+    - TheItsNameless
+    - SmokeyStack
 ---
 
 NBT data for the Bedrock edition is minimal. The only values we have access to are:

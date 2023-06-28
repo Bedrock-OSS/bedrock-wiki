@@ -1,7 +1,10 @@
 ---
 title: Skin Packs
 mentions:
-	- MedicalJewel105
+    - MedicalJewel105
+    - SirLich
+    - Joelant05
+    - TheItsNameless
 category:
     - General
 ---

@@ -1,12 +1,13 @@
 ---
 title: Intro to Command Blocks
 category: General
-mention:
- - BedrockCommands
- - zheaEvyline
+mentions:
+    - BedrockCommands
+    - zheaEvyline
+    - jordanparki7
 nav_order: 1
 tags:
- - info
+    - info
 ---
 
 ## Introduction
@@ -33,7 +34,7 @@ They can only be placed or destroyed by a player with the Operator permission le
 
 ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **Chain** runs the command in a sequence, ie. only after the previous command block it is connecting from was run.
 
-![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **Repeat** runs the command every game tick. There are approximately 20 ticks per second. A delay can be applied to adjust how often the command is executed, explained [below](/intro-to-command-blocks.html#command-block-tick-delay).
+![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **Repeat** runs the command every game tick. There are approximately 20 ticks per second. A delay can be applied to adjust how often the command is executed, explained [below](/commands/intro-to-command-blocks#command-block-tick-delay).
 
 ## Command Block Conditions
 
@@ -132,9 +133,9 @@ If nothing seems to work simply break and place that command block again.
 - How to resolve 'command block not working' 
 :::
 
-To put what you have learned into practice, try making this simple [Entity Counter](https://wiki.bedrock.dev/commands/entity-counter.html) system.
-> Note; when setting up command block systems, always the first command will be ![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **`Unconditional Always Active`** and the rest will be ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **`Unconditional Always Active`** (all 0 ticks delay) *unless specified otherwise.*
+To put what you have learned into practice, try making this simple [Entity Counter](/commands/entity-counter) system.
+> Note: when setting up command block systems, always the first command will be ![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **`Unconditional Always Active`** and the rest will be ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **`Unconditional Always Active`** (all 0 ticks delay) *unless specified otherwise.*
 > 
 > ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
-**(Recommended) Read Next: [Understanding Selectors](/commands/selectors.html)**
+**(Recommended) Read Next: [Understanding Selectors](/commands/selectors)**

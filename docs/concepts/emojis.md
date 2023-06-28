@@ -1,5 +1,18 @@
 ---
 title: Emojis & Symbols
+mentions:
+    - SirLich
+    - Joelant05
+    - sovledDev
+    - stirante
+    - Dreamedc2015
+    - MedicalJewel105
+    - JaylyDev
+    - RealBashy21
+    - ColinTimBarndt
+    - Citicx
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 :::warning

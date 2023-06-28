@@ -4,8 +4,9 @@ category: Vanilla Recreations
 tags:
     - experimental
     - intermediate
-mention:
+mentions:
     - Provedule
+    - JaylyDev
     - QuazChick
 ---
 
@@ -320,31 +321,44 @@ const fluids = [
 system.runInterval(() => {
   const players = Array.from(world.getPlayers());
 
-  for (const player of players) {
-    // Fluid effects
-    if (
-      fluids.includes(world.getDimension(player.dimension.id).getBlock({ ...player.location, y: player.location.y + 1 }).typeId) ||
-      fluids.includes(world.getDimension(player.dimension.id).getBlock(player.location).typeId)
-    ) {
-      player.addEffect("slow_falling", 4, { amplifier: player.isSneaking ? 1 : 2, showParticles: false });
-      if (player.isJumping) { // NOTE: this requires Minecraft 1.20.10 with module version 1.4.0-beta to take effect
-        player.addEffect("levitation", 3, { amplifier: 2, showParticles: false });
-      }
+mc.world.events.tick.subscribe(() => {
+    const players = Array.from(mc.world.getPlayers())
+    for (let p = 0; p < players.length; p++) {
+        for (let i = 0; i < fluidsIDs.length; i++) {
+            if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), Math.floor(players[p].location.y+1), Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+                if (!players[p].isSneaking) {
+                    players[p].addEffect(mc.MinecraftEffectTypes.levitation, 4, 1, false)
+                }
+                players[p].addEffect(mc.MinecraftEffectTypes.slowFalling, 4, 2, false)
+            } else if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), Math.floor(players[p].location.y), Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+                players[p].addEffect(mc.MinecraftEffectTypes.slowFalling, 4, 2, false)
+            }
+        }
     }
-    // Fluid fog
-    if (fluids.includes(world.getDimension(player.dimension.id).getBlock({ ...player.location, y: player.location.y + 1.63 }).typeId)) {
-      player.runCommand("fog @s push wiki:custom_fluid_fog fluid_fog");
-    } else {
-      player.runCommand("fog @s remove fluid_fog");
+    for (let p = 0; p < players.length; p++) {
+        for (let i = 0; i < fluidsIDs.length; i++) {
+            if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), players[p].location.y+1.7, Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
+                players[p].runCommand("fog @s push fluid:water_fog fluid_fog")
+                break
+            } else {
+                players[p].runCommand("fog @s remove fluid_fog")
+            }
+        }
     }
-  }
-});
-
+})
 ```
 
 </Spoiler>
 
-By the end your BP folder should look like this
+## Resources
+
+To define the textures for the fluids you need to do two thing:
+1) Make a 16x16+ texture and in terrain textures copy/rename the "fluid_template" to "fluid_`your fluid name`"
+2) Make a texture and in item textures copy/rename the "template_bucket" to "`your fluid name`_bucket"
+
+## Download / Other
+
+By the end your BH folder should look like this
 
 <FolderView
 	:paths="[
@@ -366,7 +380,7 @@ If anything goes wrong, or if you require all of the template files, they are av
 >Download MCADDON</BButton>
 
 <BButton
-  link="/assets/packs/tutorials/blocks/custom-fluids/example.mcaddon"
-  download="Custom Fluids Example.zip"
-  color=blue
->Download ZIP</BButton>
+    link="/assets/packs/tutorials/custom_fluids/more_fluids_template_file.zip"
+	  download="More Fluids Template.zip"
+    color=blue
+>Download Fluid Template</BButton>

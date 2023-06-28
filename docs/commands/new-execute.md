@@ -3,8 +3,13 @@ title: New Execute
 category: Commands
 tags:
     - easy
-mention:
+mentions:
     - JaylyDev
+    - Sprunkles137
+    - Hatchibombotar
+    - TheItsNameless
+    - SmokeyStack
+    - zheaEvyline
 ---
 
 ## Introduction
@@ -86,7 +91,7 @@ Directly sets the position context of the command.
 /execute positioned <position: x y z> -> execute
 ```
 
-Sets the position of the command to specific values. [Relative and local coordinates](/commands/relative-coordinates.html) are based around the current position of the command.
+Sets the position of the command to specific values. [Relative and local coordinates](/commands/relative-coordinates) are based around the current position of the command.
 
 ```
 /execute positioned as <origin: target> -> execute
@@ -152,7 +157,7 @@ Sets the rotation to face a block position. Relative and local coordinates are b
 /execute facing entity <origin: target> (eyes|feet) -> execute
 ```
 
-Sets the rotation to face a target's position. Setting the anchor to `feet` will aim the rotation to face where they are currently standing, while setting the anchor to `eyes` will aim the command up at the "eye position" of that target (see [`/execute anchored`](/commands/new-execute.html#execute-anchored)).
+Sets the rotation to face a target's position. Setting the anchor to `feet` will aim the rotation to face where they are currently standing, while setting the anchor to `eyes` will aim the command up at the "eye position" of that target (see [`/execute anchored`](/commands/new-execute#execute-anchored)).
 
 If multiple targets are specified then a command is ran once for each target, setting the rotation context to face that target.
 

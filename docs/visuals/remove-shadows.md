@@ -4,6 +4,13 @@ tags:
     - intermediate
 category:
     - Tutorials
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - MedicalJewel105
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 There are quite a few ways to remove shadows from entities, and nearly all of them have undesirable effects. There is no foolproof way to perfectly remove shadows from specific entities, without causing side effects.
@@ -54,8 +61,8 @@ This method is no longer supported. With the advent of render-dragon, materials 
 :::
 
 :::warning
- - This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
- - This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
+    - This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
+    - This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
 :::
 
 <Spoiler title="Removing shadows via Materials.">
@@ -109,3 +116,7 @@ This method is no longer supported. With the advent of render-dragon, materials 
 ```
 
 </Spoiler>
+
+#### Geometry + Materials Workaround
+
+You can hide entity shadows if you apply a model on your entity to cover the shadow and use `"banner_pole"` material.

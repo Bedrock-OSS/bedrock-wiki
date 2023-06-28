@@ -3,6 +3,21 @@ title: Software and preparation
 category: Guide
 nav_order: 3
 prefix: '3. '
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - sermah
+    - cda94581
+    - Joelant05
+    - MedicalJewel105
+    - TheItsNameless
+    - TheDoctor15
+    - ChibiMango
+    - profeplaysminecraft
+    - solvedDev
+    - retr0cube
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.
@@ -47,8 +62,8 @@ Many packages exist for VSCode that make editing addons easier:
 bridge. includes a regular text editor for experienced addon creators and a tree editor to make it easy for beginners to get started with editing JSON files.
 
 #### Next Steps
-- [Read more on why you should use bridge.](https://bridge-core.app/guide/why-bridge.html)
-- [Read our guide on getting started with bridge.](https://bridge-core.app/guide/index.html)
+- [Read more on why you should use bridge.](https://bridge-core.app/guide/why-bridge)
+- [Read our guide on getting started with bridge.](https://bridge-core.app/guide/index)
 - [Try out bridge. online](https://editor.bridge-core.app/)
 
 ### Mobile Editors

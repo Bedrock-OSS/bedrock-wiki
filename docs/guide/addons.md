@@ -3,13 +3,25 @@ title: Addons Explained
 category: Guide
 nav_order: 2
 prefix: '2. '
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - sermah
+    - cda94581
+    - RedSmarty
+    - TheItsNameless
+    - MedicalJewel105
+    - ChibiMango
+    - profeplaysminecraft
+    - retr0cube
+    - SmokeyStack
 ---
 
 ## What are addons?
 
 Addons allow us to modify the contents of our Minecraft Experience by _modifying_ or _removing_ existing content and _adding_ our own. Addons are very powerful and allow us to create custom entities, items, and blocks, as well as things like custom loot tables and crafting recipes. Your imagination is the limit!
 
-Addons are primarily written in [json](./understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
+Addons are primarily written in [json](/understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
 
 ## What's the difference between a Behavior Pack & a Resource Pack?
 
@@ -53,7 +65,7 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 ## What to do now?
 
 <BButton
-    link="/guide/software-preparation.html"
+    link="/guide/software-preparation"
     color=blue
 >Check out software and preparation page!</BButton>
 

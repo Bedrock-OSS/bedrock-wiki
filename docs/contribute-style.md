@@ -34,12 +34,28 @@ mentions:
 | `nav_order`      | No       | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order. |
 | `show_toc`       | No       | True    | Whether the table of contents will be generated for this page.                                                                                           |
 | `show_edit_link` | No       | True    | Whether a link should be shown which leads to this page in the GitHub repository.                                                                        |
+| `category`       | No       | None    | Specifies category where this page is displayed on the sidebar.                                                                                          |
 | `tags`           | No       | []      | A list of tags for the page. Some will be displayed on sidebar, such as 'guide' or 'beta'. All will be displayed in the actual page, at the top.         |
 | `mentions`       | No       | []      | Add your GitHub username here so that you will always be in the contributors section if this page is moved.                                              |
 
 The title is required, as it is the name shown in the bar on the left side. Mentions isn't needed, but it would be great if everyone knows who made the great article they are reading!
 
 After the Head, you write the Body. The body is just your whole content. A common mistake everyone does the first time is to put the page title as a level 1 header on their page. You don't have to do this, because the title given in the Header will already be placed on top of your page.
+
+List of categories:
+
+-   Guide
+-   Extra
+-   General
+-   Tutorials
+-   Vanilla Recreations
+-   Documentation
+-   Commands
+-   On Event Systems
+-   Scoreboard Systems
+-   NBT in Depth
+-   Legacy Scripting
+-   Ideas
 
 List of tags:
 
@@ -132,10 +148,10 @@ You can create links, that redirect you to other pages in the wiki. These are ca
 [Redirect to the contribute page](/contribute)
 
 ```Markdown
-[JSON Arrays](/guide/understanding-json.html#arrays)
+[JSON Arrays](/guide/understanding-json#arrays)
 ```
 
-[JSON Arrays](/guide/understanding-json.html#arrays)
+[JSON Arrays](/guide/understanding-json#arrays)
 
 ```Markdown
 [Go to Working with Markdown header](#working-with-markdown)

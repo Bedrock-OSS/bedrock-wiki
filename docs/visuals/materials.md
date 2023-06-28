@@ -3,7 +3,12 @@ title: Materials
 tags:
     - expert
 category:
-  - General
+    - General
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - Luthorius
 ---
 
 :::warning
@@ -22,12 +27,17 @@ If you are not prepared to go in-depth with the ins and outs, material presets c
 
 Most materials inherit the settings of previously defined materials, then further building off of them. This is written in the following format:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>RP/materials/name.material</CodeHeader>
 
 ```json
-"<New material ID>:<ID of material to use as a base>": {
-    <defines, states, and other settings>
-},
+{
+	"materials": {
+		"version": "1.0.0",
+		"<New material ID>:<ID of material to use as a base>": {
+    		<defines, states, and other settings>
+		}
+	}
+}
 ```
 
 :::warning
@@ -190,5 +200,41 @@ which can then finally be followed to "entity_static"
             "textureFilter":"Point"
         }
     ]
+}
+```
+
+## 1.16.100+ Notes
+
+Warning for anybody who uses custom materials!
+
+Custom material inheriting is no longer valid and causes content log errors the workaround Is to define the material fully custom with just the prefix and material name.
+
+This was not an issue before 1.16.100.
+
+```json
+{
+    "materials": {
+        "version": "1.0.0",
+        "prefix:window_glass:entity": { //now throws a content log error.
+            "+states": [
+                "Blending"
+            ],
+            "defines": [
+                "ENABLE_FOG",
+                "ENABLE_LIGHT",
+                "USE_ONLY_EMISSIVE"
+            ]
+        },
+        "prefix:window_glass:": { //corrects the content log error. Note: may have to also define the old inherited values.
+            "+states": [
+                "Blending"
+            ],
+            "defines": [
+                "ENABLE_FOG",
+                "ENABLE_LIGHT",
+                "USE_ONLY_EMISSIVE"
+            ]
+        }
+    }
 }
 ```
