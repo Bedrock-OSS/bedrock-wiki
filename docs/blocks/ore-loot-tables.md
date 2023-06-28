@@ -2,12 +2,12 @@
 title: Ore Loot Tables
 category: Tutorials
 tags:
-    - experimental
     - easy
 mention:
     - SykoUSS
     - ExDrill
     - MedicalJewel105
+    - QuazChick
 ---
 
 ## Features
@@ -18,7 +18,7 @@ Features:
 
 -   Can be mined using any given item (this tutorial covers the iron pickaxe)
 -   Can specify enchantments on items
--	Also drops experience reward
+-   Also drops experience reward
 
 Issues:
 
@@ -33,43 +33,33 @@ The following block behavior can be used as a template. Don't forget to set the 
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:block": {
-		"description": {
-			"identifier": "tut:silver_ore"
-		},
-		"components": {
-			//Basic components
-			"minecraft:creative_category": {
-				"category": "nature",
-				"group": "itemGroup.name.ore"
-			},
-			"minecraft:destroy_time": 10,
-			"minecraft:block_light_absorption": 15,
-			"minecraft:explosion_resistance": 3,
-			"minecraft:unit_cube": {},
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "silver_ore",
-					"render_method": "opaque"
-				}
-			},
-			"minecraft:on_player_destroyed": {
-				// Calls an event that loads structure with xp reward
-				"event": "xp_reward"
-			},
-			"minecraft:loot": "loot_tables/blocks/silver_ore.json" //The component will not run the loot if the held tool has silk touch
-		},
-		"events": {
-			"xp_reward": {
-				"run_command": {
-					"command": [
-						"structure load my_xp_structure ~~~" //You can download structure with saved xp orbs lower
-					]
-				}
-			}
-		}
-	}
+  "format_version": "1.20.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:silver_ore",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.ore"
+      }
+    },
+    "components": {
+      ...
+      // Calls an event that loads structure with xp reward
+      "minecraft:on_player_destroyed": {
+        "event": "xp_reward"
+      },
+      "minecraft:loot": "loot_tables/blocks/silver_ore.json" // Won't be dropped if using Silk Touch.
+    },
+    "events": {
+      "xp_reward": {
+        "run_command": {
+          "command": [
+            "structure load ore_xp_reward ~~~" // You can download structure with saved xp orbs lower
+          ]
+        }
+      }
+    }
+  }
 }
 ```
 
@@ -81,25 +71,25 @@ The example shown, displays the required components
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"conditions": [
-				{
-					"condition": "match_tool",
-					"item": "minecraft:iron_pickaxe",
-					"count": 1
-				}
-			],
-			"entries": [
-				{
-					"type": "item",
-					"name": "tut:raw_silver"
-				}
-			]
-		}
-	]
-{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "item": "minecraft:iron_pickaxe",
+          "count": 1
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "wiki:raw_silver"
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## Specifying Enchantments
@@ -112,27 +102,27 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 
 ```json
 "conditions": [
-	{
-		"condition": "match_tool",
-		"item": "minecraft:iron_pickaxe",
-		"count": 1,
-		"enchantments": [
-			{
-				"fortune": {
-					"level": 1
-				}
-			}
-		]
-	}
+  {
+    "condition": "match_tool",
+    "item": "minecraft:iron_pickaxe",
+    "count": 1,
+    "enchantments": [
+      {
+        "fortune": {
+          "level": 1
+        }
+      }
+    ]
+  }
 ]
 ```
 
-## Download .mcstructure
+## Download Structure
 
 <BButton
-	link="/assets/packs/tutorials/ore_loot_tables/my_xp_structure.mcstructure" download
-	color=gray
->Download structure</BButton>
+  link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download
+  color=blue
+>Download MCSTRUCTURE</BButton>
 
 ## Result
 

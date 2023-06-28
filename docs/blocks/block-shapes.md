@@ -1,6 +1,15 @@
 ---
 title: Block Shapes
 category: Documentation
+mentions:
+    - SirLich
+    - yanasakana
+    - MedicalJewel105
+    - aexer0e
+    - Luthorius
+    - Fabrimat
+    - TheItsNameless
+    - QuazChick
 ---
 
 :::warning Deprecated
@@ -26,7 +35,6 @@ They are added in the resource pack's file, `blocks.json`, using child `"blocksh
     }
 
 ```
-
 
 ## List of known Blockshapes
 

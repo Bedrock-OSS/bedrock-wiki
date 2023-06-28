@@ -1,72 +1,99 @@
 ---
-title: Applying constant Effects to Entities
+title: Applying Constant Effects
 category: Tutorials
 tags:
     - experimental
     - easy
 mention:
     - MysticChair
+    - QuazChick
 ---
 
-This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block. There are few issues that can encounter during trial-and-error, this guide is a workaround to these issues. List of potential problems is attached on the bottom of this page.
-Please visit [blocks](/blocks/blocks-stable) first to have better understanding of components used in this tutorial.
+::: tip
+This tutorial assumes you have a basic understanding of blocks.
+Check out the [blocks guide](/blocks/blocks-intro) before starting and ensure your block is using format versions `1.20.0`+.
+:::
 
-## Code
+::: warning EXPERIMENTAL
+Requires `Holiday Creator Features` to trigger events.
+:::
+
+This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block.
+
+## Setup
 
 We will need to add a couple things to our code, first let's start with property that will hold `true` and `false` values:
 
-<CodeHeader>BP/blocks/damage_block.json</CodeHeader>
+<CodeHeader>BP/blocks/wither_block.json</CodeHeader>
 
 ```json
 {
-	"properties": {
-		"wiki:is_on_block": [true, false]
-	}
+  "properties": {
+    "wiki:stood_on": [false, true]
+  }
 }
 ```
 
-Now we need `minecraft:ticking` component that will check if our property is set to `true` and if so, trigger the event causing the effect to apply:
+Now we need `minecraft:queued_ticking` component that will check if our property is set to `true` and if so, trigger the event causing the effect to apply:
 
-<CodeHeader>BP/blocks/damage_block.json</CodeHeader>
+<CodeHeader>BP/blocks/wither_block.json</CodeHeader>
 
 ```json
 {
-	"minecraft:ticking": {
-		"range": [1, 1],
-		"looping": true,
-		"on_tick": {
-			"event": "wiki:add_effect_event",
-			"target": "self",
-			"condition": "query.block_property('wiki:is_on_block`) == true"
-		}
-	}
+  "minecraft:queued_ticking": {
+    "looping": true,
+    "interval_range": [1, 1],
+    "on_tick": {
+      "event": "wiki:add_effect",
+      "target": "self",
+      "condition": "query.block_property('wiki:stood_on`)"
+    }
+  }
 }
 ```
 
-We will use `minecraft:on_step_on` component to fire the event that will set our `wiki:is_on_block` to `true`:
+We will use the `minecraft:on_step_on` event trigger component to fire the event that will set our `wiki:stood_on` property to `true`...
 
-<CodeHeader>BP/blocks/damage_block.json</CodeHeader>
+<CodeHeader>BP/blocks/wither_block.json</CodeHeader>
 
 ```json
 {
-	"minecraft:on_step_on": {
-		"event": "wiki:change_property",
-		"target": "self"
-	}
+  "minecraft:on_step_on": {
+    "event": "wiki:step_on"
+  }
 }
 ```
 
-Time to setup `events` section. First let's set the `wiki:change_property` event:
+...and the `minecraft:on_step_off` component to fire the event that will set our `wiki:stood_on` to `false`:
 
-<CodeHeader>BP/blocks/damage_block.json</CodeHeader>
+<CodeHeader>BP/blocks/wither_block.json</CodeHeader>
 
 ```json
 {
-	"wiki:change_property": {
-		"set_block_property": {
-			"wiki:is_on_block": true
-		}
-	}
+  "minecraft:on_step_off": {
+    "event": "wiki:step_off"
+  }
+}
+```
+
+Time to setup our `events`. First, let's set the `wiki:step_on` and `wiki:step_off` events:
+
+<CodeHeader>BP/blocks/wither_block.json</CodeHeader>
+
+```json
+{
+  "events": {
+    "wiki:step_on": {
+      "set_block_property": {
+        "wiki:stood_on": true
+      }
+    },
+    "wiki:step_off": {
+      "set_block_property": {
+        "wiki:stood_on": false
+      }
+    }
+  }
 }
 ```
 
@@ -76,88 +103,90 @@ The last thing to add is event that will trigger the effect:
 
 ```json
 {
-	"wiki:add_effect_event": {
-		"run_command": {
-			"command": ["effect @e[r=1] wither 2 2 false"]
-		}
-	}
+  "wiki:add_effect": {
+    "run_command": {
+      "command": "effect @e[r=1] wither 2 2"
+    }
+  }
 }
 ```
 
 And done! The code above will trigger the desired status effect as long as the entity is standing on a block.
 
-## Notes and issues
+## Example JSON
+
+<Spoiler title="Example Wither Block">
+
+<CodeHeader>BP/blocks/wither_block.json</CodeHeader>
+
+```json
+{
+  "format_version": "1.20.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:wither_block",
+      "menu_category": {
+        "category": "nature"
+      },
+      "properties": {
+        "wiki:stood_on": [false, true]
+      }
+    },
+    "components": {
+      "minecraft:geometry": "geometry.wither_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "wither_block"
+        }
+      },
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:on_step_on": {
+        "event": "wiki:step_on"
+      },
+      "minecraft:on_step_off": {
+        "event": "wiki:step_off"
+      },
+      "minecraft:queued_ticking": {
+        "looping": true,
+        "interval_range": [1, 1],
+        "on_tick": {
+          "event": "wiki:add_effect",
+          "target": "self",
+          "condition": "query.block_property('wiki:stood_on`)"
+        }
+      },
+      "minecraft:map_color": "#181818"
+    },
+    "events": {
+      "wiki:step_on": {
+        "set_block_property": {
+          "wiki:stood_on": true
+        }
+      },
+      "wiki:step_off": {
+        "set_block_property": {
+          "wiki:stood_on": false
+        }
+      },
+      "wiki:add_effect": {
+        "run_command": {
+          "command": "effect @e[r=1] wither 2 2"
+        }
+      }
+    }
+  }
+}
+```
+
+</Spoiler>
+
+## Additional Notes
 
 Some context for the last part of the code:
 
 -   **Q**: Why does the status effect is triggered via `run_command` event function if there's already `add_mob_effect` event function that does that?
 
--   **A**: `add_mob_effect` seems to not work if triggered from `minecraft:ticking`, that's why we use `run_command` as a workaround.
-
--   **Q**: What is `false` value in `wiki:is_on_block` used for?
-
--   **A**: `false` value is needed as setting `wiki:is_on_block: true` crashes the game. Setting `wiki:is_on_block: [true]` seems to work, however creates many debug log errors.
+-   **A**: `add_mob_effect` seems to not work if triggered from `minecraft:queued_ticking`, that's why we use `run_command` as a workaround.
 
 Depending on the desired outcome, there is a potential issue if effect duration is set to less than 2 seconds. If the effect is causing damage to an entity (for example via poison), that damage will be applied as soon as the effect is triggered. This results in the situation where entity receives damage faster than in vanilla Minecraft, since applying effect is quicker than damage that occurs from effects applied for more than 2 seconds (considering the entity is moving). To better understand this, simply set the effect duration in `command` to 1 second and compare the results.
 Having a 2 second duration allows the game to apply the damage in correct pace.
-
-<Spoiler title="Example code">
-
-<CodeHeader>BP/blocks/damage_block.json</CodeHeader>
-
-```json
-{
-	"format_version": "1.16.100",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:damage_block",
-			"properties": {
-				"wiki:is_on_block": [true, false]
-			}
-		},
-		"components": {
-			"minecraft:unit_cube": {},
-			"minecraft:creative_category": {
-					"category": "nature"
-			},
-			"minecraft:loot": "loot_tables/empty.json",
-			"minecraft:on_step_on": {
-				"event": "wiki:change_property",
-				"target": "self"
-			},
-			"minecraft:ticking": {
-				"range": [1, 1],
-				"looping": true,
-				"on_tick": {
-					"event": "wiki:add_effect_event",
-					"target": "self",
-					"condition": "query.block_property('wiki:is_on_block') == true"
-				}
-			},
-			"minecraft:breakonpush": true,
-			"minecraft:destroy_time": 0.2,
-			"minecraft:explosion_resistance": 1,
-			"minecraft:friction": 0.6,
-			"minecraft:flammable": {
-				"flame_odds": 0,
-				"burn_odds": 0
-			},
-			"minecraft:map_color": "#181818"
-		},
-		"events": {
-			"wiki:change_property": {
-				"set_block_property": {
-					"wiki:is_on_block": true
-				}
-			},
-			"wiki:add_effect_event": {
-				"run_command": {
-					"command": ["effect @e[r=1] wither 2 2 false"]
-				}
-			}
-		}
-	}
-}
-```
-
-</Spoiler>
