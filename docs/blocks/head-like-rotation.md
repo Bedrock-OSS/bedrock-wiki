@@ -6,7 +6,6 @@ tags:
     - expert
 mentions:
     - QuazChick
-    - UspelOrg
 ---
 
 ::: tip

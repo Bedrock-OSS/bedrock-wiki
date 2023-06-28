@@ -6,7 +6,6 @@ tags:
     - easy
 mentions:
     - MysticChair
-    - QuazChick
     - SirLich
     - MedicalJewel105
     - QuazChick
