@@ -48,7 +48,7 @@ Now we need `minecraft:queued_ticking` component that will check if our property
     "on_tick": {
       "event": "wiki:add_effect",
       "target": "self",
-      "condition": "query.block_property('wiki:stood_on`)"
+      "condition": "q.block_property('wiki:stood_on')"
     }
   }
 }
@@ -154,7 +154,7 @@ And done! The code above will trigger the desired status effect as long as the e
         "on_tick": {
           "event": "wiki:add_effect",
           "target": "self",
-          "condition": "query.block_property('wiki:stood_on`)"
+          "condition": "q.block_property('wiki:stood_on')"
         }
       },
       "minecraft:map_color": "#181818"

@@ -281,19 +281,19 @@ Requires `Holiday Creator Features` to trigger events.
 ```json
 "permutations": [
   {
-    "condition": "query.block_property('wiki:rotation') == 0",
+    "condition": "q.block_property('wiki:rotation') == 0",
     "components": {
       "minecraft:transformation": { "rotation": [0, 0, 0] }
     }
   },
   {
-    "condition": "query.block_property('wiki:rotation') == 1",
+    "condition": "q.block_property('wiki:rotation') == 1",
     "components": {
       "minecraft:transformation": { "rotation": [90, 0, 0] }
     }
   },
   {
-    "condition": "query.block_property('wiki:rotation') == 2",
+    "condition": "q.block_property('wiki:rotation') == 2",
     "components": {
       "minecraft:transformation": { "rotation": [0, 0, 90] }
     }
@@ -309,7 +309,7 @@ In order to make the block rotate the way a vanilla log would, we need to use a 
 {
   "wiki:set_axis": {
     "set_block_property": {
-      "wiki:axis": "Math.floor(query.block_face / 2)"
+      "wiki:axis": "Math.floor(q.block_face / 2)"
     }
   }
 }
@@ -379,19 +379,19 @@ This example also requires `Holiday Creator Features` to use `minecraft:unit_cub
     },
     "permutations": [
       {
-        "condition": "query.block_property('wiki:axis') == 0",
+        "condition": "q.block_property('wiki:axis') == 0",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 0] }
         }
       },
       {
-        "condition": "query.block_property('wiki:axis') == 1",
+        "condition": "q.block_property('wiki:axis') == 1",
         "components": {
           "minecraft:transformation": { "rotation": [90, 0, 0] }
         }
       },
       {
-        "condition": "query.block_property('wiki:axis') == 2",
+        "condition": "q.block_property('wiki:axis') == 2",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 90] }
         }
@@ -400,7 +400,7 @@ This example also requires `Holiday Creator Features` to use `minecraft:unit_cub
     "events": {
       "wiki:set_rotation": {
         "set_block_property": {
-          "wiki:axis": "Math.floor(query.block_face / 2)"
+          "wiki:axis": "Math.floor(q.block_face / 2)"
         }
       }
     }

@@ -108,13 +108,13 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
       "wiki:on_destroyed": {
         "sequence": [
           {
-            "condition": "query.get_equipped_item_name == 'shears'",
+            "condition": "q.is_item_name_any('slot.weapon.mainhand','minecraft:shears')",
             "spawn_loot": {
               "table": "loot_tables/blocks/custom_leaves_block.json"
             }
           },
           {
-            "condition": "query.get_equipped_item_name != 'shears'",
+            "condition": "!q.is_item_name_any('slot.weapon.mainhand','minecraft:shears')",
             "spawn_loot": {
               "table": "loot_tables/blocks/custom_leaves_loot.json"
             }
@@ -153,7 +153,7 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
     },
     "permutations": [
       {
-        "condition": "query.block_property('wiki:decay_tier') == 0",
+        "condition": "q.block_property('wiki:decay_tier') == 0",
         "components": {
           "minecraft:random_ticking": {
             "on_tick": {
@@ -164,32 +164,32 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
         }
       },
       {
-        "condition": "query.block_property('wiki:decay_tier') == 1",
+        "condition": "q.block_property('wiki:decay_tier') == 1",
         "components": {
           "minecraft:unit_cube": {},
           "tag:wiki:decay_tier_1": {}
         }
       },
       {
-        "condition": "query.block_property('wiki:decay_tier') == 2",
+        "condition": "q.block_property('wiki:decay_tier') == 2",
         "components": {
           "tag:wiki:decay_tier_2": {}
         }
       },
       {
-        "condition": "query.block_property('wiki:decay_tier') == 3",
+        "condition": "q.block_property('wiki:decay_tier') == 3",
         "components": {
           "tag:wiki:decay_tier_3": {}
         }
       },
       {
-        "condition": "query.block_property('wiki:decay_tier') == 4",
+        "condition": "q.block_property('wiki:decay_tier') == 4",
         "components": {
           "tag:wiki:decay_tier_4": {}
         }
       },
       {
-        "condition": "query.block_property('wiki:opaque')",
+        "condition": "q.block_property('wiki:opaque')",
         "components": {
           "minecraft:material_instances": {
             "*": {
@@ -251,14 +251,14 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
       },
       // Make log strippable
       "minecraft:on_interact": {
-        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
+        "condition": "q.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
         "event": "wiki:strip"
       }
     },
     "events": {
       "wiki:set_axis": {
         "set_block_property": {
-          "wiki:axis": "Math.floor(query.block_face / 2)"
+          "wiki:axis": "Math.floor(q.block_face / 2)"
         }
       },
       "wiki:strip": {
@@ -275,19 +275,19 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
             }
           },
           {
-            "condition": "query.block_property('wiki:axis') == 0",
+            "condition": "q.block_property('wiki:axis') == 0",
             "run_command": {
               "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\":0]"
             }
           },
           {
-            "condition": "query.block_property('wiki:axis') == 1",
+            "condition": "q.block_property('wiki:axis') == 1",
             "run_command": {
               "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\":1]"
             }
           },
           {
-            "condition": "query.block_property('wiki:axis') == 2",
+            "condition": "q.block_property('wiki:axis') == 2",
             "run_command": {
               "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\":2]"
             }
@@ -297,19 +297,19 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
     },
     "permutations": [
       {
-        "condition": "query.block_property('wiki:axis') == 0",
+        "condition": "q.block_property('wiki:axis') == 0",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 0] }
         }
       },
       {
-        "condition": "query.block_property('wiki:axis') == 1",
+        "condition": "q.block_property('wiki:axis') == 1",
         "components": {
           "minecraft:transformation": { "rotation": [90, 0, 0] }
         }
       },
       {
-        "condition": "query.block_property('wiki:axis') == 2",
+        "condition": "q.block_property('wiki:axis') == 2",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 90] }
         }
@@ -369,25 +369,25 @@ Here all components are the same
     "events": {
       "wiki:set_direction": {
         "set_block_property": {
-          "wiki:axis": "Math.floor(query.block_face / 2)"
+          "wiki:axis": "Math.floor(q.block_face / 2)"
         }
       }
     },
     "permutations": [
       {
-        "condition": "query.block_property('wiki:axis') == 0",
+        "condition": "q.block_property('wiki:axis') == 0",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 0] }
         }
       },
       {
-        "condition": "query.block_property('wiki:axis') == 1",
+        "condition": "q.block_property('wiki:axis') == 1",
         "components": {
           "minecraft:transformation": { "rotation": [90, 0, 0] }
         }
       },
       {
-        "condition": "query.block_property('wiki:axis') == 2",
+        "condition": "q.block_property('wiki:axis') == 2",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 90] }
         }
@@ -446,7 +446,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
         ]
       },
       "minecraft:on_interact": {
-        "condition": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bone_meal')",
+        "condition": "q.is_item_name_any('slot.weapon.mainhand','minecraft:bone_meal')",
         "event": "wiki:bone_meal"
       },
       // Starts to grow
@@ -460,13 +460,13 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
       "wiki:grow": {
         "sequence": [
           {
-            "condition": "query.block_property('wiki:growth') < 2",
+            "condition": "q.block_property('wiki:growth') < 2",
             "set_block_property": {
-              "wiki:growth": "query.block_property('wiki:growth') + 1"
+              "wiki:growth": "q.block_property('wiki:growth') + 1"
             }
           },
           {
-            "condition": "query.block_property('wiki:growth') == 2",
+            "condition": "q.block_property('wiki:growth') == 2",
             "run_command": {
               "command": "structure load custom_tree ~-2 ~ ~-2"
             }
@@ -815,7 +815,7 @@ Tree Features are a really great way to get actual custom trees. You need some u
         "extent": [0, 16],
         "distribution": "uniform"
       },
-      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "y": "q.heightmap(variable.worldx, variable.worldz)",
       "z": {
         "extent": [0, 16],
         "distribution": "uniform"

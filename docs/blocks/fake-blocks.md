@@ -62,7 +62,7 @@ To align your entity in rotation, you will need some Math.
 <CodeHeader></CodeHeader>
 
 ```json
-"rotation": [ 0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0 ]
+"rotation": [ 0, "-q.body_y_rotation + (Math.round(q.body_y_rotation / 90) * 90)", 0 ]
 ```
 
 Apply that code on the core folder (that has all the other groups inside) of your model in an animation, make sure the pivot point is 0 in the X and Z Axis, to avoid visual bugs. And also you don't need to add components like:
@@ -262,7 +262,7 @@ And now we have to add a new render controller. This is going to select differen
     }
   ],
   "textures": [
-    "array.broken[query.health * 1]" // Here you can calculate the health of your entity to make sure it isn't buggy. If your entity has 10 health, leave it as it. If it has 20, it should be `query.health * 0.5`. If it is 40, it has to be 0.25, etc...
+    "array.broken[q.health * 1]" // Here you can calculate the health of your entity to make sure it isn't buggy. If your entity has 10 health, leave it as it. If it has 20, it should be `q.health * 0.5`. If it is 40, it has to be 0.25, etc...
   ]
 }
 ```

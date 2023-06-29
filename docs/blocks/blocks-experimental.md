@@ -354,7 +354,7 @@ Sequences event responses.
         }
       },
       {
-        "condition": "query.block_property('wiki:my_prop') == true", // Optional
+        "condition": "q.block_property('wiki:my_prop')", // Optional
         "trigger": {
           "event": "wiki:my_entity_event",
           "target": "other"
@@ -413,7 +413,7 @@ String values are evaluated as Molang. This means, to set a string property, you
   "wiki:change_state": {
     "set_block_property": {
       "wiki:boolean_property_example": false,
-      "wiki:integer_property_example": "query.block_property('wiki:integer_property_example') + 1",
+      "wiki:integer_property_example": "q.block_property('wiki:integer_property_example') + 1",
       "wiki:string_property_example": "'red'"
     }
   }
@@ -523,7 +523,7 @@ Runs an event when an entity fell on the block.
   "minecraft:on_fall_on": {
     "event": "wiki:example_event",
     "target": "self", // Optional - 'self' is default (targets block)
-    "condition": "query.block_property('wiki:boolean_property_example')", // Optional
+    "condition": "q.block_property('wiki:boolean_property_example')", // Optional
     "min_fall_distance": 5
   }
 }
@@ -544,7 +544,7 @@ Runs an event when he Player uses the block.
   "minecraft:on_interact": {
     "event": "wiki:example_event",
     "target": "self", // Optional - 'self' is default (targets block)
-    "condition": "query.block_property('wiki:boolean_property_example')" // Optional
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
   }
 }
 ```
@@ -564,7 +564,7 @@ Runs an event when an entity placed the block.
   "minecraft:on_placed": {
     "event": "wiki:example_event",
     "target": "self", // Optional - 'self' is default (targets block)
-    "condition": "query.block_property('wiki:boolean_property_example')" // Optional
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
   }
 }
 ```
@@ -584,7 +584,7 @@ Runs an event when the player destroys the block.
   "minecraft:on_player_destroyed": {
     "event": "wiki:example_event",
     "target": "self", // Optional - 'self' is default (targets block)
-    "condition": "query.block_property('wiki:boolean_property_example')" // Optional
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
   }
 }
 ```
@@ -604,7 +604,7 @@ Runs an event when The Player placed the block.
   "minecraft:on_player_placing": {
     "event": "wiki:example_event",
     "target": "self", // Optional - 'self' is default (targets block)
-    "condition": "query.block_property('wiki:boolean_property_example')" // Optional
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
   }
 }
 ```
@@ -624,7 +624,7 @@ Runs an event when an entity stepped off of the block.
   "minecraft:on_step_off": {
     "event": "wiki:example_event",
     "target": "self", // Optional - 'self' is default (targets block)
-    "condition": "query.block_property('wiki:boolean_property_example')" // Optional
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
   }
 }
 ```
@@ -644,7 +644,7 @@ Runs an event when an entity stepped onto the block.
   "minecraft:on_step_on": {
     "event": "wiki:example_event",
     "target": "self", // Optional - 'self' is default (targets block)
-    "condition": "query.block_property('wiki:boolean_property_example')" // Optional
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
   }
 }
 ```
@@ -667,7 +667,7 @@ Triggers between x and y amount of ticks inside `interval_range`.
     "on_tick": {
       "event": "wiki:example_event",
       "target": "self", // Optional - 'self' is default (targets block)
-      "condition": "query.block_property('wiki:boolean_property_example')" // Optional
+      "condition": "q.block_property('wiki:boolean_property_example')" // Optional
     }
   }
 }
@@ -689,7 +689,7 @@ Allows for behavior like random crop growth.
     "on_tick": {
       "event": "wiki:example_event",
       "target": "self", // Optional - 'self' is default (targets block)
-      "condition": "query.block_property('wiki:boolean_property_example')" // Optional
+      "condition": "q.block_property('wiki:boolean_property_example')" // Optional
     }
   }
 }

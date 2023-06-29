@@ -44,7 +44,7 @@ _Released from experiment `Holiday Creator Features` in format versions 1.19.70 
 
 ### Using Properties:
 
-Properties can be tested for with the Molang `query.block_property`
+Properties can be tested for with the Molang `q.block_property`
 
 ```c
 q.block_property('wiki:string_property_example') == 'blue'
@@ -465,7 +465,7 @@ _Released from experiment `Holiday Creator Features` in format versions 1.19.60 
           // Test for identifier
           "minecraft:dirt",
           // Test for tags
-          { "tags": "!query.any_tag('stone', 'wiki_tag')" }
+          { "tags": "!q.any_tag('stone', 'wiki_tag')" }
         ]
       }
     ]
