@@ -19,7 +19,7 @@ For a list of experimental block features, visit [here](/blocks/blocks-experimen
 
 Block properties define all possible block states for your custom blocks. The first item in the values array is used as the default.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.70 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.70 and higher._
 
 ### Defining Properties:
 
@@ -60,7 +60,7 @@ Working with block properties (and many other parts of blocks) requires understa
 
 Block permutations are a way of conditionally applying components to a block with Molang expressions.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.70 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.70 and higher._
 
 <CodeHeader></CodeHeader>
 
@@ -132,7 +132,7 @@ List of block components, with usage examples:
 
 The block's entity collision box - may not exceed the unit (16&times;16&times;16) block size limitations.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.50 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.50 and higher._
 
 <CodeHeader></CodeHeader>
 
@@ -159,7 +159,7 @@ Or..
 
 Turns your block into a new/custom Crafting Table.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.50 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.50 and higher._
 
 <CodeHeader></CodeHeader>
 
@@ -228,7 +228,7 @@ If the string given does not have a translation, the raw string given will be di
 
 **Note**: Minecraft may revert to using `tile.<identifier>.name` in some scenarios.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.60 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.60 and higher._
 
 <CodeHeader></CodeHeader>
 
@@ -298,7 +298,7 @@ The model that the block will use. Disables face culling.
 
 -   The absolute bounds of the position of your 30×30×30 block are 30 pixels in each direction from the origin. Your block can be placed in any position within these bounds, as long as it adheres to rule #2.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.40 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.40 and higher._
 
 <CodeHeader></CodeHeader>
 
@@ -409,7 +409,7 @@ Different parameters for `render_method` in `minecraft:material_instances` will 
 
     ...Then, simply link the textures via `RP/blocks.json`.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.40 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.40 and higher._
 
 <CodeHeader></CodeHeader>
 
@@ -459,7 +459,7 @@ Configure conditions for a block to be able to survive.
 
 If these conditions are not met, the block will not be placed, or if the block is already placed, it will pop off.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.60 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.60 and higher._
 
 <CodeHeader></CodeHeader>
 
@@ -487,7 +487,7 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relevant bloc
 
 The hitbox of the block to be targeted - may not exceed the unit (16&times;16&times;16) block size limitations.
 
-_Released from experiment `Holiday Creator Features` in format versions 1.19.60 and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.60 and higher._
 
 <CodeHeader></CodeHeader>
 

@@ -222,7 +222,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
       },
       "minecraft:material_instances": {
         "*": {
-          // Friendly name defined in `RP/textures/terrain_texture.json`
+          // Shortname defined in `RP/textures/terrain_texture.json`
           "texture": "shell"
         }
       },

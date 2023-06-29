@@ -99,7 +99,7 @@ Time to setup our `events`. First, let's set the `wiki:step_on` and `wiki:step_o
 }
 ```
 
-The last thing to add is event that will trigger the effect:
+The last thing to add is an event that will trigger the effect:
 
 <CodeHeader>BP/blocks/damage_block.json</CodeHeader>
 

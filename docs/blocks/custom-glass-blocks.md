@@ -48,7 +48,7 @@ This will create a custom glass block which appears the same as vanilla glass bl
 ```json
 {
   "wiki:custom_glass": {
-    "textures": "custom_glass", // Friendly name defined in `RP/textures/terrain_texture.json`
+    "textures": "custom_glass" // Shortname defined in `RP/textures/terrain_texture.json`
     "sound": "glass"
   }
 }

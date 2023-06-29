@@ -129,7 +129,7 @@ _Left to right: `blocky.png`, `sapp_log_side.png`, `side_block_top.png`, `sb_up.
 
 ---
 
-All textures need to have a defined **friendly name** in `RP/textures/terrain_texture.json`
+All textures need to have a defined **shortname** in `RP/textures/terrain_texture.json`
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 

@@ -537,7 +537,7 @@ Runs an event when an entity fell on the block.
 This component requires the `Holiday Creator Features` experiment to be enabled.
 :::
 
-Runs an event when he player uses the block.
+Runs an event when the player interacts with / uses the block.
 
 <CodeHeader></CodeHeader>
 
