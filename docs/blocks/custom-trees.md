@@ -530,7 +530,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 <Spoiler title="Code">
 
-This loot will spawn leaves block (when you breaak it using shears)
+This loot will spawn leaves block (when you break it using shears)
 
 <CodeHeader>BP/loot_tables/blocks/custom_leaves_block.json</CodeHeader>
 
