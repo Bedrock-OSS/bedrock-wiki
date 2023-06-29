@@ -9,6 +9,8 @@ mentions:
 
 Documentation of all stable features of blocks.
 
+**Note**: Vanilla blocks are hard-coded. You may not override or access them.
+
 :::tip
 For a list of experimental block features, visit [here](/blocks/blocks-experimental).
 :::
@@ -51,7 +53,7 @@ q.block_property('wiki:string_property_example') == 'blue'
 ```
 
 :::tip
-Working with block properties (and many other parts of blocks) requires understanding of Molang. [Get learning!](/documentation/)
+Working with block properties (and many other parts of blocks) requires understanding of Molang. [Get learning!](https://bedrock.dev/docs/stable/Molang)
 :::
 
 ## Block Permutations
@@ -103,6 +105,10 @@ _Released from experiment `Holiday Creator Features` in format versions 1.19.70 
 
 ## Block Components
 
+:::tip
+Only one of each component can be active at once. Duplicate components will be overridden by the lowest permutation in the `permutations` array.
+:::
+
 List of block components, with usage examples:
 
 -   [`minecraft:collision_box`](#minecraft-collision-box)
@@ -124,7 +130,7 @@ List of block components, with usage examples:
 
 ### minecraft:collision_box
 
-The block's entity collision box.
+The block's entity collision box - may not exceed the unit (16&times;16&times;16) block size limitations.
 
 _Released from experiment `Holiday Creator Features` in format versions 1.19.50 and higher._
 
@@ -380,6 +386,8 @@ Or...
 
 Configures your block's rendering, primarily used to set textures.
 
+**Note**: Block faces will unconditionally darken if intersecting another block.
+
 Different parameters for `render_method` in `minecraft:material_instances` will - similar to entity runtime identifiers - affect certain properties of the block:
 
 -   Inputting `opaque` will allow redstone to pass through, grass to decay, and on it, mobs' spawning.
@@ -477,7 +485,7 @@ See [this](/blocks/block-tags) page for a list of vanilla tags and relevant bloc
 
 ### minecraft:selection_box
 
-The hitbox of the block when hovering on the block.
+The hitbox of the block to be targeted - may not exceed the unit (16&times;16&times;16) block size limitations.
 
 _Released from experiment `Holiday Creator Features` in format versions 1.19.60 and higher._
 
@@ -539,14 +547,3 @@ Visit [rotatable blocks](/blocks/rotatable-blocks) to learn how to apply rotatio
 ```
 
 For a list of many categories and groups, see [here](/documentation/creative-categories)
-
-## Additional Notes
-
--   Vanilla blocks are hard-coded. You may not override or access them.
--   Only one of each component can be active at once. Duplicate components will be overridden by the lowest permutation.
--   Custom blocks' tags are ignored by Vanilla items.
--   Block faces will unconditionally darken if intersecting another block.
--   Block loot tables are ignored when mined with the `Silk Touch` enchantment, resulting in the block dropping.
--   The following components may not exceed the default (16x) block size limitations:
-    -   `minecraft:collision_box`
-    -   `minecraft:selection_box`

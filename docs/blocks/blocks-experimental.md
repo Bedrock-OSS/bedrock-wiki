@@ -516,6 +516,8 @@ This component requires the `Holiday Creator Features` experiment to be enabled.
 
 Runs an event when an entity fell on the block.
 
+**Note**: Requires the `minecraft:collision_box` component to be 4 or higher on the Y-axis.
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -535,7 +537,7 @@ Runs an event when an entity fell on the block.
 This component requires the `Holiday Creator Features` experiment to be enabled.
 :::
 
-Runs an event when he Player uses the block.
+Runs an event when he player uses the block.
 
 <CodeHeader></CodeHeader>
 
@@ -595,7 +597,7 @@ Runs an event when the player destroys the block.
 This component requires the `Holiday Creator Features` experiment to be enabled.
 :::
 
-Runs an event when The Player placed the block.
+Runs an event as the player places the block.
 
 <CodeHeader></CodeHeader>
 
@@ -617,6 +619,8 @@ This component requires the `Holiday Creator Features` experiment to be enabled.
 
 Runs an event when an entity stepped off of the block.
 
+**Note**: Requires the `minecraft:collision_box` component to be 4 or higher on the Y-axis.
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -636,6 +640,8 @@ This component requires the `Holiday Creator Features` experiment to be enabled.
 :::
 
 Runs an event when an entity stepped onto the block.
+
+**Note**: Requires the `minecraft:collision_box` component to be 4 or higher on the Y-axis.
 
 <CodeHeader></CodeHeader>
 
@@ -708,10 +714,3 @@ Turns the block in to a unit-sized cube (16×16×16) with face culling and other
   "minecraft:unit_cube": {}
 }
 ```
-
-## Additional Notes
-
--   The following event triggers require the `minecraft:collision_box` component to be 4 or higher on the Y-axis:
-    -   `minecraft:on_step_on`
-    -   `minecraft:on_step_off`
-    -   `minecraft:on_fall_on`
