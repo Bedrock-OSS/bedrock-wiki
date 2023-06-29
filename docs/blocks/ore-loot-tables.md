@@ -12,6 +12,7 @@ mentions:
     - Chikorita-Lover
     - SirLich
     - TheItsNameless
+    - Keyyard
 ---
 
 ## Features
@@ -129,6 +130,44 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 		]
 	}
 ]
+```
+
+## XP Drops for non experimental blocks
+
+- drops experiment orbs without experimental need
+- flexible for every addons
+
+###1. Edit Lootable to have a new dummy item/block or unused block on drop
+```json
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"conditions": [
+				{
+					"condition": "match_tool",
+					"item": "minecraft:iron_pickaxe",
+					"count": 1
+				}
+			],
+			"entries": [
+				{
+					"type": "item",
+					"name": "tut:raw_silver"
+				},
+			          {
+			            "type": "item",
+			            "name": "minecraft:barrier" //the dummy item
+			          }
+			]
+		}
+	]
+{
+  ```
+###2. Loop mcfunction file
+```mcfunction
+execute as @e[type=item,name=Barrier] at @s run structure load my_xp_structure ~~~
+execute as @e[type=item,name=Barrier] run kill @s
 ```
 
 ## Download .mcstructure
