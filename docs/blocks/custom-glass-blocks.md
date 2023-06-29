@@ -6,6 +6,7 @@ tags:
     - expert
 mention:
     - Eko-byte
+    - QuazChick
 ---
 
 Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.
@@ -48,7 +49,7 @@ This will create a custom glass block which appears the same as vanilla glass bl
 ```json
 {
   "wiki:custom_glass": {
-    "textures": "custom_glass" // Shortname defined in `RP/textures/terrain_texture.json`
+    "textures": "custom_glass", // Shortname defined in `RP/textures/terrain_texture.json`
     "sound": "glass"
   }
 }
