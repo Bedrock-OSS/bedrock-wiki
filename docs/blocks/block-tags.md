@@ -44,14 +44,14 @@ Block tags can be applied exactly as items, as seen below:
 
 Tags can be queried with:
 
--   `query.all_tags`
--   `query.any_tag`
--   `query.block_has_all_tags`
--   `query.block_has_any_tag`
--   `query.block_neighbor_has_all_tags`
--   `query.block_neighbor_has_any_tag`
--   `query.relative_block_has_all_tags`
--   `query.relative_block_has_any_tag`
+-   `q.all_tags`
+-   `q.any_tag`
+-   `q.block_has_all_tags`
+-   `q.block_has_any_tag`
+-   `q.block_neighbor_has_all_tags`
+-   `q.block_neighbor_has_any_tag`
+-   `q.relative_block_has_all_tags`
+-   `q.relative_block_has_any_tag`
 
 Example of an item querying a block's tags:
 
