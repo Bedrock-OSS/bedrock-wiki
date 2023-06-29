@@ -480,33 +480,26 @@ Teleport a target randomly around a destination point.
 }
 ```
 
-### minecraft:on_step_off
+## Triggering Events
 
-Triggers an event unto a specified contextual target.
+The following event trigger components can be used to run events:
 
-<CodeHeader></CodeHeader>
+-   [`minecraft:on_fall_on`](#minecraft-on-fall-on)
+-   [`minecraft:on_interact`](#minecraft-on-interact)
+-   [`minecraft:on_placed`](#minecraft-on-placed)
+-   [`minecraft:on_player_destroyed`](#minecraft-on-player-destroyed)
+-   [`minecraft:on_player_placing`](#minecraft-on-player-placing)
+-   [`minecraft:on_step_off`](#minecraft-on-step-off)
+-   [`minecraft:on_step_on`](#minecraft-on-step-on)
+-   [`minecraft:queued_ticking`](#minecraft-queued-ticking)
+-   [`minecraft:random_ticking`](#minecraft-random-ticking)
 
-```json
-{
-  "wiki:trigger_event": {
-    "trigger": {
-      "condition": "q.block_property('wiki:string_property_example') == 'red'", // Optional
-      "event": "wiki:my_event", // Event to trigger
-      "target": "self" // Optional - 'self' is default (targets block)
-    }
-  }
-}
-```
 
-Or...
+## Components
 
-```json
-{
-  "wiki:trigger_event": {
-    "trigger": "wiki:my_event" // Trigger another block event
-  }
-}
-```
+List of block components, with usage examples:
+
+-   [`minecraft:unit_cube`](#minecraft-unit-cube)
 
 ### minecraft:on_fall_on
 
