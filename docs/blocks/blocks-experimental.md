@@ -495,7 +495,7 @@ The following event trigger components can be used to run events:
 -   [`minecraft:random_ticking`](#minecraft-random-ticking)
 
 
-## Components
+## Block Components
 
 List of block components, with usage examples:
 
