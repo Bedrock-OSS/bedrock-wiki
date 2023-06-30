@@ -165,7 +165,7 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 {
   ```
 ###2. Loop mcfunction file
-```mcfunction
+```
 execute as @e[type=item,name=Barrier] at @s run structure load my_xp_structure ~~~
 execute as @e[type=item,name=Barrier] run kill @s
 ```
