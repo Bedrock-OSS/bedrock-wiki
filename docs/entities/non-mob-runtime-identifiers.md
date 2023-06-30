@@ -2089,7 +2089,7 @@ The core behavior of `minecraft:elder_guardian_ghost` (applying mining fatigue a
 	* If `minecraft:nameable` is not active, `allow_name_tag_renaming` is considered as `false` and `always_show` is considered as `true`.
 	* If `minecraft:nameable` is active, `always_show` may be overridden, but `allow_name_tag_renaming` cannot be.
 	* On being owned, is named `§9Player.Agent`, where `Player` is the name of the owning player
-* Cannot be used as a player’s actual agent and cannot respond to the `/agent` command, even with NBT editing
+* Can only be used as a player's actual agent through the use of an NPC, the `/execute` command, and the `/agent` command, you can put this command into an npc button commands to make your agent turn left or to spawn in an agent if you don't already have one: "/execute as @initiator run /agent turn left", this command only works when run by an NPC. 
 
 #### Hardcoded Variables
 All variables are fixed due to custom entities not being able to use core agent functionality.
