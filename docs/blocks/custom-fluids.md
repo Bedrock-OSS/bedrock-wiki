@@ -10,761 +10,268 @@ mentions:
     - QuazChick
 ---
 
-:::warning
-**Requires** a basic knowledge of blocks, scripts, and commands, including permutations, events, properties, components, and the new execute command.
+::: tip
+This tutorial assumes an advanced understanding of blocks and the execute command.
+Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
-Creating fluids that are identical to vanilla fluids is not currently possible, but it is possible to make something similar. This template/tutorial is designed to assist you in creating a custom semi-fluid.
+::: warning EXPERIMENTAL
+Requires `Holiday Creator Features` for use of experimental Molang queries, new item features and to trigger block events.
 
-## How Semi-fluids Work
+Requires `Beta APIs` for use of `*-beta` module versions.
+:::
 
-Semi-fluids consist of five blocks: three blocks form the outer parts of the fluid, one block acts as the main source of the fluid, and the final block represents the falling part of the fluid. Additionally, execute commands are utilized to identify blocks and establish rules for the fluid flow. Throughout the remainder of this guide, semi-fluids will be referred to as fluids.
+Creating fluids that are identical to vanilla fluids is not currently possible, but you can make something similar! This template/tutorial is designed to assist you in creating a custom "semi-fluid".
+
+## Flow Logic
+
+-   The fluid block has states defining whether it is a source and its depth.
+-   If there is air beneath fluid blocks, it will be converted into falling fluid.
+-   Fluids with a depth above `1` will spread horizontally with decreasing depths.
+    -   This will not occur if there is falling fluid below.
+-   Flowing fluid block must have another fluid block adjacent to survive.
+-   Source blocks do not need to have other fluid blocks surrounding themselves.
+
+**This implementation does not include face culling due to its current complexity.**
 
 <WikiImage
 	src="/assets/images/blocks/custom-fluids/fluid_display.png"
-	alt="alternative text"
+	alt=""
 	pixelated="true"
-	width=540
+	width=608
 />
 
 ## Source Fluid Block
 
-Below is the `source fluid block` code. To replicate the json, copy and quick replace `template` with your fluid's name. When the source block detects air in its surroundings, it replaces it with the `outer fluid block 1`. If the source block detects air beneath it, it will also place a `falling fluid block` underneath.
+Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with your fluid's name. When the source block detects air in its surroundings, it replaces it with the outer fluid blocks. If the source block detects air beneath it, it will also place a falling fluid block underneath.
 
-<CodeHeader>BH/blocks/fluid_template/fluid_template.json</CodeHeader>
-<Spoiler title="Fluid Source JSON">
+<BButton
+    link="/assets/packs/tutorials/blocks/custom-fluids/fluid.geo.json"
+	  download
+    color=blue
+>Download Custom Fluid Geometry</BButton>
+
+<Spoiler title="Custom Fluid Block JSON">
+
+<CodeHeader>BP/blocks/custom_fluid.json</CodeHeader>
 
 ```json
 {
-  "format_version": "1.19.60",
+  "format_version": "1.20.0",
   "minecraft:block": {
     "description": {
-      "identifier": "wiki:fluid_template",
+      "identifier": "wiki:custom_fluid",
+      "menu_category": {
+        "category": "nature"
+      },
       "properties": {
-        "wiki:x": [ 0, 1 ],
-        "wiki:nx": [ 0, 1 ],
-        "wiki:z": [ 0, 1 ],
-        "wiki:nz": [ 0, 1 ],
-        "wiki:top": [ 0, 1 ],
-        "wiki:bottom": [ 0, 1 ]
+        "wiki:source": [true, false],
+        // Depth of fluid - default to 4
+        "wiki:depth": [4, 5, 3, 2, 1]
       }
     },
     "components": {
-      "minecraft:on_interact": { // enables the block to be picked up by a custom bucket
-        "event": "wiki:pick_up", // can be removed if fluid doesn't need to be picked up
-        "target": "other" // add "condition" to make the fluid be picked up by certain buckets/items
-      },
+      "minecraft:light_dampening": 0,
+      "minecraft:collision_box": false,
+      "minecraft:selection_box": false,
+      "minecraft:destructible_by_explosion": false,
+      // Trigger fluid spread
       "minecraft:queued_ticking": {
         "looping": true,
-        "interval_range": [ 0.2, 0.2 ], //fluid speed
+        "interval_range": [20, 20], // Fluid speed in ticks
         "on_tick": {
           "event": "wiki:flow"
         }
       },
-      "minecraft:loot": "loot_tables/blocks/null.json",
       "minecraft:material_instances": {
         "*": {
-          "texture": "fluid_template",
-          "render_method": "blend"
+          "texture": "flowing_lava",
+          "render_method": "alpha_test",
+          "ambient_occlusion": false,
+          "face_dimming": false
         }
       },
-      "minecraft:part_visibility": {
-        "conditions": {
-          "x": "q.block_property('wiki:x') == 0",
-          "nx": "q.block_property('wiki:nx') == 0",
-          "z": "q.block_property('wiki:z') == 0",
-          "nz": "q.block_property('wiki:nz') == 0",
-          "top": "q.block_property('wiki:top') == 0",
-          "bottom": "q.block_property('wiki:bottom') == 0"
-        }
-      },
-      "tag:template": {},
-      "tag:template_full": {},
-      "tag:fluid": {},
-      "minecraft:light_dampening": 0.0,
-      "minecraft:geometry": "geometry.fluid",
-      "minecraft:destructible_by_mining": false,
-      "minecraft:collision_box": false,
-      "minecraft:destructible_by_explosion": false,
-      "minecraft:flammable": {
-        "destroy_chance_modifier": 0,
-        "catch_chance_modifier": 0
-      }
+      "minecraft:loot": "loot_tables/empty.json",
+      "tag:custom_fluid": {}
     },
     "events": {
       "wiki:flow": {
         "sequence": [
+          // Dry out
+          {
+            "condition": "!q.block_property('wiki:source') && ((q.block_property('wiki:depth') == 5 && !q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')) || (q.block_property('wiki:depth') == 1 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_2') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_2') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_2') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_2')) || q.block_property('wiki:depth') == 2 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_3') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_3') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_3') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_3'))) || (q.block_property('wiki:depth') == 3 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_4', 'custom_fluid_5'))))",
+            "die": {}
+          },
+          // Spread
+          {
+            "condition": "q.block_property('wiki:depth') == 4",
+            "run_command": {
+              "command": [
+                "execute if block ~~~1 air run setblock ~~~1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
+                "execute if block ~~~-1 air run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
+                "execute if block ~1~~ air run setblock ~1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
+                "execute if block ~-1~~ air run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]"
+              ]
+            }
+          },
+          {
+            "condition": "q.block_property('wiki:source') && q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
+            "set_block_property": {
+              "wiki:depth": 5
+            }
+          },
+          {
+            "condition": "q.block_property('wiki:source') && !q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
+            "set_block_property": {
+              "wiki:depth": 4
+            }
+          },
+          {
+            "condition": "q.block_property('wiki:depth') == 3",
+            "run_command": {
+              "command": [
+                "execute if block ~~~1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":2]",
+                "execute if block ~~~-1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":2]",
+                "execute if block ~1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":2]",
+                "execute if block ~-1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":2]"
+              ]
+            }
+          },
+          {
+            "condition": "q.block_property('wiki:depth') == 2",
+            "run_command": {
+              "command": [
+                "execute if block ~~~1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":1]",
+                "execute if block ~~~-1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":1]",
+                "execute if block ~1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":1]",
+                "execute if block ~-1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":1]"
+              ]
+            }
+          },
+          {
+            "condition": "q.block_property('wiki:depth') == 5 && q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
+            "run_command": {
+              "command": [
+                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\":3] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]",
+                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\":2] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]",
+                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\":1] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]",
+                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~1~~ air run setblock ~1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
+                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~~~1 air run setblock ~~~1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
+                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~-1~~ air run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
+                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~~~-1 air run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]"
+              ]
+            }
+          },
+          // Fall
           {
             "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ air run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
+              "command": "execute if block ~~-1~ air run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]"
             }
           },
           {
+            "condition": "q.block_neighbor_has_any_tag(0, -1, 0, 'flowing_custom_fluid')",
             "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~ ~1 air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~ ~ ~1 wiki:fluid_template1" ]
-            }
-          },
-          {
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~ ~-1 air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~ ~ ~-1 wiki:fluid_template1" ]
-            }
-          },
-          {
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~1 ~ ~ air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~1 ~ ~ wiki:fluid_template1" ]
-            }
-          },
-          {
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~-1 ~ ~ air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~-1 ~ ~ wiki:fluid_template1" ]
-            }
-          },
-
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "set_block_property": {
-              "wiki:nz": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 0, 1, 'template_full')",
-            "set_block_property": {
-              "wiki:z": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:x": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:nx": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:top": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, -1, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:bottom": 1
-            }
-          },
-
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "set_block_property": {
-              "wiki:nz": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, 0, 1, 'template_full')",
-            "set_block_property": {
-              "wiki:z": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(1, 0, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:x": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:nx": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, 1, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:top": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, -1, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:bottom": 0
+              "command": "setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]"
             }
           }
         ]
       },
       "wiki:pick_up": {
+        "die": {},
         "decrement_stack": {},
         "run_command": {
-          "command": "give @p wiki:template_bucket"
-        },
-        "die": {}
+          "command": "give @s lava_bucket",
+          "target": "other"
+        }
       }
-    }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_property('wiki:source')",
+        "components": {
+          // Enables the block to be picked up by an item of choice
+          "minecraft:selection_box": {
+            "origin": [-7.5, 0.5, -7.5],
+            "size": [15, 13, 15]
+          },
+          "tag:custom_fluid_source": {}
+        }
+      },
+      {
+        "condition": "!q.block_property('wiki:source')",
+        "components": {
+          "tag:flowing_custom_fluid": {}
+        }
+      },
+      {
+        "condition": "q.block_property('wiki:depth') == 5",
+        "components": {
+          "minecraft:geometry": "geometry.fluid.5",
+          "tag:custom_fluid_5": {}
+        }
+      },
+      {
+        "condition": "q.block_property('wiki:depth') == 4",
+        "components": {
+          "minecraft:geometry": "geometry.fluid.4",
+          "tag:custom_fluid_4": {}
+        }
+      },
+      {
+        "condition": "q.block_property('wiki:depth') == 3",
+        "components": {
+          "minecraft:geometry": "geometry.fluid.3",
+          "tag:custom_fluid_3": {}
+        }
+      },
+      {
+        "condition": "q.block_property('wiki:depth') == 2",
+        "components": {
+          "minecraft:geometry": "geometry.fluid.2",
+          "tag:custom_fluid_2": {}
+        }
+      },
+      {
+        "condition": "q.block_property('wiki:depth') == 1",
+        "components": {
+          "minecraft:geometry": "geometry.fluid.1",
+          "tag:custom_fluid_1": {}
+        }
+      }
+    ]
   }
 }
-```
 
-</Spoiler>
-
-## Outer Fluid Block 1
-
-Below is the JSON for the `outer fluid block 1`. To replicate the json, copy and quick replace `template` with your fluid's name. This block has the same function as the source block but it can't be picked up and it places `outer fluid block 2` instead.
-
-<CodeHeader>BH/blocks/fluid_template/fluid_template1.json</CodeHeader>
-<Spoiler title="Outer Fluid 1 JSON">
-
-```json
-{
-  "format_version": "1.19.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:fluid_template1"
-    },
-    "components": {
-      "minecraft:queued_ticking": {
-        "looping": true,
-        "interval_range": [ 0.2, 0.2 ], //fluid speed
-        "on_tick": {
-          "event": "wiki:flow"
-        }
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "fluid_template",
-          "render_method": "blend"
-        }
-      },
-      "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:selection_box": false,
-      "tag:template1": {},
-      "tag:template": {},
-      "tag:fluid": {},
-      "minecraft:light_dampening": 0.0,
-      "minecraft:geometry": "geometry.fluid1",
-      "minecraft:destructible_by_mining": false,
-      "minecraft:collision_box": false,
-      "minecraft:destructible_by_explosion": false,
-      "minecraft:flammable": {
-        "destroy_chance_modifier": 0,
-        "catch_chance_modifier": 0
-      }
-    },
-    "events": {
-      "wiki:flow": {
-        "sequence": [
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, 1, 'template_full') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ air run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, 1, 'template_full') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~ ~1 air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~ ~ ~1 wiki:fluid_template2" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, 1, 'template_full') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~ ~-1 air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~ ~ ~-1 wiki:fluid_template2" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, 1, 'template_full') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~1 ~ ~ air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~1 ~ ~ wiki:fluid_template2" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, 1, 'template_full') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full') || q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~-1 ~ ~ air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~-1 ~ ~ wiki:fluid_template2" ]
-            }
-          },
-
-          {
-            "condition": "!q.block_neighbor_has_any_tag(1, 0, 0, 'template_full') && !q.block_neighbor_has_any_tag(0, 0, 1, 'template_full') && !q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full') && !q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "run_command": {
-              "target": "self",
-              "command": [ "setblock ~ ~ ~ air" ]
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-</Spoiler>
-
-## Outer Fluid Block 2
-
-Below is the JSON for the `outer fluid block 2`. To replicate the json, copy and quick replace `template` with your fluid's name. This block has the same function as the `outer fluid block 2` but it places `outer fluid block 3` instead.
-
-<CodeHeader>BH/blocks/fluid_template/fluid_template2.json</CodeHeader>
-<Spoiler title="Outer Fluid 2 JSON">
-
-```json
-{
-  "format_version": "1.19.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:fluid_template2"
-    },
-    "components": {
-      "minecraft:queued_ticking": {
-        "looping": true,
-        "interval_range": [ 0.2, 0.2 ], //fluid speed
-        "on_tick": {
-          "event": "wiki:flow"
-        }
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "fluid_template",
-          "render_method": "blend"
-        }
-      },
-      "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:selection_box": false,
-      "tag:template": {},
-      "tag:template2": {},
-      "tag:fluid": {},
-      "minecraft:light_dampening": 0.0,
-      "minecraft:geometry": "geometry.fluid2",
-      "minecraft:destructible_by_mining": false,
-      "minecraft:collision_box": false,
-      "minecraft:destructible_by_explosion": false,
-      "minecraft:flammable": {
-        "burn_odds": 0,
-        "flame_odds": 0
-      }
-    },
-    "events": {
-      "wiki:flow": {
-        "sequence": [
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, 1, 'template1') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, -1, 'template1')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ air run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, 1, 'template1') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, -1, 'template1')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~ ~1 air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~ ~ ~1 wiki:fluid_template3" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, 1, 'template1') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, -1, 'template1')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~ ~-1 air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~ ~ ~-1 wiki:fluid_template3" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, 1, 'template1') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, -1, 'template1')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~1 ~ ~ air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~1 ~ ~ wiki:fluid_template3" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, 1, 'template1') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template1') || q.block_neighbor_has_any_tag(0, 0, -1, 'template1')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~-1 ~ ~ air unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~-1 ~ ~ wiki:fluid_template3" ]
-            }
-          },
-
-          {
-            "condition": "!q.block_neighbor_has_any_tag(1, 0, 0, 'template1') && !q.block_neighbor_has_any_tag(0, 0, 1, 'template1') && !q.block_neighbor_has_any_tag(-1, 0, 0, 'template1') && !q.block_neighbor_has_any_tag(0, 0, -1, 'template1')",
-            "run_command": {
-              "target": "self",
-              "command": [ "setblock ~ ~ ~ air" ]
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-</Spoiler>
-
-## Outer Fluid Block 3
-
-Below is the JSON for the `outer fluid block 3`. To replicate the json, copy and quick replace `template` with your fluid's name. This block solely places the falling fluid block. Moreover, all fluid blocks check for the existence of at least one fluid block from a higher tier next to them. If none is found, the block deletes itself.
-
-<CodeHeader>BH/blocks/fluid_template/fluid_template3.json</CodeHeader>
-<Spoiler title="Outer Fluid 3 JSON">
-
-```json
-{
-  "format_version": "1.19.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:fluid_template3"
-    },
-    "components": {
-      "minecraft:queued_ticking": {
-        "looping": true,
-        "interval_range": [ 0.2, 0.2 ], //fluid speed
-        "on_tick": {
-          "event": "wiki:flow"
-        }
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "fluid_template",
-          "render_method": "blend"
-        }
-      },
-      "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:selection_box": false,
-      "tag:template3": {},
-      "tag:template": {},
-      "tag:fluid": {},
-      "minecraft:light_dampening": 0.0,
-      "minecraft:geometry": "geometry.fluid3",
-      "minecraft:destructible_by_mining": false,
-      "minecraft:collision_box": false,
-      "minecraft:destructible_by_explosion": false,
-      "minecraft:flammable": {
-        "burn_odds": 0,
-        "flame_odds": 0
-      }
-    },
-    "events": {
-      "wiki:flow": {
-        "sequence": [
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template2') || q.block_neighbor_has_any_tag(0, 0, 1, 'template2') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template2') || q.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ air run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template2') || q.block_neighbor_has_any_tag(0, 0, 1, 'template2') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template2') || q.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ wiki:fluid_template1 run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template2') || q.block_neighbor_has_any_tag(0, 0, 1, 'template2') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template2') || q.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ wiki:fluid_template2 run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template2') || q.block_neighbor_has_any_tag(0, 0, 1, 'template2') || q.block_neighbor_has_any_tag(-1, 0, 0, 'template2') || q.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ wiki:fluid_template3 run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-
-          {
-            "condition": "!q.block_neighbor_has_any_tag(1, 0, 0, 'template2') && !q.block_neighbor_has_any_tag(0, 0, 1, 'template2') && !q.block_neighbor_has_any_tag(-1, 0, 0, 'template2') && !q.block_neighbor_has_any_tag(0, 0, -1, 'template2')",
-            "run_command": {
-              "target": "self",
-              "command": [ "setblock ~ ~ ~ air" ]
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-</Spoiler>
-
-## Falling Fluid Block
-
-Below is the JSON for the `falling fluid block`. To replicate the json, copy and quick replace `template` with your fluid's name. If this block detects air below it, it will place another `falling fluid block`. However, if it detects another block beneath it, it will behave like the `source fluid block`.
-
-<CodeHeader>BH/blocks/fluid_template/fluid_template_down.json</CodeHeader>
-<Spoiler title="Falling Fluid JSON">
-
-```json
-{
-  "format_version": "1.19.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:fluid_template_down",
-      "properties": {
-        "wiki:x": [ 0, 1 ],
-        "wiki:nx": [ 0, 1 ],
-        "wiki:z": [ 0, 1 ],
-        "wiki:nz": [ 0, 1 ],
-        "wiki:top": [ 0, 1 ],
-        "wiki:bottom": [ 0, 1 ]
-      }
-    },
-    "components": {
-      "minecraft:queued_ticking": {
-        "looping": true,
-        "interval_range": [ 0.2, 0.2 ], //fluid speed
-        "on_tick": {
-          "event": "wiki:flow"
-        }
-      },
-      "minecraft:loot": "loot_tables/blocks/null.json",
-      "minecraft:selection_box": false,
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "fluid_template",
-          "render_method": "blend"
-        }
-      },
-      "minecraft:part_visibility": {
-        "conditions": {
-          "x": "q.block_property('wiki:x') == 0",
-          "nx": "q.block_property('wiki:nx') == 0",
-          "z": "q.block_property('wiki:z') == 0",
-          "nz": "q.block_property('wiki:nz') == 0",
-          "top": "q.block_property('wiki:top') == 0",
-          "bottom": "q.block_property('wiki:bottom') == 0"
-        }
-      },
-      "tag:template": {},
-      "tag:template_full": {},
-      "tag:template_down": {},
-      "tag:fluid": {},
-      "minecraft:light_dampening": 0.0,
-      "minecraft:geometry": "geometry.fluid",
-      "minecraft:destructible_by_mining": false,
-      "minecraft:collision_box": false,
-      "minecraft:destructible_by_explosion": false,
-      "minecraft:flammable": {
-        "burn_odds": 0,
-        "flame_odds": 0
-      }
-    },
-    "events": {
-      "wiki:flow": {
-        "sequence": [
-          {
-            "trigger": {
-              "event": "wiki:check_side",
-              "target": "self"
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ wiki:fluid_template unless block ~ ~-1 ~ wiki:fluid_template1 unless block ~ ~-1 ~ wiki:fluid_template2 unless block ~ ~-1 ~ wiki:fluid_template3 unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~ ~ ~ wiki:fluid_template_down" ]
-            }
-          },
-
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ air run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ wiki:fluid_template1 run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ wiki:fluid_template2 run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute if block ~ ~-1 ~ wiki:fluid_template3 run setblock ~ ~-1 ~ wiki:fluid_template_down" ]
-            }
-          },
-
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ wiki:fluid_template_down unless block ~ ~-1 ~ wiki:fluid_template1 unless block ~ ~-1 ~ wiki:fluid_template2 unless block ~ ~-1 ~ wiki:fluid_template3 if block ~1 ~ ~ air run setblock ~1 ~ ~ wiki:fluid_template1" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ wiki:fluid_template_down unless block ~ ~-1 ~ wiki:fluid_template1 unless block ~ ~-1 ~ wiki:fluid_template2 unless block ~ ~-1 ~ wiki:fluid_template3 if block ~ ~ ~1 air run setblock ~ ~ ~1 wiki:fluid_template1" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ wiki:fluid_template_down unless block ~ ~-1 ~ wiki:fluid_template1 unless block ~ ~-1 ~ wiki:fluid_template2 unless block ~ ~-1 ~ wiki:fluid_template3 if block ~-1 ~ ~ air run setblock ~-1 ~ ~ wiki:fluid_template1" ]
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ wiki:fluid_template_down unless block ~ ~-1 ~ wiki:fluid_template1 unless block ~ ~-1 ~ wiki:fluid_template2 unless block ~ ~-1 ~ wiki:fluid_template3 if block ~ ~ ~-1 air run setblock ~ ~ ~-1 wiki:fluid_template1" ]
-            }
-          },
-
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "setblock ~ ~ ~ air" ]
-            }
-          }
-        ]
-      },
-
-      "wiki:check_side": {
-        "sequence": [
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "set_block_property": {
-              "wiki:nz": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 0, 1, 'template_full')",
-            "set_block_property": {
-              "wiki:z": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(1, 0, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:x": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:nx": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:top": 1
-            }
-          },
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, -1, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:bottom": 1
-            }
-          },
-
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, 0, -1, 'template_full')",
-            "set_block_property": {
-              "wiki:nz": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, 0, 1, 'template_full')",
-            "set_block_property": {
-              "wiki:z": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(1, 0, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:x": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(-1, 0, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:nx": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, 1, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:top": 0
-            }
-          },
-          {
-            "condition": "!q.block_neighbor_has_any_tag(0, -1, 0, 'template_full')",
-            "set_block_property": {
-              "wiki:bottom": 0
-            }
-          },
-
-          {
-            "condition": "q.block_neighbor_has_any_tag(0, 1, 0, 'template')",
-            "run_command": {
-              "target": "self",
-              "command": [ "execute unless block ~ ~-1 ~ air unless block ~ ~-1 ~ wiki:fluid_template unless block ~ ~-1 ~ wiki:fluid_template1 unless block ~ ~-1 ~ wiki:fluid_template2 unless block ~ ~-1 ~ wiki:fluid_template3 unless block ~ ~-1 ~ wiki:fluid_template_down run setblock ~ ~ ~ wiki:fluid_template_down" ]
-            }
-          }
-        ]
-      }
-    }
-  }
-}
 ```
 
 </Spoiler>
 
 ## Fluid Bucket
 
-To pickup or place your custom fluid you need a custom bucket item. Although any item can pickup the fluid, your fluid can be customized to require this custom bucket. Below is the JSON for the custom bucket. To replicate the json, copy and quick replace `template` with your fluid's name.
+To place your custom fluid you need a custom bucket item. Below is the JSON for the custom bucket. Replace any instance of `custom_fluid` with your fluid's name.
 
-<CodeHeader>BH/items/template_bucket.json</CodeHeader>
-<Spoiler title="Template Bucket JSON">
+<Spoiler title="Custom Bucket Item JSON">
+
+<CodeHeader>BP/items/custom_fluid_bucket.json</CodeHeader>
 
 ```json
 {
-  "format_version": "1.19.60",
+  "format_version": "1.20.0",
   "minecraft:item": {
     "description": {
-      "identifier": "wiki:template_bucket",
+      "identifier": "wiki:custom_fluid_bucket",
       "category": "items"
     },
     "components": {
+      "minecraft:max_stack_size": 1,
       "minecraft:icon": {
-        "texture": "template_bucket"
+        "texture": "custom_fluid_bucket"
       },
       "minecraft:display_name": {
-        "value": "Template Bucket"
+        "value": "item.custom_fluid_bucket.name"
       },
-      "minecraft:max_stack_size": 1,
       "minecraft:block_placer": {
-        "block": "wiki:fluid_template"
+        "block": "wiki:custom_fluid"
       }
     }
   }
@@ -775,47 +282,62 @@ To pickup or place your custom fluid you need a custom bucket item. Although any
 
 ## Scripts
 
-The fluids use a script to add the ability for the player to float/sink in the fluid. The script also adds fog. To add your fluid to the script, put the ID of your new fluids in the `fluidsIDs` string array.
+The fluids use a script to add the ability for the player to float/sink in the fluid. The script also adds fog. To add your fluid to the script, put the ID of your new fluids in the `fluids` string array.
 
-<CodeHeader>BH/scripts/fluids/main.js</CodeHeader>
-<Spoiler title="Script">
+<CodeHeader>BP/manifest.json</CodeHeader>
+
+```json
+{
+  "modules": [
+    ...
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "fluids.js",
+      "uuid": ...,
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.3.0-beta"
+    }
+  ]
+}
+```
+
+<Spoiler title="Fluid Movement & Fog Script">
+
+<CodeHeader>BP/scripts/fluids.js</CodeHeader>
 
 ```javascript
-import * as mc from "@minecraft/server"
+import { system, world } from "@minecraft/server";
 
-let fluidsIDs = [
-"wiki:fluid_template",
-"wiki:fluid_template_down",
-"wiki:fluid_template1",
-"wiki:fluid_template2",
-"wiki:fluid_template3"
-]
+const fluids = [
+  "wiki:custom_fluid"
+];
 
-mc.system.runInterval(() => {
+system.runInterval(() => {
+  const players = Array.from(world.getPlayers());
+
+mc.world.events.tick.subscribe(() => {
     const players = Array.from(mc.world.getPlayers())
     for (let p = 0; p < players.length; p++) {
         for (let i = 0; i < fluidsIDs.length; i++) {
-            if (mc.world.getDimension(players[p].dimension.id).getBlock({
-              x: Math.floor(players[p].location.x),
-              y: Math.floor(players[p].location.y+1),
-              z: Math.floor(players[p].location.z)
-            })).typeId == fluidsIDs[i]) {
+            if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), Math.floor(players[p].location.y+1), Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
                 if (!players[p].isSneaking) {
                     players[p].addEffect(mc.MinecraftEffectTypes.levitation, 4, 1, false)
                 }
                 players[p].addEffect(mc.MinecraftEffectTypes.slowFalling, 4, 2, false)
-            } else if (mc.world.getDimension(players[p].dimension.id).getBlock(players[p].location)).typeId == fluidsIDs[i]) {
+            } else if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), Math.floor(players[p].location.y), Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
                 players[p].addEffect(mc.MinecraftEffectTypes.slowFalling, 4, 2, false)
             }
         }
     }
     for (let p = 0; p < players.length; p++) {
         for (let i = 0; i < fluidsIDs.length; i++) {
-            if (mc.world.getDimension(players[p].dimension.id).getBlock({
-              x: Math.floor(players[p].location.x),
-              y: players[p].location.y+1.7,
-              z: Math.floor(players[p].location.z)
-            })).typeId == fluidsIDs[i]) {
+            if (mc.world.getDimension(players[p].dimension.id).getBlock(new mc.BlockLocation(Math.floor(players[p].location.x), players[p].location.y+1.7, Math.floor(players[p].location.z))).typeId == fluidsIDs[i]) {
                 players[p].runCommand("fog @s push fluid:water_fog fluid_fog")
                 break
             } else {
@@ -831,9 +353,8 @@ mc.system.runInterval(() => {
 ## Resources
 
 To define the textures for the fluids you need to do two thing:
-
-1. Make a 16x16+ texture and in terrain textures copy/rename the "fluid*template" to "fluid*`your fluid name`"
-2. Make a texture and in item textures copy/rename the "template_bucket" to "`your fluid name`\_bucket"
+1) Make a 16x16+ texture and in terrain textures copy/rename the "fluid_template" to "fluid_`your fluid name`"
+2) Make a texture and in item textures copy/rename the "template_bucket" to "`your fluid name`_bucket"
 
 ## Download / Other
 
@@ -841,19 +362,22 @@ By the end your BH folder should look like this
 
 <FolderView
 	:paths="[
-    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template.json',
-    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template_down.json',
-    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template1.json',
-    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template2.json',
-    'com.mojang/development_behavior_packs/blocks/fluid_template/fluid_template3.json',
-    'com.mojang/development_behavior_packs/items/template_bucket.json',
-    'com.mojang/development_behavior_packs/scripts/fluids/main.js',
+    'BP/blocks/custom_fluid.json',
+    'BP/items/custom_fluid_bucket.json',
+    'BP/scripts/fluids.js',
+    'RP/fogs/custom_fluid.json'
     ]"
 ></FolderView>
 
-(`fluid_template` or `template` can be replaced)
+## Download Example Pack
 
-If anything goes wrong, or if you require all of the template files, they are available for download here. The file includes everything necessary for a functional fluid, as well as a `.txt` document that details how to create a new one.
+If anything goes wrong, or if you require all of the template files, they are available for download here. The pack includes everything necessary for a functional fluid.
+
+<BButton
+  link="/assets/packs/tutorials/blocks/custom-fluids/example.mcaddon"
+  download="Custom Fluids Example.mcaddon"
+  color=blue
+>Download MCADDON</BButton>
 
 <BButton
     link="/assets/packs/tutorials/custom_fluids/more_fluids_template_file.zip"
