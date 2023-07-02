@@ -21,23 +21,97 @@ mentions:
     - QuazChick
 ---
 
-Better documentation on the new block format introduced in the Minecraft Beta 1.16.100 and newer versions.
+Documentation on block features which require experiments to function.
 
 :::warning
 This document covers experimental features for blocks. If you would like to learn about stable blocks, you can do so [here](/blocks/blocks-stable).
 :::
 
-## Block Events
+## Block Traits
+
+:::warning EXPERIMENTAL
+Block traits require the `Upcoming Creator Features` experiment to be enabled.
+:::
+
+Block traits can be used to apply vanilla block states (such as direction) to your custom blocks easily, without the need for events and triggers.
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
-  "format_version": "1.19.80",
+  "format_version": "1.20.0",
   "minecraft:block": {
     "description": {
-      "identifier": "wiki:custom_block"
+      "identifier": "wiki:directional_example",
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:facing_direction"],
+          "y_rotation_offset": 180
+        }
+      }
     },
+    "components": {...},
+    "permutations": [...]
+  }
+}
+```
+
+_This example will set the `minecraft:facing_direction` block state when placed to either `'down'`, `'up'`, `'north'`, `'south'`, `'east'` or `'west'` - depending on where the player is facing._
+
+**Permutations are still required for this state to make a functional difference, e.g. by using the `minecraft:transformation` component with conditions querying**
+
+```c
+q.block_property('minecraft:facing_direction')
+```
+
+### Available Block Traits
+
+-   [`minecraft:placement_direction`](#minecraft-placement-direction)
+-   [`minecraft:placement_position`](#minecraft-placement-position)
+
+### minecraft:placement_direction
+
+Contains information about the player's rotation when the block was placed.
+
+#### May enable the following states
+
+| State                          | Values                                                                           | Description                                      |
+| ------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------ |
+| `minecraft:cardinal_direction` | `"north"` _(default)_<br>`"south"`<br>`"west"` <br>`"east"`                      | Cardinal facing direction of player when placed. |
+| `minecraft:facing_direction`   | `"down"`<br>`"up"`<br>`"north"` _(default)_<br>`"south"`<br>`"west"`<br>`"east"` | Overall direction of player when placed.         |
+
+#### Additional properties
+
+-   `y_rotation_offset` - This rotation offset only applies to the horizontal state values (north, south, east, west) . Only axis-aligned angles may be specified (e.g. 90, 180, -90).
+
+### minecraft:placement_position
+
+Contains information about where the player placed the block.
+
+#### May enable the following states
+
+| State                     | Values                                                                           | Description                                   |
+| ------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------- |
+| `minecraft:block_face`    | `"down"`<br>`"up"`<br>`"north"` _(default)_<br>`"south"`<br>`"west"`<br>`"east"` | Face on which the block was placed.           |
+| `minecraft:vertical_half` | `"top"`<br>`"bottom"` _(default)_                                                | The vertical half where the block was placed. |
+
+<br>
+
+_This trait has no additional properties._
+
+## Block Events
+
+:::warning EXPERIMENTAL
+Block events require the `Holiday Creator Features` experiment to be enabled.
+:::
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "format_version": "1.20.0",
+  "minecraft:block": {
+    ...
     "components": {
       "minecraft:on_step_on": {
         "event": "wiki:drop_loot",
@@ -59,6 +133,25 @@ _This example spawns a loot table when an entity stands on the block._
 
 ## Event Responses
 
+-   [`add_mob_effect`](#add-mob-effect)
+-   [`damage`](#damage)
+-   [`decrement_stack`](#decrement-stack)
+-   [`die`](#die)
+-   [`play_effect`](#play-effect)
+-   [`play_sound`](#play-sound)
+-   [`randomize`](#randomize)
+-   [`remove_mob_effect`](#remove-mob-effect)
+-   [`run_command`](#run-command)
+-   [`sequence`](#sequence)
+-   [`set_block`](#set-block)
+-   [`set_block_at_pos`](#set-block-at-pos)
+-   [`set_block_property`](#set-block-property)
+-   [`spawn_loot`](#spawn-loot)
+-   [`swing`](#swing)
+-   [`teleport`](#teleport)
+-   [`transform_item`](#transform-item)
+-   [`trigger`](#trigger)
+
 ### add_mob_effect
 
 Adds a mob effect to a target when triggered.
@@ -73,117 +166,6 @@ Adds a mob effect to a target when triggered.
       "target": "other",
       "duration": 8,
       "amplifier": 3
-    }
-  }
-}
-```
-
-### remove_mob_effect
-
-Removes a target's mob effect when triggered.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:remove_effect_event": {
-    "remove_mob_effect": {
-      "effect": "poison",
-      "target": "other"
-    }
-  }
-}
-```
-
-### spawn_loot
-
-Summons a loot table.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:drop_loot": {
-    "spawn_loot": {
-      "table": "loot_tables/blocks/my_loot_table.json"
-    }
-  }
-}
-```
-
-### set_block
-
-Removes the current block and replaces it with the defined block in the same position.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:place_block": {
-    "set_block": "minecraft:grass"
-  }
-}
-```
-
-### set_block_property
-
-Sets the block's property.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:change_color": {
-    "set_block_property": {
-      "wiki:string_property_example": "'red'"
-    }
-  }
-}
-```
-
-### set_block_at_pos
-
-Sets a block at a specified position relative to the block.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:trigger_event": {
-    "set_block_at_pos": {
-      "block_type": "minecraft:stone",
-      "block_offset": [0, 0, 0]
-    }
-  }
-}
-```
-
-### run_command
-
-Runs command(s) onto a target in context.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:execute_event": {
-    "run_command": {
-      "target": "self",
-      "command": "summon pig"
-    }
-  }
-}
-```
-
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:execute_event": {
-    "run_command": {
-      "target": "self",
-      "command": ["summon pig", "say Ooh... A pig!!1!"]
     }
   }
 }
@@ -223,7 +205,7 @@ Decrements the player's current item stack.
 
 ### die
 
-Kills the specified target in context, making the block disappear with no loot. (Destroying the block, if specified).
+Kills the specified target in context, making the block dissapear with no loot. (Destroying the block, if specified).
 
 <CodeHeader></CodeHeader>
 
@@ -271,50 +253,6 @@ Play a sound to a specified contextual target.
 }
 ```
 
-### trigger
-
-Triggers an event unto a specified contextual target.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:trigger_event": {
-    "trigger": {
-      "event": "wiki:my_event",
-      "target": "self"
-    }
-  }
-}
-```
-
-### sequence
-
-Sequences event functions
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "wiki:sequence_event": {
-    "sequence": [
-      {
-        "set_block_property": {
-          "wiki:my_prop": true
-        }
-      },
-      {
-        "condition": "q.block_property('wiki:my_prop')", //Optional
-        "trigger": {
-          "event": "wiki:my_entity_event",
-          "target": "other"
-        }
-      }
-    ]
-  }
-}
-```
-
 ### randomize
 
 Randomizes event functions
@@ -326,7 +264,7 @@ Randomizes event functions
   "wiki:randomize_events": {
     "randomize": [
       {
-        "weight": 1, //Defines the rarity
+        "weight": 1, // Defines the rarity
         "set_block_property": {
           "wiki:boolean_property_example": false
         }
@@ -346,26 +284,399 @@ Randomizes event functions
 }
 ```
 
+### remove_mob_effect
+
+Removes a target's mob effect when triggered.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:remove_effect_event": {
+    "remove_mob_effect": {
+      "effect": "poison",
+      "target": "other"
+    }
+  }
+}
+```
+
+### run_command
+
+Runs a command onto a target in context.
+
+Use an array to run multiple commands.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:execute_event": {
+    "run_command": {
+      "target": "self", // Optional - 'self' is default (targets block)
+      "command": "summon pig"
+    }
+  }
+}
+```
+
+Or...
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:execute_event": {
+    "run_command": {
+      "target": "self", // Optional - 'self' is default (targets block)
+      "command": [
+          "summon pig",
+          "say Everybody welcome the pig!"
+      ]
+    }
+  }
+}
+```
+
+### sequence
+
+Sequences event responses.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:sequence_event": {
+    "sequence": [
+      {
+        "set_block_property": {
+          "wiki:my_prop": true
+        }
+      },
+      {
+        "condition": "q.block_property('wiki:my_prop')", // Optional
+        "trigger": {
+          "event": "wiki:my_entity_event",
+          "target": "other"
+        }
+      }
+    ]
+  }
+}
+```
+
+### set_block
+
+Removes the current block and replaces it with the defined block in the same position.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:place_block": {
+    "set_block": {
+        "block_type": "minecraft:grass"
+    }
+  }
+}
+```
+
+### set_block_at_pos
+
+Sets a block at a specified position relative to the block.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:generate_stone_above": {
+    "set_block_at_pos": {
+      "block_type": "minecraft:stone",
+      "block_offset": [0, 1, 0]
+    }
+  }
+}
+```
+
+### set_block_property
+
+Set block property value(s) (Can be set to the returned value of a Molang expression string).
+
+:::warning
+String values are evaluated as Molang. This means, to set a string property, you must wrap the value in `'`s (example below).
+:::
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:change_state": {
+    "set_block_property": {
+      "wiki:boolean_property_example": false,
+      "wiki:integer_property_example": "q.block_property('wiki:integer_property_example') + 1",
+      "wiki:string_property_example": "'red'"
+    }
+  }
+}
+```
+
+### spawn_loot
+
+Summons a loot table.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:drop_loot": {
+    "spawn_loot": {
+      "table": "loot_tables/blocks/my_loot_table.json"
+    }
+  }
+}
+```
+
+### swing
+
+Causes the involved actor to swing.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:swing_arm": {
+    "swing": {}
+  }
+}
+```
+
+### teleport
+
+Teleport a target randomly around a destination point.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:go_away": {
+    "target": "other", // Teleporting entity
+    "avoid_water": true, // Avoid teleporting into water
+    "land_on_block": true, // Place target on block
+    "destination": [0, 0, 0], // Origin destination
+    "max_range": [5, 6, 7] // Maximum offsets from the origin destination
+  }
+}
+```
+
+### transform_item
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "transform_item":{
+    "transform" : "iron_sword"
+  }
+}
+```
+
 ## Triggering Events
 
-Block event-trigger components:
+The following event trigger components can be used to run events:
 
--   `minecraft:on_interact`
--   `minecraft:on_step_on`
--   `minecraft:on_step_off`
--   `minecraft:on_fall_on`
--   `minecraft:on_placed`
--   `minecraft:on_player_placing`
--   `minecraft:on_player_destroyed`
-
--   `minecraft:queued_ticking` and `minecraft:random_ticking` may be used to trigger events after a time either set or random, respectively
+-   [`minecraft:on_fall_on`](#minecraft-on-fall-on)
+-   [`minecraft:on_interact`](#minecraft-on-interact)
+-   [`minecraft:on_placed`](#minecraft-on-placed)
+-   [`minecraft:on_player_destroyed`](#minecraft-on-player-destroyed)
+-   [`minecraft:on_player_placing`](#minecraft-on-player-placing)
+-   [`minecraft:on_step_off`](#minecraft-on-step-off)
+-   [`minecraft:on_step_on`](#minecraft-on-step-on)
+-   [`minecraft:queued_ticking`](#minecraft-queued-ticking)
+-   [`minecraft:random_ticking`](#minecraft-random-ticking)
 
 
 ## Block Components
 
-List of experimental block components, with usage examples.
+List of block components, with usage examples:
+
+-   [`minecraft:unit_cube`](#minecraft-unit-cube)
+
+### minecraft:on_fall_on
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
+
+Runs an event when an entity fell on the block.
+
+**Note**: Requires the `minecraft:collision_box` component to be 4 or higher on the Y-axis.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "minecraft:on_fall_on": {
+    "event": "wiki:example_event",
+    "target": "self", // Optional - 'self' is default (targets block)
+    "condition": "q.block_property('wiki:boolean_property_example')", // Optional
+    "min_fall_distance": 5
+  }
+}
+```
+
+### minecraft:on_interact
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
+
+Runs an event when the player interacts with / uses the block.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "minecraft:on_interact": {
+    "event": "wiki:example_event",
+    "target": "self", // Optional - 'self' is default (targets block)
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
+  }
+}
+```
+
+### minecraft:on_placed
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
+
+Runs an event when an entity placed the block.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "minecraft:on_placed": {
+    "event": "wiki:example_event",
+    "target": "self", // Optional - 'self' is default (targets block)
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
+  }
+}
+```
+
+### minecraft:on_player_destroyed
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
+
+Runs an event when the player destroys the block.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "minecraft:on_player_destroyed": {
+    "event": "wiki:example_event",
+    "target": "self", // Optional - 'self' is default (targets block)
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
+  }
+}
+```
+
+### minecraft:on_player_placing
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
+
+Runs an event as the player places the block.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "minecraft:on_player_placing": {
+    "event": "wiki:example_event",
+    "target": "self", // Optional - 'self' is default (targets block)
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
+  }
+}
+```
+
+### minecraft:on_step_off
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
+
+Runs an event when an entity stepped off of the block.
+
+**Note**: Requires the `minecraft:collision_box` component to be 4 or higher on the Y-axis.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "minecraft:on_step_off": {
+    "event": "wiki:example_event",
+    "target": "self", // Optional - 'self' is default (targets block)
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
+  }
+}
+```
+
+### minecraft:on_step_on
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
+
+Runs an event when an entity stepped onto the block.
+
+**Note**: Requires the `minecraft:collision_box` component to be 4 or higher on the Y-axis.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "minecraft:on_step_on": {
+    "event": "wiki:example_event",
+    "target": "self", // Optional - 'self' is default (targets block)
+    "condition": "q.block_property('wiki:boolean_property_example')" // Optional
+  }
+}
+```
+
+### minecraft:queued_ticking
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
+
+Triggers between x and y amount of ticks inside `interval_range`.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "minecraft:queued_ticking": {
+    "looping": true,
+    "interval_range": [20, 20], // Two values (in ticks) which will be randomly decided between to determine delay duration.
+    "on_tick": {
+      "event": "wiki:example_event",
+      "target": "self", // Optional - 'self' is default (targets block)
+      "condition": "q.block_property('wiki:boolean_property_example')" // Optional
+    }
+  }
+}
+```
 
 ### minecraft:random_ticking
+
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled.
+:::
 
 Allows for behavior like random crop growth.
 
@@ -375,244 +686,24 @@ Allows for behavior like random crop growth.
 {
   "minecraft:random_ticking": {
     "on_tick": {
-      "event": "block_event",
-      "target": "self",
-      "condition": "q.block_property('wiki:block_property')" //Optional
+      "event": "wiki:example_event",
+      "target": "self", // Optional - 'self' is default (targets block)
+      "condition": "q.block_property('wiki:boolean_property_example')" // Optional
     }
   }
 }
 ```
 
-### minecraft:queued_ticking
-
-Ticks when the values between x and y values randomly inside `interval_range`.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:queued_ticking": {
-      "looping": true,
-        "interval_range": [20, 20], //range changed to this.
-        "on_tick": {
-            "event": "set_particles_and_effect",
-            "target": "block"
-        }
-  }
-}
-```
-
-### minecraft:transformation
-
-Allows for rotation, scaling and translation.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:transformation": {
-    "translation": [0.0, 0.1, -0.1],
-    "scale": [0.5, 1, 1.5],
-    "rotation": [90, 180, 0]
-  }
-}
-```
-
-For block rotations like logs, see [this](/blocks/rotatable-blocks)
-
 ### minecraft:unit_cube
 
-Forces the block to be a cube with face culling.
+:::warning EXPERIMENTAL
+This component requires the `Holiday Creator Features` experiment to be enabled and is expected to be removed/changed in the future.
+:::
 
-<CodeHeader></CodeHeader>
+Turns the block in to a unit-sized cube (16×16×16) with face culling and other performance gains, overriding `minecraft:geometry`.
 
 ```json
 {
   "minecraft:unit_cube": {}
 }
 ```
-
-### minecraft:on_step_on
-
-Runs an event when an entity stepped on the block.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:on_step_on": {
-    "event": "block_event",
-    "target": "self",
-    "condition": "q.block_property('wiki:block_property')" //Optional
-  }
-}
-```
-
-Note: you need entity collision not to be set false to trigger event.
-
-### minecraft:on_step_off
-
-Runs an event when an entity stepped off of the block.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:on_step_off": {
-    "event": "block_event",
-    "target": "self",
-    "condition": "q.block_property('wiki:block_property')" //Optional
-  }
-}
-```
-
-Note: you need entity collision not to be set false to trigger event.
-
-### minecraft:on_fall_on
-
-Runs an event when an entity fell on the block.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:on_fall_on": {
-    "event": "block_event",
-    "target": "self",
-    "condition": "q.block_property('wiki:block_property')", //Optional
-    "min_fall_distance": 5
-  }
-}
-```
-
-### minecraft:on_placed
-
-Runs an event when an entity placed the block.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:on_placed": {
-    "event": "block_event",
-    "target": "self",
-    "condition": "q.block_property('wiki:block_property')" //Optional
-  }
-}
-```
-
-### minecraft:on_player_placing
-
-Runs an event when The Player placed the block.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:on_player_placing": {
-    "event": "block_event",
-    "target": "self",
-    "condition": "q.block_property('wiki:block_property')" //Optional
-  }
-}
-```
-
-### minecraft:on_player_destroyed
-
-Runs an event when The Player destroys the block.
-_currently bugged as of 1.19.50_
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:on_player_destroyed": {
-    "event": "block_event",
-    "target": "self",
-    "condition": "q.block_property('wiki:block_property')" //Optional
-  }
-}
-```
-
-### minecraft:on_interact
-
-Runs an event when The Player uses the block.
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "minecraft:on_interact": {
-    "event": "block_event",
-    "target": "self",
-    "condition": "q.block_property('wiki:block_property')" //Optional
-  }
-}
-```
-
-## Block Tags
-
-Block tags can be given to blocks to be queried or referenced with `any_tag` or `all_tags`, which is used inside item and entity files.
-A tag can be applied like this:
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "format_version": "1.16.100",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_block"
-    },
-    "components": {
-      "tag:wiki:my_tag": {},
-      "tag:my_other_tag": {}
-    }
-  }
-}
-```
-
-and this tag can be queried with:
-
--   `q.all_tags`
--   `q.any_tag`
--   `q.block_has_all_tags`
--   `q.block_has_any_tag`
--   `q.relative_block_has_all_tags`
--   `q.relative_block_has_any_tag`
-
-Example of querying a tag:
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-  "format_version": "1.16.100",
-  "minecraft:item": {
-    "description": {
-      "category": "equipment",
-      "identifier": "wiki:pickaxe"
-    },
-    "components": {
-      "minecraft:digger": {
-        "use_efficiency": true,
-        "destroy_speeds": [
-          {
-            "speed": 5,
-            "block": {
-              "tags": "q.any_tag('wiki:my_tag', 'stone', 'metal')"
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-## Additional Notes
-
--   The following event triggers require the `minecraft:collision_box` component to be 4 or higher on the Y-axis:
-    -   `minecraft:on_step_on`
-    -   `minecraft:on_step_off`
-    -   `minecraft:on_fall_on`

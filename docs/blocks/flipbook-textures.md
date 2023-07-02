@@ -1,5 +1,5 @@
 ---
-title: Flipbook Textures
+title: Texture Animation
 category:
     - Tutorials
 tags:

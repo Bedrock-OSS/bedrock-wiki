@@ -2,7 +2,6 @@
 title: Ore Loot Tables
 category: Tutorials
 tags:
-    - experimental
     - easy
 mentions:
     - SykoUSS
@@ -23,7 +22,7 @@ Features:
 
 -   Can be mined using any given item (this tutorial covers the iron pickaxe)
 -   Can specify enchantments on items
--	Also drops experience reward
+-   Also drops experience reward
 
 Issues:
 
@@ -38,43 +37,33 @@ The following block behavior can be used as a template. Don't forget to set the 
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:block": {
-		"description": {
-			"identifier": "tut:silver_ore"
-		},
-		"components": {
-			//Basic components
-			"minecraft:creative_category": {
-				"category": "nature",
-				"group": "itemGroup.name.ore"
-			},
-			"minecraft:destroy_time": 10,
-			"minecraft:block_light_absorption": 15,
-			"minecraft:explosion_resistance": 3,
-			"minecraft:unit_cube": {},
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "silver_ore",
-					"render_method": "opaque"
-				}
-			},
-			"minecraft:on_player_destroyed": {
-				// Calls an event that loads structure with xp reward
-				"event": "xp_reward"
-			},
-			"minecraft:loot": "loot_tables/blocks/silver_ore.json" //The component will not run the loot if the held tool has silk touch
-		},
-		"events": {
-			"xp_reward": {
-				"run_command": {
-					"command": [
-						"structure load my_xp_structure ~~~" //You can download structure with saved xp orbs lower
-					]
-				}
-			}
-		}
-	}
+  "format_version": "1.20.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:silver_ore",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.ore"
+      }
+    },
+    "components": {
+      ...
+      // Calls an event that loads structure with xp reward
+      "minecraft:on_player_destroyed": {
+        "event": "xp_reward"
+      },
+      "minecraft:loot": "loot_tables/blocks/silver_ore.json" // Won't be dropped if using Silk Touch.
+    },
+    "events": {
+      "xp_reward": {
+        "run_command": {
+          "command": [
+            "structure load ore_xp_reward ~~~" // You can download structure with saved xp orbs lower
+          ]
+        }
+      }
+    }
+  }
 }
 ```
 
@@ -86,25 +75,25 @@ The example shown, displays the required components
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"conditions": [
-				{
-					"condition": "match_tool",
-					"item": "minecraft:iron_pickaxe",
-					"count": 1
-				}
-			],
-			"entries": [
-				{
-					"type": "item",
-					"name": "tut:raw_silver"
-				}
-			]
-		}
-	]
-{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "item": "minecraft:iron_pickaxe",
+          "count": 1
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "wiki:raw_silver"
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## Specifying Enchantments
@@ -117,65 +106,103 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 
 ```json
 "conditions": [
-	{
-		"condition": "match_tool",
-		"item": "minecraft:iron_pickaxe",
-		"count": 1,
-		"enchantments": [
-			{
-				"fortune": {
-					"level": 1
-				}
-			}
-		]
-	}
+  {
+    "condition": "match_tool",
+    "item": "minecraft:iron_pickaxe",
+    "count": 1,
+    "enchantments": [
+      {
+        "fortune": {
+          "level": 1
+        }
+      }
+    ]
+  }
 ]
 ```
 
-## XP Drops for non experimental blocks
+## XP Drops for Non-Experimental Blocks
 
-- drops experiment orbs without experimental need
-- flexible for every addons
+To enable XP drops for non-experimental blocks in Minecraft, you can use either of the following methods:
 
-###1. Edit Lootable to have a new dummy item/block or unused block on drop
+### Method 1: Dummy Items and Function Loop
+
+1. Create a loot table for the block you want to drop XP. For example, let's use the "minecraft:redstone" block as an example:
+
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"conditions": [
-				{
-					"condition": "match_tool",
-					"item": "minecraft:iron_pickaxe",
-					"count": 1
-				}
-			],
-			"entries": [
-				{
-					"type": "item",
-					"name": "tut:raw_silver"
-				},
-			          {
-			            "type": "item",
-			            "name": "minecraft:barrier" //the dummy item
-			          }
-			]
-		}
-	]
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:redstone"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:stone"  // Replace "minecraft:stone" with a non-existing item ID
+        }
+      ]
+    }
+  ]
+}
+```
+
+In this case, we add a non-existing item called "minecraft:stone" as a dummy item to trigger the XP drop.
+
+2. Next, create a function to loop through and process the dropped items:
+
+```mcfunction
+execute as @e[type=item,nbt={Item:{id:"minecraft:stone"}}] at @s run structure load my_xp_structure ~~~
+execute as @e[type=item,nbt={Item:{id:"minecraft:stone"}}] run kill @s
+```
+
+This function will execute for any item entity with the tag "minecraft:stone" (our dummy item). It loads a structure called "my_xp_structure" at the item's location and then kills the item.
+
+### Method 2: Function Loop
+
+1. Create a loot table for the block you want to drop XP, similar to the previous method. For example, let's use the "wiki:raw_silver" block:
+
+```json
 {
-  ```
-###2. Loop mcfunction file
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "item",
+          "name": "wiki:raw_silver"
+        }
+      ]
+    }
+  ]
+}
 ```
-execute as @e[type=item,name=Barrier] at @s run structure load my_xp_structure ~~~
-execute as @e[type=item,name=Barrier] run kill @s
+
+2. Create a function to loop through and process the dropped items:
+
 ```
+execute as @e[type=item,nbt={Item:{id:"wiki:raw_silver"},tag:!xp}] at @s run structure load my_xp_structure ~~~
+execute as @e[type=item,nbt={Item:{id:"wiki:raw_silver"},tag:!xp}] run tag @s add xp
+```
+
+This function will execute for any item entity with the "wiki:raw_silver" item ID that does not have the "xp" tag. It loads the "my_xp_structure" at the item's location and then adds the "xp" tag to the item.
+
+Please note that in both methods, you need to download the "my_xp_structure" structure file, which contains the XP orb from the button below.
+
+Remember to replace the item IDs, tags, and other specific details according to your needs.
 
 ## Download .mcstructure
 
 <BButton
-	link="/assets/packs/tutorials/ore_loot_tables/my_xp_structure.mcstructure" download
-	color=gray
->Download structure</BButton>
+  link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download
+  color=blue
+>Download MCSTRUCTURE</BButton>
 
 ## Result
 

@@ -9,6 +9,7 @@ mentions:
     - Luthorius
     - Fabrimat
     - TheItsNameless
+    - QuazChick
 ---
 
 :::warning Deprecated
@@ -34,7 +35,6 @@ They are added in the resource pack's file, `blocks.json`, using child `"blocksh
     }
 
 ```
-
 
 ## List of known Blockshapes
 
