@@ -198,7 +198,7 @@ Please note that in both methods, you need to download the "my_xp_structure" str
 
 Remember to replace the item IDs, tags, and other specific details according to your needs.
 
-## Download .mcstructure
+## Download Structure
 
 <BButton
   link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download
