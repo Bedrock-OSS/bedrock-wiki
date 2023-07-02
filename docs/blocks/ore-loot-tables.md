@@ -11,6 +11,7 @@ mentions:
     - Chikorita-Lover
     - SirLich
     - TheItsNameless
+    - QuazChick
     - Keyyard
 ---
 
@@ -158,7 +159,7 @@ In this case, we add a non-existing item called "minecraft:stone" as a dummy ite
 
 2. Next, create a function to loop through and process the dropped items:
 
-```mcfunction
+```
 execute as @e[type=item,nbt={Item:{id:"minecraft:stone"}}] at @s run structure load my_xp_structure ~~~
 execute as @e[type=item,nbt={Item:{id:"minecraft:stone"}}] run kill @s
 ```
