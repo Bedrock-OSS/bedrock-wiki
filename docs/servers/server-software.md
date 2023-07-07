@@ -73,7 +73,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### JavaScript
 
--   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [GreenFrogMCBE](https://github.com/andriycraft/GreenFrogMCBE)
 
 ### Rust
@@ -87,6 +86,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
 -   [NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)
+-   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
 
 ### Python
 
@@ -137,6 +137,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 -   [DirtServer](https://github.com/Falkirks/DirtServer)
 -   [MineJS](https://github.com/organization/MineJS)
+-   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [NodeMine](https://github.com/NodeMine/NodeMine)
 -   [Numerous-alpaca](https://github.com/numerous-alpaca/numerous-alpaca)
 -   [PocketNode](https://github.com/PocketNode/PocketNode)

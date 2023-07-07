@@ -26,17 +26,59 @@ Block tags can be applied exactly as items, as seen below:
 
 ```json
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "wiki:tree_stump"
 		},
 		"components": {
 			"tag:wood": {},
+			"tag:my_lovely_tag": {},
 			"tag:wiki:very_useless": {}
-		},
-		"events": {}
+		}
 	}
+}
+```
+
+## Testing for Tags
+
+Tags can be queried with:
+
+-   `q.all_tags`
+-   `q.any_tag`
+-   `q.block_has_all_tags`
+-   `q.block_has_any_tag`
+-   `q.block_neighbor_has_all_tags`
+-   `q.block_neighbor_has_any_tag`
+-   `q.relative_block_has_all_tags`
+-   `q.relative_block_has_any_tag`
+
+Example of an item querying a block's tags:
+
+<CodeHeader>BP/items/wiki_pickaxe.json</CodeHeader>
+
+```json
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "wiki:pickaxe",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "speed": 5,
+            "block": {
+              "tags": "query.any_tag('wiki_tag', 'stone', 'metal')"
+            }
+          }
+        ]
+      }
+    }
+  }
 }
 ```
 
@@ -45,7 +87,7 @@ Block tags can be applied exactly as items, as seen below:
 ### Vanilla Tags
 
 Vanilla tags can be applied to custom blocks, and some vanilla blocks are tagged internally. This kind of tag doesn't give blocks vanilla features. The only usage of it is to tag blocks to make them have the same tags as the vanilla blocks for queries or tests.
-| VanillaTags | Vanilla Usage |
+| Tag | Vanilla Usage |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | wood | Oak Trapdoor, Spruce Trapdoor, Birch Trapdoor, Jungle Trapdoor, Acacia Trapdoor, Dark Oak Trapdoor, Oak Door, Spruce Door, Birch Door, Jungle Door, Acacia Door, Dark Oak Door, Oak Fence, Spruce Fence, Birch Fence, Jungle Fence, Acacia Fence, Dark Oak Fence, Oak Fence Gate, Spruce Fence Gate, Birch Fence Gate, Jungle Fence Gate, Acacia Fence Gate, Dark Oak Fence Gate, Oak Log, Spruce Log, Birch Log, Jungle Log, Acacia Log, Dark Oak Log, Oak Planks, Spruce Planks, Birch Planks, Jungle Planks, Acacia Planks, Dark Oak Planks, Oak Slab, Spruce Slab, Birch Slab, Jungle Slab, Acacia Slab, Dark Oak Slab, Oak Stairs, Spruce Stairs, Birch Stairs, Jungle Stairs, Acacia Stairs, Dark Oak Stairs, Oak Sign, Spruce Sign, Birch Sign, Jungle Sign, Acacia Sign, Dark Oak Sign, Oak Pressure Plate, Spruce Pressure Plate, Birch Pressure Plate, Jungle Pressure Plate, Acacia Pressure Plate, Dark Oak Pressure Plate, Smithing Table, Fletching Table, Barrel, Beehive, Bee Nest, Ladder |
 | pumpkin | Pumpkin, Carved Pumpkin, Jack o'Lantern |
@@ -76,12 +118,12 @@ Vanilla tags can be applied to custom blocks, and some vanilla blocks are tagged
 
 Vanilla block tags are tags built specifically for blocks. They can give some vanilla features to the blocks which are tagged with them.
 
-| VanillaBlockTags | Vanilla Usage                                                        | Description  |
-| ---------------- | -------------------------------------------------------------------- | ------------ |
-| acacia           | Acacia Log                                                           |              |
-| birch            | Birch Log                                                            |              |
-| dark_oak         | Dark Oak Log                                                         |              |
-| jungle           | Jungle Log                                                           |              |
-| log              | Oak Log, Spruce Log, Birch Log, Jungle Log, Acacia Log, Dark Oak Log | A log block. |
-| oak              | Oak Log                                                              |              |
-| spruce           | Spruce Log                                                           |              |
+| Tag      | Vanilla Usage                                                        | Description  |
+| -------- | -------------------------------------------------------------------- | ------------ |
+| acacia   | Acacia Log                                                           |              |
+| birch    | Birch Log                                                            |              |
+| dark_oak | Dark Oak Log                                                         |              |
+| jungle   | Jungle Log                                                           |              |
+| log      | Oak Log, Spruce Log, Birch Log, Jungle Log, Acacia Log, Dark Oak Log | A log block. |
+| oak      | Oak Log                                                              |              |
+| spruce   | Spruce Log                                                           |              |

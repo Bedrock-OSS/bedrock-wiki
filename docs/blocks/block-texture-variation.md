@@ -1,5 +1,5 @@
 ---
-title: Block Texture Variation
+title: Texture Variation
 category: Tutorials
 tags:
     - intermediate
