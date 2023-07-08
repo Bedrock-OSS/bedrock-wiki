@@ -147,7 +147,7 @@ To enable XP drops for non-experimental blocks in Minecraft, you can use either 
       "entries": [
         {
           "type": "item",
-          "name": "minecraft:stone"  // Replace "minecraft:stone" with a non-existing item ID
+          "name": "minecraft:barrier"  // Replace "minecraft:barrier" with a non-existing item ID
         }
       ]
     }
@@ -160,8 +160,8 @@ In this case, we add a non-existing item called "minecraft:stone" as a dummy ite
 2. Next, create a function to loop through and process the dropped items:
 
 ```
-execute as @e[type=item,nbt={Item:{id:"minecraft:stone"}}] at @s run structure load my_xp_structure ~~~
-execute as @e[type=item,nbt={Item:{id:"minecraft:stone"}}] run kill @s
+execute as @e[type=item,name="Barrier"] at @s run structure load my_xp_structure ~~~
+execute as @e[type=item,name="Barrier"] run kill @s
 ```
 
 This function will execute for any item entity with the tag "minecraft:stone" (our dummy item). It loads a structure called "my_xp_structure" at the item's location and then kills the item.
@@ -188,11 +188,11 @@ This function will execute for any item entity with the tag "minecraft:stone" (o
 2. Create a function to loop through and process the dropped items:
 
 ```
-execute as @e[type=item,nbt={Item:{id:"wiki:raw_silver"},tag:!xp}] at @s run structure load my_xp_structure ~~~
-execute as @e[type=item,nbt={Item:{id:"wiki:raw_silver"},tag:!xp}] run tag @s add xp
+execute as @e[type=item,name="Raw Silver",tag=!xp] at @s run structure load my_xp_structure ~~~
+execute as @e[type=item,name="Raw Silver",tag=!xp] run tag @s add xp
 ```
 
-This function will execute for any item entity with the "wiki:raw_silver" item ID that does not have the "xp" tag. It loads the "my_xp_structure" at the item's location and then adds the "xp" tag to the item.
+This function will execute for any item entity with the name ``"Raw Silver"``, which is ``wiki:raw_silver`` item ID that does not have the "xp" tag. It loads the "my_xp_structure" at the item's location and then adds the "xp" tag to the item.
 
 Please note that in both methods, you need to download the "my_xp_structure" structure file, which contains the XP orb from the button below.
 
