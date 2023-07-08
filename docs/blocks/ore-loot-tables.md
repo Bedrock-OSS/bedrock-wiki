@@ -147,7 +147,7 @@ To enable XP drops for non-experimental blocks in Minecraft, you can use either 
       "entries": [
         {
           "type": "item",
-          "name": "minecraft:barrier"  // Replace "minecraft:barrier" with a non-existing item ID
+          "name": "minecraft:barrier"  // Dummy Item
         }
       ]
     }
