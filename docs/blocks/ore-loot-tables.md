@@ -155,7 +155,7 @@ To enable XP drops for non-experimental blocks in Minecraft, you can use either 
 }
 ```
 
-In this case, we add a non-existing item called "minecraft:stone" as a dummy item to trigger the XP drop.
+In this case, we add an existing item called "minecraft:barrier" as a dummy item to trigger the XP drop, we can create a in-existing item if you want.
 
 2. Next, create a function to loop through and process the dropped items:
 
@@ -164,7 +164,7 @@ execute as @e[type=item,name="Barrier"] at @s run structure load my_xp_structure
 execute as @e[type=item,name="Barrier"] run kill @s
 ```
 
-This function will execute for any item entity with the tag "minecraft:stone" (our dummy item). It loads a structure called "my_xp_structure" at the item's location and then kills the item.
+This function will execute for any item entity with the name "Barrier" (our dummy item). It loads a structure called "my_xp_structure" at the item's location and then kills the item.
 
 ### Method 2: Function Loop
 
@@ -192,7 +192,7 @@ execute as @e[type=item,name="Raw Silver",tag=!xp] at @s run structure load my_x
 execute as @e[type=item,name="Raw Silver",tag=!xp] run tag @s add xp
 ```
 
-This function will execute for any item entity with the name ``"Raw Silver"``, which is ``wiki:raw_silver`` item ID that does not have the "xp" tag. It loads the "my_xp_structure" at the item's location and then adds the "xp" tag to the item.
+This function will execute for any item entity with the name "Raw Silver", which is ``wiki:raw_silver`` item ID that does not have the "xp" tag. It loads the "my_xp_structure" at the item's location and then adds the "xp" tag to the item.
 
 Please note that in both methods, you need to download the "my_xp_structure" structure file, which contains the XP orb from the button below.
 
@@ -201,7 +201,7 @@ Remember to replace the item IDs, tags, and other specific details according to 
 ## Download Structure
 
 <BButton
-  link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download
+  link="/assets/packs/tutorials/blocks/ore-loot-tables/my_xp_structure.mcstructure" download
   color=blue
 >Download MCSTRUCTURE</BButton>
 
