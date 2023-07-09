@@ -202,8 +202,7 @@ Remember to replace the item IDs, tags, and other specific details according to 
 
 <BButton
   link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download
-  color=blue
->Download MCSTRUCTURE</BButton>
+  color=blue>Download MCSTRUCTURE</BButton>
 
 ## Result
 
