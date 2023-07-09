@@ -188,20 +188,20 @@ This function will execute for any item entity with the name "Barrier" (our dumm
 2. Create a function to loop through and process the dropped items:
 
 ```
-execute as @e[type=item,name="Raw Silver",tag=!xp] at @s run structure load my_xp_structure ~~~
+execute as @e[type=item,name="Raw Silver",tag=!xp] at @s run structure load ore_xp_reward ~~~
 execute as @e[type=item,name="Raw Silver",tag=!xp] run tag @s add xp
 ```
 
 This function will execute for any item entity with the name "Raw Silver", which is ``wiki:raw_silver`` item ID that does not have the "xp" tag. It loads the "my_xp_structure" at the item's location and then adds the "xp" tag to the item.
 
-Please note that in both methods, you need to download the "my_xp_structure" structure file, which contains the XP orb from the button below.
+Please note that in both methods, you need to download the "ore_xp_reward" structure file, which contains the XP orb from the button below.
 
 Remember to replace the item IDs, tags, and other specific details according to your needs.
 
 ## Download Structure
 
 <BButton
-  link="/assets/packs/tutorials/blocks/ore-loot-tables/my_xp_structure.mcstructure" download
+  link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download
   color=blue
 >Download MCSTRUCTURE</BButton>
 
