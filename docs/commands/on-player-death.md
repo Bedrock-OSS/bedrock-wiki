@@ -16,25 +16,26 @@ tags:
 This system will run your desired commands on the event that a player dies.
 
 ## Setup
+The scoreboard alive must be initilaized for this to funtion. to initialize this automatically without the need to have a a player with command previlages, follow the process outlined in [on first world load](/commands/on-first-world-load).
 
-*To be typed in chat:*
+If you prefer to initialize manually this can be completed using the following command:
 
 `/scoreboard objectives add alive dummy`
 
 ## System
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/on_death.mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players set @a [scores={alive=!2}] alive 0
-/scoreboard players set @e [type=player] alive 1
+scoreboard players set @a [scores={alive=!2}] alive 0
+scoreboard players set @e [type=player] alive 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={alive=0}] run say I died
+execute as @a [scores={alive=0}] run say I died
 
 
-/scoreboard players set @a [scores={alive=0}] alive 2
+scoreboard players set @a [scores={alive=0}] alive 2
 ```
 
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
@@ -60,3 +61,33 @@ Just make sure to follow the given order and properly add the selector argument 
 
 - Now that dead players are 0 and alive players are 1 we can use this knowledge to run our desired commands on the dead players.
     - Keep in mind we need to set their score to 2 after or otherwise the commands will keep executing till they respawn.
+
+
+## Tick Json
+To get this funtion to run in a loop contuously it must be added to tick.json or a command block. Multiple files can  added to the tick.json by placing a ccommon after each string. See [Functions](/commands/mcfunctions#tick-json) for more details.
+
+<CodeHeader>BP/functions/tick.json</CodeHeader>
+```json
+{
+  "values": [
+    "on_death"
+  ]
+}
+```
+## Folder Structure
+The structure of this behavior pack would be as follows.
+
+## Folder Structure
+
+<FolderView
+	:paths="[
+    'BP',
+    'BP/functions',
+    'BP/pack_icon.png',
+    'BP/manifest.json',
+    'BP/functions/on_death.mcfunction',
+    'BP/functions/tick.json'
+]"
+></FolderView>
+## notes on Compatibbility
+The Scoreboard names (alive in this case) may end up being used by other people. appending and _ and a set of randomly generated characters after alive would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the .mcfunction files.

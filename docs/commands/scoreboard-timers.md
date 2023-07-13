@@ -30,8 +30,8 @@ It is recommended to use this system while working with command blocks, as well 
 <CodeHeader></CodeHeader>
 
 ```yaml
-/scoreboard objectives add ticks dummy
-/scoreboard objectives add events dummy
+scoreboard objectives add ticks dummy
+scoreboard objectives add events dummy
 ```
 
 Once you have created these two objectives, you will need to define the interval for each repeating event you need on your world in the `ticks` objective.
@@ -41,13 +41,13 @@ To do that, first you must know that **1 second is approximately 20 game ticks i
 
 ```yaml
 # 2h = 20(t) × 60(s) × 60(m) × 2(h) = 144000t
-/scoreboard players set 2h ticks 144000
+scoreboard players set 2h ticks 144000
 
 #10m = 20(t) × 60(s) × 10(m) = 12000t
-/scoreboard players set 10m ticks 12000
+scoreboard players set 10m ticks 12000
 
 #30s = 20(t) × 30(s) = 600t
-/scoreboard players set 30s ticks 600
+scoreboard players set 30s ticks 600
 ```
 We will now use this scoreboard data to make our timers function.
 
@@ -56,20 +56,20 @@ We will now use this scoreboard data to make our timers function.
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players add timer ticks 1
-/scoreboard players operation * events = timer ticks
+scoreboard players add timer ticks 1
+scoreboard players operation * events = timer ticks
 
 #Chat Message (every 2h)
-/scoreboard players operation chatMessage events %= 2h ticks
-/execute if score chatMessage events matches 0 run say Technoblade never dies!
+scoreboard players operation chatMessage events %= 2h ticks
+execute if score chatMessage events matches 0 run say Technoblade never dies!
 
 #Lag Clear (every 10m)
-/scoreboard players operation lagClear events %= 10m ticks
-/execute if score lagClear events matches 0 run function clear_lag
+scoreboard players operation lagClear events %= 10m ticks
+execute if score lagClear events matches 0 run function clear_lag
 
 #Speed Effect (every 30s)
-/scoreboard players operation speedEffect events %= 30s ticks
-/execute if score speedEffect events matches 0 run effect @a speed 10 2 true
+scoreboard players operation speedEffect events %= 30s ticks
+execute if score speedEffect events matches 0 run effect @a speed 10 2 true
 ```
 ![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
 
@@ -119,8 +119,8 @@ To limit how many times an event occurs, you will need to create a new objective
 <CodeHeader></CodeHeader>
 
 ```yaml
-/scoreboard objectives set chatMessage intervals 5
-/scoreboard objectives set speedEffect intervals 10
+scoreboard objectives set chatMessage intervals 5
+scoreboard objectives set speedEffect intervals 10
 ```
 
 Once you have done that, modify your system from above like so:
@@ -128,18 +128,18 @@ Once you have done that, modify your system from above like so:
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players add timer ticks 1
-/scoreboard players operation * events = timer ticks
+scoreboard players add timer ticks 1
+scoreboard players operation * events = timer ticks
 
 #Chat Message (every 10m)
-/scoreboard players operation chatMessage events %= 2h ticks
-/execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run say Technoblade never dies!
-/execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run scoreboard players remove chatMessage intervals 1
+scoreboard players operation chatMessage events %= 2h ticks
+execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run say Technoblade never dies!
+execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run scoreboard players remove chatMessage intervals 1
 
 #Speed Effect (every 30s)
-/scoreboard players operation speedEffect events %= 30s ticks
-/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
-/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
+scoreboard players operation speedEffect events %= 30s ticks
+execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
+execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
 ```
 ![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
 
@@ -150,10 +150,10 @@ To run commands during the timeframe between intervals for a particular system y
 
 ```yaml
 #Speed Effect (every 30s) + Particle (every tick)
-/scoreboard players operation speedEffect events %= 30s ticks
-/execute if score speedEffect intervals matches 1.. as @a at @s run particle minecraft:shulker_bullet ~~~
-/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
-/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
+scoreboard players operation speedEffect events %= 30s ticks
+execute if score speedEffect intervals matches 1.. as @a at @s run particle minecraft:shulker_bullet ~~~
+execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
+execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
 ```
 As shown in line 3; to run commands while the timer is running, all you need to do is remove the "if score" testing if the interval has been reached. And instead, only test if *any* interval is left, to run our commands.
 
@@ -175,25 +175,25 @@ Let's say we want to:
 
 ```yaml
 #Clock
-/scoreboard players add @e [name=station, scores={ticks=0..}] ticks 1
+scoreboard players add @e [name=station, scores={ticks=0..}] ticks 1
 
 #Executing Commands while timer is running
-/execute as @e [name=station, scores={ticks=0..}] at @s run particle minecraft:shulker_bullet ~~~
+execute as @e [name=station, scores={ticks=0..}] at @s run particle minecraft:shulker_bullet ~~~
 
 #Executing commands within a timeframe
-/execute as @e [name=station, scores={ticks=0..200}] at @s run particle minecraft:basic_flame_particle ~~~
+execute as @e [name=station, scores={ticks=0..200}] at @s run particle minecraft:basic_flame_particle ~~~
 
 #Executing commands at specific intervals
-/execute as @e [name=station, scores={ticks=3600}] at @s run playsound note.pling @a [r=10] 
+execute as @e [name=station, scores={ticks=3600}] at @s run playsound note.pling @a [r=10]
 
 #Stopping the timer
-/execute as @e [name=station] at @s if entity @e [family=pacified, r=10, c=1] run scoreboard players set @s ticks -1
+execute as @e [name=station] at @s if entity @e [family=pacified, r=10, c=1] run scoreboard players set @s ticks -1
 
 #Looping the timer
-/execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
+execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
 
 #End
-/kill @e [name=station, scores={ticks=6000}]
+kill @e [name=station, scores={ticks=6000}]
 ```
 ![commandBlockChain7](/assets/images/commands/commandBlockChain/7.png)
 
