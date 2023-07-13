@@ -29,7 +29,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | ---------- | -------------------------------------------------------------------- |
 | PHP        | [Still Active](#php)        : 5 < [Discontinued](#php-1)        : 36 |
 | Java       | [Still Active](#java)       : 4 < [Discontinued](#java-1)       : 14 |
-| JavaScript | [Still Active](#javascript) : 2 < [Discontinued](#javascript-1) : 5  |
+| JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | C++        | [Still Active](#c)          : 2 < [Discontinued](#c-3)          : 3  |
 | TypeScript | [Still Active](#typescript) : 2 < [Discontinued](#typescript-1) : 1  |
