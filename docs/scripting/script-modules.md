@@ -17,7 +17,7 @@ Script API has modules for developers to interact with Minecraft. Additionally, 
 
     | Module UUID                            | Versions                                         | Previous names                  | Release Version    |
     | -------------------------------------- | ------------------------------------------------ | ------------------------------- | ------------------ |
-    | `b26a4d4c-afdf-4690-88f8-931846312678` | `1.3.0-beta`, `1.2.0`, `1.1.0`, `1.0.0`, `0.1.0` | `Minecraft`, `mojang-minecraft` | `Beta 1.16.210.60` |
+    | `b26a4d4c-afdf-4690-88f8-931846312678` | `1.4.0-beta , 1.3.0`, `1.2.0`, `1.1.0`, `1.0.0`, `0.1.0` | `Minecraft`, `mojang-minecraft` | `Beta 1.16.210.60` |
 
 -   **`@minecraft/server-gametest`** - A module that provides a scaffolding toolset for you to build, test, and run your custom Add-ons and worlds.
 
@@ -66,7 +66,7 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
     **Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
     -   `@minecraft/server`:
-        -   `1.0.0`
+        -   [1.0.0](https://stirante.com/script/1.0.0/)
 
     **Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
 
@@ -93,22 +93,26 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
 
     -   New stable release in `@minecraft/server`:
 
-        -   Release stable version `1.1.0`
-        -   Incremented beta version to `1.2.0-beta`
+        -   Release stable version [1.1.0](https://stirante.com/script/1.1.0/)
+        -   Incremented beta version to [1.2.0-beta](https://stirante.com/script/1.2.0-beta.1.19.80-stable/index.html)
 
     -   New API modules: `@minecraft/server-editor` and `@minecraft/server-editor-bindings`
 
--   1.20.0+
+-   1.20.0
 
     -   New stable release in `@minecraft/server`:
 
-        -   Release stable version `1.2.0`
-        -   Incremented beta version to `1.3.0-beta`
+        -   Release stable version [1.2.0](https://stirante.com/script/1.2.0/)
+        -   Incremented beta version to [1.3.0-beta](https://stirante.com/script/1.3.0-beta.1.20.0-stable/index.html)
 
     -   New stable API module: `@minecraft/server-ui`.
 
         -   Release stable version `1.0.0`
         -   Incremented beta version to `1.1.0-beta`
+-   1.20.10+
+    -   New stable release in `@minecraft/server`:
+        -   Release stable version [1.3.0](https://stirante.com/script/1.3.0/)
+        -   Incremented beta version to [1.4.0-beta](https://stirante.com/script/1.4.0-beta.1.20.10-stable/index.html)
 
 As of release 1.19.30, you can also specify dependencies using the `module_name`:
 
@@ -121,7 +125,7 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 ```json
 {
 	"module_name": "@minecraft/server",
-	"version": "1.3.0-beta"
+	"version": "1.4.0-beta"
 }
 ```
 
