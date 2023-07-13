@@ -35,7 +35,7 @@ This page discusses basic block components. You can learn more about other block
 
 Block behaviors are structured similarly to entities: they contain a description and a list of components that defines the block's behavior.
 
-Unline entities, blocks do not have a resource definition other than in `RP/blocks.json`.
+Unlike entities, blocks do not have a resource definition other than in `RP/blocks.json`.
 
 <CodeHeader>BP/blocks/blockname.json</CodeHeader>
 
