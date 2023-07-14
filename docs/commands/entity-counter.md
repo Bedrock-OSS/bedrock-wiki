@@ -18,22 +18,23 @@ This system allows you to track how many players/entities are there on your worl
 > Note: you cannot track entities in unloaded chunks though players can still be tracked regardless.
 
 ## Setup
+The scoreboard alive must be initilaized for this to funtion. to initialize this automatically without the need to have a a player with command previlages, follow the process outlined in [on first world load](/commands/on-first-world-load).
 
-*To be typed in chat:*
+If you prefer to initialize manually this can be completed using the following command:
 
 `/scoreboard objectives add total dummy`
 
 ## System
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/entity_counter.mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players set onlinePlayers total 0
-/execute as @e [type=player] run scoreboard players add onlinePlayers total 1
+scoreboard players set onlinePlayers total 0
+execute as @e [type=player] run scoreboard players add onlinePlayers total 1
 
 #Your Commands Here (examples)
-/execute if score onlinePlayers total matches 4.. run title @a actionbar Enough players to start game.
-/execute if score onlinePlayers total matches ..3 run title @a actionbar Not enough players.
+execute if score onlinePlayers total matches 4.. run title @a actionbar Enough players to start game.
+execute if score onlinePlayers total matches ..3 run title @a actionbar Not enough players.
 ```
 ![commandBlockChain3](/assets/images/commands/commandBlockChain/3.png)
 
@@ -55,3 +56,33 @@ Now based on the values obtained we can use the `/execute if score` command to r
 - **` n.. `** any number n and above
 - **` ..n `** any number n and below
 - **` n1..n2 `** any number n1 to any number n2.
+
+## Tick Json
+To get this funtion to run in a loop contuously it must be added to tick.json or a command block. Multiple files can  added to the tick.json by placing a ccommon after each string. See [Functions](/commands/mcfunctions#tick-json) for more details.
+
+<CodeHeader>BP/functions/tick.json</CodeHeader>
+```json
+{
+  "values": [
+    "entity_counter"
+  ]
+}
+```
+## Folder Structure
+The structure of this behavior pack would be as follows.
+
+## Folder Structure
+
+<FolderView
+	:paths="[
+    'BP',
+    'BP/functions',
+    'BP/pack_icon.png',
+    'BP/manifest.json',
+    'BP/functions/entity_counter.mcfunction',
+    'BP/functions/tick.json'
+]"
+></FolderView>
+## notes on Compatibbility
+The Scoreboard names (onlinePlayers in this case) may end up being used by other people. appending and _ and a set of randomly generated characters after onlinePlayers would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the .mcfunction files.
+
