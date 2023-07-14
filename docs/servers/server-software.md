@@ -8,7 +8,7 @@ mentions:
     - Joemanasdawd
     - mdisprgrm
     - Superice666
-    - kotinash
+    - GreenFrogMCBE
     - KanadeDev
     - HUYDGD
     - TheItsNameless
@@ -73,7 +73,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### JavaScript
 
--   [GreenFrogMCBE](https://github.com/kotinash/GreenFrogMCBE)
+-   [GreenFrogMCBE](https://github.com/GreenFrogMCBE/GreenFrogMCBE)
 
 ### Rust
 
