@@ -37,7 +37,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:silver_ore",

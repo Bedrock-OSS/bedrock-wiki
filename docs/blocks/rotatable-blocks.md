@@ -12,9 +12,9 @@ mentions:
     - QuazChick
 ---
 
-::: tip
-The following tutorials assume a basic understanding of blocks.
-Check out the [blocks guide](/blocks/blocks-intro) before starting and ensure your block is using format versions `1.20.0`+.
+::: tip FORMAT VERSION `1.20.10`
+This tutorial assumes a basic understanding of blocks.
+Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ## Rotation Types
@@ -347,7 +347,7 @@ This example also requires `Holiday Creator Features` to use `minecraft:unit_cub
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_log",

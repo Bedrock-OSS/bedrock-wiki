@@ -41,7 +41,7 @@ Unlike entities, blocks do not have a resource definition other than in `RP/bloc
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_block",

@@ -8,9 +8,9 @@ mentions:
     - QuazChick
 ---
 
-::: tip
+::: tip FORMAT VERSION `1.20.10`
 This tutorial assumes an advanced understanding of blocks.
-Check out the [blocks guide](/blocks/blocks-intro) before starting and ensure your block is using format versions `1.19.80`+.
+Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ::: warning EXPERIMENTAL
@@ -191,7 +191,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",
@@ -200,7 +200,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
       }
     },
     "components": {
-      // `up` collision/selection boxes
+      // `up` face collision/selection boxes
       "minecraft:collision_box": {
         "origin": [-3, 0, -3],
         "size": [6, 3, 6]
@@ -209,21 +209,9 @@ Below is the base "shell" block we will be adding advanced rotation to.
         "origin": [-3, 0, -3],
         "size": [6, 3, 6]
       },
-      "minecraft:geometry": {
-        // Model made in previous step
-        "identifier": "geometry.shell",
-        // Ensure only `up_0` bone is visible on `up` face by default
-        "bone_visibility": {
-          "up_22_5": false,
-          "up_45": false,
-          "up_67_5": false,
-          "side": false
-        }
-      },
       "minecraft:material_instances": {
         "*": {
-          // Shortname defined in `RP/textures/terrain_texture.json`
-          "texture": "shell"
+          "texture": "shell" // Shortname defined in `RP/textures/terrain_texture.json`
         }
       },
       // Prevent block from being placed on `down` face
@@ -248,8 +236,10 @@ For head-like rotation, you need to add 2 states to your block:
   "description": {
     ...
     "traits": {
-      // Face block is placed on - `north` is default
-      "minecraft:placement_position": { "enabled_states": ["minecraft:block_face"] }
+      // Face block is placed on - default is `north`
+      "minecraft:placement_position": {
+        "enabled_states": ["minecraft:block_face"]
+      }
     },
     "properties": {
       // Specific rotation of block when placed on `up` face
@@ -342,86 +332,33 @@ Insert the following permutations into your block JSON (in the presented order):
 
 Not all bones in your model should be visible, so we make use of the bone visibility `minecraft:geometry` property to ensure that only the required bones are rendered. The reason behind having multiple bones is that `minecraft:transformation` only supports multiples of 90 degrees, while head rotation requires 22.5 degree steps.
 
-Add the following permutations (in order) to your block:
+Add the following component to your block:
 
 ```json
-"permutations": [
-  ...
-  {
-    "condition": "q.block_property('wiki:rotation') == 1 || q.block_property('wiki:rotation') == 5 || q.block_property('wiki:rotation') == 9 || q.block_property('wiki:rotation') == 13",
-    "components": {
-      "minecraft:geometry": {
-        "identifier": "geometry.shell",
-        // Ensure only `up_22_5` bone is visible
-        "bone_visibility": {
-          "up_0": false,
-          "up_45": false,
-          "up_67_5": false,
-          "side": false
-        }
-      }
-    }
-  },
-  {
-    "condition": "q.block_property('wiki:rotation') == 2 || q.block_property('wiki:rotation') == 6 || q.block_property('wiki:rotation') == 10 || q.block_property('wiki:rotation') == 14",
-    "components": {
-      "minecraft:geometry": {
-        "identifier": "geometry.shell",
-        // Ensure only `up_45` bone is visible
-        "bone_visibility": {
-          "up_0": false,
-          "up_22_5": false,
-          "up_67_5": false,
-          "side": false
-        }
-      }
-    }
-  },
-  {
-    "condition": "q.block_property('wiki:rotation') == 3 || q.block_property('wiki:rotation') == 7 || q.block_property('wiki:rotation') == 11 || q.block_property('wiki:rotation') == 15",
-    "components": {
-      "minecraft:geometry": {
-        "identifier": "geometry.shell",
-        // Ensure only `up_67_5` bone is visible
-        "bone_visibility": {
-          "up_0": false,
-          "up_22_5": false,
-          "up_45": false,
-          "side": false
-        }
-      }
-    }
-  },
-  {
-    "condition": "q.block_property('minecraft:block_face') != 'up'",
-    "components": {
-      "minecraft:geometry": {
-        "identifier": "geometry.shell",
-        // Ensure only `side` bone is visible
-        "bone_visibility": {
-          "up_0": false,
-          "up_22_5": false,
-          "up_45": false,
-          "up_67_5": false
-        }
-      }
+{
+  "minecraft:geometry": {
+    "identifier": "geometry.shell", // Model created in first step
+    "bone_visibility": {
+      "up_0": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation'), 4)",
+      "up_22_5": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 1, 4)",
+      "up_45": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 2, 4)",
+      "up_67_5": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 3, 4)",
+      "side": "q.block_property('minecraft:block_face') != 'up'"
     }
   }
-]
+}
 ```
 
 ## Collision/Selection Boxes
 
-If you would like your block to have a different collision/selection box when placed on the side of a block, as with my "shell" block, add something similar to the last permutation of your block:
+If you would like your block to have a different collision/selection box when placed on the side of a block, as with my "shell" block, add something similar to this permutation:
 
 ```json
 "permutations": [
   ...
   {
-    // Look for this condition:
     "condition": "q.block_property('minecraft:block_face') != 'up'",
     "components": {
-      ...
       // Add your collision/selection boxes
       "minecraft:collision_box": {
         "origin": [-3, 5, 5],
@@ -446,7 +383,7 @@ Our block JSON file after the above steps should look similar to the code below:
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",
@@ -454,7 +391,9 @@ Our block JSON file after the above steps should look similar to the code below:
         "category": "nature"
       },
       "traits": {
-        "minecraft:placement_position": { "enabled_states": ["minecraft:block_face"] }
+        "minecraft:placement_position": {
+          "enabled_states": ["minecraft:block_face"]
+        }
       },
       "properties": {
         "wiki:rotation": {
@@ -474,10 +413,11 @@ Our block JSON file after the above steps should look similar to the code below:
       "minecraft:geometry": {
         "identifier": "geometry.shell",
         "bone_visibility": {
-          "up_22_5": false,
-          "up_45": false,
-          "up_67_5": false,
-          "side": false
+          "up_0": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation'), 4)",
+          "up_22_5": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 1, 4)",
+          "up_45": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 2, 4)",
+          "up_67_5": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 3, 4)",
+          "side": "q.block_property('minecraft:block_face') != 'up'"
         }
       },
       "minecraft:material_instances": {
@@ -488,7 +428,7 @@ Our block JSON file after the above steps should look similar to the code below:
       "minecraft:placement_filter": {
         "conditions": [
           {
-             "allowed_faces": ["up", "side"]
+            "allowed_faces": ["up", "side"]
           }
         ]
       },
@@ -523,59 +463,8 @@ Our block JSON file after the above steps should look similar to the code below:
         }
       },
       {
-        "condition": "q.block_property('wiki:rotation') == 1 || q.block_property('wiki:rotation') == 5 || q.block_property('wiki:rotation') == 9 || q.block_property('wiki:rotation') == 13",
-        "components": {
-          "minecraft:geometry": {
-            "identifier": "geometry.shell",
-            "bone_visibility": {
-              "up_0": false,
-              "up_45": false,
-              "up_67_5": false,
-              "side": false
-            }
-          }
-        }
-      },
-      {
-        "condition": "q.block_property('wiki:rotation') == 2 || q.block_property('wiki:rotation') == 6 || q.block_property('wiki:rotation') == 10 || q.block_property('wiki:rotation') == 14",
-        "components": {
-          "minecraft:geometry": {
-            "identifier": "geometry.shell",
-            "bone_visibility": {
-              "up_0": false,
-              "up_22_5": false,
-              "up_67_5": false,
-              "side": false
-            }
-          }
-        }
-      },
-      {
-        "condition": "q.block_property('wiki:rotation') == 3 || q.block_property('wiki:rotation') == 7 || q.block_property('wiki:rotation') == 11 || q.block_property('wiki:rotation') == 15",
-        "components": {
-          "minecraft:geometry": {
-            "identifier": "geometry.shell",
-            "bone_visibility": {
-              "up_0": false,
-              "up_22_5": false,
-              "up_45": false,
-              "side": false
-            }
-          }
-        }
-      },
-      {
         "condition": "q.block_property('minecraft:block_face') != 'up'",
         "components": {
-          "minecraft:geometry": {
-            "identifier": "geometry.shell",
-            "bone_visibility": {
-              "up_0": false,
-              "up_22_5": false,
-              "up_45": false,
-              "up_67_5": false
-            }
-          },
           "minecraft:collision_box": {
             "origin": [-3, 5, 5],
             "size": [6, 6, 3]

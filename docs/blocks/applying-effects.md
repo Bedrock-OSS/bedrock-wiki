@@ -11,9 +11,9 @@ mentions:
     - QuazChick
 ---
 
-::: tip
-This tutorial assumes you have a basic understanding of blocks.
-Check out the [blocks guide](/blocks/blocks-intro) before starting and ensure your block is using format versions `1.20.0`+.
+::: tip FORMAT VERSION `1.20.10`
+This tutorial assumes a basic understanding of blocks.
+Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ::: warning EXPERIMENTAL
@@ -123,7 +123,7 @@ And done! The code above will trigger the desired status effect as long as the e
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:wither_block",
@@ -153,7 +153,6 @@ And done! The code above will trigger the desired status effect as long as the e
         "interval_range": [1, 1],
         "on_tick": {
           "event": "wiki:add_effect",
-          "target": "self",
           "condition": "q.block_property('wiki:stood_on')"
         }
       },

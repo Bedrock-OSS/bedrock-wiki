@@ -9,6 +9,7 @@ mention:
     - QuazChick
 ---
 
+
 Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.
 
 By the end you should be able to create something like this!
@@ -17,13 +18,18 @@ By the end you should be able to create something like this!
 
 ## Basic Glass
 
+::: tip FORMAT VERSION `1.20.10`
+This example requires basic knowledge of blocks to understand.
+Check out [block features](/blocks/blocks-stable) before starting.
+:::
+
 This will create a custom glass block which appears the same as vanilla glass blocks!
 
 <CodeHeader>BP/blocks/custom_glass.json</CodeHeader>
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_glass",
@@ -57,9 +63,9 @@ This will create a custom glass block which appears the same as vanilla glass bl
 
 ## Vertically-Connecting Glass
 
-::: tip
+::: tip FORMAT VERSION `1.20.10`
 This example requires advanced knowledge of blocks and Molang to understand.
-Check out the [blocks guide](/blocks/blocks-intro) before starting and ensure your block is using format versions `1.19.80`+.
+Check out [block features](/blocks/blocks-stable) and [Molang](/concepts/molang) before starting.
 :::
 
 ::: warning EXPERIMENTAL
@@ -73,7 +79,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
 ```json
 // Add a "nothing" texture in terrain_texture, and make it have a transparent file
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_vertical_connecting_glass",
