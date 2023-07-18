@@ -12,24 +12,32 @@ mentions:
     - SirLich
     - TheItsNameless
     - QuazChick
+    - Keyyard
 ---
 
-## Features
+::: tip FORMAT VERSION `1.20.10`
+This tutorial assumes a basic understanding of blocks.
+Check out the [blocks guide](/blocks/blocks-intro) before starting.
+:::
+
+::: warning EXPERIMENTAL
+Requires `Holiday Creator Features` to trigger events.
+:::
 
 This tutorial aims to show a new way of creating custom ore blocks with a proper loot table. The `minecraft:loot` component will run the specified loot table regardless of the tool used, but by adding the `match_tool` condition to your loot table you can specify what tools are required per pool.
 
-Features:
+- Features:
 
--   Can be mined using any given item (this tutorial covers the iron pickaxe)
--   Can specify enchantments on items
--   Also drops experience reward
+  -   Can be mined using any given item (this tutorial covers the iron pickaxe)
+  -   Can specify enchantments on items
+  -   Also drops experience reward
 
-Issues:
+- Issues:
 
--   All items must be specified individually
--   Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
+  -   All items must be specified individually
+  -   Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
 
-## Block Behavior
+## Block JSON
 
 The following block behavior can be used as a template. Don't forget to set the block's texture using `terrain_texture.json`.
 
@@ -120,6 +128,82 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
   }
 ]
 ```
+
+## Non-Experimental Methods
+
+Rather than triggering a block event to summon reward experience, you could use one of the methods described below.
+
+Please note that you need to download the "ore_xp_reward" structure file, which contains the XP orbs, from the [here](#download-structure).
+
+### Method 1: Dummy Items and Function Loop
+
+**Step 1**: Create a loot table for the block you want to drop XP. Let's drop the "minecraft:redstone" block as an example:
+
+```json
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:redstone"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:barrier" // Dummy Item
+        }
+      ]
+    }
+  ]
+}
+```
+
+In this case, we add an existing item called "minecraft:barrier" as a dummy item to trigger the XP drop. Alternatively, you could create a new item to use as a dummy if you want.
+
+**Step 2**: Create a looping function to process the dropped items. This function should also be defined in a `BP/functions/tick.json` file to trigger it each tick.
+
+```
+execute as @e[type=item, name="Barrier"] at @s run structure load ore_xp_reward ~~~
+execute as @e[type=item, name="Barrier"] run kill
+```
+
+This function will execute for any item entity with the name "Barrier" (our dummy item). It loads the "ore_xp_reward" structure at the item's location and then kills the item.
+
+### Method 2: Function Loop Only
+
+**Step 1**: Create a loot table for the block you want to drop XP, similar to the previous method. For example, let's use a "wiki:raw_silver" block:
+
+```json
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "item",
+          "name": "wiki:raw_silver"
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Step 2**: Create a looping function to process the dropped items. This function should also be defined in a `BP/functions/tick.json` file to trigger it each tick.
+
+```
+execute as @e[type=item, name="Raw Silver", tag=!xp] at @s run structure load ore_xp_reward ~~~
+execute as @e[type=item, name="Raw Silver", tag=!xp] run tag @s add xp
+```
+
+This function will execute for any item entity with the name "Raw Silver", which does not have the "xp" tag. It loads the "ore_xp_reward" at the item's location and then adds the "xp" tag to the item.
+
+Remember to replace the item IDs, tags, and other specific details according to your needs.
 
 ## Download Structure
 
