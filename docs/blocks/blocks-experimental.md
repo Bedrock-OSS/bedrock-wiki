@@ -341,8 +341,8 @@ Or...
     "run_command": {
       "target": "self", // Optional - 'self' is default (targets block)
       "command": [
-          "summon pig",
-          "say Everybody welcome the pig!"
+        "summon pig",
+        "say Everybody welcome the pig!"
       ]
     }
   }
@@ -470,11 +470,13 @@ Teleport a target randomly around a destination point.
 ```json
 {
   "wiki:go_away": {
-    "target": "other", // Teleporting entity
-    "avoid_water": true, // Avoid teleporting into water
-    "land_on_block": true, // Place target on block
-    "destination": [0, 0, 0], // Origin destination
-    "max_range": [5, 6, 7] // Maximum offsets from the origin destination
+    "teleport": {
+      "target": "other", // Teleporting entity
+      "avoid_water": true, // Avoid teleporting into water
+      "land_on_block": true, // Place target on block
+      "destination": [0, 0, 0], // Origin destination
+      "max_range": [5, 6, 7] // Maximum offsets from the origin destination
+    }
   }
 }
 ```
@@ -487,8 +489,10 @@ Replace the target's selected item.
 
 ```json
 {
-  "transform_item":{
-    "transform" : "iron_sword"
+  "wiki:replace": {
+    "transform_item":{
+      "transform" : "iron_sword"
+    }
   }
 }
 ```
@@ -501,9 +505,11 @@ Trigger an event on a specified target.
 
 ```json
 {
-  "trigger":{
-    "event" : "wiki:crack",
-    "target": "self"
+  "wiki:trigger_crack": {
+    "trigger":{
+      "event" : "wiki:crack",
+      "target": "self"
+    }
   }
 }
 ```
