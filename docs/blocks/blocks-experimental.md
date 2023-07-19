@@ -490,8 +490,8 @@ Replace the target's selected item.
 ```json
 {
   "wiki:replace": {
-    "transform_item":{
-      "transform" : "iron_sword"
+    "transform_item": {
+      "transform": "iron_sword"
     }
   }
 }
@@ -506,8 +506,8 @@ Trigger an event on a specified target.
 ```json
 {
   "wiki:trigger_crack": {
-    "trigger":{
-      "event" : "wiki:crack",
+    "trigger": {
+      "event": "wiki:crack",
       "target": "self"
     }
   }

@@ -139,7 +139,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.50
 
 ```json
 {
-  "minecraft:collision_box":{
+  "minecraft:collision_box": {
     "origin": [-8, 0, -8],
     "size": [16, 16, 16]
   }
