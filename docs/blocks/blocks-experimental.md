@@ -493,6 +493,21 @@ Replace the target's selected item.
 }
 ```
 
+### trigger
+
+Trigger an event on a specified target.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "trigger":{
+    "event" : "wiki:crack",
+    "target": "self"
+  }
+}
+```
+
 ## Triggering Events
 
 The following event trigger components can be used to run events:
