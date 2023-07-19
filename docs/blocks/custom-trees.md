@@ -1,6 +1,6 @@
 ---
 title: Custom Trees
-category: Vanilla Recreations
+category: Vanilla Re-Creations
 tags:
     - experimental
 mention:

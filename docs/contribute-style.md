@@ -48,7 +48,7 @@ List of categories:
 -   Extra
 -   General
 -   Tutorials
--   Vanilla Recreations
+-   Vanilla Re-Creations
 -   Documentation
 -   Commands
 -   On Event Systems

@@ -1,6 +1,6 @@
 ---
 title: Custom Glass
-category: Vanilla Recreations
+category: Vanilla Re-Creations
 tags:
     - experimental
     - expert

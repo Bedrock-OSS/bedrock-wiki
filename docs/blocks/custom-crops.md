@@ -1,6 +1,6 @@
 ---
 title: Custom Crops
-category: Vanilla Recreations
+category: Vanilla Re-Creations
 tags:
     - experimental
     - easy

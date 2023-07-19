@@ -5,7 +5,7 @@ categories:
       color: blue
     - title: Tutorials
       color: green
-    - title: Vanilla Recreations
+    - title: Vanilla Re-Creations
       color: orange
     - title: Documentation
       color: red
