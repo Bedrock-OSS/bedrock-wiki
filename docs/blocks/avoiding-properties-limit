@@ -14,9 +14,6 @@ This method simply combines two or more properties in order to re-use them and r
 
 ## The logic:
 What your code will do going of by the example above is the following;
-
-<CodeHeader>Example</CodeHeader>
-
 ```
 1 & 1 = A   1 & 5 = E   1 & 9 =  I   1 & 13 = M
 1 & 2 = B   1 & 6 = F   1 & 10 = J
@@ -24,9 +21,6 @@ What your code will do going of by the example above is the following;
 1 & 4 = D   1 & 8 = H   1 & 12 = L
 ```
 And then;
-
-<CodeHeader>Example</CodeHeader>
-
 ```
 2 & 1 = N   2 & 5 = R   2 & 9 =  V   2 & 13 = Z
 2 & 2 = O   2 & 6 = S   2 & 10 = W
