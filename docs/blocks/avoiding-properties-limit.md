@@ -1,16 +1,18 @@
 ---
-title: Avoiding Properties limit
+title: Avoiding Properties Limit
+category: Tutorials
 tags:
     - guide
+    - advanced
 mentions:
     - Kaioga5
 ---
 
 ## Introduction:
-As you may know, block properties have a limit of 64 that you cannot exceed. This is very frustrating when creating new blocks, so I will explain you how you can avoid reaching this limit. Please note that you are not going to have more than 64 properties, however the results you'll get using this method will be equal to that!
+As you may know, block properties have a total limit of 64 values (16 maximum per property) that you cannot exceed. This is very frustrating when creating new blocks, so I will explain you how you can avoid reaching this limit. Please note that you are not going to have more than 64 properties, however the results you'll get using this method will be equal to that!
 
 ## How it works:
-This method simply combines two or more properties in order to re-use them and read them either in permutations or conditions. For example, let's say you want to have a block with the English Alphabet letters. You'll need 26 properties for that, right? Well, with combinations you need way less! For the sake of simplicity, let's just use 15.
+This method simply combines two or more properties in order to re-use them and read them either in permutations or conditions. For example, let's say you want to have a block with the English Alphabet letters. You'll need 26 property values for that, right? Well, with combinations you need way less! For the sake of simplicity, let's just use 15 property values.
 
 ## The logic:
 What your code will do going of by the example above is the following;
@@ -28,7 +30,7 @@ And then;
 2 & 4 = Q   2 & 8 = U   2 & 12 = Y
 ```
 
-You see how you get the same results as using 26 properties with just 15? And it can even be less if you combine more than two digits! With just 16 properties and using 5 values for combinations, you can read up to 4368 properties... crazy right?
+You see how you get the same results as using 26 property values with just 15? And it can even be less if you combine more than two digits! With just 16 property values in one of your properties and using 5 values in a second property for combinations, you can read up to 4368 property values... crazy right?
 
 ## How will it look like:
 Using the example above as reference, your properties would look like this;
