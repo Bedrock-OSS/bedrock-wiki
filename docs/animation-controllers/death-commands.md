@@ -95,23 +95,23 @@ Requires Experimental
 You can also use the `minecraft:on_death` component in your `entity.json` file in the Behavior Pack, which is a fairly easy way to accomplish a command on death.
 
 You first add it to your components and make it run an event on self;
-```
+```json
 "minecraft:on_death" : {
-          "event" : "wiki:on_death",
-          "target" : "self"
-           }
+	"event" : "wiki:on_death",
+	"target" : "self"
+}
 ```
 
 And then, in your events section you add the event;
 
-```
+```json
 "wiki:on_death": {
-            "run_command": {
-                "command": [
-                    "say I have died!"
-                ]
-            }
-        }
+	"run_command": {
+		"command": [
+			"say I have died!"
+		]
+	}
+}
 ```
 
 :::tip
