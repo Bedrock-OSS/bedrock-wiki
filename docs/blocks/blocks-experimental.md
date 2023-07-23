@@ -84,8 +84,8 @@ Contains information about the player's rotation when the block was placed.
 
 | State                          | Values                                                                           | Description                                      |
 | ------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| `minecraft:cardinal_direction` | `"north"` _(default)_<br>`"south"`<br>`"west"` <br>`"east"`                      | Cardinal facing direction of player when placed. |
-| `minecraft:facing_direction`   | `"down"`<br>`"up"`<br>`"north"` _(default)_<br>`"south"`<br>`"west"`<br>`"east"` | Overall direction of player when placed.         |
+| `minecraft:cardinal_direction` | `"north"`<br>`"south"` _(default)_<br>`"west"` <br>`"east"`                      | Cardinal facing direction of player when placed. |
+| `minecraft:facing_direction`   | `"down"` _(default)_<br>`"up"`<br>`"north"`<br>`"south"`<br>`"west"`<br>`"east"` | Overall direction of player when placed.         |
 
 <br>
 
@@ -101,7 +101,7 @@ Contains information about where the player placed the block.
 
 | State                     | Values                                                                           | Description                                   |
 | ------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------- |
-| `minecraft:block_face`    | `"down"`<br>`"up"`<br>`"north"` _(default)_<br>`"south"`<br>`"west"`<br>`"east"` | Face on which the block was placed.           |
+| `minecraft:block_face`    | `"down"` _(default)_<br>`"up"`<br>`"north"`<br>`"south"`<br>`"west"`<br>`"east"` | Face on which the block was placed.           |
 | `minecraft:vertical_half` | `"top"`<br>`"bottom"` _(default)_                                                | The vertical half where the block was placed. |
 
 <br>
