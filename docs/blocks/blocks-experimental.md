@@ -21,11 +21,17 @@ mentions:
     - QuazChick
 ---
 
-Documentation on block features which require experiments to function.
+:::tip FORMAT VERSION `1.20.10`
 
-:::warning
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information on custom blocks, and currently targets format version `1.20.10`.
+:::
+
+:::warning EXPERIMENTAL
 This document covers experimental features for blocks. If you would like to learn about stable blocks, you can do so [here](/blocks/blocks-stable).
 :::
+
+Documentation on block features which require experiments to function.
+
 
 ## Block Traits
 
@@ -35,11 +41,17 @@ Block traits require the `Upcoming Creator Features` experiment to be enabled.
 
 Block traits can be used to apply vanilla block states (such as direction) to your custom blocks easily, without the need for events and triggers.
 
+**Permutations are still required for this state to make a functional difference, e.g. by using the `minecraft:transformation` component with conditions querying**
+
+```c
+q.block_property('minecraft:facing_direction')
+```
+
 <CodeHeader></CodeHeader>
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:directional_example",
@@ -50,19 +62,14 @@ Block traits can be used to apply vanilla block states (such as direction) to yo
         }
       }
     },
-    "components": {...},
-    "permutations": [...]
+    "components": { ... },
+    "permutations": [ ... ]
   }
 }
 ```
 
 _This example will set the `minecraft:facing_direction` block state when placed to either `'down'`, `'up'`, `'north'`, `'south'`, `'east'` or `'west'` - depending on where the player is facing._
 
-**Permutations are still required for this state to make a functional difference, e.g. by using the `minecraft:transformation` component with conditions querying**
-
-```c
-q.block_property('minecraft:facing_direction')
-```
 
 ### Available Block Traits
 
@@ -73,14 +80,16 @@ q.block_property('minecraft:facing_direction')
 
 Contains information about the player's rotation when the block was placed.
 
-#### May enable the following states
+**May enable the following states:**
 
 | State                          | Values                                                                           | Description                                      |
 | ------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| `minecraft:cardinal_direction` | `"north"` _(default)_<br>`"south"`<br>`"west"` <br>`"east"`                      | Cardinal facing direction of player when placed. |
-| `minecraft:facing_direction`   | `"down"`<br>`"up"`<br>`"north"` _(default)_<br>`"south"`<br>`"west"`<br>`"east"` | Overall direction of player when placed.         |
+| `minecraft:cardinal_direction` | `"north"`<br>`"south"` _(default)_<br>`"west"` <br>`"east"`                      | Cardinal facing direction of player when placed. |
+| `minecraft:facing_direction`   | `"down"` _(default)_<br>`"up"`<br>`"north"`<br>`"south"`<br>`"west"`<br>`"east"` | Overall direction of player when placed.         |
 
-#### Additional properties
+<br>
+
+**Additional properties:**
 
 -   `y_rotation_offset` - This rotation offset only applies to the horizontal state values (north, south, east, west) . Only axis-aligned angles may be specified (e.g. 90, 180, -90).
 
@@ -88,16 +97,16 @@ Contains information about the player's rotation when the block was placed.
 
 Contains information about where the player placed the block.
 
-#### May enable the following states
+**May enable the following states:**
 
 | State                     | Values                                                                           | Description                                   |
 | ------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------- |
-| `minecraft:block_face`    | `"down"`<br>`"up"`<br>`"north"` _(default)_<br>`"south"`<br>`"west"`<br>`"east"` | Face on which the block was placed.           |
+| `minecraft:block_face`    | `"down"` _(default)_<br>`"up"`<br>`"north"`<br>`"south"`<br>`"west"`<br>`"east"` | Face on which the block was placed.           |
 | `minecraft:vertical_half` | `"top"`<br>`"bottom"` _(default)_                                                | The vertical half where the block was placed. |
 
 <br>
 
-_This trait has no additional properties._
+**_This trait has no additional properties._**
 
 ## Block Events
 
@@ -109,7 +118,7 @@ Block events require the `Holiday Creator Features` experiment to be enabled.
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     ...
     "components": {
@@ -191,21 +200,23 @@ Inflicts a specified damage unto a target in context.
 
 ### decrement_stack
 
-Decrements the player's current item stack.
+Removes one item from the player's selected stack.
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
   "wiki:remove_one": {
-    "decrement_stack": {}
+    "decrement_stack": {
+      "ignore_game_mode": true // Optional - Should this affect creative mode players (default is false)
+    }
   }
 }
 ```
 
 ### die
 
-Kills the specified target in context, making the block dissapear with no loot. (Destroying the block, if specified).
+Kills the specified target, making the block disappear with no loot or effects if `self` is the target.
 
 <CodeHeader></CodeHeader>
 
@@ -330,8 +341,8 @@ Or...
     "run_command": {
       "target": "self", // Optional - 'self' is default (targets block)
       "command": [
-          "summon pig",
-          "say Everybody welcome the pig!"
+        "summon pig",
+        "say Everybody welcome the pig!"
       ]
     }
   }
@@ -459,23 +470,46 @@ Teleport a target randomly around a destination point.
 ```json
 {
   "wiki:go_away": {
-    "target": "other", // Teleporting entity
-    "avoid_water": true, // Avoid teleporting into water
-    "land_on_block": true, // Place target on block
-    "destination": [0, 0, 0], // Origin destination
-    "max_range": [5, 6, 7] // Maximum offsets from the origin destination
+    "teleport": {
+      "target": "other", // Teleporting entity
+      "avoid_water": true, // Avoid teleporting into water
+      "land_on_block": true, // Place target on block
+      "destination": [0, 0, 0], // Origin destination
+      "max_range": [5, 6, 7] // Maximum offsets from the origin destination
+    }
   }
 }
 ```
 
 ### transform_item
 
+Replace the target's selected item.
+
 <CodeHeader></CodeHeader>
 
 ```json
 {
-  "transform_item":{
-    "transform" : "iron_sword"
+  "wiki:replace": {
+    "transform_item": {
+      "transform": "iron_sword"
+    }
+  }
+}
+```
+
+### trigger
+
+Trigger an event on a specified target.
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+  "wiki:trigger_crack": {
+    "trigger": {
+      "event": "wiki:crack",
+      "target": "self"
+    }
   }
 }
 ```

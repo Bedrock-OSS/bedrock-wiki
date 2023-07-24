@@ -7,13 +7,14 @@ mentions:
     - QuazChick
 ---
 
-Documentation of all stable features of blocks.
+:::tip FORMAT VERSION `1.20.10`
+
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information on custom blocks, and currently targets format version `1.20.10`.
+:::
+
+Documentation of all stable features of blocks. For a list of experimental block features, visit [here](/blocks/blocks-experimental).
 
 **Note**: Vanilla blocks are hard-coded. You may not override or access them.
-
-:::tip
-For a list of experimental block features, visit [here](/blocks/blocks-experimental).
-:::
 
 ## Block Properties
 
@@ -27,13 +28,13 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_block",
       "properties": {
         "wiki:string_property_example": ["red", "green", "blue"],
-        "wiki:boolean_property_example": [true, false],
+        "wiki:boolean_property_example": [false, true],
         "wiki:integer_property_example": [1, 2, 3],
         "wiki:integer_range_property_example": {
           "values": { "min": 0, "max": 5 }
@@ -66,7 +67,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_block",
@@ -138,7 +139,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.50
 
 ```json
 {
-  "minecraft:collision_box":{
+  "minecraft:collision_box": {
     "origin": [-8, 0, -8],
     "size": [16, 16, 16]
   }
@@ -308,7 +309,13 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.40
 }
 ```
 
-Or hide specific bones:
+---
+
+**Bone Visibility**
+
+Hide direct child cubes of bones in your model.
+
+*Molang supported in `bone_visibility` for format versions 1.20.10 and higher.*
 
 <CodeHeader></CodeHeader>
 
@@ -317,8 +324,9 @@ Or hide specific bones:
   "minecraft:geometry": {
     "identifier": "geometry.example_block", // Geometry identifier from file in 'RP/models/entity' or 'RP/models/blocks' folder.
     "bone_visibility": {
-      "wiki_bone": false,
-      "another_bone": true // true is the default - has no effect.
+      "wiki_bone": false, // Hide cubes in this bone
+      "conditional_bone": "q.block_property('wiki:example_property') == 3", // Molang expressions can conditionally set visibility
+      "another_bone": true // true is the default so has no effect.
     }
   }
 }
@@ -450,7 +458,7 @@ Or...
 ```
 
 :::tip
-You need to add the material instance to any face of a cube within Blockbench by right-clicking on a cube and opening its `Material Instances`.
+Material instance names can be defined on the face of any cube within Blockbench by right-clicking on a cube and opening its `Material Instances`.
 :::
 
 ### minecraft:placement_filter

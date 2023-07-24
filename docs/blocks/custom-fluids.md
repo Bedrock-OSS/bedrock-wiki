@@ -1,6 +1,6 @@
 ---
 title: Custom Fluids
-category: Vanilla Recreations
+category: Vanilla Re-Creations
 tags:
     - experimental
     - intermediate
@@ -10,9 +10,9 @@ mentions:
     - QuazChick
 ---
 
-::: tip
+::: tip FORMAT VERSION `1.20.10`
 This tutorial assumes an advanced understanding of blocks and the execute command.
-Check out the [blocks guide](/blocks/blocks-intro) before starting.
+Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ::: warning EXPERIMENTAL
@@ -57,7 +57,7 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_fluid",
@@ -107,10 +107,10 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
             "condition": "q.block_property('wiki:depth') == 4",
             "run_command": {
               "command": [
-                "execute if block ~~~1 air run setblock ~~~1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
-                "execute if block ~~~-1 air run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
-                "execute if block ~1~~ air run setblock ~1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
-                "execute if block ~-1~~ air run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]"
+                "execute if block ~~~1 air run setblock ~~~1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]",
+                "execute if block ~~~-1 air run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]",
+                "execute if block ~1~~ air run setblock ~1~~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]",
+                "execute if block ~-1~~ air run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]"
               ]
             }
           },
@@ -130,10 +130,10 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
             "condition": "q.block_property('wiki:depth') == 3",
             "run_command": {
               "command": [
-                "execute if block ~~~1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":2]",
-                "execute if block ~~~-1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":2]",
-                "execute if block ~1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":2]",
-                "execute if block ~-1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":2]"
+                "execute if block ~~~1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=2]",
+                "execute if block ~~~-1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=2]",
+                "execute if block ~1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~1~~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=2]",
+                "execute if block ~-1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=2]"
               ]
             }
           },
@@ -141,10 +141,10 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
             "condition": "q.block_property('wiki:depth') == 2",
             "run_command": {
               "command": [
-                "execute if block ~~~1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":1]",
-                "execute if block ~~~-1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":1]",
-                "execute if block ~1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":1]",
-                "execute if block ~-1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":1]"
+                "execute if block ~~~1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=1]",
+                "execute if block ~~~-1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=1]",
+                "execute if block ~1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~1~~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=1]",
+                "execute if block ~-1~~ air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=1]"
               ]
             }
           },
@@ -152,26 +152,26 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
             "condition": "q.block_property('wiki:depth') == 5 && q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
             "run_command": {
               "command": [
-                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\":3] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]",
-                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\":2] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]",
-                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\":1] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]",
-                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~1~~ air run setblock ~1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
-                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~~~1 air run setblock ~~~1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
-                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~-1~~ air run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]",
-                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~~~-1 air run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":3]"
+                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\"=3] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=5]",
+                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\"=2] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=5]",
+                "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\"=1] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=5]",
+                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~1~~ air run setblock ~1~~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]",
+                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~~~1 air run setblock ~~~1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]",
+                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~-1~~ air run setblock ~-1~~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]",
+                "execute unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid if block ~~~-1 air run setblock ~~~-1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]"
               ]
             }
           },
           // Fall
           {
             "run_command": {
-              "command": "execute if block ~~-1~ air run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]"
+              "command": "execute if block ~~-1~ air run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=5]"
             }
           },
           {
             "condition": "q.block_neighbor_has_any_tag(0, -1, 0, 'flowing_custom_fluid')",
             "run_command": {
-              "command": "setblock ~~-1~ wiki:custom_fluid [\"wiki:source\":false,\"wiki:depth\":5]"
+              "command": "setblock ~~-1~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=5]"
             }
           }
         ]
@@ -256,7 +256,7 @@ To place your custom fluid you need a custom bucket item. Below is the JSON for 
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_fluid_bucket",
@@ -298,7 +298,7 @@ The fluids use a script to add the ability for the player to float/sink in the f
   "dependencies": [
     {
       "module_name": "@minecraft/server",
-      "version": "1.3.0-beta"
+      "version": "1.4.0-beta"
     }
   ]
 }
@@ -322,8 +322,9 @@ system.runInterval(() => {
       fluids.includes(world.getDimension(player.dimension.id).getBlock({ ...player.location, y: player.location.y + 1 }).typeId) ||
       fluids.includes(world.getDimension(player.dimension.id).getBlock(player.location).typeId)
     ) {
-      player.addEffect("slow_falling", 4, { amplifier: player.isSneaking ? 1 : 2, showParticles: false });
-      if (player.isJumping) { // NOTE: This only takes effect in v1.20.10+ with module version 1.4.0-beta
+      player.addEffect("slowness", 1, { amplifier: 2, showParticles: false });
+      player.addEffect("slow_falling", 4, { showParticles: false });
+      if (player.isJumping) {
         player.addEffect("levitation", 3, { amplifier: 2, showParticles: false });
       }
     }

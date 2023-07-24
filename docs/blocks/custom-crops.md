@@ -1,6 +1,6 @@
 ---
 title: Custom Crops
-category: Vanilla Recreations
+category: Vanilla Re-Creations
 tags:
     - experimental
     - easy
@@ -11,9 +11,9 @@ mentions:
     - QuazChick
 ---
 
-::: tip
-This tutorial assumes you have a basic understanding of blocks.
-Check out the [blocks guide](/blocks/blocks-intro) before starting.
+::: tip FORMAT VERSION `1.20.10`
+This tutorial assumes a basic understanding of blocks.
+Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ::: warning EXPERIMENTAL
@@ -36,7 +36,7 @@ Add the `minecraft:is_hoe` or `minecraft:is_shovel` item tags to any custom tool
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_dirt",
@@ -248,7 +248,7 @@ Here is the full `wiki:custom_farmland` json for reference.
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_farmland",
@@ -361,7 +361,7 @@ To start with, we want our crops to have 4 stages of growth, so the crop should 
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_crop",
@@ -569,7 +569,7 @@ Here is the entire `wiki:custom_crop` file for reference.
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_crop",
@@ -757,7 +757,7 @@ Below are some example loot tables that your custom crop could use:
 {
   "pools": [
     {
-      "rolls": 2,
+      "rolls": 1,
       "entries": [
         {
           "type": "item",
@@ -793,7 +793,7 @@ Holding a crop block in your hand wouldn't look right, so we place the crop with
 
 ```json
 {
-  "format_version": "1.19.60",
+  "format_version": "1.20.10",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_seeds" // Make sure this is different from your crop's ID
@@ -822,7 +822,7 @@ Your crop can't only drop seeds! Create a custom food using the template below.
 
 ```json
 {
-  "format_version": "1.19.60",
+  "format_version": "1.20.10",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_food" // Make sure this is different from your crop and food's ID

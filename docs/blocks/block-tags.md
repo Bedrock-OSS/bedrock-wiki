@@ -26,7 +26,7 @@ Block tags can be applied exactly as items, as seen below:
 
 ```json
 {
-	"format_version": "1.20.0",
+	"format_version": "1.20.10",
 	"minecraft:block": {
 		"description": {
 			"identifier": "wiki:tree_stump"

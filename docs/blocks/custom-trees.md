@@ -1,6 +1,6 @@
 ---
 title: Custom Trees
-category: Vanilla Recreations
+category: Vanilla Re-Creations
 tags:
     - experimental
 mention:
@@ -9,9 +9,9 @@ mention:
     - QuazChick
 ---
 
-::: tip
+::: tip FORMAT VERSION `1.20.10`
 This tutorial assumes an advanced understanding of blocks.
-Check out the [blocks guide](/blocks/blocks-intro) before starting.
+Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ::: warning EXPERIMENTAL
@@ -52,7 +52,7 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_leaves",
@@ -215,7 +215,7 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_log",
@@ -277,19 +277,19 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
           {
             "condition": "q.block_property('wiki:axis') == 0",
             "run_command": {
-              "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\":0]"
+              "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\"=0]"
             }
           },
           {
             "condition": "q.block_property('wiki:axis') == 1",
             "run_command": {
-              "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\":1]"
+              "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\"=1]"
             }
           },
           {
             "condition": "q.block_property('wiki:axis') == 2",
             "run_command": {
-              "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\":2]"
+              "command": "setblock ~~~ wiki:custom_stripped_log [\"wiki:axis\"=2]"
             }
           }
         ]
@@ -332,7 +332,7 @@ Here all components are the same
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_stripped_log",
@@ -409,7 +409,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_sapling",
@@ -501,11 +501,10 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.20.10",
   "minecraft:item": {
     "description": {
-      "identifier": "wiki:custom_sapling_placer",
-      "category": "nature"
+      "identifier": "wiki:custom_sapling_placer"
     },
     "components": {
       "minecraft:creative_category": {

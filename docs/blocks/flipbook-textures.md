@@ -72,14 +72,14 @@ After making block have animated texture, it is time to figure out how it all wo
 
 ```json
 {
-    "num_mip_levels" : 4,
-    "padding" : 8,
-    "resource_pack_name" : "vanilla",
-    "texture_data" : {
-        "magma": {
-            "textures": "textures/blocks/magma"
-        }
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "magma": {
+      "textures": "textures/blocks/magma"
     }
+  }
 }
 ```
 
@@ -129,11 +129,11 @@ Example:
 <CodeHeader>RP/textures/terrain_texture.json#texture_data</CodeHeader>
 
 ```json
-"dirt" : {
-    "textures" : [
-        "textures/blocks/dirt",
-        "textures/blocks/coarse_dirt" //imagine if this is the path you wanted to animate
-    ]
+"dirt": {
+  "textures": [
+    "textures/blocks/dirt",
+    "textures/blocks/coarse_dirt" // Imagine that this is the path you want to animate
+  ]
 }
 ```
 
@@ -148,16 +148,16 @@ Example:
 <CodeHeader>RP/textures/terrain_texture.json#texture_data</CodeHeader>
 
 ```json
-"dirt" : {
-    "textures" : [
-           {
-       "variations": [
-           { "path": "textures/blocks/dirt_va" }, //imagine if this is the block variation you wanted to animate
-           { "path": "textures/blocks/dirt0" },
-           { "path": "textures/blocks/dirt1" }
-           ]
-        }
-    ]
+"dirt": {
+  "textures": [
+    {
+      "variations": [
+        { "path": "textures/blocks/dirt_va" }, // Imagine that this is the block variation you want to animate
+        { "path": "textures/blocks/dirt0" },
+        { "path": "textures/blocks/dirt1" }
+      ]
+    }
+  ]
 }
 ```
 

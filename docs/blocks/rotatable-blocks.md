@@ -12,9 +12,9 @@ mentions:
     - QuazChick
 ---
 
-::: tip
-The following tutorials assume a basic understanding of blocks.
-Check out the [blocks guide](/blocks/blocks-intro) before starting and ensure your block is using format versions `1.20.0`+.
+::: tip FORMAT VERSION `1.20.10`
+This tutorial assumes a basic understanding of blocks.
+Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ## Rotation Types
@@ -224,42 +224,42 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
   "permutations": [
     // Facing up
     {
-      "condition": "q.block_property('minecraft:facing_direction') == 'up'",
+      "condition": "q.block_property('minecraft:block_face') == 'up'",
       "components": {
         "minecraft:transformation": { "rotation": [90, 0, 0] }
       }
     },
     // Facing down
     {
-      "condition": "q.block_property('minecraft:facing_direction') == 'down'",
+      "condition": "q.block_property('minecraft:block_face') == 'down'",
       "components": {
         "minecraft:transformation": { "rotation": [-90, 0, 0] }
       }
     },
     // Facing north
     {
-      "condition": "q.block_property('minecraft:facing_direction') == 'north'",
+      "condition": "q.block_property('minecraft:block_face') == 'north'",
       "components": {
         "minecraft:transformation": { "rotation": [0, 0, 0] }
       }
     },
     // Facing west
     {
-      "condition": "q.block_property('minecraft:facing_direction') == 'west'",
+      "condition": "q.block_property('minecraft:block_face') == 'west'",
       "components": {
         "minecraft:transformation": { "rotation": [0, 90, 0] }
       }
     },
     // Facing south
     {
-      "condition": "q.block_property('minecraft:facing_direction') == 'south'",
+      "condition": "q.block_property('minecraft:block_face') == 'south'",
       "components": {
         "minecraft:transformation": { "rotation": [0, 180, 0] }
       }
     },
     // Facing east
     {
-      "condition": "q.block_property('minecraft:facing_direction') == 'east'",
+      "condition": "q.block_property('minecraft:block_face') == 'east'",
       "components": {
         "minecraft:transformation": { "rotation": [0, -90, 0] }
       }
@@ -281,19 +281,19 @@ Requires `Holiday Creator Features` to trigger events.
 ```json
 "permutations": [
   {
-    "condition": "q.block_property('wiki:rotation') == 0",
+    "condition": "q.block_property('wiki:axis') == 0",
     "components": {
       "minecraft:transformation": { "rotation": [0, 0, 0] }
     }
   },
   {
-    "condition": "q.block_property('wiki:rotation') == 1",
+    "condition": "q.block_property('wiki:axis') == 1",
     "components": {
       "minecraft:transformation": { "rotation": [90, 0, 0] }
     }
   },
   {
-    "condition": "q.block_property('wiki:rotation') == 2",
+    "condition": "q.block_property('wiki:axis') == 2",
     "components": {
       "minecraft:transformation": { "rotation": [0, 0, 90] }
     }
@@ -347,7 +347,7 @@ This example also requires `Holiday Creator Features` to use `minecraft:unit_cub
 
 ```json
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.10",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_log",
