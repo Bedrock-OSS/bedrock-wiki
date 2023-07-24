@@ -9,10 +9,14 @@ mentions:
 ---
 
 ## Introduction:
-As you may know, block properties have a total limit of 64 values (16 maximum per property) that you cannot exceed. This is very frustrating when creating new blocks, so I will explain you how you can avoid reaching this limit. Please note that you are not going to have more than 64 properties, however the results you'll get using this method will be equal to that!
+Block properties have a total limit of 64 values (16 maximum per property) that cannot be exceed. This article will explain how to avoid reaching the limit.
+
+:::tip
+You are not going to have more than 64 properties. Using this method will be equal to that amount!
+:::
 
 ## How it works:
-This method simply combines two or more properties in order to re-use them and read them either in permutations or conditions. For example, let's say you want to have a block with the English Alphabet letters. You'll need 26 property values for that, right? Well, with combinations you need way less! For the sake of simplicity, let's just use 15 property values.
+This method combines two or more properties in order to re-use and read them in permutations or conditions. For example, a block with the English Alphabet letters will need 26 values. You can use less values by using combinations.
 
 ## The logic:
 What your code will do going of by the example above is the following;
@@ -30,26 +34,25 @@ And then;
 2 & 4 = Q   2 & 8 = U   2 & 12 = Y
 ```
 
-You see how you get the same results as using 26 property values with just 15? And it can even be less if you combine more than two digits! With just 16 property values in one of your properties and using 5 values in a second property for combinations, you can read up to 4368 property values... crazy right?
+Using this method, you achieve the same results with just 15 values. The more values available for combinations, the higher your property limit is.
 
 ## How will it look like:
 Using the example above as reference, your properties would look like this;
-```
+```json
 "properties": {
     "wiki:value": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
     "wiki:division": [ 1, 2 ]
-    }
+}
 ```
 And your conditions like this;
 ```
-"condition": "query.block_property('wiki:division') == 1 && query.block_property('wiki:value') == 1"
+"condition": "q.block_property('wiki:division') == 1 && q.block_property('wiki:value') == 1"
 
-"condition": "query.block_property('wiki:division') == 1 && query.block_property('wiki:value') == 2"
+"condition": "q.block_property('wiki:division') == 1 && q.block_property('wiki:value') == 2"
 ```
 ## What have you learned;
 You have learned how to use less than 64 properties and do more, combining properties to have better possibilities.
 
 :::tip
 You can use more than 2 values in order to have more possible combinations.
-
 :::
