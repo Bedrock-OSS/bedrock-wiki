@@ -8,18 +8,18 @@ mentions:
     - Kaioga5
 ---
 
-## Introduction:
+## Introduction
 Block properties have a total limit of 64 values (16 maximum per property) that cannot be exceed. This article will explain how to avoid reaching the limit.
 
 :::tip
 You are not going to have more than 64 properties. Using this method will be equal to that amount!
 :::
 
-## How it works:
+## How it works
 This method combines two or more properties in order to re-use and read them in permutations or conditions. For example, a block with the English Alphabet letters will need 26 values. You can use less values by using combinations.
 
-## The logic:
-What your code will do going of by the example above is the following;
+## The logic
+What your code will do going of by the example above is the following:
 ```
 1 & 1 = A   1 & 5 = E   1 & 9 =  I   1 & 13 = M
 1 & 2 = B   1 & 6 = F   1 & 10 = J
@@ -36,8 +36,8 @@ And then;
 
 Using this method, you achieve the same results with just 15 values. The more values available for combinations, the higher your property limit is.
 
-## How will it look like:
-Using the example above as reference, your properties would look like this;
+## How Will It Look
+Using the example above as reference, your properties would look like this:
 ```json
 "properties": {
     "wiki:value": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
@@ -50,7 +50,7 @@ And your conditions like this;
 
 "condition": "q.block_property('wiki:division') == 1 && q.block_property('wiki:value') == 2"
 ```
-## What have you learned;
+## What You Have Learned
 You have learned how to use less than 64 properties and do more, combining properties to have better possibilities.
 
 :::tip
