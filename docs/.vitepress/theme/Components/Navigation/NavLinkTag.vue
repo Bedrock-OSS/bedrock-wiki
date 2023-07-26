@@ -13,6 +13,7 @@ const displayedTags = [
   'help',
   'info',
   'outdated',
+  'scripting',
   'system'
 ]
 
@@ -23,4 +24,6 @@ const props = defineProps<{
 let valid = displayedTags.includes(props.tag)
 let title = props.tag
 let colour = colorFromTag(props.tag)
+
+if (props.tag === 'scripting') title = 'scripts'
 </script>

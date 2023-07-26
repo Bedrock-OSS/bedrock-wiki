@@ -23,6 +23,9 @@ export function colorFromTag(tag: string) {
     case 'red':
       color = 'red'
       break
+    case 'scripting':
+      color = 'yellow'
+      break
     default:
   }
 
