@@ -45,7 +45,7 @@ This will create a vanilla-like custom slab.
 			}
 		},
 		"permutations": [
-			//Down Slab
+			//Bottom Slab
 			{
 				"condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('wiki:state') == 0",
 				"components": {
@@ -111,6 +111,11 @@ This will create a vanilla-like custom slab.
 			"wiki:full_slab": {
 				"set_block_property": {
 					"wiki:state": 1
+				},
+				"run_command": {
+					"command": [
+						"playsound dig.stone @a[r=8]"
+					]
 				}
 			}
 		}
