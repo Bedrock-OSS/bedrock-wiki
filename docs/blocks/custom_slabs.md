@@ -114,7 +114,7 @@ This will create a vanilla-like custom slab.
 				},
 				"run_command": {
 					"command": [
-						"playsound dig.stone @a[r=8]"
+						"playsound step.stone @a ~~~ 0.7 1.5"
 					]
 				}
 			}
