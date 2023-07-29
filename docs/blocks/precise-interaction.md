@@ -34,6 +34,21 @@ This is where precise interaction comes in! The following methods of precise int
 
 ![Showcase image displaying example Pigeonholes and Double Flower Pot blocks](/assets/images/blocks/precise-interaction/showcase.png)
 
+## How It Works
+
+The provided methods of precise interaction use `faceLocation`, a property of the following Script API classes:
+
+- [`ItemUseOnBeforeEvent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/itemuseonbeforeevent)
+- [`ItemUseOnAfterEvent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/itemuseonafterevent)
+
+It's also a returned property from the following methods:
+
+- [`Entity.getBlockFromViewDirection()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entity#getblockfromviewdirection)
+- [`Dimension.getBlockFromRay()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/dimension#getblockfromray)
+- [`ProjectileHitAfterEvent.getBlockHit()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/projectilehitafterevent#getblockfromray)
+
+This value tells us where on the block's `minecraft:selection_box` was selected/hit, which is what precise interaction relies on.
+
 ## FaceSelectionPlains Class
 
 This class allows you to define 2D areas on a block's face and get the selected plain.
