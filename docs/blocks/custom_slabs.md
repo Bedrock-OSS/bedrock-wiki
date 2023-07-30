@@ -14,7 +14,7 @@ Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` for use of experimental Molang queries, new item features and to trigger block events.
+Requires `Holiday Creator Features` to trigger block events.
 Requires `Upcoming Creator Features` for use of block traits.
 ::
 ## Introduction
@@ -41,13 +41,13 @@ This will create a vanilla-like custom slab.
                 }
             },
 			"properties": {
-				"wiki:state": [0, 1]
+				"wiki:double": [false, true]
 			}
 		},
 		"permutations": [
 			//Bottom Slab
 			{
-				"condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('wiki:state') == 0",
+				"condition": "query.block_property('minecraft:vertical_half') == 'bottom' && !query.block_property('wiki:double')",
 				"components": {
 					"minecraft:collision_box": {
                         "origin": [ -8, 0, -8 ],
@@ -66,7 +66,7 @@ This will create a vanilla-like custom slab.
 			},
 			//Top Slab
 			{
-				"condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('wiki:state') == 0",
+				"condition": "query.block_property('minecraft:vertical_half') == 'top' && !query.block_property('wiki:double')",
 				"components": {
 					"minecraft:collision_box": {
                         "origin": [ -8, 8, -8 ],
@@ -85,7 +85,7 @@ This will create a vanilla-like custom slab.
 			},
 			//Full Slab
 			{
-				"condition": "query.block_property('wiki:state') == 1",
+				"condition": "query.block_property('wiki:double')",
 				"components": {
 					"minecraft:unit_cube": {
 					}
@@ -110,7 +110,7 @@ This will create a vanilla-like custom slab.
 		"events": {
 			"wiki:full_slab": {
 				"set_block_property": {
-					"wiki:state": 1
+					"wiki:double": true
 				},
 				"run_command": {
 					"command": [
