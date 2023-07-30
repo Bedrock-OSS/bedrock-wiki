@@ -88,11 +88,22 @@ This will create a vanilla-like custom slab.
 				"condition": "query.block_property('wiki:double')",
 				"components": {
 					"minecraft:unit_cube": {
+					},
+					"minecraft:on_player_destroyed": {
+						"event": "wiki:double_destroy",
+						"target": "self"
 					}
 				}
 			}
 		],
 		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 7
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			"tag:stone": {},		  
 			"minecraft:geometry": {
 				"identifier": "geometry.slab",
 				"bone_visibility": {
@@ -116,7 +127,13 @@ This will create a vanilla-like custom slab.
 					"command": [
 						"playsound step.stone @a ~~~ 0.7 1.5"
 					]
+				},
+				"decrement_stack": {
+					"ignore_game_mode": false
 				}
+			},
+			"wiki:double_destroy": {
+				"spawn_loot": {} // Spawns the block's default loot
 			}
 		}
 	}
