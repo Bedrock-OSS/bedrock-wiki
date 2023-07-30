@@ -27,115 +27,107 @@ This will create a vanilla-like custom slab.
 
 ```json
 {
-	"format_version": "1.20.10",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:slab_template",
-			"menu_category": {
-				"category": "construction",
-				"group": "itemGroup.name.slab"
-			},
-			"traits": {
-                "minecraft:placement_position": {
-                    "enabled_states": ["minecraft:vertical_half"]
-                	}
-            	},
-			"properties": {
-				"wiki:double": [false, true]
-			}
-		},
-		"permutations": [
-		// Bottom Slab
-		{
-		"condition": "query.block_property('minecraft:vertical_half') == 'bottom' && !query.block_property('wiki:double')",
-		"components": {
-                    "minecraft:collision_box": {
-                        "origin": [ -8, 0, -8 ],
-                        "size": [ 16, 8, 16 ] 
-                    },
-                    "minecraft:selection_box": {
-                        "origin": [ -8, 0, -8 ],
-                        "size": [ 16, 8, 16 ]
-                    },
-                    "minecraft:on_interact": {
-			"event": "wiki:full_slab",
-			"target": "self",
-			"condition": "q.block_face == 1.0 && q.is_item_name_any('slot.weapon.mainhand','wiki:slab_template')"
-				}
-			}
-		},
-		// Top Slab
-		{
-		"condition": "query.block_property('minecraft:vertical_half') == 'top' && !query.block_property('wiki:double')",
-		"components": {
-                    "minecraft:collision_box": {
-                        "origin": [ -8, 8, -8 ],
-                        "size": [ 16, 8, 16 ] 
-                    },
-                    "minecraft:selection_box": {
-                        "origin": [ -8, 8, -8 ],
-                        "size": [ 16, 8, 16 ]
-                    },
-                    "minecraft:on_interact": {
-			"event": "wiki:full_slab",
-			"target": "self",
-			"condition": "q.block_face == 0.0 && q.is_item_name_any('slot.weapon.mainhand','wiki:slab_template')"
-				}
-			}
-		},
-		// Full Slab
-		{
-		"condition": "query.block_property('wiki:double')",
-		"components": {
-		    "minecraft:unit_cube": {},
-		    "minecraft:on_player_destroyed": {
-			"event": "wiki:double_destroy",
-			"target": "self"
-					}
-				}
-			}
-		],
-		"components": {
-			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 7
-			},
-			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 6
-			},
-			"tag:stone": {},		  
-			"minecraft:geometry": {
-				"identifier": "geometry.slab",
-				"bone_visibility": {
-					"bottom_slab": "query.block_property('minecraft:vertical_half') == 'bottom'",
-					"top_slab": "query.block_property('minecraft:vertical_half') == 'top'"
-				}
-			},
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "stone",
-					"render_method": "opaque"
-				}
-			}
-		},
-		"events": {
-			"wiki:full_slab": {
-				"set_block_property": {
-					"wiki:double": true
-				},
-				"run_command": {
-					"command": [
-						"playsound step.stone @a ~~~ 0.7 1.5"
-					]
-				},
-				"decrement_stack": {
-					"ignore_game_mode": false
-				}
-			},
-			"wiki:double_destroy": {
-				"spawn_loot": {} // Spawns the block's default loot
-			}
-		}
-	}
+  "format_version": "1.20.10",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:custom_slab",
+      "menu_category": {
+        "category": "construction",
+        "group": "itemGroup.name.slab"
+      },
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": ["minecraft:vertical_half"]
+        }
+      },
+      "properties": {
+        "wiki:double": [false, true]
+      }
+    },
+    "permutations": [
+      // Bottom Slab
+      {
+        "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && !query.block_property('wiki:double')",
+        "components": {
+          "minecraft:collision_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 8, 16]
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 8, 16]
+          },
+          "minecraft:on_interact": {
+            "event": "wiki:full_slab",
+            "condition": "q.block_face == 1.0 && q.is_item_name_any('slot.weapon.mainhand','wiki:custom_slab')"
+          }
+        }
+      },
+      // Top Slab
+      {
+        "condition": "query.block_property('minecraft:vertical_half') == 'top' && !query.block_property('wiki:double')",
+        "components": {
+          "minecraft:collision_box": {
+            "origin": [-8, 8, -8],
+            "size": [16, 8, 16]
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 8, -8],
+            "size": [16, 8, 16]
+          },
+          "minecraft:on_interact": {
+            "event": "wiki:full_slab",
+            "condition": "q.block_face == 0.0 && q.is_item_name_any('slot.weapon.mainhand','wiki:custom_slab')"
+          }
+        }
+      },
+      // Double Slab
+      {
+        "condition": "query.block_property('wiki:double')",
+        "components": {
+          "minecraft:unit_cube": {},
+          "minecraft:on_player_destroyed": {
+            "event": "wiki:double_destroy"
+          }
+        }
+      }
+    ],
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 7
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 6
+      },
+      "minecraft:geometry": {
+        "identifier": "geometry.slab",
+        "bone_visibility": {
+          "bottom_slab": "query.block_property('minecraft:vertical_half') == 'bottom'",
+          "top_slab": "query.block_property('minecraft:vertical_half') == 'top'"
+        }
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "stone",
+          "render_method": "opaque"
+        }
+      }
+    },
+    "events": {
+      "wiki:full_slab": {
+        "set_block_property": {
+          "wiki:double": true
+        },
+        "run_command": {
+          "command": "playsound step.stone @a ~~~ 0.7 1.5"
+        },
+        "decrement_stack": {}
+      },
+      "wiki:double_destroy": {
+        "spawn_loot": {} // Spawns the block's default loot
+      }
+    }
+  }
 }
 ```
 
