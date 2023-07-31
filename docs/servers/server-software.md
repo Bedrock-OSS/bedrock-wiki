@@ -91,7 +91,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### Python
 
-- [PieMC-Bedrock](https://github.com/LapisMYT/PieMC_Bedrock)
+- [PieMC](https://github.com/PieMC-Dev/PieMC)
 
 ## Discontinued Software
 
