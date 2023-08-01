@@ -260,8 +260,8 @@ After we create the form, we will need to show the form to the player and save t
 Let's say our form must be opened with a stick that is named "Form Opener". You can use any event with any configurations in order to open your own form.
 
 ```js
-world.events.beforeItemUse.subscribe(event => {
-	if (event.item.typeId === "minecraft:stick" && event.item.nameTag === "Form Opener") {
+world.events.afterItemUse.subscribe(event => {
+	if (event.itemStack.typeId === "minecraft:stick" && event.itemStack.nameTag === "Form Opener") {
 		// Form
 	};
 });
