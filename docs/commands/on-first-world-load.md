@@ -35,14 +35,14 @@ This system will run your desired commands on the event that the world is loaded
 <CodeHeader>BP/functions/initialise.mcfunction</CodeHeader>
 ```yaml
 scoreboard objectives add world dummy
-scoreboard players add world initialised 0
+scoreboard players add initialised world 0
 
 
 #Your Commands Here (example)
-execute if score world initialised 0 run say New world created!
+execute if score initialised world matches 0 run say New world created!
 
 
-scoreboard players set world initialised 1
+scoreboard players set initialised world 1
 ```
 
 Here we have used an `execute - say` command as an example but you can use any command you prefer and as many as you require.
@@ -59,6 +59,7 @@ An objective of the name `world` is added for us to save scores to it so that we
 Following the creation of the objective, a score of `0` is added to the FakePlayer name `initialised`. This will register it to the objective and enable us to use the `execute if score` command structure to run our desired commands.
 
 Finally the score for `initialised` is set to 1 after all the commands are run in order to prevent it from executing more than once.
+
 ## Folder Structure
 
 <FolderView
@@ -71,5 +72,9 @@ Finally the score for `initialised` is set to 1 after all the commands are run i
     'BP/functions/tick.json'
 ]"
 ></FolderView>
-## notes on Compatibbility
-The Scoreboard names (world in this case) may end up being used by other people. appending and _ and a set of randomly generated characters after world would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the .mcfunction files.
+
+### Note On Compatibility
+The scoreboard names (in this case: 'world') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after world would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the ` .mcfunction ` files.
+- Ex:
+    - ` world_0fe678 `
+    - ` initialise_0fe678.mcfunction `
