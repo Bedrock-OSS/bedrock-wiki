@@ -24,7 +24,7 @@ If you prefer to initialize manually this can be completed using the following c
 
 ## System
 
-<CodeHeader>BP/functions/on_death.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/on_player_death.mcfunction</CodeHeader>
 
 ```yaml
 scoreboard players set @a [scores={alive=!2}] alive 0
@@ -65,13 +65,13 @@ Just make sure to follow the given order and properly add the selector argument 
 
 ## Tick Json
 
-If you are using functions instead of command blocks, the ` on_first_join ` function must be added to the ` tick.json ` in order to loop it and run continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
+If you are using functions instead of command blocks, the ` on_first_join ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
 {
   "values": [
-    "on_death"
+    "on_player_death"
   ]
 }
 ```
