@@ -16,7 +16,7 @@ tags:
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
 This system will run your desired commands on the event that the world is loaded for the first time.
-> Note: a [Function](/commands/mcfunctions) Pack is required to achieve this system since it is the `tick.json` file which allows us to run commands as soon as the world is initialised.
+> **Note:** a [Function](/commands/mcfunctions) Pack is required to achieve this system since it is the `tick.json` file which allows us to run commands as soon as the world is initialised.
 
 
 ## Tick Json
@@ -73,8 +73,6 @@ Finally the score for `initialised` is set to 1 after all the commands are run i
 ]"
 ></FolderView>
 
-### Note On Compatibility
-The scoreboard names (in this case: 'world') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after world would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the ` .mcfunction ` files.
-- Ex:
-    - ` world_0fe678 `
-    - ` initialise_0fe678.mcfunction `
+> **Note:** the scoreboard names (in this case: 'world') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after world would be a choice that reduces the probability of collisions. Similar technique can be employed for the filenames in the ` .mcfunction ` files. Ex:
+> - ` world_0fe678 `
+> - ` initialise_0fe678.mcfunction `
