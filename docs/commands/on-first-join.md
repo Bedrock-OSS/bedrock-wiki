@@ -68,6 +68,6 @@ If using functions, your pack folder structure will be be as follows:
 ]"
 ></FolderView>
 
-> **Note:** the tag names (in this case: 'joined') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after world would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` files. Ex:
+> **Note:** the tag names (in this case: 'joined') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after world would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
 > - ` joined_0fe678 `
 > - ` on_first_join_0fe678.mcfunction `
