@@ -63,9 +63,9 @@ Just make sure to follow the given order and properly add the selector argument 
     - Keep in mind we need to set their score to 2 after or otherwise the commands will keep executing till they respawn.
 
 
-## Tick Json
+## Tick JSON
 
-If you are using functions instead of command blocks, the ` on_first_join ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
+If you are using functions instead of command blocks, the ` on_player_join ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
@@ -84,11 +84,11 @@ If using functions, your pack folder structure will be be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_first_join.mcfunction',
+    'BP/functions/on_player_death.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
 
 > **Note:** the scoreboard names (in this case: 'alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
 > - ` alive_0fe678 `
-> - ` on_death_0fe678.mcfunction `
+> - ` on_player_death_0fe678.mcfunction `
