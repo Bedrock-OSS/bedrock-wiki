@@ -74,11 +74,9 @@ All commands involved in a command-block-chain or function will only run in a se
 ![gametick](/assets/images/commands/gametick.png)
 :::
 
+## Tick JSON
 
-
-
-## Tick Json
-To get this funtion to run in a loop contuously it must be added to tick.json or a command block. Multiple files can  added to the tick.json by placing a ccommon after each string. See [Functions](/commands/mcfunctions#tick-json) for more details.
+If you are using functions instead of command blocks, the ` on_player_join ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
@@ -88,10 +86,8 @@ To get this funtion to run in a loop contuously it must be added to tick.json or
   ]
 }
 ```
-## Folder Structure
-The structure of this behavior pack would be as follows.
 
-## Folder Structure
+If using functions, your pack folder structure will be be as follows:
 
 <FolderView
 	:paths="[
@@ -103,5 +99,7 @@ The structure of this behavior pack would be as follows.
     'BP/functions/tick.json'
 ]"
 ></FolderView>
-## notes on Compatibbility
-The Scoreboard names (total in this case) may end up being used by other people. appending and _ and a set of randomly generated characters after total would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the .mcfunction files.
+
+> **Note:** the scoreboard names (in this case: 'total') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+> - ` total_0fe678 `
+> - ` on_player_leave_0fe678.mcfunction `
