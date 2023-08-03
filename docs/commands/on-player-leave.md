@@ -18,10 +18,10 @@ This system will run your desired commands on the event that a player leaves the
 > Note: you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](/commands/on-player-join) system to execute when they join back.
 
 ## Setup
-The scoreboard alive must be initilaized for this to funtion. to initialize this automatically without the need to have a a player with command previlages, follow the process outlined in [on first world load](/commands/on-first-world-load).
 
-If you prefer to initialize manually this can be completed using the following command:
 `/scoreboard objectives add total dummy`
+
+If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/docs/commands/on-first-world-load)
 
 ## System
 
