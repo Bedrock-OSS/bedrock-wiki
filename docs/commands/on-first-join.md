@@ -44,7 +44,7 @@ Once we run our desired commands for players without the tag, they will be given
 
 ## Tick Json
 
-If you are using functions instead of command blocks, the ` on_first_join ` function must be added to the ` tick.json ` in order to loop it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
+If you are using functions instead of command blocks, the ` on_first_join ` function must be added to the ` tick.json ` in order to loop it and run continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
@@ -68,6 +68,6 @@ If using functions, your pack folder structure will be be as follows:
 ]"
 ></FolderView>
 
-> **Note:** the tag names (in this case: 'joined') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after world would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+> **Note:** the tag names (in this case: 'joined') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
 > - ` joined_0fe678 `
 > - ` on_first_join_0fe678.mcfunction `
