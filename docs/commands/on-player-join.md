@@ -25,7 +25,7 @@ If you prefer to initialize manually this can be completed using the following c
 
 ## System
 
-<CodeHeader>BP/functions/on_join.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/on_player_join.mcfunction</CodeHeader>
 
 ```yaml
 scoreboard players add @a joined 0
@@ -54,19 +54,21 @@ Immediately after the commands are run, we reset all the scores on the objective
 
 And this way, since our commands only target players with the score 0, the commands won't repeat again for the players who stayed unless they leave and rejoin or if we run:
 `/scoreboard players set <player> joined 0`
-## Tick Json
-To get this funtion to run in a loop contuously it must be added to tick.json or a command block. Multiple files can  added to the tick.json by placing a ccommon after each string. See [Functions](/commands/mcfunctions#tick-json) for more details.
+
+## Tick JSON
+
+If you are using functions instead of command blocks, the ` on_player_join ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
 {
   "values": [
-    "on_join"
+    "on_player_join"
   ]
 }
 ```
-## Folder Structure
-The structure of this behavior pack would be as follows.
+
+If using functions, your pack folder structure will be be as follows:
 
 <FolderView
 	:paths="[
@@ -74,9 +76,11 @@ The structure of this behavior pack would be as follows.
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_join.mcfunction',
+    'BP/functions/on_player_join.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
-## notes on Compatibbility
-The Scoreboard names (joined in this case) may end up being used by other people. appending and _ and a set of randomly generated characters after joined would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the .mcfunction files.
+
+> **Note:** the scoreboard names (in this case: 'joined') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+> - ` joined_0fe678 `
+> - ` on_player_join_0fe678.mcfunction `
