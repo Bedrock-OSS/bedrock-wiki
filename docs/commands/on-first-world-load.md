@@ -25,7 +25,7 @@ This system will run your desired commands on the event that the world is loaded
 ```json
 {
   "values": [
-    "on_join"
+    "initialise"
   ]
 }
 ```
