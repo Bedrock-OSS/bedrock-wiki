@@ -15,7 +15,7 @@ tags:
 
 This system will run your desired commands on the event that a player leaves the world.
 
-> Note: you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](/commands/on-player-join) system to execute when they join back.
+> **Note:** you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](/commands/on-player-join) system to execute when they join back.
 
 ## Setup
 
