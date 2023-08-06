@@ -26,7 +26,7 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 #Aux Value Example:
 /setblock ~ ~ ~ wool 1
 #It's Block State equivalent:
-/setblock ~ ~ ~ wool ["color":"orange"]
+/setblock ~ ~ ~ wool ["color"="orange"]
 ```
 
 - Any command block using aux values will continue to function as it is however block states will need to be adopted when updating them.
@@ -37,9 +37,9 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 <CodeHeader>Examples</CodeHeader>
 
 ```yaml
-/setblock ~ ~ ~ wool ["color":"white"]
-/setblock ~ ~ ~ wheat ["growth":0]
-/setblock ~ ~ ~ wood ["wood_type":"birch","stripped_bit":true]
+/setblock ~ ~ ~ wool ["color"="white"]
+/setblock ~ ~ ~ wheat ["growth"=0]
+/setblock ~ ~ ~ wood ["wood_type"="birch","stripped_bit"=true]
 /setblock ~ ~ ~ wool []
 ```
 
@@ -48,24 +48,24 @@ In Bedrock Edition we used Aux values (also known as Metadata) to define a block
 - Quotation marks ` " " ` are used around strings such as `"birch", "spruce" etc..`
 - Integer values `0, 1, 2..` and boolean values `true/false` do not use quotation marks.
 - Leaving the brackets blank is also a correct syntax, it will simply default to 0.
-- `wool 0` is white wool hence you may simply write it as `wool []` instead of `wool ["color":"white"]`
+- `wool 0` is white wool hence you may simply write it as `wool []` instead of `wool ["color"="white"]`
 
 ### Notes For Beginners
 
 - **Integers** are whole numbers. They are used to define a block from a 'range' of values.
     - Example: Redstone power 1 to 15
-    - `["redstone_power":10]`
+    - `["redstone_power"=10]`
 
 - **Boolean** is a programming term which refers to `true/false` values. You can simply understand it as yes or no questions.
     - Is this piston powered? `yes/no`
     - Is this button pressed? `yes/no`
     - Is this log stripped? `yes/no`
-    - `["stripped_bit":true]`
+    - `["stripped_bit"=true]`
 
 - **Strings** are unique 'text' inputs. You can simply understand it as multiple choice questions.
     - What color is this wool? `"white"`, `"orange"`, `"brown"` etc..
     - What wood type is this log? `"spruce"`, `"birch"`, `"acacia"` etc..
-    - `["wood_type":"spruce"]`
+    - `["wood_type"="spruce"]`
  
  
 ## Block States List
@@ -104,14 +104,14 @@ Example; detecting a pressed stone button on ground facing up:
 
 ```yaml
 #✅ Accepted:
-/execute if block ~~~ stone_button [“button_pressed_bit”:true,”facing_direction”:1] run say success
+/execute if block ~~~ stone_button [“button_pressed_bit”=true,”facing_direction”=1] run say success
 /execute if block ~~~ stone_button run say success
 
 # ❌ Not Accepted:
-/execute if block ~~~ stone_button [“button_pressed_bit”:true] run say success
-/execute if block ~~~ stone_button [“facing_direction”:1] run say success
+/execute if block ~~~ stone_button [“button_pressed_bit”=true] run say success
+/execute if block ~~~ stone_button [“facing_direction”=1] run say success
 ```
-Though block states have replaced aux values, we still cannot detect blocks based on specific filters like we do with selector arguments yet.
+Though block states have replaced aux values, we still cannot detect blocks based on specific filters yet like we do with selector arguments.
 
 ### Related Bug Reports
 - [MCPE-133360](https://bugs.mojang.com/browse/MCPE-133360)

@@ -17,11 +17,9 @@ This system will run your desired commands on the event that a player respawns f
 
 ## Setup
 
-The scoreboard alive must be initilaized for this to funtion. to initialize this automatically without the need to have a a player with command previlages, follow the process outlined in [on first world load](/commands/on-first-world-load).
-
-If you prefer to initialize manually this can be completed using the following command:
-
 `/scoreboard objectives add respawn dummy`
+
+If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/docs/commands/on-first-world-load)
 
 ## System
 
@@ -55,22 +53,20 @@ In the system, your desired commands must come before the other 2 commands becau
 
 Hence; if we were to put them at the end then the other 2 commands would set respawning players score to 0 first and then the commands you want to run won't be able to select those players as our selector argument is ` @e [scores={respawn=1}] ` not 0. Using 0 would not work as then it would repeat endlessly even on players who have already respawned.
 
+## Tick JSON
 
-## Tick Json
-To get this funtion to run in a loop contuously it must be added to tick.json or a command block. Multiple files can  added to the tick.json by placing a ccommon after each string. See [Functions](/commands/mcfunctions#tick-json) for more details.
+If you are using functions instead of command blocks, the ` on_player_respawn ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
 {
   "values": [
-    "on_join"
+    "on_player_respawn"
   ]
 }
 ```
-## Folder Structure
-The structure of this behavior pack would be as follows.
 
-## Folder Structure
+If using functions, your pack folder structure will be be as follows:
 
 <FolderView
 	:paths="[
@@ -82,5 +78,7 @@ The structure of this behavior pack would be as follows.
     'BP/functions/tick.json'
 ]"
 ></FolderView>
-## notes on Compatibbility
-The Scoreboard names (alive in this case) may end up being used by other people. appending and _ and a set of randomly generated characters after alive would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the .mcfunction files.
+
+> **Note:** the scoreboard names (in this case: 'respawn') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+> - ` respawn_0fe678 `
+> - ` on_player_respawn_0fe678.mcfunction `
