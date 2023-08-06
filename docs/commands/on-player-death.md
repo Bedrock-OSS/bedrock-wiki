@@ -16,15 +16,14 @@ tags:
 This system will run your desired commands on the event that a player dies.
 
 ## Setup
-The scoreboard alive must be initilaized for this to funtion. to initialize this automatically without the need to have a a player with command previlages, follow the process outlined in [on first world load](/commands/on-first-world-load).
-
-If you prefer to initialize manually this can be completed using the following command:
 
 `/scoreboard objectives add alive dummy`
 
+If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/docs/commands/on-first-world-load)
+
 ## System
 
-<CodeHeader>BP/functions/on_death.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/on_player_death.mcfunction</CodeHeader>
 
 ```yaml
 scoreboard players set @a [scores={alive=!2}] alive 0
@@ -63,21 +62,20 @@ Just make sure to follow the given order and properly add the selector argument 
     - Keep in mind we need to set their score to 2 after or otherwise the commands will keep executing till they respawn.
 
 
-## Tick Json
-To get this funtion to run in a loop contuously it must be added to tick.json or a command block. Multiple files can  added to the tick.json by placing a ccommon after each string. See [Functions](/commands/mcfunctions#tick-json) for more details.
+## Tick JSON
+
+If you are using functions instead of command blocks, the ` on_player_death ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
 {
   "values": [
-    "on_death"
+    "on_player_death"
   ]
 }
 ```
-## Folder Structure
-The structure of this behavior pack would be as follows.
 
-## Folder Structure
+If using functions, your pack folder structure will be be as follows:
 
 <FolderView
 	:paths="[
@@ -85,9 +83,11 @@ The structure of this behavior pack would be as follows.
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_death.mcfunction',
+    'BP/functions/on_player_death.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
-## notes on Compatibbility
-The Scoreboard names (alive in this case) may end up being used by other people. appending and _ and a set of randomly generated characters after alive would be a choice that reduces the probability of colisions. Similar techniques can be employed for the filenames in the .mcfunction files.
+
+> **Note:** the scoreboard names (in this case: 'alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+> - ` alive_0fe678 `
+> - ` on_player_death_0fe678.mcfunction `
