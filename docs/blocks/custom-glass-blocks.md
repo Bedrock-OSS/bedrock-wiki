@@ -20,7 +20,7 @@ By the end you should be able to create something like this!
 
 ::: tip FORMAT VERSION `1.20.10`
 This example requires basic knowledge of blocks to understand.
-Check out [block features](/blocks/blocks-stable) before starting.
+Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 This will create a custom glass block which appears the same as vanilla glass blocks!
@@ -65,7 +65,7 @@ This will create a custom glass block which appears the same as vanilla glass bl
 
 ::: tip FORMAT VERSION `1.20.10`
 This example requires advanced knowledge of blocks and Molang to understand.
-Check out [block features](/blocks/blocks-stable) and [Molang](/concepts/molang) before starting.
+Check out the [blocks guide](/blocks/blocks-intro) and [Molang](/concepts/molang) before starting.
 :::
 
 ::: warning EXPERIMENTAL

@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting Blocks
 category: General
-nav_order: 4
 tags:
     - help
 mentions:

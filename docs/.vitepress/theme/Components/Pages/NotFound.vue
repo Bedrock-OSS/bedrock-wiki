@@ -18,6 +18,9 @@ const { site } = useData()
 const router = useRouter()
 
 const URL_MAP: Record<string, string> = {
+  'blocks/blocks-16': 'blocks/blocks-intro',
+  'blocks/blocks-stable': 'blocks/blocks-intro',
+
 	'documentation/biome-tags': 'world-generation/biome-tags',
 
 	'concepts/mcfunction': 'commands/mcfunction',

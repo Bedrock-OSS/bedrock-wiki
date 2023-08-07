@@ -13,7 +13,7 @@ mentions:
 
 ::: tip FORMAT VERSION `1.20.10`
 This tutorial assumes a basic understanding of blocks.
-Check out [block features](/blocks/blocks-stable) before starting.
+Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 ::: warning EXPERIMENTAL

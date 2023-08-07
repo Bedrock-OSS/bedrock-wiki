@@ -25,6 +25,7 @@ Anvil interactions are handled within an [item definition](/items/items-16), not
 No experimental toggles are required to use recipes or any of their features.
 
 ### Registration
+
 All recipes are stored in the `recipes` folder in the behavior pack root. The files can be named and organized under any folder hierarchy as desired.
 
 This arbitrary structure is used for the paths in this document:
@@ -66,7 +67,9 @@ As an example, a "cold steel sword" might be crafted using the following [shaped
 ```
 
 ## Shared Properties and Structures
+
 ### Format Version
+
 The [format version](/guide/format-version) is intended to version the schema used for the body of a recipe. It is provided with the top-level `"format_version"` property.
 
 <CodeHeader>#/</CodeHeader>
@@ -81,6 +84,7 @@ It's strongly recommended to include a format version anyway, choosing a value t
 :::
 
 ### Description
+
 The `"description"` object, required within any recipe type, holds the metadata of a recipe.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -97,6 +101,7 @@ It's strongly recommended to use a namespace. Namespaces are a standard in other
 :::
 
 ### Tags
+
 Recipes are linked to crafting interfaces using the required `"tags"` array property, which must be placed within any recipe type. Any interface whose tag is provided in the array may use that recipe, if applicable. At least one tag must be provided.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -107,35 +112,41 @@ Recipes are linked to crafting interfaces using the required `"tags"` array prop
 Vanilla interfaces are exposed to tags for each set of recipe types.
 
 Crafting:
-- `crafting_table`
-- `stonecutter`
-- `smithing_table`
+
+-   `crafting_table`
+-   `stonecutter`
+-   `smithing_table`
 
 Note that if you want to make a smithing recipe, you will need to use `<namespace>:netherite_ingot` for the second slot, though using a different identifier will not work. **This no longer works after 1.18.30**.
 
 Cooking and Smelting:
-- `furnace`
-- `blast_furnace`
-- `smoker`
-- `campfire`
-- `soul_campfire`
+
+-   `furnace`
+-   `blast_furnace`
+-   `smoker`
+-   `campfire`
+-   `soul_campfire`
 
 Brewing:
-- `brewing_stand`
+
+-   `brewing_stand`
 
 Education:
-- `material_reducer`
 
-Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-stable#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
+-   `material_reducer`
+
+Additionally, [custom crafting tables](/blocks/block-components#crafting-table) can declare a custom tag for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
 
 ::: tip
 To effectively disable a recipe (useful for [overriding](#overrides) a prior recipe), set the tag array to `[""]`.
 :::
 
 ### Item Descriptors
+
 Working with recipes entails referencing items across a number of properties. Items may be provided in one of two formats: a string reference or an item object. Both formats have means of handling data values, but only the item object may be used to specify a count for that item (usable in recipe outputs). For recipe inputs, if no data value is provided, items with any data value under that identifier will be usable for that input. The data value for an output defaults to `0` if one is not explicitly provided. Selecting recipe inputs by item tags is not supported.
 
 #### String Reference
+
 Generally, a string reference is just the namespace and identifier combination for that item:
 
 <CodeHeader>#/minecraft:recipe_shapeless/ingredients/0</CodeHeader>
@@ -151,6 +162,7 @@ String references additionally support specification of a data value as a suffix
 ```
 
 #### Item Object
+
 The item object is a more explicit construct for referencing items.
 
 <CodeHeader>#/minecraft:recipe_shapeless/ingredients/0</CodeHeader>
@@ -183,6 +195,7 @@ Despite having similarities to trade [table item descriptors](/loot/trade-tables
 :::
 
 #### Identifier Additions
+
 Additional identifiers not typically usable are available to recipes to describe basic potions.
 
 <CodeHeader>#/minecraft:recipe_brewing_mix/input</CodeHeader>
@@ -192,30 +205,31 @@ Additional identifiers not typically usable are available to recipes to describe
 
 These identifiers are not usable in the object notation, only the string notation. Variants are unavailable for splash and lingering potions. All such identifiers follow the format: <code>minecraft:potion_type:<em>potion_effect</em></code>, where <code><em>potion_effect</em></code> can be one of the following:
 
-- `water`
-- `awkward`
-- `mundane`
-- `thick`
-- `healing`
-- `regeneration`
-- `swiftness`
-- `strength`
-- `harming`
-- `poison`
-- `slowness`
-- `weakness`
-- `water_breathing`
-- `fire_resistance`
-- `nightvision`
-- `invisibility`
-- `leaping`
-- `slow_falling`
-- `turtle_master`
-- `wither`
+-   `water`
+-   `awkward`
+-   `mundane`
+-   `thick`
+-   `healing`
+-   `regeneration`
+-   `swiftness`
+-   `strength`
+-   `harming`
+-   `poison`
+-   `slowness`
+-   `weakness`
+-   `water_breathing`
+-   `fire_resistance`
+-   `nightvision`
+-   `invisibility`
+-   `leaping`
+-   `slow_falling`
+-   `turtle_master`
+-   `wither`
 
 Where supported, `long_` and `strong_` prefixes may be used to designate modified potions, such as `minecraft:potion_type:strong_poison`.
 
 ## Crafting
+
 Crafting operations instantly transform inputs to outputs using crafting grids. Two crafting recipe types are available: [shapeless recipes](#shapeless-recipes), whose inputs may be arranged in any way, and [shaped recipes](#shaped-recipes), used to define strict arrangements of inputs.
 Crafting recipes support both crafting tables and stonecutters:
 
@@ -224,9 +238,10 @@ Crafting recipes support both crafting tables and stonecutters:
 "tags": ["crafting_table", "stonecutter"]
 ```
 
-`"crafting_table"` applies to both vanilla crafting tables and the player 2 × 2 crafting grid in their inventory. There is currently no way to opt into one but not the other. Crafting recipes additionally support custom tags, linking recipes to a [crafting grid provided by a custom block](/blocks/blocks-stable#minecraft-crafting-table).
+`"crafting_table"` applies to both vanilla crafting tables and the player 2 × 2 crafting grid in their inventory. There is currently no way to opt into one but not the other. Crafting recipes additionally support custom tags, linking recipes to a [crafting grid provided by a custom block](/blocks/block-components#crafting-table).
 
 ### Shapeless Recipes
+
 Shapeless recipes simply bind a collection of inputs to a single output on a crafting grid.
 
 ![](/assets/images/loot/recipes/shapeless_recipe.png)
@@ -257,6 +272,7 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 ```
 
 #### Ingredients
+
 The required `"ingredients"` array property lists the items required as inputs for the crafting recipe.
 
 <CodeHeader>#/minecraft:recipe_shapeless/</CodeHeader>
@@ -273,6 +289,7 @@ The required `"ingredients"` array property lists the items required as inputs f
 Each entry is an [item descriptor](#item-descriptors). If an ingredient provides a count, that count must be expressed across multiple crafting grid slots. Using stacked items in a single grid slot to yield a product is unsupported. If the items required for crafting are available but the count of ingredients is greater than the crafting interface being used supports, the recipe will automatically be made unavailable in the recipe book.
 
 #### Shapeless Results
+
 Shapeless recipe outputs are expressed using the required `"result"` property and may be expressed as either an [item descriptor](#item-descriptors) or an array of a single item descriptor.
 
 <CodeHeader>#/minecraft:recipe_shapeless/</CodeHeader>
@@ -284,6 +301,7 @@ Shapeless recipe outputs are expressed using the required `"result"` property an
 ```
 
 ### Shaped Recipes
+
 Shaped recipes enforce that the ingredients used during crafting conform to a strict shape.
 
 ![](/assets/images/loot/recipes/shaped_recipe.png)
@@ -319,6 +337,7 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 ```
 
 #### Patterns
+
 The required `"pattern"` array property establishes the shape used for the recipe.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -339,6 +358,7 @@ If the pattern is only comprised of spaces, empty crafting interfaces able to fi
 :::
 
 ##### Row Normalization
+
 The pattern grid must be at most 3 × 3 but may be smaller. If string lengths are mismatched, Minecraft will automatically extend shorter strings, implying spaces in filled slots. The following two are equivalent:
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -364,6 +384,7 @@ Currently, no crafting grids, including those configurable from custom blocks, m
 :::
 
 ##### Grid Freedom
+
 Spaces are not automatically implied to fill in any remaining slots in the 3 × 3 space. If a provided pattern is smaller than the crafting grid being used, the pattern can be used anywhere so long as the structure and contents are maintained. As an example, consider the following pattern on a crafting table:
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -412,6 +433,7 @@ To restrict placements to a particular location, use explicit spaces, which enfo
 ```
 
 ##### Symmetry
+
 All shaped recipes are innately horizontally symmetric:
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -435,6 +457,7 @@ The preceding recipe may also be used by a player as though it were set to:
 ```
 
 #### Keys
+
 Keys provide meaning to characters in a [pattern](#patterns), done via the required `"key"` object property, which maps key names to [item descriptors](#item-descriptors).
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -456,6 +479,7 @@ If a character in the pattern is not present in the key map, it will be treated 
 :::
 
 #### Shaped Results
+
 Shaped crafting recipe outputs behave very similarly to their [shapeless counterparts](#shapeless-results). Unlike array results for shapeless recipes, however, shaped recipe result arrays may contain more than one [item descriptor](#item-descriptors).
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -475,18 +499,21 @@ Any items not able to fit in the player's inventory are instead placed in the in
 :::
 
 ### Recipe Book
+
 The recipe book automatically indexes and displays available recipes to the player, intelligently accounting for [ingredient counts](#ingredients) in shapeless recipes or [pattern constraints](#patterns) in shaped recipes. When multiple recipes point to the same output, the recipe book uses its own unique prioritization system.
 
 When both recipes being compared are shapeless recipes, the following rules determine prioritization in order:
-- Lower ingredient count of the *first* listed ingredient
-- More negative [priority](#priority)
-- Lower-valued identifier string
+
+-   Lower ingredient count of the _first_ listed ingredient
+-   More negative [priority](#priority)
+-   Lower-valued identifier string
 
 For shaped recipes, recipes with "lesser" identifiers, when compared as strings, are always prioritized.
 
 When comparing a shaped recipe to a shapeless recipe, the rules for comparing shapeless recipes are used; however, the interpreted count of ingredients for the shaped recipe is different from its actual ingredient count. Exactly how the ingredient count for a shaped recipe is determined is unknown.
 
 ### Grouping
+
 This section is included informatively. Groups are present in crafting recipes in vanilla definitions, given with the optional `"group"` string property.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -497,6 +524,7 @@ This section is included informatively. Groups are present in crafting recipes i
 It is currently unknown what, if anything, this property achieves. Presumably, it would be used with the [recipe book](#recipe-book). Neither using new custom groups nor reusing groups from vanilla definitions appear to achieve anything.
 
 ### Priority
+
 Crafting recipes support an additional property for handling input collisions, `"priority"`, which primarily acts as a [tiebreaker](#prioritization) when multiple recipes could possibly apply to the given situation. Priorities are provided directly within the crafting recipe type object.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
@@ -507,6 +535,7 @@ Crafting recipes support an additional property for handling input collisions, `
 Crafting recipes with lower priority values take precedence. So, if all else is equal, a recipe with a priority of `0` would be used over a recipe with priority `1`. Priorities may be negative if necessary. If `"priority"` is not provided, a priority of `0` is implied.
 
 ## Heating
+
 Furnace recipes are used to transform an item using a heat source over a period of time. A slight misnomer, furnace recipes are used with any interface that involves a heat source, including campfires.
 
 ![](/assets/images/loot/recipes/furnace_recipe.png)
@@ -537,6 +566,7 @@ All vanilla heating blocks are supported via tags.
 ```
 
 ### Heating Transactions
+
 Furnace recipes bind exactly one input [item descriptor](#item-descriptors) to exactly one output item descriptor.
 
 <CodeHeader>#/minecraft:recipe_furnace/</CodeHeader>
@@ -551,6 +581,7 @@ Furnace recipes bind exactly one input [item descriptor](#item-descriptors) to e
 Any count given in the input is ignored. XP returns and fuel sources for a cooking and smelting recipe cannot be altered. The time required to heat an item is set by the used block and is unchangeable.
 
 ## Brewing
+
 Brewing recipes are used to transform an item using another item as a catalyst. Two brewing recipe types are available: [brewing mixes](#brewing-mixes), which do not transition data from input to output, and [brewing containers](#brewing-containers), which do.
 
 Only one interface supports brewing recipes:
@@ -561,6 +592,7 @@ Only one interface supports brewing recipes:
 ```
 
 ### Brewing Transactions
+
 Brewing transactions are similar to [heating transactions](#heating-transactions), requiring an input and output, each pointing to a single [item descriptor](#item-descriptors). Brewing recipes, however, also require the `"reagent"` property as a catalyst, which also can only point to a single item descriptor.
 
 <CodeHeader>#/minecraft:recipe_brewing_mix/</CodeHeader>
@@ -573,7 +605,7 @@ Brewing transactions are similar to [heating transactions](#heating-transactions
 Provided count values are ignored in these brewing properties. Items are meant to transform one at a time in a brew.
 
 ::: warning
-If the input item for a brewing recipe has the ability to stack, the *entire* stack will be consumed in the transformation. There are currently no workarounds to avoid this.
+If the input item for a brewing recipe has the ability to stack, the _entire_ stack will be consumed in the transformation. There are currently no workarounds to avoid this.
 :::
 
 After the brewing time has passed, the catalyst is consumed, and output items directly replace input items.
@@ -583,6 +615,7 @@ Currently, the stackability of the produced output is bugged, regardless of whet
 :::
 
 ### Brewing Mixes
+
 Brewing mixes are simple brewing recipes theoretically designed to isolate the data value of the input from the data value of the output.
 
 ![](/assets/images/loot/recipes/brewing_mix_recipe.png)
@@ -608,15 +641,16 @@ Unfortunately, assigned data values are broken for brewing mix recipes.
 
 In general, a brewing recipe will never work if a data value is supplied to the input. The only exceptions are if the input is one of the following:
 
-- `minecraft:potion`
-- `minecraft:splash_potion`
-- `minecraft:lingering_potion`
-- [Potion identifier additions](#identifier-additions)
+-   `minecraft:potion`
+-   `minecraft:splash_potion`
+-   `minecraft:lingering_potion`
+-   [Potion identifier additions](#identifier-additions)
 
 If a data value is specified for a reagent using the `"data"` property format, a brew occurs when any item with the given identifier is placed as a reagent for that recipe, regardless of data value. However, the brew only succeeds if the correct data value is matched. If it’s not, the brew will appear to succeed, but the input will not be transformed into the output; despite the brew failing, the reagent and a percentage of the blaze powder fuel are consumed anyway.
 :::
 
 ### Brewing Containers
+
 Brewing containers are designed to pass the data value of an input to the transformed output.
 
 ![](/assets/images/loot/recipes/brewing_container_recipe.png)
@@ -639,27 +673,30 @@ Brewing containers are designed to pass the data value of an input to the transf
 
 Brewing containers are stricter than [brewing mixes](#brewing-mixes) about their inputs. Only the following item types are allowed in a brewing container recipe:
 
-- `minecraft:potion`
-- `minecraft:splash_potion`
-- `minecraft:lingering_potion`
-- [Potion identifier additions](#identifier-additions)
+-   `minecraft:potion`
+-   `minecraft:splash_potion`
+-   `minecraft:lingering_potion`
+-   [Potion identifier additions](#identifier-additions)
 
 Because the data value is carried downstream from input to output in a brewing container recipe, assigned data values in `"input"` and `"output"` are ignored.
 
 ## Overrides
+
 As with all domains in add-ons, the pack order in the behavior pack list affects how Minecraft chooses files to use during gameplay. Higher-listed behavior pack entries take priority over lower-listed ones, including the base vanilla pack.
 
 To override a recipe in a lower-listed pack, the recipe type and identifiers must both match. The override file can be named and located in any way — only the contents matter. Partial overrides are not accepted in recipes; the entire recipe must be redefined.
 
 ::: warning
-Overrides only work if the recipe type is an *exact* match. In most cases, a mismatch results in a new recipe created alongside the existing one.
+Overrides only work if the recipe type is an _exact_ match. In most cases, a mismatch results in a new recipe created alongside the existing one.
 
 If attempting to construct an override that converts between the two crafting recipe types, an error will be thrown. To circumvent this, first copy the vanilla definition into the pack. Next, set the `"tags"` for that file to `[""]`; this effectively disables the recipe. Finally, set up a new file as the other crafting recipe type, choosing a different identifier to avoid the error.
 :::
 
 ## Prioritization
+
 After considering [overrides](#overrides), if multiple recipes would apply based on the inputs, the outputs are selected using the following tiebreakers, considered in order:
-- Recipes declared in higher-ordered packs in the world behavior packs list
-- If for crafting recipes, *lower*-valued [priority properties](#priority)
-- If for crafting recipes, [shaped recipes](#shaped-recipes) over [shapeless ones](#shapeless-recipes)
-- "Lesser" identifiers, as interpreted by string comparison
+
+-   Recipes declared in higher-ordered packs in the world behavior packs list
+-   If for crafting recipes, _lower_-valued [priority properties](#priority)
+-   If for crafting recipes, [shaped recipes](#shaped-recipes) over [shapeless ones](#shapeless-recipes)
+-   "Lesser" identifiers, as interpreted by string comparison

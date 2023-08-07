@@ -11,7 +11,7 @@ mention:
 
 ::: tip FORMAT VERSION `1.20.10`
 This tutorial assumes an advanced understanding of blocks.
-Check out [block features](/blocks/blocks-stable) before starting.
+Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 ::: warning EXPERIMENTAL
@@ -526,13 +526,11 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ## Loot Tables
 
-
 <Spoiler title="Code">
 
 This loot will spawn leaves block (when you break it using shears)
 
 <CodeHeader>BP/loot_tables/blocks/custom_leaves_block.json</CodeHeader>
-
 
 ```json
 {
