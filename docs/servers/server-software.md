@@ -17,6 +17,7 @@ mentions:
     - ProtectorYT364
     - ThomasOrs
     - lapismyt
+    - ModMaker101
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
@@ -34,7 +35,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
 | JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
-| C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
+| C#         | [Still Active](#c-1)        : 2 < [Discontinued](#c-4)          : 1  |
 | C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
 | Python     | [Still Active](#python)     : 1 < [Discontinued](#python-1)     : 2  |
 | D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
@@ -50,6 +51,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### C#
 
 -   [MiNET](https://github.com/NiclasOlofsson/MiNET)
+-   [Terac](https://github.com/TeracMC/Terac)
 
 ### C
 
