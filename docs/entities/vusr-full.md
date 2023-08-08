@@ -7,7 +7,7 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` and some formatting has been removed to make the page load quickly. *Last updated for 1.19.80*
+Includes all examples. Namespace `minecraft` and some formatting has been removed to make the page load quickly. *Last updated for 1.20.10*
 
 ## biome_filter
 
@@ -429,9 +429,18 @@ pig
 
 ```json
 "minecraft:biome_filter": {
-    "test": "has_biome_tag",
-    "operator": "==",
-    "value": "animal"
+    "any_of": [
+        {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "animal"
+        },
+        {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "cherry_grove"
+        }
+    ]
 }
 ```
 
@@ -632,6 +641,11 @@ rabbit
             "test": "has_biome_tag",
             "operator": "==",
             "value": "meadow"
+        },
+        {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "cherry_grove"
         }
     ]
 }
@@ -676,9 +690,18 @@ sheep
 
 ```json
 "minecraft:biome_filter": {
-    "test": "has_biome_tag",
-    "operator": "==",
-    "value": "meadow"
+    "any_of": [
+        {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "meadow"
+        },
+        {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "cherry_grove"
+        }
+    ]
 }
 ```
 
