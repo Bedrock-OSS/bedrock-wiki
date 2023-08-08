@@ -225,7 +225,7 @@ Content log is the most useful tool you have for debugging your addons. Please d
 
 Content Log is an extremely important debugging tool, which you should always have on.
 
-Turn on both content log settings in `settings > creator`. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI in-game by pressing `ctrl+h`. Learn more about the content log [here](/guide/troubleshooting).
+Turn on both content log settings in `settings > creator`. This will show you any errors in your add-on when you enter a world with it applied. You can open the content log GUI in-game by pressing `ctrl+h` or by pressing `Content Log History` in the creator settings panel. Learn more about the content log [here](/guide/troubleshooting).
 
 ## Creating your testing world
 
