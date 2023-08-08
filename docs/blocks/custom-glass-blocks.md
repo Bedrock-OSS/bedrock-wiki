@@ -9,7 +9,6 @@ mention:
     - QuazChick
 ---
 
-
 Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.
 
 By the end you should be able to create something like this!
@@ -18,7 +17,7 @@ By the end you should be able to create something like this!
 
 ## Basic Glass
 
-::: tip FORMAT VERSION `1.20.10`
+::: tip FORMAT VERSION `1.20.20`
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -29,7 +28,7 @@ This will create a custom glass block which appears the same as vanilla glass bl
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_glass",
@@ -63,9 +62,9 @@ This will create a custom glass block which appears the same as vanilla glass bl
 
 ## Vertically-Connecting Glass
 
-::: tip FORMAT VERSION `1.20.10`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.20`
 This example requires advanced knowledge of blocks and Molang to understand.
-Check out the [blocks guide](/blocks/blocks-intro) and [Molang](/concepts/molang) before starting.
+Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [Molang](/concepts/molang) before starting.
 :::
 
 ::: warning EXPERIMENTAL
@@ -79,7 +78,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
 ```json
 // Add a "nothing" texture in terrain_texture, and make it have a transparent file
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_vertical_connecting_glass",
@@ -87,9 +86,9 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         "category": "contruction",
         "group": "itemGroup.name.glass"
       },
-      "properties": {
+      "states": {
         // Properties needed for connected textures, also contols up and down culling
-        "wiki:connected_state": [0, 1, 2, 3],
+        "wiki:connection": [0, 1, 2, 3],
         // Properties to cull faces depending on surrounding blocks
         "wiki:cull_north": [false, true],
         "wiki:cull_south": [false, true],
@@ -106,7 +105,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         "looping": true,
         "interval_range": [0, 0],
         "on_tick": {
-          "event": "wiki:change_state"
+          "event": "wiki:update"
         }
       },
       "minecraft:unit_cube": {},
@@ -119,7 +118,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
       // These permutations control what textures are displayed at different situations
       // They also use tags to determine what state they are in, (top texture then top tag)
       {
-        "condition": "q.block_property('wiki:connected_state') == 0 && !q.block_property('wiki:cull_north') && !q.block_property('wiki:cull_south') && !q.block_property('wiki:cull_east') && !q.block_property('wiki:cull_west')",
+        "condition": "q.block_state('wiki:connection') == 0 && !q.block_state('wiki:cull_north') && !q.block_state('wiki:cull_south') && !q.block_state('wiki:cull_east') && !q.block_state('wiki:cull_west')",
         "components": {
           "tag:default": {},
           "minecraft:material_instances": {
@@ -139,7 +138,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:connected_state') == 1 && !q.block_property('wiki:cull_north') && !q.block_property('wiki:cull_south') && !q.block_property('wiki:cull_east') && !q.block_property('wiki:cull_west')",
+        "condition": "q.block_state('wiki:connection') == 1 && !q.block_state('wiki:cull_north') && !q.block_state('wiki:cull_south') && !q.block_state('wiki:cull_east') && !q.block_state('wiki:cull_west')",
         "components": {
           "tag:top": {},
           "minecraft:material_instances": {
@@ -159,7 +158,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:connected_state') == 2 && !q.block_property('wiki:cull_north') && !q.block_property('wiki:cull_south') && !q.block_property('wiki:cull_east') && !q.block_property('wiki:cull_west')",
+        "condition": "q.block_state('wiki:connection') == 2 && !q.block_state('wiki:cull_north') && !q.block_state('wiki:cull_south') && !q.block_state('wiki:cull_east') && !q.block_state('wiki:cull_west')",
         "components": {
           "tag:bottom": {},
           "minecraft:material_instances": {
@@ -179,7 +178,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:connected_state') == 3 && !q.block_property('wiki:cull_north') && !q.block_property('wiki:cull_south') && !q.block_property('wiki:cull_east') && !q.block_property('wiki:cull_west')",
+        "condition": "q.block_state('wiki:connection') == 3 && !q.block_state('wiki:cull_north') && !q.block_state('wiki:cull_south') && !q.block_state('wiki:cull_east') && !q.block_state('wiki:cull_west')",
         "components": {
           "tag:middle": {},
           "minecraft:material_instances": {
@@ -199,7 +198,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_north') && q.block_property('wiki:connected_state') == 0",
+        "condition": "q.block_state('wiki:cull_north') && q.block_state('wiki:connection') == 0",
         "components": {
           "tag:default": {},
           "minecraft:material_instances": {
@@ -223,7 +222,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_south') && q.block_property('wiki:connected_state') == 0",
+        "condition": "q.block_state('wiki:cull_south') && q.block_state('wiki:connection') == 0",
         "components": {
           "tag:default": {},
           "minecraft:material_instances": {
@@ -247,7 +246,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_east') && q.block_property('wiki:connected_state') == 0",
+        "condition": "q.block_state('wiki:cull_east') && q.block_state('wiki:connection') == 0",
         "components": {
           "tag:default": {},
           "minecraft:material_instances": {
@@ -271,7 +270,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_west') && q.block_property('wiki:connected_state') == 0",
+        "condition": "q.block_state('wiki:cull_west') && q.block_state('wiki:connection') == 0",
         "components": {
           "tag:default": {},
           "minecraft:material_instances": {
@@ -295,7 +294,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_north') && q.block_property('wiki:connected_state') == 1",
+        "condition": "q.block_state('wiki:cull_north') && q.block_state('wiki:connection') == 1",
         "components": {
           "tag:top": {},
           "minecraft:material_instances": {
@@ -319,7 +318,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_south') && q.block_property('wiki:connected_state') == 1",
+        "condition": "q.block_state('wiki:cull_south') && q.block_state('wiki:connection') == 1",
         "components": {
           "tag:top": {},
           "minecraft:material_instances": {
@@ -343,7 +342,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_east') && q.block_property('wiki:connected_state') == 1",
+        "condition": "q.block_state('wiki:cull_east') && q.block_state('wiki:connection') == 1",
         "components": {
           "tag:top": {},
           "minecraft:material_instances": {
@@ -368,7 +367,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
       },
       //in this situation if there is a block to the west and it is the upper connected texture then it shall have the west side invisible and the sides be the upper connected part
       {
-        "condition": "q.block_property('wiki:cull_west') && q.block_property('wiki:connected_state') == 1",
+        "condition": "q.block_state('wiki:cull_west') && q.block_state('wiki:connection') == 1",
         "components": {
           "tag:top": {},
           "minecraft:material_instances": {
@@ -392,7 +391,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_north') && q.block_property('wiki:connected_state') == 2",
+        "condition": "q.block_state('wiki:cull_north') && q.block_state('wiki:connection') == 2",
         "components": {
           "tag:bottom": {},
           "minecraft:material_instances": {
@@ -416,7 +415,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_south') && q.block_property('wiki:connected_state') == 2",
+        "condition": "q.block_state('wiki:cull_south') && q.block_state('wiki:connection') == 2",
         "components": {
           "tag:bottom": {},
           "minecraft:material_instances": {
@@ -440,7 +439,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_east') && q.block_property('wiki:connected_state') == 2",
+        "condition": "q.block_state('wiki:cull_east') && q.block_state('wiki:connection') == 2",
         "components": {
           "tag:bottom": {},
           "minecraft:material_instances": {
@@ -464,7 +463,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_west') && q.block_property('wiki:connected_state') == 2",
+        "condition": "q.block_state('wiki:cull_west') && q.block_state('wiki:connection') == 2",
         "components": {
           "tag:bottom": {},
           "minecraft:material_instances": {
@@ -488,7 +487,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_north') && q.block_property('wiki:connected_state') == 3",
+        "condition": "q.block_state('wiki:cull_north') && q.block_state('wiki:connection') == 3",
         "components": {
           "tag:middle": {},
           "minecraft:material_instances": {
@@ -512,7 +511,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_south') && q.block_property('wiki:connected_state') == 3",
+        "condition": "q.block_state('wiki:cull_south') && q.block_state('wiki:connection') == 3",
         "components": {
           "tag:middle": {},
           "minecraft:material_instances": {
@@ -536,7 +535,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_east') && q.block_property('wiki:connected_state') == 3",
+        "condition": "q.block_state('wiki:cull_east') && q.block_state('wiki:connection') == 3",
         "components": {
           "tag:middle": {},
           "minecraft:material_instances": {
@@ -560,7 +559,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         }
       },
       {
-        "condition": "q.block_property('wiki:cull_west') && q.block_property('wiki:connected_state') == 3",
+        "condition": "q.block_state('wiki:cull_west') && q.block_state('wiki:connection') == 3",
         "components": {
           "tag:middle": {},
           "minecraft:material_instances": {
@@ -585,12 +584,12 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
       }
     ],
     "events": {
-      "wiki:change_state": {
+      "wiki:update": {
         "sequence": [
           // Set the block to have no culling
           {
             "condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_vertical_connecting_glass')",
-            "set_block_property": {
+            "set_block_state": {
               "wiki:cull_north": "q.block_neighbor_has_any_tag(0,0,-1,'custom_vertical_connecting_glass')",
               "wiki:cull_south": "q.block_neighbor_has_any_tag(0,0,1,'custom_vertical_connecting_glass')",
               "wiki:cull_west": "q.block_neighbor_has_any_tag(-1,0,0,'custom_vertical_connecting_glass')",
@@ -600,56 +599,56 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
           // Control the custom texture state
           {
             "condition": "q.block_neighbor_has_any_tag(0,-1,0,'default')",
-            "set_block_property": {
-              "wiki:connected_state": 1
+            "set_block_state": {
+              "wiki:connection": 1
             }
           },
           {
             "condition": "q.block_neighbor_has_any_tag(0,1,0,'top') && !q.block_neighbor_has_any_tag(0,-1,0,'middle')",
-            "set_block_property": {
-              "wiki:connected_state": 2
+            "set_block_state": {
+              "wiki:connection": 2
             }
           },
           {
             "condition": "q.block_neighbor_has_any_tag(0,1,0,'top') && q.block_neighbor_has_any_tag(0,-1,0,'middle')",
-            "set_block_property": {
-              "wiki:connected_state": 3
+            "set_block_state": {
+              "wiki:connection": 3
             }
           },
           {
             "condition": "q.block_neighbor_has_any_tag(0,-1,0,'top')",
-            "set_block_property": {
-              "wiki:connected_state": 1
+            "set_block_state": {
+              "wiki:connection": 1
             }
           },
           {
             "condition": "q.block_neighbor_has_any_tag(0,-1,0,'bottom') && (q.block_neighbor_has_any_tag(0,1,0,'top') || q.block_neighbor_has_any_tag(0,1,0,'middle'))",
-            "set_block_property": {
-              "wiki:connected_state": 3
+            "set_block_state": {
+              "wiki:connection": 3
             }
           },
           {
             "condition": "!q.block_neighbor_has_any_tag(0,1,0,'top', 'default', 'middle', 'bottom') && q.block_neighbor_has_any_tag(0,-1,0,'middle', 'bottom')",
-            "set_block_property": {
-              "wiki:connected_state": 1
+            "set_block_state": {
+              "wiki:connection": 1
             }
           },
           {
             "condition": "!q.block_neighbor_has_any_tag(0,1,0,'top', 'default', 'middle', 'bottom') && !q.block_neighbor_has_any_tag(0,-1,0,'middle', 'bottom', 'top', 'default')",
-            "set_block_property": {
-              "wiki:connected_state": 0
+            "set_block_state": {
+              "wiki:connection": 0
             }
           },
           {
             "condition": "q.block_neighbor_has_any_tag(0,1,0,'top', 'middle', 'bottom') && !q.block_neighbor_has_any_tag(0,-1,0,'middle', 'bottom', 'top', 'default')",
-            "set_block_property": {
-              "wiki:connected_state": 2
+            "set_block_state": {
+              "wiki:connection": 2
             }
           },
           {
             "condition": "q.block_neighbor_has_any_tag(0,1,0,'default') && q.block_neighbor_has_any_tag(0,-1,0,'default')",
-            "set_block_property": {
-              "wiki:connected_state": 3
+            "set_block_state": {
+              "wiki:connection": 3
             }
           }
         ]
