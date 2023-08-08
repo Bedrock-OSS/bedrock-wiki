@@ -8,24 +8,23 @@ mentions:
     - MedicalJewel105
     - SquisSloim
     - SmokeyStack
+    - QuazChick
 ---
-
-## What this page covers
 
 From this page you will learn:
 
 -   How to apply flipbook textures to a block.
--   Which values you can apply in flipbook_textures.json and what they do.
+-   Which values you can apply in `RP/textures/flipbook_textures.json` and what they do.
 
-## Beginning
+## Applying Flipbook Textures
 
 Flipbook textures are animated textures. Blocks like fire, water, lava and magma use them. You can use animated texture for your blocks too!
 For the first time let's use magma's animated texture.
-You can simply apply animated magma's texture to your block by changing `texture` value to one, defined in `Vanilla_RP/textures/terrain_texture.json`:
+You can simply apply animated magma's texture to your block by changing `texture` value to one, defined in `Vanilla RP/textures/terrain_texture.json`:
 
 ```json
 "magma": {
-    "textures": "textures/blocks/magma"
+  "textures": "textures/blocks/magma"
 }
 ```
 
@@ -33,24 +32,22 @@ You can simply apply animated magma's texture to your block by changing `texture
 
 ```json
 {
-	"format_version": "1.17.20",
+	"format_version": "1.20.20",
 	"minecraft:block": {
 		"description": {
-			"identifier": "wiki:flipbook_block"
+			"identifier": "wiki:flipbook_block",
+      "menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.construction"
+      }
 		},
 		"components": {
-			"minecraft:destroy_time": 7,
 			"minecraft:unit_cube": {},
 			"minecraft:block_light_absorption": 15,
 			"minecraft:block_light_emission": 0,
-			"minecraft:creative_category": {
-				"category": "construction",
-				"group": "itemGroup.name.construction"
-			},
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "magma", // Add it here.
-					"render_method": "opaque"
+					"texture": "magma" // Add it here.
 				}
 			}
 		}
@@ -62,7 +59,7 @@ You can simply apply animated magma's texture to your block by changing `texture
 
 Now it has animated texture!
 
-## How it works
+## Defining Flipbook Textures
 
 After making block have animated texture, it is time to figure out how it all works.
 
@@ -72,9 +69,10 @@ After making block have animated texture, it is time to figure out how it all wo
 
 ```json
 {
-  "num_mip_levels": 4,
-  "padding": 8,
-  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "resource_pack_name": "wiki", // ID for your resource pack
+  "padding": 8, // Prevent textures from visually overflowing into each other
+  "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
   "texture_data": {
     "magma": {
       "textures": "textures/blocks/magma"
@@ -89,11 +87,11 @@ After making block have animated texture, it is time to figure out how it all wo
 
 ```json
 [
-    {
-        "flipbook_texture": "textures/blocks/magma",
-        "atlas_tile": "magma",
-        "ticks_per_frame": 10
-    }
+  {
+    "atlas_tile": "magma",
+    "flipbook_texture": "textures/blocks/magma",
+    "ticks_per_frame": 10
+  }
 ]
 ```
 
@@ -101,30 +99,24 @@ After making block have animated texture, it is time to figure out how it all wo
 
 3. Minecraft uses this animated texture for blocks who have `magma` as texture.
 
-This is the way how it works.
+## Flipbook Texture Parameters
 
-## What are the components?
+While looking up for something in vanilla flipbook texture file, you may notice some additional paramters:
 
-While looking up for something in vanilla flipbook texture file, you can notice some components.
+| Component          | Type             | Description                                                                                                 |
+| ------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| flipbook_texture   | string           | Path to texture.                                                                                            |
+| atlas_tile         | string           | The shortname defined in the terrain_textures.json.                                                         |
+| atlas_index        | integer          | The index of the texture array inside the definition of that shortname.                                     |
+| atlas_tile_variant | integer          | The variant of the block's texture array inside the shortname's block variation.                            |
+| ticks_per_frame    | integer          | How fast frames should be changed. 20 ticks = 1 second.                                                     |
+| frames             | array or integer | List with frame index to use on each frame, or the total number of frames to be repeated one after another. |
+| replicate          | integer          | Sets the size of pixels. Default: 1.                                                                        |
+| blend_frames       | boolean          | Defines should frames transition be smooth or not. Default: true.                                           |
 
-Here is explanation for them:
+### `atlas_index`
 
-| Component          | Value   | Meaning                                                                          |
-| ------------------ | ------- | -------------------------------------------------------------------------------- |
-| flipbook_texture   | string  | Path to texture.                                                                 |
-| atlas_tile         | string  | The shortname defined in the terrain_textures.json.                              |
-| atlas_index        | integer | The index of the texture array inside the definition of that shortname.*         |
-| atlas_tile_variant | integer | The variant of the block's texture array inside the shortname's block variation. |
-| ticks_per_frame    | integer | How fast frames should be changed. 20 ticks = 1 second.                          |
-| frames             | list    | List with numbers of frames which defines their order.                           |
-| replicate          | integer | Sets the size of pixels. Default: 1.**                                           |
-| blend_frames       | boolean | Defines should frames transition be smooth or not. Default: true.                |
-
-\* `atlas_index`
-
-A component where you'll define the value of the block index to animate.
-
-Example:
+A component where you'll define the block texture index to animate.
 
 <CodeHeader>RP/textures/terrain_texture.json#texture_data</CodeHeader>
 
@@ -137,13 +129,11 @@ Example:
 }
 ```
 
-Since path 2 has an animated texture, therefore you'll put `"atlas_index": 1"` on the Dirt block's flipbook texture.
+Since path 2 has an animated texture, therefore you'll put `"atlas_index": 1` on the Dirt block's flipbook texture.
 
-\* `atlas_tile_variant`
+### `atlas_tile_variant`
 
-A component where you'll define the value of the block variant (which is registered to the Variations array) to animate.
-
-Example:
+A component where you'll define the block variant (which is registered to the `variations` array) to animate.
 
 <CodeHeader>RP/textures/terrain_texture.json#texture_data</CodeHeader>
 
@@ -161,20 +151,21 @@ Example:
 }
 ```
 
-Now let's say we wanted path 1 to be animated, now what you'll do here is to put `"atlas_tile_variant": 1"` on the Dirt block's flipbook texture.
+Now let's say we wanted path 1 to be animated, now what you'll do here is to put `"atlas_tile_variant": 1` on the Dirt block's flipbook texture.
 
-
-\*\* `replicate`
+### `replicate`
 
 Changes size of the peace of used texture. Can only take values that are multiples of two. If frame has smaller amount of pixels, extends them.
 
-| `replicate` value |           what it does           |
-| ----------------- | -------------------------------- |
-| < 0               | Breaks animation                 |
-| 0                 | Breaks animation & texture       |
-| 2                 | Renders 1/4 pixels of frame      |
-| x                 | Renders 1/(x**2) pixels of frame |
+| `replicate` value | what it does                              |
+| ----------------- | ----------------------------------------- |
+| < 0               | Breaks animation                          |
+| 0                 | Breaks animation & texture                |
+| 2                 | Renders 1 / 4 pixels of frame             |
+| x                 | Renders 1 / x<sup>2</sup> pixels of frame |
+
+## Result
 
 ![](/assets/images/blocks/flipbook-textures/animated_texture_2.gif)
 
-Now you can modify vanilla flipbook textures or create your own ones.
+Now you can modify vanilla flipbook textures or create your own ones!
