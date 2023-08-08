@@ -19,7 +19,7 @@ This system will run your desired commands on the event that a players joins the
 
 `/scoreboard objectives add joined dummy`
 
-If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/docs/commands/on-first-world-load)
+If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
 
 ## System
 
