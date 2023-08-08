@@ -29,9 +29,9 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | ---------- | -------------------------------------------------------------------- |
 | PHP        | [Still Active](#php)        : 5 < [Discontinued](#php-1)        : 36 |
 | Java       | [Still Active](#java)       : 4 < [Discontinued](#java-1)       : 14 |
+| C++        | [Still Active](#c)          : 3 < [Discontinued](#c-3)          : 3  |
 | TypeScript | [Still Active](#typescript) : 3 < [Discontinued](#typescript-1) : 1  |
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
-| C++        | [Still Active](#c)          : 2 < [Discontinued](#c-3)          : 3  |
 | JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
 | C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
@@ -45,6 +45,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 -   [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
 -   [BedrockPowder](https://github.com/BedrockPowder/BedrockPowder)
+-   [AllayBE](https://github.com/AllayBE/AllayBE)
 
 ### C#
 
@@ -91,7 +92,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### Python
 
-- [PieMC-Bedrock](https://github.com/LapisMYT/PieMC_Bedrock)
+- [PieMC](https://github.com/PieMC-Dev/PieMC)
 
 ## Discontinued Software
 
