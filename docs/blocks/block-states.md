@@ -7,8 +7,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip MIN ENGINE VERSION `[1, 20, 20]`
-When working with block states, ensure that the `min_engine_version` in your pack manifest is `[1, 20, 20]` or higher.
+:::tip FORMAT & MIN ENGINE VERSION `1.20.20`
+When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
 
 Block states allow your blocks to have variants, each with its own functionality and appearance through use of [permutations](/blocks/block-permutations).

@@ -7,10 +7,10 @@ mentions:
     - QuazChick
 ---
 
-:::tip MIN ENGINE VERSION `[1, 20, 20]`
+:::tip FORMAT & MIN ENGINE VERSION `1.20.20`
 Before you learn about block traits, you should be confident with [block states](/blocks/block-states).
 
-When working with block states, ensure that the `min_engine_version` in your pack manifest is `[1, 20, 20]` or higher.
+When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
 
 ## Applying Traits

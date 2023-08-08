@@ -26,7 +26,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION `1.20.20`
+:::tip FORMAT & MIN ENGINE VERSION `1.20.20`
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::
 :::danger <nbsp/>
