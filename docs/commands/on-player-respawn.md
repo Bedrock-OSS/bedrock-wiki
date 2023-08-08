@@ -17,6 +17,8 @@ This system will run your desired commands on the event that a player respawns f
 
 ## Setup
 
+*To be typed in Chat:*
+
 `/scoreboard objectives add respawn dummy`
 
 If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/docs/commands/on-first-world-load)

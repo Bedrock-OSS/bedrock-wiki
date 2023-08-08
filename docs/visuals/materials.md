@@ -22,7 +22,6 @@ At the moment, most things in the game are hard-coded to use specific material a
 
 If you are not prepared to go in-depth with the ins and outs, material presets can be found [here](/documentation/materials).
 
-
 ## Syntax and Structure
 
 Most materials inherit the settings of previously defined materials, then further building off of them. This is written in the following format:
