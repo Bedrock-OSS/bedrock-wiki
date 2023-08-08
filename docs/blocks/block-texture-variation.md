@@ -9,13 +9,14 @@ mentions:
     - Hatchibombotar
     - SmokeyStack
     - MedicalJewel105
+    - QuazChick
 ---
 
 Block texture variation is when a single block can have multiple textures. This is useful for blocks such as dirt or grass, where some blocks may have slight variations such as small rocks and others don't.
 
 To enable texture variations, create a `terrain_texture.json` file in the textures folder. The `terrain_texture.json` in the block definition of the texture should be set to a dictionary with a variation key, and the variation key is an array of dictionaries that must contain a path key pointing to the texture file and may contain a weight to control how often the textures show up.
 
-## Example Dirt Texture Variation
+## Applying Texture Variation
 
 This is an example of how to create texture variations for the dirt block with three images:
 
@@ -26,9 +27,10 @@ This is an example of how to create texture variations for the dirt block with t
 
 ```json
 {
-	"num_mip_levels": 0,
-	"padding": 0,
-	"resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "resource_pack_name": "wiki", // ID for your resource pack
+  "padding": 8, // Prevent textures from visually overflowing into each other
+  "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
 	"texture_data": {
 		"dirt": {
 			"textures": {
@@ -39,15 +41,14 @@ This is an example of how to create texture variations for the dirt block with t
 				]
 			}
 		}
-	},
-	"texture_name": "atlas.terrain"
+	}
 }
 ```
 
 -   Create or modify three dirt textures, name them `dirt0.png`, `dirt1.png`, and `dirt2.png`
 -   Copy the `dirt0.png`, `dirt1.png`, and `dirt2.png` to the location noted in the path variable. This could contain additional folders if you want to be orderly.
 
-## Example of weighted dirt amounts
+## Weighted Texture Variation
 
 After using the example above, you might want to adjust the weights, edit the `terrain_textures.json` to include a weight field as shown below.
 
@@ -55,9 +56,10 @@ After using the example above, you might want to adjust the weights, edit the `t
 
 ```json
 {
-	"num_mip_levels": 0,
-	"padding": 0,
-	"resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "resource_pack_name": "wiki", // ID for your resource pack
+  "padding": 8, // Prevent textures from visually overflowing into each other
+  "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
 	"texture_data": {
 		"dirt": {
 			"textures": {
@@ -68,8 +70,7 @@ After using the example above, you might want to adjust the weights, edit the `t
 				]
 			}
 		}
-	},
-	"texture_name": "atlas.terrain"
+	}
 }
 ```
 
