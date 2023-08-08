@@ -7,10 +7,10 @@ mentions:
     - QuazChick
 ---
 
-:::tip MIN ENGINE VERSION `[1, 20, 20]`
+:::tip FORMAT & MIN ENGINE VERSION `1.20.20`
 Before you learn about block permutations, you should be confident with [block states](/blocks/block-states).
 
-When working with block states, ensure that the `min_engine_version` in your pack manifest is `[1, 20, 20]` or higher.
+When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
 
 Block permutations are a way of conditionally applying components (including event triggers and tags) to a block with Molang expressions.
@@ -29,11 +29,11 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_block",
-      "properties": {
+      "states": {
         "wiki:custom_integer_state": [2, 4, 6, 8],
         "wiki:custom_boolean_state": [false, true],
         "wiki:custom_string_state": ["red", "green", "blue"]
