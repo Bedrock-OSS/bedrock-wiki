@@ -271,14 +271,6 @@ Note that you will need to define animation in client entity like this:
 
 ![](/assets/images/tutorials/sleeping-entities/result.png)
 
-
-
-
-
-
-
-
-
 ## Taking naps
 
 This behavior is inspired from foxes.
