@@ -319,7 +319,7 @@ export default class SelectionBoxes {
 
 -    #### getSelected
       ```ts
-      getSelected(faceLocation: Vector3, options?: { invertU?: boolean; invertV?: boolean }): number | string | undefined
+      getSelected(faceLocation: Vector3, options?: { invertX?: boolean; invertY?: boolean; invertZ?: boolean }): number | string | undefined
       ```
       Get the box which the `faceLocation` lies within.
 
