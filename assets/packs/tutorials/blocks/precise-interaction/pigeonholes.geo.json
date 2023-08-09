@@ -1,0 +1,242 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pigeonholes",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "pigeonholes",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 16, 16],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "side"},
+								"south": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "side"},
+								"west": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "side"},
+								"up": {"uv": [16, 16], "uv_size": [-16, -16]},
+								"down": {"uv": [16, 16], "uv_size": [-16, -16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "empty_slots",
+					"parent": "pigeonholes",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "empty_slot_0",
+					"parent": "empty_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 8, -8],
+							"size": [6, 8, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [6, 8], "material_instance": "empty_slot"},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "empty_slot_1",
+					"parent": "empty_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 8, -8],
+							"size": [5, 8, 0],
+							"uv": {
+								"north": {"uv": [6, 0], "uv_size": [5, 8], "material_instance": "empty_slot"},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "empty_slot_2",
+					"parent": "empty_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [3, 8, -8],
+							"size": [5, 8, 0],
+							"uv": {
+								"north": {"uv": [11, 0], "uv_size": [5, 8], "material_instance": "empty_slot"},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "empty_slot_3",
+					"parent": "empty_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [6, 8, 0],
+							"uv": {
+								"north": {"uv": [0, 8], "uv_size": [6, 8], "material_instance": "empty_slot"},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "empty_slot_4",
+					"parent": "empty_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 0, -8],
+							"size": [5, 8, 0],
+							"uv": {
+								"north": {"uv": [6, 8], "uv_size": [5, 8], "material_instance": "empty_slot"},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "empty_slot_5",
+					"parent": "empty_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [3, 0, -8],
+							"size": [5, 8, 0],
+							"uv": {
+								"north": {"uv": [11, 8], "uv_size": [5, 8], "material_instance": "empty_slot"},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "occupied_slots",
+					"parent": "pigeonholes",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "occupied_slot_0",
+					"parent": "occupied_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 8, -8],
+							"size": [6, 8, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [6, 8], "material_instance": "occupied_slot"}
+							}
+						}
+					]
+				},
+				{
+					"name": "occupied_slot_1",
+					"parent": "occupied_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 8, -8],
+							"size": [5, 8, 0],
+							"uv": {
+								"north": {"uv": [6, 0], "uv_size": [5, 8], "material_instance": "occupied_slot"}
+							}
+						}
+					]
+				},
+				{
+					"name": "occupied_slot_2",
+					"parent": "occupied_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [3, 8, -8],
+							"size": [5, 8, 0],
+							"uv": {
+								"north": {"uv": [11, 0], "uv_size": [5, 8], "material_instance": "occupied_slot"}
+							}
+						}
+					]
+				},
+				{
+					"name": "occupied_slot_3",
+					"parent": "occupied_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [6, 8, 0],
+							"uv": {
+								"north": {"uv": [0, 8], "uv_size": [6, 8], "material_instance": "occupied_slot"}
+							}
+						}
+					]
+				},
+				{
+					"name": "occupied_slot_4",
+					"parent": "occupied_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 0, -8],
+							"size": [5, 8, 0],
+							"uv": {
+								"north": {"uv": [6, 8], "uv_size": [5, 8], "material_instance": "occupied_slot"}
+							}
+						}
+					]
+				},
+				{
+					"name": "occupied_slot_5",
+					"parent": "occupied_slots",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [3, 0, -8],
+							"size": [5, 8, 0],
+							"uv": {
+								"north": {"uv": [11, 8], "uv_size": [5, 8], "material_instance": "occupied_slot"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
