@@ -39,7 +39,7 @@ Check out [block features](/blocks/blocks-stable) before starting.
     -   Used by logs and basalt
     -   3 axis-aligned directions
 
--   ### [Specific Rotation](/blocks/head-like-rotation)
+-   ### [Precise Rotation](/blocks/precise-rotation)
     -   Used by skulls, signs and banners
     -   16 directions (22.5 degree multiples)
     -   4 cardinal side-attached directions

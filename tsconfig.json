@@ -16,7 +16,6 @@
 		"docs/.vitepress/**/*.ts",
 		"docs/.vitepress/**/*.d.ts",
 		"docs/.vitepress/**/*.tsx",
-		"docs/.vitepress/**/*.vue",
-		"docs/.vitepress/theme/Composables/colorFromTag.js"
+		"docs/.vitepress/**/*.vue"
 	]
 }
