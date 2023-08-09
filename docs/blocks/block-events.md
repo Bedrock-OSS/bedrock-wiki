@@ -128,14 +128,12 @@ Adds a mob effect to a target when triggered.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:effect_event": {
-    "add_mob_effect": {
-      "effect": "poison",
-      "target": "other",
-      "duration": 8,
-      "amplifier": 3
-    }
+"wiki:effect_event": {
+  "add_mob_effect": {
+    "effect": "poison",
+    "target": "other",
+    "duration": 8,
+    "amplifier": 3
   }
 }
 ```
@@ -147,13 +145,11 @@ Inflicts a specified damage unto a target in context.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:damage_event": {
-    "damage": {
-      "type": "magic",
-      "target": "other",
-      "amount": 4
-    }
+"wiki:damage_event": {
+  "damage": {
+    "type": "magic",
+    "target": "other",
+    "amount": 4
   }
 }
 ```
@@ -165,11 +161,9 @@ Removes one item from the player's selected stack.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:remove_one": {
-    "decrement_stack": {
-      "ignore_game_mode": true // Optional - Should this affect creative mode players (default is false)
-    }
+"wiki:remove_one": {
+  "decrement_stack": {
+    "ignore_game_mode": true // Optional - Should this affect creative mode players (default is false)
   }
 }
 ```
@@ -181,11 +175,9 @@ Kills the specified target, making the block disappear with no loot or effects i
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:destroy": {
-    "die": {
-      "target": "self"
-    }
+"wiki:destroy": {
+  "die": {
+    "target": "self"
   }
 }
 ```
@@ -197,12 +189,10 @@ Play a particle effect at a specified contextual target's position.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:particle_effect": {
-    "play_effect": {
-      "effect": "minecraft:campfire_smoke",
-      "target": "self"
-    }
+"wiki:particle_effect": {
+  "play_effect": {
+    "effect": "minecraft:campfire_smoke",
+    "target": "self"
   }
 }
 ```
@@ -214,12 +204,10 @@ Play a sound to a specified contextual target.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:play_sound": {
-    "play_sound": {
-      "sound": "mob.enderman.death",
-      "target": "self"
-    }
+"wiki:play_sound": {
+  "play_sound": {
+    "sound": "mob.enderman.death",
+    "target": "self"
   }
 }
 ```
@@ -231,12 +219,10 @@ Removes a target's mob effect when triggered.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:remove_effect_event": {
-    "remove_mob_effect": {
-      "effect": "poison",
-      "target": "other"
-    }
+"wiki:remove_effect_event": {
+  "remove_mob_effect": {
+    "effect": "poison",
+    "target": "other"
   }
 }
 ```
@@ -250,12 +236,10 @@ Use an array to run multiple commands.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:execute_event": {
-    "run_command": {
-      "target": "self", // Optional - 'self' is default (targets block)
-      "command": "summon pig"
-    }
+"wiki:execute_event": {
+  "run_command": {
+    "target": "self", // Optional - 'self' is default (targets block)
+    "command": "summon pig"
   }
 }
 ```
@@ -265,15 +249,13 @@ Or...
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:execute_event": {
-    "run_command": {
-      "target": "self", // Optional - 'self' is default (targets block)
-      "command": [
-        "summon pig",
-        "say Everybody welcome the pig!"
-      ]
-    }
+"wiki:execute_event": {
+  "run_command": {
+    "target": "self", // Optional - 'self' is default (targets block)
+    "command": [
+      "summon pig",
+      "say Everybody welcome the pig!"
+    ]
   }
 }
 ```
@@ -285,11 +267,9 @@ Removes the current block and replaces it with the defined block in the same pos
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:place_block": {
-    "set_block": {
-        "block_type": "minecraft:grass"
-    }
+"wiki:place_block": {
+  "set_block": {
+      "block_type": "minecraft:grass"
   }
 }
 ```
@@ -301,12 +281,10 @@ Sets a block at a specified position relative to the block.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:generate_stone_above": {
-    "set_block_at_pos": {
-      "block_type": "minecraft:stone",
-      "block_offset": [0, 1, 0]
-    }
+"wiki:generate_stone_above": {
+  "set_block_at_pos": {
+    "block_type": "minecraft:stone",
+    "block_offset": [0, 1, 0]
   }
 }
 ```
@@ -322,13 +300,11 @@ String values are evaluated as Molang. This means, to set a string state, you mu
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:change_state": {
-    "set_block_state": {
-      "wiki:boolean_state_example": false,
-      "wiki:integer_state_example": "q.block_state('wiki:integer_state_example') + 1",
-      "wiki:string_state_example": "'red'"
-    }
+"wiki:change_state": {
+  "set_block_state": {
+    "wiki:boolean_state_example": false,
+    "wiki:integer_state_example": "q.block_state('wiki:integer_state_example') + 1",
+    "wiki:string_state_example": "'red'"
   }
 }
 ```
@@ -340,11 +316,9 @@ Summons a loot table.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:drop_loot": {
-    "spawn_loot": {
-      "table": "loot_tables/blocks/my_loot_table.json"
-    }
+"wiki:drop_loot": {
+  "spawn_loot": {
+    "table": "loot_tables/blocks/my_loot_table.json"
   }
 }
 ```
@@ -356,10 +330,8 @@ Causes the involved actor to swing.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:swing_arm": {
-    "swing": {}
-  }
+"wiki:swing_arm": {
+  "swing": {}
 }
 ```
 
@@ -370,15 +342,13 @@ Teleport a target randomly around a destination point.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:go_away": {
-    "teleport": {
-      "target": "other", // Teleporting entity
-      "avoid_water": true, // Avoid teleporting into water
-      "land_on_block": true, // Place target on block
-      "destination": [0, 0, 0], // Origin destination
-      "max_range": [5, 6, 7] // Maximum offsets from the origin destination
-    }
+"wiki:go_away": {
+  "teleport": {
+    "target": "other", // Teleporting entity
+    "avoid_water": true, // Avoid teleporting into water
+    "land_on_block": true, // Place target on block
+    "destination": [0, 0, 0], // Origin destination
+    "max_range": [5, 6, 7] // Maximum offsets from the origin destination
   }
 }
 ```
@@ -390,11 +360,9 @@ Replace the target's selected item.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-{
-  "wiki:replace": {
-    "transform_item": {
-      "transform": "iron_sword"
-    }
+"wiki:replace": {
+  "transform_item": {
+    "transform": "iron_sword"
   }
 }
 ```
@@ -418,15 +386,15 @@ Trigger an event on a specified target.
 
 Event triggers are defined as [components](/blocks/block-components) in your block, so can be added, changed or removed with [permutations](/blocks/block-permutations).
 
--   [`minecraft:on_fall_on`](#minecraft-on-fall-on)
--   [`minecraft:on_interact`](#minecraft-on-interact)
--   [`minecraft:on_placed`](#minecraft-on-placed)
--   [`minecraft:on_player_destroyed`](#minecraft-on-player-destroyed)
--   [`minecraft:on_player_placing`](#minecraft-on-player-placing)
--   [`minecraft:on_step_off`](#minecraft-on-step-off)
--   [`minecraft:on_step_on`](#minecraft-on-step-on)
--   [`minecraft:queued_ticking`](#minecraft-queued-ticking)
--   [`minecraft:random_ticking`](#minecraft-random-ticking)
+-   [`minecraft:on_fall_on`](#on-fall-on)
+-   [`minecraft:on_interact`](#on-interact)
+-   [`minecraft:on_placed`](#on-placed)
+-   [`minecraft:on_player_destroyed`](#on-player-destroyed)
+-   [`minecraft:on_player_placing`](#on-player-placing)
+-   [`minecraft:on_step_off`](#on-step-off)
+-   [`minecraft:on_step_on`](#on-step-on)
+-   [`minecraft:queued_ticking`](#queued-ticking)
+-   [`minecraft:random_ticking`](#random-ticking)
 
 ### On Fall On
 
