@@ -8,7 +8,7 @@ tags:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.10
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.10.
 :::
 
 Ever need to prevent a specific block from being placed? In 1.20.10, some dangerous unobtainable blocks can be acquired, so you can use this script to keep your world or server safe!
@@ -16,7 +16,7 @@ Ever need to prevent a specific block from being placed? In 1.20.10, some danger
 ## Setup
 
 :::tip
-Before creating a script, it is recommended to learn the basics of JavaScript, Addons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
+Before creating a script, it is recommended to learn the basics of JavaScript, Add-ons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
 :::
 
 Just like other scripts, you need the dependency in your `manifest.json`. We are using the `@minecraft/server` module, specifically version `1.4.0-beta`.
@@ -170,6 +170,6 @@ world.beforeEvents.itemUseOn.subscribe(event => {
 
 You can now modify the message sent to the player in `player.sendMessage()`. Put your message between the two backticks. 
 
-You can also change the typeId of the block in `event.itemStack.typeId === "minecraft:bedrock"`. Put the namespace and indentifier in place of `minecraft:bedrock`.
+You can also change the typeId of the block in `event.itemStack.typeId === "minecraft:bedrock"`. Put the namespace and identifier in place of `minecraft:bedrock`.
 
 To learn more about Script API, you can check out the [wiki](/scripting/starting-scripts) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
