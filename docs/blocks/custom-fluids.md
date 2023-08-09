@@ -4,7 +4,6 @@ category: Vanilla Re-Creations
 tags:
     - experimental
     - intermediate
-    - scripting
 mentions:
     - Provedule
     - JaylyDev

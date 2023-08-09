@@ -1,11 +1,12 @@
 ---
-title: Editing Wiki Pages
+title: How to edit pages on our wiki
 hidden: true
 mentions:
     - TheItsNameless
     - MedicalJewel105
-    - QuazChick
 ---
+
+## Working on the wiki
 
 Now that you have our wiki locally, you can edit the files right on your device. If you don't know how to work with VSCode, there are some very good videos from Microsoft itself [here](https://code.visualstudio.com/docs).
 
@@ -56,25 +57,18 @@ List of categories:
 -   Legacy Scripting
 -   Ideas
 
-*New categories can be defined a section's `index.md` file.*
-
 List of tags:
 
--   beginner
+-   guide
+-   recipe
+-   help
+-   experimental
 -   beta
 -   easy
--   experimental
--   expert
--   guide
--   help
--   info
 -   intermediate
--   outdated
--   recipe
--   scripting
--   system
+-   expert
 
-## Viewing the Wiki Locally
+## Viewing the Wiki locally
 
 Its really hard to know how your article will look when its finished and published. To help with that, you can use a tool called `npm`!
 
@@ -90,7 +84,7 @@ Hover over the part where it says `"http://localhost:3000/"` and press ctrl and 
 
 Done! Every time you change and save a file in VSCode it will automatically be updated in your browser.
 
-## Viewing the Built Page
+## Viewing the built page
 
 The above tool shows you how the Wiki will look when it is built. But sometimes there are some errors arriving which you only get if you `build` the page.
 
@@ -552,14 +546,12 @@ Well, its hard to realise that. And we don't want perfectly and consistently for
 
 1.  For naming packages, folders, etc. consult our [Style-Guide](/meta/style-guide).
 
-### Headings
+### Headers
 
-1.  Don't use level-1 headings. Your page starts with a level-1 heading which has the same title as written in the Front Matter.
-2.  Try to avoid heading levels higher 4. They wont show in the right sidebar (only level-2 headings appear there) and won't have proper styling.
-3.  Use the `Title Case` style. For example,
-    -   `Welcome to the Wiki!`
-    -   `How It Works`
-4.  Don't use `:` in your headings!
+1.  Don't use level-1 Headers. Your Page starts with a level-1 Header, that has the same title as written in the Front Matter.
+2.  Try to avoid Headers higher than level-3. They wont show in the right sidebar and wont be easy to see.
+3.  Start with an Uppercase Letter and use the `Title Case` style.
+4.  Don't use `:` in your Headers!
 
 Some examples:
 
@@ -575,17 +567,15 @@ Some examples:
 
 ❌ `## my own: article`
 
-✔️ `## Next Steps`
-
-❌ `## Next Steps:`
-
 ### JSON Code
 
 1.  Use CodeHeaders, unless it is illogical or not possible.
-2.  Fully extend JSON Code if it improves readability aka. as ["Prettified Code"](https://jsonformatter.curiousconcept.com/#).
-    -   Do not extend `.geo.json` files as it would be too long.
-3.  If the code is too long or not necessary, wrap it in a spoiler component.
-3.  Use `RP` and `BP` as root folders.
+2.  Fully extend JSON Code aka. as ["Prettified Code"](https://jsonformatter.curiousconcept.com/#).
+
+Do not extend `.geo.json` as it will be too long.
+If the code is too long and not necessary, use spoilers.
+
+3.  Use `RP` and `BP` as root-folders.
 4.  Make comments but not many.
 
 Describe the most important things in comments inside the JSON, you can tell about other components after the code. Also follow our comments style.

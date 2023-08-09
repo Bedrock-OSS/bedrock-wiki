@@ -1,5 +1,5 @@
 ---
-title: Beginner's Guide
+title: Beginners Guide
 nav_order: 1
 categories:
     - title: Guide
@@ -8,6 +8,6 @@ categories:
       color: blue
 ---
 
-Welcome to the Bedrock Beginner's Guide!
+Welcome to the Bedrock Beginners Guide!
 
 <BButton color="blue" link="introduction">Get Started!</BButton>

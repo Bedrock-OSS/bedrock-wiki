@@ -16,7 +16,7 @@ Check out [block features](/blocks/blocks-stable) before starting.
 ::: warning EXPERIMENTAL
 Requires `Holiday Creator Features` to trigger block events.
 Requires `Upcoming Creator Features` for use of block traits.
-:::
+::
 
 ## Introduction
 

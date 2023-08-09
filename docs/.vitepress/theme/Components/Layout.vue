@@ -129,6 +129,7 @@
 import {
 	computed,
 	reactive,
+	watchEffect,
 	onMounted,
 	defineAsyncComponent,
 } from 'vue'
@@ -188,7 +189,7 @@ const showEditLink = computed(
 )
 
 const mentionedContributors = computed(
-	() => routeData.value.frontmatter.mentions ?? []
+	() => routeData.value.frontmatter.mention ?? []
 )
 
 const tags = computed(() => routeData.value.frontmatter.tags ?? [])
