@@ -160,11 +160,11 @@ In this case, we add an existing item called "minecraft:barrier" as a dummy item
 2. Next, create a function to loop through and process the dropped items:
 
 ```
-execute as @e[type=item,name="Barrier"] at @s run structure load my_xp_structure ~~~
+execute as @e[type=item,name="Barrier"] at @s run structure load ore_xp_reward ~~~
 execute as @e[type=item,name="Barrier"] run kill @s
 ```
 
-This function will execute for any item entity with the name "Barrier" (our dummy item). It loads a structure called "my_xp_structure" at the item's location and then kills the item.
+This function will execute for any item entity with the name "Barrier" (our dummy item). It loads a structure called "ore_xp_reward" at the item's location and then kills the item.
 
 ### Method 2: Function Loop
 
@@ -192,7 +192,7 @@ execute as @e[type=item,name="Raw Silver",tag=!xp] at @s run structure load ore_
 execute as @e[type=item,name="Raw Silver",tag=!xp] run tag @s add xp
 ```
 
-This function will execute for any item entity with the name "Raw Silver", which is ``wiki:raw_silver`` item ID that does not have the "xp" tag. It loads the "my_xp_structure" at the item's location and then adds the "xp" tag to the item.
+This function will execute for any item entity with the name "Raw Silver", which is ``wiki:raw_silver`` item ID that does not have the "xp" tag. It loads the "ore_xp_reward" at the item's location and then adds the "xp" tag to the item.
 
 Please note that in both methods, you need to download the "ore_xp_reward" structure file, which contains the XP orb from the button below.
 
