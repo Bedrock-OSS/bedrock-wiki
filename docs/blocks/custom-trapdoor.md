@@ -17,10 +17,13 @@ Check out [block features](/blocks/blocks-stable) before starting.
 Requires `Holiday Creator Features` to trigger block events.
 Requires `Upcoming Creator Features` for use of block traits.
 ::
+
 ## Introduction
+
 Making custom trapdoors is an often difficult task to do, but after reading this tutorial you'll understand how they work in case you find any drawbacks during recreating them, and you'll be provided with a template for you to use.
 
 ## Custom Trapdoor
+
 This will create a vanilla-like custom trapdoor.
 
 <CodeHeader>BP/blocks/custom_trapdoor.json</CodeHeader>
@@ -240,11 +243,13 @@ This will create a vanilla-like custom trapdoor.
 ```
 
 ## Geometry
+
 This will be the geometry used for your custom trapdoors.
 
 <Spoiler title="Geometry JSON">
   
 <CodeHeader>RP/models/blocks/trapdoor.geo.json</CodeHeader>
+
 ```json
 {
 	"format_version": "1.12.0",
