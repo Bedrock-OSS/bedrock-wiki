@@ -28,7 +28,7 @@ mentions:
 ```
 
 | Name             | Required | Default | Note                                                                                                                                                     |
-| ---------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|----------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `title`          | Yes      | None    | The title of the page.                                                                                                                                   |
 | `nav_order`      | No       | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order. |
 | `show_toc`       | No       | True    | Whether the table of contents will be generated for this page.                                                                                           |
@@ -74,7 +74,14 @@ List of tags:
 -   scripting
 -   system
 
-## Viewing the Wiki Locally
+To make a tag display in the navigation, simply add it to the `displayedTags` array in `.vitepress/theme/Components/Navigation/NavLinkTag.vue``
+
+## Wiki Add-On
+
+Sometimes we need to give a template/example pack after a guide. For this purpose we use separate GitHub repository: [wiki-addon](https://github.com/Bedrock-OSS/wiki-addon).
+Please, add your packs there. It helps us to maintain all add-ons and keep them up-to-date.
+
+## Viewing the Wiki locally
 
 Its really hard to know how your article will look when its finished and published. To help with that, you can use a tool called `npm`!
 
@@ -297,7 +304,7 @@ A Button works like a link, but is more noticeable for the user.
 >Download Wiki Logo</BButton>
 
 | Attribute | Required | Type   | Note                                                                                                                                                                   |
-| --------- | -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------|----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | link      | yes      | String | Link to redirect when clicking on the Button you can also link there content to download from wiki files. If doing this for pictures, add `download` after link value. |
 | color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'default' as values, otherwise it will be grey_                                             |
 
@@ -359,7 +366,7 @@ and here
 </Spoiler>
 
 | Attribute | Required | Type   | Note                              |
-| --------- | -------- | ------ | --------------------------------- |
+|-----------|----------|--------|-----------------------------------|
 | title     | yes      | String | Will be displayed after the arrow |
 
 The content between the two tags is the content that will be hidden.
@@ -385,7 +392,7 @@ A Label is a small icon with uppercase letters that can be used to give your art
 > label</Label>
 
 | Attribute | Required | Type   | Note                                                                                                    |
-| --------- | -------- | ------ | ------------------------------------------------------------------------------------------------------- |
+|-----------|----------|--------|---------------------------------------------------------------------------------------------------------|
 | name      | yes      | String | Text that will be displayed inside the box                                                              |
 | color     | no       | String | Color of the box <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be transparent_ |
 
@@ -420,7 +427,7 @@ FolderViews are Components which can be used to show a setup of files, like in o
 ]"></FolderView>
 
 | Attribute | Required | Type                                | Note                                                                   |
-| --------- | -------- | ----------------------------------- | ---------------------------------------------------------------------- |
+|-----------|----------|-------------------------------------|------------------------------------------------------------------------|
 | :paths    | yes      | String containing a List of Strings | Represents all files and folders which should appear in the FolderView |
 
 The `:paths` Attribute is a String, that contains a List of all separate file paths. This String must be written with double quotes! Each file path must be written entirely and has to be wrapped inside single quotes.
@@ -444,7 +451,7 @@ A YouTubeEmbed can be used to embed a YouTube Video in your article.
 <YouTubeEmbed id='dQw4w9WgXcQ' />
 
 | Attribute | Required | Type   | Note                       |
-| --------- | -------- | ------ | -------------------------- |
+|-----------|----------|--------|----------------------------|
 | id        | yes      | String | ID of the video to display |
 
 ### WikiImage
@@ -470,7 +477,7 @@ A WikiImage is an alternative way to add an image in your article.
 />
 
 | Attribute | Required | Type    | Note                                                                                                                   |
-| --------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
+|-----------|----------|---------|------------------------------------------------------------------------------------------------------------------------|
 | src       | yes      | String  | Image to show                                                                                                          |
 | alt       | no       | String  | Text to show if the browser can't load the image. Not really important, as most modern browser support showing images. |
 | pixelated | no       | Boolean | If the image should be pixelated.                                                                                      |
@@ -503,7 +510,7 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 />
 
 | Attribute | Required | Type   | Note                                   |
-| --------- | -------- | ------ | -------------------------------------- |
+|-----------|----------|--------|----------------------------------------|
 | imgsrc    | yes      | String | Image to display inside the box        |
 | title     | yes      | String | Title to show                          |
 | link      | yes      | String | Link to redirect on clicking the title |
@@ -650,16 +657,16 @@ This section is only for the readability of your Markdown files. It wont be visi
 
 ```
 | Some Data | Aaaaand More Data |
-| --------- | ----------------- |
+|-----------|-------------------|
 | here      | and here          |
 ```
 
 ❌
 
 ```
-|Some Data|Aaaaand More Data|
-|---|---|
-|here|and here|
+| Some Data | Aaaaand More Data |
+|-----------|-------------------|
+| here      | and here          |
 ```
 
 For tables you can download an [extension](https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter). However always check how it formats it.

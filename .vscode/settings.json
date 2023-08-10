@@ -9,5 +9,12 @@
 		"editor.formatOnSave": true
 	},
 	"editor.formatOnSave": true,
-	"eslint.validate": ["javascript", "typescript", "vue"]
+	"eslint.validate": [
+		"javascript",
+		"typescript",
+		"vue"
+	],
+	"[markdown]": {
+		"editor.defaultFormatter": "darkriszty.markdown-table-prettify"
+	}
 }

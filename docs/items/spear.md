@@ -46,26 +46,25 @@ It can go without saying that you'd obviously need an item to make a spear, howe
 <CodeHeader>BP/items/spear.json</CodeHeader>
 
 ```json
-
-        {
-            //Use duration is the max time we can use the item.
-            "minecraft:use_duration": 3600,
-            //This component is what gives our spear the ability to 'draw' it like a bow
-            "minecraft:throwable": {
-                "min_draw_duration": 2,
-                "max_draw_duration": 4,
-                "scale_power_by_draw_duration": true
-            },
-            //What projectile to shoot when draw is complete
-             "minecraft:projectile": {
-                "projectile_entity": "wiki:thrown_iron_spear",
-                "minimum_critical_power": 1.0
-            },
-            //Durability of the spear.
-            "minecraft:durability": {
-                "max_durability": 125
-            }
-        }
+{
+    //Use duration is the max time we can use the item.
+    "minecraft:use_duration": 3600,
+    //This component is what gives our spear the ability to 'draw' it like a bow
+    "minecraft:throwable": {
+        "min_draw_duration": 2,
+        "max_draw_duration": 4,
+        "scale_power_by_draw_duration": true
+    },
+    //What projectile to shoot when draw is complete
+    "minecraft:projectile": {
+        "projectile_entity": "wiki:thrown_iron_spear",
+        "minimum_critical_power": 1.0
+    },
+    //Durability of the spear.
+    "minecraft:durability": {
+        "max_durability": 125
+    }
+}
 ```
 
 ## Spear Projectile
@@ -78,15 +77,15 @@ We can safely say that we got the important components for our spear. Next we mo
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "wiki:thrown_iron_spear",
-			"is_spawnable": false,
-			"is_summonable": true,
-			"is_experimental": false,
-			"runtime_identifier":"minecraft:snowball"
-		},
+    "format_version": "1.12.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:thrown_iron_spear",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "runtime_identifier": "minecraft:snowball"
+        },
         "component_groups": {
             "wiki:give": {
                 "minecraft:instant_despawn": {}
@@ -161,61 +160,61 @@ Here we got our simple projectile entity. We are missing one part to make this a
 <CodeHeader>BP/entities/spear.json</CodeHeader>
 
 ```json
-    {
+{
     "components": {
         //Entity sensor detects if the projectile is on the ground, and if the player is near the entity.
         //This will run an event when it's true
-                "minecraft:entity_sensor": {
-                "event": "wiki:give",
-                "event_filters": {
-                    "all_of": [
-                        {
-                            "subject": "other",
-                            "test": "is_family",
-                            "value": "player"
-                        },
-                        {
-                            "subject": "self",
-                            "test": "on_ground",
-                            "value": true
-                        }
-                    ]
-                },
-                "minimum_count": 1,
-                "relative_range": false,
-                "sensor_range": 0.7
-            }
-        },
-            "events": {
-                /*
-                This event will despawn our projectile, and give our player a tag, which we will use in our script.
-                */
-            "wiki:give": {
-                "sequence": [
+        "minecraft:entity_sensor": {
+            "event": "wiki:give",
+            "event_filters": {
+                "all_of": [
                     {
-                        "add": {
-                            "component_groups": [
-                                "wiki:give"
-                            ]
-                        }
+                        "subject": "other",
+                        "test": "is_family",
+                        "value": "player"
                     },
                     {
-                        "randomize": [
-                            {
-                                "run_command": {
-                                    "command": [
-                                        "playsound random.pop @p",
-                                        "tag @p add iron_spear"
-                                    ]
-                                },
-                                "weight": 90
-                            }
-                        ]
+                        "subject": "self",
+                        "test": "on_ground",
+                        "value": true
                     }
                 ]
-            }
+            },
+            "minimum_count": 1,
+            "relative_range": false,
+            "sensor_range": 0.7
+        }
+    },
+    "events": {
+        /*
+        This event will despawn our projectile, and give our player a tag, which we will use in our script.
+        */
+        "wiki:give": {
+            "sequence": [
+                {
+                    "add": {
+                        "component_groups": [
+                            "wiki:give"
+                        ]
+                    }
+                },
+                {
+                    "randomize": [
+                        {
+                            "run_command": {
+                                "command": [
+                                    "playsound random.pop @p",
+                                    "tag @p add iron_spear"
+                                ]
+                            },
+                            "weight": 90
+                        }
+                    ]
+                }
+            ]
         }
     }
+}
 ```
 
 Once we're done with out projectile entity, it's time to go to Resource Packs.
@@ -227,32 +226,35 @@ We will be using a basic client entity file for our projectile with added code.
 <Spoiler title="Client Entity">
 
 <CodeHeader>RP/entities/spear.json</CodeHeader>
+
 ```json
 {
-	"format_version": "1.10.0",
-	"minecraft:client_entity": {
-		"description": {
-			"identifier": "wiki:thrown_iron_spear",
-			"materials": {
-				"default": "entity_alphatest"
-			},
-			"textures": {
-				"default": "textures/entity/iron_spear"
-			},
-			 "animations": {
-        "move": "animation.weapon.default_thrown"
-      },
-			      "scripts": {
-        "animate": [
-          "move"
-        ]
-      },
-			"geometry": {
-				"default": "geometry.stone_spear"
-			},
-			"render_controllers": ["controller.render.default"]
-		}
-	}
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:thrown_iron_spear",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/iron_spear"
+            },
+            "animations": {
+                "move": "animation.weapon.default_thrown"
+            },
+            "scripts": {
+                "animate": [
+                    "move"
+                ]
+            },
+            "geometry": {
+                "default": "geometry.stone_spear"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
 }
 ```
 </Spoiler>
@@ -262,6 +264,7 @@ Inside our client entity file, you might have noticed that there is animations b
 :::warning
 Make sure your entity model is modeled like the image bellow!
 :::
+
 ![](/assets/images/items/spears/spear_model.png)
 
 ## Animation
@@ -297,40 +300,42 @@ We will be using the Trident Attachable because it comes with item positions and
 {
     "format_version": "1.10.0",
     "minecraft:attachable": {
-      "description": {
-        "identifier": "wiki:iron_spear",
-        "materials": {
-          "default": "entity_alphatest",
-          "enchanted": "entity_alphatest_glint"
-        },
-        "textures": {
-          "default": "textures/entity/iron_spear",
-          "enchanted": "textures/misc/enchanted_item_glint"
-        },
-        "geometry": {
-          "default": "geometry.stone_spear_item"
-        },
-        "animations": {
-          "wield": "controller.animation.trident.wield",
-          "wield_first_person": "animation.trident.wield_first_person",
-          "wield_first_person_raise": "animation.trident.wield_first_person_raise",
-          "wield_first_person_raise_shake": "animation.trident.wield_first_person_raise_shake",
-          "wield_first_person_riptide": "animation.trident.wield_first_person_riptide",
-          "wield_third_person": "animation.trident.wield_third_person",
-          "wield_third_person_raise": "animation.trident.wield_third_person_raise"
-        },
-        "scripts": {
-          "pre_animation": [
-            "variable.charge_amount = math.clamp((query.main_hand_item_max_duration - (query.main_hand_item_use_duration - query.frame_alpha + 1.0)) / 10.0, 0.0, 1.0f);"
-          ],
-          "animate": [
-            "wield"
-          ]
-        },
-        "render_controllers": [ "controller.render.item_default" ]
-      }
+        "description": {
+            "identifier": "wiki:iron_spear",
+            "materials": {
+                "default": "entity_alphatest",
+                "enchanted": "entity_alphatest_glint"
+            },
+            "textures": {
+                "default": "textures/entity/iron_spear",
+                "enchanted": "textures/misc/enchanted_item_glint"
+            },
+            "geometry": {
+                "default": "geometry.stone_spear_item"
+            },
+            "animations": {
+                "wield": "controller.animation.trident.wield",
+                "wield_first_person": "animation.trident.wield_first_person",
+                "wield_first_person_raise": "animation.trident.wield_first_person_raise",
+                "wield_first_person_raise_shake": "animation.trident.wield_first_person_raise_shake",
+                "wield_first_person_riptide": "animation.trident.wield_first_person_riptide",
+                "wield_third_person": "animation.trident.wield_third_person",
+                "wield_third_person_raise": "animation.trident.wield_third_person_raise"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "variable.charge_amount = math.clamp((query.main_hand_item_max_duration - (query.main_hand_item_use_duration - query.frame_alpha + 1.0)) / 10.0, 0.0, 1.0f);"
+                ],
+                "animate": [
+                    "wield"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.item_default"
+            ]
+        }
     }
-  }
+}
 ```
 
 ## Script
@@ -389,6 +394,6 @@ Once you've followed this guide, you should have your own working spear in-game.
 Example Pack Download:
 
 <BButton
-    link="/assets/packs/tutorials/spear/wiki_spear_pack.mcaddon" download
-	color=gray
+    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/wiki_spear_pack.mcaddon"
+    color=blue
 >💾 Example Pack</BButton>
