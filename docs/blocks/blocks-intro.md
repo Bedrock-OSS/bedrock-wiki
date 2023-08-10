@@ -39,7 +39,7 @@ This tutorial will cover how to create basic blocks for the stable version of Mi
 
 ## Registering Blocks
 
-Block behaviors are structured similarly to entities: they contain a description and a list of components that defines the block's behavior.
+Block definitions are structured similarly to entities: they contain a description and a list of components that defines the block's behavior.
 
 Unlike entities, blocks do not have a resource definition other than in `RP/blocks.json`.
 
@@ -54,10 +54,12 @@ Below is the **minimum** behavior-side code to get a custom block in the creativ
     "description": {
       "identifier": "wiki:custom_block",
       "menu_category": {
-        "category": "construction"
+        "category": "construction", // The creative inventory or recipe book tab that the block is placed into
+        "group": "itemGroup.name.concrete", // The expandable group that the block is a part of. (Optional)
+        "is_hidden_in_commands": false // Is the block hidden from use in commands? (Optional)
       }
     },
-    "components": {}
+    "components": {} // Must be here, even if empty!
   }
 }
 ```
