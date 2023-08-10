@@ -9,12 +9,12 @@
 import { colorFromTag } from '../../Composables/colorFromTag'
 
 const displayedTags = [
-  'guide',
-  'help',
-  'info',
-  'outdated',
-  'scripting',
-  'system'
+	'guide',
+	'help',
+	'info',
+	'outdated',
+	'scripting',
+	'system'
 ]
 
 const props = defineProps<{
