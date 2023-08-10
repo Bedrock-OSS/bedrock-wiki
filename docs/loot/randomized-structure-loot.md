@@ -97,6 +97,11 @@ Add `LootTable` and the file path to your loot table
 Save changes (Ctrl + S)
 
 ## Loot Tabler (Browser Application)
+
+:::tip
+To export a structure on mobile devices, [Download this pack.](https://mcpedl.com/export-structure-button-android-addon/)
+:::
+
 ### Adding the Loot Table
 
 Open the website and click "Upload". Choose your structure file.
