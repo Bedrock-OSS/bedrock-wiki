@@ -1,48 +1,29 @@
 <template>
 	<span
 		v-if="valid"
-		:class="`${colour} label`"
+		:class="`${colour} label ml-auto`"
 	>{{ title }}</span>
 </template>
 
 <script setup lang="ts">
+import { colorFromTag } from '../../Composables/colorFromTag'
+
+const displayedTags = [
+  'guide',
+  'help',
+  'info',
+  'outdated',
+  'scripting',
+  'system'
+]
 
 const props = defineProps<{
 	tag: string
 }>()
 
-let valid = true
-let title = ''
-let colour = ''
+let valid = displayedTags.includes(props.tag)
+let title = props.tag
+let colour = colorFromTag(props.tag)
 
-switch (props.tag) {
-case 'guide': {
-	title = 'GUIDE'
-	colour = 'green'
-	break
-}
-case 'outdated': {
-	title = 'OUTDATED'
-	colour = 'red'
-	break
-}
-case 'info': {
-	title = 'INFO'
-	colour = 'green'
-	break
-}
-case 'system': {
-	title = 'SYSTEM'
-	colour = 'blue'
-	break
-}
-case 'help': {
-	title = 'HELP'
-	colour = 'blue'
-	break
-}
-default:
-	valid = false
-	break
-}
+if (props.tag === 'scripting') title = 'scripts'
 </script>
