@@ -18,7 +18,7 @@ mentions:
 ---
 
 ::: tip
-It is highly recommended that you look over [the BlockBench modelling and texturing](/guide/blockbench) section in the beginner's guides before tackling these sections.
+It is highly recommended that you look over [the BlockBench modelling and texturing](/guide/blockbench) section in the beginners guides before tackling these sections.
 :::
 
 Making custom armors is surprisingly easy to do, you need to do a bit of fiddling around as there are a few files that need to be added and there can be a little bit of texturing involved but you can do as much or as little as you want here.

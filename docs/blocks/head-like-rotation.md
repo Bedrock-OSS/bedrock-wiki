@@ -1,5 +1,5 @@
 ---
-title: Precise Rotation
+title: Specific (Head-Like) Rotation
 category: Tutorials
 tags:
     - experimental
@@ -14,16 +14,12 @@ Check out [block features](/blocks/blocks-stable) before starting.
 :::
 
 ::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger events. 
-
-Requires `Upcoming Creator Features` to use block traits.
+Requires `Holiday Creator Features` to trigger events and `Upcoming Creator Features` to use block traits.
 :::
 
 This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a "shell" block with this rotation type.
 
-*Looking for regular rotation? Learn about it [here](/blocks/rotatable-blocks)!*
-
-![Custom shell blocks oriented randomly](/assets/images/blocks/precise-rotation/showcase.png)
+![Custom shell blocks oriented randomly](/assets/images/blocks/head-like-rotation/showcase.png)
 
 Features:
 
@@ -33,9 +29,9 @@ Features:
 
 ## Block Model
 
-To allow for more precise rotation, your block's model will need a few extra bones.
+To allow for more specific rotation, your block's model will need a few extra bones.
 
-There are 4 bones required for precise ground rotation, each with different Y axis rotations:
+There are 4 bones required for specific ground rotation, each with different Y axis rotations:
 
 -   `up_0` (Y rotation = 0)
 -   `up_22_5` (Y rotation = 22.5)
@@ -56,7 +52,7 @@ In addition, a `side` bone will be necessary for placement on side faces.
 
 The following model for a "shell" block can be used as a reference:
 
-![](/assets/images/blocks/precise-rotation/model_bones.png)
+![](/assets/images/blocks/head-like-rotation/model_bones.png)
 
 <Spoiler title="Shell Example Model">
 
@@ -246,7 +242,7 @@ For head-like rotation, you need to add 2 states to your block:
       }
     },
     "properties": {
-      // Precise rotation of block when placed on `up` face
+      // Specific rotation of block when placed on `up` face
       "wiki:rotation": {
         "values": { "min": 0, "max": 15 } // An alternative property value syntax to define larger integer ranges easily
       }
@@ -305,7 +301,7 @@ Create the following component and event in your block:
 
 ## Block Permutations
 
-These define the base cardinal rotations which will be expanded by the precise bones in our model.
+These define the base cardinal rotations which will be expanded by the specific bones in our model.
 
 Insert the following permutations into your block JSON (in the presented order):
 
@@ -334,7 +330,7 @@ Insert the following permutations into your block JSON (in the presented order):
 
 ## Bone Visibility
 
-Not all bones in your model should be visible, so we make use of the bone visibility `minecraft:geometry` property to ensure that only the required bones are rendered. The reason behind having multiple bones is that `minecraft:transformation` only supports multiples of 90 degrees, while precise rotation requires 22.5 degree steps.
+Not all bones in your model should be visible, so we make use of the bone visibility `minecraft:geometry` property to ensure that only the required bones are rendered. The reason behind having multiple bones is that `minecraft:transformation` only supports multiples of 90 degrees, while head rotation requires 22.5 degree steps.
 
 Add the following component to your block:
 
@@ -492,27 +488,27 @@ What you have created:
 
 <Checklist>
 
--   [x] Block model supporting precise rotation
+-   [x] Block model supporting head-like rotation
 -   [x] Block with 16 rotation states, allowing placement on 5 block faces (20 total orientations)
 
 </Checklist>
 
 ---
 
-![Custom shell blocks in a square formation, each pointing towards the middle](/assets/images/blocks/precise-rotation/result.png)
+![Custom shell blocks in a square formation, each pointing towards the middle](/assets/images/blocks/head-like-rotation/result.png)
 
 ## Download Example Pack
 
 Template pack made according to this tutorial, adding a "shell" block into the `Nature` tab.
 
 <BButton
-  link="/assets/packs/tutorials/blocks/precise-rotation/example.mcaddon"
-  download="Precise Rotation Example.mcaddon"
+  link="/assets/packs/tutorials/blocks/head-like-rotation/example.mcaddon"
+  download="Specific (Head-Like) Rotation Example.mcaddon"
   color=blue
 >Download MCADDON</BButton>
 
 <BButton
-  link="/assets/packs/tutorials/blocks/precise-rotation/example.mcaddon"
-  download="Precise Rotation Example.zip"
+  link="/assets/packs/tutorials/blocks/head-like-rotation/example.mcaddon"
+  download="Specific (Head-Like) Rotation Example.zip"
   color=blue
 >Download ZIP</BButton>

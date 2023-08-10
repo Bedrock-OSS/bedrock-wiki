@@ -3,7 +3,7 @@ title: Advanced Manifest
 category: Extra
 nav_order: 4
 prefix: 'd.'
-mentions:
+mention:
     - MRBBATES1
     - Luthorius
     - SirLich

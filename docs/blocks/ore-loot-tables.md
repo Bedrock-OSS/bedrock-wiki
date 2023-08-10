@@ -133,7 +133,7 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 
 Rather than triggering a block event to summon reward experience, you could use one of the methods described below.
 
-Please note that you need to download the "ore_xp_reward" structure file, which contains the XP orbs, from [here](#download-structure).
+Please note that you need to download the "ore_xp_reward" structure file, which contains the XP orbs, from the [here](#download-structure).
 
 ### Method 1: Dummy Items and Function Loop
 
@@ -207,10 +207,7 @@ Remember to replace the item IDs, tags, and other specific details according to 
 
 ## Download Structure
 
-<BButton
-  link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download
-  color=blue
->Download MCSTRUCTURE</BButton>
+<BButton link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download color=blue> Download MCSTRUCTURE</BButton>
 
 ## Result
 

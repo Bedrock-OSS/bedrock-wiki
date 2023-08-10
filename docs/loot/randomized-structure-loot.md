@@ -18,7 +18,7 @@ Adding loot tables to containers in structure is easy, you need to have a PC and
 
 To start, create the directory `BP/loot_tables/chests` and create your loot table file here.
 
-You can learn how to make loot tables in [Beginner's Guide](/guide/loot-table)
+You can learn how to make loot tables in [Beginners Guide](/guide/loot-table)
 
 <CodeHeader>BP/loot_tables/chests/my_structure_loot.json</CodeHeader>
 
@@ -97,6 +97,11 @@ Add `LootTable` and the file path to your loot table
 Save changes (Ctrl + S)
 
 ## Loot Tabler (Browser Application)
+
+:::tip
+To export a structure on mobile devices, [Download this pack.](https://mcpedl.com/export-structure-button-android-addon/)
+:::
+
 ### Adding the Loot Table
 
 Open the website and click "Upload". Choose your structure file.
