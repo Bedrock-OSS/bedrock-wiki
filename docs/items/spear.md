@@ -1,6 +1,8 @@
 ---
 title: Custom Spear
 category: Tutorials
+tags:
+    - scripting
 mentions:
     - XxPoggyisLitxX
     - SirLich
