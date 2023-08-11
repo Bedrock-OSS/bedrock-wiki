@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.10`
+::: tip FORMAT VERSION `1.20.20`
 This tutorial assumes an advanced understanding of blocks and the execute command.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -18,7 +18,7 @@ Check out the [blocks guide](/blocks/blocks-intro) before starting.
 ::: warning EXPERIMENTAL
 Requires `Holiday Creator Features` for use of experimental Molang queries, new item features and to trigger block events.
 
-Requires `Beta APIs` for use of `*-beta` module versions.
+Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.5.0-beta`.
 :::
 
 Creating fluids that are identical to vanilla fluids is not currently possible, but you can make something similar! This template/tutorial is designed to assist you in creating a custom "semi-fluid".
@@ -56,14 +56,14 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_fluid",
       "menu_category": {
-        "category": "nature"
+        "category": "none"
       },
-      "properties": {
+      "states": {
         "wiki:source": [true, false],
         // Depth of fluid - default to 4
         "wiki:depth": [4, 5, 3, 2, 1]
@@ -84,8 +84,8 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
       },
       "minecraft:material_instances": {
         "*": {
-          "texture": "flowing_lava",
-          "render_method": "alpha_test",
+          "texture": "custom_fluid", // Shortname defined in `RP/textures/terrain_texture.json`
+          "render_method": "blend",
           "ambient_occlusion": false,
           "face_dimming": false
         }
@@ -98,12 +98,12 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
         "sequence": [
           // Dry out
           {
-            "condition": "!q.block_property('wiki:source') && ((q.block_property('wiki:depth') == 5 && !q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')) || (q.block_property('wiki:depth') == 1 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_2') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_2') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_2') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_2')) || q.block_property('wiki:depth') == 2 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_3') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_3') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_3') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_3'))) || (q.block_property('wiki:depth') == 3 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_4', 'custom_fluid_5'))))",
+            "condition": "!q.block_state('wiki:source') && ((q.block_state('wiki:depth') == 5 && !q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')) || (q.block_state('wiki:depth') == 1 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_2') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_2') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_2') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_2')) || q.block_state('wiki:depth') == 2 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_3') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_3') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_3') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_3'))) || (q.block_state('wiki:depth') == 3 && !(q.block_neighbor_has_any_tag(1, 0, 0, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(-1, 0, 0, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(0, 0, 1, 'custom_fluid_4', 'custom_fluid_5') || q.block_neighbor_has_any_tag(0, 0, -1, 'custom_fluid_4', 'custom_fluid_5'))))",
             "die": {}
           },
           // Spread
           {
-            "condition": "q.block_property('wiki:depth') == 4",
+            "condition": "q.block_state('wiki:depth') == 4",
             "run_command": {
               "command": [
                 "execute if block ~~~1 air run setblock ~~~1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=3]",
@@ -114,19 +114,19 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
             }
           },
           {
-            "condition": "q.block_property('wiki:source') && q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
-            "set_block_property": {
+            "condition": "q.block_state('wiki:source') && q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
+            "set_block_state": {
               "wiki:depth": 5
             }
           },
           {
-            "condition": "q.block_property('wiki:source') && !q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
-            "set_block_property": {
+            "condition": "q.block_state('wiki:source') && !q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
+            "set_block_state": {
               "wiki:depth": 4
             }
           },
           {
-            "condition": "q.block_property('wiki:depth') == 3",
+            "condition": "q.block_state('wiki:depth') == 3",
             "run_command": {
               "command": [
                 "execute if block ~~~1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=2]",
@@ -137,7 +137,7 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
             }
           },
           {
-            "condition": "q.block_property('wiki:depth') == 2",
+            "condition": "q.block_state('wiki:depth') == 2",
             "run_command": {
               "command": [
                 "execute if block ~~~1 air unless block ~~-1~ air unless block ~~-1~ wiki:custom_fluid run setblock ~~~1 wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=1]",
@@ -148,7 +148,7 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
             }
           },
           {
-            "condition": "q.block_property('wiki:depth') == 5 && q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
+            "condition": "q.block_state('wiki:depth') == 5 && q.block_neighbor_has_any_tag(0, 1, 0, 'custom_fluid')",
             "run_command": {
               "command": [
                 "execute if block ~~-1~ wiki:custom_fluid [\"wiki:depth\"=3] run setblock ~~-1~ wiki:custom_fluid [\"wiki:source\"=false,\"wiki:depth\"=5]",
@@ -186,7 +186,7 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
     },
     "permutations": [
       {
-        "condition": "q.block_property('wiki:source')",
+        "condition": "q.block_state('wiki:source')",
         "components": {
           // Enables the block to be picked up by an item of choice
           "minecraft:selection_box": {
@@ -197,41 +197,41 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
         }
       },
       {
-        "condition": "!q.block_property('wiki:source')",
+        "condition": "!q.block_state('wiki:source')",
         "components": {
           "tag:flowing_custom_fluid": {}
         }
       },
       {
-        "condition": "q.block_property('wiki:depth') == 5",
+        "condition": "q.block_state('wiki:depth') == 5",
         "components": {
           "minecraft:geometry": "geometry.fluid.5",
           "tag:custom_fluid_5": {}
         }
       },
       {
-        "condition": "q.block_property('wiki:depth') == 4",
+        "condition": "q.block_state('wiki:depth') == 4",
         "components": {
           "minecraft:geometry": "geometry.fluid.4",
           "tag:custom_fluid_4": {}
         }
       },
       {
-        "condition": "q.block_property('wiki:depth') == 3",
+        "condition": "q.block_state('wiki:depth') == 3",
         "components": {
           "minecraft:geometry": "geometry.fluid.3",
           "tag:custom_fluid_3": {}
         }
       },
       {
-        "condition": "q.block_property('wiki:depth') == 2",
+        "condition": "q.block_state('wiki:depth') == 2",
         "components": {
           "minecraft:geometry": "geometry.fluid.2",
           "tag:custom_fluid_2": {}
         }
       },
       {
-        "condition": "q.block_property('wiki:depth') == 1",
+        "condition": "q.block_state('wiki:depth') == 1",
         "components": {
           "minecraft:geometry": "geometry.fluid.1",
           "tag:custom_fluid_1": {}
@@ -240,7 +240,6 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
     ]
   }
 }
-
 ```
 
 </Spoiler>
@@ -255,11 +254,13 @@ To place your custom fluid you need a custom bucket item. Below is the JSON for 
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_fluid_bucket",
-      "category": "items"
+      "menu_category": {
+        "category": "items"
+      }
     },
     "components": {
       "minecraft:max_stack_size": 1,
@@ -297,7 +298,7 @@ The fluids use a script to add the ability for the player to float/sink in the f
   "dependencies": [
     {
       "module_name": "@minecraft/server",
-      "version": "1.4.0-beta"
+      "version": "1.5.0-beta"
     }
   ]
 }
@@ -313,7 +314,7 @@ import { system, world } from "@minecraft/server";
 const fluids = ["wiki:custom_fluid"];
 
 system.runInterval(() => {
-  const players = Array.from(world.getPlayers());
+  const players = world.getPlayers();
 
   for (const player of players) {
     // Fluid effects
@@ -321,7 +322,7 @@ system.runInterval(() => {
       fluids.includes(world.getDimension(player.dimension.id).getBlock({ ...player.location, y: player.location.y + 1 }).typeId) ||
       fluids.includes(world.getDimension(player.dimension.id).getBlock(player.location).typeId)
     ) {
-      player.addEffect("slowness", 1, { amplifier: 2, showParticles: false });
+      player.addEffect("slowness", 3, { amplifier: 2, showParticles: false });
       player.addEffect("slow_falling", 4, { showParticles: false });
       if (player.isJumping) {
         player.addEffect("levitation", 3, { amplifier: 2, showParticles: false });
@@ -339,9 +340,9 @@ system.runInterval(() => {
 
 </Spoiler>
 
-## Download / Other
+## Result
 
-By the end your BP folder should look like this
+By the end your BP folder should look like this:
 
 <FolderView
 	:paths="[
@@ -349,7 +350,7 @@ By the end your BP folder should look like this
     'BP/items/custom_fluid_bucket.json',
     'BP/scripts/fluids.js',
     'RP/fogs/custom_fluid.json'
-    ]"
+  ]"
 ></FolderView>
 
 ## Download Example Pack
