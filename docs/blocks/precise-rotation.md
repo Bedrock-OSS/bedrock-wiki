@@ -8,8 +8,8 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.10`
-This tutorial assumes an advanced understanding of blocks.
+::: tip FORMAT VERSION `1.20.20`
+This tutorial assumes an advanced understanding of blocks and Molang.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
@@ -195,7 +195,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",
@@ -235,21 +235,21 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 For head-like rotation, you need to add 2 states to your block:
 
+<CodeHeader>minecraft:block</CodeHeader>
+
 ```json
-{
-  "description": {
-    ...
-    "traits": {
-      // Face block is placed on - default is `north`
-      "minecraft:placement_position": {
-        "enabled_states": ["minecraft:block_face"]
-      }
-    },
-    "properties": {
-      // Precise rotation of block when placed on `up` face
-      "wiki:rotation": {
-        "values": { "min": 0, "max": 15 } // An alternative property value syntax to define larger integer ranges easily
-      }
+"description": {
+  ...
+  "traits": {
+    // Face block is placed on - default is `north`
+    "minecraft:placement_position": {
+      "enabled_states": ["minecraft:block_face"]
+    }
+  },
+  "states": {
+    // Precise rotation of block when placed on `up` face
+    "wiki:rotation": {
+      "values": { "min": 0, "max": 15 } // An alternative property value syntax to define larger integer ranges easily
     }
   }
 }
@@ -260,25 +260,24 @@ For head-like rotation, you need to add 2 states to your block:
 Rather than manually typing bounds for each `wiki:rotation` value, you can use some [complex Molang](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/molangreference/examples/molangconcepts/molangintroduction#simple-vs-complex-expressions) and division to return the values desired!
 
 ```c
-// If targeted block face is `up`, continue, otherwise 0 is returned
-q.block_face == 1 ? {
-  // Transform player's head Y rotation to a positive
-  t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != Math.abs(q.head_y_rotation(0)));
-  // How many 16ths of 360 is the head rotation? - rounded
-  t.block_rotation = Math.round(t.positive_head_rot / 22.5);
+// Transform player's head Y rotation to a positive
+t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0)));
+// How many 16ths of 360 is the head rotation? - rounded
+t.rotation = math.round(t.positive_head_rot / 22.5);
 
-  // 0 and 16 represent duplicate rotations (0 degrees and 360 degrees), so 0 is returned if the value of `t.block_rotation` is 16
-  return t.block_rotation != 16 ? t.block_rotation;
-};
+// 0 and 16 represent duplicate rotations (0 degrees and 360 degrees), so 0 is returned if the value of `t.rotation` is 16
+return t.rotation != 16 ? t.rotation;
 ```
 
 On a single line so that you can put it into JSON:
 
+<CodeHeader>minecraft:block > components > minecraft:on_player_placing > condition</CodeHeader>
+
 ```c
-q.block_face == 1 ? { t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != Math.abs(q.head_y_rotation(0))); t.block_rotation = Math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation; };
+t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0))); t.rotation = math.round(t.positive_head_rot / 22.5); return t.rotation != 16 ? t.rotation;
 ```
 
-## Set Rotation
+## Applying Rotation
 
 Time to use this Molang to set the block properties you have added!
 
@@ -286,10 +285,13 @@ We will update our block properties when the player is placing the block. This m
 
 Create the following component and event in your block:
 
+<CodeHeader>minecraft:block</CodeHeader>
+
 ```json
 "components": {
   ...
   "minecraft:on_player_placing": {
+    "condition": "q.block_face == 1", // Precise rotation only applies to `up` face
     "event": "wiki:set_rotation"
   }
 },
@@ -297,17 +299,19 @@ Create the following component and event in your block:
   "wiki:set_rotation": {
     "set_block_property": {
       // Now use the long Molang expression from before to set the rotation property
-      "wiki:rotation": "q.block_face == 1 ? { t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != Math.abs(q.head_y_rotation(0))); t.block_rotation = Math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation; };"
+      "wiki:rotation": "q.block_face == 1 ? { t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0))); t.block_rotation = math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation; };"
     }
   }
 }
 ```
 
-## Block Permutations
+<br>
 
-These define the base cardinal rotations which will be expanded by the precise bones in our model.
+Then, use [permutations](/blocks/block-permutations) to define the base cardinal rotations which will be expanded by the precise bones in our model.
 
 Insert the following permutations into your block JSON (in the presented order):
+
+<CodeHeader>minecraft:block</CodeHeader>
 
 ```json
 "permutations": [
@@ -338,17 +342,17 @@ Not all bones in your model should be visible, so we make use of the bone visibi
 
 Add the following component to your block:
 
+<CodeHeader>minecraft:block > components</CodeHeader>
+
 ```json
-{
-  "minecraft:geometry": {
-    "identifier": "geometry.shell", // Model created in first step
-    "bone_visibility": {
-      "up_0": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation'), 4)",
-      "up_22_5": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 1, 4)",
-      "up_45": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 2, 4)",
-      "up_67_5": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 3, 4)",
-      "side": "q.block_property('minecraft:block_face') != 'up'"
-    }
+"minecraft:geometry": {
+  "identifier": "geometry.shell", // Model created in first step
+  "bone_visibility": {
+    "up_0": "q.block_property('minecraft:block_face') == 'up' && !math.mod(q.block_property('wiki:rotation'), 4)",
+    "up_22_5": "q.block_property('minecraft:block_face') == 'up' && !math.mod(q.block_property('wiki:rotation') - 1, 4)",
+    "up_45": "q.block_property('minecraft:block_face') == 'up' && !math.mod(q.block_property('wiki:rotation') - 2, 4)",
+    "up_67_5": "q.block_property('minecraft:block_face') == 'up' && !math.mod(q.block_property('wiki:rotation') - 3, 4)",
+    "side": "q.block_property('minecraft:block_face') != 'up'"
   }
 }
 ```
@@ -357,24 +361,23 @@ Add the following component to your block:
 
 If you would like your block to have a different collision/selection box when placed on the side of a block, as with my "shell" block, add something similar to this permutation:
 
+<CodeHeader>minecraft:block > permutations</CodeHeader>
+
 ```json
-"permutations": [
-  ...
-  {
-    "condition": "q.block_property('minecraft:block_face') != 'up'",
-    "components": {
-      // Add your collision/selection boxes
-      "minecraft:collision_box": {
-        "origin": [-3, 5, 5],
-        "size": [6, 6, 3]
-      },
-      "minecraft:selection_box": {
-        "origin": [-3, 5, 5],
-        "size": [6, 6, 3]
-      }
+{
+  "condition": "q.block_property('minecraft:block_face') != 'up'",
+  "components": {
+    // Add your collision/selection boxes
+    "minecraft:collision_box": {
+      "origin": [-3, 5, 5],
+      "size": [6, 6, 3]
+    },
+    "minecraft:selection_box": {
+      "origin": [-3, 5, 5],
+      "size": [6, 6, 3]
     }
   }
-]
+}
 ```
 
 ## Final Block JSON
@@ -387,7 +390,7 @@ Our block JSON file after the above steps should look similar to the code below:
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",
@@ -399,7 +402,7 @@ Our block JSON file after the above steps should look similar to the code below:
           "enabled_states": ["minecraft:block_face"]
         }
       },
-      "properties": {
+      "states": {
         "wiki:rotation": {
           "values": { "min": 0, "max": 15 }
         }
@@ -417,11 +420,11 @@ Our block JSON file after the above steps should look similar to the code below:
       "minecraft:geometry": {
         "identifier": "geometry.shell",
         "bone_visibility": {
-          "up_0": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation'), 4)",
-          "up_22_5": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 1, 4)",
-          "up_45": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 2, 4)",
-          "up_67_5": "q.block_property('minecraft:block_face') == 'up' && !Math.mod(q.block_property('wiki:rotation') - 3, 4)",
-          "side": "q.block_property('minecraft:block_face') != 'up'"
+          "up_0": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation'), 4)",
+          "up_22_5": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 1, 4)",
+          "up_45": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 2, 4)",
+          "up_67_5": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 3, 4)",
+          "side": "q.block_state('minecraft:block_face') != 'up'"
         }
       },
       "minecraft:material_instances": {
@@ -437,37 +440,38 @@ Our block JSON file after the above steps should look similar to the code below:
         ]
       },
       "minecraft:on_player_placing": {
+        "condition": "q.block_face == 1",
         "event": "wiki:set_rotation"
       }
     },
     "events": {
       "wiki:set_rotation": {
-        "set_block_property": {
-          "wiki:rotation": "q.block_face == 1 ? { t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != Math.abs(q.head_y_rotation(0))); t.block_rotation = Math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation; };"
+        "set_block_state": {
+          "wiki:rotation": "t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0))); t.block_rotation = math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation;"
         }
       }
     },
     "permutations": [
       {
-        "condition": "q.block_property('wiki:rotation') >= 4 || q.block_property('minecraft:block_face') == 'east'",
+        "condition": "q.block_state('wiki:rotation') >= 4 || q.block_state('minecraft:block_face') == 'east'",
         "components": {
           "minecraft:transformation": { "rotation": [0, -90, 0] }
         }
       },
       {
-        "condition": "q.block_property('wiki:rotation') >= 8 || q.block_property('minecraft:block_face') == 'south'",
+        "condition": "q.block_state('wiki:rotation') >= 8 || q.block_state('minecraft:block_face') == 'south'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 180, 0] }
         }
       },
       {
-        "condition": "q.block_property('wiki:rotation') >= 12 || q.block_property('minecraft:block_face') == 'west'",
+        "condition": "q.block_state('wiki:rotation') >= 12 || q.block_state('minecraft:block_face') == 'west'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 90, 0] }
         }
       },
       {
-        "condition": "q.block_property('minecraft:block_face') != 'up'",
+        "condition": "q.block_state('minecraft:block_face') != 'up'",
         "components": {
           "minecraft:collision_box": {
             "origin": [-3, 5, 5],
