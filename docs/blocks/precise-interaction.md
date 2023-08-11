@@ -9,15 +9,15 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.10`
+::: tip FORMAT VERSION `1.20.20`
 This tutorial assumes an advanced understanding of blocks and scripting.
-Check out [block features](/blocks/blocks-stable) and the [scripting guide](/scripting/starting-scripts) before starting.
+Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/starting-scripts) guides before starting.
 :::
 
 ::: warning EXPERIMENTAL
 Requires `Holiday Creator Features` to trigger block events.
 
-Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.4.0-beta`.
+Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.5.0-beta`.
 :::
 
 :::danger NO EMPTY HANDS!
@@ -30,7 +30,7 @@ For example, what if you want to create a block that has multiple buttons on one
 
 This is where precise interaction comes in! The following methods of precise interaction allow you to define multiple areas in a block that can be interacted with separately, and assign different functions to each area. In this tutorial, we will show you how to add precise interaction to your blocks using scripts, with examples of each method.
 
-**Note**: Precise interaction does not enable blocks to have multiple / a custom-shaped [`minecraft:selection_box`](/blocks/blocks-stable#minecraft-selection-box). The selection box must be within all defined areas for precise interaction to function properly.
+**Note**: Precise interaction does not enable blocks to have multiple/custom-shaped [`minecraft:selection_box`](/blocks/block-components#selection-box) components. The selection box must be within all defined areas for precise interaction to function properly.
 
 ![Showcase image displaying example Pigeonholes and Double Flower Pot blocks](/assets/images/blocks/precise-interaction/showcase.png)
 
@@ -395,7 +395,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:pigeonholes",
@@ -408,7 +408,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
           "y_rotation_offset": 180
         }
       },
-      "properties": {
+      "states": {
         "wiki:slot_0_occupied": [false, true],
         "wiki:slot_1_occupied": [false, true],
         "wiki:slot_2_occupied": [false, true],
@@ -425,18 +425,18 @@ Interacting with paper will fill the selected slot. Destroying the block release
         "identifier": "geometry.pigeonholes",
         "bone_visibility": {
           // Display each slot as empty/occupied
-          "empty_slot_0": "!q.block_property('wiki:slot_0_occupied')",
-          "empty_slot_1": "!q.block_property('wiki:slot_1_occupied')",
-          "empty_slot_2": "!q.block_property('wiki:slot_2_occupied')",
-          "empty_slot_3": "!q.block_property('wiki:slot_3_occupied')",
-          "empty_slot_4": "!q.block_property('wiki:slot_4_occupied')",
-          "empty_slot_5": "!q.block_property('wiki:slot_5_occupied')",
-          "occupied_slot_0": "q.block_property('wiki:slot_0_occupied')",
-          "occupied_slot_1": "q.block_property('wiki:slot_1_occupied')",
-          "occupied_slot_2": "q.block_property('wiki:slot_2_occupied')",
-          "occupied_slot_3": "q.block_property('wiki:slot_3_occupied')",
-          "occupied_slot_4": "q.block_property('wiki:slot_4_occupied')",
-          "occupied_slot_5": "q.block_property('wiki:slot_5_occupied')"
+          "empty_slot_0": "!q.block_state('wiki:slot_0_occupied')",
+          "empty_slot_1": "!q.block_state('wiki:slot_1_occupied')",
+          "empty_slot_2": "!q.block_state('wiki:slot_2_occupied')",
+          "empty_slot_3": "!q.block_state('wiki:slot_3_occupied')",
+          "empty_slot_4": "!q.block_state('wiki:slot_4_occupied')",
+          "empty_slot_5": "!q.block_state('wiki:slot_5_occupied')",
+          "occupied_slot_0": "q.block_state('wiki:slot_0_occupied')",
+          "occupied_slot_1": "q.block_state('wiki:slot_1_occupied')",
+          "occupied_slot_2": "q.block_state('wiki:slot_2_occupied')",
+          "occupied_slot_3": "q.block_state('wiki:slot_3_occupied')",
+          "occupied_slot_4": "q.block_state('wiki:slot_4_occupied')",
+          "occupied_slot_5": "q.block_state('wiki:slot_5_occupied')"
         }
       },
       "minecraft:material_instances": {
@@ -456,7 +456,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
       },
       "minecraft:on_interact": {
         // Only allow interaction with the front face
-        "condition": "(q.block_face == 2 && q.block_property('minecraft:cardinal_direction') == 'north') || (q.block_face == 3 && q.block_property('minecraft:cardinal_direction') == 'south') || (q.block_face == 4 && q.block_property('minecraft:cardinal_direction') == 'west') || (q.block_face == 5 && q.block_property('minecraft:cardinal_direction') == 'east')",
+        "condition": "(q.block_face == 2 && q.block_state('minecraft:cardinal_direction') == 'north') || (q.block_face == 3 && q.block_state('minecraft:cardinal_direction') == 'south') || (q.block_face == 4 && q.block_state('minecraft:cardinal_direction') == 'west') || (q.block_face == 5 && q.block_state('minecraft:cardinal_direction') == 'east')",
         "event": "wiki:on_insert"
       }
     },
@@ -473,28 +473,28 @@ Interacting with paper will fill the selected slot. Destroying the block release
     "permutations": [
       // Facing north
       {
-        "condition": "q.block_property('minecraft:cardinal_direction') == 'north'",
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 0] }
         }
       },
       // Facing west
       {
-        "condition": "q.block_property('minecraft:cardinal_direction') == 'west'",
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 90, 0] }
         }
       },
       // Facing south
       {
-        "condition": "q.block_property('minecraft:cardinal_direction') == 'south'",
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 180, 0] }
         }
       },
       // Facing east
       {
-        "condition": "q.block_property('minecraft:cardinal_direction') == 'east'",
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
         "components": {
           "minecraft:transformation": { "rotation": [0, -90, 0] }
         }
@@ -548,7 +548,7 @@ world.afterEvents.itemUseOn.subscribe((e) => {
 
   // Set block state and play an insert sound. The stack is decremented in the block JSON event.
   occupySlot(e.block, slots.getSelected(e));
-  placer.runCommand(`playsound insert.chiseled_bookshelf @a ${Object.values(block.location).join(" ")}`);
+  e.source.runCommand(`playsound insert.chiseled_bookshelf @a ${Object.values(e.block.location).join(" ")}`);
 });
 
 // ------------------------------
@@ -606,14 +606,14 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:double_flower_pot",
       "menu_category": {
         "category": "items"
       },
-      "properties": {
+      "states": {
         "wiki:axis": ["x", "z"],
         "wiki:pot_0_plant": ["none", "dandelion", "cactus"],
         "wiki:pot_1_plant": ["none", "dandelion", "cactus"]
@@ -633,10 +633,10 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
         "identifier": "geometry.double_flower_pot",
         // Conditionally display plants in their pots
         "bone_visibility": {
-          "dandelion_0": "q.block_property('wiki:pot_0_plant') == 'dandelion'",
-          "dandelion_1": "q.block_property('wiki:pot_1_plant') == 'dandelion'",
-          "cactus_0": "q.block_property('wiki:pot_0_plant') == 'cactus'",
-          "cactus_1": "q.block_property('wiki:pot_1_plant') == 'cactus'"
+          "dandelion_0": "q.block_state('wiki:pot_0_plant') == 'dandelion'",
+          "dandelion_1": "q.block_state('wiki:pot_1_plant') == 'dandelion'",
+          "cactus_0": "q.block_state('wiki:pot_0_plant') == 'cactus'",
+          "cactus_1": "q.block_state('wiki:pot_1_plant') == 'cactus'"
         }
       },
       "minecraft:material_instances": {
@@ -647,7 +647,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
         },
         // Material instances defined in model:
         "dirt": {
-          "texture": "double_flower_pot_dirt", // Apply a darker tint to the dirt texture in `terrain_texture.json` to replicate vanilla potted dirt
+          "texture": "double_flower_pot_dirt", // Apply a darker tint to the dirt texture to replicate vanilla potted dirt
           "render_method": "alpha_test",
           "ambient_occlusion": false
         },
@@ -680,7 +680,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
     },
     "events": {
       "wiki:set_axis": {
-        "set_block_property": {
+        "set_block_state": {
           "wiki:axis": "Math.floor((q.cardinal_facing_2d - 2) / 2) == 1 ? 'z' : 'x'"
         }
       },
@@ -690,7 +690,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
     },
     "permutations": [
       {
-        "condition": "q.block_property('wiki:axis') == 'z'",
+        "condition": "q.block_state('wiki:axis') == 'z'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 90, 0] } // Front of model facing east
         }
@@ -712,14 +712,8 @@ import SelectionBoxes from "../utils/selection_boxes"; // Import the SelectionBo
 
 // Support orientation along both horizontal axes
 const pots = {
-  x: new SelectionBoxes(
-    { origin: [-7, 0, -3], size: [6, 6, 6] },
-    { origin: [1, 0, -3], size: [6, 6, 6] }
-  ),
-  z: new SelectionBoxes(
-    { origin: [-3, 0, -7], size: [6, 6, 6] },
-    { origin: [-3, 0, 1], size: [6, 6, 6] }
-  ),
+  x: new SelectionBoxes({ origin: [-7, 0, -3], size: [6, 6, 6] }, { origin: [1, 0, -3], size: [6, 6, 6] }),
+  z: new SelectionBoxes({ origin: [-3, 0, -7], size: [6, 6, 6] }, { origin: [-3, 0, 1], size: [6, 6, 6] }),
 };
 
 // The state value and sound associated with each plant
@@ -757,7 +751,7 @@ world.beforeEvents.itemUseOn.subscribe((e) => {
 //    Plant in the selected pot
 // -------------------------------
 world.afterEvents.itemUseOn.subscribe((e) => {
-  if (e.block.typeId !== "wiki:double_flower_pot" || !plants[e.itemStack.typeId] || e.sender.isSneaking) return;
+  if (e.block.typeId !== "wiki:double_flower_pot" || !plants[e.itemStack.typeId] || e.source.isSneaking) return;
 
   const selectedPot = getSelectedPot(e);
   const plant = plants[e.itemStack.typeId];
@@ -825,7 +819,7 @@ Don't forget to import your scripts into your pack's entry file!
   "dependencies": [
     {
       "module_name": "@minecraft/server",
-      "version": "1.4.0-beta"
+      "version": "1.5.0-beta"
     }
   ]
 }
