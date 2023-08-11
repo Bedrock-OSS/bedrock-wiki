@@ -40,7 +40,10 @@ One of the following NBT editors are recommended:
 
 For convenience, this article contains a premade structure file you can download and use. Inside is an AOE cloud that exists for the maximum possible time.
 
-<a href="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/structures/aec.mcstructure?raw=true">📄 Structure file</a>
+<BButton
+  link="/assets/packs/entities/aec/aec.mcstructure" download
+  color=blue
+>Download MCSTRUCTURE</BButton>
 
 Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructure)
 
