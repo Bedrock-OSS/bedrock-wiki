@@ -48,7 +48,7 @@ This will create a vanilla-like custom slab.
     "permutations": [
       // Bottom Slab
       {
-        "condition": "query.block_state('minecraft:vertical_half') == 'bottom' && !query.block_state('wiki:double')",
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('wiki:double')",
         "components": {
           "minecraft:collision_box": {
             "origin": [-8, 0, -8],
@@ -66,7 +66,7 @@ This will create a vanilla-like custom slab.
       },
       // Top Slab
       {
-        "condition": "query.block_state('minecraft:vertical_half') == 'top' && !query.block_state('wiki:double')",
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('wiki:double')",
         "components": {
           "minecraft:collision_box": {
             "origin": [-8, 8, -8],
@@ -84,7 +84,7 @@ This will create a vanilla-like custom slab.
       },
       // Double Slab
       {
-        "condition": "query.block_state('wiki:double')",
+        "condition": "q.block_state('wiki:double')",
         "components": {
           "minecraft:unit_cube": {},
           "minecraft:on_player_destroyed": {
@@ -103,8 +103,8 @@ This will create a vanilla-like custom slab.
       "minecraft:geometry": {
         "identifier": "geometry.slab",
         "bone_visibility": {
-          "bottom_slab": "query.block_state('minecraft:vertical_half') == 'bottom'",
-          "top_slab": "query.block_state('minecraft:vertical_half') == 'top'"
+          "bottom_slab": "q.block_state('minecraft:vertical_half') == 'bottom'",
+          "top_slab": "q.block_state('minecraft:vertical_half') == 'top'"
         }
       },
       "minecraft:material_instances": {
