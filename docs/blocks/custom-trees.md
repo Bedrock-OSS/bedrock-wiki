@@ -989,6 +989,6 @@ What you have created:
 Template Pack to use in-game to get the idea.
 
 <BButton
-  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_tree.mcaddon"
+  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_trees.mcaddon"
   color=blue
 >Download MCADDON</BButton>
