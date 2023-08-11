@@ -855,7 +855,7 @@ Your crop can't only drop seeds! Create a custom food using the template below.
 Your pack should now contain the following files:
 
 <FolderView
-	:paths="[
+  :paths="[
     'BP/blocks/custom_dirt.json',
     'BP/blocks/custom_crop.json',
     'BP/blocks/custom_farmland.json',

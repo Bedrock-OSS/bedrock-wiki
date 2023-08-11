@@ -36,30 +36,30 @@ Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is pro
 
 ```json
 {
-	"texture_name": "atlas.terrain",
-	"resource_pack_name": "wiki",
-	"padding": 8,
-	"num_mip_levels": 4,
-	"texture_data": {
-		"dirt_like": {
-			"textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
-		},
-		"log_like_top": {
-			"textures": "textures/blocks/log_like_top" // You can replace this with anything, just remember the name
-		},
-		"log_like_side": {
-			"textures": "textures/blocks/log_like_side" // You can replace this with anything, just remember the name
-		},
-		"custom_grass_top": {
-			"textures": "textures/blocks/custom_grass_top" // You can replace this with anything, just remember the name
-		},
-		"custom_grass_bottom": {
-			"textures": "textures/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
-		},
-		"custom_grass_side": {
-			"textures": "textures/blocks/custom_grass_side" // You can replace this with anything, just remember the name
-		}
-	}
+  "texture_name": "atlas.terrain",
+  "resource_pack_name": "wiki",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "dirt_like": {
+      "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
+    },
+    "log_like_top": {
+      "textures": "textures/blocks/log_like_top" // You can replace this with anything, just remember the name
+    },
+    "log_like_side": {
+      "textures": "textures/blocks/log_like_side" // You can replace this with anything, just remember the name
+    },
+    "custom_grass_top": {
+      "textures": "textures/blocks/custom_grass_top" // You can replace this with anything, just remember the name
+    },
+    "custom_grass_bottom": {
+      "textures": "textures/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
+    },
+    "custom_grass_side": {
+      "textures": "textures/blocks/custom_grass_side" // You can replace this with anything, just remember the name
+    }
+  }
 }
 ```
 
@@ -170,17 +170,17 @@ Solution: Navigate to your block file. Navigate to your `material_instances` com
 
 ```json
 {
-	"format_version": "1.20.20",
-	"minecraft:block": {
+  "format_version": "1.20.20",
+  "minecraft:block": {
     ...
-		"components": {
-			"minecraft:material_instances": {
-				"*": {
-					"render_method": "alpha_test"
-				}
-			}
-		}
-	}
+    "components": {
+      "minecraft:material_instances": {
+        "*": {
+          "render_method": "alpha_test"
+        }
+      }
+    }
+  }
 }
 ```
 

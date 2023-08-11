@@ -32,26 +32,26 @@ You can simply apply animated magma's texture to your block by changing `texture
 
 ```json
 {
-	"format_version": "1.20.20",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:flipbook_block",
+  "format_version": "1.20.20",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:flipbook_block",
       "menu_category": {
-				"category": "construction",
-				"group": "itemGroup.name.construction"
+        "category": "construction",
+        "group": "itemGroup.name.construction"
       }
-		},
-		"components": {
-			"minecraft:unit_cube": {},
-			"minecraft:block_light_absorption": 15,
-			"minecraft:block_light_emission": 0,
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "magma" // Add it here.
-				}
-			}
-		}
-	}
+    },
+    "components": {
+      "minecraft:unit_cube": {},
+      "minecraft:block_light_absorption": 15,
+      "minecraft:block_light_emission": 0,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "magma" // Add it here.
+        }
+      }
+    }
+  }
 }
 ```
 

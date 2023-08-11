@@ -871,45 +871,45 @@ Make geometry for sapling:
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:geometry": [
-		{
-			"description": {
-				"identifier": "geometry.custom_sapling",
-				"texture_width": 16,
-				"texture_height": 16,
-				"visible_bounds_width": 2,
-				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
-			},
-			"bones": [
-				{
-					"name": "sapling",
-					"pivot": [0, 0, 0],
-					"cubes": [
-						{
-							"origin": [-8, 0, 0],
-							"size": [16, 16, 0],
-							"pivot": [0, 0, 0],
-							"rotation": [0, 45, 0],
-							"uv": {
-								"north": {"uv": [0, 0], "uv_size": [16, 16]}
-							}
-						},
-						{
-							"origin": [-8, 0, 0],
-							"size": [16, 16, 0],
-							"pivot": [0, 0, 0],
-							"rotation": [0, -45, 0],
-							"uv": {
-								"north": {"uv": [0, 0], "uv_size": [16, 16]}
-							}
-						}
-					]
-				}
-			]
-		}
-	]
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.custom_sapling",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 2,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [0, 0.75, 0]
+      },
+      "bones": [
+        {
+          "name": "sapling",
+          "pivot": [0, 0, 0],
+          "cubes": [
+            {
+              "origin": [-8, 0, 0],
+              "size": [16, 16, 0],
+              "pivot": [0, 0, 0],
+              "rotation": [0, 45, 0],
+              "uv": {
+                "north": {"uv": [0, 0], "uv_size": [16, 16]}
+              }
+            },
+            {
+              "origin": [-8, 0, 0],
+              "size": [16, 16, 0],
+              "pivot": [0, 0, 0],
+              "rotation": [0, -45, 0],
+              "uv": {
+                "north": {"uv": [0, 0], "uv_size": [16, 16]}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
 ```
 

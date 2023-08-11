@@ -36,10 +36,10 @@ Creating fluids that are identical to vanilla fluids is not currently possible, 
 **This implementation does not include face culling due to its current complexity.**
 
 <WikiImage
-	src="/assets/images/blocks/custom-fluids/fluid_display.png"
-	alt=""
-	pixelated="true"
-	width=608
+  src="/assets/images/blocks/custom-fluids/fluid_display.png"
+  alt=""
+  pixelated="true"
+  width=608
 />
 
 ## Source Fluid Block
@@ -346,7 +346,7 @@ system.runInterval(() => {
 By the end your BP folder should look like this:
 
 <FolderView
-	:paths="[
+  :paths="[
     'BP/blocks/custom_fluid.json',
     'BP/items/custom_fluid_bucket.json',
     'BP/scripts/fluids.js',
