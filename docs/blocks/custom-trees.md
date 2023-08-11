@@ -3,7 +3,7 @@ title: Custom Trees
 category: Vanilla Re-Creations
 tags:
     - experimental
-mention:
+mentions:
     - MedicalJewel105
     - TheItsNameless
     - QuazChick

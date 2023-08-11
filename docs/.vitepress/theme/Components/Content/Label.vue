@@ -29,7 +29,7 @@ export default {
 	computed: {
 		style () {
 			let color = this.color ? this.color : colorFromTag(this.name)
-			return 'label rounded-lg mb-2 mt-4 py-1 mr-2 px-2 inline-block uppercase ' + color
+			return 'label large ' + color
 		}
 	},
 	methods: {},
