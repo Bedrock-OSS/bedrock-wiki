@@ -11,7 +11,7 @@ mentions:
 
 ::: tip FORMAT VERSION `1.20.20`
 This tutorial assumes a good understanding of blocks.
-Check out the [blocks guide](/blocks/blocks-guide) before starting.
+Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 ::: warning EXPERIMENTAL
