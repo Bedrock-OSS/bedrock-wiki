@@ -2,7 +2,6 @@
 title: Avoiding State Limit
 category: Tutorials
 tags:
-    - guide
     - expert
 mentions:
     - Kaioga5
