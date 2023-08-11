@@ -1,12 +1,11 @@
 ---
-title: How to edit pages on our wiki
+title: Editing Wiki Pages
 hidden: true
 mentions:
     - TheItsNameless
     - MedicalJewel105
+    - QuazChick
 ---
-
-## Working on the wiki
 
 Now that you have our wiki locally, you can edit the files right on your device. If you don't know how to work with VSCode, there are some very good videos from Microsoft itself [here](https://code.visualstudio.com/docs).
 
@@ -29,7 +28,7 @@ mentions:
 ```
 
 | Name             | Required | Default | Note                                                                                                                                                     |
-| ---------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|----------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `title`          | Yes      | None    | The title of the page.                                                                                                                                   |
 | `nav_order`      | No       | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order. |
 | `show_toc`       | No       | True    | Whether the table of contents will be generated for this page.                                                                                           |
@@ -57,16 +56,30 @@ List of categories:
 -   Legacy Scripting
 -   Ideas
 
+*New categories can be defined a section's `index.md` file.*
+
 List of tags:
 
--   guide
--   recipe
--   help
--   experimental
+-   beginner
 -   beta
 -   easy
--   intermediate
+-   experimental
 -   expert
+-   guide
+-   help
+-   info
+-   intermediate
+-   outdated
+-   recipe
+-   scripting
+-   system
+
+To make a tag display in the navigation, simply add it to the `displayedTags` array in `.vitepress/theme/Components/Navigation/NavLinkTag.vue``
+
+## Wiki Add-On
+
+Sometimes we need to give a template/example pack after a guide. For this purpose we use separate GitHub repository: [wiki-addon](https://github.com/Bedrock-OSS/wiki-addon).
+Please, add your packs there. It helps us to maintain all add-ons and keep them up-to-date.
 
 ## Viewing the Wiki locally
 
@@ -84,7 +97,7 @@ Hover over the part where it says `"http://localhost:3000/"` and press ctrl and 
 
 Done! Every time you change and save a file in VSCode it will automatically be updated in your browser.
 
-## Viewing the built page
+## Viewing the Built Page
 
 The above tool shows you how the Wiki will look when it is built. But sometimes there are some errors arriving which you only get if you `build` the page.
 
@@ -291,7 +304,7 @@ A Button works like a link, but is more noticeable for the user.
 >Download Wiki Logo</BButton>
 
 | Attribute | Required | Type   | Note                                                                                                                                                                   |
-| --------- | -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------|----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | link      | yes      | String | Link to redirect when clicking on the Button you can also link there content to download from wiki files. If doing this for pictures, add `download` after link value. |
 | color     | no       | String | Defines the color of the button <br> _Only accepts `red`, `green`, `blue`, 'default' as values, otherwise it will be grey_                                             |
 
@@ -353,7 +366,7 @@ and here
 </Spoiler>
 
 | Attribute | Required | Type   | Note                              |
-| --------- | -------- | ------ | --------------------------------- |
+|-----------|----------|--------|-----------------------------------|
 | title     | yes      | String | Will be displayed after the arrow |
 
 The content between the two tags is the content that will be hidden.
@@ -379,7 +392,7 @@ A Label is a small icon with uppercase letters that can be used to give your art
 > label</Label>
 
 | Attribute | Required | Type   | Note                                                                                                    |
-| --------- | -------- | ------ | ------------------------------------------------------------------------------------------------------- |
+|-----------|----------|--------|---------------------------------------------------------------------------------------------------------|
 | name      | yes      | String | Text that will be displayed inside the box                                                              |
 | color     | no       | String | Color of the box <br> _Only accepts `red`, `green`, `blue` as values, otherwise it will be transparent_ |
 
@@ -414,7 +427,7 @@ FolderViews are Components which can be used to show a setup of files, like in o
 ]"></FolderView>
 
 | Attribute | Required | Type                                | Note                                                                   |
-| --------- | -------- | ----------------------------------- | ---------------------------------------------------------------------- |
+|-----------|----------|-------------------------------------|------------------------------------------------------------------------|
 | :paths    | yes      | String containing a List of Strings | Represents all files and folders which should appear in the FolderView |
 
 The `:paths` Attribute is a String, that contains a List of all separate file paths. This String must be written with double quotes! Each file path must be written entirely and has to be wrapped inside single quotes.
@@ -438,7 +451,7 @@ A YouTubeEmbed can be used to embed a YouTube Video in your article.
 <YouTubeEmbed id='dQw4w9WgXcQ' />
 
 | Attribute | Required | Type   | Note                       |
-| --------- | -------- | ------ | -------------------------- |
+|-----------|----------|--------|----------------------------|
 | id        | yes      | String | ID of the video to display |
 
 ### WikiImage
@@ -464,7 +477,7 @@ A WikiImage is an alternative way to add an image in your article.
 />
 
 | Attribute | Required | Type    | Note                                                                                                                   |
-| --------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
+|-----------|----------|---------|------------------------------------------------------------------------------------------------------------------------|
 | src       | yes      | String  | Image to show                                                                                                          |
 | alt       | no       | String  | Text to show if the browser can't load the image. Not really important, as most modern browser support showing images. |
 | pixelated | no       | Boolean | If the image should be pixelated.                                                                                      |
@@ -497,7 +510,7 @@ With CardLinks you can make fancy boxes with an image and a text, which contains
 />
 
 | Attribute | Required | Type   | Note                                   |
-| --------- | -------- | ------ | -------------------------------------- |
+|-----------|----------|--------|----------------------------------------|
 | imgsrc    | yes      | String | Image to display inside the box        |
 | title     | yes      | String | Title to show                          |
 | link      | yes      | String | Link to redirect on clicking the title |
@@ -546,12 +559,14 @@ Well, its hard to realise that. And we don't want perfectly and consistently for
 
 1.  For naming packages, folders, etc. consult our [Style-Guide](/meta/style-guide).
 
-### Headers
+### Headings
 
-1.  Don't use level-1 Headers. Your Page starts with a level-1 Header, that has the same title as written in the Front Matter.
-2.  Try to avoid Headers higher than level-3. They wont show in the right sidebar and wont be easy to see.
-3.  Start with an Uppercase Letter and use the `Title Case` style.
-4.  Don't use `:` in your Headers!
+1.  Don't use level-1 headings. Your page starts with a level-1 heading which has the same title as written in the Front Matter.
+2.  Try to avoid heading levels higher 4. They wont show in the right sidebar (only level-2 headings appear there) and won't have proper styling.
+3.  Use the `Title Case` style. For example,
+    -   `Welcome to the Wiki!`
+    -   `How It Works`
+4.  Don't use `:` in your headings!
 
 Some examples:
 
@@ -567,15 +582,17 @@ Some examples:
 
 ❌ `## my own: article`
 
+✔️ `## Next Steps`
+
+❌ `## Next Steps:`
+
 ### JSON Code
 
 1.  Use CodeHeaders, unless it is illogical or not possible.
-2.  Fully extend JSON Code aka. as ["Prettified Code"](https://jsonformatter.curiousconcept.com/#).
-
-Do not extend `.geo.json` as it will be too long.
-If the code is too long and not necessary, use spoilers.
-
-3.  Use `RP` and `BP` as root-folders.
+2.  Fully extend JSON Code if it improves readability aka. as ["Prettified Code"](https://jsonformatter.curiousconcept.com/#).
+    -   Do not extend `.geo.json` files as it would be too long.
+3.  If the code is too long or not necessary, wrap it in a spoiler component.
+3.  Use `RP` and `BP` as root folders.
 4.  Make comments but not many.
 
 Describe the most important things in comments inside the JSON, you can tell about other components after the code. Also follow our comments style.
@@ -640,16 +657,16 @@ This section is only for the readability of your Markdown files. It wont be visi
 
 ```
 | Some Data | Aaaaand More Data |
-| --------- | ----------------- |
+|-----------|-------------------|
 | here      | and here          |
 ```
 
 ❌
 
 ```
-|Some Data|Aaaaand More Data|
-|---|---|
-|here|and here|
+| Some Data | Aaaaand More Data |
+|-----------|-------------------|
+| here      | and here          |
 ```
 
 For tables you can download an [extension](https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter). However always check how it formats it.

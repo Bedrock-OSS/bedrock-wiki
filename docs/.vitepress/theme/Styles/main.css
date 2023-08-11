@@ -109,10 +109,17 @@ ol {
 }
 
 .label {
-	@apply rounded-lg flex-initial px-1;
+	@apply flex-initial px-1.2 py-0.2 uppercase inline-block;
 	font-size: 0.66rem;
+	letter-spacing: 0.02rem;
 	line-height: 1rem;
 	font-weight: 650;
+	border-radius: 0.275rem;
+}
+
+.label.large {
+  @apply rounded-md mb-2 mt-4 py-1 px-1.5 mr-2;
+	font-size: 0.8rem;
 }
 
 .dark .green {
@@ -136,7 +143,7 @@ ol {
 }
 
 .orange {
-	@apply bg-yellow-300;
+	@apply bg-orange-300;
 }
 
 .dark .blue {
@@ -145,6 +152,15 @@ ol {
 
 .blue {
 	@apply bg-blue-300;
+}
+
+.dark .yellow {
+	@apply bg-yellow-400;
+	color: #262626;
+}
+
+.yellow {
+	@apply bg-yellow-300
 }
 
 .border-gray {

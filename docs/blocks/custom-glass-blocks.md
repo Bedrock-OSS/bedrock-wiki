@@ -4,7 +4,7 @@ category: Vanilla Re-Creations
 tags:
     - experimental
     - expert
-mention:
+mentions:
     - Eko-byte
     - QuazChick
 ---

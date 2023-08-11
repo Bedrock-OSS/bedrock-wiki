@@ -129,7 +129,6 @@
 import {
 	computed,
 	reactive,
-	watchEffect,
 	onMounted,
 	defineAsyncComponent,
 } from 'vue'
@@ -152,7 +151,7 @@ onMounted(() => {
 
 const route = useRoute()
 const { page } = useData()
-const { toggle, isVisible } = useSidebarState()
+const { isVisible } = useSidebarState()
 
 function agreeCookies() {
 	document.cookie = 'bedrock-cookies=true; max-age=31536000 ; path=/'
@@ -189,7 +188,7 @@ const showEditLink = computed(
 )
 
 const mentionedContributors = computed(
-	() => routeData.value.frontmatter.mention ?? []
+	() => routeData.value.frontmatter.mentions ?? []
 )
 
 const tags = computed(() => routeData.value.frontmatter.tags ?? [])
