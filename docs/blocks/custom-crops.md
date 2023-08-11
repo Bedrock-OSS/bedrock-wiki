@@ -117,7 +117,7 @@ Nevertheless, it's just special dirt. Let's walk through how it works:
 -   After that we can add our moisture logic to our block to emulate vanilla functionality.
 
 <BButton
-    link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-custom_crops/rp/models/blocks/farmland.geo.json"
+    link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_crops/rp/models/blocks/farmland.geo.json"
     color=blue
 >Download Custom Farmland Geometry</BButton>
 
@@ -386,7 +386,7 @@ By lowering the position down a pixel, it will sit above our custom farmland per
 ![](/assets/images/blocks/custom-crops/model.png)
 
 <BButton
-    link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-custom_crops/rp/models/blocks/crop.geo.json"
+    link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_crops/rp/models/blocks/crop.geo.json"
     color=blue
 >Download Custom Crop Geometry</BButton>
 

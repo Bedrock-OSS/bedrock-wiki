@@ -385,8 +385,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 ![Pigeonholes Showcase](/assets/images/blocks/precise-interaction/pigeonholes.png)
 
 <BButton
-  link="/assets/packs/tutorials/blocks/precise-interaction/pigeonholes.geo.json"
-  download
+  link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-precise_interaction/rp/models/blocks/pigeonholes.geo.json"
   color=blue
 >Download Pigeonholes Model</BButton>
 
@@ -597,8 +596,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 ![Double Flower Pot Showcase](/assets/images/blocks/precise-interaction/double_flower_pot.png)
 
 <BButton
-  link="/assets/packs/tutorials/blocks/precise-interaction/double_flower_pot.geo.json"
-  download
+  link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-precise_interaction/rp/models/blocks/double_flower_pot.geo.json"
   color=blue
 >Download Double Flower Pot Model</BButton>
 
@@ -846,15 +844,8 @@ import "./blocks/double_flower_pot";
 Template pack made according to this tutorial, adding the Pigeonholes and Double Flower Pot blocks into the `Items` tab.
 
 <BButton
-  link="/assets/packs/tutorials/blocks/precise-interaction/example.mcaddon"
-  download="Precise Interaction Example.mcaddon"
+  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_interaction.mcaddon"
   color=blue
 >Download MCADDON</BButton>
-
-<BButton
-  link="/assets/packs/tutorials/blocks/precise-interaction/example.mcaddon"
-  download="Precise Interaction Example.zip"
-  color=blue
->Download ZIP</BButton>
 
 If you require extra assistance with precise interaction, feel free to ask in the [Bedrock Add-Ons Discord](/discord)! Remember to include a link to this page in your question, as the classes provided here are not built into Minecraft.

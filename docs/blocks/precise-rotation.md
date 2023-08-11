@@ -506,13 +506,6 @@ What you have created:
 Template pack made according to this tutorial, adding a "shell" block into the `Nature` tab.
 
 <BButton
-  link="/assets/packs/tutorials/blocks/precise-rotation/example.mcaddon"
-  download="Precise Rotation Example.mcaddon"
+  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_rotation.mcaddon"
   color=blue
 >Download MCADDON</BButton>
-
-<BButton
-  link="/assets/packs/tutorials/blocks/precise-rotation/example.mcaddon"
-  download="Precise Rotation Example.zip"
-  color=blue
->Download ZIP</BButton>

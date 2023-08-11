@@ -1001,13 +1001,6 @@ What you have created:
 Template Pack to use in-game to get the idea.
 
 <BButton
-  link="/assets/packs/tutorials/blocks/custom-trees/example.mcaddon"
-  download="Custom Trees Example.mcaddon"
+  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_tree.mcaddon"
   color=blue
 >Download MCADDON</BButton>
-
-<BButton
-  link="/assets/packs/tutorials/blocks/custom-trees/example.mcaddon"
-  download="Custom Trees Example.zip"
-  color=blue
->Download ZIP</BButton>

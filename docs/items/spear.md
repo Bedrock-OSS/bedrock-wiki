@@ -394,6 +394,6 @@ Once you've followed this guide, you should have your own working spear in-game.
 Example Pack Download:
 
 <BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/wiki_spear_pack.mcaddon"
+    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_spear.mcaddon"
     color=blue
 >💾 Example Pack</BButton>
