@@ -117,8 +117,7 @@ Nevertheless, it's just special dirt. Let's walk through how it works:
 -   After that we can add our moisture logic to our block to emulate vanilla functionality.
 
 <BButton
-    link="/assets/packs/tutorials/blocks/custom-crops/farmland.geo.json"
-	  download="Custom Farmland Geometry.json"
+    link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_crops/rp/models/blocks/farmland.geo.json"
     color=blue
 >Download Custom Farmland Geometry</BButton>
 
@@ -389,8 +388,7 @@ By lowering the position down a pixel, it will sit above our custom farmland per
 ![](/assets/images/blocks/custom-crops/model.png)
 
 <BButton
-    link="/assets/packs/tutorials/blocks/custom-crops/crop.geo.json"
-	  download
+    link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_crops/rp/models/blocks/crop.geo.json"
     color=blue
 >Download Custom Crop Geometry</BButton>
 
@@ -875,13 +873,6 @@ In conclusion, with the help of this tutorial/template, you now have the knowled
 If you require further assistance or would like to access the complete template files, please use the download button provided below. Happy designing!
 
 <BButton
-    link="/assets/packs/tutorials/blocks/custom-crops/example.zip"
-	  download="Custom Crop Example.mcaddon"
+    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_crops.mcaddon"
     color=blue
 >Download MCADDON</BButton>
-
-<BButton
-    link="/assets/packs/tutorials/blocks/custom-crops/example.zip"
-	  download="Custom Crop Example.zip"
-    color=blue
->Download ZIP</BButton>
