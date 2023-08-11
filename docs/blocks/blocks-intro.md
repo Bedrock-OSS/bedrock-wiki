@@ -101,7 +101,7 @@ Let's configure our own functionality!
       "minecraft:map_color": "#ffffff",
       "minecraft:light_dampening": 0,
       "minecraft:light_emission": 4,
-      "minecraft:loot": "loot_tables/blocks/custom_block.json",
+      "minecraft:loot": "loot_tables/blocks/custom_block.json"
     }
   }
 }
