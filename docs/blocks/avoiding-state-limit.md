@@ -9,16 +9,19 @@ mentions:
 ---
 
 ## Introduction
+
 Block states have a total limit of 64 values (16 maximum per state) that cannot be exceed. This article will explain how to avoid reaching the limit.
 
 :::tip
-Thius tutorial does not show you how to have more than 64 states. However, using this method will be equal to that amount!
+Thius tutorial does not show you how to have more than 64 states values. However, using this method will simulate that amount!
 :::
 
 ## How It Works
+
 This method combines two or more states in order to re-use and read them in permutations or conditions. For example, a block with the English alphabet letters will need 26 values. You can use less values by using combinations.
 
 ## The Logic
+
 What your code will do going of by the example above is the following:
 ```
 1 & 1 = A   1 & 5 = E   1 & 9 =  I   1 & 13 = M
@@ -37,20 +40,29 @@ And then;
 Using this method, you achieve the same results with just 15 values. The more values available for combinations, the higher your state limit is.
 
 ## How It Looks
+
 Using the example above as reference, your states would look like this:
+
+<CodeHeader>minecraft:block > description</CodeHeader>
+
 ```json
 "states": {
   "wiki:value": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
   "wiki:division": [1, 2]
 }
 ```
-And for your conditions, like this:
-```
-"condition": "q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 1"
 
+And for your conditions, like this:
+
+```json
+"condition": "q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 1"
+```
+```json
 "condition": "q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 2"
 ```
+
 ## What You Have Learned
+
 You have learned how to use less than 64 states and do more, combining states to have better possibilities.
 
 :::tip
