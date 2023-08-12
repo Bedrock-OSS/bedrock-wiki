@@ -101,7 +101,7 @@ Here we will add `uv_anim` component with offset and scale properties:
 
 ```json
 "uv_anim": {
-    "offset": [ 0.0, "math.mod(math.floor(query.life_time * frames_per_second),frame_count) / frame_count" ],
+    "offset": [ 0.0, "math.mod(math.floor(q.life_time * frames_per_second),frame_count) / frame_count" ],
     "scale": [ 1.0, "1 / frame_count" ]
 }
 ```

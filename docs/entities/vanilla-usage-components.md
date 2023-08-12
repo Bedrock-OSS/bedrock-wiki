@@ -304,11 +304,11 @@ allay
     "event_names": [
         {
             "event_name": "ambient.tame",
-            "condition": "query.is_using_item"
+            "condition": "q.is_using_item"
         },
         {
             "event_name": "ambient",
-            "condition": "!query.is_using_item"
+            "condition": "!q.is_using_item"
         }
     ]
 }
@@ -410,11 +410,11 @@ warden
     "on_increase_sounds": [
         {
             "sound": "listening_angry",
-            "condition": "query.anger_level(this) >= 40"
+            "condition": "q.anger_level(this) >= 40"
         },
         {
             "sound": "listening",
-            "condition": "query.anger_level(this) >= 0"
+            "condition": "q.anger_level(this) >= 0"
         }
     ],
     "nuisance_filter": {
@@ -2483,7 +2483,7 @@ sheep
 ```json
 "minecraft:behavior.eat_block": {
     "priority": 6,
-    "success_chance": "query.is_baby ? 0.02 : 0.001",
+    "success_chance": "q.is_baby ? 0.02 : 0.001",
     "time_until_eat": 1.8,
     "eat_and_replace_block_pairs": [
         {
@@ -11267,7 +11267,7 @@ axolotl
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "q.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
@@ -11278,7 +11278,7 @@ bee
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "q.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
@@ -11288,7 +11288,7 @@ blaze
 
 ```json
 "minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 10 : 0"
+    "on_death": "q.last_hit_by_player ? 10 : 0"
 }
 ```
 
@@ -11299,7 +11299,7 @@ camel
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "q.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
@@ -11310,7 +11310,7 @@ cat
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "q.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
@@ -11320,7 +11320,7 @@ cave_spider
 
 ```json
 "minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 5 : 0"
+    "on_death": "q.last_hit_by_player ? 5 : 0"
 }
 ```
 
@@ -11331,7 +11331,7 @@ chicken
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "q.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
@@ -11342,7 +11342,7 @@ cow
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "q.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
@@ -12419,7 +12419,7 @@ warden
 
 ```json
 "minecraft:heartbeat": {
-    "interval": "2.0 - math.clamp(query.anger_level / 80 * 1.5, 0, 1.5)"
+    "interval": "2.0 - math.clamp(q.anger_level / 80 * 1.5, 0, 1.5)"
 }
 ```
 
@@ -17122,7 +17122,7 @@ boat
             ],
             "min_rider_count": 2,
             "max_rider_count": 2,
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "rotate_rider_by": "q.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
             "lock_rider_rotation": 90
         },
         {
@@ -17133,7 +17133,7 @@ boat
             ],
             "min_rider_count": 2,
             "max_rider_count": 2,
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "rotate_rider_by": "q.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
             "lock_rider_rotation": 90
         }
     ]
@@ -17168,7 +17168,7 @@ boat
             ],
             "min_rider_count": 2,
             "max_rider_count": 2,
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "rotate_rider_by": "q.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
             "lock_rider_rotation": 90
         },
         {
@@ -17179,7 +17179,7 @@ boat
             ],
             "min_rider_count": 2,
             "max_rider_count": 2,
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "rotate_rider_by": "q.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
             "lock_rider_rotation": 90
         }
     ]
@@ -17214,7 +17214,7 @@ boat
             ],
             "min_rider_count": 2,
             "max_rider_count": 2,
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "rotate_rider_by": "q.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
             "lock_rider_rotation": 90
         },
         {
@@ -17225,7 +17225,7 @@ boat
             ],
             "min_rider_count": 2,
             "max_rider_count": 2,
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "rotate_rider_by": "q.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
             "lock_rider_rotation": 90
         }
     ]

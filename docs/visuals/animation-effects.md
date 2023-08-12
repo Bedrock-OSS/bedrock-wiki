@@ -129,12 +129,12 @@ You can call more than one particle at the same time:
 					},
 					"rotation" : {
 						"0.2" : {
-							"post" : [ "180.0 * (0.2 + 0.07 * math.sin(query.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ],
+							"post" : [ "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ],
 							"pre" : [ 36.0, 0.0, 0.0 ]
 						},
 						"1.8" : {
 							"post" : [ 36.0, 0.0, 0.0 ],
-							"pre" : [ "180.0 * (0.2 + 0.07 * math.sin(query.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ]
+							"pre" : [ "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ]
 						}
 					}
 				}

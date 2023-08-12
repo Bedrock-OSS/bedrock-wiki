@@ -106,10 +106,10 @@ Here is an example of a simple json file, used for Minecraft addons:
 			"animation_length": 1.0,
 			"bones": {
 				"front_wheels": {
-					"rotation": ["query.modified_distance_moved * -30", 0, 0]
+					"rotation": ["q.modified_distance_moved * -30", 0, 0]
 				},
 				"back_wheels": {
-					"rotation": ["query.modified_distance_moved * -30", 0, 0]
+					"rotation": ["q.modified_distance_moved * -30", 0, 0]
 				}
 			}
 		}

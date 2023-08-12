@@ -694,7 +694,7 @@ List of all new item components, with usage examples
 		"destroy_speeds": [
 			{
 				"block": {
-					"tags": "query.any_tag('stone', 'metal')" // Note that not all blocks have tags; listing many blocks may be necessary
+					"tags": "q.any_tag('stone', 'metal')" // Note that not all blocks have tags; listing many blocks may be necessary
 				},
 				"speed": 6,
 				"on_dig": {
@@ -863,10 +863,10 @@ Item tags work the same as block tags and can be applied like this:
 
 They can then be queried with:
 
--   `query.any_tag`
--   `query.all_tags`
--   `query.equipped_item_all_tags`
--   `query.equipped_item_any_tag`
+-   `q.any_tag`
+-   `q.all_tags`
+-   `q.equipped_item_all_tags`
+-   `q.equipped_item_any_tag`
 
 ## Breaking changes
 

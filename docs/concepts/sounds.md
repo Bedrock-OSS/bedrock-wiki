@@ -311,7 +311,7 @@ This example shows playing an explosion sound, synced using an animation control
     "default":{
         "transitions":[
             {
-                "explode_state":"query.mark_variant == 1"
+                "explode_state":"q.mark_variant == 1"
             }
         ]
     },
@@ -323,7 +323,7 @@ This example shows playing an explosion sound, synced using an animation control
         ],
         "transitions":[
             {
-                "default":"query.mark_variant == 0"
+                "default":"q.mark_variant == 0"
             }
         ]
     }

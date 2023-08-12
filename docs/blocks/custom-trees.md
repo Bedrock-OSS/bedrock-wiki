@@ -804,7 +804,7 @@ Tree Features are a really great way to get actual custom trees. You need some u
         "distribution": "uniform",
         "extent": [0, 16]
       },
-      "y": "q.heightmap(variable.worldx, variable.worldz)",
+      "y": "q.heightmap(v.worldx, v.worldz)",
       "z": {
         "distribution": "uniform",
         "extent": [0, 16]

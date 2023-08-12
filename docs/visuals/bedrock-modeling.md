@@ -59,11 +59,11 @@ Let's start with this picture.
 
 the name or `animation.cuack` is essential. You can't have symbols or caps there, and it must start with `animation.` for the animations to work without problems. Now the function we will be using is
 
-`Base + Math.sin((query.life_time + Offset) * Speed) \_ pitch`
+`Base + Math.sin((q.life_time + Offset) * Speed) \_ pitch`
 
 -   Base is the starting rotation/position the bone has
 -   Sin is the math function we all know
--   `query.life_time` is a variable. Is a number that will be increasing as the animation continues
+-   `q.life_time` is a variable. Is a number that will be increasing as the animation continues
 -   Offset is a number we use to have the animation start earlier or later than its "original" position
 -   Speed is the time it will take from going from top to down
 -   Pitch is how far it goes from the origin
@@ -72,11 +72,11 @@ the name or `animation.cuack` is essential. You can't have symbols or caps there
 
 Function used:
 
-`Math.sin((query.life_time+0.5)*150)*15`
+`Math.sin((q.life_time+0.5)*150)*15`
 
 one on position & the other on rotation.
 
-<MolangGraph code="Math.sin((query.life_time+0.5)*150)*15" :toY="2" :stepSize="0.001"/>
+<MolangGraph code="Math.sin((q.life_time+0.5)*150)*15" :toY="2" :stepSize="0.001"/>
 
 Don't forget that for the animation to be a perfect loop. It would help if you correlated the sin equation `speed` & the animation `time`.
 Here's a table with values to get a perfect loop, though there are more you can discover.
@@ -108,13 +108,13 @@ You can learn more about queries & functions [here](https://bedrock.dev/docs/sta
 
 ## Animation Speed
 
-To easily change the speed of an animation you can simply multiply the default value of `anim_time_update` (defaults to `query.delta_time + query.anim_time`) inside our animation:
+To easily change the speed of an animation you can simply multiply the default value of `anim_time_update` (defaults to `q.delta_time + q.anim_time`) inside our animation:
 
 <CodeHeader>RP/animations/myentity.animation.json#animations</CodeHeader>
 
 ```json
 "animation.myentity.myanimation": {
-    "anim_time_update":"2 * query.delta_time + query.anim_time"
+    "anim_time_update":"2 * q.delta_time + q.anim_time"
     //Your animation goes here!
 }
 ```

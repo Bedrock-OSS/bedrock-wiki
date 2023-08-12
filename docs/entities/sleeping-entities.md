@@ -245,7 +245,7 @@ Again just copy/paste it if you need.
 				"default": {
 					"transitions": [
 						{
-							"sleep": "query.is_sleeping"
+							"sleep": "q.is_sleeping"
 						}
 					]
 				},
@@ -253,7 +253,7 @@ Again just copy/paste it if you need.
 					"animations": ["sleeping"],
 					"transitions": [
 						{
-							"default": "!query.is_sleeping"
+							"default": "!q.is_sleeping"
 						}
 					]
 				}
@@ -375,7 +375,7 @@ In our resource pack you can run an animation when entity starts to sleep.
 				"default": {
 					"transitions": [
 						{
-							"sleep": "query.is_sleeping"
+							"sleep": "q.is_sleeping"
 						}
 					]
 				},
@@ -383,7 +383,7 @@ In our resource pack you can run an animation when entity starts to sleep.
 					"animations": ["sleeping"],
 					"transitions": [
 						{
-							"default": "!query.is_sleeping"
+							"default": "!q.is_sleeping"
 						}
 					]
 				}

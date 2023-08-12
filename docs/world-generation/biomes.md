@@ -1074,7 +1074,7 @@ The second value of the array determines height variation. Negative values behav
 The terrain becomes more radical with larger values, which should generally not be used for several reasons:
 
 -   If outside creative mode, player annoyance will be high due to limited mobility options in the early game.
--   Typically useful Molang queries, such as `"query.heightmap()"`, becomes less helpful as Nether-like shelves of land generate instead of smoother, simpler terrain.
+-   Typically useful Molang queries, such as `"q.heightmap()"`, becomes less helpful as Nether-like shelves of land generate instead of smoother, simpler terrain.
 -   Performance issues may arise with weaker computers.
 
 The maximum and minimum offsets from the average height when using noise parameters depends on the height variation. In general, a ∆ of 1 in the second noise parameter will result in _at most_ a ∆ of +/- 16 blocks in these offsets.
@@ -1192,7 +1192,7 @@ A noise curve that is dependent upon the seed of a world can be used to restrict
 
 The exact value generated from the noise curve at a particular location is inconsequential to the resultant surface adjustment. The only consideration is whether the value at that location meets the conditional check.
 
-> Although both curves are formed based on the world seed, the noise curve used for surface adjustments is not equivalent to the noise curve used with `"query.noise"`. Their correspondence cannot be depended upon for generation.
+> Although both curves are formed based on the world seed, the noise curve used for surface adjustments is not equivalent to the noise curve used with `"q.noise"`. Their correspondence cannot be depended upon for generation.
 
 ##### Intervals
 
@@ -1460,7 +1460,7 @@ Biomes are the starting point of much of the configurable gameplay in Minecraft.
 			"distribution": "uniform",
 			"extent": [0, 16]
 		},
-		"y": "query.heightmap(variable.worldx, variable.worldz)"
+		"y": "q.heightmap(v.worldx, v.worldz)"
 	}
 },
 "minecraft:ignore_automatic_features": {}
@@ -1491,7 +1491,7 @@ Features are mostly outside the scope of biomes, but the two components within a
 				"distribution": "uniform",
 				"extent": [0, 16]
 			},
-			"y": "query.heightmap(variable.worldx, variable.worldz)"
+			"y": "q.heightmap(v.worldx, v.worldz)"
 		}
 	]
 }

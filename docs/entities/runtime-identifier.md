@@ -259,7 +259,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:panda
 
--   Allows `query.is_grazing` and `query.sit_mount` to function with the `minecraft:behavior.random_sitting` component.
+-   Allows `q.is_grazing` and `q.sit_mount` to function with the `minecraft:behavior.random_sitting` component.
 
 ---
 
@@ -273,13 +273,13 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:piglin
 
--   Allows `minecraft:celebrate_hunt` to function (which activates query.is_celebrating).
+-   Allows `minecraft:celebrate_hunt` to function (which activates q.is_celebrating).
 
 ---
 
 ### minecraft:player
 
--   Activates `query.movement_direction`.
+-   Activates `q.movement_direction`.
 
 ---
 
@@ -301,7 +301,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:sheep
 
--   Allows `query.is_grazing` to function with the `behavior.eat_block` component.
+-   Allows `q.is_grazing` to function with the `behavior.eat_block` component.
 
 ---
 
