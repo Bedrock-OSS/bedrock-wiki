@@ -442,7 +442,7 @@ This behavior-based animation controller is used to call the event `wiki:running
         "walk":{
             "transitions":[
                 {
-                    "run":"query.is_sheared"
+                    "run":"q.is_sheared"
                 }
             ]
         },
@@ -452,7 +452,7 @@ This behavior-based animation controller is used to call the event `wiki:running
             ],
             "transitions":[
                 {
-                    "walk":"!query.is_sheared"
+                    "walk":"!q.is_sheared"
                 }
             ]
         }

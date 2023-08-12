@@ -22,7 +22,7 @@ Math animations are a powerful alternative to keyframe animations. Generally spe
 
 ```json
 "leftarm" : {
-    "rotation" : [ "((-0.2 + 1.5 * (math.abs(math.mod(query.modified_distance_moved, 13) - 6.5) - 3.25) / 3.25) * query.modified_move_speed) * 57.3 - variable.agent.armxrotationfactor", 0.0, "-variable.agent.armzrotation" ]
+    "rotation" : [ "((-0.2 + 1.5 * (math.abs(math.mod(q.modified_distance_moved, 13) - 6.5) - 3.25) / 3.25) * q.modified_move_speed) * 57.3 - v.agent.armxrotationfactor", 0.0, "-v.agent.armzrotation" ]
 },
 ```
 
@@ -47,7 +47,7 @@ To begin, first create a new keyframe at frame 0 in your timeline. You may then 
 **Remember**, you should always omit quotation marks around expressions; they are only required in raw JSON-editing!
 
 Do mind that not all Molang queries are supported in Blockbench in part due to missing game-context. If you wish to preview an animation that uses a context-specific query, you may add it to the Variable Placeholders section, just underneath the keyframe panel, to simulate a value.
-For example, adding `query.modified_distance_moved = time*8` simulates the `modified_distance_moved` query with a speed of 8 blocks per second.
+For example, adding `q.modified_distance_moved = time*8` simulates the `modified_distance_moved` query with a speed of 8 blocks per second.
 
 ## Using Queries
 
@@ -55,10 +55,10 @@ The largest and most useful of tools in our mathematical repertoire is the wide 
 
 Common Queries include:
 
--   `query.modified_distance_moved`
--   `query.modified_move_speed`
--   `query.anim_time`
--   `query.life_time`
+-   `q.modified_distance_moved`
+-   `q.modified_move_speed`
+-   `q.anim_time`
+-   `q.life_time`
 
 These are utilised in animations to draw things such as the attack-time or distance-moved from the game-world to provide a more dynamic and synced flow.
 
@@ -68,7 +68,7 @@ By using queries, you can avoid the need to create animation controllers. If the
 
 ## Example
 
-A specific application example of a Math-Based animation may be found below. The example utilises the Molang Query, `"query.modified_distance_moved"`:
+A specific application example of a Math-Based animation may be found below. The example utilises the Molang Query, `"q.modified_distance_moved"`:
 
 <CodeHeader></CodeHeader>
 
@@ -81,11 +81,11 @@ A specific application example of a Math-Based animation may be found below. The
 			"bones": {
 			
 				"front_wheels": {
-					"rotation": [ "query.modified_distance_moved * -30", 0, 0 ]
+					"rotation": [ "q.modified_distance_moved * -30", 0, 0 ]
 				},
 				
 				"back_wheels": {
-					"rotation": [ "query.modified_distance_moved * -30", 0, 0 ]
+					"rotation": [ "q.modified_distance_moved * -30", 0, 0 ]
 				}
 				
 			}
@@ -94,6 +94,6 @@ A specific application example of a Math-Based animation may be found below. The
 }
 ```
 
-In this example, the model's bones, `front_wheels` and `back_wheels`, are rotated on the X-axis based on information passed from `query.modified_distance_moved`, then multiplied by -30.
+In this example, the model's bones, `front_wheels` and `back_wheels`, are rotated on the X-axis based on information passed from `q.modified_distance_moved`, then multiplied by -30.
 
 This means that a car at *rest* **will not** spin, and a car that is *driving* **will spin** - doing so at a rate proportional to the car's movement speed.

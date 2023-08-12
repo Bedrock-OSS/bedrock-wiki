@@ -26,7 +26,7 @@ To trigger slash commands, we are going to use Behavior Pack animation controlle
 In short, animation controllers allow us to trigger events from behavior packs.
 
 -   Slash commands (like `/say`)
--   Molang ( `variable.foo += 1;` )
+-   Molang ( `v.foo += 1;` )
 -   Entity Events (such as `@s wiki:my_event`)
 
 Here is an example animation controller:
@@ -106,17 +106,17 @@ We can update our animation controller to trigger based on `skin_id`:
 				"default": {
 					"transitions": [
 						{
-							"command_example": "query.skin_id == 1"
+							"command_example": "q.skin_id == 1"
 						},
 						{
-							"zombies": "query.skin_id == 2"
+							"zombies": "q.skin_id == 2"
 						}
 					]
 				},
 				"command_example": {
 					"transitions": [
 						{
-							"default": "query.skin_id != 1"
+							"default": "q.skin_id != 1"
 						}
 					],
 					"on_entry": ["/say Command One!", "@s execute_no_commands"]
@@ -124,7 +124,7 @@ We can update our animation controller to trigger based on `skin_id`:
 				"zombies": {
 					"transitions": [
 						{
-							"default": "query.skin_id != 2"
+							"default": "q.skin_id != 2"
 						}
 					],
 					"on_entry": [

@@ -282,7 +282,7 @@ The animation we use for our projectile isn't you normal entity animation. This 
 			"bones": {
 				"body": {
                     //This is some molang stuff. The animation uses this to rotate the model based on its current angle.
-					"rotation": ["-query.target_x_rotation", "-query.body_y_rotation", 0]
+					"rotation": ["-q.target_x_rotation", "-q.body_y_rotation", 0]
 				}
 			}
 		}
@@ -324,7 +324,7 @@ We will be using the Trident Attachable because it comes with item positions and
             },
             "scripts": {
                 "pre_animation": [
-                    "variable.charge_amount = math.clamp((query.main_hand_item_max_duration - (query.main_hand_item_use_duration - query.frame_alpha + 1.0)) / 10.0, 0.0, 1.0f);"
+                    "v.charge_amount = math.clamp((q.main_hand_item_max_duration - (q.main_hand_item_use_duration - q.frame_alpha + 1.0)) / 10.0, 0.0, 1.0f);"
                 ],
                 "animate": [
                     "wield"

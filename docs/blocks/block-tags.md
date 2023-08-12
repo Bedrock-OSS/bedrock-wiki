@@ -72,7 +72,7 @@ Example of an item querying a block's tags:
           {
             "speed": 5,
             "block": {
-              "tags": "query.any_tag('wiki_tag', 'stone', 'metal')"
+              "tags": "q.any_tag('wiki_tag', 'stone', 'metal')"
             }
           }
         ]

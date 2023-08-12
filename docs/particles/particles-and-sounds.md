@@ -183,8 +183,8 @@ The second particle, "wiki:pink_hit".
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [
-					"0.10 + variable.particle_random_1*0.05",
-					"0.10 + variable.particle_random_1*0.05"
+					"0.10 + v.particle_random_1*0.05",
+					"0.10 + v.particle_random_1*0.05"
 				],
 				"facing_camera_mode": "lookat_xyz",
 				"uv": {
@@ -205,14 +205,14 @@ The second particle, "wiki:pink_hit".
 				"color": {
 					"gradient": [
 						[
-							"variable.particle_random_1*0.3 + 0.6",
-							"variable.particle_random_2*0.3+ 0.6",
-							"variable.particle_random_2*0.3+ 0.6",
+							"v.particle_random_1*0.3 + 0.6",
+							"v.particle_random_2*0.3+ 0.6",
+							"v.particle_random_2*0.3+ 0.6",
 							1.0
 						],
-						["variable.particle_random_1*0.3 + 0.6", 0.5, 0.3, 1.0]
+						["v.particle_random_1*0.3 + 0.6", 0.5, 0.3, 1.0]
 					],
-					"interpolant": "variable.particle_age/variable.particle_lifetime"
+					"interpolant": "v.particle_age/v.particle_lifetime"
 				}
 			},
 			"minecraft:particle_appearance_lighting": {}

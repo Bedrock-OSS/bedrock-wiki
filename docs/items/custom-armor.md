@@ -67,7 +67,7 @@ Create a chest piece:
 				"repair_items": [
 					{
 						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"
+						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
 						// Some complicated molang; just copy it
 					}
 				]
@@ -124,7 +124,7 @@ To start with you need to create an `attachables` folder in your RP (you may alr
 			},
 			// We tell it to hide the chest layer as we will be showing our armor on top
 			"scripts": {
-				"parent_setup": "variable.chest_layer_visible = 0.0;"
+				"parent_setup": "v.chest_layer_visible = 0.0;"
 			},
 			// We tell it what controller to use (default armor one)
 			"render_controllers": ["controller.render.armor"]
@@ -190,7 +190,7 @@ So while the chest piece alone is great, you probably want a whole set, so from 
 				"repair_items": [
 					{
 						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"
+						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
 					}
 				]
 			},
@@ -240,7 +240,7 @@ Once we are done here we need to create the attachables file like this:
 			},
 			// Hide legs layer as we will be rendering over it
 			"scripts": {
-				"parent_setup": "variable.leg_layer_visible = 0.0;"
+				"parent_setup": "v.leg_layer_visible = 0.0;"
 			},
 			// Same as before
 			"render_controllers": ["controller.render.armor"]
@@ -289,7 +289,7 @@ This is just like the chest piece, just we change some of the categories and slo
 				"repair_items": [
 					{
 						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"
+						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
 					}
 				]
 			},
@@ -338,7 +338,7 @@ As you can see not much has changed, we just update the categories/slots to the 
 			},
 			// We tell it to hide the helmet layer as we will be showing our armor on top
 			"scripts": {
-				"parent_setup": "variable.chest_layer_visible = 0.0;"
+				"parent_setup": "v.chest_layer_visible = 0.0;"
 			},
 			// We tell it what controller to use (default armor one)
 			"render_controllers": ["controller.render.armor"]
@@ -387,7 +387,7 @@ You already know the pattern so lets make the item and attachable json files.
 				"repair_items": [
 					{
 						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"
+						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
 					}
 				]
 			},
@@ -436,7 +436,7 @@ The custom boots texture if you need it.
 			},
 			// We tell it to hide the boots layer as we will be showing our armor on top
 			"scripts": {
-				"parent_setup": "variable.chest_layer_visible = 0.0;"
+				"parent_setup": "v.chest_layer_visible = 0.0;"
 			},
 			// We tell it what controller to use (default armor one)
 			"render_controllers": ["controller.render.armor"]

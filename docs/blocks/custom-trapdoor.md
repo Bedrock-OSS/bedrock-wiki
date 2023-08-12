@@ -53,7 +53,7 @@ This will create a vanilla-like custom trapdoor.
         "permutations": [
             // Top Closed
             {
-            "condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('minecraft:cardinal_direction') == 'north' && !query.block_property('wiki:open')",
+            "condition": "q.block_property('minecraft:vertical_half') == 'top' && q.block_property('minecraft:cardinal_direction') == 'north' && !q.block_property('wiki:open')",
             "components": {
                 "minecraft:transformation": {
                     "rotation": [ 0, 0, 180 ]
@@ -61,7 +61,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-                "condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('minecraft:cardinal_direction') == 'south' && !query.block_property('wiki:open')",
+                "condition": "q.block_property('minecraft:vertical_half') == 'top' && q.block_property('minecraft:cardinal_direction') == 'south' && !q.block_property('wiki:open')",
                 "components": {
                     "minecraft:transformation": {
                         "rotation": [ 180, 0, 0 ]
@@ -69,7 +69,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-                "condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('minecraft:cardinal_direction') == 'east' && !query.block_property('wiki:open')",
+                "condition": "q.block_property('minecraft:vertical_half') == 'top' && q.block_property('minecraft:cardinal_direction') == 'east' && !q.block_property('wiki:open')",
                 "components": {
                     "minecraft:transformation": {
                         "rotation": [ 180, -270, 0 ]
@@ -77,7 +77,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-                "condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('minecraft:cardinal_direction') == 'west' && !query.block_property('wiki:open')",
+                "condition": "q.block_property('minecraft:vertical_half') == 'top' && q.block_property('minecraft:cardinal_direction') == 'west' && !q.block_property('wiki:open')",
                 "components": {
                     "minecraft:transformation": {
                         "rotation": [ 180, 270, 0 ]
@@ -86,7 +86,7 @@ This will create a vanilla-like custom trapdoor.
             },
             // Top Open
             {
-                "condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('minecraft:cardinal_direction') == 'north' && query.block_property('wiki:open')",
+                "condition": "q.block_property('minecraft:vertical_half') == 'top' && q.block_property('minecraft:cardinal_direction') == 'north' && q.block_property('wiki:open')",
                 "components": {
                     "minecraft:transformation": {
                         "rotation": [ -270, 0, 0 ]
@@ -94,7 +94,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-            "condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('minecraft:cardinal_direction') == 'south' && query.block_property('wiki:open')",
+            "condition": "q.block_property('minecraft:vertical_half') == 'top' && q.block_property('minecraft:cardinal_direction') == 'south' && q.block_property('wiki:open')",
             "components": {
                 "minecraft:transformation": {
                     "rotation": [ 270, 0, -180 ]
@@ -102,7 +102,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-            "condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('minecraft:cardinal_direction') == 'east' && query.block_property('wiki:open')",
+            "condition": "q.block_property('minecraft:vertical_half') == 'top' && q.block_property('minecraft:cardinal_direction') == 'east' && q.block_property('wiki:open')",
             "components": {
                 "minecraft:transformation": {
                     "rotation": [ 0, 270, 90 ]
@@ -110,7 +110,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-            "condition": "query.block_property('minecraft:vertical_half') == 'top' && query.block_property('minecraft:cardinal_direction') == 'west' && query.block_property('wiki:open')",
+            "condition": "q.block_property('minecraft:vertical_half') == 'top' && q.block_property('minecraft:cardinal_direction') == 'west' && q.block_property('wiki:open')",
             "components": {
                 "minecraft:transformation": {
                     "rotation": [ 180, -270, -270 ]
@@ -119,7 +119,7 @@ This will create a vanilla-like custom trapdoor.
             },
             // Bottom Closed
             {
-            "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('minecraft:cardinal_direction') == 'north' && !query.block_property('wiki:open')",
+            "condition": "q.block_property('minecraft:vertical_half') == 'bottom' && q.block_property('minecraft:cardinal_direction') == 'north' && !q.block_property('wiki:open')",
             "components": {
                 "minecraft:transformation": {
                     "rotation": [ 0, 0, 0 ]
@@ -127,7 +127,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-                "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('minecraft:cardinal_direction') == 'south' && !query.block_property('wiki:open')",
+                "condition": "q.block_property('minecraft:vertical_half') == 'bottom' && q.block_property('minecraft:cardinal_direction') == 'south' && !q.block_property('wiki:open')",
                 "components": {
                     "minecraft:transformation": {
                         "rotation": [ 0, 180, 0 ]
@@ -135,7 +135,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-                "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('minecraft:cardinal_direction') == 'east' && !query.block_property('wiki:open')",
+                "condition": "q.block_property('minecraft:vertical_half') == 'bottom' && q.block_property('minecraft:cardinal_direction') == 'east' && !q.block_property('wiki:open')",
                 "components": {
                     "minecraft:transformation": {
                         "rotation": [ 0, 270, 0 ]
@@ -143,7 +143,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-                "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('minecraft:cardinal_direction') == 'west' && !query.block_property('wiki:open')",
+                "condition": "q.block_property('minecraft:vertical_half') == 'bottom' && q.block_property('minecraft:cardinal_direction') == 'west' && !q.block_property('wiki:open')",
                 "components": {
                     "minecraft:transformation": {
                         "rotation": [ 0, -270, 0 ]
@@ -151,7 +151,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-            "condition": "query.block_property('wiki:open')",
+            "condition": "q.block_property('wiki:open')",
             "components": {
                 "minecraft:on_interact":{
                     "event" : "wiki:close",
@@ -161,7 +161,7 @@ This will create a vanilla-like custom trapdoor.
             },
             // Bottom Open
             {
-                "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('minecraft:cardinal_direction') == 'north' && query.block_property('wiki:open')",
+                "condition": "q.block_property('minecraft:vertical_half') == 'bottom' && q.block_property('minecraft:cardinal_direction') == 'north' && q.block_property('wiki:open')",
                 "components": {
                     "minecraft:transformation": {
                         "rotation": [ 90, 0, 180 ]
@@ -169,7 +169,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-            "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('minecraft:cardinal_direction') == 'south' && query.block_property('wiki:open')",
+            "condition": "q.block_property('minecraft:vertical_half') == 'bottom' && q.block_property('minecraft:cardinal_direction') == 'south' && q.block_property('wiki:open')",
             "components": {
                 "minecraft:transformation": {
                     "rotation": [ 270, 0, 0 ]
@@ -177,7 +177,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-            "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('minecraft:cardinal_direction') == 'east' && query.block_property('wiki:open')",
+            "condition": "q.block_property('minecraft:vertical_half') == 'bottom' && q.block_property('minecraft:cardinal_direction') == 'east' && q.block_property('wiki:open')",
             "components": {
                 "minecraft:transformation": {
                     "rotation": [ 0, -270, 90 ]
@@ -185,7 +185,7 @@ This will create a vanilla-like custom trapdoor.
                 }
             },
             {
-            "condition": "query.block_property('minecraft:vertical_half') == 'bottom' && query.block_property('minecraft:cardinal_direction') == 'west' && query.block_property('wiki:open')",
+            "condition": "q.block_property('minecraft:vertical_half') == 'bottom' && q.block_property('minecraft:cardinal_direction') == 'west' && q.block_property('wiki:open')",
             "components": {
                 "minecraft:transformation": {
                     "rotation": [ 180, 270, -270 ]
@@ -206,7 +206,7 @@ This will create a vanilla-like custom trapdoor.
                 "size": [ 16, 3, 16 ]
             },
             "minecraft:on_interact":{
-                "condition": "!query.block_property('wiki:open')",
+                "condition": "!q.block_property('wiki:open')",
                 "event" : "wiki:open",
                 "target": "self"
             },

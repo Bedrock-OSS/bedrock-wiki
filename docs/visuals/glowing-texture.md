@@ -73,11 +73,11 @@ We need to modify the `RP/entity/my_entity.entity.json` file of the mob we want 
 				"animate": [
 					"setup",
 					{
-						"walk": "query.modified_move_speed"
+						"walk": "q.modified_move_speed"
 					},
 					"look_at_target",
 					{
-						"baby_transform": "query.is_baby"
+						"baby_transform": "q.is_baby"
 					}
 				]
 			},

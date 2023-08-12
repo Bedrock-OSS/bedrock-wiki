@@ -87,7 +87,7 @@ Next of all, copy paste this BP animation controller. This assumes that you set 
                                         "animations": ["find_player"],
                                         "transitions": [
                                                 {
-                                                        "detected": "query.is_sheared"
+                                                        "detected": "q.is_sheared"
                                                 }
                                         ]
                                 },
@@ -95,7 +95,7 @@ Next of all, copy paste this BP animation controller. This assumes that you set 
                                         "animations": ["find_no_player"],
                                         "transitions": [
                                                 {
-                                                        "default": "!query.is_sheared"
+                                                        "default": "!q.is_sheared"
                                                 }
                                         ],
                                         "on_entry": ["/say oink oink"]
@@ -124,7 +124,7 @@ Finally, copy-paste this snippet into the behavior file for the pig-like so. Mak
 
 ## Molang, BP Animations & Animation Controllers
 
-The `for_each` function and `query.get_nearby_entities` or `query.get_nearby_entities_except_self` can also be used for detecting other entities. They are more effective than using `minecraft:entity_sensor` because they are better at detecting if the entity you want to detect goes away than with `minecraft:entity_sensor`. The only downside is that they're experimental.
+The `for_each` function and `q.get_nearby_entities` or `q.get_nearby_entities_except_self` can also be used for detecting other entities. They are more effective than using `minecraft:entity_sensor` because they are better at detecting if the entity you want to detect goes away than with `minecraft:entity_sensor`. The only downside is that they're experimental.
 
 Just like in the previous method we will make pigs say "oink oink" upon detecting players, though you can replace those with whatever you want. First of all, copy-paste this BP animation:
 
@@ -139,7 +139,7 @@ Just like in the previous method we will make pigs say "oink oink" upon detectin
 			"loop": true,
 			"timeline": {
 				"0": [
-					"v.x = 0.0; for_each(t.player, query.get_nearby_entities_except_self(16, 'minecraft:player'), { v.x = v.x + 1; }); return v.x > 0.0;"
+					"v.x = 0.0; for_each(t.player, q.get_nearby_entities_except_self(16, 'minecraft:player'), { v.x = v.x + 1; }); return v.x > 0.0;"
 				]
 			}
 		}
@@ -147,7 +147,7 @@ Just like in the previous method we will make pigs say "oink oink" upon detectin
 }
 ```
 
-The first parameter that `query.get_nearby_entities_except_self` needs to work is the radius in blocks it will detect other entities in. The other is the identifier of the mob you want to make it detect.
+The first parameter that `q.get_nearby_entities_except_self` needs to work is the radius in blocks it will detect other entities in. The other is the identifier of the mob you want to make it detect.
 
 Now that's good and all, but on the off chance, you want to make the pig detect players with some attribute that can be detected with Molang, use this.
 
@@ -162,7 +162,7 @@ Now that's good and all, but on the off chance, you want to make the pig detect 
 			"loop": true,
 			"timeline": {
 				"0": [
-					"v.x = 0.0; for_each(t.player, query.get_nearby_entities_except_self(2, 'minecraft:player'), { v.x = v.x + (t.player -> query.is_sheared); }); return v.x > 0.0;"
+					"v.x = 0.0; for_each(t.player, q.get_nearby_entities_except_self(2, 'minecraft:player'), { v.x = v.x + (t.player -> q.is_sheared); }); return v.x > 0.0;"
 				]
 			}
 		}

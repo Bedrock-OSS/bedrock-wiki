@@ -113,7 +113,7 @@ When present, this section lists NBT fields used by entities with this runtime i
 When Molang queries would have behaviors very specific to this runtime identifier, this section will be given. The queries thoroughly explain return values. All notable queries in this document are usable on both the client and the server.
 
 ### Hardcoded Variables
-Molang variables that are bound to specific runtime identifiers in a hardcoded fashion are listed here. In other contexts, without proper declaration, the variables would be undefined. All hardcoded variables in this document are usable on both the client and the server. In all but one case (`variable.armor_stand.pose_index` on [`minecraft:armor_stand`](#minecraft:armor_stand)), the variables available to custom entities are generally worthless.
+Molang variables that are bound to specific runtime identifiers in a hardcoded fashion are listed here. In other contexts, without proper declaration, the variables would be undefined. All hardcoded variables in this document are usable on both the client and the server. In all but one case (`v.armor_stand.pose_index` on [`minecraft:armor_stand`](#minecraft:armor_stand)), the variables available to custom entities are generally worthless.
 
 ### Effects
 Particle and sound effects bound to entities in a hardcoded manner are described in this optional section. In all but one case (the particle effect on [￼`minecraft:fireworks_rocket`￼](#minecraft:fireworks_rocket)), the effects can nevertheless be configured by editing the associated data-driven particle or sound effects definitions.
@@ -149,8 +149,8 @@ By default, `minecraft:portal` and `minecraft:end_portal` will teleport entities
 “Hit points” dictates how, if at all, hit points are used on the entity. This attribute uses its own enumeration to describe its behavior:
 | Value                | Explanation                                                  |
 |----------------------|--------------------------------------------------------------|
-| Health               | The entity uses health, configurable via the `minecraft:health` component. Health can be evaluated using entity filters, components, and `query.health`. Health is serialized via NBT.<br><br>Structural integrity is always reported as `0` for entities using this hit point system. |
-| Structural integrity | The entity uses a hardcoded structural integrity system that cannot be configured. Structural integrity can only be queried, via `query.structural_integrity`. `minecraft:damage_sensor` has no functionality with entities that use structural integrity. Structural integrity is not serialized.<br><br>`query.hurt_time` and `query.hurt_direction` work with these entities.<br><br>With [one exception](#minecraft:armor_stand), health is always reported as `0` for entities using this hit point system. |
+| Health               | The entity uses health, configurable via the `minecraft:health` component. Health can be evaluated using entity filters, components, and `q.health`. Health is serialized via NBT.<br><br>Structural integrity is always reported as `0` for entities using this hit point system. |
+| Structural integrity | The entity uses a hardcoded structural integrity system that cannot be configured. Structural integrity can only be queried, via `q.structural_integrity`. `minecraft:damage_sensor` has no functionality with entities that use structural integrity. Structural integrity is not serialized.<br><br>`q.hurt_time` and `q.hurt_direction` work with these entities.<br><br>With [one exception](#minecraft:armor_stand), health is always reported as `0` for entities using this hit point system. |
 | Item                 | The entity uses a special hit point system that serializes data into the `Health` top-level NBT field. This hit point system is only configurable via NBT. Configurations to `minecraft:health` are ignored. `minecraft:damage_sensor` has no functionality with entities that use item health.<br><br>Both health and structural integrity are always reported as `0` for entities using this hit point system. |
 | None                 | The entity does not use hit points, at least not in a conventional sense. It may despawn on being hit or be immune to such damage.<br><br>Both health and structural integrity are always reported as `0` for entities using this hit point system. |
 
@@ -160,7 +160,7 @@ Assuming the entity is damageable, `/damage` is able to work for “health”, �
 Some runtime identifiers’ entities cannot be damaged by any means (including via `/damage`). Such runtime identifiers are marked as inactive under this attribute. Note that `minecraft:damage_sensor` cannot make undamageable entities damageable. In this document, “gameplay” damage is damage taken through normal gameplay, e.g., not commands.
 
 **Flammable**
-Entities whose runtime identifier have this attribute flagged as active can be set on fire. When flammable entities are on fire, `query.is_on_fire` will return `true` and `on_fire_color` will be used as the overlay color from a render controller. However, the entity may not actually be damageable by fire, lava, or fire ticks. This attribute is also flagged as inactive if the entity can take fire, lava, or fire tick damage but would die or despawn from it.
+Entities whose runtime identifier have this attribute flagged as active can be set on fire. When flammable entities are on fire, `q.is_on_fire` will return `true` and `on_fire_color` will be used as the overlay color from a render controller. However, the entity may not actually be damageable by fire, lava, or fire ticks. This attribute is also flagged as inactive if the entity can take fire, lava, or fire tick damage but would die or despawn from it.
 
 **Can be knocked back**
 When noted as active, entities can be knocked back when taking damage from entity attacks or explosions, and this can be tuned using the universal `minecraft:knockback_resistance` component. When noted as inactive, `minecraft:knockback_resistance` cannot make stationary entities able to be knocked back.
@@ -238,7 +238,7 @@ Other updates to an entity — such as `minecraft:variant` changing or if the en
 Entity positional changes are generally interpolated on the client when the entity moves small distances on the server between ticks. This technique ensures a fluid appearance in movement, especially when the entity is running its usual behaviors, i.e., not being teleported. If this is inactive, entities using such runtime identifiers will appear to stutter around. This is generally inactive on runtime identifiers that are not expected to move much in order to improve performance.
 
 **Oriented**
-Normally, entities on the client automatically update their orientation to match the server. If this attribute is inactive, the client entity will by default appear in a fixed direction (with the geometry rotated 180° about the *y*-axis) even if the server entity is being oriented some specific way. All entities have server-configurable rotations, and rotational updates are always sent to the client. Therefore, animations can always be used to force a client entity’s orientation to match the server using `query.body_x_rotation` and `query.body_y_rotation`.
+Normally, entities on the client automatically update their orientation to match the server. If this attribute is inactive, the client entity will by default appear in a fixed direction (with the geometry rotated 180° about the *y*-axis) even if the server entity is being oriented some specific way. All entities have server-configurable rotations, and rotational updates are always sent to the client. Therefore, animations can always be used to force a client entity’s orientation to match the server using `q.body_x_rotation` and `q.body_y_rotation`.
 
 **Shadow**
 When active, the entity will have a shadow rendered underneath it. For a few runtime identifiers, a shadow will be present, but the shadow size will use a fixed size and disregard the provided collision box in the server entity definition.
@@ -458,9 +458,9 @@ Most core behaviors of projectiles are handled via the `minecraft:projectile` co
 | Step sounds           | ❌     |
 
 ### `minecraft:splash_potion` & `minecraft:lingering_potion`
-* `minecraft:variant` is overloaded for entities using this runtime identifier. While the `is_variant` entity filter will reflect the correct variant as normal, `query.variant` will return a different value (on both the server and the client) based on the `potionId` top-level NBT field on the entity. The type of effect `potionId` [represents](/documentation/projectiles#potion-ids), regardless of effect strength, determines the value:
+* `minecraft:variant` is overloaded for entities using this runtime identifier. While the `is_variant` entity filter will reflect the correct variant as normal, `q.variant` will return a different value (on both the server and the client) based on the `potionId` top-level NBT field on the entity. The type of effect `potionId` [represents](/documentation/projectiles#potion-ids), regardless of effect strength, determines the value:
 
-| Effect          | `query.variant` Value |
+| Effect          | `q.variant` Value |
 |-----------------|-----------------------|
 | Slowness        | `0`                   |
 | Swiftness       | `1`                   |
@@ -975,14 +975,14 @@ Transportation entities move other entities. Most of the core behavior of transp
 * `minecraft:chest_boat` has reduced friction when pushed and will continue sliding along even solid ground indefinitely until colliding with a vertical obstacle
 
 #### Notable Queries
-* `query.structural_integrity`
+* `q.structural_integrity`
 	* Reflects the effective hit points of the entity
 	* Entity dies when reaching 0
 	* Ranges from `1` to `40`, starting at `40` by default
 	* Because structural integrity is not serialized, reset to `40` when reloading the world or when reloading the chunks the entity is in
-* `query.hurt_time`
+* `q.hurt_time`
 	* Normally `0`; when the entity is attacked by a player (even indirectly) in survival mode, instantly becomes and stays at `1` for 0.5 seconds before resetting to `0`
-* `query.hurt_direction`
+* `q.hurt_direction`
 	* Starts at `1` and alternates between `1` and `-1` with each attack by a player (even indirectly) in survival mode
 
 #### Server Attributes
@@ -1029,7 +1029,7 @@ Transportation entities move other entities. Most of the core behavior of transp
 		* Uses a scaling destruction system based on frequency of attacks
 			* If attacks are too spread out, the entity will never be destroyed.
 			* The closer attacks are in time, the faster the entity will be destroyed.
-			* See `query.structural_integrity` notes below for specifics.
+			* See `q.structural_integrity` notes below for specifics.
 		* Damage increases (such as via the strength effect) affect hit point loss greater. Critical hits and other factors do not apply.
 	* Destroyed in a single hit if ranged attacked by a player in survival mode
 	* Destroyed immediately if blown up or in fire or lava
@@ -1041,15 +1041,15 @@ Transportation entities move other entities. Most of the core behavior of transp
 * Plays a fragment of the `minecart.base` sound effect approximately every second while moving by any means, even when teleporting
 
 #### Notable Queries
-* `query.structural_integrity`
+* `q.structural_integrity`
 	* Reflects the effective hit points of the entity
 	* Entity dies when reaching 0
 	* Ranges from `1` to `40`, starting at `40` by default
 	* 8 is subtracted from this value for each point of damage received. When below 20, 1 is added to this value every tick until reaching 20.
 	* Reset to `40` when reloading the world, but even though structural integrity is not serialized, doesn’t reset when reloading the chunks the entity is in
-* `query.hurt_time`
+* `q.hurt_time`
 	* Normally `0`; when the entity is attacked by a player (even indirectly) in survival mode, instantly becomes and stays at `1` for 0.5 seconds before resetting to `0`
-* `query.hurt_direction`
+* `q.hurt_direction`
 	* Starts at `1` and alternates between `1` and `-1` with each attack by a player (even indirectly) in survival mode
 
 #### Server Attributes
@@ -1072,7 +1072,7 @@ Transportation entities move other entities. Most of the core behavior of transp
 | Hookable                        | ⚠️                    | Destroyed on hook attachment if hook was cast by player in creative mode<br>Otherwise, attaches but cannot pull entity |
 | Targetable                      | ❌                    |                                                              |
 | Can be projectile               | ⚠️                    | Block collision always treated as `false` unless `stick_in_ground` is provided                    |
-| Can move along rails            | ✅                    | Positioned directly on the rail's baseline<br>Rail movement automatically orients entity on the server. (The client still requires an animation using `query.body_y_rotation` since “Oriented” client attribute is ❌.)<br>Decelerates gradually |
+| Can move along rails            | ✅                    | Positioned directly on the rail's baseline<br>Rail movement automatically orients entity on the server. (The client still requires an animation using `q.body_y_rotation` since “Oriented” client attribute is ❌.)<br>Decelerates gradually |
 | Automatically rides             | ❌                    |                                                              |
 | Configurable loot               | ⚠️                    | Drops provided loot table when `/kill` is used on it<br>Drops nothing if destroyed (even indirectly) by a player in creative mode<br>Drops intrinsic loot when destroyed otherwise. Variations drop their corresponding item form, with the exception of command block minecarts, which only drop a `minecraft:minecart`. |
 | Spawn behavior                  | Rail                 |                                                              |
@@ -1201,7 +1201,7 @@ Block-like entities act as stationary fake blocks or otherwise act as a workarou
 * Uses structural integrity uniquely
 	* May have declare `minecraft:health` and alter it via component groups
 		* Will be serialized correctly into entity data
-		* Will return the correct value in `query.health`
+		* Will return the correct value in `q.health`
 	* Doesn’t actually use health to determine when it breaks, working more like other entities that use structural integrity
 		* Despawns in a single hit if attacked (including indirectly) by a player in creative mode
 		* Destroyed in multiple hits if melee attacked by a player enough in survival mode
@@ -1228,18 +1228,18 @@ Block-like entities act as stationary fake blocks or otherwise act as a workarou
 * `Pose`
 
 #### Notable Queries
-* `query.structural_integrity`
+* `q.structural_integrity`
 	* `1` by default; after ever being hit, set to `-10`.
 	* Reset to `1` when reloading the world or when reloading the chunks the entity is in
-* `query.hurt_time`
+* `q.hurt_time`
 	* Normally `0`; when the entity is attacked by a player (even indirectly) in survival mode, instantly becomes and stays at `1` for 0.5 seconds before resetting to `0`
-* `query.hurt_direction`
+* `q.hurt_direction`
 	* Starts at `1` and alternates between `1` and `-1` with each attack by a player (even indirectly) in survival mode
 
 #### Hardcoded Variables
-* `variable.armor_stand.hurt_time`
-	* Reflects `query.hurt_time`
-* `variable.armor_stand.pose_index`
+* `v.armor_stand.hurt_time`
+	* Reflects `q.hurt_time`
+* `v.armor_stand.pose_index`
 	* Reflects NBT `Pose`’s `PoseIndex` integer tag
 		* Able to use full scale of integer tag values, not just the poses handled by vanilla
 
@@ -1510,7 +1510,7 @@ Block-like entities act as stationary fake blocks or otherwise act as a workarou
 * Cannot take be configured to take pictures like the vanilla `minecraft:tripod_camera` entity
 
 #### Hardcoded Variables
-* `variable.isFlashing`
+* `v.isFlashing`
 	* Always `0` since custom entities cannot be used to take pictures
 
 #### Server Attributes
@@ -1808,7 +1808,7 @@ Items and XP orbs are “picked up” by eligible nearby entities automatically.
 	* Sets the orb’s experience worth to absorbing players
 
 #### Notable Queries
-* `query.texture_frame_index`
+* `q.texture_frame_index`
 	* Returns integers inclusively between `0` and `10` depending on the value of the NBT tag `experience value`:
 
 | `experience value` minimum | `experience value` maximum | Return value |
@@ -2093,15 +2093,15 @@ The core behavior of `minecraft:elder_guardian_ghost` (applying mining fatigue a
 
 #### Hardcoded Variables
 All variables are fixed due to custom entities not being able to use core agent functionality.
-* `variable.agent.swinganimationtick`
+* `v.agent.swinganimationtick`
 	* Always `0`
-* `variable.agent.ishovering`
+* `v.agent.ishovering`
 	* Always `0`
-* `variable.agent.swinganimationduration`
+* `v.agent.swinganimationduration`
 	* Always `6`
-* `variable.agent.easein`
+* `v.agent.easein`
 	* Always `0`
-* `variable.agent.movespeedscalar`
+* `v.agent.movespeedscalar`
 	* Always `1`
 
 #### Server Attributes

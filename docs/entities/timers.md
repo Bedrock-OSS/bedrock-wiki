@@ -214,13 +214,13 @@ A very useful feature of the timer component is its ability to define a random i
     "inactive": {
       "transitions": [
         {
-          "active": "query.is_sheared"
+          "active": "q.is_sheared"
         }
       ]
     },
     "active": {
       "on_entry": [
-        "variable.random_interval = math.random(2, 7);",
+        "v.random_interval = math.random(2, 7);",
         "/say random interval started"
       ],
       "animations": [
@@ -228,7 +228,7 @@ A very useful feature of the timer component is its ability to define a random i
       ],
       "transitions": [
         {
-          "inactive": "query.anim_time >= variable.random_interval"
+          "inactive": "q.anim_time >= v.random_interval"
         }
       ],
       "on_exit": [
@@ -248,7 +248,7 @@ A very useful feature of the timer component is its ability to define a random i
 }
 ```
 
-Explanation: Upon entry into the state beginning the animation, a variable is given a random value between 2 and 7. The animation finishes when the current animation time is greater than or equal to the value of this variable.
+Explanation: Upon entry into the state beginning the animation, a variable is given a random value between 2 and 7. The animation finishes when the current animation time is greater than or equal to the value of this v.
 
 **Notes**:
 -   The animation length can be set to any value greater than the maximum end of the time range (100 is used as a general template)
@@ -269,13 +269,13 @@ Another useful feature of the timer component is its ability to trigger events a
     "inactive": {
       "transitions": [
         {
-          "active": "query.is_powered"
+          "active": "q.is_powered"
         }
       ]
     },
     "active": {
       "on_entry": [
-        "variable.random_choices = math.random(0, 100);",
+        "v.random_choices = math.random(0, 100);",
         "/say random interval started"
       ],
       "animations": [
@@ -283,13 +283,13 @@ Another useful feature of the timer component is its ability to trigger events a
       ],
       "transitions": [
         {
-          "inactive": "query.anim_time >= 2.0 && variable.random_choices < 30"
+          "inactive": "q.anim_time >= 2.0 && v.random_choices < 30"
         },
         {
-          "inactive": "query.anim_time >= 5.0 && variable.random_choices < 90"
+          "inactive": "q.anim_time >= 5.0 && v.random_choices < 90"
         },
         {
-          "inactive": "query.anim_time >= 9.0 && variable.random_choices <= 100"
+          "inactive": "q.anim_time >= 9.0 && v.random_choices <= 100"
         }
       ],
       "on_exit": [

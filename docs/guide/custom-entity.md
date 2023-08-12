@@ -614,7 +614,7 @@ Let us look at our animation controller for attacking.
 		"default": {
 			"transitions": [
 				{
-					"attacking": "query.is_delayed_attacking"
+					"attacking": "q.is_delayed_attacking"
 				}
 			]
 		},
@@ -623,7 +623,7 @@ Let us look at our animation controller for attacking.
 			"animations": ["attack"],
 			"transitions": [
 				{
-					"default": "!query.is_delayed_attacking"
+					"default": "!q.is_delayed_attacking"
 				}
 			]
 		}
@@ -639,14 +639,14 @@ You can see under `transitions`, we have a condition, which when true will trans
 
 ```json
 {
-	"attacking": "query.is_delayed_attacking"
+	"attacking": "q.is_delayed_attacking"
 }
 ```
 
-Here, `attacking` is the state that will be transitioned to, and `query.is_delayed_attacking` is the condition that needs to be true for the transition to occur.
-This condition is called a _query_. These queries can tell us things about the entity such as if it is attacking or moving. The query `query.is_delayed_attacking` will return `true` when the entity is performing the attack behavior.
+Here, `attacking` is the state that will be transitioned to, and `q.is_delayed_attacking` is the condition that needs to be true for the transition to occur.
+This condition is called a _query_. These queries can tell us things about the entity such as if it is attacking or moving. The query `q.is_delayed_attacking` will return `true` when the entity is performing the attack behavior.
 
-When the entity is in the `attacking` state, it also has a transition back to the default state. Now the condition is `!query.is_delayed_attacking`. Here the `!` means _not_, so it will return the opposite result of `query.is_delayed_attacking` (If `query.is_delayed_attacking` returns `true` then `!query.is_delayed_attacking` returns false).
+When the entity is in the `attacking` state, it also has a transition back to the default state. Now the condition is `!q.is_delayed_attacking`. Here the `!` means _not_, so it will return the opposite result of `q.is_delayed_attacking` (If `q.is_delayed_attacking` returns `true` then `!q.is_delayed_attacking` returns false).
 
 This state also has `animations`. These are the animations that will always play while in this state. Note that we are using the _shortname_ for our animation here, which we will reference in our entity file later. If you don't, the animations will not play.
 There is also the `blend_transition` key, which allows the animations to slowly fade into each other. A higher number means a longer blending time.
@@ -664,7 +664,7 @@ We can also make a similar controller for our `move` and `idle` animation.
 			"animations": ["idle"],
 			"transitions": [
 				{
-					"moving": "query.modified_move_speed > 0.1"
+					"moving": "q.modified_move_speed > 0.1"
 				}
 			]
 		},
@@ -673,7 +673,7 @@ We can also make a similar controller for our `move` and `idle` animation.
 			"animations": ["move"],
 			"transitions": [
 				{
-					"standing": "query.modified_move_speed < 0.1"
+					"standing": "q.modified_move_speed < 0.1"
 				}
 			]
 		}
@@ -683,7 +683,7 @@ We can also make a similar controller for our `move` and `idle` animation.
 
 This follows a similar pattern with some additions.
 We now have `initial_state` which tells the controller which state to start on. If none is listed then it will start on the state `default`.
-You'll also notice our queries look slightly different. Here the query `query.modified_move_speed` returns a value, so in order to return a boolean (i.e. true or false) we look at when the value is above or below `0.1`. For more in depth information on animation controllers, you can read [here](/animation-controllers/animation-controllers-intro).
+You'll also notice our queries look slightly different. Here the query `q.modified_move_speed` returns a value, so in order to return a boolean (i.e. true or false) we look at when the value is above or below `0.1`. For more in depth information on animation controllers, you can read [here](/animation-controllers/animation-controllers-intro).
 
 Now that we have our animation controllers, we can add them to our animation controller file. Similarly to animations, the key is the identifier for our animation controller; `controller.animation.ghost.attack` and `controller.animation.ghost.walk`.
 
@@ -700,7 +700,7 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 				"default": {
 					"transitions": [
 						{
-							"attacking": "query.is_delayed_attacking"
+							"attacking": "q.is_delayed_attacking"
 						}
 					]
 				},
@@ -709,7 +709,7 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 					"animations": ["attack"],
 					"transitions": [
 						{
-							"default": "!query.is_delayed_attacking"
+							"default": "!q.is_delayed_attacking"
 						}
 					]
 				}
@@ -723,7 +723,7 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 					"animations": ["idle"],
 					"transitions": [
 						{
-							"moving": "query.modified_move_speed > 0.1"
+							"moving": "q.modified_move_speed > 0.1"
 						}
 					]
 				},
@@ -732,7 +732,7 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 					"animations": ["move"],
 					"transitions": [
 						{
-							"standing": "query.modified_move_speed < 0.1"
+							"standing": "q.modified_move_speed < 0.1"
 						}
 					]
 				}
@@ -1346,7 +1346,7 @@ Your folder structure should look like this:
 				"default": {
 					"transitions": [
 						{
-							"attacking": "query.is_delayed_attacking"
+							"attacking": "q.is_delayed_attacking"
 						}
 					]
 				},
@@ -1355,7 +1355,7 @@ Your folder structure should look like this:
 					"animations": ["attack"],
 					"transitions": [
 						{
-							"default": "!query.is_delayed_attacking"
+							"default": "!q.is_delayed_attacking"
 						}
 					]
 				}
@@ -1369,7 +1369,7 @@ Your folder structure should look like this:
 					"animations": ["idle"],
 					"transitions": [
 						{
-							"moving": "query.modified_move_speed > 0.1"
+							"moving": "q.modified_move_speed > 0.1"
 						}
 					]
 				},
@@ -1378,7 +1378,7 @@ Your folder structure should look like this:
 					"animations": ["move"],
 					"transitions": [
 						{
-							"standing": "query.modified_move_speed < 0.1"
+							"standing": "q.modified_move_speed < 0.1"
 						}
 					]
 				}

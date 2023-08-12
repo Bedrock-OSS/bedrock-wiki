@@ -162,13 +162,13 @@ The item object is a more explicit construct for referencing items.
 }
 ```
 
-The required `"item"` property functions the same as the string reference format. Although an explicit data field is available, the data suffix string format is still supported in the `"item"` property. However, unlike the suffix form, `"data"` can accept Molang. The Molang here is evaluated once on world load, not per-crafting attempt. Variables cannot be used to pass data between properties in a recipe. Furthermore, the nature of input items cannot be queried. Currently, the only known usable query in the `"data"` property is `query.get_actor_info_id`, used to look up the ID of an entity's spawn egg by its identifier:
+The required `"item"` property functions the same as the string reference format. Although an explicit data field is available, the data suffix string format is still supported in the `"item"` property. However, unlike the suffix form, `"data"` can accept Molang. The Molang here is evaluated once on world load, not per-crafting attempt. Variables cannot be used to pass data between properties in a recipe. Furthermore, the nature of input items cannot be queried. Currently, the only known usable query in the `"data"` property is `q.get_actor_info_id`, used to look up the ID of an entity's spawn egg by its identifier:
 
 <CodeHeader>#/minecraft:recipe_shapeless/result</CodeHeader>
 ```json
 {
 	"item": "minecraft:spawn_egg",
-	"data": "query.get_actor_info_id('minecraft:chicken')"
+	"data": "q.get_actor_info_id('minecraft:chicken')"
 }
 ```
 
