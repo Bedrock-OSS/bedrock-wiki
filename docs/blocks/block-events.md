@@ -62,11 +62,11 @@ All event responses should be contained within the sequence.
   "sequence": [
     {
       "set_block_state": {
-        "wiki:my_prop": true
+        "wiki:my_state": true
       }
     },
     {
-      "condition": "q.block_state('wiki:my_prop')", // Optional
+      "condition": "q.block_state('wiki:my_state')", // Optional
       "trigger": {
         "event": "wiki:my_entity_event",
         "target": "other"
@@ -88,7 +88,7 @@ Randomly run event responses.
     {
       "weight": 1, // 1/4 chance
       "set_block_state": {
-        "wiki:my_prop": true
+        "wiki:my_state": true
       }
     },
     {
