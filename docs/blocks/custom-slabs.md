@@ -16,7 +16,8 @@ Check out [block features](/blocks/blocks-stable) before starting.
 ::: warning EXPERIMENTAL
 Requires `Holiday Creator Features` to trigger block events.
 Requires `Upcoming Creator Features` for use of block traits.
-::
+:::
+
 ## Introduction
 Making custom slabs is a simple task, but if you find any drawbacks during recreating slabs, this tutorial will help you with it, and you'll be provided with a template for you to use.
 
