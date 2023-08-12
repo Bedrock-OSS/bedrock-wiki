@@ -62,15 +62,18 @@ The following query functions require experimental Molang features to be enabled
 
 Example of an item querying a block's tags:
 
-<CodeHeader>BP/items/wiki_pickaxe.json</CodeHeader>
+<CodeHeader>BP/items/custom_pickaxe.json</CodeHeader>
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.20.20",
   "minecraft:item": {
     "description": {
-      "identifier": "wiki:pickaxe",
-      "category": "equipment"
+      "identifier": "wiki:custom_pickaxe",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.pickaxe"
+      }
     },
     "components": {
       "minecraft:digger": {
@@ -79,7 +82,7 @@ Example of an item querying a block's tags:
           {
             "speed": 5,
             "block": {
-              "tags": "q.any_tag('wiki_tag', 'stone', 'metal')"
+              "tags": "q.any_tag('custom_ore', 'stone', 'metal')"
             }
           }
         ]
