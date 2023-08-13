@@ -186,12 +186,14 @@ Kills the specified target, making the block disappear with no loot or effects i
 
 Play a particle effect at a specified contextual target's position.
 
+Supported `effect` values are unknown. Using the `playsound` command with the [`run_command`](#run-command) event response can be used as an alternative.
+
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
 "wiki:particle_effect": {
   "play_effect": {
-    "effect": "minecraft:campfire_smoke",
+    "effect": "???",
     "target": "self"
   }
 }
@@ -199,14 +201,16 @@ Play a particle effect at a specified contextual target's position.
 
 ### play_sound
 
-Play a sound to a specified contextual target.
+Plays a sound from a specified contextual target.
+
+Supports most vanilla individual sound event IDs from `RP/sounds.json`, however custom entries will not function.
 
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
 "wiki:play_sound": {
   "play_sound": {
-    "sound": "mob.enderman.death",
+    "sound": "beacon.power",
     "target": "self"
   }
 }
