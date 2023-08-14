@@ -418,6 +418,8 @@ Custom instance names can be defined within material instances, and can be refer
 
 Configure conditions for a block to be able to survive. If these conditions are not met, the block will not be placed, or if the block is already placed, it will pop off.
 
+**The `block_filter` may have up to 64 entries.**
+
 **If omitted, the block can be placed and survive on any surface.**
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.60 and higher._
