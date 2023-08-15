@@ -12,10 +12,10 @@ We as a bedrock OSS want to help as well and are looking for contributors for th
 
 ### How to get started
 
-Read the official [Hacktoberfest guide](https://hacktoberfest.com/participation/#beginner-resources) to get started. After that, check out the organizations/projects bellow. You can [join the discord]( https://discord.gg/XjV87YN) to get in touch. 
+Read the official [Hacktoberfest guide](https://hacktoberfest.com/participation/#beginner-resources) to get started. After that, check out the organizations/projects bellow. You can [join the discord]( https://discord.gg/XjV87YN) to get in touch.
 
 :::tip
-Issues that are a particularly good fit for Hacktoberfest will be tagged as so.  
+Issues that are a particularly good fit for Hacktoberfest will be tagged as so.
 :::
 
 # Organizations
@@ -32,7 +32,7 @@ The Bedrock Wiki is a knowledge-sharing website for Technical Bedrock, containin
 
 ### [Regolith](https://github.com/Bedrock-OSS/regolith)
 
-Regolith is an Add-on Compiler for the Bedrock Edition of Minecraft. 
+Regolith is an Add-on Compiler for the Bedrock Edition of Minecraft.
 
 
 ### [Bedrock Loot Gen](https://github.com/Bedrock-OSS/bedrock-loot-gen)

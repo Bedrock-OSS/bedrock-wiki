@@ -3,6 +3,9 @@ title: Editing Your First Model
 category: Tutorials
 mentions:
     - TheDoctor15
+    - MedicalJewel105
+    - TheItsNameless
+    - SmokeyStack
 tags:
     - expert
 ---
@@ -107,12 +110,12 @@ If we look how the arm look we see all is now fixed.
 
 #### Export it!
 
-It is time to now export your model first put the steve arm texture inside `VRpackTemplateRP\textures`. 
+It is time to now export your model first put the steve arm texture inside `VRpackTemplateRP\textures`.
 Call it `hologram_hands.png`.
 
 ![](/assets/images/vr/tutorial-hand-right/export-texture.png)
 
-Now lets export the model. 
+Now lets export the model.
 
 ![](/assets/images/vr/tutorial-hand-right/export-model-1.png)
 

@@ -3,6 +3,12 @@ title: Vanilla Item Identifiers
 category: Documentation
 tags:
     - deprecated
+mentions:
+    - TheDoctor15
+    - Medicaljewel105
+    - Luthorius
+    - epxzzy
+    - SmokeyStack
 ---
 
 :::danger
@@ -33,7 +39,7 @@ The namespace is allowed to be changed, learn more about namespaces [here](/conc
 
 ### namespace:banner
 
--   The item icon and model will be changed to that of the Vanilla Banner. 
+-   The item icon and model will be changed to that of the Vanilla Banner.
 
 ---
 

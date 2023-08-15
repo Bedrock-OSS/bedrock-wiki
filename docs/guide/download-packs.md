@@ -5,6 +5,16 @@ description: Appendix for downloading example Packs
 prefix: 'b. '
 nav_order: 2
 show_toc: false
+mentions:
+    - SirLich
+    - Joelant05
+    - Dreamedc2015
+    - sermah
+    - SmokeyStack
+    - MedicalJewel105
+    - Luthorius
+    - TheDoctor15
+    - TheItsNameless
 ---
 
 ::: tip

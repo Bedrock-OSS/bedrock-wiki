@@ -3,8 +3,11 @@ title: Look at Entity
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - shanewolf38
+    - MedicalJewel105
+    - TheItsNameless
+    - SmokeyStack
 ---
 
 The following tutorial provides a resource pack method to detect when the player is looking at an entity. The code below must be placed inside the entity that will be looked at by the player, and will provide a variable `v.look_at_entity` which returns true when the entity is being looked at.
@@ -38,4 +41,4 @@ The provided code is very accurate for the standard Minecraft mob size of 1 bloc
 
 ## Explanation
 
-The variable detects when the player is looking at the entity by checking if the rotation angle required for the entity to look at the player is opposite the rotation angle required for the player to look at the entity. The horizontal and vertical angle sensitivity are modified by the distance of the entity from the camera to maintain accuracy. 
+The variable detects when the player is looking at the entity by checking if the rotation angle required for the entity to look at the player is opposite the rotation angle required for the player to look at the entity. The horizontal and vertical angle sensitivity are modified by the distance of the entity from the camera to maintain accuracy.

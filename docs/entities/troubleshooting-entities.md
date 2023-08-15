@@ -4,6 +4,14 @@ category: General
 nav_order: 3
 tags:
     - help
+mentions:
+    - SirLich
+    - BlueFrog130
+    - SmokeyStack
+    - MedicalJewel105
+    - aexer0e
+    - ChibiMango
+    - RonarsCorruption
 ---
 
 :::tip
@@ -98,6 +106,7 @@ This means you have a working behavior file, but for whatever reason, the game i
 -   Syntax error in your .entity file
 -   The entity's identifiers don't match
 -   One or more of the resources your .entity file directs to are invalid
+-   Check that your RP folder is "entity", and your BP folder is "entities"
 
 ### Step 3.2.1 - Syntax error
 

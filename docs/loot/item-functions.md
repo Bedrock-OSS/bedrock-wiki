@@ -3,14 +3,16 @@ title: Item Functions
 category: Documentation
 nav_order: 4
 tags:
-- Stable
-- Last updated for Version 1.18.10
-mention:
-- Ciosciaa
+    - Stable
+    - Last updated for Version 1.18.10
+mentions:
+    - Ciosciaa
+    - MedicalJewel105
+    - ThomasOrs
 toc_max_level: 1
 ---
 
-Item functions modify the nature of an item in [loot tables](./loot-tables.html) and [trade tables](./trade-tables.html).
+Item functions modify the nature of an item in [loot tables](/loot-tables) and [trade tables](/trade-tables).
 
 ```json
 
@@ -32,27 +34,27 @@ A handful of functions are available for basic item properties. These functions 
 
 | Function             | Container Loot | Block Drops | Fishing | Entity Drops | Entity Equipment | Trade Tables |
 | -------------------- | -------------- | ----------- | ------- | ------------ | ---------------- | ------------ |
-| `set_count`          | ✅             | ✅         | ✅      | ✅          | ✅              | ❌           |
-| `set_name`           | ✅             | ✅         | ✅      | ✅          | ✅              | ✅           |
-| `set_lore`           | ✅             | ✅         | ✅      | ✅          | ✅              | ✅           |
-| `set_data`           | ✅             | ✅         | ✅      | ✅          | ✅              | ✅           |
-| `random_block_state` | ✅             | ✅         | ✅      | ✅          | ✅              | ✅           |
-| `random_aux_value`   | ✅             | ✅         | ✅      | ✅          | ✅              | ✅           |
-| `set_damage`         | ✅             | ✅         | ✅      | ✅          | ✅              | ✅           |
+| `set_count`          | ✅              | ✅           | ✅       | ✅            | ✅                | ❌            |
+| `set_name`           | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `set_lore`           | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `set_data`           | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `random_block_state` | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `random_aux_value`   | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `set_damage`         | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
 
 ### Count
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ❌     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ❌      |
 
 ::: tip NOTE
-Trade tables use the [`"quantity"` property](./trade-tables.html#quantity) to set their count.
+Trade tables use the [`"quantity"` property](/trade-tables#quantity) to set their count.
 :::
 
 The `set_count` function sets the count for that item entry.
@@ -76,12 +78,12 @@ The `"count"` property determines how many of that item should be yielded; it ca
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 The name of an item can be set using the `set_name` function. Names are visible in the user interface when hovering over an item. Names can be changed by players using anvils.
 
@@ -101,12 +103,12 @@ The name to give the item is given with the string `"name"` property. By default
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 The `set_lore` function sets the lore for an item.
 
@@ -129,12 +131,12 @@ The `"lore"` property configures the lore. It can be represented as either a str
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `set_data` establishes the data for the given item, similar to the argument in the `/give` command. If used on a block, it will set the block's data value. If used on an item, it will set it's aux value. Unlike the command, however, `set_data` cannot set the durability of an item. For that, use [`durability`](#durability).
 
@@ -169,12 +171,12 @@ The object form will randomly select a data value inclusively between the provid
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `random_block_state` sets an individual block state for a block.
 
@@ -200,12 +202,12 @@ Defaults to 0… kinda required otherwise pointless? IDK…
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `random_aux_value`
 
@@ -234,12 +236,12 @@ Works on block data, too
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 Item durability can be set using the `set_damage` function.
 
@@ -263,24 +265,24 @@ Some functions are only usable by a certain set of items. See each function for 
 
 | Function             | Container Loot | Block Drops | Fishing | Entity Drops | Entity Equipment | Trade Tables |
 | -------------------- | -------------- | ----------- | ------- | ------------ | ---------------- | ------------ |
-| `furnace_smelt`      | ❌            | ❌          | ❌     | ✅           | ❌              | ❌           |
-| `set_book_contents`  | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
-| `exploration_map`    | ✅            | ✅          | ✅     | ✅           | ✅              | ⚠️           |
-| `set_banner_details` | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
-| `random_dye`         | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
-| `set_actor_id`       | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
-| `fill_container`     | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
+| `furnace_smelt`      | ❌              | ❌           | ❌       | ✅            | ❌                | ❌            |
+| `set_book_contents`  | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `exploration_map`    | ✅              | ✅           | ✅       | ✅            | ✅                | ⚠️            |
+| `set_banner_details` | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `random_dye`         | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `set_actor_id`       | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `fill_container`     | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
 
 ### Heat Item
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ❌     |
-| Block drops      | ❌     |
-| Fishing          | ❌     |
-| Entity drops     | ✅     |
-| Entity equipment | ❌     |
-| Trade table      | ❌     |
+| Container loot   | ❌      |
+| Block drops      | ❌      |
+| Fishing          | ❌      |
+| Entity drops     | ✅      |
+| Entity equipment | ❌      |
+| Trade table      | ❌      |
 
 `furnace_smelt`
 
@@ -299,12 +301,12 @@ Vanilla files use a function condition for this, but even removing that conditio
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `set_book_contents`
 
@@ -342,12 +344,12 @@ Can use color codes; Each different page string resets the color codes each time
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `exploration_map`
 
@@ -364,7 +366,7 @@ Can use color codes; Each different page string resets the color codes each time
 trade table info:
 destination
 Currently only `monument` `mansion`.
-Nothing else, not even buriedtreasure (this one looks like it’ll work — names the map right instead of Unknown Map like the others, but it doesn’t point anywhere). :(
+Nothing else, not even buried treasure (this one looks like it’ll work — names the map right instead of Unknown Map like the others, but it doesn’t point anywhere). :(
 
 Loot table info:
 Destination
@@ -379,12 +381,12 @@ Keep in mind how only 2 locations worked from traders
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `set_banner_details`
 
@@ -406,12 +408,12 @@ Can only be 0 or 1
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `random_dye`
 
@@ -430,12 +432,12 @@ Doesn’t work on wool or whatever
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `set_actor_id`
 
@@ -456,12 +458,12 @@ in trade tables, defaults to trader's entity type
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `fill_container`
 
@@ -483,23 +485,23 @@ Works in containers and both entity stuff and blocks
 
 ## Enchanting
 | Function                   | Container Loot | Block Drops | Fishing | Entity Drops | Entity Equipment | Trade Tables |
-| -------------------------- | -------------- |------------ | ------- | ------------ | ---------------- | ------------ |
-| `enchant_book_for_trading` | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
-| `enchant_with_levels`      | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
-| `enchant_randomly`         | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
-| `enchant_random_gear`      | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
-| `specific_enchants`        | ✅            | ✅          | ✅     | ✅           | ✅              | ✅           |
+| -------------------------- | -------------- | ----------- | ------- | ------------ | ---------------- | ------------ |
+| `enchant_book_for_trading` | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `enchant_with_levels`      | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `enchant_randomly`         | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `enchant_random_gear`      | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
+| `specific_enchants`        | ✅              | ✅           | ✅       | ✅            | ✅                | ✅            |
 
 ### Enchant for Trading
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `enchant_book_for_trading`
 
@@ -517,12 +519,12 @@ documented in trade tables
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `enchant_with_levels` enchants items using enchantment table logic, optionally allowing for treasure enchantments.
 
@@ -546,22 +548,22 @@ level 99999 gives ludicrously powerful books… with pretty much every possible
 treasure
 	Enables treasure enchantments as possibilities for that item
 	boolean, defaults to false
-	If false, curses can't appear as possiblities; if true, they can	
+	If false, curses can't appear as possibilities; if true, they can	
 levels
 	Can be number or min/max object
 	Defaults to 0
-	Can be negative, but will just be reampped as though 0.
+	Can be negative, but will just be remapped as though 0.
 	
 ### Random Enchantments
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `enchant_randomly`
 
@@ -582,12 +584,12 @@ boolean, defaults to false
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `enchant_random_gear`
 
@@ -612,12 +614,12 @@ Going over 1 doesn't make it "more" enchanted
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ✅     |
+| Container loot   | ✅      |
+| Block drops      | ✅      |
+| Fishing          | ✅      |
+| Entity drops     | ✅      |
+| Entity equipment | ✅      |
+| Trade table      | ✅      |
 
 `specific_enchants`
 
@@ -645,21 +647,21 @@ Can be an exact number or a 2-valued array, representing min and max, inclusive
 ## External Factors
 | Function                    | Container Loot | Block Drops | Fishing | Entity Drops | Entity Equipment | Trade Tables |
 | --------------------------- | -------------- | ----------- | ------- | ------------ | ---------------- | ------------ |
-| `looting_enchant`           | ❌            | ❌          | ❌     | ✅           | ❌              | ❌           |
-| `explosion_decay`           | ❌            | ✅          | ❌     | ❌           | ❌              | ❌           |
-| `set_data_from_color_index` | ❌            | ❌          | ❌     | ❌           | ❌              | ✅           |
-| `trader_material_type`      | ❌            | ❌          | ❌     | ❌           | ❌              | ✅           |
+| `looting_enchant`           | ❌              | ❌           | ❌       | ✅            | ❌                | ❌            |
+| `explosion_decay`           | ❌              | ✅           | ❌       | ❌            | ❌                | ❌            |
+| `set_data_from_color_index` | ❌              | ❌           | ❌       | ❌            | ❌                | ✅            |
+| `trader_material_type`      | ❌              | ❌           | ❌       | ❌            | ❌                | ✅            |
 
 ### Held Tool Looting Enchantment
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ❌     |
-| Block drops      | ❌     |
-| Fishing          | ❌     |
-| Entity drops     | ✅     |
-| Entity equipment | ❌     |
-| Trade table      | ❌     |
+| Container loot   | ❌      |
+| Block drops      | ❌      |
+| Fishing          | ❌      |
+| Entity drops     | ✅      |
+| Entity equipment | ❌      |
+| Trade table      | ❌      |
 
 `looting_enchant`
 
@@ -682,12 +684,12 @@ Count can be an integer or min/max
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ❌     |
-| Block drops      | ✅     |
-| Fishing          | ❌     |
-| Entity drops     | ❌     |
-| Entity equipment | ❌     |
-| Trade table      | ❌     |
+| Container loot   | ❌      |
+| Block drops      | ✅      |
+| Fishing          | ❌      |
+| Entity drops     | ❌      |
+| Entity equipment | ❌      |
+| Trade table      | ❌      |
 
 `explosion_decay`
 
@@ -705,12 +707,12 @@ By default, always survives. If in an explosion, has a chance of not dropping ba
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ❌     |
-| Block drops      | ❌     |
-| Fishing          | ❌     |
-| Entity drops     | ❌     |
-| Entity equipment | ❌     |
-| Trade table      | ✅     |
+| Container loot   | ❌      |
+| Block drops      | ❌      |
+| Fishing          | ❌      |
+| Entity drops     | ❌      |
+| Entity equipment | ❌      |
+| Trade table      | ✅      |
 
 `set_data_from_color_index`
 
@@ -728,12 +730,12 @@ Sets the data value of the block to the value of the `minecraft:color` component
 
 | Usage            | Usable |
 | ---------------- | ------ |
-| Container loot   | ❌     |
-| Block drops      | ❌     |
-| Fishing          | ❌     |
-| Entity drops     | ❌     |
-| Entity equipment | ❌     |
-| Trade table      | ✅     |
+| Container loot   | ❌      |
+| Block drops      | ❌      |
+| Fishing          | ❌      |
+| Entity drops     | ❌      |
+| Entity equipment | ❌      |
+| Trade table      | ✅      |
 
 `trader_material_type`
 

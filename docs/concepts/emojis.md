@@ -1,5 +1,18 @@
 ---
 title: Emojis & Symbols
+mentions:
+    - SirLich
+    - Joelant05
+    - sovledDev
+    - stirante
+    - Dreamedc2015
+    - MedicalJewel105
+    - JaylyDev
+    - RealBashy21
+    - ColinTimBarndt
+    - Citicx
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 :::warning
@@ -50,7 +63,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Small Left Arrow  |                         | U+E056  | ![](/assets/images/concepts/emojis/mobile/smallleftarrow.png)  |
 | Small Right Arrow |                         | U+E058  | ![](/assets/images/concepts/emojis/mobile/smallrightarrow.png) |
 | Small Up Arrow    |                         | U+E055  | ![](/assets/images/concepts/emojis/mobile/smalluparrow.png)    |
-| Small Up Down     |                         | U+E057  | ![](/assets/images/concepts/emojis/mobile/smalldownarrow.png)  |
+| Small Down Arrow  |                         | U+E057  | ![](/assets/images/concepts/emojis/mobile/smalldownarrow.png)  |
 | Small Inventory   |                         | U+E05B  | ![](/assets/images/concepts/emojis/mobile/smallinventory.png)  |
 
 ### PC (Windows 10/MacOS/Chrome OS)

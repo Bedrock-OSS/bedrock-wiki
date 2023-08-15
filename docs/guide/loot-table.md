@@ -4,6 +4,17 @@ category: Guide
 description: How to add your first Loot Table, Spawn Rule and Crafting Recipe
 nav_order: 8
 prefix: '8. '
+mentions:
+    - KaiFireborn
+    - SirLich
+    - sermah
+    - cda94581
+    - Ultr4Anubis
+    - TheItsNameless
+    - Ciosciaa
+    - MedicalJewel105
+    - ChibiMango
+    - FrankyRay
 ---
 
 Next, we'll enhance the custom Ghost entity by adding some more basic mechanics to it:

@@ -3,6 +3,11 @@ title: Feature Types
 category: General
 tags:
     - experimental
+mentions:
+    - SirLich
+    - MedicalJewel105
+    - Luthorius
+    - TheItsNameless
 ---
 
 _Last updated for 1.17.10_
@@ -945,7 +950,7 @@ Because placement of features is so often relative to the heightmap, the incomin
 This means that the specified _y_-origin from the scatter feature’s parent is ignored in favor of the _y_-coordinate of the heightmap at an iteration’s _x_-_z_ location ([assuming the _y_-coordinate would be evaluated after the lateral coordinates](#evaluation-order)). The `"y"` property may still be given a value that will represent the offset from the heightmap.
 
 ::: tip NOTE
-Functionally, this is the same as using the Molang expression `"query.heightmap(v.worldx, v.worldz) + *offset*"`.
+Functionally, this is the same as using the Molang expression `"q.heightmap(v.worldx, v.worldz) + *offset*"`.
 :::
 
 ##### Distribution Types
@@ -1080,7 +1085,7 @@ When finished with the target’s feature tree, if more iterations have yet to b
 		"conditional_features": [
 			{
 				"places_feature": "olympus:columns_unweathered",
-				"condition": "query.noise(v.originx, v.originz) < 0"
+				"condition": "q.noise(v.originx, v.originz) < 0"
 			},
 			{
 				"places_feature": "olympus:columns_weathered",
@@ -1107,11 +1112,11 @@ Instead, if _every_ success should place a feature in the same location, use an 
 "conditional_features": [
 	{
 		"places_feature": "summer_fun:beachadjustment_water",
-		"condition": "query.heightmap(v.originx, v.originz) < 63 && query.noise(v.originx, v.originz) < 0"
+		"condition": "q.heightmap(v.originx, v.originz) < 63 && q.noise(v.originx, v.originz) < 0"
 	},
 	{
 		"places_feature": "summer_fun:beachadjustment_coral",
-		"condition": "query.heightmap(v.originx, v.originz) < 63 && query.noise(v.originx, v.originz) >= 0"
+		"condition": "q.heightmap(v.originx, v.originz) < 63 && q.noise(v.originx, v.originz) >= 0"
 	},
 	{
 		"places_feature": "summer_fun:beachadjustment_air",

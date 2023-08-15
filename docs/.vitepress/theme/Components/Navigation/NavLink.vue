@@ -16,16 +16,12 @@
 		<div class="text-sm">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
 
-		<span
-			v-if="!!props.item.tags?.length"
-			class="ml-auto space-x-2"
-		>
-			<NavLinkTag
-				v-for="(tag, i) in props.item.tags"
-				:key="i"
-				:tag="tag"
-			/>
-		</span>
+    <NavLinkTag
+      v-if="!!props.item.tags?.length"
+      v-for="(tag, i) in props.item.tags"
+      :key="i"
+      :tag="tag"
+    />
 	</a>
 </template>
 
@@ -76,7 +72,7 @@ watchEffect(() => {
 }
 
 .item {
-	@apply transition-colors px-2 py-1 m-1;
+	@apply transition-colors pl-2 pr-1 py-1 m-1;
 }
 
 .item:hover,

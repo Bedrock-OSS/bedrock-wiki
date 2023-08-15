@@ -1,6 +1,16 @@
 ---
 title: Spawn Rules
 category: General
+mentions:
+    - SirLich
+    - solvedDev
+    - MedicalJewel105
+    - aexer0e
+    - Ciosciaa
+    - FrankyRay
+    - Luthorius
+    - TheItsNameless
+    - SmokeyStack
 ---
 
 Spawn rules define how entities will spawn into the world. You should use spawn rules when you want your custom entity to spawn naturally, just like vanilla entities. The different components allow you to define when, where, and how the entity will spawn in.
@@ -122,7 +132,7 @@ minecraft:player_in_village_filter
 ### minecraft:spawns_above_block_filter
 
 <CodeHeader></CodeHeader>
-    
+
 ```json
         "minecraft:spawns_above_block_filter": {
           "blocks": "minecraft:stone",

@@ -4,8 +4,11 @@ category: Tutorials
 tags:
     - experimental
     - intermediate
-mention:
+mentions:
     - Chikorita-Lover
+    - MedicalJewel105
+    - Luthorius
+    - TheItsNameless
 ---
 
 ## Introduction
@@ -20,7 +23,7 @@ The use of Holiday Creator Features is also required to add item tags and easily
 
 ## Server Animation
 
-The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. You can read a bit more [here](/entities/timers.html#animation-based-timers). We can start by using the following as a template:
+The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. You can read a bit more [here](/entities/timers#animation-based-timers). We can start by using the following as a template:
 
 <CodeHeader>BP/animations/player.json</CodeHeader>
 
@@ -69,7 +72,7 @@ To actually check if our item is equipped, we can use a Molang query that checks
 You can skip this section if:
 
 - You want check for a vanilla item instead, such as an iron armor piece through the `minecraft:iron_tier` tag
-- You want to check for the item via `query.is_item_name_any`, which checks for an item identifier in any slot
+- You want to check for the item via `q.is_item_name_any`, which checks for an item identifier in any slot
 
 In our item's behavior, we'll have to add a tag to `components`. For example, if we wanted to add the `example:emerald_tier` tag, we would add the `tag:example:emerald_tier` component:
 
@@ -105,22 +108,22 @@ Now with a short name set, we can run our animation.
 
 Add `scripts` to `description`, and set a Molang query to run. To check for the item, we can use one of the following:
 
-- `query.is_item_name_any`, to check for a given item identifier in any slot. This example will check for `example:totem_of_retreat` in either hand:
+- `q.is_item_name_any`, to check for a given item identifier in any slot. This example will check for `example:totem_of_retreat` in either hand:
 ```
-query.is_item_name_any('slot.weapon.mainhand',0,'example:totem_of_retreat') || query.is_item_name_any('slot.weapon.offhand',0,'example:totem_of_retreat')
-```
-
-- `query.equipped_item_any_tag`, to check for at least one of any given tag in a given slot. This example will allow an emerald- or phantom- tier armor piece to be used:
-```
-query.equipped_item_any_tag('slot.armor.head','example:emerald_tier','example:phantom_tier')
+q.is_item_name_any('slot.weapon.mainhand',0,'example:totem_of_retreat') || q.is_item_name_any('slot.weapon.offhand',0,'example:totem_of_retreat')
 ```
 
-- `query.equipped_item_all_tags`, to check for all given tags in a given slot. This example will only allow an armor piece that's both emerald- and ancient- tier:
+- `q.equipped_item_any_tag`, to check for at least one of any given tag in a given slot. This example will allow an emerald- or phantom- tier armor piece to be used:
 ```
-query.equipped_item_all_tags('slot.armor.head','example:ancient_tier','example:emerald_tier')
+q.equipped_item_any_tag('slot.armor.head','example:emerald_tier','example:phantom_tier')
 ```
 
-Let's take a look at an example using `query.equipped_item_any_tag`:
+- `q.equipped_item_all_tags`, to check for all given tags in a given slot. This example will only allow an armor piece that's both emerald- and ancient- tier:
+```
+q.equipped_item_all_tags('slot.armor.head','example:ancient_tier','example:emerald_tier')
+```
+
+Let's take a look at an example using `q.equipped_item_any_tag`:
 
 <CodeHeader>BP/entities/player.json#description</CodeHeader>
 
@@ -136,7 +139,7 @@ Let's take a look at an example using `query.equipped_item_any_tag`:
     "scripts": {
         "animate": [
             {
-                "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier')"
+                "emerald_armor": "q.equipped_item_any_tag('slot.armor.head','example:emerald_tier')"
             }
         ]
     }
@@ -162,7 +165,7 @@ If you want to run a command when multiple of the armor set's pieces are equippe
 ```json
 "animate": [
     {
-        "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.feet','example:emerald_tier')"
+        "emerald_armor": "q.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && q.equipped_item_any_tag('slot.armor.chest','example:emerald_tier') && q.equipped_item_any_tag('slot.armor.legs','example:emerald_tier') && q.equipped_item_any_tag('slot.armor.feet','example:emerald_tier')"
     }
 ]
 ```
@@ -178,7 +181,7 @@ The turtle shell doesn't always inflict Water Breathing, but instead only for 10
 ```json
 "animate": [
     {
-        "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.health <= 5"
+        "emerald_armor": "q.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && q.health <= 5"
     }
 ]
 ```
@@ -193,7 +196,7 @@ We can also apply this to requiring multiple armor pieces, with even longer Mola
 {
     "animate": [
         {
-            "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.chest','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.legs','example:emerald_tier') && query.equipped_item_any_tag('slot.armor.feet','example:emerald_tier') && query.health <= 5"
+            "emerald_armor": "q.equipped_item_any_tag('slot.armor.head','example:emerald_tier') && q.equipped_item_any_tag('slot.armor.chest','example:emerald_tier') && q.equipped_item_any_tag('slot.armor.legs','example:emerald_tier') && q.equipped_item_any_tag('slot.armor.feet','example:emerald_tier') && q.health <= 5"
         }
     ]
 }
@@ -246,10 +249,10 @@ In our player behavior, you'll have to add on to `animations` and `scripts` as w
     "scripts": {
         "animate": [
             {
-                "emerald_armor": "query.equipped_item_any_tag('slot.armor.head','example:emerald_tier')"
+                "emerald_armor": "q.equipped_item_any_tag('slot.armor.head','example:emerald_tier')"
             },
             {
-                "phantom_armor": "query.equipped_item_any_tag('slot.armor.head','example:phantom_tier')"
+                "phantom_armor": "q.equipped_item_any_tag('slot.armor.head','example:phantom_tier')"
             }
         ]
     }

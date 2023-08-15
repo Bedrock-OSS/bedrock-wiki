@@ -3,10 +3,18 @@ title: Entity Timers
 category: Tutorials
 tags:
     - intermediate
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+    - Justash01
+    - TheItsNameless
+    - zheaEvyline
 ---
 
 Time-based interactions are extremely useful tools for map making. This article hopes to provide an extensive list which details the many ways which timers can be made. For convenience, this page will be split up into two main sections: component-based timers and animation-based timers. Each has their own advantages and disadvantages, which will be outlined in their respective sections.
-You might also find useful [Command Timers](/commands/timers).
+You might also find useful [Scoreboard Timers](/commands/scoreboard-timers).
 
 ## Component-based timers
 
@@ -206,13 +214,13 @@ A very useful feature of the timer component is its ability to define a random i
     "inactive": {
       "transitions": [
         {
-          "active": "query.is_sheared"
+          "active": "q.is_sheared"
         }
       ]
     },
     "active": {
       "on_entry": [
-        "variable.random_interval = math.random(2, 7);",
+        "v.random_interval = math.random(2, 7);",
         "/say random interval started"
       ],
       "animations": [
@@ -220,7 +228,7 @@ A very useful feature of the timer component is its ability to define a random i
       ],
       "transitions": [
         {
-          "inactive": "query.anim_time >= variable.random_interval"
+          "inactive": "q.anim_time >= v.random_interval"
         }
       ],
       "on_exit": [
@@ -240,7 +248,7 @@ A very useful feature of the timer component is its ability to define a random i
 }
 ```
 
-Explanation: Upon entry into the state beginning the animation, a variable is given a random value between 2 and 7. The animation finishes when the current animation time is greater than or equal to the value of this variable.
+Explanation: Upon entry into the state beginning the animation, a variable is given a random value between 2 and 7. The animation finishes when the current animation time is greater than or equal to the value of this v.
 
 **Notes**:
 -   The animation length can be set to any value greater than the maximum end of the time range (100 is used as a general template)
@@ -261,13 +269,13 @@ Another useful feature of the timer component is its ability to trigger events a
     "inactive": {
       "transitions": [
         {
-          "active": "query.is_powered"
+          "active": "q.is_powered"
         }
       ]
     },
     "active": {
       "on_entry": [
-        "variable.random_choices = math.random(0, 100);",
+        "v.random_choices = math.random(0, 100);",
         "/say random interval started"
       ],
       "animations": [
@@ -275,13 +283,13 @@ Another useful feature of the timer component is its ability to trigger events a
       ],
       "transitions": [
         {
-          "inactive": "query.anim_time >= 2.0 && variable.random_choices < 30"
+          "inactive": "q.anim_time >= 2.0 && v.random_choices < 30"
         },
         {
-          "inactive": "query.anim_time >= 5.0 && variable.random_choices < 90"
+          "inactive": "q.anim_time >= 5.0 && v.random_choices < 90"
         },
         {
-          "inactive": "query.anim_time >= 9.0 && variable.random_choices <= 100"
+          "inactive": "q.anim_time >= 9.0 && v.random_choices <= 100"
         }
       ],
       "on_exit": [
@@ -309,4 +317,4 @@ Explanation: Upon entry into the state beginning the animation, a variable is gi
 -   To assign a weight to a time in the list, add the weight to the value the randomized variable must be less than in the list's previous entry (e.g. 5 seconds has a weight of 90 - 30 = 60)
 -   Any events or commands to run when the animation is finished are put inside on_exit
 
-Hopefully this spread some light on the subject of handling time in Minecraft Bedrock! As shown above, there are many possible ways it can be done, each with their own pros and cons. If you have any other useful methods for creating time-based events, please [contribute to the wiki](/contribute.html)!
+Hopefully this spread some light on the subject of handling time in Minecraft Bedrock! As shown above, there are many possible ways it can be done, each with their own pros and cons. If you have any other useful methods for creating time-based events, please [contribute to the wiki](/contribute)!

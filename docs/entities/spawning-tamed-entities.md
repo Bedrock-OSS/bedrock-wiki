@@ -3,8 +3,13 @@ title: Spawning Tamed Entities
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - Axelpvz2030
+    - aexer0e
+    - SirLich
+    - MedicalJewel105
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 In this tutorial, you will learn how to spawn a pre-tamed entity by running an event on the player you want the entity tamed to, and by throwing an item that transforms into a tamed entity upon impact.
@@ -64,7 +69,7 @@ You can find the BP player entity file in the vanilla behavior pack provided by 
 
 ## pretamed_wolf.json
 
-Afterwards, we'll need to create a simple custom entity that will have the `minecraft:arrow` runtime identifier (other projectile runtime identifiers work as well), an empty projectile component, and a trasnfomation component to turn into a tamed wolf.
+Afterwards, we'll need to create a simple custom entity that will have the `minecraft:arrow` runtime identifier (other projectile runtime identifiers work as well), an empty projectile component, and a transformation component to turn into a tamed wolf.
 
 <CodeHeader>BP/entities/pretamed_wolf.json</CodeHeader>
 
@@ -151,9 +156,7 @@ We'll also need to make some adjustment to our custom projectile entity so that 
                     "impact_damage":{
                         "damage":0
                     },
-                    "stick_in_ground":{
-                        
-                    },
+                    "stick_in_ground":{},
                     "definition_event":{
                         "event_trigger":{
                             "event":"wiki:on_hit"

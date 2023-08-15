@@ -5,6 +5,16 @@ nav_order: 1
 tags:
     - guide
     - beginner
+mentions:
+    - SirLich
+    - solvedDev
+    - stirante
+    - Joelant05
+    - destruc7ion
+    - MedicalJewel105
+    - ChibiMango
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means and how to use them.
@@ -148,7 +158,7 @@ Events are activated inside of certain components when some criteria is met. Bel
 ```
 Here, when the entity is interacted with by the player, it will activate the `"wiki:on_interact"` event. The event will then add the component group `"wiki:interacted"`. This will then apply the component `"minecraft:scale"`.
 
-For a more in depth tutorial on what events can do check out our page on entity events. 
+For a more in depth tutorial on what events can do check out our page on entity events.
 
 <BButton link="/entities/entity-events">Entity Events</BButton>
 
@@ -160,4 +170,4 @@ Component groups and events are the primary tools that vanilla entities use to c
 
 - The fox has two component groups `minecraft:fox_red` and `minecraft:fox_active` to have the two color variants depending on where they spawn.
 
-- The enderman will become agressive to the player when looked at.
+- The enderman will become aggressive to the player when looked at.

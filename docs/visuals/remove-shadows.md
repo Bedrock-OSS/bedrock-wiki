@@ -4,11 +4,18 @@ tags:
     - intermediate
 category:
     - Tutorials
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - MedicalJewel105
+    - SmokeyStack
+    - ThomasOrs
 ---
 
-There are quite a few ways to remove shadows from entities, and nearly all of them have undesirable effects. There is no foolproof way to perfectly remove shadows from specific entities, without causing side effects. 
+There are quite a few ways to remove shadows from entities, and nearly all of them have undesirable effects. There is no foolproof way to perfectly remove shadows from specific entities, without causing side effects.
 
-This document will showcase some of the various ways to remove shadows, and any possible effects from doing this. 
+This document will showcase some of the various ways to remove shadows, and any possible effects from doing this.
 
 ## Small Collision Box
 
@@ -41,11 +48,11 @@ You can also add the [custom hit test component](https://bedrock.dev/docs/stable
 
 ## Teleport underground
 
-If you have a dummy entity (invisible) that you need to interact with, you can telport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
+If you have a dummy entity (invisible) that you need to interact with, you can teleport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
 
 ## Using runtime identifier
 
-Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifers document](/entities/runtime-identifier) for more information.
+Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifiers document](/entities/runtime-identifier) for more information.
 
 ## Using Materials
 
@@ -54,8 +61,8 @@ This method is no longer supported. With the advent of render-dragon, materials 
 :::
 
 :::warning
- - This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
- - This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
+    - This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
+    - This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
 :::
 
 <Spoiler title="Removing shadows via Materials.">
@@ -109,3 +116,7 @@ This method is no longer supported. With the advent of render-dragon, materials 
 ```
 
 </Spoiler>
+
+#### Geometry + Materials Workaround
+
+You can hide entity shadows if you apply a model on your entity to cover the shadow and use `"banner_pole"` material.

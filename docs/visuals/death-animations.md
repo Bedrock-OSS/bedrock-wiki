@@ -3,7 +3,17 @@ title: Custom Death Animations
 tags:
     - intermediate
 category:
-	- General
+    - General
+mentions:
+    - SirLich
+    - Joelant05
+    - Dreamedc2015
+    - MedicalJewel105
+    - aexer0e
+    - Xterionix
+    - ChibiMango
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Death animation refers to the rotation of the entity as it dies. This is accompanied by a red coloring and followed shortly after by the disappearance of the entity geometry and the appearance of the death particles.
@@ -14,20 +24,20 @@ This part will explain how to remove death animations at all.
 
 ### Teleporting the Entity
 
-A fairly common way to remove entities without causing death effects is to teleport them into the void. This can be done from animation controllers by using `!query.is_alive` like:
+A fairly common way to remove entities without causing death effects is to teleport them into the void. This can be done from animation controllers by using `!q.is_alive` like:
 `/teleport @s ~ ~-1000 ~`
 
 Please note that this will remove all death effects, including sound, particles, loot, and the visual death of the entity.
 
 ### minecraft:instant_despawn
 
-If you want to make entity just dissapear, you can add component group with `"minecraft:instant_despawn":{}` and run an event which will add this component group.
+If you want to make entity just disappear, you can add component group with `"minecraft:instant_despawn":{}` and run an event which will add this component group.
 
 Please note that this will remove all death effects, including sound, particles, loot, and the visual death of the entity.
 
 ### Transformation to another entity
 
-Similar to teleporting, the entity is triggering an entity transform on death. Use `!query.is_alive` in animation controller to send an event which will add component group with `"minecraft:transformation"` component. With this component entity will convert into another:
+Similar to teleporting, the entity is triggering an entity transform on death. Use `!q.is_alive` in animation controller to send an event which will add component group with `"minecraft:transformation"` component. With this component entity will convert into another:
 
 <CodeHeader></CodeHeader>
 
@@ -54,19 +64,19 @@ We can also cancel the rotational value of the entity, allowing the entity to di
 
 If you need more information about triggering animations from entity death, see [this document](/animation-controllers/death-commands) on death effects.
 
-Rotation needs to be applied to a bone parent to all other bones, with a pivot at [0,0,0], and the animation should only start when `!query.is_alive`.
+Rotation needs to be applied to a bone parent to all other bones, with a pivot at [0,0,0], and the animation should only start when `!q.is_alive`.
 
 Animation:
 
 <CodeHeader></CodeHeader>
 
 ```json
-"rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, query.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
+"rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, q.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
 ```
 
 Animation Controller:
 
-(query.all_animations_finished is only needed for respawning entities, like players)
+(q.all_animations_finished is only needed for respawning entities, like players)
 
 <CodeHeader>RP/animation_controllers/custom_death.animation.controllers.json</CodeHeader>
 
@@ -80,7 +90,7 @@ Animation Controller:
 				"default": {
 					"transitions": [
 						{
-							"cancel_animation": "!query.is_alive"
+							"cancel_animation": "!q.is_alive"
 						}
 					]
 				},
@@ -88,7 +98,7 @@ Animation Controller:
 					"animations": ["my.animation"],
 					"transitions": [
 						{
-							"default": "query.is_alive && query.all_animations_finished"
+							"default": "q.is_alive && q.all_animations_finished"
 						}
 					]
 				}
@@ -194,9 +204,7 @@ Here an example file in the BP
                     "spawn_item":"egg",
                     "single_use":true
                 },
-                "minecraft:is_sheared":{
-                    
-                },
+                "minecraft:is_sheared":{},
                 "minecraft:timer":{
                     "looping":true,
                     "time":[
@@ -209,9 +217,7 @@ Here an example file in the BP
                 }
             },
             "wiki:despawn":{
-                "minecraft:instant_despawn":{
-                    
-                }
+                "minecraft:instant_despawn":{}
             }
         },
         "components":{
@@ -229,9 +235,7 @@ Here an example file in the BP
                 "value":8,
                 "max":8
             },
-            "minecraft:physics":{
-                
-            },
+            "minecraft:physics":{},
             "minecraft:pushable":{
                 "is_pushable":true,
                 "is_pushable_by_piston":true
@@ -289,7 +293,7 @@ Here an example file for the animation controller.
 					"blend_transition": 0.2,
 					"transitions": [
 						{
-							"dead": "query.is_sheared"
+							"dead": "q.is_sheared"
 						}
 					]
 				},

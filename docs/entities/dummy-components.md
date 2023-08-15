@@ -1,6 +1,12 @@
 ---
 title: Dummy Components
 category: Documentation
+mentions:
+    - SirLich
+    - jigarbov
+    - MedicalJewel105
+    - StealthyExpertX
+    - TheItsNameless
 ---
 
 :::warning Deprecation Warning
@@ -26,25 +32,25 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 
 | Type      | Query                                                         | Component                    | Notes                                                                                                                             |
 | --------- | ------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Int**   | query.variant                                                 | minecraft:variant            |                                                                                                                                   |
-| **Int**   | query.mark_variant                                            | minecraft:mark_variant       |                                                                                                                                   |
-| **Int**   | query.skin_id                                                 | minecraft:skin_id            |                                                                                                                                   |
+| **Int**   | q.variant                                                 | minecraft:variant            |                                                                                                                                   |
+| **Int**   | q.mark_variant                                            | minecraft:mark_variant       |                                                                                                                                   |
+| **Int**   | q.skin_id                                                 | minecraft:skin_id            |                                                                                                                                   |
 | **Int\*** | Filter like: `"test": "is_color"`, colors are provided below. | minecraft:color              | Also sets color in materials.                                                                                                     |
 | **Int\*** | No known filter, but can be used with `"has_component"`       | minecraft:color2             | Also sets color in materials.                                                                                                     |
-| Bit       | query.is_illager_captain                                      | minecraft:is_illager_captain |                                                                                                                                   |
-| Bit       | query.is_baby                                                 | minecraft:is_baby            | Disables use of `minecraft:breedable`                                                                                             |
-| Bit       | query.is_sheared                                              | minecraft:is_sheared         |                                                                                                                                   |
-| Bit       | query.is_saddled                                              | minecraft:is_saddled         |                                                                                                                                   |
-| Bit       | query.is_tamed                                                | minecraft:is_tamed           |                                                                                                                                   |
-| Bit       | query.is_chested                                              | minecraft:is_chested         | Will drop chest on death                                                                                                          |
-| Bit       | query.is_powered                                              | minecraft:is_charged         |                                                                                                                                   |
-| Bit       | query.is_stunned                                              | minecraft:is_stunned         |                                                                                                                                   |
-| Bit       | query.can_climb                                               | minecraft:can_climb          | Will allow entities to climb ladders                                                                                              |
-| Bit       | query.can_fly                                                 | minecraft:can_fly            | Marks the entity as being able to fly, the pathfinder won't be restricted to paths where a solid block is required underneath it. |
-| Bit       | query.can_power_jump                                          | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
-| Bit       | query.is_ignited                                              | minecraft:is_ignited         |                                                                                                                                   |
-| Bit       | query.out_of_control                                          | minecraft:out_of_control     | New, used by code for hardcoded boat movement/particle stuff, and the Molang query. Probably safe                                 |
-| Bit   | query.has_any_family('monster')                            | minecraft:type_family         | Can use a family type and return a bit value from a family such as 'monster' as true or false.
+| Bit       | q.is_illager_captain                                      | minecraft:is_illager_captain |                                                                                                                                   |
+| Bit       | q.is_baby                                                 | minecraft:is_baby            | Disables use of `minecraft:breedable`                                                                                             |
+| Bit       | q.is_sheared                                              | minecraft:is_sheared         |                                                                                                                                   |
+| Bit       | q.is_saddled                                              | minecraft:is_saddled         |                                                                                                                                   |
+| Bit       | q.is_tamed                                                | minecraft:is_tamed           |                                                                                                                                   |
+| Bit       | q.is_chested                                              | minecraft:is_chested         | Will drop chest on death                                                                                                          |
+| Bit       | q.is_powered                                              | minecraft:is_charged         |                                                                                                                                   |
+| Bit       | q.is_stunned                                              | minecraft:is_stunned         |                                                                                                                                   |
+| Bit       | q.can_climb                                               | minecraft:can_climb          | Will allow entities to climb ladders                                                                                              |
+| Bit       | q.can_fly                                                 | minecraft:can_fly            | Marks the entity as being able to fly, the pathfinder won't be restricted to paths where a solid block is required underneath it. |
+| Bit       | q.can_power_jump                                          | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
+| Bit       | q.is_ignited                                              | minecraft:is_ignited         |                                                                                                                                   |
+| Bit       | q.out_of_control                                          | minecraft:out_of_control     | New, used by code for hardcoded boat movement/particle stuff, and the Molang q. Probably safe                                 |
+| Bit   | q.has_any_family('monster')                            | minecraft:type_family         | Can use a family type and return a bit value from a family such as 'monster' as true or false.
 ### Colors for the color and color2 components
 
 -   black

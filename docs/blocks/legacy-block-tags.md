@@ -1,7 +1,7 @@
 ---
 hidden: true
 title: Legacy Block Tags
-mention:
+mentions:
   - ThijsHankelMC
   - yanasakana
   - aexer0e

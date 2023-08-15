@@ -2,7 +2,10 @@
 title: Introduction to AOE Clouds
 category: Tutorials
 tags:	
-	- intermediate
+    - intermediate
+mentions:
+    - Sprunkles137
+    - MedicalJewel105
 ---
 
 **Area-of-effect clouds**, also known as AOE clouds and `minecraft:area_effect_cloud` internally, are special entities that have many unique properties. Normally these entities are created through throwing lingering potions, but with structures and some NBT editing magic we can manipulate them in very powerful ways for map-making.
@@ -20,7 +23,7 @@ Area-of-effect clouds have several special features we can take advantage of:
 
 The projectile component supports spawning in area-of-effect clouds on hit. Minecraft uses this to spawn in AOE clouds from lingering potions.
 
-[Projectiles Documentation](/documentation/projectiles.html#spawn-aoe-cloud)
+[Projectiles Documentation](/documentation/projectiles#spawn-aoe-cloud)
 
 ## Method 2: NBT Editing
 
@@ -37,7 +40,10 @@ One of the following NBT editors are recommended:
 
 For convenience, this article contains a premade structure file you can download and use. Inside is an AOE cloud that exists for the maximum possible time.
 
-<a href="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/structures/aec.mcstructure?raw=true">📄 Structure file</a>
+<BButton
+  link="/assets/packs/entities/aec/aec.mcstructure" download
+  color=blue
+>Download MCSTRUCTURE</BButton>
 
 Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructure)
 

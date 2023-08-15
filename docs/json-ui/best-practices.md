@@ -3,9 +3,12 @@ title: Best Practices
 category: General
 nav_order: 2
 tags:
-  - guide
-mention:
-  - LukasPAH
+    - guide
+mentions:
+    - LukasPAH
+    - SmokeyStack
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 :::tip Info
@@ -84,7 +87,7 @@ Using the [modification strategies documented on the wiki](/json-ui/json-ui-intr
             { "emote_helpers@hud.emote_helpers": {} },
             { "centered_gui_elements@centered_gui_elements": {} },
             { "centered_gui_elements_at_bottom_middle@centered_gui_elements_at_bottom_middle": {} }
-            ... // the rest of the controls are continuted here.
+            ... // the rest of the controls are continued here.
         ]
     }
 }
@@ -180,7 +183,7 @@ However, sometimes it is not feasible to avoid modifying trees. In this case, yo
 }
 ```
 
-The `/` will target a child control of the specified element. Do note that if the specified target child control name does not exist, it will cause a resource pack error. Your UI will function as normal without issue, but it is preferred to avoid targetting controls in nested trees where possible due to that.
+The `/` will target a child control of the specified element. Do note that if the specified target child control name does not exist, it will cause a resource pack error. Your UI will function as normal without issue, but it is preferred to avoid targeting controls in nested trees where possible due to that.
 
 ### Utilize a Single Entry Point
 In order to add custom UI to a particular screen, the UI needs to be merged with the vanilla UI at some point. This is called the entry point, and it is best practice to have your custom UI merged with the vanilla UI in a single point where possible to reduce the likelihood of the UI breaking. Here is an example that uses 2 entry points in `hud_screen.json`:
@@ -250,7 +253,7 @@ In terms of FPS, JSON-UI is the second most costly addon subsystem behind entiti
 
 ### Minimize the Number of Operators in the UI
 
-[Operators](/json-ui/json-ui-intro#using-operators) are used in the UI to evaluate conditions, perform math, and modify strings. These operators are useful for techniques such as [conditional rendering](/json-ui/json-ui-intro#conditional-rendering), but using these **add a lot of overhead**. For example, if you have a variable `"$var": "(2 * (-1 * $number))"`, it is significantly more performant to simplify to `"$var": "(-2 * $number)"`. It is best to simplify expresisons as much as possible, and remove unneeded expressions in order to speed up evaluation times as much as possible.
+[Operators](/json-ui/json-ui-intro#using-operators) are used in the UI to evaluate conditions, perform math, and modify strings. These operators are useful for techniques such as [conditional rendering](/json-ui/json-ui-intro#conditional-rendering), but using these **add a lot of overhead**. For example, if you have a variable `"$var": "(2 * (-1 * $number))"`, it is significantly more performant to simplify to `"$var": "(-2 * $number)"`. It is best to simplify expressions as much as possible, and remove unneeded expressions in order to speed up evaluation times as much as possible.
 
 ### Minimize the Number of Bindings in the UI
 Similar to operators, using many [bindings](/json-ui/json-ui-intro#bindings) **can also add significant overhead**. Part of the reason why the settings screen takes so long to open is because all of the toggles and options are linked to specific bindings, in which there are many. Removing bindings that do not contribute to function, or can be simplified are another fantastic way to increase performance.
@@ -354,7 +357,7 @@ Sometimes, you can simplify and consolidate multiple controls into a single elem
         "$texture": "textures/ui/example_3",
         "$binding_text": "3"
     },
-    
+
     "image_4@image_template": {
         "$texture": "textures/ui/example_4",
         "$binding_text": "4"
@@ -366,7 +369,7 @@ Sometimes, you can simplify and consolidate multiple controls into a single elem
     }
 }
 ```
-Taking a more thoughtful approach, this can be signifantly simplified into a single control with fewer operators, bindings, and controls overall.
+Taking a more thoughtful approach, this can be significantly simplified into a single control with fewer operators, bindings, and controls overall.
 
 ```json
 {

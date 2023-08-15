@@ -4,6 +4,21 @@ category: Guide
 description: How to create your first custom Entity
 nav_order: 6
 prefix: '6. '
+mentions:
+    - ThijsHankelMC
+    - TheItsNameless
+    - SmokeyStack
+    - MedicalJewel105
+    - SirLich
+    - ChibiMango
+    - smell-of-curry
+    - Hatchibombotar
+    - Sephodious
+    - LeGend077
+    - Ascent817
+    - BaHuu
+    - Sprunkles317
+    - ThomasOrs
 ---
 
 Similarly to custom items, we can also make custom entities with many similar mechanics to the vanilla entities in the game. These entities can be incredibly powerful allowing you to make your own animals which can be bred and tamed or an aggressive mob that attacks anything it sees.
@@ -27,7 +42,7 @@ First, we will cover how to create an entity & define its behavior. Next, we wil
 
 ## Entity Behavior
 
-Like with items, we need a file to tell our entity how to behave which points an identifier to certain components which define behavior. This file will be very similar to our item behavior file except with alot more components.
+Like with items, we need a file to tell our entity how to behave which points an identifier to certain components which define behavior. This file will be very similar to our item behavior file except with a lot more components.
 
 We define our server file in our BP, under the `BP/entities/` folder. We will call this file `ghost.se.json`. Here the `.se` stands for _server entity_. This is for clarity and is recommend in the [Style Guide](/meta/style-guide).
 
@@ -77,7 +92,7 @@ For more information on components in entities, you can check out our page [here
 
 ### Stat Components
 
-These are the components that you will generally have on every entity. This define some core attribrutes to your entity.
+These are the components that you will generally have on every entity. This define some core attributes to your entity.
 
 <CodeHeader>BP/entities/ghost.se.json#minecraft:entity#components</CodeHeader>
 
@@ -130,14 +145,15 @@ You will always need a `movement` and `navigation` component if you want your en
 }
 ```
 
-`minecraft:physics` is used to apply gravity and collision to your entity. `minecraft:jump.static` allows your entity to jump up blocks for traversal. Both are used on almost every entity.
+`minecraft:physics` is used to apply gravity and collision to your entity. Note: you can not change this component via using a component group.
+`minecraft:jump.static` allows your entity to jump up blocks for traversal. Both are used on almost every entity.
 
 There are few different types of movement components which allow different types of movement such as `minecraft:movement.swim` used by dolphins, `minecraft:movement.fly` used by parrots and `minecraft:movement.hover` used by bees.
 The `minecraft:movement.basic` component allows our entity to walk by moving over blocks. To make it seem like our entity is actually floating, we will use our geometry .
 
 The navigation component is a pathfinder which defines what paths we allow our entity to follow. For example skeletons will try not to walk in sunlight, so their pathing stops them from taking paths that would put them in sunlight. Additionally, parrots can fly so they can path into the air unlike walking mobs.
 
-These components have alot of different settings which allow for interesting pathing. The settings we've chosen let our ghost walk along the ground, avoid stepping into sunlight, pass through doorways and open doors.
+These components have a lot of different settings which allow for interesting pathing. The settings we've chosen let our ghost walk along the ground, avoid stepping into sunlight, pass through doorways and open doors.
 
 ### Behavior Components
 
@@ -338,7 +354,7 @@ Next we will learn how to create our resource or client file and how to assign o
 
 ## Entity Resource
 
-Applying visuals to an entity is very different to an item. Since there are alot more pieces, we have a separate file dedicated to defining the resources.
+Applying visuals to an entity is very different to an item. Since there are a lot more pieces, we have a separate file dedicated to defining the resources.
 This is the called entity _client file_ which we will name `ghost.ce.json`. These files go in the folder `RP/entity/`.
 
 In this section, we will use the example resources created for our ghost entity to demonstrate how to add them to an entity. In the next section of the guide, we explain how to use Blockbench, a dedicated 3D editor, to create your own entity geometry and animations.
@@ -458,7 +474,7 @@ An animation file can contain one or multiple animations within it. Our animatio
 Each animation is defined by the key, so here our three animation identifiers are `animation.ghost.idle`, `animation.ghost.attack` and `animation.ghost.move`.
 
 :::tip NOTE
-If you have mutliple animation files for one entity, consider moving them all into one file to keep your folders easy to read and navigate.
+If you have multiple animation files for one entity, consider moving them all into one file to keep your folders easy to read and navigate.
 If not, ensure that when you are referencing the animation in your entity file, you use the animation identifier and _not_ the file name.
 :::
 
@@ -599,7 +615,7 @@ Let us look at our animation controller for attacking.
 		"default": {
 			"transitions": [
 				{
-					"attacking": "query.is_delayed_attacking"
+					"attacking": "q.is_delayed_attacking"
 				}
 			]
 		},
@@ -608,7 +624,7 @@ Let us look at our animation controller for attacking.
 			"animations": ["attack"],
 			"transitions": [
 				{
-					"default": "!query.is_delayed_attacking"
+					"default": "!q.is_delayed_attacking"
 				}
 			]
 		}
@@ -624,14 +640,14 @@ You can see under `transitions`, we have a condition, which when true will trans
 
 ```json
 {
-	"attacking": "query.is_delayed_attacking"
+	"attacking": "q.is_delayed_attacking"
 }
 ```
 
-Here, `attacking` is the state that will be transitioned to, and `query.is_delayed_attacking` is the condition that needs to be true for the transition to occur.
-This condition is called a _query_. These queries can tell us things about the entity such as if it is attacking or moving. The query `query.is_delayed_attacking` will return `true` when the entity is performing the attack behavior.
+Here, `attacking` is the state that will be transitioned to, and `q.is_delayed_attacking` is the condition that needs to be true for the transition to occur.
+This condition is called a _query_. These queries can tell us things about the entity such as if it is attacking or moving. The query `q.is_delayed_attacking` will return `true` when the entity is performing the attack behavior.
 
-When the entity is in the `attacking` state, it also has a transition back to the default state. Now the condition is `!query.is_delayed_attacking`. Here the `!` means _not_, so it will return the opposite result of `query.is_delayed_attacking` (If `query.is_delayed_attacking` returns `true` then `!query.is_delayed_attacking` returns false).
+When the entity is in the `attacking` state, it also has a transition back to the default state. Now the condition is `!q.is_delayed_attacking`. Here the `!` means _not_, so it will return the opposite result of `q.is_delayed_attacking` (If `q.is_delayed_attacking` returns `true` then `!q.is_delayed_attacking` returns false).
 
 This state also has `animations`. These are the animations that will always play while in this state. Note that we are using the _shortname_ for our animation here, which we will reference in our entity file later. If you don't, the animations will not play.
 There is also the `blend_transition` key, which allows the animations to slowly fade into each other. A higher number means a longer blending time.
@@ -649,7 +665,7 @@ We can also make a similar controller for our `move` and `idle` animation.
 			"animations": ["idle"],
 			"transitions": [
 				{
-					"moving": "query.modified_move_speed > 0.1"
+					"moving": "q.modified_move_speed > 0.1"
 				}
 			]
 		},
@@ -658,7 +674,7 @@ We can also make a similar controller for our `move` and `idle` animation.
 			"animations": ["move"],
 			"transitions": [
 				{
-					"standing": "query.modified_move_speed < 0.1"
+					"standing": "q.modified_move_speed < 0.1"
 				}
 			]
 		}
@@ -667,8 +683,8 @@ We can also make a similar controller for our `move` and `idle` animation.
 ```
 
 This follows a similar pattern with some additions.
-We now have `inital_state` which tells the controller which state to start on. If none is listed then it will start on the state `default`.
-You'll also notice our queries look slightly different. Here the query `query.modified_move_speed` returns a value, so in order to return a boolean (i.e. true or false) we look at when the value is above or below `0.1`. For more in depth information on animation controllers, you can read [here](/animation-controllers/animation-controllers-intro).
+We now have `initial_state` which tells the controller which state to start on. If none is listed then it will start on the state `default`.
+You'll also notice our queries look slightly different. Here the query `q.modified_move_speed` returns a value, so in order to return a boolean (i.e. true or false) we look at when the value is above or below `0.1`. For more in depth information on animation controllers, you can read [here](/animation-controllers/animation-controllers-intro).
 
 Now that we have our animation controllers, we can add them to our animation controller file. Similarly to animations, the key is the identifier for our animation controller; `controller.animation.ghost.attack` and `controller.animation.ghost.walk`.
 
@@ -685,7 +701,7 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 				"default": {
 					"transitions": [
 						{
-							"attacking": "query.is_delayed_attacking"
+							"attacking": "q.is_delayed_attacking"
 						}
 					]
 				},
@@ -694,7 +710,7 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 					"animations": ["attack"],
 					"transitions": [
 						{
-							"default": "!query.is_delayed_attacking"
+							"default": "!q.is_delayed_attacking"
 						}
 					]
 				}
@@ -708,7 +724,7 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 					"animations": ["idle"],
 					"transitions": [
 						{
-							"moving": "query.modified_move_speed > 0.1"
+							"moving": "q.modified_move_speed > 0.1"
 						}
 					]
 				},
@@ -717,7 +733,7 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 					"animations": ["move"],
 					"transitions": [
 						{
-							"standing": "query.modified_move_speed < 0.1"
+							"standing": "q.modified_move_speed < 0.1"
 						}
 					]
 				}
@@ -732,7 +748,7 @@ With that, we have created all the resources we need for our entity. We will now
 ### Entity Client File
 
 The client file contains all the references to the visual components of our entity.
-Our client file will go in `RP/entity/` and we name this file `ghost.ce.json`. This file will have all our information under the `decription` key. We begin with the familar formatting:
+Our client file will go in `RP/entity/` and we name this file `ghost.ce.json`. This file will have all our information under the `description` key. We begin with the familiar formatting:
 
 <CodeHeader>RP/entity/ghost.ce.json</CodeHeader>
 
@@ -811,7 +827,7 @@ This follows a similar structure to the animation controller and animation file,
 This tells the game that the resource rendered should be the resource with shortname `default`. Render controllers can also allow you to display different textures or apply different materials to different parts of our model. Under `materials`, we use `"*"` to mean that we apply this material to all _bones_ in our model (i.e. each cube in our model.) For more information on render controllers, you can check our page [here](/entities/render-controllers).
 
 :::tip
-If you keep your shortnames consitent, you can actually reference the same render controller for multiple entities.
+If you keep your shortnames consistent, you can actually reference the same render controller for multiple entities.
 :::
 
 Now to tell your entity to use this render controller, we add it to our entity file like so:
@@ -886,7 +902,7 @@ With this our animations should be working correctly.
 
 #### Spawn Egg
 
-The final step to finalise our entity client file, is to create a spawn egg for our entity. Luckily, our file can gnerate one for us with the key `spawn_egg`.
+The final step to finalise our entity client file, is to create a spawn egg for our entity. Luckily, our file can generate one for us with the key `spawn_egg`.
 
 <CodeHeader>RP/entity/ghost.ce.json#description</CodeHeader>
 
@@ -969,7 +985,7 @@ Your folder structure should look like this:
 	'RP/animations/ghost.a.json',
 	'RP/animation_controllers/ghost.ac.json',
 	'RP/entity/ghost.ce.json',
-	'RP/models/entity/ghost.geo',
+	'RP/models/entity/ghost.geo.json',
 	'RP/render_controllers/ghost.rc.json',
 	'RP/textures/entity/ghost.png',
 	'RP/textures/items/ectoplasm.png',
@@ -1331,7 +1347,7 @@ Your folder structure should look like this:
 				"default": {
 					"transitions": [
 						{
-							"attacking": "query.is_delayed_attacking"
+							"attacking": "q.is_delayed_attacking"
 						}
 					]
 				},
@@ -1340,7 +1356,7 @@ Your folder structure should look like this:
 					"animations": ["attack"],
 					"transitions": [
 						{
-							"default": "!query.is_delayed_attacking"
+							"default": "!q.is_delayed_attacking"
 						}
 					]
 				}
@@ -1354,7 +1370,7 @@ Your folder structure should look like this:
 					"animations": ["idle"],
 					"transitions": [
 						{
-							"moving": "query.modified_move_speed > 0.1"
+							"moving": "q.modified_move_speed > 0.1"
 						}
 					]
 				},
@@ -1363,7 +1379,7 @@ Your folder structure should look like this:
 					"animations": ["move"],
 					"transitions": [
 						{
-							"standing": "query.modified_move_speed < 0.1"
+							"standing": "q.modified_move_speed < 0.1"
 						}
 					]
 				}

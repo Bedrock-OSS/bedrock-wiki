@@ -4,9 +4,27 @@ category: General
 tags:
     - guide
     - experimental
+mentions:
+    - SirLich
+    - solvedDev
+    - stirante
+    - Joelant05
+    - destruc7ion
+    - SmokeyStack
+    - MedicalJewel105
+    - aexer0e
+    - Apex360
+    - Luthorius
+    - TheItsNameless
+    - ThomasOrs
+    - SmokeyStack
 ---
 
 _Last updated for 1.16.210_
+
+:::warning
+As of 1.18, Custom Biomes are broken for Minecraft Bedrock
+:::
 
 :::warning
 Biome customization is _experimental_. An experimental gameplay toggle must be enabled for each world that uses behavior packs containing biome definitions. What is currently available works well if declared correctly; however, incorrectly declared components and properties may result in crashing as opposed to just logged errors. Furthermore, due to issues caused by the [inheritance model](#inheritance), the schema used for custom biomes is currently not well constructed.
@@ -295,7 +313,7 @@ Minecraft only allows the player’s first load in a select few biomes:
 -   Savanna
 -   Jungle
 
-The variants of these biomes, such as Shattered Savannas and Flower Forests, also allow for player load-in. If none of thesse biomes are present due to de-weighting (and in the case of the Plains and Forest biomes, additionally being unlisted as [sub-biomes of Deep Oceans](#islands)), the player usually will not be able to load in to the world: the game most often will search for a valid spawn location endlessly.
+The variants of these biomes, such as Shattered Savannas and Flower Forests, also allow for player load-in. If none of these biomes are present due to de-weighting (and in the case of the Plains and Forest biomes, additionally being unlisted as [sub-biomes of Deep Oceans](#islands)), the player usually will not be able to load in to the world: the game most often will search for a valid spawn location endlessly.
 
 > In some rare, inexplicable cases, the player will be thrown into a biome not ordained for player loading at the world origin after enough time has passed attempting to find a valid load-in spot.
 
@@ -395,7 +413,7 @@ The rest of the Overworld is covered in oceans. Oceans are a misnomer as they do
 
 The oceans are prevalently split by normal and deep depths with about equal weight. Scattered islands can generate inside the ocean region. By default, there are ten ocean biomes in total: one for each combination of the five temperatures and two depths. Ocean biomes do not have to actually generate as aquatic biomes; they can be land. Furthermore, oceans can contain land sub-biomes. Plains, Forests, and Beaches, for example, are not exclusive to oceans but can generate as a part of ocean islands, themselves contained within the ocean regions.
 
-> Ocean weighting behaves differently from other distributions. Seemingly, oceans weren’t intended to compete for space: vanilla biomes have exclusively one ocean biome for each depth-climate combination. Competing oceans of similar weights are separated on a very small scale: approximately several blocks across each instance. A greater difference in weights does more cleanly separate competing biomes, but the lesser-weighted biome will still only generate in very small clumps. Generally, it is wiser to use [surface adjusments](#surface-adjustments) or [features](#features) to transform oceans.
+> Ocean weighting behaves differently from other distributions. Seemingly, oceans weren’t intended to compete for space: vanilla biomes have exclusively one ocean biome for each depth-climate combination. Competing oceans of similar weights are separated on a very small scale: approximately several blocks across each instance. A greater difference in weights does more cleanly separate competing biomes, but the lesser-weighted biome will still only generate in very small clumps. Generally, it is wiser to use [surface adjustments](#surface-adjustments) or [features](#features) to transform oceans.
 
 > If all oceans are set not to generate via [de-weighting](#climates), the game falls back to Frozen Ocean and Deep Frozen Ocean. Because of this fallback, the addition of a custom biome may be the only way to remove all the vanilla ocean biomes
 
@@ -1056,7 +1074,7 @@ The second value of the array determines height variation. Negative values behav
 The terrain becomes more radical with larger values, which should generally not be used for several reasons:
 
 -   If outside creative mode, player annoyance will be high due to limited mobility options in the early game.
--   Typically useful Molang queries, such as `"query.heightmap()"`, becomes less helpful as Nether-like shelves of land generate instead of smoother, simpler terrain.
+-   Typically useful Molang queries, such as `"q.heightmap()"`, becomes less helpful as Nether-like shelves of land generate instead of smoother, simpler terrain.
 -   Performance issues may arise with weaker computers.
 
 The maximum and minimum offsets from the average height when using noise parameters depends on the height variation. In general, a ∆ of 1 in the second noise parameter will result in _at most_ a ∆ of +/- 16 blocks in these offsets.
@@ -1174,7 +1192,7 @@ A noise curve that is dependent upon the seed of a world can be used to restrict
 
 The exact value generated from the noise curve at a particular location is inconsequential to the resultant surface adjustment. The only consideration is whether the value at that location meets the conditional check.
 
-> Although both curves are formed based on the world seed, the noise curve used for surface adjustments is not equivalent to the noise curve used with `"query.noise"`. Their correspondence cannot be depended upon for generation.
+> Although both curves are formed based on the world seed, the noise curve used for surface adjustments is not equivalent to the noise curve used with `"q.noise"`. Their correspondence cannot be depended upon for generation.
 
 ##### Intervals
 
@@ -1442,7 +1460,7 @@ Biomes are the starting point of much of the configurable gameplay in Minecraft.
 			"distribution": "uniform",
 			"extent": [0, 16]
 		},
-		"y": "query.heightmap(variable.worldx, variable.worldz)"
+		"y": "q.heightmap(v.worldx, v.worldz)"
 	}
 },
 "minecraft:ignore_automatic_features": {}
@@ -1473,7 +1491,7 @@ Features are mostly outside the scope of biomes, but the two components within a
 				"distribution": "uniform",
 				"extent": [0, 16]
 			},
-			"y": "query.heightmap(variable.worldx, variable.worldz)"
+			"y": "q.heightmap(v.worldx, v.worldz)"
 		}
 	]
 }

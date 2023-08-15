@@ -3,6 +3,13 @@ title: Entity Properties
 category: General
 tags:
     - experimental
+mentions:
+    - SirLich
+    - sermah
+    - MedicalJewel105
+    - Luthorius
+    - stirante
+    - TheItsNameless
 ---
 
 :::warning
@@ -128,8 +135,8 @@ To sync through the Resource Pack (client-side), `client_sync` field can be used
 ### Manipulating and Accessing Entity Properties
 
 You can access entity properties through Molang Entity Queries:
-    -   `query.actor_property`
-    -   `query.has_actor_property`
+    -   `q.actor_property`
+    -   `q.has_actor_property`
 
 :::warning
 These Molang Entity Queries are a part of Experimental features
@@ -145,7 +152,7 @@ With entity events, you may set the entity property to a value with the `set_act
         "set_actor_property":{
             "property:number_enum_example":2,
             "property:string_enum_example":"'second'",
-            "property:boolean_enum_example":"!query.actor_property('property:boolean_enum_example')"
+            "property:boolean_enum_example":"!q.actor_property('property:boolean_enum_example')"
         }
     }
 }
@@ -203,7 +210,7 @@ Entity Permutations are implemented to apply a set of components every tick if t
 ```json
 "permutations":[
     {
-        "condition":"query.actor_property('property:string_enum_example') == 'first'",
+        "condition":"q.actor_property('property:string_enum_example') == 'first'",
         "components":{
             "minecraft:scale":{
                 "value":1.0
@@ -211,7 +218,7 @@ Entity Permutations are implemented to apply a set of components every tick if t
         }
     },
     {
-        "condition":"query.actor_property('property:string_enum_example') == 'second'",
+        "condition":"q.actor_property('property:string_enum_example') == 'second'",
         "components":{
             "minecraft:scale":{
                 "value":2.0
@@ -219,7 +226,7 @@ Entity Permutations are implemented to apply a set of components every tick if t
         }
     },
     {
-        "condition":"query.actor_property('property:string_enum_example') == 'third'",
+        "condition":"q.actor_property('property:string_enum_example') == 'third'",
         "components":{
             "minecraft:scale":{
                 "value":3.0

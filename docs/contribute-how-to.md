@@ -112,7 +112,7 @@ Open our [GitHub Repository](https://github.com/Bedrock-OSS/bedrock-wiki) and cl
 
 ![](/assets/images/contribute/setting_up_local/setup_fork.png)
 
-Open GitHub Desktop and click on `Clone a repository from the Internet`. 
+Open GitHub Desktop and click on `Clone a repository from the Internet`.
 
 ![](/assets/images/contribute/setting_up_local/setup_clone.png)
 
@@ -132,11 +132,11 @@ Once you finished working on the wiki, you can now commit and push your changes 
 
 Switch to GitHub Desktop and you should see your changes. If you can't see them, make sure you saved your files and opened the right repository in GitHub Desktop.
 
-Once you confirmed your changes in GitHub Desktop, you can give your commit a name and a description (but both aren't necessary) and click on `commit to main`. 
+Once you confirmed your changes in GitHub Desktop, you can give your commit a name and a description (but both aren't necessary) and click on `commit to main`.
 
 ![](/assets/images/contribute/committing_changes/committing.png)
 
-After you committed your changes, you need to push your local clone to GitHub. Just click on `Push commits to the origin remote`. 
+After you committed your changes, you need to push your local clone to GitHub. Just click on `Push commits to the origin remote`.
 
 ![](/assets/images/contribute/committing_changes/committing_push.png)
 
@@ -146,7 +146,7 @@ GitHub will now send your local clone to their servers.
 
 Now that GitHub has your edits on their servers, you need to create a `"Pull Request"` (PR), so that we can merge your changes.
 
-There are many ways to do this. For now, just click on `Create Pull Request` in GitHub Desktop. 
+There are many ways to do this. For now, just click on `Create Pull Request` in GitHub Desktop.
 
 ![](/assets/images/contribute/creating_pr/pr.png)
 
@@ -190,7 +190,7 @@ Now click on `Choose a branch to merge into ...`.
 <br>
 <br>
 
-Select the default branch (it should already be selected) and click on `Create a merge commit`. 
+Select the default branch (it should already be selected) and click on `Create a merge commit`.
 
 <img src="/assets/images/contribute/troubleshooting/merge/merge_commit.png" width=260>
 <br>

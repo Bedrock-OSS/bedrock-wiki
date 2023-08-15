@@ -5,6 +5,15 @@ nav_order: 1
 tags:
     - guide
     - experimental
+mentions:
+    - SirLich
+    - solvedDev
+    - Dreamedc2015
+    - destruc7ion
+    - MedicalJewel105
+    - aexer0e
+    - retr0cube
+    - SmokeyStack
 ---
 
 :::warning
@@ -288,7 +297,7 @@ Here's an code example from the [Features Documentation](https://bedrock.dev/r/F
 
 ```json
 {
-  "format_version": 1.13.0,
+  "format_version": "1.13.0",
   "minecraft:structure_template_feature": {
     "description": {
       "identifier": "wiki:hot_air_balloon_feature"

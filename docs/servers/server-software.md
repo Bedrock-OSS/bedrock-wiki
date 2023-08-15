@@ -1,25 +1,43 @@
 ---
 title: Bedrock Server Software
+mentions:
+    - SirLich
+    - DevGod6969
+    - NhanAZ
+    - SmokeyStack
+    - Joemanasdawd
+    - mdisprgrm
+    - Superice666
+    - GreenFrogMCBE
+    - KanadeDev
+    - HUYDGD
+    - TheItsNameless
+    - hvlhx
+    - SmokeyStack
+    - ProtectorYT364
+    - ThomasOrs
+    - lapismyt
+    - ModMaker101
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
 
-Alongside the Vanilla BDS offering, many community projects exist, in a variaty of languages. 
+Alongside the Vanilla BDS offering, many community projects exist, in a variety of languages.
 
 ## Software by Language
 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
-| PHP        | [Still Active](#php)        : 6 < [Discontinued](#php-1)        : 34 |
-| Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 13 |
+| PHP        | [Still Active](#php)        : 5 < [Discontinued](#php-1)        : 36 |
+| Java       | [Still Active](#java)       : 4 < [Discontinued](#java-1)       : 14 |
+| C++        | [Still Active](#c)          : 3 < [Discontinued](#c-3)          : 3  |
+| TypeScript | [Still Active](#typescript) : 3 < [Discontinued](#typescript-1) : 1  |
 | Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
-| TypeScript | [Still Active](#typescript) : 2 < Discontinued                  : 0  |
-| JavaScript | [Still Active](#javascript) : 2 < [Discontinued](#javascript-1) : 5  |
-| C++        | [Still Active](#c)          : 1 < [Discontinued](#c-3)          : 3  |
+| JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
-| C#         | [Still Active](#c-1)        : 1 < [Discontinued](#c-4)          : 1  |
+| C#         | [Still Active](#c-1)        : 2 < [Discontinued](#c-4)          : 1  |
 | C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
-| Python     | Still Active                : 0 < [Discontinued](#python)       : 2  |
+| Python     | [Still Active](#python)     : 1 < [Discontinued](#python-1)     : 2  |
 | D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
 | Kotlin     | Still Active                : 0 < [Discontinued](#kotlin)       : 1  |
 
@@ -27,10 +45,13 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 ### C++
 
 -   [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
+-   [BedrockPowder](https://github.com/BedrockPowder/BedrockPowder)
+-   [AllayBE](https://github.com/AllayBE/AllayBE)
 
 ### C#
 
 -   [MiNET](https://github.com/NiclasOlofsson/MiNET)
+-   [Terac](https://github.com/TeracMC/Terac)
 
 ### C
 
@@ -46,18 +67,17 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
--   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
 -   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)
 
 ### TypeScript
 
 -   [BDSX](https://github.com/bdsx/bdsx)
 -   [JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)
+-   [PowerAllay](https://github.com/PowerAllay/PowerAllay)
 
 ### JavaScript
 
--   [BlueBird](https://github.com/BlueBirdMC/Server)
--   [GreenFrogMCBE](https://github.com/andriycraft/GreenFrogMCBE)
+-   [GreenFrogMCBE](https://github.com/GreenFrogMCBE/GreenFrogMCBE)
 
 ### Rust
 
@@ -65,12 +85,16 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 
 ### PHP
 
--   [Altay](https://github.com/TuranicTeam/Altay)
 -   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
 -   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
--   [SteadFast2](https://github.com/Hydreon/Steadfast2)
 -   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
+-   [NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)
+-   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
+
+### Python
+
+- [PieMC](https://github.com/PieMC-Dev/PieMC)
 
 ## Discontinued Software
 
@@ -110,14 +134,21 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [SpiderMine](https://github.com/QuantumWorks/SpiderMine)
 -   [voxelwind](https://github.com/voxelwind/voxelwind)
 -   [Terracotta](https://github.com/TerracottaMC/Terracotta)
+-   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
+
 
 ### JavaScript
 
 -   [DirtServer](https://github.com/Falkirks/DirtServer)
 -   [MineJS](https://github.com/organization/MineJS)
+-   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [NodeMine](https://github.com/NodeMine/NodeMine)
 -   [Numerous-alpaca](https://github.com/numerous-alpaca/numerous-alpaca)
 -   [PocketNode](https://github.com/PocketNode/PocketNode)
+
+### TypeScript
+
+-   [LeafMCBE](https://github.com/LeafMCBE/LeafMCBE)
 
 ### Kotlin
 
@@ -129,7 +160,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [AtmosPE](https://github.com/AtmosPE/AtmosPE)
 -   [BlueLight](https://github.com/BlueLightJapan/BlueLight)
 -   [ClearSky](https://github.com/ClearSkyTeam/ClearSky)
--   [ClearSkyTeam-PocketMine-MP](https://github.com/ClearSkyTeam/PocketMine-MP)
+-   [ClearSkyTeam/PocketMine-MP](https://github.com/ClearSkyTeam/PocketMine-MP)
 -   [CoreminePE](https://github.com/starfury1927/CoreminePE)
 -   [DevMine](https://github.com/MineCode-Devs/DevMine)
 -   [DragMine](https://github.com/DragMineTeam/DragMine)
@@ -159,6 +190,8 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variaty 
 -   [WolfMC](https://github.com/Wolf-MC/WolfMC)
 -   [Elco-MP](https://github.com/elco-mp/Elco-MP)
 -   [OpenTouch](https://github.com/pooooooon/OpenTouch)
+-   [Altay](https://github.com/TuranicTeam/Altay)
+-   [SteadFast2](https://github.com/Hydreon/Steadfast2)
 
 ### Python
 

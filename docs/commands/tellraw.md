@@ -1,9 +1,19 @@
 ---
 title: Tellraw
-category: General
+category: Commands
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - MedicalJewel105
+    - Luthorius
+    - Fabrimat
+    - Sprunkles137
+    - ThomasOrs
+    - zheaEvyline
+    - SmokeyStack
 ---
 
-tellraw sends a JSON message to selected or all players being usefull for sending plain messages to players ingame
+tellraw sends a JSON message to selected or all players being useful for sending plain messages to players ingame
 
 **The titleraw command follows the same theme**
 
@@ -12,14 +22,14 @@ tellraw sends a JSON message to selected or all players being usefull for sendin
 
 ## Format
 
-this is how the tell raw command is formated
+this is how the tell raw command is formatted
 
 ```
 tellraw <target: target> <raw json message: json>
 ```
 
 -   ` <target: target>`: The target is expressed as a playername or player groups such as `@a` `@r` `@s` `@p`
--   `<raw json message: json>`: This is a json schema that tells how the message is structured or constructured. expressed with for example:
+-   `<raw json message: json>`: This is a json schema that tells how the message is structured or constructed. expressed with for example:
     `{"rawtext":[{"text":""}]}`
 
 
@@ -80,7 +90,7 @@ You can use the following to use selector to display names.
 
 ## Translate text
 
-To have a language dependant text you can use the translate component and [translation keys](/concepts/text-and-translations). please note you will need relavent information in each of the desired .lang files for this to work.
+To have a language dependant text you can use the translate component and [translation keys](/concepts/text-and-translations). please note you will need relevant information in each of the desired .lang files for this to work.
 
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
@@ -92,7 +102,7 @@ example.langcode.1=I am line one
 <CodeHeader>RP/texts/de_DE.lang</CodeHeader>
 
 ```
-example.langcode.1=Ich bin strich eins
+example.langcode.1=Ich bin Zeile eins
 ```
 
 

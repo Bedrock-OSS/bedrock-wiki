@@ -36,7 +36,7 @@ Danger zone, do not proceed
 
 <Checklist>
 
--   [x] My first task Lorem *ipsum* dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+-   [x] My first task Lorem *ipsum* dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 -   [x] More tasks ...
 -   [ ] and more
 

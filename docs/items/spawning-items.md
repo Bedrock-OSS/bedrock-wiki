@@ -3,6 +3,13 @@ title: Spawning Items
 category: Tutorials
 tags:
     - intermediate
+mentions:
+    - SirLich
+    - Joelant05
+    - Dreamedc2015
+    - yanasakana
+    - MedicalJewel105
+    - aexer0e
 ---
 
 It is fairly common to want to spawn an item in the world, as if dropped. This page will walk through how to accomplish this through various methods, including Entity Deaths, Interactions, and an all-purpose method.

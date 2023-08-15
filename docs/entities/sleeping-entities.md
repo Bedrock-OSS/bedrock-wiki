@@ -3,23 +3,28 @@ title: Sleeping Entities
 category: Tutorials
 tags:
     - intermediate
-mention:
+mentions:
     - MedicalJewel105
+    - SirLich
 ---
 
 This tutorial will explain how to make entity sleep.
 
-## Features
+## Sleeping in beds
 
--   Entity sleeps during the night and wakes up at day time
--   Interaction with entity will wake it up and after a while it goes sleeping again
--   If entity is hurt, it wakes up
+This behavior is inspired from villagers.
 
-## Behavior Pack
+### Features
+
+-   Entity sleeps during the night and wakes up at day time.
+-   Interaction with entity will wake it up and after a while it goes sleeping again.
+-   If entity is hurt, it wakes up.
+
+### Behavior Pack
 
 In this section behavior pack components will be discussed.
 
-### Components
+#### Components
 
 Let's start with some basic components that you need to add to your entity.
 
@@ -58,7 +63,7 @@ It runs event if it isn't day time.
 You need some basic navigation components for your entity be able to move to bed.
 :::
 
-### Component Groups
+#### Component Groups
 
 Now you need some component groups for your entity with some components.
 
@@ -114,19 +119,19 @@ Now you need some component groups for your entity with some components.
 }
 ```
 
--   minecraft:behavior.sleep
+-   `minecraft:behavior.sleep`
 
 Determines sleep details, priority needs to be at `0` (the biggest weight).
 
--   minecraft:damage_sensor
+-   `minecraft:damage_sensor``
 
 Add it if you want your entity wake up if it is being attacked.
 
--   minecraft:environment_sensor
+-   `minecraft:environment_sensor`
 
 Runs `wake_up` event when it is day time.
 
--   minecraft:interact
+-   `minecraft:interact`
 
 This makes player to be able wake up entity without hurting it.
 
@@ -143,9 +148,9 @@ This makes player to be able wake up entity without hurting it.
 }
 ```
 
-This component group is required because entity will sleep again after delay when woken up.
+This component group is required for entity to fall asleep again (with some delay) after it was woken up.
 
-### Events
+#### Events
 
 Here you will find all events that you need.
 I don't really think it needs explanation.
@@ -193,11 +198,11 @@ I don't really think it needs explanation.
 }
 ```
 
-## Resource Pack
+### Resource Pack
 
 Don't forget that you need to add sleeping animation and controller for it to your entity!
 
-### Animation
+#### Animation
 
 Just copy/paste it.
 
@@ -224,7 +229,7 @@ Just copy/paste it.
 }
 ```
 
-### Animation Controller
+#### Animation Controller
 
 Again just copy/paste it if you need.
 
@@ -240,7 +245,7 @@ Again just copy/paste it if you need.
 				"default": {
 					"transitions": [
 						{
-							"sleep": "query.is_sleeping"
+							"sleep": "q.is_sleeping"
 						}
 					]
 				},
@@ -248,7 +253,7 @@ Again just copy/paste it if you need.
 					"animations": ["sleeping"],
 					"transitions": [
 						{
-							"default": "!query.is_sleeping"
+							"default": "!q.is_sleeping"
 						}
 					]
 				}
@@ -262,6 +267,130 @@ Note that you will need to define animation in client entity like this:
 
 `"sleeping": "animation.sleeping_entity.sleep"`
 
-## Result
+### Result
 
 ![](/assets/images/tutorials/sleeping-entities/result.png)
+
+## Taking naps
+
+This behavior is inspired from foxes.
+
+### Features
+
+-   Entity sleeps when feels safe, far from mobs or when the weather is not a thunderstorm.
+-   Approaching the entity will make it wake up unless it's a trusted or sneaking player, or it's another entity with the family group `sleeping_entity`.
+-   If entity is hurt, it wakes up.
+
+### Behavior Pack
+
+In this section behavior pack components will be discussed.
+
+#### Components
+
+For this behavior you will need only one component:
+
+<CodeHeader>BP/entities/sleeping_entity.json#components</CodeHeader>
+
+```json
+"minecraft:behavior.nap": {
+    "priority": 8,
+    "cooldown_min": 2.0,
+    "cooldown_max": 7.0,
+    "mob_detect_dist": 12.0,
+    "mob_detect_height": 6.0,
+    "can_nap_filters": {
+        "all_of": [
+            {
+                "test": "in_water",
+                "subject": "self",
+                "operator": "==",
+                "value": false
+            },
+            {
+                "test": "on_ground",
+                "subject": "self",
+                "operator": "==",
+                "value": true
+            },
+            {
+                "test": "is_underground",
+                "subject": "self",
+                "operator": "==",
+                "value": true
+            },
+            {
+                "test": "weather_at_position",
+                "subject": "self",
+                "operator": "!=",
+                "value": "thunderstorm"
+            }
+        ]
+    },
+    "wake_mob_exceptions": {
+        "any_of": [
+            {
+                "test": "trusts",
+                "subject": "other",
+                "operator": "==",
+                "value": true
+            },
+            {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "==",
+                "value": "sleeping_entity"
+            },
+            {
+                "test": "is_sneaking",
+                "subject": "other",
+                "operator": "==",
+                "value": true
+            }
+        ]
+    }
+}
+```
+
+If you want to also use the trusting mechanic, add:
+
+<CodeHeader>BP/entities/sleeping_entity.json#components</CodeHeader>
+
+```json
+"minecraft:trust": {}
+```
+
+### Resource Pack
+
+In our resource pack you can run an animation when entity starts to sleep.
+
+<CodeHeader>RP/animations_controllers/ac.sleeping_entity.sleep.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.sleeping_entity.sleep": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"sleep": "q.is_sleeping"
+						}
+					]
+				},
+				"sleep": {
+					"animations": ["sleeping"],
+					"transitions": [
+						{
+							"default": "!q.is_sleeping"
+						}
+					]
+				}
+			}
+		}
+	}
+}
+```
+
+The last thing, you will have to create and register a sleeping animation for you entity. If you don't know how to do it check out the [BlockBench page](/guide/blockbench.html#animating).

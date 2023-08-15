@@ -23,7 +23,6 @@
 
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { useTheme } from '../../Composables/theme'
 
 const { currentTheme } = useTheme()

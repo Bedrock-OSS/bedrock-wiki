@@ -2,7 +2,16 @@
 title: Throwable Items
 category: Tutorials
 tags:
-- intermediate
+    - intermediate
+mentions:
+    - Fabrimat
+    - MedicalJewel105
+    - Luthorius
+    - IlkinQafarov
+    - seeit360
+    - TheItsNameless
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 ::: tip
@@ -139,9 +148,9 @@ The animation controller is responsible for detecting the usage of the item and 
         "default": {
           "transitions": [
             {
-              // Current "query.is_item_name_any" takes 3 arguments, first is slot name, second is slot id, third is the item we want to check for
-              "throw_item": "query.is_item_name_any('slot.weapon.mainhand', 0, 'wiki:throwable_item') && query.is_using_item"
-	      // "query.is_using_item" returns 'true' or 'false', in our case if player uses item it is going to return 'true'
+              // Current "q.is_item_name_any" takes 3 arguments, first is slot name, second is slot id, third is the item we want to check for
+              "throw_item": "q.is_item_name_any('slot.weapon.mainhand', 0, 'wiki:throwable_item') && q.is_using_item"
+	      // "q.is_using_item" returns 'true' or 'false', in our case if player uses item it is going to return 'true'
             }
           ],
           "on_entry": [
@@ -202,7 +211,7 @@ Now, you have to register the animation controller to the `player.json` file:
       }
     },
     "components": {
-        "minecraft:breathable": { // keeps breath timer bubbles from appearing 
+        "minecraft:breathable": { // keeps breath timer bubbles from appearing
           "total_supply": 15,
           "suffocate_time": -1,
           "inhale_time": 3.75,
@@ -299,7 +308,7 @@ This method requires the `Holiday Creator Features` experimental toggle to be en
 We can notice several things here:
 
 - `format_version` must be `1.16.100`
-- `minecraft:on_use` will call an event everytime the item is used (right-clicked)
+- `minecraft:on_use` will call an event every time the item is used (right-clicked)
 
 In the event:
 
@@ -370,4 +379,4 @@ The entity file is the same as the Stable version.
 
 ## Conclusion
 
-Once you have your throwable item you can start trying several things, like playing with its power, effects, animations or combining it with an [AOE Cloud](/entities/introduction-to-aec.html). The only limit is your imagination.
+Once you have your throwable item you can start trying several things, like playing with its power, effects, animations or combining it with an [AOE Cloud](/entities/introduction-to-aec). The only limit is your imagination.

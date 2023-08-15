@@ -1,6 +1,15 @@
 ---
 title: Pack Folder Structure
 show_toc: false
+mentions:
+    - SirLich
+    - ThijsHankelMC
+    - MedicalJewel105
+    - Esatz77
+    - ChibiMango
+    - TheItsNameless
+    - JaylyDev
+    - SmokeyStack
 ---
 
 <FolderView :paths="[
@@ -20,7 +29,7 @@ show_toc: false
     'BP/recipes/example.recipe.json',
     'BP/scripts/client/exampleClient.js',
     'BP/scripts/server/exampleServer.js',
-    'BP/scripts/gametests/exampleTest.js',
+    'BP/scripts/exampleScript.js',
     'BP/spawn_rules/example.spawn.json',
     'BP/texts/languages.json',
     'BP/texts/\*.lang',
@@ -39,7 +48,7 @@ show_toc: false
     'RP/entity/example.ce.json',
     'RP/fogs/example_fog_setting.json',
     'RP/items/example.item.json',
-    'RP/materials/example.material',              
+    'RP/materials/example.material',
     'RP/models/entity/example.geo.json',
     'RP/models/blocks/example.geo.json',
     'RP/particles/example.particle.json',

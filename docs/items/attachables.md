@@ -2,7 +2,13 @@
 title: Attachables
 category: Documentation
 tags:
-  - beginner
+    - beginner
+mentions:
+    - Sprunkles317
+    - MedicalJewel105
+    - AdamRaichu
+    - Luthorius
+    - TheItsNameless
 ---
 
 ::: tip
@@ -125,6 +131,10 @@ Here is an example of such an animation. This also includes a first-person anima
 
 To more easily create first-person animations, we need to mimic how the arm is positioned in the first person.
 
+:::tip
+To add animation for player's hands, you need to use player's animations, not attachables animations. 
+:::
+
 Use the following guide animation and import it into Blockbench. It applies a rotation of (95, -45, 115) and a translation of (13.5, -10, 12) to the right arm bone, perfectly mimicking how the arm is positioned in first-person.
 <BButton
   link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/attachable_guide.animation.json?raw=true"
@@ -161,7 +171,7 @@ Next up is modifying the root bone of our geometry to be bound to the equipment 
 // A bone
 {
   "name": "skeleton_head",
-  "binding": "query.item_slot_to_bone_name(context.item_slot)",
+  "binding": "q.item_slot_to_bone_name(context.item_slot)",
   "pivot": [0, 4, 0],
   "cubes": [
     {
@@ -177,7 +187,7 @@ The `"parent"` key in a bone accepts a string, and whichever bone name is entere
 
 The `"binding"` key on the other hand accepts Molang, and the pivot point of whichever bone name is entered is set as the *root position* that the child bone and its children should inherit.
 
-For the value of `"binding"` we are using the Molang query `query.item_slot_to_bone_name`, which converts a slot name to a bone name, with the contextual variable `context.item_slot` as an argument. This converts the name of the equipment slot this item resides in to its corresponding bone name in the player's geometry. The conversions are as follows:
+For the value of `"binding"` we are using the Molang query `q.item_slot_to_bone_name`, which converts a slot name to a bone name, with the contextual variable `context.item_slot` as an argument. This converts the name of the equipment slot this item resides in to its corresponding bone name in the player's geometry. The conversions are as follows:
 - `'main_hand'` → "rightitem"
 - `'off_hand'` → "leftitem"
 

@@ -2,7 +2,14 @@
 title: Custom Weapons
 category: Tutorials
 tags:
-	- experimental
+    - experimental
+mentions:
+    - SirLich
+    - solvedDev
+    - MedicalJewel105
+    - aexer0e
+    - PepijnMC
+    - ThomasOrs
 ---
 
 Making a custom weapon is pretty simple since the 1.16.100 changes, as these allow you to simply define an item entry for it in your `BP/items` folder and provide a corresponding texture in the `RP/textures/items` folder with a bit of config and you have a fully working weapon that you can customize however you see fit.
@@ -52,7 +59,7 @@ Like with the other item tutorials we will start by making a simple custom sword
 				"repair_items": [
 					{
 						"items": "minecraft:stick",
-						"repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"
+						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
 					}
 				]
 			}
@@ -153,7 +160,7 @@ To do this you need to add the `"minecraft:weapon": {}` component, even if its j
 
 So if you add the above component to your item json file when you mouse over your sword you will now see **+10 Attack Damage** listed in its tooltip.
 
-> You may be thinking "why didnt you just add this above?" and the answer is because we will build off this component to add more cool stuff in the next section, so I wanted to keep it separate.
+> You may be thinking "why didn't you just add this above?" and the answer is because we will build off this component to add more cool stuff in the next section, so I wanted to keep it separate.
 
 ## Unique ability & durability
 

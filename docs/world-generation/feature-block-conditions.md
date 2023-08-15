@@ -3,8 +3,10 @@ title: Block Conditions for Features
 category: Tutorials
 tags:
     - experimental
-mention:
-	- PavelDobCZ23
+mentions:
+    - PavelDobCZ23
+    - SmokeyStack
+    - ThomasOrs
 ---
 
 Sometimes you might need to place any feature conditionally depending on what blocks are below or above it for example. Not many features have the option to conditionally place them like so, but with a simple trick we can use it on anything we want.
@@ -32,7 +34,7 @@ This feature places a `single_block_feature` which can be specified with the con
         "enforce_placement_rules": false,
         "enforce_survivability_rules": false,
         "may_replace": ["minecraft:air"], //Only blocks the feature is allowed to be placed in.
-        "may_attach_to": { //Attchment conditions - what blocks can surround the feature when its being placed
+        "may_attach_to": { //Attachment conditions - what blocks can surround the feature when its being placed
             "bottom": ["minecraft:grass"] //Only blocks the feature can be placed on top of.
         }
     }
@@ -40,7 +42,7 @@ This feature places a `single_block_feature` which can be specified with the con
 //This "dummy" feature will only allow the feature to generate in the air, right above a grass block.
 ```
 
-This next feature is the one that is going to replace the cobblestone with the original air block that was there, however it can be ommited if you choose a block you actually want there or if it won't cause you any issues later.
+This next feature is the one that is going to replace the cobblestone with the original air block that was there, however it can be omitted if you choose a block you actually want there or if it won't cause you any issues later.
 
 <CodeHeader>BP/features/block_replacement_feature.json</CodeHeader>
 

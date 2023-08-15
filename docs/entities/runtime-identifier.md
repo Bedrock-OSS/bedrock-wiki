@@ -1,6 +1,20 @@
 ---
 title: Runtime Identifiers
 category: Documentation
+mentions:
+    - MedicalJewel105
+    - aexer0e
+    - Luthorius
+    - SirLich
+    - TheDoctor15
+    - ChibiMango
+    - stirante
+    - epxzzy
+    - IlkinQafarov
+    - TheItsNameless
+    - SmokeyStack
+    - ThomasOrs
+    - Goatfu
 ---
 
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
@@ -116,7 +130,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 -   Breaks the entity.
 -   Punching entity will make it despawn.
 -   Spawns strangely.
--   Drops minecart.  
+-   Drops minecart.
 
 ---
 
@@ -179,7 +193,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 -   Adds the Ender Dragon death effect to the entity.
 -   Inherits Ender Dragon hitbox.
--   Destroys blocks within hitbox, including blocks below the entity. To prevent it from falling to bedrock either, add a indutructible block below it, remove gravity from the entity or disable the `mobGriefing` gamerule.
+-   Destroys blocks within hitbox, including blocks below the entity. To prevent it from falling to bedrock either, add a indestructible block below it, remove gravity from the entity or disable the `mobGriefing` gamerule.
 -   Damages players within 2 blocks of hitbox.
 -   Increases distance it is rendered.
 -   Only able to be killed using /kill.
@@ -245,7 +259,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:panda
 
--   Allows `query.is_grazing` and `query.sit_mount` to function with the `minecraft:behavior.random_sitting` component.
+-   Allows `q.is_grazing` and `q.sit_mount` to function with the `minecraft:behavior.random_sitting` component.
 
 ---
 
@@ -259,13 +273,13 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:piglin
 
--   Allows `minecraft:celebrate_hunt` to function (which activates query.is_celebrating).
+-   Allows `minecraft:celebrate_hunt` to function (which activates q.is_celebrating).
 
 ---
 
 ### minecraft:player
 
--   Activates `query.movement_direction`.
+-   Activates `q.movement_direction`.
 
 ---
 
@@ -287,7 +301,7 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 
 ### minecraft:sheep
 
--   Allows `query.is_grazing` to function with the `behavior.eat_block` component.
+-   Allows `q.is_grazing` to function with the `behavior.eat_block` component.
 
 ---
 
@@ -305,13 +319,27 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ### minecraft:shulker_bullet
 
--   The entity will leave a trail of `minecraft:shulker_bullet` particles
+-   The entity will leave a trail of `minecraft:shulker_bullet` particles.
 
 ---
 
 ### minecraft:slime
 
--   The entity will create slime particles when falling
+-   The entity will create slime particles when falling.
+-   The entity will spawn slimes of lower tier upon death depending on variant (variants 1 to 5 act as the default slime tiers, values above 5 will act as a default medium slime)
+-   Allows entity to attack and have the slime jumping mechanism active at the same time (without this identifier, the slime can't rotate while attacking, the entity would instead jump in a straight path till it loses the target)
+
+---
+
+### minecraft:snowball
+
+-   Removes hitbox.
+-   You can't interact with entity anymore.
+-   Spawns at player's head.
+-   Entity ignores gravity.
+-   Removes entity shadow.
+-   Entity only faces South.
+-   Cannot make step sounds.
 
 ---
 

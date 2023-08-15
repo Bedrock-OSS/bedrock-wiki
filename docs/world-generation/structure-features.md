@@ -1,10 +1,11 @@
 ---
 title: Generating Custom Structures
 category: Tutorials
-mention:
-	- DerpMcaddon
+mentions:
+    - DerpMcaddon
+    - SirLich
 tags:
-	- experimental
+    - experimental
 ---
 
 Structure feature is one of the most basic feature. It places exported `.mcstructure` file in the world.
@@ -81,7 +82,7 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`!
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"y": "query.heightmap(v.worldx, v.worldz)", //Generates the feature on the highest block on the column
+			"y": "q.heightmap(v.worldx, v.worldz)", //Generates the feature on the highest block on the column
 			"z": {
 				"extent": [0, 16],
 				"distribution": "uniform"
@@ -305,7 +306,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 				"extent": [0, 16],
 				"distribution": "uniform"
 			},
-			"y": "query.above_top_solid(v.worldx, v.worldz)", //Places the feature on top of the highest solid block on the column, so it won't place it on the surface of the water
+			"y": "q.above_top_solid(v.worldx, v.worldz)", //Places the feature on top of the highest solid block on the column, so it won't place it on the surface of the water
 			"z": {
 				"extent": [0, 16],
 				"distribution": "uniform"

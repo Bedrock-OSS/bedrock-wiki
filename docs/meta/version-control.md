@@ -1,5 +1,8 @@
 ---
 title: Version Control
+mentions:
+    - SirLich
+    - sermah
 ---
 
 Version control is the concept of backing up your code iteratively, so you can roll back to specific versions as needed. Version control could be achieved at the most basic level by taking a `.zip` of your addon every day and uploading it to google drive. This isn't unreasonable, but it has three significant difficulties that proper VCS (version control systems) fix:

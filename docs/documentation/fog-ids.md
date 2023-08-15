@@ -1,5 +1,9 @@
 ---
 title: Fog IDs
+mentions:
+    - SirLich
+    - MedicalJewel105
+    - TheItsNameless
 ---
 
 ## By Element X
@@ -90,6 +94,7 @@ title: Fog IDs
 | minecraft:fog_beach                            | beach                            | 
 | minecraft:fog_birch_forest                     | birch_forest                     | 
 | minecraft:fog_birch_forest_hills               | birch_forest_hills               | 
+| minecraft:fog_cherry_grove                     | cherry_grove                     | 
 | minecraft:fog_cold_beach                       | cold_beach                       | 
 | minecraft:fog_cold_ocean                       | cold_ocean                       | 
 | minecraft:fog_cold_taiga                       | cold_taiga                       | 
@@ -154,5 +159,5 @@ title: Fog IDs
 | minecraft:fog_the_end                          | the_end                          | 
 | minecraft:fog_warm_ocean                       | warm_ocean                       | 
 | minecraft:fog_warped_forest                    | warped_forest                    | 
-*Last updated for 1.19.40*
+*Last updated for 1.20.10*
 <!-- page_dumper_end -->

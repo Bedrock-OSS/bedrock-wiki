@@ -3,12 +3,23 @@ title: Intro to Scripting
 category: Legacy Scripting
 nav_order: 1
 tags:
-    - guide
+    - outdated
+mentions:
+    - SirLich
+    - destruc7ion
+    - sermah
+    - MedicalJewel105
+    - wower3201
+    - retr0cube
+    - Hatchibombotar
+    - Fabrimat
+    - Herobrine643928
+    - JaylyDev
 ---
 
 :::danger Stop!
 
-This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/game-tests.html).
+This scripting API is no longer supported. Refer to the new [Scripting API](/scripting/starting-scripts).
 
 :::
 

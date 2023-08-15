@@ -27,7 +27,7 @@
 import type { INavCategory } from './Structure'
 import Category from './Category.vue'
 import NavLink from '../Navigation/NavLink.vue'
-import { defineProps, ref, computed } from 'vue'
+import {  ref, computed } from 'vue'
 import { useData } from 'vitepress'
 import { useIsMobile } from '../../Composables/isMobile'
 

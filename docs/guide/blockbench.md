@@ -4,6 +4,18 @@ category: Guide
 description: A first peek into Blockbench
 prefix: '7. '
 nav_order: 7
+mentions:
+    - KaiFireborn
+    - SirLich
+    - Dreamedc2015
+    - SmokeyStack
+    - sermah
+    - cda94581
+    - TheItsNameless
+    - ThijsHankelMC
+    - MedicalJewel105
+    - ChibiMango
+    - smell-of-curry
 ---
 
 Blockbench is a free software designed to make Minecraft modeling, texturing, and animating possible. It is available for mobile browsers, Windows 10, and macOS. Please install it at [blockbench.net](https://blockbench.net/).

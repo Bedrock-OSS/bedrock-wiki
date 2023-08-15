@@ -3,6 +3,13 @@ title: Disabling Team-damage
 category: Tutorials
 tags:
     - intermediate
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - MedicalJewel105
+    - Luthorius
+    - TCLynx
 ---
 
 If you wish to disable team damage (so one cannot hurt their teammates), assign a tag with the team name to every teammate (I'm going to use `team1`, `team2`, `team3` and `team4` for this example).

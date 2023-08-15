@@ -4,6 +4,16 @@ category: Tutorials
 tags:
     - recipe
     - intermediate
+mentions:
+    - SirLich
+    - Joelant05
+    - Dreamedc2015
+    - MedicalJewel105
+    - aexer0e
+    - imsolucid
+    - nebulacrab
+    - Luthorius
+    - TheItsNameless
 ---
 
 Whether making a plane or a dragon, adding controllability to flying entities will probably challenge most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 3 main workaround ways you can use to achieve this.
@@ -44,14 +54,14 @@ Now we will give it slow falling and speed as it's falling so that it doesn't in
         "default":{
             "transitions":[
                 {
-                    "jumping":"!query.is_on_ground"
+                    "jumping":"!q.is_on_ground"
                 }
             ]
         },
         "jumping":{
             "transitions":[
                 {
-                    "default":"query.is_on_ground"
+                    "default":"q.is_on_ground"
                 }
             ],
             "on_entry":[
@@ -160,14 +170,14 @@ The entity will probably still be too slow when flying, so we'll borrow our anim
         "default":{
             "transitions":[
                 {
-                    "jumping_1":"!query.is_on_ground"
+                    "jumping_1":"!q.is_on_ground"
                 }
             ]
         },
         "jumping_1":{
             "transitions":[
                 {
-                    "transition_to_default":"query.is_on_ground"
+                    "transition_to_default":"q.is_on_ground"
                 },
                 {
                     "jumping_2":"true"
@@ -180,7 +190,7 @@ The entity will probably still be too slow when flying, so we'll borrow our anim
         "jumping_2":{
             "transitions":[
                 {
-                    "transition_to_default":"query.is_on_ground"
+                    "transition_to_default":"q.is_on_ground"
                 },
                 {
                     "jumping_1":"true"
@@ -216,14 +226,14 @@ You might also notice that the entity levitates when you go near it. We can fix 
         "default":{
             "transitions":[
                 {
-                    "has_rider":"query.has_rider"
+                    "has_rider":"q.has_rider"
                 }
             ]
         },
         "has_rider":{
             "transitions":[
                 {
-                    "default":"!query.has_rider"
+                    "default":"!q.has_rider"
                 }
             ],
             "on_entry":[
@@ -279,7 +289,7 @@ Next, we need an animation controller that causes the entity to levitate when th
             ],
             "transitions":[
                 {
-                    "rising":"query.is_jumping"
+                    "rising":"q.is_jumping"
                 }
             ]
         },
@@ -289,7 +299,7 @@ Next, we need an animation controller that causes the entity to levitate when th
             ],
             "transitions":[
                 {
-                    "falling":"!query.is_jumping"
+                    "falling":"!q.is_jumping"
                 }
             ]
         }
@@ -312,7 +322,7 @@ Now, we need a copy of the player's behavior file, which we will modify slightly
     "scripts":{
         "animate":[
             {
-                "fly_dragon":"query.is_riding"
+                "fly_dragon":"q.is_riding"
             }
         ]
     }
@@ -330,7 +340,7 @@ The entity can now be controlled with the jump key, but there's a bug. If the pl
         "no_rider":{
             "transitions":[
                 {
-                    "has_rider":"query.has_rider"
+                    "has_rider":"q.has_rider"
                 }
             ]
         },
@@ -340,7 +350,7 @@ The entity can now be controlled with the jump key, but there's a bug. If the pl
             ],
             "transitions":[
                 {
-                    "no_rider":"!query.has_rider"
+                    "no_rider":"!q.has_rider"
                 }
             ]
         }

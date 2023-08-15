@@ -2,6 +2,9 @@
 title: Entity Texture Animations
 mentions:
     - MedicalJewel105
+    - IlkinQafarov
+    - TheItsNameless
+    - SmokeyStack
 tags:
     - intermediate
 category:
@@ -16,8 +19,8 @@ From this page you will learn how to make an animated texture for an entity. Ani
 
 This page is based on content by [AgentMindStorm](https://www.youtube.com/channel/UC-ljddYkFdTQl-MVEaVvbuQ).
 
-<YouTubeEmbed 
-    id="F6e-w1rCEi4" 
+<YouTubeEmbed
+    id="F6e-w1rCEi4"
 />
 
 ## Textures
@@ -98,7 +101,7 @@ Here we will add `uv_anim` component with offset and scale properties:
 
 ```json
 "uv_anim": {
-    "offset": [ 0.0, "math.mod(math.floor(query.life_time * frames_per_second),frame_count) / frame_count" ],
+    "offset": [ 0.0, "math.mod(math.floor(q.life_time * frames_per_second),frame_count) / frame_count" ],
     "scale": [ 1.0, "1 / frame_count" ]
 }
 ```

@@ -2,6 +2,16 @@
 title: Sounds
 tags:
     - intermediate
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - aexer0e
+    - MedicalJewel105
+    - Justash01
+    - DasEtwas
+    - TheItsNameless
+    - ThomasOrs
 ---
 
 In bedrock, we can add custom sounds without overwriting any vanilla sounds. This is done by adding files to the resource pack.
@@ -12,7 +22,7 @@ The best way to learn about sounds is by downloading and playing around with the
 
 ### Folder Structure
 
-There are two main files that we edit when we want to add sounds. Note how `sound_definition` is nestedinside `sounds`.
+There are two main files that we edit when we want to add sounds. Note how `sound_definition` is nested inside `sounds`.
 
 Sound files themselves are added inside of the `sounds` folder, and can be any of the following formats.
 
@@ -266,7 +276,7 @@ This example shows playing a wing-flap sound, synced with an animation.
 
 ```json
 "sound_effects": {
-    "wing_flap": "wiki.dragon.wing_flap" //where wiki.dragon.roar is a sound definited in sound_definitions
+    "wing_flap": "wiki.dragon.wing_flap" //where wiki.dragon.roar is a sound defined in sound_definitions
 }
 ```
 
@@ -290,7 +300,7 @@ This example shows playing an explosion sound, synced using an animation control
 
 ```json
 "sound_effects": {
-    "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound definited in sound_definitions just like animation sounds.
+    "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound defined in sound_definitions just like animation sounds.
 }
 ```
 
@@ -301,7 +311,7 @@ This example shows playing an explosion sound, synced using an animation control
     "default":{
         "transitions":[
             {
-                "explode_state":"query.mark_variant == 1"
+                "explode_state":"q.mark_variant == 1"
             }
         ]
     },
@@ -313,7 +323,7 @@ This example shows playing an explosion sound, synced using an animation control
         ],
         "transitions":[
             {
-                "default":"query.mark_variant == 0"
+                "default":"q.mark_variant == 0"
             }
         ]
     }

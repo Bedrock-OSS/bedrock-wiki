@@ -1,43 +1,45 @@
 ---
 title: Structure Presentation
 category: Ideas
-mention:
-	- MedicalJewel105
+mentions:
+    - MedicalJewel105
+    - LeGend077
+    - ThomasOrs
 ---
 
-## Why this page exists?
+## Why this page exists
 
-Representing features of your add-on has same importance as features' quality. If people like representation of your add-on, most likely they will try it and love it. In this page representation of structures will be discussed.
+Presenting features of an add-on clearly has same importance in showcasing quality. If people can understand an add-on and it's features they might be more likely to try it. This page will demonstrate a way of presenting structures.
 
 ## Presentation Methods
 
-Actually, there are lots ways of showing your structure to people. You can:
+There are lots ways of you could showcase structures to people. You can:
 
--	Make in-game screenshot.
--	Show it in structure block (also in-game).
--	Screenshot of rendered 3D object of your structure.
+-	Take in-game screenshots of the structure.
+-	Take a screenshot inside of a structure block.
+-	Create a 3D object of your structure.
 
-Lower all this methods will be shown. For this we will be using a structure of pillager outpost.
+Below all three methods will be shown using the Pillager outpost structure as an example.
 
-#### In-Game Screenshot
+### In-Game Screenshot
 
-This method is not bad and lots of people use it, however there are some difficulties, like finding a good place for placing structure. This method is very good if you have RTX on or shaders (which are extincting).
+This is the simplest method because it is quick and easy. It also lets you showcase the structure in the context of the world, there are some disadvantages however. You may need to find a good place to take a screenshot or have difficulty finding a good angle.
 
 ![](/assets/images/visuals/structure-presentation/in-game.png)
 
-#### In Structure Block
+### In a Structure Block
 
-This method is for lazy people and is not good at all. Structure rendering in structure blocks is kinda broken and you need to carefully see if you are making a screenshot without them.
+This method avoids some of the disadvantages of a screenshot in the world, you are able to focus entirely on the structure without other blocks in the view.
 
 ![](/assets/images/visuals/structure-presentation/structure-block-0.png)
 
-You can also change the border and clear background but it will be even more difficult.
+By making [JSON UI](/json-ui/json-ui-intro) edits you can change the background color and remove other elements to further improve this method.
 
 ![](/assets/images/visuals/structure-presentation/structure-block-1.png)
 
-#### Rendered 3D Object
+### Rendered 3D Object
 
-You can export your structure as a 3D model. If 3D export button is not working for you, try to use following fix:
+Structures can be exported as a 3d model. If 3D export button is not working for you, you can try applying a 3d-export-fix pack.
 
 <BButton
 	link="/assets/packs/visuals/structure-presentation/3d-export-fix.mcpack" download
@@ -46,6 +48,6 @@ You can export your structure as a 3D model. If 3D export button is not working 
 
 ![](/assets/images/visuals/structure-presentation/model-render.png)
 
-This method is mostly available for pc users. You can create a simple render in Paint 3D and more advanced in blender. In this case we can represent our structure in a fast and easy way.
+This method is mostly available for pc users. You can create a simple render in Paint 3D or a more advanced in blender. In this case we can represent our structure in a fast and easy way.
 
-⬇ If you have any other methods, feel free to edit this page.
+⬇ If you have any other methods, contribute them below.

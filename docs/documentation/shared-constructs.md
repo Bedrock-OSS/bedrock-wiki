@@ -2,13 +2,14 @@
 title: Shared Constructs
 nav_order: 1
 tags:
-- Stable
-- Last updated for Version 1.18.10
-mention:
-- Ciosciaa
+    - Stable
+    - Last updated for Version 1.18.10
+mentions:
+    - Ciosciaa
+    - ThomasOrs
 ---
 
-A few JSON constructs are expressable in multiple locations in the add-ons system.
+A few JSON constructs are expressible in multiple locations in the add-ons system.
 
 ## Range Objects
 Range objects define a spread between two numbers.

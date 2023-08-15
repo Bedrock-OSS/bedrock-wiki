@@ -1,5 +1,11 @@
 ---
 title: Addon Performance
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - TheItsNameless
+    - SmokeyStack
 ---
 
 ::: warning
@@ -149,7 +155,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ### texture_list.json
 
--   Tons of textures badly affect game performance. Create a [`texture_list.json`](/concepts/textures-list) file. 
+-   Tons of textures badly affect game performance. Create a [`texture_list.json`](/concepts/textures-list) file.
 
 ### Quantity
 
@@ -164,6 +170,12 @@ This guide is a non-exhaustive list of specific performance considerations separ
 -   The recommended maximum texture resolution is 4096x4096 to maintain compatibility with low-end devices
 -   Keep in mind that textures are atlased, and larger textures can mess with atlas generation on lower-end devices
 -   Only make textures as significant as needed to convey the detail needed at the needed distance
+
+## Trades
+
+Villager trades cause performance issues and even crashes on all devices at 60 trades or greater. Avoid tons of trades for one entity.
+Your best bet to resolve this issue is to split your trades in half and move them to another villager or custom entity/npc, 30 trades is a good safe number from testing.
+*probably JSON UI issues*
 
 ## Sounds
 

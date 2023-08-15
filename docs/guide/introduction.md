@@ -6,6 +6,17 @@ tags:
     - guide
 nav_order: 1
 prefix: '1. '
+mentions:
+    - KaiFireborn
+    - SirLich
+    - BlueFrog130
+    - sermah
+    - SmokeyStack
+    - TheItsNameless
+    - MedicalJewel105
+    - smell-of-curry
+    - Hatchibombotar
+    - retr0cube
 ---
 
 ## What are Addons?

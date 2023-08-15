@@ -4,6 +4,19 @@ category: Guide
 description: How to create your first custom Item
 nav_order: 5
 prefix: '5. '
+mentions:
+    - KaiFireborn
+    - SirLich
+    - cda94581
+    - TheItsNameless
+    - MedicalJewel105
+    - ChibiMango
+    - TheDoctor15
+    - SmokeyStack
+    - unickorn
+    - Sprunkles317
+    - ThomasOrs
+    - davedavis
 ---
 
 In Minecraft, we can create custom items, which can be dropped, traded, crafted, and otherwise used like a normal item. There is a lot of power in the system, including the ability to make food, fuel, and tools.
@@ -23,14 +36,14 @@ Conceptually, items are made up of two parts:
 First, we will learn how to create a new simple item & define its behaviors. In the next section we will assign a texture to this item, so you can see it in game.
 
 :::warning
-This guide requires expirimental features toggled on.
+This guide requires experimental features toggled on.
 :::
 
 ## Item Behavior
 
 To make an item we will need a way to identify it and define how we want it to behave. To do this we will be making a file which tell Minecraft to apply certain behaviors to a specific item of our choice.
 
-At the end of this section we will have a fully defined the behavior of our item.
+At the end of this section we will have fully defined the behavior of our item.
 
 ### Components
 
@@ -38,12 +51,13 @@ Different items behave differently; you can eat a porkchop, enchanted items glow
 We are able to define how our custom item will behave by using behavior components.
 
 <Spoiler title="Example Components">
-<CodeHeader>components/</CodeHeader>
+<CodeHeader>components/
 ```json
-"minecraft:food": 
+"minecraft:food":
 "minecraft:foil": true,
 "minecraft:max_stack_size": 16
 ```
+</CodeHeader>
 </Spoiler>
 
 Components contain information which tells the game what our item should do. For example the component `"minecraft:foil"` determines whether the item should have an enchanted foil to it, so setting it to `true` will apply it.
@@ -86,10 +100,10 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 }
 ```
 
-Most files in your pack will have 2 top level defintions, `"format_version"` and `"minecraft:<file_type>"`.
+Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
 The format version defines which version of the Addon system Minecraft will use to read this file. For our item, we will be using `1.16.100` to allow us to use the experimental features. For more information on format version you can check [here](/guide/format-version).
 
-The second defintions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
+The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
 
 Let us look closer at the `"description"`:
 
@@ -153,7 +167,7 @@ To start we need a texture for our item. For our ectoplasm, we will be using thi
 
 <BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png">Download texture here</BButton>
 
-All item textures are stored in `RP/texture/items/`. From here, you can create any subdirectories you wish.
+All item textures are stored in `RP/textures/items/`. From here, you can create any subdirectories you wish.
 It's best to name your texture image files with the items' _id_, in our case it will be `ectoplasm.png`.
 It is recommended to have your images in `.png` format and be of size `16x16`, though Minecraft will accept other formats such as `.jpg` or `.tga`.
 
@@ -181,7 +195,7 @@ All item shortnames are stored in one file called `item_texture.json` which is i
 }
 ```
 
-Here we have 3 top level defintions, `texture_data` is where we will define our shortnames, the other two define the type of file this is.
+Here we have 3 top level definitions, `texture_data` is where we will define our shortnames, the other two define the type of file this is.
 The `resource_pack_name` is simply our resource pack's name and `texture_name` is what kind of texture file this is. Since this is for _items_, this will always be set to `atlas.items`.
 
 Under `texture_data` will our list of item shortname definitions. An example definition looks like this:

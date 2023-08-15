@@ -1,5 +1,10 @@
 ---
 title: Using Schemas
+mentions:
+    - SirLich
+    - MedicalJewel105
+    - 7dev7urandom
+    - KalmeMarq
 ---
 
 A JSON schema gives you two things: validation to be sure that your JSON has the correct structure and (depending on editor support) IntelliSense to help you write your JSON correctly, to begin with. Schemas are nice because they give you instant feedback when you screw something up, but they can't catch everything.

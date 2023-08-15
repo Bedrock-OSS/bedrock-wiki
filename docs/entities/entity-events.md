@@ -1,17 +1,23 @@
 ---
 title: Entity Events
 category: General
-mention:
+mentions:
     - ChibiMango
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+    - SmokeyStack
+    - ThomasOrs
 tags:
     - beginner
 ---
 
-Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This page aims to cover how to call events within the entity and other entities as well as the format of an event. 
+Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This page aims to cover how to call events within the entity and other entities as well as the format of an event.
 
 ## Event Layout
 
-Events allow us to add and remove component groups from our entity allowing us to change the behavior of our entity when certain conditions are met. They are called events because we can activate them when events happen such as a timer running out, a player interacting with the entity or an environmental change occuring. When an event is activated it will read through the keys and determined whether to add or remove component groups.
+Events allow us to add and remove component groups from our entity allowing us to change the behavior of our entity when certain conditions are met. They are called events because we can activate them when events happen such as a timer running out, a player interacting with the entity or an environmental change occurring. When an event is activated it will read through the keys and determined whether to add or remove component groups.
 
 An event can have six different keys which can add or remove component groups:
 - add
@@ -45,7 +51,7 @@ The most essential and common use of events is directly adding and/or removing c
 ```
 
 :::tip
-When you add a component group, if a currently active component group has the same component inside it, it will be overwritten by the group most recently added. 
+When you add a component group, if a currently active component group has the same component inside it, it will be overwritten by the group most recently added.
 :::
 
 ### Randomize
@@ -79,11 +85,11 @@ The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95%
 }
 ```
 
-Note that the `randomize` will only select one option out of the pool of options. 
+Note that the `randomize` will only select one option out of the pool of options.
 
 ### Sequence/Filters
 
-Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. Filters allow us to make conditional events which will only add/remove component groups if a conditon is met. The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
+Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. Filters allow us to make conditional events which will only add/remove component groups if a condition is met. The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
 
 <CodeHeader></CodeHeader>
 
@@ -132,7 +138,7 @@ Additionally, `sequence` allows us to run multiple parameters in sequence. It ev
 Entries in a sequence are not exclusive; if a filter in one of them passes, it does not prevent the other entries from running. In the case above, there is no filter in the first entry and so it automatically runs. This does not stop the other entries from being checked and subsequently running if valid.
 :::
 
-Below is an extensive example of using the sequence to combine filters, randomising and add & removing component groups:
+Below is an extensive example of using the sequence to combine filters, randomizing and add & removing component groups:
 
 <Spoiler title="Sequence Example">
 
@@ -339,7 +345,7 @@ This event is run when the entity is hit by a player or projectile. There is a 6
 ### Trigger
 
 Trigger is a parameter which can be used inside of an entity event to run other events based on filters to a chosen target.
-We can use this to trigger another event within the entity, and combining this with `sequence` can allow us to organise our events neatly.
+We can use this to trigger another event within the entity, and combining this with `sequence` can allow us to organize our events neatly.
 
 We are also able to specify filters and a target for the event. The target parameter is discussed in depth later. If the following event is called by the `minecraft:interact` component, then if the entity interacted with has the family tag `pig`, it will run the event `wiki:interacted` in the player that interacted with the entity.
 
@@ -358,7 +364,7 @@ We are also able to specify filters and a target for the event. The target param
     }
 }
 ```
-:::tip 
+:::tip
 Events are able to retain entity context from the component they were called in. For example, the if an event is triggered using a `minecraft:interact` component, we are able to apply the filter to the player who interacted with the entity. However, if the method that called the event does not have this context, using target will not work.
 :::
 
@@ -436,7 +442,7 @@ This behavior-based animation controller is used to call the event `wiki:running
         "walk":{
             "transitions":[
                 {
-                    "run":"query.is_sheared"
+                    "run":"q.is_sheared"
                 }
             ]
         },
@@ -446,7 +452,7 @@ This behavior-based animation controller is used to call the event `wiki:running
             ],
             "transitions":[
                 {
-                    "walk":"!query.is_sheared"
+                    "walk":"!q.is_sheared"
                 }
             ]
         }
@@ -457,7 +463,7 @@ This behavior-based animation controller is used to call the event `wiki:running
 Here the `@s` is used to apply the event onto the entities self. Animation controllers are incredibly powerful and can be used to create even more custom behavior, though they are more advanced. Check out our page [here](/animation-controllers/animation-controllers-intro) for more information
 
 Within an event, as well as adding & removing component groups we can also `trigger` other events to occur.
-This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`. 
+This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`.
 
 <CodeHeader></CodeHeader>
 
@@ -562,13 +568,13 @@ The component `minecraft:damage_sensor` inside the pillager calls the event `min
 }
 ```
 
-Some components have these `targets` and each has certain ones that can be used. For example, `minecraft:interact` can have the target as either `self` or `other` where other is the entity that interacted with the entity. All valid components should have `self` and `target` as options where target is the targetted entity. 
+Some components have these `targets` and each has certain ones that can be used. For example, `minecraft:interact` can have the target as either `self` or `other` where other is the entity that interacted with the entity. All valid components should have `self` and `target` as options where target is the targeted entity.
 
 ### Built-in Events
 In general, using the component groups from vanilla mobs will not work. For example, the `minecraft:convert_to_drowned` will not be called in your entity unless you use one of the methods above to call it. However, there are a few events that called automatically when the conditions are met:
--   `minecraft:entity_spawned` : called when the entity is spawned in. Useful for setting up inital component groups.
+-   `minecraft:entity_spawned` : called when the entity is spawned in. Useful for setting up initial component groups.
 -   `minecraft:entity_born`    : called when the entity is spawned in through breeding.
--   `minecraft:entity_transformed` : called when another entity transforms into this one. 
+-   `minecraft:entity_transformed` : called when another entity transforms into this one.
 -   `minecraft:on_prime`        : called when the entity's fuse is lit and is ready to explode.
 
 A good example of these in use is with the cow. This shows how we can always ensure the cow has either `minecraft:cow_adult` or `minecraft:cow_baby` as soon as it is spawned/transformed.
@@ -600,7 +606,7 @@ A good example of these in use is with the cow. This shows how we can always ens
     },
     "minecraft:entity_transformed": {
         "add": {
-            "component_groups": ["minecraft:cow_adult"]   
+            "component_groups": ["minecraft:cow_adult"]
         }
     }
 }

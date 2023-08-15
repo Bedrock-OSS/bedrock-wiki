@@ -3,10 +3,15 @@ title: Recipes
 category: Documentation
 nav_order: 3
 tags:
-- Stable
-- Last updated for Version 1.18.10
-mention:
-- Ciosciaa
+    - Stable
+    - Last updated for Version 1.18.10
+mentions:
+    - Ciosciaa
+    - SirLich
+    - MedicalJewel105
+    - TheHyperWhale
+    - Luthorius
+    - QuazChick
 ---
 
 Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.
@@ -14,7 +19,7 @@ Recipes are the means of handling several item transactions, namely those occurr
 ![](/assets/images/loot/recipes/recipe.png)
 
 ::: tip
-Anvil interactions are handled within an [item definition](/items/items-16.html), not via recipe files. Loom transactions are currently unavailable.
+Anvil interactions are handled within an [item definition](/items/items-16), not via recipe files. Loom transactions are currently unavailable.
 :::
 
 No experimental toggles are required to use recipes or any of their features.
@@ -41,13 +46,11 @@ As an example, a "cold steel sword" might be crafted using the following [shaped
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "wiki:cold_steel_sword"
 		},
 		"tags": ["crafting_table", "altar"],
-
 		"pattern": [
 			"X",
 			"X",
@@ -120,7 +123,10 @@ Cooking and Smelting:
 Brewing:
 - `brewing_stand`
 
-Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-16.html#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
+Education:
+- `material_reducer`
+
+Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-stable#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
 
 ::: tip
 To effectively disable a recipe (useful for [overriding](#overrides) a prior recipe), set the tag array to `[""]`.
@@ -152,18 +158,17 @@ The item object is a more explicit construct for referencing items.
 {
 	"item": "minecraft:planks",
 	"data": 2,
-	
 	"count": 3
 }
 ```
 
-The required `"item"` property functions the same as the string reference format. Although an explicit data field is available, the data suffix string format is still supported in the `"item"` property. However, unlike the suffix form, `"data"` can accept Molang. The Molang here is evaluated once on world load, not per-crafting attempt. Variables cannot be used to pass data between properties in a recipe. Furthermore, the nature of input items cannot be queried. Currently, the only known usable query in the `"data"` property is `query.get_actor_info_id`, used to look up the ID of an entity's spawn egg by its identifier:
+The required `"item"` property functions the same as the string reference format. Although an explicit data field is available, the data suffix string format is still supported in the `"item"` property. However, unlike the suffix form, `"data"` can accept Molang. The Molang here is evaluated once on world load, not per-crafting attempt. Variables cannot be used to pass data between properties in a recipe. Furthermore, the nature of input items cannot be queried. Currently, the only known usable query in the `"data"` property is `q.get_actor_info_id`, used to look up the ID of an entity's spawn egg by its identifier:
 
 <CodeHeader>#/minecraft:recipe_shapeless/result</CodeHeader>
 ```json
 {
 	"item": "minecraft:spawn_egg",
-	"data": "query.get_actor_info_id('minecraft:chicken')"
+	"data": "q.get_actor_info_id('minecraft:chicken')"
 }
 ```
 
@@ -174,7 +179,7 @@ If a count greater than `1` is provided for an item that does not stack, an erro
 :::
 
 ::: warning
-Despite having similarities to trade [table item descriptors](/loot/trade-tables.html#items), recipe item descriptors cannot use functions.
+Despite having similarities to trade [table item descriptors](/loot/trade-tables#items), recipe item descriptors cannot use functions.
 :::
 
 #### Identifier Additions
@@ -219,7 +224,7 @@ Crafting recipes support both crafting tables and stonecutters:
 "tags": ["crafting_table", "stonecutter"]
 ```
 
-`"crafting_table"` applies to both vanilla crafting tables and the player 2 × 2 crafting grid in their inventory. There is currently no way to opt into one but not the other. Crafting recipes additionally support custom tags, linking recipes to a [crafting grid provided by a custom block](/blocks/blocks-16.html#minecraft-crafting-table).
+`"crafting_table"` applies to both vanilla crafting tables and the player 2 × 2 crafting grid in their inventory. There is currently no way to opt into one but not the other. Crafting recipes additionally support custom tags, linking recipes to a [crafting grid provided by a custom block](/blocks/blocks-stable#minecraft-crafting-table).
 
 ### Shapeless Recipes
 Shapeless recipes simply bind a collection of inputs to a single output on a crafting grid.
@@ -230,14 +235,12 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_shapeless": {
 		"description": {
 			"identifier": "wiki:brass_door_knob"
 		},
 		"group": "handles",
 		"tags": ["construction_bench"],
-		
 		"ingredients": [
 			"wiki:brass",
 			{
@@ -289,18 +292,16 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "wiki:covered_arch"
 		},
 		"tags": ["crafting_table"],
-
 		"pattern": [
 			"SSS",
 			"I I",
 			"I I"
-		]
+		],
 		"key": {
 			"S": "wiki:cloth",
 			"I": "wiki:support"
@@ -462,7 +463,6 @@ Shaped crafting recipe outputs behave very similarly to their [shapeless counter
 "result": [
 	{
 		"item": "wiki:covered_arch",
-		
 		"count": 3
 	},
 	"wiki:crafting_scrap"
@@ -515,17 +515,14 @@ Furnace recipes are used to transform an item using a heat source over a period 
 ```json
 {
 	"format_version": "1.17.41",
-
 	"minecraft:recipe_furnace": {
 		"description": {
 			"identifier": "wiki:magic_ash"
 		},
 		"tags": ["soul_campfire"],
-
 		"input": "wiki:bone_fragments",
 		"output": {
 			"item": "wiki:magic_ash",
-
 			"count": 4
 		}
 	}
@@ -547,7 +544,6 @@ Furnace recipes bind exactly one input [item descriptor](#item-descriptors) to e
 "input": "wiki:bone_fragments"
 "output": {
 	"item": "wiki:magic_ash",
-	
 	"count": 4
 }
 ```
@@ -595,13 +591,11 @@ Brewing mixes are simple brewing recipes theoretically designed to isolate the d
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_brewing_mix": {
 		"description": {
 			"identifier": "wiki:paralysis_brew"
 		},
 		"tags": ["brewing_stand"],
-
 		"input": "wiki:amberglass_flask",
 		"reagent": "wiki:viporfly_poison",
 		"output": "wiki:paralysis_brew"
@@ -631,13 +625,11 @@ Brewing containers are designed to pass the data value of an input to the transf
 ```json
 {
 	"format_version": "1.17.41",
-	
 	"minecraft:recipe_brewing_container": {
 		"description": {
 			"identifier": "wiki:illumination_potion"
 		},
 		"tags": ["brewing_stand"],
-
 		"input": "minecraft:potion",
 		"reagent": "wiki:radiant_berries",
 		"output": "wiki:illumination_potion"

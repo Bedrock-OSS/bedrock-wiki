@@ -3,15 +3,16 @@ title: Add Hud Elements
 category: Tutorials
 tags:
     - beginner
-mention:
+mentions:
     - shanewolf38
+    - SmokeyStack
 ---
 
 In this tutorial, you will learn how to add elements to the hud screen.
 
 ## Overview
 
-The hud screen, which is shown the majority of the time in the game, displays critical information for the player. There are plenty of times you'll want to add elements onto this screen, such as pop-up text after completing certain events, a stamina bar showing how much energy the player has, a speedometer showing the player's speed, and much more! 
+The hud screen, which is shown the majority of the time in the game, displays critical information for the player. There are plenty of times you'll want to add elements onto this screen, such as pop-up text after completing certain events, a stamina bar showing how much energy the player has, a speedometer showing the player's speed, and much more!
 
 To add an element you've created onto the hud screen, you'll need to use the `modification` parameter to add a new `control` (element) to the `root_panel`. The root panel is a panel type element which contains nearly all of the elements displayed on the hud.
 

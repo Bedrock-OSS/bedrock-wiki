@@ -2,6 +2,9 @@
 title: Trading Behavior
 category: General
 nav_order: 2
+mentions:
+    - Ciosciaa
+    - MedicalJewel105
 ---
 
 Making an entity a trader is accomplished via `minecraft:trade_table` or `minecraft:economy_trade_table` components. Both of them will open a trading UI from the given path, but the economy trades component has some more options referring to some Village and Pillage trading mechanics. Other AI goals you'll need are `minecraft:behavior.trade_with_player`, optionally `minecraft.behavior:trade_interest` (allows the mob to hold/offer an item) and, potentially, `"minecraft:trade_resupply": {}`.

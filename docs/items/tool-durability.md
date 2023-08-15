@@ -4,8 +4,9 @@ category: Tutorials
 tags:
     - experimental
     - intermediate
-mention:
+mentions:
     - MedicalJewel105
+    - TheDoctor15
 ---
 
 ## Introduction
@@ -89,7 +90,7 @@ Looks simple, doesn't it?
 "minecraft:repairable": {
     "repair_items": [
         {
-            "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
+            "repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability",
             "items": [
                 "bs:silver",
                 "bs:silver_axe"
@@ -101,7 +102,7 @@ Looks simple, doesn't it?
 
 Formula explanation:
 
-`"context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"`
+`"context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"`
 
 The _final_ durability will be durability of the first axe + durability of the second axe + 5% of 2nd axe MAX durability.
 

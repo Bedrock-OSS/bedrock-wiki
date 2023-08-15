@@ -1,10 +1,11 @@
 ---
 title: Generating Patches
 category: Tutorials
-mention:
-	- DerpMcaddon
+mentions:
+    - DerpMcaddon
+    - SirLich
 tags:
-	- experimental
+    - experimental
 ---
 
 Feature based surface builder is a feature that puts together a collection of blocks that serve to add variety and decoration to the Overworld surface. This tutorial will explain what is needed to create this feature, including size, frequency, generation location, and more!
@@ -13,7 +14,7 @@ Feature based surface builder is a feature that puts together a collection of bl
 
 Single block features are going to be the base of our surface builder. They will define which blocks we are going to use. For this tutorial I'll be using Coarse Dirt, Podzol and Cobblestone.
 
-Learn more about single block features [here](/world-generation/feature-types.html#single-block-features)
+Learn more about single block features [here](/world-generation/feature-types#single-block-features)
 
 Coarse Dirt File
 
@@ -88,7 +89,7 @@ Cobblestone File
 
 Weighted random features are going to be our _randomizer_ to select between each type of blocks.
 
-Learn more about weighted random features [here](/world-generation/feature-types.html#weighted-random-features)
+Learn more about weighted random features [here](/world-generation/feature-types#weighted-random-features)
 
 <CodeHeader>BP/features/select_surface_block_feature.json</CodeHeader>
 
@@ -121,7 +122,7 @@ Learn more about weighted random features [here](/world-generation/feature-types
 
 Scatter features are an important part of our surface builder. It will determine the size, shape and number of blocks in one blob.
 
-Learn more about scatter features [here](/world-generation/feature-types.html#scatter-features)
+Learn more about scatter features [here](/world-generation/feature-types#scatter-features)
 
 <CodeHeader>BP/features/scatter_surface_block_feature.json</CodeHeader>
 
@@ -141,7 +142,7 @@ Learn more about scatter features [here](/world-generation/feature-types.html#sc
 			"extent": [0, 8],
 			"distribution": "gaussian"
 		},
-		"y": "query.heightmap(v.worldx, v.worldz) -1",
+		"y": "q.heightmap(v.worldx, v.worldz) -1",
 		"places_feature": "wiki:select_surface_block_feature" //Weighted random feature identifier
 	}
 }
@@ -151,7 +152,7 @@ Learn more about scatter features [here](/world-generation/feature-types.html#sc
 
 -   `extent` use an array to determine the size of the blob. `[0, 8]` means the size is extended from 0 to 8 blocks. So, our blob would be 8 blocks long both on X and Z axis. **Only use this for X and Z distribution**.
 
--   `"y": "query.heightmap(v.worldx, v.worldz) -1` means it will put the block on the highest block on the y coordinate -1. So it'll always put the feature on the surface.
+-   `"y": "q.heightmap(v.worldx, v.worldz) -1` means it will put the block on the highest block on the y coordinate -1. So it'll always put the feature on the surface.
 
 -   `distribution` specifies the type of distribution to use. Available include `Gaussian`, `Inverse Gaussian`, `Uniform`,`Fixed Grid` and `Jittered Grid`
 

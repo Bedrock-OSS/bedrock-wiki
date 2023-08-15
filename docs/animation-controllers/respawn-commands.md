@@ -2,6 +2,14 @@
 title: Respawn Commands
 tags:
     - recipe
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - BlueFrog130
+    - SmokeyStack
+    - MedicalJewel105
+    - cda94581
 ---
 
 <BButton color="blue" link="animation-controllers-intro">Learn more about Animation Controllers</BButton>
@@ -22,11 +30,11 @@ Simply add the animation controller to the `player.json`, and
 				"initialization": {
 					"transitions": [
 						{
-							"has_died": "!query.is_alive"
+							"has_died": "!q.is_alive"
 						}
 					],
 					"on_exit": [
-						"variable.delay = 0.2 + query.life_time;",
+						"v.delay = 0.2 + q.life_time;",
 						"/<death command or animation>"
 					]
 				},
@@ -34,7 +42,7 @@ Simply add the animation controller to the `player.json`, and
 					"on_exit": ["/<Respawn command or animation>"],
 					"transitions": [
 						{
-							"initialization": "query.is_alive && (query.life_time >= variable.delay)"
+							"initialization": "q.is_alive && (q.life_time >= v.delay)"
 						}
 					]
 				}

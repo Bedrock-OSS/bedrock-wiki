@@ -3,6 +3,10 @@ title: Block Materials
 category: Documentation
 tags:
     - experimental
+mentions:
+    - SirLich
+    - yanasakana
+    - MedicalJewel105
 ---
 
 ## Application
@@ -22,18 +26,16 @@ Block materials essentially control how a block is rendered in the world, much l
 }
 ```
 
-_Note: This feature is currently experimental, and, as such, is currently only available for custom blocks._
+## Block Materials
 
-## List of Materials
-
-| Argument     | Slot                                                                                                                                                                                                                                                                     |
+| Material     | Description                                                                                                                                                                                                                                                              |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | opaque       | Used for a regular block texture without an alpha layer. Does not allow for transparency or translucency. This material enables AO (ambient occlusion) for the block, creating shadows around and underneath it.                                                         |
 | alpha_test   | Used for a block like the vanilla (unstained) glass. Does not allow for translucency, only fully opaque or fully transparent textures. By default, this material disables AO for the block, removing those ugly shadows if you're making a non-full or decorative block. |
 | blend        | Used for a block like stained glass. Allows for transparency and translucency (slightly transparent textures). By default, this material disables AO for the block.                                                                                                      |
 | double_sided | Used for completely disabling backface culling.                                                                                                                                                                                                                          |
 
-_Note: Some of these features may be disabled or overridden with their respective parameters. For example:_
+_Note: Some of these features can be disabled or overridden with their respective parameters. For example:_
 
 <CodeHeader></CodeHeader>
 
@@ -42,9 +44,9 @@ _Note: Some of these features may be disabled or overridden with their respectiv
 	"minecraft:material_instances": {
 		"*": {
 			"texture": "blast_vent",
+			"render_method": "alpha_test",
 			"ambient_occlusion": true,
-			"face_dimming": true,
-			"render_method": "alpha_test"
+			"face_dimming": true
 		}
 	}
 }
