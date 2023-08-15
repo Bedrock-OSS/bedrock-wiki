@@ -1,6 +1,7 @@
 ---
 title: Addons Explained
 category: Guide
+description: The basics of Addons
 nav_order: 2
 prefix: '2. '
 mentions:

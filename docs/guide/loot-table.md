@@ -1,6 +1,7 @@
 ---
 title: 'Adding a Loot Table, a Spawn rule and a crafting recipe'
 category: Guide
+description: How to add your first Loot Table, Spawn Rule and Crafting Recipe
 nav_order: 8
 prefix: '8. '
 mentions:

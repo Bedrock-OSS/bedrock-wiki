@@ -1,6 +1,7 @@
 ---
 title: Introduction
 category: Guide
+description: Introduction to our "Getting Started" Guide
 tags:
     - guide
 nav_order: 1
