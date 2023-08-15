@@ -2,7 +2,7 @@
 title: Craftable Item Spawn Eggs
 category: Tutorials
 tags: 
-    - guide
+    - tutorials
 mentions:
     - SirLich
     - solvedDev
