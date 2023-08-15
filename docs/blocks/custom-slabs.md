@@ -120,7 +120,7 @@ This will create a vanilla-like custom slab.
           "wiki:double": true
         },
         "run_command": {
-          "command": "playsound step.stone @a ~~~ 0.7 1.5"
+          "command": "playsound use.stone @a ~~~ 1 0.8"
         },
         "decrement_stack": {}
       },
