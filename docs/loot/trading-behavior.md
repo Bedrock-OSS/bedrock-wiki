@@ -25,7 +25,7 @@ For a simple trading UI, `trade_table` + `trade_with_player` components should d
 ```
 
 3. Now make sure the component group is added to the entity via an event. It's a good idea to add it in `minecraft:entity_spawned` event, since it triggers on spawn.
-If you don't feel confident with events and component groups, make sure you're familiar with entity definition rules/concepts: {LINK TO CUSTOM ENTITY BEHAVIOR DEFINITION SUBGUIDE}.
+If you don't feel confident with events and component groups, make sure you're familiar with entity definition rules/concepts. See the [Intro to Entities](/entities/entity-intro-bp).
 
 :::warning
 If you add the component in components, it will cause all kinds of problems, including blank trading UIs for all entities in the world. Because of an issue with the trading AI goals, they must be added in component groups.
