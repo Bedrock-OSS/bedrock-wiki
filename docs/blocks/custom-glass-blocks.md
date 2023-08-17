@@ -88,7 +88,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
         "group": "itemGroup.name.glass"
       },
       "properties": {
-        // Properties needed for connected textures, also contols up and down culling
+        // Properties needed for connected textures, also controls up and down culling
         "wiki:connected_state": [0, 1, 2, 3],
         // Properties to cull faces depending on surrounding blocks
         "wiki:cull_north": [false, true],
