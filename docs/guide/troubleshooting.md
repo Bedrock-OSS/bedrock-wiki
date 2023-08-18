@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting
 category: Extra
+description: A simple troubleshooting guide
 prefix: 'c. '
 nav_order: 3
 tags:
