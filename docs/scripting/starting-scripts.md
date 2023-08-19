@@ -6,10 +6,11 @@ mentions:
     - Herobrine643928
     - JaylyDev
     - SmokeyStack
+    - kumja1
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.10
 :::
 
 ## Overview
@@ -77,12 +78,12 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 			// Enables the use of @minecraft/server module
 			// note that version changes every monthly releases.
       "module_name": "@minecraft/server",
-      "version": "1.3.0-beta"
+      "version": "1.4.0-beta"
     },
     {
 			// Enables the use of @minecraft/server-ui module
       "module_name": "@minecraft/server-ui",
-      "version": "1.1.0-beta"
+      "version": "1.2.0-beta"
     }
   ]
 }
@@ -94,22 +95,22 @@ If your project needs other module to run your code, add another dependency that
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
 -   `@minecraft/server`:
-    -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server/v/1.2.0-rc.1.20.0-preview.21) (Latest version)
+    -   [`1.3.0`](https://www.npmjs.com/package/@minecraft/server/v/1.3.0) (Latest version)
+    -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server/v/1.2.0)
     -   [`1.1.0`](https://www.npmjs.com/package/@minecraft/server/v/1.1.0)
     -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0)
+
 -   `@minecraft/server-ui`:
-    -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.0.0-rc.1.20.0-preview.21) (Latest version, requires `@minecraft/server@1.2.0`)
+    -   [`1.1.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.1.0) (Latest version, requires `@minecraft/server@1.3.0`)
 
 **Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
 
 -   `@minecraft/server`:
 
-    -   [`1.3.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.3.0-beta.1.20.0-preview.21) (Latest beta)
-    -   `0.1.0` (use `mojang-minecraft`, NOT `@minecraft/server` when importing module for this version)
+    -   [`1.4.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.3.0-beta.1.20.0-preview.21) (Latest beta)
 
 -   `@minecraft/server-ui`:
-    -   [`1.1.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.1.0-beta.1.20.0-preview.21) (Latest beta)
-    -   `0.1.0` (use `mojang-minecraft-ui`, NOT `@minecraft/server-ui` when importing module for this version)
+    -   [`1.2.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.1.0-beta.1.20.0-preview.21) (Latest beta)
 -   `@minecraft/server-gametest`:
 
     -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.20.0-preview.21) (Latest beta)
