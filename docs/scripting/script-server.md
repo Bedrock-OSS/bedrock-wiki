@@ -10,7 +10,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.10
 :::
 
 In Scripting API, most of the core features are implemented in the `@minecraft/server` module, with lots of methods to interact a Minecraft world, including entities, blocks, dimensions, and more programmatically. This article contains a basic introduction to some of the core API mechanics, for more detailed information please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
@@ -26,7 +26,7 @@ You will need to add the Script module as a dependency in your `manifest.json`.
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.1.0-beta"
+			"version": "1.4.0-beta"
 		}
 	]
 }
@@ -51,7 +51,7 @@ import { world } from "@minecraft/server";
 -
 // subscribing to a blockBreak event
 // - fires when a player breaks a block
-world.events.blockBreak.subscribe((event) => {
+world.afterEvents.blockBreak.subscribe((event) => {
 	const player = event.player; // Player that broke the block
 	const block = event.block; // Block that's broken
 	player.sendMessage(`You have broken ${block.typeId}`); // send a message to player
@@ -72,7 +72,7 @@ Just like world events, get the `events` property from system object. In this ex
 import { system } from "@minecraft/server";
 
 // subscribing to a beforeWatchdogTerminate event
-system.events.beforeWatchdogTerminate.subscribe((event) => {
+system.beforeEvents.watchdogTerminate.subscribe((event) => {
 	event.cancel = true;
 	console.warn('Canceled critical exception of type ' + event.terminateReason);
 });
@@ -103,7 +103,7 @@ What event listener returns:
 ```js
 import { system } from "@minecraft/server";
 
-system.events.scriptEventReceive.subscribe((event) => {
+system.afterEvents.scriptEventReceive.subscribe((event) => {
   const {
   	id,           // returns string (wiki:test)
   	initiator,    // returns Entity
@@ -192,23 +192,23 @@ The `DynamicPropertiesDefinition` class is used in conjunction with the `Propert
 To register dynamic properties in Minecraft, developers can subscribe to the `worldInitialize` event provided by the `world` object in the `@minecraft/server` module. Here's an example of how to do that:
 
 ```typescript
-import { DynamicPropertiesDefinition, MinecraftEntityTypes, world } from "@minecraft/server";
+import { DynamicPropertiesDefinition, world } from "@minecraft/server";
 
-world.events.worldInitialize.subscribe((event) => {
+world.afterEvents.worldInitialize.subscribe((event) => {
   const propertiesDefinition = new DynamicPropertiesDefinition();
   propertiesDefinition.defineBoolean('isAngry');
-  event.propertyRegistry.registerEntityTypeDynamicProperties(propertiesDefinition, MinecraftEntityTypes.zombie);
+  event.propertyRegistry.registerEntityTypeDynamicProperties(propertiesDefinition, 'minecraft:zombie');
 });
 ```
 
-In this example, we are defining a boolean dynamic property called `isAngry` and registering it for all zombie entities in the world. The registerEntityTypeDynamicProperties method is used to register the dynamic property for a particular entity type, in this case, `MinecraftEntityTypes.zombie`.
+In this example, we are defining a boolean dynamic property called `isAngry` and registering it for all zombie entities in the world. The registerEntityTypeDynamicProperties method is used to register the dynamic property for a particular entity type, in this case, `minecraft:zombie`.
 
 Similarly, you can use the `registerWorldDynamicProperties` method to register globally available dynamic properties for a world. Here's an example of how to register a number dynamic property called `playerScore` for the entire world:
 
 ```typescript
 import { DynamicPropertiesDefinition, world } from "@minecraft/server";
 
-world.events.worldInitialize.subscribe((event) => {
+world.afterEvents.worldInitialize.subscribe((event) => {
   const propertiesDefinition = new DynamicPropertiesDefinition();
   propertiesDefinition.defineNumber('playerScore');
   event.propertyRegistry.registerWorldDynamicProperties(propertiesDefinition);
@@ -228,13 +228,14 @@ It is important to note that registering a dynamic property does not set a value
 With this in mind, here are some examples of how to get and set dynamic properties in Minecraft:
 
 ```typescript
-import { MinecraftEntityTypes, world } from "@minecraft/server";
+import { world } from "@minecraft/server";
 
-world.events.entityHit.subscribe(({ hitEntity }) => {
-  if (hitEntity.typeId !== MinecraftEntityTypes.zombie.id) return; // only zombies that got hit
+world.afterEvents.entityHitEntity.subscribe(({ hitEntity }) => {
+  if (hitEntity.typeId !== 'minecraft:zombie') return; // only zombies that got hit
   hitEntity.setDynamicProperty('isAngry', true); // set boolean property with value
   const isAngry = hitEntity.getDynamicProperty<boolean>('isAngry'); // get boolean property
 });
+
 ```
 
 In this example, we are setting a boolean dynamic property called `isAngry` on a zombie entity that got hit. We then get the value of the `isAngry` property using the `getDynamicProperty` method.
@@ -274,9 +275,9 @@ Returns a `Promise<CommandResult>`. Throws an error **synchronously** if the que
 
 Normally we recommend avoiding using commands because it's slow to run a command from Script API, and server performance starts to slow down as more commands are executed over time. However, the following command features are not implemented in scripting API, which leaves us no choice but to use `runCommand` or `runCommandAsync`.
 
-**Ender chest and offhand slot**
+**Ender chest**
 
-Script API does not provide any methods to get/set information of player's ender chest and off hand slot. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
+Script API does not provide any methods to get/set information of player's ender chest. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
 
 **tickingarea**
 
@@ -326,15 +327,10 @@ Script API even though the loot is broken from the start, but it's useful for dr
 **weather**
 
 -   Script API can't get weather directly.
--   Can't set weather.
 
 **difficulty**
 
 Script API can't set world difficulty.
-
-**playanimation**
-
-Script API can't play client entity animation.
 
 **mobevent**
 
