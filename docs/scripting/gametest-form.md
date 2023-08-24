@@ -14,6 +14,7 @@ mentions:
     - Herobrine643928
     - SmokeyStack
     - ThomasOrs
+    - kumja1
 ---
 
 ::: warning
@@ -30,11 +31,11 @@ Like other modules, you will need to add the dependency into your `manifest.json
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server-ui",
-			"version": "1.0.0-beta"
+			"version": "1.2.0-beta"
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.3.0-beta"
+			"version": "1.4.0-beta"
 		}
 	]
 }
@@ -260,8 +261,8 @@ After we create the form, we will need to show the form to the player and save t
 Let's say our form must be opened with a stick that is named "Form Opener". You can use any event with any configurations in order to open your own form.
 
 ```js
-world.events.beforeItemUse.subscribe(event => {
-	if (event.item.typeId === "minecraft:stick" && event.item.nameTag === "Form Opener") {
+world.beforeEvents.itemUse.subscribe(event => {
+	if (event.itemStack.typeId === "minecraft:stick" && event.itemStack.nameTag === "Form Opener") {
 		// Form
 	};
 });
