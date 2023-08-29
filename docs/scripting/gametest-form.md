@@ -261,13 +261,16 @@ After we create the form, we will need to show the form to the player and save t
 Let's say our form must be opened with a stick that is named "Form Opener". You can use any event with any configurations in order to open your own form.
 
 ```js
-world.beforeEvents.itemUse.subscribe(event => {
+world.afterEvents.itemUse.subscribe(event => {
 	if (event.itemStack.typeId === "minecraft:stick" && event.itemStack.nameTag === "Form Opener") {
 		// Form
 	};
 });
 ```
-
+::note - if beforeEvent triggers are used the Event privages will prevent the code from executing unless chaged to:
+```
+world.beforeEvents.itemUse.subscrube((event)=>{ system.run((event)=>{ your code }); });
+```
 :::warning
 These forms will only open when no other UI is open. If you want to open the form through a custom command/chat message, you cannot because the chat UI is open. You will need to use `/damage` to close the chat UI, then open the form. The best option is using another event.
 :::
