@@ -50,6 +50,85 @@ And your conditions like this;
 
 "condition": "q.block_property('wiki:division') == 1 && q.block_property('wiki:value') == 2"
 ```
+
+# Binary Method
+We can use two properties to produce a single number that can range from 0 to 255.
+
+In same way we can use 3 properties to produce a single number that can range from 0 to 4095
+
+## Value Range Calculation
+
+minimum value = 0
+
+maximum value = 16^n - 1
+
+_where n is number of properties_
+
+
+## How to use
+### create properties
+```json
+"properties": {
+    "wiki:high": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13,14,15 ], //every property must have exactly these values
+    "wiki:low": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13,14,15 ]
+}
+```
+
+### reading value
+```json
+"condition":"q.block_property('wiki:high') * 16 + q.block_property('wiki:low') = 157"
+// the condition will be true when wiki:high = 9 and wiki:low = 13
+```
+### Storing value
+suppose we want to save number 98
+```json
+"set_block_state": {
+    "wiki:high":  "math.floor(98/16)", //divide value to save by 16 and assign quotient to property
+    "wiki:low":    "math.mod(98,16)", //divide value to save by 16 and assign remainder to property
+}
+```
+## How it works
+Since a property can hold 16 different values, this means 4 bit of data.
+
+![Image describing how it works](https://github.com/Bedrock-OSS/bedrock-wiki/assets/109032503/a7d00866-2120-49d3-ba85-5b92a4e831d8)
+
+**why multiply, divide or do modulus with 16**
+
+
+The reason is simple we are using two properties with lower part aka wiki:low able to hold 16 different values only
+
+## Creating it with 3 properties
+we create **wiki:high** , **wiki:low1**, **wiki:low2** by using same method.
+
+earlier we used constant 16 for wiki:high but this time we will use 256 for wiki:high
+
+The reason is all wiki:lows can store upto 256 different values (0 - 255)
+
+### Saving
+
+lets save 2355
+```
+//pseudo code
+wiki:high = math.floor(2355/256)
+remainder = math.mod(2355,256)
+//the remainder can be saved in same way as we use to store in 2 properties bcz this remainder range is 0 to 255
+wiki:low1 = math.floor(remainder/16)
+wiki:low2 = math.mod(remainder,16)
+```
+this is how it will look like in minecraft json
+```json
+ "set_block_property": {
+      "wiki:high": "math.floor(2355/256)",
+      "wiki:low1": "math.floor(math.mod(2355,256)/16)",
+      "wiki:low2": "math.mod(math.mod(2355,256),16)"
+    }
+```
+### Reading
+```json
+"condition":"q.block_property('wiki:high') * 256 + (q.block_property('wiki:low1') * 16 + q.block_property('wiki:low2')) == 4355"
+```
+
+
 ## What You Have Learned
 You have learned how to use less than 64 properties and do more, combining properties to have better possibilities.
 
