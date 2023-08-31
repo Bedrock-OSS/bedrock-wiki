@@ -285,7 +285,10 @@ Script API can't access ticking areas.
 
 **kick**
 
-Script API can't kick player.
+Script API can't kick player. Without proxying that command via execute as
+```
+player.runcommand('execute as " + player.name + " run kick " + playerToKick +" " +reason);
+```
 
 **setblock**
 
