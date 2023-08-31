@@ -182,6 +182,7 @@ Possible values include:
 *   `0`, `s`, or `survival` for Survival mode
 *   `1`, `c`, or `creative` for Creative mode
 *   `2`, `a`, or `adventure` for Adventure mode
+*   `spectator` for Spectator mode
 *   `d` or `default` for the default game mode
 
 Examples:
