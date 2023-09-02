@@ -575,7 +575,7 @@ function releasePaper(e) {
 }
 
 // Release paper on block break and explode
-world.afterEvents.blockBreak.subscribe((e) => {
+world.afterEvents.playerBreakBlock.subscribe((e) => {
   if (e.brokenBlockPermutation.type.id !== "wiki:pigeonholes") return;
   releasePaper(e);
 });
@@ -789,7 +789,7 @@ function releasePlants(e) {
   }
 }
 
-world.afterEvents.blockBreak.subscribe((e) => {
+world.afterEvents.playerBreakBlock.subscribe((e) => {
   if (e.brokenBlockPermutation.type.id === "wiki:double_flower_pot") releasePlants(e);
 });
 world.afterEvents.blockExplode.subscribe((e) => {
