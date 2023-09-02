@@ -111,7 +111,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.50
 }
 ```
 
-## Destructible By Explosion
+## Destructible by Explosion
 
 How resistant your block is to being destroyed by explosions.
 
@@ -136,7 +136,7 @@ How resistant your block is to being destroyed by explosions.
 "minecraft:destructible_by_explosion": false // Cannot be destroyed by explosions
 ```
 
-## Destructible By Mining
+## Destructible by Mining
 
 Duration required to destroy block when being mined.
 
