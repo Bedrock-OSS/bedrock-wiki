@@ -17,7 +17,7 @@ Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/starting
 ::: warning EXPERIMENTAL
 Requires `Holiday Creator Features` to trigger block events.
 
-Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.5.0-beta`.
+Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.6.0-beta`.
 :::
 
 :::danger NO EMPTY HANDS!
@@ -819,7 +819,7 @@ Don't forget to import your scripts into your pack's entry file!
   "dependencies": [
     {
       "module_name": "@minecraft/server",
-      "version": "1.5.0-beta"
+      "version": "1.6.0-beta"
     }
   ]
 }

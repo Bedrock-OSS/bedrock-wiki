@@ -19,7 +19,7 @@ Check out the [blocks guide](/blocks/blocks-intro) before starting.
 ::: warning EXPERIMENTAL
 Requires `Holiday Creator Features` for use of block tag Molang queries and to trigger block events.
 
-Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.5.0-beta`.
+Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.6.0-beta`.
 :::
 
 Creating fluids that are identical to vanilla fluids is not currently possible, but you can make something similar! This template/tutorial is designed to assist you in creating a custom "semi-fluid".
@@ -299,7 +299,7 @@ The fluids use a script to add the ability for the player to float/sink in the f
   "dependencies": [
     {
       "module_name": "@minecraft/server",
-      "version": "1.5.0-beta"
+      "version": "1.6.0-beta"
     }
   ]
 }
