@@ -167,27 +167,27 @@ Textures can also be applied per face. For example, a custom "compass block" cou
 
 `textures/blocks/compass_block_down.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_down.png" pixelated="true" width="60"/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_down.png" pixelated="true" width="64"/>
 
 `textures/blocks/compass_block_up.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_up.png" pixelated="true" width="60"/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_up.png" pixelated="true" width="64"/>
 
 `textures/blocks/compass_block_north.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_north.png" pixelated="true" width="60"/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_north.png" pixelated="true" width="64"/>
 
 `textures/blocks/compass_block_east.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_east.png" pixelated="true" width="60"/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_east.png" pixelated="true" width="64"/>
 
 `textures/blocks/compass_block_south.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_south.png" pixelated="true" width="60"/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_south.png" pixelated="true" width="64"/>
 
 `textures/blocks/compass_block_west.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_west.png" pixelated="true" width="60"/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_west.png" pixelated="true" width="64"/>
 
 <br>
 <br>
