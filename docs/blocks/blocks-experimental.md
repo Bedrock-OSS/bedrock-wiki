@@ -47,8 +47,8 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 | Trait                                                                           | Required Experiments              |
 | ------------------------------------------------------------------------------- | --------------------------------- |
-| [`minecraft:placement_direction`](/blocks/block-components#placement-direction) | None _(format versions 1.20.30+)_ |
-| [`minecraft:placement_position`](/blocks/block-components#placement-position)   | None _(format versions 1.20.30+)_ |
+| [`minecraft:placement_direction`](/blocks/block-components#placement-direction) | None _(format versions 1.20.20+)_ |
+| [`minecraft:placement_position`](/blocks/block-components#placement-position)   | None _(format versions 1.20.20+)_ |
 
 ## Block Permutations
 
