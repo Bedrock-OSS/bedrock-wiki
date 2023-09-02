@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.20`
+::: tip FORMAT VERSION `1.20.30`
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/starting-scripts) guides before starting.
 :::
@@ -395,7 +395,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:pigeonholes",
@@ -606,7 +606,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:double_flower_pot",

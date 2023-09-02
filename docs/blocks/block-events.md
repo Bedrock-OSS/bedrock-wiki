@@ -9,8 +9,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.20.20`
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.20.20`.
+:::tip FORMAT & MIN ENGINE VERSION `1.20.30`
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.20.30`.
 :::
 :::warning EXPERIMENTAL
 Block events require the `Holiday Creator Features` experiment to be enabled.
@@ -26,7 +26,7 @@ Block events allow you to manipulate the game world when certain conditions are 
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:loot_dropper"

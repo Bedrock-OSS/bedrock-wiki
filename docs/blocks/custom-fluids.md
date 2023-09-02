@@ -11,13 +11,13 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.20`
+::: tip FORMAT VERSION `1.20.30`
 This tutorial assumes an advanced understanding of blocks and the execute command.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 ::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` for use of experimental Molang queries, new item features and to trigger block events.
+Requires `Holiday Creator Features` for use of block tag Molang queries and to trigger block events.
 
 Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.5.0-beta`.
 :::
@@ -57,7 +57,7 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_fluid",
@@ -255,7 +255,7 @@ To place your custom fluid you need a custom bucket item. Below is the JSON for 
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_fluid_bucket",

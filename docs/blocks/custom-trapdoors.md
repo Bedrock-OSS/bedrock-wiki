@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.20`
+::: tip FORMAT VERSION `1.20.30`
 This tutorial assumes a good understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -30,7 +30,7 @@ This will create a vanilla-like custom trapdoor.
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_trapdoor",

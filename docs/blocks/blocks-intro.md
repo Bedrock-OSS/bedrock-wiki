@@ -26,7 +26,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.20.20`
+:::tip FORMAT & MIN ENGINE VERSION `1.20.30`
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::
 :::danger <nbsp/>
@@ -43,13 +43,13 @@ Block definitions are structured similarly to entities: they contain a descripti
 
 Unlike entities, blocks do not have a resource definition other than in `RP/blocks.json`.
 
-Below is the **minimum** behavior-side code to get a custom block in the creative inventory.
+Below is the **minimum** behavior-side code to get a custom block into the creative inventory.
 
 <CodeHeader>BP/blocks/custom_block.json</CodeHeader>
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_block",
@@ -82,7 +82,7 @@ Let's configure our own functionality!
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_block",

@@ -9,13 +9,13 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.20`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
 This tutorial assumes an advanced understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 ::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger block events and for use of block tag Molang queries.
+Requires `Holiday Creator Features` for use of block tag Molang queries and to trigger block events.
 :::
 
 Creating your own tree with decaying leaves is complex, but possible! Follow this tutorial and you'll have your own in no time.
@@ -211,7 +211,7 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_log",
@@ -327,7 +327,7 @@ Here all components are the same
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_stripped_log",
@@ -405,7 +405,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_sapling",
@@ -497,7 +497,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_sapling_placer",

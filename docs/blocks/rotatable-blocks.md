@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.20`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states) and [block traits](/blocks/block-traits).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -335,7 +335,7 @@ This example also requires `Holiday Creator Features` to use `minecraft:unit_cub
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_log",

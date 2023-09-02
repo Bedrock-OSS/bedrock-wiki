@@ -10,9 +10,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION `1.20.20`
+:::tip FORMAT VERSION `1.20.30`
 
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information on custom blocks, and currently targets format version `1.20.20`.
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information on custom blocks, and currently targets format version `1.20.30`.
 :::
 
 This page acts as an index outlining experimental requirements of custom block features.
@@ -47,8 +47,8 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 | Trait                                                                           | Required Experiments              |
 | ------------------------------------------------------------------------------- | --------------------------------- |
-| [`minecraft:placement_direction`](/blocks/block-components#placement-direction) | None _(format versions 1.20.20+)_ |
-| [`minecraft:placement_position`](/blocks/block-components#placement-position)   | None _(format versions 1.20.20+)_ |
+| [`minecraft:placement_direction`](/blocks/block-components#placement-direction) | None _(format versions 1.20.30+)_ |
+| [`minecraft:placement_position`](/blocks/block-components#placement-position)   | None _(format versions 1.20.30+)_ |
 
 ## Block Permutations
 

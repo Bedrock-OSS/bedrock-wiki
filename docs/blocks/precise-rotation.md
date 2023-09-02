@@ -8,15 +8,13 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.20`
+::: tip FORMAT VERSION `1.20.30`
 This tutorial assumes an advanced understanding of blocks and Molang.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 ::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger events. 
-
-Requires `Upcoming Creator Features` to use block traits.
+Requires `Holiday Creator Features` to trigger events.
 :::
 
 This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a "shell" block with this rotation type.
@@ -195,7 +193,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",
@@ -390,7 +388,7 @@ Our block JSON file after the above steps should look similar to the code below:
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",

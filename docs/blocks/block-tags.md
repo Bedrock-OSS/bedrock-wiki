@@ -25,7 +25,7 @@ Block tags can be applied in the same way as items - in the block's `components`
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:tree_stump",
@@ -66,7 +66,7 @@ Example of an item querying a block's tags:
 
 ```json
 {
-  "format_version": "1.20.20",
+  "format_version": "1.20.30",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_pickaxe",
