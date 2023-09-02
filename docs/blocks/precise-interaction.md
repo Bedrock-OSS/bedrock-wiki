@@ -40,6 +40,7 @@ The provided methods of precise interaction use `faceLocation`, a property of th
 
 - [`ItemUseOnBeforeEvent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/itemuseonbeforeevent)
 - [`ItemUseOnAfterEvent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/itemuseonafterevent)
+- [`PlayerPlaceBlockBeforeEvent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/playerplaceblockbeforeevent)
 
 It's also a returned property from the following methods:
 
