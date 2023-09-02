@@ -9,17 +9,21 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.30`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 ::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger block events.
+Requires `Holiday Creator Features` to trigger block events and for use of the `minecraft:unit_cube` component.
 :::
 
 ## Introduction
 Making custom slabs is a simple task, but if you find any drawbacks during recreating slabs, this tutorial will help you with it, and you'll be provided with a template for you to use.
+
+Issues:
+- Your custom slab will appear vertically centred when carried.
+- Your custom slab may appear full-sized in item form (on the ground, in item frames, in hand)
 
 ## Custom Slab
 This will create a vanilla-like custom slab.

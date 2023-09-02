@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.30`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
 This tutorial assumes a good understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::

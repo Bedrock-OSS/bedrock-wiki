@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.30`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
 This tutorial assumes an advanced understanding of blocks and the execute command.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
