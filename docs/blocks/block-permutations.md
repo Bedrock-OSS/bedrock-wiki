@@ -34,9 +34,9 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
     "description": {
       "identifier": "wiki:custom_block",
       "states": {
-        "wiki:custom_integer_state": [2, 4, 6, 8],
-        "wiki:custom_boolean_state": [false, true],
-        "wiki:custom_string_state": ["red", "green", "blue"]
+        "wiki:integer_state_example": [2, 4, 6, 8],
+        "wiki:boolean_state_example": [false, true],
+        "wiki:string_state_example": ["red", "green", "blue"]
       }
     },
     "components": {},
