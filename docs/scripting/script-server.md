@@ -391,7 +391,7 @@ world.beforeEvents.chatSend.subscribe(event => {
 
 To migrate code with the new privilege system, the `world.setTime()` function is wrapped inside the `system.run()` method, which delays its execution by a tick. This ensures that the function is not executed in the same tick that the before event fires.
 
-2. Execute function asynchronously:
+2. Execute function at a later tick using `async` functions:
 
 ```js
 world.beforeEvents.chatSend.subscribe(async (event) => {
@@ -404,4 +404,4 @@ world.beforeEvents.chatSend.subscribe(async (event) => {
 });
 ```
 
-The use of `await` is another way to cause the code to run asynchronously without the use of `system.run()`. As the code before `await` are run synchronously, so the event can be canceled with `event.cancel = true`.
+By using `async` functions that wait for longer than a tick the privelege system can be bypassed. As the code before `await` is run synchronously, so the event can be canceled with `event.cancel = true`, and in the later ticks the operation can proceed. Note that async/await calls alone are not enough, as code run in this manner still performs synchronously until a blocking call is used (such as the `sleep()` function in the example). 

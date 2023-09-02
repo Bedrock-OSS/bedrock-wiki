@@ -1,6 +1,7 @@
 ---
 title: Project Setup Android
 category: Guide
+description: How to setup your project on Android
 mentions:
     - Etanarvazac
     - MedicalJewel105
