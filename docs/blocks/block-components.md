@@ -354,18 +354,22 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.40
 Render methods essentially control how a block appears in the world, much like entity materials. Below are the key properties of each type:
 
 | Render Method      | _Transparency_ | _Translucency_ | _Backface Culling_ | Vanilla Examples                |
-| ------------------ | -------------- | -------------- | ------------------ | ------------------------------- |
-| opaque _(default)_ | ❌             | ❌             | ✔️                 | Dirt, Stone, Concrete.          |
-| double_sided       | ❌             | ❌             | ❌                 | N/A - Use for opaque 2D plains. |
-| alpha_test         | ✔️             | ❌             | ❌                 | Vines, Rails, Saplings.         |
-| blend              | ✔️             | ✔️             | ✔️                 | Glass, Beacon, Honey Block.     |
+| ------------------ | :------------: | :------------: | :----------------: | ------------------------------- |
+| opaque _(default)_ |       ❌       |       ❌       |         ✔️         | Dirt, Stone, Concrete.          |
+| double_sided       |       ❌       |       ❌       |         ❌         | N/A - Use for opaque 2D plains. |
+| alpha_test         |       ✔️       |       ❌       |         ❌         | Vines, Rails, Saplings.         |
+| blend              |       ✔️       |       ✔️       |         ✔️         | Glass, Beacon, Honey Block.     |
 
--   _Transparency_ - fully see-through areas.
+-   **_Transparency_** - fully see-through areas.
 
--   _Translucency_ - semi-transparent areas.
+-   **_Translucency_** - semi-transparent areas.
 
--   _Backface Culling_ - faces become invisible when viewed from behind.
-    -   Render methods without backface culling disappear at a distance (based on render distance).
+    -   Transulcent pixel appear opaque in UI rendering.
+
+-   **_Backface Culling_** - faces become invisible when viewed from behind.
+
+    -   Render methods without backface culling disappear at a distance (based on fog/render distance).
+    -   Backface culling is **always** enabled in UI rendering.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -377,7 +381,7 @@ Render methods essentially control how a block appears in the world, much like e
   "*": {
     "texture": "texture_name", // Shortname defined in `RP/textures/terrain_textures.json`
     "render_method": "blend", // One of the render methods in the above table
-    "face_dimming": true, // Defaults to true; should this material be dimmed by the direction it's facing?
+    "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
     "ambient_occlusion": true // Defaults to true; should shadows be created based on surrounding blocks?
   }
 }
