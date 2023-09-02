@@ -52,7 +52,7 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_leaves",
