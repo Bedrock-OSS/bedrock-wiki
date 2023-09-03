@@ -75,7 +75,7 @@ Looks simple, doesn't it?
     ],
     "on_dig": {
 		// Defines event that should happen when any block was destroyed.
-        "event": "damage_item"
+        "event": "durability_update"
     }
 }
 ```
