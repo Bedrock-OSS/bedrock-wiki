@@ -48,9 +48,11 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 Listed below are ways to get the current value of block states in different contexts.
 
-### Molang Query
+### Molang Query Function
 
-State values are returned by `q.block_state`.
+State values are returned by the `block_state` query function.
+
+<CodeHeader></CodeHeader>
 
 ```c
 q.block_state('wiki:string_state_example') == 'blue'
@@ -58,7 +60,9 @@ q.block_state('wiki:string_state_example') == 'blue'
 
 ### Command Argument
 
-The block states argument is included in commands such as `execute` and `testforblock`, and can be used to check the value of block states.
+The [block states argument](/commands/block-states) is included in commands such as `execute` and `testforblock`, and can be used to check the value of block states.
+
+<CodeHeader></CodeHeader>
 
 ```c
 execute if block ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer_state_example"=4] run kill
@@ -66,7 +70,13 @@ execute if block ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki
 
 ### Script API
 
-The `BlockPermutation` scripting class has methods which allow you to get the current value of different states.
+:::warning EXPERIMENTAL
+The [`BlockPermutation.getState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#getstate) method requires the `Beta APIs` experiment to be enabled.
+:::
+
+The [`BlockPermutation.getState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#getstate) method allows you to get the current value of different states.
+
+<CodeHeader></CodeHeader>
 
 ```js
 customBlock.permutation.getState("wiki:integer_state_example") === 3
@@ -76,7 +86,9 @@ customBlock.permutation.getState("wiki:integer_state_example") === 3
 
 ### Command Argument
 
-The block states argument is included in commands such as `setblock` and `fill`, and can be used to change states away from their default values.
+The [block states argument](/commands/block-states) is included in commands such as `setblock` and `fill`, and can be used to change states away from their default values.
+
+<CodeHeader></CodeHeader>
 
 ```c
 setblock ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer_state_example"=4]
@@ -84,7 +96,13 @@ setblock ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer
 
 ### Script API
 
-The `BlockPermutation` scripting class has methods which allow you to change the values of states.
+:::warning EXPERIMENTAL
+The [`BlockPermutation.withState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#withstate) method requires the `Beta APIs` experiment to be enabled.
+:::
+
+The [`BlockPermutation.withState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#withstate) method returns a new block permutation with the specified state value changed. This permutation can be applied to the block using the [`Block.setPermutation()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/block#setpermutation) method, as seen below.
+
+<CodeHeader></CodeHeader>
 
 ```js
 customBlock.setPermutation(
@@ -98,7 +116,7 @@ customBlock.setPermutation(
 Block events require the `Holiday Creator Features` experiment to be enabled.
 :::
 
-The `set_block_state` event response can change the values of custom block states.
+The [`set_block_state`](/blocks/block-events#set-block-state) event response can change the values of custom block states.
 
 <CodeHeader>minecraft:block > events</CodeHeader>
 
