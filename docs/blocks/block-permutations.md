@@ -25,7 +25,7 @@ The `permutations` array is a direct child of `minecraft:block` and is made up o
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.70 and higher._
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/blocks/custom_block.json</CodeHeader>
 
 ```json
 {
