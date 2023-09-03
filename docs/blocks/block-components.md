@@ -4,14 +4,12 @@ description: Block components are used to change how your block appears and func
 category: General
 nav_order: 2
 mentions:
-    - SmokeyStack
-    - QuazChick
     - SirLich
     - solvedDev
     - yanasakana
+    - SmokeyStack
     - MedicalJewel105
     - aexer0e
-    - SmokeyStack
     - Chikorita-Lover
     - Luthorius
     - TheDoctor15
@@ -19,6 +17,7 @@ mentions:
     - TheItsNameless
     - ThomasOrs
     - Kaioga5
+    - QuazChick
 ---
 
 :::tip FORMAT & MIN ENGINE VERSION `1.20.30`
