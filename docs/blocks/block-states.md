@@ -34,7 +34,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
         "wiki:boolean_state_example": [false, true],
         "wiki:integer_state_example": [1, 2, 3],
         "wiki:integer_range_state_example": {
-          "values": { "min": 0, "max": 5 } // Same as [0, 1, 2, 3, 4, 5]
+          "values": { "min": 0, "max": 5 } // The same as [0, 1, 2, 3, 4, 5]
         }
       }
     },
@@ -82,6 +82,16 @@ The block states argument is included in commands such as `setblock` and `fill`,
 setblock ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer_state_example"=4]
 ```
 
+### Script API
+
+The `BlockPermutation` scripting class has methods which allow you to change the values of states.
+
+```js
+customBlock.setPermutation(
+  customBlock.permutation.withState("wiki:boolean_state_example", false)
+);
+```
+
 ### Event Response
 
 :::warning EXPERIMENTAL
@@ -99,14 +109,4 @@ The `set_block_state` event response can change the values of custom block state
     "wiki:string_state_example": "'red'"
   }
 }
-```
-
-### Script API
-
-The `BlockPermutation` scripting class has methods which allow you to change the values of states.
-
-```js
-customBlock.setPermutation(
-  customBlock.permutation.withState("wiki:boolean_state_example", false)
-);
 ```
