@@ -167,7 +167,7 @@ The following permutation sets top texture to be wet when the `wiki:moisture` va
 
 ### Hydration
 
-Each random tick, out farmland should trigger an event to determine the block's current moisture state.
+Each random tick, our farmland should trigger an event to determine the block's current moisture state.
 
 <CodeHeader>minecraft:block</CodeHeader>
 
@@ -210,7 +210,7 @@ This is the tricky part of our farmland block, water detection. In vanilla Minec
 
 ### Trampling
 
-If out custom farmland is fallen onto, it should have a chance to decay.
+If our custom farmland is fallen onto, it should have a chance to decay.
 
 <CodeHeader>minecraft:block</CodeHeader>
 

@@ -74,7 +74,7 @@ _The block description is also home to [states](/blocks/block-states) and [trait
 
 ## Adding Components
 
-Right now, out custom block is using the default component values (which can be found [here](/blocks/block-components)).
+Right now, our custom block is using the default component values (which can be found [here](/blocks/block-components)).
 
 Let's configure our own functionality!
 
