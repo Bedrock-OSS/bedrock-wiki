@@ -11,7 +11,6 @@ mentions:
 ---
 
 :::tip FORMAT VERSION `1.20.30`
-
 Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information on custom blocks, and currently targets format version `1.20.30`.
 :::
 

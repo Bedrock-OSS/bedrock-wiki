@@ -173,7 +173,7 @@ And done! The code above will trigger the desired status effect as long as the e
 
 Some context for the last part of the code:
 
--   **Q**: Why does the status effect is triggered via `run_command` event function if there's already `add_mob_effect` event response that does that?
+-   **Q**: Why is the effect triggered via the `run_command` event response if there's already an `add_mob_effect` event response that does that?
 
 -   **A**: `add_mob_effect` does not have a target when triggered from `minecraft:queued_ticking`, so `/effect`'s target selection must be used instead.
 
