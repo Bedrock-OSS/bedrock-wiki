@@ -332,6 +332,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:damage
+This component controls the amount of additional attack damgage taht the item does. The value property is a 32-bit integer. This value may also be negative. 
 
 <CodeHeader></CodeHeader>
 
@@ -342,6 +343,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:can_destroy_in_creative
+This component controls whether or not you can break lbocks wiht this item while you are in creative mode. 
 
 <CodeHeader></CodeHeader>
 
@@ -496,6 +498,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:enchantable
+The value property is a 32-bit integer. 
 
 <CodeHeader></CodeHeader>
 
@@ -509,6 +512,7 @@ List of all new item components, with usage examples
 ```
 
 ### Enchantable Slots
+Note: The "all" enchantable slot allows you to apply any enchantment that you want to the item, just like anh enchanted book. 
 
 | Slot Name     |
 | ------------- |
@@ -529,6 +533,7 @@ List of all new item components, with usage examples
 | shield        |
 | shovel        |
 | sword         |
+| all           |
 
 
 ### minecraft:shooter
@@ -544,6 +549,12 @@ List of all new item components, with usage examples
 		"ammunition": [
 			{
 				"item": "minecraft:arrow",
+				"use_offhand": true,
+				"search_inventory": true,
+				"use_in_creative": true
+			},
+			{
+				"item": "minecraft:fireworks_rocket",
 				"use_offhand": true,
 				"search_inventory": true,
 				"use_in_creative": true
@@ -570,18 +581,21 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:armor
+This component allows you to put the item into the armor slot specified by the minecraft:wearable component. It also stops attatchables from working on the item while it is in a hand slot or while the player is in first person mode. If you want a piece of armor that can still be seen while in first person then don't include this component, and instead include only the minecraft:wearable component, then it will be visible in first person mode too, the side effect of this are that you can't put on the armor directly from the inventory, but instead you have to use the item to put it on, another side effect is that the armor cannot provide any protection values. 
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
 	"minecraft:armor": {
-		"protection": 4
+		"protection": 4,
+		"texture_type" : "none"
 	}
 }
 ```
 
 ### minecraft:wearable
+Allows the item to be worn in the specified inventory slot type. 
 
 <CodeHeader></CodeHeader>
 
@@ -653,6 +667,14 @@ List of all new item components, with usage examples
 				"on_repaired": {
 					"event": "example_event",
 					"target": "holder" // Can also be 'self' to trigger an item event"
+				}
+			},
+			{
+				"items": ["minecraft:diamond", "minecraft:netherite_ingot"],
+				"repair_amount": 100, // Can also be molang expression
+				"on_repaired": {
+					"event": "example_item_event",
+					"target": "self"
 				}
 			}
 		]
@@ -731,6 +753,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:throwable
+Throws the item as the projectile entity type specified in the "minecraft:projectile" component. 
 
 <CodeHeader></CodeHeader>
 
