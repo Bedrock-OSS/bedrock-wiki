@@ -36,7 +36,7 @@ This page acts as an index outlining experimental requirements of custom block f
 | [`minecraft:placement_filter`](/blocks/block-components#placement-filter)                   | None _(format versions 1.19.60+)_ |
 | [`minecraft:selection_box`](/blocks/block-components#selection-box)                         | None _(format versions 1.19.60+)_ |
 | [`minecraft:transformation`](/blocks/block-components#transformation)                       | None                              |
-| [`minecraft:unit_cube`](/blocks/block-components#unit-cube-experimental)                    | **`Holiday Creator Features`**    |
+| [`minecraft:unit_cube`](/blocks/block-components#unit-cube)                                 | **`Holiday Creator Features`**    |
 
 ## Block States
 

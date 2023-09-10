@@ -500,7 +500,7 @@ Lean about [rotatable blocks](/blocks/rotatable-blocks) to apply rotation based 
 }
 ```
 
-## Unit Cube (EXPERIMENTAL)
+## Unit Cube (EXPERIMENTAL) {#unit-cube}
 
 :::warning EXPERIMENTAL
 This component requires the `Holiday Creator Features` experiment to be enabled and is expected to be removed/changed in the future.
