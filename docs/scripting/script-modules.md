@@ -152,3 +152,21 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 	]
 }
 ```
+
+###Module Version compatiblity
+From 1.20.10 until 1.20.40.20-Preview (current at time of writing). Module have opaque compatiblity matrix that appears to be set at the last time the oldest library was updated. For instance:
+|Server        | Server=UI    |            Compatibility|
+|------------|------|-----------------------|
+|1.0.0|1.0.0|True|
+|1.1.0|1.0.0|True|
+|1.2.0|1.0.0 |True|
+|1.3.0+|1.0.0|False|
+|1.0.0|1.1.0 |True|
+|1.1.0|1.1.0 |True|
+|1.2.0|1.1.0|True|
+|1.3.0+|1.1.0|False|
+|1.X.0-Beta|1.0.0|False|
+|1.X.0-Beta|1.1.0|False|
+|1.3.0+|1.2.0-Beta|False|
+
+At the time of writing this only impacts Sever and Server-UI as they are the only 2 thave have stable versions. Testing was completed on 1.20.10 to 1.20.40-preview this bug may be fixed in future version of minecraft.
