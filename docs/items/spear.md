@@ -8,6 +8,7 @@ mentions:
     - SirLich
     - TheItsNamless
     - ThomasOrs
+    - kumja1
 ---
 
 ::: tip
@@ -345,14 +346,14 @@ Now that we've setup our spear, there is no way to damage the spear when it's th
 The script is really simple, and wouldn't require much brain power.
 
 ```js
-import { world, ItemStack, ItemTypes } from "@minecraft/server"
+import { world, ItemStack } from "@minecraft/server"
 import { system } from "@minecraft/server";
 //This prevents world crash
-system.events.beforeWatchdogTerminate.subscribe(data => {
+system.beforeEvents.watchdogTerminate.subscribe(data => {
   data.cancel = true;
 });
 
-world.events.itemReleaseCharge.subscribe(ev => {
+world.afterEvents.itemReleaseUse.subscribe(ev => {
     //This is for multiplayer support
     for (const player of world.getPlayers()){
     //Basic variables to get the player inventory and held item.
@@ -363,13 +364,13 @@ world.events.itemReleaseCharge.subscribe(ev => {
       if (itemStack?.typeId === 'wiki:iron_spear') {
         var container = player.getComponent('inventory').container
         //The new item to be given.
-        var newItem =  new ItemStack(ItemTypes?.get("wiki:iron_spear"));
+        var newItem =  new ItemStack("wiki:iron_spear");
         var oldItem = container?.getItem(player.selectedSlot)
         //Here's that tag!
         player.removeTag("iron_spear")
         }
         //We subscribe a tick event to detect when we have the tag and if the item has durability less than the max.
-      let e = world.events.tick.subscribe(data => {
+      let e = system.runInterval(() => {
       if(player.hasTag("iron_spear") && itemStack?.typeId === 'wiki:iron_spear' && itemStack?.getComponent("durability").damage <= 125) {
         player.removeTag("iron_spear")
         //This gives our saved item (newItem) +1 durability each time we pick it up.
@@ -377,10 +378,11 @@ world.events.itemReleaseCharge.subscribe(ev => {
         container.setItem(player.selectedSlot, newItem);
         //When we don't have the tag, we stop the tick event.
         if(!player.hasTag("iron_spear")){
-        world.events.tick.unsubscribe(e);
+        system.clearRun(e);
       }}
     })}
     })
+
 ```
 
 ## Final Product
