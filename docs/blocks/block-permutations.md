@@ -1,6 +1,6 @@
 ---
 title: Block Permutations
-description: Block permutations are a way of conditionally applying components (including event triggers and tags) to a block with Molang expressions.
+description: The block permutations array provides a way of conditionally applying components to a block based on its current permutation.
 category: General
 nav_order: 7
 mentions:
@@ -13,9 +13,9 @@ Before you learn about block permutations, you should be confident with [block s
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
 
-Block permutations are a way of conditionally applying components (including event triggers and tags) to a block with Molang expressions.
+The block `permutations` array provides a way of conditionally applying components (including event triggers and tags) to a block based on its current permutation (collection of state values).
 
-Permutations can override the block's base components, as well as those of other permutations. The latest permutation in the `permutations` array takes priority.
+Components within the `permutations` array can override the block's base components, as well as those of other component lists. The latest item in the `permutations` array takes priority.
 
 ## Defining Permutations
 
@@ -66,11 +66,11 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ## Permutation Conditions
 
-When evaluated as truthy (not false or 0), the involved permutation's components are applied.
+When evaluated as truthy (not false or 0), the involved component list is applied.
 
 Permutation conditions are written as Molang expression strings, and have very limited context:
 
--   Conditions may only use the query function `q.block_state`.
--   Conditions cannot have side effects.
+-   Conditions are purely based on the block's permutation, therefore only have access to the `q.block_state` query function.
+-   This also means that conditions cannot have side effects.
     -   The following math functions may not be used: `math.die_roll`, `math.die_roll_integer`, `math.random`, `math.random_integer`.
     -   Variables cannot be assigned.
