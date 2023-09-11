@@ -10,10 +10,10 @@ mentions:
 
 ## Introduction
 
-Block states have a total limit of 64 values (16 maximum per state) that cannot be exceed. This article will explain how to avoid reaching the limit.
+Blocks have a limit of 16 valid values per state that cannot be exceed. This guide will explain how to avoid reaching the limit.
 
 :::tip
-This tutorial does not show you how to have more than 64 states values. However, using this method will simulate that amount!
+This tutorial does not show you how to have more than 16 states values, however using this method will simulate that!
 :::
 
 ## How It Works
