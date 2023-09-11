@@ -376,6 +376,7 @@ This component controls whether or not you can break bocks with this item while 
 ```
 
 ### minecraft:explodable
+This component controls whether or not this item can be blown up by explosions such as tnt or a creeper. 
 
 <CodeHeader></CodeHeader>
 
@@ -386,6 +387,7 @@ This component controls whether or not you can break bocks with this item while 
 ```
 
 ### minecraft:should_despawn
+This component controls whether or not this item will despawn. 
 
 <CodeHeader></CodeHeader>
 
