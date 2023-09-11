@@ -343,7 +343,7 @@ This component controls the amount of additional attack damgage taht the item do
 ```
 
 ### minecraft:can_destroy_in_creative
-This component controls whether or not you can break lbocks wiht this item while you are in creative mode. 
+This component controls whether or not you can break bocks with this item while you are in creative mode. 
 
 <CodeHeader></CodeHeader>
 
@@ -396,6 +396,7 @@ This component controls whether or not you can break lbocks wiht this item while
 ```
 
 ### minecraft:liquid_clipped
+This component allows an item to be used on a liquid block to trigger the "minecraft:on_use_on" component, when set to false (default) "minecraft:on_use_on" will not activate when using the item on a liquid block, but when set to true then it will activate. 
 
 <CodeHeader></CodeHeader>
 
@@ -411,7 +412,7 @@ This component controls whether or not you can break lbocks wiht this item while
 
 ```json
 {
-	"minecraft:allow_off_hand": true // Disables most functionality
+	"minecraft:allow_off_hand": true // Disables most functionality while the item is in the off hand. 
 }
 ```
 
@@ -438,6 +439,62 @@ This component controls whether or not you can break lbocks wiht this item while
 		"block": "minecraft:grass",
 		"use_block_description": true
 	}
+}
+```
+
+### minecraft:interact_button
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:interact_button": "Use This Custom Item" // Can be a string or a boolean value. 
+}
+```
+
+### minecraft:hand_equipped
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:hand_equipped": true
+}
+```
+
+### minecraft:stacked_by_data
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:stacked_by_data": true
+}
+```
+
+### minecraft:chargeable
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:chargeable": {
+		"movement_modifier": 0.0,
+		"on_complete": {
+			"event": "example:example_event",
+			"target": "holder" // Can also be 'self' to trigger an item event"
+		}
+	}
+}
+```
+
+### minecraft:hover_text_color
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:hover_text_color": "green"
 }
 ```
 
@@ -602,6 +659,7 @@ Allows the item to be worn in the specified inventory slot type.
 ```json
 {
 	"minecraft:wearable": {
+		"dispensable" : true,
 		"slot": "slot.armor.feet" // Can be slot listed in the '/replaceitem' command
 	}
 }
@@ -630,6 +688,7 @@ Allows the item to be worn in the specified inventory slot type.
 {
 	"minecraft:record": {
 		"sound_event": "cat", // Currently restricted to strings listed below
+		"duration": 5,
 		"comparator_signal": 8
 	}
 }
@@ -670,7 +729,7 @@ Allows the item to be worn in the specified inventory slot type.
 				}
 			},
 			{
-				"items": ["minecraft:diamond", "minecraft:netherite_ingot"],
+				"items": ["minecraft:diamond:2", "minecraft:netherite_ingot"], // Putting a second colon and a number after the item identifier allows you to specify a data value for the item, for example minecraft:diamond:2 will not allow the item to be repaired with normal diamonds, but it will allow it to be repaired with diamonds that have a data value of 2. 
 				"repair_amount": 100, // Can also be molang expression
 				"on_repaired": {
 					"event": "example_item_event",
@@ -811,7 +870,7 @@ _Full list of categories can be found [here](/documentation/creative-categories)
 		},
 		"nutrition": 3,
 		"can_always_eat": true,
-		"saturation_modifier": "normal",
+		"saturation_modifier": "normal", // Can also be a float value. 
 		"using_converts_to": "minecraft:apple" // Changes the food or drink into another item when consumed. It can be changed to any item.
 	}
 }
