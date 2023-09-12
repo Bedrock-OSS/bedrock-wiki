@@ -283,7 +283,8 @@ In general, important behaviors will have a priority of `0` or `1`.
 			"minecraft:loot": {
 				"table": "loot_tables/entities/ghost.json"
 			},
-
+			"minecraft:physics": {},
+			"minecraft:jump.static": {},
 			"minecraft:movement.basic": {},
 			"minecraft:navigation.walk": {
 				"can_walk": true,
@@ -1037,7 +1038,8 @@ Your folder structure should look like this:
 			"minecraft:loot": {
 				"table": "loot_tables/entities/ghost.json"
 			},
-
+			"minecraft:physics": {},
+			"minecraft:jump.static": {},
 			"minecraft:movement.basic": {},
 			"minecraft:navigation.walk": {
 				"can_walk": true,
