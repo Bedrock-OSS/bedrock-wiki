@@ -22,7 +22,7 @@ This annual event plays a huge role in encouraging meaningful contributions to t
 We as a bedrock OSS want to help as well and are looking for contributors for the open source projects, see project you can help on in the [Where to contribute section](#where-to-contribute). If you don't know how to help, we suggest reading [How to get started](#how-to-get-started).
 
 :::warning Attention!
-After ten year the Hacktoberfest is moving from the historical t-shirt reward to a digital reward kit, you can learn more [here](https://hacktoberfest.com/about/#digital-rewards).
+After ten years the Hacktoberfest is moving from the historical t-shirt reward to a digital reward kit, you can learn more [here](https://hacktoberfest.com/about/#digital-rewards).
 :::
 
 ## How to get started
