@@ -327,7 +327,7 @@ form.show(event.source).then(r => {
 });
 ```
 
-### ModalFormData
+### MessageFormData
 Same as an action form, Message form will save the input inside `.selection`. However, something is odd about this form. `.button1` returns 1, but `.button2` returns 0. Using `.canceled` will not work, but closing the form will return 0. This is why button2 must be used for the "No/Cancel" option.
 
 ```js
