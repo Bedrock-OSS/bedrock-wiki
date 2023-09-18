@@ -34,7 +34,7 @@ This will create a custom glass block which appears the same as vanilla glass bl
     "description": {
       "identifier": "wiki:custom_glass",
       "menu_category": {
-        "category": "contruction",
+        "category": "construction",
         "group": "itemGroup.name.glass"
       }
     },
@@ -84,7 +84,7 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
     "description": {
       "identifier": "wiki:custom_vertical_connecting_glass",
       "menu_category": {
-        "category": "contruction",
+        "category": "construction",
         "group": "itemGroup.name.glass"
       },
       "properties": {
