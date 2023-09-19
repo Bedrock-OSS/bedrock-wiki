@@ -33,7 +33,7 @@ This will create a custom glass block which appears the same as vanilla glass bl
     "description": {
       "identifier": "wiki:custom_glass",
       "menu_category": {
-        "category": "contruction",
+        "category": "construction",
         "group": "itemGroup.name.glass"
       }
     },
@@ -83,13 +83,13 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
     "description": {
       "identifier": "wiki:custom_vertical_connecting_glass",
       "menu_category": {
-        "category": "contruction",
+        "category": "construction",
         "group": "itemGroup.name.glass"
       },
       "states": {
-        // Properties needed for connected textures, also controls up and down culling
+        // States needed for connected textures, also controls up and down culling
         "wiki:connection": [0, 1, 2, 3],
-        // Properties to cull faces depending on surrounding blocks
+        // States to cull faces depending on surrounding blocks
         "wiki:cull_north": [false, true],
         "wiki:cull_south": [false, true],
         "wiki:cull_east": [false, true],
