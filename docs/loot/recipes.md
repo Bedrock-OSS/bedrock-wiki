@@ -4,7 +4,7 @@ category: Documentation
 nav_order: 3
 tags:
     - Stable
-    - Last updated for Version 1.18.10
+    - Last updated for Version 1.20.30
 mentions:
     - Ciosciaa
     - SirLich
@@ -60,6 +60,17 @@ As an example, a "cold steel sword" might be crafted using the following [shaped
 			"X": "wiki:cold_steel",
 			"I": "minecraft:stick"
 		},
+		"unlock": [
+            {
+              "item": "wiki:cold_steel"
+            },
+			{
+              "item": "minecraft:stick"
+            },
+			{
+			 "context": "PlayerInWater"
+			}
+          ]
 		"result": "wiki:cold_steel_sword"
 	}
 }
@@ -81,7 +92,7 @@ It's strongly recommended to include a format version anyway, choosing a value t
 :::
 
 ### Description
-The `"description"` object, required within any recipe type, holds the metadata of a recipe.
+The `"description"` object, required within any recipe type, holds the identifier of a recipe.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
@@ -97,7 +108,7 @@ It's strongly recommended to use a namespace. Namespaces are a standard in other
 :::
 
 ### Tags
-Recipes are linked to crafting interfaces using the required `"tags"` array property, which must be placed within any recipe type. Any interface whose tag is provided in the array may use that recipe, if applicable. At least one tag must be provided.
+Recipes are linked to crafting interfaces using the required `"tags"` array property, which must be placed within any recipe type. These tags will make the recipe be shared across different blocks that uses the `minecraft:crafting_table` component. When the recipe does not inlcude the `crafting_table` tag, or any vanilla tag, but a tag from your custom block, the recipe will only be shared to that custom block and not the crafting table/stone_cutter/etc. At least one tag must be provided.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 ```json
@@ -111,7 +122,9 @@ Crafting:
 - `stonecutter`
 - `smithing_table`
 
-Note that if you want to make a smithing recipe, you will need to use `<namespace>:netherite_ingot` for the second slot, though using a different identifier will not work. **This no longer works after 1.18.30**.
+::: 
+warning Note that if you want to make a smithing recipe, you will need to use `<namespace>:netherite_ingot` for the second slot, though using a different identifier will not work. **This no longer works after 1.18.30**.
+:::
 
 Cooking and Smelting:
 - `furnace`
@@ -126,11 +139,30 @@ Brewing:
 Education:
 - `material_reducer`
 
+::: tip 
 Additionally, [custom crafting blocks can declare a custom tag](/blocks/blocks-stable#minecraft-crafting-table) for crafting recipes to use. Custom cooking and smelting blocks and custom brewing stands are not currently available.
+:::
 
 ::: tip
 To effectively disable a recipe (useful for [overriding](#overrides) a prior recipe), set the tag array to `[""]`.
 :::
+
+### Recipe Unlocking
+Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, you `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
+```json
+		"unlock": [
+            {
+              "item": "wiki:cold_steel" //item to unlock recipe
+            },
+			{
+              "item": "minecraft:stick" //item to unlock recipe
+            },
+			{
+			 "context": "PlayerInWater" //event to unlock recipe
+			}
+          ]
+```
+Each object in this array contains `"item"` and this tells the recipe what item the player needs in their inventory in order for this recipe to be unlocked. `"context"` is used to determine what event unlocks this recipe. `"PlayerInWater"` will unlock this recipe when the player enters water. This is also the only known context for recipes.
 
 ### Item Descriptors
 Working with recipes entails referencing items across a number of properties. Items may be provided in one of two formats: a string reference or an item object. Both formats have means of handling data values, but only the item object may be used to specify a count for that item (usable in recipe outputs). For recipe inputs, if no data value is provided, items with any data value under that identifier will be usable for that input. The data value for an output defaults to `0` if one is not explicitly provided. Selecting recipe inputs by item tags is not supported.
@@ -248,6 +280,17 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 				"data": 2
 			}
 		],
+		"unlock": [
+            {
+              "item": "wiki:cold_steel" //item to unlock recipe
+            },
+			{
+              "item": "minecraft:stick" //item to unlock recipe
+            },
+			{
+			 "context": "PlayerInWater" //event to unlock recipe
+			}
+          ],
 		"result": {
 			"item": "wiki:door_knob",
 			"data": 3
@@ -306,6 +349,17 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 			"S": "wiki:cloth",
 			"I": "wiki:support"
 		},
+		"unlock": [
+            {
+              "item": "wiki:cold_steel" //item to unlock recipe
+            },
+			{
+              "item": "minecraft:stick" //item to unlock recipe
+            },
+			{
+			 "context": "PlayerInWater" //event to unlock recipe
+			}
+          ],
 		"result": [
 			{
 				"item": "wiki:covered_arch",
@@ -454,6 +508,23 @@ Any unicode character from `U+0020` to `U+07FF` may be used as a key name. If a 
 ::: warning
 If a character in the pattern is not present in the key map, it will be treated as though it were a space, a designated empty tile.
 :::
+
+### Recipe Unlocking
+Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, you `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
+```json
+		"unlock": [
+            {
+              "item": "wiki:cold_steel" //item to unlock recipe
+            },
+			{
+              "item": "minecraft:stick" //item to unlock recipe
+            },
+			{
+			 "context": "PlayerInWater" //event to unlock recipe
+			}
+          ]
+```
+Each object in this array contains `"item"` and this tells the recipe what item the player needs in their inventory in order for this recipe to be unlocked. `"context"` is used to determine what event unlocks this recipe. `"PlayerInWater"` will unlock this recipe when the player enters water. This is also the only known context for recipes.
 
 #### Shaped Results
 Shaped crafting recipe outputs behave very similarly to their [shapeless counterparts](#shapeless-results). Unlike array results for shapeless recipes, however, shaped recipe result arrays may contain more than one [item descriptor](#item-descriptors).
