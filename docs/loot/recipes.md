@@ -65,12 +65,13 @@ As an example, a "cold steel sword" might be crafted using the following [shaped
               "item": "wiki:cold_steel"
             },
 			{
-              "item": "minecraft:stick"
-            },
+              "item": "minecraft:wool",
+            	"data":  3
+			},
 			{
 			 "context": "PlayerInWater"
 			}
-          ]
+          ],
 		"result": "wiki:cold_steel_sword"
 	}
 }
@@ -155,14 +156,15 @@ Minecraft 1.20.30 added recipe unlocking to the game. In order to have your reci
               "item": "wiki:cold_steel" //item to unlock recipe
             },
 			{
-              "item": "minecraft:stick" //item to unlock recipe
-            },
+              "item": "minecraft:wool", //item to unlock recipe
+            	"data":  3
+			},
 			{
 			 "context": "PlayerInWater" //event to unlock recipe
 			}
           ]
 ```
-Each object in this array contains `"item"` and this tells the recipe what item the player needs in their inventory in order for this recipe to be unlocked. `"context"` is used to determine what event unlocks this recipe. `"PlayerInWater"` will unlock this recipe when the player enters water. This is also the only known context for recipes.
+Each object in this array contains `"item"` and this tells the recipe what item the player needs in their inventory in order for this recipe to be unlocked. It also accepts data values. `"context"` is used to determine what event unlocks this recipe. `"PlayerInWater"` will unlock this recipe when the player enters water. This is also the only known context for recipes.
 
 ### Item Descriptors
 Working with recipes entails referencing items across a number of properties. Items may be provided in one of two formats: a string reference or an item object. Both formats have means of handling data values, but only the item object may be used to specify a count for that item (usable in recipe outputs). For recipe inputs, if no data value is provided, items with any data value under that identifier will be usable for that input. The data value for an output defaults to `0` if one is not explicitly provided. Selecting recipe inputs by item tags is not supported.
@@ -282,13 +284,14 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 		],
 		"unlock": [
             {
-              "item": "wiki:cold_steel" //item to unlock recipe
+              "item": "wiki:cold_steel"
             },
 			{
-              "item": "minecraft:stick" //item to unlock recipe
-            },
+              "item": "minecraft:wool",
+            	"data":  3
+			},
 			{
-			 "context": "PlayerInWater" //event to unlock recipe
+			 "context": "PlayerInWater"
 			}
           ],
 		"result": {
@@ -351,13 +354,14 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 		},
 		"unlock": [
             {
-              "item": "wiki:cold_steel" //item to unlock recipe
+              "item": "wiki:cold_steel"
             },
 			{
-              "item": "minecraft:stick" //item to unlock recipe
-            },
+              "item": "minecraft:wool",
+            	"data":  3
+			},
 			{
-			 "context": "PlayerInWater" //event to unlock recipe
+			 "context": "PlayerInWater"
 			}
           ],
 		"result": [
@@ -517,8 +521,9 @@ Minecraft 1.20.30 added recipe unlocking to the game. In order to have your reci
               "item": "wiki:cold_steel" //item to unlock recipe
             },
 			{
-              "item": "minecraft:stick" //item to unlock recipe
-            },
+              "item": "minecraft:wool", //item to unlock recipe
+            	"data":  3
+			},
 			{
 			 "context": "PlayerInWater" //event to unlock recipe
 			}
