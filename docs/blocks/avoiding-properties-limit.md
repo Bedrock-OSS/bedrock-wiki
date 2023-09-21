@@ -87,7 +87,7 @@ suppose we want to save number 98
 Since a property can hold 16 different values, this means 4 bit of data.
 
 
-![Image describing how it works](assets/109032503/a7d00866-2120-49d3-ba85-5b92a4e831d8)
+![Image describing how it works](binay%20method%20working.png)
 
 **Why multiply, divide or do modulus with 16**
 
