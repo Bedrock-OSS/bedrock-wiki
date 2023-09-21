@@ -142,12 +142,12 @@ Message Form only contains 2 buttons, unlike Action Forms, which can have more t
 Just like the buttons on an Action Form, button1 and button2 have 2 arguments, text and icon.
 
 ```js
-form.button1("Button 1: Yes");
-form.button2("Button 2: No");
+form.button1("Button 1: No");
+form.button2("Button 2: Yes");
 ```
 
 :::tip
-Because the Message Form only has 2 buttons, it's recommended to have "Yes/OK" option on "button1" and "No/Cancel" option on "button2". You can see the problem in the "Show and Respond" section
+Because the Message Form only has 2 buttons, it's recommended to have "Yes/OK" option on "button2" and "No/Cancel" option on "button1". You can see the problem in the "Show and Respond" section
 :::
 
 #### Example
@@ -157,8 +157,8 @@ This is an example of a Message Form
 let form = new MessageFormData();
 form.title("Higher Random Tick Warning");
 form.body("Are you sure you want to run this command:\n/gamerule randomtickspeed 1000\nThis can cause lag to the world");
-form.button1("Yes, do it!");
-form.button2("No, leave it as default!");
+form.button1("No, leave it as default!");
+form.button2("Yes, do it!");
 ```
 
 ![image](/assets/images/gametest/gametest-form/message-form.png)
@@ -327,8 +327,8 @@ form.show(event.source).then(r => {
 });
 ```
 
-### ModalFormData
-Same as an action form, Message form will save the input inside `.selection`. However, something is odd about this form. `.button1` returns 1, but `.button2` returns 0. Using `.canceled` will not work, but closing the form will return 0. This is why button2 must be used for the "No/Cancel" option.
+### MessageFormData
+Same as an action form, Message form will save the input inside `.selection`. However, something is odd about this form. `.button2` returns 1, but `.button1` returns 0. Using `.canceled` will not work, but closing the form will return 0. This is why button1 must be used for the "No/Cancel" option.
 
 ```js
 form.show(event.source).then(r => {
