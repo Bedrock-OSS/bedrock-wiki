@@ -328,6 +328,9 @@ Script API cannot run Minecraft function files without the use of `/function`.
 
 Script API even though the loot is broken from the start, but it's useful for drop or set the item to players/world.
 
+**weather**
+Script API can't get weather directly
+
 **difficulty**
 
 Script API can't set world difficulty.
