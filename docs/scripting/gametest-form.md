@@ -142,12 +142,12 @@ Message Form only contains 2 buttons, unlike Action Forms, which can have more t
 Just like the buttons on an Action Form, button1 and button2 have 2 arguments, text and icon.
 
 ```js
-form.button1("Button 1: Yes");
-form.button2("Button 2: No");
+form.button1("Button 1: No");
+form.button2("Button 2: Yes");
 ```
 
 :::tip
-Because the Message Form only has 2 buttons, it's recommended to have "Yes/OK" option on "button1" and "No/Cancel" option on "button2". You can see the problem in the "Show and Respond" section
+Because the Message Form only has 2 buttons, it's recommended to have "Yes/OK" option on "button2" and "No/Cancel" option on "button1". You can see the problem in the "Show and Respond" section
 :::
 
 #### Example
@@ -157,8 +157,8 @@ This is an example of a Message Form
 let form = new MessageFormData();
 form.title("Higher Random Tick Warning");
 form.body("Are you sure you want to run this command:\n/gamerule randomtickspeed 1000\nThis can cause lag to the world");
-form.button1("Yes, do it!");
-form.button2("No, leave it as default!");
+form.button1("No, leave it as default!");
+form.button2("Yes, do it!");
 ```
 
 ![image](/assets/images/gametest/gametest-form/message-form.png)
