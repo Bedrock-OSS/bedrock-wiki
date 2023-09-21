@@ -7,10 +7,11 @@ mentions:
     - JaylyDev
     - SmokeyStack
     - ThomasOrs
+    - kumja1
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.10
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.30
 :::
 
 In Scripting API, most of the core features are implemented in the `@minecraft/server` module, with lots of methods to interact a Minecraft world, including entities, blocks, dimensions, and more programmatically. This article contains a basic introduction to some of the core API mechanics, for more detailed information please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
@@ -26,7 +27,7 @@ You will need to add the Script module as a dependency in your `manifest.json`.
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.4.0-beta"
+			"version": "1.5.0"
 		}
 	]
 }
@@ -51,7 +52,7 @@ import { world } from "@minecraft/server";
 -
 // subscribing to a blockBreak event
 // - fires when a player breaks a block
-world.afterEvents.blockBreak.subscribe((event) => {
+world.afterEvents.playerBreakBlock.subscribe((event) => {
 	const player = event.player; // Player that broke the block
 	const block = event.block; // Block that's broken
 	player.sendMessage(`You have broken ${block.typeId}`); // send a message to player
@@ -328,8 +329,7 @@ Script API cannot run Minecraft function files without the use of `/function`.
 Script API even though the loot is broken from the start, but it's useful for drop or set the item to players/world.
 
 **weather**
-
--   Script API can't get weather directly.
+Script API can't get weather directly
 
 **difficulty**
 
