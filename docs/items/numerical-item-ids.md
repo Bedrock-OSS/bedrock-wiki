@@ -4,7 +4,7 @@ category: Documentation
 ---
 
 ::: tip
-This page is a more up-to-date version of [this page](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonitems), and is current as of version 1.20.20.
+This page is a more up-to-date version of [this page](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonitems), and is current as of version 1.20.30.
 :::
 
 ## Overview
@@ -12,9 +12,9 @@ This page is a more up-to-date version of [this page](https://learn.microsoft.co
 Item IDs (not to be confused with type IDs) are an older system which are mainly used to render items with [JSON UI](json-ui/json-ui-documentation#item-id-aux-item-id-aux) nowadays. All items & blocks (Even custom ones!) have their own unique ID.
 
 ## ID Formatting
-- Vanilla items & blocks have IDs from `-642` to `715`.
+- Vanilla items & blocks have IDs from `-738` to `719`.
 - All custom blocks have *increasingly negative* IDs, starting from an ID of `-745`. These do not interfere with vanilla IDs in any way.
-- All non-experimental items (1.10 format) have *increasingly positive* IDs, starting from an ID of `716`. These do not interfere with vanilla IDs in any way.
+- All non-experimental items (1.10 format) have *increasingly positive* IDs, starting from an ID of `757`. These do not interfere with vanilla IDs in any way.
 - All experimental items (1.16.100 format) have *increasingly positive* IDs, starting from an ID of 257. These **WILL SHIFT VANILLA IDs** that are higher than 256. For example, `'minecraft:apple'` (ID of `257`) will be moved up to an ID of `258` if you have one experimental item.
 
 ## Vanilla ID List
@@ -22,6 +22,66 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 
 | Name              |  ID  |
 | ----------------- | :--: |
+| black_terracotta | -738 |
+| red_terracotta | -737 |
+| green_terracotta | -736 |
+| brown_terracotta | -735 |
+| blue_terracotta | -734 |
+| purple_terracotta | -733 |
+| cyan_terracotta | -732 |
+| light_gray_terracotta | -731 |
+| gray_terracotta | -730 |
+| pink_terracotta | -729 |
+| lime_terracotta | -728 |
+| yellow_terracotta | -727 |
+| light_blue_terracotta | -726 |
+| magenta_terracotta | -725 |
+| orange_terracotta | -724 |
+| black_concrete_powder | -723 |
+| red_concrete_powder | -722 |
+| green_concrete_powder | -721 |
+| brown_concrete_powder | -720 |
+| blue_concrete_powder | -719 |
+| purple_concrete_powder | -718 |
+| cyan_concrete_powder | -717 |
+| light_gray_concrete_powder | -716 |
+| gray_concrete_powder | -715 |
+| pink_concrete_powder | -714 |
+| lime_concrete_powder | -713 |
+| yellow_concrete_powder | -712 |
+| light_blue_concrete_powder | -711 |
+| magenta_concrete_powder | -710 |
+| orange_concrete_powder | -709 |
+| black_stained_glass | -687 |
+| red_stained_glass | -686 |
+| green_stained_glass | -685 |
+| brown_stained_glass | -684 |
+| blue_stained_glass | -683 |
+| purple_stained_glass | -682 |
+| cyan_stained_glass | -681 |
+| light_gray_stained_glass | -680 |
+| gray_stained_glass | -679 |
+| pink_stained_glass | -678 |
+| lime_stained_glass | -677 |
+| yellow_stained_glass | -676 |
+| light_blue_stained_glass | -675 |
+| magenta_stained_glass | -674 |
+| orange_stained_glass | -673 |
+| black_stained_glass_pane | -657 |
+| red_stained_glass_pane | -656 |
+| green_stained_glass_pane | -655 |
+| brown_stained_glass_pane | -654 |
+| blue_stained_glass_pane | -653 |
+| purple_stained_glass_pane | -652 |
+| cyan_stained_glass_pane | -651 |
+| light_gray_stained_glass_pane | -650 |
+| gray_stained_glass_pane | -649 |
+| pink_stained_glass_pane | -648 |
+| lime_stained_glass_pane | -647 |
+| yellow_stained_glass_pane | -646 |
+| light_blue_stained_glass_pane | -645 |
+| magenta_stained_glass_pane | -644 |
+| orange_stained_glass_pane | -643 |
 | black_concrete | -642 |
 | red_concrete | -641 |
 | green_concrete | -640 |
@@ -1336,17 +1396,21 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | shaper_armor_trim_smithing_template | 699 |
 | host_armor_trim_smithing_template | 700 |
 | music_disc_relic | 701 |
-| wool | 702 |
-| carpet | 703 |
-| log | 704 |
-| fence | 705 |
-| coral | 706 |
-| log2 | 707 |
-| white_concrete | 708 |
-| white_shulker_box | 709 |
-| boat | 710 |
-| dye | 711 |
-| banner_pattern | 712 |
-| spawn_egg | 713 |
-| end_crystal | 714 |
-| glow_berries | 715 |
+| terracotta | 702 |
+| wool | 703 |
+| carpet | 704 |
+| log | 705 |
+| fence | 706 |
+| coral | 707 |
+| log2 | 708 |
+| concrete | 709 |
+| concrete_powder | 710 |
+| stained_glass | 711 |
+| stained_glass_pane | 712 |
+| dyed_shulker_box | 713 |
+| boat | 714 |
+| dye | 715 |
+| banner_pattern | 716 |
+| spawn_egg | 717 |
+| end_crystal | 718 |
+| glow_berries | 719 |
