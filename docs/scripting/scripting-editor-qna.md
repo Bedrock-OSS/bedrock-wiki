@@ -10,17 +10,17 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/uZF75ZxcJ
 *warning:* Not all messages were copied over, and some were copy-edited. If you want to see everything, join the above discord, and get the "events archive" role.
 
 ## Slash Commands
--   **Q**: When can we expect custom slash command registration instead of having to create chat commands
--   **A**: Likely not anytime soon but it's something we've talked about.
--   **A**: Use /scriptevent
+-    **Q**: When can we expect custom slash command registration instead of having to create chat commands
+-    **A**: Likely not anytime soon but it's something we've talked about.
+-    **A**: Use /scriptevent
 
 ## Why Webpack/how do you like your build process for Editor?
--   **Q**: I see a lot of references to Webpack in your Editor JavaScript files. Why Webpack over, say, Rollup or ESBuild? Do you like your current tooling for deploying these?
--   **A**: Good catch on that! In fact, if you look at the recent @minecraft/vanilla-data package we are using esbuild there as an alternative. Really it comes down to how heavy weight the tool is and whether it has the customizations we need. Editor is where we are exploring different ways to package our libraries, so it was the first to use bundling tooling, but we want to keep trying alternatives to improve our internal build time and minimize configuration.
+-    **Q**: I see a lot of references to Webpack in your Editor JavaScript files. Why Webpack over, say, Rollup or ESBuild? Do you like your current tooling for deploying these?
+-    **A**: Good catch on that! In fact, if you look at the recent @minecraft/vanilla-data package we are using esbuild there as an alternative. Really it comes down to how heavy weight the tool is and whether it has the customizations we need. Editor is where we are exploring different ways to package our libraries, so it was the first to use bundling tooling, but we want to keep trying alternatives to improve our internal build time and minimize configuration.
 
 ## Worker Threads
--   **Q**: Will we ever see worker threads being implemented or having options for another scripting language where I can use multiple threads?
--   **A**: We've thought about worker threads, nothing in the immediate plans, but hearing about the use cases today has been valuable.
+-    **Q**: Will we ever see worker threads being implemented or having options for another scripting language where I can use multiple threads?
+-    **A**: We've thought about worker threads, nothing in the immediate plans, but hearing about the use cases today has been valuable.
 
 ## Better Cameras
 -    **Q**: Will we get point rotation with cameras using script api in the future? Second question will camera mode be integrated into Editor mode as an editing suite? I was imagining some sort of timeline dopesheet, which would be great for refined timing. Visualizing a cameras path is HUGE so that’s really high up on my list for editor mode camera stuff
@@ -29,22 +29,22 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/uZF75ZxcJ
 -    **A**: We do have future plans for an orbit camera preset, so it's great to know you would find it valuable.
 
 ## Error Log
--   **Q**: More detailed error log? Sometimes we don't know where the error is. Sometimes we only get a short error like this: `TypeError:  is not a function` I want a more detailed or long error log like: `TypeError: x is not a function ....(error stack)`
--   **A**: This is great feedback.  We're always trying to improve error messages like this.  If you have specific code examples of where a call stack is not included please let us know. Those errors can be very frustrating!
+-    **Q**: More detailed error log? Sometimes we don't know where the error is. Sometimes we only get a short error like this: `TypeError:  is not a function` I want a more detailed or long error log like: `TypeError: x is not a function ....(error stack)`
+-    **A**: This is great feedback.  We're always trying to improve error messages like this.  If you have specific code examples of where a call stack is not included please let us know. Those errors can be very frustrating!
 
 ## QuickJS and JIT Compilation
--   **Q**: Are there any plans for moving away from QuickJS anytime soon?
--   **A**: We currently don't have any plans to move away from QuickJS any time soon. are there any particular painpoints or issues with QuickJS you're seeing?
--   **Q**: No JIT optimization mostly
--   **A**: The challenge is that even with JS engines which do support JIT (like V8), it is not supported on all of our target devices.
+-    **Q**: Are there any plans for moving away from QuickJS anytime soon?
+-    **A**: We currently don't have any plans to move away from QuickJS any time soon. are there any particular painpoints or issues with QuickJS you're seeing?
+-    **Q**: No JIT optimization mostly
+-    **A**: The challenge is that even with JS engines which do support JIT (like V8), it is not supported on all of our target devices.
 
 ## More velocity control for the Player
--   **Q**: Are there any plans to:
-1. Allow for `applyImpulse` for the player?
-2. Allow for `clearVelocity` for the player?
-3. Allow for `keepVelocity` option when teleporting the player?
--   **A**: Due to technical limitations we were unable to provide these APIs for players at the same time as other entities but it's something we would like to make available in the future.
--   **A**: We're trying to avoid adding new APIs to beta that don't have a short-term release plan. We don't like having APIs sit around in beta for a year plus.
+-    **Q**: Are there any plans to:
+-    **Q**: Allow for `applyImpulse` for the player?
+-    **Q**: Allow for `clearVelocity` for the player?
+-    **Q**: Allow for `keepVelocity` option when teleporting the player?
+-    **A**: Due to technical limitations we were unable to provide these APIs for players at the same time as other entities but it's something we would like to make available in the future.
+-    **A**: We're trying to avoid adding new APIs to beta that don't have a short-term release plan. We don't like having APIs sit around in beta for a year plus.
 
 ## Editor Mode on Mobile
 -    **Q**: Any plans on porting Editor to mobile
@@ -72,9 +72,9 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/uZF75ZxcJ
 -    **Q**: My main issue with editor mode is its lack of visual support. Like directional arrows to help better keep track of which direction a selected paste box will paste to. Instead of fiddling with the direction dropdown because i forgot which direction i needed to put it.
 -    **Q**: I guess my question is, what visual elements are planning to be added in? What new and easier tools suggested from the community are being looked into.
 -    **A**: I’m going to answer with the caveat that what I state below may change as we prototype, develop, and get feedback! All of that out of the way…here are a few things we are thinking for visualization support: 
-1. **More gizmos!** We have the move gizmo and resize gizmos, but we want to add rotation gizmos and also have gizmos appear on paste preview volumes.
-2. **Paste preview with an actual preview**: Right now it’s an empty volume, which isn’t super informative! We want to add actual visuals of what you’re pasting within that volume.
-3. **Brush preview and structure placement**: Imagine the brush tip wasn’t just a single cube, but the shape and size of what you’re going to be painting! And imagine a world when you go to place a structure, you could click-to-drag the structure into the world and precisely place it.
+-    **A**: **More gizmos!** We have the move gizmo and resize gizmos, but we want to add rotation gizmos and also have gizmos appear on paste preview volumes.
+-    **A**: **Paste preview with an actual preview**: Right now it’s an empty volume, which isn’t super informative! We want to add actual visuals of what you’re pasting within that volume.
+-    **A**: **Brush preview and structure placement**: Imagine the brush tip wasn’t just a single cube, but the shape and size of what you’re going to be painting! And imagine a world when you go to place a structure, you could click-to-drag the structure into the world and precisely place it.
 
 ## A new data structure for saving data upon leaving the world
 -    **Q**: It would be nice to have something more complex than scoreboards or storing data in entity names or tags or armor stands. Data stored in variables is reset when reconnecting to the world (unless hosted on a server ofc - that doesn't shut down). Maybe it would really help to have read and write access for the text files in the behavior folders, I know that would be a huge thing, it would allow us to create anything really, but it would also be a significant security risk. Either way, just a new data structure that would be preserved after a world restart would help a ton.
@@ -124,10 +124,10 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/uZF75ZxcJ
 ## What qualities do you aim for when making the API?
 -    **Q**: Things like usability and reliability.
 -    **A**: There are a bunch of things really, but I think it can be distilled to a few major points:
-1. Are we able to properly guarantee backwards compatibility of this API? Does it have deterministic behavior and timing?
-2. Does it cover the desired scenario adequately and interact well with other existing APIs?
-3. Is it easy to use, well typed (for easy intellisense guidance), and clear? We have a large amount of tests and internally we write demos of APIs to make sure they are easy to use. And i'm a huge advocate for making the typescript types help you write code faster as well.
-4. How does the script API interact with or compare with existing functionality from commands, JSON, or molang?
+-    **A**: Are we able to properly guarantee backwards compatibility of this API? Does it have deterministic behavior and timing?
+-    **A**: Does it cover the desired scenario adequately and interact well with other existing APIs?
+-    **A**: Is it easy to use, well typed (for easy intellisense guidance), and clear? We have a large amount of tests and internally we write demos of APIs to make sure they are easy to use. And i'm a huge advocate for making the typescript types help you write code faster as well.
+-    **A**: How does the script API interact with or compare with existing functionality from commands, JSON, or molang?
 -    **A**: A really big aim of scripting is a super stable platform to build experiences off of, but we also know that scripting is a part the broader extensibility surfaces of the game. So the combination of usability + reliability and compatibility is hugely important.
 
 ## What is your favorite thing you've seen created with the Scripting API?
@@ -194,8 +194,8 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/uZF75ZxcJ
 
 ## More types for Dynamic Properties?
 -    **Q**: Can we expect some improvements to Dynamic Properties, with more complex types in the future such as:
-1. Items: We are not able to serialize item to string properly because we dont have access to all data related to these types
-2. TypedArrays: Chance to save the byte array directly to Dynamic Properties as we are able to have bigger arrays then strings are allowed too.
+-    **Q**: Items: We are not able to serialize item to string properly because we dont have access to all data related to these types
+-    **Q**: TypedArrays: Chance to save the byte array directly to Dynamic Properties as we are able to have bigger arrays then strings are allowed too.
 -    **A**: Great ideas!
 
 ## More entity health APIs
@@ -253,14 +253,12 @@ The idea of callbacks from client to server is interesting, however we'd like to
 -    **A**: Thanks for the reminder. It's definitely something we want to take a look at adding eventually.
 
 ## Giving more power to the scripting engine
--    **Q**:
-1. Is there any plans that allow for some sort of lower level access to world data on the server? So instead of having to call setblock/fill we can get whole chunks from a function call modify them then put them back into the world.
-2. Are there any plans that allow users to change how many commands are able to be in the command queue? Because 128 can be limiting for some jobs.
-3. Is there a possibility that there will be a way of at world startup running JS before the RP and BP get loaded? This would allow for things like dynamically generating textures and items at run time and make doing stuff like tinkers construct much much much faster
--    **A**:
-1. We would love to provide more performant block APIs. I agree that setBlock can be a bit too costly for multiblock operations and fill is too restrictive when trying to set different block types. We've also discussed the possibility of having worker threads to perform large computations without bogging down the main server thread.
-2. The command queue restriction is something we can look into. Would it be helpful for you to have an API to query the command queue size?  I'd love to here more about the scenarios where you're impacted by the limit.
-3. We haven't looked into this yet but it's something we'll consider.
+-    **Q**: Is there any plans that allow for some sort of lower level access to world data on the server? So instead of having to call setblock/fill we can get whole chunks from a function call modify them then put them back into the world.
+-    **Q**: Are there any plans that allow users to change how many commands are able to be in the command queue? Because 128 can be limiting for some jobs.
+-    **Q**: Is there a possibility that there will be a way of at world startup running JS before the RP and BP get loaded? This would allow for things like dynamically generating textures and items at run time and make doing stuff like tinkers construct much much much faster
+-    **A**: We would love to provide more performant block APIs. I agree that setBlock can be a bit too costly for multiblock operations and fill is too restrictive when trying to set different block types. We've also discussed the possibility of having worker threads to perform large computations without bogging down the main server thread.
+-    **A**: The command queue restriction is something we can look into. Would it be helpful for you to have an API to query the command queue size?  I'd love to here more about the scenarios where you're impacted by the limit.
+-    **A**: We haven't looked into this yet but it's something we'll consider.
 
 ## Entity AI
 -    **Q**: Will we ever see the depth of entity behavior control like there is for simulated player (minecraft/server-gametest)? A lot of the entity behavior components are controlled on the JSON side. What would it look like to move those to the script API side?
