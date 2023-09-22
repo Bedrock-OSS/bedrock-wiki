@@ -10,6 +10,7 @@ mentions:
     - MedicalJewel105
     - aexer0e
     - ThijsHankelMC
+    - QuazChick
 ---
 
 ::: warning EXPERIMENTAL
@@ -20,7 +21,7 @@ Sometimes your block needs to have features which Minecraft doesn't allow. A pos
 
 ## Creating the Collision
 
-Here is a tutorial on making a solid entity in four different ways, with `runtime_identifiers`, blocks, and components. [Solid Entities](/entities/solid-entities).
+The [solid entities](/entities/solid-entities) tutorial outlines four different ways to create a collision, with `runtime_identifiers`, blocks, and components.
 
 ## Basic Components
 
@@ -114,7 +115,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:align"

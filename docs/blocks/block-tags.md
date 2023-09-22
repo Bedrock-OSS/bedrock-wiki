@@ -1,8 +1,7 @@
 ---
 title: Block Tags
-category: Documentation
-tags:
-    - experimental
+category: General
+nav_order: 3
 mentions:
     - SirLich
     - yanasakana
@@ -13,30 +12,33 @@ mentions:
     - Chikorita-Lover
     - victorsigma
     - TheItsNameless
+    - QuazChick
 ---
 
-Block Tags are used for various block properties. They can be called when testing for block arguments in commands.
-Some tags are prefixed with `can_be`, or `can_hurt`. One would expect these to have a boolean response.
+Block tags can be used to ensure that a block meets certain conditions.
 
-## Application
+## Applying Tags
 
-Block tags can be applied exactly as items, as seen below:
+Block tags can be applied in the same way as items - in the block's `components` - as seen below:
 
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/blocks/tree_stump.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.20.10",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:tree_stump"
-		},
-		"components": {
-			"tag:wood": {},
-			"tag:my_lovely_tag": {},
-			"tag:wiki:very_useless": {}
-		}
-	}
+  "format_version": "1.20.30",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:tree_stump",
+      "menu_category": {
+        "category": "nature"
+      }
+    },
+    "components": {
+      "tag:wood": {},
+      "tag:my_lovely_tag": {},
+      "tag:wiki:very_useless": {}
+    }
+  }
 }
 ```
 
@@ -46,6 +48,11 @@ Tags can be queried with:
 
 -   `q.all_tags`
 -   `q.any_tag`
+
+:::warning EXPERIMENTAL
+The following query functions require experimental Molang features to be enabled.
+:::
+
 -   `q.block_has_all_tags`
 -   `q.block_has_any_tag`
 -   `q.block_neighbor_has_all_tags`
@@ -55,15 +62,18 @@ Tags can be queried with:
 
 Example of an item querying a block's tags:
 
-<CodeHeader>BP/items/wiki_pickaxe.json</CodeHeader>
+<CodeHeader>BP/items/custom_pickaxe.json</CodeHeader>
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.20.30",
   "minecraft:item": {
     "description": {
-      "identifier": "wiki:pickaxe",
-      "category": "equipment"
+      "identifier": "wiki:custom_pickaxe",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.pickaxe"
+      }
     },
     "components": {
       "minecraft:digger": {
@@ -72,7 +82,7 @@ Example of an item querying a block's tags:
           {
             "speed": 5,
             "block": {
-              "tags": "q.any_tag('wiki_tag', 'stone', 'metal')"
+              "tags": "q.any_tag('custom_ore', 'stone', 'metal')"
             }
           }
         ]

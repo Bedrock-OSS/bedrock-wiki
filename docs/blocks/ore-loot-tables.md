@@ -15,7 +15,7 @@ mentions:
     - Keyyard
 ---
 
-::: tip FORMAT VERSION `1.20.10`
+::: tip FORMAT VERSION `1.20.30`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -45,7 +45,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:silver_ore",
@@ -58,12 +58,12 @@ The following block behavior can be used as a template. Don't forget to set the 
       ...
       // Calls an event that loads structure with xp reward
       "minecraft:on_player_destroyed": {
-        "event": "xp_reward"
+        "event": "wiki:xp_reward"
       },
       "minecraft:loot": "loot_tables/blocks/silver_ore.json" // Won't be dropped if using Silk Touch.
     },
     "events": {
-      "xp_reward": {
+      "wiki:xp_reward": {
         "run_command": {
           "command": [
             "structure load ore_xp_reward ~~~" // You can download structure with saved xp orbs lower
@@ -133,7 +133,7 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 
 Rather than triggering a block event to summon reward experience, you could use one of the methods described below.
 
-Please note that you need to download the "ore_xp_reward" structure file, which contains the XP orbs, from the [here](#download-structure).
+Please note that you need to download the "ore_xp_reward" structure file, which contains the XP orbs, from [here](#download-structure).
 
 ### Method 1: Dummy Items and Function Loop
 
@@ -168,7 +168,7 @@ In this case, we add an existing item called "minecraft:barrier" as a dummy item
 
 **Step 2**: Create a looping function to process the dropped items. This function should also be defined in a `BP/functions/tick.json` file to trigger it each tick.
 
-```
+```c
 execute as @e[type=item, name="Barrier"] at @s run structure load ore_xp_reward ~~~
 execute as @e[type=item, name="Barrier"] run kill
 ```
@@ -196,7 +196,7 @@ This function will execute for any item entity with the name "Barrier" (our dumm
 
 **Step 2**: Create a looping function to process the dropped items. This function should also be defined in a `BP/functions/tick.json` file to trigger it each tick.
 
-```
+```c
 execute as @e[type=item, name="Raw Silver", tag=!xp] at @s run structure load ore_xp_reward ~~~
 execute as @e[type=item, name="Raw Silver", tag=!xp] run tag @s add xp
 ```

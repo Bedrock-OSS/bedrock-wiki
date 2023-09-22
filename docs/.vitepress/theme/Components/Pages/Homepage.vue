@@ -15,9 +15,9 @@
 					Bedrock Wiki
 				</h1>
 				<p>
-					This wiki is a knowledge-sharing website for Technical
-					Bedrock, containing documentation, tutorials, and general
-					how-to information.
+					This wiki is a knowledge-sharing website for technical features
+					of Minecraft Bedrock, containing documentation, tutorials, and
+					general how-to information.
 				</p>
 			</div>
 		</div>
@@ -36,9 +36,9 @@
 			</div>
 			<div class="mt-4 flex justify-center flex-col flex-nowrap">
 				<p>
-					This wiki is a knowledge-sharing website for Technical
-					Bedrock, containing documentation, tutorials, and general
-					how-to information.
+					This wiki is a knowledge-sharing website for technical features
+					of Minecraft Bedrock, containing documentation, tutorials, and
+					general how-to information.
 				</p>
 			</div>
 		</div>
@@ -59,7 +59,7 @@
 					imgsrc-light="assets/images/homepage/discord.png"
 					link="/discord"
 				>
-					Join the discord to learn about addons, and seek help from
+					Join the Discord to learn about addons, and seek help from
 					other addon creators.
 				</CardLink>
 				<CardLink
@@ -68,7 +68,7 @@
 					link="/commands/intro-to-command-blocks"
 				>
 					<a href="commands/intro-to-command-blocks">Beginner's Guide</a>: Learn about command block basics.<br><br>
-					<a href="commands/mcfunctions">Functions</a>: Get started with Function Packs, a faster more powerful way to code commands!
+					<a href="commands/mcfunctions">Functions</a>: Get started with functions, a faster more powerful way to code commands!
 				</CardLink>
 				<CardLink
 					title="Entities"
@@ -76,7 +76,7 @@
 					link="entities/entity-intro-bp"
 				>
 					<a href="entities/entity-intro-bp">Beginner's Guide</a>:
-					Learn about the structure of Behavior Pack Entity files.<br><br>
+					Learn about the structure of behavior pack entity files.<br><br>
 					<a href="entities/troubleshooting-entities">Troubleshooting</a>: Learn to troubleshoot common issues when creating
 					entities, such as invisible textures.
 				</CardLink>
@@ -97,16 +97,15 @@
 				>
 					<a href="blocks/blocks-intro">Beginner's Guide</a>: A "Hello
 					world" guide in making blocks.<br><br>
-					<a href="blocks/blocks-stable">Block Features</a>: Learn about the
-					capabilities of custom blocks.
+					<a href="blocks/block-components">Block Components</a>: Learn about the capabilities of custom blocks.
 				</CardLink>
 				<CardLink
 					title="Scripting"
 					imgsrc-light="assets/images/homepage/scripting.png"
 					link="scripting/starting-scripts"
 				>
-					<a href="scripting/starting-scripts">Beginner's Guide</a>: Learn the basics of the experimental scripting-API<br><br>
-					<a href="scripting/custom-command">Custom commands</a>:
+					<a href="scripting/starting-scripts">Beginner's Guide</a>: Learn the basics of the Script API.<br><br>
+					<a href="scripting/custom-command">Custom Commands</a>:
 					Learn how to make your own custom commands!
 				</CardLink>
 				<CardLink

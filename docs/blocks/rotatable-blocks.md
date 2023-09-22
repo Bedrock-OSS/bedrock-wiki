@@ -1,8 +1,6 @@
 ---
 title: Rotatable Blocks
 category: Tutorials
-tags:
-    - experimental
 mentions:
     - Ultr4Anubis
     - SmokeyStack
@@ -12,9 +10,9 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION `1.20.10`
-This tutorial assumes a basic understanding of blocks.
-Check out [block features](/blocks/blocks-stable) before starting.
+::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
+This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states) and [block traits](/blocks/block-traits).
+Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 ## Rotation Types
@@ -46,24 +44,20 @@ Check out [block features](/blocks/blocks-stable) before starting.
 
 ## Cardinal Direction Rotation
 
-::: warning EXPERIMENTAL
-Requires `Upcoming Creator Features` to use block traits.
-:::
-
 ### Trait
 
 To set the state which determines the block's direction, we will use the `minecraft:placement_direction` block trait with the `minecraft:cardinal_direction` state enabled.
 
+<CodeHeader>minecraft:block</CodeHeader>
+
 ```json
-{
-  "description": {
-    "identifier": "wiki:cardinal_direction_example",
-    // Block traits are defined here
-    "traits": {
-      "minecraft:placement_direction": {
-        "enabled_states": ["minecraft:cardinal_direction"], // Can be used in queries e.g. `q.block_property('minecraft:cardinal_direction') == 'north'`
-        "y_rotation_offset": 180 // Face towards player
-      }
+"description": {
+  "identifier": "wiki:cardinal_direction_example",
+  // Block traits are defined here
+  "traits": {
+    "minecraft:placement_direction": {
+      "enabled_states": ["minecraft:cardinal_direction"], // Can be used in queries e.g. `q.block_state('minecraft:cardinal_direction') == 'north'`
+      "y_rotation_offset": 180 // Face towards player
     }
   }
 }
@@ -75,60 +69,56 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 **The below rotation values assume that the front of your model is facing north.**
 
+<CodeHeader>minecraft:block</CodeHeader>
+
 ```json
-{
-  "permutations": [
-    // Facing north
-    {
-      "condition": "q.block_property('minecraft:cardinal_direction') == 'north'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 0, 0] }
-      }
-    },
-    // Facing west
-    {
-      "condition": "q.block_property('minecraft:cardinal_direction') == 'west'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 90, 0] }
-      }
-    },
-    // Facing south
-    {
-      "condition": "q.block_property('minecraft:cardinal_direction') == 'south'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 180, 0] }
-      }
-    },
-    // Facing east
-    {
-      "condition": "q.block_property('minecraft:cardinal_direction') == 'east'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, -90, 0] }
-      }
+"permutations": [
+  // Facing north
+  {
+    "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 0, 0] }
     }
-  ]
-}
+  },
+  // Facing west
+  {
+    "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 90, 0] }
+    }
+  },
+  // Facing south
+  {
+    "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 180, 0] }
+    }
+  },
+  // Facing east
+  {
+    "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, -90, 0] }
+    }
+  }
+]
 ```
 
 ## Facing Direction Rotation
-
-::: warning EXPERIMENTAL
-Requires `Upcoming Creator Features` to use block traits.
-:::
 
 ### Trait
 
 To set the state which determines the block's direction, we will use the `minecraft:placement_direction` block trait with the `minecraft:facing_direction` state enabled.
 
+<CodeHeader>minecraft:block</CodeHeader>
+
 ```json
-{
-  "description": {
-    "identifier": "wiki:facing_direction_example",
-    // Block traits are defined here
-    "traits": {
-      "minecraft:placement_direction": {
-        "enabled_states": ["minecraft:facing_direction"], // Can be used in queries e.g. `q.block_property('minecraft:facing_direction') == 'north'`
-      }
+"description": {
+  "identifier": "wiki:facing_direction_example",
+  // Block traits are defined here
+  "traits": {
+    "minecraft:placement_direction": {
+      "enabled_states": ["minecraft:facing_direction"], // Can be used in queries e.g. `q.block_state('minecraft:facing_direction') == 'north'`
     }
   }
 }
@@ -140,74 +130,70 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 **The below rotation values assume that the front of your model is facing north.**
 
+<CodeHeader>minecraft:block</CodeHeader>
+
 ```json
-{
-  "permutations": [
-    // Facing up
-    {
-      "condition": "q.block_property('minecraft:facing_direction') == 'up'",
-      "components": {
-        "minecraft:transformation": { "rotation": [90, 0, 0] }
-      }
-    },
-    // Facing down
-    {
-      "condition": "q.block_property('minecraft:facing_direction') == 'down'",
-      "components": {
-        "minecraft:transformation": { "rotation": [-90, 0, 0] }
-      }
-    },
-    // Facing north
-    {
-      "condition": "q.block_property('minecraft:facing_direction') == 'north'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 0, 0] }
-      }
-    },
-    // Facing west
-    {
-      "condition": "q.block_property('minecraft:facing_direction') == 'west'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 90, 0] }
-      }
-    },
-    // Facing south
-    {
-      "condition": "q.block_property('minecraft:facing_direction') == 'south'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 180, 0] }
-      }
-    },
-    // Facing east
-    {
-      "condition": "q.block_property('minecraft:facing_direction') == 'east'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, -90, 0] }
-      }
+"permutations": [
+  // Facing down
+  {
+    "condition": "q.block_state('minecraft:facing_direction') == 'down'",
+    "components": {
+      "minecraft:transformation": { "rotation": [-90, 0, 0] }
     }
-  ]
-}
+  },
+  // Facing up
+  {
+    "condition": "q.block_state('minecraft:facing_direction') == 'up'",
+    "components": {
+      "minecraft:transformation": { "rotation": [90, 0, 0] }
+    }
+  },
+  // Facing north
+  {
+    "condition": "q.block_state('minecraft:facing_direction') == 'north'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 0, 0] }
+    }
+  },
+  // Facing west
+  {
+    "condition": "q.block_state('minecraft:facing_direction') == 'west'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 90, 0] }
+    }
+  },
+  // Facing south
+  {
+    "condition": "q.block_state('minecraft:facing_direction') == 'south'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 180, 0] }
+    }
+  },
+  // Facing east
+  {
+    "condition": "q.block_state('minecraft:facing_direction') == 'east'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, -90, 0] }
+    }
+  }
+]
 ```
 
 ## Block Face Rotation
-
-::: warning EXPERIMENTAL
-Requires `Upcoming Creator Features` to use block traits.
-:::
 
 ### Trait
 
 To set the state which determines the block's attachment, we will use the `minecraft:placement_position` block trait with the `minecraft:block_face` state enabled.
 
+<CodeHeader>minecraft:block</CodeHeader>
+
 ```json
-{
-  "description": {
-    "identifier": "wiki:facing_direction_example",
-    // Block traits are defined here
-    "traits": {
-      "minecraft:placement_position": {
-        "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_property('minecraft:block_face') == 'north'`
-      }
+"description": {
+  "identifier": "wiki:facing_direction_example",
+  // Block traits are defined here
+  "traits": {
+    "minecraft:placement_position": {
+      "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
     }
   }
 }
@@ -219,53 +205,53 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 **The below rotation values assume that the front of your model is facing north.**
 
+<CodeHeader>minecraft:block</CodeHeader>
+
 ```json
-{
-  "permutations": [
-    // Facing up
-    {
-      "condition": "q.block_property('minecraft:block_face') == 'up'",
-      "components": {
-        "minecraft:transformation": { "rotation": [90, 0, 0] }
-      }
-    },
-    // Facing down
-    {
-      "condition": "q.block_property('minecraft:block_face') == 'down'",
-      "components": {
-        "minecraft:transformation": { "rotation": [-90, 0, 0] }
-      }
-    },
-    // Facing north
-    {
-      "condition": "q.block_property('minecraft:block_face') == 'north'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 0, 0] }
-      }
-    },
-    // Facing west
-    {
-      "condition": "q.block_property('minecraft:block_face') == 'west'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 90, 0] }
-      }
-    },
-    // Facing south
-    {
-      "condition": "q.block_property('minecraft:block_face') == 'south'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, 180, 0] }
-      }
-    },
-    // Facing east
-    {
-      "condition": "q.block_property('minecraft:block_face') == 'east'",
-      "components": {
-        "minecraft:transformation": { "rotation": [0, -90, 0] }
-      }
+"permutations": [
+  // Facing down
+  {
+    "condition": "q.block_state('minecraft:block_face') == 'down'",
+    "components": {
+      "minecraft:transformation": { "rotation": [-90, 0, 0] }
     }
-  ]
-}
+  },
+  // Facing up
+  {
+    "condition": "q.block_state('minecraft:block_face') == 'up'",
+    "components": {
+      "minecraft:transformation": { "rotation": [90, 0, 0] }
+    }
+  },
+  // Facing north
+  {
+    "condition": "q.block_state('minecraft:block_face') == 'north'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 0, 0] }
+    }
+  },
+  // Facing west
+  {
+    "condition": "q.block_state('minecraft:block_face') == 'west'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 90, 0] }
+    }
+  },
+  // Facing south
+  {
+    "condition": "q.block_state('minecraft:block_face') == 'south'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 180, 0] }
+    }
+  },
+  // Facing east
+  {
+    "condition": "q.block_state('minecraft:block_face') == 'east'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, -90, 0] }
+    }
+  }
+]
 ```
 
 ## Log Rotation
@@ -276,63 +262,65 @@ Block rotation identical to how vanilla logs rotate.
 Requires `Holiday Creator Features` to trigger events.
 :::
 
+### Block State
+
+<CodeHeader>minecraft:block > description</CodeHeader>
+
+```json
+"states": {
+  "wiki:axis": [0, 1, 2]
+}
+```
+
+### Block Event & Trigger
+
+In order to make the block rotate the way a vanilla log would, we need to use a molang expression that uses a query to get what face of a block we're placing our block on and convert it to 0, 1, or 2.
+
+<CodeHeader>minecraft:block > events</CodeHeader>
+
+```json
+"wiki:set_axis": {
+  "set_block_state": {
+    "wiki:axis": "Math.floor(q.block_face / 2)"
+  }
+}
+```
+
+This event is called upon by using the `minecraft:on_player_placing` trigger component.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:on_player_placing": {
+  "event": "wiki:set_axis"
+}
+```
+
 ### Permutations
+
+<CodeHeader>minecraft:block</CodeHeader>
 
 ```json
 "permutations": [
   {
-    "condition": "q.block_property('wiki:axis') == 0",
+    "condition": "q.block_state('wiki:axis') == 0",
     "components": {
       "minecraft:transformation": { "rotation": [0, 0, 0] }
     }
   },
   {
-    "condition": "q.block_property('wiki:axis') == 1",
+    "condition": "q.block_state('wiki:axis') == 1",
     "components": {
       "minecraft:transformation": { "rotation": [90, 0, 0] }
     }
   },
   {
-    "condition": "q.block_property('wiki:axis') == 2",
+    "condition": "q.block_state('wiki:axis') == 2",
     "components": {
       "minecraft:transformation": { "rotation": [0, 0, 90] }
     }
   }
 ]
-```
-
-### Event
-
-In order to make the block rotate the way a vanilla log would, we need to use a molang expression that uses a query to get what face of a block we're placing our block on and convert it to 0, 1, or 2.
-
-```json
-{
-  "wiki:set_axis": {
-    "set_block_property": {
-      "wiki:axis": "Math.floor(q.block_face / 2)"
-    }
-  }
-}
-```
-
-This event is called upon by using the `minecraft:on_player_placing` component.
-
-```json
-{
-  "minecraft:on_player_placing": {
-    "event": "wiki:set_axis"
-  }
-}
-```
-
-### Block Property
-
-```json
-{
-  "properties": {
-    "wiki:axis": [0, 1, 2]
-  }
-}
 ```
 
 ### Log Rotation Example
@@ -347,11 +335,11 @@ This example also requires `Holiday Creator Features` to use `minecraft:unit_cub
 
 ```json
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.30",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_log",
-      "properties": {
+      "states": {
         "wiki:axis": [0, 1, 2]
       }
     },
@@ -377,33 +365,33 @@ This example also requires `Holiday Creator Features` to use `minecraft:unit_cub
         "event": "wiki:set_axis"
       }
     },
+    "events": {
+      "wiki:set_axis": {
+        "set_block_state": {
+          "wiki:axis": "Math.floor(q.block_face / 2)"
+        }
+      }
+    },
     "permutations": [
       {
-        "condition": "q.block_property('wiki:axis') == 0",
+        "condition": "q.block_state('wiki:axis') == 0",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 0] }
         }
       },
       {
-        "condition": "q.block_property('wiki:axis') == 1",
+        "condition": "q.block_state('wiki:axis') == 1",
         "components": {
           "minecraft:transformation": { "rotation": [90, 0, 0] }
         }
       },
       {
-        "condition": "q.block_property('wiki:axis') == 2",
+        "condition": "q.block_state('wiki:axis') == 2",
         "components": {
           "minecraft:transformation": { "rotation": [0, 0, 90] }
         }
       }
-    ],
-    "events": {
-      "wiki:set_rotation": {
-        "set_block_property": {
-          "wiki:axis": "Math.floor(q.block_face / 2)"
-        }
-      }
-    }
+    ]
   }
 }
 ```
