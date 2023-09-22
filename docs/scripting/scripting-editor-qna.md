@@ -9,7 +9,7 @@ This Q&A took place in the [Bedrock Addons discord](https://discord.gg/uZF75ZxcJ
 
 *warning:* Not all messages were copied over, and some were copy-edited. If you want to see everything, join the above discord, and get the "events archive" role.
 
-## Slash Commands
+## [Slash Commands](https://canary.discord.com/channels/523663022053392405/1153425859672285327)
 -    **Q**: When can we expect custom slash command registration instead of having to create chat commands
 -    **A**: Likely not anytime soon but it's something we've talked about.
 -    **A**: Use /scriptevent
