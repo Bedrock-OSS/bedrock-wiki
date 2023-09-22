@@ -332,6 +332,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:damage
+This component controls the amount of additional attack damgage taht the item does. The value property is a 32-bit integer. This value may also be negative. 
 
 <CodeHeader></CodeHeader>
 
@@ -342,6 +343,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:can_destroy_in_creative
+This component controls whether or not you can break bocks with this item while you are in creative mode. 
 
 <CodeHeader></CodeHeader>
 
@@ -374,6 +376,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:explodable
+This component controls whether or not this item can be blown up by explosions such as tnt or a creeper. 
 
 <CodeHeader></CodeHeader>
 
@@ -384,6 +387,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:should_despawn
+This component controls whether or not this item will despawn. 
 
 <CodeHeader></CodeHeader>
 
@@ -394,6 +398,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:liquid_clipped
+This component allows an item to be used on a liquid block to trigger the "minecraft:on_use_on" component, when set to false (default) "minecraft:on_use_on" will not activate when using the item on a liquid block, but when set to true then it will activate. 
 
 <CodeHeader></CodeHeader>
 
@@ -409,7 +414,7 @@ List of all new item components, with usage examples
 
 ```json
 {
-	"minecraft:allow_off_hand": true // Disables most functionality
+	"minecraft:allow_off_hand": true // Disables most functionality while the item is in the off hand. 
 }
 ```
 
@@ -436,6 +441,62 @@ List of all new item components, with usage examples
 		"block": "minecraft:grass",
 		"use_block_description": true
 	}
+}
+```
+
+### minecraft:interact_button
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:interact_button": "Use This Custom Item" // Can be a string or a boolean value. 
+}
+```
+
+### minecraft:hand_equipped
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:hand_equipped": true
+}
+```
+
+### minecraft:stacked_by_data
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:stacked_by_data": true
+}
+```
+
+### minecraft:chargeable
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:chargeable": {
+		"movement_modifier": 0.0,
+		"on_complete": {
+			"event": "example:example_event",
+			"target": "holder" // Can also be 'self' to trigger an item event"
+		}
+	}
+}
+```
+
+### minecraft:hover_text_color
+
+<CodeHeader></CodeHeader>
+
+```json
+{
+	"minecraft:hover_text_color": "green"
 }
 ```
 
@@ -496,6 +557,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:enchantable
+The value property is a 32-bit integer. 
 
 <CodeHeader></CodeHeader>
 
@@ -509,6 +571,7 @@ List of all new item components, with usage examples
 ```
 
 ### Enchantable Slots
+Note: The "all" enchantable slot allows you to apply any enchantment that you want to the item, just like anh enchanted book. 
 
 | Slot Name     |
 | ------------- |
@@ -529,6 +592,7 @@ List of all new item components, with usage examples
 | shield        |
 | shovel        |
 | sword         |
+| all           |
 
 
 ### minecraft:shooter
@@ -544,6 +608,12 @@ List of all new item components, with usage examples
 		"ammunition": [
 			{
 				"item": "minecraft:arrow",
+				"use_offhand": true,
+				"search_inventory": true,
+				"use_in_creative": true
+			},
+			{
+				"item": "minecraft:fireworks_rocket",
 				"use_offhand": true,
 				"search_inventory": true,
 				"use_in_creative": true
@@ -570,24 +640,28 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:armor
+This component allows you to put the item into the armor slot specified by the minecraft:wearable component. It also stops attatchables from working on the item while it is in a hand slot or while the player is in first person mode. If you want a piece of armor that can still be seen while in first person then don't include this component, and instead include only the minecraft:wearable component, then it will be visible in first person mode too, the side effect of this are that you can't put on the armor directly from the inventory, but instead you have to use the item to put it on, another side effect is that the armor cannot provide any protection values. 
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
 	"minecraft:armor": {
-		"protection": 4
+		"protection": 4,
+		"texture_type" : "none"
 	}
 }
 ```
 
 ### minecraft:wearable
+Allows the item to be worn in the specified inventory slot type. 
 
 <CodeHeader></CodeHeader>
 
 ```json
 {
 	"minecraft:wearable": {
+		"dispensable" : true,
 		"slot": "slot.armor.feet" // Can be slot listed in the '/replaceitem' command
 	}
 }
@@ -616,6 +690,7 @@ List of all new item components, with usage examples
 {
 	"minecraft:record": {
 		"sound_event": "cat", // Currently restricted to strings listed below
+		"duration": 5,
 		"comparator_signal": 8
 	}
 }
@@ -653,6 +728,14 @@ List of all new item components, with usage examples
 				"on_repaired": {
 					"event": "example_event",
 					"target": "holder" // Can also be 'self' to trigger an item event"
+				}
+			},
+			{
+				"items": ["minecraft:diamond:2", "minecraft:netherite_ingot"], // Putting a second colon and a number after the item identifier allows you to specify a data value for the item, for example minecraft:diamond:2 will not allow the item to be repaired with normal diamonds, but it will allow it to be repaired with diamonds that have a data value of 2. 
+				"repair_amount": 100, // Can also be molang expression
+				"on_repaired": {
+					"event": "example_item_event",
+					"target": "self"
 				}
 			}
 		]
@@ -731,6 +814,7 @@ List of all new item components, with usage examples
 ```
 
 ### minecraft:throwable
+Throws the item as the projectile entity type specified in the "minecraft:projectile" component. 
 
 <CodeHeader></CodeHeader>
 
@@ -788,7 +872,7 @@ _Full list of categories can be found [here](/documentation/creative-categories)
 		},
 		"nutrition": 3,
 		"can_always_eat": true,
-		"saturation_modifier": "normal",
+		"saturation_modifier": "normal", // Can also be a float value. 
 		"using_converts_to": "minecraft:apple" // Changes the food or drink into another item when consumed. It can be changed to any item.
 	}
 }

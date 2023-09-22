@@ -40,6 +40,13 @@ You can use whatever behaviors you like, but here is a good template. The import
 			"is_experimental": false
 		},
 		"components": {
+			"minecraft:breathable": { //Optional, allows the entity to breath underwater
+				"breathes_water": true
+			},
+			"minecraft:physics": { 
+				"has_gravity": false, //Optional, allows the entity to not be affected by gravity or water
+				"has_collision": false
+			},
 			"minecraft:custom_hit_test": {
 				"hitboxes": [
 					{

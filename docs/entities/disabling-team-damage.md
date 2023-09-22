@@ -13,6 +13,7 @@ mentions:
 ---
 
 If you wish to disable team damage (so one cannot hurt their teammates), assign a tag with the team name to every teammate (I'm going to use `team1`, `team2`, `team3` and `team4` for this example).
+WARNING: This will NOT work on realms, the reason for this is that on realms there is a bug where modified player.json files in the behavior packs do not work, and the gmae just ignores them (This may be fixed in the future but as of 1.20.15 it is not fixed. (This also applies to older version of minecraft as well.))
 Now add this damage sensor component into your `player.json`s `"components": {}`. See comments for explanation.
 
 <CodeHeader>BP/entities/player.json#components</CodeHeader>

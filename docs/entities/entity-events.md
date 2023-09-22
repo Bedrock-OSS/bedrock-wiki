@@ -19,13 +19,14 @@ Entity events are one of the fundamental building blocks of behavior alongside c
 
 Events allow us to add and remove component groups from our entity allowing us to change the behavior of our entity when certain conditions are met. They are called events because we can activate them when events happen such as a timer running out, a player interacting with the entity or an environmental change occurring. When an event is activated it will read through the keys and determined whether to add or remove component groups.
 
-An event can have six different keys which can add or remove component groups:
+An event can have seven different keys which can add, remove component groups, trigger another event and set value to properties:
 - add
 - remove
 - randomize
 - sequence
 - filters
 - trigger
+- set_property
 
 ### Add/Remove
 
