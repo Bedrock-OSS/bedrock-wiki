@@ -1,1 +1,0 @@
-import{_ as e,c as r,o as t}from"./404.md.a04cbd8e.js";const m=JSON.parse('{"title":"Servers & Realms","description":"","frontmatter":{"title":"Servers & Realms"},"headers":[],"relativePath":"servers/index.md"}'),s={name:"servers/index.md"};function a(n,o,c,i,d,p){return t(),r("div")}const l=e(s,[["render",a]]);export{m as __pageData,l as default};
