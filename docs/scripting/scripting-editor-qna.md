@@ -343,8 +343,8 @@ The bigger gap is on the JSON side IMHO - getting started with templateified JSO
 
 All of that out of the way…here are a few things we are thinking for visualization support: 
 
-1. **More gizmos! **We have the move gizmo and resize gizmos, but we want to add rotation gizmos and also have gizmos appear on paste preview volumes. 
-2. **Paste preview with an actual preview: **Right now it’s an empty volume, which isn’t super informative! We want to add actual visuals of what you’re pasting within that volume. 
+1. **More gizmos!** We have the move gizmo and resize gizmos, but we want to add rotation gizmos and also have gizmos appear on paste preview volumes. 
+2. **Paste preview with an actual preview:** Right now it’s an empty volume, which isn’t super informative! We want to add actual visuals of what you’re pasting within that volume. 
 3. **Brush preview and structure placement:** Imagine the brush tip wasn’t just a single cube, but the shape and size of what you’re going to be painting! And imagine a world when you go to place a structure, you could click-to-drag the structure into the world and precisely place it. 
 
 Let us know what **you** think and provide your own feedback on more visuals that would be helpful for us to add into our plans!!
