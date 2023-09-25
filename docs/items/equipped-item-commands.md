@@ -148,7 +148,7 @@ Let's take a look at an example using `q.equipped_item_any_tag`:
 
 This example will run a server animation with the `emerald_armor` short name if an emerald-tier item is equipped in the helmet slot. You can change the Molang field to match your item tag, use a different query, or add additional queries.
 
-You can view a list of additional slot identifiers at the [Minecraft Wiki](https://minecraft.fandom.com/wiki/Commands/replaceitem#:~:text=Slot-,Slot%20Numbers,-Restrictions).
+You can view a list of additional slot identifiers at the [Minecraft Wiki](https://minecraft.wiki/w/Slot#Bedrock_Edition).
 
 ## Conclusion
 
