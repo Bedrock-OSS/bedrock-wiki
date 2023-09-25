@@ -10,7 +10,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.10
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.30
 :::
 
 ## Overview
@@ -78,7 +78,7 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 			// Enables the use of @minecraft/server module
 			// note that version changes every monthly releases.
       "module_name": "@minecraft/server",
-      "version": "1.4.0-beta"
+      "version": "1.6.0-beta"
     },
     {
 			// Enables the use of @minecraft/server-ui module
@@ -95,7 +95,9 @@ If your project needs other module to run your code, add another dependency that
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
 -   `@minecraft/server`:
-    -   [`1.3.0`](https://www.npmjs.com/package/@minecraft/server/v/1.3.0) (Latest version)
+    -   [`1.5.0`](https://www.npmjs.com/package/@minecraft/server/v/1.5.0) (Latest version)
+    -   [`1.4.0`](https://www.npmjs.com/package/@minecraft/server/v/1.4.0)
+    -   [`1.3.0`](https://www.npmjs.com/package/@minecraft/server/v/1.3.0)
     -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server/v/1.2.0)
     -   [`1.1.0`](https://www.npmjs.com/package/@minecraft/server/v/1.1.0)
     -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0)
@@ -107,13 +109,13 @@ If your project needs other module to run your code, add another dependency that
 
 -   `@minecraft/server`:
 
-    -   [`1.4.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.3.0-beta.1.20.0-preview.21) (Latest beta)
+    -   [`1.6.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.6.0-beta.1.20.30-stable) (Latest beta)
 
 -   `@minecraft/server-ui`:
-    -   [`1.2.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.1.0-beta.1.20.0-preview.21) (Latest beta)
+    -   [`1.2.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.2.0-beta.1.20.30-stable) (Latest beta)
 -   `@minecraft/server-gametest`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.20.0-preview.21) (Latest beta)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.20.30-stable) (Latest beta)
 
 -   `@minecraft/server-net`:
 
@@ -187,11 +189,12 @@ These allow for enhanced auto-completions and validation when used inside of you
 Latest beta API modules:
 
 ```bash
-npm install @minecraft/server@1.3.0-beta.1.20.0-stable
-npm install @minecraft/server-gametest@1.3.0-beta.1.20.0-stable
-npm install @minecraft/server-ui@1.3.0-beta.1.20.0-stable
-npm install @minecraft/server-admin@1.3.0-beta.1.20.0-stable
-npm install @minecraft/server-net@1.3.0-beta.1.20.0-stable
+npm i @minecraft/server@1.6.0-beta.1.20.30-stable
+npm i @minecraft/server-ui@1.2.0-beta.1.20.30-stable
+npm i @minecraft/server-gametest@1.0.0-beta.1.20.30-stable
+npm i @minecraft/server-admin@1.0.0-beta.1.20.30-stable
+npm i @minecraft/server-net@1.0.0-beta.1.20.30-stable
+npm i @minecraft/vanilla-data@1.20.30
 ```
 
 Latest stable API modules:
