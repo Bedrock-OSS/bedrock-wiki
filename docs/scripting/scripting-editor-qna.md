@@ -142,8 +142,8 @@ entity.setMolangFunction("wiki", "getMyAngle", () => {
    return 32;
 })
 ```
-Then in the animation, you would write `rotation: [0, "script.wiki:getMyAngle()", 0]`
-This would allow for things like inverse kinematics and running animations from behavior packs without wasting q.skin_id or q.variant or editing player.json.
+-   Then in the animation, you would write `rotation: [0, "script.wiki:getMyAngle()", 0]`
+-   This would allow for things like inverse kinematics and running animations from behavior packs without wasting q.skin_id or q.variant or editing player.json.
 -   **A**: Entity properties are the way! Let us know if there are any scenarios where entity properties don't meet your needs. 
 The idea of callbacks from client to server is interesting, however we'd like to avoid introducing more client-authoritative behaviors.
 
@@ -154,8 +154,7 @@ The idea of callbacks from client to server is interesting, however we'd like to
 ## Beta APIs
 -   **Q**: Are there any plans to get beta-apis out of beta and into the game as a normal feature?
 -   **A**: Yes! We are actively moving many APIs from beta into "stable"!  Check out the change logs per release as we normally include those changes in there.
-
-1.20.30 is and 1.20.40 will be a pretty big drop for non-beta APIs!
+-   1.20.30 is and 1.20.40 will be a pretty big drop for non-beta APIs!
 
 ## Soon to be released API features
 -   **Q**: What are some of the APIs/features that you are currently working on or that are going to be released soon?
