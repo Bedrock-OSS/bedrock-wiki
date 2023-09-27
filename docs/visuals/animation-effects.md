@@ -28,7 +28,7 @@ Minecraft Particles can be used in entity animations. For example, the phantom h
 
 Here we defined a shortname for particle that we are going to use.
 
-You can find a list of particles [here](https://minecraft.gamepedia.com/Particles) or [here](/particles/vanilla-particles).
+You can find a list of particles [here](https://minecraft.wiki/w/Particles) or [here](/particles/vanilla-particles).
 
 :::warning Warning!
 Not every particle works there. If you have problems, consider trying another particle. For example, use this one.

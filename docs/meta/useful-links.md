@@ -85,7 +85,7 @@ Important links have a ⭐.
 
 -   ⭐ [bedrock.dev](https://bedrock.dev/)
 -   ⭐ [Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
--   ⭐ [Gamepedia Community Wiki](https://minecraft.gamepedia.com)
+-   ⭐ [Minecraft Community Wiki](https://minecraft.wiki)
 -   [Mcbehub](https://mcbehub.com/category/realmdocs)
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
 -   [Documentation Graveyard (removed components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)

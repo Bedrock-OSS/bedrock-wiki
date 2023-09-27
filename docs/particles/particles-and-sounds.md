@@ -32,7 +32,7 @@ Minecraft Particles can be used in entity animations. For example, the phantom h
 
 This piece of code is located in our resource entity file. Here we defined the shortname ("l_explosion") for the particle we are going to use, "minecraft:large_explosion".
 
-You can test a particle in-game with the `/particle <namespace:particle_id> ~ ~2 ~` command. You can view the full list of Vanilla Particles [here](https://minecraft.gamepedia.com/Particles).
+You can test a particle in-game with the `/particle <namespace:particle_id> ~ ~2 ~` command. You can view the full list of Vanilla Particles [here](https://minecraft.wiki/w/Particles).
 
 Now for the Blockbench part.
 
