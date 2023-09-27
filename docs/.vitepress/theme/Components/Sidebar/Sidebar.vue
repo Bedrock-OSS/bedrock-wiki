@@ -33,28 +33,12 @@
 
 <script setup lang="ts">
 import Navigation from './Navigation.vue'
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
 import { useSidebarState } from '../../Composables/sidebar'
-import { onClickOutside } from '@vueuse/core'
-import { useIsMobile } from '../../Composables/isMobile'
 
 const sidebarElement = ref<HTMLElement | null>(null)
-const { isVisible, toggle } = useSidebarState()
+const { isVisible } = useSidebarState()
 const { site } = useData()
 const navLinks = computed(() => site.value.themeConfig.sidebar['/'])
-const { isMobile } = useIsMobile()
-
-let dispose: (() => void) | undefined = undefined
-watch(isVisible, () => {
-	if (!isVisible.value) {
-		dispose?.()
-	} else {
-		setTimeout(() => {
-			dispose = onClickOutside(sidebarElement, () => {
-				if (isMobile.value && isVisible.value) toggle()
-			})
-		}, 100)
-	}
-})
 </script>

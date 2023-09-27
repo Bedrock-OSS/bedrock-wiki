@@ -8,6 +8,7 @@
 			:class="{
 				'md:ml-80': isVisible,
 			}"
+			@pointerdown="isMobile && isVisible && toggle()"
 		>
 			<h1
 				v-if="page && page.title"
@@ -139,6 +140,7 @@ import { useSidebarState } from '../Composables/sidebar'
 import { Content, useData, useRoute } from 'vitepress'
 import Label from './Content/Label.vue'
 import Button from './Content/Button.vue'
+import { useIsMobile } from '../Composables/isMobile'
 
 const Contributors = defineAsyncComponent(
 	() => import('./Content/Contributors.vue')
@@ -151,7 +153,8 @@ onMounted(() => {
 
 const route = useRoute()
 const { page } = useData()
-const { isVisible } = useSidebarState()
+const { isVisible, toggle } = useSidebarState()
+const { isMobile } = useIsMobile()
 
 function agreeCookies() {
 	document.cookie = 'bedrock-cookies=true; max-age=31536000 ; path=/'
