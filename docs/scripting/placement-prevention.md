@@ -1,6 +1,5 @@
 
 ### Stable Methods
-```markdown
 ---
 title: Block Placement Prevention (Stable)
 mentions:
@@ -320,4 +319,3 @@ To learn more about Script API, you can check out the [wiki](/scripting/starting
 
 
 The tutorial has been seperated into two sections: one for stable methods and one for beta methods. You can now use these sections independently depending on which version of the Script API you are working with. If you have any more questions or need further assistance, feel free to ask!
-```
