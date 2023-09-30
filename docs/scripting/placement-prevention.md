@@ -1,4 +1,4 @@
-
+---
 ### Stable Methods
 ```markdown
 title: Block Placement Prevention (Stable)
@@ -314,6 +314,7 @@ world.beforeEvents.playerPlaceBlock.subscribe(event => {
 You can now modify the message sent to the player in `player.sendMessage()`. Put your message between the two backticks. 
 
 You can also change the typeId of the block in `event.block.typeId === "minecraft:bedrock"`. Put the namespace and identifier in place of `minecraft:bedrock`.
+---
 
 To learn more about Script API, you can check out the [wiki](/scripting/starting-scripts) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
 ```
