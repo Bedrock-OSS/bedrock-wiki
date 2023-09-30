@@ -19,7 +19,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.30
 :::
 
 Who doesn't want cool custom commands? With the Script API, you can create your own. In this article, we will be creating them using the Script API.
@@ -64,7 +64,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
 		{
 			// Minecraft native module - needed to use the "@minecraft/server" module
 			"module_name": "@minecraft/server",
-			"version": "1.4.0-beta"
+			"version": "1.6.0-beta"
 		}
   ]
 }
