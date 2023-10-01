@@ -75,7 +75,7 @@ The repository that hosts the code for the VSCode extension that is used for Blo
 
 ### [Minecraft Json Schemas](https://github.com/Blockception/Minecraft-bedrock-json-schemas)
 
-The JSON validation schema files for Minecraft bedrock.<br><be>
+The JSON validation schema files for Minecraft bedrock.<br><br>
 
 ### [Minecraft Error Codes Pages](https://github.com/Blockception/Minecraft-Error-Codes)
 
@@ -99,7 +99,7 @@ Minecraft Bedrock pack-access library.
 
 ### [Bedrock Schema Docs](https://github.com/SirLich/bedrock-schema-docs)
 
-Auto generated documentation from the Schemas by Blockception.<br><br>
+Auto-generated documentation from the Schemas by Blockception.<br><br>
 
 <span>
 <img src="/assets/images/hacktoberfest/mcdevkit.png"
