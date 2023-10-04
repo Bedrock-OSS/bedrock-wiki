@@ -841,7 +841,9 @@ Throws the item as the projectile entity type specified in the "minecraft:projec
 }
 ```
 
-:::warning Frame field no longer works. First texture of an array will be applied. :::
+:::warning
+Frame field no longer works. First texture of an array will be applied.
+:::
 
 ### minecraft:creative_category
 
