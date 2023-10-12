@@ -99,10 +99,11 @@ There will be instructions for creating custom emoji at the bottom.
 | Small Down Arrow  |                         | U+E057  | ![](/assets/images/concepts/emojis/touch/smalldownarrow.png)  |
 | Small Inventory   |                         | U+E05B  | ![](/assets/images/concepts/emojis/touch/smallinventory.png)  |
 
+
 ### Keyboard & Mouse
 
-| Name               | Letter (Copy/Paste This) | Unicode | Image                                                         |
-| ------------------ | ------------------------ | ------- | ------------------------------------------------------------- |
+| Name               | Letter (Copy/Paste This) | Unicode | Image                                                               |
+| ------------------ | ------------------------ | ------- | ------------------------------------------------------------------- |
 | Left Click         |                         | U+E060  | ![](/assets/images/concepts/emojis/keyboard/left_click.png)         |
 | Right Click        |                         | U+E061  | ![](/assets/images/concepts/emojis/keyboard/right_click.png)        |
 | Middle Click       |                         | U+E062  | ![](/assets/images/concepts/emojis/keyboard/middle_click.png)       |
@@ -110,6 +111,7 @@ There will be instructions for creating custom emoji at the bottom.
 | Small Right Click  |                         | U+E071  | ![](/assets/images/concepts/emojis/keyboard/small_right_click.png)  |
 | Small Middle Click |                         | U+E072  | ![](/assets/images/concepts/emojis/keyboard/small_middle_click.png) |
 | Small Mouse        |                         | U+E073  | ![](/assets/images/concepts/emojis/keyboard/small_mouse.png)        |
+
 
 ### Xbox
 
@@ -132,6 +134,7 @@ There will be instructions for creating custom emoji at the bottom.
 | D-pad Down         |                         | U+E00E  | ![](/assets/images/concepts/emojis/xbox/dpad_down.png)     |
 | D-pad Left         |                         | U+E00D  | ![](/assets/images/concepts/emojis/xbox/dpad_left.png)     |
 
+
 ### Nintendo Switch
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                        |
@@ -152,6 +155,7 @@ There will be instructions for creating custom emoji at the bottom.
 | D-pad Right        |                         | U+E04F  | ![](/assets/images/concepts/emojis/switch/dpad_right.png)    |
 | D-pad Down         |                         | U+E04E  | ![](/assets/images/concepts/emojis/switch/dpad_down.png)     |
 | D-pad Left         |                         | U+E04D  | ![](/assets/images/concepts/emojis/switch/dpad_left.png)     |
+
 
 ### PlayStation (4/5)
 
@@ -174,6 +178,7 @@ There will be instructions for creating custom emoji at the bottom.
 | D-pad Down         |                         | U+E02E  | ![](/assets/images/concepts/emojis/playstation/dpad_down.png)     |
 | D-pad Left         |                         | U+E02D  | ![](/assets/images/concepts/emojis/playstation/dpad_left.png)     |
 
+
 ### Oculus (Rift/Rift S)
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                        |
@@ -189,6 +194,7 @@ There will be instructions for creating custom emoji at the bottom.
 | RT (Right Trigger) |                         | U+E0E8  | ![](/assets/images/concepts/emojis/oculus/right_trigger.png) |
 | LS (Left Stick)    |                         | U+E0E5  | ![](/assets/images/concepts/emojis/oculus/left_stick.png)    |
 | RS (Right Stick)   |                         | U+E0E6  | ![](/assets/images/concepts/emojis/oculus/right_stick.png)   |
+
 
 ### Windows MR (Mixed Reality)
 
