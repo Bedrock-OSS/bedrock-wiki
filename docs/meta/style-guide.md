@@ -40,7 +40,7 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 | RP Item              | dragon_tooth.item.rp.json  |
 | Render Controller    | dragon.rc.json             |
 | Loot Table           | dragon.loot.json           |
-| Dragon Saddle        | dragon_saddle.recipe.json  |
+| Recipe               | dragon_saddle.recipe.json  |
 | Spawn Rules          | dragon.spawn.json          |
 | Trade Table          | dragon.trade.json          |
 | Particles            | dragon_magic.particle.json |
