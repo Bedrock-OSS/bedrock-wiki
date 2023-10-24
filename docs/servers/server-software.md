@@ -18,6 +18,7 @@ mentions:
     - ThomasOrs
     - lapismyt
     - ModMaker101
+    - MisleWater079
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
@@ -28,15 +29,15 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
-| PHP        | [Still Active](#php)        : 5 < [Discontinued](#php-1)        : 36 |
+| PHP        | [Still Active](#php)        : 4 < [Discontinued](#php-1)        : 38 |
 | Java       | [Still Active](#java)       : 4 < [Discontinued](#java-1)       : 14 |
-| C++        | [Still Active](#c)          : 3 < [Discontinued](#c-3)          : 3  |
-| TypeScript | [Still Active](#typescript) : 3 < [Discontinued](#typescript-1) : 1  |
-| Go         | [Still Active](#go)         : 2 < [Discontinued](#go-1)         : 4  |
-| JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 5  |
-| Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 2  |
-| C#         | [Still Active](#c-1)        : 2 < [Discontinued](#c-4)          : 1  |
-| C          | [Still Active](#c-2)        : 1 < Discontinued                  : 0  |
+| C++        | [Still Active](#c)          : 1 < [Discontinued](#c-1)          : 5  |
+| TypeScript | [Still Active](#typescript) : 4 < [Discontinued](#typescript-1) : 1  |
+| Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 5  |
+| JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 6  |
+| Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 1  |
+| C#         | Still Active                : 0 < [Discontinued](#c-2)          : 3  |
+| C          | Still Active                : 0 < [Discontinued](#c-3)          : 1  |
 | Python     | [Still Active](#python)     : 1 < [Discontinued](#python-1)     : 2  |
 | D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
 | Kotlin     | Still Active                : 0 < [Discontinued](#kotlin)       : 1  |
@@ -45,22 +46,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### C++
 
 -   [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
--   [BedrockPowder](https://github.com/BedrockPowder/BedrockPowder)
--   [AllayBE](https://github.com/AllayBE/AllayBE)
-
-### C#
-
--   [MiNET](https://github.com/NiclasOlofsson/MiNET)
--   [Terac](https://github.com/TeracMC/Terac)
-
-### C
-
--   [Podrum](https://github.com/Podrum/Podrum)
 
 ### Go
 
 -   [DragonFly](https://github.com/df-mc/dragonfly)
--   [Saddle](https://github.com/saddlemc/saddle)
 
 ### Java
 
@@ -71,6 +60,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### TypeScript
 
+-   [Serenity](https://github.com/SerenityJS)
 -   [BDSX](https://github.com/bdsx/bdsx)
 -   [JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)
 -   [PowerAllay](https://github.com/PowerAllay/PowerAllay)
@@ -86,9 +76,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### PHP
 
 -   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
--   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
--   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
 -   [NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)
 -   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
 
@@ -100,13 +88,21 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### C++
 
+-   [AllayBE](https://github.com/AllayBE/AllayBE)
+-   [BedrockPowder](https://github.com/BedrockPowder/BedrockPowder)
 -   [Element Zero](https://github.com/Element-0/ElementZero)
 -   [Cenisys](https://github.com/iTXTech/Cenisys)
 -   [CenisysPro](https://github.com/GenisysPro/CenisysPro)
 
 ### C#
 
+-   [Terac](https://github.com/TeracMC/Terac)
+-   [MiNET](https://github.com/NiclasOlofsson/MiNET)
 -   [NetherServ](https://github.com/protosleep/NetherServ)
+
+### C
+
+-   [Podrum](https://github.com/Podrum/Podrum)
 
 ### D
 
@@ -114,6 +110,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### Go
 
+-   [Saddle](https://github.com/saddlemc/saddle)
 -   [Rockit-LMS](https://github.com/cr0sh/Rockit-LMS)
 -   [GoMine](https://github.com/Irmine/GoMine)
 -   [SpecterGO](https://github.com/SpecterTeam/SpecterGO)
@@ -156,6 +153,8 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### PHP
 
+-   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
+-   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [able-mp](https://github.com/AbleUnion/able-mp)
 -   [AtmosPE](https://github.com/AtmosPE/AtmosPE)
 -   [BlueLight](https://github.com/BlueLightJapan/BlueLight)
