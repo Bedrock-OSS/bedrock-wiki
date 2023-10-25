@@ -60,10 +60,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### TypeScript
 
--   [Serenity](https://github.com/SerenityJS)
 -   [BDSX](https://github.com/bdsx/bdsx)
 -   [JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)
 -   [PowerAllay](https://github.com/PowerAllay/PowerAllay)
+-   [Serenity](https://github.com/SerenityJS)
 
 ### JavaScript
 
@@ -90,15 +90,15 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 -   [AllayBE](https://github.com/AllayBE/AllayBE)
 -   [BedrockPowder](https://github.com/BedrockPowder/BedrockPowder)
--   [Element Zero](https://github.com/Element-0/ElementZero)
 -   [Cenisys](https://github.com/iTXTech/Cenisys)
 -   [CenisysPro](https://github.com/GenisysPro/CenisysPro)
+-   [Element Zero](https://github.com/Element-0/ElementZero)
 
 ### C#
 
--   [Terac](https://github.com/TeracMC/Terac)
 -   [MiNET](https://github.com/NiclasOlofsson/MiNET)
 -   [NetherServ](https://github.com/protosleep/NetherServ)
+-   [Terac](https://github.com/TeracMC/Terac)
 
 ### C
 
@@ -110,35 +110,35 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### Go
 
--   [Saddle](https://github.com/saddlemc/saddle)
--   [Rockit-LMS](https://github.com/cr0sh/Rockit-LMS)
 -   [GoMine](https://github.com/Irmine/GoMine)
--   [SpecterGO](https://github.com/SpecterTeam/SpecterGO)
 -   [Magic-Alpaca](https://github.com/PocketMiner92/Magic-Alpaca)
+-   [Rockit-LMS](https://github.com/cr0sh/Rockit-LMS)
+-   [Saddle](https://github.com/saddlemc/saddle)
+-   [SpecterGO](https://github.com/SpecterTeam/SpecterGO)
 
 ### Java
 
--   [Jenisys3](https://github.com/FrontierDevs/Jenisys3)
--   [Nukkit](https://github.com/Nukkit/Nukkit)
 -   [BukkitPE](https://github.com/BukkitPE/BukkitPE)
 -   [DiamondCore](https://github.com/DRAGKILLS/DiamondCore)
 -   [Dragonet](https://github.com/DragonetMC/Dragonet)
 -   [Dragonet-Legacy](https://github.com/DragonetMC/Dragonet-Legacy)
 -   [GoMint](https://github.com/GoMint/GoMint)
+-   [Jenisys3](https://github.com/FrontierDevs/Jenisys3)
 -   [MagmaBlock](https://github.com/PrismarineMC/MagmaBlock)
 -   [MCPEBukkit](https://github.com/MCPEBukkit/MCPEBukkit)
 -   [MineTurtle](https://github.com/MCPEBukkit/MineTurtle)
--   [SpiderMine](https://github.com/QuantumWorks/SpiderMine)
--   [voxelwind](https://github.com/voxelwind/voxelwind)
--   [Terracotta](https://github.com/TerracottaMC/Terracotta)
+-   [Nukkit](https://github.com/Nukkit/Nukkit)
 -   [PowerNukkit](https://github.com/PowerNukkit/PowerNukkit)
+-   [SpiderMine](https://github.com/QuantumWorks/SpiderMine)
+-   [Terracotta](https://github.com/TerracottaMC/Terracotta)
+-   [voxelwind](https://github.com/voxelwind/voxelwind)
 
 
 ### JavaScript
 
+-   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [DirtServer](https://github.com/Falkirks/DirtServer)
 -   [MineJS](https://github.com/organization/MineJS)
--   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [NodeMine](https://github.com/NodeMine/NodeMine)
 -   [Numerous-alpaca](https://github.com/numerous-alpaca/numerous-alpaca)
 -   [PocketNode](https://github.com/PocketNode/PocketNode)
@@ -153,9 +153,8 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### PHP
 
--   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
--   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [able-mp](https://github.com/AbleUnion/able-mp)
+-   [Altay](https://github.com/TuranicTeam/Altay)
 -   [AtmosPE](https://github.com/AtmosPE/AtmosPE)
 -   [BlueLight](https://github.com/BlueLightJapan/BlueLight)
 -   [ClearSky](https://github.com/ClearSkyTeam/ClearSky)
@@ -165,7 +164,9 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [DragMine](https://github.com/DragMineTeam/DragMine)
 -   [DualNova](https://github.com/DualNova-Team/DualNova)
 -   [Elywing](https://github.com/H4PM/Elywing)
+-   [Elco-MP](https://github.com/elco-mp/Elco-MP)
 -   [Endako](https://github.com/LeronDoesGM/Endako)
+-   [EskoBE](https://github.com/MCPE357/EskoBE)
 -   [Extropy](https://github.com/ConflictPE/Extropy)
 -   [Freven](https://github.com/FrevenTeam/Freven)
 -   [FrontierEdge](https://github.com/FrontierDevs/FrontierEdge)
@@ -176,21 +177,20 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [ImagicalMine](https://github.com/ImagicalMine/ImagicalMine)
 -   [Leveryl](https://github.com/LeverylTeam/Leveryl)
 -   [LikeMP](https://github.com/LikeMP-BE/LikeMP)
+-   [LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)
 -   [MechNetwork](https://github.com/MechRalph04/MechNetwork)
 -   [NekoMine-MP](https://github.com/Nekiechan/NekoMine-MP)
+-   [OpenTouch](https://github.com/pooooooon/OpenTouch)
+-   [ShadePE](https://github.com/ExplodingPE/ShadePE)
 -   [PocketMinePlusPlus-Legacy](https://github.com/PrismarineMC/PocketMinePlusPlus-Legacy)
 -   [Prismarine-0.12](https://github.com/PrismarineMC/Prismarine-0.12)
--   [ShadePE](https://github.com/ExplodingPE/ShadePE)
 -   [SkyLightPM](https://github.com/SkyLightMCPE/SkyLightPM)
 -   [StarrySky](https://github.com/StarrySky-PE/StarrySky)
 -   [Steadfast-Hybrid](https://github.com/yungtechboy1/Steadfast-Hybrid)
+-   [SteadFast2](https://github.com/Hydreon/Steadfast2)
 -   [T-STAR](https://github.com/TaleStar/T-STAR)
 -   [Turanic](https://github.com/TuranicTeam/Turanic)
 -   [WolfMC](https://github.com/Wolf-MC/WolfMC)
--   [Elco-MP](https://github.com/elco-mp/Elco-MP)
--   [OpenTouch](https://github.com/pooooooon/OpenTouch)
--   [Altay](https://github.com/TuranicTeam/Altay)
--   [SteadFast2](https://github.com/Hydreon/Steadfast2)
 
 ### Python
 
