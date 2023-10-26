@@ -59,9 +59,10 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 Listed below are all the 'damage sources' in MCBE for the `/damage` command currently available:
 ```
+all
 anvil
-attack
 block_explosion
+campfire
 charging
 contact
 drowning
@@ -83,7 +84,9 @@ none
 override
 piston
 projectile
+ram_attack
 sonic_boom
+soul_campfire
 stalactite
 stalagmite
 starve
