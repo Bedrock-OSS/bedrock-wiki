@@ -17,6 +17,7 @@ mentions:
     - TheItsNameless
     - ThomasOrs
     - QuazChick
+    - VactricaKing
 ---
 
 :::tip FORMAT & MIN ENGINE VERSION `1.20.30`
@@ -283,7 +284,13 @@ Removes the current block and replaces it with the defined block in the same pos
 ```json
 "wiki:place_block": {
   "set_block": {
-      "block_type": "minecraft:grass"
+      "block_type": {
+          "name": "minecraft:trapdoor",
+          "states": {
+              "facing": "north",
+              "open": true
+          }
+      }
   }
 }
 ```
@@ -295,10 +302,15 @@ Sets a block at a specified position relative to the block.
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
-"wiki:generate_stone_above": {
+"wiki:generate_upper_door_above": {
   "set_block_at_pos": {
-    "block_type": "minecraft:stone",
-    "block_offset": [0, 1, 0]
+      "block_type": {
+          "name": "minecraft:door",
+          "states": {
+              "upper_block_bit": true
+          }
+      },
+      "block_offset": [0, 1, 0]
   }
 }
 ```
