@@ -212,3 +212,6 @@ Clears 2 apples for players that have four or more apples:
 
 Checks for players who have two sticks and two diamonds:
 -   `/testfor @a[hasitem=[{item=diamond,quantity=2},{item=stick,quantity=2}]]`
+
+Checks for players who doesn't have a stick:
+-   `/testfor @a[hasitem=[{item=stick,quantity=0}]`
