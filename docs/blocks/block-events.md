@@ -305,7 +305,7 @@ Sets a block at a specified position relative to the block.
 "wiki:generate_upper_door_above": {
   "set_block_at_pos": {
       "block_type": {
-          "name": "minecraft:door",
+          "name": "minecraft:wooden_door",
           "states": {
               "upper_block_bit": true
           }
