@@ -287,8 +287,8 @@ Removes the current block and replaces it with the defined block in the same pos
       "block_type": {
           "name": "minecraft:trapdoor",
           "states": {
-              "facing": "north",
-              "open": true
+              "direction": 2,
+              "open_bit": true
           }
       }
   }
