@@ -59,7 +59,7 @@ Minecraft Bedrock will send out a message to all listed servers (and the local n
 
 After this message, the server will respond with something called an unconnected pong. The reason these messages are unconnected is because the client has not established a connection to the server. This is the format of an unconnected pong:
 
-`0xc1 | client alive time in ms (recorded from previous ping) | server GUID | string length | Edition (MCPE or MCEE for Education Edition);MOTD line 1;Protocol Version;Version Name;Player Count;Max Player Count;Server Unique ID;MOTD line 2;Game mode;Game mode (numeric);Port (IPv4);Port (IPv6);`
+`0x1c | client alive time in ms (recorded from previous ping) | server GUID | string length | Edition (MCPE or MCEE for Education Edition);MOTD line 1;Protocol Version;Version Name;Player Count;Max Player Count;Server Unique ID;MOTD line 2;Game mode;Game mode (numeric);Port (IPv4);Port (IPv6);`
 
 Example:
 
