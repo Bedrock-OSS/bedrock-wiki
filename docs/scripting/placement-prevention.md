@@ -1,5 +1,5 @@
 
-### Stable Methods
+
 ---
 title: Block Placement Prevention (Stable)
 mentions:
@@ -176,7 +176,6 @@ You can also change the typeId of the block in `event.itemStack.typeId === "mine
 To learn more about Script API, you can check out the [wiki](/scripting/starting-scripts) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
 
 
-### Beta Methods
 ---
 title: Block Placement Prevention (Beta)
 mentions:
