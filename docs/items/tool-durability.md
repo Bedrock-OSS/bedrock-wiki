@@ -11,7 +11,7 @@ mentions:
 
 ## Introduction
 
-1.16.100 items have different durability mechanic than 1.10 and 1.16 items.
+1.16.100+ items have different durability mechanic than 1.10 and 1.16 items.
 Now you need to define when will the item get durability damage and also an event that does it.
 What will be discussed on this page:
 
@@ -28,7 +28,7 @@ What will be discussed on this page:
 ```json
 "durability_update": {
     "damage": {
-        "type": "durability",
+        "type": "none",
         "amount": 1,
         "target": "self"
     }
