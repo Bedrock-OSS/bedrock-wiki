@@ -176,19 +176,6 @@ You can also change the typeId of the block in `event.itemStack.typeId === "mine
 To learn more about Script API, you can check out the [wiki](/scripting/starting-scripts) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
 
 
----
-title: Block Placement Prevention (Beta)
-mentions:
--   kumja1
-category: Tutorials
-tags:
-    - experimental
----
-
-::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.30.
-:::
-
 With the release of 1.20.30, we got a new beforeEvent that allows us to prevent block placement
 negating the need to use other methods such as world.beforeEvents.itemUseOn,Note: this is only for those who want to use beta methods, if not, then look up for the stable methods tutorial
 
