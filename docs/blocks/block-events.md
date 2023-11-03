@@ -284,6 +284,18 @@ Removes the current block and replaces it with the defined block in the same pos
 ```json
 "wiki:place_block": {
   "set_block": {
+      "block_type": "minecraft:grass"
+  }
+}
+```
+
+Or...
+
+<CodeHeader>minecraft:block > events</CodeHeader>
+
+```json
+"wiki:place_block": {
+  "set_block": {
       "block_type": {
           "name": "minecraft:trapdoor",
           "states": {
@@ -298,6 +310,19 @@ Removes the current block and replaces it with the defined block in the same pos
 ### set_block_at_pos
 
 Sets a block at a specified position relative to the block.
+
+<CodeHeader>minecraft:block > events</CodeHeader>
+
+```json
+"wiki:generate_stone_above": {
+  "set_block_at_pos": {
+    "block_type": "minecraft:stone",
+    "block_offset": [0, 1, 0]
+  }
+}
+```
+
+Or...
 
 <CodeHeader>minecraft:block > events</CodeHeader>
 
