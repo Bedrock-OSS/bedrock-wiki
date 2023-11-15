@@ -50,7 +50,7 @@ what now? You don't know? So read the next byte to find out what to do next.
 ![](/assets/images/nbt/VS_Editor_images/step8.png)
 
 So we read type 3, the 3 type is Int16 which contains 4 bytes. But before we read our number We have to find out the name of this property again. So?
-Read an Int32 to get the length of the name for this property.
+Read the next two bytes to get the length of the name for this property.
 
 ![](/assets/images/nbt/VS_Editor_images/step9.png)
 
