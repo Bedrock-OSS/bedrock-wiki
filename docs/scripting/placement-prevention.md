@@ -7,6 +7,9 @@ tags:
   - stable
 ---
 
+
+The tutorial has been separated into two sections: one for stable methods and one for beta methods. You can now use these sections independently depending on which version of the Script API you are working with.
+
 ::: warning
 The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.30.
 :::
@@ -152,18 +155,11 @@ You can also
 
  change the typeId of the block in `event.itemStack.typeId === "minecraft:bedrock"`. Put the namespace and identifier in place of `minecraft:bedrock`.
 
-To learn more about Script API, you can check out the [wiki](/scripting/starting-scripts) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted).
 
----
-title: "Block Placement Prevention (Beta)"
-mentions:
-  - kumja1
-category: Tutorials
-tags:
-  - experimental
----
 
 ::: warning
+-Made by kumja1
+
 With the release of 1.20.30, we got a new beforeEvent that allows us to prevent block placement, negating the need to use other methods such as world.beforeEvents.itemUseOn. Note: this is only for those who want to use beta methods; if not, then look up for the stable methods tutorial.
 :::
 
@@ -204,7 +200,7 @@ Just like other scripts, you need the dependency in your `manifest.json`. We are
   "dependencies": [
     {
       "module_name": "@minecraft/server",
-      "version": "1.7.0-beta"
+      "version": "1.8.0-beta"
     }
   ]
 }
@@ -270,4 +266,5 @@ You can now modify the message sent to the player in `player.sendMessage()`. Put
 
 You can also change the typeId of the block in `event.block.typeId === "minecraft:bedrock"`. Put the namespace and identifier in place of `minecraft:bedrock`.
 
-The tutorial has been separated into two sections: one for stable methods and one for beta methods. You can now use these sections independently depending on which version of the Script API you are working with.
+To learn more about Script API, you can check out the [wiki](/scripting/starting-scripts) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted).
+
