@@ -9,6 +9,10 @@ mentions:
     - TheDoctor15
 ---
 
+:::warning
+`on_dig` in items have been removed from the game, so this tutorial won't help you. If you know the way, please, contribute! 
+:::
+
 ## Introduction
 
 1.16.100+ items have different durability mechanic than 1.10 and 1.16 items.
