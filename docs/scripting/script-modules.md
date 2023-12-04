@@ -2,7 +2,7 @@
 title: Script Modules
 category: General
 mentions:
-	- cda94581
+    - cda94581
 ---
 
 ::: warning
@@ -66,7 +66,7 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
     **Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
     -   `@minecraft/server`:
-        -   [1.0.0](https://stirante.com/script/1.0.0/)
+        -   [1.0.0](https://stirante.com/script/server/1.0.0/)
 
     **Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, with lots of experimental features in the API.
 
@@ -93,8 +93,8 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
 
     -   New stable release in `@minecraft/server`:
 
-        -   Release stable version [1.1.0](https://stirante.com/script/1.1.0/)
-        -   Incremented beta version to [1.2.0-beta](https://stirante.com/script/1.2.0-beta.1.19.80-stable/index.html)
+        -   Release stable version [1.1.0](https://stirante.com/script/server/1.1.0/)
+        -   Incremented beta version to [1.2.0-beta](https://stirante.com/script/server/1.2.0-beta.1.19.80-stable/index.html)
 
     -   New API modules: `@minecraft/server-editor` and `@minecraft/server-editor-bindings`
 
@@ -102,8 +102,8 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
 
     -   New stable release in `@minecraft/server`:
 
-        -   Release stable version [1.2.0](https://stirante.com/script/1.2.0/)
-        -   Incremented beta version to [1.3.0-beta](https://stirante.com/script/1.3.0-beta.1.20.0-stable/index.html)
+        -   Release stable version [1.2.0](https://stirante.com/script/server/1.2.0/)
+        -   Incremented beta version to [1.3.0-beta](https://stirante.com/script/server/1.3.0-beta.1.20.0-stable/index.html)
 
     -   New stable API module: `@minecraft/server-ui`.
 
@@ -111,8 +111,8 @@ Script API modules all have their own versions and since 1.19.20 they follow sem
         -   Incremented beta version to `1.1.0-beta`
 -   1.20.10+
     -   New stable release in `@minecraft/server`:
-        -   Release stable version [1.3.0](https://stirante.com/script/1.3.0/)
-        -   Incremented beta version to [1.4.0-beta](https://stirante.com/script/1.4.0-beta.1.20.10-stable/index.html)
+        -   Release stable version [1.3.0](https://stirante.com/script/server/1.3.0/)
+        -   Incremented beta version to [1.4.0-beta](https://stirante.com/script/server/1.4.0-beta.1.20.10-stable/index.html)
 
 As of release 1.19.30, you can also specify dependencies using the `module_name`:
 
