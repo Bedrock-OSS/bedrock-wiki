@@ -550,7 +550,7 @@ Minecraft 1.20.30 added recipe unlocking to the game. In order to have your reci
 			{
 				"context": "PlayerInWater" //event to unlock recipe
 			}
-          ]
+		]
 ```
 Each object in this array contains `"item"` and this tells the recipe what item the player needs in their inventory in order for this recipe to be unlocked. `"context"` is used to determine what event unlocks this recipe. `"PlayerInWater"` will unlock this recipe when the player enters water. This is also the only known context for recipes.
 
