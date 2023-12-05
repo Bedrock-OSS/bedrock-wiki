@@ -10,13 +10,29 @@ mentions:
     - yanasakana
     - MedicalJewel105
     - aexer0e
+    - Xterionix
 ---
 
 It is fairly common to want to spawn an item in the world, as if dropped. This page will walk through how to accomplish this through various methods, including Entity Deaths, Interactions, and an all-purpose method.
 
+## /loot
+
+The simplest method of spawning items to date is by using /loot. Formatted as such:
+```
+/loot spawn ~ ~ ~ loot "entities/cow"
+```
+
+<CodeHeader>BP/loot_tables/entities/cow.json</CodeHeader>
+
+```json
+"minecraft:loot": {
+	"table": "loot_tables/entities/cow.json"
+}
+```
+
 ## Entity Deaths
 
-The simplest method of spawning items - and generally the most common one - is dropping items upon an entity's death. This is done by adding the `minecraft:loot` component to the entity and linking it to the respective loot table (`forium` in the following example) containing items you wish to be dropped.
+Another simple method of spawning items - and generally the most common one - is dropping items upon an entity's death. This is done by adding the `minecraft:loot` component to the entity and linking it to the respective loot table (`forium` in the following example) containing items you wish to be dropped.
 
 <CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
 
