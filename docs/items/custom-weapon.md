@@ -59,7 +59,7 @@ Like with the other item tutorials we will start by making a simple custom sword
 			"minecraft:repairable": {
 				"repair_items": [
 					{
-						"items": "minecraft:stick",
+						"items": ["minecraft:stick"],
 						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
 					}
 				]
