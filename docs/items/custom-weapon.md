@@ -10,6 +10,7 @@ mentions:
     - aexer0e
     - PepijnMC
     - ThomasOrs
+    - Xterionix
 ---
 
 Making a custom weapon is pretty simple since the 1.16.100 changes, as these allow you to simply define an item entry for it in your `BP/items` folder and provide a corresponding texture in the `RP/textures/items` folder with a bit of config and you have a fully working weapon that you can customize however you see fit.
@@ -215,7 +216,7 @@ So if you go back into your my_sword.json and after your `components` section ad
 					},
 					{
 						// We have another dummy random element here which contains the max weight
-						"weight": 4
+						"weight": 3
 					}
 				]
 			},
