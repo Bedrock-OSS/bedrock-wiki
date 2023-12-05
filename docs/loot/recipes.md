@@ -62,17 +62,17 @@ As an example, a "cold steel sword" might be crafted using the following [shaped
 			"I": "minecraft:stick"
 		},
 		"unlock": [
-            {
-              "item": "wiki:cold_steel"
-            },
 			{
-              "item": "minecraft:wool",
-            	"data":  3
+				"item": "wiki:cold_steel"
 			},
 			{
-			 "context": "PlayerInWater"
+				"item": "minecraft:wool",
+				"data":  3
+			},
+			{
+				"context": "PlayerInWater"
 			}
-          ],
+		],
 		"result": "wiki:cold_steel_sword"
 	}
 }
@@ -161,15 +161,15 @@ To effectively disable a recipe (useful for [overriding](#overrides) a prior rec
 Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, you `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
 ```json
 		"unlock": [
-            {
-              "item": "wiki:cold_steel" //item to unlock recipe
-            },
 			{
-              "item": "minecraft:wool", //item to unlock recipe
-            	"data":  3
+				"item": "wiki:cold_steel" //item to unlock recipe
 			},
 			{
-			 "context": "PlayerInWater" //event to unlock recipe
+				"item": "minecraft:wool", //item to unlock recipe
+				"data":  3
+			},
+			{
+				"context": "PlayerInWater" //event to unlock recipe
 			}
           ]
 ```
@@ -298,17 +298,17 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 			}
 		],
 		"unlock": [
-            {
-              "item": "wiki:cold_steel"
-            },
 			{
-              "item": "minecraft:wool",
-            	"data":  3
+				"item": "wiki:cold_steel"
 			},
 			{
-			 "context": "PlayerInWater"
+				"item": "minecraft:wool",
+				"data":  3
+			},
+			{
+				"context": "PlayerInWater"
 			}
-          ],
+		],
 		"result": {
 			"item": "wiki:door_knob",
 			"data": 3
@@ -371,17 +371,17 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 			"I": "wiki:support"
 		},
 		"unlock": [
-            {
-              "item": "wiki:cold_steel"
-            },
 			{
-              "item": "minecraft:wool",
-            	"data":  3
+				"item": "wiki:cold_steel"
 			},
 			{
-			 "context": "PlayerInWater"
+				"item": "minecraft:wool",
+				"data":  3
+			},
+			{
+				"context": "PlayerInWater"
 			}
-          ],
+		],
 		"result": [
 			{
 				"item": "wiki:covered_arch",
@@ -540,15 +540,15 @@ If a character in the pattern is not present in the key map, it will be treated 
 Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, you `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
 ```json
 		"unlock": [
-            {
-              "item": "wiki:cold_steel" //item to unlock recipe
-            },
 			{
-              "item": "minecraft:wool", //item to unlock recipe
-            	"data":  3
+				"item": "wiki:cold_steel" //item to unlock recipe
 			},
 			{
-			 "context": "PlayerInWater" //event to unlock recipe
+				"item": "minecraft:wool", //item to unlock recipe
+				"data":  3
+			},
+			{
+				"context": "PlayerInWater" //event to unlock recipe
 			}
           ]
 ```
