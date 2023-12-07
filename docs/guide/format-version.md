@@ -26,7 +26,7 @@ By using format versions *per file*, Minecraft gives you a lot of control over h
 
 Format versions are also used for the purpose of versioning experimental features. Since Minecraft releases bedrock experiments directly into stable, some format versions will be 'locked' under experimental, unless you toggle the correct experiment.
 
-A well known example is the item/blocks system, where `1.16.100` denotes experimental, and `1.10.0` denotes stable. If you want to make an item, it's important to select a format version early, as it will effect everything else you add to the files.
+A well known example is the item/blocks system, where `1.16.100` denotes experimental, and `1.10.0` denotes stable. If you want to make an item, it's important to select a format version early, as it will effect everything else you add to the files. If you are going with an experimental format version for your item/block you may want to go higher than `1.16.100` because some experimental features won't work properly in that format version, for example if you are making a custom spawn egg and you want it to be able to set the entity type of a monster spawner, then you need to the format version to `1.19.80` or higher. 
 
 ## Format Version is not Game Version
 
@@ -111,6 +111,8 @@ This section will list the format versions used in the vanilla game, alongside h
     - `1.16` : 1
     - `1.14` : 1
     - `1.16.100`: 0 🚀
+    - `1.19.80`: 0
+    - `1.20.40`: 0
 
 **Recipes**:
     - `1.12` : 991
