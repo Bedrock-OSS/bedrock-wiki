@@ -14,10 +14,11 @@ mentions:
     - JaylyDev
     - Fabrimat
     - Herobrine643928
+    - kumja1
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.40
 :::
 
 The GameTest Framework allows us to create unit tests ("GameTests") which make it easier to test if game mechanics work.
@@ -47,7 +48,7 @@ To use the GameTest Framework, the `@minecraft/server-gametest` module is requir
 "dependencies": [
     {
         "module_name": "@minecraft/server",
-        "version": "1.3.0-beta"
+        "version": "1.7.0-beta"
     },
     {
         "module_name": "@minecraft/server-gametest",
