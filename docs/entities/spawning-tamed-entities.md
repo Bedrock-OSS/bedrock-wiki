@@ -97,6 +97,10 @@ Afterwards, we'll need to create a simple custom entity that will have the `mine
 
 And now, you can spawn a tamed wolf next to the player with `/event entity @p wiki:spawn_tamed_wolf`. You can also spawn it with a `wiki:pretamed_wolf` spawn egg by setting `is_spawnable` to `true`!
 
+:::warning
+If you want to spawn a custom entity instead of a wolf using this method, you will need to make sure that the entity has the minecraft:is_tamed component for it to work properly. Otherwise, some behaviors will not function as expected for a tamed entity.
+:::
+
 ## Integrating Item Projectiles (Alternate Method)
 
 Introduced as one of [1.16's experimental item features](/items/items-16), the `shoot` event property can be used to make projectiles that transform into tamed entities upon impact.
