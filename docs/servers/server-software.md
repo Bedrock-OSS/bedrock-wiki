@@ -19,6 +19,7 @@ mentions:
     - lapismyt
     - ModMaker101
     - Misledwater79
+    - AzaleeX
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
@@ -78,6 +79,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)
+-   [Symply](https://github.com/SymplyX/Symply) 
 -   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
 
 ### Python
