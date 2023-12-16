@@ -234,7 +234,7 @@ Functions are what makes loot tables so powerful. They can do a wide range of ta
 	"type": "item",
 	"name": "minecraft:dirt",
 	"weight": 10,
-	"functions" [
+	"functions": [
 		{
 			"function": "set_count",
 			"count": {
