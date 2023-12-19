@@ -21,6 +21,7 @@ mentions:
     - Etanarvazac
     - retr0cube
     - ThomasOrs
+    - lescx
 ---
 
 ## The com.mojang folder
@@ -40,6 +41,18 @@ _Tip: You can type %appdata% into the searchbar to jump directly into the 'C:\Us
 Android 11 or older: `Phone > games > com.mojang`
 
 Android 12 and newer: `Phone > Android > data > com.mojang.minecraftpe > files > games > com.mojang`
+
+### ChromeOS
+
+Before you can see the `com.mojang` in your files, make sure to change the `File Storage Location` to `External` in your Minecraft Settings:
+
+- Go to `Minecraft Settings`.
+- Navigate to `Settings > General > Storage`.
+- Change the `File Storage Location` to `External`.
+
+After that you can access the `com.mojang` folder in your Android Subsystem:
+
+`My Files > Play Files > Android > data > com.mojang.minecraftpe > files > games > com.mojang`
 
 ### iOS
 
