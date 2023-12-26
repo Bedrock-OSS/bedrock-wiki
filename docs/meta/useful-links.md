@@ -97,7 +97,7 @@ Important links have a ⭐.
 - [Introduction to the GameTest Framework](https://learn.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted): This is the best way to test games, and it uses JavaScript, the most popular programming language in the world!
 - [Build a gameplay experience with TypeScript](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted): TypeScript is Microsoft's copy of JavaScript. Writing add-ons in TypeScript allows you to add any functionality you can imagine!
 - [@minecraft/server Module](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft): This module and the others near it are how we can access Minecraft values with our TypeScript code. It's technical, but a great resource.
-- [List and summary of commands (Minecraft fandom)](https://minecraft.wiki/w/Commands#List_and_summary_of_commands): Most add-ons will run some commands. This community-supported wiki is the best resource for learning each and every command.
+- [List and summary of commands (Unofficial Minecraft wiki)](https://minecraft.wiki/w/Commands#List_and_summary_of_commands): Most add-ons will run some commands. This community-supported wiki is the best resource for learning each and every command.
 
 ## Sample Behavior & Resource Packs
 
@@ -119,7 +119,7 @@ These packs are published by the open-source community
 
 -   [GameTests API Wrapper](https://github.com/notbeer/Framework-Wrapper)
 -   [GameTests Plugin-API-Starter-Pack](https://github.com/MajestikButter/Plugin-API-Starter-Pack)
--   [Useful for Block Tags](https://mcpedl.com/debug-stick-addon-1/)
+-   [Useful for Block Tags](https://mcpedl.com/debug-stick/)
 
 ## Raytracing Resources
 -  ⭐ [Ray Tracing and PBR Texturing guide](https://docs.microsoft.com/en-us/minecraft/creator/documents/rtxgettingstarted)
@@ -135,9 +135,8 @@ These packs are published by the open-source community
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
 -   ⭐ [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
 -   [MCDLHub](https://mcdlhub.com/)
--   [MCBEHub](https://mcbehub.com/)
--   [MCPECore](https://mcpecore.com/)
 -   [CubitosMC](https://www.cubitosmc.com/)
+-   [Modbay](https://modbay.org/)
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
 
