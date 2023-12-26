@@ -13,6 +13,10 @@ tags:
 [compound]: /assets/images/nbt/compound.png
 [string]: /assets/images/nbt/string.png
 
+:::warning DEPRECATED
+This method no longer works after 1.20.50 update.
+:::
+
 By default, Minecraft doesn't allow you to save structures that are more than 64x255x64 in size.
 In this guide you will learn how to extend structure box size for structure blocks.
 
