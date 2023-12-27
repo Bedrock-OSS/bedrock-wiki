@@ -43,7 +43,7 @@ Item categories applied with the item component `creative_category` direct it ex
 <CodeHeader></CodeHeader>
 
 ::: tip
-In Minecraft 1.20.0 and newer, hiding items in the creative menu isn't possible. Items must be categorized as 'Items', 'Equipment', 'Construction', or 'Nature' in the 'description' section, using 'category': '<type>'.
+In Minecraft 1.20.0 and newer, hiding items in the creative menu isn't possible. Items must be categorized as 'Items', 'Equipment', 'Construction', or 'Nature' in the 'description' section, using 'category': '\<type\>'.
 :::
 
 ```json
