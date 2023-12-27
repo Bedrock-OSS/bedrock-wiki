@@ -22,7 +22,7 @@ Creative categories are the categories that determine where an item or block wil
 As of 1.17.30 this feature is currently experimental and is currently available for both custom items & blocks. Make sure to use the [1.16.100+ format version!](/items/items-16)
 :::
 
-Item categories applied with the item description direct it to a more broad field in the creative category, individual tabs. They need to be the same tab as the component `creative_category`. Such would be applied like the following example:
+Item categories applied with the item description direct it to a more broad field in the creative category, individual tabs. They need to be the same tab as the component `creative_category`. Such would be applied in the following example:
 
 <CodeHeader></CodeHeader>
 
@@ -41,6 +41,10 @@ Item categories applied with the item description direct it to a more broad fiel
 Item categories applied with the item component `creative_category` direct it exactly where to go. Such would be applied like the following example:
 
 <CodeHeader></CodeHeader>
+
+::: tip
+In Minecraft 1.20.0 and newer, hiding items in the creative menu isn't possible. Items must be categorized as 'Items', 'Equipment', 'Construction', or 'Nature' in the 'description' section, using 'category': '<type>'.
+:::
 
 ```json
 {
