@@ -18,7 +18,7 @@ Creative categories are the categories that determine where an item or block wil
 
 ## For Items
 
-::: warning
+:::warning
 As of 1.17.30 this feature is currently experimental and is currently available for both custom items & blocks. Make sure to use the [1.16.100+ format version!](/items/items-16)
 :::
 
