@@ -9,7 +9,7 @@ This page is a more up-to-date version of [this page](https://learn.microsoft.co
 
 ## Overview
 
-Item IDs (not to be confused with type IDs) are an older system which are mainly used to render items with [JSON UI](json-ui/json-ui-documentation#item-id-aux-item-id-aux) nowadays. All items & blocks (Even custom ones!) have their own unique ID.
+Item IDs (not to be confused with type IDs) are an older system which are mainly used to render items with [JSON UI](/json-ui/json-ui-documentation#item-id-aux-item-id-aux) nowadays. All items & blocks (Even custom ones!) have their own unique ID.
 
 ## ID Formatting
 - Vanilla items & blocks have IDs from `-738` to `719`.
