@@ -23,7 +23,7 @@ This system allows you to track how many players/entities are there on your worl
 
 `/scoreboard objectives add total dummy`
 
-If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/docs/commands/on-first-world-load)
+If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
 
 ## System
 
