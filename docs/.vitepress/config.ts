@@ -157,11 +157,11 @@ function generateSidebar(base: string, dir: string) {
 					// Multiply by category value if it exists
 					const navA =
 						(dataA.nav_order || 50) +
-							(order[dataA.category] || 0) * 100 ||
+						(order[dataA.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
 					const navB =
 						(dataB.nav_order || 50) +
-							(order[dataB.category] || 0) * 100 ||
+						(order[dataB.category] || 0) * 100 ||
 						Number.MAX_SAFE_INTEGER
 
 					// Tie goes to the text compare! (Will also apply for elements without nav order)
@@ -172,7 +172,7 @@ function generateSidebar(base: string, dir: string) {
 					// Return nav order
 					return navA - navB
 				}
-			),
+			)
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
@@ -182,8 +182,8 @@ function generateSidebar(base: string, dir: string) {
 			if (frontMatter.data.title === void 0) {
 				throw new Error(
 					'File ' +
-						path.join(joinedPath, 'index.md') +
-						' has invalid frontmatter!'
+					path.join(joinedPath, 'index.md') +
+					' has invalid frontmatter!'
 				)
 			}
 		}
@@ -292,19 +292,19 @@ const req = async (url2: string) => {
 	return response.json()
 }
 const getAuthors = async () => {
-	let files = await req('git/trees/wiki?recursive=1')
-	// @ts-ignore
-	if (!files.tree) return files
-	// @ts-ignore
-	files = files.tree
-		.filter(({ path }: { path: string }) =>
-			path.match('docs/(?!public|.vite.*$).*.md')
-		)
-		// @ts-ignore
-		.map((e) => e.path)
-	console.log('Getting data for the files ' + files)
+	// let files = await req('git/trees/wiki?recursive=1')
+	// // @ts-ignore
+	// if (!files.tree) return files
+	// // @ts-ignore
+	// files = files.tree
+	// 	.filter(({ path }: { path: string }) =>
+	// 		path.match('docs/(?!public|.vite.*$).*.md')
+	// 	)
+	// 	// @ts-ignore
+	// 	.map((e) => e.path)
+	// console.log('Getting data for the files ' + files)
 	const contributors = {}
-	const authors = []
+	// const authors = []
 
 	// TODO: Fix this
 	return contributors
@@ -497,9 +497,9 @@ module.exports = (async function () {
 			const fm = ctx.pageData.frontmatter
 
 			const description =
-			fm.description !== undefined
-				? fm.description
-				: 'This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.'
+				fm.description !== undefined
+					? fm.description
+					: 'This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.'
 
 			const title = fm.title !== undefined ? fm.title : 'The Bedrock Wiki'
 
@@ -513,13 +513,13 @@ module.exports = (async function () {
 			const imageAlt = 'The title image of the Bedrock Wiki'
 
 			const url =
-			ctx.pageData.relativePath !== undefined
-				? `https://wiki.bedrock.dev/${ctx.pageData.relativePath.slice(
-					0,
-					ctx.pageData.relativePath.lastIndexOf('.md')
-				)}.html`
-				: 'https://wiki.bedrock.dev'
-	
+				ctx.pageData.relativePath !== undefined
+					? `https://wiki.bedrock.dev/${ctx.pageData.relativePath.slice(
+						0,
+						ctx.pageData.relativePath.lastIndexOf('.md')
+					)}.html`
+					: 'https://wiki.bedrock.dev'
+
 			const data = {
 				// twitter
 				'twitter:card': 'summary',
@@ -538,7 +538,7 @@ module.exports = (async function () {
 				'og:site_name': site
 			}
 			// eslint-disable-next-line prefer-const
-			let out: (string | {name: string, content: string})[][] = []
+			let out: (string | { name: string, content: string })[][] = []
 			Object.entries(data).forEach(([name, content]) => {
 				out.push(['meta', {
 					name: name,

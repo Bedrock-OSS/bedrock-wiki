@@ -34,104 +34,100 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { ref, watch } from 'vue'
-import { universalFetch } from '../../Utils/fetch'
+import { getGitHubAuthor, GitHubAuthor } from '../../Utils/user-cache'
 
-const { page, site } = useData()
+const { page } = useData()
 
 const props = defineProps<{
 	mentioned: Array<string>
 }>()
 
-if (import.meta.env.MODE == 'development')
-	console.log('DEV MODE: Using getContributorsLegacy')
+// if (import.meta.env.MODE == 'development')
+// 	console.log('DEV MODE: Using getContributorsLegacy')
 
 const getContributors = async function () {
-	const path = site.value.themeConfig.docsDir + '/' + page.value.relativePath
-	const contrs = site.value.themeConfig.contributors
-	if (import.meta.env.MODE == 'development')
-		return await getContributorsLegacy()
-	if (!contrs || !JSON.stringify(contrs).includes('SirLich')) {
-		console.error('couldn\'t fetch contributors:', contrs)
-		return await getContributorsLegacy()
-	}
-	const ret: GitHubAuthor[] | null = contrs[path]
-		? Array.from(contrs[path])
-		: null
-	if (!ret) {
-		console.error(
-			'Document path:',
-			path,
-			'not found within contributors:',
-			Object.keys(contrs)
-		)
-		return await getContributorsLegacy()
-	}
-	const headers = {
-		...(!!import.meta.env.GITHUB_TOKEN && {
-			Authorization: 'Bearer ' + import.meta.env.GITHUB_TOKEN,
-		}),
-	}
+	const ret: GitHubAuthor[] = []
+	// const path = site.value.themeConfig.docsDir + '/' + page.value.relativePath
+	// const contrs = site.value.themeConfig.contributors
+	// if (import.meta.env.MODE == 'development')
+	// 	return await getContributorsLegacy()
+	// if (!contrs || !JSON.stringify(contrs).includes('SirLich')) {
+	// 	console.error('couldn\'t fetch contributors:', contrs)
+	// 	return await getContributorsLegacy()
+	// }
+	// const ret: GitHubAuthor[] | null = contrs[path]
+	// 	? Array.from(contrs[path])
+	// 	: null
+	// if (!ret) {
+	// 	console.error(
+	// 		'Document path:',
+	// 		path,
+	// 		'not found within contributors:',
+	// 		Object.keys(contrs)
+	// 	)
+	// 	return await getContributorsLegacy()
+	// }
+	// const headers = {
+	// 	...(!!import.meta.env.GITHUB_TOKEN && {
+	// 		Authorization: 'Bearer ' + import.meta.env.GITHUB_TOKEN,
+	// 	}),
+	// }
 	for (let i = 0; i < props.mentioned.length; i++) {
-		if (
-			ret.filter(
-				(value: GitHubAuthor) => value.login === props.mentioned[i]
-			).length > 0
-		)
-			continue
-		const url = 'https://api.github.com/users/' + props.mentioned[i]
-		const result = await universalFetch(url, { headers })
-		let user: GitHubAuthor = await result.json()
+		// if (
+		// 	ret.filter(
+		// 		(value: GitHubAuthor) => value.login === props.mentioned[i]
+		// 	).length > 0
+		// )
+		// 	continue
+		// const url = 'https://api.github.com/users/' + props.mentioned[i]
+		// let user: GitHubAuthor = await result.json()
+		const user = await getGitHubAuthor(props.mentioned[i])
+		if (!user) continue
 		ret.push(user)
 	}
 	return ret
 }
 
-// partial type of https://api.github.com/users/user
-interface GitHubAuthor {
-	login: string
-	avatar_url: string
-	html_url: string
-}
-const getContributorsLegacy = async function () {
-	let url =
-		'https://api.github.com/repos/' +
-		site.value.themeConfig.repo +
-		'/commits?path=' +
-		site.value.themeConfig.docsDir +
-		'/' +
-		page.value.relativePath
+// const getContributorsLegacy = async function () {
+// 	let url =
+// 		'https://api.github.com/repos/' +
+// 		site.value.themeConfig.repo +
+// 		'/commits?path=' +
+// 		site.value.themeConfig.docsDir +
+// 		'/' +
+// 		page.value.relativePath
 
-	const headers = {
-		...(!!import.meta.env.GITHUB_TOKEN && {
-			Authorization: 'Bearer ' + import.meta.env.GITHUB_TOKEN,
-		}),
-	}
+// 	const headers = {
+// 		...(!!import.meta.env.GITHUB_TOKEN && {
+// 			Authorization: 'Bearer ' + import.meta.env.GITHUB_TOKEN,
+// 		}),
+// 	}
 
-	const result = await universalFetch(url, { headers })
-	let commits: { author: GitHubAuthor }[] = await result.json()
-	let contributors: GitHubAuthor[] = []
+// 	const result = await universalFetch(url, { headers })
+// 	let commits: { author: GitHubAuthor }[] = await result.json()
+// 	let contributors: GitHubAuthor[] = []
 
-	const contributorExists = (login: string) =>
-		contributors.filter((value) => value.login === login).length > 0
+// 	const contributorExists = (login: string) =>
+// 		contributors.filter((value) => value.login === login).length > 0
 
-	for (let i = 0; i < commits.length; i++) {
-		if (
-			commits[i]?.author?.login &&
-			!contributorExists(commits[i].author.login)
-		) {
-			contributors.push(commits[i].author)
-		}
-	}
+// 	for (let i = 0; i < commits.length; i++) {
+// 		if (
+// 			commits[i]?.author?.login &&
+// 			!contributorExists(commits[i].author.login)
+// 		) {
+// 			contributors.push(commits[i].author)
+// 		}
+// 	}
 
-	// mentioned
-	for (let i = 0; i < props.mentioned.length; i++) {
-		url = 'https://api.github.com/users/' + props.mentioned[i]
-		const result = await universalFetch(url, { headers })
-		let user: GitHubAuthor = await result.json()
-		if (!contributorExists(user.login)) contributors.push(user)
-	}
-	return contributors
-}
+// 	// mentioned
+// 	for (let i = 0; i < props.mentioned.length; i++) {
+// 		url = 'https://api.github.com/users/' + props.mentioned[i]
+// 		const result = await universalFetch(url, { headers })
+// 		let user: GitHubAuthor = await result.json()
+// 		if (!contributorExists(user.login)) contributors.push(user)
+// 	}
+// 	return contributors
+// }
 
 let contributors = ref(await getContributors())
 watch(page, async () => {
