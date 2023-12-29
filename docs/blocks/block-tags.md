@@ -35,9 +35,9 @@ Block tags can be applied in the same way as items - in the block's `components`
       }
     },
     "components": {
-        "minecraft:tags": {
-            "tags": [ "wood", "my_lovely_tag", "wiki:very_useless" ]
-        }
+      "tag:wood": {},
+      "tag:my_lovely_tag": {},
+      "tag:wiki:very_useless": {}
     }
   }
 }
