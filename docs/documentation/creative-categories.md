@@ -1,98 +1,97 @@
 ---
-title: Creative Categories
-tags:
-    - experimental
+title: Menu Categories
 mentions:
-    - Warhead51707
-    - yanasakana
-    - SirLich
-    - SmokeyStack
-    - MedicalJewel105
-    - Chikorita-Lover
-    - MiemieMethod
-    - retr0cube
-    - TheItsNameless
+  - Warhead51707
+  - yanasakana
+  - SirLich
+  - SmokeyStack
+  - MedicalJewel105
+  - Chikorita-Lover
+  - MiemieMethod
+  - retr0cube
+  - TheItsNameless
+  - QuazChick
 ---
 
-Creative categories are the categories that determine where an item or block will appear inside of the creative inventory.
+Menu categories determine where items and blocks appear inside of the creative inventory and recipe book.
 
-## For Items
+- A `category` can be defined to place the item under a tab (such as construction). Click [here](#list-of-categories) for a list of valid categories.
 
-:::warning
-As of 1.17.30 this feature is currently experimental and is currently available for both custom items & blocks. Make sure to use the [1.16.100+ format version!](/items/items-16)
+- A `group` specifies which expandable group the item is placed into. If you use a custom value, a new expandable group won't be created, however items with the group will be placed next to each other in the creative inventory. Click [here](#list-of-groups) for a list of expandable groups.
+
+- You can also set `is_hidden_in_commands` to true to remove this block/item from commands, such as `/give` and `/setblock`.
+
+If `menu_category` is omitted, the item will only be accessible through commands and won't appear in the creative inventory or recipe book.
+
+**NOTE:** The menu category of custom spawn eggs cannot be modified. You must instead create a custom item with the `minecraft:entity_placer` component.
+
+<CodeHeader></CodeHeader>
+
+```json
+"menu_category": {
+  "category": "construction", // Tab the item is placed under
+  "group": "itemGroup.name.door", // Optional - Group the item is placed into
+  "is_hidden_in_commands": false // Optional - default is false (item is usable in commands)
+}
+```
+
+:::danger HIDDEN ITEMS INACCESSIBLE IN COMMANDS ([MCPE-177866](https://bugs.mojang.com/browse/MCPE-177866))
+Currently, setting the category to "none" in a custom item (not block) prevents the item from being used in commands, overriding the "is_hidden_in_commands" option. This issue doesn't affect blocks.
 :::
 
-Item categories applied with the item description direct it to a more broad field in the creative category, individual tabs. They need to be the same tab as the component `creative_category`. Such would be applied in the following example:
+## Block Example
 
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:dagger",
-			"category": "equipment"
-		}
-	}
-}
-```
-
-Item categories applied with the item component `creative_category` direct it exactly where to go. Such would be applied like the following example:
-
-<CodeHeader></CodeHeader>
-
-::: tip
-In Minecraft 1.20.0 and newer, hiding items in the creative menu isn't possible. Items must be categorized as 'Items', 'Equipment', 'Construction', or 'Nature' in the 'description' section, using 'category': '\<type\>'.
-:::
+<CodeHeader>BP/blocks/balsa_wood.json</CodeHeader>
 
 ```json
 {
-	"minecraft:creative_category": {
-		"parent": "itemGroup.name.sword"
-	}
+  "format_version": "1.20.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:balsa_wood",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.wood" // Placed into an expandable group
+      }
+    }
+  }
 }
 ```
 
-## For Blocks
+## Item Example
 
-Block Categories are defined via `menu_category`, your custom block will not show up in the Creative Inventory if you don't have this, here's an example:
-
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/items/dagger.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.19.50",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:balsa",
-			"menu_category": {
-				"category": "nature",
-				"group": "itemGroup.name.wood"
-			}
-		}
-	}
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "wiki:dagger",
+      "menu_category": {
+        "category": "equipment",
+        "is_hidden_in_commands": true // Item cannot be used in commands
+      }
+    }
+  }
 }
 ```
 
-As you can see, `menu_category` accepts 2 optional children, the `category` child & the `group` child. A list of groups & categories can be found below. You can also use `is_hidden_in_commands` to make the block not show in commands.
+## List of Categories
 
-## List of Creative Tabs
+_For use with `menu_category` parameter, `category`._
 
-> _For use with `description` parameter, `category`_
+| Category     | Description                                              |
+| ------------ | -------------------------------------------------------- |
+| construction | Added to the "Contruction" tab.                          |
+| equipment    | Added to the "Equipment" tab.                            |
+| items        | Added to the "Items" tab.                                |
+| nature       | Added to the "Nature" tab.                               |
+| none         | Not added to a tab and only accessible through commands. |
 
-|   Category   |
-| ------------ |
-| commands     |
-| construction |
-| equipment    |
-| items        |
-| nature       |
-| none         |
+## List of Groups
 
-## List of Creative Categories
-
-> _For use with the `group` parameter_
+_For use with the `menu_category` parameter, `group`._
 
 <!-- page_dumper_start -->
 | Creative Categories:              |
