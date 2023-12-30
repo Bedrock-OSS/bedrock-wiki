@@ -8,6 +8,7 @@ mentions:
     - SirLich
     - SmokeyStack
     - ThomasOrs
+    - Xterionix
 ---
 
 Format versions are an important part of Minecraft: Bedrock Edition's Addon System. They appear at the top of most files, formatted like this: `"format_version": "1.16.100"`. You can think of this as the "version number" of the file, and the number you select here is really important! The format version you select will define which syntax and features are available to you, in that particular file.
@@ -63,63 +64,47 @@ This section will list the format versions used in the vanilla game, alongside h
 
 ### Resource Pack
 
-**Entity**:
-    - `1.10.0` : 82 ⭐
-    - `1.8.0` : 74
-
-**Animation Controller**:
-    - `1.10.0` : 56 ⭐
-
-**Animation**:
-    - `1.8.0` : 120
-    - `1.10.0` : 6 ⭐
-
-**Attachables**:
-    - `1.10.0` : 29 ⭐
-    - `1.8.0` : 25
-    - `1.10` : 1
-
-**Models**:
-    - `1.8.0` : 92
-    - `1.12.0` : 19
-    - `1.10.0` : 4
-    - `1.16.0` : 7
-
-**Particles**:
-    - `1.10.0` : 131 ⭐
-
-**Render Controllers**:
-    - `1.10.0`: 83 ⭐
+| Resource Pack        | Version  | Count |
+|----------------------|----------|-------|
+| Entity               | 1.10.0 ⭐ | 82    |
+| Entity               | 1.8.0    | 74    |
+| Animation Controller | 1.10.0 ⭐ | 56    |
+| Animation            | 1.8.0    | 120   |
+| Animation            | 1.10.0 ⭐ | 6     |
+| Attachables          | 1.10.0 ⭐ | 29    |
+| Attachables          | 1.8.0    | 25    |
+| Attachables          | 1.10     | 1     |
+| Models               | 1.8.0    | 92    |
+| Models               | 1.12.0   | 19    |
+| Models               | 1.10.0   | 4     |
+| Models               | 1.16.0   | 7     |
+| Particles            | 1.10.0 ⭐ | 131   |
+| Render Controllers   | 1.10.0 ⭐ | 83    |
 
 ### Behavior Pack
 
-**Entities**:
-    - `1.8.0` : 2
-    - `1.16.210` : 1
-    - `1.13.0` : 7
-    - `1.16.0` : 58 ⭐
-    - `1.16.100` : 3
-    - `1.12.0` : 21
-    - `1.17.20` : 7
-    - `1.17.10` : 4
-    - `1.10.0` : 1
-    - `1.14.0` : 1
-
-**Items**:
-    - `1.10` : 44 ⭐
-    - `1.16.0` : 1
-    - `1.16` : 1
-    - `1.14` : 1
-    - `1.16.100`: 0 🚀
-    - `1.19.80`: 0
-    - `1.20.40`: 0
-
-**Recipes**:
-    - `1.12` : 991
-    - `1.16` : 194 ⭐
-    - `1.14` : 2
-
-**Spawn Rules**:
-    - `1.8.0` : 48 ⭐
-    - `1.17.0` : 1
-    - `1.11.0` : 1
+| Category    | Version    | Count |
+|-------------|------------|-------|
+| Entities    | 1.8.0      | 2     |
+| Entities    | 1.16.210   | 1     |
+| Entities    | 1.13.0     | 7     |
+| Entities    | 1.16.0 ⭐   | 58    |
+| Entities    | 1.16.100   | 3     |
+| Entities    | 1.12.0     | 21    |
+| Entities    | 1.17.20    | 7     |
+| Entities    | 1.17.10    | 4     |
+| Entities    | 1.10.0     | 1     |
+| Entities    | 1.14.0     | 1     |
+| Items       | 1.10 ⭐     | 44    |
+| Items       | 1.16.0     | 1     |
+| Items       | 1.16       | 1     |
+| Items       | 1.14       | 1     |
+| Items       | 1.16.100 🚀 | 0     |
+| Items       | 1.19.80    | 0     |
+| Items       | 1.20.40    | 0     |
+| Recipes     | 1.12       | 991   |
+| Recipes     | 1.16 ⭐     | 194   |
+| Recipes     | 1.14       | 2     |
+| Spawn Rules | 1.8.0 ⭐    | 48    |
+| Spawn Rules | 1.17.0     | 1     |
+| Spawn Rules | 1.11.0     | 1     |
