@@ -927,33 +927,6 @@ _Full list of categories can be found [here](/documentation/creative-categories)
 }
 ```
 
-## Item Tags
-
-Item tags work the same as block tags and can be applied like this:
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "example:my_item"
-		},
-		"components": {
-			"tag:example:my_tag": {}
-		}
-	}
-}
-```
-
-They can then be queried with:
-
--   `q.any_tag`
--   `q.all_tags`
--   `q.equipped_item_all_tags`
--   `q.equipped_item_any_tag`
-
 ## Breaking changes
 
 If your item isn't showing up, these changes might have broken your item.
