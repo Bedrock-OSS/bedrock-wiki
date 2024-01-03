@@ -189,12 +189,12 @@ These allow for enhanced auto-completions and validation when used inside of you
 Latest beta API modules:
 
 ```bash
-npm i @minecraft/server@1.6.0-beta.1.20.30-stable
-npm i @minecraft/server-ui@1.2.0-beta.1.20.30-stable
-npm i @minecraft/server-gametest@1.0.0-beta.1.20.30-stable
-npm i @minecraft/server-admin@1.0.0-beta.1.20.30-stable
-npm i @minecraft/server-net@1.0.0-beta.1.20.30-stable
-npm i @minecraft/vanilla-data@1.20.30
+npm i @minecraft/server@beta
+npm i @minecraft/server-ui@beta
+npm i @minecraft/server-gametest@beta
+npm i @minecraft/server-admin@beta
+npm i @minecraft/server-net@beta
+npm i @minecraft/vanilla-data
 ```
 
 Latest stable API modules:
