@@ -3,18 +3,19 @@ export function colorFromTag(tag: string) {
 
 	switch (tag) {
 	case 'guide':
+	case 'info':
 		color = 'green'
 		break
 	case 'help':
 	case 'easy':
 	case 'beginner':
 	case 'recipe':
-	case 'info':
 	case 'system':
 		color = 'blue'
 		break
 	case 'experimental':
 	case 'intermediate':
+	case 'method':
 		color = 'orange'
 		break
 	case 'beta':
