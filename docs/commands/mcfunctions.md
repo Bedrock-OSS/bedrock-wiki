@@ -49,7 +49,7 @@ effect @a [tag=atSpawn] weakness 12 255 true
 - All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible.
 Commands in a function are still run in the same order, however.
 
-- Minecraft can **not** run more than 10,000 lines of functions in one function file. This includes any other function files that are executed inside of the original file.
+- Minecraft can **not** run more than 10,000 lines of commands in one function file. This includes any other function files that are executed inside of the original file.
 
 - It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
 
@@ -58,7 +58,7 @@ Commands in a function are still run in the same order, however.
 ## Creating a Function
 
 1. Locate the `📁 com.mojang` folder and navigate to `📁 development_behavior_packs`
-    - The development folders are used for quick reloading of packs, as the packs aren't cached to a specified world.
+    - The development folders are used for quick reloading of packs, as the packs aren't cached to the world files.
 
 2. Create a folder (of any name) for the function pack. This will be referred to as Behavior Pack or BP.
 
