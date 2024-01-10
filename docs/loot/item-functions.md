@@ -14,10 +14,6 @@ toc_max_level: 1
 
 Item functions modify the nature of an item in [loot tables](/loot/loot-tables) and [trade tables](/loot/trade-tables).
 
-```json
-
-```
-
 TODO
 can enchantments be prefixed with minecraft:/whatever?
 
