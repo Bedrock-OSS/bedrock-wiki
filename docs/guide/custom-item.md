@@ -51,13 +51,15 @@ Different items behave differently; you can eat a porkchop, enchanted items glow
 We are able to define how our custom item will behave by using behavior components.
 
 <Spoiler title="Example Components">
-<CodeHeader>components/
+
+<CodeHeader>BP/items/example.json/components/</CodeHeader>
+
 ```json
 "minecraft:food":
 "minecraft:foil": true,
 "minecraft:max_stack_size": 16
 ```
-</CodeHeader>
+
 </Spoiler>
 
 Components contain information which tells the game what our item should do. For example the component `"minecraft:foil"` determines whether the item should have an enchanted foil to it, so setting it to `true` will apply it.
