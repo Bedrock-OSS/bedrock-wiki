@@ -9,4 +9,6 @@ categories:
       color: blue
     - title: Scoreboard Systems
       color: blue
+    - title: Techniques
+      color: orange
 ---

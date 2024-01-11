@@ -14,7 +14,8 @@ const displayedTags = [
 	'info',
 	'outdated',
 	'scripting',
-	'system'
+	'system',
+	'method'
 ]
 
 const props = defineProps<{
