@@ -4,6 +4,7 @@ category: General
 nav_order: 3
 mentions:
     - Xterionix
+    - SmokeyStack
 ---
 
 Item tags can be used to ensure that a item meets certain conditions.
@@ -16,19 +17,19 @@ Item tags can be used to ensure that a item meets certain conditions.
 
 ```json
 {
-	"format_version": "1.20.50",
-	"minecraft:item": {
-		"description": {
-			"identifier": "example:my_item"
-		},
-		"components": {
-			"minecraft:tags": {
-        "tags": [
-          "example:my_tag"
-        ]
-      }
-		}
-	}
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "example:my_item"
+        },
+        "components": {
+            "minecraft:tags": {
+                "tags": [
+                    "example:my_tag"
+                ]
+            }
+        }
+    }
 }
 ```
 
@@ -38,15 +39,15 @@ Item tags can be used to ensure that a item meets certain conditions.
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "example:my_item"
-		},
-		"components": {
-			"tag:example:my_tag": {}
-		}
-	}
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "example:my_item"
+        },
+        "components": {
+            "tag:example:my_tag": {}
+        }
+    }
 }
 ```
 
