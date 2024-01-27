@@ -37,10 +37,13 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 `mcstructure` files are uncompressed [NBT files](https://wiki.vg/NBT#Specification). Like all Bedrock Edition NBT files, they are stored in little-endian format. The tag structure is as follows:
 
 > ![Integer][int] `format_version`: Currently always set to `1`.
+>
 > ![List][list] `size`: List of three integers describing the size of the structure's bounds.
 >
 > > ![Integer][int] Size of the structure in the X direction.
+> >
 > > ![Integer][int] Size of the structure in the Y direction.
+> >
 > > ![Integer][int] Size of the structure in the Z direction.
 >
 > ![Compound][compound] `structure`: Actual data compound.
@@ -48,6 +51,7 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 > > ![List][list] `block_indices`: List containing two sublists, one for each layer. These contain the blocks in the structure. Each block is stored as an integer index into the palette (see below). Proceeds in ZYX order from the lowest corner to the highest one. For example, if the structure size is `[2,3,4]`, then the 24 (product of the dimensions) values in each layer list represent the blocks located at `[(0,0,0), (0,0,1), (0,0,2), (0,0,3), (0,1,0), (0,1,1), (0,1,2), (0,1,3), (0,2,0), (0,2,1), (0,2,2), (0,2,3), (1,0,0), (1,0,1), (1,0,2), (1,0,3), (1,1,0), (1,1,1), (1,1,2), (1,1,3), (1,2,0), (1,2,1), (1,2,2), (1,2,3)]` relative to the origin. Index values equal to `-1` indicate no block, causing any existing block to remain upon loading. This occurs when structure voids are saved, and is the case for most blocks in the second layer. Both layers share the same palette.
 > >
 > > > ![List][list] of ![Integer][int] Indices for blocks in the primary layer.
+> > >
 > > > ![List][list] of ![Integer][int] Indices for blocks in the secondary layer. This layer is usually empty, except for water when the block here is waterlogged.
 > >
 > > ![List][list] of ![Compound][compound] `entities`: List of entities as NBT, stored exactly the same as entities in the world file itself. Tags like `Pos` and `UniqueID` are saved, but replaced upon loading.
