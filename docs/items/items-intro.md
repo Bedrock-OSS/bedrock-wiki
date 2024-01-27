@@ -21,7 +21,7 @@ mentions:
 ---
 
 :::warning
-Items on the stable version of Minecraft (1.10 format version) are missing many new features, available in experimental (1.16 format version). You can learn more about experimental items [here](/items/items-16).
+Items on the stable version of Minecraft (1.10 format version) are missing many new features, available in experimental (1.16 format version). You can learn more about experimental items [here](/items/item-components).
 :::
 
 Items require both a behavior file, to determine the behavior of the item, and a resource file, to determine the look of the item.

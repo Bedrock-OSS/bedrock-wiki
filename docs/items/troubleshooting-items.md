@@ -40,7 +40,7 @@ Versions `1.16.0` and prior are currently **stable** (Includes versions `1.16`, 
 :::tip
 Versions `1.16.100` and onward are **experimental**. These items **will not work unless** `Holiday Creator Features` **is enabled in the world**.
 
-🔗 Our tutorial on [experimental items](/items/items-16).
+🔗 Our tutorial on [experimental items](/items/item-components).
 🔗 Documentation for [experimental items](https://bedrock.dev/docs/stable/Item)
 :::
 
