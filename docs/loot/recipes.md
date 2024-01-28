@@ -19,7 +19,7 @@ Recipes are the means of handling several item transactions, namely those occurr
 ![](/assets/images/loot/recipes/recipe.png)
 
 ::: tip
-Anvil interactions are handled within an [item definition](/items/items-16), not via recipe files. Loom transactions are currently unavailable.
+Anvil interactions are handled within an [item definition](/items/item-components), not via recipe files. Loom transactions are currently unavailable.
 :::
 
 No experimental toggles are required to use recipes or any of their features.

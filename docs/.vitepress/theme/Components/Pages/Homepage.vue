@@ -87,7 +87,7 @@
 				>
 					<a href="items/items-intro">Beginner's Guide</a>: A "Hello
 					world" guide in creating your first item.<br><br>
-					<a href="items/items-16">Items 1.16+</a>: Learn about the
+					<a href="items/item-components">Items 1.16+</a>: Learn about the
 					new experimental items.
 				</CardLink>
 				<CardLink

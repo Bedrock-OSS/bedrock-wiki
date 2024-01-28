@@ -32,7 +32,7 @@ const URL_MAP: Record<string, string> = {
 	'concepts/blocks': 'blocks/blocks-intro',
 	'concepts/components-events-groups': 'entities/entity-intro-bp',
 	'concepts/entity-properties': 'entities/entity-properties',
-	'concepts/items': 'items/items-16',
+	'concepts/items': 'items/item-components',
 	'concepts/json-ui': 'json-ui/json-ui-intro',
 	'concepts/render-controller': 'visuals/render-controller',
 	'concepts/math-based-animations': 'visuals/math-based-animations',

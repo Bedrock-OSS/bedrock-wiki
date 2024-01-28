@@ -122,7 +122,7 @@ The description key contains the `identifier` and any other information required
 The `category` key defines which tab of the creative inventory the item would show up in. There are four tabs to choose from: `"Nature"`, `"Equipment"`, `"Construction"` and `"Items"`. If this key is not included, then the item will not show in the creative inventory, but you can still get the item by using `/give`.
 
 Now we can actually define the behavior of our item, under `components`. Here we simply place any components we want our item to have.
-This will be our `"minecraft:max_stack_size"` component. For other components you can use, check out our more in depth guide on Items [here](/items/items-16).
+This will be our `"minecraft:max_stack_size"` component. For other components you can use, check out our more in depth guide on Items [here](/items/item-components).
 
 <CodeHeader>ectoplasm.json/minecraft:item/</CodeHeader>
 

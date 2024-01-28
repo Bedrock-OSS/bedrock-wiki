@@ -103,7 +103,7 @@ If you want to spawn a custom entity instead of a wolf using this method, you wi
 
 ## Integrating Item Projectiles (Alternate Method)
 
-Introduced as one of [1.16's experimental item features](/items/items-16), the `shoot` event property can be used to make projectiles that transform into tamed entities upon impact.
+Introduced as one of [1.16's experimental item features](/items/item-components), the `shoot` event property can be used to make projectiles that transform into tamed entities upon impact.
 
 <CodeHeader>BP/items/throwable_pretamed_wolf.json</CodeHeader>
 
