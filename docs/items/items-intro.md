@@ -5,7 +5,7 @@ category: General
 nav_order: 1
 tags:
     - guide
-	- beginner
+    - beginner
 mentions:
     - SirLich
     - solvedDev
@@ -20,7 +20,7 @@ mentions:
     - mark-wiemer
     - TheItsNameless
     - s1050613
-	- SmokeyStack
+    - SmokeyStack
 ---
 
 Minecraft Bedrock allows us to add custom items into our world with various vanilla-like properties
@@ -39,16 +39,16 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 ```json
 {
-	"format_version": "1.20.50",
-  	"minecraft:block": {
-    	"description": {
-      		"identifier": "wiki:custom_item",
-      		"menu_category": {
-        		"category": "construction"
-      		}
-    	},
-    	"components": {} // Must be here, even if empty!
-  	}
+    "format_version": "1.20.50",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_item",
+            "menu_category": {
+              "category": "construction"
+            }
+        },
+        "components": {} // Must be here, even if empty!
+    }
 }
 ```
 
@@ -56,7 +56,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 - Defines the item's identifier - a unique ID in the format of `namespace:identifier`.
 - Configures which `menu_category` the block is placed into.
-	- Also takes the optional parameters `group` and `is_hidden_in_commands`.
+    - Also takes the optional parameters `group` and `is_hidden_in_commands`.
 
 ## Adding Components
 
@@ -68,26 +68,26 @@ Let's configure our own functionality!
 
 ```json
 {
-	"format_version": "1.20.50",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:custom_block",
-			"menu_category": {
-				"category": "construction"
-			}
-    	},
-		"components": {
-			"minecraft:damage": {
-    			"value": 10
-			},
-			"minecraft:durability":{
-    			"max_durability": 36
-			},
-			"minecraft:hand_equipped": {
-    			"value": true
-			}
-		}
-	}
+    "format_version": "1.20.50",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_block",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:damage": {
+                "value": 10
+            },
+            "minecraft:durability":{
+                "max_durability": 36
+            },
+            "minecraft:hand_equipped": {
+                "value": true
+            }
+        }
+    }
 }
 ```
 
@@ -101,13 +101,13 @@ We need to create a texture shortname to link it to an image in `RP/textures/ite
 
 ```json
 {
-	"resource_pack_name": "wiki",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"custom_item": {
-			"textures": "textures/items/custom_item"
-		}
-	}
+    "resource_pack_name": "wiki",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "custom_item": {
+            "textures": "textures/items/custom_item"
+        }
+    }
 }
 ```
 
@@ -117,20 +117,20 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
 
 ```json
 {
-	"format_version": "1.20.50",
-	"minecraft:block": {
-		"description": {
-			"identifier": "wiki:custom_block",
-			"menu_category": {
-				"category": "construction"
-			}
-    	},
-		"components": {
-			"minecraft:icon": {
-    			"texture": "custom_item"
-			}
-		}
-	}
+    "format_version": "1.20.50",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_block",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "custom_item"
+            }
+        }
+    }
 }
 ```
 
@@ -152,7 +152,7 @@ In this page, you've learnt about the following:
 
 -   [x] Basic features of items
 -   [x] How to apply a texture
--	[x] How to link textures using shortnames in `item_textures.json`
--	[x] How to define names in the language file
+-   [x] How to link textures using shortnames in `item_textures.json`
+-   [x] How to define names in the language file
 
 </Checklist>
