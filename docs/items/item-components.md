@@ -5,17 +5,18 @@ category: General
 nav_order: 2
 mentions:
     - SmokeyStack
+    - QuazChick
 ---
 
 :::tip FORMAT & MIN ENGINE VERSION `1.20.50`
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.20.50`.
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.20.50`.
 :::
 
 ## Applying Components
 
-Item components are used to change how your block appears and functions in the world. They are applied in the `components` child of `minecraft:item`.
+Item components are used to change how your item appears and functions in the world. They are applied in the `components` child of `minecraft:item`.
 
-<CodeHeader>BP/blocks/lamp.json</CodeHeader>
+<CodeHeader>BP/items/custom_item.json</CodeHeader>
 
 ```json
 {
@@ -28,7 +29,7 @@ Item components are used to change how your block appears and functions in the w
             }
         },
         "components": {
-            "minecraft:icon":{
+            "minecraft:icon": {
                 "texture": "custom_item"
             }
         }
