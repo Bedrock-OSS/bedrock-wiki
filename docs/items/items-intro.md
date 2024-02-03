@@ -31,16 +31,14 @@ This tutorial will cover how to create basic items for the stable version of Min
 
 Item definitions are structured similarly to entities: they contain a description and a list of components that defines the item's behavior.
 
-Unlike entities, blocks do not have a resource definition other than in `RP/blocks.json`.
-
-Below is the **minimum** behavior-side code to get a custom block into the creative inventory.
+Below is the **minimum** behavior-side code to get a custom item into the creative inventory.
 
 <CodeHeader>BP/items/custom_item.json</CodeHeader>
 
 ```json
 {
     "format_version": "1.20.50",
-    "minecraft:block": {
+    "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
             "menu_category": {
@@ -55,7 +53,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 ### Item Description
 
 - Defines the item's identifier - a unique ID in the format of `namespace:identifier`.
-- Configures which `menu_category` the block is placed into.
+- Configures which `menu_category` the item is placed into.
     - Also takes the optional parameters `group` and `is_hidden_in_commands`.
 
 ## Adding Components
@@ -69,9 +67,9 @@ Let's configure our own functionality!
 ```json
 {
     "format_version": "1.20.50",
-    "minecraft:block": {
+    "minecraft:item": {
         "description": {
-            "identifier": "wiki:custom_block",
+            "identifier": "wiki:custom_item",
             "menu_category": {
                 "category": "construction"
             }
@@ -118,9 +116,9 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
 ```json
 {
     "format_version": "1.20.50",
-    "minecraft:block": {
+    "minecraft:item": {
         "description": {
-            "identifier": "wiki:custom_block",
+            "identifier": "wiki:custom_item",
             "menu_category": {
                 "category": "construction"
             }
