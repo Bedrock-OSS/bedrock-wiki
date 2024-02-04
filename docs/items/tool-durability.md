@@ -111,8 +111,28 @@ This provides a way to damage weapons using scripts
 // Add your item IDs into this array
 const my_items = ["wiki:silver_dagger"]
 
+world.afterEvents.entityHurt.subscribe(event => {
+    // If there's no source entity, skip
+    if (!event.damageSource.damagingEntity) return
 
+    // Get equipped weapon
+    const equipment = event.damageSource.damagingEntity.getComponent("minecraft:equippable")
+    if (!equipment) return
+    const weapon = equipment.getEquipment(EquipmentSlot.Mainhand)
 
+    // If there's no weapon, skip
+    if (!weapon) return
+
+    // If the item is not in our item IDs, skip
+    if (!my_items.includes(weapon.typeId)) return
+    let newItem = damage_item(weapon)
+    equipment.setEquipment(EquipmentSlot.Mainhand, newItem)
+    if (!newItem) {
+        if (event.damageSource.damagingEntity instanceof Player) {
+            event.damageSource.damagingEntity.playSound("random.break")
+        }
+    }
+})
 ```
 
 ### on_hurt_entity
