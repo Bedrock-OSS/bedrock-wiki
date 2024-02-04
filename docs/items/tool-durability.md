@@ -16,17 +16,11 @@ mentions:
 1.16.100+ items have different durability mechanic than 1.10 and 1.16 items.
 Now you need to define when will the item get durability damage and also an event that does it.
 What will be discussed on this page:
-
 - Durability component
-
 - Event that updates durability
-
 - Damaging entities
-
 - Block breaking
-
 - `repair_amount` value
-
 - `on_tool_used` event
 
 ### Components
@@ -48,7 +42,7 @@ What will be discussed on this page:
 <CodeHeader>BP/items/my_item.json#events</CodeHeader>
 
 ```json
-"your_mod:durability_update": {
+"durability_update": {
     "damage": {
         "type": "none",
         "amount": 1,
@@ -149,7 +143,7 @@ world.afterEvents.entityHurt.subscribe(event => {
 ```json
 "minecraft:weapon": {
     "on_hurt_entity": {
-        "event": "your_mod:durability_update"
+        "event": "durability_update"
     }
 }
 ```
@@ -219,7 +213,7 @@ world.afterEvents.playerBreakBlock.subscribe(event => {
     ],
     "on_dig": {
         // Defines event that should happen when any block was destroyed.
-        "event": "your_mod:durability_update"
+        "event": "durability_update"
     }
 }
 ```
