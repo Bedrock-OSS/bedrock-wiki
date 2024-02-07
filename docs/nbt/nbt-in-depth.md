@@ -81,7 +81,7 @@ The NBT bedrock Header is indicated by two 4-byte numbers, the first is always 8
 ## Little-Endian
 Little-Endian is the common method of writing numbers in bytes to streams or files.
 It's not a science and it's easy to understand. So if Int16 `(short)` of value `0x5a72` then we convert it to bytes [`0x5a`, `0x72`] and then reverse their order that means [`0x72`, `0x5a`] and write d file: `72 5a`. It may seem illogical, but little-endian is almost always used when writing and reading from files. A single `byte` is the same in both methods because it is one byte in size. For example:
-- Int16 (long) `0x11223344aabbccdd`
+- Int64 (long) `0x11223344aabbccdd`
 - Split to 8 bytes `0x11 0x22 0x33 0x44 0xAA 0xBB 0xCC 0xDD`
 - Reverse `0xDD 0xCC 0xBB 0xAA 0x44 0x33 0x22 0x11`
 - Write `dd cc bb aa   44 33 22 11`
