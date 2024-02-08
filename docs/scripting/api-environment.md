@@ -65,6 +65,7 @@ You will encounter this most often when using events, because in every data even
   - `console` - Standard object having base output methods (`log`, `warn`, `error`, `info`)
 
 - ***What is not supported***
+    - `WeakRef` - Object handler constructor with weak reference
     - `BigInt` - Standard function constructor for big ints
     - `setTimeout` - Standard function for timing code runs
     - `setInterval` - Standard function for timing code runs in intervals
