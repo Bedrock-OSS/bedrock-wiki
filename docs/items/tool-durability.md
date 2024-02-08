@@ -92,7 +92,7 @@ function damage_item(item) {
 
 :::warning Experimental Script
 
-This script uses `@minecraft/server 1.8.0-beta`, which will change in the next minecraft update.
+This script uses `@minecraft/server 1.9.0-beta`, which will change in the next minecraft update.
 :::
 
 For format versions 1.20.40 and onward, `on_hurt_entity` no longer works.
@@ -154,7 +154,7 @@ world.afterEvents.entityHurt.subscribe(event => {
 
 :::warning Experimental Script
 
-This script uses `@minecraft/server 1.8.0-beta`, which will change in the next minecraft update.
+This script uses `@minecraft/server 1.9.0-beta`, which will change in the next minecraft update.
 :::
 
 For format versions 1.20.20 and onward, `on_dig` no longer works.
