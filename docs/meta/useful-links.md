@@ -30,6 +30,7 @@ Important links have a ⭐.
 -   ⭐ [bridge.](https://discord.gg/NxKuWuA)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
 -   [Amulet & MCEdit](https://discord.gg/dSnwqQf)
+-   [Amethyst](https://discord.gg/Cxrj9UXnDB)
 -   [Artists Refuge](https://discord.gg/aVXbPCdRr3)
 -   [BDSX](https://discord.gg/8UhbaDwFMh)
 -   [Bedrock Commands](https://discord.gg/vV29d6rJcj)
