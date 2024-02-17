@@ -18,6 +18,7 @@ mentions:
     - ThomasOrs
     - QuazChick
     - VactricaKing
+    - BlazeDrake
 ---
 
 :::tip FORMAT & MIN ENGINE VERSION `1.20.30`
@@ -25,6 +26,9 @@ Using the latest format version when creating custom blocks provides access to f
 :::
 :::warning EXPERIMENTAL
 Block events require the `Holiday Creator Features` experiment to be enabled.
+:::
+:::danger WARNING
+Block events are deprecated, and will be removed in a future update. It is not recommended to use them unless absolutely necessary, as you will need to convert all functionality from them to scripts once they are removed.
 :::
 
 ## Defining Events
