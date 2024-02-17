@@ -9,6 +9,7 @@ mentions:
     - TheItsNamless
     - ThomasOrs
     - kumja1
+hidden: true
 ---
 
 ::: tip
