@@ -34,8 +34,6 @@ Some objects passed to us by the API have their own native handle, in some cases
 
 That means the only function you called with a non-natively released object, the function tries to find a native handle on an object that is no longer there.
 
-You will encounter this most often when using events, because in every data events are natively released after the event ends, therefore you cannot save the object that was given by the event; if you have a player object, after the player leaves, the native handle of the object is released and you can no longer call the methods and properties of the object that used to be the player.
-
 ## Support
 
 - ***What is supported***
