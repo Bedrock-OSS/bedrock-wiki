@@ -18,7 +18,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.30
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.60
 :::
 
 In version 1.18.30, Minecraft released a wonderful new script module, `@minecraft/server-ui` (formerly named `mojang-minecraft-ui`). With this module, we can create form UIs without the need for JSON UI-wrangling.
@@ -35,7 +35,7 @@ Like other modules, you will need to add the dependency into your `manifest.json
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.6.0-beta"
+			"version": "1.9.0-beta"
 		}
 	]
 }
