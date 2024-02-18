@@ -10,7 +10,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.30
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.60
 :::
 
 ## Overview
@@ -78,7 +78,7 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 			// Enables the use of @minecraft/server module
 			// note that version changes every monthly releases.
       "module_name": "@minecraft/server",
-      "version": "1.6.0-beta"
+      "version": "1.9.0-beta"
     },
     {
 			// Enables the use of @minecraft/server-ui module
@@ -95,7 +95,10 @@ If your project needs other module to run your code, add another dependency that
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. The initial API set is narrow, but more features will be added over the coming months.
 
 -   `@minecraft/server`:
-    -   [`1.5.0`](https://www.npmjs.com/package/@minecraft/server/v/1.5.0) (Latest version)
+    -   [`1.8.0`](https://www.npmjs.com/package/@minecraft/server/v/1.8.0) (Latest version)
+    -   [`1.7.0`](https://www.npmjs.com/package/@minecraft/server/v/1.7.0)
+    -   [`1.6.0`](https://www.npmjs.com/package/@minecraft/server/v/1.6.0)
+    -   [`1.5.0`](https://www.npmjs.com/package/@minecraft/server/v/1.5.0)
     -   [`1.4.0`](https://www.npmjs.com/package/@minecraft/server/v/1.4.0)
     -   [`1.3.0`](https://www.npmjs.com/package/@minecraft/server/v/1.3.0)
     -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server/v/1.2.0)
@@ -109,21 +112,21 @@ If your project needs other module to run your code, add another dependency that
 
 -   `@minecraft/server`:
 
-    -   [`1.6.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.6.0-beta.1.20.30-stable) (Latest beta)
+    -   [`1.9.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.9.0-beta.1.20.60-stable) (Latest beta)
 
 -   `@minecraft/server-ui`:
-    -   [`1.2.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.2.0-beta.1.20.30-stable) (Latest beta)
+    -   [`1.2.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.2.0-beta.1.20.60-stable) (Latest beta)
 -   `@minecraft/server-gametest`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.20.30-stable) (Latest beta)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.20.60-stable) (Latest beta)
 
 -   `@minecraft/server-net`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-net/v/1.0.0-beta.1.20.0-preview.21) (Latest beta, Bedrock Dedicated Server module only, must enable in `permission.json`)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-net/v/1.0.0-beta.1.20.60-stable) (Latest beta, Bedrock Dedicated Server module only, must enable in `permission.json`)
 
 -   `@minecraft/server-admin`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-admin/v/1.0.0-beta.1.20.0-preview.21) (Latest beta, Bedrock Dedicated Server module only)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-admin) (Latest beta, Bedrock Dedicated Server module only)
 
 (Beta 1.19.40.23+) In order to use the `eval()` function or `Function()` constructors, you can add the following in the manifest capabilities:
 
