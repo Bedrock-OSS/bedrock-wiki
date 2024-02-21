@@ -31,7 +31,7 @@ You can name it how ever you want, in the end you should have a shortcut looking
 
 ## Opening Minecraft in VR
 
-First make sure you connected your headset probably:
+First make sure you connected your headset properly:
 
 ![](/assets/images/vr/install/vr_headset.png)
 
