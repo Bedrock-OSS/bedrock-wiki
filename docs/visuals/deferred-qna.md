@@ -1,5 +1,5 @@
 ---
-title: Scripting and Editor Q&A 2024/02/23
+title: Deferred Technical Preview Q&A 2024/02/23
 mentions:
     - SmokeyStack
 ---
