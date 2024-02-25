@@ -29,6 +29,7 @@ Important links have a ⭐.
 -   ⭐ [Blockbench](http://discord.gg/fZQbxbg)
 -   ⭐ [bridge.](https://discord.gg/NxKuWuA)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
+-   [Snowstorm](https://discord.gg/W9d78Z8AvM)
 -   [Amulet & MCEdit](https://discord.gg/dSnwqQf)
 -   [Amethyst](https://discord.gg/Cxrj9UXnDB)
 -   [Artists Refuge](https://discord.gg/aVXbPCdRr3)
