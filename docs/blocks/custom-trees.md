@@ -7,9 +7,10 @@ mentions:
     - MedicalJewel105
     - TheItsNameless
     - QuazChick
+    - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
 This tutorial assumes an advanced understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -52,7 +53,7 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_leaves",
@@ -211,7 +212,7 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_log",
@@ -327,7 +328,7 @@ Here all components are the same
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_stripped_log",
@@ -405,7 +406,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_sapling",
@@ -497,7 +498,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_sapling_placer",

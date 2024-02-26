@@ -6,6 +6,7 @@ tags:
     - easy
 mentions:
     - QuazChick
+    - SmokeyStack
 ---
 
 Although custom blocks are unable to make use of vanilla [block shapes](/blocks/block-shapes), we can create our own models which follow a similar format to entity models. This tutorial will walk you through the process of creating a custom block model for a "paper bag" using [Blockbench](https://blockbench.net). You should learn the main features of Minecraft geometry tailored towards creating custom blocks from this tutorial.
@@ -155,7 +156,7 @@ Then, textures can be applied by material instances through their `RP/textures/t
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:paper_bag",

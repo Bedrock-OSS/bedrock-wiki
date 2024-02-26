@@ -6,9 +6,10 @@ tags:
     - expert
 mentions:
     - QuazChick
+    - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
 This tutorial assumes an advanced understanding of blocks and Molang.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -193,7 +194,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",
@@ -388,7 +389,7 @@ Our block JSON file after the above steps should look similar to the code below:
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",

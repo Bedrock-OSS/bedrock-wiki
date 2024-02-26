@@ -20,8 +20,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.20.30`
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.20.30`.
+:::tip FORMAT & MIN ENGINE VERSION `1.20.60`
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.20.60`.
 :::
 :::danger <nbsp/>
 Only one instance of each component can be active at once. Duplicate components will be overridden by the latest [permutation](/blocks/block-permutations).
@@ -37,7 +37,7 @@ Block components are used to change how your block appears and functions in the 
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:lamp",
@@ -498,25 +498,4 @@ Lean about [rotatable blocks](/blocks/rotatable-blocks) to apply rotation based 
   "rotation": [90, 180, 0],
   "scale": [0.5, 1, 0.5],
 }
-```
-
-## Unit Cube (EXPERIMENTAL) {#unit-cube}
-
-:::warning EXPERIMENTAL
-This component requires the `Holiday Creator Features` experiment to be enabled and is expected to be removed/changed in the future.
-:::
-
-Turns the block into a 16&times;16&times;16 cube, overriding `minecraft:geometry`.
-
-**When active:**
-
--   The block becomes non-breathable.
--   The block conducts redstone power.
-
-**If your block's texture/model doesn't need to change based on permutation, define textures in `RP/blocks.json` to avoid using this experimental component.**
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:unit_cube": {}
 ```

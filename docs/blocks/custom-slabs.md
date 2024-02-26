@@ -7,9 +7,10 @@ tags:
 mentions:
     - Kaioga5
     - QuazChick
+    - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.30`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -32,7 +33,7 @@ This will create a vanilla-like custom slab.
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_slab",

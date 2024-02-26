@@ -9,9 +9,10 @@ mentions:
     - Provedule
     - ThomasOrs
     - QuazChick
+    - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.20.30`
+:::tip FORMAT & MIN ENGINE VERSION `1.20.60`
 This tutorial assumes a good understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block permutations](/blocks/block-permutations) before starting.
 :::
@@ -36,7 +37,7 @@ Add the `minecraft:is_hoe` or `minecraft:is_shovel` item tags to any custom tool
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_dirt",
@@ -247,7 +248,7 @@ Here is the full `wiki:custom_farmland` json for reference.
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_farmland",
@@ -362,7 +363,7 @@ To start with, we want our crops to have 4 stages of growth, so the crop should 
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_crop",
@@ -574,7 +575,7 @@ Here is the entire `wiki:custom_crop` file for reference.
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_crop",
@@ -797,7 +798,7 @@ Holding a crop block in your hand wouldn't look right, so we place the crop with
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_seeds", // Make sure this is different from your crop's ID
@@ -826,7 +827,7 @@ Your crop can't only drop seeds! Create a custom food using the template below.
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:item": {
     "description": {
       "identifier": "wiki:custom_food", // Make sure this is different from your crop and food's ID

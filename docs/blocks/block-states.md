@@ -5,9 +5,10 @@ category: General
 nav_order: 4
 mentions:
     - QuazChick
+    - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.20.30`
+:::tip FORMAT & MIN ENGINE VERSION `1.20.60`
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
 
@@ -30,7 +31,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-  "format_version": "1.20.30",
+  "format_version": "1.20.60",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_block",
@@ -75,10 +76,6 @@ execute if block ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki
 
 ### Script API
 
-:::warning EXPERIMENTAL
-The [`BlockPermutation.getState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#getstate) method requires the `Beta APIs` experiment to be enabled.
-:::
-
 The [`BlockPermutation.getState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#getstate) method allows you to get the current value of different states.
 
 <CodeHeader></CodeHeader>
@@ -100,10 +97,6 @@ setblock ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer
 ```
 
 ### Script API
-
-:::warning EXPERIMENTAL
-The [`BlockPermutation.withState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#withstate) method requires the `Beta APIs` experiment to be enabled.
-:::
 
 The [`BlockPermutation.withState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#withstate) method returns a new block permutation with the specified state value changed. This permutation can be applied to the block using the [`Block.setPermutation()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/block#setpermutation) method, as seen below.
 
