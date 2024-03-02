@@ -228,15 +228,7 @@ The `minecraft:food` must have the `minecraft:use_modifiers` component in order 
 "minecraft:food":{
     "can_always_eat": false,
     "nutrition" : 3,
-    "effects" : [
-        {
-            "name": "poison",
-            "chance": 1.0,
-            "duration": 5,
-            "amplifier": 0
-        }
-    ],
-    "saturation_modifier": "normal",
+    "saturation_modifier": "0.6",
     "using_converts_to": "bowl"
 }
 ```
