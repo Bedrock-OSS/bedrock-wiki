@@ -16,7 +16,7 @@ mentions:
 
 This animation controller can be used to run commands, such as re-adding potion effects or giving items when the player respawns.
 
-Simply add the animation controller to the `player.json`, and
+Simply add the following animation controller to the `player.json`, and you'll be all done!
 
 <CodeHeader>BP/animation_controllers/respawn.ac.json</CodeHeader>
 
