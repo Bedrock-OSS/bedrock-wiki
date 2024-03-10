@@ -193,51 +193,6 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
 
 If you followed this properly, your item should now have a texture.
 
-### My item is Huge
-
-To turn it to back into a normal size item (`16x16`), use render offsets and the following formula: `base value/(res/16)`
-
-The base values, `[0.075, 0.125, 0.075]`, seems to be the about the same scale value as normal items.
-
-<CodeHeader>BP/items/your_item.json#components</CodeHeader>
-
-```json
-"minecraft:render_offsets":{
-    "main_hand":{
-        "first_person":{
-            "scale":[
-                0,
-                0,
-                0
-            ]
-        },
-        "third_person":{
-            "scale":[
-                0,
-                0,
-                0
-            ]
-        }
-    },
-    "off_hand":{
-        "first_person":{
-            "scale":[
-                0,
-                0,
-                0
-            ]
-        },
-        "third_person":{
-            "scale":[
-                0,
-                0,
-                0
-            ]
-        }
-    }
-}
-```
-
 ## What now?
 
 You've reached the end of the guide. If you still have any problems, feel free to [join the discord server](/discord) and ask your question there.
