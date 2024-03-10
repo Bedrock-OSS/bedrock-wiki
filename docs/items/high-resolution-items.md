@@ -6,7 +6,7 @@ mentions:
 ---
 
 ::: tip
-This tutorial uses attachables. If you do not know what an attachable is, read this page first: [Attachables](attachables.html)
+This tutorial uses attachables. If you do not know what an attachable is, read this page first: [Attachables](/items/attachables)
 :::
 
 Introduction
