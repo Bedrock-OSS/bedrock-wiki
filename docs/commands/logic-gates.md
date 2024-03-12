@@ -22,12 +22,11 @@ They are what a computer uses to perform any function. These devices are very he
 
 ![logicGatesTable](/assets/images/commands/logicGatesTable.jpg)
 
-
 **Converted To Commands:**
 
 - Buffer:
   - `/execute if entity @s [tag=red] run <command>`
-- (Inverter) NOT:
+- (Inverter) NOT Gate:
   - `/execute if entity @s [tag=!red] run <command>`
 - AND Gate:
   - `/execute if entity @s [tag=red, tag=green] run <command>`
@@ -48,20 +47,24 @@ They are what a computer uses to perform any function. These devices are very he
 
 **AND Gate:**
 - `/execute as @p [tag=red, tag=green] run say success`
-- The AND gate takes at least two inputs. In this case, if the player meets both requirements (meaning they have both the tag red and the tag green), the command will run. The AND gate is the most commonly used gate in Minecraft commands.
+
+The AND gate takes at least two inputs. In this case, if the player meets both requirements (meaning they have both the tag red and the tag green), the command will run. The AND gate is the most commonly used gate in Minecraft commands.
 
 **NOT Gate:**
 - `/execute as @p [tag=!red] run say success` or:
 - `/execute as @p unless entity @s [tag=red] run say success`
-- The NOT gate inverses the input. In this case, the command will only run if the player does NOT have the tag red. The NOT gate is also very commonly used in Minecraft commands.
+
+The NOT gate inverses the input. In this case, the command will only run if the player does NOT have the tag red. The NOT gate is also very commonly used in Minecraft commands.
 
 **OR Gate:**
 - `/execute as @p unless entity @s[tag=!red, tag=!green] run say success`
-- The OR gate takes two or more inputs. If the player has at least one of the requirements, the command will run. In this case, the player can either have the tag red, or the tag green, or both. The OR gate is not natural to Minecraft commands, but with the addition of the `/execute unless`, you can perform it yourself. It may seem a little confusing as to how the OR gate works. You can think about it like this: the command runs UNLESS you have neither tag. This produces the same output table as the OR gate. Try it out in the game yourself!
+
+The OR gate takes two or more inputs. If the player has at least one of the requirements, the command will run. In this case, the player can either have the tag red, or the tag green, or both. The OR gate is not natural to Minecraft commands, but with the addition of the `/execute unless`, you can perform it yourself. It may seem a little confusing as to how the OR gate works. You can think about it like this: the command runs UNLESS you have neither tag. This produces the same output table as the OR gate. Try it out in the game yourself!
 
 **XOR Gate:**
 - `/execute as @p unless entity @s [tag=!red, tag=!green] unless entity @s [tag=red, tag=green] run say success`
-- The XOR gate takes two inputs. If the player has at least one of the requirements, but not both, the command will run. In this case, the player can have either the tag red or the tag green, but if they have both tags the command will not run. The XOR gate is also not natural to Minecraft Commands, but this workaround will allow you to perform the function.
+
+The XOR gate takes two inputs. If the player has at least one of the requirements, but not both, the command will run. In this case, the player can have either the tag red or the tag green, but if they have both tags the command will not run. The XOR gate is also not natural to Minecraft Commands, but this workaround will allow you to perform the function.
 
 The remaining gates are simply the inverse of the others, which you can change by flipping the `if` / `unless` in the command, or refer the above logic gates for examples.
 
@@ -87,7 +90,7 @@ Here is a list of argument selectors that can be used in the logic gates:
 - `/execute unless entity @p [hasitem={item=diamond_sword,quantity=0},{item=iron_sword,quantity=0}] run <command>`
   - Run the command if the player has either a diamond sword or an iron sword.
 
-> Note, you amy use more than two filters for the OR gate, and the command will execute if it meets any one or more of the selector arguments.
+> Note, you may use more than two inputs (selector arguments) for the OR gate, and the command will execute if it meets any one or more of the inputs.
 
 Mixing any of the different argument selectors will also work:
 - `/execute unless entity @p[tag=!red, scores={score1=!1..5}] run <command>`
