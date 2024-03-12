@@ -1,5 +1,5 @@
 ---
-title: On First Join
+title: On Player First Join
 category: On Event Systems
 mentions:
     - BedrockCommands
