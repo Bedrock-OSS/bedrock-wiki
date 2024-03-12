@@ -6,8 +6,6 @@ mentions:
     - zheaEvyline
     - SmokeyStack
 nav_order: 1
-tags:
-    - system
 ---
 
 ## Introduction
