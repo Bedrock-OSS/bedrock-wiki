@@ -109,7 +109,7 @@ Example; detecting a pressed stone button on ground facing up:
 /execute if block ~~~ stone_button [“button_pressed_bit”=true] run say success
 /execute if block ~~~ stone_button [“facing_direction”=1] run say success
 ```
-Though block states have replaced aux values, we still cannot detect blocks based on specific filters yet like we do with selector arguments like shown in the above code.
+From the above code, we can see that, though block states have replaced aux values, we still cannot detect blocks based on only the specific block states needed to test like we do in the case of entities using selector arguments.
 
 ### Related Bug Reports
 - [MCPE-133360](https://bugs.mojang.com/browse/MCPE-133360)
