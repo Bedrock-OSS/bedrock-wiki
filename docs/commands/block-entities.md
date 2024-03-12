@@ -4,8 +4,6 @@ category: Techniques
 mention:
     - BedrockCommands
     - zheaEvyline
-tags:
-    - system
 ---
 
 ## Introduction
