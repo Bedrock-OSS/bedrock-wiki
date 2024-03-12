@@ -20,7 +20,7 @@ It is what a computer uses to perform any function. These are very helpful for p
 
 **Chart:**
 
-dd
+![logicGatesTable](/assets/images/commands/logicGatesTable.jpg)
 
 
 **Converted To Commands:**
