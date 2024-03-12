@@ -5,8 +5,6 @@ mentions:
     - BedrockCommands
     - zheaEvyline
     - jordanparki7
-tags:
-    - info
 ---
 
 ## Introduction
