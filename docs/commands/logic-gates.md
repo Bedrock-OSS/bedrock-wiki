@@ -48,7 +48,7 @@ They are what a computer uses to perform any function. These devices are very he
 **AND Gate:**
 - `/execute as @p [tag=red, tag=green] run say success`
 
-The AND gate takes at least two inputs. In this case, if the player meets both requirements (meaning they have both the tag red and the tag green), the command will run. The AND gate is the most commonly used gate in Minecraft commands.
+The AND gate takes at least two inputs. In this case, if the player meets both requirements (having the 'red' and 'green' tags), the command will run. The AND gate is the most commonly used gate in Minecraft commands.
 
 **NOT Gate:**
 - `/execute as @p [tag=!red] run say success` or:
