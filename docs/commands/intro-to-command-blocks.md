@@ -6,8 +6,6 @@ mentions:
     - zheaEvyline
     - jordanparki7
 nav_order: 1
-tags:
-    - info
 ---
 
 ## Introduction

@@ -1,5 +1,5 @@
 ---
-title: New Execute
+title: Execute
 category: Commands
 tags:
     - easy
@@ -245,3 +245,5 @@ Now for some examples of things that were not possible to do in one command, or 
 # Test for an entity without targeting it
 /execute as @a at @s if entity @e[type=armor_stand,r=10] run gamemode survival @s
 ```
+
+**(Recommended) Read Next: [Execute Logic Gates](/commands/logic-gates)**

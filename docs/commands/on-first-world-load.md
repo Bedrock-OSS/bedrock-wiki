@@ -7,8 +7,6 @@ mentions:
     - SmokeyStack
     - cda94581
 nav_order: 6
-tags:
-    - system
 ---
 
 ## Introduction

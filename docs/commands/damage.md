@@ -1,8 +1,6 @@
 ---
 title: Damage
 category: Commands
-tags:
-    - info
 mentions:
     - BedrockCommands
     - cda94581

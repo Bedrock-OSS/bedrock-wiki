@@ -5,8 +5,6 @@ mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 3
-tags:
-    - system
 ---
 
 ## Introduction
