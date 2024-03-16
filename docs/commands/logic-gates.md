@@ -65,7 +65,7 @@ The OR gate takes two or more inputs. If the player has at least one of the requ
 **XOR Gate:**
 - `/execute as @p unless entity @s [tag=!red, tag=!green] unless entity @s [tag=red, tag=green] run say success`
 
-The XOR gate takes two inputs. If the player has at least one of the requirements, but not both, the command will run. In this case, the player can have either the tag red or the tag green, but if they have both tags the command will not run. The XOR gate is also not natural to Minecraft Commands, but this workaround will allow you to perform the function.
+The XOR gate takes two inputs. If the player has exactly _one_ of the requirements, the command will run. In this case, the player can have either the tag red or the tag green, but if they have both tags the command will not run. The XOR gate is also not natural to Minecraft Commands, but this workaround will allow you to perform the function.
 
 The remaining gates are simply the inverse of the others, which you can change by flipping the `if` / `unless` in the command, or refer the above logic gates for examples.
 
