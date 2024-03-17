@@ -164,19 +164,19 @@ Sets how much damage the item can take before breaking, and allows the item to b
 
 ## Enchantable
 
-Determines what enchantments can be applied to the item. Not all enchantments will have an effect on all item components.
+Determines the enchantments that can be applied to the item, specifying the item slot for potential enchantments and the enchantability value that influences the quality and frequency of enchantments applied.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
 "minecraft:enchantable": {
-	"slot": "bow",
-	"value": 10
+    "slot": "sword",
+    "value": 9
 }
 ```
 
-### Enchantable Slots
-Note: The "all" enchantable slot allows you to apply any enchantment that you want to the item, just like an enchanted book. 
+### Enchantment Slots
+Specifies the applicable item category for enchantments, such as armor pieces, weapons, and tools.
 
 | Slot Name     |
 | ------------- |
@@ -198,6 +198,24 @@ Note: The "all" enchantable slot allows you to apply any enchantment that you wa
 | shovel        |
 | sword         |
 | all           |
+
+### Enchantability Value
+Determines the item's enchantability, influencing the quality and quantity of potential enchantments. Higher values boost the chance of guaranteeing more powerful enchantments. The table below details enchantability scores across different materials, showcasing their ability to get enchantments.
+
+| Material  | Armor Enchantability | Sword/Tool Enchantability |
+|-----------|----------------------|---------------------------|
+| Wood      | N/A                  | 15                        |
+| Leather   | 15                   | N/A                       |
+| Stone     | N/A                  | 5                         |
+| Chain     | 12                   | N/A                       |
+| Iron      | 9                    | 14                        |
+| Gold      | 25                   | 22                        |
+| Diamond   | 10                   | 10                        |
+| Turtle    | 9                    | N/A                       |
+| Netherite | 15                   | 15                        |
+| Other     | 1                    | 1                         |
+
+For an in-depth exploration of enchantability and its impact on the game, refer to the [Enchanting Mechanics on the Unofficial Minecraft Wiki](https://minecraft.fandom.com/wiki/Enchanting_mechanics#Enchantability).
 
 
 ## Entity Placer
