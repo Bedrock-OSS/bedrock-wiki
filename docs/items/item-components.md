@@ -215,7 +215,7 @@ Determines the item's enchantability, influencing the quality and quantity of po
 | Netherite | 15                   | 15                        |
 | Other     | 1                    | 1                         |
 
-For an in-depth exploration of enchantability and its impact on the game, refer to the [Enchanting Mechanics on the Unofficial Minecraft Wiki](https://minecraft.fandom.com/wiki/Enchanting_mechanics#Enchantability).
+For an in-depth exploration of enchantability and its impact on the game, refer to the [Enchanting Mechanics on the Unofficial Minecraft Wiki](https://minecraft.wiki/w/Enchanting_mechanics#Enchantability).
 
 
 ## Entity Placer
