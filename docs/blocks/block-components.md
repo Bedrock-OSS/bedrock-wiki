@@ -496,6 +496,6 @@ Lean about [rotatable blocks](/blocks/rotatable-blocks) to apply rotation based 
 "minecraft:transformation": {
   "translation": [-5, 8, 0],
   "rotation": [90, 180, 0],
-  "scale": [0.5, 1, 0.5],
+  "scale": [0.5, 1, 0.5]
 }
 ```
