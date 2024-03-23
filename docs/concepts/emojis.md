@@ -251,6 +251,10 @@ Two sprite-sheets are provided for each glyph-target: One that accurately reflec
 ![](/assets/images/concepts/emojis/custom/annotated/glyph_E1.png)
 ![](/assets/images/concepts/emojis/custom/glyph_E1.png)
 
+_Edited glyph_E1.png for free-use shared by @zheaEvyline:_
+
+![](/assets/images/concepts/emojis/custom/edited/glyph_E1.png)
+
 Your filepath should look like this:
 
 <FolderView
