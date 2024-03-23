@@ -88,14 +88,14 @@ Here is a list of argument selectors that can be used in the logic gates:
   - Run the command if the entity is either a chicken or a cow.
 - `/execute unless entity @p [scores={scoreA=!5, scoreB=!5}] run <command>`
   - Run the command if the player has either a score of 5 in objective scoreA or scoreB.
-- `/execute unless entity @p [hasitem={item=diamond_sword,quantity=0},{item=iron_sword,quantity=0}] run <command>`
+- `/execute unless entity @p [hasitem=[{item=diamond_sword,quantity=0},{item=iron_sword,quantity=0}]] run <command>`
   - Run the command if the player has either a diamond sword or an iron sword.
 
 > Note, you may use more than two inputs (selector arguments) for the OR gate, and the command will execute if it meets any one or more of the inputs.
 
 Mixing any of the different argument selectors will also work:
 - `/execute unless entity @p[tag=!red, scores={score1=!1..5}] run <command>`
-- `/execute unless entity @p[name=!player, hasitem={item=iron_sword, quantity=0}] run <command>`
+- `/execute unless entity @p[name=!player, hasitem=[{item=iron_sword, quantity=0}]] run <command>`
 - `/execute unless entity @e[type=!chicken, tag=!green, scores={score1=!5}, family=!mob}] run <command>`
 
 For any doubts or queries, you may join our Discord linked above and any of our community experts will be happy to assist you.
