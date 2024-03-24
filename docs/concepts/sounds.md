@@ -216,6 +216,8 @@ Common events:
 | splash     | For splashing in the water                               |
 | attack     | For melee attacking                                      |
 | shoot      | For shooting projectiles                                 |
+| cast.spell | For starting summon                                      |
+| prepare.attack | For finishing summon                                 |
 
 There are also many sound events, which _most likely_ trigger automatically, but which I don't have details for, such as:
 
