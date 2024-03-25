@@ -4,6 +4,7 @@ category: Techniques
 mentions:
     - BedrockCommands
     - zheaEvyline
+    - hatfluppyclouds
 nav_order: 1
 ---
 
@@ -64,7 +65,7 @@ The OR gate takes two or more inputs. If the player has at least one of the requ
 **XOR Gate:**
 - `/execute as @p unless entity @s [tag=!red, tag=!green] unless entity @s [tag=red, tag=green] run say success`
 
-The XOR gate takes two inputs. If the player has at least one of the requirements, but not both, the command will run. In this case, the player can have either the tag red or the tag green, but if they have both tags the command will not run. The XOR gate is also not natural to Minecraft Commands, but this workaround will allow you to perform the function.
+The XOR gate takes two inputs. If the player has exactly _one_ of the requirements, the command will run. In this case, the player can have either the tag red or the tag green, but if they have both tags the command will not run. The XOR gate is also not natural to Minecraft Commands, but this workaround will allow you to perform the function.
 
 The remaining gates are simply the inverse of the others, which you can change by flipping the `if` / `unless` in the command, or refer the above logic gates for examples.
 
@@ -87,14 +88,14 @@ Here is a list of argument selectors that can be used in the logic gates:
   - Run the command if the entity is either a chicken or a cow.
 - `/execute unless entity @p [scores={scoreA=!5, scoreB=!5}] run <command>`
   - Run the command if the player has either a score of 5 in objective scoreA or scoreB.
-- `/execute unless entity @p [hasitem={item=diamond_sword,quantity=0},{item=iron_sword,quantity=0}] run <command>`
+- `/execute unless entity @p [hasitem=[{item=diamond_sword,quantity=0},{item=iron_sword,quantity=0}]] run <command>`
   - Run the command if the player has either a diamond sword or an iron sword.
 
 > Note, you may use more than two inputs (selector arguments) for the OR gate, and the command will execute if it meets any one or more of the inputs.
 
 Mixing any of the different argument selectors will also work:
 - `/execute unless entity @p[tag=!red, scores={score1=!1..5}] run <command>`
-- `/execute unless entity @p[name=!player, hasitem={item=iron_sword, quantity=0}] run <command>`
+- `/execute unless entity @p[name=!player, hasitem=[{item=iron_sword, quantity=0}]] run <command>`
 - `/execute unless entity @e[type=!chicken, tag=!green, scores={score1=!5}, family=!mob}] run <command>`
 
 For any doubts or queries, you may join our Discord linked above and any of our community experts will be happy to assist you.
