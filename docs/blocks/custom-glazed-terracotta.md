@@ -7,7 +7,7 @@ mentions:
     - Kaioga5
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.40`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.70`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -23,7 +23,7 @@ This will create a vanilla-like custom glazed terracotta.
 
 ```json
 {
-    "format_version": "1.20.40",
+    "format_version": "1.20.70",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:glazed_terracotta_template",
