@@ -19,11 +19,10 @@ In this doc we'll discuss how to convert between different coordinate frames in 
 * If you wanted to fire off a projectile from the tip of a weapon.
 * If you wanted to solve IK Chains for limbs to match ground contact points.
 
-## Background ##
+## Background
 Before we jump into guide, there's a few background topics worth covering.
 
-## There are many ways to represent transforms ##
-### Matrices ###
+### Matrices
 Generally by the time we send everything to graphics cards we convert things into matrices because it's really efficient to transform many vertices (such as for of a mesh) by a set of matrices. Games often work with other representations, such as quaternions, or in the case of Minecraft Euler rotations, but matrices are good to have a solid understanding of to start with.
 
 If you see a 4x4 matrix full of a bunch of values, if you're not used to working with them, it might seem like you need to have special abilities to see through them, like this.
@@ -78,11 +77,11 @@ Finally, moving on to Minecraft. At the time of this writing, Minecraft doesn't 
 
 Also, whether we're using a TRS (Transform Rotation Scale combined object), Quaternions, Matrices, or Euler angles, when rotations are involved ORDER DOES MATTER. Rotate A then Rotate B, is not the same as rotate B and then rotate by A.
 
-# Get to know the world before we start. #
+# Get to know the world before we start
 
 Let's think about those Axis vectors in the unrotated, standard case. We actually can determine which way positive X, Y and Z are, by moving around in the world. When you first spawn into a game for the first time, you're facing due North, as the game calls it. Which if you then walk forward you'll see this increases your Z value. And if you jump you see Y goes up. And that leaves X, which is not right! Well it's not wrong, it's left! As you continue facing North, if you strafe left, this increases your X value. This is a right-handed coordinate system (if you point your fingers towards an axis, and curl them towards the next consecutive axis, your thumb points to the 3rd. XY->Z, YZ->X, wrap for Z: ZX->Y).
 
-# Finally!! Let's get started with an Entity #
+# Finally!! Let's get started with an Entity
 
 When creating an entity, I recommend start out in blockbench, and make the first entity you create a simple 3-cardinal axis frame, like so:
 
@@ -135,7 +134,7 @@ On the entity side, you just need the minimum to play your animation:
     },
     "scripts": {
     "pre_animation": [
-        // TODO
+        "// TODO -- we will fill this in next."
     ],
     "animate": [
         "myAnim"
@@ -201,7 +200,7 @@ mathematically that looks like:
 
 Which is happening right to left.
 
-#### 1: Inverse(Translation) ####
+#### 1: Inverse(Translation)
 
 If normally (in forward direction) you're going from ent to world, you'd take your Entity-relative position (like a joint position) and add the entity's. So in reverse, we subtract the entitie's location.
 
@@ -209,11 +208,11 @@ If normally (in forward direction) you're going from ent to world, you'd take yo
     v.target_y = v.target_y - q.position(1);
     v.target_z = v.target_z - q.position(2);
 
-#### 2: Inverse(RotationZ) ####
+#### 2: Inverse(RotationZ)
 
 currently entities appear to only be able to adjust from the controllers via pitch and yaw. So no "Z". So we skip that step.
 
-#### 3: Inverse(RotationY) ####
+#### 3: Inverse(RotationY)
 
 To query the entity's yaw, there's a query method: q.body_y_rotation. We'll use that but consider that a positive rotation should make the character turn to the left. Rotating a vector by an angle, is a pretty simple formula, using sin and cos, but getting the sign right is important. Just think if you have a vector that starts facing world +z, and then get's rotated to the left, what will the +X axis become initially positive or initially negative? In our case X left is actually world space still so X left is positive. Likewise, if we had a vector facing positive +X (to the left), and we then started rotating to the left, the Z axis would start becoming?... Yes negative. You only negate the sine term. One last note, t.x is a temporary to save the value of the target
 
@@ -238,13 +237,13 @@ In other words, here's another alternative, that will be more consistent with ot
     v.target.z=t.cos_yaw * t.z - t.sin_yaw * v.target.x;
     v.target.x=t.sin_yaw * t.z + t.cos_yaw * v.target.x;
 
-#### 4: Inverse(RotationX) ####
+#### 4: Inverse(RotationX)
 
 It is legitimately possible I think for entities to pitch, but in practice I haven't seen it. So I just skipped it.
 
 It is an exercise for the reader, though later there will be more info when it comes to bone transforms, so you can get some additional context from that section (when I get to it).
 
-#### 5: Inverse(Scale) ####
+#### 5: Inverse(Scale)
 
 The last step, is to apply the scale from world to entity. Entities need to be represented with smaller units, so the operation in this direction is multiply. If we were going from ent to world it would be divided by 16.
 
