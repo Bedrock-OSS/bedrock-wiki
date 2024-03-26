@@ -218,6 +218,7 @@ Common events:
 | shoot      | For shooting projectiles                                 |
 | cast.spell | For starting summon                                      |
 | prepare.attack | For finishing summon                                 |
+| roar       | For roaring                                              |
 
 There are also many sound events, which _most likely_ trigger automatically, but which I don't have details for, such as:
 
