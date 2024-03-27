@@ -2,7 +2,6 @@
 title: Precise Rotation
 category: Tutorials
 tags:
-    - experimental
     - expert
 mentions:
     - QuazChick
