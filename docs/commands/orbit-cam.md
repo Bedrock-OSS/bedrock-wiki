@@ -14,7 +14,7 @@ This technique allows you to confine your camera rotations to an orbit around th
 
 ## Video Demonstration
 
-dd
+![orbitCamDemo](/assets/images/commands/orbitcam/orbitCamDemo.mp4)
 
 ## Command
 
@@ -23,11 +23,11 @@ dd
 ```yaml
 /execute as @p at @s anchored eyes rotated ~ 0 positioned ^^1^-2 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @s
 ```
-![commandBlockChain](/assets/images/commands/commandBlockChain/1.png)
+![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
 
 **2D Visualisation:**
 
-dd
+![OrbitCamVisualRep](/assets/images/commands/orbitcam/OrbitCamVisualRep.mp4)
 
 **Command Breakdown:**
 
@@ -63,7 +63,7 @@ dd
 #To orbit camera around entity tagged with 'orbit_center'
 /execute as @p at @e [tag=orbit_center] anchored eyes rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @e [tag=orbit_center]
 ```
-![commandBlockChain](/assets/images/commands/commandBlockChain/1.png)
+![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
 
 <CodeHeader>mcfunction</CodeHeader>
 
@@ -71,4 +71,4 @@ dd
 #To orbit camera around position 6 7 8
 /execute as @p positioned 6 7 8 rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing 6 7 8
 ```
-![commandBlockChain](/assets/images/commands/commandBlockChain/1.png)
+![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
