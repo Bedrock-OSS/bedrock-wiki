@@ -57,3 +57,18 @@ dd
 
 **Other Examples:**
 
+<CodeHeader>mcfunction</CodeHeader>
+
+```yaml
+#To orbit camera around entity tagged with 'orbit_center'
+/execute as @p at @e [tag=orbit_center] anchored eyes rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @e [tag=orbit_center]
+```
+![commandBlockChain](/assets/images/commands/commandBlockChain/1.png)
+
+<CodeHeader>mcfunction</CodeHeader>
+
+```yaml
+#To orbit camera around position 6 7 8
+/execute as @p positioned 6 7 8 rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing 6 7 8
+```
+![commandBlockChain](/assets/images/commands/commandBlockChain/1.png)
