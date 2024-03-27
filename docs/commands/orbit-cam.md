@@ -38,7 +38,7 @@ This technique allows you to confine your camera rotations to an orbit around th
 - `anchored eyes`
   - brings the execution position up to the target player's eye level.
 - `rotated ~ 0`
-  - sets the rotation relative to the target player's horizontal rotation but confines the vertical rotation to 0° (straight).
+  - sets the execution rotation relative to the target player's horizontal rotation but confines the vertical rotation to 0° (straight).
 - `positioned ^^1^-2`
   - pushes the execution position 1 block above the player and 2 blocks behind.
   - increase or decrease value 1 to increase / decrease orbit height.
@@ -47,7 +47,7 @@ This technique allows you to confine your camera rotations to an orbit around th
      - Positive value will set the position in front of the player.
      - To learn more, refer to: [Coordinates System](docs/commands/relative-coordinates.md)
 - `run camera @s set minecraft:free ease 0.1 linear pos ~~~`
-  - sets the camera for the target player with the `minecraft:free` preset with a `linear` ease value of `0.1` at relative coordinates (1 block above and 2 blocks behind from the player's sight)
+  - sets the camera for the target player with the `minecraft:free` preset with a `linear` ease value of `0.1` at relative coordinates (1 block above and 2 blocks behind from the target player's sight)
   - To adjust camera movement speed increase / decrease ease value `0.1`
   - To learn about the `/camera` command and it's available options such as presets and ease, refer to the following resources:
      - [Introduction to Camera Command](https://learn.microsoft.com/en-us/minecraft/creator/documents/cameracommandintroduction)
