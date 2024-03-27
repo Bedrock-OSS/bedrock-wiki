@@ -14,7 +14,9 @@ This technique allows you to confine your camera rotations to an orbit around th
 
 ## Video Demonstration
 
-![orbitCamDemo](/assets/images/commands/orbitcam/orbitCamDemo.mp4)
+<YouTubeEmbed
+    id="yOlWjTpInFE"
+/>
 
 ## Command
 
@@ -27,7 +29,7 @@ This technique allows you to confine your camera rotations to an orbit around th
 
 **2D Visualisation:**
 
-![OrbitCamVisualRep](/assets/images/commands/orbitcam/OrbitCamVisualRep.mp4)
+![OrbitCamVisualRep](/assets/images/commands/orbitcam/OrbitCamVisualRep.gif)
 
 **Command Breakdown:**
 
