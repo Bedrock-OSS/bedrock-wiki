@@ -78,7 +78,7 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 			// Enables the use of @minecraft/server module
 			// note that version changes every monthly releases.
       "module_name": "@minecraft/server",
-      "version": "1.9.0-beta"
+      "version": "1.10.0-beta"
     },
     {
 			// Enables the use of @minecraft/server-ui module
