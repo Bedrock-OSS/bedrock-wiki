@@ -8,6 +8,7 @@ mentions:
     - SmokeyStack
     - Sprunkles137
     - Hatchibombotar
+    - SpacebarNinja
 ---
 
 Target selectors are used in commands to target who you want to execute a command on without explicitly setting a target, such as a player's name. A target selector is comprised of a selector variable, and optionally a list of selector arguments.
@@ -154,6 +155,14 @@ Limits the selection of targets by their rotation. There are two types of rotati
 
 -   `rxm=<value>` and `rx=<value>`—Selects entities whose x-rotation is between the minimum and maximum values, inclusive and respectively.
 -   `rym=<value>` and `ry=<value>`—Selects entities whose y-rotation is between the minimum and maximum values, inclusive and respectively.
+
+_x-rotation diagram shared by @SpacebarNinja:_
+
+![x-rotation](/assets/images/commands/selectors/x-rotation.png)
+
+_y-rotation diagram shared by @SpacebarNinja:_
+
+![y-rotation](/assets/images/commands/selectors/y-rotation.png)
 
 Examples:
 
