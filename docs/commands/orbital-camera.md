@@ -42,7 +42,7 @@ This technique allows you to confine your camera rotations to an orbit around th
 - `rotated ~ 0`
   - sets the execution rotation relative to the target player's horizontal rotation but confines the vertical rotation to 0° (straight).
   - if you wish to lock the horizontal rotation instead, simply do: `rotated 0 ~`
-     - note: value `0` can be changed to face the direction you need. Refer to [Rotations](docs/commands/selectors#rotation) for more info.
+     - note: value `0` can be changed to face the direction you need. Refer to [Rotations](/commands/selectors#rotation) for more info.
   - if you do not wish to lock the vertical rotation, simply omit this part altogether to get a full spherical rotation. However, this will not prevent the camera from going underground.
 - `positioned ^^1^-2`
   - pushes the execution position 1 block above the player and 2 blocks behind.
@@ -50,7 +50,7 @@ This technique allows you to confine your camera rotations to an orbit around th
   - increase or decrease value -2 to increase / decrease orbit radius.
      - Negative value will set the position behind the player.
      - Positive value will set the position in front of the player.
-     - To learn more, refer to: [Coordinates System](docs/commands/relative-coordinates)
+     - To learn more, refer to: [Coordinates System](/commands/relative-coordinates)
 - `run camera @s set minecraft:free ease 0.1 linear pos ~~~`
   - sets the camera for the target player with the `minecraft:free` preset with a `linear` ease value of `0.1` at relative coordinates (1 block above and 2 blocks behind from the target player's sight)
   - To adjust camera movement speed increase / decrease ease value `0.1`
