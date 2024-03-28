@@ -1,0 +1,197 @@
+Subpacks is controlled inside the manifest.json I will past my working manifest json file bellow and comment the different functions and add comments like //THIS
+A real good recource to read is https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonmanifest
+
+
+//START
+
+{
+	"format_version": 2,
+	"header": {
+		"description": "Reblocks RTX by aBTV Texture Pack is a Medieval looking texture pack that mixes Stylized with semi-realistic look. Pack by @psiloncraft",  //TITLE OF THE PACK
+		"name": "ReBlocks RTX", //PACK NAME, DISPLAYS IN THE TEXTUREPACK LIST INGAME
+		"uuid": "36d3664e-2a81-4a34-a2f9-4bc4a9345be0", //MUST BE UNIQUE!!  I use https://www.uuidgenerator.net/version4 to generate this UUID
+		"version": [1, 0, 5], //PACK VERSION//
+		"min_engine_version": [1, 16, 0] // NINIMUM SUPPORTED GAME VERSION 
+	},
+	"modules": [{
+		"description": "Changer resolution up or down here. Pack by @psiloncraft", // Currently this module is not in use, but it is a place to remind yourself why the module is defined
+		"type": "resources", //This is the type of the module. Can be any of the following: resources, data, client_data, interface, world_template or javascript.
+		"uuid": "bfe5d047-8cf3-48da-8397-6e721fd1d2bb", //MUST BE UNIQUE!! AND **NOT** EQUAL TO THE UUID UNDER "HEADER"  I use https://www.uuidgenerator.net/version4 to generate this UUID
+		"version": [1, 0, 5] //PACK VERSION
+	}],
+	"capabilities": [
+		"raytraced" // DEFINES WHAT FUNCTIONS TO ACTIVATE FOR THE RESOURCE PACK
+	],
+    "settings": [{
+			"type": "label", // //under the cogwheel you get to set some text by first adding type --> label and then define the text under
+			"text": "Drag the slider to change resolution between 128 - 256 -512 px", // this is line no.1
+        },
+		{
+			"type": "label",
+			"text": "recommended Ram: 512px 16gb Ram, 256px 8gb Ram, 128px 4gb Ram" //this is line no.2
+
+		}
+	],
+	"subpacks": [ // look at the remarks marked //*** under
+		{
+			"folder_name": "512x",
+			"name": "512x",
+			"memory_tier": 65
+		},
+		{
+			"folder_name": "256x",
+			"name": "256x",
+			"memory_tier": 64
+		},
+		{
+			"folder_name": "128x",
+			"name": "128x",
+			"memory_tier": 40
+		},
+		{
+			"folder_name": "64x",
+			"name": "64x",
+			"memory_tier": 32
+		}
+
+    ]
+}
+
+
+//***  Subpacks is a way to tell the game what assets to load inside the /textures folder. to define the hirearcy inside the resorcepack folder im making an example under and naming my pack Fancypack. 
+//Everything that is defined in the manifest.json file will take the defined subfolder and overwrite the textures folder in the root level of the texture pack
+
+Fancypack //includes the following files and subfolders ad default from game source
+    animation_controllers
+    animations
+    attachables
+    entity
+    fogs
+    models
+    particles
+    render_controllers
+    sounds
+    texts
+    textures
+    ui
+    biomes_client.json
+    blocks.json
+    manifest.json
+    pack_icon.png
+    sounds
+
+//into this filestructure I add subpacks and add new subfolders for the different assets that i want to triger by using the slider to select so that the new file structure will look like this
+
+Fancypack //includes the following files and subfolders ad default from game source
+    animation_controllers
+    animations
+    attachables
+    entity
+    fogs
+    models
+    particles
+    render_controllers
+    sounds
+    texts
+    textures
+    ui
+    subpacks
+        16x
+            textures
+                blocks
+                entity
+                environment  
+                items
+                misc
+                models
+                painting
+                ui
+                flame_atlas.png
+                flipbook_textures.json
+                item_texture.json
+                texture_list.json
+        32x
+            textures
+                blocks
+                entity
+                environment  
+                items
+                misc
+                models
+                painting
+                ui
+                flame_atlas.png
+                flipbook_textures.json
+                item_texture.json
+                texture_list.json
+        64x
+            textures
+                blocks
+                entity
+                environment  
+                items
+                misc
+                models
+                painting
+                ui
+                flame_atlas.png
+                flipbook_textures.json
+                item_texture.json
+                texture_list.json
+        128x
+            textures
+                blocks
+                entity
+                environment  
+                items
+                misc
+                models
+                painting
+                ui
+                flame_atlas.png
+                flipbook_textures.json
+                item_texture.json
+                texture_list.json
+        256x
+            textures
+                blocks
+                entity
+                environment  
+                items
+                misc
+                models
+                painting
+                ui
+                flame_atlas.png
+                flipbook_textures.json
+                item_texture.json
+                texture_list.json
+        512x
+            textures
+                blocks
+                entity
+                environment  
+                items
+                misc
+                models
+                painting
+                ui
+                flame_atlas.png
+                flipbook_textures.json
+                item_texture.json
+                texture_list.json
+
+    biomes_client.json
+    blocks.json
+    manifest.json
+    pack_icon.png
+    sounds
+
+
+//What does this mean: for all the different subpacks you can have different resolutions and or different textures that gets triggered by the cogwheel selector ingame under global packs.
+//example I i select my "fancypack" and go to the cogwheel and select 256x resolution the game will copy all the folders from the 256x subpack folder and copy that into the root textures folder. 
+
+    
+
+
+
