@@ -67,7 +67,7 @@ So this means, if we have a location relative to our right hand, and we want to 
 Entity * RootBone * Pelvis * Spine0 .. SpineN * RShoulder * RightElbow * RightHand * point;
 ```
 
-If you get into more complex transforms, it is strongly advise to name your transforms to reflect the space they transform from and to. So for the above we would use something like:
+If you get into more complex transforms, it is strongly advised to name your transforms to reflect the space they transform from and to. So for the above we would use something like:
 
 ```
 World_To_Entity * Entity_To_Root * Root_To_Pelvis * Pelvis_To_Spine0 .. Spine(N-1)_To_SpineN * SpineN_To_RShoulder * RShoulder_To_RElbow * RElbow_To_RHand * RHand_point;
