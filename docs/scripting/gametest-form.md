@@ -4,6 +4,7 @@ category: Tutorials
 tags:
     - experimental
 mentions:
+    - DrakPlay
     - cda94581
     - FrankyRay
     - MedicalJewel105
@@ -244,7 +245,7 @@ form.toggle("Toggle", true);
 This is an example of a Modal Form with all of the components
 
 ```js
-let form = new MessageFormData()
+let form = new ModalFormData()
 let effectList = [ "Regeneration", "Protection", "Poison", "Wither" ]
 form.title("Effect Generator");
 form.textField("Target", "Target of Effect")
