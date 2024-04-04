@@ -8,6 +8,9 @@ mentions:
     - QuazChick
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 ## Introduction
 
 Blocks have a limit of 16 valid values per state that cannot be exceed. This guide will explain how to avoid reaching the limit.

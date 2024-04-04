@@ -21,6 +21,9 @@ mentions:
     - BlazeDrake
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 :::tip FORMAT & MIN ENGINE VERSION `1.20.60`
 Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.20.60`.
 :::

@@ -16,6 +16,9 @@ mentions:
     - Kaioga5
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 Block tags can be used to ensure that a block meets certain conditions.
 
 ## Applying Tags

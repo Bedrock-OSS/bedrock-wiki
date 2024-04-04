@@ -10,6 +10,9 @@ mentions:
     - SmokeyStack
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.
 
 By the end you should be able to create something like this!

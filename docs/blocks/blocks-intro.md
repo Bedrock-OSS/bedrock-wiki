@@ -26,6 +26,9 @@ mentions:
     - QuazChick
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 :::tip FORMAT & MIN ENGINE VERSION `1.20.60`
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::

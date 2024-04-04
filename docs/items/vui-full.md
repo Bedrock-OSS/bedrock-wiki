@@ -6,6 +6,9 @@ mentions:
 hidden: true
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Includes all examples. Namespace `minecraft` and some formatting have been removed to make the page load quickly. *Last updated for 1.20.10*
 

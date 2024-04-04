@@ -7,6 +7,9 @@ mentions:
     - SmokeyStack
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 Item tags can be used to ensure that a item meets certain conditions.
 
 ## Applying Tags

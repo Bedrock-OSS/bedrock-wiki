@@ -3,6 +3,9 @@ title: Numerical Item IDs
 category: Documentation
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 ::: tip
 This page is a more up-to-date version of [this page](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonitems), and is current as of version 1.20.51.
 :::

@@ -11,6 +11,9 @@ mentions:
     - napstaa967
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 ## Introduction
 
 1.16.100+ items have different durability mechanic than 1.10 and 1.16 items.

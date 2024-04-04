@@ -8,6 +8,9 @@ mentions:
     - SmokeyStack
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 :::tip FORMAT & MIN ENGINE VERSION `1.20.60`
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::

@@ -14,6 +14,9 @@ mentions:
     - SmokeyStack
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 ::: warning EXPERIMENTAL
 Requires `Holiday Creator Features` to trigger block events.
 :::

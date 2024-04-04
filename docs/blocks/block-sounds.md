@@ -7,6 +7,9 @@ mentions:
     - QuazChick
 ---
 
+:::danger PLEASE READ
+This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::
 Block sounds refers to the sound property in your block entry inside `blocks.json`.
 This property is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound. You can apply sound to your block this way:
 
