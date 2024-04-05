@@ -6,6 +6,7 @@ mentions:
     - SmokeyStack
     - ThomasOrs
     - Adrian8115
+    - ismaileke
 ---
 
 Minecraft Bedrock uses a protocol known as [RakNet](http://www.jenkinssoftware.com/)
@@ -115,12 +116,9 @@ The server sends this packet in response to the incoming connection request.
 ::: tip
 If you are interested and want to read more about it here is the documentation for the Bedrock Protocol and RakNet:
 
+[Mojang's Official Protocol Documentation](https://github.com/Mojang/bedrock-protocol-docs)
+
 [RakNet Protocol Documentation](https://wiki.vg/Raknet_Protocol)
-
-[Newer Bedrock Protocol Documentation for 1.20.50](https://prismarinejs.github.io/minecraft-data/?d=protocol&v=bedrock_1.20.50) [(by PrismarineJS)](https://prismarinejs.github.io) :::
-
-::: warning
-There is also the old Bedrock Protocol Wiki which might possibly be outdated!
-[Bedrock Protocol Documentation](https://wiki.vg/Bedrock_Protocol) :::
+:::
 
 This page is a WIP, feel free to contribute as it is still being worked on.
