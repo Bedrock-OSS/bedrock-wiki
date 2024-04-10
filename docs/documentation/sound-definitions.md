@@ -2670,6 +2670,12 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `record.ward`
 
+`record.5`
+
+`record.otherside`
+
+`record.relic`
+
 ## ui
 
 #### item
@@ -2694,15 +2700,7 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `ambient.weather.thunder`
 
-## No category
-
-#### record
----
-`record.5`
-
-`record.otherside`
-
-`record.relic`
+## No Category
 
 #### sign
 ---
