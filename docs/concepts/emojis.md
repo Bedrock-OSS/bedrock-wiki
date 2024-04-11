@@ -288,6 +288,12 @@ Copy this code into the following field, and press <kbd>Convert</kbd>. The symbo
 </form>
 </div>
 
+### Emoji Positioning
+- To position an emoji upwards/downwards, simply move it up/down within its own emoji slot.
+- To position an emoji towards the left or right, simply add any pixel of 5-10% opacity to its side (within its own slot), opposite to the direction you want to move it.
+  - Ex: to move an emoji to the right by 2 pixels, add any 5-10% opacity pixel connecting to it, anywhere on its left most side and add another one to the left of that pixel.
+_Note: the following steps are for emojis smaller than its slot size._
+
 ### Glyph Separation Space
 
-Sometimes, it appears that if you put 2 glyphs near to each other, there will be a couple of empty pixels between them. The only fix for it is to scale the glyph itself.
+Sometimes, it appears that if you put 2 glyphs near to each other, there will be a couple of empty pixels between them. The only fix for it is to scale the glyph (png file) itself. Ex: 256×256 → 512×512
