@@ -129,7 +129,7 @@ Now write your first TypeScript code in `src` directory, for example below:
 <CodeHeader>BP/src/Main.ts</CodeHeader>
 
 ```ts
-import { Player, EntityQueryOptions, GameMode, Vector3 } from '@minecraft/server';
+import { Player, EntityQueryOptions, GameMode, Vector3, world } from '@minecraft/server';
 
 // Example function that uses the provided types
 function findPlayersInSurvivalMode(location: Vector3): Player[] {
@@ -180,7 +180,7 @@ Now the `src/Main.ts` file should have been transpiled to `scripts/Main.js` with
 <CodeHeader>BP/scripts/Main.js</CodeHeader>
 
 ```js
-import { GameMode } from '@minecraft/server';
+import { GameMode, world } from '@minecraft/server';
 // Example function that uses the provided types
 function findPlayersInSurvivalMode(location) {
     const options = {
