@@ -158,7 +158,7 @@ To effectively disable a recipe (useful for [overriding](#overrides) a prior rec
 :::
 
 ### Recipe Unlocking
-Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, you `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
+Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, your `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
 ```json
 		"unlock": [
 			{
