@@ -2,18 +2,15 @@
 title: Precise Rotation
 category: Tutorials
 tags:
-    - experimental
     - expert
+    - scripting
 mentions:
     - QuazChick
     - SmokeyStack
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
-This tutorial assumes an advanced understanding of blocks and Molang.
+::: tip FORMAT & MIN ENGINE VERSION `1.21.0`
+This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
@@ -45,9 +42,7 @@ There are 4 bones required for precise ground rotation, each with different Y ax
 The bones will likely be duplicates of each other, excluding rotation change.
 
 :::tip
-
 Keep your bones' pivots set to `[0, 0, 0]` so that their rotation is around the middle of the block.
-
 :::
 
 In addition, a `side` bone will be necessary for placement on side faces.
@@ -62,16 +57,13 @@ The following model for a "shell" block can be used as a reference:
 
 ```json
 {
-  "format_version": "1.12.0",
+  "format_version": "1.21.0",
   "minecraft:geometry": [
     {
       "description": {
         "identifier": "geometry.shell",
         "texture_width": 16,
-        "texture_height": 16,
-        "visible_bounds_width": 3,
-        "visible_bounds_height": 2.5,
-        "visible_bounds_offset": [0, 0.75, 0]
+        "texture_height": 16
       },
       "bones": [
         {
@@ -193,7 +185,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-  "format_version": "1.20.60",
+  "format_version": "1.21.0",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",
@@ -220,7 +212,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
       "minecraft:placement_filter": {
         "conditions": [
           {
-             "allowed_faces": ["up", "side"]
+            "allowed_faces": ["up", "side"]
           }
         ]
       }
@@ -239,7 +231,7 @@ For head-like rotation, you need to add 2 states to your block:
 "description": {
   ...
   "traits": {
-    // Face block is placed on - default is `north`
+    // Face block is placed on - default is `down` (which won't be accessible through placement)
     "minecraft:placement_position": {
       "enabled_states": ["minecraft:block_face"]
     }
@@ -247,63 +239,102 @@ For head-like rotation, you need to add 2 states to your block:
   "states": {
     // Precise rotation of block when placed on `up` face
     "wiki:rotation": {
-      "values": { "min": 0, "max": 15 } // An alternative property value syntax to define larger integer ranges easily
+      "values": { "min": 0, "max": 15 } // An alternative state value format to define larger integer ranges easily
     }
   }
 }
 ```
 
-## Rotation Molang Expression
+## Initial Script
 
-Rather than manually typing bounds for each `wiki:rotation` value, you can use some [complex Molang](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/molangreference/examples/molangconcepts/molangintroduction#simple-vs-complex-expressions) and division to return the values desired!
+Before we start writing our script, make sure you have it linked to your pack manifest by importing it into your entry file.
 
-```c
-// Transform player's head Y rotation to a positive
-t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0)));
-// How many 16ths of 360 is the head rotation? - rounded
-t.rotation = math.round(t.positive_head_rot / 22.5);
+<CodeHeader>BP/scripts/main.js</CodeHeader>
 
-// 0 and 16 represent duplicate rotations (0 degrees and 360 degrees), so 0 is returned if the value of `t.rotation` is 16
-return t.rotation != 16 ? t.rotation;
+```js
+import "./shell.js";
 ```
 
-On a single line so that you can put it into JSON:
+<br>
 
-<CodeHeader>minecraft:block > components > minecraft:on_player_placing > condition</CodeHeader>
+Now, in our `shell.js` file, we need to import the `world` object from [`@minecraft/server`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server):
 
-```c
-t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0))); t.rotation = math.round(t.positive_head_rot / 22.5); return t.rotation != 16 ? t.rotation;
+<CodeHeader>BP/scripts/shell.js</CodeHeader>
+
+```js
+import { world } from "@minecraft/server";
 ```
 
-## Applying Rotation
+## Rotation Calculation
 
-Time to use this Molang to set the block properties you have added!
+Rather than manually typing bounds for each `wiki:rotation` value, you can use some division and rounding to return the values desired!
 
-We will update our block properties when the player is placing the block. This means that in our event, we have access to `q.block_face` and `q.head_y_rotation`.
+Add the following function to your script:
 
-Create the following component and event in your block:
+<CodeHeader>BP/scripts/shell.js</CodeHeader>
+
+```js
+/** @param {number} playerYRotation */
+function getPreciseRotation(playerYRotation) {
+  // Transform player's head Y rotation to a positive
+  if (playerYRotation < 0) playerYRotation += 360;
+  // How many 16ths of 360 is the head rotation? - rounded
+  const rotation = Math.round(playerYRotation / 22.5);
+
+  // 0 and 16 represent duplicate rotations (0 degrees and 360 degrees), so 0 is returned if the value of `rotation` is 16
+  return rotation !== 16 ? rotation : 0;
+}
+```
+
+## Setting Rotation
+
+Time to use this function to set the block state you have added!
+
+We will update our block state before the block is placed by using [custom components](/blocks/block-events) and, more specifically, the [beforeOnPlayerPlace](/blocks/block-events#before-player-place) hook. This means that, in our event handler, we have access to the player's rotation.
+
+Add the following to your script to register a custom `wiki:shell_rotation` component:
+
+:::tip
+Think of a unique custom component identifier. There can't be duplicate custom components between packs!
+:::
+
+<CodeHeader>BP/scripts/shell.js</CodeHeader>
+
+```js
+world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
+  blockTypeRegistry.registerCustomComponent("wiki:shell_rotation", {
+    beforeOnPlayerPlace(event) {
+      const { player } = event;
+      if (!player) return; // Exit if the player is undefined
+
+      const blockFace = event.permutationToPlace.getState("minecraft:block_face");
+      if (blockFace !== "up") return; // Exit if the block hasn't been placed on the top of another block
+
+      // Get the rotation using the function from earlier
+      const playerYRotation = player.getRotation().y;
+      const rotation = getPreciseRotation(playerYRotation);
+
+      // Tell Minecraft to place the correct `wiki:rotation` value
+      event.permutationToPlace = event.permutationToPlace.withState("wiki:rotation", rotation);
+    }
+  });
+});
+```
+
+<br>
+
+Now you can apply this custom component to your block!
 
 <CodeHeader>minecraft:block</CodeHeader>
 
 ```json
 "components": {
   ...
-  "minecraft:on_player_placing": {
-    "condition": "q.block_face == 1", // Precise rotation only applies to `up` face
-    "event": "wiki:set_rotation"
-  }
-},
-"events": {
-  "wiki:set_rotation": {
-    "set_block_property": {
-      // Now use the long Molang expression from before to set the rotation property
-      "wiki:rotation": "q.block_face == 1 ? { t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0))); t.block_rotation = math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation; };"
-    }
-  }
+  "minecraft:custom_components": ["wiki:shell_rotation"]
 }
 ```
 
-<br>
+## Rotation Permutations
 
 Then, use [permutations](/blocks/block-permutations) to define the base cardinal rotations which will be expanded by the precise bones in our model.
 
@@ -334,7 +365,7 @@ Insert the following permutations into your block JSON (in the presented order):
 ]
 ```
 
-## Bone Visibility
+## Rotation Bone Visibility
 
 Not all bones in your model should be visible, so we make use of the bone visibility `minecraft:geometry` property to ensure that only the required bones are rendered. The reason behind having multiple bones is that `minecraft:transformation` only supports multiples of 90 degrees, while precise rotation requires 22.5 degree steps.
 
@@ -378,9 +409,9 @@ If you would like your block to have a different collision/selection box when pl
 }
 ```
 
-## Final Block JSON
+## Final Block JSON & Script
 
-Our block JSON file after the above steps should look similar to the code below:
+Your block JSON and script files after the above steps should look similar to those below:
 
 <Spoiler title="Shell Example Block JSON">
 
@@ -388,7 +419,7 @@ Our block JSON file after the above steps should look similar to the code below:
 
 ```json
 {
-  "format_version": "1.20.60",
+  "format_version": "1.21.0",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:shell",
@@ -437,17 +468,7 @@ Our block JSON file after the above steps should look similar to the code below:
           }
         ]
       },
-      "minecraft:on_player_placing": {
-        "condition": "q.block_face == 1",
-        "event": "wiki:set_rotation"
-      }
-    },
-    "events": {
-      "wiki:set_rotation": {
-        "set_block_state": {
-          "wiki:rotation": "t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0))); t.block_rotation = math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation;"
-        }
-      }
+      "minecraft:custom_components": ["wiki:shell_rotation"]
     },
     "permutations": [
       {
@@ -488,6 +509,41 @@ Our block JSON file after the above steps should look similar to the code below:
 
 </Spoiler>
 
+<Spoiler title="Shell Example Script">
+
+<CodeHeader>BP/scripts/shell.js</CodeHeader>
+
+```js
+import { world } from "@minecraft/server";
+
+/** @param {number} playerYRotation */
+function getPreciseRotation(playerYRotation) {
+  if (playerYRotation < 0) playerYRotation += 360;
+  const rotation = Math.round(playerYRotation / 22.5);
+
+  return rotation !== 16 ? rotation : 0;
+}
+
+world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
+  blockTypeRegistry.registerCustomComponent("wiki:shell_rotation", {
+    beforeOnPlayerPlace(event) {
+      const { player } = event;
+      if (!player) return;
+
+      const blockFace = event.permutationToPlace.getState("minecraft:block_face");
+      if (blockFace !== "up") return;
+
+      const playerYRotation = player.getRotation().y;
+      const rotation = getPreciseRotation(playerYRotation);
+
+      event.permutationToPlace = event.permutationToPlace.withState("wiki:rotation", rotation);
+    }
+  });
+});
+```
+
+</Spoiler>
+
 ## Result
 
 What you have created:
@@ -495,7 +551,8 @@ What you have created:
 <Checklist>
 
 -   [x] Block model supporting precise rotation
--   [x] Block with 16 rotation states, allowing placement on 5 block faces (20 total orientations)
+-   [x] Block with 16 supported rotation values, allowing placement on 5 block faces (20 total orientations)
+-   [x] Custom block component that can be used to set this rotation state
 
 </Checklist>
 
