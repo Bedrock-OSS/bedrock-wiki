@@ -3,6 +3,7 @@ title: Ore Loot Tables
 category: Tutorials
 tags:
     - easy
+    - scripting
 mentions:
     - SykoUSS
     - ExDrill
@@ -15,19 +16,14 @@ mentions:
     - Keyyard
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-::: tip FORMAT VERSION `1.20.60`
+:::tip FORMAT VERSION `1.21.0`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger events.
-:::
-
 This tutorial aims to show a new way of creating custom ore blocks with a proper loot table. The `minecraft:loot` component will run the specified loot table regardless of the tool used, but by adding the `match_tool` condition to your loot table you can specify what tools are required per pool.
+
+In addition, through use of scripts and custom components, we can create the experience orb reward offered by vanilla ores if the correct tool is used to destroy the block.
 
 - Features:
 
@@ -40,47 +36,9 @@ This tutorial aims to show a new way of creating custom ore blocks with a proper
   -   All items must be specified individually
   -   Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
 
-## Block JSON
-
-The following block behavior can be used as a template. Don't forget to set the block's texture using `terrain_texture.json`.
-
-<CodeHeader>BP/blocks/silver_ore.json</CodeHeader>
-
-```json
-{
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:silver_ore",
-      "menu_category": {
-        "category": "nature",
-        "group": "itemGroup.name.ore"
-      }
-    },
-    "components": {
-      ...
-      // Calls an event that loads structure with xp reward
-      "minecraft:on_player_destroyed": {
-        "event": "wiki:xp_reward"
-      },
-      "minecraft:loot": "loot_tables/blocks/silver_ore.json" // Won't be dropped if using Silk Touch.
-    },
-    "events": {
-      "wiki:xp_reward": {
-        "run_command": {
-          "command": [
-            "structure load ore_xp_reward ~~~" // You can download structure with saved xp orbs lower
-          ]
-        }
-      }
-    }
-  }
-}
-```
-
 ## Loot Table
 
-The example shown, displays the required components
+In the example below, you can see how the `match_tool` condition is used to test for a `minecraft:iron_pickaxe`:
 
 <CodeHeader>BP/loot_tables/blocks/silver_ore.json</CodeHeader>
 
@@ -107,13 +65,13 @@ The example shown, displays the required components
 }
 ```
 
-## Specifying Enchantments
+### Specifying Enchantments
 
 If needed you can add the enchantments section to your condition, but remember each tool and level must be listed as separate pools.
 
 Also note that it can correctly detect only 1st and 2nd enchantment level.
 
-<CodeHeader>BP/loot_tables/blocks/silver_ore.json#pools</CodeHeader>
+<CodeHeader>BP/loot_tables/blocks/silver_ore.json > pools</CodeHeader>
 
 ```json
 "conditions": [
@@ -132,85 +90,79 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 ]
 ```
 
-## Non-Experimental Methods
+## XP Reward Script
 
-Rather than triggering a block event to summon reward experience, you could use one of the methods described below.
+To spawn experience orbs when your ore block is destroyed, custom components can be used. Here, we use the [onPlayerDestroy](/blocks/block-events#player-destroy) event hook. If you don't want your block to spawn XP, this step can be ignored.
 
-Please note that you need to download the "ore_xp_reward" structure file, which contains the XP orbs, from [here](#download-structure).
+Similarly to the loot table, we check the item in the player's hand and then spawn a random number of XP orbs at the block's location.
 
-### Method 1: Dummy Items and Function Loop
+<CodeHeader>BP/scripts/silver_ore.js</CodeHeader>
 
-**Step 1**: Create a loot table for the block you want to drop XP. Let's drop the "minecraft:redstone" block as an example:
+```js
+import { world, EquipmentSlot } from "@minecraft/server";
+
+/**
+ * @param {number} min The minimum integer
+ * @param {number} max The maximum integer
+ * @returns {number} A random integer between the `min` and `max` parameters (inclusive)
+ * */
+const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+// Register a custom component before the world is loaded
+world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
+  blockTypeRegistry.registerCustomComponent("wiki:silver_ore_xp_reward", {
+    onPlayerDestroy({ block, dimension, player }) {
+      // Check the tool in the player's hand
+      const equippable = player?.getComponent("minecraft:equippable");
+      if (!equippable) return; // Exit if the player or its equipment are undefined
+
+      const itemStack = equippable.getEquipment(EquipmentSlot.Mainhand);
+      if (itemStack?.typeId !== "minecraft:iron_pickaxe") return; // Exit if the player isn't holding an iron pickaxe
+
+      // Specify enchantments
+      const enchantable = itemStack.getComponent("minecraft:enchantable");
+      const silkTouch = enchantable?.getEnchantment("silk_touch");
+      if (silkTouch) return; // Exit if the iron pickaxe has the Silk Touch enchantment
+
+      // Spawn the XP orbs
+      const xpAmount = randomInt(0, 3); // Number of XP orbs to spawn
+
+      for (let i = 0; i < xpAmount; i++) {
+        dimension.spawnEntity("minecraft:xp_orb", block.location);
+      }
+    }
+  });
+});
+```
+
+## Block JSON
+
+The following block behavior can be used as a template. Don't forget to set the block's texture using `terrain_texture.json`.
+
+Here you need to do two things:
+- Point to the new loot table with the `minecraft:loot` component.
+- Add our experience reward custom component to the `minecraft:custom_components` array.
+
+<CodeHeader>BP/blocks/silver_ore.json</CodeHeader>
 
 ```json
 {
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "minecraft:redstone"
-        }
-      ]
+  "format_version": "1.21.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wiki:silver_ore",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.ore"
+      }
     },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "minecraft:barrier" // Dummy Item
-        }
-      ]
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/silver_ore.json", // Won't be dropped if using Silk Touch.
+      "minecraft:custom_components": ["wiki:silver_ore_xp_reward"]
     }
-  ]
+  }
 }
 ```
-
-In this case, we add an existing item called "minecraft:barrier" as a dummy item to trigger the XP drop. Alternatively, you could create a new item to use as a dummy if you want.
-
-**Step 2**: Create a looping function to process the dropped items. This function should also be defined in a `BP/functions/tick.json` file to trigger it each tick.
-
-```c
-execute as @e[type=item, name="Barrier"] at @s run structure load ore_xp_reward ~~~
-execute as @e[type=item, name="Barrier"] run kill
-```
-
-This function will execute for any item entity with the name "Barrier" (our dummy item). It loads the "ore_xp_reward" structure at the item's location and then kills the item.
-
-### Method 2: Function Loop Only
-
-**Step 1**: Create a loot table for the block you want to drop XP, similar to the previous method. For example, let's use a "wiki:raw_silver" block:
-
-```json
-{
-  "pools": [
-    {
-      "entries": [
-        {
-          "type": "item",
-          "name": "wiki:raw_silver"
-        }
-      ]
-    }
-  ]
-}
-```
-
-**Step 2**: Create a looping function to process the dropped items. This function should also be defined in a `BP/functions/tick.json` file to trigger it each tick.
-
-```c
-execute as @e[type=item, name="Raw Silver", tag=!xp] at @s run structure load ore_xp_reward ~~~
-execute as @e[type=item, name="Raw Silver", tag=!xp] run tag @s add xp
-```
-
-This function will execute for any item entity with the name "Raw Silver", which does not have the "xp" tag. It loads the "ore_xp_reward" at the item's location and then adds the "xp" tag to the item.
-
-Remember to replace the item IDs, tags, and other specific details according to your needs.
-
-## Download Structure
-
-<BButton link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download color=blue> Download MCSTRUCTURE</BButton>
 
 ## Result
 
