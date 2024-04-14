@@ -303,11 +303,11 @@ Think of a unique custom component identifier. There can't be duplicate custom c
 ```js
 world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
   blockTypeRegistry.registerCustomComponent("wiki:shell_rotation", {
-    beforeOnPlayerPlace(e) {
-      const { player } = e;
+    beforeOnPlayerPlace(event) {
+      const { player } = event;
       if (!player) return; // Exit if the player is undefined
 
-      const blockFace = e.permutationToPlace.getState("minecraft:block_face");
+      const blockFace = event.permutationToPlace.getState("minecraft:block_face");
       if (blockFace !== "up") return; // Exit if the block hasn't been placed on the top of another block
 
       // Get the rotation using the function from earlier
@@ -315,7 +315,7 @@ world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
       const rotation = getPreciseRotation(playerYRotation);
 
       // Tell Minecraft to place the correct `wiki:rotation` value
-      e.permutationToPlace = e.permutationToPlace.withState("wiki:rotation", rotation);
+      event.permutationToPlace = event.permutationToPlace.withState("wiki:rotation", rotation);
     }
   });
 });
@@ -526,17 +526,17 @@ function getPreciseRotation(playerYRotation) {
 
 world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
   blockTypeRegistry.registerCustomComponent("wiki:shell_rotation", {
-    beforeOnPlayerPlace(e) {
-      const { player } = e;
+    beforeOnPlayerPlace(event) {
+      const { player } = event;
       if (!player) return;
 
-      const blockFace = e.permutationToPlace.getState("minecraft:block_face");
+      const blockFace = event.permutationToPlace.getState("minecraft:block_face");
       if (blockFace !== "up") return;
 
       const playerYRotation = player.getRotation().y;
       const rotation = getPreciseRotation(playerYRotation);
 
-      e.permutationToPlace = e.permutationToPlace.withState("wiki:rotation", rotation);
+      event.permutationToPlace = event.permutationToPlace.withState("wiki:rotation", rotation);
     }
   });
 });
