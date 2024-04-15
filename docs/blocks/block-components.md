@@ -20,11 +20,8 @@ mentions:
     - QuazChick
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-:::tip FORMAT & MIN ENGINE VERSION `1.20.60`
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.20.60`.
+:::tip FORMAT & MIN ENGINE VERSION `1.21.0`
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.0`.
 :::
 :::danger <nbsp/>
 Only one instance of each component can be active at once. Duplicate components will be overridden by the latest [permutation](/blocks/block-permutations).
@@ -40,187 +37,205 @@ Block components are used to change how your block appears and functions in the 
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:lamp",
-      "menu_category": {
-        "category": "items"
-      }
-    },
-    "components": {
-      "minecraft:light_dampening": 0,
-      "minecraft:light_emission": 15,
-      "minecraft:map_color": [210, 200, 190],
-      "minecraft:geometry": "geometry.lamp",
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "lamp"
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_block",
+            "menu_category": {
+                "category": "items"
+            }
         },
-        "shade": {
-          "texture": "lamp_shade"
+        "components": {
+            "minecraft:geometry": "geometry.lamp",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "lamp"
+                },
+                "shade": {
+                    "texture": "lamp_shade"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
 ## Collision Box
 
-The block's entity/particle collision box, measured in <abbr title="16ths of a block unit">pixels</abbr> - must be contained within the block unit (16&times;16&times;16).
+Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used. 
 
--   Origin is measured from the horizontal middle and vertical bottom of your block, extending from the north-east.
+_Released from experiment `Holiday Creator Features` for format versions `1.19.50` and higher._
 
--   Size is calculated from the origin point, extending from the north-east.
+Type: Boolean/Object
 
-**May also be defined as a boolean:**
+- `origin`: Vector [a, b, c]
+    - Minimal position of the bounds of the collision box. `origin` is specified as `[x, y, z]` and must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
+-  `size`: Vector [a, b, c]
+    - Size of each side of the collision box. Size is specified as `[x, y, z]`. `origin` + `size` must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
 
--   When `false`, entities can pass through the block.
--   When `true`, a unit-sized cube is set as the collision.
+### Example using Boolean
 
-**Default value:** `true`
+<CodeHeader>minecraft:block > components</CodeHeader>
 
-_Released from experiment `Holiday Creator Features` for format versions 1.19.50 and higher._
+```json
+"minecraft:collision_box": true
+```
+
+### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:collision_box": {
-  "origin": [-8, 0, -8],
-  "size": [16, 16, 16]
+    "origin": [-8, 0, -8],
+    "size": [16, 16, 16]
 }
-```
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:collision_box": false
 ```
 
 ## Crafting Table
 
-Turns your block into a crafting table, opening a functional crafting interface when interacted with.
+Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes.
 
-_Released from experiment `Holiday Creator Features` for format versions 1.19.50 and higher._
+_Released from experiment `Holiday Creator Features` for format versions `1.19.50` and higher._
+
+Type: Object
+
+- `crafting_tags`: Array
+    - Required Field
+    - Defines the tags recipes should define to be crafted on this table. Limited to 64 tags. Each tag is limited to 64 characters.
+- `table_name`: String
+    - Specifies the language file key that maps to what text will be displayed in the UI of this table. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this field is omitted, the name displayed will default to the name specified in the "display_name" component. If this block has no "display_name" component, the name displayed will default to the name of the block.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:crafting_table": {
-  "table_name": "Wiki Workbench", // Name shown in crafting menu, can be translated
-  "crafting_tags": ["crafting_table", "wiki_workbench"] // Tags to be used within the recipe file
+    "table_name": "Wiki Workbench",
+    "crafting_tags": [
+        "crafting_table",
+        "wiki_workbench"
+    ]
 }
 ```
 
 ## Destructible by Explosion
 
-How resistant your block is to being destroyed by explosions.
+Describes the destructible by explosion properties for this block. If set to true, the block will have the default explosion resistance. If set to false, this block is indestructible by explosion. If the component is omitted, the block will have the default explosion resistance.
 
-**May also be defined as a boolean:**
+Type: Boolean/Object
 
--   When `false`, the block cannot be exploded.
--   When `true`, the block has an explosion resistance of `0`.
+- `explosion_resistance`: Double
+    - Describes how resistant the block is to explosion. Greater values mean the block is less likely to break when near an explosion (or has higher resistance to explosions). The scale will be different for different explosion power levels. A negative value or 0 means it will easily explode; larger numbers increase level of resistance.
 
-**Default value:** `true`
+### Example using Boolean
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:destructible_by_explosion": false
+```
+
+### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:destructible_by_explosion": {
-  "explosion_resistance": 20
+    "explosion_resistance": 20
 }
-```
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:destructible_by_explosion": false // Cannot be destroyed by explosions
 ```
 
 ## Destructible by Mining
 
-Duration required to destroy block when being mined.
+Describes the destructible by mining properties for this block. If set to true, the block will take the default number of seconds to destroy. If set to false, this block is indestructible by mining. If the component is omitted, the block will take the default number of seconds to destroy.
 
-**May also be defined as a boolean:**
+Type: Boolean/Object
 
--   When `false`, the block cannot be mined.
--   When `true`, the block can be mined instantly.
+- `seconds_to_destroy`: Double
+    - Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.
+    - Note: It actually takes 2x the amount of seconds defined.\
 
-**Default value:** `true`
+### Example using Boolean
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:destructible_by_mining": false
+```
+
+### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:destructible_by_mining": {
-  "seconds_to_destroy": 0.5
+    "seconds_to_destroy": 20
 }
-```
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:destructible_by_mining": false // Cannot be destroyed by mining
 ```
 
 ## Display Name
 
-Language file key that determines text that will be displayed when you hover over the block in your inventory and hotbar.
+Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name.
 
-If the string given does not have a translation, the raw string given will be displayed.
+_Released from experiment `Holiday Creator Features` for format versions `1.19.60` and higher._
 
-**Note**: Minecraft may revert to using `tile.<identifier>.name` in some scenarios.
+Type: String
 
-_Released from experiment `Holiday Creator Features` for format versions 1.19.60 and higher._
+### Example using String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"minecraft:display_name": "tile.example_block.red.name"
+"minecraft:display_name": "Custom Block"
+```
+
+### Example using Localization String
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:display_name": "tile.wiki:custom_block.name"
 ```
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
 ```c
-tile.example_block.red.name=Red Example Block
+tile.wiki:custom_block.name=Custom Block
 ```
 
 ## Flammable
 
-Describes your block's flammability.
+Describes the flammable properties for this block. If set to true, default values are used. If set to false, or if this component is omitted, the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited.
 
-**May also be defined as a boolean:**
+Type: Boolean/Object
 
--   When `false`, the block will not catch on fire or be destroyed by fire.
--   When `true`, the example values below are used.
+- `catch_chance_modifier`: Int
+    - A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a `catch_chance_modifier` greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the `destroy_chance_modifier` is 0). If the `catch_chance_modifier` is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if `destroy_chance_modifier` is greater than 0). The default value of 5 is the same as that of Planks.
 
-**Default value:** `false`
+### Example using Boolean
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:flammable": true
+```
+
+### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:flammable": {
-  "catch_chance_modifier": 5, // Affects chance that this block will catch flame when next to a fire
-  "destroy_chance_modifier": 20 // Affects chance that this block will be destroyed by flames when on fire
+    "catch_chance_modifier": 5,
+    "destroy_chance_modifier": 20
 }
-```
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:flammable": false // Default - your block will not catch fire, but can be directly ignited
 ```
 
 ## Friction
 
-Describes your block's friction in a decimal range of `0.0` to `0.9`. Less friction means a more slippery surface.
+Describes the friction for this block in a range of (0.0-0.9). Friction affects an entity's movement speed when it travels on the block. Greater value results in more friction.
 
-**Vanilla value examples:**
-
--   Dirt: `0.4`
--   Ice: `0.02`
-
-**Default value:** `0.4`
+Type: Double
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -230,7 +245,7 @@ Describes your block's friction in a decimal range of `0.0` to `0.9`. Less frict
 
 ## Geometry
 
-The model that the block will use. Your model will not have any face culling applied when intersecting with other blocks.
+The description identifier of the geometry to use to render this block. This identifier must match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: `minecraft:geometry.full_block` or `minecraft:geometry.cross`.
 
 **Custom block model limitations:**
 
@@ -240,17 +255,34 @@ The model that the block will use. Your model will not have any face culling app
 
 -   The absolute bounds of the position of your 30&times;30&times;30 block are 30 <abbr title="16ths of a block unit">pixels</abbr> in each direction from the origin. Your block can be placed in any position within these bounds, as long as it adheres to rule #2.
 
-**When active:**
-
--   The block becomes breathable.
--   The block no longer conducts redstone power.
+Note: Does not conduct redstone. Even if using the vanilla `full_block` identifier. Makes your block breathable as well. Mobs are unable to spawn as well. Interestingly, bats are able to hang upside down on them despite being a "non solid" block in terms of spawnability and conducitvity.
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.40 and higher._
+
+Type: String/Object
+
+- `identifier`: String
+    - The identifier of the geometry.
+- `bone_visibility`: Object
+    - Optional “array” of Booleans that define the visibility of individual bones in the geometry file. In order to set up bone_visibility the geometry file name must be entered as an identifier. After the identifier has been specified, bone_visibility can be defined based on the names of the bones in the specified geometry file on a true/false basis.
+    - Note that all bones default to true, so bones should only be defined if they are being set to false. Including bones set to true will work the same as the default.
+
+### Example using String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"minecraft:geometry": "geometry.example_block" // Geometry identifier from file in 'RP/models/entity' or 'RP/models/blocks' folder
+"minecraft:geometry": "geometry.example_block"
+```
+
+### Example using Object
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:geometry": {
+    "identifier": "geometry.example_block"
+}
 ```
 
 ---
@@ -267,25 +299,20 @@ _Molang expressions supported in `bone_visibility` for format versions 1.20.10 a
 
 ```json
 "minecraft:geometry": {
-  "identifier": "geometry.example_block", // Geometry identifier from file in 'RP/models/entity' or 'RP/models/blocks' folder.
-  "bone_visibility": {
-    "wiki_bone": false, // Hide cubes in this bone
-    "conditional_bone": "q.block_state('wiki:example_state') == 3", // Molang expressions can conditionally set visibility
-    "another_bone": true // true is the default so has no effect.
-  }
+    "identifier": "geometry.example_block",
+    "bone_visibility": {
+        "wiki_bone": false,
+        "conditional_bone": "q.block_state('wiki:example_state') == 3",
+        "another_bone": true
+    }
 }
 ```
 
 ## Light Dampening
 
-Sets how much the light will be dampened when passed through the block (integer 0-15) - higher value means less light passes through.
+The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more.
 
-**Vanilla value examples:**
-
--   Dirt & Tinted Glass: `15`
--   Iron Bars & Glass Panes: `0`
-
-**Default value:** `15`
+Type: Int
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -295,14 +322,9 @@ Sets how much the light will be dampened when passed through the block (integer 
 
 ## Light Emission
 
-Sets how much the light will be emitted by the block (integer 0-15).
+The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted.
 
-**Vanilla value examples:**
-
--   Froglight: `15`
--   Redstone Torch (lit): `7`
-
-**Default value:** `0`
+Type: Int
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -312,9 +334,11 @@ Sets how much the light will be emitted by the block (integer 0-15).
 
 ## Loot
 
-Loot to drop when destroyed (ignored by `Silk Touch` enchantment).
+The path to the loot table, relative to the behavior pack. Silk Touch overrides this.
 
 **If omitted, drops the block as an item.**
+
+Type: String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -324,15 +348,19 @@ Loot to drop when destroyed (ignored by `Silk Touch` enchantment).
 
 ## Map Color
 
-Block's appearance on a map as a hex string or [R, G, B] (0-255) array.
+Sets the color of the block when rendered to a map. The color is represented as a hex value in the format `#RRGGBB`. May also be expressed as an array of [R, G, B] from 0 to 255. If this component is omitted, the block will not show up on the map.
 
-**If omitted, the block is ignored by maps.**
+Type: String/Vector [a, b, c]
+
+### Example using String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"minecraft:map_color": "#ffffff"
+"minecraft:map_color": "#FFFFFF"
 ```
+
+### Example using Vector [a, b, c]
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -422,70 +450,89 @@ Custom instance names can be defined within material instances, and can be refer
 
 ## Placement Filter
 
-Configure conditions for a block to be able to survive. If these conditions are not met, the block will not be placed, or if the block is already placed, it will pop off.
-
-**The `block_filter` may have up to 64 entries.**
-
-**If omitted, the block can be placed and survive on any surface.**
+Sets rules for under what conditions the block can be placed or survive.
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.60 and higher._
+
+Type: Object
+
+- `conditions`: Array - List of conditions where the block can be placed/survive. Limited to 64 conditions. Each condition is a JSON Object that must contain at least one (and can contain both) of the parameters `allowed_faces` or `block_filter` as shown below.
+    - `allowed_faces`: Array - List of any of the following strings describing which face(s) this block can be placed on: `up`, `down`, `north`, `south`, `east`, `west`, `side`, `all`. Limited to 6 faces.
+    - `block_filter`: Array - List of blocks that this block can be placed against in the `allowed_faces` direction. Limited to 64 blocks. Each block in this list can either be specified as a String (block name) or as a BlockDescriptor.
+
+### Block Descriptor
+A BlockDescriptor is an object that allows you to reference a block (or multiple blocks) based on its tags, or based on its name and states. The fields of a BlockDescriptor are described below.
+
+- `name`: String
+    - The name of a block.
+- `states`: Object
+    - The list of Vanilla block states and their values that the block can have, expressed in key/value pairs.
+- `tags`: String
+    - A condition using Molang queries that results to true/false that can be used to query for blocks with certain tags.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"minecraft:placement_filter": {
-  "conditions": [
-    {
-      "allowed_faces": ["up"], // Can include 'up', 'down', 'north', 'east', 'south', 'west', and 'side'.
-      "block_filter": [
-        // Test for identifier
-        "minecraft:dirt",
-        // Test for tags
-        { "tags": "!q.any_tag('stone', 'wiki_tag')" }
-      ]
+    "minecraft:placement_filter": {
+        "conditions": [
+            {
+                "allowed_faces": [
+                    "up"
+                ],
+                "block_filter": [
+                    "minecraft:dirt",
+                    {
+                        "name": "minecraft:sand",
+                        "states": {
+                            "sand_type": "red"
+                        }
+                    },
+                    {
+                        "tags": "!q.any_tag('stone', 'wiki_tag')"
+                    }
+                ]
+            }
+        ]
     }
-  ]
-}
 ```
 
 See [this](/blocks/block-tags) page for a list of vanilla tags and relevant blocks.
 
 ## Selection Box
 
-The selectable area (hitbox) of the block, measured in <abbr title="16ths of a block unit">pixels</abbr> - must be contained within the block unit (16&times;16&times;16).
-
--   Origin is measured from the horizontal middle and vertical bottom of your block, extending from the north-east.
--   Size is calculated from the origin point, extending from the north-east.
-
-**May also be defined as a boolean:**
-
--   When `false`, entities can pass through the block.
--   When `true`, a unit-sized cube is set as the collision.
-
-**Default value:** `true`
+Defines the area of the block that is selected by the player's cursor. If set to true, default values are used. If set to false, this block is not selectable by the player's cursor. If this component is omitted, default values are used.
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.60 and higher._
+
+Type: Boolean/Object
+
+- `origin`: Vector [a, b, c]
+    - Minimal position of the bounds of the collision box. `origin` is specified as `[x, y, z]` and must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
+-  `size`: Vector [a, b, c]
+    - Size of each side of the collision box. Size is specified as `[x, y, z]`. `origin` + `size` must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
+
+### Example using Boolean
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:selection_box": true
+```
+
+### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:selection_box": {
-  "origin": [-8, 0, -8],
-  "size": [16, 16, 16]
+    "origin": [-8, 0, -8],
+    "size": [16, 16, 16]
 }
-```
-
-Or..
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:selection_box": false
 ```
 
 ## Transformation
 
-Allows for translation (movement), scaling and rotation of blocks - both visual and functional.
+Supports rotation, scaling, and translation. The component can be added to the whole block and/or to individual block permutations. Transformed geometries still have the same restrictions that non-transformed geometries have such as a maximum size of 30/16 units.
 
 **Transformed models must not exceed the [block geometry limits](#geometry).**
 
@@ -493,12 +540,27 @@ Allows for translation (movement), scaling and rotation of blocks - both visual 
 Lean about [rotatable blocks](/blocks/rotatable-blocks) to apply rotation based on how the block is placed, just like furnaces and mob heads!
 :::
 
+Type: Object
+
+- `rotation`: Vector [a, b, c]
+    - How many degrees to rotate the geometry. [x ,y, z]. Must be in increments of 90. Can be negative. If not in increment of 90, the game will round to the nearest 90 increment.
+- `rotation_pivot`: Vector [a, b, c]
+    - The pivot point(in block units) to rotate the block on.
+- `scale`: Vector [a, b, c]
+    - How many pixels to scale the geometry. [x ,y, z]
+- `scale_pivot`: Vector [a, b, c]
+    - The pivot point(in block units) to scale the block on.
+- `translation`: Vector [a, b, c]
+    - How many pixels to translate the geometry. [x ,y, z]
+
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:transformation": {
-  "translation": [-5, 8, 0],
-  "rotation": [90, 180, 0],
-  "scale": [0.5, 1, 0.5]
+    "translation": [-5, 8, 0 ],
+    "rotation": [90, 180, 0],
+    "scale": [0.5, 1, 0.5],
+    "rotation_pivot": [0, 0, 0],
+    "scale_pivot": [0, 0, 0]
 }
 ```
