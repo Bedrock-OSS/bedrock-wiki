@@ -622,7 +622,7 @@ Type: Object
             "items":[
                 "minecraft:diamond"
             ],
-            "repair_amount": "c.other->q.remaining_durability + 0.05 * c.other->q.max_durability"
+            "repair_amount": "math.min(q.remaining_durability + c.other->q.remaining_durability + math.floor(q.max_durability /20), c.other->q.max_durability)" // Vanilla formula
         }
     ]
 }
