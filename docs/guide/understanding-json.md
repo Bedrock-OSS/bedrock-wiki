@@ -126,7 +126,7 @@ Take a careful look at the format. You will see that the entire structure is bui
 
 ## Troubleshooting Examples
 
-Here are a few examples, to help you understand feedback you might recieve on the discord or online. We tend to use technical jargon when talking about errors in JSON, so hopefully this section helps familizrize you with the terms: 
+Here are a few examples, to help you understand feedback you might recieve on the discord or online. We tend to use technical jargon when talking about errors in JSON, so hopefully this section helps familiarize you with the terms: 
 
 ---
 
