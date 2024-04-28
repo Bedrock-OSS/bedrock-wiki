@@ -16,6 +16,7 @@ mentions:
     - Herobrine643928
     - ConsoleTerm
     - kumja1
+    - modmaker101
 ---
 
 ::: warning
@@ -55,7 +56,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
 			"description": "Gametest Module",
 			"type": "script",
 			"language": "javascript",
-			"entry": "scripts/index.js",
+			"entry": "scripts/main.js",
 			"uuid": "f626740d-50a6-49f1-a24a-834983b72134",
 			"version": [1, 0, 0]
 		}
@@ -76,7 +77,7 @@ In our manifest, we have added script module. The `entry` is where our script fi
 	:paths="[
 		'BP/manifest.json',
 		'BP/pack_icon.png',
-        'BP/scripts/index.js'
+        'BP/scripts/main.js'
 	]"
 />
 
@@ -84,7 +85,7 @@ In our manifest, we have added script module. The `entry` is where our script fi
 
 Now comes the fun part - creating our custom commands. First, we will add the module.
 
-<CodeHeader>BP/scripts/index.js</CodeHeader>
+<CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
 import { world } from '@minecraft/server';
@@ -92,7 +93,7 @@ import { world } from '@minecraft/server';
 
 Next, we will add simple commands, such as `!gmc` to change our gamemode to creative and `!gms` to change into survival.
 
-<CodeHeader>BP/scripts/index.js</CodeHeader>
+<CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
 world.beforeEvents.chatSend.subscribe((eventData) => {
@@ -124,7 +125,7 @@ This function will always be checking if the player types the special message to
 
 For example, let's make our commands usable only to players that have the `Admin` tag.
 
-<CodeHeader>BP/scripts/index.js</CodeHeader>
+<CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
 import { world } from "@minecraft/server";
