@@ -102,7 +102,7 @@ Wrongly named files/folders is a common source of errors. Please check your work
 
 The manifest is a file that identifies your pack to Minecraft. Every pack has one manifest. A folder with a correctly formatted manifest will show up in Minecraft, and we consider this the "minimal" pack before we can add additional content.
 
-Manifest files are written in `json`. If this isn't familiar to you, you can learn more about json [here](/understanding-json).
+Manifest files are written in `json`. If this isn't familiar to you, you can learn more about json [here](/guide/understanding-json).
 
 First, create a new file in your BP folder by right-clicking on the folder and selecting `New File`. Call the file `manifest.json`. To begin, you can copy paste the following code into the file.
 
