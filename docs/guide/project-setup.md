@@ -138,7 +138,7 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 -   "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device with an older version installed, the more recent version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
 
--   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on.
+-   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on. The number specified here should match the version number of the game, unless you're planning for backwards compatibility with older versions.
 
 -   In "`modules`", the "`type`" is defined to be "`data`". This makes your pack a _Behavior Pack_.
 
