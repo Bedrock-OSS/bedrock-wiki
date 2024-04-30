@@ -15,6 +15,7 @@ mentions:
     - SmokeyStack
     - ThomasOrs
     - Goatfu
+    - MRBBATES1
 ---
 
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
@@ -254,6 +255,14 @@ Color Variant: Leucistic, Wild, Yellow, Cyan, Blue.
 -   Disables entity shadow.
 -   Makes the entity drop a minecart on death.
 -   Prevents the entity from rotating.
+
+---
+
+### minecraft:npc
+
+-   When in creative mode; punching entity will make it instantly despawn.
+-   When in survival or adventure mode; punching entity causes no damage and no Knockback is applied.
+-   Ignores the `minecraft:health` component in all modes.
 
 ---
 
