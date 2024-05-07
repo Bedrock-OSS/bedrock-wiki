@@ -44,7 +44,7 @@ Structures can be exported as a 3d model. If 3D export button is not working for
 <BButton
   link="/assets/packs/visuals/structure-presentation/3d-export-fix-v2.mcpack" download
 	color=blue
->Download Pack
+>Download Pack</BButton>
 
 <BButton
 	link="/assets/packs/visuals/structure-presentation/3d-export-fix.mcpack" download
