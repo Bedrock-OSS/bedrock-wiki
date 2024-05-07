@@ -329,7 +329,7 @@ form.show(event.source).then(r => {
 ```
 
 ### MessageFormData
-Similar to action form, message form will save the input inside `.selection`. `.button1` will return 0, and `.button2` will return 1. There is no close button, but pressing escape will close the form. We can use `.canceled` to handle this event.
+Similar to the action form, the message form will save the input inside `.selection`. Clicking `.button1` will return 0, and clicking `.button2` will return 1. Although there is no close button, pressing 'Escape' will close the form. We can use `.canceled` to handle this event.
 
 ```js
 form.show(event.source).then(r => {
