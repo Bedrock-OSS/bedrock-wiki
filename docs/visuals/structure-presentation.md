@@ -42,9 +42,14 @@ By making [JSON UI](/json-ui/json-ui-intro) edits you can change the background 
 Structures can be exported as a 3d model. If 3D export button is not working for you, you can try applying a 3d-export-fix pack.
 
 <BButton
-	link="/assets/packs/visuals/structure-presentation/3d-export-fix.mcpack" download
+  link="/assets/packs/visuals/structure-presentation/3d-export-fix-v2.mcpack" download
 	color=blue
 >Download Pack</BButton>
+
+<BButton
+	link="/assets/packs/visuals/structure-presentation/3d-export-fix.mcpack" download
+	color=blue
+>Download Pack (prior 1.19.30)</BButton>
 
 ![](/assets/images/visuals/structure-presentation/model-render.png)
 
