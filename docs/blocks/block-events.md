@@ -21,8 +21,8 @@ mentions:
     - BlazeDrake
 ---
 
-:::tip FORMAT VERSION `1.21.0`
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.0`.
+:::tip FORMAT VERSION `1.20.80`
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.20.80`.
 :::
 
 ## Registering Custom Components
@@ -39,14 +39,14 @@ _This example prevents the player from placing the block if they aren't in creat
 import { world, GameMode } from "@minecraft/server";
 
 const CreativeModeOnlyComponent = {
-  beforeOnPlayerPlace(event) {
-    const isInCreative = event.player?.getGameMode() === GameMode.creative;
-    if (!isInCreative) event.cancel = true;
-  }
+    beforeOnPlayerPlace(event) {
+        const isInCreative = event.player?.getGameMode() === GameMode.creative;
+        if (!isInCreative) event.cancel = true;
+    }
 }
 
 world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
-  blockTypeRegistry.registerCustomComponent("wiki:creative_mode_only", CreativeModeOnlyComponent);
+    blockTypeRegistry.registerCustomComponent("wiki:creative_mode_only", CreativeModeOnlyComponent);
 });
 ```
 
@@ -60,7 +60,7 @@ Like any normal component, custom components can be added and removed based on t
 
 ```js
 "components": {
-  "minecraft:custom_components": ["wiki:creative_mode_only"]
+        "minecraft:custom_components": [ "wiki:creative_mode_only" ]
 }
 ```
 
@@ -72,12 +72,12 @@ Runs before a player places the block.
 
 ```js
 beforeOnPlayerPlace(event) {
-  event.block // Block impacted by this event. This is the block that will be replaced.
-  event.cancel // If set to true, cancels the block place event.
-  event.dimension // Dimension that contains the block.
-  event.face // The block face that was placed onto.
-  event.permutationToPlace // The block permutation that will be placed. Can be changed to place a different permutation instead.
-  event.player // The player that is placing this block. May be undefined.
+        event.block // Block impacted by this event. This is the block that will be replaced.
+        event.cancel // If set to true, cancels the block place event.
+        event.dimension // Dimension that contains the block.
+        event.face // The block face that was placed onto.
+        event.permutationToPlace // The block permutation that will be placed. Can be changed to place a different permutation instead.
+        event.player // The player that is placing this block. May be undefined.
 }
 ```
 
@@ -95,7 +95,7 @@ Runs when an entity falls on the block.
 
 ```json
 "minecraft:entity_fall_on": {
-  "min_fall_distance": 5 // The minimum distance an entity must fall to trigger this event (optional).
+        "min_fall_distance": 5 // The minimum distance an entity must fall to trigger this event (optional).
 }
 ```
 
@@ -103,10 +103,10 @@ Runs when an entity falls on the block.
 
 ```js
 onEntityFallOn(event) {
-  event.block // Block impacted by this event.
-  event.dimension // Dimension that contains the block.
-  event.entity // The entity that stepped on the block. May be undefined.
-  event.fallDistance // The distance that the entity fell before landing.
+        event.block // Block impacted by this event.
+        event.dimension // Dimension that contains the block.
+        event.entity // The entity that stepped on the block. May be undefined.
+        event.fallDistance // The distance that the entity fell before landing.
 }
 ```
 
@@ -118,9 +118,9 @@ Runs when the block is placed.
 
 ```js
 onPlace(event) {
-  event.block // Block impacted by this event.
-  event.dimension // Dimension that contains the block.
-  event.previousBlock // Permutation of the replaced block.
+    event.block // Block impacted by this event.
+    event.dimension // Dimension that contains the block.
+    event.previousBlock // Permutation of the replaced block.
 }
 ```
 
@@ -132,10 +132,10 @@ Runs when the player destroys the block.
 
 ```js
 onPlayerDestroy(event) {
-  event.block // Block impacted by this event. This is the block after it has been destroyed.
-  event.destroyedBlockPermutation // Permutation of the block before it was destroyed.
-  event.dimension // Dimension that contains the block.
-  event.player // The player that destroyed the block. May be undefined.
+    event.block // Block impacted by this event. This is the block after it has been destroyed.
+    event.destroyedBlockPermutation // Permutation of the block before it was destroyed.
+    event.dimension // Dimension that contains the block.
+    event.player // The player that destroyed the block. May be undefined.
 }
 ```
 
@@ -147,11 +147,11 @@ Runs when the player interacts with / uses the block.
 
 ```js
 onPlayerInteract(event) {
-  event.block // Block impacted by this event.
-  event.dimension // Dimension that contains the block.
-  event.face // The block face that was interacted with.
-  event.faceLocation // Location relative to the bottom north-west corner of the block that the player interacted with.
-  event.player // The player that interacted with the block. May be undefined.
+    event.block // Block impacted by this event.
+    event.dimension // Dimension that contains the block.
+    event.face // The block face that was interacted with.
+    event.faceLocation // Location relative to the bottom north-west corner of the block that the player interacted with.
+    event.player // The player that interacted with the block. May be undefined.
 }
 ```
 
@@ -163,8 +163,8 @@ Triggered on every random tick, allowing for behavior like random crop growth.
 
 ```js
 onRandomTick(event) {
-  event.block // Block impacted by this event.
-  event.dimension // Dimension that contains the block.
+    event.block // Block impacted by this event.
+    event.dimension // Dimension that contains the block.
 }
 ```
 
@@ -180,9 +180,9 @@ Runs when an entity steps off the block.
 
 ```js
 onStepOff(event) {
-  event.block // Block impacted by this event.
-  event.dimension // Dimension that contains the block.
-  event.entity // The entity that stepped on the block. May be undefined.
+    event.block // Block impacted by this event.
+    event.dimension // Dimension that contains the block.
+    event.entity // The entity that stepped on the block. May be undefined.
 }
 ```
 
@@ -198,9 +198,9 @@ Runs when an entity steps onto the block.
 
 ```js
 onStepOn(event) {
-  event.block // Block impacted by this event.
-  event.dimension // Dimension that contains the block.
-  event.entity // The entity that stepped on the block. May be undefined.
+    event.block // Block impacted by this event.
+    event.dimension // Dimension that contains the block.
+    event.entity // The entity that stepped on the block. May be undefined.
 }
 ```
 
@@ -216,8 +216,8 @@ Triggers between X and Y amount of ticks inside `interval_range` of the block's 
 
 ```json
 "minecraft:tick": {
-  "looping": true,
-  "interval_range": [10, 20], // Two values (in ticks) which will be randomly decided between to determine delay duration.
+    "looping": true,
+    "interval_range": [10, 20], // Two values (in ticks) which will be randomly decided between to determine delay duration.
 }
 ```
 
@@ -225,7 +225,7 @@ Triggers between X and Y amount of ticks inside `interval_range` of the block's 
 
 ```js
 onTick(event) {
-  event.block // Block impacted by this event.
-  event.dimension // Dimension that contains the block.
+    event.block // Block impacted by this event.
+    event.dimension // Dimension that contains the block.
 }
 ```

@@ -14,13 +14,6 @@ mentions:
     - SmokeyStack
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger block events.
-:::
-
 Sometimes your block needs to have features which Minecraft doesn't allow. A possible solution is to create an entity which replicates characteristics of a block.
 
 ## Creating the Collision
@@ -35,28 +28,28 @@ Those components below are required to make the entity act as a block, and also 
 
 ```json
 {
-  // Knockback resistance is needed to make it not be Knocked off by an entity.
-  "minecraft:knockback_resistance": {
-    "value": 1
-  },
-  // Tells if the entity can be pushed or not.
-  "minecraft:pushable": {
-    "is_pushable": false,
-    "is_pushable_by_piston": true
-  },
-  // Sets the distance through which the entity can push through.
-  "minecraft:push_through": {
-    "value": 1
-  },
-  // Makes it invincible.
-  "minecraft:damage_sensor": {
-    "triggers": [
-      {
-        "deals_damage": false,
-        "cause": "all"
-      }
-    ]
-  }
+    // Knockback resistance is needed to make it not be Knocked off by an entity.
+    "minecraft:knockback_resistance": {
+        "value": 1
+    },
+    // Tells if the entity can be pushed or not.
+    "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+    },
+    // Sets the distance through which the entity can push through.
+    "minecraft:push_through": {
+        "value": 1
+    },
+    // Makes it invincible.
+    "minecraft:damage_sensor": {
+        "triggers": [
+            {
+                "deals_damage": false,
+                "cause": "all"
+            }
+        ]
+    }
 }
 ```
 
@@ -87,29 +80,33 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 <CodeHeader>BP/entities/your_entity.json#minecraft:entity/events</CodeHeader>
 
 ```json
-// Event in the original entity.
-"minecraft:entity_spawned": {
-  "add": {
-    "components_groups": [
-        "despawn" // We will also need to despawn the first entity.
-    ]
-  },
-  "run_command": {
-    "command": [
-        "setblock ~~~ wiki:align"
-    ]
-  }
+{
+    // Event in the original entity.
+    "minecraft:entity_spawned": {
+        "add": {
+            "components_groups": [
+                "despawn" // We will also need to despawn the first entity.
+            ]
+        },
+        "run_command": {
+            "command": [
+                "setblock ~~~ wiki:align"
+            ]
+        }
+    }
 }
 ```
 
 <CodeHeader>BP/entities/your_entity.json#minecraft:entity/component_groups</CodeHeader>
 
 ```json
-// Component group in the original entity.
-"component_groups": {
-  "despawn": {
-    "minecraft:despawn": {}
-  }
+{
+    // Component group in the original entity.
+    "component_groups": {
+        "despawn": {
+            "minecraft:despawn": {}
+        }
+    }
 }
 ```
 
@@ -119,86 +116,97 @@ Block used to summon the dummy entity right on the block, and as the block is ce
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:align"
-    },
-    "components": {
-      "minecraft:light_dampening": 0,
-      "minecraft:collision_box": false,
-      "minecraft:selection_box": false,
-      "minecraft:loot": "loot_tables/empty.json",
-      "minecraft:geometry": "geometry.empty",
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "empty"
+    "format_version": "1.20.80",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:align"
+        },
+        "components": {
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": false,
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:geometry": "geometry.empty",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "empty"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:custom_components": [
+                "wiki:on_placed_align"
+            ]
         }
-      },
-      "minecraft:destructible_by_mining": {
-        "seconds_to_destroy": 2
-      },
-      "minecraft:on_placed": {
-        "event": "wiki:event"
-      }
-    },
-    "events": {
-      "wiki:event": {
-        "run_command": {
-          "command": [
-            "setblock ~~~ air", // This will remove the block
-            "summon wiki:dummy_align" // And this will spawn the dummy entity.
-          ]
-        }
-      }
     }
-  }
 }
 ```
+
+For our custom component script, we'll utilize the `beforeOnPlayerPlace` event. We use this event to prevent the block from being placed and just summon our entity instead.
+
+```ts
+import { world } from "@minecraft/server";
+
+const wikiOnPlacedAlign = {
+    beforeOnPlayerPlace(event) {
+        event.cancel = true;
+        let blockLocation = event.block.location;
+        event.player.dimension.spawnEntity('wiki:dummy_align', blockLocation);
+    }
+}
+
+world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
+    blockTypeRegistry.registerCustomComponent("wiki:on_placed_align", wikiOnPlacedAlign);
+});
+```
+
 
 <CodeHeader>BP/entities/your_dummy_entity.json</CodeHeader>
 
 ```json
 {
-  "format_version": "1.13.0",
-  "minecraft:entity": {
-    "description": {
-      "identifier": "wiki:dummy_align", // The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
-      "is_spawnable": false,
-      "is_summonable": true,
-      "is_experimental": false
-    },
-    "component_groups": {
-      "transform": {
-        "minecraft:transformation": {
-          "into": "wiki:your_entity",
-          "delay": 0
+    "format_version": "1.13.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:dummy_align", // The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "transform": {
+                "minecraft:transformation": {
+                    "into": "wiki:your_entity",
+                    "delay": 0
+                }
+            }
+        },
+        "components": {
+            "minecraft:physics": {
+                "has_gravity": false
+            },
+            "minecraft:collision_box": {
+                "width": 0.1,
+                "height": 0.1
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "transform"
+                    ]
+                }
+            }
         }
-      }
-    },
-    "components": {
-      "minecraft:physics": {
-        "has_gravity": false
-      },
-      "minecraft:collision_box": {
-        "width": 0.1,
-        "height": 0.1
-      },
-      "minecraft:damage_sensor": {
-        "triggers": {
-          "cause": "all",
-          "deals_damage": false
-        }
-      }
-    },
-    "events": {
-      "minecraft:entity_spawned": {
-        "add": {
-          "component_groups": ["transform"]
-        }
-      }
     }
-  }
 }
 ```
 
@@ -211,18 +219,20 @@ First, we have to add some textures to your entity file, make sure that you are 
 <CodeHeader>RP/entity/your_entity.json#description</CodeHeader>
 
 ```json
-"textures": {
-  "default": "textures/entity/your_texture",
-  "destroy_stage_0": "textures/environment/destroy_stage_0",
-  "destroy_stage_1": "textures/environment/destroy_stage_1",
-  "destroy_stage_2": "textures/environment/destroy_stage_2",
-  "destroy_stage_3": "textures/environment/destroy_stage_3",
-  "destroy_stage_4": "textures/environment/destroy_stage_4",
-  "destroy_stage_5": "textures/environment/destroy_stage_5",
-  "destroy_stage_6": "textures/environment/destroy_stage_6",
-  "destroy_stage_7": "textures/environment/destroy_stage_7",
-  "destroy_stage_8": "textures/environment/destroy_stage_8",
-  "destroy_stage_9": "textures/environment/destroy_stage_9"
+{
+    "textures": {
+        "default": "textures/entity/your_texture",
+        "destroy_stage_0": "textures/environment/destroy_stage_0",
+        "destroy_stage_1": "textures/environment/destroy_stage_1",
+        "destroy_stage_2": "textures/environment/destroy_stage_2",
+        "destroy_stage_3": "textures/environment/destroy_stage_3",
+        "destroy_stage_4": "textures/environment/destroy_stage_4",
+        "destroy_stage_5": "textures/environment/destroy_stage_5",
+        "destroy_stage_6": "textures/environment/destroy_stage_6",
+        "destroy_stage_7": "textures/environment/destroy_stage_7",
+        "destroy_stage_8": "textures/environment/destroy_stage_8",
+        "destroy_stage_9": "textures/environment/destroy_stage_9"
+    }
 }
 ```
 
@@ -231,9 +241,11 @@ And add a geometry that has to inflate 0.1 in all their cubes to avoid Z-Fightin
 <CodeHeader>RP/entity/your_entity.json#description</CodeHeader>
 
 ```json
-"geometry": {
-    "default": "geometry.your_geometry",
-    "broken": "geometry.broken"
+{
+    "geometry": {
+        "default": "geometry.your_geometry",
+        "broken": "geometry.broken"
+    }
 }
 ```
 
@@ -242,32 +254,34 @@ And now we have to add a new render controller. This is going to select differen
 <CodeHeader>RP/render_controllers/my_entity.json</CodeHeader>
 
 ```json
-"controller.render.broken": {
-  "arrays": {
-    "textures": {
-      "array.broken": [
-        "texture.destroy_stage_9",
-        "texture.destroy_stage_8",
-        "texture.destroy_stage_7",
-        "texture.destroy_stage_6",
-        "texture.destroy_stage_5",
-        "texture.destroy_stage_4",
-        "texture.destroy_stage_3",
-        "texture.destroy_stage_2",
-        "texture.destroy_stage_1",
-        "texture.destroy_stage_0",
-        "texture.normal"
-      ]
+{
+    "controller.render.broken": {
+        "arrays": {
+            "textures": {
+                "array.broken": [
+                    "texture.destroy_stage_9",
+                    "texture.destroy_stage_8",
+                    "texture.destroy_stage_7",
+                    "texture.destroy_stage_6",
+                    "texture.destroy_stage_5",
+                    "texture.destroy_stage_4",
+                    "texture.destroy_stage_3",
+                    "texture.destroy_stage_2",
+                    "texture.destroy_stage_1",
+                    "texture.destroy_stage_0",
+                    "texture.normal"
+                ]
+            }
+        },
+        "geometry": "Geometry.broken",
+        "materials": [
+            {
+                "*": "Material.default"
+            }
+        ],
+        "textures": [
+            "array.broken[q.health * 1]" // Here you can calculate the health of your entity to make sure it isn't buggy. If your entity has 10 health, leave it as it. If it has 20, it should be `q.health * 0.5`. If it is 40, it has to be 0.25, etc...
+        ]
     }
-  },
-  "geometry": "Geometry.broken",
-  "materials": [
-    {
-      "*": "Material.default"
-    }
-  ],
-  "textures": [
-    "array.broken[q.health * 1]" // Here you can calculate the health of your entity to make sure it isn't buggy. If your entity has 10 health, leave it as it. If it has 20, it should be `q.health * 0.5`. If it is 40, it has to be 0.25, etc...
-  ]
 }
 ```
