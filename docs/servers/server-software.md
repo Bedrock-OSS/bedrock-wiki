@@ -20,6 +20,8 @@ mentions:
     - ModMaker101
     - Misledwater79
     - AzaleeX
+    - wu-vincent
+    - smartcmd
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
@@ -31,15 +33,15 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
 | PHP        | [Still Active](#php)        : 4 < [Discontinued](#php-1)        : 38 |
-| Java       | [Still Active](#java)       : 4 < [Discontinued](#java-1)       : 14 |
-| C++        | [Still Active](#c)          : 1 < [Discontinued](#c-1)          : 5  |
+| Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 14 |
+| C++        | [Still Active](#c)          : 2 < [Discontinued](#c-1)          : 5  |
 | TypeScript | [Still Active](#typescript) : 4 < [Discontinued](#typescript-1) : 1  |
 | Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 5  |
 | JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 6  |
 | Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 1  |
 | C#         | Still Active                : 0 < [Discontinued](#c-2)          : 3  |
 | C          | Still Active                : 0 < [Discontinued](#c-3)          : 1  |
-| Python     | [Still Active](#python)     : 1 < [Discontinued](#python-1)     : 2  |
+| Python     | [Still Active](#python)     : 2 < [Discontinued](#python-1)     : 2  |
 | D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
 | Kotlin     | Still Active                : 0 < [Discontinued](#kotlin)       : 1  |
 
@@ -47,6 +49,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### C++
 
 -   [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
+-   [Endstone](https://github.com/EndstoneMC/endstone)
 
 ### Go
 
@@ -54,6 +57,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### Java
 
+-   [Allay](https://github.com/AllayMC/Allay)
 -   [JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
@@ -85,6 +89,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### Python
 
 - [PieMC](https://github.com/PieMC-Dev/PieMC)
+- [Endstone](https://github.com/EndstoneMC/endstone)
 
 ## Discontinued Software
 

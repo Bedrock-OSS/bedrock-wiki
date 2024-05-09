@@ -329,17 +329,17 @@ form.show(event.source).then(r => {
 ```
 
 ### MessageFormData
-Same as an action form, Message form will save the input inside `.selection`. However, something is odd about this form. `.button1` returns 1, but `.button2` returns 0. Using `.canceled` will not work, but closing the form will return 0. This is why button2 must be used for the "No/Cancel" option.
+Similar to the action form, the message form will save the input inside `.selection`. Clicking `.button1` will return 0, and clicking `.button2` will return 1. Although there is no close button, pressing 'Escape' will close the form. We can use `.canceled` to handle this event.
 
 ```js
 form.show(event.source).then(r => {
-	// ".canceled" does not work, but returns 0 to ".selection"
-	if (r.selection === 0) {
-		// Do something when the player closes the form or presses "button2"
-		return;
-	};
+	if(r.canceled || r.selection == 0){
+		// Do something when the player closes the form or presses "button1"
+		return
+	}
+	//we don't need to test for "r.selection == 1" since that the only case we didn't handle yet.
+	// Do something when player presses "button2"
 
-	// Do something when player presses "button1"
 }).catch(e => {
 	console.error(e, e.stack);
 });

@@ -119,6 +119,16 @@ For the following examples, lets assume that we have 2 fully functional language
  Whenever using a custom language, make sure to unequip the language before you disable the Resource Pack which it is stored in, or else Minecraft will crash.
 :::
 
+### Tools
+If Microsoft are localizing your .lang file there are specific technical requirements that your .lang must follow. 
+
+- Ensure &lt;tab&gt;# before comments (**not** spaces).
+- Ensure line breaks are the Windows style (CR+LF), not Unix style.
+- Must not contain duplicate keys.
+- Strings must be commented to ease translation.
+
+You can use the free browser-based [LangUtil tool](https://langutil.bedrockexplorer.com) to assist with this.
+
 ### Vanilla Languages
 
 The following is a table of the 29 languages Minecraft supports by default.
