@@ -22,7 +22,7 @@ Modifying texture of vanilla emojis and symbols on this page are incompatible wi
 Minecraft has a bunch of hard-coded [Private Use Unicode symbols](https://en.wikipedia.org/wiki/Private_Use_Areas) that it automatically converts to Emoji-like symbols.
 These can be used anywhere where normal letters can - signs, books, item names, chat, etc.
 
-Below you can find platform specific Emoji's, as well as general symbols. Copy/paste the "box" character under the Letter colum directly into Minecraft.
+Below you can find platform specific Emoji's, as well as general symbols. Copy/paste the "box" character under the Letter colum directly into Minecraft. You can also use the input key using /titleraw or /tellraw. 
 
 There will be instructions for creating custom emoji at the bottom.
 
@@ -63,54 +63,54 @@ There will be instructions for creating custom emoji at the bottom.
 
 ### New Touch
 
-| Name              | Letter (Copy/Paste This) | Unicode | Image                                                      |
-| ----------------- | ------------------------ | ------- | ---------------------------------------------------------- |
-| Jump              |                         | U+E014  | ![](/assets/images/concepts/emojis/new_touch/jump.png)     |
-| Attack            |                         | U+E015  | ![](/assets/images/concepts/emojis/new_touch/attack.png)   |
-| Joy Stick         |                         | U+E016  | ![](/assets/images/concepts/emojis/new_touch/joystick.png) |
-| Place             |                         | U+E018  | ![](/assets/images/concepts/emojis/new_touch/place.png)    |
-| Sneak             |                         | U+E019  | ![](/assets/images/concepts/emojis/new_touch/sneak.png)    |
-| Sprint            |                         | U+E01A  | ![](/assets/images/concepts/emojis/new_touch/sprint.png)   |
-| Fly Up            |                         | U+E01B  | ![](/assets/images/concepts/emojis/new_touch/fly_up.png)   |
-| Fly Down          |                         | U+E01C  | ![](/assets/images/concepts/emojis/new_touch/fly_down.png) |
-| Dismount          |                         | U+E01D  | ![](/assets/images/concepts/emojis/new_touch/dismount.png) |
+| Name              | Letter (Copy/Paste This) | Unicode | Input Key                                      | Image                                                      | 
+| ----------------- | ------------------------ | ------- | ---------------------------------------------- | ---------------------------------------------------------- |
+| Jump              |                         | U+E014  | :tip_virtual_button_jump:                     | ![](/assets/images/concepts/emojis/new_touch/jump.png)     |
+| Attack            |                         | U+E015  | :tip_virtual_button_action_attack_or_destroy: | ![](/assets/images/concepts/emojis/new_touch/attack.png)   |
+| Joy Stick         |                         | U+E016  | :tip_virtual_joystick:                        | ![](/assets/images/concepts/emojis/new_touch/joystick.png) |
+| Place             |                         | U+E018  | :tip_virtual_button_action_build_or_use:      | ![](/assets/images/concepts/emojis/new_touch/place.png)    |
+| Sneak             |                         | U+E019  | :tip_virtual_button_sneak:                    | ![](/assets/images/concepts/emojis/new_touch/sneak.png)    |
+| Sprint            |                         | U+E01A  | :tip_virtual_button_sprint:                   | ![](/assets/images/concepts/emojis/new_touch/sprint.png)   |
+| Fly Up            |                         | U+E01B  | :tip_virtual_button_fly_up:                   | ![](/assets/images/concepts/emojis/new_touch/fly_up.png)   |
+| Fly Down          |                         | U+E01C  | :tip_virtual_button_fly_down:                 | ![](/assets/images/concepts/emojis/new_touch/fly_down.png) |
+| Dismount          |                         | U+E01D  | :tip_virtual_button_dismount:                 | ![](/assets/images/concepts/emojis/new_touch/dismount.png) |
 
 
 ### Touch
 
-| Name              | Letter (Copy/Paste This) | Unicode | Image                                                         |
-| ----------------- | ------------------------ | ------- | ------------------------------------------------------------- |
-| Jump              |                         | U+E084  | ![](/assets/images/concepts/emojis/touch/jump.png)            |
-| Crouch            |                         | U+E085  | ![](/assets/images/concepts/emojis/touch/crouch.png)          |
-| Fly Up            |                         | U+E086  | ![](/assets/images/concepts/emojis/touch/fly_up.png)          |
-| Fly Down          |                         | U+E087  | ![](/assets/images/concepts/emojis/touch/fly_down.png)        |
-| Stop Flying       |                         | U+E088  | ![](/assets/images/concepts/emojis/touch/stop_flying.png)     |
-| Left Arrow        |                         | U+E081  | ![](/assets/images/concepts/emojis/touch/left_arrow.png)      |
-| Right Arrow       |                         | U+E083  | ![](/assets/images/concepts/emojis/touch/right_arrow.png)     |
-| Up Arrow          |                         | U+E080  | ![](/assets/images/concepts/emojis/touch/up_arrow.png)        |
-| Down Arrow        |                         | U+E082  | ![](/assets/images/concepts/emojis/touch/down_arrow.png)      |
-| Small Jump        |                         | U+E059  | ![](/assets/images/concepts/emojis/touch/smalljump.png)       |
-| Small Crouch      |                         | U+E05A  | ![](/assets/images/concepts/emojis/touch/smallcrouch.png)     |
-| Small Fly Up      |                         | U+E05C  | ![](/assets/images/concepts/emojis/touch/smallflyup.png)      |
-| Small Fly Down    |                         | U+E05D  | ![](/assets/images/concepts/emojis/touch/smallflydown.png)    |
-| Small Left Arrow  |                         | U+E056  | ![](/assets/images/concepts/emojis/touch/smallleftarrow.png)  |
-| Small Right Arrow |                         | U+E058  | ![](/assets/images/concepts/emojis/touch/smallrightarrow.png) |
-| Small Up Arrow    |                         | U+E055  | ![](/assets/images/concepts/emojis/touch/smalluparrow.png)    |
-| Small Down Arrow  |                         | U+E057  | ![](/assets/images/concepts/emojis/touch/smalldownarrow.png)  |
-| Small Inventory   |                         | U+E05B  | ![](/assets/images/concepts/emojis/touch/smallinventory.png)  |
+| Name              | Letter (Copy/Paste This) | Unicode | Input Key                                      |  Image                                                         |
+| ----------------- | ------------------------ | ------- | ---------------------------------------------- | ------------------------------------------------------------- |
+| Jump              |                         | U+E084  | :touch_jump:                                  | ![](/assets/images/concepts/emojis/touch/jump.png)            |
+| Crouch            |                         | U+E085  | :touch_sneak:                                 | ![](/assets/images/concepts/emojis/touch/crouch.png)          |
+| Fly Up            |                         | U+E086  | :touch_fly_up:                                | ![](/assets/images/concepts/emojis/touch/fly_up.png)          |
+| Fly Down          |                         | U+E087  | :touch_fly_down:                              | ![](/assets/images/concepts/emojis/touch/fly_down.png)        |
+| Stop Flying       |                         | U+E088  | :touch_stop_flying:                           | ![](/assets/images/concepts/emojis/touch/stop_flying.png)     |
+| Left Arrow        |                         | U+E081  | :touch_left:                                  | ![](/assets/images/concepts/emojis/touch/left_arrow.png)      |
+| Right Arrow       |                         | U+E083  | :touch_right:                                 | ![](/assets/images/concepts/emojis/touch/right_arrow.png)     |
+| Up Arrow          |                         | U+E080  | :touch_forward:                               | ![](/assets/images/concepts/emojis/touch/up_arrow.png)        |
+| Down Arrow        |                         | U+E082  | :touch_back:                                  | ![](/assets/images/concepts/emojis/touch/down_arrow.png)      |
+| Small Jump        |                         | U+E059  | :tip_touch_jump:                              | ![](/assets/images/concepts/emojis/touch/smalljump.png)       |
+| Small Crouch      |                         | U+E05A  | :tip_touch_sneak:                             | ![](/assets/images/concepts/emojis/touch/smallcrouch.png)     |
+| Small Fly Up      |                         | U+E05C  | :tip_touch_fly_up:                            | ![](/assets/images/concepts/emojis/touch/smallflyup.png)      |
+| Small Fly Down    |                         | U+E05D  | :tip_touch_fly_down:                          | ![](/assets/images/concepts/emojis/touch/smallflydown.png)    |
+| Small Left Arrow  |                         | U+E056  | :tip_touch_left:                              | ![](/assets/images/concepts/emojis/touch/smallleftarrow.png)  |
+| Small Right Arrow |                         | U+E058  | :tip_touch_right:                             | ![](/assets/images/concepts/emojis/touch/smallrightarrow.png) |
+| Small Up Arrow    |                         | U+E055  | :tip_touch_forward:                           | ![](/assets/images/concepts/emojis/touch/smalluparrow.png)    |
+| Small Down Arrow  |                         | U+E057  | :tip_touch_back:                              | ![](/assets/images/concepts/emojis/touch/smalldownarrow.png)  |
+| Small Inventory   |                         | U+E05B  | :tip_touch_inventory:                         | ![](/assets/images/concepts/emojis/touch/smallinventory.png)  |
 
 
 ### Keyboard & Mouse
 
-| Name               | Letter (Copy/Paste This) | Unicode | Image                                                               |
-| ------------------ | ------------------------ | ------- | ------------------------------------------------------------------- |
-| Left Click         |                         | U+E060  | ![](/assets/images/concepts/emojis/keyboard/left_click.png)         |
-| Right Click        |                         | U+E061  | ![](/assets/images/concepts/emojis/keyboard/right_click.png)        |
-| Middle Click       |                         | U+E062  | ![](/assets/images/concepts/emojis/keyboard/middle_click.png)       |
-| Small Left Click   |                         | U+E070  | ![](/assets/images/concepts/emojis/keyboard/small_left_click.png)   |
-| Small Right Click  |                         | U+E071  | ![](/assets/images/concepts/emojis/keyboard/small_right_click.png)  |
-| Small Middle Click |                         | U+E072  | ![](/assets/images/concepts/emojis/keyboard/small_middle_click.png) |
-| Small Mouse        |                         | U+E073  | ![](/assets/images/concepts/emojis/keyboard/small_mouse.png)        |
+| Name               | Letter (Copy/Paste This) | Unicode | Input Key                                      | Image                                                               |
+| ------------------ | ------------------------ | ------- | ---------------------------------------------- | ------------------------------------------------------------------- |
+| Left Click         |                         | U+E060  | :mouse_left_button:                           | ![](/assets/images/concepts/emojis/keyboard/left_click.png)         |
+| Right Click        |                         | U+E061  | :mouse_right_button:                          | ![](/assets/images/concepts/emojis/keyboard/right_click.png)        |
+| Middle Click       |                         | U+E062  | :mouse_middle_button:                         | ![](/assets/images/concepts/emojis/keyboard/middle_click.png)       |
+| Small Left Click   |                         | U+E070  | :light_mouse_left_button:                     | ![](/assets/images/concepts/emojis/keyboard/small_left_click.png)   |
+| Small Right Click  |                         | U+E071  | :light_mouse_right_button:                    | ![](/assets/images/concepts/emojis/keyboard/small_right_click.png)  |
+| Small Middle Click |                         | U+E072  | :light_mouse_middle_button:                   | ![](/assets/images/concepts/emojis/keyboard/small_middle_click.png) |
+| Small Mouse        |                         | U+E073  | :light_mouse_button:                          | ![](/assets/images/concepts/emojis/keyboard/small_mouse.png)        |
 
 
 ### Xbox
@@ -225,6 +225,28 @@ There will be instructions for creating custom emoji at the bottom.
 | Immersive Reader |                         | U+E104  | ![](/assets/images/concepts/emojis/other/immersive_reader.png) |
 | Hollow Star      |                         | U+E106  | ![](/assets/images/concepts/emojis/other/hollow_star.png)      |
 | Solid Star       |                         | U+E107  | ![](/assets/images/concepts/emojis/other/solid_star.png)       |
+
+
+### Additional Input Keys
+
+Additional input keys can be used to automatically detect the input type of the player and be used when using /titleraw or /tellraw. 
+
+| Name                | Input Key                    | Image (for Xbox Input, as example)                            |
+| ------------------- | ---------------------------- | ------------------------------------------------------------- |
+| Jump                | :_input_key.jump:            | ![](/assets/images/concepts/emojis/xbox/a_button.png)         |
+| Sneak               | :_input_key.sneak:           | ![](/assets/images/concepts/emojis/xbox/b_button.png)         |
+| Sprint              | :_input_key.sprint:          | ![](/assets/images/concepts/emojis/xbox/left_stick.png)       |
+| Forward             | :_input_key.forward:         | Unassigned (only work for Keyboard/Mouse right now)           |
+| Back                | :_input_key.back:            | Unassigned (only work for Keyboard/Mouse right now)           |
+| Left                | :_input_key.left:            | Unassigned (only work for Keyboard/Mouse right now)           |
+| Right               | :_input_key.right:           | Unassigned (only work for Keyboard/Mouse right now)           |
+| Attack              | :_input_key.attack:          | ![](/assets/images/concepts/emojis/xbox/right_trigger.png)    |
+| Intentory           | :_input_key.inventory:       | ![](/assets/images/concepts/emojis/xbox/y_button.png)         |
+| Hotbar Select Left  | :_input_key.cycleItemLeft:   | ![](/assets/images/concepts/emojis/xbox/left_bumper.png)      |
+| Hotbar Select Right | :_input_key.cycleItemRight:  | ![](/assets/images/concepts/emojis/xbox/right_bumper.png)     |
+| Use                 | :_input_key.use:             | ![](/assets/images/concepts/emojis/xbox/left_trigger.png)     |
+| Drop                | :_input_key.drop:            | ![](/assets/images/concepts/emojis/xbox/dpad_down.png)        |
+| Code Bulder         | :_input_key.codeBuilder:     | Unassigned (only works on Minecraft Education)                |
 
 
 ## Custom Emoji
