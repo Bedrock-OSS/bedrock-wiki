@@ -42,7 +42,7 @@
 		"sass": "^1.56.1",
 		"vite-plugin-pwa": "^0.13.3",
 		"vite-plugin-windicss": "^1.8.8",
-		"vitepress": "^1.0.0-alpha.29",
+		"vitepress": "1.1.4",
 		"vue": "^3.2.45",
 		"windicss": "^3.5.6"
 	}
