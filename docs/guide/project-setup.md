@@ -24,6 +24,15 @@ mentions:
     - lescx
 ---
 
+## Introduction
+
+This page will guide you through the steps required to create your first "working" add-on and view it in game. If you're joining on android, you should follow this alternative guide:
+
+<BButton
+	link="./project-setup-android"
+	color=blue
+>Android guide</BButton>
+
 ## The com.mojang folder
 
 The `com.mojang` folder is a special folder where Minecraft stores data (Addons, Worlds, Player info...). Minecraft understands this location, and all files we access or create will be placed somewhere in this folder!
@@ -32,9 +41,11 @@ You should create a shortcut to the `com.mojang` folder on your Desktop or on yo
 
 ### Windows
 
-_Tip: You can type %appdata% into the searchbar to jump directly into the 'C:\Users\USERNAME\AppData\' folder._
+On windows, the `com.mojang` folder is located within your app-data folder.
 
-`C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
+_Tip: You can type `%appdata%` into the searchbar to jump directly into the `C:\Users\<USERNAME>\AppData\` folder._
+
+`C:\Users\<USERNAME>\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
 
 ### Android
 
@@ -67,15 +78,6 @@ We will develop our addon in `development_behavior_packs` and `development_resou
 ## Your Workspace
 
 :::tip
-Project setup is different for android and other platforms. Consider looking into our guide for android platforms.
-:::
-
-<BButton
-	link="./project-setup-android"
-	color=blue
->Android guide</BButton>
-
-:::tip
 In this guide, BP refers to the folder you created in `development_behavior_packs` ("the behavior pack"), and RP refers to the folder you created in `development_resource_packs` ("the resource pack")
 :::
 
@@ -92,12 +94,8 @@ Let's create your first add-on workspace in Visual Studio Code now.
 
 ## BP Manifest
 
-:::tip
+:::tip Creating Files
 In this guide, you will often be instructed to create files with specific names, placed in specific folders. If the folder doesn't exist yet, please create it!
-:::
-
-:::warning
-Wrongly named files/folders is a common source of errors. Please check your work carefully against the examples.
 :::
 
 The manifest is a file that identifies your pack to Minecraft. Every pack has one manifest. A folder with a correctly formatted manifest will show up in Minecraft, and we consider this the "minimal" pack before we can add additional content.
@@ -231,8 +229,8 @@ If you have done everything correctly, your packs should show up in Minecraft no
 
 ## Turn on Content Log
 
-:::warning
-Content log is the most useful tool you have for debugging your addons. Please do not skip this step.
+:::warning Content Log
+Content log is the most useful tool you have for debugging your addons. Please do not skip this step!
 :::
 
 ![](/assets/images/guide/content_log.png)
@@ -275,21 +273,9 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 	'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
 ]"></FolderView>
 
-## What you have learned
+## Next
 
-:::tip What you have learned:
-
--   What the com.mojang folder is, where it is and what folders it contains
--   How to setup your workspace
--   What a `manifest.json` file is
--   How to use UUIDs
--   How to create an icon for your addon
--   What a `.lang` file is
-
-:::
-
-## Your progress so far
-
+:::tip What you have learned
 <Checklist>
 
 -   [x] Setup your pack
@@ -298,3 +284,9 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 -   [ ] Create the entity's loot, spawn rules and a custom recipe
 
 </Checklist>
+:::
+
+<BButton
+    link="/guide/custom-item"
+    color=blue
+>Next: Custom Item</BButton>
