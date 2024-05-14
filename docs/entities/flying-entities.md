@@ -110,12 +110,12 @@ There are multiple ways of achieving that, but in this tutorial, we'll be using 
 <CodeHeader></CodeHeader>
 
 ```
-execute @a[rxm=-90,rx=-25] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 6 true
-execute @a[rxm=-25,rx=-15] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 3 true
-execute @a[rxm=-15,rx=-5] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 2 true
-execute @a[rxm=-5,rx=20] ~~~ effect @e[type=wiki:dragon,r=1] levitation 1 1 true
-execute @a[rxm=20,rx=35] ~~~ effect @e[type=wiki:dragon,r=1] slow_falling 1 1 true
-execute @a[rxm=35,rx=90] ~~~ effect @e[type=wiki:dragon,r=1] clear
+execute as @a[rxm=-90,rx=-25] run effect @e[type=wiki:dragon,r=1] levitation 1 6 true
+execute as @a[rxm=-25,rx=-15] run effect @e[type=wiki:dragon,r=1] levitation 1 3 true
+execute as @a[rxm=-15,rx=-5] run effect @e[type=wiki:dragon,r=1] levitation 1 2 true
+execute as @a[rxm=-5,rx=20] run effect @e[type=wiki:dragon,r=1] levitation 1 1 true
+execute as @a[rxm=20,rx=35] run effect @e[type=wiki:dragon,r=1] slow_falling 1 1 true
+execute as @a[rxm=35,rx=90] run effect @e[type=wiki:dragon,r=1] clear
 ```
 
 **Depending on how big your entity is and how far away the player's seat is from its pivot, you might need to change the radius `r` to a more significant value.**
@@ -250,12 +250,12 @@ You might also notice that the entity levitates when you go near it. We can fix 
 <CodeHeader></CodeHeader>
 
 ```
-execute @a[rxm=-90,rx=-25] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 6 true
-execute @a[rxm=-25,rx=-15] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 3 true
-execute @a[rxm=-15,rx=-5] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 2 true
-execute @a[rxm=-5,rx=20] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 1 true
-execute @a[rxm=20,rx=35] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] slow_falling 1 1 true
-execute @a[rxm=35,rx=90] ~~~ effect @e[type=wiki:dragon,r=1,tag=has_rider] clear
+execute as @a[rxm=-90,rx=-25] run effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 6 true
+execute as @a[rxm=-25,rx=-15] run effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 3 true
+execute as @a[rxm=-15,rx=-5] run effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 2 true
+execute as @a[rxm=-5,rx=20] run effect @e[type=wiki:dragon,r=1,tag=has_rider] levitation 1 1 true
+execute as @a[rxm=20,rx=35] run effect @e[type=wiki:dragon,r=1,tag=has_rider] slow_falling 1 1 true
+execute as @a[rxm=35,rx=90] run effect @e[type=wiki:dragon,r=1,tag=has_rider] clear
 ```
 
 ## Controlling Through Jumping
