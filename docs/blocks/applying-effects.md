@@ -2,7 +2,6 @@
 title: Applying Constant Effects
 category: Tutorials
 tags:
-    - experimental
     - easy
 mentions:
     - MysticChair
@@ -12,16 +11,9 @@ mentions:
     - SmokeyStack
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.80`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
-:::
-
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger events.
 :::
 
 This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block.
@@ -33,8 +25,10 @@ We will need to add a couple things to our code, first let's start with a state 
 <CodeHeader>minecraft:block > description</CodeHeader>
 
 ```json
-"states": {
-  "wiki:stood_on": [false, true]
+{
+    "states": {
+        "wiki:stood_on": [ false, true ]
+    }
 }
 ```
 
@@ -43,54 +37,31 @@ Now we need the `minecraft:queued_ticking` component that will check if our prop
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"minecraft:queued_ticking": {
-  "looping": true,
-  "interval_range": [1, 1],
-  "on_tick": {
-    "event": "wiki:add_effect",
-    "target": "self",
-    "condition": "q.block_state('wiki:stood_on')"
-  }
-}
-```
-
-We will use the `minecraft:on_step_on` event trigger component to fire the event that will set our `wiki:stood_on` property to `true`...
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:on_step_on": {
-  "event": "wiki:step_on"
-}
-```
-
-...and the `minecraft:on_step_off` component to fire the event that will set our `wiki:stood_on` to `false`:
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:on_step_off": {
-  "event": "wiki:step_off"
+{
+    "minecraft:queued_ticking": {
+        "looping": true,
+        "interval_range": [1, 1],
+    }
 }
 ```
 
 Time to setup our `events`. First, let's define the `wiki:step_on` and `wiki:step_off` events:
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader>BP/scripts/applying-effects.js</CodeHeader>
 
-```json
-"events": {
-  "wiki:step_on": {
-    "set_block_state": {
-      "wiki:stood_on": true
+```js
+import { world, GameMode } from "@minecraft/server";
+
+const applyingEffectsStepOn = {
+    onStepOn(event) {
+        const isInCreative = event.player?.getGameMode() === GameMode.creative;
+        if (!isInCreative) event.cancel = true;
     }
-  },
-  "wiki:step_off": {
-    "set_block_state": {
-      "wiki:stood_on": false
-    }
-  }
 }
+
+world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
+    blockTypeRegistry.registerCustomComponent("wiki:applying_effects_step_on", applyingEffectsStepOn);
+});
 ```
 
 The last thing to add is an event that will trigger the effect:
