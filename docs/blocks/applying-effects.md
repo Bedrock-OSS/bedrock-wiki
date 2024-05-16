@@ -32,48 +32,147 @@ We will need to add a couple things to our code, first let's start with a state 
 }
 ```
 
-Now we need the `minecraft:queued_ticking` component that will check if our property is set to `true` and if so, trigger the event causing the effect to apply:
+Now we need the `minecraft:tick` component that will check if our property is set to `true` and if so, trigger the event causing the effect to apply:
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 {
-    "minecraft:queued_ticking": {
-        "looping": true,
+    "minecraft:tick": {
         "interval_range": [1, 1],
     }
 }
 ```
 
-Time to setup our `events`. First, let's define the `wiki:step_on` and `wiki:step_off` events:
+Now we need to register our custom components to hook onto the events:
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+{
+    "minecraft:custom_components": [
+        "wiki:applying_effects_step_on",
+        "wiki:applying_effects_step_off"
+    ]
+}
+```
+
+We also need a custom component for the tick event. For this, we'll create a permutation so the custom component is only applied if the block is being stepped on:
+
+<CodeHeader>minecraft:block</CodeHeader>
+
+```json
+{
+    "permutations": [
+        {
+            "components": {
+                "minecraft:tick": {
+                    "interval_range": [1, 1]
+                },
+                "minecraft:custom_components": ["wiki:applying_effects_tick"]
+            },
+            "condition": "q.block_state('wiki:stood_on')"
+        }
+    ]
+}
+```
+
+Time to setup our `events`. First, let's define the `step_on` and `step_off` events:
+
+<CodeHeader>BP/scripts/applying-effects.js</CodeHeader>
+
+```ts
+import {
+    BlockComponentStepOffEvent,
+    BlockComponentStepOnEvent,
+    BlockComponentTickEvent,
+    BlockPermutation,
+    Entity,
+    GameMode,
+    Player,
+    world
+} from '@minecraft/server';
+
+const applyingEffectsStepOn = {
+    onStepOn(event: BlockComponentStepOnEvent) {
+        if (event.entity.typeId === 'minecraft:player') {
+            let source = event.entity as Player;
+            if (source.getGameMode() === GameMode.creative) return;
+        }
+
+        event.block.setPermutation(
+            BlockPermutation.resolve(event.block.typeId, {
+                'wiki:stood_on': true
+            })
+        );
+    }
+};
+
+const applyingEffectsStepOff = {
+    onStepOff(event: BlockComponentStepOffEvent) {
+        if (event.entity.typeId === 'minecraft:player') {
+            let source = event.entity as Player;
+            if (source.getGameMode() === GameMode.creative) return;
+        }
+
+        event.block.setPermutation(
+            BlockPermutation.resolve(event.block.typeId, {
+                'wiki:stood_on': false
+            })
+        );
+    }
+};
+
+world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
+    blockTypeRegistry.registerCustomComponent(
+        'wiki:applying_effects_step_on',
+        applyingEffectsStepOn
+    );
+});
+
+world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
+    blockTypeRegistry.registerCustomComponent(
+        'wiki:applying_effects_step_off',
+        applyingEffectsStepOff
+    );
+});
+```
+
+Now, let's add our event that will give the entity the wither effect:
 
 <CodeHeader>BP/scripts/applying-effects.js</CodeHeader>
 
 ```js
-import { world, GameMode } from "@minecraft/server";
+import {
+    BlockComponentStepOffEvent,
+    BlockComponentStepOnEvent,
+    BlockComponentTickEvent,
+    BlockPermutation,
+    Entity,
+    GameMode,
+    Player,
+    world
+} from '@minecraft/server';
 
-const applyingEffectsStepOn = {
-    onStepOn(event) {
-        const isInCreative = event.player?.getGameMode() === GameMode.creative;
-        if (!isInCreative) event.cancel = true;
+const applyingEffectsTick = {
+    onTick(event: BlockComponentTickEvent) {
+        let entities: Entity[] = event.dimension.getEntitiesAtBlockLocation(
+            event.block.above().location
+        );
+
+        entities.forEach((entity) => {
+            entity.addEffect('minecraft:wither', 2, { amplifier: 2 });
+        });
     }
-}
+};
 
 world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
-    blockTypeRegistry.registerCustomComponent("wiki:applying_effects_step_on", applyingEffectsStepOn);
+    blockTypeRegistry.registerCustomComponent(
+        'wiki:applying_effects_tick',
+        applyingEffectsTick
+    );
 });
-```
 
-The last thing to add is an event that will trigger the effect:
-
-<CodeHeader>minecraft:block > events</CodeHeader>
-
-```json
-"wiki:add_effect": {
-  "run_command": {
-    "command": "effect @e[r=1] wither 2 2"
-  }
-}
 ```
 
 And done! The code above will trigger the desired status effect as long as the entity is standing on a block.
@@ -86,71 +185,41 @@ And done! The code above will trigger the desired status effect as long as the e
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:wither_block",
-      "menu_category": {
-        "category": "nature"
-      },
-      "states": {
-        "wiki:stood_on": [false, true]
-      }
-    },
-    "components": {
-      "minecraft:geometry": "geometry.wither_block",
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "wither_block"
-        }
-      },
-      "minecraft:loot": "loot_tables/empty.json",
-      "minecraft:on_step_on": {
-        "event": "wiki:step_on"
-      },
-      "minecraft:on_step_off": {
-        "event": "wiki:step_off"
-      },
-      "minecraft:queued_ticking": {
-        "looping": true,
-        "interval_range": [1, 1],
-        "on_tick": {
-          "event": "wiki:add_effect",
-          "condition": "q.block_state('wiki:stood_on')"
-        }
-      },
-      "minecraft:map_color": "#181818"
-    },
-    "events": {
-      "wiki:step_on": {
-        "set_block_state": {
-          "wiki:stood_on": true
-        }
-      },
-      "wiki:step_off": {
-        "set_block_state": {
-          "wiki:stood_on": false
-        }
-      },
-      "wiki:add_effect": {
-        "run_command": {
-          "command": "effect @e[r=1] wither 2 2"
-        }
-      }
+    "format_version": "1.20.80",
+    "minecraft:block": {
+        "components": {
+            "minecraft:geometry": "geometry.wither_block",
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:map_color": "#181818",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "wither_block"
+                }
+            },
+            "minecraft:custom_components": [
+                "wiki:applying_effects_step_on",
+                "wiki:applying_effects_step_off"
+            ]
+        },
+        "description": {
+            "identifier": "custom_namespace:custom_block_2",
+            "states": {
+                "wiki:stood_on": [false, true]
+            }
+        },
+        "permutations": [
+            {
+                "components": {
+                    "minecraft:tick": {
+                        "interval_range": [1, 1]
+                    },
+                    "minecraft:custom_components": ["wiki:applying_effects_tick"]
+                },
+                "condition": "q.block_state('wiki:stood_on')"
+            }
+        ]
     }
-  }
 }
 ```
 
 </Spoiler>
-
-## Additional Notes
-
-Some context for the last part of the code:
-
--   **Q**: Why is the effect triggered via the `run_command` event response if there's already an `add_mob_effect` event response that does that?
-
--   **A**: `add_mob_effect` does not have a target when triggered from `minecraft:queued_ticking`, so `/effect`'s target selection must be used instead.
-
-Depending on the desired outcome, there is a potential issue if effect duration is set to less than 2 seconds. If the effect is causing damage to an entity (for example via poison), that damage will be applied as soon as the effect is triggered. This results in the situation where entity receives damage faster than in vanilla Minecraft, since applying effect is quicker than damage that occurs from effects applied for more than 2 seconds (considering the entity is moving). To better understand this, simply set the effect duration in `command` to 1 second and compare the results.
-Having a 2 second duration allows the game to apply the damage in correct pace.
