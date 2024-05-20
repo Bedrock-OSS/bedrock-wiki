@@ -1,6 +1,6 @@
 ---
 title: Block Event Migration
-description: See how the deprecated JSON event responses look in JavaScript form.
+description: View Script API implementations of the deprecated JSON block event responses.
 category: General
 nav_order: 9
 tags:
@@ -10,10 +10,10 @@ mentions:
 ---
 
 :::tip BEFORE YOU START
-This page requires you to be comfortable with basic JavaScript and requires  knowledge of how modern [block events](/blocks/block-events) work.
+This page requires you to be comfortable with basic JavaScript and requires knowledge of how modern [block events](/blocks/block-events) work.
 :::
 
-Struggling to upgrade your blocks' JSON events to [custom components](/blocks/block-events#registering-custom-components)? Don't worry! This page will help you to understand what the deprecated JSON event responses look like in JavaScript form.
+Struggling to upgrade your blocks' JSON events to [custom components](/blocks/block-events#registering-custom-components)? Don't worry! This page will help you to understand what the deprecated JSON event responses look like implemented using the Script API.
 
 ## Add Mob Effect
 
