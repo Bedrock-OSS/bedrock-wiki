@@ -1,7 +1,6 @@
 {
 	"trailingComma": "es5",
 	"useTabs": true,
-	"tabWidth": 4,
 	"semi": false,
 	"singleQuote": true,
 	"printWidth": 80,
@@ -10,6 +9,9 @@
 		{
 			"files": "*.md",
 			"options": {
+				"useTabs": false,
+				"tabWidth": 4,
+				"semi": true,
 				"parser": "mdx"
 			}
 		}

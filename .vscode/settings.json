@@ -15,6 +15,7 @@
 		"vue"
 	],
 	"[markdown]": {
+		"editor.tabSize": 4,
 		"editor.defaultFormatter": "darkriszty.markdown-table-prettify"
 	}
 }
