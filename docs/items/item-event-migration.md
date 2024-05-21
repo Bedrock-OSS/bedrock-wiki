@@ -54,7 +54,8 @@ import { EquipmentSlot, GameMode, Player } from "@minecraft/server";
 
 ```js
 onMineBlock({ source }) {
-    if (!source || !(source instanceof Player)) return;
+    // Get main hand slot
+    if (!(source instanceof Player)) return;
 
     const equippable = source.getComponent("minecraft:equippable");
     if (!equippable) return;
@@ -62,18 +63,31 @@ onMineBlock({ source }) {
     const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
     if (!mainhand.hasItem()) return;
 
-    const durability = mainhand.getComponent("minecraft:durability");
-    if (!durability || Math.random() > durability.getDamageChance()) return;
+    // Apply durability damage when not in creative mode
+    if (source.getGameMode() === GameMode.creative) return;
 
+    const itemStack = mainhand.getItem(); // Allows us to get item components
+
+    const durability = itemStack.getComponent("minecraft:durability");
+    if (!durability) return;
+
+    // Factor in unbreaking enchantment
+    const enchantable = itemStack.getComponent("minecraft:enchantable");
+    const unbreakingLevel = enchantable?.getEnchantment("unbreaking")?.level;
+
+    const damageChance = durability.getDamageChance(unbreakingLevel) / 100;
+
+    if (Math.random() > damageChance) return; // Randomly skip damage based on unkbreaking level
+
+    // Damage the item
     const shouldBreak = durability.damage === durability.maxDurability;
 
-    if (source.getGameMode() !== GameMode.creative) {
-        if (shouldBreak) {
-            durability.damage++; // Damage the item
-        } else {
-            mainhand.setItem(undefined); // Remove the item
-            source.playSound("random.break"); // Play break sound
-        }
+    if (shouldBreak) {
+        mainhand.setItem(undefined); // Remove the item
+        source.playSound("random.break"); // Play break sound
+    } else {
+        durability.damage++; // Increase durability damage
+        mainhand.setItem(itemStack); // Update item in main hand
     }
 }
 ```
