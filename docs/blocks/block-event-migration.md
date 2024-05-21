@@ -77,7 +77,7 @@ onPlayerInteract({ player }) {
 
     const damageChance = durability.getDamageChance(unbreakingLevel) / 100;
 
-    if (Math.random() > damageChance) return; // Randomly skip damage based on unkbreaking level
+    if (Math.random() > damageChance) return; // Randomly skip damage based on unbreaking level
 
     // Damage the item
     const shouldBreak = durability.damage === durability.maxDurability;
