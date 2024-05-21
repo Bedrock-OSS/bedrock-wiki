@@ -303,7 +303,7 @@ onStepOn({ entity }) {
 ## Transform Item
 
 ```js
-import { EquipmentSlot } from "@minecraft/server";
+import { EquipmentSlot, ItemStack } from "@minecraft/server";
 ```
 
 <CodeHeader>Custom Component</CodeHeader>
@@ -316,6 +316,6 @@ onPlayerInteract({ player }) {
     const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
     if (!mainhand.hasItem() || mainhand.typeId !== "minecraft:bowl") return;
 
-    mainhand.setItem("minecraft:suspicious_stew");
+    mainhand.setItem(new ItemStack("minecraft:suspicious_stew"));
 }
 ```
