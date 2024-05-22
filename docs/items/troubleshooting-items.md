@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting Items
 category: General
-nav_order: 4
 tags:
     - help
 mentions:
