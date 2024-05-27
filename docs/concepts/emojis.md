@@ -246,7 +246,7 @@ Additional input keys can be used to automatically detect the input type of the 
 | Hotbar Select Right | :_input_key.cycleItemRight:  | ![](/assets/images/concepts/emojis/xbox/right_bumper.png)     |
 | Use                 | :_input_key.use:             | ![](/assets/images/concepts/emojis/xbox/left_trigger.png)     |
 | Drop                | :_input_key.drop:            | ![](/assets/images/concepts/emojis/xbox/dpad_down.png)        |
-| Code Bulder         | :_input_key.codeBuilder:     | Unassigned (only works on Minecraft Education)                |
+| Code Builder        | :_input_key.codeBuilder:     | Unassigned (only works on Minecraft Education)                |
 
 
 ## Custom Emoji
