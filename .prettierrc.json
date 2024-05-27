@@ -1,6 +1,6 @@
 {
 	"embeddedLanguageFormatting": "off",
-	"printWidth": 80,
+	"printWidth": 100,
 	"semi": false,
 	"singleQuote": true,
 	"trailingComma": "es5",
@@ -12,6 +12,7 @@
 				"embeddedLanguageFormatting": "auto",
 				"parser": "mdx",
 				"semi": true,
+				"singleQuote": false,
 				"tabWidth": 4,
 				"useTabs": false
 			}
