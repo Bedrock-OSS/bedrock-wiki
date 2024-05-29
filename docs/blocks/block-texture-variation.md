@@ -12,9 +12,10 @@ mentions:
     - QuazChick
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
+:::warning MATERIAL INSTANCES
+The [material instances](/blocks/block-components#material-instances) component does not support texture variation. To apply variated textures, you must not have the [geometry](/blocks/block-components#geometry) component applied to your block and textures must be referenced in `RP/blocks.json` instead.
 :::
+
 Block texture variation is when a single block can have multiple textures. This is useful for blocks such as dirt or grass, where some blocks may have slight variations such as small rocks and others don't.
 
 To enable texture variations, create a `terrain_texture.json` file in the textures folder. The `terrain_texture.json` in the block definition of the texture should be set to a dictionary with a variation key, and the variation key is an array of dictionaries that must contain a path key pointing to the texture file and may contain a weight to control how often the textures show up.
