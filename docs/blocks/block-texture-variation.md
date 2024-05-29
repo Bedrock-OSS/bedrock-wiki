@@ -16,16 +16,25 @@ mentions:
 The [material instances](/blocks/block-components#material-instances) component does not support texture variation. To apply variated textures, you must not have the [geometry](/blocks/block-components#geometry) component applied to your block and textures must be referenced in `RP/blocks.json` instead.
 :::
 
-Block texture variation is when a single block can have multiple textures. This is useful for blocks such as dirt or grass, where some blocks may have slight variations such as small rocks and others don't.
+Block texture variation is when a single block can have multiple textures. This is useful for blocks such as dirt or grass, where some blocks may have slight variations, such as small rocks, and others don't.
 
-To enable texture variations, create a `terrain_texture.json` file in the textures folder. The `terrain_texture.json` in the block definition of the texture should be set to a dictionary with a variation key, and the variation key is an array of dictionaries that must contain a path key pointing to the texture file and may contain a weight to control how often the textures show up.
+**Issues:**
+
+-   Variations referencing texture set files do not use the defined heightmap, MER or normal map files ([MCPE-126617](https://bugs.mojang.com/browse/MCPE-126617)).
 
 ## Applying Texture Variation
 
-This is an example of how to create texture variations for the dirt block with three images:
+To enable texture variations, create a `terrain_texture.json` file in your resource pack's `textures` folder.
 
--   Create a `textures/terrain_texture.json` file in the resource pack
--   In the JSON file, you need to define the blocks that have variation, as shown below
+This file contains a list of block textures. Variated block textures have a `variation` parameter which is an array of the different textures that will be randomly displayed on the block. Through use of the `weight` parameter, certain texture variations can be made more common than others ([see here](#weighted-texture-variation)).
+
+This is an example of how to create 3 texture variations for the vanilla dirt block:
+
+-   Create or modify three dirt textures, name them `dirt0.png`, `dirt1.png`, and `dirt2.png`.
+-   Copy the `dirt0.png`, `dirt1.png`, and `dirt2.png` to the location noted in the path variable. This could contain additional folders if you want to be orderly.
+-   Add the following to dirt's texture entry:
+
+
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
@@ -33,8 +42,8 @@ This is an example of how to create texture variations for the dirt block with t
 {
   "texture_name": "atlas.terrain",
   "resource_pack_name": "wiki", // ID for your resource pack
-  "padding": 8, // Prevent textures from visually overflowing into each other
   "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
+  "padding": 8, // Prevent textures from visually overflowing into each other
   "texture_data": {
     "dirt": {
       "textures": {
@@ -49,12 +58,12 @@ This is an example of how to create texture variations for the dirt block with t
 }
 ```
 
--   Create or modify three dirt textures, name them `dirt0.png`, `dirt1.png`, and `dirt2.png`
--   Copy the `dirt0.png`, `dirt1.png`, and `dirt2.png` to the location noted in the path variable. This could contain additional folders if you want to be orderly.
 
 ## Weighted Texture Variation
 
 After using the example above, you might want to adjust the weights, edit the `terrain_textures.json` to include a weight field as shown below.
+
+To calculate how likely a texture variation is, add all of the weights together (in this case 70 + 20 + 10 = 100) and divide the weight by this total. For example, the probability of the `dirt0` variation being chosen is 70 &div; 100, so 70% of positions in the world will display `dirt0` if dirt is placed there.
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
@@ -77,8 +86,3 @@ After using the example above, you might want to adjust the weights, edit the `t
   }
 }
 ```
-
-Notes:
-
--   This does appear to grab the texture set file. However, the texture set files do not seem to grasp the MER or regular file defined in the texture set.
-    -- [Bug Report](https://bugs.mojang.com/browse/MCPE-126617)
