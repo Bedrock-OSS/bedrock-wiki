@@ -27,6 +27,11 @@ div[class*='language-'] {
 	line-height: 24px;
 }
 
+/* add some space in code window after text */
+.line {
+	padding-right: 14px;
+}
+
 /* hide copy-button and lang */
 [class*='language-'] button,
 [class*='language-'] .lang {
