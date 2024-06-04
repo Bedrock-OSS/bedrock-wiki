@@ -24,6 +24,7 @@
 		"molangjs": "^1.5.2",
 		"prismjs": "^1.29.0",
 		"vite": "^3.2.4",
+		"vue-eslint-parser": "^9.4.3",
 		"vue-prism-editor": "^2.0.0-alpha.2"
 	},
 	"devDependencies": {
@@ -34,8 +35,8 @@
 		"@typescript-eslint/eslint-plugin": "^5.44.0",
 		"@typescript-eslint/parser": "^5.44.0",
 		"diacritics": "^1.3.0",
-		"eslint": "^8.28.0",
-		"eslint-plugin-vue": "^9.8.0",
+		"eslint": "^8.57.0",
+		"eslint-plugin-vue": "^9.26.0",
 		"gray-matter": "^4.0.3",
 		"node-fetch": "^2.6.7",
 		"run-script-os": "^1.1.6",
