@@ -10,136 +10,111 @@ mentions:
     - SmokeyStack
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.80`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger block events and for use of the `minecraft:unit_cube` component.
-:::
-
 ## Introduction
+
 Making custom slabs is a simple task, but if you find any drawbacks during recreating slabs, this tutorial will help you with it, and you'll be provided with a template for you to use.
 
 Issues:
-- Your custom slab will appear vertically centred when carried.
-- Your custom slab may appear full-sized in item form (on the ground, in item frames, in hand)
+
+-   Your custom slab will appear vertically centred when carried.
+-   Your custom slab may appear full-sized in item form (on the ground, in item frames, in hand)
 
 ## Custom Slab
+
 This will create a vanilla-like custom slab.
 
 <CodeHeader>BP/blocks/custom_slab.json</CodeHeader>
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_slab",
-      "menu_category": {
-        "category": "construction",
-        "group": "itemGroup.name.slab"
-      },
-      "traits": {
-        "minecraft:placement_position": {
-          "enabled_states": ["minecraft:vertical_half"]
-        }
-      },
-      "states": {
-        "wiki:double": [false, true]
-      }
-    },
-    "permutations": [
-      // Bottom Slab
-      {
-        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('wiki:double')",
+    "format_version": "1.20.80",
+    "minecraft:block": {
         "components": {
-          "minecraft:collision_box": {
-            "origin": [-8, 0, -8],
-            "size": [16, 8, 16]
-          },
-          "minecraft:selection_box": {
-            "origin": [-8, 0, -8],
-            "size": [16, 8, 16]
-          },
-          "minecraft:on_interact": {
-            "event": "wiki:form_double",
-            "condition": "q.block_face == 1.0 && q.is_item_name_any('slot.weapon.mainhand', 'wiki:custom_slab')"
-          }
-        }
-      },
-      // Top Slab
-      {
-        "condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('wiki:double')",
-        "components": {
-          "minecraft:collision_box": {
-            "origin": [-8, 8, -8],
-            "size": [16, 8, 16]
-          },
-          "minecraft:selection_box": {
-            "origin": [-8, 8, -8],
-            "size": [16, 8, 16]
-          },
-          "minecraft:on_interact": {
-            "event": "wiki:form_double",
-            "condition": "q.block_face == 0.0 && q.is_item_name_any('slot.weapon.mainhand', 'wiki:custom_slab')"
-          }
-        }
-      },
-      // Double Slab
-      {
-        "condition": "q.block_state('wiki:double')",
-        "components": {
-          "minecraft:unit_cube": {},
-          "minecraft:on_player_destroyed": {
-            "event": "wiki:destroy_double"
-          }
-        }
-      }
-    ],
-    "components": {
-      "minecraft:destructible_by_mining": {
-        "seconds_to_destroy": 7
-      },
-      "minecraft:destructible_by_explosion": {
-        "explosion_resistance": 6
-      },
-      "minecraft:geometry": {
-        "identifier": "geometry.slab",
-        "bone_visibility": {
-          "bottom_slab": "q.block_state('minecraft:vertical_half') == 'bottom'",
-          "top_slab": "q.block_state('minecraft:vertical_half') == 'top'"
-        }
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "stone"
-        }
-      }
-    },
-    "events": {
-      "wiki:form_double": {
-        "set_block_state": {
-          "wiki:double": true
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 30
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:geometry": {
+                "bone_visibility": {
+                    "bottom": "q.block_state('minecraft:vertical_half') == 'bottom' || q.block_state('wiki:is_double')",
+                    "top": "q.block_state('minecraft:vertical_half') == 'top' || q.block_state('wiki:is_double')"
+                },
+                "identifier": "geometry.slab"
+            },
+            "minecraft:map_color": [229, 229, 51],
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "honeycomb_bricks"
+                },
+                "ends": {
+                    "texture": ""
+                }
+            }
         },
-        "run_command": {
-          "command": "playsound use.stone @a ~~~ 1 0.8"
+        "description": {
+            "identifier": "wiki:honeycomb_bricks_slab",
+            "menu_category": {
+                "category": "construction",
+                "group": "itemGroup.name.slab"
+            },
+            "states": {
+                "wiki:is_double": [false, true]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": ["minecraft:vertical_half"]
+                }
+            }
         },
-        "decrement_stack": {}
-      },
-      "wiki:destroy_double": {
-        "spawn_loot": {} // Spawns the block's default loot
-      }
+        "permutations": [
+            {
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:custom_components": ["adk-lib:before_on_player_place_double_slab"],
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    }
+                },
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('wiki:is_double')"
+            },
+            {
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [-8, 8, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:custom_components": ["adk-lib:before_on_player_place_double_slab"],
+                    "minecraft:selection_box": {
+                        "origin": [-8, 8, -8],
+                        "size": [16, 8, 16]
+                    }
+                },
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('wiki:is_double')"
+            },
+            {
+                "components": {
+                    "minecraft:loot": "loot_tables/wiki/blocks/honeycomb_bricks_slab.json"
+                },
+                "condition": "q.block_state('wiki:is_double')"
+            }
+        ]
     }
-  }
 }
 ```
 
 ## Geometry
+
 This will be the geometry used for your custom slabs.
 
 <Spoiler title="Geometry JSON">
@@ -148,57 +123,63 @@ This will be the geometry used for your custom slabs.
 
 ```json
 {
-  "format_version": "1.12.0",
-  "minecraft:geometry": [
-    {
-      "description": {
-        "identifier": "geometry.slab",
-        "texture_width": 16,
-        "texture_height": 16,
-        "visible_bounds_width": 2,
-        "visible_bounds_height": 2.5,
-        "visible_bounds_offset": [0, 0.75, 0]
-      },
-      "bones": [
+    "format_version": "1.21.0",
+    "minecraft:geometry": [
         {
-          "name": "top_slab",
-          "pivot": [0, 0, 0],
-          "cubes": [
-            {
-              "origin": [-8, 8, -8],
-              "size": [16, 8, 16],
-              "uv": {
-                "north": {"uv": [0, 0], "uv_size": [16, 8]},
-                "east": {"uv": [0, 0], "uv_size": [16, 8]},
-                "south": {"uv": [0, 0], "uv_size": [16, 8]},
-                "west": {"uv": [0, 0], "uv_size": [16, 8]},
-                "up": {"uv": [16, 16], "uv_size": [-16, -16]},
-                "down": {"uv": [16, 16], "uv_size": [-16, -16]}
-              }
-            }
-          ]
-        },
-        {
-          "name": "bottom_slab",
-          "pivot": [0, 0, 0],
-          "cubes": [
-            {
-              "origin": [-8, 0, -8],
-              "size": [16, 8, 16],
-              "uv": {
-                "north": {"uv": [0, 8], "uv_size": [16, 8]},
-                "east": {"uv": [0, 8], "uv_size": [16, 8]},
-                "south": {"uv": [0, 8], "uv_size": [16, 8]},
-                "west": {"uv": [0, 8], "uv_size": [16, 8]},
-                "up": {"uv": [16, 16], "uv_size": [-16, -16]},
-                "down": {"uv": [16, 16], "uv_size": [-16, -16]}
-              }
-            }
-          ]
+            "description": {
+                "identifier": "geometry.slab",
+                "texture_width": 16,
+                "texture_height": 16,
+                "visible_bounds_width": 2,
+                "visible_bounds_height": 2.5,
+                "visible_bounds_offset": [0, 0.75, 0]
+            },
+            "bones": [
+                {
+                    "name": "root",
+                    "pivot": [0, 0, 0]
+                },
+                {
+                    "name": "bottom",
+                    "parent": "root",
+                    "pivot": [0, 0, 0],
+                    "cubes": [
+                        {
+                            "origin": [-8, 0, -8],
+                            "size": [16, 8, 16],
+                            "uv": {
+                                "north": { "uv": [0, 8], "uv_size": [16, 8] },
+                                "east": { "uv": [0, 8], "uv_size": [16, 8] },
+                                "south": { "uv": [0, 8], "uv_size": [16, 8] },
+                                "west": { "uv": [0, 8], "uv_size": [16, 8] },
+                                "up": { "uv": [16, 16], "uv_size": [-16, -16] },
+                                "down": { "uv": [16, 16], "uv_size": [-16, -16] }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "top",
+                    "parent": "root",
+                    "pivot": [0, 0, 0],
+                    "cubes": [
+                        {
+                            "origin": [-8, 8, -8],
+                            "size": [16, 8, 16],
+                            "uv": {
+                                "north": { "uv": [0, 8], "uv_size": [16, 8] },
+                                "east": { "uv": [0, 8], "uv_size": [16, 8] },
+                                "south": { "uv": [0, 8], "uv_size": [16, 8] },
+                                "west": { "uv": [0, 8], "uv_size": [16, 8] },
+                                "up": { "uv": [16, 16], "uv_size": [-16, -16] },
+                                "down": { "uv": [16, 16], "uv_size": [-16, -16] }
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
