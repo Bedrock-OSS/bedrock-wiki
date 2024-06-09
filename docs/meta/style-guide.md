@@ -165,3 +165,4 @@ Own-line comments can be used for organizational purposes but should not store l
 | FPV     | First Person View                  |
 | RD      | Render Dragon                      |
 | VSCode  | Visual Studio Code                 |
+| SP      | Skin Pack                          |
