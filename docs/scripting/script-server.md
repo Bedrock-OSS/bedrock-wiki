@@ -258,7 +258,7 @@ In this example, we are setting a number dynamic property called `playerScore` g
 Note that there is a maximum queue of 128 asynchronous commands that can be run in a given tick.
 
 Usually, it executes the command in the next tick.
-To run command parallel with the script, you have to surround your code in a asynchronous function.
+To run the command parallel with the script, you have to surround your code in a asynchronous function.
 
 ```js
 import { world } from "@minecraft/server";
@@ -274,87 +274,88 @@ Returns a `Promise<CommandResult>`. Throws an error **synchronously** if the que
 
 **Avoid run commands in script**
 
-Normally we recommend avoiding using commands because it's slow to run a command from Script API, and server performance starts to slow down as more commands are executed over time. However, the following command features are not implemented in scripting API, which leaves us no choice but to use `runCommand` or `runCommandAsync`.
+Normally we recommend avoiding using commands because it's slow to run a command from the Script API, and server performance starts to slow down as more commands are executed over time. However, the following command features are not implemented in scripting API, which leaves us no choice but to use `runCommand` or `runCommandAsync`.
 
 **Ender chest**
 
-Script API does not provide any methods to get/set information of player's ender chest. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
+The Script API does not provide any methods to get/set information of player's ender chest. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
 
 **tickingarea**
 
-Script API can't access ticking areas.
+The Script API can't access ticking areas.
 
 **kick**
 
-Script API can't kick player. Without proxying that command via execute as
+The Script API can't kick players without proxying that command via execute as
 ```
 player.runcommand('execute as " + player.name + " run kick " + playerToKick +" " +reason);
 ```
 
 **setblock**
 
-Script API can't destroy block `/setblock ... destroy`
+The Script API can't destroy blocks `/setblock ... destroy`
 
 **titleraw**
 
-Script API can't display translations in title, subtitle or actionbar in rawtext json. Consider using `%` (e.g. `%death.fell.accident.water%`)
+The Script API can't display translations in titles, subtitles or actionbars in rawtext json. Consider using `%` (e.g. `%death.fell.accident.water%`)
 
 **Player's abilities**
 
--   Script API you can't set abilities for each player.
--   You can't read player's abilities.
+-   The Script API can't set abilities for each player.
+-   It can't read player's abilities.
 
 **execute**
 
-Script API new execute can be useful to run command with lot of if/unless condition for simplicity or maybe performance.
+The Script API's new execute can be useful to run commands with lots of if/unless conditions for simplicity, or maybe performance.
 
-Sometimes this `/execute` used to trigger `/loot` command, as `runCommandAsync` cannot trigger loots in the API.
+Sometimes this `/execute` is used to trigger `/loot` commands, as `runCommandAsync` cannot trigger loot in the API.
 
 **Minecraft functions**
 
-Script API cannot run Minecraft function files without the use of `/function`.
+The Script API cannot run Minecraft function files without the use of `/function`.
 
 **gamerule**
 
--   Script API cannot set any game rules.
--   Cannot read game rules' value.
+-   The Script API cannot set any game rules.
+-   It cannot read game rules' value.
 
 **locate**
 
--   Script API cannot get structure's location.
--   Cannot get biome's location.
+-   The Script API cannot get structure's location.
+-   Cannot get biome's locations.
 
 **loot**
 
-Script API even though the loot is broken from the start, but it's useful for drop or set the item to players/world.
+- The Script API cannot get loot directly
+- Even though the loot is broken from the start, the command is useful to drop or set an item to players/world.
 
 **weather**
-Script API can't get weather directly
+The Script API can't get weather directly.
 
 **difficulty**
 
-Script API can't set world difficulty.
+The Script API can't set world difficulty.
 
 **mobevent**
 
-Script API can't enable/disable mobevent.
+The Script API can't enable/disable mobevent.
 
 **camerashake**
 
-Script API can't add/stop camera shake for player.
+The Script API can't add/stop camera shake for player.
 
 **fog**
 
-Script API can't manage active fog settings for player.
+The Script API can't manage active fog settings for player.
 
 **stopsound**
 
-Script API can't stop playing a sound.
+The Script API can't stop playing a sound.
 
 **dialogue**
 
--   Script API can't open the NPC dialogue to player.
--   Can't change the dialogue displayed by an NPC.
+-   The Script API can't open the NPC dialogue to the player.
+-   It cannot change the dialogue displayed by an NPC.
 
 ## BeforeEvents privilege system
 
