@@ -357,3 +357,113 @@ The entity can now be controlled with the jump key, but there's a bug. If the pl
     }
 }
 ```
+
+## Controlling by Scripts
+
+This fourth method allows us to adjust the falling speed, movement speed and it works when player jumps. It is essential to add the horse jump function so that when the player jumps, he does not fall off the entity, also it's very important to add the family type that indicates that it can fly, since we handle this in the scripts.
+
+<CodeHeader></CodeHeader>
+
+```json
+"components": {
+    "minecraft:behavior.player_ride_tamed": {},
+    "minecraft:input_ground_controlled": {},
+    "minecraft:can_power_jump": {},
+    "minecraft:horse.jump_strength": {
+        "value": 0
+    },
+    "minecraft:damage_sensor": {
+        "triggers": [
+        {
+            "cause": "fall",
+            "deals_damage": false
+        }
+        ]
+    },
+    "minecraft:rideable": {
+        "seat_count": 1,
+        "interact_text": "action.interact.mount",
+        "family_types": ["player"],
+        "seats": {
+        "position": [0.0, 0.63, 0.0]
+        }
+    },
+    "minecraft:type_family": {
+        "family": ["pig", "mob", "wiki:can_fly"] // Indicates that the entity can fly
+    }
+}
+```
+
+After adjusting our entity with the previous configurations, we are going to add the script to give it functionality.
+
+**Utils.js**
+<CodeHeader></CodeHeader>
+
+```js
+import { Entity } from "@minecraft/server";
+class Utils {
+  /**
+   * @param {Entity} entity
+   */
+  constructor(entity) {
+    this.entity = entity;
+    this.rideable = entity?.getComponent("rideable");
+    this.player = this.rideable?.getRiders()[0];
+    this.riding = this.player?.getComponent("riding");
+  }
+
+  /**
+   * @param {number} flySpeed
+   * @param {number} fallSpeed
+   * @param {number} XZspeed
+   */
+  flySystem(flySpeed, fallSpeed, XZspeed) {
+    if (!this.riding) return;
+    const direction = {
+      x: 0,
+      y: this.player.isJumping ? flySpeed : fallSpeed,
+      z: 0,
+    };
+    this.entity.addEffect("speed", 5, {
+      showParticles: false,
+      amplifier: XZspeed,
+    });
+    this.entity.applyImpulse(direction);
+  }
+}
+
+export default Utils;
+```
+
+The Utils.js file creates a function to make the entity able to fly.
+Now we need to apply it to our entity for this to work.
+
+**index.js**
+
+<CodeHeader></CodeHeader>
+
+```js
+import { system, world } from "@minecraft/server";
+import Utils from "./Utils";
+
+system.runInterval(() => {
+    const dim = world.getDimension('overworld');
+    // You can use tags instead of family type
+    for (const entity of dim.getEntities({ families: [ "wiki:can_fly" ] })) {
+        const utils = new Utils(entity);
+        // Recommended values
+        utils.flySystem(0.09, 0.07, 5);
+    }
+});
+```
+
+You can adjust the speed from index.js.
+
+Speed ​​on Y axis (UP)
+**flySpeed: 0.09**
+Speed ​​on Y axis (DOWN)
+**fallSpeed: 0.07**
+Speed on X axis (Horizontal)
+**XZspeed: 5**
+
+These are just recommended values, your free to change the velocity.
