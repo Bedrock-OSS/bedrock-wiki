@@ -42,8 +42,8 @@ const CreativeModeOnlyComponent = {
     beforeOnPlayerPlace(event) {
         const isInCreative = event.player?.getGameMode() === GameMode.creative;
         if (!isInCreative) event.cancel = true;
-    }
-}
+    },
+};
 
 world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
     blockTypeRegistry.registerCustomComponent("wiki:creative_mode_only", CreativeModeOnlyComponent);
@@ -60,7 +60,7 @@ Like any normal component, custom components can be added and removed based on t
 
 ```js
 "components": {
-        "minecraft:custom_components": [ "wiki:creative_mode_only" ]
+    "minecraft:custom_components": [ "wiki:creative_mode_only" ]
 }
 ```
 
@@ -72,12 +72,12 @@ Runs before a player places the block.
 
 ```js
 beforeOnPlayerPlace(event) {
-        event.block // Block impacted by this event. This is the block that will be replaced.
-        event.cancel // If set to true, cancels the block place event.
-        event.dimension // Dimension that contains the block.
-        event.face // The block face that was placed onto.
-        event.permutationToPlace // The block permutation that will be placed. Can be changed to place a different permutation instead.
-        event.player // The player that is placing this block. May be undefined.
+    event.block // Block impacted by this event. This is the block that will be replaced.
+    event.cancel // If set to true, cancels the block place event.
+    event.dimension // Dimension that contains the block.
+    event.face // The block face that was placed onto.
+    event.permutationToPlace // The block permutation that will be placed. Can be changed to place a different permutation instead.
+    event.player // The player that is placing this block. May be undefined.
 }
 ```
 
@@ -95,7 +95,7 @@ Runs when an entity falls on the block.
 
 ```json
 "minecraft:entity_fall_on": {
-        "min_fall_distance": 5 // The minimum distance an entity must fall to trigger this event (optional).
+    "min_fall_distance": 5 // The minimum distance an entity must fall to trigger this event (optional).
 }
 ```
 
@@ -103,10 +103,10 @@ Runs when an entity falls on the block.
 
 ```js
 onEntityFallOn(event) {
-        event.block // Block impacted by this event.
-        event.dimension // Dimension that contains the block.
-        event.entity // The entity that stepped on the block. May be undefined.
-        event.fallDistance // The distance that the entity fell before landing.
+    event.block // Block impacted by this event.
+    event.dimension // Dimension that contains the block.
+    event.entity // The entity that stepped on the block. May be undefined.
+    event.fallDistance // The distance that the entity fell before landing.
 }
 ```
 
