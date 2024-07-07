@@ -11,9 +11,6 @@ mentions:
     - TheItsNameless
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 ## Introduction
 
 A common concept for add-ons is implementing new armor sets with unique effects, just like the turtle shell and netherite armor. While items have a knockback resistance component, they don't have a component for inflicting mob effects, emitting particles, etc. under certain conditions. However, using server animations, Molang and item tags, this can easily be done!
@@ -47,10 +44,10 @@ The first step will be to create a server animation, which is a file that runs c
 
 Let's go over what's in this template and what everything does:
 
-- `animation.player.emerald_armor` is our animation's identifier; you can change this to something else, such as `animation.player.phantom_armor`.
-- `timeline` runs commands and events at given keyframes.
-- `animation_length` is how long the animation lasts; we'll use 0.05 seconds, as that's the length of an in-game tick.
-- `loop` is quite straight-forward; setting it to true makes the animation loop.
+-   `animation.player.emerald_armor` is our animation's identifier; you can change this to something else, such as `animation.player.phantom_armor`.
+-   `timeline` runs commands and events at given keyframes.
+-   `animation_length` is how long the animation lasts; we'll use 0.05 seconds, as that's the length of an in-game tick.
+-   `loop` is quite straight-forward; setting it to true makes the animation loop.
 
 We can add commands to the `0.0` array in our timeline to execute, such as an `/effect` command, like such:
 
@@ -58,9 +55,7 @@ We can add commands to the `0.0` array in our timeline to execute, such as an `/
 
 ```json
 {
-    "0.0": [
-        "/effect @s speed 1 0"
-    ]
+    "0.0": ["/effect @s speed 1 0"]
 }
 ```
 
@@ -74,8 +69,8 @@ To actually check if our item is equipped, we can use a Molang query that checks
 
 You can skip this section if:
 
-- You want check for a vanilla item instead, such as an iron armor piece through the `minecraft:iron_tier` tag
-- You want to check for the item via `q.is_item_name_any`, which checks for an item identifier in any slot
+-   You want check for a vanilla item instead, such as an iron armor piece through the `minecraft:iron_tier` tag
+-   You want to check for the item via `q.is_item_name_any`, which checks for an item identifier in any slot
 
 In our item's behavior, we'll have to add a tag to `components`. For example, if we wanted to add the `example:emerald_tier` tag, we would add the `tag:example:emerald_tier` component:
 
@@ -111,17 +106,20 @@ Now with a short name set, we can run our animation.
 
 Add `scripts` to `description`, and set a Molang query to run. To check for the item, we can use one of the following:
 
-- `q.is_item_name_any`, to check for a given item identifier in any slot. This example will check for `example:totem_of_retreat` in either hand:
+-   `q.is_item_name_any`, to check for a given item identifier in any slot. This example will check for `example:totem_of_retreat` in either hand:
+
 ```
 q.is_item_name_any('slot.weapon.mainhand',0,'example:totem_of_retreat') || q.is_item_name_any('slot.weapon.offhand',0,'example:totem_of_retreat')
 ```
 
-- `q.equipped_item_any_tag`, to check for at least one of any given tag in a given slot. This example will allow an emerald- or phantom- tier armor piece to be used:
+-   `q.equipped_item_any_tag`, to check for at least one of any given tag in a given slot. This example will allow an emerald- or phantom- tier armor piece to be used:
+
 ```
 q.equipped_item_any_tag('slot.armor.head','example:emerald_tier','example:phantom_tier')
 ```
 
-- `q.equipped_item_all_tags`, to check for all given tags in a given slot. This example will only allow an armor piece that's both emerald- and ancient- tier:
+-   `q.equipped_item_all_tags`, to check for all given tags in a given slot. This example will only allow an armor piece that's both emerald- and ancient- tier:
+
 ```
 q.equipped_item_all_tags('slot.armor.head','example:ancient_tier','example:emerald_tier')
 ```

@@ -12,9 +12,6 @@ mentions:
     - QuazChick
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 :::tip
 This page contains troubleshooting information about _blocks_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
 :::
@@ -39,30 +36,30 @@ Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is pro
 
 ```json
 {
-  "texture_name": "atlas.terrain",
-  "resource_pack_name": "wiki",
-  "padding": 8,
-  "num_mip_levels": 4,
-  "texture_data": {
-    "dirt_like": {
-      "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
-    },
-    "log_like_top": {
-      "textures": "textures/blocks/log_like_top" // You can replace this with anything, just remember the name
-    },
-    "log_like_side": {
-      "textures": "textures/blocks/log_like_side" // You can replace this with anything, just remember the name
-    },
-    "custom_grass_top": {
-      "textures": "textures/blocks/custom_grass_top" // You can replace this with anything, just remember the name
-    },
-    "custom_grass_bottom": {
-      "textures": "textures/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
-    },
-    "custom_grass_side": {
-      "textures": "textures/blocks/custom_grass_side" // You can replace this with anything, just remember the name
+    "texture_name": "atlas.terrain",
+    "resource_pack_name": "wiki",
+    "padding": 8,
+    "num_mip_levels": 4,
+    "texture_data": {
+        "dirt_like": {
+            "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
+        },
+        "log_like_top": {
+            "textures": "textures/blocks/log_like_top" // You can replace this with anything, just remember the name
+        },
+        "log_like_side": {
+            "textures": "textures/blocks/log_like_side" // You can replace this with anything, just remember the name
+        },
+        "custom_grass_top": {
+            "textures": "textures/blocks/custom_grass_top" // You can replace this with anything, just remember the name
+        },
+        "custom_grass_bottom": {
+            "textures": "textures/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
+        },
+        "custom_grass_side": {
+            "textures": "textures/blocks/custom_grass_side" // You can replace this with anything, just remember the name
+        }
     }
-  }
 }
 ```
 
@@ -74,19 +71,19 @@ Dirt like block example:
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:dirt_like"
-    },
-    "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "dirt_like",
+    "format_version": "1.20.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:dirt_like"
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "dirt_like"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
@@ -96,24 +93,24 @@ Log like block example:
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:log_like"
-    },
-    "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "log_like_side"
+    "format_version": "1.20.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:log_like"
         },
-        "end": {
-          "texture": "log_like_top"
-        },
-        "up": "end",
-        "down": "end"
-      }
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "log_like_side"
+                },
+                "end": {
+                    "texture": "log_like_top"
+                },
+                "up": "end",
+                "down": "end"
+            }
+        }
     }
-  }
 }
 ```
 
@@ -123,25 +120,25 @@ Grass-like block example:
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_grass"
-    },
-    "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "custom_grass_side"
+    "format_version": "1.20.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_grass"
         },
-        "up": {
-          "texture": "custom_grass_top"
-        },
-        "down": {
-          "texture": "custom_grass_bottom"
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "custom_grass_side"
+                },
+                "up": {
+                    "texture": "custom_grass_top"
+                },
+                "down": {
+                    "texture": "custom_grass_bottom"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 

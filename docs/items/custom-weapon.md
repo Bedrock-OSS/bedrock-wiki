@@ -13,9 +13,6 @@ mentions:
     - Xterionix
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 Making a custom weapon is pretty simple since the 1.16.100 changes, as these allow you to simply define an item entry for it in your `BP/items` folder and provide a corresponding texture in the `RP/textures/items` folder with a bit of config and you have a fully working weapon that you can customize however you see fit.
 
 ## Custom Sword Item
@@ -26,49 +23,49 @@ Like with the other item tutorials we will start by making a simple custom sword
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:my_sword",
-			// Notice we give it the equipment category
-			"category": "equipment"
-		},
-		"components": {
-			// This allows us to have the sword in the creative category of swords
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.sword"
-			},
-			"minecraft:max_stack_size": 1,
-			// This is a new change as we want it to be equippable in the hand
-			"minecraft:hand_equipped": true,
-			"minecraft:durability": {
-				"max_durability": 600
-			},
-			// Give it however much damage you want
-			"minecraft:damage": 10,
-			// We also let it be enchantable in the "sword" slot
-			"minecraft:enchantable": {
-				"value": 10,
-				"slot": "sword"
-			},
-			// This texture is used for both inventory and the hand model
-			"minecraft:icon": {
-				"texture": "my_sword"
-			},
-			"minecraft:display_name": {
-				"value": "My Custom Sword"
-			},
-			// Allow the sword to be repaired with sticks
-			"minecraft:repairable": {
-				"repair_items": [
-					{
-						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
-					}
-				]
-			}
-		}
-	}
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:my_sword",
+            // Notice we give it the equipment category
+            "category": "equipment"
+        },
+        "components": {
+            // This allows us to have the sword in the creative category of swords
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.sword"
+            },
+            "minecraft:max_stack_size": 1,
+            // This is a new change as we want it to be equippable in the hand
+            "minecraft:hand_equipped": true,
+            "minecraft:durability": {
+                "max_durability": 600
+            },
+            // Give it however much damage you want
+            "minecraft:damage": 10,
+            // We also let it be enchantable in the "sword" slot
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "sword"
+            },
+            // This texture is used for both inventory and the hand model
+            "minecraft:icon": {
+                "texture": "my_sword"
+            },
+            "minecraft:display_name": {
+                "value": "My Custom Sword"
+            },
+            // Allow the sword to be repaired with sticks
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minecraft:stick"],
+                        "repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
+                    }
+                ]
+            }
+        }
+    }
 }
 ```
 
@@ -78,14 +75,14 @@ So at a bare minimum that is enough to get a sword put into the game, we still n
 
 ```json
 {
-	"resource_pack_name": "vanilla",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"my_sword": {
-			// Make sure you have put an icon texture called my_sword.png here
-			"textures": "textures/items/my_sword"
-		}
-	}
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "my_sword": {
+            // Make sure you have put an icon texture called my_sword.png here
+            "textures": "textures/items/my_sword"
+        }
+    }
 }
 ```
 
@@ -93,7 +90,9 @@ Here is an example texture if you do not have your own to use, just `Save As` an
 
 ![](/assets/images/tutorials/custom-weapons/my_sword.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-weapons/my_sword.png">Download texture here</BButton>
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-weapons/my_sword.png">
+    Download texture here
+</BButton>
 
 ## In-game
 
@@ -187,6 +186,7 @@ Once we add that then every time you hurt an entity it will raise the event `wik
 > I could just as easily call the event **"space-noodle"** and it would work fine, but you want it to be easily searchable and self explaining, so keep that in mind
 
 Now that we have an event being raised we can do what we want with it. In this example I am going to do 3 things:
+
 1. Teleport the player with 25% chance.
 2. Output a message letting the player know that something happened.
 3. Damage the sword.
@@ -250,28 +250,28 @@ You should probably make a recipe for it, which is covered in previous chapters,
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "wiki:my_sword"
-		},
-		"tags": ["crafting_table"],
-		"pattern": ["e", "E", "#"],
-		"key": {
-			"#": {
-				"item": "minecraft:stick"
-			},
-			"E": {
-				"item": "minecraft:ender_eye"
-			},
-			"e": {
-				"item": "minecraft:ender_pearl"
-			}
-		},
-		"result": {
-			"item": "wiki:my_sword"
-		}
-	}
+    "format_version": "1.12.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "wiki:my_sword"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["e", "E", "#"],
+        "key": {
+            "#": {
+                "item": "minecraft:stick"
+            },
+            "E": {
+                "item": "minecraft:ender_eye"
+            },
+            "e": {
+                "item": "minecraft:ender_pearl"
+            }
+        },
+        "result": {
+            "item": "wiki:my_sword"
+        }
+    }
 }
 ```
 

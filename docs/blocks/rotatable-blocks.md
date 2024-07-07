@@ -10,9 +10,6 @@ mentions:
     - QuazChick
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 ::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states) and [block traits](/blocks/block-traits).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
@@ -338,64 +335,64 @@ This example also requires `Holiday Creator Features` to use `minecraft:unit_cub
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_log",
-      "states": {
-        "wiki:axis": [0, 1, 2]
-      }
-    },
-    "components": {
-      "minecraft:destructible_by_mining": {
-        "seconds_to_destroy": 1.5
-      },
-      "minecraft:destructible_by_explosion": {
-        "explosion_resistance": 15
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "log_side"
+    "format_version": "1.20.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_log",
+            "states": {
+                "wiki:axis": [0, 1, 2]
+            }
         },
-        "end": {
-          "texture": "log_top"
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 15
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "log_side"
+                },
+                "end": {
+                    "texture": "log_top"
+                },
+                "up": "end",
+                "down": "end"
+            },
+            "minecraft:unit_cube": {},
+            "minecraft:on_player_placing": {
+                "event": "wiki:set_axis"
+            }
         },
-        "up": "end",
-        "down": "end"
-      },
-      "minecraft:unit_cube": {},
-      "minecraft:on_player_placing": {
-        "event": "wiki:set_axis"
-      }
-    },
-    "events": {
-      "wiki:set_axis": {
-        "set_block_state": {
-          "wiki:axis": "Math.floor(q.block_face / 2)"
-        }
-      }
-    },
-    "permutations": [
-      {
-        "condition": "q.block_state('wiki:axis') == 0",
-        "components": {
-          "minecraft:transformation": { "rotation": [0, 0, 0] }
-        }
-      },
-      {
-        "condition": "q.block_state('wiki:axis') == 1",
-        "components": {
-          "minecraft:transformation": { "rotation": [90, 0, 0] }
-        }
-      },
-      {
-        "condition": "q.block_state('wiki:axis') == 2",
-        "components": {
-          "minecraft:transformation": { "rotation": [0, 0, 90] }
-        }
-      }
-    ]
-  }
+        "events": {
+            "wiki:set_axis": {
+                "set_block_state": {
+                    "wiki:axis": "Math.floor(q.block_face / 2)"
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('wiki:axis') == 0",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('wiki:axis') == 1",
+                "components": {
+                    "minecraft:transformation": { "rotation": [90, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('wiki:axis') == 2",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 0, 90] }
+                }
+            }
+        ]
+    }
 }
 ```
 

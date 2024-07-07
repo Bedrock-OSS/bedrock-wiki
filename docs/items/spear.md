@@ -12,9 +12,6 @@ mentions:
 hidden: true
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 ::: tip
 It's highly recommended that you have a basic understanding of JavaScript and Script-API.
 :::
@@ -123,11 +120,7 @@ We can safely say that we got the important components for our spear. Next we mo
                 "anchor": 1,
                 "gravity": 0.05,
                 "hit_sound": "bow.hit",
-                "offset": [
-                    0,
-                    -0.1,
-                    0
-                ],
+                "offset": [0, -0.1, 0],
                 "on_hit": {
                     "definition_event": {
                         "event_trigger": {
@@ -198,19 +191,14 @@ Here we got our simple projectile entity. We are missing one part to make this a
             "sequence": [
                 {
                     "add": {
-                        "component_groups": [
-                            "wiki:give"
-                        ]
+                        "component_groups": ["wiki:give"]
                     }
                 },
                 {
                     "randomize": [
                         {
                             "run_command": {
-                                "command": [
-                                    "playsound random.pop @p",
-                                    "tag @p add iron_spear"
-                                ]
+                                "command": ["playsound random.pop @p", "tag @p add iron_spear"]
                             },
                             "weight": 90
                         }
@@ -248,20 +236,17 @@ We will be using a basic client entity file for our projectile with added code.
                 "move": "animation.weapon.default_thrown"
             },
             "scripts": {
-                "animate": [
-                    "move"
-                ]
+                "animate": ["move"]
             },
             "geometry": {
                 "default": "geometry.stone_spear"
             },
-            "render_controllers": [
-                "controller.render.default"
-            ]
+            "render_controllers": ["controller.render.default"]
         }
     }
 }
 ```
+
 </Spoiler>
 
 Inside our client entity file, you might have noticed that there is animations bound to it. This animation will make our projectile rotate as it flies.
@@ -280,17 +265,17 @@ The animation we use for our projectile isn't you normal entity animation. This 
 
 ```json
 {
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.weapon.default_thrown": {
-			"loop": true,
-			"bones": {
-				"body": {
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.weapon.default_thrown": {
+            "loop": true,
+            "bones": {
+                "body": {
                     //This is some molang stuff. The animation uses this to rotate the model based on its current angle.
-					"rotation": ["-q.target_x_rotation", "-q.body_y_rotation", 0]
-				}
-			}
-		}
+                    "rotation": ["-q.target_x_rotation", "-q.body_y_rotation", 0]
+                }
+            }
+        }
     }
 }
 ```
@@ -331,13 +316,9 @@ We will be using the Trident Attachable because it comes with item positions and
                 "pre_animation": [
                     "v.charge_amount = math.clamp((q.main_hand_item_max_duration - (q.main_hand_item_use_duration - q.frame_alpha + 1.0)) / 10.0, 0.0, 1.0f);"
                 ],
-                "animate": [
-                    "wield"
-                ]
+                "animate": ["wield"]
             },
-            "render_controllers": [
-                "controller.render.item_default"
-            ]
+            "render_controllers": ["controller.render.item_default"]
         }
     }
 }
@@ -350,43 +331,49 @@ Now that we've setup our spear, there is no way to damage the spear when it's th
 The script is really simple, and wouldn't require much brain power.
 
 ```js
-import { world, ItemStack } from "@minecraft/server"
+import { world, ItemStack } from "@minecraft/server";
 import { system } from "@minecraft/server";
 //This prevents world crash
-system.beforeEvents.watchdogTerminate.subscribe(data => {
-  data.cancel = true;
+system.beforeEvents.watchdogTerminate.subscribe((data) => {
+    data.cancel = true;
 });
 
-world.afterEvents.itemReleaseUse.subscribe(ev => {
+world.afterEvents.itemReleaseUse.subscribe((ev) => {
     //This is for multiplayer support
-    for (const player of world.getPlayers()){
-    //Basic variables to get the player inventory and held item.
-      let inv = player.getComponent( 'inventory' ).container
-      //Our itemStack to save our item. This also saves item data.
-      const itemStack = inv.getItem(player.selectedSlot);
-    //If the item we're holding is our spear, we run code.
-      if (itemStack?.typeId === 'wiki:iron_spear') {
-        var container = player.getComponent('inventory').container
-        //The new item to be given.
-        var newItem =  new ItemStack("wiki:iron_spear");
-        var oldItem = container?.getItem(player.selectedSlot)
-        //Here's that tag!
-        player.removeTag("iron_spear")
+    for (const player of world.getPlayers()) {
+        //Basic variables to get the player inventory and held item.
+        let inv = player.getComponent("inventory").container;
+        //Our itemStack to save our item. This also saves item data.
+        const itemStack = inv.getItem(player.selectedSlot);
+        //If the item we're holding is our spear, we run code.
+        if (itemStack?.typeId === "wiki:iron_spear") {
+            var container = player.getComponent("inventory").container;
+            //The new item to be given.
+            var newItem = new ItemStack("wiki:iron_spear");
+            var oldItem = container?.getItem(player.selectedSlot);
+            //Here's that tag!
+            player.removeTag("iron_spear");
         }
         //We subscribe a tick event to detect when we have the tag and if the item has durability less than the max.
-      let e = system.runInterval(() => {
-      if(player.hasTag("iron_spear") && itemStack?.typeId === 'wiki:iron_spear' && itemStack?.getComponent("durability").damage <= 125) {
-        player.removeTag("iron_spear")
-        //This gives our saved item (newItem) +1 durability each time we pick it up.
-        newItem.getComponent("durability").damage = oldItem.getComponent("durability").damage + 1;
-        container.setItem(player.selectedSlot, newItem);
-        //When we don't have the tag, we stop the tick event.
-        if(!player.hasTag("iron_spear")){
-        system.clearRun(e);
-      }}
-    })}
-    })
-
+        let e = system.runInterval(() => {
+            if (
+                player.hasTag("iron_spear") &&
+                itemStack?.typeId === "wiki:iron_spear" &&
+                itemStack?.getComponent("durability").damage <= 125
+            ) {
+                player.removeTag("iron_spear");
+                //This gives our saved item (newItem) +1 durability each time we pick it up.
+                newItem.getComponent("durability").damage =
+                    oldItem.getComponent("durability").damage + 1;
+                container.setItem(player.selectedSlot, newItem);
+                //When we don't have the tag, we stop the tick event.
+                if (!player.hasTag("iron_spear")) {
+                    system.clearRun(e);
+                }
+            }
+        });
+    }
+});
 ```
 
 ## Final Product

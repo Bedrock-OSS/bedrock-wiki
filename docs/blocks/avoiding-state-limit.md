@@ -8,9 +8,6 @@ mentions:
     - QuazChick
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 ## Introduction
 
 Blocks have a limit of 16 valid values per state that cannot be exceed. This guide will explain how to avoid reaching the limit.
@@ -26,13 +23,16 @@ This method combines two or more states in order to re-use and read them in perm
 ## The Logic
 
 What your code will do going of by the example above is the following:
+
 ```
 1 & 1 = A   1 & 5 = E   1 & 9 =  I   1 & 13 = M
 1 & 2 = B   1 & 6 = F   1 & 10 = J
 1 & 3 = C   1 & 7 = G   1 & 11 = K
 1 & 4 = D   1 & 8 = H   1 & 12 = L
 ```
+
 And then;
+
 ```
 2 & 1 = N   2 & 5 = R   2 & 9 =  V   2 & 13 = Z
 2 & 2 = O   2 & 6 = S   2 & 10 = W
@@ -60,6 +60,7 @@ And for your conditions, like this:
 ```json
 "condition": "q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 1"
 ```
+
 ```json
 "condition": "q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 2"
 ```

@@ -11,20 +11,18 @@ mentions:
     - napstaa967
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 ## Introduction
 
 1.16.100+ items have different durability mechanic than 1.10 and 1.16 items.
 Now you need to define when will the item get durability damage and also an event that does it.
 What will be discussed on this page:
-- Durability component
-- Event that updates durability
-- Damaging entities
-- Block breaking
-- `repair_amount` value
-- `on_tool_used` event
+
+-   Durability component
+-   Event that updates durability
+-   Damaging entities
+-   Block breaking
+-   `repair_amount` value
+-   `on_tool_used` event
 
 ### Components
 
@@ -68,24 +66,25 @@ This function supports unbreaking on items
 ```js
 function damage_item(item) {
     // Get durability
-    const durabilityComponent = item.getComponent("durability")
-    var unbreaking = 0
+    const durabilityComponent = item.getComponent("durability");
+    var unbreaking = 0;
     // Get unbreaking level
     if (item.hasComponent("enchantments")) {
-        unbreaking = item.getComponent("enchantments").enchantments.getEnchantment("unbreaking")
+        unbreaking = item.getComponent("enchantments").enchantments.getEnchantment("unbreaking");
         if (!unbreaking) {
-            unbreaking = 0
+            unbreaking = 0;
         } else {
-            unbreaking = unbreaking.level
+            unbreaking = unbreaking.level;
         }
     }
     // Apply damage
     if (durabilityComponent.damage == durabilityComponent.maxDurability) {
-
-        return
+        return;
     }
-    durabilityComponent.damage += Number(Math.round(Math.random() * 100) <= durabilityComponent.getDamageChance(unbreaking))
-    return item
+    durabilityComponent.damage += Number(
+        Math.round(Math.random() * 100) <= durabilityComponent.getDamageChance(unbreaking)
+    );
+    return item;
 }
 ```
 
@@ -106,30 +105,30 @@ This provides a way to damage weapons using scripts
 
 ```js
 // Add your item IDs into this array
-const my_items = ["wiki:silver_dagger"]
+const my_items = ["wiki:silver_dagger"];
 
-world.afterEvents.entityHurt.subscribe(event => {
+world.afterEvents.entityHurt.subscribe((event) => {
     // If there's no source entity, skip
-    if (!event.damageSource.damagingEntity) return
+    if (!event.damageSource.damagingEntity) return;
 
     // Get equipped weapon
-    const equipment = event.damageSource.damagingEntity.getComponent("minecraft:equippable")
-    if (!equipment) return
-    const weapon = equipment.getEquipment(EquipmentSlot.Mainhand)
+    const equipment = event.damageSource.damagingEntity.getComponent("minecraft:equippable");
+    if (!equipment) return;
+    const weapon = equipment.getEquipment(EquipmentSlot.Mainhand);
 
     // If there's no weapon, skip
-    if (!weapon) return
+    if (!weapon) return;
 
     // If the item is not in our item IDs, skip
-    if (!my_items.includes(weapon.typeId)) return
-    let newItem = damage_item(weapon)
-    equipment.setEquipment(EquipmentSlot.Mainhand, newItem)
+    if (!my_items.includes(weapon.typeId)) return;
+    let newItem = damage_item(weapon);
+    equipment.setEquipment(EquipmentSlot.Mainhand, newItem);
     if (!newItem) {
         if (event.damageSource.damagingEntity instanceof Player) {
-            event.damageSource.damagingEntity.playSound("random.break")
+            event.damageSource.damagingEntity.playSound("random.break");
         }
     }
-})
+});
 ```
 
 ### on_hurt_entity
@@ -168,24 +167,29 @@ This provides a way to damage digger items by using scripts
 
 ```js
 // Add your item IDs into this array
-const my_items = ["wiki:obsidian_pickaxe"]
+const my_items = ["wiki:obsidian_pickaxe"];
 
-world.afterEvents.playerBreakBlock.subscribe(event => {
+world.afterEvents.playerBreakBlock.subscribe((event) => {
     // If there's no item, skip
-    if (!event.itemStackAfterBreak) return
+    if (!event.itemStackAfterBreak) return;
     // If the item is not in our item IDs, skip
-    if (!my_items.includes(event.itemStackAfterBreak.typeId)) return
+    if (!my_items.includes(event.itemStackAfterBreak.typeId)) return;
 
     // If player is in creative, skip
-    if (world.getPlayers({
-        gameMode: GameMode.creative
-    }).includes(event.player)) return
-    const newItem = damage_item(event.itemStackAfterBreak)
-    event.player.getComponent("minecraft:equippable").setEquipment(EquipmentSlot.Mainhand, newItem)
+    if (
+        world
+            .getPlayers({
+                gameMode: GameMode.creative,
+            })
+            .includes(event.player)
+    )
+        return;
+    const newItem = damage_item(event.itemStackAfterBreak);
+    event.player.getComponent("minecraft:equippable").setEquipment(EquipmentSlot.Mainhand, newItem);
     if (!newItem) {
-        event.player.playSound("random.break")
+        event.player.playSound("random.break");
     }
-})
+});
 ```
 
 ### on_dig

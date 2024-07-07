@@ -13,14 +13,12 @@ mentions:
     - Xterionix
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 It is fairly common to want to spawn an item in the world, as if dropped. This page will walk through how to accomplish this through various methods, including Entity Deaths, Interactions, and an all-purpose method.
 
 ## /loot
 
 The simplest method of spawning items to date is by using /loot. Formatted as such:
+
 ```
 /loot spawn ~ ~ ~ loot "entities/cow"
 ```
@@ -55,25 +53,25 @@ Behaviors:
 
 ```json
 {
-	"format_version": "1.16.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "wiki:drop_entity",
-			"is_spawnable": true,
-			"is_summonable": true,
-			"is_experimental": false
-		},
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:drop_entity",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
 
-		"components": {
-			// Causes the entity to die when spawned
-			"minecraft:health": {
-				"value": 0
-			},
-			"minecraft:loot": {
-				"table": "loot_tables/entities/some_loot.json"
-			}
-		}
-	}
+        "components": {
+            // Causes the entity to die when spawned
+            "minecraft:health": {
+                "value": 0
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/some_loot.json"
+            }
+        }
+    }
 }
 ```
 
@@ -141,31 +139,31 @@ Teleporting the entity into the void causes no death animation, sound, or partic
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.drop_items.die": {
-			"initial_state": "spawn",
-			"states": {
-				"spawn": {
-					"transitions": [
-						{
-							"delay": "1"
-						}
-					]
-				},
-				"delay": {
-					"transitions": [
-						{
-							"die": "1"
-						}
-					]
-				},
-				"die": {
-					"on_entry": ["/tp @s ~ -200 ~"]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.drop_items.die": {
+            "initial_state": "spawn",
+            "states": {
+                "spawn": {
+                    "transitions": [
+                        {
+                            "delay": "1"
+                        }
+                    ]
+                },
+                "delay": {
+                    "transitions": [
+                        {
+                            "die": "1"
+                        }
+                    ]
+                },
+                "die": {
+                    "on_entry": ["/tp @s ~ -200 ~"]
+                }
+            }
+        }
+    }
 }
 ```
 

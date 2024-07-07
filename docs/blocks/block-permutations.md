@@ -8,9 +8,6 @@ mentions:
     - SmokeyStack
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 :::tip FORMAT & MIN ENGINE VERSION `1.20.60`
 Before you learn about block permutations, you should be confident with [block states](/blocks/block-states).
 
@@ -33,38 +30,38 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_block",
-      "states": {
-        "wiki:integer_state_example": [2, 4, 6, 8],
-        "wiki:boolean_state_example": [false, true],
-        "wiki:string_state_example": ["red", "green", "blue"]
-      }
-    },
-    "components": {},
-    "permutations": [
-      {
-        "condition": "q.block_state('wiki:integer_state_example') == 2",
-        "components": {
-          "minecraft:friction": 0.1
-        }
-      },
-      {
-        "condition": "q.block_state('wiki:boolean_state_example')",
-        "components": {
-          "minecraft:friction": 0.8 // Overrides previous permutation
-        }
-      },
-      {
-        "condition": "q.block_state('wiki:string_state_example') == 'red' && !q.block_state('wiki:boolean_state_example')",
-        "components": {
-          "minecraft:geometry": "geometry.pig"
-        }
-      }
-    ]
-  }
+    "format_version": "1.20.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_block",
+            "states": {
+                "wiki:integer_state_example": [2, 4, 6, 8],
+                "wiki:boolean_state_example": [false, true],
+                "wiki:string_state_example": ["red", "green", "blue"]
+            }
+        },
+        "components": {},
+        "permutations": [
+            {
+                "condition": "q.block_state('wiki:integer_state_example') == 2",
+                "components": {
+                    "minecraft:friction": 0.1
+                }
+            },
+            {
+                "condition": "q.block_state('wiki:boolean_state_example')",
+                "components": {
+                    "minecraft:friction": 0.8 // Overrides previous permutation
+                }
+            },
+            {
+                "condition": "q.block_state('wiki:string_state_example') == 'red' && !q.block_state('wiki:boolean_state_example')",
+                "components": {
+                    "minecraft:geometry": "geometry.pig"
+                }
+            }
+        ]
+    }
 }
 ```
 

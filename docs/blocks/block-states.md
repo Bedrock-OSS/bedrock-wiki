@@ -8,9 +8,6 @@ mentions:
     - SmokeyStack
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 :::tip FORMAT & MIN ENGINE VERSION `1.20.60`
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
@@ -84,7 +81,7 @@ The [`BlockPermutation.getState()`](https://learn.microsoft.com/minecraft/creato
 <CodeHeader></CodeHeader>
 
 ```js
-customBlock.permutation.getState("wiki:integer_state_example") === 3
+customBlock.permutation.getState("wiki:integer_state_example") === 3;
 ```
 
 ## Setting State Values
@@ -106,9 +103,7 @@ The [`BlockPermutation.withState()`](https://learn.microsoft.com/minecraft/creat
 <CodeHeader></CodeHeader>
 
 ```js
-customBlock.setPermutation(
-  customBlock.permutation.withState("wiki:boolean_state_example", false)
-);
+customBlock.setPermutation(customBlock.permutation.withState("wiki:boolean_state_example", false));
 ```
 
 ### Event Response
