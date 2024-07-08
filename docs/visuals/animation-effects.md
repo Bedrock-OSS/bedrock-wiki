@@ -168,6 +168,10 @@ Now save your animation and launch the game!
 
 ![](/assets/images/visuals/animation-effects/showcase.png)
 
+:::warning Warning!
+Currently (1.21.1) locators are broken for attachables.
+:::
+
 ## Offscreen Updating
 
 You can set `"should_update_bones_and_effects_offscreen"` to `true` inside entity rp scripts for particle and sound effects to update offscreen, by default both of them will stop playing if the entity isn't being rendered on display.
