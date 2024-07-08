@@ -62,7 +62,7 @@ Minecraft Bedrock will send out a message to all listed servers (and the local n
 
 After this message, the server will respond with something called an unconnected pong. The reason these messages are unconnected is because the client has not established a connection to the server. This is the format of an unconnected pong:
 
-`0x1c | client alive time in ms (recorded from previous ping) | server GUID | string length | Edition (MCPE or MCEE for Education Edition);MOTD line 1;Protocol Version;Version Name;Player Count;Max Player Count;Server Unique ID;MOTD line 2;Game mode;Game mode (numeric);Port (IPv4);Port (IPv6);`
+`0x1c | client alive time in ms (recorded from previous ping) | server GUID | Magic | string length | Edition (MCPE or MCEE for Education Edition);MOTD line 1;Protocol Version;Version Name;Player Count;Max Player Count;Server Unique ID;MOTD line 2;Game mode;Game mode (numeric);Port (IPv4);Port (IPv6);`
 
 Example:
 
@@ -74,7 +74,7 @@ The client doesn't seem to use the gamemode or the numeric value for the gamemod
 
 The client sends this when attempting to join the server
 
-`0x05 | Magic | Protocol version	(currently 10 or 0x0a) | RakNet Null Padding`
+`0x05 | Magic | Protocol version	(currently 11 or 0x0b) | RakNet Null Padding`
 
 The null padding seems to be used to discover the maximum packet size the network can handle.
 
@@ -104,7 +104,17 @@ This is the last part of the handshake between the client and the server.
 
 This is the part where the client sends the connection request.
 
+`0x84 (RakNet_Packet_type BitFlag, see table below) | RakNet Packet Sequence number (3 bytes, I use 0x00 0x00 0x00)`
 `0x09 | client GUID | Request timestamp (Long) | Secure (Boolean, I use 0x00)`
+
+RakNet_Packet_type BitFlag Table 0x84
+||||
+|----|----|----|
+| 1 . . . | . . . . | = is for connected peer: True|
+| . 0 . . | . . . . | = is ACK: False|
+| . . 0 . | . . . . | = is NACK: False|
+| . . . . | 0 . . . | = is pair: False|
+| . . . . | . 1 . . | = needs B and AS: True|
 
 ### Connection Request Accepted
 
