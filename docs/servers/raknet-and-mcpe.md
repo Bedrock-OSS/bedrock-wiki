@@ -104,7 +104,7 @@ This is the last part of the handshake between the client and the server.
 
 This is the part where the client sends the connection request.
 
-`0x84 (RakNet_Packet_type BitFlag, see table below) | RakNet Packet Sequence number (3 bytes, I use 0x00 0x00 0x00)`
+`0x84 (RakNet_Packet_type BitFlag, see table below) | RakNet Packet Sequence number (3 bytes, Minecraft Client sends 0x00 0x00 0x00) | 0x40 (RakNet_Message BitFlag, see table below) | RakNet Payload length (2 bytes; Minecraft Client sends 144 (0x00 0x90), even though that is wrong) | RakNet Reliable Message Number (3 bytes, Minecraft Client sends 0x00 0x00 0x00) |`
 `0x09 | client GUID | Request timestamp (Long) | Secure (Boolean, I use 0x00)`
 
 RakNet_Packet_type BitFlag Table 0x84
@@ -116,11 +116,17 @@ RakNet_Packet_type BitFlag Table 0x84
 | . . . . | 0 . . . | = is pair: False|
 | . . . . | . 1 . . | = needs B and AS: True|
 
+RakNet_Message BitFlag Table 0x40
+||||
+|----|----|----|
+| 0 1 0 . | . . . . | = reliability: reliable (2)|
+| . . . 0 | . . . . | = has split packet: False|
+
 ### Connection Request Accepted
 
 The server sends this packet in response to the incoming connection request.
  
- `0x10 | client Address | System index (Short, unknown what this does. 0 works as a value) | System adresses ([]Address) | Request timestamp (Long) | Accepted timestamp (Long)`
+ `0x10 | client Address | System index (Short, unknown what this does. 0 works as a value (Minecraft client sends 47)) | System adresses ([]Address) | Request timestamp (Long) | Accepted timestamp (Long)`
 
 ## Sources
 ::: tip
