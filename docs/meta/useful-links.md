@@ -82,6 +82,7 @@ Important links have a ⭐.
 -   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
 -   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
 -   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
+-   [Glyph Tools](https://nhanaz.github.io/glyph/)
 
 ## Documentation
 
