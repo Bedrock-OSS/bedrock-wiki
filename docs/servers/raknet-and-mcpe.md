@@ -80,7 +80,7 @@ The null padding seems to be used to discover the maximum packet size the networ
 
 The client will send this to the server with decreasing null padding until the server responds with a
 
-## Open Connection Reply 1
+### Open Connection Reply 1
 
 The server responds with this once the client attempts to join
 
