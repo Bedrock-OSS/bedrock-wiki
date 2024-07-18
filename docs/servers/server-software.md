@@ -32,13 +32,13 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
-| PHP        | [Still Active](#php)        : 4 < [Discontinued](#php-1)        : 38 |
-| Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 14 |
+| PHP        | [Still Active](#php)        : 3 < [Discontinued](#php-1)        : 39 |
+| Java       | [Still Active](#java)       : 6 < [Discontinued](#java-1)       : 14 |
 | C++        | [Still Active](#c)          : 2 < [Discontinued](#c-1)          : 5  |
 | TypeScript | [Still Active](#typescript) : 3 < [Discontinued](#typescript-1) : 2  |
 | Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 5  |
-| JavaScript | [Still Active](#javascript) : 0 < [Discontinued](#javascript-1) : 7  |
-| Rust       | [Still Active](#rust)       : 0 < [Discontinued](#rust-1)       : 2  |
+| JavaScript | Still Active                : 0 < [Discontinued](#javascript)   : 7  |
+| Rust       | Still Active                : 0 < [Discontinued](#rust)         : 2  |
 | C#         | Still Active                : 0 < [Discontinued](#c-2)          : 3  |
 | C          | Still Active                : 0 < [Discontinued](#c-3)          : 1  |
 | Python     | [Still Active](#python)     : 1 < [Discontinued](#python-1)     : 3  |
@@ -62,6 +62,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
 -   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)
+-   [Symply](https://github.com/SymplyX/Symply)
 
 ### TypeScript
 
@@ -74,8 +75,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)
--   [Symply](https://github.com/SymplyX/Symply) 
--   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
 
 ### Python
 
@@ -129,7 +128,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [SpiderMine](https://github.com/QuantumWorks/SpiderMine)
 -   [Terracotta](https://github.com/TerracottaMC/Terracotta)
 -   [voxelwind](https://github.com/voxelwind/voxelwind)
-
 
 ### JavaScript
 
@@ -187,6 +185,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [StarrySky](https://github.com/StarrySky-PE/StarrySky)
 -   [Steadfast-Hybrid](https://github.com/yungtechboy1/Steadfast-Hybrid)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
+-   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
 -   [T-STAR](https://github.com/TaleStar/T-STAR)
 -   [Turanic](https://github.com/TuranicTeam/Turanic)
 -   [WolfMC](https://github.com/Wolf-MC/WolfMC)
