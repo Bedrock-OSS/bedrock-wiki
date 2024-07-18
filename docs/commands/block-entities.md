@@ -40,7 +40,12 @@ To preserve credits to the creator, the community termed this method as "Max's B
     - **Only use this if you wish to reduce one command from the system.**
 :::
 
-Lastly, place the desired block item in the armor stand's mainhand.
+3. Lastly, place the desired block item in the armor stand's mainhand.
+
+:::tip
+- `/replaceitem entity @e [name=Grumm] slot.weapon.offhand 0 <itemID>`
+  - Instead of manually placing the desired block item in the armor stand's main-hand, use this command to place it in it's offhand to prevent players from taking the item.
+:::
 
 ## System
 
@@ -66,11 +71,6 @@ Lastly, place the desired block item in the armor stand's mainhand.
 5. *Optional command.* Aligns the full-block size MBE properly.
     - Skip 4 & 5 if you do not need full-block size MBE.
 6. Locks in place to prevent fall in case block underneath is removed.
-
-:::tip
-- `/replaceitem entity @e [name=Grumm] slot.weapon.offhand 0 <itemID>`
-  - Instead of manually placing the desired block item in the armor stand's main-hand, use this command to place it in it's offhand to prevent players from taking the item.
-:::
 
 ## Rotations & Alignments
 
