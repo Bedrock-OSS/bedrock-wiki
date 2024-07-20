@@ -301,26 +301,29 @@ Think of a unique custom component identifier. There can't be duplicate custom c
 <CodeHeader>BP/scripts/shell.js</CodeHeader>
 
 ```js
+/** @type {import("@minecraft/server").BlockCustomComponent} */
+const ShellRotationBlockComponent = {
+    beforeOnPlayerPlace(event) {
+        const { player } = event;
+        if (!player) return; // Exit if the player is undefined
+
+        const blockFace = event.permutationToPlace.getState("minecraft:block_face");
+        if (blockFace !== "up") return; // Exit if the block hasn't been placed on the top of another block
+
+        // Get the rotation using the function from earlier
+        const playerYRotation = player.getRotation().y;
+        const rotation = getPreciseRotation(playerYRotation);
+
+        // Tell Minecraft to place the correct `wiki:rotation` value
+        event.permutationToPlace = event.permutationToPlace.withState("wiki:rotation", rotation);
+    },
+};
+
 world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent("wiki:shell_rotation", {
-        beforeOnPlayerPlace(event) {
-            const { player } = event;
-            if (!player) return; // Exit if the player is undefined
-
-            const blockFace = event.permutationToPlace.getState("minecraft:block_face");
-            if (blockFace !== "up") return; // Exit if the block hasn't been placed on the top of another block
-
-            // Get the rotation using the function from earlier
-            const playerYRotation = player.getRotation().y;
-            const rotation = getPreciseRotation(playerYRotation);
-
-            // Tell Minecraft to place the correct `wiki:rotation` value
-            event.permutationToPlace = event.permutationToPlace.withState(
-                "wiki:rotation",
-                rotation
-            );
-        },
-    });
+    blockComponentRegistry.registerCustomComponent(
+        "wiki:shell_rotation",
+        ShellRotationBlockComponent
+    );
 });
 ```
 
@@ -527,24 +530,27 @@ function getPreciseRotation(playerYRotation) {
     return rotation !== 16 ? rotation : 0;
 }
 
+/** @type {import("@minecraft/server").BlockCustomComponent} */
+const ShellRotationBlockComponent = {
+    beforeOnPlayerPlace(event) {
+        const { player } = event;
+        if (!player) return;
+
+        const blockFace = event.permutationToPlace.getState("minecraft:block_face");
+        if (blockFace !== "up") return;
+
+        const playerYRotation = player.getRotation().y;
+        const rotation = getPreciseRotation(playerYRotation);
+
+        event.permutationToPlace = event.permutationToPlace.withState("wiki:rotation", rotation);
+    },
+};
+
 world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent("wiki:shell_rotation", {
-        beforeOnPlayerPlace(event) {
-            const { player } = event;
-            if (!player) return;
-
-            const blockFace = event.permutationToPlace.getState("minecraft:block_face");
-            if (blockFace !== "up") return;
-
-            const playerYRotation = player.getRotation().y;
-            const rotation = getPreciseRotation(playerYRotation);
-
-            event.permutationToPlace = event.permutationToPlace.withState(
-                "wiki:rotation",
-                rotation
-            );
-        },
-    });
+    blockComponentRegistry.registerCustomComponent(
+        "wiki:shell_rotation",
+        ShellRotationBlockComponent
+    );
 });
 ```
 
