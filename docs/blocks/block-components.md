@@ -40,12 +40,15 @@ Block components are used to change how your block appears and functions in the 
     "format_version": "1.21.0",
     "minecraft:block": {
         "description": {
-            "identifier": "wiki:custom_block",
+            "identifier": "wiki:lamp",
             "menu_category": {
                 "category": "items"
             }
         },
         "components": {
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 15,
+            "minecraft:map_color": [210, 200, 190],
             "minecraft:geometry": "geometry.lamp",
             "minecraft:material_instances": {
                 "*": {
@@ -62,16 +65,16 @@ Block components are used to change how your block appears and functions in the 
 
 ## Collision Box
 
-Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used. 
+Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.
 
 _Released from experiment `Holiday Creator Features` for format versions `1.19.50` and higher._
 
 Type: Boolean/Object
 
-- `origin`: Vector [a, b, c]
-    - Minimal position of the bounds of the collision box. `origin` is specified as `[x, y, z]` and must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
--  `size`: Vector [a, b, c]
-    - Size of each side of the collision box. Size is specified as `[x, y, z]`. `origin` + `size` must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
+-   `origin`: Vector [a, b, c]
+    -   Minimal position of the bounds of the collision box. `origin` is specified as `[x, y, z]` and must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
+-   `size`: Vector [a, b, c]
+    -   Size of each side of the collision box. Size is specified as `[x, y, z]`. `origin` + `size` must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
 
 ### Example using Boolean
 
@@ -100,11 +103,11 @@ _Released from experiment `Holiday Creator Features` for format versions `1.19.5
 
 Type: Object
 
-- `crafting_tags`: Array
-    - Required Field
-    - Defines the tags recipes should define to be crafted on this table. Limited to 64 tags. Each tag is limited to 64 characters.
-- `table_name`: String
-    - Specifies the language file key that maps to what text will be displayed in the UI of this table. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this field is omitted, the name displayed will default to the name specified in the "display_name" component. If this block has no "display_name" component, the name displayed will default to the name of the block.
+-   `crafting_tags`: Array
+    -   Required Field
+    -   Defines the tags recipes should define to be crafted on this table. Limited to 64 tags. Each tag is limited to 64 characters.
+-   `table_name`: String
+    -   Specifies the language file key that maps to what text will be displayed in the UI of this table. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this field is omitted, the name displayed will default to the name specified in the "display_name" component. If this block has no "display_name" component, the name displayed will default to the name of the block.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -124,8 +127,8 @@ Describes the destructible by explosion properties for this block. If set to tru
 
 Type: Boolean/Object
 
-- `explosion_resistance`: Double
-    - Describes how resistant the block is to explosion. Greater values mean the block is less likely to break when near an explosion (or has higher resistance to explosions). The scale will be different for different explosion power levels. A negative value or 0 means it will easily explode; larger numbers increase level of resistance.
+-   `explosion_resistance`: Double
+    -   Describes how resistant the block is to explosion. Greater values mean the block is less likely to break when near an explosion (or has higher resistance to explosions). The scale will be different for different explosion power levels. A negative value or 0 means it will easily explode; larger numbers increase level of resistance.
 
 ### Example using Boolean
 
@@ -151,9 +154,9 @@ Describes the destructible by mining properties for this block. If set to true, 
 
 Type: Boolean/Object
 
-- `seconds_to_destroy`: Double
-    - Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.
-    - Note: It actually takes 2x the amount of seconds defined.\
+-   `seconds_to_destroy`: Double
+    -   Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.
+    -   Note: It actually takes 2x the amount of seconds defined.\
 
 ### Example using Boolean
 
@@ -209,8 +212,8 @@ Describes the flammable properties for this block. If set to true, default value
 
 Type: Boolean/Object
 
-- `catch_chance_modifier`: Int
-    - A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a `catch_chance_modifier` greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the `destroy_chance_modifier` is 0). If the `catch_chance_modifier` is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if `destroy_chance_modifier` is greater than 0). The default value of 5 is the same as that of Planks.
+-   `catch_chance_modifier`: Int
+    -   A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a `catch_chance_modifier` greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the `destroy_chance_modifier` is 0). If the `catch_chance_modifier` is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if `destroy_chance_modifier` is greater than 0). The default value of 5 is the same as that of Planks.
 
 ### Example using Boolean
 
@@ -261,11 +264,11 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.40
 
 Type: String/Object
 
-- `identifier`: String
-    - The identifier of the geometry.
-- `bone_visibility`: Object
-    - Optional “array” of Booleans that define the visibility of individual bones in the geometry file. In order to set up bone_visibility the geometry file name must be entered as an identifier. After the identifier has been specified, bone_visibility can be defined based on the names of the bones in the specified geometry file on a true/false basis.
-    - Note that all bones default to true, so bones should only be defined if they are being set to false. Including bones set to true will work the same as the default.
+-   `identifier`: String
+    -   The identifier of the geometry.
+-   `bone_visibility`: Object
+    -   Optional “array” of Booleans that define the visibility of individual bones in the geometry file. In order to set up bone_visibility the geometry file name must be entered as an identifier. After the identifier has been specified, bone_visibility can be defined based on the names of the bones in the specified geometry file on a true/false basis.
+    -   Note that all bones default to true, so bones should only be defined if they are being set to false. Including bones set to true will work the same as the default.
 
 ### Example using String
 
@@ -456,19 +459,20 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.60
 
 Type: Object
 
-- `conditions`: Array - List of conditions where the block can be placed/survive. Limited to 64 conditions. Each condition is a JSON Object that must contain at least one (and can contain both) of the parameters `allowed_faces` or `block_filter` as shown below.
-    - `allowed_faces`: Array - List of any of the following strings describing which face(s) this block can be placed on: `up`, `down`, `north`, `south`, `east`, `west`, `side`, `all`. Limited to 6 faces.
-    - `block_filter`: Array - List of blocks that this block can be placed against in the `allowed_faces` direction. Limited to 64 blocks. Each block in this list can either be specified as a String (block name) or as a BlockDescriptor.
+-   `conditions`: Array - List of conditions where the block can be placed/survive. Limited to 64 conditions. Each condition is a JSON Object that must contain at least one (and can contain both) of the parameters `allowed_faces` or `block_filter` as shown below.
+    -   `allowed_faces`: Array - List of any of the following strings describing which face(s) this block can be placed on: `up`, `down`, `north`, `south`, `east`, `west`, `side`, `all`. Limited to 6 faces.
+    -   `block_filter`: Array - List of blocks that this block can be placed against in the `allowed_faces` direction. Limited to 64 blocks. Each block in this list can either be specified as a String (block name) or as a BlockDescriptor.
 
 ### Block Descriptor
+
 A BlockDescriptor is an object that allows you to reference a block (or multiple blocks) based on its tags, or based on its name and states. The fields of a BlockDescriptor are described below.
 
-- `name`: String
-    - The name of a block.
-- `states`: Object
-    - The list of Vanilla block states and their values that the block can have, expressed in key/value pairs.
-- `tags`: String
-    - A condition using Molang queries that results to true/false that can be used to query for blocks with certain tags.
+-   `name`: String
+    -   The name of a block.
+-   `states`: Object
+    -   The list of Vanilla block states and their values that the block can have, expressed in key/value pairs.
+-   `tags`: String
+    -   A condition using Molang queries that results to true/false that can be used to query for blocks with certain tags.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -506,10 +510,10 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.60
 
 Type: Boolean/Object
 
-- `origin`: Vector [a, b, c]
-    - Minimal position of the bounds of the collision box. `origin` is specified as `[x, y, z]` and must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
--  `size`: Vector [a, b, c]
-    - Size of each side of the collision box. Size is specified as `[x, y, z]`. `origin` + `size` must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
+-   `origin`: Vector [a, b, c]
+    -   Minimal position of the bounds of the collision box. `origin` is specified as `[x, y, z]` and must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
+-   `size`: Vector [a, b, c]
+    -   Size of each side of the collision box. Size is specified as `[x, y, z]`. `origin` + `size` must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
 
 ### Example using Boolean
 
@@ -542,16 +546,16 @@ Lean about [rotatable blocks](/blocks/rotatable-blocks) to apply rotation based 
 
 Type: Object
 
-- `rotation`: Vector [a, b, c]
-    - How many degrees to rotate the geometry. [x ,y, z]. Must be in increments of 90. Can be negative. If not in increment of 90, the game will round to the nearest 90 increment.
-- `rotation_pivot`: Vector [a, b, c]
-    - The pivot point(in block units) to rotate the block on.
-- `scale`: Vector [a, b, c]
-    - How many pixels to scale the geometry. [x ,y, z]
-- `scale_pivot`: Vector [a, b, c]
-    - The pivot point(in block units) to scale the block on.
-- `translation`: Vector [a, b, c]
-    - How many pixels to translate the geometry. [x ,y, z]
+-   `rotation`: Vector [a, b, c]
+    -   How many degrees to rotate the geometry. [x ,y, z]. Must be in increments of 90. Can be negative. If not in increment of 90, the game will round to the nearest 90 increment.
+-   `rotation_pivot`: Vector [a, b, c]
+    -   The pivot point(in block units) to rotate the block on.
+-   `scale`: Vector [a, b, c]
+    -   How many pixels to scale the geometry. [x ,y, z]
+-   `scale_pivot`: Vector [a, b, c]
+    -   The pivot point(in block units) to scale the block on.
+-   `translation`: Vector [a, b, c]
+    -   How many pixels to translate the geometry. [x ,y, z]
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
