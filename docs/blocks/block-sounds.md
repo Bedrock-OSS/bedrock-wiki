@@ -14,7 +14,7 @@ This property is used to determine general block sounds, such as the mining soun
 
 ```json
 {
-    "format_version": [1, 1, 0],
+    "format_version": "1.21.20",
     "wiki:custom_log": {
         "sound": "wood" // Define sound here
     }

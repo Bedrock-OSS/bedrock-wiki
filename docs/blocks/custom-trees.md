@@ -1031,7 +1031,7 @@ Add sounds to blocks
 
 ```json
 {
-    "format_version": [1, 1, 0],
+    "format_version": "1.21.20",
     "wiki:custom_leaves": {
         "sound": "grass"
     },
