@@ -82,6 +82,8 @@ world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
 
 ## Applying Effects to Treaders
 
+### Block JSON
+
 We also need the block to tick in order to apply the desired effect every tick. For this, we'll use the [permutations](/blocks/block-permutations) array so a custom component is only applied if the block is being stepped on:
 
 <CodeHeader>minecraft:block</CodeHeader>
@@ -100,6 +102,8 @@ We also need the block to tick in order to apply the desired effect every tick. 
     }
 ]
 ```
+
+### Custom Component Script
 
 Now, let's add our event that will give the entity the wither effect:
 
