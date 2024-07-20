@@ -45,8 +45,11 @@ const CreativeModeOnlyComponent = {
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
-    blockTypeRegistry.registerCustomComponent("wiki:creative_mode_only", CreativeModeOnlyComponent);
+world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent(
+        "wiki:creative_mode_only",
+        CreativeModeOnlyComponent
+    );
 });
 ```
 
