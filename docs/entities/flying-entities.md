@@ -362,7 +362,7 @@ The entity can now be controlled with the jump key, but there's a bug. If the pl
 
 This fourth method allows us to adjust the falling speed, movement speed and it works when player jumps. It is essential to add the horse jump function so that when the player jumps, he does not fall off the entity, also it's very important to add the family type that indicates that it can fly, since we handle this in the scripts.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>minecraft:entity</CodeHeader>
 
 ```json
 "components": {
