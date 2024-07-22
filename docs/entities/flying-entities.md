@@ -396,8 +396,7 @@ This fourth method allows us to adjust the falling speed, movement speed and it 
 
 After adjusting our entity with the previous configurations, we are going to add the script to give it functionality.
 
-**Utils.js**
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/scripts/utils.js</CodeHeader>
 
 ```js
 import { Entity } from "@minecraft/server";
