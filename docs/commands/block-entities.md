@@ -33,11 +33,18 @@ To preserve credits to the creator, the community termed this method as "Max's B
     - It is necessary to name it 'Grumm' to avoid inverted block textures.
 2. `/execute as @e [type= armor_stand, name=Grumm, c=1] at @s run tp @s ~~~ 260`
     - This will align the MBE to the normal Minecraft block grid.
-ㅤ
+
 :::tip
 - Crouch & right-click (on mcpe: long press) the armor stand 6 times to place it in Pose 7
     - Doing this negates the need to use the 2nd command in the system.
     - **Only use this if you wish to reduce one command from the system.**
+:::
+
+3. Lastly, place the desired block item in the armor stand's mainhand.
+
+:::tip
+- `/replaceitem entity @e [name=Grumm] slot.weapon.offhand 0 <itemID>`
+  - Instead of manually placing the desired block item in the armor stand's main-hand, use this command to place it in it's offhand to prevent players from taking the item.
 :::
 
 ## System
@@ -67,7 +74,7 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ## Rotations & Alignments
 
-> Note: These rotation commands are to be executed only once through a command block.
+> Note: These rotation commands (when item placed in main hand) are to be executed only once through a command block.
 
 <Spoiler title="Full MBE">
 
