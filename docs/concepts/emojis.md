@@ -290,13 +290,13 @@ Your filepath should look like this:
 
 ### Using the emojis in-game
 
-Once you have your custom emojis inside the `glyph_E0.png` or `glyph_E1.png`, you need to obtain it's corresponding "character" which you will be able to copy-paste to display the emoji in-game.
+Once you have your custom emojis inside the `glyph_E0.png` or `glyph_E1.png`, you need to obtain it's corresponding letter/symbol which you will be able to copy-paste to display the emoji in-game.
 
-_You can obtain the character with the help of this [Glyph Web Tool](https://nhanaz.github.io/glyph/) made by @NhanAZ_
+_You can obtain the letter/symbol with the help of this [Glyph Web Tool](https://nhanaz.github.io/glyph/) made by @NhanAZ_
 
 ### Finding the correct hex.
 
-Alternatively, you may insert the character "code" of the emoji slot into the converter below to obtain it.
+Alternatively, you may insert the character "code" of the emoji into the converter below to obtain it's corresponding letter/symbol.
 
 The first two characters of the "code" are always `0x`.
 
