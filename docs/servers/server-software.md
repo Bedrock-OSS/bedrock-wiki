@@ -32,24 +32,24 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 | Language   | Status                                                               |
 | ---------- | -------------------------------------------------------------------- |
-| PHP        | [Still Active](#php)        : 4 < [Discontinued](#php-1)        : 38 |
+| PHP        | [Still Active](#php)        : 4 < [Discontinued](#php-1)        : 39 |
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 14 |
 | C++        | [Still Active](#c)          : 2 < [Discontinued](#c-1)          : 5  |
-| TypeScript | [Still Active](#typescript) : 4 < [Discontinued](#typescript-1) : 1  |
+| TypeScript | [Still Active](#typescript) : 3 < [Discontinued](#typescript-1) : 2  |
 | Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 5  |
-| JavaScript | [Still Active](#javascript) : 1 < [Discontinued](#javascript-1) : 6  |
-| Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 1  |
+| JavaScript | Still Active                : 0 < [Discontinued](#javascript)   : 7  |
+| Rust       | Still Active                : 0 < [Discontinued](#rust)         : 2  |
 | C#         | Still Active                : 0 < [Discontinued](#c-2)          : 3  |
 | C          | Still Active                : 0 < [Discontinued](#c-3)          : 1  |
-| Python     | [Still Active](#python)     : 2 < [Discontinued](#python-1)     : 2  |
+| Python     | [Still Active](#python)     : 1 < [Discontinued](#python-1)     : 3  |
 | D          | Still Active                : 0 < [Discontinued](#d)            : 1  |
 | Kotlin     | Still Active                : 0 < [Discontinued](#kotlin)       : 1  |
 
 ## Active Software
 ### C++
 
--   [LiteLoader](https://github.com/LiteLDev/LiteLoaderBDS)
 -   [Endstone](https://github.com/EndstoneMC/endstone)
+-   [LeviLamina](https://github.com/LiteLDev/LeviLamina)
 
 ### Go
 
@@ -67,28 +67,17 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 -   [BDSX](https://github.com/bdsx/bdsx)
 -   [JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)
--   [PowerAllay](https://github.com/PowerAllay/PowerAllay)
 -   [Serenity](https://github.com/SerenityJS)
-
-### JavaScript
-
--   [GreenFrogMCBE](https://github.com/GreenFrogMCBE/GreenFrogMCBE)
-
-### Rust
-
--   [Netrex](https://github.com/NetrexMC/Netrex)
 
 ### PHP
 
 -   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)
--   [Symply](https://github.com/SymplyX/Symply) 
--   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
+-   [Symply](https://github.com/SymplyX/Symply)
 
 ### Python
 
-- [PieMC](https://github.com/PieMC-Dev/PieMC)
 - [Endstone](https://github.com/EndstoneMC/endstone)
 
 ## Discontinued Software
@@ -140,11 +129,11 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [Terracotta](https://github.com/TerracottaMC/Terracotta)
 -   [voxelwind](https://github.com/voxelwind/voxelwind)
 
-
 ### JavaScript
 
 -   [BlueBird](https://github.com/BlueBirdMC/Server)
 -   [DirtServer](https://github.com/Falkirks/DirtServer)
+-   [GreenFrogMCBE](https://github.com/GreenFrogMCBE/GreenFrogMCBE)
 -   [MineJS](https://github.com/organization/MineJS)
 -   [NodeMine](https://github.com/NodeMine/NodeMine)
 -   [Numerous-alpaca](https://github.com/numerous-alpaca/numerous-alpaca)
@@ -153,6 +142,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### TypeScript
 
 -   [LeafMCBE](https://github.com/LeafMCBE/LeafMCBE)
+-   [PowerAllay](https://github.com/PowerAllay/PowerAllay)
 
 ### Kotlin
 
@@ -195,6 +185,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [StarrySky](https://github.com/StarrySky-PE/StarrySky)
 -   [Steadfast-Hybrid](https://github.com/yungtechboy1/Steadfast-Hybrid)
 -   [SteadFast2](https://github.com/Hydreon/Steadfast2)
+-   [SynapseNet](https://github.com/DANIHEX/SynapseNet)
 -   [T-STAR](https://github.com/TaleStar/T-STAR)
 -   [Turanic](https://github.com/TuranicTeam/Turanic)
 -   [WolfMC](https://github.com/Wolf-MC/WolfMC)
@@ -202,11 +193,13 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### Python
 
 -   [AlphaMC](https://github.com/Suppert/AlphaMC)
+-   [PieMC](https://github.com/PieMC-Dev/PieMC)
 -   [PodrumLegacy](https://github.com/Podrum/PodrumLegacy)
 
 ### Rust
 
 -   [Limonite](https://github.com/iTXTech/limonite)
+-   [Netrex](https://github.com/NetrexMC/Netrex)
 
 ## Licensing
 
