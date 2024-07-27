@@ -83,7 +83,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 ### Rust
 
-- [RAsra](https://github.com/Adrian8115/RAstra)
+- [RAstra](https://github.com/Adrian8115/RAstra)
 
 ## Discontinued Software
 
