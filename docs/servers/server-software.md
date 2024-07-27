@@ -38,7 +38,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | TypeScript | [Still Active](#typescript) : 3 < [Discontinued](#typescript-1) : 2  |
 | Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 5  |
 | JavaScript | Still Active                : 0 < [Discontinued](#javascript)   : 7  |
-| Rust       | Still Active                : 0 < [Discontinued](#rust)         : 2  |
+| Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 3  |
 | C#         | Still Active                : 0 < [Discontinued](#c-2)          : 3  |
 | C          | Still Active                : 0 < [Discontinued](#c-3)          : 1  |
 | Python     | [Still Active](#python)     : 1 < [Discontinued](#python-1)     : 3  |
@@ -79,6 +79,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### Python
 
 - [Endstone](https://github.com/EndstoneMC/endstone)
+
+### Rust
+
+- [RAsra](https://github.com/Adrian8115/RAstra)
 
 ## Discontinued Software
 
@@ -200,6 +204,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 -   [Limonite](https://github.com/iTXTech/limonite)
 -   [Netrex](https://github.com/NetrexMC/Netrex)
+-   [Mirai](https://github.com/teampathfinders/mirai)
 
 ## Licensing
 
