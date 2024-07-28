@@ -22,6 +22,7 @@ mentions:
     - AzaleeX
     - wu-vincent
     - smartcmd
+    - Adrian8115
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
@@ -38,7 +39,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 | TypeScript | [Still Active](#typescript) : 3 < [Discontinued](#typescript-1) : 2  |
 | Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 5  |
 | JavaScript | Still Active                : 0 < [Discontinued](#javascript)   : 7  |
-| Rust       | Still Active                : 0 < [Discontinued](#rust)         : 2  |
+| Rust       | [Still Active](#rust)       : 1 < [Discontinued](#rust-1)       : 3  |
 | C#         | Still Active                : 0 < [Discontinued](#c-2)          : 3  |
 | C          | Still Active                : 0 < [Discontinued](#c-3)          : 1  |
 | Python     | [Still Active](#python)     : 1 < [Discontinued](#python-1)     : 3  |
@@ -79,6 +80,10 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### Python
 
 - [Endstone](https://github.com/EndstoneMC/endstone)
+
+### Rust
+
+- [RAstra](https://github.com/Adrian8115/RAstra)
 
 ## Discontinued Software
 
@@ -200,6 +205,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 -   [Limonite](https://github.com/iTXTech/limonite)
 -   [Netrex](https://github.com/NetrexMC/Netrex)
+-   [Mirai](https://github.com/teampathfinders/mirai)
 
 ## Licensing
 
