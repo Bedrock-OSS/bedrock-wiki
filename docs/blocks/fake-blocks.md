@@ -89,9 +89,7 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
             ]
         },
         "run_command": {
-            "command": [
-                "setblock ~~~ wiki:align"
-            ]
+            "command": ["setblock ~~~ wiki:align"]
         }
     }
 }
@@ -135,9 +133,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 2
             },
-            "minecraft:custom_components": [
-                "wiki:on_placed_align"
-            ]
+            "minecraft:custom_components": ["wiki:on_placed_align"]
         }
     }
 }
@@ -152,15 +148,14 @@ const wikiOnPlacedAlign = {
     beforeOnPlayerPlace(event) {
         event.cancel = true;
         let blockLocation = event.block.location;
-        event.player.dimension.spawnEntity('wiki:dummy_align', blockLocation);
-    }
-}
+        event.player.dimension.spawnEntity("wiki:dummy_align", blockLocation);
+    },
+};
 
-world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
-    blockTypeRegistry.registerCustomComponent("wiki:on_placed_align", wikiOnPlacedAlign);
+world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent("wiki:on_placed_align", wikiOnPlacedAlign);
 });
 ```
-
 
 <CodeHeader>BP/entities/your_dummy_entity.json</CodeHeader>
 
@@ -200,9 +195,7 @@ world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
         "events": {
             "minecraft:entity_spawned": {
                 "add": {
-                    "component_groups": [
-                        "transform"
-                    ]
+                    "component_groups": ["transform"]
                 }
             }
         }

@@ -143,8 +143,8 @@ const CustomCropGrowthBlockComponent = {
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
-    blockTypeRegistry.registerCustomComponent(
+world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent(
         "wiki:custom_crop_growth",
         CustomCropGrowthBlockComponent
     );
