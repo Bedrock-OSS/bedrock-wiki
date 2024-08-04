@@ -94,13 +94,13 @@ This is the first half of the handshake between the client and the server.
 
 The client responds with this after they receive the open connection reply 1 packet.
 
-`0x07 | magic | Cookie (uint32, if server has security) + extra byte(0) | server address | MTU Size (Unsigned short) | client GUID`
+`0x07 | magic | Cookie (uint32, if server has security) | Client supports security (Boolean(false), always false for the vanilla client) | server Address | MTU Size (Unsigned short) | client GUID (Long)`
 
 ### Open Connection Reply 2        |→ Server→Client
 
 This is the last part of the handshake between the client and the server.
 
-`0x08 | magic | server GUID | client address | MTU Size | server has security`
+`0x08 | magic | server GUID (Long) | client Address | MTU Size | security(Boolean)`
 
 **From here on, all RakNet messages are contained in a [Frame Set Packet](https://wiki.vg/Raknet_Protocol#Frame_Set_Packet).**
 
@@ -108,7 +108,7 @@ This is the last part of the handshake between the client and the server.
 
 This is the part where the client sends the connection request.
 
-`0x09 | client GUID | Request timestamp (Long) | Secure (Boolean, I use 0x00)`
+`0x09 | client GUID (Long) | Request timestamp (Long) | Secure (Boolean)`
 
 ### Connection Request Accepted        |→ Server→Client
 
