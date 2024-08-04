@@ -94,7 +94,7 @@ This is the first half of the handshake between the client and the server.
 
 The client responds with this after they receive the open connection reply 1 packet.
 
-`0x07 | magic | Cookie (uint32, if server has security) | Client supports security (Boolean(false), always false for the vanilla client) | server Address | MTU Size (Unsigned short) | client GUID (Long)`
+`0x07 | magic | Cookie (uint32, if server has security) | Client supports security (Boolean(false), always false for the vanilla client, if server has security) | server Address | MTU Size (Unsigned short) | client GUID (Long)`
 
 ### Open Connection Reply 2        |→ Server→Client
 
