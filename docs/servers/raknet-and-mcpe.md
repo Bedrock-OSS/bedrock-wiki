@@ -144,7 +144,7 @@ The client sends this packet in response to Connection Request Accepted.
  placehodler for the other clientMachineAddresses (a.k.a. Internal Adresses):
 
  > 0xd4 0x0b 0xa7 0x86 0xdd 0x98 0x33 0x00 0x00
- each byte replaces one of the 9 misisng clientMachineAdresses
+ each byte replaces one of the 9 missing clientMachineAdresses
 
 After having sent this packet,
 you must periodically sent a Connected Ping to keep the connection alive.
