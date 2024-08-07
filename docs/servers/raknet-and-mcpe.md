@@ -49,6 +49,7 @@ You can find a list of Minecraft Bedrock server softwares [here](/servers/server
 - **From here on, the RakNet connection is established and all RakNet messages are contained in a [Frame Set Packet](https://wiki.vg/Raknet_Protocol#Frame_Set_Packet).**
 -   [x] Connection Request
 -   [x] Connection Request Accepted
+-   [x] New Incoming Connection
 
 </Checklist>
 
@@ -70,7 +71,8 @@ Example:
 
 The client doesn't seem to use the gamemode or the numeric value for the gamemode.
 
-### Open Connection Request 1
+
+### Open Connection Request 1        |→ Client→Server
 
 The client sends this when attempting to join the server
 
@@ -80,53 +82,46 @@ The null padding seems to be used to discover the maximum packet size the networ
 
 The client will send this to the server with decreasing null padding until the server responds with a
 
-### Open Connection Reply 1
+### Open Connection Reply 1        |→ Server→Client
 
 The server responds with this once the client attempts to join
 
-`0x06 | magic | server GUID | use encryption boolean (normally false) | RakNet Null Padding Size (Unsigned short, I use 1400)`
+`0x06 | magic | server GUID | ServerHasSecurity (boolean) | Cookie (uint32, if server has security) | MTU Size (Unsigned short)`
 
 This is the first half of the handshake between the client and the server.
 
-### Open Connection Request 2
+### Open Connection Request 2        |→ Client→Server
 
 The client responds with this after they receive the open connection reply 1 packet.
 
-`0x07 | magic | server address | RakNet Null Padding Size | client GUID`
+`0x07 | magic | Cookie (uint32, if server has security) | Client supports security (Boolean(false), always false for the vanilla client, if server has security) | server Address | MTU Size (Unsigned short) | client GUID (Long)`
 
-### Open Connection Reply 2
+### Open Connection Reply 2        |→ Server→Client
 
 This is the last part of the handshake between the client and the server.
 
-`0x08 | magic | server GUID | client address | Null Padding Size | use encryption`
+`0x08 | magic | server GUID (Long) | client Address | MTU Size | security(Boolean)`
 
-### Connection Request
+**From here on, all RakNet messages are contained in a [Frame Set Packet](https://wiki.vg/Raknet_Protocol#Frame_Set_Packet).**
+
+### Connection Request        |→ Client→Server
 
 This is the part where the client sends the connection request.
 
-`0x84 (RakNet_Packet_type BitFlag, see table below) | RakNet Packet Sequence number (3 bytes, Minecraft Client sends 0x00 0x00 0x00) | 0x40 (RakNet_Message BitFlag, see table below) | RakNet Payload length (2 bytes; Minecraft Client sends 144 (0x00 0x90), even though that is wrong) | RakNet Reliable Message Number (3 bytes, Minecraft Client sends 0x00 0x00 0x00) |`
-`0x09 | client GUID | Request timestamp (Long) | Secure (Boolean, I use 0x00)`
+`0x09 | client GUID (Long) | Request timestamp (Long) | Secure (Boolean)`
 
-RakNet_Packet_type BitFlag Table 0x84
-||||
-|----|----|----|
-| 1 . . . | . . . . | = is for connected peer: True|
-| . 0 . . | . . . . | = is ACK: False|
-| . . 0 . | . . . . | = is NACK: False|
-| . . . . | 0 . . . | = is pair: False|
-| . . . . | . 1 . . | = needs B and AS: True|
-
-RakNet_Message BitFlag Table 0x40
-||||
-|----|----|----|
-| 0 1 0 . | . . . . | = reliability: reliable (2)|
-| . . . 0 | . . . . | = has split packet: False|
-
-### Connection Request Accepted
+### Connection Request Accepted        |→ Server→Client
 
 The server sends this packet in response to the incoming connection request.
  
- `0x10 | client Address | System index (Short, unknown what this does. 0 works as a value (Minecraft client sends 47)) | System adresses ([]Address) | Request timestamp (Long) | Accepted timestamp (Long)`
+ `0x10 | client Address | System index (Short, unknown what this does. 0 works as a value (Minecraft client sends 47)) | System adresses ([]Address) | Ping time (Long) | Pong Time (Long)`
+
+### New Incoming Connection        |→ Client→Server
+
+Our RakNet connection is now fully successful.
+
+`0x13 | server Address | internal Adress ([20(maybe 10)]Address) (i use 255.255.255.255:0) | Ping time (Long) | Pong Time (Long)`
+
 
 ## Sources
 ::: tip
