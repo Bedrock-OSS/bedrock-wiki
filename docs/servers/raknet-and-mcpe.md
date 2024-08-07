@@ -7,6 +7,7 @@ mentions:
     - ThomasOrs
     - Adrian8115
     - ismaileke
+    - Tom-Teclador
 ---
 
 Minecraft Bedrock uses a protocol known as [RakNet](http://www.jenkinssoftware.com/)
@@ -128,6 +129,45 @@ The server sends this packet in response to the incoming connection request.
  
  `0x10 | client Address | System index (Short, unknown what this does. 0 works as a value (Minecraft client sends 47)) | System adresses ([]Address) | Request timestamp (Long) | Accepted timestamp (Long)`
 
+### Note:
+The next 2 packets ( and the first Minecraft Protocoll packet) are all send together as one by the vanilla client.
+The RakNetProtocoll allows for them to be sent seperately too, 
+however servers with a custom raknet implementation might not always handle this case 
+because this never occurs within the vanilly client.
+
+### New Incomming Connection
+
+The client sends this packet in response to Connection Request Accepted.
+ 
+ `0x13 | serverAddress (uint8) | clientMachineAddresses (address[10], Minecraft sends only one ipv6 together with a placeholder (see below) instead of the other 9) | clientSendTime (uint64) | serverSendTime (uint64)`
+
+ placehodler for the other clientMachineAddresses (a.k.a. Internal Adresses):
+
+ > 0xd4 0x0b 0xa7 0x86 0xdd 0x98 0x33 0x00 0x00
+ each byte replaces one of the 9 misisng clientMachineAdresses
+
+After having sent this packet,
+you must periodically sent a Connected Ping to keep the connection alive.
+The server also sometimes sends a Connected Ping, respond with a Connected Pong.
+
+### Connected Ping
+
+The client sends this packet immeadiatly after/with New Incomming Connection.
+This packet should be sent as unreliable.
+The client/server will respond to this with a Connected Pong.
+
+`0x00 | Time since start (uint64)`
+
+
+### Connected Pong
+
+The client or server sends this packet after having received a Connected Ping.
+This packet should be sent as unreliable.
+
+`0x00 | Time since start client (uint64) | Time since start server (uint64)`
+
+
+
 ## Sources
 ::: tip
 If you are interested and want to read more about it here is the documentation for the Bedrock Protocol and RakNet:
@@ -135,6 +175,8 @@ If you are interested and want to read more about it here is the documentation f
 [Mojang's Official Protocol Documentation](https://github.com/Mojang/bedrock-protocol-docs)
 
 [RakNet Protocol Documentation](https://wiki.vg/Raknet_Protocol)
+
+[another RakNet Protocol Documentation](https://github.com/vp817/RakNetProtocolDoc)
 :::
 
 This page is a WIP, feel free to contribute as it is still being worked on.
