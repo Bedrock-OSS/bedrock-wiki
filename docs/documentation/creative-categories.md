@@ -110,6 +110,7 @@ _For use with the `menu_category` parameter, `group`._
 | itemGroup.name.chest              |
 | itemGroup.name.chestboat          |
 | itemGroup.name.chestplate         |
+| itemGroup.name.compounds          |
 | itemGroup.name.concrete           |
 | itemGroup.name.concretePowder     |
 | itemGroup.name.cookedFood         |
@@ -151,6 +152,7 @@ _For use with the `menu_category` parameter, `group`._
 | itemGroup.name.potion             |
 | itemGroup.name.potterySherds      |
 | itemGroup.name.pressurePlate      |
+| itemGroup.name.products           |
 | itemGroup.name.rail               |
 | itemGroup.name.rawFood            |
 | itemGroup.name.record             |
@@ -176,5 +178,5 @@ _For use with the `menu_category` parameter, `group`._
 | itemGroup.name.wool               |
 | itemGroup.name.woolCarpet         |
 
-*Last updated for 1.20.10*
+*Last updated for 1.21.0*
 <!-- page_dumper_end -->

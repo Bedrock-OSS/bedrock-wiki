@@ -159,5 +159,5 @@ mentions:
 | minecraft:fog_the_end                          | the_end                          | 
 | minecraft:fog_warm_ocean                       | warm_ocean                       | 
 | minecraft:fog_warped_forest                    | warped_forest                    | 
-*Last updated for 1.20.10*
+*Last updated for 1.21.0*
 <!-- page_dumper_end -->

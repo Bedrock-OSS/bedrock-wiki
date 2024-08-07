@@ -31,7 +31,7 @@ Entity Properties Definition:
 {
     "minecraft:entity":{
         "description":{
-            "identifier":"entity:properties_example",
+            "identifier":"wiki:properties_example",
             "properties":{
                 "property:number_range_example":{
                     "values":{
@@ -170,7 +170,7 @@ Entity can have various aliases with custom entity identifier to use:
 	"format_version": "1.16.0",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "entity:properties_example",
+			"identifier": "wiki:properties_example",
 			"is_spawnable": true,
 			"is_summonable": true,
 			"is_experimental": false,
@@ -185,11 +185,11 @@ Entity can have various aliases with custom entity identifier to use:
 				}
 			},
 			"aliases": {
-				"entity:default_alias": {},
-				"entity:first_alias": {
+				"wiki:default_alias": {},
+				"wiki:first_alias": {
 					"property:property_index": 1
 				},
-				"entity:second_alias": {
+				"wiki:second_alias": {
 					"property:property_index": 2
 				}
 			}
@@ -198,7 +198,7 @@ Entity can have various aliases with custom entity identifier to use:
 }
 ```
 
-Now, the entity has multiple aliases, and you can use the defined alias identifier through the `summon` command to spawn the entity with the properties set: `/summon entity:first_alias` will spawn the entity with the entity property `property:property_index` set to 1.
+Now, the entity has multiple aliases, and you can use the defined alias identifier through the `summon` command to spawn the entity with the properties set: `/summon ewiki:first_alias` will spawn the entity with the entity property `property:property_index` set to 1.
 
 ## Entity Permutations
 

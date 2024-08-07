@@ -606,7 +606,7 @@ Example:
 	"minecraft:item": {
 		"description": {
             // Describing an object with components.
-			"identifier": "bs:copper_coin",
+			"identifier": "wiki:copper_coin",
 			"category": "items"
 		},
 		"components": {

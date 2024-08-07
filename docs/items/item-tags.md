@@ -23,12 +23,12 @@ Item tags can be used to ensure that a item meets certain conditions.
     "format_version": "1.20.50",
     "minecraft:item": {
         "description": {
-            "identifier": "example:my_item"
+            "identifier": "wiki:my_item"
         },
         "components": {
             "minecraft:tags": {
                 "tags": [
-                    "example:my_tag"
+                    "wiki:my_tag"
                 ]
             }
         }
@@ -45,10 +45,10 @@ Item tags can be used to ensure that a item meets certain conditions.
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "example:my_item"
+            "identifier": "wiki:my_item"
         },
         "components": {
-            "tag:example:my_tag": {}
+            "tag:wiki:my_tag": {}
         }
     }
 }

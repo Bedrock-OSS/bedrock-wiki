@@ -2,12 +2,11 @@
 title: Sound Definitions
 mentions:
     - MedicalJewel105
-    - nothatkidreal
 ---
 
 Sounds from `sound_definitions.json` sorted by categories and subcategories based on their names.
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-*Last updated for 1.20.10*
+*Last updated for 1.21.0*
 
 ## ambient
 
@@ -44,6 +43,10 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `ambient.warped_forest.loop`
 
 `ambient.warped_forest.mood`
+
+#### entity
+---
+`entity.generic.splash`
 
 #### firework
 ---
@@ -132,6 +135,14 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `block.composter.fill_success`
 
 `block.composter.ready`
+
+`block.copper_bulb.turn_off`
+
+`block.copper_bulb.turn_on`
+
+`block.decorated_pot.insert`
+
+`block.decorated_pot.insert_fail`
 
 `block.enchanting_table.use`
 
@@ -281,6 +292,10 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `break.chiseled_bookshelf`
 
+`break.copper_bulb`
+
+`break.copper_grate`
+
 `break.decorated_pot`
 
 `break.dirt_with_roots`
@@ -294,6 +309,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `break.hanging_roots`
 
 `break.hanging_sign`
+
+`break.heavy_core`
 
 `break.large_amethyst_bud`
 
@@ -326,6 +343,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `break.suspicious_sand`
 
 `break.tuff`
+
+`break.web`
 
 #### bubble
 ---
@@ -459,6 +478,10 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `close.wooden_trapdoor`
 
+#### close_door
+---
+`close_door.copper`
+
 #### conduit
 ---
 `conduit.activate`
@@ -470,6 +493,14 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `conduit.deactivate`
 
 `conduit.short`
+
+#### crafter
+---
+`crafter.craft`
+
+`crafter.disable_slot`
+
+`crafter.fail`
 
 #### dig
 ---
@@ -555,6 +586,10 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 ---
 `extinguish.candle`
 
+#### fall
+---
+`fall.copper_bulb`
+
 #### fire
 ---
 `fire.fire`
@@ -604,6 +639,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `hit.cloth`
 
 `hit.copper`
+
+`hit.copper_bulb`
 
 `hit.coral`
 
@@ -713,6 +750,18 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 ---
 `lodestone_compass.link_compass_to_lodestone`
 
+#### ominous_bottle
+---
+`ominous_bottle.end_use`
+
+#### ominous_item_spawner
+---
+`ominous_item_spawner.about_to_spawn_item`
+
+`ominous_item_spawner.spawn_item`
+
+`ominous_item_spawner.spawn_item_begin`
+
 #### open
 ---
 `open.bamboo_wood_door`
@@ -742,6 +791,14 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `open.wooden_door`
 
 `open.wooden_trapdoor`
+
+#### open_door
+---
+`open_door.copper`
+
+#### open_trapdoor
+---
+`open_trapdoor.copper`
 
 #### pick_berries
 ---
@@ -778,6 +835,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `place.chiseled_bookshelf`
 
 `place.copper`
+
+`place.copper_bulb`
 
 `place.deepslate`
 
@@ -821,6 +880,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `place.tuff`
 
+`place.tuff_bricks`
+
 #### portal
 ---
 `portal.portal`
@@ -830,6 +891,10 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `power.off.sculk_sensor`
 
 `power.on.sculk_sensor`
+
+#### pumpkin
+---
+`pumpkin.carve`
 
 #### random
 ---
@@ -903,15 +968,25 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `step.cherry_leaves`
 
+`step.copper_bulb`
+
+`step.copper_grate`
+
 `step.decorated_pot`
 
 `step.frog_spawn`
 
 `step.froglight`
 
+`step.heavy_core`
+
 `step.sculk_shrieker`
 
 `step.sculk_vein`
+
+`step.tuff_bricks`
+
+`step.web`
 
 #### tile
 ---
@@ -926,6 +1001,32 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 #### tilt_up
 ---
 `tilt_up.big_dripleaf`
+
+#### trial_spawner
+---
+`trial_spawner.ambient`
+
+`trial_spawner.ambient_ominous`
+
+`trial_spawner.break`
+
+`trial_spawner.charge_activate`
+
+`trial_spawner.close_shutter`
+
+`trial_spawner.detect_player`
+
+`trial_spawner.eject_item`
+
+`trial_spawner.hit`
+
+`trial_spawner.open_shutter`
+
+`trial_spawner.place`
+
+`trial_spawner.spawn_mob`
+
+`trial_spawner.step`
 
 #### ui
 ---
@@ -1019,16 +1120,58 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `use.wood`
 
+#### vault
+---
+`vault.activate`
+
+`vault.ambient`
+
+`vault.break`
+
+`vault.close_shutter`
+
+`vault.deactivate`
+
+`vault.eject_item`
+
+`vault.hit`
+
+`vault.insert_item`
+
+`vault.insert_item_fail`
+
+`vault.open_shutter`
+
+`vault.place`
+
+`vault.step`
+
 ## bottle
 
 #### bottle
 ---
 `bottle.dragonbreath`
 
+`bottle.empty`
+
+`bottle.fill`
+
 ## hostile
+
+#### breeze_wind_charge
+---
+`breeze_wind_charge.burst`
 
 #### entity
 ---
+`entity.wither_skeleton.ambient`
+
+`entity.wither_skeleton.death`
+
+`entity.wither_skeleton.hurt`
+
+`entity.wither_skeleton.step`
+
 `entity.zombie.converted_to_drowned`
 
 #### mob
@@ -1040,6 +1183,38 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `mob.blaze.hit`
 
 `mob.blaze.shoot`
+
+`mob.bogged.ambient`
+
+`mob.bogged.death`
+
+`mob.bogged.hurt`
+
+`mob.bogged.step`
+
+`mob.breeze.charge`
+
+`mob.breeze.death`
+
+`mob.breeze.deflect`
+
+`mob.breeze.hurt`
+
+`mob.breeze.idle_air`
+
+`mob.breeze.idle_ground`
+
+`mob.breeze.inhale`
+
+`mob.breeze.jump`
+
+`mob.breeze.land`
+
+`mob.breeze.shoot`
+
+`mob.breeze.slide`
+
+`mob.breeze.whirl`
 
 `mob.creeper.death`
 
@@ -1169,6 +1344,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `mob.hoglin.attack`
 
+`mob.hoglin.converted_to_zombified`
+
 `mob.hoglin.death`
 
 `mob.hoglin.howl`
@@ -1180,6 +1357,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `mob.hoglin.step`
 
 `mob.husk.ambient`
+
+`mob.husk.convert_to_zombie`
 
 `mob.husk.death`
 
@@ -1525,17 +1704,45 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `music.overworld.cherry_grove`
 
+`music.overworld.deep_dark`
+
 `music.overworld.desert`
 
+`music.overworld.dripstone_caves`
+
 `music.overworld.flower_forest`
+
+`music.overworld.grove`
+
+`music.overworld.jagged_peaks`
 
 `music.overworld.jungle`
 
 `music.overworld.jungle_edge`
 
+`music.overworld.lush_caves`
+
 `music.overworld.mesa`
 
+`music.overworld.snowy_slopes`
+
+`music.overworld.stony_peaks`
+
 ## neutral
+
+#### armor
+---
+`armor.break_wolf`
+
+`armor.crack_wolf`
+
+`armor.damage_wolf`
+
+`armor.equip_wolf`
+
+`armor.repair_wolf`
+
+`armor.unequip_wolf`
 
 #### charge
 ---
@@ -1584,6 +1791,32 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `mob.allay.item_taken`
 
 `mob.allay.item_thrown`
+
+`mob.armadillo.ambient`
+
+`mob.armadillo.brush`
+
+`mob.armadillo.death`
+
+`mob.armadillo.eat`
+
+`mob.armadillo.hurt`
+
+`mob.armadillo.hurt_reduced`
+
+`mob.armadillo.land`
+
+`mob.armadillo.peek`
+
+`mob.armadillo.roll`
+
+`mob.armadillo.scute_drop`
+
+`mob.armadillo.step`
+
+`mob.armadillo.unroll_finish`
+
+`mob.armadillo.unroll_start`
 
 `mob.armor_stand.break`
 
@@ -1648,6 +1881,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `mob.camel.step_sand`
 
 `mob.cat.beg`
+
+`mob.cat.beg_for_food`
 
 `mob.cat.eat`
 
@@ -2041,6 +2276,20 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 ## player
 
+#### ambient
+---
+`ambient.underwater.enter`
+
+`ambient.underwater.exit`
+
+#### apply_effect
+---
+`apply_effect.bad_omen`
+
+`apply_effect.raid_omen`
+
+`apply_effect.trial_omen`
+
 #### armor
 ---
 `armor.equip_chain`
@@ -2100,6 +2349,8 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 `damage.fallbig`
 
 `damage.fallsmall`
+
+`damage.thorns`
 
 #### elytra
 ---
@@ -2407,6 +2658,14 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `land.wood`
 
+#### mace
+---
+`mace.heavy_smash_ground`
+
+`mace.smash_air`
+
+`mace.smash_ground`
+
 #### mob
 ---
 `mob.player.hurt_drown`
@@ -2575,6 +2834,10 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 ---
 `vr.stutterturn`
 
+#### wind_charge
+---
+`wind_charge.burst`
+
 ## record
 
 #### horn
@@ -2671,13 +2934,11 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `record.ward`
 
-`record.5`
-
-`record.otherside`
-
-`record.relic`
-
 ## ui
+
+#### hud
+---
+`hud.bubble.pop`
 
 #### item
 ---
@@ -2691,6 +2952,16 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `random.toast`
 
+`random.toast_recipe_unlocking_in`
+
+`random.toast_recipe_unlocking_out`
+
+#### ui
+---
+`ui.drawer_close`
+
+`ui.drawer_open`
+
 ## weather
 
 #### ambient
@@ -2701,7 +2972,21 @@ This page was created with [Wiki Content Generator](https://github.com/Bedrock-O
 
 `ambient.weather.thunder`
 
-## No Category
+## No category
+
+#### record
+---
+`record.5`
+
+`record.creator`
+
+`record.creator_music_box`
+
+`record.otherside`
+
+`record.precipice`
+
+`record.relic`
 
 #### sign
 ---

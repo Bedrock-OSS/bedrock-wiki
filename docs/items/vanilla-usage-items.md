@@ -5,12 +5,9 @@ mentions:
     - MedicalJewel105
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
 Note that not more than 8 examples are shown for each component to keep this page fast to load. Namespace `minecraft` was also removed.
-If you want to see full page, you can do it [here](/items/vui-full). *Last updated for 1.20.10*
+If you want to see full page, you can do it [here](/items/vui-full). *Last updated for 1.21.0*
 
 ## block
 
@@ -41,6 +38,79 @@ camera
     "shutter_duration": 0.2,
     "picture_duration": 1.0,
     "slide_away_duration": 0.2
+}
+```
+
+</Spoiler>
+
+## cooldown
+
+<Spoiler title="Show">
+
+wind_charge
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:cooldown": {
+    "category": "wind_charge",
+    "duration": 0.5
+}
+```
+
+</Spoiler>
+
+## display_name
+
+<Spoiler title="Show">
+
+apple
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:display_name": {
+    "value": "item.apple.name"
+}
+```
+
+breeze_rod
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:display_name": {
+    "value": "item.breeze_rod.name"
+}
+```
+
+ominous_trial_key
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:display_name": {
+    "value": "item.ominous_trial_key.name"
+}
+```
+
+trial_key
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:display_name": {
+    "value": "item.trial_key.name"
+}
+```
+
+wind_charge
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:display_name": {
+    "value": "item.wind_charge.name"
 }
 ```
 
@@ -79,7 +149,7 @@ apple
 ```json
 "minecraft:food": {
     "nutrition": 4,
-    "saturation_modifier": "low"
+    "saturation_modifier": 0.3
 }
 ```
 
@@ -204,6 +274,62 @@ appleEnchanted
 
 </Spoiler>
 
+## icon
+
+<Spoiler title="Show">
+
+apple
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:icon": {
+    "texture": "apple"
+}
+```
+
+breeze_rod
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:icon": {
+    "texture": "breeze_rod"
+}
+```
+
+ominous_trial_key
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:icon": {
+    "texture": "ominous_trial_key"
+}
+```
+
+trial_key
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:icon": {
+    "texture": "trial_key"
+}
+```
+
+wind_charge
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:icon": {
+    "texture": "wind_charge"
+}
+```
+
+</Spoiler>
+
 ## max_damage
 
 <Spoiler title="Show">
@@ -300,6 +426,22 @@ suspicious_stew
 
 ```json
 "minecraft:max_stack_size": 1
+```
+
+</Spoiler>
+
+## projectile
+
+<Spoiler title="Show">
+
+wind_charge
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:projectile": {
+    "projectile_entity": "wind_charge_projectile"
+}
 ```
 
 </Spoiler>
@@ -467,7 +609,7 @@ salmon
 
 </Spoiler>
 
-## use_duration
+## tags
 
 <Spoiler title="Show">
 
@@ -476,8 +618,52 @@ apple
 <CodeHeader></CodeHeader>
 
 ```json
-"minecraft:use_duration": 32
+"minecraft:tags": {
+    "tags": [
+        "minecraft:is_food"
+    ]
+}
 ```
+
+</Spoiler>
+
+## throwable
+
+<Spoiler title="Show">
+
+wind_charge
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:throwable": {
+    "do_swing_animation": true,
+    "launch_power_scale": 1.5,
+    "max_launch_power": 1.5,
+    "default_offset_scale": 0.8,
+    "inside_block_offset_scale": 0.05
+}
+```
+
+</Spoiler>
+
+## use_animation
+
+<Spoiler title="Show">
+
+apple
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:use_animation": "eat"
+```
+
+</Spoiler>
+
+## use_duration
+
+<Spoiler title="Show">
 
 appleEnchanted
 
@@ -533,6 +719,31 @@ camera
 
 ```json
 "minecraft:use_duration": 100000
+```
+
+carrot
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:use_duration": 32
+```
+
+</Spoiler>
+
+## use_modifiers
+
+<Spoiler title="Show">
+
+apple
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:use_modifiers": {
+    "use_duration": 1.6,
+    "movement_modifier": 0.35
+}
 ```
 
 </Spoiler>

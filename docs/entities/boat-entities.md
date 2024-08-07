@@ -34,7 +34,7 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 	"minecraft:entity": {
 		"format_version": "1.14.0",
 		"description": {
-			"identifier": "foo:bar",
+			"identifier": "wiki:boat",
 			"is_summonable": true,
 			"is_spawnable": true,
 			"is_experimental": false
@@ -99,7 +99,7 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 	"minecraft:entity": {
 		"format_version": "1.14.0",
 		"description": {
-			"identifier": "foo:bar",
+			"identifier": "wiki:boat",
 			"is_summonable": true,
 			"is_spawnable": true,
 			"is_experimental": false

@@ -16,7 +16,7 @@ mentions:
 ---
 
 :::warning
-A much easier method of running entity commands is through the `run_command` event response. However, this is currently experimental.
+A much easier method of running entity commands is through the `run_command` or `queue_command` event response. However, this is currently experimental.
 :::
 
 ## Animation Controllers
