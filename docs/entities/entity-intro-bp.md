@@ -15,6 +15,7 @@ mentions:
     - ChibiMango
     - SmokeyStack
     - ThomasOrs
+description: Introduction to entities behavior pack.
 ---
 
 Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means and how to use them.

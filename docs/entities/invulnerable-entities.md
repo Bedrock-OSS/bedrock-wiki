@@ -8,6 +8,7 @@ mentions:
     - Joelant05
     - solvedDev
     - MedicalJewel105
+description: Learn how to make invulnerable entities.
 ---
 
 ## Using Damage Sensor

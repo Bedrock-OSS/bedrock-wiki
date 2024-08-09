@@ -5,6 +5,7 @@ tags:
     - easy
 mentions:
     - Kaioga5
+description: Re-creation of vanilla glazed terracotta.
 ---
 
 :::danger PLEASE READ

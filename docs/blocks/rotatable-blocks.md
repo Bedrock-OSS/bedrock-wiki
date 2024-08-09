@@ -2,12 +2,13 @@
 title: Rotatable Blocks
 category: Tutorials
 mentions:
-    - Ultr4Anubis
-    - SmokeyStack
-    - ihategravel2
-    - MedicalJewel105
-    - MajestikButter
-    - QuazChick
+  - Ultr4Anubis
+  - SmokeyStack
+  - ihategravel2
+  - MedicalJewel105
+  - MajestikButter
+  - QuazChick
+description: Create rotatable blocks.
 ---
 
 :::danger PLEASE READ

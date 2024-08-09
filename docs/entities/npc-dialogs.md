@@ -14,7 +14,7 @@ mentions:
     - ThomasOrs
 ---
 
-Non-Player Characters, or NPCs are villager-like entities that can be given a dialogue with a message and multiple buttons. They were originally designed for use in adventure maps, but with the introduction of the `/dialogue` command, they can now be used in the context of a normal addon.
+Non-Player Characters, or NPCs are villager-like entities that can be given a dialogue with a message and multiple buttons. They were originally designed for use in adventure maps, but with the introduction of the `/dialogue` command, they can now be used in the context of a normal add-on.
 
 ## Dialog Files
 

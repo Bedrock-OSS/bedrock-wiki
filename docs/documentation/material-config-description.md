@@ -1,10 +1,11 @@
 ---
 title: Material Configuration Description
 tags:
-    - expert
+  - expert
 mentions:
-    - MedicalJewel105
-    - SmokeyStack
+  - MedicalJewel105
+  - SmokeyStack
+description: This article will introduce the structure and configuration of the material file in detail.
 ---
 
 :::warning

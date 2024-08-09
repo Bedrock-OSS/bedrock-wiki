@@ -6,6 +6,7 @@ mentions:
     - SirLich
 tags:
     - experimental
+description: Add your structure to world generation.
 ---
 
 Structure feature is one of the most basic feature. It places exported `.mcstructure` file in the world.

@@ -11,6 +11,7 @@ mentions:
   - retr0cube
   - TheItsNameless
   - QuazChick
+description: Menu categories determine where items and blocks appear inside of the creative inventory and recipe book.
 ---
 
 Menu categories determine where items and blocks appear inside of the creative inventory and recipe book.
@@ -82,7 +83,7 @@ Currently, setting the category to "none" in a custom item (not block) prevents 
 _For use with `menu_category` parameter, `category`._
 
 | Category     | Description                                              |
-| ------------ | -------------------------------------------------------- |
+|--------------|----------------------------------------------------------|
 | construction | Added to the "Contruction" tab.                          |
 | equipment    | Added to the "Equipment" tab.                            |
 | items        | Added to the "Items" tab.                                |
@@ -95,7 +96,7 @@ _For use with the `menu_category` parameter, `group`._
 
 <!-- page_dumper_start -->
 | Creative Categories:              |
-| --------------------------------- |
+|-----------------------------------|
 | itemGroup.name.anvil              |
 | itemGroup.name.arrow              |
 | itemGroup.name.axe                |

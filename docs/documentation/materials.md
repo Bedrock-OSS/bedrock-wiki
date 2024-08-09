@@ -9,20 +9,21 @@ mentions:
     - MedicalJewel105
     - SmokeyStack
     - ThomasOrs
+description: Materials documentation.
 ---
 
 :::warning
 Materials are not for the faint of heart. Be prepared for potential crashes, content log errors, and long loading times.
 :::
 
-Materials are extremely useful for making entities more unique. You can make new ones for your addons, or use pre-existing vanilla materials.
+Materials are extremely useful for making entities more unique. You can make new ones for your add-ons, or use pre-existing vanilla materials.
 
 You can learn more about creating materials [here](/visuals/materials).
 
 ## List of Vanilla Materials
 
 | Vanilla_Material                                                                        |
-| --------------------------------------------------------------------------------------- |
+|-----------------------------------------------------------------------------------------|
 | [alpha_block](#alpha-block)                                                             |
 | [alpha_block_color](#alpha-block-color)                                                 |
 | [banner](#banner)                                                                       |

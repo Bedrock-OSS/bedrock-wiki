@@ -10,6 +10,7 @@ mentions:
     - TheItsNameless
     - SmokeyStack
     - zheaEvyline
+description: Learn new /execute command.
 ---
 
 ## Introduction

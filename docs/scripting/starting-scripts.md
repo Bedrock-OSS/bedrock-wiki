@@ -2,11 +2,12 @@
 title: Starting Scripting
 category: General
 mentions:
-    - cda94581
-    - Herobrine643928
-    - JaylyDev
-    - SmokeyStack
-    - kumja1
+  - cda94581
+  - Herobrine643928
+  - JaylyDev
+  - SmokeyStack
+  - kumja1
+description: Start scripting in MCBE.
 ---
 
 ::: warning
@@ -55,7 +56,7 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 {
   "format_version": 2,
   "header": {
-    "name": "Bedrock Addons",
+    "name": "Bedrock Add-ons",
     "description": "Script API Template",
     "uuid": "<UUID>",
     "version": [0, 1, 0],

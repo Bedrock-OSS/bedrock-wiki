@@ -9,6 +9,7 @@ mentions:
     - Sprunkles137
     - Hatchibombotar
     - SpacebarNinja
+description: Understanding command selectors.
 ---
 
 Target selectors are used in commands to target who you want to execute a command on without explicitly setting a target, such as a player's name. A target selector is comprised of a selector variable, and optionally a list of selector arguments.

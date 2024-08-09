@@ -1,18 +1,19 @@
 ---
-title: Addon Performance
+title: Add-on Performance
 mentions:
     - SirLich
     - Joelant05
     - MedicalJewel105
     - TheItsNameless
     - SmokeyStack
+description: Learn how to optimize your add-on.
 ---
 
 ::: warning
-This page was compiled primarily using community feedback from multiple sources. As a result, some information may be generalized, subjective, or conflicting. Always use your own best judgment when optimizing your addons. This page is not a substitute for testing your addon on a wide range of devices.
+This page was compiled primarily using community feedback from multiple sources. As a result, some information may be generalized, subjective, or conflicting. Always use your own best judgment when optimizing your add-ons. This page is not a substitute for testing your add-on on a wide range of devices.
 :::
 
-Performance in addons is crucial, as the most technically fantastic addon is mainly useless if the majority of the player base cannot experience it. When developing addons, it should always be considered that many Bedrock players will be experiencing your addon on a significantly lower power device than you are developing on. This is especially true for mobile users. Therefore, addons should be developed with performance in mind and tested for performance on lower-end devices when possible.
+Performance in add-ons is crucial, as the most technically fantastic add-on is mainly useless if the majority of the player base cannot experience it. When developing add-ons, it should always be considered that many Bedrock players will be experiencing your add-on on a significantly lower power device than you are developing on. This is especially true for mobile users. Therefore, add-ons should be developed with performance in mind and tested for performance on lower-end devices when possible.
 
 This guide is a non-exhaustive list of specific performance considerations separated by the various subsystems of Bedrock Edition. No single point should be taken as a hard and fast rule. Instead, these performance considerations should help you to recognize potential areas for improvement.
 
@@ -123,7 +124,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 #### Comparison Table
 
 |     Light Source | Score | Redstone Updates | Animted Texture | Light Updates | Tick Updates | Particles | Renders |
-| ---------------: | :---: | :--------------: | :-------------: | :-----------: | :----------: | :-------: | :-----: |
+|-----------------:|:-----:|:----------------:|:---------------:|:-------------:|:------------:|:---------:|:-------:|
 |     Light Blocks |   1   |      False       |      False      |     True      |    False     |   False   |  False  |
 |         Lanterns |   4   |      False       |      True       |     True      |     True     |   False   |  True   |
 |    Custom Blocks |   2   |      False       |      False      |     True      |    False     |   False   |  True   |

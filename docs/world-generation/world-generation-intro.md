@@ -14,6 +14,7 @@ mentions:
     - aexer0e
     - retr0cube
     - SmokeyStack
+description: Introduction to WorldGen.
 ---
 
 :::warning

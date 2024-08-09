@@ -7,6 +7,7 @@ mentions:
     - SirLich
     - solvedDev
     - MedicalJewel105
+description: Tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.
 ---
 
 This will guide tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.
@@ -21,6 +22,7 @@ Another trick to solve this if you _must_ have smaller textures is by **increasi
 Vertex snap is a handy tool in blockbench any modeler should use. It's beneficial when doing rounded things like wheels.
 You can find this tool right top next to the movement & scale tools. It has 2 modes, Move & Scale. How this tool works can be seen in the following gif.
 ![](/assets/images/visuals/bedrock-modeling/vertex_snap.gif)
+
 ## Transparency
 
 If you use semi-transparent textures (like colored glass), you need to move elements with that texture to the bottom of the element list. Otherwise, elements behind these semi-transparent ones won't render in-game.
@@ -36,7 +38,7 @@ and in general, any on pixel art.
 Whether or no the transparency or emissive textures in your models work in-game, it's decided by the materials applied to them.
 
 | Material              | Description                                                                                              |
-| --------------------- | -------------------------------------------------------------------------------------------------------- |
+|-----------------------|----------------------------------------------------------------------------------------------------------|
 | entity                | basic opaque material                                                                                    |
 | entity_alphatest      | supports transparent pixels                                                                              |
 | entity_alphablend     | supports translucent pixels                                                                              |
@@ -82,7 +84,7 @@ Don't forget that for the animation to be a perfect loop. It would help if you c
 Here's a table with values to get a perfect loop, though there are more you can discover.
 
 | Speed | Time | Group |
-| ----- | ---- | ----- |
+|-------|------|-------|
 | 150   | 2.4  | 1     |
 | 100   | 3.6  | 2     |
 
@@ -90,7 +92,7 @@ These numbers can be multiplied but not divided, so these will also work
 But only multiples of the same option
 
 | Speed | Time | Group |
-| ----- | ---- | ----- |
+|-------|------|-------|
 | 150   | 4.8  | 1     |
 | 200   | 3.6  | 2     |
 | 300   | 2.4  | 1     |

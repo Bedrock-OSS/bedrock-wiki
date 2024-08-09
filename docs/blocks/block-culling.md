@@ -2,7 +2,8 @@
 title: Block Culling
 category: General
 mentions:
-    - legopitstop
+  - legopitstop
+description: This article shows how to specify particular faces and/or bones in a geometry file for culling checks.
 ---
 
 This section shows how to specify particular faces and/or bones in a geometry file for culling checks.

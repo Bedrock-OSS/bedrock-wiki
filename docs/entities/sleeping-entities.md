@@ -6,6 +6,7 @@ tags:
 mentions:
     - MedicalJewel105
     - SirLich
+description: This tutorial will explain how to make entity sleep.
 ---
 
 This tutorial will explain how to make entity sleep.

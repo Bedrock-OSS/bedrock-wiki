@@ -6,6 +6,7 @@ mentions:
     - MedicalJewel105
     - Misledwater79
     - SmokeyStack
+description: About .mcstructure format.
 ---
 
 [int]: /assets/images/nbt/int.png

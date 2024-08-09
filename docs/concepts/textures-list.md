@@ -6,6 +6,7 @@ mentions:
     - Joelant05
     - AFoxyToast
     - TheItsNameless
+description: The textures_list file is Minecraft's way of caching each texture so that it can retrieve it faster than looking through each image in your textures folder.
 ---
 
 ## General Overview

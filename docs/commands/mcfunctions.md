@@ -7,6 +7,7 @@ mentions:
     - zheaEvyline
     - jordanparki7
 nav_order: 3
+description: Learn about functions in MCBE.
 ---
 ## Introduction
 

@@ -7,6 +7,7 @@ mentions:
     - shanewolf38
     - SmokeyStack
     - ThomasOrs
+description: In this tutorial, you will learn how to convert a numerical string into a number and a number into a text string.
 ---
 
 In this tutorial, you will learn how to convert a numerical string into a number and a number into a text string.

@@ -3,6 +3,7 @@ title: Vanilla Usage Components - Full
 category: Documentation
 mentions:
     - MedicalJewel105
+description: Automatically generated list of item components used in vanilla.
 hidden: true
 ---
 

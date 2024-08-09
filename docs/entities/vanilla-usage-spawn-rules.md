@@ -3,6 +3,7 @@ title: Vanilla Usage Spawn Rules
 category: Documentation
 mentions:
     - MedicalJewel105
+description: Automatically generated list of spawn rules components used in vanilla.
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.

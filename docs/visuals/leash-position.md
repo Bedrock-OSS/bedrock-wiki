@@ -8,6 +8,7 @@ mentions:
     - Overload1252
 tags:
     - easy
+description: Adjust position of a leash on your entity.
 ---
 
 Have you ever wanted to change position of a leash on your entity?

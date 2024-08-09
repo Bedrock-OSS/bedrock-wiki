@@ -8,6 +8,7 @@ mentions:
     - SmokeyStack
     - ThomasOrs
     - kumja1
+description: Introduction to some of the core API mechanics.
 ---
 
 ::: warning

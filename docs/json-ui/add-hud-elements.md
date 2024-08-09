@@ -6,6 +6,7 @@ tags:
 mentions:
     - shanewolf38
     - SmokeyStack
+description: In this tutorial, you will learn how to add elements to the hud screen.
 ---
 
 In this tutorial, you will learn how to add elements to the hud screen.

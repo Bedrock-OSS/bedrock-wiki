@@ -8,9 +8,10 @@ mentions:
     - SmokeyStack
 tags:
     - expert
+description: Setup pack for future usage.
 ---
 
-To start making your addon you should download this template.
+To start making your add-on you should download this template.
 This template contains all the required assets for a start on making the VR pack.
 
 <BButton
@@ -19,7 +20,7 @@ This template contains all the required assets for a start on making the VR pack
 >Get the template!</BButton>
 
 :::warning
-Dont delete `contents.json` and `textures_list.json` from the template.
+Don't delete `contents.json` and `textures_list.json` from the template.
 :::
 
 ## What does the template contain?

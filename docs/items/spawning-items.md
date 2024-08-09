@@ -11,6 +11,7 @@ mentions:
     - MedicalJewel105
     - aexer0e
     - Xterionix
+description: Spawn an item entity.
 ---
 
 :::danger PLEASE READ

@@ -6,6 +6,7 @@ mentions:
     - SirLich
 tags:
     - experimental
+description: Feature based surface builder is a feature that puts together a collection of blocks that serve to add variety and decoration to the Overworld surface.
 ---
 
 Feature based surface builder is a feature that puts together a collection of blocks that serve to add variety and decoration to the Overworld surface. This tutorial will explain what is needed to create this feature, including size, frequency, generation location, and more!

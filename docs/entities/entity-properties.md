@@ -10,6 +10,7 @@ mentions:
     - Luthorius
     - stirante
     - TheItsNameless
+description: Entity Properties were implemented to save data or store values on entities efficiently without needing the use of components or attributes in server-side of the entity, similar to Block Properties.
 ---
 
 :::warning

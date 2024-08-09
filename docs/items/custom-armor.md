@@ -15,6 +15,7 @@ mentions:
     - XxPoggyisLitxX
     - LeGend077
     - SmokeyStack
+description: Learn how to make custom armor.
 ---
 
 :::danger PLEASE READ
@@ -148,7 +149,7 @@ If you do not feel creative we have provided a recoloured diamond armour skin fo
 
 <BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_legs.png">Download texture here</BButton>
 
-> In the real world you would probably want to use `BlockBench` or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the addon.
+> In the real world you would probably want to use `BlockBench` or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the add-on.
 > If you now go into the game and check what you have produced you should be able to wear your chest piece and pat yourself on the back for a job well done.
 
 ![](/assets/images/tutorials/custom-armor/armor-item-image.jpg)

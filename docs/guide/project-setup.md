@@ -35,7 +35,6 @@ This page will guide you through the steps required to create your first "workin
 
 ## The com.mojang folder
 
-The `com.mojang` folder is a special folder where Minecraft stores data (Addons, Worlds, Player info...). Minecraft understands this location, and all files we access or create will be placed somewhere in this folder!
 
 You should create a shortcut to the `com.mojang` folder on your Desktop or on your mobile device, so you can easily access it at any time. The exact location of the `com.mojang` folder will depend on your device OS.
 
@@ -71,9 +70,7 @@ After that you can access the `com.mojang` folder in your Android Subsystem:
 
 ### Development Packs
 
-We will develop our addon in `development_behavior_packs` and `development_resource_packs`. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test your addon without reloading Minecraft.
 
-`resource_packs` and `behavior_packs` on the other hand contain stable addons, including those imported via `.mcpack`. We can ignore these folders for now.
 
 ## Your Workspace
 
@@ -90,7 +87,6 @@ Let's create your first add-on workspace in Visual Studio Code now.
 2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**
 3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP`**.
 4. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
-5. Press `File > Save Workspace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
 
 ## BP Manifest
 
@@ -180,7 +176,6 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
 
 ## Pack Icon
 
-The pack icon is an image file which identifies how your addon will look in-game. If you have a low-resolution square image, you can use it. Otherwise, download and use this example icon:
 
 <WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated/>
 
@@ -193,7 +188,6 @@ You should place a copy of your desired image into both the RP and the BP. The i
 
 ## Language Files
 
-The last thing to do is setup language support for your addon. You will need to create a language file for both the RP and the BP. You can learn more about how Minecraft handles localization [here](/concepts/text-and-translations).
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
@@ -230,7 +224,7 @@ If you have done everything correctly, your packs should show up in Minecraft no
 ## Turn on Content Log
 
 :::warning Content Log
-Content log is the most useful tool you have for debugging your addons. Please do not skip this step!
+Content log is the most useful tool you have for debugging your add-ons. Please do not skip this step!
 :::
 
 ![](/assets/images/guide/content_log.png)
@@ -273,7 +267,20 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 	'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
 ]"></FolderView>
 
-## Next
+## What you have learned
+
+:::tip What you have learned:
+
+-   What the com.mojang folder is, where it is and what folders it contains
+-   How to setup your workspace
+-   What a `manifest.json` file is
+-   How to use UUIDs
+-   How to create an icon for your add-on
+-   What a `.lang` file is
+
+:::
+
+## Your progress so far
 
 :::tip What you have learned
 <Checklist>

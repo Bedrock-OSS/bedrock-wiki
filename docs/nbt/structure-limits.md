@@ -5,6 +5,7 @@ mentions:
     - MedicalJewel105
 tags:
     - easy
+description: Extend structure limits.
 ---
 
 [structure]: /assets/images/nbt/structure.png

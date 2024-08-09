@@ -10,9 +10,9 @@ This wiki is a knowledge-sharing website for Minecraft Bedrock Add-Ons, containi
 
 # Contributing
 
-You've found a typo, couldn't get along with a guide because it was too complicated or want to write your own guide to help other users create their own addons? Then you've come to the right place!
+You've found a typo, couldn't get along with a guide because it was too complicated or want to write your own guide to help other users create their own add-ons? Then you've come to the right place!
 
-The Bedrock wiki is fully open source and is maintained by our lovely community. And this community grows every day! If you want to be part of this community, get help on addons or just want to expand our wiki, you can join our Discord servers:
+Our Bedrock wiki is fully open source and is maintained by our lovely community. And this community grows every day! If you want to be part of this community, get help on add-ons or just want to expand our wiki, you can join our Discord servers:
 
  - [Bedrock OSS](https://discord.gg/XjV87YN) - for wiki contributing and cool projects,
  - [Bedrock Add-Ons](https://discord.gg/pytC8zKHPn) - for add-on help.

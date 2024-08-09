@@ -2,11 +2,12 @@
 title: Creating Block Models
 category: Tutorials
 tags:
-    - beginner
-    - easy
+  - beginner
+  - easy
 mentions:
-    - QuazChick
-    - SmokeyStack
+  - QuazChick
+  - SmokeyStack
+description: Learn how to setup custom model for your block.
 ---
 
 :::danger PLEASE READ

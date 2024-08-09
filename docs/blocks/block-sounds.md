@@ -2,9 +2,10 @@
 title: Block Sounds
 category: Documentation
 mentions:
-    - MedicalJewel105
-    - TheItsNameless
-    - QuazChick
+  - MedicalJewel105
+  - TheItsNameless
+  - QuazChick
+description: Block sounds refers to the sound property in your block entry inside blocks.json.
 ---
 
 :::danger PLEASE READ
@@ -28,7 +29,7 @@ The following are valid values for the sound property:
 
 <!-- page_dumper_start -->
 | *Last updated for 1.21.0* |
-| ------------------------- |
+|---------------------------|
 | amethyst_block            |
 | amethyst_cluster          |
 | ancient_debris            |

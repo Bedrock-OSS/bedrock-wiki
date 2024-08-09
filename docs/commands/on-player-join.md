@@ -5,6 +5,7 @@ mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 2
+description: This system will run your desired commands on the event that a players joins the world.
 ---
 
 ## Introduction

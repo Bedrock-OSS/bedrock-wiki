@@ -148,7 +148,7 @@ And finally, as an introduction to recipes, we'll make the Ectoplasm craftable i
 -   `"format_version"` is already known.
 -   With `"recipe_shaped"` we define, that each ingredient has a set place in the crafting grid. There are some other types that can be used, you can find more information [here](/loot/recipes).
 -   Inside `"description"` we define the `"identifier"` of this recipe, which is the name of the recipe.
--   `"tags"` is a list of benches (crafting table, furnace, etc) that are able to use this recipe. After version b1.16.100 it was possible to use custom benches, created by an addon.
+-   `"tags"` is a list of benches (crafting table, furnace, etc) that are able to use this recipe. After version b1.16.100 it was possible to use custom benches, created by an add-on.
 -   `"pattern"` defines the arrangement of the items inside the crafting grid. Each `#` represents the item that is set under `"key"`. In this case, the whole 3x3 grid has to be filled with `"wiki:ectoplasm"`, our own item. It is possible to define more items, just add an entry to `"key"` and set the key to a character, that you can use inside `"pattern"`.
 -   `"result"` contains an `"item"`, which is set to the item that will be the output of this recipe.
 

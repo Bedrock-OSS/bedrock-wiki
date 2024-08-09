@@ -52,15 +52,15 @@
 					link="guide/introduction"
 				>
 					Step-by-step tutorials, intended as your first-contact with
-					addons.
+					add-ons.
 				</CardLink>
 				<CardLink
 					title="Discord"
 					imgsrc-light="assets/images/homepage/discord.png"
 					link="/discord"
 				>
-					Join the Discord to learn about addons, and seek help from
-					other addon creators.
+					Join the Discord to learn about add-ons, and seek help from
+					other add-on creators.
 				</CardLink>
 				<CardLink
 					title="Commands"

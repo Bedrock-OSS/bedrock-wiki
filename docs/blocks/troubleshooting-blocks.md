@@ -2,14 +2,15 @@
 title: Troubleshooting Blocks
 category: General
 tags:
-    - help
+  - help
 mentions:
-    - SmokeyStack
-    - SirLich
-    - aexer0e
-    - MedicalJewel105
-    - Sprunkles137
-    - QuazChick
+  - SmokeyStack
+  - SirLich
+  - aexer0e
+  - MedicalJewel105
+  - Sprunkles137
+  - QuazChick
+description: Guide for blocks troubleshooting.
 ---
 
 :::danger PLEASE READ

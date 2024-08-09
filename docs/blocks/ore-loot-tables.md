@@ -2,17 +2,18 @@
 title: Ore Loot Tables
 category: Tutorials
 tags:
-    - easy
+  - easy
 mentions:
-    - SykoUSS
-    - ExDrill
-    - MedicalJewel105
-    - SmokeyStack
-    - Chikorita-Lover
-    - SirLich
-    - TheItsNameless
-    - QuazChick
-    - Keyyard
+  - SykoUSS
+  - ExDrill
+  - MedicalJewel105
+  - SmokeyStack
+  - Chikorita-Lover
+  - SirLich
+  - TheItsNameless
+  - QuazChick
+  - Keyyard
+description: Create vanilla-like loot system for custom ore.
 ---
 
 :::danger PLEASE READ

@@ -11,6 +11,7 @@ mentions:
     - PepijnMC
     - ThomasOrs
     - Xterionix
+description: Learn how to make custom weapons.
 ---
 
 :::danger PLEASE READ

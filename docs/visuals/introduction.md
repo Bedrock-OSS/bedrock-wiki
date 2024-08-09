@@ -9,6 +9,7 @@ mentions:
     - SirLich
     - MedicalJewel105
     - Overload1252
+description: Introduction to Entity Visuals.
 ---
 
 ## What is this section about?

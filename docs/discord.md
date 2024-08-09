@@ -3,11 +3,12 @@ title: Discord
 hidden: true
 show_toc: false
 show_contributors: false
+description: Bedrock Wiki Discord Communities.
 ---
 
 The Bedrock Wiki is supported by two active discord communities, which you are encouraged to join. Additionally, we maintain an actively updated list of community discords for Bedrock tools, content, or simply socialization.
 
-Please feel free to join us to ask questions, get involved in Bedrock Addons, or to contribute to this site!
+Please feel free to join us to ask questions, get involved in Bedrock Add-Ons, or to contribute to this site!
 
 <br>
 <br>
@@ -37,7 +38,7 @@ Please feel free to join us to ask questions, get involved in Bedrock Addons, or
 				imgsrcLight="assets/images/discord/oss.png"
 				link="https://discord.gg/XjV87YN"
 			>
-				Bedrock OSS is a programming-focused creators discord for Bedrock. <br /><br />Here you can report wiki issues, collaborate on new articles, and get help with Bedrock tools, such as bridge. or Blockception's VSCode addon.
+				Bedrock OSS is a programming-focused creators discord for Bedrock. <br /><br />Here you can report wiki issues, collaborate on new articles, and get help with Bedrock tools, such as bridge. or Blockception's VSCode add-on.
 			</CardLink>
 			<CardLink
 				title="Additional Servers"

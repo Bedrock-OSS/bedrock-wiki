@@ -10,6 +10,7 @@ mentions:
     - TheItsNameless
     - JaylyDev
     - SmokeyStack
+description: Pack folder structure example.
 ---
 
 <FolderView :paths="[

@@ -2,14 +2,15 @@
 title: Texture Variation
 category: Tutorials
 tags:
-    - intermediate
+  - intermediate
 mentions:
-    - SirLich
-    - solvedDev
-    - Hatchibombotar
-    - SmokeyStack
-    - MedicalJewel105
-    - QuazChick
+  - SirLich
+  - solvedDev
+  - Hatchibombotar
+  - SmokeyStack
+  - MedicalJewel105
+  - QuazChick
+description: Block texture variation is when a single block can have multiple textures.
 ---
 
 :::danger PLEASE READ

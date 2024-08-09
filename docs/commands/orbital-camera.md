@@ -2,8 +2,9 @@
 title: Orbital Camera
 category: Techniques
 mention:
-    - BedrockCommands
-    - zheaEvyline
+  - BedrockCommands
+  - zheaEvyline
+description: This technique allows you to confine your camera rotations to an orbit around the player, an entity or position with the height and radius of the orbit being fully adjustable.
 ---
 
 ## Introduction

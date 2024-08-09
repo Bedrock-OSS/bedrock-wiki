@@ -2,14 +2,15 @@
 title: Entity Attacks
 category: Tutorials
 mentions:
-    - Luthorius
-    - TheDoctor15
-    - SirLich
-    - MedicalJewel105
-    - epxzzy
-    - ThomasOrs
+  - Luthorius
+  - TheDoctor15
+  - SirLich
+  - MedicalJewel105
+  - epxzzy
+  - ThomasOrs
 tags:
-    - intermediate
+  - intermediate
+description: Learn how to make entity attacks in a proper way.
 ---
 
 Entity attacks are a complex subject that require many different things to work correctly:
@@ -59,7 +60,7 @@ There are many ways to trigger hostility. The most common type `nearest_attackab
 For more fine control, you may also consider using one of the following components:
 
 | Component                                                | Note                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
+|----------------------------------------------------------|--------------------------------------------------------------|
 | minecraft:behavior.nearest_attackable_target             | Targets entity meeting the given requirements                |
 | minecraft:behavior.nearest_prioritized_attackable_target | Allows for "priority": [integer] to be set after each filter |
 | minecraft:behavior.defend_trusted_target                 | Targets entity that hurts any entities specified in filters  |
@@ -157,7 +158,7 @@ This would only target `snow_golem`s, `iron_golem`s, and `player`s that are **no
 Here are the available attacks:
 
 | Component                                            | Note                                                     |
-| ---------------------------------------------------- | -------------------------------------------------------- |
+|------------------------------------------------------|----------------------------------------------------------|
 | [minecraft:behavior.melee_attack](#melee)            | Deals damage to a single target                          |
 | [minecraft:behavior.ranged_attack](#ranged)          | Fires a projectile towards a target                      |
 | [minecraft:area_attack](#area)                       | Effectively melee attacks on anything withing range      |
@@ -197,7 +198,7 @@ The value defined in components stating integers of damage can simply be a const
 Both the mob effect and duration timer are optional, but when they are used, the available effects are as following:
 
 | Effect Name     |
-| --------------- |
+|-----------------|
 | speed           |
 | slowness        |
 | haste           |
@@ -253,7 +254,7 @@ Fires specified [projectiles](/documentation/projectiles) towards target at set 
 List of vanilla projectiles:
 
 | Vanilla Projectiles              |
-| -------------------------------- |
+|----------------------------------|
 | minecraft:arrow                  |
 | minecraft:dragon_fireball        |
 | minecraft:egg                    |
@@ -546,7 +547,7 @@ Animations are self explanatory. The files themselves contain all specific anima
 Though it is possible to create them in a simple text editor.
 
 | Vanilla Attack Animations                    |
-| -------------------------------------------- |
+|----------------------------------------------|
 | "animation.zombie.attack_bare_hand"          |
 | "animation.skeleton.attack.v1.0"             |
 | "animation.humanoid.bow_and_arrow.v1.0"      |
@@ -559,7 +560,7 @@ A few examples of Animations. Locate /vanilla_resource_pack/animations for all o
 List of states that trigger animations.
 
 | Vanilla Attack Animation Controllers           |
-| ---------------------------------------------- |
+|------------------------------------------------|
 | "controller.animation.zombie.attack_bare_hand" |
 | "controller.animation.skeleton.attack"         |
 | "controller.animation.humanoid.bow_and_arrow"  |

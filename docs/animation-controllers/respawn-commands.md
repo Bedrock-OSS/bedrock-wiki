@@ -10,6 +10,7 @@ mentions:
     - SmokeyStack
     - MedicalJewel105
     - cda94581
+description: Run command when entity respawns.
 ---
 
 <BButton color="blue" link="animation-controllers-intro">Learn more about Animation Controllers</BButton>

@@ -15,6 +15,7 @@ mentions:
     - Noruaric
     - JaylyDev
     - zheaEvyline
+description: Useful links for developing add-ons.
 ---
 
 There is loads of helpful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
@@ -46,7 +47,7 @@ Important links have a ⭐.
 ## Software (installed)
 
 -   ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
--   ⭐ [bridge. Addon Editor](https://bridge-core.github.io/)
+-   ⭐ [bridge. Add-on Editor](https://bridge-core.github.io/)
 -   ⭐ [VSCode Editor](https://code.visualstudio.com/)
 -   ⭐ [Regolith](https://github.com/Bedrock-OSS/regolith)
 -   [CoreCoder [Code Editor]](https://hanprog.itch.io/core-coder)
@@ -66,12 +67,13 @@ Important links have a ⭐.
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
 -   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Apply Loot Tables to Structures](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
+-   [MCBE ESSENTIALS](https://mcbe-essentials.github.io/)
 -   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
 -   [Convert MCSTRUCTURE to MCFUNCTION](https://mcbe-essentials.github.io/structure-to-function/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
 -   [World Packager](https://mcbe-essentials.github.io/world-packager/)
--   [Manifest Generator](https://bedrock-manifest.web.app/)
+-   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
 -   [Foxynotail Tools](https://www.foxynotail.com/tools/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
 -   [behavior-builder (beta)](https://stirante.com/behavior/index)
@@ -81,7 +83,7 @@ Important links have a ⭐.
 -   [Molang Playground](https://bridge-core.github.io/molang-playground/)
 -   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
 -   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
--   [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
+-   [Add-on Obfuscator](https://tools.pixelpoly.co/obfuscator)
 -   [Glyph Tools](https://nhanaz.github.io/glyph/)
 
 ## Documentation
@@ -132,7 +134,7 @@ These packs are published by the open-source community
 - [RTX Presets](https://discord.com/channels/691547840463241267/919021996271108108)
 - [`.texture_set.json` Adobe Substance 3D Painter plugin](https://github.com/jasonjgardner/painter-plugin-texture-set-json)
 
-## Addon Marketplaces & Links
+## Add-On Marketplaces & Links
 
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
@@ -151,7 +153,7 @@ These packs are published by the open-source community
 -   [Run Bedrock on Linux](https://github.com/Element-0/ElementZero)
 -   [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
 -   [Block Models](https://blockmodels.com/)
--   [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
+-   [Bedrock Add-Ons Reddit](https://www.reddit.com/r/BedrockAddons/)
 -   [Windows 10 Non-renderdragon install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
 -   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
 -   [Java & Bedrock Client](https://github.com/kennyvv/Alex)

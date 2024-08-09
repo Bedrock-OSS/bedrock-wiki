@@ -8,6 +8,7 @@ mentions:
     - MedicalJewel105
     - Luthorius
     - TheItsNameless
+description: World generation feature types explained.
 ---
 
 _Last updated for 1.17.10_

@@ -2,6 +2,7 @@
 title: Sound Definitions
 mentions:
     - MedicalJewel105
+description: Automatically generated sounds from sound_definitions.json sorted by categories and subcategories.
 ---
 
 Sounds from `sound_definitions.json` sorted by categories and subcategories based on their names.

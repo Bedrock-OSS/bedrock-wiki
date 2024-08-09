@@ -17,6 +17,7 @@ mentions:
     - ConsoleTerm
     - kumja1
     - modmaker101
+description: Custom commands using scripts.
 ---
 
 ::: warning
@@ -28,7 +29,7 @@ Who doesn't want cool custom commands? With the Script API, you can create your 
 ## Setup Pack
 
 :::tip
-Before creating a script, it is recommended to learn the basics of JavaScript, Addons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
+Before creating a script, it is recommended to learn the basics of JavaScript, Add-Ons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
 :::
 
 Assuming you have understood the basics of scripting, let's start creating the pack.

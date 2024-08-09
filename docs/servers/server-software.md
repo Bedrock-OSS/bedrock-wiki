@@ -23,6 +23,7 @@ mentions:
     - wu-vincent
     - smartcmd
     - Adrian8115
+description: Software for Bedrock servers.
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people. This is very common within Java Edition Minecraft, but is also possible on Bedrock. [You can download the official Mojang BDS software here.](https://www.minecraft.net/en-us/download/server/bedrock).
@@ -32,7 +33,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ## Software by Language
 
 | Language   | Status                                                               |
-| ---------- | -------------------------------------------------------------------- |
+|------------|----------------------------------------------------------------------|
 | PHP        | [Still Active](#php)        : 4 < [Discontinued](#php-1)        : 39 |
 | Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 14 |
 | C++        | [Still Active](#c)          : 2 < [Discontinued](#c-1)          : 5  |

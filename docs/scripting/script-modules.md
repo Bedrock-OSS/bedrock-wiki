@@ -3,6 +3,7 @@ title: Script Modules
 category: General
 mentions:
     - cda94581
+description: Script API has modules for developers to interact with Minecraft.
 ---
 
 ::: warning
@@ -15,38 +16,38 @@ Script API has modules for developers to interact with Minecraft. Additionally, 
 
 -   **`@minecraft/server`** - Core module to manipulate a Minecraft world, including entities, blocks, dimensions, and more.
 
-    | Module UUID                            | Versions                                         | Previous names                  | Release Version    |
-    | -------------------------------------- | ------------------------------------------------ | ------------------------------- | ------------------ |
+    | Module UUID                            | Versions                                                 | Previous names                  | Release Version    |
+    |----------------------------------------|----------------------------------------------------------|---------------------------------|--------------------|
     | `b26a4d4c-afdf-4690-88f8-931846312678` | `1.4.0-beta , 1.3.0`, `1.2.0`, `1.1.0`, `1.0.0`, `0.1.0` | `Minecraft`, `mojang-minecraft` | `Beta 1.16.210.60` |
 
 -   **`@minecraft/server-gametest`** - A module that provides a scaffolding toolset for you to build, test, and run your custom Add-ons and worlds.
 
     | Module UUID                            | Versions     | Previous names                | Release version    |
-    | -------------------------------------- | ------------ | ----------------------------- | ------------------ |
+    |----------------------------------------|--------------|-------------------------------|--------------------|
     | `6f4b6893-1bb6-42fd-b458-7fa3d0c89616` | `1.0.0-beta` | `GameTest`, `mojang-gametest` | `Beta 1.16.210.60` |
 
 -   **`@minecraft/server-ui`** - A module provides ways to show dialogs to players.
 
     | Module UUID                            | Versions              | Previous names        | Release version                       |
-    | -------------------------------------- | --------------------- | --------------------- | ------------------------------------- |
+    |----------------------------------------|-----------------------|-----------------------|---------------------------------------|
     | `2bd50a27-ab5f-4f40-a596-3641627c635e` | `1.1.0-beta`, `1.0.0` | `mojang-minecraft-ui` | `Beta 1.18.20.21+ (Release 1.18.30+)` |
 
 -   **`@minecraft/server-admin`** - BDS module for configuration of variables and secrets. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
 
     | Module UUID                            | Versions     | Previous names                  | Release version    |
-    | -------------------------------------- | ------------ | ------------------------------- | ------------------ |
+    |----------------------------------------|--------------|---------------------------------|--------------------|
     | `53d7f2bf-bf9c-49c4-ad1f-7c803d947920` | `1.0.0-beta` | `mojang-minecraft-server-admin` | `Release 1.19.10+` |
 
 -   **`@minecraft/server-net`** - BDS module for executing HTTP-based requests. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
 
     | Module UUID                            | Versions     | Previous names | Release version    |
-    | -------------------------------------- | ------------ | -------------- | ------------------ |
+    |----------------------------------------|--------------|----------------|--------------------|
     | `777b1798-13a6-401c-9cba-0cf17e31a81b` | `1.0.0-beta` | `mojang-net`   | `Release 1.19.10+` |
 
 -   **`@minecraft/server-editor`** and **`@minecraft/server-editor-bindings`**
 
     | Versions     | Release version    |
-    | ------------ | ------------------ |
+    |--------------|--------------------|
     | `0.1.0-beta` | `Preview 1.19.80+` |
 
 ## Script Versioning
@@ -155,18 +156,18 @@ Do not add `"uuid"` and `"module_name"` properties into dependency, add one or t
 
 ###Module Version compatiblity
 From 1.20.10 until 1.20.40.20-Preview (current at time of writing). Module have opaque compatiblity matrix that appears to be set at the last time the oldest library was updated. For instance:
-|Server        | Server=UI    |            Compatibility|
-|------------|------|-----------------------|
-|1.0.0|1.0.0|True|
-|1.1.0|1.0.0|True|
-|1.2.0|1.0.0 |True|
-|1.3.0+|1.0.0|False|
-|1.0.0|1.1.0 |True|
-|1.1.0|1.1.0 |True|
-|1.2.0|1.1.0|True|
-|1.3.0+|1.1.0|False|
-|1.X.0-Beta|1.0.0|False|
-|1.X.0-Beta|1.1.0|False|
-|1.3.0+|1.2.0-Beta|False|
+| Server     | Server=UI  | Compatibility |
+|------------|------------|---------------|
+| 1.0.0      | 1.0.0      | True          |
+| 1.1.0      | 1.0.0      | True          |
+| 1.2.0      | 1.0.0      | True          |
+| 1.3.0+     | 1.0.0      | False         |
+| 1.0.0      | 1.1.0      | True          |
+| 1.1.0      | 1.1.0      | True          |
+| 1.2.0      | 1.1.0      | True          |
+| 1.3.0+     | 1.1.0      | False         |
+| 1.X.0-Beta | 1.0.0      | False         |
+| 1.X.0-Beta | 1.1.0      | False         |
+| 1.3.0+     | 1.2.0-Beta | False         |
 
 At the time of writing this only impacts Server and Server-UI as they are the only 2 thave have stable versions. Testing was completed on 1.20.10 to 1.20.40-preview this bug may be fixed in future version of minecraft.

@@ -21,7 +21,7 @@ mentions:
     - ThomasOrs
 ---
 
-Before you can start creating addons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.
+Before you can start creating add-ons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.
 
 This page will provide you a list of software to install, and configuration tips for setup.
 
@@ -34,19 +34,19 @@ This page will provide you a list of software to install, and configuration tips
 
 ## Picking an Editor
 
-Addons can be created using any text editor, however it's much more comfortable to work in a dedicated editor. A good editor can give you code-completion, error-detection, and in-editor documentation.
+Add-ons can be created using any text editor, however it's much more comfortable to work in a dedicated editor. A good editor can give you code-completion, error-detection, and in-editor documentation.
 
 There are strong opinions about the best editor for beginners, but generally speaking you cannot go wrong selecting either VSCode, or bridge. If you are mobile, you will need to use a mobile alternative.
 
 ### VSCode
 
-VSCode is a general purpose text-editor and IDE. With VSCode, you will be able to edit your addons in plain-text, guided along by a powerful array of extensions and addons. VSCode is a great option for programmers and advanced users.
+VSCode is a general purpose text-editor and IDE. With VSCode, you will be able to edit your add-ons in plain-text, guided along by a powerful array of extensions and add-ons. VSCode is a great option for programmers and advanced users.
 
 [⚙️Install VSCode](https://code.visualstudio.com/)
 
 <Spoiler title="Configuring VSCode">
 
-Many packages exist for VSCode that make editing addons easier:
+Many packages exist for VSCode that make editing add-ons easier:
 
 -   [Blockception's Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
 -   [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
@@ -61,8 +61,8 @@ Many packages exist for VSCode that make editing addons easier:
 
 ### bridge.
 
-[bridge.](https://bridge-core.app/) is a light-weight, dedicated IDE for Minecraft addons. It features [innovative features](https://bridge-core.app/guide/features/) such as [entity and block previews](https://bridge-core.app/guide/features/index.html#file-previews), [rich auto-completions and file validations](https://bridge-core.app/guide/features/index.html#auto-completions-and-validation) and [advanced file creation with presets](https://bridge-core.app/guide/features/index.html#advanced-file-creation).
-bridge. includes a regular text editor for experienced addon creators and a tree editor to make it easy for beginners to get started with editing JSON files.
+[bridge.](https://bridge-core.app/) is a light-weight, dedicated IDE for Minecraft add-ons. It features [innovative features](https://bridge-core.app/guide/features/) such as [entity and block previews](https://bridge-core.app/guide/features/index.html#file-previews), [rich auto-completions and file validations](https://bridge-core.app/guide/features/index.html#auto-completions-and-validation) and [advanced file creation with presets](https://bridge-core.app/guide/features/index.html#advanced-file-creation).
+bridge. includes a regular text editor for experienced add-on creators and a tree editor to make it easy for beginners to get started with editing JSON files.
 
 <Spoiler title="Configuring Bridge">
 
@@ -90,8 +90,8 @@ bridge. includes a regular text editor for experienced addon creators and a tree
 
 When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn.
 
-:::tip Choosing an art program
-Choose a program that feels comfortable and easy for you to use. Many Addon creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you!
+:::tip
+Choose a program that feels comfortable and easy for you to use. Many Add-on creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you!
 :::
 
 ### Krita
@@ -143,7 +143,9 @@ LibreSprite is a free and open source program for creating and animating your sp
 
 ## Additional Materials
 
-This guide will walk you through the first stages of addon development, but it is not comprehensive! To learn more about addons, you will have to use and reference other sources of information, which we will link to here.
+:::tip
+This guide will walk you through the first stages of add-on development, but it is not comprehensive! To learn more about add-ons, you will have to use and reference other sources of information, which we will link to here.
+:::
 
 ### Join the Discord
 
@@ -157,11 +159,11 @@ Minecraft's vanilla files are a good source of reference material. You should do
 
 ### Documentation
 
-There are many good sources of Addon documentation. Familiarize yourself with all of them, and consider bookmarking them.
+There are many good sources of Add-on documentation. Familiarize yourself with all of them, and consider bookmarking them.
 
 -   [bedrock.dev](https://bedrock.dev/): Reference documentation.
 -   [wiki.bedrock.dev](https://wiki.bedrock.dev/): Tutorials and guides.
--   [MS Docs](https://docs.microsoft.com/en-us/minecraft/creator/): The official microsoft creator portal for addons.
+-   [MS Docs](https://docs.microsoft.com/en-us/minecraft/creator/): The official microsoft creator portal for add-ons.
 
 ### Troubleshooting and Additional Help
 
@@ -176,8 +178,8 @@ There are many good sources of Addon documentation. Familiarize yourself with al
 
 -   [x] Installed the necessary software
 -   [x] Downloaded the Vanilla Example files
--   [ ] Locate your com.mojang folder and create your addon's workspace.
--   [ ] Create the manifest and pack icon for your first addon
+-   [ ] Locate your `com.mojang` folder and create your add-on's workspace.
+-   [ ] Create the manifest and pack icon for your first add-on
 
 </Checklist>
 :::

@@ -5,6 +5,7 @@ mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 5
+description: Create timers using scoreboards.
 ---
 
 ## Introduction

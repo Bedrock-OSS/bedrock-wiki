@@ -3,9 +3,10 @@ title: Version Control
 mentions:
     - SirLich
     - sermah
+description: Control changes in add-on files.
 ---
 
-Version control is the concept of backing up your code iteratively, so you can roll back to specific versions as needed. Version control could be achieved at the most basic level by taking a `.zip` of your addon every day and uploading it to google drive. This isn't unreasonable, but it has three significant difficulties that proper VCS (version control systems) fix:
+Version control is the concept of backing up your code iteratively, so you can roll back to specific versions as needed. Version control could be achieved at the most basic level by taking a `.zip` of your add-on every day (or every version) and uploading it to google drive (or saving locally). This isn't unreasonable, but it has three significant difficulties that proper VCS (version control systems) fix:
 
 -   It isn't easy to compare versions
 -   It isn't easy to _actually_ roll-back to a previous version
@@ -25,7 +26,7 @@ For a complete walkthrough of `git`, you should follow the following [git tutori
 
 ## GitHub
 
-GitHub is a version of your git project (`repository`) that is hosted online. This allows multiple people to work on the same project at the same time and collaborate. This is very helpful for map-making. By hosting on Github, you can also (optionally) make your code public, making it easier than ever to share your addons with the world.
+GitHub is a version of your git project (`repository`) that is hosted online. This allows multiple people to work on the same project at the same time and collaborate. This is very helpful for map-making. By hosting on Github, you can also (optionally) make your code public, making it easier than ever to share your add-ons with the world.
 
 For a complete walkthrough of using `Github`, you should follow this [github tutorial](https://guides.github.com/activities/hello-world/).
 
@@ -45,7 +46,7 @@ This assumes you are adding an _existing_ project to git. The steps are similar 
 
 ## Structure
 
-The big issue with using `git` for addons is that `git` generally works by encapsulating a _single_ folder and managing it. Of course, in Bedrock Addons, assets are spread across two folders: The `BP`, and `RP`. To get around this issue, we will place our repository outside of the `com.mojang` folder entirely and then use window `junctions` to "copy" the folders in.
+The big issue with using `git` for add-ons is that `git` generally works by encapsulating a _single_ folder and managing it. Of course, in Bedrock Add-Ons, assets are spread across two folders: The `BP`, and `RP`. To get around this issue, we will place our repository outside of the `com.mojang` folder entirely and then use window `junctions` to "copy" the folders in.
 
 There are many advantages of placing our project in a separate location:
 

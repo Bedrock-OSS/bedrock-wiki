@@ -12,6 +12,7 @@ mentions:
     - aexer0e
     - ChibiMango
     - RonarsCorruption
+description: Troubleshooting guide for entities.
 ---
 
 :::tip

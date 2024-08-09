@@ -3,32 +3,33 @@ title: JSON UI Documentation
 category: Documentation
 nav_order: 1
 mentions:
-    - KalmeMarq
-    - SirLich
-    - solvedDev
-    - Joelant05
-    - GTB3NW
-    - stirante
-    - sermah
-    - MedicalJewel105
-    - tinedpakgamer
-    - LeGend077
-    - TheDataLioness
-    - shanewolf38
-    - JosiahDZD
-    - Tcbdxh
-    - inotflying
-    - TheItsNameless
-    - SmokeyStack
-    - Gotemba912
+  - KalmeMarq
+  - SirLich
+  - solvedDev
+  - Joelant05
+  - GTB3NW
+  - stirante
+  - sermah
+  - MedicalJewel105
+  - tinedpakgamer
+  - LeGend077
+  - TheDataLioness
+  - shanewolf38
+  - JosiahDZD
+  - Tcbdxh
+  - inotflying
+  - TheItsNameless
+  - SmokeyStack
+  - Gotemba912
+description: Documentation for JSON UI.
 ---
 
 ## UI Elements
 
 ### Element Types
 
-|       Name       |                                           Description                                           |                                                                                                                                                                                                               Allowed Properties                                                                                                                                                                                                               |
-| ---------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name             | Description                                                                                     | Allowed Properties                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | panel            | A container, like `<div>` in HTML                                                               | [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                                                                        |
 | stack_panel      | Similar to `panel` but stacks its children depending on `orientation` property value            | [Stack Panel](/json-ui/json-ui-documentation#stack-panel) <br> [Collection](/json-ui/json-ui-documentation#collection) <br> [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                            |
 | collection_panel | Similar to `stack_panel`, but does not have the `orientation` property                          | [Collection](/json-ui/json-ui-documentation#collection) <br> [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                           |
@@ -52,19 +53,19 @@ mentions:
 
 #### Legacy Element Types (No longer work)
 
-|      Name      |                       Description                        |                                                                                                                                                                                                                               Allowed Properties                                                                                                                                                                                                                               |
-| -------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name           | Description                                              | Allowed Properties                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|----------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | tab            | The way tabs were made before the addition of toggles    | [Tab](/json-ui/json-ui-documentation#tab-legacy) <br> [Button](/json-ui/json-ui-documentation#button) <br> [Input](/json-ui/json-ui-documentation#input) <br> [Focus](/json-ui/json-ui-documentation#focus) <br> [Sound](/json-ui/json-ui-documentation#sound) <br> [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding) |
-| carousel_label |                                                          | [Carousel Text](/json-ui/json-ui-documentation#carousel-text-legacy) <br> [Text](/json-ui/json-ui-documentation#text) <br> [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                         |
-| grid_item      | A `panel` but specifically to be an item/child of a grid | [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                                                                                              |
-| scrollbar      |                                                          | [Input](/json-ui/json-ui-documentation#input) <br> [Focus](/json-ui/json-ui-documentation#focus) <br> [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                              |
+| carousel_label |                                                          | [Carousel Text](/json-ui/json-ui-documentation#carousel-text-legacy) <br> [Text](/json-ui/json-ui-documentation#text) <br> [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                          |
+| grid_item      | A `panel` but specifically to be an item/child of a grid | [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                                                                                                                                     |
+| scrollbar      |                                                          | [Input](/json-ui/json-ui-documentation#input) <br> [Focus](/json-ui/json-ui-documentation#focus) <br> [Control](/json-ui/json-ui-documentation#control) <br> [Layout](/json-ui/json-ui-documentation#layout) <br> [Data Binding](/json-ui/json-ui-documentation#data-binding)                                                                                                                                                               |
 
 ## Properties
 
 ### Control
 
-|       Property Name       |         Type         | Default Value |                                                                                            Description                                                                                             |
-| ------------------------- | :------------------: | :-----------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property Name             |         Type         | Default Value | Description                                                                                                                                                                                        |
+|---------------------------|:--------------------:|:-------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | visible                   |       boolean        |    `true`     | If the UI element should be visible                                                                                                                                                                |
 | enabled                   |       boolean        |    `true`     | If true and if the UI element or any of its children have the locked state then they will be in the locked                                                                                         |
 | layer                     |         int          |      `0`      | Z-Index/Layer (like zindex in CSS) relative to parent element. Higher layers will render above                                                                                                     |
@@ -90,33 +91,33 @@ mentions:
 
 #### Legacy (no longer works)
 
-| Property Name |   Type   | Default Value |                                                                                     Description                                                                                     |
-| ------------- | :------: | :-----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| z_order       |   int    |       0       | First version of the `layer` property                                                                                                                                              |
-| scroll_report | string[] |               | Array of the name of the controls to notify when content inside of the scroll panel changes                                                                                         |
+| Property Name |   Type   | Default Value | Description                                                                                                                                                                          |
+|---------------|:--------:|:-------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| z_order       |   int    |       0       | First version of the `layer` property                                                                                                                                                |
+| scroll_report | string[] |               | Array of the name of the controls to notify when content inside of the scroll panel changes                                                                                          |
 | alignment     |   enum   |               | Possible values: <br> `top_left` <br> `top_middle` <br> `top_right` <br> `left_middle` <br> `center` <br> `right_middle` <br> `bottom_left` <br> `bottom_middle` <br> `bottom_right` |
 
 ### Layout
 
-|       Property Name        |          Type          |      Default Value       |                                                                                                                                                                                                                                                                                                                                                                                                                    Description                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| -------------------------- | :--------------------: | :----------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property Name              |          Type          |      Default Value       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|----------------------------|:----------------------:|:------------------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | size                       | Vector [width, height] | `["default", "default"]` | Size of the UI element. <br> Possible values: <br> `"default"` (Default value which is `"100%"`) <br> `0` (Number of pixels) <br> `"0px"` (Number of pixels. It's the same as 0 but it's put inside a string with px at the end. It's used when you want to sum or subtract a percentage based value with a specific number of pixels. (e.g. `"75% + 12px"`)) <br> `"0%"` (Percentage of relative to the parent element) <br> `"0%c"` (Percentage of the total width/height of the element children) <br> `"0%cm"` (Percentage of the width/height of the biggest visible child of that element) <br> `"0%sm"` (Percentage of the width/height of the sibling element) <br> `"0%y"` (Percentage of the element height) <br> `"0%x"` (Percentage of the element width) <br> `"fill"` (Expands to the remaining width/height of the parent element) |
 | max_size                   | Vector [width, height] | `["default", "default"]` | Maximum size of the UI element can have                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | min_size                   | Vector [width, height] | `["default", "default"]` | Minimum size of the UI element can have                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | offset                     |     Vector [x, y]      |         `[0, 0]`         | Position of the UI element relative to the parent UI element. It's TopLeft based meaning the coordinates [0, 0] start at the top left of the screen. <br> `10`- pixels <br> `"10px"` - pixels <br> `"50%"` - Width/height of the parent element <br> `"50%x"` - Width of the element <br> `"50%y"` - Height of the element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| anchor_from                |          enum          |         `center`         | Anchor point in the parent element. <br> Possible values: <br> `top_left` <br> `top_middle` <br> `top_right` <br> `left_middle` <br> `center` <br> `right_middle` <br> `bottom_left` <br> `bottom_middle` <br> `bottom_right`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| anchor_to                  |          enum          |         `center`         | Anchor point in the element. <br> Possible values: <br> `top_left` <br> `top_middle` <br> `top_right` <br> `left_middle` <br> `center` <br> `right_middle` <br> `bottom_left` <br> `bottom_middle` <br> `bottom_right`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| anchor_from                |          enum          |         `center`         | Anchor point in the parent element. <br> Possible values: <br> `top_left` <br> `top_middle` <br> `top_right` <br> `left_middle` <br> `center` <br> `right_middle` <br> `bottom_left` <br> `bottom_middle` <br> `bottom_right`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| anchor_to                  |          enum          |         `center`         | Anchor point in the element. <br> Possible values: <br> `top_left` <br> `top_middle` <br> `top_right` <br> `left_middle` <br> `center` <br> `right_middle` <br> `bottom_left` <br> `bottom_middle` <br> `bottom_right`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | inherit_max_sibling_width  |        boolean         |         `false`          | Use the maximum width of the sibling element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | inherit_max_sibling_height |        boolean         |         `false`          | Use the maximum height of the sibling element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | use_anchored_offset        |        boolean         |                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | contained                  |        boolean         |                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| draggable                  |          enum          |                          | Makes the element draggable through cursor. The element should be able to accept input in order to be draggable (`input_panel`, `button`, etc.) and must have the required button mappings. <br> Possible values: `vertical`, `horizontal` and `both`    |
+| draggable                  |          enum          |                          | Makes the element draggable through cursor. The element should be able to accept input in order to be draggable (`input_panel`, `button`, etc.) and must have the required button mappings. <br> Possible values: `vertical`, `horizontal` and `both`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | follows_cursor             |        boolean         |         `false`          | Follows the cursor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ### Data Binding
 
-| Property Name |                                           Type                                            | Default Value |                    Description                     |
-| ------------- | :---------------------------------------------------------------------------------------: | :-----------: | -------------------------------------------------- |
+| Property Name |                                         Type                                         | Default Value | Description                                        |
+|---------------|:------------------------------------------------------------------------------------:|:-------------:|----------------------------------------------------|
 | bindings      | Vector of [binding object](/json-ui/json-ui-documentation#data-binding-array-object) |               | Bind and work with hardcoded values in the element |
 
 
@@ -124,8 +125,8 @@ mentions:
 
 Data Binding allows to bind hardcoded values/variables to an element property.
 
-|       Property Name       |  Type   | Default Value |                                                                                Description                                                                                |
-| ------------------------- | :-----: | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property Name             |  Type   | Default Value | Description                                                                                                                                                               |
+|---------------------------|:-------:|:-------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ignored                   | boolean |    `false`    | If binding should be ignored                                                                                                                                              |
 | binding_type              |  enum   |               | Possible values: <br> `global` <br> `view` <br> `collection` <br> `collection_details` <br> `none`                                                                        |
 | binding_name              | string  |               | Stores the value of the data binding name or condition with it                                                                                                            |
@@ -140,14 +141,14 @@ Data Binding allows to bind hardcoded values/variables to an element property.
 
 ### Stack Panel
 
-| Property Name | Type  | Default Value |                                                Description                                                 |
-| ------------- | :---: | :-----------: | ---------------------------------------------------------------------------------------------------------- |
-| orientation   | enum  |  `vertical`   | Direction the elements stack inside `stack_panel`. <br> Possible values: <br> `vertical` <br> `horizontal` |
+| Property Name | Type | Default Value | Description                                                                                                |
+|---------------|:----:|:-------------:|------------------------------------------------------------------------------------------------------------|
+| orientation   | enum |  `vertical`   | Direction the elements stack inside `stack_panel`. <br> Possible values: <br> `vertical` <br> `horizontal` |
 
 ### Grid
 
-|       Property Name       |          Type          | Default Value |                                                             Description                                                             |
-| ------------------------- | :--------------------: | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Property Name             |          Type          | Default Value | Description                                                                                                                         |
+|---------------------------|:----------------------:|---------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | grid_dimensions           | Vector [rows, columns] |               | Number of columns and rows the grid has                                                                                             |
 | maximum_grid_items        |          int           |               | Maximum number of items the grid will generate                                                                                      |
 | grid_dimension_binding    |         string         |               | Binding name for grid dimensions                                                                                                    |
@@ -158,30 +159,30 @@ Data Binding allows to bind hardcoded values/variables to an element property.
 
 ### Text
 
-|      Property Name      |       Type       |   Default Value   |                                                      Description                                                      |
-| ----------------------- | :--------------: | :---------------: | --------------------------------------------------------------------------------------------------------------------- |
-| text                    |      string      |                   | Text content                                                                                                          |
-| color                   | Vector [r, g, b] | `[1.0, 1.0, 1.0]` | Text color. RGB value from 0.0 to 1.0                                                                                                          |
-| locked_color            | Vector [r, g, b] |                   | Text color when a parent has `enabled: false`                                                                         |
-| shadow                  |     boolean      |      `false`      | Text shadow                                                                                                           |
-| hide_hyphen             |     boolean      |      `false`      | Hide hyphen caused by word breaking                                                                                   |
-| notify_on_ellipses      |     string[]     |                   | Array of names of the controls to notify when text gets or loses ellipses                                             |
-| enable_profanity_filter |     boolean      |      `false`      | If "bad" words should be censored                                                                                     |
-| locked_alpha            |      float       |                   | Alpha/transparency of label when a parent has `enabled: false`                                                        |
-| font_size               |       enum       |     `normal`      | Size of the text. <br> Possible values: <br> `small` <br> `normal` <br> `large` <br> `extra_large`                    |
-| font_scale_factor       |      float       |       `1.0`       | Scale of the text                                                                                                     |
-| localize                |     boolean      |      `false`      | If ```text``` should be able to be translated                                                                         |
-| line_padding            |      number      |                   | Space between lines                                                                                                   |
-| font_type               |       enum       |     `default`     | Font of the text. <br> Possible values: <br> `default` <br> `rune` <br> `unicode` <br> `smooth` <br> `MinecraftTen` <br> or any other custom font                                                                                                      |
-| backup_font_type        |       enum       |     `default`     | Font used if `font_type` didn't work                                                                                  |
-| text_alignment          |       enum       |                   | Text alignment direction. If it's not defined it will adjust automatically based on `anchor_from` and ```anchor_to``` |
+| Property Name           |       Type       |   Default Value   | Description                                                                                                                                       |
+|-------------------------|:----------------:|:-----------------:|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| text                    |      string      |                   | Text content                                                                                                                                      |
+| color                   | Vector [r, g, b] | `[1.0, 1.0, 1.0]` | Text color. RGB value from 0.0 to 1.0                                                                                                             |
+| locked_color            | Vector [r, g, b] |                   | Text color when a parent has `enabled: false`                                                                                                     |
+| shadow                  |     boolean      |      `false`      | Text shadow                                                                                                                                       |
+| hide_hyphen             |     boolean      |      `false`      | Hide hyphen caused by word breaking                                                                                                               |
+| notify_on_ellipses      |     string[]     |                   | Array of names of the controls to notify when text gets or loses ellipses                                                                         |
+| enable_profanity_filter |     boolean      |      `false`      | If "bad" words should be censored                                                                                                                 |
+| locked_alpha            |      float       |                   | Alpha/transparency of label when a parent has `enabled: false`                                                                                    |
+| font_size               |       enum       |     `normal`      | Size of the text. <br> Possible values: <br> `small` <br> `normal` <br> `large` <br> `extra_large`                                                |
+| font_scale_factor       |      float       |       `1.0`       | Scale of the text                                                                                                                                 |
+| localize                |     boolean      |      `false`      | If ```text``` should be able to be translated                                                                                                     |
+| line_padding            |      number      |                   | Space between lines                                                                                                                               |
+| font_type               |       enum       |     `default`     | Font of the text. <br> Possible values: <br> `default` <br> `rune` <br> `unicode` <br> `smooth` <br> `MinecraftTen` <br> or any other custom font |
+| backup_font_type        |       enum       |     `default`     | Font used if `font_type` didn't work                                                                                                              |
+| text_alignment          |       enum       |                   | Text alignment direction. If it's not defined it will adjust automatically based on `anchor_from` and ```anchor_to```                             |
 
 #### Legacy (no longer works)
 
-| Property Name |  Type   | Default Value |                             Description                             |
-| ------------- | :-----: | :-----------: | ------------------------------------------------------------------- |
-| wrap          | boolean |     `false`     | Break text into lines if text is bigger than width of the element |
-| clip          | boolean |     `false`     |                                                                     |
+| Property Name |  Type   | Default Value | Description                                                       |
+|---------------|:-------:|:-------------:|-------------------------------------------------------------------|
+| wrap          | boolean |    `false`    | Break text into lines if text is bigger than width of the element |
+| clip          | boolean |    `false`    |                                                                   |
 
 <br>
 
@@ -213,50 +214,50 @@ Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
 
 ### Sprite
 
-|        Property Name        |                     Type                      | Default Value |                                                                                       Description                                                                                        |
-| --------------------------- | :-------------------------------------------: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| texture                     |                    string                     |               | Image path starting from pack root. (e.g. `"textures/ui/White"`)                                                                                                                         |
-| allow_debug_missing_texture |                    boolean                    |    `true`     | Display the missing_texture if the texture is not found                                                                                                                                  |
-| uv                          |                 Vector [u, v]                 |               | Start position of the texture mapping                                                                                                                                                    |
-| uv_size                     |            Vector [width, height]             |               | Size of the texture mapping                                                                                                                                                              |
-| texture_file_system         |                    string                     |`InUserPackage`| Source to get the texture.  <br> Possible values: <br> `InUserPackage` <br> `InAppPackage` <br> `RawPath` <br> `RawPersistent` <br> `InSettingsDir` <br> `InExternalDir` <br> `InServerPackage` <br> `InDataDir` <br> `InUserDir` <br> `InWorldDir` <br> `StoreCache` <br> Usage is Unknown |
-| nineslice_size              | int, Vector [x, y] or Vector [x0, y0, x1, y1] |               | 9-slice. A method that divides an texture into 9 pieces. When resized the corners will stay in place and the rest will stretch                                                           |
-| tiled                       |                boolean or enum                |               | If the texture will tile when the size of the UI element is bigger than the texture size. <br> Possible values: <br> `true`/`false` <br> `x` <br> `y`                                    |
-| tiled_scale                 |                Vector [sX, sY]                |    `false`    | Scale of the tile textures                                                                                                                                                               |
-| clip_direction              |                     enum                      |               | Start point position for the `clip_ratio`. If `down`, the image will begin to appear from the bottom. <br> Possible values: <br> `left` <br> `right` <br> `up` <br> `down` <br> `center` |
-| clip_ratio                  |                     float                     |               | How much to clip. From 0.0 to 1.0                                                                                                                                                        |
-| clip_pixelperfect           |                    boolean                    |               | If the clip should try to be the most pixel accurate possible                                                                                                                            |
-| keep_ratio                  |                    boolean                    |    `true`    | Keep ratio when resizing image                                                                                                                                                           |
-| bilinear                    |                    boolean                    |    `false`    | Use the bilinear function when resizing the image                                                                                                                                        |
-| fill                        |                    boolean                    |    `false`    | Scratch the image to the size                                                                                                                                                            |
-| $fit_to_width               |                    boolean                    |               |                                                                                                                                                                                          |
-| zip_folder                  |                    string                     |               |                                                                                                                                                                                          |
-| grayscale                   |                    boolean                    |    `false`    | Render image in black and white                                                                                                                                                          |
-| force_texture_reload        |                    boolean                    |               | Reload image when the texture path is changed                                                                                                                                            |
-| base_size                   |            Vector [width, height]             |               |                                                                                                                                                                                          |
+| Property Name               |                     Type                      |  Default Value  | Description                                                                                                                                                                                                                                                                                 |
+|-----------------------------|:---------------------------------------------:|:---------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| texture                     |                    string                     |                 | Image path starting from pack root. (e.g. `"textures/ui/White"`)                                                                                                                                                                                                                            |
+| allow_debug_missing_texture |                    boolean                    |     `true`      | Display the missing_texture if the texture is not found                                                                                                                                                                                                                                     |
+| uv                          |                 Vector [u, v]                 |                 | Start position of the texture mapping                                                                                                                                                                                                                                                       |
+| uv_size                     |            Vector [width, height]             |                 | Size of the texture mapping                                                                                                                                                                                                                                                                 |
+| texture_file_system         |                    string                     | `InUserPackage` | Source to get the texture.  <br> Possible values: <br> `InUserPackage` <br> `InAppPackage` <br> `RawPath` <br> `RawPersistent` <br> `InSettingsDir` <br> `InExternalDir` <br> `InServerPackage` <br> `InDataDir` <br> `InUserDir` <br> `InWorldDir` <br> `StoreCache` <br> Usage is Unknown |
+| nineslice_size              | int, Vector [x, y] or Vector [x0, y0, x1, y1] |                 | 9-slice. A method that divides an texture into 9 pieces. When resized the corners will stay in place and the rest will stretch                                                                                                                                                              |
+| tiled                       |                boolean or enum                |                 | If the texture will tile when the size of the UI element is bigger than the texture size. <br> Possible values: <br> `true`/`false` <br> `x` <br> `y`                                                                                                                                       |
+| tiled_scale                 |                Vector [sX, sY]                |     `false`     | Scale of the tile textures                                                                                                                                                                                                                                                                  |
+| clip_direction              |                     enum                      |                 | Start point position for the `clip_ratio`. If `down`, the image will begin to appear from the bottom. <br> Possible values: <br> `left` <br> `right` <br> `up` <br> `down` <br> `center`                                                                                                    |
+| clip_ratio                  |                     float                     |                 | How much to clip. From 0.0 to 1.0                                                                                                                                                                                                                                                           |
+| clip_pixelperfect           |                    boolean                    |                 | If the clip should try to be the most pixel accurate possible                                                                                                                                                                                                                               |
+| keep_ratio                  |                    boolean                    |     `true`      | Keep ratio when resizing image                                                                                                                                                                                                                                                              |
+| bilinear                    |                    boolean                    |     `false`     | Use the bilinear function when resizing the image                                                                                                                                                                                                                                           |
+| fill                        |                    boolean                    |     `false`     | Scratch the image to the size                                                                                                                                                                                                                                                               |
+| $fit_to_width               |                    boolean                    |                 |                                                                                                                                                                                                                                                                                             |
+| zip_folder                  |                    string                     |                 |                                                                                                                                                                                                                                                                                             |
+| grayscale                   |                    boolean                    |     `false`     | Render image in black and white                                                                                                                                                                                                                                                             |
+| force_texture_reload        |                    boolean                    |                 | Reload image when the texture path is changed                                                                                                                                                                                                                                               |
+| base_size                   |            Vector [width, height]             |                 |                                                                                                                                                                                                                                                                                             |
 
 To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with binding condition `"always"`. Progress arrow and fuel images in furnace UI work like this.
 
 ### Input
 
-|           Property Name            |                                            Type                                             | Default Value | Description |
-| ---------------------------------- | :-----------------------------------------------------------------------------------------: | :-----------: | ----------- |
+| Property Name                      |                                          Type                                          | Default Value | Description |
+|------------------------------------|:--------------------------------------------------------------------------------------:|:-------------:|-------------|
 | button_mappings                    | Vector of [mapping object](/json-ui/json-ui-documentation#button-mapping-array-object) |               |             |
-| modal                              |                                           boolean                                           |               |             |
-| inline_modal                       |                                           boolean                                           |               |             |
-| always_listen_to_input             |                                           boolean                                           |               |             |
-| always_handle_pointer              |                                           boolean                                           |               |             |
-| always_handle_controller_direction |                                           boolean                                           |               |             |
-| hover_enabled                      |                                           boolean                                           |               |             |
-| prevent_touch_input                |                                           boolean                                           |               |             |
-| consume_event                      |                                           boolean                                           |               |             |
-| consume_hover_events               |                                           boolean                                           |               |             |
-| gesture_tracking_button            |                                           string                                            |               |             |
+| modal                              |                                        boolean                                         |               |             |
+| inline_modal                       |                                        boolean                                         |               |             |
+| always_listen_to_input             |                                        boolean                                         |               |             |
+| always_handle_pointer              |                                        boolean                                         |               |             |
+| always_handle_controller_direction |                                        boolean                                         |               |             |
+| hover_enabled                      |                                        boolean                                         |               |             |
+| prevent_touch_input                |                                        boolean                                         |               |             |
+| consume_event                      |                                        boolean                                         |               |             |
+| consume_hover_events               |                                        boolean                                         |               |             |
+| gesture_tracking_button            |                                         string                                         |               |             |
 
 #### Button Mapping Array Object
 
-|          Property Name           |  Type   | Default Value |                                    Description                                     |
-| -------------------------------- | :-----: | :-----------: | ---------------------------------------------------------------------------------- |
+| Property Name                    |  Type   | Default Value | Description                                                                        |
+|----------------------------------|:-------:|:-------------:|------------------------------------------------------------------------------------|
 | ignored                          | boolean |    `false`    | If mapping should be ignored                                                       |
 | from_button_id                   | string  |               | ID of the action that fires the event                                              |
 | to_button_id                     | string  |               | ID of the action to be executed when event is fired                                |
@@ -271,8 +272,8 @@ To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with
 
 ### Focus
 
-|        Property Name         |                                                     Type                                                      | Default Value |                                                                                           Description                                                                                           |
-| ---------------------------- | :-----------------------------------------------------------------------------------------------------------: | :-----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property Name                |                                                     Type                                                      | Default Value | Description                                                                                                                                                                                     |
+|------------------------------|:-------------------------------------------------------------------------------------------------------------:|:-------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | default_focus_precedence     |                                                      int                                                      |               |                                                                                                                                                                                                 |
 | focus_enabled                |                                                    boolean                                                    |               | If the arrow keys or controller can focus the element                                                                                                                                           |
 | focus_wrap_enabled           |                                                    boolean                                                    |               |                                                                                                                                                                                                 |
@@ -297,8 +298,8 @@ To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with
 
 #### Focus Container Custom Array Object
 
-|       Property Name        |  Type  |                                                          Description                                                           |
-| -------------------------- | :----: | ------------------------------------------------------------------------------------------------------------------------------ |
+| Property Name              |  Type  | Description                                                                                                                    |
+|----------------------------|:------:|--------------------------------------------------------------------------------------------------------------------------------|
 | other_focus_container_name | string | Name of the UI control that will receive focus when on button.menu_left, button.menu_right, button.menu_up or button.menu_down |
 | focus_id_inside            | string | Identifier (`focus_identifier`) of the focusable child control of the `other_focus_container_name` that will recieve the focus |
 
@@ -330,8 +331,8 @@ To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with
 
 ### Button
 
-|  Property Name  |  Type  | Default Value |                                Description                                 |
-| --------------- | :----: | :-----------: | -------------------------------------------------------------------------- |
+| Property Name   |  Type  | Default Value | Description                                                                |
+|-----------------|:------:|:-------------:|----------------------------------------------------------------------------|
 | default_control | string |               | Name of the child control that will be displayed only in the default state |
 | hover_control   | string |               | Name of the child control that will be displayed only in the hover state   |
 | pressed_control | string |               | Name of the child control that will be displayed only in the pressed state |
@@ -339,8 +340,8 @@ To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with
 
 ### Toggle
 
-|         Property Name          |  Type   | Default Value |                                        Description                                        |
-| ------------------------------ | :-----: | :-----------: | ----------------------------------------------------------------------------------------- |
+| Property Name                  |  Type   | Default Value | Description                                                                               |
+|--------------------------------|:-------:|:-------------:|-------------------------------------------------------------------------------------------|
 | radio_toggle_group             | boolean |               |                                                                                           |
 | toggle_name                    | string  |               | Identifier for the toggle group it belongs to. It can be a custom one.                    |
 | toggle_default_state           | boolean |               |                                                                                           |
@@ -375,25 +376,25 @@ And there are some must toggles in setting and inventory,even though you can not
 For example,in setting that is  accessibility and in inventory,the construction,equipment,items and nature tabs are must.
 ### Dropdown
 
-|      Property Name       |  Type  | Default Value |                             Description                              |
-| ------------------------ | :----: | :-----------: | -------------------------------------------------------------------- |
+| Property Name            |  Type  | Default Value | Description                                                          |
+|--------------------------|:------:|:-------------:|----------------------------------------------------------------------|
 | dropdown_name            | string |               | Identifier for the dropdown                                          |
 | dropdown_content_control | string |               | Name of the child control that will behave as the root content panel |
 | dropdown_area            | string |               | Name of the child control that will behave as the inside content     |
 
 ### Sound
 
-| Property Name |                                       Type                                       |                                                     Description                                                     |
-| ------------- | :------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------- |
-| sound_name    |                                      string                                      | Name of the sound defined in the `RP/sounds/sound_definitions.json` file that plays when the pressed event is fired |
-| sound_volume  |                                      float                                       | Volume of the sound                                                                                                 |
-| sound_pitch   |                                      float                                       | Pitch of the sound                                                                                                  |
+| Property Name |                                    Type                                     | Description                                                                                                         |
+|---------------|:---------------------------------------------------------------------------:|---------------------------------------------------------------------------------------------------------------------|
+| sound_name    |                                   string                                    | Name of the sound defined in the `RP/sounds/sound_definitions.json` file that plays when the pressed event is fired |
+| sound_volume  |                                    float                                    | Volume of the sound                                                                                                 |
+| sound_pitch   |                                    float                                    | Pitch of the sound                                                                                                  |
 | sounds        | Vector of [sound object](/json-ui/json-ui-documentation#sound-array-object) | Array of the sounds to play when the pressed event is fired                                                         |
 
 #### Sound Array Object
 
-|       Property Name       |  Type  |                                                     Description                                                     |
-| ------------------------- | :----: | ------------------------------------------------------------------------------------------------------------------- |
+| Property Name             |  Type  | Description                                                                                                         |
+|---------------------------|:------:|---------------------------------------------------------------------------------------------------------------------|
 | sound_name                | string | Name of the sound defined in the `RP/sounds/sound_definitions.json` file that plays when the pressed event is fired |
 | sound_volume              | float  | Volume of the sound                                                                                                 |
 | sound_pitch               | float  | Pitch of the sound                                                                                                  |
@@ -402,14 +403,14 @@ For example,in setting that is  accessibility and in inventory,the construction,
 
 ### Collection
 
-|  Property Name  |  Type  |            Description            |
-| --------------- | :----: | --------------------------------- |
+| Property Name   |  Type  | Description                       |
+|-----------------|:------:|-----------------------------------|
 | collection_name | string | Name of the collection to be used |
 
 ### Text Edit
 
-|           Property Name            |  Type   | Default Value |                                                                        Description                                                                         |
-| ---------------------------------- | :-----: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property Name                      |  Type   | Default Value | Description                                                                                                                                                |
+|------------------------------------|:-------:|:-------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | text_box_name                      | string  |               | Identifier for text box                                                                                                                                    |
 | text_edit_box_grid_collection_name | string  |               | Name of the collection the `edit_box` belongs to                                                                                                           |
 | constrain_to_rect                  | boolean |               |                                                                                                                                                            |
@@ -424,8 +425,8 @@ For example,in setting that is  accessibility and in inventory,the construction,
 
 ### Slider
 
-|        Property Name         |  Type   | Default Value |                                                 Description                                                  |
-| ---------------------------- | :-----: | :-----------: | ------------------------------------------------------------------------------------------------------------ |
+| Property Name                |  Type   | Default Value | Description                                                                                                  |
+|------------------------------|:-------:|:-------------:|--------------------------------------------------------------------------------------------------------------|
 | slider_track_button          | string  |               | ID of the action for the slider track                                                                        |
 | slider_small_decrease_button | string  |               | ID of the action for the decrease slider                                                                     |
 | slider_small_increase_button | string  |               | ID of the action for the increase slider                                                                     |
@@ -445,16 +446,16 @@ For example,in setting that is  accessibility and in inventory,the construction,
 
 ### Slider Box
 
-|  Property Name  |  Type  | Default Value |                              Description                              |
-| --------------- | :----: | :-----------: | --------------------------------------------------------------------- |
+| Property Name   |  Type  | Default Value | Description                                                           |
+|-----------------|:------:|:-------------:|-----------------------------------------------------------------------|
 | default_control | string |               | Name of the child control that will be displayed in the default state |
 | hover_control   | string |               | Name of the child control that will be displayed in the hover state   |
 | locked_control  | string |               | Name of the child control that will be displayed in the locked state  |
 
 ### Scroll View
 
-|       Property Name        |  Type   | Default Value |                                            Description                                            |
-| -------------------------- | :-----: | :-----------: | ------------------------------------------------------------------------------------------------- |
+| Property Name              |  Type   | Default Value | Description                                                                                       |
+|----------------------------|:-------:|:-------------:|---------------------------------------------------------------------------------------------------|
 | scrollbar_track_button     | string  |               | ID of the action for the track button                                                             |
 | scrollbar_touch_button     | string  |               | ID of the action for the touch input                                                              |
 | scroll_speed               | number  |               | Scrolling speed                                                                                   |
@@ -470,15 +471,15 @@ For example,in setting that is  accessibility and in inventory,the construction,
 
 ### Custom Render
 
-| Property Name | Type  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------- | :---: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| renderer      | enum  | Possible values: <br> `hover_text_renderer` <br> `3d_structure_renderer` <br> `splash_text_renderer` <br> `ui_holo_cursor` <br> `trial_time_renderer` <br> `panorama_renderer` <br> `actor_portrait_renderer` <br> `banner_pattern_renderer` <br> `live_player_renderer` <br> `web_view_renderer` <br> `hunger_renderer` <br> `bubbles_renderer` <br> `mob_effects_renderer` <br> `cursor_renderer` <br> `progress_indicator_renderer` <br> `camera_renderer` <br> `horse_jump_renderer` <br> `armor_renderer` <br> `horse_heart_renderer` <br> `heart_renderer` <br> `hotbar_cooldown_renderer` <br> `hotbar_renderer` <br> `hud_player_renderer` <br> `live_horse_renderer` <br> `holographic_postrenderer` <br> `enchanting_book_renderer` <br> `debug_screen_renderer` <br> `gradient_renderer` <br> `paper_doll_renderer` <br> `name_tag_renderer` <br> `flying_item_renderer` <br> `inventory_item_renderer` <br> `credits_renderer` <br> `vignette_renderer` <br> `progress_bar_renderer` <br> `debug_overlay_renderer` <br> `background_renderer` <br> `bohr_model_renderer` <br> `experience_renderer` (Legacy, no longer works) <br> `menu_background_renderer` (Legacy, no longer works) |
+| Property Name | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|---------------|:----:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| renderer      | enum | Possible values: <br> `hover_text_renderer` <br> `3d_structure_renderer` <br> `splash_text_renderer` <br> `ui_holo_cursor` <br> `trial_time_renderer` <br> `panorama_renderer` <br> `actor_portrait_renderer` <br> `banner_pattern_renderer` <br> `live_player_renderer` <br> `web_view_renderer` <br> `hunger_renderer` <br> `bubbles_renderer` <br> `mob_effects_renderer` <br> `cursor_renderer` <br> `progress_indicator_renderer` <br> `camera_renderer` <br> `horse_jump_renderer` <br> `armor_renderer` <br> `horse_heart_renderer` <br> `heart_renderer` <br> `hotbar_cooldown_renderer` <br> `hotbar_renderer` <br> `hud_player_renderer` <br> `live_horse_renderer` <br> `holographic_postrenderer` <br> `enchanting_book_renderer` <br> `debug_screen_renderer` <br> `gradient_renderer` <br> `paper_doll_renderer` <br> `name_tag_renderer` <br> `flying_item_renderer` <br> `inventory_item_renderer` <br> `credits_renderer` <br> `vignette_renderer` <br> `progress_bar_renderer` <br> `debug_overlay_renderer` <br> `background_renderer` <br> `bohr_model_renderer` <br> `experience_renderer` (Legacy, no longer works) <br> `menu_background_renderer` (Legacy, no longer works) |
 
 
 ####  Renderers
 
-|         Renderer Name         |                                                  Description                                                   |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Renderer Name                 | Description                                                                                                    |
+|-------------------------------|----------------------------------------------------------------------------------------------------------------|
 | `flying_item_renderer`        | The flying item when you change an item from a slot to another                                                 |
 | `inventory_item_renderer`     | Renders an item icon. It only work in screens when ingame                                                      |
 | `credits_renderer`            | The credits and end poem                                                                                       |
@@ -517,8 +518,8 @@ For example,in setting that is  accessibility and in inventory,the construction,
 
 #### Specific Properties
 
-|    Property Name     |        Type         |                   Renderer                    |                          Description                          |
-| -------------------- | :-----------------: | --------------------------------------------- | ------------------------------------------------------------- |
+| Property Name        |        Type         | Renderer                                      | Description                                                   |
+|----------------------|:-------------------:|-----------------------------------------------|---------------------------------------------------------------|
 | gradient_direction   |        enum         | `gradient_renderer`                           | Possible values: <br> `vertical` <br> `horizontal`            |
 | color1               | Vector [r, g, b, a] | `gradient_renderer`                           |                                                               |
 | color2               | Vector [r, g, b, a] | `gradient_renderer`                           |                                                               |
@@ -537,8 +538,8 @@ For example,in setting that is  accessibility and in inventory,the construction,
 
 ### Screen
 
-|            Property Name            |  Type   |                                Description                                |
-| ----------------------------------- | :-----: | ------------------------------------------------------------------------- |
+| Property Name                       |  Type   | Description                                                               |
+|-------------------------------------|:-------:|---------------------------------------------------------------------------|
 | render_only_when_topmost            | boolean | Only render the screen if it's the most top screen in the screen stack    |
 | screen_not_flushable                | boolean |                                                                           |
 | always_accepts_input                | boolean |                                                                           |
@@ -561,8 +562,8 @@ For example,in setting that is  accessibility and in inventory,the construction,
 
 ### Selection Wheel
 
-|       Property Name       |   Type   | Description |
-| ------------------------- | :------: | ----------- |
+| Property Name             |   Type   | Description |
+|---------------------------|:--------:|-------------|
 | inner_radius              |  number  |             |
 | outer_radius              |  number  |             |
 | state_controls            | string[] |             |
@@ -573,8 +574,8 @@ For example,in setting that is  accessibility and in inventory,the construction,
 | initial_button_slice      | integer  |             |
 
 ### TTS
-|            Property Name            |  Type   |                                        Description                                         |
-| ----------------------------------- | :-----: | ------------------------------------------------------------------------------------------ |
+| Property Name                       |  Type   | Description                                                                                |
+|-------------------------------------|:-------:|--------------------------------------------------------------------------------------------|
 | tts_name                            | string  |                                                                                            |
 | tts_control_header                  | string  |                                                                                            |
 | tts_section_header                  | string  |                                                                                            |
@@ -597,16 +598,16 @@ For example,in setting that is  accessibility and in inventory,the construction,
 
 ### Tab (Legacy)
 
-| Property Name |  Type  | Default Value |                        Description                        |
-| ------------- | :----: | :-----------: | --------------------------------------------------------- |
+| Property Name |  Type  | Default Value | Description                                               |
+|---------------|:------:|:-------------:|-----------------------------------------------------------|
 | tab_index     |  int   |               | ID of tab in its group                                    |
 | tab_group     |  int   |               | ID of the group the tab belongs to                        |
 | tab_control   | string |               | Name of the control that will show when the tab is active |
 
 ### Carousel Text (Legacy)
 
-| Property Name |         Type         | Default Value |           Description           |
-| ------------- | :------------------: | :-----------: | ------------------------------- |
+| Property Name |         Type         | Default Value | Description                     |
+|---------------|:--------------------:|:-------------:|---------------------------------|
 | always_rotate |       boolean        |               |                                 |
 | rotate_speed  |        number        |               |                                 |
 | hover_color   | Vector [r, g, b, a], |               | `color` when element is hovered |
@@ -680,7 +681,7 @@ Basically `anchor_to` is the anchor point in the element that will be attached t
 ### Variables Property
 
 | Name       |  Type  | Description |
-| ---------- | :----: | ----------- |
+|------------|:------:|-------------|
 | `requires` | string | condition   |
 
 <br>
@@ -732,8 +733,8 @@ If you have multiple variables use `"variables": [{}]`
 
 ## Property Bag
 
-|                Name                |        Type         |                     Requirements                     |                           Description                           |
-| ---------------------------------- | :-----------------: | ---------------------------------------------------- | --------------------------------------------------------------- |
+| Name                               |        Type         | Requirements                                         | Description                                                     |
+|------------------------------------|:-------------------:|------------------------------------------------------|-----------------------------------------------------------------|
 | #filtered_light_multiplier         |        float        | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
 | #banner_patterns                   |       string        | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
 | #banner_colors                     |       string        | type[custom] <br> renderer[inventory_item_renderer]  |                                                                 |
@@ -830,8 +831,8 @@ If you have multiple variables use `"variables": [{}]`
 
 ## Animations
 
-|  Animation Property Name  |     Type      |                                                                                                                                                                                                                                                                                       Description                                                                                                                                                                                                                                                                                        |
-| ------------------------- | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Animation Property Name   |     Type      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|---------------------------|:-------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | anim_type                 |     enum      | Possible values: <br> `alpha` <br> `clip` <br> `color` <br> `flip_book` <br> `offset` <br> `size` <br> `uv` <br> `wait` <br> `aseprite_flip_book`                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | duration                  |    number     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | next                      |    string     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -847,7 +848,7 @@ If you have multiple variables use `"variables": [{}]`
 | fps                       |      int      | Frames per second                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | frame_count               |      int      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | frame_step                |    number     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| reversible                |    boolean    | Run the animation in reverse after completion                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| reversible                |    boolean    | Run the animation in reverse after completion                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | resettable                |    boolean    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | scale_from_starting_alpha |    boolean    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | activated                 |    boolean    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -856,8 +857,8 @@ For more information about the `aseprite_flip_book` animation type, please see o
 
 ## Global Variables
 
-|                Variable                |                                           Note                                            |
-| -------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Variable                               | Note                                                                                      |
+|----------------------------------------|-------------------------------------------------------------------------------------------|
 | $store_disabled                        |                                                                                           |
 | $game_pad                              | There's a controller connected to the device                                              |
 | $mouse                                 | There's a mouse connected to the device                                                   |
@@ -1967,8 +1968,8 @@ Some of them only work in specific screens.
 
 ### Sliders
 
-|           Name            |           Slider Name           |        Value Binding Name        | TTS Value (`tts_value_changed`) |                  Slider Text                  |           Enabled Binding Name           |
-| ------------------------- | ------------------------------- | -------------------------------- | ------------------------------- | --------------------------------------------- | ---------------------------------------- |
+| Name                      | Slider Name                     | Value Binding Name               | TTS Value (`tts_value_changed`) | Slider Text                                   | Enabled Binding Name                     |
+|---------------------------|---------------------------------|----------------------------------|---------------------------------|-----------------------------------------------|------------------------------------------|
 | Brightness                | `gamma`                         | `#gamma`                         | `#gamma_text_value`             | `#gamma_slider_label`                         | `#gamma_enabled`                         |
 | Brightness (VR)           | `vr_gamma`                      | `#vr_gamma`                      | `#vr_gamma_text_value`          | `#vr_gamma_slider_label`                      | `#vr_gamma_enabled`                      |
 | HUD Opacity               | `interface_opacity`             | `#interface_opacity`             | `#interface_opacity_text_value` | `#interface_opacity_slider_label`             | `#interface_opacity_enabled`             |
@@ -1977,8 +1978,8 @@ Some of them only work in specific screens.
 
 ### Toggles
 
-|                  Name                   |              Toggle Name              |           State Binding Name           |              Enabled Binding Name              |
-| --------------------------------------- | ------------------------------------- | -------------------------------------- | ---------------------------------------------- |
+| Name                                    | Toggle Name                           | State Binding Name                     | Enabled Binding Name                           |
+|-----------------------------------------|---------------------------------------|----------------------------------------|------------------------------------------------|
 | Invert Y Axis (Mouse)                   | `keyboard_mouse_invert_y_axis`        | `#keyboard_mouse_invert_y_axis`        | `#keyboard_mouse_invert_y_axis_enabled`        |
 | Auto Jump (Mouse)                       | `keyboard_mouse_autojump`             | `#keyboard_mouse_autojump`             | `#keyboard_mouse_autojump_enabled`             |
 | Show Full Keyboard Options              | `keyboard_show_full_keyboard_options` | `#keyboard_show_full_keyboard_options` | `#keyboard_show_full_keyboard_options_enabled` |
@@ -2041,7 +2042,7 @@ Some of them only work in specific screens.
 ## Item ID Aux (`#item_id_aux`)
 
 | Name              |  ID  | Aux Values |
-| ----------------- | :--: | :--------: |
+|-------------------|:----:|:----------:|
 | diamond           | 306  |  20054016  |
 | emerald           | 519  |  34013184  |
 | gold_ingot        | 308  |  20185088  |

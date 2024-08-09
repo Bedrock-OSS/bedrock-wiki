@@ -5,6 +5,7 @@ mentions:
     - BedrockCommands
     - zheaEvyline
     - jordanparki7
+description: Understanding /playsound command.
 ---
 
 ## Introduction

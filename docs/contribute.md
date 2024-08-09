@@ -3,6 +3,7 @@ title: Contributing to the Bedrock Wiki
 hidden: true
 show_toc: false
 show_contributors: false
+description: The Bedrock Wiki Needs You!
 ---
 
 Hello there!

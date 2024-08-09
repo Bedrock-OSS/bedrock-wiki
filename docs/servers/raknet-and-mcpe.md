@@ -8,6 +8,7 @@ mentions:
     - Adrian8115
     - ismaileke
     - Tom-Teclador
+description: RakNet protocol for MCBE.
 ---
 
 Minecraft Bedrock uses a protocol known as [RakNet](http://www.jenkinssoftware.com/)
@@ -26,7 +27,7 @@ You can find a list of Minecraft Bedrock server softwares [here](/servers/server
 ## Data Types
 
 | Type           | Size | Range           | Notes                                                          |
-| -------------- | ---- | --------------- | -------------------------------------------------------------- |
+|----------------|------|-----------------|----------------------------------------------------------------|
 | Byte           | 1    | 0-255           | An unsigned integer                                            |
 | Long           | 8    | -2^63 to 2^63-1 | Signed 64 bit integer                                          |
 | Magic          | 16   |                 | 00ffff00fefefefefdfdfdfd12345678 - Will always be those bytes  |

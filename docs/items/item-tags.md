@@ -5,6 +5,7 @@ nav_order: 3
 mentions:
     - Xterionix
     - SmokeyStack
+description: Add tags to items.
 ---
 
 :::danger PLEASE READ

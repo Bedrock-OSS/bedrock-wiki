@@ -9,6 +9,7 @@ mentions:
     - Ciosciaa
     - Etanarvazac
     - SmokeyStack
+description: All about loot tables.
 ---
 
 ::: warning

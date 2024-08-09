@@ -4,9 +4,10 @@ category: Tutorials
 mentions:
     - LeGend077
     - MedicalJewel105
+description: Re-create Enderman's glowing eyes in your own details.
 ---
 
-In this tutorial, you will learn how to make a glowing texture, like enderman's eyes have for an entity by using materials and textures.
+In this tutorial, you will learn how to make a glowing texture, like Enderman's eyes have for an entity by using materials and textures.
 
 ## Texture
 

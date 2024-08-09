@@ -2,23 +2,24 @@
 title: TypeScript
 category: Documentation
 mentions:
-    - BlueFrog130
-    - sermah
-    - SmokeyStack
-    - SirLich
-    - Fabrimat
-    - JaylyDev
-    - Herobrine643928
-    - ThomasOrs
+  - BlueFrog130
+  - sermah
+  - SmokeyStack
+  - SirLich
+  - Fabrimat
+  - JaylyDev
+  - Herobrine643928
+  - ThomasOrs
+description: TypeScript in MCBE add-on developing.
 ---
 
 [TypeScript](https://www.typescriptlang.org/) is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.
 
-Typescript is very beneficial to use when developing scripts for Minecraft addons. There exist libraries to aid in the development of Minecraft addons to provide intellisense and type-safety for broadcasting and listening to events.
+Typescript is very beneficial to use when developing scripts for Minecraft add-ons. There exist libraries to aid in the development of Minecraft add-ons to provide intellisense and type-safety for broadcasting and listening to events.
 
 ## How it Works
 
-TypeScript is a language which requires compilation into JavaScript. Minecraft has no idea what to do with a `.ts` file. Therefore some tooling needs to be set up in order to utilize TypeScript to build addons.
+TypeScript is a language which requires compilation into JavaScript. Minecraft has no idea what to do with a `.ts` file. Therefore some tooling needs to be set up in order to utilize TypeScript to build add-ons.
 
 First, the TypeScript files need to be compiled into JavaScript, which is all accomplished by utilizing the [TypeScript Compiler](https://www.npmjs.com/package/typescript). Then the files can be utilized by Minecraft's scripting system.
 
@@ -48,7 +49,7 @@ If you haven't already. Run `cd` to set the directory the terminal is running on
 cd path/to/project
 ```
 
-Next we need to install the TypeScript for creating the addon. To do this, enter the following commands.
+Next we need to install the TypeScript for creating the add-on. To do this, enter the following commands.
 
 The following command install TypeScript globally.
 
@@ -162,7 +163,7 @@ tsc
 tsc --watch
 ```
 
-`--watch` will watch for any changes you make within the `src` directory and automatically reinstall the addon.
+`--watch` will watch for any changes you make within the `src` directory and automatically reinstall the add-on.
 
 <FolderView :paths="[
 	'node_modules',

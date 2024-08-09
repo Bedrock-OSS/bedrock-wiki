@@ -2,11 +2,12 @@
 title: Precise Rotation
 category: Tutorials
 tags:
-    - experimental
-    - expert
+  - experimental
+  - expert
 mentions:
-    - QuazChick
-    - SmokeyStack
+  - QuazChick
+  - SmokeyStack
+description: This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a "shell" block with this rotation type.
 ---
 
 :::danger PLEASE READ

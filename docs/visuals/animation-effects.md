@@ -4,6 +4,7 @@ mentions:
     - MedicalJewel105
 category:
     - General
+description: Learn how to add particles and sounds to your animation.
 ---
 
 ## Effects in Animations
@@ -38,6 +39,7 @@ Also note that some particles emit constantly.
 ### Sounds
 
 If you want to use a sound, you need to define it too.
+You can get sounds at [ZapSplat](https://www.zapsplat.com/).
 
 <CodeHeader>RP/entity/my_entity.json</CodeHeader>
 

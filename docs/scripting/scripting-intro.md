@@ -15,6 +15,7 @@ mentions:
     - Fabrimat
     - Herobrine643928
     - JaylyDev
+description: Scripting intro.
 ---
 
 :::danger Stop!
@@ -154,7 +155,7 @@ Copy/paste this into your `manifest.json`:
 	},
 	"header": {
 		"name": "Hello World",
-		"description": "Hello World scripting tutorial addon!",
+		"description": "Hello World scripting tutorial add-on!",
 		"uuid": "<uuid-1>",
 		"version": [0, 0, 1],
 		"min_engine_version": [1, 14, 0]
@@ -199,7 +200,7 @@ You can provide it your name via the array of `"authors"`, the `"url"` of your G
 
 ### the "header" section
 
-The section labelled `"header"` provides information about your addon like the addon's `"name"`, `"description"`, `"version"` (e.g. `[0,0,1]` which means `version 0.0.1`), and `"min_engine_version"` (which is the minimum Minecraft version your addon is aiming for - e.g. `Minecraft v1.14.9`).
+The section labelled `"header"` provides information about your add-on like the add-on's `"name"`, `"description"`, `"version"` (e.g. `[0,0,1]` which means `version 0.0.1`), and `"min_engine_version"` (which is the minimum Minecraft version your add-on is aiming for - e.g. `Minecraft v1.14.9`).
 
 ### the "modules" section
 

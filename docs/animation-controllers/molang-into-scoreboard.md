@@ -1,12 +1,13 @@
 ---
 title: Molang into Scoreboard
 mentions:
-    - SirLich
-    - MedicalJewel105
-    - shanewolf38
-    - Luthorius
-    - TheItsNameless
-    - ThomasOrs
+  - SirLich
+  - MedicalJewel105
+  - shanewolf38
+  - Luthorius
+  - TheItsNameless
+  - ThomasOrs
+description: Turn MoLang variable value into scoreboard value.
 ---
 
 The following provides a method to read any Molang (variable, query, etc.) into a score instantly. Ensure that the animation name called in the controllers `convert` state matches the name of the animation (animation.namespace.molang_to_score) as defined in the entity.

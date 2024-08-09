@@ -3,6 +3,7 @@ title: Vanilla Usage Spawn Rules - Full
 category: Documentation
 mentions:
     - MedicalJewel105
+description: Automatically generated list of spawn rules components used in vanilla.
 hidden: true
 ---
 

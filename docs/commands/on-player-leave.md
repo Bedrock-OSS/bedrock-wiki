@@ -5,6 +5,7 @@ mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 3
+description: This system will run your desired commands on the event that a player leaves the world.
 ---
 
 ## Introduction

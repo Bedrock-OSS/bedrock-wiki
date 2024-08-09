@@ -9,6 +9,7 @@ mentions:
     - Sprunkles137
     - TheItsNameless
     - SmokeyStack
+description: Commands with NBT components.
 ---
 
 NBT data for the Bedrock edition is minimal. The only values we have access to are:

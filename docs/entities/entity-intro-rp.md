@@ -14,6 +14,7 @@ mentions:
     - TheItsNameless
     - SmokeyStack
     - ThomasOrs
+description: Introduction to entities resource pack.
 ---
 
 The resource-pack entity file holds references to assets which form the visuals of our entity. Additionally, it contains information on how and when to render these visuals.

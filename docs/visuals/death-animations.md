@@ -14,6 +14,7 @@ mentions:
     - ChibiMango
     - SmokeyStack
     - ThomasOrs
+description: Change or disable entity death animations.
 ---
 
 Death animation refers to the rotation of the entity as it dies. This is accompanied by a red coloring and followed shortly after by the disappearance of the entity geometry and the appearance of the death particles.

@@ -15,6 +15,7 @@ mentions:
     - Luthorius
     - TheItsNameless
     - ThomasOrs
+description: Some of the MoLang queries explained.
 ---
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
@@ -32,7 +33,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 ### X
 
 | Argument | Slot       |
-| -------- | ---------- |
+|----------|------------|
 | 0        | Helmet     |
 | 1        | Chestplace |
 | 2        | Leggings   |
@@ -41,7 +42,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 ### Y
 
 | Argument | Type                  |
-| -------- | --------------------- |
+|----------|-----------------------|
 | -1       | none                  |
 | 0        | Leather armor piece   |
 | 1        | Chain armor piece     |
@@ -54,12 +55,12 @@ Where `x` and `y` are both integer arguments, from the following table:
 
 ### Y for horses
 
-| Argument | Type                  |
-| -------- | --------------------- |
-| 1        | Leather armor piece   |
-| 2        | Iron armor piece      |
-| 3        | Gold armor piece      |
-| 4        | Diamond armor piece   |
+| Argument | Type                |
+|----------|---------------------|
+| 1        | Leather armor piece |
+| 2        | Iron armor piece    |
+| 3        | Gold armor piece    |
+| 4        | Diamond armor piece |
 
 ### Example
 
@@ -74,7 +75,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 ### X
 
 | Argument | Slot       |
-| -------- | ---------- |
+|----------|------------|
 | 0        | Helmet     |
 | 1        | Chestplace |
 | 2        | Leggings   |
@@ -85,7 +86,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 Unknown, possibly:
 
 | Argument | Slot                       |
-| -------- | -------------------------- |
+|----------|----------------------------|
 | 0        | Default armor material     |
 | 1        | Enchanted armor material   |
 | 2        | Leather armor material     |
@@ -102,7 +103,7 @@ Where `slot` and `channel` are both integer arguments, from the following tables
 ### Slot
 
 | Argument | Slot       |
-| -------- | ---------- |
+|----------|------------|
 | 0        | Helmet     |
 | 1        | Chestplace |
 | 2        | Leggings   |
@@ -111,7 +112,7 @@ Where `slot` and `channel` are both integer arguments, from the following tables
 ### Channel
 
 | Argument | Slot          |
-| -------- | ------------- |
+|----------|---------------|
 | 0        | Red channel   |
 | 1        | Green channel |
 | 2        | Blue channel  |
@@ -239,7 +240,7 @@ Takes the equipment slot name first, followed by the slot index value, and then 
 
 Possible equipment slot are as follows:
 | Slot Name              | Slot Counts | Description                                                                         |
-| ---------------------- | ----------- | ----------------------------------------------------------------------------------- |
+|------------------------|-------------|-------------------------------------------------------------------------------------|
 | `slot.weapon.mainhand` | 0           | Usually any held items are in here                                                  |
 | `slot.weapon.offhand`  | 0           | Offhand slot for things like `Shield`, `Totem of Undying` or a `Map`                |
 | `slot.armor.head`      | 0           | Head armor piece                                                                    |
@@ -407,7 +408,7 @@ query.time_of_day - day time table
 <Spoiler title="Show">
 
 | `query.time_of_day` | Day Time |
-| ------------------- | -------- |
+|---------------------|----------|
 | 0.00                | 18000    |
 | 0.01                | 18240    |
 | 0.02                | 18480    |
@@ -544,7 +545,7 @@ variable.zNorm = query.movement_direction(2) / variable.mag;
 For more information on normalized vectors you can play around with this <a href=https://www.desmos.com/calculator/hhoamwgve2>Desmos graph</a>
 
 | Argument | Axis |
-| -------- | ---- |
+|----------|------|
 | 0        | X    |
 | 1        | Y    |
 | 2        | Z    |

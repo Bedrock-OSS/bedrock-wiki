@@ -3,10 +3,11 @@ title: Biome Tags
 category: Documentation
 mentions:
     - MedicalJewel105
+description: Automatically generated biome tags.
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
- *Last updated on 08 August 2024*
+ *Last updated on 09 August 2024*
 
 ## Biome tag per Biome
 

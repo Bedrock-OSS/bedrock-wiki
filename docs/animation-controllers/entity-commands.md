@@ -13,6 +13,7 @@ mentions:
     - aexer0e
     - cda94581
     - ThijsHankelMC
+description: Trigger slash commands from entities.
 ---
 
 :::warning
