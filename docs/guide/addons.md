@@ -24,6 +24,10 @@ Addons allow us to modify the contents of our Minecraft Experience by _modifying
 
 Addons are primarily written in [json](/guide/understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
 
+:::tip Javascripting
+Since this guide was written, the definition of 'Add-On' has expanded to include the Javascript scripting API. You can learn more about this API elsewhere on this site.
+:::
+
 ## What's the difference between a Behavior Pack & a Resource Pack?
 
 Addons are split into two pack types: Resource Packs, and Behavior Packs. Both can function independently, but they are most commonly used together. When you have both a Resource Pack and Behavior Pack, this is referred to as an _addon_.
@@ -54,19 +58,16 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 -   An RP entity definition, which describes how your entity will _look_
 -   A BP entity definition, which describes how your entity will _act_
 
-## What you have learned
+# Next
 
-:::tip
-
+:::tip What you have learned
 -   Addons modify Minecraft content or add their own
 -   Addons are written in json
 -   An addon is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
 :::
 
-## What to do now?
-
 <BButton
     link="/guide/software-preparation"
     color=blue
->Check out software and preparation page!</BButton>
+>Next: Software and preparation</BButton>
 

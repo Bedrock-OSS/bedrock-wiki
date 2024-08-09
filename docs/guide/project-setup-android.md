@@ -1,13 +1,12 @@
 ---
 title: Project Setup Android
-category: Guide
+category: Extra
 description: How to setup your project on Android
 mentions:
     - Etanarvazac
     - MedicalJewel105
     - TheItsNameless
     - ThomasOrs
-hidden: true
 ---
 
 ## Tools
