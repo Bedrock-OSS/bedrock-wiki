@@ -2,12 +2,12 @@
 title: Script Watchdog
 category: Documentation
 tags:
-    - experimental
+  - experimental
 mentions:
-    - JaylyDev
-    - SmokeyStack
-    - ThomasOrs
-  description: Watchdog is a performance system for script engine that is enabled in Minecraft script plugins by default.
+  - JaylyDev
+  - SmokeyStack
+  - ThomasOrs
+description: Watchdog is a performance system for script engine that is enabled in Minecraft script plugins by default.
 ---
 
 Watchdog is a performance system for script engine that is enabled in Minecraft script plugins by default.
