@@ -96,7 +96,7 @@ _For use with the `menu_category` parameter, `group`._
 
 <!-- page_dumper_start -->
 | Creative Categories:              |
-|-----------------------------------|
+| --------------------------------- |
 | itemGroup.name.anvil              |
 | itemGroup.name.arrow              |
 | itemGroup.name.axe                |

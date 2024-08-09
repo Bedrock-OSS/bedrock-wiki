@@ -29,7 +29,7 @@ The following are valid values for the sound property:
 
 <!-- page_dumper_start -->
 | *Last updated for 1.21.0* |
-|---------------------------|
+| ------------------------- |
 | amethyst_block            |
 | amethyst_cluster          |
 | ancient_debris            |
