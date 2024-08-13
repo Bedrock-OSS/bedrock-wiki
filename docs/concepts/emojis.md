@@ -13,6 +13,7 @@ mentions:
   - Citicx
   - TheItsNameless
   - ThomasOrs
+  - t3hero
 description: Add your own emojis and symbols to MCBE.
 ---
 
