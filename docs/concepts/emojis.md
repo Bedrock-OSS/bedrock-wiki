@@ -230,24 +230,26 @@ There will be instructions for creating custom emoji at the bottom.
 
 ### Additional Input Keys
 
-Additional input keys can be used to automatically detect the input type of the player and be used when using /titleraw or /tellraw. 
+Input keys can be used to automatically detect the input of the player and be used with /titleraw or /tellraw with the `text` component.
 
-| Name                | Input Key                   | Image (for Xbox Input, as example)                         |
-|---------------------|-----------------------------|------------------------------------------------------------|
-| Jump                | :_input_key.jump:           | ![](/assets/images/concepts/emojis/xbox/a_button.png)      |
-| Sneak               | :_input_key.sneak:          | ![](/assets/images/concepts/emojis/xbox/b_button.png)      |
-| Sprint              | :_input_key.sprint:         | ![](/assets/images/concepts/emojis/xbox/left_stick.png)    |
-| Forward             | :_input_key.forward:        | Unassigned (only work for Keyboard/Mouse right now)        |
-| Back                | :_input_key.back:           | Unassigned (only work for Keyboard/Mouse right now)        |
-| Left                | :_input_key.left:           | Unassigned (only work for Keyboard/Mouse right now)        |
-| Right               | :_input_key.right:          | Unassigned (only work for Keyboard/Mouse right now)        |
-| Attack              | :_input_key.attack:         | ![](/assets/images/concepts/emojis/xbox/right_trigger.png) |
-| Intentory           | :_input_key.inventory:      | ![](/assets/images/concepts/emojis/xbox/y_button.png)      |
-| Hotbar Select Left  | :_input_key.cycleItemLeft:  | ![](/assets/images/concepts/emojis/xbox/left_bumper.png)   |
-| Hotbar Select Right | :_input_key.cycleItemRight: | ![](/assets/images/concepts/emojis/xbox/right_bumper.png)  |
-| Use                 | :_input_key.use:            | ![](/assets/images/concepts/emojis/xbox/left_trigger.png)  |
-| Drop                | :_input_key.drop:           | ![](/assets/images/concepts/emojis/xbox/dpad_down.png)     |
-| Code Builder        | :_input_key.codeBuilder:    | Unassigned (only works on Minecraft Education)             |
+Below are the results of default keybindings. All text below, including "Unassigned", is literal and will display that text to the player.
+
+| Name                | Input Key                   | Keyboard & Mouse                                            | Touch                                                      | Xbox                                                       | Nintendo Switch                                             | Playstation (4/5)                                                |
+|---------------------|-----------------------------|-------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------------|
+| Jump                | :_input_key.jump:           | SPACE                                                       | ![](/assets/images/concepts/emojis/touch/jump.png)         | ![](/assets/images/concepts/emojis/xbox/a_button.png)      | ![](/assets/images/concepts/emojis/switch/a_button.png)     | ![](/assets/images/concepts/emojis/playstation/cross.png)        |
+| Sneak               | :_input_key.sneak:          | SHIFT                                                       | ![](/assets/images/concepts/emojis/touch/crouch.png)       | ![](/assets/images/concepts/emojis/xbox/b_button.png)      | ![](/assets/images/concepts/emojis/switch/b_button.png)     | ![](/assets/images/concepts/emojis/playstation/circle.png)       |
+| Sprint              | :_input_key.sprint:         | CONTROL                                                     | Unassigned                                                 | ![](/assets/images/concepts/emojis/xbox/left_stick.png)    | ![](/assets/images/concepts/emojis/switch/left_stick.png)   | ![](/assets/images/concepts/emojis/playstation/left_stick.png)   |
+| Forward             | :_input_key.forward:        | W                                                           | ![](/assets/images/concepts/emojis/touch/up_arrow.png)     | Unassigned                                                 | Unassigned                                                  | Unassigned                                                       |
+| Back                | :_input_key.back:           | S                                                           | ![](/assets/images/concepts/emojis/touch/down_arrow.png)   | Unassigned                                                 | Unassigned                                                  | Unassigned                                                       |
+| Left                | :_input_key.left:           | A                                                           | ![](/assets/images/concepts/emojis/touch/left_arrow.png)   | Unassigned                                                 | Unassigned                                                  | Unassigned                                                       |
+| Right               | :_input_key.right:          | D                                                           | ![](/assets/images/concepts/emojis/touch/right_arrow.png)  | Unassigned                                                 | Unassigned                                                  | Unassigned                                                       |
+| Attack              | :_input_key.attack:         | ![](/assets/images/concepts/emojis/keyboard/left_click.png) | Unassigned                                                 | ![](/assets/images/concepts/emojis/xbox/right_trigger.png) | ![](/assets/images/concepts/emojis/switch/right_trigger.png)| ![](/assets/images/concepts/emojis/playstation/right_trigger.png)|
+| Inventory           | :_input_key.inventory:      | E                                                           | Unassigned                                                 | ![](/assets/images/concepts/emojis/xbox/y_button.png)      | ![](/assets/images/concepts/emojis/switch/x_button.png)     | ![](/assets/images/concepts/emojis/playstation/triangle.png)     |
+| Cycle Item Left     | :_input_key.cycleItemLeft:  | Unassigned                                                  | Unassigned                                                 | ![](/assets/images/concepts/emojis/xbox/left_bumper.png)   | ![](/assets/images/concepts/emojis/switch/left_bumper.png)  | ![](/assets/images/concepts/emojis/playstation/left_bumper.png)  |
+| Cycle Item Right    | :_input_key.cycleItemRight: | Unassigned                                                  | Unassigned                                                 | ![](/assets/images/concepts/emojis/xbox/right_bumper.png)  | ![](/assets/images/concepts/emojis/switch/right_bumper.png) | ![](/assets/images/concepts/emojis/playstation/right_bumper.png) |
+| Use                 | :_input_key.use:            | ![](/assets/images/concepts/emojis/keyboard/right_click.png)| Unassigned                                                 | ![](/assets/images/concepts/emojis/xbox/left_trigger.png)  | ![](/assets/images/concepts/emojis/switch/left_trigger.png) | ![](/assets/images/concepts/emojis/playstation/left_trigger.png) |
+| Drop                | :_input_key.drop:           | Q                                                           | Unassigned                                                 | ![](/assets/images/concepts/emojis/xbox/dpad_down.png)     | ![](/assets/images/concepts/emojis/switch/dpad_down.png)    | ![](/assets/images/concepts/emojis/playstation/dpad_down.png)    |
+| Code Builder        | :_input_key.codeBuilder:    | Unassigned                                                  | Unassigned                                                 | Unassigned                                                 | Unassigned                                                  | Unassigned                                                       |
 
 
 ## Custom Emoji
