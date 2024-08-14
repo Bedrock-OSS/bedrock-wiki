@@ -8,6 +8,7 @@ mentions:
     - Kaioga5
     - QuazChick
     - SmokeyStack
+hidden: true
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.20.80`
