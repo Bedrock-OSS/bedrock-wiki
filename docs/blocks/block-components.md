@@ -23,11 +23,9 @@ mentions:
 :::tip FORMAT & MIN ENGINE VERSION `1.21.20`
 Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.20`.
 :::
-:::danger
+:::danger OVERRIDING COMPONENTS
 Only one instance of each component can be active at once. Duplicate components will be overridden by the latest [permutation](/blocks/block-permutations).
 :::
-
-Looking for event trigger components? [Find them here!](/blocks/block-events#event-triggers)
 
 ## Applying Components
 
@@ -67,7 +65,7 @@ Block components are used to change how your block appears and functions in the 
 
 Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.
 
-_Released from experiment `Holiday Creator Features` for format versions `1.19.50` and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.50 and higher._
 
 Type: Boolean/Object
 
@@ -99,7 +97,7 @@ Type: Boolean/Object
 
 Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes.
 
-_Released from experiment `Holiday Creator Features` for format versions `1.19.50` and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.50 and higher._
 
 Type: Object
 
@@ -180,7 +178,7 @@ Type: Boolean/Object
 
 Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name.
 
-_Released from experiment `Holiday Creator Features` for format versions `1.19.60` and higher._
+_Released from experiment `Holiday Creator Features` for format versions 1.19.60 and higher._
 
 Type: String
 
@@ -386,23 +384,21 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.40
 
 Render methods essentially control how a block appears in the world, much like entity materials. Below are the key properties of each type:
 
-| Render Method      | _Transparency_ | _Translucency_ | _Backface Culling_ | Vanilla Examples                |
-| ------------------ | :------------: | :------------: | :----------------: | ------------------------------- |
-| opaque _(default)_ |       ❌       |       ❌       |         ✔️         | Dirt, Stone, Concrete.          |
-| double_sided       |       ❌       |       ❌       |         ❌         | N/A - Use for opaque 2D plains. |
-| alpha_test         |       ✔️       |       ❌       |         ❌         | Vines, Rails, Saplings.         |
-| blend              |       ✔️       |       ✔️       |         ✔️         | Glass, Beacon, Honey Block.     |
+| Render Method           | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples                |
+| ----------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------- |
+| alpha_test              |       ✔️       |       ❌       |         ❌         |        ✔️         | Vines, Rails, Saplings.         |
+| alpha_test_single_sided |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Trapdoors.               |
+| blend                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block.     |
+| double_sided            |       ❌       |       ❌       |         ❌         |        ❌         | N/A - Use for opaque 2D plains. |
+| opaque _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete.          |
 
 -   **_Transparency_** - fully see-through areas.
 
 -   **_Translucency_** - semi-transparent areas.
 
-    -   Transulcent pixel appear opaque in UI rendering.
-
 -   **_Backface Culling_** - faces become invisible when viewed from behind.
 
-    -   Render methods without backface culling disappear at a distance (based on fog/render distance).
-    -   Backface culling is **always** enabled in UI rendering.
+-   **_Distant Culling_** - the block becomes invisible before reaching the full render distance.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
