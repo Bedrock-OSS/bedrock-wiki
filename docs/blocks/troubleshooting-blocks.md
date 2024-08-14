@@ -145,15 +145,20 @@ Grass-like block example:
 
 If you followed this properly, your block should now have correct texture.
 
-## 1.2 - Texture Displays "Update" Written on Dirt
+## 1.2 - Texture Displays "?" on Dirt
 
-Problem: My custom block has turned into a dirt block with green writing on it.
+Problem: My custom block has turned into a dirt block with a question mark on it.
 
-![](/assets/images/blocks/block_tr/tr_update.png)
+<WikiImage
+    src="/assets/images/blocks/block_tr/unknown.png"
+    pixelated="true"
+    width="128"
+    class="my-4"
+/>
 
 This an `unknown` block, which appears when the block identifier is changed or if your block JSON invalid.
 
-Solution: Use a JSON linter and double check that your identifier didn't change. Ensure that you block has `minecraft:unit_cube`/`minecraft:geometry` and `minecraft:material_instances`, or an `RP/blocks.json` textures entry.
+Solution: Use a JSON linter and double check that your identifier didn't change. Ensure that you block has `minecraft:geometry` and `minecraft:material_instances`, or an `RP/blocks.json` textures entry.
 
 ---
 
@@ -196,33 +201,6 @@ Solution: Add following component to your block's code:
 ```json
 "minecraft:light_dampening": 0
 ```
-
-## 2.3 - Model Cubes Overlap in Inventory
-
-Problem: You have a block with custom geometry and it renders strange in inventory, like this:
-
-![](/assets/images/blocks/block_tr/inventory_render_cubes.png)
-
-Solution: In the inventory, block geometry is rendered from the bottom to the top, where later cubes overlap earlier cubes. To render your block correctly, you'll need to change the order of the cubes in blockbench.
-
-```
-cube_middle      cube_bottom
-cube_top     ->  cube_middle
-cube_bottom      cube_top
-```
-
-## 2.4 - Block Looks Small in Inventory
-
-Problem: Your custom 16³ block looks smaller than vanilla blocks in inventory.
-
-Solution:
-Blocks can get their visuals in two ways, either by applying textures in the `RP/blocks.json` file _OR_ in the `minecraft:material_instances` component.
-
-Using `blocks.json` causes the block to appear full sized in your inventory, but doesn't allow for custom block models or changing visuals using permutations.
-
-If your block has no model or textures active from components or permutations, it will take the textures from the `blocks.json` causing the normal full sized block model.
-
-If you want to make use of the rotation component you can't just apply it, you need to give it material instances, unit_cube or a custom model and the rotation component. This will make it rotatable, while the default state will use the `blocks.json` and shows normally.
 
 ## 3.0 - Common Content Log Errors
 
