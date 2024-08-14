@@ -212,21 +212,18 @@ Create two new animations, one for holding the item in first person and another 
 To make creating these animations easier, please do the following:
 
 -   Download the following player skeleton model. We will use this as a visual aid for positioning your model.
-
-        <BButton
-
+    <BButton
     link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/player_skeleton.geo.json?raw=true"
     color=blue
-
-    > 📄 Player Skeleton File</BButton>
+        > 📄 Player Skeleton File</BButton>
 
 -   With a text editor, add the bones and cubes from your model to the player skeleton model, then import the player skeleton model into Blockbench.
 -   Set your model's root bone(s) to be a child of the 'rightItem' bone in the player skeleton.
 -   Download the following animation file import the `wiki.third_person_guide` animation. This will be used later to make positioning easier.
     <BButton
-link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/attachable_guide.animation.json?raw=true"
-color=blue
-> 📄 Attachable Guide File</BButton>
+    link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/attachable_guide.animation.json?raw=true"
+    color=blue
+    > 📄 Attachable Guide File</BButton>
 
 These guide animations have one notable feature: they apply a -24 offset to the y-position of the right item bone to counteract a similar -24 y-position offset Minecraft applies to bound bones. We are unsure at this time why this happens.
 
