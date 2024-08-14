@@ -7,7 +7,6 @@ tags:
 mentions:
     - legopitstop
     - QuazChick
-description: This article shows how to specify particular faces and/or bones in a geometry file for culling checks.
 ---
 
 :::tip CREATE YOUR MODEL
