@@ -1,5 +1,6 @@
 ---
 title: Creating Block Models
+description: Learn how to set up a custom model for your block.
 category: Tutorials
 tags:
     - beginner
@@ -7,7 +8,6 @@ tags:
 mentions:
     - QuazChick
     - SmokeyStack
-description: Learn how to setup custom model for your block.
 ---
 
 Although custom blocks are unable to make use of vanilla [block shapes](/blocks/block-shapes), we can create our own models which follow a similar format to entity models. This tutorial will walk you through the process of creating a custom block model for a "paper bag" using [Blockbench](https://blockbench.net). You should learn the main features of Minecraft geometry tailored towards creating custom blocks from this tutorial.
@@ -83,17 +83,19 @@ The "paper_bag" model has multiple pre-made textures, listed below:
 
 -   `textures/blocks/paper_bag.png`
 
-        <WikiImage src="/assets/images/blocks/block-models/paper_bag.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
+            <WikiImage src="/assets/images/blocks/block-models/paper_bag.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
+
+        <br>
 
     <br>
-<br>
 
 -   `textures/blocks/paper_bag_bottom_fold.png`
 
-        <WikiImage src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
+            <WikiImage src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
+
+        <br>
 
     <br>
-<br>
 
 -   `textures/blocks/paper_bag_side_gusset.png`
 
@@ -150,6 +152,12 @@ For the "paper_bag" model, the east and west faces should have their own texture
 Once exported from `File > Export > Export Bedrock Geometry` into your `RP/models/blocks` folder, you can reference a model in your block JSON.
 
 Then, textures can be applied by material instances through their `RP/textures/terrian_texture.json` shortname. In this example, the paper_bag shouldn't block light, so its light dampening is set to 0.
+
+:::warning BLOCKS.JSON
+Adding [`minecraft:geometry`](/blocks/block-components#geometry) to your block will cause the game to ignore texture definitions in `RP/blocks.json`.
+
+If you have textures for your block defined in that file, make sure you migrate them to [`minecraft:material_instances`](/blocks/block-components#material-instances) for them to appear.
+:::
 
 <CodeHeader>BP/blocks/paper_bag.json</CodeHeader>
 
