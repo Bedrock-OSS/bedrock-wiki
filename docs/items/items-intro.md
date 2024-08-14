@@ -21,6 +21,7 @@ mentions:
     - TheItsNameless
     - s1050613
     - SmokeyStack
+    - QuazChick
 ---
 
 Minecraft Bedrock allows us to add custom items into our world with various vanilla-like properties
@@ -37,7 +38,7 @@ Below is the **minimum** behavior-side code to get a custom item into the creati
 
 ```json
 {
-    "format_version": "1.20.50",
+    "format_version": "1.21.20",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -66,7 +67,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.20.50",
+    "format_version": "1.21.20",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -75,15 +76,11 @@ Let's configure our own functionality!
             }
         },
         "components": {
-            "minecraft:damage": {
-                "value": 10
-            },
+            "minecraft:damage": 10,
             "minecraft:durability": {
                 "max_durability": 36
             },
-            "minecraft:hand_equipped": {
-                "value": true
-            }
+            "minecraft:hand_equipped": true
         }
     }
 }
@@ -115,7 +112,7 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
 
 ```json
 {
-    "format_version": "1.20.50",
+    "format_version": "1.21.20",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -124,9 +121,7 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
             }
         },
         "components": {
-            "minecraft:icon": {
-                "texture": "custom_item"
-            }
+            "minecraft:icon": "custom_item"
         }
     }
 }
@@ -134,7 +129,7 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
 
 ## Defining Names
 
-Finally, we will give our item a name. Additionally, you can use the [Display Name](/items/item-components#display_name) component.
+Finally, we will give our item a name. Additionally, you can use the [Display Name](/items/item-components#display-name) component.
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 

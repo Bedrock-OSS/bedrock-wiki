@@ -11,18 +11,16 @@ mentions:
 description: Re-creation of vanilla glass.
 ---
 
+::: tip FORMAT VERSION `1.21.20`
+This example requires basic knowledge of blocks to understand.
+Check out the [blocks guide](/blocks/blocks-intro) before starting.
+:::
+
 Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.
 
 By the end you should be able to create something like this!
 
 ![Glass Results](/assets/images/blocks/glass-block/glass_showcase.png)
-
-## Basic Glass
-
-::: tip FORMAT VERSION `1.21.20`
-This example requires basic knowledge of blocks to understand.
-Check out the [blocks guide](/blocks/blocks-intro) before starting.
-:::
 
 This will create a custom glass block which appears the same as vanilla glass blocks!
 
@@ -62,6 +60,7 @@ This will create a custom glass block which appears the same as vanilla glass bl
 }
 ```
 
+<!--
 ## Vertically-Connecting Glass
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
@@ -661,3 +660,4 @@ Requires `Holiday Creator Features` for use of `minecraft:unit_cube` and to trig
 ```
 
 </Spoiler>
+-->

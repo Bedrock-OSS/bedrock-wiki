@@ -2,7 +2,7 @@
 title: Item Events
 description: Item events trigger when certain conditions are met. Creators can hook into these events to modify the game world when events are triggered.
 category: General
-nav_order: 8
+nav_order: 4
 tags:
     - scripting
 mentions:
@@ -15,28 +15,25 @@ Using the latest format version when creating custom items provides access to fr
 
 ## Registering Custom Components
 
-item events trigger when certain conditions are met and can be "listened" to in **custom components** which are registered in scripts before the world is loaded.
+Item events trigger when certain conditions are met and can be "listened" to in **custom components** which are registered in scripts before the world is loaded.
 
 Within each custom component, event handler functions (such as [`onBeforeDurabilityDamage`](#onBeforeDurabilityDamage)) are listed to configure what you want to happen when each event is triggered.
 
 _This example prevents the item from taking durability damage when hitting an entity:_
 
-<CodeHeader>BP/scripts/creative_mode_only_component.js</CodeHeader>
+<CodeHeader>BP/scripts/unbreakable_component.js</CodeHeader>
 
 ```js
 import { world } from "@minecraft/server";
 
-const CancelDurabilityDamageComponent = {
-    onDurabilityDamage(event) {
+const UnbreakableItemComponent = {
+    onBeforeDurabilityDamage(event) {
         event.durabilityDamage = 0;
     },
 };
 
 world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
-    itemComponentRegistry.registerCustomComponent(
-        "wiki:cancel_durability_damage",
-        CancelDurabilityDamageComponent
-    );
+    itemComponentRegistry.registerCustomComponent("wiki:unbreakable", UnbreakableItemComponent);
 });
 ```
 
@@ -46,9 +43,9 @@ To bind a custom component to a custom item, simply list them in the [`minecraft
 
 <CodeHeader>minecraft:item</CodeHeader>
 
-```js
+```json
 "components": {
-    "minecraft:custom_components": [ "wiki:creative_mode_only" ]
+    "minecraft:custom_components": ["wiki:unbreakable"]
 }
 ```
 
@@ -69,11 +66,11 @@ onBeforeDurabilityDamage(event) {
 
 ## Complete Use
 
-:::tip DEPENDENCIES
-The complete use event requires the `minecraft:use_modifiers` component to be active on your item to trigger.
+:::tip DEPENDENCY
+The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) component to be active on your item to trigger.
 :::
 
-This event will be called when an item containing this component's use duration was completed.
+This event will be called when the use duration of the item containing this component is completed.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -97,16 +94,16 @@ onCompleteUse(event) {
 This event will be called when an item containing this component is eaten by an entity.
 
 :::tip DEPENDENCIES
-The complete use event requires the `minecraft:use_modifiers` and the `minecraft:food` component to be active on your item to trigger.
+The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) and the [`minecraft:food`](/items/item-components#food) component to be active on your item to trigger.
 :::
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
+"minecraft:food": {},
 "minecraft:use_modifiers": {
     "use_duration": 5
-},
-"minecraft:food": {}
+}
 ```
 
 <CodeHeader>Custom Component</CodeHeader>
@@ -150,19 +147,7 @@ onMineBlock(event) {
 
 ## Use
 
-:::tip DEPENDENCIES
-The complete use event requires the `minecraft:use_modifiers` component to be active on your item to trigger.
-:::
-
 This function will be called when an item containing this component is used by a player.
-
-<CodeHeader>minecraft:item > components</CodeHeader>
-
-```json
-"minecraft:use_modifiers": {
-    "use_duration": 5
-}
-```
 
 <CodeHeader>Custom Component</CodeHeader>
 
@@ -175,19 +160,7 @@ onUse(event) {
 
 ## Use On
 
-:::tip DEPENDENCIES
-The complete use event requires the `minecraft:use_modifiers` component to be active on your item to trigger.
-:::
-
 This function will be called when an item containing this component is used on a block.
-
-<CodeHeader>minecraft:item > components</CodeHeader>
-
-```json
-"minecraft:use_modifiers": {
-    "use_duration": 5
-}
-```
 
 <CodeHeader>Custom Component</CodeHeader>
 

@@ -1,5 +1,6 @@
 ---
 title: Precise Interaction
+description: Learn how to interact with different parts of the same block.
 category: Tutorials
 tags:
     - experimental
@@ -8,22 +9,11 @@ tags:
 mentions:
     - QuazChick
     - SmokeyStack
-description: Learn how to make interaction with blocks in a proper way.
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/starting-scripts) guides before starting.
-:::
-
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger block events.
-
-Requires `Beta APIs` to use [@minecraft/server](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server) module version `1.6.0-beta`.
-:::
-
-:::danger NO EMPTY HANDS!
-The following examples of precise interaction require the player to be interacting with an item (not air) in their hand.
 :::
 
 The ability to create custom blocks that the player can interact with can be very basic to implement, yet still allow for complex functionality. However, sometimes the default interaction mode, which is based on simply right-clicking or tapping the block without location-specific conditions, is not enough to achieve the desired functionality.
@@ -32,35 +22,27 @@ For example, what if you want to create a block that has multiple buttons on one
 
 This is where precise interaction comes in! The following methods of precise interaction allow you to define multiple areas in a block that can be interacted with separately, and assign different functions to each area. In this tutorial, we will show you how to add precise interaction to your blocks using scripts, with examples of each method.
 
-**Note**: Precise interaction does not enable blocks to have multiple/custom-shaped [`minecraft:selection_box`](/blocks/block-components#selection-box) components. The selection box must be within all defined areas for precise interaction to function properly.
+**Note:** Precise interaction does not enable blocks to have multiple/custom-shaped [`minecraft:selection_box`](/blocks/block-components#selection-box) components. The selection box must be within all defined areas for precise interaction to function properly.
 
 ![Showcase image displaying example Pigeonholes and Double Flower Pot blocks](/assets/images/blocks/precise-interaction/showcase.png)
 
-## How It Works
+## How it Works
 
-The provided methods of precise interaction use `faceLocation`, a property of the following Script API classes:
-
--   [`ItemUseOnBeforeEvent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/itemuseonbeforeevent)
--   [`ItemUseOnAfterEvent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/itemuseonafterevent)
--   [`PlayerPlaceBlockBeforeEvent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/playerplaceblockbeforeevent)
-
-It's also a returned property from the following methods:
-
--   [`Entity.getBlockFromViewDirection()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entity#getblockfromviewdirection)
--   [`Dimension.getBlockFromRay()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/dimension#getblockfromray)
--   [`ProjectileHitBlockAfterEvent.getBlockHit()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/projectilehitblockafterevent#getblockhit)
+The provided methods of precise interaction use `faceLocation`, a property of the [`player interact event`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockcomponentplayerinteractevent?view=minecraft-bedrock-experimental).
 
 This value tells us where on the block's `minecraft:selection_box` was selected/hit, which is what precise interaction relies on.
+
+**Note:** `faceLocation` is _supposed_ to be relative to the bottom north-west corner of the interacted block, however it is currently relative to the world origin, meaning we will have to perform an additional calculation to make it relative. When this issue is resolved, this calculation will no longer be needed.
 
 ## FaceSelectionPlains Class
 
 This class allows you to define 2D areas on a block's face and get the selected plain.
 
-To use this method for precise interaction, create the file `BP/scripts/utils/face_selection_plains.js` and paste the below code into it.
+To use this method for precise interaction, create the file `BP/scripts/utilities/face_selection_plains.js` and paste the below code into it.
 
 <Spoiler title="FaceSelectionPlains Code">
 
-<CodeHeader>BP/scripts/utils/face_selection_plains.js</CodeHeader>
+<CodeHeader>BP/scripts/utilities/face_selection_plains.js</CodeHeader>
 
 ```js
 import { Direction } from "@minecraft/server";
@@ -80,18 +62,21 @@ export default class FaceSelectionPlains {
         this.plains = plains;
     }
     /**
-     * @param {{ blockFace: Direction, faceLocation: Record<"x" | "y" | "z", number> }} selection
+     * @param {Object} selection
+     * @param {Direction} selection.face
+     * @param {import("@minecraft/server").Vector3} selection.faceLocation
      *
-     * @param {Object} [options] Optionally configure how the selected plain is calculated.
+     * @param {Object} [options]
      * @param {boolean} [options.invertU] Horizontal axis extends `right -> left` rather than `left -> right` if true.
      * @param {boolean} [options.invertV] Vertical axis extends `bottom -> top` rather than `top -> bottom` if true.
      *
      * @returns Selected plain ID, or plain index if an ID is not provided. If no plains apply to the selection, `undefined` is returned.
      */
     getSelected(selection, options) {
-        const face = selection.blockFace;
+        const { face, faceLocation } = selection;
+
         // Create a new object so the original is not mutated
-        let location = { ...selection.faceLocation };
+        let location = { ...faceLocation };
 
         const horizontalAxis = face === Direction.East || face === Direction.West ? "z" : "x";
         const verticalAxis = face === Direction.Up || face === Direction.Down ? "z" : "y";
@@ -154,7 +139,7 @@ export default class FaceSelectionPlains {
 -   #### getSelected
 
     ```ts
-    getSelected(selection: { blockFace: Direction; faceLocation: Vector3 }, options?: { invertU?: boolean; invertV?: boolean }): number | string | undefined
+    getSelected(selection: { face: Direction; faceLocation: Vector3 }, options?: { invertU?: boolean; invertV?: boolean }): number | string | undefined
     ```
 
     Returns the involved plain's array index, or name if provided. If no plain is selected, `undefined` is returned.
@@ -164,7 +149,7 @@ export default class FaceSelectionPlains {
     -   **selection**: `Object`<br>
         Object containing details about the selection.<br><br>
 
-        -   **blockFace**: [`Direction`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/direction)<br>
+        -   **face**: [`Direction`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/direction)<br>
             The selected face of the block.<br><br>
 
         -   **faceLocation**: [`Vector3`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/vector3)<br>
@@ -188,7 +173,7 @@ The below example would split the targeted block face into quarters:
 
 ```js
 import { world } from "@minecraft/server";
-import FaceSelectionPlains from "../utils/face_selection_plains";
+import FaceSelectionPlains from "../utilities/face_selection_plains";
 
 const quadrants = new FaceSelectionPlains(
     { origin: [0, 0], size: [8, 8] },
@@ -213,19 +198,28 @@ const quadrants = new FaceSelectionPlains(
 
 <br>
 
-This could be used with an [`itemUseOn` after event](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/itemuseonafterevent) to get the selected quadrant:
+This could be used in a [custom component](/blocks/block-events) to get the selected quadrant:
 
 ```js
-world.afterEvents.itemUseOn.subscribe((e) => {
-    // Do nothing if the targeted block is not "wiki:example_block"
-    if (e.block.typeId !== "wiki:example_block") return;
+const QuadrantInteractionBlockComponent = {
+    onPlayerInteract({ block, face, faceLocation }) {
+        // Work around the faceLocation bug - get the location relative to the block
+        const relativeFaceLocation = {
+            x: faceLocation.x - block.location.x,
+            y: faceLocation.y - block.location.y,
+            z: faceLocation.z - block.location.z,
+        };
 
-    // Returns the selected area's index (0, 1, 2 or 3), or name if provided (e.g. "top_left").
-    // If no plain was selected, `undefined` is retured.
-    const selectedQuadrant = quadrants.getSelected(e);
+        // Returns the selected area's index (0, 1, 2 or 3), or name if provided (e.g. "top_left").
+        // If no plain was selected, `undefined` is retured.
+        const selectedQuadrant = quadrants.getSelected({
+            face,
+            faceLocation: relativeFaceLocation,
+        });
 
-    world.sendMessage(`Quadrant ${selectedQuadrant} was selected!`);
-});
+        world.sendMessage(`Quadrant ${selectedQuadrant} was selected!`);
+    },
+};
 ```
 
 ## SelectionBoxes Class
@@ -238,11 +232,11 @@ If you wish to use Blockbench's values, the `invertX` option should be set to tr
 
 This class allows you to define 3D areas in a block and get the box which the face selection lies within.
 
-To use this method for precise interaction, create the file `BP/scripts/utils/selection_boxes.js` and paste the below code into it.
+To use this method for precise interaction, create the file `BP/scripts/utilities/selection_boxes.js` and paste the below code into it.
 
 <Spoiler title="SelectionBoxes Code">
 
-<CodeHeader>BP/scripts/utils/selection_boxes.js</CodeHeader>
+<CodeHeader>BP/scripts/utilities/selection_boxes.js</CodeHeader>
 
 ```js
 const isInRange = (value, min, max) => value >= min && value <= max;
@@ -262,7 +256,7 @@ export default class SelectionBoxes {
     /**
      * Get the box which the `faceLocation` lies within.
      *
-     * @param {Record<"x" | "y" | "z", number>} faceLocation Selection location relative to the bottom north-west corner of the block.
+     * @param {import("@minecraft/server").Vector3} faceLocation Selection location relative to the bottom north-west corner of the block.
      *
      * @param {Object} [options] Optionally configure how the selected box is calculated.
      * @param {boolean} [options.invertX] X axis extends `west -> east` rather than `east -> west` if true, following [Blockbench](https://blockbench.net)'s displayed positions.
@@ -283,15 +277,20 @@ export default class SelectionBoxes {
         for (let i = 0; i < this.boxes.length; i++) {
             const box = this.boxes[i];
 
-            const origin = {
+            const from = {
                 x: box.origin[0] + 8,
                 y: box.origin[1],
                 z: box.origin[2] + 8,
             };
+            const to = {
+                x: from.x + box.size[0],
+                y: from.y + box.size[1],
+                z: from.z + box.size[2],
+            };
 
-            const inXRange = isInRange(location.x, origin.x / 16, (origin.x + box.size[0]) / 16);
-            const inYRange = isInRange(location.y, origin.y / 16, (origin.y + box.size[1]) / 16);
-            const inZRange = isInRange(location.z, origin.z / 16, (origin.z + box.size[2]) / 16);
+            const inXRange = isInRange(location.x, from.x / 16, to.x / 16);
+            const inYRange = isInRange(location.y, from.y / 16, to.y / 16);
+            const inZRange = isInRange(location.z, from.z / 16, to.z / 16);
 
             if (inXRange && inYRange && inZRange) return box.name ?? i;
         }
@@ -363,7 +362,7 @@ The below example would split the targeted block into its vertical halves:
 
 ```js
 import { world } from "@minecraft/server";
-import SelectionBoxes from "../utils/selection_boxes";
+import SelectionBoxes from "../utilities/selection_boxes";
 
 const verticalHalves = new SelectionBoxes(
     { origin: [-8, 8, -8], size: [16, 8, 16], name: "top" },
@@ -413,12 +412,6 @@ Interacting with paper will fill the selected slot. Destroying the block release
             "menu_category": {
                 "category": "items"
             },
-            "traits": {
-                "minecraft:placement_direction": {
-                    "enabled_states": ["minecraft:cardinal_direction"],
-                    "y_rotation_offset": 180
-                }
-            },
             "states": {
                 "wiki:slot_0_occupied": [false, true],
                 "wiki:slot_1_occupied": [false, true],
@@ -426,14 +419,22 @@ Interacting with paper will fill the selected slot. Destroying the block release
                 "wiki:slot_3_occupied": [false, true],
                 "wiki:slot_4_occupied": [false, true],
                 "wiki:slot_5_occupied": [false, true]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"],
+                    "y_rotation_offset": 180
+                }
             }
         },
         "components": {
+            "minecraft:custom_components": ["wiki:pigeonholes_storage"],
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 1.5
             },
             "minecraft:geometry": {
                 "identifier": "geometry.pigeonholes",
+                "culling": "wiki:pigeonholes_culling",
                 "bone_visibility": {
                     // Display each slot as empty/occupied
                     "empty_slot_0": "!q.block_state('wiki:slot_0_occupied')",
@@ -464,21 +465,6 @@ Interacting with paper will fill the selected slot. Destroying the block release
                 "occupied_slot": {
                     "texture": "pigeonholes_occupied"
                 }
-            },
-            "minecraft:on_interact": {
-                // Only allow interaction with the front face
-                "condition": "(q.block_face == 2 && q.block_state('minecraft:cardinal_direction') == 'north') || (q.block_face == 3 && q.block_state('minecraft:cardinal_direction') == 'south') || (q.block_face == 4 && q.block_state('minecraft:cardinal_direction') == 'west') || (q.block_face == 5 && q.block_state('minecraft:cardinal_direction') == 'east')",
-                "event": "wiki:on_insert"
-            }
-        },
-        "events": {
-            "wiki:on_insert": {
-                "sequence": [
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:paper')",
-                        "decrement_stack": {}
-                    }
-                ]
             }
         },
         "permutations": [
@@ -522,8 +508,8 @@ Interacting with paper will fill the selected slot. Destroying the block release
 <CodeHeader>BP/scripts/blocks/pigeonholes.js</CodeHeader>
 
 ```js
-import { world, ItemStack } from "@minecraft/server";
-import FaceSelectionPlains from "../utils/face_selection_plains"; // Import the FaceSelectionPlains class to use it
+import { world, EquipmentSlot, GameMode, ItemStack } from "@minecraft/server";
+import FaceSelectionPlains from "../utilities/face_selection_plains"; // Import the FaceSelectionPlains class to use it
 
 // Slot bounds
 const slots = new FaceSelectionPlains(
@@ -543,72 +529,73 @@ const isSlotOccupied = (block, slot) => block.permutation.getState(`wiki:slot_${
 const occupySlot = (block, slot) =>
     block.setPermutation(block.permutation.withState(`wiki:slot_${slot}_occupied`, true));
 
-// Cancel the use if a slot was not selected, is occupied, or if not interacting with paper
-world.beforeEvents.itemUseOn.subscribe((e) => {
-    if (
-        e.block.typeId !== "wiki:pigeonholes" ||
-        !isFrontFace(e.block, e.blockFace) ||
-        (e.itemStack.typeId !== "minecraft:paper" && e.source.isSneaking)
-    )
-        return;
+const emptySlot = (block, slot) =>
+    block.setPermutation(block.permutation.withState(`wiki:slot_${slot}_occupied`, false));
 
-    // Get the selected slot index
-    const slot = slots.getSelected(e);
+function handleInteract({ block, face, faceLocation, dimension, player }) {
+    if (!player || !isFrontFace(block, face)) return;
 
-    if (
-        slot === undefined ||
-        isSlotOccupied(e.block, slot) ||
-        e.itemStack.typeId !== "minecraft:paper"
-    )
-        e.cancel = true;
-});
+    const equippable = player.getComponent("minecraft:equippable");
+    if (!equippable) return;
 
-// ------------------------------
-//    Insert paper on interact
-// ------------------------------
-world.afterEvents.itemUseOn.subscribe((e) => {
-    if (e.block.typeId !== "wiki:pigeonholes" || e.itemStack.typeId !== "minecraft:paper") return;
+    const relativeFaceLocation = {
+        x: faceLocation.x - block.location.x,
+        y: faceLocation.y - block.location.y,
+        z: faceLocation.z - block.location.z,
+    };
 
-    // Set block state and play an insert sound. The stack is decremented in the block JSON event.
-    occupySlot(e.block, slots.getSelected(e));
-    e.source.runCommand(
-        `playsound insert.chiseled_bookshelf @a ${Object.values(e.block.location).join(" ")}`
-    );
-});
+    const selectedSlot = slots.getSelected({ face, faceLocation: relativeFaceLocation });
+    if (selectedSlot === undefined) return;
+
+    const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
+    const isHoldingPaper = mainhand.hasItem() && mainhand.typeId === "minecraft:paper";
+
+    if (isHoldingPaper && !isSlotOccupied(block, selectedSlot)) {
+        if (player.getGameMode() !== GameMode.creative) {
+            if (mainhand.amount > 1) mainhand.amount--;
+            else mainhand.setItem(undefined);
+        }
+
+        occupySlot(block, selectedSlot);
+        dimension.playSound("insert.chiseled_bookshelf", block.center());
+    } else if (isSlotOccupied(block, selectedSlot)) {
+        emptySlot(block, selectedSlot);
+
+        const itemLocation = { ...faceLocation };
+        itemLocation.y -= 0.5;
+        dimension.spawnItem(new ItemStack("minecraft:paper"), itemLocation).clearVelocity();
+
+        dimension.playSound("pickup.chiseled_bookshelf", block.center());
+    }
+}
 
 // ------------------------------
 //  Release paper on destruction
 // ------------------------------
-function releasePaper(e) {
-    // Get the number of states with the value `true`. This is the amount of paper stored in the block
-    const storageAmount = Object.values(
-        (e.brokenBlockPermutation ?? e.explodedBlockPermutation).getAllStates()
-    ).filter((v) => v === true).length;
+function releasePaper({ block, destroyedBlockPermutation, dimension }) {
+    const states = destroyedBlockPermutation.getAllStates();
 
-    // If no paper is stored, stop here
-    if (storageAmount === 0) return;
+    for (const state in states) {
+        const value = states[state];
+        const isPaper = value === true;
 
-    // Centre loot in block
-    const lootLocation = {
-        x: e.block.location.x + 0.5,
-        y: e.block.location.y + 0.5,
-        z: e.block.location.z + 0.5,
-    };
+        if (!isPaper) continue;
 
-    // Create an item entity for every stored paper
-    for (let i = 0; i < storageAmount; i++) {
-        e.block.dimension.spawnItem(new ItemStack("minecraft:paper"), lootLocation);
+        dimension.spawnItem(new ItemStack("minecraft:paper"), block.center());
     }
 }
 
-// Release paper on block break and explode
-world.afterEvents.playerBreakBlock.subscribe((e) => {
-    if (e.brokenBlockPermutation.type.id !== "wiki:pigeonholes") return;
-    releasePaper(e);
-});
-world.afterEvents.blockExplode.subscribe((e) => {
-    if (e.explodedBlockPermutation.type.id !== "wiki:pigeonholes") return;
-    releasePaper(e);
+/** @type {import("@minecraft/server").BlockCustomComponent} */
+const PigeonholesStorageBlockComponent = {
+    onPlayerInteract: handleInteract,
+    onPlayerDestroy: releasePaper,
+};
+
+world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent(
+        "wiki:pigeonholes_storage",
+        PigeonholesStorageBlockComponent
+    );
 });
 ```
 
@@ -641,12 +628,17 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
                 "category": "items"
             },
             "states": {
-                "wiki:axis": ["x", "z"],
                 "wiki:pot_0_plant": ["none", "dandelion", "cactus"],
                 "wiki:pot_1_plant": ["none", "dandelion", "cactus"]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"]
+                }
             }
         },
         "components": {
+            "minecraft:custom_components": ["wiki:double_flower_pot"],
             "minecraft:collision_box": {
                 "origin": [-7, 0, -3],
                 "size": [14, 6, 6]
@@ -696,28 +688,11 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
                     "texture": "cactus_top",
                     "render_method": "alpha_test"
                 }
-            },
-            "minecraft:on_player_placing": {
-                "event": "wiki:set_axis"
-            },
-            "minecraft:on_interact": {
-                "condition": "!q.is_sneaking && q.is_item_name_any('slot.weapon.mainhand', 'minecraft:yellow_flower', 'minecraft:cactus')", // Only trigger with valid plants
-                "event": "wiki:on_plant"
-            }
-        },
-        "events": {
-            "wiki:set_axis": {
-                "set_block_state": {
-                    "wiki:axis": "Math.floor((q.cardinal_facing_2d - 2) / 2) == 1 ? 'z' : 'x'"
-                }
-            },
-            "wiki:on_plant": {
-                "decrement_stack": {}
             }
         },
         "permutations": [
             {
-                "condition": "q.block_state('wiki:axis') == 'z'",
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east'",
                 "components": {
                     "minecraft:transformation": { "rotation": [0, 90, 0] } // Front of model facing east
                 }
@@ -735,7 +710,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```js
 import { world, ItemStack } from "@minecraft/server";
-import SelectionBoxes from "../utils/selection_boxes"; // Import the SelectionBoxes class to use it
+import SelectionBoxes from "../utilities/selection_boxes"; // Import the SelectionBoxes class to use it
 
 // Support orientation along both horizontal axes
 const pots = {
@@ -855,13 +830,13 @@ Don't forget to import your scripts into your pack's entry file!
             "language": "javascript",
             "entry": "index.js", // Your defined entry file
             "uuid": "...",
-            "version": [1, 0, 0]
+            "version": "1.0.0"
         }
     ],
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.6.0-beta"
+            "version": "1.12.0"
         }
     ]
 }

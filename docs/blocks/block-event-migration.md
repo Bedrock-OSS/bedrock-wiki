@@ -126,7 +126,7 @@ onPlayerInteract({ player }) {
 
 ```js
 onStepOn({ block }) {
-    block.setType("minecraft:air")
+    block.setType("minecraft:air");
 }
 ```
 
@@ -176,8 +176,8 @@ onStepOn({ entity }) {
 
 ```js
 onStepOn({ dimension }) {
-    dimension.runCommand("say Hello there!")
-    dimension.runCommand("say Welcome to my world!")
+    dimension.runCommand("say Hello there!");
+    dimension.runCommand("say Welcome to my world!");
 }
 ```
 
@@ -187,7 +187,7 @@ onStepOn({ dimension }) {
 
 ```js
 onStepOn({ block }) {
-    block.setType("minecraft:grass_block")
+    block.setType("minecraft:grass_block");
 }
 ```
 
