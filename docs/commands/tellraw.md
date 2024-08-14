@@ -11,6 +11,7 @@ mentions:
     - ThomasOrs
     - zheaEvyline
     - SmokeyStack
+description: Tellraw command explained.
 ---
 
 tellraw sends a JSON message to selected or all players being useful for sending plain messages to players ingame

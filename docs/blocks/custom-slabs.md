@@ -2,13 +2,14 @@
 title: Custom Slabs
 category: Vanilla Re-Creations
 tags:
-    - experimental
-    - easy
+  - experimental
+  - easy
 mentions:
     - Kaioga5
     - QuazChick
     - SmokeyStack
 hidden: true
+description: Re-creation of vanilla slabs.
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`

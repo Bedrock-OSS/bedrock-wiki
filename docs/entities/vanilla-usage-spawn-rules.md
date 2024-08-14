@@ -3,14 +3,61 @@ title: Vanilla Usage Spawn Rules
 category: Documentation
 mentions:
     - MedicalJewel105
+description: Automatically generated list of spawn rules components used in vanilla.
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Note that not more than 8 examples are shown for each component to keep this page fast to load. Namespace `minecraft` was also removed.If you want to see full page, you can do it [here](/entities/vusr-full). *Last updated for 1.20.10*
+Note that not more than 8 examples are shown for each component to keep this page fast to load. Namespace `minecraft` was also removed.If you want to see full page, you can do it [here](/entities/vusr-full). *Last updated for 1.21.0*
 
 ## biome_filter
 
 <Spoiler title="Show">
+
+armadillo
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:biome_filter": {
+    "test": "has_biome_tag",
+    "value": "savanna"
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:biome_filter": {
+    "all_of": [
+        {
+            "test": "has_biome_tag",
+            "value": "mesa"
+        },
+        {
+            "test": "has_biome_tag",
+            "operator": "not",
+            "value": "plateau"
+        }
+    ]
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:biome_filter": {
+    "all_of": [
+        {
+            "test": "has_biome_tag",
+            "value": "mesa"
+        },
+        {
+            "test": "has_biome_tag",
+            "value": "plateau"
+        }
+    ]
+}
+```
 
 axolotl
 
@@ -60,6 +107,27 @@ bee
 ]
 ```
 
+bogged
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:biome_filter": {
+    "any_of": [
+        {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "swamp"
+        },
+        {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "mangrove_swamp"
+        }
+    ]
+}
+```
+
 chicken
 
 <CodeHeader></CodeHeader>
@@ -72,73 +140,43 @@ chicken
 }
 ```
 
-cod
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:biome_filter": [
-    {
-        "test": "has_biome_tag",
-        "operator": "==",
-        "value": "ocean"
-    },
-    {
-        "test": "has_biome_tag",
-        "operator": "!=",
-        "value": "warm"
-    }
-]
-```
-
-cow
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:biome_filter": {
-    "test": "has_biome_tag",
-    "operator": "==",
-    "value": "animal"
-}
-```
-
-creeper
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:biome_filter": {
-    "test": "has_biome_tag",
-    "operator": "==",
-    "value": "monster"
-}
-```
-
-dolphin
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:biome_filter": [
-    {
-        "test": "has_biome_tag",
-        "operator": "==",
-        "value": "ocean"
-    },
-    {
-        "test": "has_biome_tag",
-        "operator": "!=",
-        "value": "frozen"
-    }
-]
-```
-
 </Spoiler>
 
 ## brightness_filter
 
 <Spoiler title="Show">
+
+armadillo
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:brightness_filter": {
+    "min": 7,
+    "max": 15,
+    "adjust_for_weather": false
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:brightness_filter": {
+    "min": 7,
+    "max": 15,
+    "adjust_for_weather": false
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:brightness_filter": {
+    "min": 7,
+    "max": 15,
+    "adjust_for_weather": false
+}
+```
 
 bat
 
@@ -164,6 +202,18 @@ bee
 }
 ```
 
+bogged
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:brightness_filter": {
+    "min": 0,
+    "max": 7,
+    "adjust_for_weather": true
+}
+```
+
 chicken
 
 <CodeHeader></CodeHeader>
@@ -185,52 +235,6 @@ cow
     "min": 7,
     "max": 15,
     "adjust_for_weather": false
-}
-```
-
-creeper
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:brightness_filter": {
-    "min": 0,
-    "max": 7,
-    "adjust_for_weather": true
-}
-```
-
-donkey
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:brightness_filter": {
-    "min": 7,
-    "max": 15,
-    "adjust_for_weather": false
-}
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:brightness_filter": {
-    "min": 7,
-    "max": 15,
-    "adjust_for_weather": false
-}
-```
-
-drowned
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:brightness_filter": {
-    "min": 0,
-    "max": 7,
-    "adjust_for_weather": true
 }
 ```
 
@@ -364,6 +368,17 @@ drowned
 
 <Spoiler title="Show">
 
+bogged
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:difficulty_filter": {
+    "min": "easy",
+    "max": "hard"
+}
+```
+
 creeper
 
 <CodeHeader></CodeHeader>
@@ -423,17 +438,6 @@ enderman
     "max": "hard"
 }
 ```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:difficulty_filter": {
-    "min": "easy",
-    "max": "hard"
-}
-```
-
-ghast
 
 <CodeHeader></CodeHeader>
 
@@ -644,6 +648,35 @@ stray
 
 <Spoiler title="Show">
 
+armadillo
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:herd": {
+    "min_size": 2,
+    "max_size": 3
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:herd": {
+    "min_size": 1,
+    "max_size": 2
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:herd": {
+    "min_size": 1,
+    "max_size": 2
+}
+```
+
 axolotl
 
 <CodeHeader></CodeHeader>
@@ -679,6 +712,17 @@ bee
 }
 ```
 
+bogged
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:herd": {
+    "min_size": 1,
+    "max_size": 2
+}
+```
+
 chicken
 
 <CodeHeader></CodeHeader>
@@ -687,50 +731,6 @@ chicken
 "minecraft:herd": {
     "min_size": 2,
     "max_size": 4
-}
-```
-
-cod
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:herd": {
-    "min_size": 4,
-    "max_size": 7
-}
-```
-
-cow
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:herd": {
-    "min_size": 2,
-    "max_size": 3
-}
-```
-
-dolphin
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:herd": {
-    "min_size": 3,
-    "max_size": 5
-}
-```
-
-donkey
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:herd": {
-    "min_size": 2,
-    "max_size": 6
 }
 ```
 
@@ -902,6 +902,137 @@ strider
 
 <Spoiler title="Show">
 
+armadillo
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:spawns_on_block_filter": [
+    {
+        "name": "minecraft:grass_block"
+    },
+    {
+        "name": "minecraft:sand",
+        "states": {
+            "sand_type": "red"
+        }
+    },
+    {
+        "name": "minecraft:dirt",
+        "states": {
+            "dirt_type": "coarse"
+        }
+    },
+    {
+        "name": "minecraft:brown_terracotta"
+    },
+    {
+        "name": "minecraft:hardened_clay"
+    },
+    {
+        "name": "minecraft:orange_terracotta"
+    },
+    {
+        "name": "minecraft:light_gray_terracotta"
+    },
+    {
+        "name": "minecraft:red_terracotta"
+    },
+    {
+        "name": "minecraft:white_terracotta"
+    },
+    {
+        "name": "minecraft:yellow_terracotta"
+    }
+]
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:spawns_on_block_filter": [
+    {
+        "name": "minecraft:grass_block"
+    },
+    {
+        "name": "minecraft:sand",
+        "states": {
+            "sand_type": "red"
+        }
+    },
+    {
+        "name": "minecraft:dirt",
+        "states": {
+            "dirt_type": "coarse"
+        }
+    },
+    {
+        "name": "minecraft:brown_terracotta"
+    },
+    {
+        "name": "minecraft:hardened_clay"
+    },
+    {
+        "name": "minecraft:orange_terracotta"
+    },
+    {
+        "name": "minecraft:light_gray_terracotta"
+    },
+    {
+        "name": "minecraft:red_terracotta"
+    },
+    {
+        "name": "minecraft:white_terracotta"
+    },
+    {
+        "name": "minecraft:yellow_terracotta"
+    }
+]
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:spawns_on_block_filter": [
+    {
+        "name": "minecraft:grass_block"
+    },
+    {
+        "name": "minecraft:sand",
+        "states": {
+            "sand_type": "red"
+        }
+    },
+    {
+        "name": "minecraft:dirt",
+        "states": {
+            "dirt_type": "coarse"
+        }
+    },
+    {
+        "name": "minecraft:brown_terracotta"
+    },
+    {
+        "name": "minecraft:hardened_clay"
+    },
+    {
+        "name": "minecraft:orange_terracotta"
+    },
+    {
+        "name": "minecraft:light_gray_terracotta"
+    },
+    {
+        "name": "minecraft:red_terracotta"
+    },
+    {
+        "name": "minecraft:white_terracotta"
+    },
+    {
+        "name": "minecraft:yellow_terracotta"
+    }
+]
+```
+
 axolotl
 
 <CodeHeader></CodeHeader>
@@ -927,35 +1058,6 @@ cow
 ```
 
 donkey
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:spawns_on_block_filter": "minecraft:grass"
-```
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:spawns_on_block_filter": "minecraft:grass"
-```
-
-goat
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:spawns_on_block_filter": [
-    "minecraft:stone",
-    "minecraft:snow",
-    "minecraft:powder_snow",
-    "minecraft:snow_layer",
-    "minecraft:packed_ice",
-    "minecraft:gravel"
-]
-```
-
-horse
 
 <CodeHeader></CodeHeader>
 
@@ -1063,7 +1165,35 @@ zombie_pigman
 
 <Spoiler title="Show">
 
+armadillo
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:spawns_on_surface": {}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:spawns_on_surface": {}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:spawns_on_surface": {}
+```
+
 bee
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:spawns_on_surface": {}
+```
+
+bogged
 
 <CodeHeader></CodeHeader>
 
@@ -1088,36 +1218,6 @@ cod
 ```
 
 cow
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:spawns_on_surface": {}
-```
-
-creeper
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:spawns_on_surface": {}
-```
-
-dolphin
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:spawns_on_surface": {}
-```
-
-donkey
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:spawns_on_surface": {}
-```
 
 <CodeHeader></CodeHeader>
 
@@ -1263,6 +1363,34 @@ guardian
 
 <Spoiler title="Show">
 
+armadillo
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:weight": {
+    "default": 10
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:weight": {
+    "default": 6,
+    "rarity": 3
+}
+```
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:weight": {
+    "default": 6,
+    "rarity": 2
+}
+```
+
 axolotl
 
 <CodeHeader></CodeHeader>
@@ -1293,6 +1421,16 @@ bee
 }
 ```
 
+bogged
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:weight": {
+    "default": 40
+}
+```
+
 chicken
 
 <CodeHeader></CodeHeader>
@@ -1300,46 +1438,6 @@ chicken
 ```json
 "minecraft:weight": {
     "default": 10
-}
-```
-
-cod
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:weight": {
-    "default": 75
-}
-```
-
-cow
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:weight": {
-    "default": 8
-}
-```
-
-creeper
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:weight": {
-    "default": 100
-}
-```
-
-dolphin
-
-<CodeHeader></CodeHeader>
-
-```json
-"minecraft:weight": {
-    "default": 7
 }
 ```
 

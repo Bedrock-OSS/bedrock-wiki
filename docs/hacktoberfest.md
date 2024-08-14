@@ -3,6 +3,7 @@ hidden: true
 show_toc: false
 show_contributors: true
 title: Hacktoberfest
+description: Participate in Hacktoberfest and contribute to the Wiki!
 ---
 <div class="xl:mr-72">
 <WikiImage
@@ -115,7 +116,7 @@ See all participating MCDevKit projects [here](https://github.com/orgs/MCDevKit/
 
 ### [jsonte](https://github.com/MCDevKit/jsonte)
 
-JSON Templating Engine for generating JSON files easily for Minecraft Bedrock Addon development.<br><br>
+JSON Templating Engine for generating JSON files easily for Minecraft Bedrock Add-On development.<br><br>
 
 <span>
 <img src="/assets/images/hacktoberfest/bridge.png"

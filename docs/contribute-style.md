@@ -5,6 +5,7 @@ mentions:
     - TheItsNameless
     - MedicalJewel105
     - QuazChick
+description: Learn how to structure pages and work with wiki formatting.
 ---
 
 Now that you have our wiki locally, you can edit the files right on your device. If you don't know how to work with VSCode, there are some very good videos from Microsoft itself [here](https://code.visualstudio.com/docs).
@@ -36,6 +37,7 @@ mentions:
 | `category`       | No       | None    | Specifies category where this page is displayed on the sidebar.                                                                                          |
 | `tags`           | No       | []      | A list of tags for the page. Some will be displayed on sidebar, such as 'guide' or 'beta'. All will be displayed in the actual page, at the top.         |
 | `mentions`       | No       | []      | Add your GitHub username here so that you will always be in the contributors section if this page is moved.                                              |
+| `description`    | No       | None    | This text will be displayed in links description when posted somewhere. `:`, `"` symbols are NOT allowed there.                                          |
 
 The title is required, as it is the name shown in the bar on the left side. Mentions isn't needed, but it would be great if everyone knows who made the great article they are reading!
 
@@ -606,7 +608,7 @@ Example:
 	"minecraft:item": {
 		"description": {
             // Describing an object with components.
-			"identifier": "bs:copper_coin",
+			"identifier": "wiki:copper_coin",
 			"category": "items"
 		},
 		"components": {

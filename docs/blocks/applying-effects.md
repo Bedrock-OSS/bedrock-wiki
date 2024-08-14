@@ -5,11 +5,12 @@ tags:
     - easy
     - scripting
 mentions:
-    - MysticChair
-    - SirLich
-    - MedicalJewel105
-    - QuazChick
-    - SmokeyStack
+  - MysticChair
+  - SirLich
+  - MedicalJewel105
+  - QuazChick
+  - SmokeyStack
+description: This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block.
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`

@@ -12,6 +12,7 @@ mentions:
     - DasEtwas
     - TheItsNameless
     - ThomasOrs
+description: Add custom sounds without overwriting any vanilla ones.
 ---
 
 In bedrock, we can add custom sounds without overwriting any vanilla sounds. This is done by adding files to the resource pack.
@@ -87,7 +88,7 @@ In the example above, I showed two `top-level` fields: `category` and `sounds`. 
 Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get other effects.
 
 | Category | Note                                            |
-| -------- | ----------------------------------------------- |
+|----------|-------------------------------------------------|
 | weather  |                                                 |
 | block    |                                                 |
 | bucket   |                                                 |
@@ -193,7 +194,7 @@ If we want our sounds to run automatically, we can add them into the `sounds.jso
 Sounds can be added into various categories:
 
 | Category                | Note                                                                             |
-| ----------------------- | -------------------------------------------------------------------------------- |
+|-------------------------|----------------------------------------------------------------------------------|
 | individual_event_sounds | Contains sounds like beacon activation, chest-close, or explode                  |
 | block_sounds            | Contains hit, step, and break sounds for blocks                                  |
 | entity_sounds           | Contains death, ambient, hurt, etc. sounds for entities (Including custom ones!) |
@@ -205,25 +206,25 @@ I assume that sounds can be added in other categories, but I personally only hav
 
 Common events:
 
-| Events     | Note                                                     |
-| ---------- | -------------------------------------------------------- |
-| ambient    | Played randomly, such as grunts, clucks, or ghast noises |
-| hurt       | Played when damaged                                      |
-| death      | Played when it dies                                      |
-| step       | Played when the entity moves along the ground            |
-| fall.big   | For hitting the ground from a high height                |
-| fall.small | For hitting the ground from a low height                 |
-| splash     | For splashing in the water                               |
-| attack     | For melee attacking                                      |
-| shoot      | For shooting projectiles                                 |
-| cast.spell | For starting summon                                      |
-| prepare.attack | For finishing summon                                 |
-| roar       | For roaring                                              |
+| Events         | Note                                                     |
+|----------------|----------------------------------------------------------|
+| ambient        | Played randomly, such as grunts, clucks, or ghast noises |
+| hurt           | Played when damaged                                      |
+| death          | Played when it dies                                      |
+| step           | Played when the entity moves along the ground            |
+| fall.big       | For hitting the ground from a high height                |
+| fall.small     | For hitting the ground from a low height                 |
+| splash         | For splashing in the water                               |
+| attack         | For melee attacking                                      |
+| shoot          | For shooting projectiles                                 |
+| cast.spell     | For starting summon                                      |
+| prepare.attack | For finishing summon                                     |
+| roar           | For roaring                                              |
 
 There are also many sound events, which _most likely_ trigger automatically, but which I don't have details for, such as:
 
 | Unknown Categories |
-| ------------------ |
+|--------------------|
 | breathe            |
 | splash             |
 | swim               |

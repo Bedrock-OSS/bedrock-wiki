@@ -5,6 +5,7 @@ mentions:
     - ConsoleTerm
 tags:
     - expert
+description: NBT reading step by step.
 ---
 
 Before going through this example, it is necessary to first familiarize yourself with NBT in its full beauty. See *[NBT in Depth](/nbt/nbt-in-depth)*.

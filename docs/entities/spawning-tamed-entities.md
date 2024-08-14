@@ -10,6 +10,7 @@ mentions:
     - MedicalJewel105
     - SmokeyStack
     - ThomasOrs
+description: In this tutorial, you will learn how to spawn a pre-tamed entity by running an event on the player you want the entity tamed to, and by throwing an item that transforms into a tamed entity upon impact.
 ---
 
 In this tutorial, you will learn how to spawn a pre-tamed entity by running an event on the player you want the entity tamed to, and by throwing an item that transforms into a tamed entity upon impact.

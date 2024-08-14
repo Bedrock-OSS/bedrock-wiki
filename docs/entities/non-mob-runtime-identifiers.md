@@ -5,6 +5,7 @@ mentions:
     - Ciosciaa
     - SmokeyStack
     - ThomasOrs
+description: Non-mobs are unconventional entities used for gameplay or utility.
 ---
 
 _Last updated for 1.19.10_

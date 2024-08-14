@@ -3,17 +3,18 @@ title: Block Tags
 category: General
 nav_order: 3
 mentions:
-    - SirLich
-    - yanasakana
-    - aexer0e
-    - SmokeyStack
-    - MedicalJewel105
-    - Luthorius
-    - Chikorita-Lover
-    - victorsigma
-    - TheItsNameless
-    - QuazChick
-    - Kaioga5
+  - SirLich
+  - yanasakana
+  - aexer0e
+  - SmokeyStack
+  - MedicalJewel105
+  - Luthorius
+  - Chikorita-Lover
+  - victorsigma
+  - TheItsNameless
+  - QuazChick
+  - Kaioga5
+description: Block tags can be used to ensure that a block meets certain conditions.
 ---
 
 Block tags can be used to ensure that a block meets certain conditions.

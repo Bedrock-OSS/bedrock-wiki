@@ -7,6 +7,7 @@ mentions:
     - SmokeyStack
     - cda94581
 nav_order: 6
+description: This system will run your desired commands on the event that the world is loaded for the first time.
 ---
 
 ## Introduction

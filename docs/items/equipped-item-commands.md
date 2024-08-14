@@ -9,6 +9,7 @@ mentions:
     - MedicalJewel105
     - Luthorius
     - TheItsNameless
+description: Run commands when item is equipped.
 ---
 
 ## Introduction

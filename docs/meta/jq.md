@@ -1,10 +1,11 @@
 ---
-title: Creating addons with JQ
+title: Creating add-ons with JQ
 hidden: true
 mentions:
     - SirLich
     - Joelant05
     - MedicalJewel105
+description: jq is a JSON editing program written in C.
 ---
 
 ## Introduction
@@ -13,9 +14,9 @@ mentions:
 
 _— https://stedolan.github.io/jq/_
 
-jq is a JSON editing program written in C. It can be thought of similarly to Perl. Because it was explicitly written to parse JSON, however, it has many valuable features that are not present in other text processors. jq defines its programs as filters, as they take an input, your JSON data, and produce an output, your modified JSON data. Though seemingly simple, jq contains many advanced features that can be extremely useful when procedurally generating addon files.
+jq is a JSON editing program written in C. It can be thought of similarly to Perl. Because it was explicitly written to parse JSON, however, it has many valuable features that are not present in other text processors. jq defines its programs as filters, as they take an input, your JSON data, and produce an output, your modified JSON data. Though seemingly simple, jq contains many advanced features that can be extremely useful when procedurally generating add-on files.
 
-I'll be explaining jq from the perspective that jq is a command-line interface. However, wrappers have been designed for jq in essentially every programming language, so you can easily incorporate jq filters into the programing language of your choice, including Go, JavaScript, Java, Ruby, Python, and R. Given that, I will primarily focus on filter design from the perspective of Minecraft addons, and I'll leave the implementation to your specific use case. I'll be including embeds from [jqterm.com](https://jqterm.com/?query=.), which uses a JavaScript implementation of jq to display filters in a web browser.
+I'll be explaining jq from the perspective that jq is a command-line interface. However, wrappers have been designed for jq in essentially every programming language, so you can easily incorporate jq filters into the programing language of your choice, including Go, JavaScript, Java, Ruby, Python, and R. Given that, I will primarily focus on filter design from the perspective of Minecraft add-ons, and I'll leave the implementation to your specific use case. I'll be including embeds from [jqterm.com](https://jqterm.com/?query=.), which uses a JavaScript implementation of jq to display filters in a web browser.
 
 ## Getting jq
 

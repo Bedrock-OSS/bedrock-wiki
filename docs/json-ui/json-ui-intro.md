@@ -3,28 +3,29 @@ title: Intro to JSON UI
 category: General
 nav_order: 1
 tags:
-    - guide
+  - guide
 mentions:
-    - sermah
-    - KalmeMarq
-    - SirLich
-    - solvedDev
-    - Joelant05
-    - GTB3NW
-    - stirante
-    - MedicalJewel105
-    - r4isen1920
-    - shanewolf38
-    - LeGend077
-    - mark-wiemer
-    - TheItsNameless
-    - ThomasOrs
+  - sermah
+  - KalmeMarq
+  - SirLich
+  - solvedDev
+  - Joelant05
+  - GTB3NW
+  - stirante
+  - MedicalJewel105
+  - r4isen1920
+  - shanewolf38
+  - LeGend077
+  - mark-wiemer
+  - TheItsNameless
+  - ThomasOrs
+description: Introduction to JSON UI.
 ---
 
 ## Introduction
 
 :::warning
-JSON UI is being deprecated in favor of [Ore UI](https://github.com/Mojang/ore-ui). Note that any addons using JSON UI will eventually break in the coming years.
+JSON UI is being deprecated in favor of [Ore UI](https://github.com/Mojang/ore-ui). Note that any add-ons using JSON UI will eventually break in the coming years.
 :::
 
 :::tip
@@ -245,7 +246,7 @@ The following are the list of element types, which are possible values for the `
 You can use operators in JSON UI, along with `$variables` and `#bindings` into common properties such as `size` and `offset`. Here's a list of properties you can use:
 
 | Operator Name         | Operator | Examples                                                                      |
-| --------------------- | -------- | ----------------------------------------------------------------------------- |
+|-----------------------|----------|-------------------------------------------------------------------------------|
 | Addition              | +        | `"100% + 420px"` `($text + ' my')` `($index + 2)` `('#' + $bdg_nm + '_name')` |
 | Subtraction           | -        | `"100% - 69px"` `($text - ' my')` `($index - 13)`                             |
 | Multiplication        | *        | `($var * 9)` `(#value * 5)`                                                   |
@@ -870,7 +871,7 @@ These are the list of common button IDs you can use in `from_button_id` property
 
 **For mouse and keyboard:**
 | Button ID                      | Description       |
-| ------------------------------ | ----------------- |
+|--------------------------------|-------------------|
 | `button.menu_select`           | Mouse left click  |
 | `button.menu_secondary_select` | Mouse right click |
 | `button.menu_ok`               | ENTER key         |
@@ -884,7 +885,7 @@ These are the list of common button IDs you can use in `from_button_id` property
 
 **For controllers:**
 | Button ID                      | Description    |
-| ------------------------------ | -------------- |
+|--------------------------------|----------------|
 | `button.controller_select `    | X/A button     |
 | `button.menu_secondary_select` | Y button       |
 | `button.menu_exit`             | B button       |
@@ -901,7 +902,7 @@ It's a good practice in creating UIs to also add support for various different c
 To modify JSON UI in a non-intrusive way, you can use the `modifications` property to modify previously existing JSON UI elements from other packs (usually vanilla JSON UI files). Doing this makes sure only necessary parts are modified unless otherwise intended, to improve compatibility with other packs that modify the JSON UI.
 
 | Modification    | Description                                 |
-| --------------- | ------------------------------------------- |
+|-----------------|---------------------------------------------|
 | `insert_back`   | **insert** at end of array                  |
 | `insert_front`  | **insert** at start of array                |
 | `insert_after`  | **insert** after target in array            |

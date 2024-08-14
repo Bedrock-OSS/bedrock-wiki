@@ -2,14 +2,15 @@
 title: Custom Fluids
 category: Vanilla Re-Creations
 tags:
-    - experimental
-    - intermediate
-    - scripting
+  - experimental
+  - intermediate
+  - scripting
 mentions:
-    - Provedule
-    - JaylyDev
-    - QuazChick
-    - SmokeyStack
+  - Provedule
+  - JaylyDev
+  - QuazChick
+  - SmokeyStack
+description: Re-creation of vanilla fluids.
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`

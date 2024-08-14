@@ -11,6 +11,7 @@ mentions:
     - MedicalJewel105
     - aexer0e
     - Xterionix
+description: Spawn an item entity.
 ---
 
 It is fairly common to want to spawn an item in the world, as if dropped. This page will walk through how to accomplish this through various methods, including Entity Deaths, Interactions, and an all-purpose method.

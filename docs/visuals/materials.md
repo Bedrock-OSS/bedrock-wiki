@@ -9,6 +9,7 @@ mentions:
     - Joelant05
     - MedicalJewel105
     - Luthorius
+description: Learn about materials in Minecraft Bedrock.
 ---
 
 :::warning

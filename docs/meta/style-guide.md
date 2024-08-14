@@ -5,12 +5,13 @@ mentions:
     - solvedDev
     - MedicalJewel105
     - ChibiMango
+description: Officially supported Bedrock-Wiki style guide for add-on creation.
 ---
 
-This document will present the officially supported Bedrock-Wiki style guide for addon-creation. This guide aims to promote best practices while creating addons and create a consistent format for everyone to follow.
+This document will present the officially supported Bedrock-Wiki style guide for add-on creation. This guide aims to promote best practices while creating add-ons and create a consistent format for everyone to follow.
 
 :::tip
-The style guide is a living, breathing document, which will evolve as addon-creation evolves. Please get in touch if you think something needs to be updated or changed!
+The style guide is a living, breathing document, which will evolve as add-on creation evolves. Please get in touch if you think something needs to be updated or changed!
 :::
 
 ## Folder Structure
@@ -27,7 +28,7 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 ## File and Folder names
 
 | Concept              | Example Identifier         |
-| -------------------- | -------------------------- |
+|----------------------|----------------------------|
 | Behavior Pack        | dragons_BP                 |
 | Resource Pack        | dragons_RP                 |
 | Geometry             | dragon.geo.json            |
@@ -88,11 +89,11 @@ You can use sub-indexing in your entities:
 ## Groups and Events should complement each other
 
 | Group        | Event                  |
-| ------------ | ---------------------- |
+|--------------|------------------------|
 | sirlich:wild | ✔️ sirlich:become_wild |
-| sirlich:wild | ❌ sirlich:wild        |
+| sirlich:wild | ❌ sirlich:wild         |
 | sirlich:tame | ✔️ sirlich:on_tame     |
-| sirlich:tame | ❌ sirlich:tame        |
+| sirlich:tame | ❌ sirlich:tame         |
 
 ## Short-Names should be Generic
 
@@ -152,7 +153,7 @@ Own-line comments can be used for organizational purposes but should not store l
 ## Acronyms when discussing
 
 | Acronym | Concept                            |
-| ------- | ---------------------------------- |
+|---------|------------------------------------|
 | BP      | Behavior Pack                      |
 | RP      | Resource pack                      |
 | VRP     | Vanilla Resource Pack              |
@@ -165,3 +166,4 @@ Own-line comments can be used for organizational purposes but should not store l
 | FPV     | First Person View                  |
 | RD      | Render Dragon                      |
 | VSCode  | Visual Studio Code                 |
+| SP      | Skin Pack                          |

@@ -9,6 +9,7 @@ mentions:
     - Luthorius
     - epxzzy
     - SmokeyStack
+description: Vanilla item identifiers effects.
 ---
 
 :::danger

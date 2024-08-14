@@ -1,5 +1,6 @@
 ---
 title: Projectiles
+category: Documentation
 mentions:
     - SirLich
     - stirante
@@ -7,6 +8,7 @@ mentions:
     - SmokeyStack
     - Luthorius
     - ThomasOrs
+description: Projectile component documentation.
 ---
 
 ## Overview
@@ -19,7 +21,7 @@ _This information was last tested on **1.18.2**._
 :::
 
 | Name                      | Type             | Default Value | Description                                                                                                                                       |
-| ------------------------- | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------------------|------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | anchor                    | Integer          |               |                                                                                                                                                   |
 | angle_offset              | Decimal          | 0             | Determines the angle at which the projectile is thrown                                                                                            |
 | catch_fire                | Boolean          | false         | If true, the entity hit will be set on fire                                                                                                       |
@@ -92,7 +94,7 @@ _Exact behavior unknown_
 Deals damage on hit.
 
 | Name                           | Type                             | Description                                                                                                                  |
-| ------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+|--------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | damage                         | Integer/Integer Array [min, max] | Damage dealt to entity on hit                                                                                                |
 | semi_random_diff_damage        | Boolean                          |                                                                                                                              |
 | max_critical_damage            | Decimal                          |                                                                                                                              |
@@ -111,7 +113,7 @@ Deals damage on hit.
 Calls an event on hit.
 
 | Name               | Type    | Description                                         |
-| ------------------ | ------- | --------------------------------------------------- |
+|--------------------|---------|-----------------------------------------------------|
 | affect_projectile  | Boolean | Event will be triggered for projectile entity       |
 | affect_shooter     | Boolean | Event will be triggered for shooter entity          |
 | affect_target      | Boolean | Event will be triggered for hit entity              |
@@ -120,7 +122,7 @@ Calls an event on hit.
 | event_trigger      | Object  | Event to trigger. Structure below.                  |
 
 | Name    | Type   | Description                           |
-| ------- | ------ | ------------------------------------- |
+|---------|--------|---------------------------------------|
 | event   | String | Event to trigger                      |
 | target  | String | Target of the event                   |
 | filters | Object | Criteria required in order to trigger |
@@ -130,7 +132,7 @@ Calls an event on hit.
 Sticks the projectile into the ground.
 
 | Name       | Type    | Description |
-| ---------- | ------- | ----------- |
+|------------|---------|-------------|
 | shake_time | Decimal |             |
 
 ### spawn_aoe_cloud
@@ -138,7 +140,7 @@ Sticks the projectile into the ground.
 Spawns an area of effect cloud of potion effect.
 
 | Name                | Type                    | Description                                                                                                                                                                      |
-| ------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | radius              | Decimal                 | Radius of the cloud                                                                                                                                                              |
 | radius_on_use       | Decimal                 |                                                                                                                                                                                  |
 | potion              | Integer                 | Lingering Potion ID                                                                                                                                                              |
@@ -151,7 +153,7 @@ Spawns an area of effect cloud of potion effect.
 #### Potion IDs
 
 | Potion                    | Regular | Extended | Enhanced (Level II) |
-| ------------------------- | ------- | -------- | ------------------- |
+|---------------------------|---------|----------|---------------------|
 | Water Bottle              | 0       |          |                     |
 | Mundane Potion            | 1       | 2        |                     |
 | Thick Potion              | 3       |          |                     |
@@ -180,7 +182,7 @@ Spawns an area of effect cloud of potion effect.
 Spawns an entity on hit.
 
 | Name                        | Type    | Description                                 |
-| --------------------------- | ------- | ------------------------------------------- |
+|-----------------------------|---------|---------------------------------------------|
 | first_spawn_percent_chance  | Decimal |                                             |
 | second_spawn_percent_chance | Decimal |                                             |
 | first_spawn_count           | Integer |                                             |
@@ -193,7 +195,7 @@ Spawns an entity on hit.
 Spawns particles on hit.
 
 | Name          | Type    | Description                                              |
-| ------------- | ------- | -------------------------------------------------------- |
+|---------------|---------|----------------------------------------------------------|
 | particle_type | String  | [Vanilla Particles](/particles/vanilla-particles) to use |
 | num_particles | Integer | Number of particles                                      |
 | on_entity_hit | Boolean | Whether it should spawn particles on entity hit          |
@@ -205,7 +207,7 @@ Spawns particles on hit.
 Applies a mob effect to the target.
 
 | Name           | Type    | Description                                 |
-| -------------- | ------- | ------------------------------------------- |
+|----------------|---------|---------------------------------------------|
 | effect         | String  | Effect                                      |
 | duration       | Integer | Duration of the effect                      |
 | durationeasy   | Integer | Duration of the effect on easy difficulty   |
@@ -220,7 +222,7 @@ Applies a mob effect to the target.
 Despite the name, this actually spawns a number of experience orbs, being worth the amount stated.
 
 | Name  | Type    | Description                                                                                     |
-| ----- | ------- | ----------------------------------------------------------------------------------------------- |
+|-------|---------|-------------------------------------------------------------------------------------------------|
 | minXP | Integer | Minimum amount of experience to give                                                            |
 | maxXP | Integer | Maximum amount of experience to give                                                            |
 | xp    | Integer | Constant amount of experience to give. When set, it will be used instead of min and max values. |
@@ -233,7 +235,7 @@ _Requires Education Edition toggle to be enabled._
 Freezes water on hit.
 
 | Name          | Type    | Description                   |
-| ------------- | ------- | ----------------------------- |
+|---------------|---------|-------------------------------|
 | shape         | String  | "sphere" or "cube"            |
 | snap_to_block | Boolean |                               |
 | size          | Integer | The size of the freeze effect |
@@ -243,7 +245,7 @@ Freezes water on hit.
 _Exact behavior unknown. Right now it crashes minecraft probably because of wrong parameters_
 
 | Name         | Type    | Description |
-| ------------ | ------- | ----------- |
+|--------------|---------|-------------|
 | owner_damage | Integer |             |
 | knockback    | Boolean |             |
 | ignite       | Boolean |             |

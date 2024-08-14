@@ -9,6 +9,7 @@ mentions:
     - AdamRaichu
     - Luthorius
     - TheItsNameless
+description: Item attachables documentation.
 ---
 
 ::: tip

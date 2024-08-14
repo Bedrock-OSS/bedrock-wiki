@@ -1,13 +1,12 @@
 ---
 title: Project Setup Android
-category: Guide
+category: Extra
 description: How to setup your project on Android
 mentions:
     - Etanarvazac
     - MedicalJewel105
     - TheItsNameless
     - ThomasOrs
-hidden: true
 ---
 
 ## Tools
@@ -57,7 +56,7 @@ Now that you have the workplace setup, code editors should have a way for you to
 3. Tap "Add a storage", followed by "select folder"
 4. This should have opened your device's file browser. Navigate to the _main_ folder for your projects (for us, `/Minecraft Packs`) then tap "Use this folder". If your device asked you to allow Acode access, tap "Allow".
 5. You should be back in Acode now. Tap "OK" and your folder should now be in the list. Tap on it and then "Select Folder" on the bottom of the screen.
-6. Now when you open the file browser (3 bars in top-left), you should see your folder in the list. You now have quick access to your addon's behaviour and resource pack folders. The file browser uses tree view to display your active workspace.
+6. Now when you open the file browser (3 bars in top-left), you should see your folder in the list. You now have quick access to your add-on's behaviour and resource pack folders. The file browser uses tree view to display your active workspace.
 
 :::tip
 You can create new files and folders inside your packs from the file browser by tapping and holding on the folder you want to create the item in.
@@ -73,7 +72,7 @@ When creating a new file in a file manager or some text or code applications, th
 
 The manifest file is the file Minecraft uses to identify your packs. Every pack has one (and only one) manifest. A folder with a correctly formatted manifest will show up in Minecraft. Before we begin adding content, we will ensure our "minimal" pack is visible. Manifests are written in the `JSON` programming language. If you're unfamiliar with JSON, you can learn more about it [here](/guide/understanding-json).
 
-Create a new text file in your addon's behaviour pack folder called `manifest.json`. To begin, copy and paste the following code into the `manifest.json` file. A full breakdown of the manifest file is provided after creating these files.
+Create a new text file in your add-on's behaviour pack folder called `manifest.json`. To begin, copy and paste the following code into the `manifest.json` file. A full breakdown of the manifest file is provided after creating these files.
 
 <codeHeader>BP/manifest.json</codeHeader>
 
@@ -97,7 +96,7 @@ Create a new text file in your addon's behaviour pack folder called `manifest.js
 }
 ```
 
-Now create another `manifest.json` file in your addon's resource pack folder. Again, copy and paste the following code inside the new file.
+Now create another `manifest.json` file in your add-on's resource pack folder. Again, copy and paste the following code inside the new file.
 
 <codeHeader>RP/manifest.json</codeHeader>
 
@@ -127,7 +126,7 @@ Now create another `manifest.json` file in your addon's resource pack folder. Ag
 -   `name` is name of your pack. We will be defining the this in "code form" later so they can easily be translated into other languages, should you create a pack with multiple languages.
 -   `description` is a short description about your pack that will show up under the `name` in-game. This will also be defined later in "code form".
 -   `uuid` is required to help identify your pack from other packs and will have a breakdown of it's own below. Once explained, you'll need to replace all of the `...` with them.
--   `version` is literally the version of your addon. Upon completing your addon, you can always change this to `[1, 0, 0]`. However, it'll be easier to use the hotfix spot while making your changes on mobile.
+-   `version` is literally the version of your add-on. Upon completing your add-on, you can always change this to `[1, 0, 0]`. However, it'll be easier to use the hotfix spot while making your changes on mobile.
 -   `min_engine_version` tells Minecraft what the minimum version it needs to be in order for your pack to work. For example, if your pack has a crafting recipe that involves concrete, your pack can't run on Minecraft 1.5 because concrete doesn't exist in that version.
 -   Under `modules`, you have the `type` field. This tells Minecraft what your pack is. So `data` in your BP tells the game that pack is a behaviour pack and `resources` in your RP tells the game that pack is a resource pack.
 
@@ -139,7 +138,7 @@ You should **NEVER** use the same UUID twice! Use the [Online UUID Generator Too
 
 ## Pack Icon
 
-Notice how other packs have a icon? It's a image file which can quickly identify how your addon will appear in-game. Got a low-resolution square image as a PNG? You can use it! Otherwise, you can use this example icon.
+Notice how other packs have a icon? It's a image file which can quickly identify how your add-on will appear in-game. Got a low-resolution square image as a PNG? You can use it! Otherwise, you can use this example icon.
 
 <WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated/>
 
@@ -152,13 +151,13 @@ You must place a copy of your desired image in both the behaviour and resource p
 
 ## Language Files
 
-Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your addon. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can You can learn more about how Minecraft handles localization [here](/concepts/text-and-translations). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you `§r`eset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
+Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your add-on. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can You can learn more about how Minecraft handles localization [here](/concepts/text-and-translations). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you `§r`eset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
 
 <codeHeader>BP/texts/en_US.lang</codeHeader>
 
 ```
-pack.name=§2My §lFIRST §r§2Addon's Behaviour Pack!
-pack.description=This addon is made by a Wiki Contributor!
+pack.name=§2My §lFIRST §r§2Add-on's Behaviour Pack!
+pack.description=This add-on is made by a Wiki Contributor!
 ```
 
 <codeHeader>BP/texts/languages.json</codeHeader>
@@ -170,8 +169,8 @@ pack.description=This addon is made by a Wiki Contributor!
 <codeHeader>RP/texts/en_US.lang</codeHeader>
 
 ```
-pack.name=§2My §lFIRST §r§2Addon's Resource Pack!
-pack.description=This addon is made by a Wiki Contributor!
+pack.name=§2My §lFIRST §r§2Add-on's Resource Pack!
+pack.description=This add-on is made by a Wiki Contributor!
 ```
 
 <codeHeader>RP/texts/languages.json</codeHeader>
@@ -180,9 +179,9 @@ pack.description=This addon is made by a Wiki Contributor!
 ["en_US"]
 ```
 
-## Importing Your Addon
+## Importing Your Add-on
 
-Now that your addon has all of the required content, we need to import it to Minecraft. To do this, we need to create a file with the extension `.mcaddon`.
+Now that your add-on has all of the required content, we need to import it to Minecraft. To do this, we need to create a file with the extension `.mcaddon`.
 
 1. Open your preferred file manager and navigate to the folder containing your behaviour and resource packs.
 2. Using multi-select, select both packs and create a ZIP file.
@@ -195,7 +194,7 @@ If done correctly, Minecraft will display a banner for both packs. First is `Imp
 ## Turn on Content Log
 
 :::warning
-Content log is the most useful tool you have for debugging your addons. Please do not skip this step.
+Content log is the most useful tool you have for debugging your add-ons. Please do not skip this step.
 :::
 
 ![](/assets/images/guide/content_log.png)
@@ -244,7 +243,7 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 -   How to setup your mobile workspace
 -   What a `manifest.json` file is
 -   What are UUID's and how to use them
--   How to create icons for your addons
+-   How to create icons for your add-ons
 -   What a `.lang` file is
 
 :::

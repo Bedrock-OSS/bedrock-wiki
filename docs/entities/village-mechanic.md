@@ -9,9 +9,10 @@ mentions:
     - SirLich
     - Ciosciaa
     - ThomasOrs
+description: This article is for anyone who wants to try imitate the village mechanic for their entities.
 ---
 
-This article is for anyone who wants to try imitate the village mechanic for their entities
+This article is for anyone who wants to try imitate the village mechanic for their entities.
 
 ## Navigation Behavior
 
@@ -350,7 +351,7 @@ Use this on melee attack. Ranged attack can accidentally shoot any entity with i
 
 All of this can be used by custom entities and have relation to villager or village:
 | Behavior                                   | Uses                                                                                               | Note                                                                                                            |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+|--------------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | `minecraft:behavior.defend_village_target` | Allows entity to attack other entity that hurt the entity who had "dweller_role": "inhabitant".    | Recommended to use only on entities with melee attack.                                                          |
 | `minecraft:behavior.hide`                  | Used by villager to hide and stay at defined POI.                                                  | Currently, there is no documentation for the POI type that's why I recommend not to change `"poi_type": "bed"`. |
 | `minecraft:behavior.move_to_village`       | Used by Illager and also witch. Allows entity to travel to a random x,y,z coordinate in a village. | -                                                                                                               |

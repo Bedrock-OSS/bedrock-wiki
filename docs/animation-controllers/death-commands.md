@@ -10,6 +10,7 @@ mentions:
     - MedicalJewel105
     - Kaioga5
     - TheItsNameless
+description: Run command when entity dies.
 ---
 
 <BButton color="blue" link="animation-controllers-intro">Learn more about Animation Controllers</BButton>

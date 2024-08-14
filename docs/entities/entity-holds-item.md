@@ -14,6 +14,7 @@ mentions:
     - sermah
     - 7dev7urandom
     - legopitstop
+description: In this tutorial, you will learn to have an entity spawn with an item in its hand.
 ---
 
 ::: tip

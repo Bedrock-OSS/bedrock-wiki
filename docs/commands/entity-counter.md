@@ -5,6 +5,7 @@ mentions:
     - BedrockCommands
     - zheaEvyline
 nav_order: 3
+description: This system allows you to track how many players/entities are there on your world and run your desired commands based on the values obtained.
 ---
 
 ## Introduction

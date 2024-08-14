@@ -7,6 +7,7 @@ category:
 mentions:
     - SirLich
     - MedicalJewel105
+description: Player's client entity files.
 ---
 
 This tutorial will show you how to create player NPCs and add them into your world. These player NPCs will take vanilla player skins, and come included with walk-animations, attack animations, etc.

@@ -6,6 +6,7 @@ mentions:
     - Luthorius
     - MedicalJewel105
     - Hatchibombotar
+description: Scoreboards can be used to perform complex operations, similar to MoLang. Operations come in two flavors - mathematical, and logical.
 ---
 
 Scoreboards can be used to perform complex operations, similar to [Molang](/concepts/molang). Operations come in two flavors: mathematical, and logical.

@@ -76,7 +76,7 @@ An identifier is a name unique to this item. For a vanilla minecraft egg it's id
 -   The namespace (`minecraft`)
 -   The id (`egg`)
 
-The namespace is unique to your addon and you will use it throughout the project. This is to reduce issues if someone adds two packs to your game which both add an ectoplasm item; the namespace reduces the chance of the identifier being the same.
+The namespace is unique to your add-on and you will use it throughout the project. This is to reduce issues if someone adds two packs to your game which both add an ectoplasm item; the namespace reduces the chance of the identifier being the same.
 The namespace that Minecraft use is `minecraft`. Your namespace should be unique to you, for example the authors initials or an abbreviation of the pack name. We will use the namespace `wiki` in our example; for more information on making a namespace check out our page [here](/concepts/namespaces).
 
 The id is an informative shorthand name for your item. Here we will use `ectoplasm`.
@@ -103,7 +103,7 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 ```
 
 Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
-The format version defines which version of the Addon system Minecraft will use to read this file. For our item, we will be using `1.16.100` to allow us to use the experimental features. For more information on format version you can check [here](/guide/format-version).
+The format version defines which version of the Add-on system Minecraft will use to read this file. For our item, we will be using `1.16.100` to allow us to use the experimental features. For more information on format version you can check [here](/guide/format-version).
 
 The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
 
@@ -151,7 +151,7 @@ With that, we have now fully defined our item's behavior. This is what your file
 }
 ```
 
-If you open a world with your addon, your item should be in the correct menu but invisible and have a strange name.
+If you open a world with your add-on, your item should be in the correct menu but invisible and have a strange name.
 
 This is because we haven't defined the visuals yet. However, you should see that it does stack as expected. In the next section, we will define the items texture and assign it to our item.
 

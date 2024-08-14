@@ -9,6 +9,7 @@ mentions:
     - MedicalJewel105
     - TheDoctor15
     - napstaa967
+description: Add vanilla-like durability to custom tools.
 ---
 
 ## Introduction
@@ -259,7 +260,7 @@ Tags work kinda like runtime identifiers for entities.
 Known tags:
 
 | Tag                  | Effects        | How can be called                                  |
-| -------------------- | -------------- | -------------------------------------------------- |
+|----------------------|----------------|----------------------------------------------------|
 | minecraft:is_axe     | Strips logs    | By interacting with blocks that axe interacts with |
 | minecraft:is_hoe     | Makes farmland | By interacting with blocks that hoe interacts with |
 | minecraft:is_pickaxe | Unknown        | Unknown                                            |

@@ -11,6 +11,7 @@ mentions:
   - retr0cube
   - TheItsNameless
   - QuazChick
+description: Menu categories determine where items and blocks appear inside of the creative inventory and recipe book.
 ---
 
 Menu categories determine where items and blocks appear inside of the creative inventory and recipe book.
@@ -82,7 +83,7 @@ Currently, setting the category to "none" in a custom item (not block) prevents 
 _For use with `menu_category` parameter, `category`._
 
 | Category     | Description                                              |
-| ------------ | -------------------------------------------------------- |
+|--------------|----------------------------------------------------------|
 | construction | Added to the "Contruction" tab.                          |
 | equipment    | Added to the "Equipment" tab.                            |
 | items        | Added to the "Items" tab.                                |
@@ -110,6 +111,7 @@ _For use with the `menu_category` parameter, `group`._
 | itemGroup.name.chest              |
 | itemGroup.name.chestboat          |
 | itemGroup.name.chestplate         |
+| itemGroup.name.compounds          |
 | itemGroup.name.concrete           |
 | itemGroup.name.concretePowder     |
 | itemGroup.name.cookedFood         |
@@ -151,6 +153,7 @@ _For use with the `menu_category` parameter, `group`._
 | itemGroup.name.potion             |
 | itemGroup.name.potterySherds      |
 | itemGroup.name.pressurePlate      |
+| itemGroup.name.products           |
 | itemGroup.name.rail               |
 | itemGroup.name.rawFood            |
 | itemGroup.name.record             |
@@ -176,5 +179,5 @@ _For use with the `menu_category` parameter, `group`._
 | itemGroup.name.wool               |
 | itemGroup.name.woolCarpet         |
 
-*Last updated for 1.20.10*
+*Last updated for 1.21.0*
 <!-- page_dumper_end -->

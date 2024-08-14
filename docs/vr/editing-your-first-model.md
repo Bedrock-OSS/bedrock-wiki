@@ -8,6 +8,7 @@ mentions:
     - SmokeyStack
 tags:
     - expert
+description: This tutorial will show you how to make your first VR model.
 ---
 
 This tutorial will show you how to make your first VR model.

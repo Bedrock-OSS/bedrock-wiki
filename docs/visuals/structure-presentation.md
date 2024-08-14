@@ -5,6 +5,7 @@ mentions:
     - MedicalJewel105
     - LeGend077
     - ThomasOrs
+description: How to present your structure in a better way.
 ---
 
 ## Why this page exists

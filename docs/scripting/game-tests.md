@@ -15,6 +15,7 @@ mentions:
     - Fabrimat
     - Herobrine643928
     - kumja1
+description: The GameTest Framework allows us to create unit tests ("GameTests") which make it easier to test if game mechanics work.
 ---
 
 ::: warning

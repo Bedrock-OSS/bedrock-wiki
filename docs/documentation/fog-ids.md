@@ -4,12 +4,13 @@ mentions:
     - SirLich
     - MedicalJewel105
     - TheItsNameless
+description: Fog IDs documentation.
 ---
 
 ## By Element X
 
 | ID                                             | Note                                                                             |
-| ---------------------------------------------- | -------------------------------------------------------------------------------- |
+|------------------------------------------------|----------------------------------------------------------------------------------|
 | minecraft:fog_bamboo_jungle                    | Fog used in the bamboo jungle.                                                   |
 | minecraft:fog_bamboo_jungle_hills              | Fog used in the bamboo jungle hills.                                             |
 | minecraft:fog_basalt_deltas                    | Fog used in the basalt deltas. Adds a gray-red tint to the edge of the sky       |
@@ -159,5 +160,5 @@ mentions:
 | minecraft:fog_the_end                          | the_end                          | 
 | minecraft:fog_warm_ocean                       | warm_ocean                       | 
 | minecraft:fog_warped_forest                    | warped_forest                    | 
-*Last updated for 1.20.10*
+*Last updated for 1.21.0*
 <!-- page_dumper_end -->

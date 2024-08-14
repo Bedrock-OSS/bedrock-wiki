@@ -6,6 +6,7 @@ tags:
 mentions:
     - shanewolf38
     - SmokeyStack
+description: In this tutorial, you will learn how to preserve binding data and update elements based on titles containing specific strings.
 ---
 
 In this tutorial, you will learn how to preserve binding data and update elements based on titles containing specific strings.

@@ -2,13 +2,14 @@
 title: Custom Trees
 category: Vanilla Re-Creations
 tags:
-    - experimental
+  - experimental
 mentions:
     - MedicalJewel105
     - TheItsNameless
     - QuazChick
     - SmokeyStack
 hidden: true
+description: Re-creation of vanilla trees.
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`

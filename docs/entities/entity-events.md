@@ -11,6 +11,7 @@ mentions:
     - ThomasOrs
 tags:
     - beginner
+description: Learn one of the most important things for entities - events.
 ---
 
 Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This page aims to cover how to call events within the entity and other entities as well as the format of an event.

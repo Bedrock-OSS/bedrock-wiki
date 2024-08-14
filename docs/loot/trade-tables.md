@@ -9,6 +9,7 @@ mentions:
     - Ciosciaa
     - SirLich
     - TheItsNameless
+description: Trade tables represent the fundamental data behind trading item transactions for an entity.
 ---
 
 Trade tables represent the fundamental data behind trading item transactions for an entity. Trade tables are not standalone; they must be referenced from an [entity component](https://bedrock.dev/docs/stable/Entities#minecraft%3Aeconomy_trade_table). Using the randomizing properties available to trade tables, trade offers, item counts, and cost calculations may vary across entity instances, even if all would point to the same trade table.
@@ -507,7 +508,7 @@ The price multiplier directly and solely affects cost increases in response to a
 Cost increase due solely to demand is linear, where each increase in demand adds a proportion of the base cost, given by the price multiplier. Assuming the following variables…
 
 | Variable | Meaning                                                                              |
-| -------- | ------------------------------------------------------------------------------------ |
+|----------|--------------------------------------------------------------------------------------|
 | _c_      | Total cost                                                                           |
 | _p_      | Base cost, including [quantity overrides](#quantity-modifying-enchantment-functions) |
 | _m_      | Price multiplier                                                                     |
@@ -679,22 +680,22 @@ In trade tables, if no ID is provided, the trader's entity type will be assigned
 Because trade tables do not use in-data identifiers, they are overridden simply by replacing a prior trade table with a new one. You can learn more about [asset overrides here](/concepts/overwriting-assets)
 
 Below are the currently used vanilla trade tables for each trader:
-|Trader|Path|
-|-|-|
-|Stone Mason|`BP/trading/economy_trades/stone_mason_trades.json`|
-|Farmer|`BP/trading/economy_trades/farmer_trades.json`|
-|Fisherman|`BP/trading/economy_trades/fisherman_trades.json`|
-|Butcher|`BP/trading/economy_trades/butcher_trades.json`|
-|Shepherd|`BP/trading/economy_trades/shepherd_trades.json`|
-|Leather Worker|`BP/trading/economy_trades/leather_worker_trades.json`|
-|Librarian|`BP/trading/economy_trades/librarian_trades.json`|
-|Cartographer|`BP/trading/economy_trades/cartographer_trades.json`|
-|Cleric|`BP/trading/economy_trades/cleric_trades.json`|
-|Tool Smith|`BP/trading/economy_trades/tool_smith_trades.json`|
-|Weapon Smith|`BP/trading/economy_trades/weapon_smith_trades.json`|
-|Fletcher|`BP/trading/economy_trades/fletcher_trades.json`|
-|Armorer|`BP/trading/economy_trades/armorer_trades.json`|
-|Wandering Trader|`BP/trading/economy_trades/wandering_trader_trades.json`|
+| Trader           | Path                                                     |
+|------------------|----------------------------------------------------------|
+| Stone Mason      | `BP/trading/economy_trades/stone_mason_trades.json`      |
+| Farmer           | `BP/trading/economy_trades/farmer_trades.json`           |
+| Fisherman        | `BP/trading/economy_trades/fisherman_trades.json`        |
+| Butcher          | `BP/trading/economy_trades/butcher_trades.json`          |
+| Shepherd         | `BP/trading/economy_trades/shepherd_trades.json`         |
+| Leather Worker   | `BP/trading/economy_trades/leather_worker_trades.json`   |
+| Librarian        | `BP/trading/economy_trades/librarian_trades.json`        |
+| Cartographer     | `BP/trading/economy_trades/cartographer_trades.json`     |
+| Cleric           | `BP/trading/economy_trades/cleric_trades.json`           |
+| Tool Smith       | `BP/trading/economy_trades/tool_smith_trades.json`       |
+| Weapon Smith     | `BP/trading/economy_trades/weapon_smith_trades.json`     |
+| Fletcher         | `BP/trading/economy_trades/fletcher_trades.json`         |
+| Armorer          | `BP/trading/economy_trades/armorer_trades.json`          |
+| Wandering Trader | `BP/trading/economy_trades/wandering_trader_trades.json` |
 
 ::: tip NOTE
 Additional trade tables exist directly within the `trading` folder, but these are deprecated. Only the tables in the `economy_trades` sub-folder are currently used.

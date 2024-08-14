@@ -8,6 +8,7 @@ mentions:
     - SmokeyStack
     - Keyyard
     - Ultr4Anubis
+description: Run commands when player is AFK.
 ---
 
 ### AFK Detector Animation Controller

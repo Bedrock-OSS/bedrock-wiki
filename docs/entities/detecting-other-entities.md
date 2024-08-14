@@ -10,6 +10,7 @@ mentions:
     - SirLich
     - Luthorius
     - TheItsNameless
+description: Fire an event when other entities are nearby.
 ---
 
 You might have thought about making your entities fire an event when other entities are nearby. This article details the various known ways to do so.

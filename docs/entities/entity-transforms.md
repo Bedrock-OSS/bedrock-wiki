@@ -8,6 +8,7 @@ tags:
 mentions:
     - Johnb003
     - SmokeyStack
+description: In this page we'll discuss how to convert between different coordinate frames in Minecraft.
 ---
 
 # Entity Transforms
@@ -178,7 +179,7 @@ v.target.z = -v.target.z * 16;
 
 Let's break it down a bit:
 
-pre_animation runs before the animation, and runs this script. The script is intended to be given a position, perhaps your addon will supply the input through parameters from your behavior via a script?
+pre_animation runs before the animation, and runs this script. The script is intended to be given a position, perhaps your add-on will supply the input through parameters from your behavior via a script?
 
 For now you can hard-code these to the world location 10,y,10, where y is just at the same height as the entity.
 

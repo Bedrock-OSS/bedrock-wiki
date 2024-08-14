@@ -6,6 +6,7 @@ mentions:
     - zheaEvyline
     - SmokeyStack
     - ThomasOrs
+description: Learn how to use block states in commands.
 ---
 
 ## Introduction

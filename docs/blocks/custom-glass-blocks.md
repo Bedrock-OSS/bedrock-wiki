@@ -2,12 +2,13 @@
 title: Custom Glass
 category: Vanilla Re-Creations
 tags:
-    - experimental
-    - expert
+  - experimental
+  - expert
 mentions:
-    - Eko-byte
-    - QuazChick
-    - SmokeyStack
+  - Eko-byte
+  - QuazChick
+  - SmokeyStack
+description: Re-creation of vanilla glass.
 ---
 
 Making glass blocks may seem like a simple task, however it comes with many drawbacks as you will find, this tutorial aims to help you achieve a vanilla like glass block.

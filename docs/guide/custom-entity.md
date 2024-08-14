@@ -111,8 +111,8 @@ These are the components that you will generally have on every entity. This defi
 	"value": 0.2
 },
 "minecraft:collision_box": {
-	"width": 1,
-	"height": 2
+	"width": 0.8,
+	"height": 1.8
 },
 "minecraft:loot": {
 	"table": "loot_tables/entities/ghost.json"
@@ -277,8 +277,8 @@ In general, important behaviors will have a priority of `0` or `1`.
 				"value": 0.2
 			},
 			"minecraft:collision_box": {
-				"width": 1,
-				"height": 2
+				"width": 0.8,
+				"height": 1.8
 			},
 			"minecraft:loot": {
 				"table": "loot_tables/entities/ghost.json"
@@ -1032,8 +1032,8 @@ Your folder structure should look like this:
 				"value": 0.2
 			},
 			"minecraft:collision_box": {
-				"width": 1,
-				"height": 2
+				"width": 0.8,
+				"height": 1.8
 			},
 			"minecraft:loot": {
 				"table": "loot_tables/entities/ghost.json"

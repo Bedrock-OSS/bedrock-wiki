@@ -2,14 +2,15 @@
 title: Block Shapes
 category: Documentation
 mentions:
-    - SirLich
-    - yanasakana
-    - MedicalJewel105
-    - aexer0e
-    - Luthorius
-    - Fabrimat
-    - TheItsNameless
-    - QuazChick
+  - SirLich
+  - yanasakana
+  - MedicalJewel105
+  - aexer0e
+  - Luthorius
+  - Fabrimat
+  - TheItsNameless
+  - QuazChick
+description: Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accessible files.
 ---
 
 :::warning DEPRECATED
@@ -35,7 +36,7 @@ They are added in the resource pack's file, `blocks.json`, using child `"blocksh
 ## List of known Blockshapes
 
 | ID  | Block Shape               |
-| --- | ------------------------- |
+|-----|---------------------------|
 | -1  | invisible                 |
 | 0   | block                     |
 | 1   | cross_texture             |
@@ -123,5 +124,6 @@ They are added in the resource pack's file, `blocks.json`, using child `"blocksh
 | 133 | flowering_azalea          |
 | 134 | glow_frame                |
 | 135 | glow_lichen               |
+| 136 | redstone_wire"            |
 
 [ Original Credit ](https://gist.github.com/toka7290/3bef704d2f57c775bb9ac84443a6df1c)

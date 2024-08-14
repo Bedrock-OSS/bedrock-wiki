@@ -6,7 +6,7 @@ mentions:
     - SmokeyStack
 ---
 
-This Q&A took place in the [Bedrock Addons discord](https://discord.gg/uZF75ZxcJq). Ten Microsoft/Mojang employees joined us to answer questions about the Scripting and Editor API. Questions were community sourced.
+This Q&A took place in the [Bedrock Add-Ons discord](https://discord.gg/uZF75ZxcJq). Ten Microsoft/Mojang employees joined us to answer questions about the Scripting and Editor API. Questions were community sourced.
 
 :::warning
 Not all messages were copied over, and some were copy-edited. If you want to see everything, join the above discord, and get the "events archive" role.

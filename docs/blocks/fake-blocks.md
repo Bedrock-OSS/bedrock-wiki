@@ -2,16 +2,17 @@
 title: Fake Blocks
 category: Tutorials
 tags:
-    - intermediate
+  - intermediate
 mentions:
-    - SirLich
-    - solvedDev
-    - Joelant05
-    - MedicalJewel105
-    - aexer0e
-    - ThijsHankelMC
-    - QuazChick
-    - SmokeyStack
+  - SirLich
+  - solvedDev
+  - Joelant05
+  - MedicalJewel105
+  - aexer0e
+  - ThijsHankelMC
+  - QuazChick
+  - SmokeyStack
+description: Sometimes your block needs to have features which Minecraft doesn't allow. A possible solution is to create an entity which replicates characteristics of a block.
 ---
 
 Sometimes your block needs to have features which Minecraft doesn't allow. A possible solution is to create an entity which replicates characteristics of a block.

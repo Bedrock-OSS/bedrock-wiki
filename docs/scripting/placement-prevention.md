@@ -5,6 +5,7 @@ mentions:
 category: Tutorials
 tags:
   - stable
+description: Prevent block placement via scripts.
 ---
 
 

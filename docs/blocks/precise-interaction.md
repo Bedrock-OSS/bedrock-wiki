@@ -2,12 +2,13 @@
 title: Precise Interaction
 category: Tutorials
 tags:
-    - experimental
-    - expert
-    - scripting
+  - experimental
+  - expert
+  - scripting
 mentions:
-    - QuazChick
-    - SmokeyStack
+  - QuazChick
+  - SmokeyStack
+description: Learn how to make interaction with blocks in a proper way.
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`

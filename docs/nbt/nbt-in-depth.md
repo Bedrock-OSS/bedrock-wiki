@@ -7,6 +7,7 @@ mentions:
     - ThomasOrs
 tags:
     - expert
+description: NBT in depth.
 ---
 
 NBT (Named Binary Tag) is a name for data encoding format at the binary level, you certainly know format JSON which is based on the text level. Therefore, we will be able to use the JSON format for some examples, you may also notice that minecraft itself uses JSON to represent NBT in commands such as java commands or simplified bedrock commands ( `/give`, `/replaceitem`). See [NBT Commands](/commands/nbt-commands) . In this article, we will show NBT in much more detail than you will ever expect, because what you could see in the commands is far from NBT, and we will show you how NBT works and how to read it, also how `Minecraft BE` itself uses it as well.
@@ -18,7 +19,7 @@ As it was said, NBT works on a binary level, so you need to know that the smalle
 We also cannot say how the tags should be named, because everyone can call NBT tags differently, but they must always have the same binary base (`id`), id is represented by one byte.
 
 |        Name        | Binary ID | Binary  Size      | Description                                                                                                                                                            |
-| :----------------: | --------: | :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|:------------------:|----------:|:------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |        Byte        |      0x01 | 1 byte (8-bits)   | One byte size type                                                                                                                                                     |
 |   Int16 (short)    |      0x02 | 2 bytes (16-bits) | A two-byte type                                                                                                                                                        |
 |  Int32 (intiger)   |      0x03 | 4 bytes (32-bits) | A four-byte type                                                                                                                                                       |

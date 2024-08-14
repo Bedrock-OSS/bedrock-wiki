@@ -9,6 +9,7 @@ mentions:
     - Ciosciaa
     - MedicalJewel105
     - SmokeyStack
+description: Enchantments documentation for items.
 ---
 
 Enchantment identifiers are used in the `/enchant` command and in item functions and conditions.

@@ -10,6 +10,7 @@ mentions:
     - ThomasOrs
     - kumja1
 hidden: true
+description: Make custom spear.
 ---
 
 ::: tip

@@ -9,6 +9,7 @@ tags:
     - intermediate
 category:
     - Tutorials
+description: Animate texture of your entity.
 ---
 
 ## Whats on this page?

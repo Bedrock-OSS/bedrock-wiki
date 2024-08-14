@@ -6,6 +6,7 @@ mentions:
     - zheaEvyline
     - SmokeyStack
 nav_order: 1
+description: This system will run your desired commands on the event that a player joins the world for the first time.
 ---
 
 ## Introduction
@@ -13,8 +14,6 @@ nav_order: 1
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
 This system will run your desired commands on the event that a player joins the world for the first time.
-
-
 
 ## System
 <CodeHeader>BP/functions/on_first_join.mcfunction</CodeHeader>

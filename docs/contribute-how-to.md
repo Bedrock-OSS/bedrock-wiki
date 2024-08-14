@@ -3,6 +3,7 @@ title: How to contribute to our wiki
 hidden: true
 mentions:
 -   TheItsNameless
+description: Make your first contribution!
 ---
 
 ## About this Guide

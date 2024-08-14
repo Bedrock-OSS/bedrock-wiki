@@ -2,7 +2,8 @@
 title: High Resolution Items
 category: Tutorials
 mentions:
-    - BlazeDrake
+  - BlazeDrake
+description: Learn how to make items with high resolution texture in a proper way.
 ---
 
 ::: tip

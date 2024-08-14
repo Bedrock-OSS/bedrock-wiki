@@ -8,17 +8,18 @@ mentions:
     - SmokeyStack
     - MedicalJewel105
     - TheItsNameless
+description: Subpacks allow you to select between different add-on 'configurations'.
 ---
 
 ## What are Subpacks?
 
-Subpacks allow you to select between different addon 'configurations'.
+Subpacks allow you to select between different add-on 'configurations'.
 
 They are intended for texture resolutions to load on different memory capacities, but can also be used to create file variations in behavior and resource packs. These variations can be selected by clicking the gear icon and adjusting the slider.
 
 ## How do Subpacks work?
 
-Files placed in you subpack folder will override files placed in your main addon folder, if the subpack is selected. For example, if your addon contains both `RP/textures/entities/ghost.png` and `RP/subpacks/pack_1/textures/ghost.png`, the second image file will replace the first, if subpack `pack_1` is selected.
+Files placed in you subpack folder will override files placed in your main add-on folder, if the subpack is selected. For example, if your add-on contains both `RP/textures/entities/ghost.png` and `RP/subpacks/pack_1/textures/ghost.png`, the second image file will replace the first, if subpack `pack_1` is selected.
 
 For more information about how files override each other, please see our page on [overriding vanilla assets](/concepts/overwriting-assets).
 

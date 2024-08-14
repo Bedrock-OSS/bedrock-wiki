@@ -11,6 +11,7 @@ mentions:
     - MedicalJewel105
     - SmokeyStack
     - ThomasOrs
+description: Get rid of that annoying shadow.
 ---
 
 There are quite a few ways to remove shadows from entities, and nearly all of them have undesirable effects. There is no foolproof way to perfectly remove shadows from specific entities, without causing side effects.

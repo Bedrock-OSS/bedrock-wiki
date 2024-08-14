@@ -2,11 +2,12 @@
 title: Creating Block Models
 category: Tutorials
 tags:
-    - beginner
-    - easy
+  - beginner
+  - easy
 mentions:
-    - QuazChick
-    - SmokeyStack
+  - QuazChick
+  - SmokeyStack
+description: Learn how to setup custom model for your block.
 ---
 
 Although custom blocks are unable to make use of vanilla [block shapes](/blocks/block-shapes), we can create our own models which follow a similar format to entity models. This tutorial will walk you through the process of creating a custom block model for a "paper bag" using [Blockbench](https://blockbench.net). You should learn the main features of Minecraft geometry tailored towards creating custom blocks from this tutorial.
