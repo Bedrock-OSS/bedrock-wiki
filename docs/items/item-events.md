@@ -21,7 +21,7 @@ Within each custom component, event handler functions (such as [`onBeforeDurabil
 
 _This example prevents the item from taking durability damage when hitting an entity:_
 
-<CodeHeader>BP/scripts/creative_mode_only_component.js</CodeHeader>
+<CodeHeader>BP/scripts/unbreakable_component.js</CodeHeader>
 
 ```js
 import { world } from "@minecraft/server";
@@ -70,7 +70,7 @@ onBeforeDurabilityDamage(event) {
 The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) component to be active on your item to trigger.
 :::
 
-This event will be called when an item containing this component's use duration was completed.
+This event will be called when the use duration of the item containing this component is completed.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -147,19 +147,7 @@ onMineBlock(event) {
 
 ## Use
 
-:::tip DEPENDENCY
-The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) component to be active on your item to trigger.
-:::
-
 This function will be called when an item containing this component is used by a player.
-
-<CodeHeader>minecraft:item > components</CodeHeader>
-
-```json
-"minecraft:use_modifiers": {
-    "use_duration": 5
-}
-```
 
 <CodeHeader>Custom Component</CodeHeader>
 
