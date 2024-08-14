@@ -483,8 +483,8 @@ module.exports = (async function () {
 			const url =
 				ctx.pageData.relativePath !== undefined
 					? `https://wiki.bedrock.dev/${ctx.pageData.relativePath.slice(
-							0,
-							ctx.pageData.relativePath.lastIndexOf('.md')
+						0,
+						ctx.pageData.relativePath.lastIndexOf('.md')
 					  )}.html`
 					: 'https://wiki.bedrock.dev'
 
