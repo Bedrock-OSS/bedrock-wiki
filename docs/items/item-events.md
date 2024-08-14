@@ -66,8 +66,8 @@ onBeforeDurabilityDamage(event) {
 
 ## Complete Use
 
-:::tip DEPENDENCIES
-The complete use event requires the `minecraft:use_modifiers` component to be active on your item to trigger.
+:::tip DEPENDENCY
+The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) component to be active on your item to trigger.
 :::
 
 This event will be called when an item containing this component's use duration was completed.
@@ -94,16 +94,16 @@ onCompleteUse(event) {
 This event will be called when an item containing this component is eaten by an entity.
 
 :::tip DEPENDENCIES
-The complete use event requires the `minecraft:use_modifiers` and the `minecraft:food` component to be active on your item to trigger.
+The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) and the [`minecraft:food`](/items/item-components#food) component to be active on your item to trigger.
 :::
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
+"minecraft:food": {},
 "minecraft:use_modifiers": {
     "use_duration": 5
-},
-"minecraft:food": {}
+}
 ```
 
 <CodeHeader>Custom Component</CodeHeader>
@@ -147,8 +147,8 @@ onMineBlock(event) {
 
 ## Use
 
-:::tip DEPENDENCIES
-The complete use event requires the `minecraft:use_modifiers` component to be active on your item to trigger.
+:::tip DEPENDENCY
+The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) component to be active on your item to trigger.
 :::
 
 This function will be called when an item containing this component is used by a player.
@@ -172,19 +172,7 @@ onUse(event) {
 
 ## Use On
 
-:::tip DEPENDENCIES
-The complete use event requires the `minecraft:use_modifiers` component to be active on your item to trigger.
-:::
-
 This function will be called when an item containing this component is used on a block.
-
-<CodeHeader>minecraft:item > components</CodeHeader>
-
-```json
-"minecraft:use_modifiers": {
-    "use_duration": 5
-}
-```
 
 <CodeHeader>Custom Component</CodeHeader>
 
