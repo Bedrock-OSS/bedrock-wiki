@@ -24,7 +24,7 @@ mentions:
 Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.20`.
 :::
 :::danger OVERRIDING COMPONENTS
-Only one instance of each component can be active at once. Duplicate components will be overridden by the latest [permutation](/blocks/block-permutations).
+Only one instance of each component can be active at once. Duplicate components will be overridden by the latest [permutations](/blocks/block-permutations) entry.
 :::
 
 ## Applying Components
@@ -154,7 +154,7 @@ Type: Boolean/Object
 
 -   `seconds_to_destroy`: Double
     -   Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.
-    -   Note: It actually takes 2x the amount of seconds defined.\
+    -   Note: It actually takes 2x the amount of seconds defined.
 
 ### Example using Boolean
 
@@ -202,6 +202,25 @@ Type: String
 
 ```c
 tile.wiki:custom_block.name=Custom Block
+```
+
+## Entity Fall On
+
+Triggers an event when an entity falls onto this block.
+
+Type: Object
+
+-   `min_fall_distance`: Double
+    -   The minimum distance an entity must fall to trigger the event in blocks.
+
+_Released from experiment `Beta APIs` for format versions 1.21.10 and higher._
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:entity_fall_on": {
+    "min_fall_distance": 5
+}
 ```
 
 ## Flammable
@@ -527,6 +546,28 @@ Type: Boolean/Object
 "minecraft:selection_box": {
     "origin": [-8, 0, -8],
     "size": [16, 16, 16]
+}
+```
+
+## Tick
+
+Causes the block to tick after a random delay in the range specified by `interval_range`.
+
+Type: Object
+
+-   `interval_range`: Range [a, b]
+    -   Two durations (in ticks) which will be used as the minimum and maximum delays for randomness.
+-   `looping`: Boolean
+    -   Whether this block should continuously tick, rather than only ticking once.
+
+_Released from experiment `Beta APIs` for format versions 1.21.10 and higher._
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:tick": {
+    "interval_range": [10, 20],
+    "looping": true
 }
 ```
 

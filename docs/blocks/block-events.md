@@ -87,9 +87,9 @@ beforeOnPlayerPlace(event) {
 ## Entity Fall On
 
 :::tip DEPENDENCIES
-The entity fall on event requires the `minecraft:entity_fall_on` component to be active on your block to trigger.
+The entity fall on event requires the [`minecraft:entity_fall_on`](/blocks/block-components#entity-fall-on) component to be active on your block to trigger.
 
-The entity fall on event requires the `minecraft:collision_box` component to be 4 or higher on the Y-axis in order to trigger.
+The entity fall on event requires the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be 4 or higher on the Y-axis in order to trigger.
 :::
 
 Runs when an entity falls on the block.
@@ -174,7 +174,7 @@ onRandomTick(event) {
 ## Step Off
 
 :::tip DEPENDENCY
-The step off event requires the the `minecraft:collision_box` component to be 4 or higher on the Y-axis in order to trigger.
+The step off event requires the the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be 4 or higher on the Y-axis in order to trigger.
 :::
 
 Runs when an entity steps off the block.
@@ -192,7 +192,7 @@ onStepOff(event) {
 ## Step On
 
 :::tip DEPENDENCY
-The step on event requires the the `minecraft:collision_box` component to be 4 or higher on the Y-axis in order to trigger.
+The step on event requires the the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be 4 or higher on the Y-axis in order to trigger.
 :::
 
 Runs when an entity steps onto the block.
@@ -210,17 +210,17 @@ onStepOn(event) {
 ## Tick
 
 :::tip DEPENDENCY
-The tick event requires the `minecraft:tick` component to be active on your block to trigger.
+The tick event requires the [`minecraft:tick`](/blocks/block-components#tick) component to be active on your block to trigger.
 :::
 
-Triggers between X and Y amount of ticks inside `interval_range` of the block's `minecraft:tick` component.
+Triggers between X and Y amount of ticks inside `interval_range` of the block's [`minecraft:tick`](/blocks/block-components#tick) component.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:tick": {
-    "looping": true,
-    "interval_range": [10, 20], // Two values (in ticks) which will be randomly decided between to determine delay duration.
+    "interval_range": [10, 20],
+    "looping": true
 }
 ```
 
