@@ -62,9 +62,9 @@ Like any normal component, custom components can be added and removed based on t
 
 <CodeHeader>minecraft:block</CodeHeader>
 
-```js
+```json
 "components": {
-    "minecraft:custom_components": [ "wiki:creative_mode_only" ]
+    "minecraft:custom_components": ["wiki:creative_mode_only"]
 }
 ```
 

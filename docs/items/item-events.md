@@ -43,9 +43,9 @@ To bind a custom component to a custom item, simply list them in the [`minecraft
 
 <CodeHeader>minecraft:item</CodeHeader>
 
-```js
+```json
 "components": {
-    "minecraft:custom_components": [ "wiki:creative_mode_only" ]
+    "minecraft:custom_components": ["wiki:unbreakable"]
 }
 ```
 
