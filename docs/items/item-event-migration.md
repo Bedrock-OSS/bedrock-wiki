@@ -2,7 +2,7 @@
 title: Item Event Migration
 description: View Script API implementations of the deprecated JSON item event responses.
 category: General
-nav_order: 4
+nav_order: 5
 tags:
     - help
 mentions:
