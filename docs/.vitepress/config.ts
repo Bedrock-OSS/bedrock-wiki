@@ -116,22 +116,13 @@ function generateSidebar(base: string, dir: string) {
 		let joinedPath = path.join(dir, file)
 		const stats = fs.statSync(joinedPath)
 		// Handle top level directories
-		if (
-			stats.isDirectory() &&
-			fs.existsSync(path.join(joinedPath, 'index.md'))
-		) {
-			const str = fs.readFileSync(
-				path.join(joinedPath, 'index.md'),
-				'utf8'
-			)
+		if (stats.isDirectory() && fs.existsSync(path.join(joinedPath, 'index.md'))) {
+			const str = fs.readFileSync(path.join(joinedPath, 'index.md'), 'utf8')
 			let frontMatter
 			try {
 				frontMatter = matter(str)
 			} catch (e) {
-				joinedPath = path.relative(
-					process.cwd(),
-					path.join(joinedPath, 'index.md')
-				)
+				joinedPath = path.relative(process.cwd(), path.join(joinedPath, 'index.md'))
 				console.log(
 					// @ts-ignore
 					`::error file=${joinedPath},line=1,col=1::File ${joinedPath} has invalid frontmatter! ${e.message}`
@@ -144,35 +135,24 @@ function generateSidebar(base: string, dir: string) {
 
 			order = getCategoryOrder(frontMatter)
 
-			const children = generateSidebar(base, joinedPath).concat(
-				getCategories(frontMatter)
-			)
+			const children = generateSidebar(base, joinedPath).concat(getCategories(frontMatter))
 
-			children.sort(
-				(
-					{ data: dataA, text: textA },
-					{ data: dataB, text: textB }
-				) => {
-					// Default to max int, so without nav order you will show second
-					// Multiply by category value if it exists
-					const navA =
-						(dataA.nav_order || 50) +
-						(order[dataA.category] || 0) * 100 ||
-						Number.MAX_SAFE_INTEGER
-					const navB =
-						(dataB.nav_order || 50) +
-						(order[dataB.category] || 0) * 100 ||
-						Number.MAX_SAFE_INTEGER
+			children.sort(({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
+				// Default to max int, so without nav order you will show second
+				// Multiply by category value if it exists
+				const navA =
+					(dataA.nav_order || 50) + (order[dataA.category] || 0) * 100 || Number.MAX_SAFE_INTEGER
+				const navB =
+					(dataB.nav_order || 50) + (order[dataB.category] || 0) * 100 || Number.MAX_SAFE_INTEGER
 
-					// Tie goes to the text compare! (Will also apply for elements without nav order)
-					if (navA == navB) {
-						return textA.localeCompare(textB)
-					}
-
-					// Return nav order
-					return navA - navB
+				// Tie goes to the text compare! (Will also apply for elements without nav order)
+				if (navA == navB) {
+					return textA.localeCompare(textB)
 				}
-			)
+
+				// Return nav order
+				return navA - navB
+			})
 			data.push({
 				text: frontMatter.data.title,
 				data: frontMatter.data,
@@ -180,11 +160,7 @@ function generateSidebar(base: string, dir: string) {
 			})
 
 			if (frontMatter.data.title === void 0) {
-				throw new Error(
-					'File ' +
-					path.join(joinedPath, 'index.md') +
-					' has invalid frontmatter!'
-				)
+				throw new Error('File ' + path.join(joinedPath, 'index.md') + ' has invalid frontmatter!')
 			}
 		}
 
@@ -244,26 +220,22 @@ function generateSidebar(base: string, dir: string) {
 		}
 	})
 
-	return data.sort(
-		({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
-			// Default to max int, so without nav order you will show second
-			// Multiply by category value if it exists
-			const navA =
-				(dataA.nav_order || 50) + (order[dataA.category] || 0) * 100 ||
-				Number.MAX_SAFE_INTEGER
-			const navB =
-				(dataB.nav_order || 50) + (order[dataB.category] || 0) * 100 ||
-				Number.MAX_SAFE_INTEGER
+	return data.sort(({ data: dataA, text: textA }, { data: dataB, text: textB }) => {
+		// Default to max int, so without nav order you will show second
+		// Multiply by category value if it exists
+		const navA =
+			(dataA.nav_order || 50) + (order[dataA.category] || 0) * 100 || Number.MAX_SAFE_INTEGER
+		const navB =
+			(dataB.nav_order || 50) + (order[dataB.category] || 0) * 100 || Number.MAX_SAFE_INTEGER
 
-			// Tie goes to the text compare! (Will also apply for elements without nav order)
-			if (navA == navB) {
-				return textA.localeCompare(textB)
-			}
-
-			// Return nav order
-			return navA - navB
+		// Tie goes to the text compare! (Will also apply for elements without nav order)
+		if (navA == navB) {
+			return textA.localeCompare(textB)
 		}
-	)
+
+		// Return nav order
+		return navA - navB
+	})
 }
 
 function getSidebar() {
@@ -276,17 +248,13 @@ let limit = ''
 
 const req = async (url2: string) => {
 	attempts++
-	if (!process.env.GITHUB_TOKEN)
-		return { message: 'Unable to get GITHUB_TOKEN' }
-	const res = await fetch(
-		`https://api.github.com/repos/Bedrock-OSS/bedrock-wiki/${url2}`,
-		{
-			headers: {
-				'content-type': 'application/json',
-				authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-			},
-		}
-	)
+	if (!process.env.GITHUB_TOKEN) return { message: 'Unable to get GITHUB_TOKEN' }
+	const res = await fetch(`https://api.github.com/repos/Bedrock-OSS/bedrock-wiki/${url2}`, {
+		headers: {
+			'content-type': 'application/json',
+			authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+		},
+	})
 	const response = res
 	limit = response.headers.get('X-RateLimit-Limit') || ''
 	return response.json()
@@ -427,7 +395,7 @@ module.exports = (async function () {
 			[
 				'script',
 				{},
-				'!function(){try {var d=document.documentElement.classList;d.remove(\'light\',\'dark\');var e=localStorage.getItem(\'docTheme\');if(\'system\'===e||(!e&&true)){var t=\'(prefers-color-scheme: dark)\',m=window.matchMedia(t);m.media!==t||m.matches?d.add(\'dark\'):d.add(\'light\')}else if(e) d.add(e)}catch(e){}}()',
+				"!function(){try {var d=document.documentElement.classList;d.remove('light','dark');var e=localStorage.getItem('docTheme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);m.media!==t||m.matches?d.add('dark'):d.add('light')}else if(e) d.add(e)}catch(e){}}()",
 			],
 			[
 				'script',
@@ -515,9 +483,9 @@ module.exports = (async function () {
 			const url =
 				ctx.pageData.relativePath !== undefined
 					? `https://wiki.bedrock.dev/${ctx.pageData.relativePath.slice(
-						0,
-						ctx.pageData.relativePath.lastIndexOf('.md')
-					)}.html`
+							0,
+							ctx.pageData.relativePath.lastIndexOf('.md')
+					  )}.html`
 					: 'https://wiki.bedrock.dev'
 
 			const data = {
@@ -535,15 +503,18 @@ module.exports = (async function () {
 				'og:image': image,
 				'og:image:alt': imageAlt,
 				'og:url': url,
-				'og:site_name': site
+				'og:site_name': site,
 			}
 			// eslint-disable-next-line prefer-const
-			let out: (string | { name: string, content: string })[][] = []
+			let out: (string | { name: string; content: string })[][] = []
 			Object.entries(data).forEach(([name, content]) => {
-				out.push(['meta', {
-					name: name,
-					content: content
-				}])
+				out.push([
+					'meta',
+					{
+						name: name,
+						content: content,
+					},
+				])
 			})
 
 			return out

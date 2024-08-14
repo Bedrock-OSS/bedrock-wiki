@@ -1,6 +1,6 @@
 ---
 title: Intro to Blocks
-description: A "Hello world" guide in making blocks. Learn the block format and how to create basic custom blocks.
+description: A Hello world guide in making blocks. Learn the block format and how to create basic custom blocks.
 category: General
 nav_order: 1
 tags:

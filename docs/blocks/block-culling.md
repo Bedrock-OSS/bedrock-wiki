@@ -1,6 +1,6 @@
 ---
 title: Block Culling
-description: Block culling rules benefit performance, allowing you to remove faces of a block's model based on the surrounding full, opaque blocks.
+description: Block culling rules benefit performance, allowing you to remove faces of a blocks model based on the surrounding full, opaque blocks.
 category: General
 tags:
     - intermediate

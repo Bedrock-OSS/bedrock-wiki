@@ -38,8 +38,8 @@ To tell the game what image the sherd is supposed to display, we need to edit th
 }
 ```
 
-- `custom_item` is the identifier of your custom pottery sherd. Replace this with the identifier of your item.
-- `path/to/the/display` refers to the path that points to your display. Since this is a reference path, you can point it to any image in the `textures` folder. Please note that decorated pots does not support transparency.
+-   `custom_item` is the identifier of your custom pottery sherd. Replace this with the identifier of your item.
+-   `path/to/the/display` refers to the path that points to your display. Since this is a reference path, you can point it to any image in the `textures` folder. Please note that decorated pots does not support transparency.
 
 If you've done everything right, your decorated pot will now display the sherd you want instead of being a blank pot!
 

@@ -25,9 +25,7 @@ Item tags can be used to ensure that a item meets certain conditions.
         },
         "components": {
             "minecraft:tags": {
-                "tags": [
-                    "wiki:my_tag"
-                ]
+                "tags": ["wiki:my_tag"]
             }
         }
     }

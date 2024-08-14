@@ -2,12 +2,12 @@
 title: Custom Glass
 category: Vanilla Re-Creations
 tags:
-  - experimental
-  - expert
+    - experimental
+    - expert
 mentions:
-  - Eko-byte
-  - QuazChick
-  - SmokeyStack
+    - Eko-byte
+    - QuazChick
+    - SmokeyStack
 description: Re-creation of vanilla glass.
 ---
 

@@ -5,9 +5,9 @@ tags:
     - expert
     - scripting
 mentions:
-  - QuazChick
-  - SmokeyStack
-description: This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a "shell" block with this rotation type.
+    - QuazChick
+    - SmokeyStack
+description: This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a shell block with this rotation type.
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`

@@ -2,11 +2,11 @@
 title: Creating Block Models
 category: Tutorials
 tags:
-  - beginner
-  - easy
+    - beginner
+    - easy
 mentions:
-  - QuazChick
-  - SmokeyStack
+    - QuazChick
+    - SmokeyStack
 description: Learn how to setup custom model for your block.
 ---
 
@@ -83,14 +83,16 @@ The "paper_bag" model has multiple pre-made textures, listed below:
 
 -   `textures/blocks/paper_bag.png`
 
-    <WikiImage src="/assets/images/blocks/block-models/paper_bag.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
-<br>
+        <WikiImage src="/assets/images/blocks/block-models/paper_bag.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
+
+    <br>
 <br>
 
 -   `textures/blocks/paper_bag_bottom_fold.png`
 
-    <WikiImage src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
-<br>
+        <WikiImage src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
+
+    <br>
 <br>
 
 -   `textures/blocks/paper_bag_side_gusset.png`

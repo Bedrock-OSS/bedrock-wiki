@@ -2,14 +2,14 @@
 title: Block Shapes
 category: Documentation
 mentions:
-  - SirLich
-  - yanasakana
-  - MedicalJewel105
-  - aexer0e
-  - Luthorius
-  - Fabrimat
-  - TheItsNameless
-  - QuazChick
+    - SirLich
+    - yanasakana
+    - MedicalJewel105
+    - aexer0e
+    - Luthorius
+    - Fabrimat
+    - TheItsNameless
+    - QuazChick
 description: Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accessible files.
 ---
 
@@ -36,7 +36,7 @@ They are added in the resource pack's file, `blocks.json`, using child `"blocksh
 ## List of known Blockshapes
 
 | ID  | Block Shape               |
-|-----|---------------------------|
+| --- | ------------------------- |
 | -1  | invisible                 |
 | 0   | block                     |
 | 1   | cross_texture             |

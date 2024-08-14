@@ -2,12 +2,12 @@
 title: Custom Trapdoors
 category: Vanilla Re-Creations
 tags:
-  - experimental
-  - intermediate
+    - experimental
+    - intermediate
 mentions:
-  - Kaioga5
-  - QuazChick
-  - SmokeyStack
+    - Kaioga5
+    - QuazChick
+    - SmokeyStack
 description: Re-creation of vanilla trapdoors.
 ---
 

@@ -4,14 +4,14 @@ category: Tutorials
 tags:
     - intermediate
 mentions:
-  - Fabrimat
-  - MedicalJewel105
-  - Luthorius
-  - IlkinQafarov
-  - seeit360
-  - TheItsNameless
-  - SmokeyStack
-  - ThomasOrs
+    - Fabrimat
+    - MedicalJewel105
+    - Luthorius
+    - IlkinQafarov
+    - seeit360
+    - TheItsNameless
+    - SmokeyStack
+    - ThomasOrs
 description: Recreate vanilla throwing mechanic.
 ---
 

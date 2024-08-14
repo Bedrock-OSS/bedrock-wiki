@@ -2,10 +2,10 @@
 title: Avoiding State Limit
 category: Tutorials
 tags:
-  - expert
+    - expert
 mentions:
-  - Kaioga5
-  - QuazChick
+    - Kaioga5
+    - QuazChick
 description: Blocks have a limit of 16 valid values per state that cannot be exceed. This guide will explain how to avoid reaching the limit.
 ---
 

@@ -5,15 +5,15 @@ tags:
     - easy
     - scripting
 mentions:
-  - SykoUSS
-  - ExDrill
-  - MedicalJewel105
-  - SmokeyStack
-  - Chikorita-Lover
-  - SirLich
-  - TheItsNameless
-  - QuazChick
-  - Keyyard
+    - SykoUSS
+    - ExDrill
+    - MedicalJewel105
+    - SmokeyStack
+    - Chikorita-Lover
+    - SirLich
+    - TheItsNameless
+    - QuazChick
+    - Keyyard
 description: Create vanilla-like loot system for custom ore.
 ---
 

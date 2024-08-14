@@ -2,8 +2,8 @@
 title: Custom Slabs
 category: Vanilla Re-Creations
 tags:
-  - experimental
-  - easy
+    - experimental
+    - easy
 mentions:
     - Kaioga5
     - QuazChick

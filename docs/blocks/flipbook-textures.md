@@ -1,14 +1,14 @@
 ---
 title: Texture Animation
 category:
-  - Tutorials
+    - Tutorials
 tags:
-  - intermediate
+    - intermediate
 mentions:
-  - MedicalJewel105
-  - SquisSloim
-  - SmokeyStack
-  - QuazChick
+    - MedicalJewel105
+    - SquisSloim
+    - SmokeyStack
+    - QuazChick
 description: Flipbook (animated) textures for blocks.
 ---
 
@@ -102,7 +102,7 @@ After making block have animated texture, it is time to figure out how it all wo
 While looking up for something in vanilla flipbook texture file, you may notice some additional paramters:
 
 | Component          | Type             | Description                                                                                                 |
-|--------------------|------------------|-------------------------------------------------------------------------------------------------------------|
+| ------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
 | flipbook_texture   | string           | Path to texture.                                                                                            |
 | atlas_tile         | string           | The shortname defined in the terrain_textures.json.                                                         |
 | atlas_index        | integer          | The index of the texture array inside the definition of that shortname.                                     |
@@ -156,7 +156,7 @@ Now let's say we wanted path 1 to be animated, now what you'll do here is to put
 Changes size of the peace of used texture. Can only take values that are multiples of two. If frame has smaller amount of pixels, extends them.
 
 | `replicate` value | what it does                              |
-|-------------------|-------------------------------------------|
+| ----------------- | ----------------------------------------- |
 | < 0               | Breaks animation                          |
 | 0                 | Breaks animation & texture                |
 | 2                 | Renders 1 / 4 pixels of frame             |
