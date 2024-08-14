@@ -2,7 +2,7 @@
 title: Item Events
 description: Item events trigger when certain conditions are met. Creators can hook into these events to modify the game world when events are triggered.
 category: General
-nav_order: 8
+nav_order: 4
 tags:
     - scripting
 mentions:
@@ -15,7 +15,7 @@ Using the latest format version when creating custom items provides access to fr
 
 ## Registering Custom Components
 
-item events trigger when certain conditions are met and can be "listened" to in **custom components** which are registered in scripts before the world is loaded.
+Item events trigger when certain conditions are met and can be "listened" to in **custom components** which are registered in scripts before the world is loaded.
 
 Within each custom component, event handler functions (such as [`onBeforeDurabilityDamage`](#onBeforeDurabilityDamage)) are listed to configure what you want to happen when each event is triggered.
 
@@ -26,17 +26,14 @@ _This example prevents the item from taking durability damage when hitting an en
 ```js
 import { world } from "@minecraft/server";
 
-const CancelDurabilityDamageComponent = {
-    onDurabilityDamage(event) {
+const UnbreakableItemComponent = {
+    onBeforeDurabilityDamage(event) {
         event.durabilityDamage = 0;
     },
 };
 
 world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
-    itemComponentRegistry.registerCustomComponent(
-        "wiki:cancel_durability_damage",
-        CancelDurabilityDamageComponent
-    );
+    itemComponentRegistry.registerCustomComponent("wiki:unbreakable", UnbreakableItemComponent);
 });
 ```
 

@@ -38,7 +38,8 @@ _This example prevents the player from placing the block if they aren't in creat
 ```js
 import { world, GameMode } from "@minecraft/server";
 
-const CreativeModeOnlyComponent = {
+/** @type {import("@minecraft/server").BlockCustomComponent} */
+const CreativeModeOnlyBlockComponent = {
     beforeOnPlayerPlace(event) {
         const isInCreative = event.player?.getGameMode() === GameMode.creative;
         if (!isInCreative) event.cancel = true;
@@ -48,7 +49,7 @@ const CreativeModeOnlyComponent = {
 world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent(
         "wiki:creative_mode_only",
-        CreativeModeOnlyComponent
+        CreativeModeOnlyBlockComponent
     );
 });
 ```
