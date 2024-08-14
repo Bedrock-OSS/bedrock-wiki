@@ -8,7 +8,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.20.60`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.20`
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
 
@@ -31,7 +31,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-  "format_version": "1.20.60",
+  "format_version": "1.21.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_block",

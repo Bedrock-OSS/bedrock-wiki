@@ -39,12 +39,7 @@ First, let's create a root bone for our model from the outliner by clicking on `
 
 The "paper bag" model will need two cubes: one for the handle, and one for the main bag. These can be added by selecting your root bone and clicking `Add Cube`.
 
-<WikiImage
-    src="/assets/images/blocks/block-models/new_cube.png"
-    alt
-    width="600"
-    class="my-4"
-/>
+<WikiImage src="/assets/images/blocks/block-models/new_cube.png" alt width="600" class="my-4" />
 
 Cubes can be moved, resized and rotated from the top toolbar. Below are the two cubes my "paper_bag" model will use.
 
@@ -88,18 +83,23 @@ The "paper_bag" model has multiple pre-made textures, listed below:
 -   `textures/blocks/paper_bag.png`
 
     <WikiImage src="/assets/images/blocks/block-models/paper_bag.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
-    <br>
-    <br>
+<br>
+<br>
 
 -   `textures/blocks/paper_bag_bottom_fold.png`
 
     <WikiImage src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
-    <br>
-    <br>
+<br>
+<br>
 
 -   `textures/blocks/paper_bag_side_gusset.png`
 
-    <WikiImage src="/assets/images/blocks/block-models/paper_bag_side_gusset.png" style="background-color: rgb(0,0,0,0.15);" pixelated="true" width="128"/>
+    <WikiImage
+        src="/assets/images/blocks/block-models/paper_bag_side_gusset.png"
+        style="background-color: rgb(0,0,0,0.15);"
+        pixelated="true"
+        width="128"
+    />
 
 These can be imported into Blockbench and then dragged onto each appropriate block face, although they likely won't look quite right...
 
@@ -152,7 +152,7 @@ Then, textures can be applied by material instances through their `RP/textures/t
 
 ```json
 {
-    "format_version": "1.21.0",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:paper_bag",
@@ -190,15 +190,20 @@ Then, textures can be applied by material instances through their `RP/textures/t
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 m-0 p-0">
     <CardLink
-    title="Create Culling Rules"
-    imgsrc-light="assets/images/homepage/crafting_table_0.png"
-    link="/blocks/block-culling">
-    Creating culling rules for your model can aid performance by telling the game to unrender hidden parts of your model.
+        title="Create Culling Rules"
+        imgsrc-light="assets/images/homepage/crafting_table_0.png"
+        link="/blocks/block-culling"
+    >
+        Creating culling rules for your model can aid performance by telling the game to unrender
+        hidden parts of your model.
     </CardLink>
     <CardLink
-    title="Conditional Bone Rendering"
-    imgsrc-light="assets/images/homepage/scripting.png"
-    link="/blocks/block-components#bone-visibility">
-    Use the "bone_visibility" parameter of the <a href="/blocks/block-components#geometry">geometry</a> component to render different model bones based on your block's current permutation.
+        title="Conditional Bone Rendering"
+        imgsrc-light="assets/images/homepage/scripting.png"
+        link="/blocks/block-components#bone-visibility"
+    >
+        Use the "bone_visibility" parameter of the{" "}
+        <a href="/blocks/block-components#geometry">geometry</a> component to render different model
+        bones based on your block's current permutation.
     </CardLink>
 </div>

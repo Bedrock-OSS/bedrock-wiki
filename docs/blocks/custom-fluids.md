@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This tutorial assumes an advanced understanding of blocks and the execute command.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -58,7 +58,7 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_fluid",
@@ -256,7 +256,7 @@ To place your custom fluid you need a custom bucket item. Below is the JSON for 
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_fluid_bucket",

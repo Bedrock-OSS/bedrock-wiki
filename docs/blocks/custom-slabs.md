@@ -11,7 +11,7 @@ mentions:
 hidden: true
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.80`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -33,7 +33,7 @@ This will create a vanilla-like custom slab.
 
 ```json
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "components": {
             "minecraft:destructible_by_explosion": {
@@ -124,7 +124,7 @@ This will be the geometry used for your custom slabs.
 
 ```json
 {
-    "format_version": "1.21.0",
+    "format_version": "1.21.20",
     "minecraft:geometry": [
         {
             "description": {

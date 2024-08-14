@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.80`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -141,7 +141,7 @@ And done! The code above will trigger the desired status effect as long as the e
 
 ```json
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:wither_block",
