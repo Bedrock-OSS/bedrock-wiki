@@ -11,6 +11,7 @@ mentions:
     - QuazChick
     - SmokeyStack
 description: Re-creation of vanilla fluids.
+hidden: true
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
