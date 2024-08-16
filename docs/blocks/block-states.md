@@ -105,22 +105,3 @@ The [`BlockPermutation.withState()`](https://learn.microsoft.com/minecraft/creat
 ```js
 customBlock.setPermutation(customBlock.permutation.withState("wiki:boolean_state_example", false));
 ```
-
-### Event Response
-
-:::warning EXPERIMENTAL
-Block events require the `Holiday Creator Features` experiment to be enabled.
-:::
-
-The [`set_block_state`](/blocks/block-events#set-block-state) event response can change the values of custom block states.
-
-<CodeHeader>minecraft:block > events</CodeHeader>
-
-```json
-"wiki:change_state": {
-  "set_block_state": {
-    "wiki:boolean_state_example": false,
-    "wiki:string_state_example": "'red'"
-  }
-}
-```
