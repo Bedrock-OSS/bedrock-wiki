@@ -50,11 +50,6 @@ Tags can be queried with:
 
 -   `q.all_tags`
 -   `q.any_tag`
-
-:::warning EXPERIMENTAL
-The following query functions require experimental Molang features to be enabled.
-:::
-
 -   `q.block_has_all_tags`
 -   `q.block_has_any_tag`
 -   `q.block_neighbor_has_all_tags`
