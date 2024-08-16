@@ -15,10 +15,6 @@ This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger events.
-:::
-
 This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a "shell" block with this rotation type.
 
 _Looking for regular rotation? Learn about it [here](/blocks/rotatable-blocks)!_
