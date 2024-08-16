@@ -24,7 +24,7 @@ This page will give you an introduction to the 80% of Minecraft's Creator API co
 
 ## Create your first project
 
-Currently, script can only be used in behavior packs.
+Currently, scripts can only be used in behavior packs.
 
 In the behavior pack manifest, you need to add a `script` module and set an `entry` point for your script project. Currently, only `"javascript"` is supported as a valid language.
 

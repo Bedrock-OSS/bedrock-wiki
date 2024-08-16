@@ -10,14 +10,14 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.20
 :::
 
-In Scripting API, most of the core features are implemented in the `@minecraft/server` module, with lots of methods to interact a Minecraft world, including entities, blocks, dimensions, and more programmatically. This article contains a basic introduction to some of the core API mechanics, for more detailed information please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
+In Scripting API, most of the core features are implemented in the `@minecraft/server` module, which contains lots of methods to interact with Minecraft world, including entities, blocks, dimensions, and more. This article contains a basic introduction to some of the core API mechanics. For more detailed information please visit the [Microsoft documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server) pages.
 
 ## Setup
 
-You will need to add the Script module as a dependency in your `manifest.json`.
+You will need to add the script module as a dependency in your `manifest.json`.
 
 <CodeHeader>BP/manifest.json</CodeHeader>
 
@@ -26,7 +26,7 @@ You will need to add the Script module as a dependency in your `manifest.json`.
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.1.0-beta"
+			"version": "1.13.0"
 		}
 	]
 }
@@ -34,27 +34,31 @@ You will need to add the Script module as a dependency in your `manifest.json`.
 
 ## Events
 
-In Scripting API, the `@minecraft/server` module uses their own event-driven architecture, making it possible to execute code when a specific event occurs, by subscribing to a specific event listener.
+In script API, the `@minecraft/server` module uses its own event-driven architecture, making it possible to execute code when a specific event occurs by subscribing to an event listener.
 
 **World Events**
 
-World events API provides many event listeners that fires when a specific type of events happen in/to a Minecraft world, events such as `chatSend`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
+World event APIs provides many event listeners that fires when a specific type of events happen in a Minecraft world, such as `chatSend`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
 
 ::: tip
-Check out Microsoft docs to see what world events are available in Minecraft: [Events documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/events)
+Check the Microsoft docs to see what world events are available within Minecraft.
+- Before events fire before an event happens and are read-only but can be canceled. [Before Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/worldbeforeevents).
+- After events fire after an event has run and cannot be canceled. [After Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/worldafterevents)
+- After events should always be used unless the event needs to be canceled.
 :::
 
-In order to subscribe to an event, get the `events` property from world object. In this example we're subscribing to a blockBreak event.
+In order to subscribe to an event, get the `afterEvents` property from the world object. In this example we will subscribe to the block break event.
 
 ```js
-import { world } from "@minecraft/server";
--
-// subscribing to a blockBreak event
-// - fires when a player breaks a block
-world.events.blockBreak.subscribe((event) => {
-	const player = event.player; // Player that broke the block
-	const block = event.block; // Block that's broken
-	player.sendMessage(`You have broken ${block.typeId}`); // send a message to player
+import { world } from '@minecraft/server';
+
+// subscribing to the block break event
+// fires when a player breaks a block
+world.afterEvents.playerBreakBlock.subscribe((event) => {
+	const player = event.player; // Player that broke the block for this event.
+	const block = event.block; // Block impacted by this event. Note that the typeId if this block will ALWAYS be air.
+	const permutation = event.brokenBlockPermutation; // Returns permutation information about this block before it was broken.
+	player.sendMessage(`You have broken ${permutation.type.id} at ${block.x}, ${block.y}, ${block.z}`); // Sends a message to player.
 });
 ```
 
@@ -63,32 +67,34 @@ world.events.blockBreak.subscribe((event) => {
 System events fires when a specific type of event happens in the scope of the Minecraft add-on system.
 
 ::: tip
-Check out Microsoft docs to see what system events are available in Minecraft: [SystemEvents documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systemevents)
+Check the Microsoft docs to see what system events are available within Minecraft.
+- Before events fire before an event happens and are read-only but can be canceled. [Before Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systembeforeevents).
+- After events fire after an event has run and cannot be canceled. [After Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systemafterevents)
+- Both types of events are used for different purposes.
 :::
 
-Just like world events, get the `events` property from system object. In this example we're subscribing to a beforeWatchdogTerminate event, where the API can cancel the performance watchdog terminates scripting execution due to exceeding a performance boundary, depending on the configuration of the runtime environment.
+Get the `beforeEvents` property from the system object. In this example we will subscribe to the watchdogTerminate event, allowing the API to cancel the performance watchdog from closing the world if the game exceedes a performance boundary, depending on the configuration of the script environment.
 
 ```js
-import { system } from "@minecraft/server";
+import { system } from '@minecraft/server';
 
-// subscribing to a beforeWatchdogTerminate event
-system.events.beforeWatchdogTerminate.subscribe((event) => {
-	event.cancel = true;
-	console.warn('Canceled critical exception of type ' + event.terminateReason);
+// subscribing to the watchdogTerminate event
+system.beforeEvents.watchdogTerminate.subscribe((event) => {
+	event.cancel = true; // Cancel the world from closing down. This will terminate the script engine instead.
+	console.warn('Canceled critical exception of type ' + event.terminateReason); // Print a message to the console if this event fires.
 });
 ```
 
 **ScriptEvents**
 
-ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block.-
-`/scriptevent` - Triggers a script event with an ID and message.
+ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering the `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block. More information on this event can be found on the [Script Event Documentaion](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/scripteventcommandmessageafterevent) page.
 
 ```
 /scriptevent <messageId: string> <message: string>
 ```
 
--   `messageId` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
--   `message` in scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
+-   `messageId` in the scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
+-   `message` in the scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
 
 **Example**:
 
@@ -98,173 +104,187 @@ Command input:
 /scriptevent wiki:test Hello World
 ```
 
-What event listener returns:
+What the event listener returns:
 
 ```js
-import { system } from "@minecraft/server";
+import { system } from '@minecraft/server';
 
-system.events.scriptEventReceive.subscribe((event) => {
+system.afterEvents.scriptEventReceive.subscribe((event) => {
   const {
-  	id,           // returns string (wiki:test)
-  	initiator,    // returns Entity
-    message,      // returns string (Hello World)
-    sourceBlock,  // returns Block
-    sourceEntity, // returns Entity
-    sourceType,   // returns MessageSourceType
-  } = event;
+  		id,           // returns string (wiki:test)
+  		initiator,    // returns Entity (or undefined if an NPC did not fire the command)
+  		message,      // returns string (Hello World)
+   	sourceBlock,  // returns Block (or undefined if a block did not fire the command)
+   	sourceEntity, // returns Entity (or undefined if an entity did not fire the command)
+   	sourceType,   // returns MessageSourceType (can be 'Block', 'Entity', 'NPCDialogue', or 'Server')
+	} = event;
 });
 ```
 
 ## Scheduling
 
-We may decide to execute a function not right now, but at a certain time later. That’s called “scheduling a call”.
+We may decide to execute a function at a certain time in the future. This is known as "scheduling a call".
 
-In Script API, basic methods like `setTimeout` and `setInterval` does not exist in the scripting engine, instead Minecraft implements their own scheduling methods.
+In script API, native javascript methods like `setTimeout` and `setInterval` do not exist in the scripting engine. Minecraft has instead implemented their own scheduling methods that work using game ticks instead of real time.
 
-These methods can be accessed from the `system` object obtained by:
+These methods can be accessed from the `system` object obtained by importing:
 
 ```js
-import { system } from "@minecraft/server";
+import { system } from '@minecraft/server';
 ```
 
 There are two methods for it:
 
 **Scheduling timers**
-`system.run(callback)` - Runs a specified function at the tick after the current tick. This is frequently used to implement delayed behaviors and game loops.
+`system.run(callback)` - Runs a specified function at the next available future time. This is frequently used to implement delayed behaviors and game loops. When run within the context of an event handler, this will generally run the code at the end of the same tick where the event occurred. When run in other code (a system.run callout), this will run the function in the next tick. Note, however, that depending on load on the system, running in the same or next tick is not guaranteed.
 
 ```js
-import { system, world } from "@minecraft/server";
+import { system, world } from '@minecraft/server';
 
 system.run(() => {
-	world.sendMessage("This runs a tick after the last tick");
+	world.sendMessage('This runs one tick after the previous tick');
 });
 ```
 
-`system.runInterval(callback, tickInterval?)` - Runs a function repeatedly, starting after the interval of time, then repeating continuously at that interval.
+`system.runInterval(callback: () => void, tickInterval?: number): number` - Runs a set of code repeatedly, starting after the first interval of time and repeating continuously forever that interval.
 
 ```js
-import { system, world } from "@minecraft/server";
+import { system, world } from '@minecraft/server';
 
 system.runInterval(() => {
-	world.sendMessage("This message runs every 20 ticks");
+	world.sendMessage('This message runs every 20 ticks (once per second)');
 }, 20);
 ```
 
-`system.runTimeout(callback, tickDelay?)` - Runs a function once after the interval of time.
+`system.runTimeout(callback: () => void, tickDelay?: number): number` - Runs a function once after the interval of time has elapsed.
 
 ```js
-import { system, world } from "@minecraft/server";
+import { system, world } from '@minecraft/server';
 
 system.runTimeout(() => {
-	world.sendMessage("This message runs once after 20 ticks has passed.");
+	world.sendMessage('This message runs once once 20 ticks has passed.');
 }, 20);
+```
+
+`system.runJob(generator: Generator<void, void, void>): number` - Queues a generator function to run until completion. The generator will be given a time slice each tick, and will be run until it yields or completes. [Generator Function Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*).
+
+```js
+import { system, world, BlockPermutation } from '@minecraft/server';
+
+function* blockPlacingGenerator(size, startX, startY, startZ) {
+	const overworld = world.getDimension('overworld'); // gets the dimension of type overworld.
+   for (let x = startX; x < startX + size; x++) {
+      for (let y = startY; y < startY + size; y++) {
+         for (let z = startZ; z < startZ + size; z++) {
+            const block = overworld.getBlock({ x: x, y: y, z: z }); // get the block at the current loop coordinates.
+            if (block) block.setType('minecraft:cobblestone'); // if the block is loaded, set it to cobblestone.
+            // yield back to job coordinator after every block is placed
+         	yield;
+         }
+      }
+   }
+}
+// builds a 10x10x10 cube of cobblestone starting at overworld location -2, -60, 1.
+system.runJob(blockPlacingGenerator(10, -2, -60, 1));;
 ```
 
 **Clearing timers**
+
 `system.clearRun(runId): void` - Cancels the execution of a function run that was previously scheduled via the `run`, `runTimeout` or `runInterval` function.
 
 ```js
-import { system, world } from "@minecraft/server";
+import { system, world } from '@minecraft/server';
 
 const callbackId = system.runInterval(() => {
-	world.sendMessage("Running every tick");
+	world.sendMessage('Running every tick');
 });
 
 system.runTimeout(() => {
-	system.clearRun(callbackId); // stops system.runInterval callback from running after 20 ticks
-	world.sendMessage("Stopped");
+	system.clearRun(callbackId); // stops the system.runInterval callback from running after 20 ticks
+	world.sendMessage('Stopped');
 }, 20);
 ```
 
-## Saving and Loading
+`clearJob(jobId: number): void` - Cancels the execution of a job queued via the `runJob` function.
 
-With the @minecraft/server module, developers can define their own custom properties, known as dynamic properties, that can be used and stored within Minecraft. These data are stored specifically in the db folder using a behavior pack's module UUID.
+```js
+import { system, world } from '@minecraft/server';
+
+const callbackId = system.runInterval(() => {
+	world.sendMessage('Running every tick');
+});
+
+system.runTimeout(() => {
+	system.clearRun(callbackId); // stops the system.runInterval callback from running after 20 ticks
+	world.sendMessage('Stopped');
+}, 20);
+```
+
+More information on all the system methods can be found on the [Game Loops & Timed Callbacks](https://learn.microsoft.com/en-us/minecraft/creator/documents/systemrunguide) documentation page.
+
+## Saving and Loading data
+
+With the `@minecraft/server` module, developers can define their own custom properties, known as dynamic properties, that can be used and stored within Minecraft. This data is stored specifically in the world's db folder using the behavior pack module UUID.
 
 ![dynamic_properties](/assets/images/gametest/script-server/dynamic_properties.png)
 
-In order to save data, the property must be initialised first. There are multiple ways to declare dynamic properties, either on an entity type or world. You can define as many numbers and booleans as you would like, however Minecraft API only allows each - behavior pack to save a limited bytes of string.-
--If you register property in EntityType, each entity can save up to 1,000 bytes of text data.
-
--   If you register property in World, each entity can save up to 10,000 bytes of text data.
-
-The `DynamicPropertiesDefinition` class is used in conjunction with the `PropertyRegistry` class to define dynamic properties that can be used on entities of a specified type or at the global World-level. The `defineBoolean`, `defineNumber`, and `defineString` methods are used to define new boolean, number, and string dynamic properties, respectively.
-
-To register dynamic properties in Minecraft, developers can subscribe to the `worldInitialize` event provided by the `world` object in the `@minecraft/server` module. Here's an example of how to do that:
-
-```typescript
-import { DynamicPropertiesDefinition, MinecraftEntityTypes, world } from "@minecraft/server";
-
-world.events.worldInitialize.subscribe((event) => {
-  const propertiesDefinition = new DynamicPropertiesDefinition();
-  propertiesDefinition.defineBoolean('isAngry');
-  event.propertyRegistry.registerEntityTypeDynamicProperties(propertiesDefinition, MinecraftEntityTypes.zombie);
-});
-```
-
-In this example, we are defining a boolean dynamic property called `isAngry` and registering it for all zombie entities in the world. The registerEntityTypeDynamicProperties method is used to register the dynamic property for a particular entity type, in this case, `MinecraftEntityTypes.zombie`.
-
-Similarly, you can use the `registerWorldDynamicProperties` method to register globally available dynamic properties for a world. Here's an example of how to register a number dynamic property called `playerScore` for the entire world:
-
-```typescript
-import { DynamicPropertiesDefinition, world } from "@minecraft/server";
-
-world.events.worldInitialize.subscribe((event) => {
-  const propertiesDefinition = new DynamicPropertiesDefinition();
-  propertiesDefinition.defineNumber('playerScore');
-  event.propertyRegistry.registerWorldDynamicProperties(propertiesDefinition);
-});
-```
-
-In this example, we are defining a number dynamic property called `playerScore` and registering it globally for the entire world using the `registerWorldDynamicProperties` method.
+In order to save data, the property must first be initialized. There are multiple ways to declare dynamic properties, either on an entity, world, or item. You can define as many numbers and booleans as you would like, however Minecraft API only allows each - behavior pack to save a limited amount of data per dynamic property.
+- String dynamic properties can be a maximum of 32767 characters in length.
+- Number dynamic properties can be a maximum of the 64-bit float limit (-1.7976931348623158e+308 to -2.2250738585072014e-308, or from 2.2250738585072014e-308 to 1.7976931348623158e+308).
 
 **Get and Set Dynamic Properties**
 
 To get and set dynamic properties, you can use the `getDynamicProperty` and `setDynamicProperty` methods.
 
 :::tip
-It is important to note that registering a dynamic property does not set a value on the property. Unless the value of the property is saved in the world already, when getting the property for the first time, the method returns nothing.
+It is important to note that getting a dynamic property does not guarantee it has a value saved. When getting the property for the first time, the method returns `undefined`.
 :::
 
 With this in mind, here are some examples of how to get and set dynamic properties in Minecraft:
 
-```typescript
-import { MinecraftEntityTypes, world } from "@minecraft/server";
+```js
+import { system, world } from '@minecraft/server';
 
-world.events.entityHit.subscribe(({ hitEntity }) => {
-  if (hitEntity.typeId !== MinecraftEntityTypes.zombie.id) return; // only zombies that got hit
-  hitEntity.setDynamicProperty('isAngry', true); // set boolean property with value
-  const isAngry = hitEntity.getDynamicProperty<boolean>('isAngry'); // get boolean property
-});
+system.runInterval(() => {
+	world.getPlayers().forEach(player => { // run code for each player the array returns.
+		// all three properties are unique to each player, similar to tags/scoreboard data.
+		player.setDynamicProperty('number_value', 12); // sets a number property on the player.
+		player.setDynamicProperty('string_value', 'This is a string :)'); // string property
+		player.setDynamicProperty('boolean_value', true); // boolean property
+	});
+}, 20); // run this interval once every 20 game ticks.
+
+world.afterEvents.playerBreakBlock.subscribe(data => { // subscribe to the block break event.
+	const player = data.player; // define the player variable for use later.
+	const numberProperty = player.getDynamicProperty('number_value'); // get the dynamic property that was saved.
+	player.sendMessage(`You have a property of value ${numberProperty}!`); // print the players saved value to the chat.
+})
 ```
 
-In this example, we are setting a boolean dynamic property called `isAngry` on a zombie entity that got hit. We then get the value of the `isAngry` property using the `getDynamicProperty` method.
+Here is an example of how to get and set dynamic properties at the global level:
 
-Here is an example of how to get and set dynamic properties at the global World-level:
+```js
+import { world } from '@minecraft/server';
 
-```typescript
-import { world } from "@minecraft/server";
-
-world.setDynamicProperty('playerScore', 100); // set number property with value
-const playerScore = world.getDynamicProperty('playerScore'); // get number property
+world.setDynamicProperty('player_score', 100); // set a property with a number value
+const playerScore = world.getDynamicProperty('player_score'); // get the previously set property- will return 100.
 ```
-
-In this example, we are setting a number dynamic property called `playerScore` globally for the entire world using the `setDynamicProperty` method. We then get the value of the `playerScore` property using the `getDynamicProperty` method.
 
 ## Running Commands
 
 `Entity.runCommandAsync()` or `Dimension.runCommandAsync()` allows the API to run a particular command asynchronously from the context of the broader dimension.
-Note that there is a maximum queue of 128 asynchronous commands that can be run in a given tick.
+Note that there is a maximum of 128 asynchronous commands that can be run in a given tick. Always try to avoid runCommandAsync calls wherever possible, and use built-in API methods instead.
 
-Usually, it executes the command in the next tick.
-To run command parallel with the script, you have to surround your code in a asynchronous function.
+The game executes the queued commands in the next tick of the world.
+To run commands parallel with the script, you have to surround your code in a asynchronous function.
 
 ```js
-import { world } from "@minecraft/server";
+import { world } from '@minecraft/server';
 
 (async () => {
-	await world.getDimension("overworld").runCommandAsync("say Using say command on dimension.");
+	await world.getDimension('overworld').runCommandAsync('say Using say command on dimension.');
 
-	world.sendMessage("This runs after runCommandAsync is executed");
+	world.sendMessage('This runs after runCommandAsync is executed');
 })();
 ```
 
@@ -280,77 +300,59 @@ Script API does not provide any methods to get/set information of player's ender
 
 **tickingarea**
 
-Script API can't access ticking areas.
+Script API cannot access, set, or remove ticking areas.
 
 **kick**
 
-Script API can't kick player.
+Script API cannot kick players.
 
 **setblock**
 
-Script API can't destroy block `/setblock ... destroy`
+Script API cannot destroy blocks `/setblock ... destroy`. It is possible to set a block, however.
 
-**titleraw**
+**Player abilities**
 
-Script API can't display translations in title, subtitle or actionbar in rawtext json. Consider using `%` (e.g. `%death.fell.accident.water%`)
-
-**Player's abilities**
-
--   Script API you can't set abilities for each player.
--   You can't read player's abilities.
+-   Script API cannot set abilities for each player.
+-   You cannot read player abilities.
 
 **execute**
 
-Script API new execute can be useful to run command with lot of if/unless condition for simplicity or maybe performance.
+Script API can utilize new execute syntax to run commands with lots of if/unless conditions for simplicity or performance.
 
-Sometimes this `/execute` used to trigger `/loot` command, as `runCommandAsync` cannot trigger loots in the API.
+`/execute` can be used to trigger the `/loot` command, as `runCommandAsync` cannot access vanilla loot tables directly.
 
 **Minecraft functions**
 
-Script API cannot run Minecraft function files without the use of `/function`.
-
-**gamerule**
-
--   Script API cannot set any game rules.
--   Cannot read game rules' value.
+-   Script API cannot run Minecraft function files without the use of `/function`.
 
 **locate**
 
--   Script API cannot get structure's location.
--   Cannot get biome's location.
+-   Script API cannot get a structure location.
+-   Cannot get a biome location.
 
 **loot**
 
-Script API even though the loot is broken from the start, but it's useful for drop or set the item to players/world.
+-   Script API even though the loot is broken from the start, but it's useful for drop or set the item to players/world.
 
 **weather**
 
--   Script API can't get weather directly.
--   Can't set weather.
+-   Script API cannot get/set the world weather.
 
 **difficulty**
 
-Script API can't set world difficulty.
-
-**playanimation**
-
-Script API can't play client entity animation.
+-   Script API cannot set the world difficulty.
 
 **mobevent**
 
-Script API can't enable/disable mobevent.
-
-**camerashake**
-
-Script API can't add/stop camera shake for player.
+-   Script API cannot enable/disable mobevents.
 
 **fog**
 
-Script API can't manage active fog settings for player.
+-   Script API cannot manage active fog settings for players.
 
 **stopsound**
 
-Script API can't stop playing a sound.
+-   Script API cannot stop playing a sound. Music can be stopped using `World::stopMusic()` or `Player::stopMusic()`.
 
 **dialogue**
 
@@ -360,47 +362,68 @@ Script API can't stop playing a sound.
 ## BeforeEvents privilege system
 
 ::: tip
-The developers may release an article discussing this topic in Microsoft Learn, for now these are the infomation the community  gathered.
+The developers may release an article discussing this topic in Microsoft Docs, but for now this is the infomation the community has gathered.
 :::
 
-In 1.20.0, Minecraft Scripting API releases a privilege system for callbacks fired in before events (i.e. `ChatSendBeforeEvent`).
+In 1.20.0, Minecraft Scripting API released a privilege system for callbacks fired in before events (i.e. `ChatSendBeforeEvent`).
 
-This limits the native functions that are allowed to be executed in the callback, which most of the functions are the native functions that modifies changes to Minecraft (like setting the world time with `World::setTime()`) in the same tick. The purpose of this implementation is to avoid cascading changes in the middle of a game tick.
+This limits the native functions that are allowed to be executed in before event callbacks. These are the native functions that modify the world (like setting the world time with `World::setTimeOfDay()`) in the same tick. The purpose of this implementation is to avoid cascading changes in the middle of a game tick.
 
 ```js
+import { world } from '@minecraft/server';
+
 world.beforeEvents.chatSend.subscribe(event => {
 	event.cancel = true;
-	world.setTime(TimeOfDay.Night);
+	world.setTimeOfDay(0);
 });
 ```
 
-In the example code above, the world sets the time and cancels a message from being sent to the chat. It also changes the time of the world to night using `world.setTime()`, which throws error as the native function does not have the privilege to change the state of the world.
+In the example code above, the message being sent to the chat is canceled and the time of the world is set. `world.setTimeOfDay()` throws an error as the native function does not have the required privileges to change the state of the world.
 
-To migrate your code to this new system. You must run these native functions that requires privilege in the tick after the tick that fires the event, using the following methods:
+To migrate your code to this new system, you must run these native functions that requires privilege in the tick after the event fires using the following methods:
 
 1. Use `system.run`:
 
 ```js
+import { world, system } from '@minecraft/server';
+
 world.beforeEvents.chatSend.subscribe(event => {
 	event.cancel = true;
 	system.run(() => {
-		world.setTime(TimeOfDay.Night);
+		world.setTimeOfDay(0);
 	});
 });
 ```
 
-To migrate code with the new privilege system, the `world.setTime()` function is wrapped inside the `system.run()` method, which delays its execution by a tick. This ensures that the function is not executed in the same tick that the before event fires.
+To migrate code with the new privilege system, the `world.setTimeOfDay()` function is wrapped inside the `system.run()` method, which delays its execution by a tick. This ensures that the function is not executed in the same tick that the before event fires.
+
+2. Use `system.runTimeout`:
+
+```js
+import { world, system } from '@minecraft/server';
+
+world.beforeEvents.chatSend.subscribe(async (event) => {
+	event.cancel = true;
+	system.runTimeout(() => {
+		world.setTimeOfDay(0);
+	}, 5);
+});
+```
+
+This code functions very similarly to the `system.run()` example, but a custom length can be specified in the timeout, allowing for more control over when the code fires.
 
 2. Execute function at a later tick using `async` functions:
 
 ```js
+import { world } from '@minecraft/server';
+
 world.beforeEvents.chatSend.subscribe(async (event) => {
 	// synchronous code
 	event.cancel = true;
 
 	// asynchronous code
 	await sleep(10); // Pretend you have a sleep function that returns a promise that resolves in 10 ticks
-	world.setTime(TimeOfDay.Night);
+	world.setTimeOfDay(0);
 });
 ```
 
