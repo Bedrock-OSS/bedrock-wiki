@@ -6,46 +6,50 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.20
 :::
 
 ## Overview
 
-Script API has modules for developers to interact with Minecraft. Additionally, dependencies will need to be set based on modules used.
+Script API has modules for developers to interact with Minecraft. Additionally, manifest dependencies will need to be set based on the modules used within your add-on.
 
 -   **`@minecraft/server`** - Core module to manipulate a Minecraft world, including entities, blocks, dimensions, and more.
 
-    | Module UUID                            | Versions                                         | Previous names                  | Release Version    |
-    | -------------------------------------- | ------------------------------------------------ | ------------------------------- | ------------------ |
-    | `b26a4d4c-afdf-4690-88f8-931846312678` | `1.4.0-beta , 1.3.0`, `1.2.0`, `1.1.0`, `1.0.0`, `0.1.0` | `Minecraft`, `mojang-minecraft` | `Beta 1.16.210.60` |
+    |     Module Name     |                                                              Valid Versions (As of 1.21.20)                                                              |         Previous Names          |  Release Version   |
+    | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------ |
+    | `@minecraft/server` | `1.14.0-beta`, `1.13.0`, `1.12.0`, `1.11.0`, `1.10.0`, `1.9.0`, `1.8.0`, `1.7.0`, `1.6.0`, `1.5.0`, `1.4.0`, `1.3.0`, `1.2.0`, `1.1.0`, `1.0.0`, `0.1.0` | `Minecraft`, `mojang-minecraft` | `Beta 1.16.210.60` |
 
--   **`@minecraft/server-gametest`** - A module that provides a scaffolding toolset for you to build, test, and run your custom Add-ons and worlds.
 
-    | Module UUID                            | Versions     | Previous names                | Release version    |
-    | -------------------------------------- | ------------ | ----------------------------- | ------------------ |
-    | `6f4b6893-1bb6-42fd-b458-7fa3d0c89616` | `1.0.0-beta` | `GameTest`, `mojang-gametest` | `Beta 1.16.210.60` |
+-   **`@minecraft/server-ui`** - A module that provides ways to show dialogs & custom-built forms to players.
 
--   **`@minecraft/server-ui`** - A module provides ways to show dialogs to players.
+    |      Module Name       |     Valid Versions (As of 1.21.20)      |    Previous Names     |  Release Version  |
+    | ---------------------- | --------------------------------------- | --------------------- | ----------------- |
+    | `@minecraft/server-ui` | `1.3.0-beta`, `1.2.0`, `1.1.0`, `1.0.0` | `mojang-minecraft-ui` | `Beta 1.18.20.21` |
 
-    | Module UUID                            | Versions              | Previous names        | Release version                       |
-    | -------------------------------------- | --------------------- | --------------------- | ------------------------------------- |
-    | `2bd50a27-ab5f-4f40-a596-3641627c635e` | `1.1.0-beta`, `1.0.0` | `mojang-minecraft-ui` | `Beta 1.18.20.21+ (Release 1.18.30+)` |
 
--   **`@minecraft/server-admin`** - BDS module for configuration of variables and secrets. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
+-   **`@minecraft/server-gametest`** - A module that provides a scaffolding toolset for you to build, test, and run your custom add-ons and worlds.
 
-    | Module UUID                            | Versions     | Previous names                  | Release version    |
-    | -------------------------------------- | ------------ | ------------------------------- | ------------------ |
-    | `53d7f2bf-bf9c-49c4-ad1f-7c803d947920` | `1.0.0-beta` | `mojang-minecraft-server-admin` | `Release 1.19.10+` |
+    |         Module Name          | Valid Versions (As of 1.21.20) |        Previous Names         |  Release Version   |
+    | ---------------------------- | ------------------------------ | ----------------------------- | ------------------ |
+    | `@minecraft/server-gametest` | `1.0.0-beta`                   | `GameTest`, `mojang-gametest` | `Beta 1.16.210.60` |
+
 
 -   **`@minecraft/server-net`** - BDS module for executing HTTP-based requests. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
 
-    | Module UUID                            | Versions     | Previous names | Release version    |
-    | -------------------------------------- | ------------ | -------------- | ------------------ |
-    | `777b1798-13a6-401c-9cba-0cf17e31a81b` | `1.0.0-beta` | `mojang-net`   | `Release 1.19.10+` |
+    |       Module Name       |   Versions   | Previous Names |  Release Version  |
+    | ----------------------- | ------------ | -------------- | ----------------- |
+    | `@minecraft/server-net` | `1.0.0-beta` | `mojang-net`   | `Release 1.19.10` |
+
+
+-   **`@minecraft/server-admin`** - BDS module for configuration of variables and secrets. This module is only available in [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) and cannot be used on realms and worlds.
+
+    |        Module Name        |   Versions   |         Previous Names          |  Release Version  |
+    | ------------------------- | ------------ | ------------------------------- | ----------------- |
+    | `@minecraft/server-admin` | `1.0.0-beta` | `mojang-minecraft-server-admin` | `Release 1.19.10` |
 
 -   **`@minecraft/server-editor`** and **`@minecraft/server-editor-bindings`**
 
-    | Versions     | Release version    |
+    | Versions     | Release Version    |
     | ------------ | ------------------ |
     | `0.1.0-beta` | `Preview 1.19.80+` |
 
