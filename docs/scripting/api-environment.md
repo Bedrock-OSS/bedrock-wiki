@@ -26,7 +26,17 @@ Not everyone can encounter this problem because the use of eval and Function met
 
 Some browsers also prohibit the use of these methods, mainly the eval method, when using eval there is a risk of malicious code that can harm the problem in your add-on, which is why it is disabled by default.
 
-To enable these methods that evaluate code, you must mention it in the manifest. What and how you can find here. [Start with Script API](/scripting/starting-scripts).
+To enable these methods that evaluate code, you must mention it in the manifest. This capability also targets on usage of `Function()` constructor:
+
+<CodeHeader>BP/manifest.json</CodeHeader>
+
+```json
+{
+	"capabilities": [
+		"script_eval"
+	]
+}
+```
 
 ## Support
 
@@ -61,3 +71,6 @@ To enable these methods that evaluate code, you must mention it in the manifest.
     - `setInterval` - Standard function for timing code runs in intervals
     - `clearTimeout` - Standard function for canceling setTimeout runs
     - `clearInterval` - Standard function for canceling setInterval runs
+
+- **Extended Methods**
+  We have bunch of additional methods exposed by QuickJS, but don't expect anything game-changing, we got some additional string methods to wrap string in html formats for example: `"text".bolt() -> "<b>text<b>"`. These methods are useless and not documented and we are not going to either.
