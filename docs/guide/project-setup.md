@@ -223,7 +223,7 @@ pack.description=A Ghostly Guide
 
 ## Checking your Work
 
-If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide.](/troubleshooting)
+If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide](/guide/troubleshooting).
 
 ![](/assets/images/guide/project-setup/active_pack.png)
 
