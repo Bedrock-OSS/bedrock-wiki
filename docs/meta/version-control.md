@@ -40,11 +40,11 @@ If you've gotten this far, hopefully, you have a GitHub account and are familiar
 -   github
 -   git
 
-# Setting up Git
+## Setting up Git
 
 This assumes you are adding an _existing_ project to git. The steps are similar if you are starting from scratch.
 
-## Structure
+### Structure
 
 The big issue with using `git` for add-ons is that `git` generally works by encapsulating a _single_ folder and managing it. Of course, in Bedrock Add-Ons, assets are spread across two folders: The `BP`, and `RP`. To get around this issue, we will place our repository outside of the `com.mojang` folder entirely and then use window `junctions` to "copy" the folders in.
 
@@ -54,7 +54,7 @@ There are many advantages of placing our project in a separate location:
 -   We can combine the RP and the BP into one repository
 -   All of our projects can be easily viewed in a simple location, instead of nested deep within com.mojang
 
-## Creating a Git Repository
+### Creating a Git Repository
 
 Pick a convenient location for your projects. I placed mine at `C:/sirlich/projects`. Make a new folder with the name of your map. We will be using `wiki` as the name of our mock project.
 
@@ -62,7 +62,7 @@ Right-click the folder, and click `"Open git Bash"`. If this option doesn't appe
 
 Type: `git init`. This will create a blank repository in your project.
 
-## Linking your existing RP and BP
+### Linking your existing RP and BP
 
 The next step is to make the repository aware of your RP and BP folders. We will be using window symlink "junctions". When we create a junction, we essentially create a wormhole in our file system that will make it appear like your files are in two places at once. Deleting/editing/adding files is perfectly copied over.
 
@@ -73,13 +73,13 @@ When you are finished, you should see `wiki_RP` and `wiki_BP` in your project fo
 
 You can now push this repository to `github`, following the tutorial above.
 
-## Extra Files
+### Extra Files
 
 Because we created our repository based on symlinks, we can add anything we like into the project folder without worrying about breaking the com.mojang folder. I like to track `.bb` files, cover-art files (`.kra` etc.).
 
 You can also add notes, video files, or anything else you want to track.
 
-## Working with your VCS
+### Working with your VCS
 
 The main things to remember about working with VCS:
 

@@ -171,7 +171,7 @@ There are many good sources of Add-on documentation. Familiarize yourself with a
 -   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
 -   You can explore additional tools [here](/meta/useful-links).
 
-# Next
+## Next
 
 :::tip What you have learned
 <Checklist>

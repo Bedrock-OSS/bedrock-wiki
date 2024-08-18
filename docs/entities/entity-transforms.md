@@ -11,8 +11,6 @@ mentions:
 description: In this page we'll discuss how to convert between different coordinate frames in Minecraft.
 ---
 
-# Entity Transforms
-
 ## Overview
 
 In this page we'll discuss how to convert between different coordinate frames in Minecraft. There are many reasons why you might want to do this:

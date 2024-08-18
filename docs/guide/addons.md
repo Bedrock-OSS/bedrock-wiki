@@ -58,7 +58,7 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 -   An RP entity definition, which describes how your entity will _look_
 -   A BP entity definition, which describes how your entity will _act_
 
-# Next
+## Next
 
 -   Add-ons modify Minecraft content or add their own
 -   Add-ons are written in json
