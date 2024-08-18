@@ -1,7 +1,5 @@
 ---
 title: Death Commands
-tags:
-    - recipe
 mentions:
     - SirLich
     - BlueFrog130

@@ -2,7 +2,6 @@
 title: Creating Boats
 category: Tutorials
 tags:
-    - recipe
     - intermediate
 mentions:
     - SirLich

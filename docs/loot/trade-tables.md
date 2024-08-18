@@ -2,9 +2,6 @@
 title: Trade Tables
 category: Documentation
 nav_order: 2
-tags:
-    - Stable
-    - Last updated for Version 1.18.10
 mentions:
     - Ciosciaa
     - SirLich

@@ -6,7 +6,6 @@ mentions:
     - TheItsNameless
 tags:
     - easy
-    - Last updated for Version 1.18.32 (MEE)
 description: Enable experimental features in Education Edition.
 ---
 
