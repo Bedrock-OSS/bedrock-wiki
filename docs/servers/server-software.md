@@ -23,7 +23,7 @@ mentions:
     - wu-vincent
     - smartcmd
     - Adrian8115
-    - SculkTeams
+    - sculkmp
 description: Software for Bedrock servers.
 ---
 
