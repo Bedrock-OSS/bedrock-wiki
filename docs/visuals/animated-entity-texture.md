@@ -7,8 +7,7 @@ mentions:
     - SmokeyStack
 tags:
     - intermediate
-category:
-    - Tutorials
+category: Tutorials
 description: Animate texture of your entity.
 ---
 

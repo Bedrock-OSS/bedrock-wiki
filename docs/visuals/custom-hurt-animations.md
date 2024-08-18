@@ -4,8 +4,7 @@ tags:
     - intermediate
 mentions:
     - MedicalJewel105
-category:
-    - Tutorials
+category: Tutorials
 description: Tutorial on how to trigger custom animation when entity is hurt.
 ---
 

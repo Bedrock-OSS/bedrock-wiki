@@ -2,8 +2,7 @@
 title: Materials
 tags:
     - expert
-category:
-    - General
+category: General
 mentions:
     - SirLich
     - Joelant05

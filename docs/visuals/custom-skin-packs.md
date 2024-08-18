@@ -5,8 +5,7 @@ mentions:
     - SirLich
     - Joelant05
     - TheItsNameless
-category:
-    - General
+category: General
 description: Create your own skin pack.
 ---
 

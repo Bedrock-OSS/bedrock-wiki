@@ -3,8 +3,7 @@ title: Introduction to Entity Visuals
 nav_order: 1
 tags:
     - guide
-category:
-    - General
+category: General
 mentions:
     - SirLich
     - MedicalJewel105

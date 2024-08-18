@@ -1,7 +1,6 @@
 ---
 title: Texture Animation
-category:
-  - Tutorials
+category: Tutorials
 tags:
   - intermediate
 mentions:

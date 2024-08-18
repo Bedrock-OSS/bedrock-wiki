@@ -2,8 +2,7 @@
 title: Custom Death Animations
 tags:
     - intermediate
-category:
-    - General
+category: General
 mentions:
     - SirLich
     - Joelant05
