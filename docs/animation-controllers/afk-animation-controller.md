@@ -1,7 +1,5 @@
 ---
 title: AFK Detector
-tags:
-    - recipe
 mentions:
     - SirLich
     - BlueFrog130

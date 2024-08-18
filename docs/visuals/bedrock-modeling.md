@@ -1,8 +1,7 @@
 ---
 title: Bedrock Modeling
 nav_order: 2
-category:
-    - General
+category: General
 mentions:
     - SirLich
     - solvedDev

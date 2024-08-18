@@ -1,7 +1,6 @@
 ---
 title: Leash Position
-category:
-    - Tutorials
+category: Tutorials
 mentions:
     - MedicalJewel105
     - SirLich

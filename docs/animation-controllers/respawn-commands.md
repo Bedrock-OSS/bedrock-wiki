@@ -1,7 +1,5 @@
 ---
 title: Respawn Commands
-tags:
-    - recipe
 mentions:
     - SirLich
     - solvedDev

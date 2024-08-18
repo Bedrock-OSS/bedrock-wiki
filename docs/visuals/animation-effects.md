@@ -2,8 +2,7 @@
 title: Effects in Animations
 mentions:
     - MedicalJewel105
-category:
-    - General
+category: General
 description: Learn how to add particles and sounds to your animation.
 ---
 

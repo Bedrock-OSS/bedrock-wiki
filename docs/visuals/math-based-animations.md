@@ -2,8 +2,7 @@
 title: Math-based Animations
 tags:
     - intermediate
-category:
-    - General
+category: General
 mentions:
     - SirLich
     - solvedDev

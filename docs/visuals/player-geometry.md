@@ -2,8 +2,7 @@
 title: Player Geometry
 tags:
     - beginner
-category:
-    - Tutorials
+category: Tutorials
 mentions:
     - SirLich
     - MedicalJewel105

@@ -2,9 +2,6 @@
 title: Item Functions
 category: Documentation
 nav_order: 4
-tags:
-    - Stable
-    - Last updated for Version 1.18.10
 mentions:
     - Ciosciaa
     - MedicalJewel105

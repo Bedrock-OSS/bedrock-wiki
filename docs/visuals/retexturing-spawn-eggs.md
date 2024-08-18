@@ -2,8 +2,7 @@
 title: Retexturing Spawn Eggs
 tags:
     - beginner
-category:
-    - Tutorials
+category: Tutorials
 mentions:
     - SirLich
     - Joelant05

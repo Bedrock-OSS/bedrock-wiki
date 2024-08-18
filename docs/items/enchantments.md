@@ -2,8 +2,6 @@
 title: Enchantments
 category: Documentation
 nav_order: 5
-tags:
-    - Stable
 mentions:
     - Ciosciaa
     - MedicalJewel105
