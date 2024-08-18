@@ -2,8 +2,6 @@
 title: Convert Points Between Any Space (World, Entity, Bones)
 category: Tutorials
 tags:
-    - guide
-    - info
     - intermediate
 mentions:
     - Johnb003
