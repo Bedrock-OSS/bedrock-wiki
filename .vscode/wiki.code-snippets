@@ -1,4 +1,32 @@
 {
+	"Button": {
+		"prefix": "wiki.button",
+		"body": [
+			"<Button link=\"$1\">",
+      "    $3",
+			"</Button>"
+		]
+	},
+	"Card": {
+		"prefix": "wiki.card",
+		"body": [
+			"<Card",
+			"    image=\"${1:/assets/images/}\"",
+			"    title=\"$2\"",
+			"    link=\"$3\"",
+			"/>"
+		]
+	},
+	"CardGrid": {
+		"prefix": "wiki.cardgrid",
+		"body": [
+			"<CardGrid>",
+			"",
+			"$1",
+			"",
+			"</CardGrid>"
+		]
+	},
 	"CodeHeader": {
 		"prefix": "wiki.codeheader",
 		"body": [
@@ -7,29 +35,7 @@
 			"```${2:json}",
 			"$3",
 			"```"
-		],
-		"description": "CodeHeader with code panel."
-	},
-	"Button": {
-		"prefix": "wiki.button",
-		"body": [
-			"<BButton",
-			"    link=\"$1\"",
-			"    color=$2",
-			">$3</BButton>"
-		],
-		"description": "Button."
-	},
-	"Checklist": {
-		"prefix": "wiki.checklist",
-		"body": [
-			"<Checklist>",
-			"",
-			" -   $1",
-			"",
-			"</Checklist>"
-		],
-		"description": "Checklist."
+		]
 	},
 	"Spoiler": {
 		"prefix": "wiki.spoiler",
@@ -39,38 +45,36 @@
 			"$2",
 			"",
 			"</Spoiler>"
-		],
-		"description": "Spoiler."
-	},
-	"Label": {
-		"prefix": "wiki.label",
-		"body": [
-			"<Label",
-			"    name=\"$1\"",
-			"    color=\"$2\"",
-			"></Label>"
-		],
-		"description": "Label."
+		]
 	},
 	"FolderView": {
 		"prefix": "wiki.folderview",
 		"body": [
-			"<FolderView",
-			"    :paths=\"[",
+			"<FolderView :paths=\"[",
 			"    '$1'",
-			"    ]\"",
-			"></FolderView>"
-		],
-		"description": "Empty folderview."
+			"]\" />",
+		]
 	},
-	"YouTubeEmbed": {
-		"prefix": "wiki.ytembed",
+	"Label": {
+		"prefix": "wiki.label",
 		"body": [
-			"<YouTubeEmbed",
-			"    id=\"$1\"",
-			"/>"
-		],
-		"description": "YouTube embed."
+			"<Label color=\"$1\">",
+      "    $1",
+      "</Label>"
+		]
+	},
+	"Page Dumper (only use if you know how)": {
+		"prefix": "wiki.page_dumper",
+		"body": [
+			"<!-- page_dumper_start -->",
+			"<!-- page_dumper_end -->"
+		]
+	},
+	"Tag": {
+		"prefix": "wiki.tag",
+		"body": [
+			"<Tag name=\"${1:beginner}\" />"
+		]
 	},
 	"WikiImage": {
 		"prefix": "wiki.image",
@@ -78,29 +82,14 @@
 			"<WikiImage",
 			"    src=\"${1:/assets/images/}\"",
 			"    alt=\"$2\"",
-			"    pixelated=\"${3:true}\"",
-			"    width=$4",
+			"    ${3:pixelated}",
 			"/>"
-		],
-		"description": "WikiImage."
+		]
 	},
-	"CardLink": {
-		"prefix": "wiki.cardlink",
+	"YouTubeEmbed": {
+		"prefix": "wiki.ytembed",
 		"body": [
-			"<CardLink",
-			"    imgsrcLight=\"${1:/assets/images/}\"",
-			"    title=\"$2\"",
-			"    link=\"$3\"",
-			"/>"
-		],
-		"description": "CardLink."
+			"<YouTubeEmbed id=\"$1\" />"
+		]
 	},
-	"Page Dumper (Use only if know how)": {
-		"prefix": "wiki.page_dumper",
-		"body": [
-			"<!-- page_dumper_start -->",
-			"<!-- page_dumper_end -->"
-		],
-		"description": "Page dumper. Use only if know how."
-	}
 }
