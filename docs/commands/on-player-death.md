@@ -116,8 +116,8 @@ If two or more players are teleported to the same point and one of them dies but
 
 **States:**
 
-- **` is_dead=0 `** player is *not* dead (dead).
-- **` is_dead=1 `** player died. (used for 'trigger' actions).
+- **` is_dead=0 `** player is *not* dead (alive).
+- **` is_dead=1 `** player is dead. (used for 'trigger' actions).
 - **` is_dead=1.. `** player is still dead. (used for repeating actions).
 
 **Purpose Of Each Command:**
