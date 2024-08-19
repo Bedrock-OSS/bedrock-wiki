@@ -20,7 +20,7 @@ These command-techniques allow you to detect certain player/entity 'states' and 
 
 This technique allows you to detect when your target is/isn't moving, accounting for even subtle movements.
 
-![player_moving](/assets/images/commands/states/moving.gif)
+![](/assets/images/commands/states/moving.gif)
 
 :::warning Known Issues:
 1. Does not account for movement while the spyglass is zoomed in or when Slowness Level 6 or higher is in effect.
@@ -128,7 +128,7 @@ Calculation for the values are given below:
 
 This technique allows you to detect when the player is/isn't sleeping.
 
-![player_sleeping](/assets/images/commands/states/sleeping.jpg)
+![](/assets/images/commands/states/sleeping.jpg)
 
 Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 
@@ -170,7 +170,7 @@ It is a requirement to follow this same sequence and properly apply the `scores`
 
 This technique allows you to detect when the player is/isn't sneaking.
 
-![player_sneaking](/assets/images/commands/states/sneaking.png)
+![](/assets/images/commands/states/sneaking.png)
 
 Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the player hitbox to 1.5 blocks when sneaking, making a proper sneak-detection using just commands is now possible which previously required add-on assistance.
 
@@ -213,7 +213,7 @@ It is a requirement to follow this same sequence and properly apply the `scores`
 
 This technique allows you to detect when the player is/isn't crawling.
 
-![player_crawling](/assets/images/commands/states/crawling.png)
+![](/assets/images/commands/states/crawling.png)
 
 Note: When crawling, the player's hitbox is reduced to 0.6 blocks.
 
