@@ -21,7 +21,7 @@ These command-techniques allow you to detect certain player/entity 'states' and 
 
 This technique allows you to detect when your target is/isn't moving, accounting for even subtle movements.
 
-![](/assets/images/commands/states/moving.gif)
+![](/assets/images/commands/movement-detections/moving.gif)
 
 :::warning Known Issues:
 1. Does not account for movement while the spyglass is zoomed in or when Slowness Level 6 or higher is in effect.
@@ -129,7 +129,7 @@ Calculation for the values are given below:
 
 This technique allows you to detect when the player is/isn't sleeping.
 
-![](/assets/images/commands/states/sleeping.jpg)
+![](/assets/images/commands/movement-detections/sleeping.jpg)
 
 Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 
@@ -171,7 +171,7 @@ It is a requirement to follow this same sequence and properly apply the `scores`
 
 This technique allows you to detect when the player is/isn't sneaking.
 
-![](/assets/images/commands/states/sneaking.png)
+![](/assets/images/commands/movement-detections/sneaking.png)
 
 Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the player hitbox to 1.5 blocks when sneaking, making a proper sneak-detection using just commands is now possible which previously required add-on assistance.
 
@@ -214,7 +214,7 @@ It is a requirement to follow this same sequence and properly apply the `scores`
 
 This technique allows you to detect when the player is/isn't crawling.
 
-![](/assets/images/commands/states/crawling.png)
+![](/assets/images/commands/movement-detections/crawling.png)
 
 Note: When crawling, the player's hitbox is reduced to 0.6 blocks.
 
@@ -264,9 +264,9 @@ If you desperately need to detect all three states separately **solely using com
 :::warning Known Issues:
 1. Gliding while touching the ground/ceiling or crashing straight into a wall will be detected as crawling.
 2. Crawling from absolute corner of a block with no adjacent blocks above and below will be detected as gliding.
-   - ![issue2](/assets/images/commands/states/issue2.png)
+   - ![issue2](/assets/images/commands/movement-detections/issue2.png)
 3. Swimming in a waterlogged block under another waterlogged block will be detected as crawling.
-   - ![issue3](/assets/images/commands/states/issue3.png)
+   - ![issue3](/assets/images/commands/movement-detections/issue3.png)
 :::
     
 <CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
