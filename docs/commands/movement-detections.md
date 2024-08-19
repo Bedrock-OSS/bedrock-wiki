@@ -263,7 +263,7 @@ If you desperately need to detect all three states separately **solely using com
 
 :::warning Known Issues:
 1. Gliding while touching the ground/ceiling or crashing straight into a wall will be detected as crawling.
-2. Crawling from absolute corner of a block with no adjacent blocks above and below will be detected as gliding.
+2. Crawling from absolute corner of a block while wearing an Elytra, with no adjacent blocks above or below, will be detected as gliding.
    - ![issue2](/assets/images/commands/movement-detections/issue2.png)
 3. Swimming in a waterlogged block under another waterlogged block will be detected as crawling.
    - ![issue3](/assets/images/commands/movement-detections/issue3.png)
