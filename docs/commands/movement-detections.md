@@ -4,6 +4,7 @@ category: Techniques
 mention:
     - BedrockCommands
     - zheaEvyline
+description: These command-techniques allow you to detect certain player/entity 'states' and subsequently execute your desired commands.
 ---
 
 ## Introduction
