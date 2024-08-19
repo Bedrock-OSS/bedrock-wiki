@@ -1,17 +1,15 @@
 {
-	"trailingComma": "es5",
-	"useTabs": true,
-	"tabWidth": 4,
-	"semi": false,
-	"singleQuote": true,
-	"printWidth": 80,
-	"embeddedLanguageFormatting": "off",
-	"overrides": [
-		{
-			"files": "*.md",
-			"options": {
-				"parser": "mdx"
-			}
-		}
-	]
+  "trailingComma": "es5",
+  "semi": true,
+  "singleQuote": false,
+  "printWidth": 100,
+  "embeddedLanguageFormatting": "auto",
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "parser": "mdx"
+      }
+    }
+  ]
 }
