@@ -7,7 +7,6 @@ export default {
   "/blocks/blocks-stable": "/blocks/blocks-intro",
   "/blocks/custom-trapdoor": "/blocks/custom-trapdoors",
 
-  "/concepts/mcfunction": "/commands/mcfunction",
   "/concepts/animation-controllers": "/animation-controllers/animation-controllers-intro",
   "/concepts/biomes": "/world-generation/biomes",
   "/concepts/blocks": "/blocks/blocks-intro",
@@ -16,6 +15,7 @@ export default {
   "/concepts/items": "/items/item-components",
   "/concepts/json-ui": "/json-ui/json-ui-intro",
   "/concepts/math-based-animations": "/visuals/math-based-animations",
+  "/concepts/mcfunction": "/commands/mcfunction",
   "/concepts/render-controller": "/visuals/render-controller",
 
   "/documentation/biome-tags": "/world-generation/biome-tags",
