@@ -55,7 +55,7 @@ Type: Boolean
 
 ## Block Placer
 
-Block Placer item component. Items with this component will place a block when used. Experimental toggles required: Holiday Creator Features (in format versions before 1.20.10).
+Block Placer item component. Items with this component will place a block when used. Released from experiment in format version 1.20.10.
 
 When used in Survival Mode, the item will be consumed.
 
@@ -95,7 +95,7 @@ Type: Boolean
 
 ## Cooldown
 
-Cool down time for a component. After use, all items in a specified 'cool down category' become unusable for a determined amount of time defined in the component. In format versions before 1.20.10, this component requires the 'Holiday Creator Features' experimental toggle.
+Cool down time for a component. After use, all items in a specified 'cool down category' become unusable for a determined amount of time defined in the component. Released from experiment in format version 1.20.10.
 
 Requires `minecraft:use_modifiers`.
 
@@ -188,7 +188,7 @@ Type: Object
 
 ## Display Name
 
-Defines the text shown when an item name is shown, such as hover text. In format versions prior to 1.20.0, this component requires the 'Holiday Creator Features' experimental toggle.
+Defines the text shown when an item name is shown, such as hover text. Released from experiment in format version 1.20.0.
 
 Does not support newline escape character
 
@@ -216,7 +216,7 @@ Type: String
 
 ## Durability
 
-Determines how much damage the item can take before breaking, and allows the item to be combined in crafting. In format versions prior to 1.20.0, this component requires the 'Holiday Creator Features' experimental toggle.
+Determines how much damage the item can take before breaking, and allows the item to be combined in crafting. Released from experiment in format version 1.20.0.
 
 Durability does not implicitly damage itself when mining blocks. It must be handled via ScriptAPI. It does however implicitly damage itself when damaging mobs.
 Each hit on a mob decreases durability by 2. This does not match vanilla property for weapons, but does match vanilla property for tools.
@@ -327,7 +327,7 @@ For an in-depth exploration of enchantability and its impact on the game, refer 
 
 ## Entity Placer
 
-Allows the item to place specified entities into the world. In format versions prior to 1.20.0, this component requires the 'Holiday Creator Features' experimental toggle.
+Allows the item to place specified entities into the world. Released from experiment in format version 1.20.0.
 
 Type: Object
 
@@ -386,7 +386,7 @@ Type: Object
 
 ## Fuel
 
-Allows the item to be used as fuel in a furnace to 'cook' other items. In format versions prior to 1.20.0, this component requires the 'Holiday Creator Features' experimental toggle.
+Allows the item to be used as fuel in a furnace to 'cook' other items. Released from experiment in format version 1.20.0.
 
 Max value is `107374180` inclusive. The reason for this number is because when translated to ticks, it hits the 32-bit integer limit
 
@@ -447,7 +447,7 @@ Type: String
 
 ## Icon
 
-Determines the icon to represent the item in the UI and elsewhere. In format versions before 1.20.10, this component requires the 'Holiday Creator Features' experimental toggle.
+Determines the icon to represent the item in the UI and elsewhere. Released from experiment in format version 1.20.10.
 
 Type: Object
 
@@ -520,7 +520,7 @@ Type: Int
 
 ## Projectile
 
-Projectile item component. Projectile items shoot out, like an arrow. In format versions prior to 1.20.10, this component requires the 'Holiday Creator Features' experimental toggle.
+Projectile item component. Projectile items shoot out, like an arrow. Released from experiment in format version 1.20.10.
 
 Type: Object
 
@@ -571,7 +571,7 @@ Listed [here](https://learn.microsoft.com/en-us/minecraft/creator/reference/cont
 
 ## Repairable
 
-Repairable item component: Determines which items can be used to repair a defined item, as well as the amount of durability specified items will repair. In format versions prior to 1.20.10, this component requires the 'Holiday Creator Features' experimental toggle.
+Repairable item component: Determines which items can be used to repair a defined item, as well as the amount of durability specified items will repair. Released from experiment in format version 1.20.10.
 
 By default, it can be repaired by itself. It will combine the two durabilities.
 
@@ -632,7 +632,7 @@ Type: Object
 
 ## Shooter
 
-Shooter Item Component. Must have the `minecraft:use_modifiers` component in order to function properly. In format versions prior to 1.20.10, this component requires the 'Holiday Creator Features' experimental toggle.
+Shooter Item Component. Must have the `minecraft:use_modifiers` component in order to function properly. Released from experiment in format version 1.20.10.
 
 Type: Object
 
@@ -718,7 +718,7 @@ Type: Object
 
 ## Throwable
 
-Throwable item component. Throwable items, such as a snowball. In format versions prior to 1.20.10, this component requires the 'Holiday Creator Features' experimental toggle. Item must have the `minecraft:projectile` component.
+Throwable item component. Throwable items, such as a snowball. Released from experiment in format version 1.20.10. Item must have the `minecraft:projectile` component.
 
 Type: Object
 
@@ -804,7 +804,7 @@ Type: Object
 
 ## Wearable
 
-Determines where the item can be worn. If any non-hand slot is chosen, the max stack size is set to 1. Experimental toggles required: Holiday Creator Features.
+Determines where the item can be worn. If any non-hand slot is chosen, the max stack size is set to 1.
 
 Type: Object
 
