@@ -21,41 +21,6 @@ This page contains troubleshooting information about _items_. You should read ou
 
 I followed a tutorial or tried to make my own item and something is wrong! Calm down. This page will help debug common issues. Follow the buttons and prompts to learn about possible issues with your item, and tips for fixing.
 
-<BButton color="blue" link="#_1-10-vs-1-16-items">
-    Continue
-</BButton>
-
----
-
-## 1.10 vs 1.16 Items?
-
-Before starting, you need to determine whether you creating an experimental item, or a stable item.
-
-:::tip
-Versions `1.16.0` and prior are currently **stable** (Includes versions `1.16`, `1.14`, `1.13`, `1.12`, `1.10`). These **do not** require `Holiday Creator Features` to be enabled.
-
-🔗 Tutorial on [stable items](/guide/custom-item).
-🔗 Documentation for [stable items](https://bedrock.dev/docs/1.16.0.0/1.16.20.54/Item)
-
-:::
-
-:::tip
-Versions `1.16.100` and onward are **experimental**. These items **will not work unless** `Holiday Creator Features` **is enabled in the world**.
-
-🔗 Our tutorial on [experimental items](/items/item-components).
-🔗 Documentation for [experimental items](https://bedrock.dev/docs/stable/Item)
-:::
-
-### Continue
-
-<BButton color="blue" link="#stable-items">
-    1.10 format (stable)
-</BButton> <BButton color="blue" link="#experimental-items">
-    1.16.100 format (experimental)
-</BButton>
-
----
-
 ## Stable Items
 
 This section contains troubleshooting information for stable items. Remember, you are using the `1.10` format, so you need both an RP file and a BP file for your item! If you only have a BP file, you have become confused between format versions. Please start again [here](#_1-10-vs-1-16-items).
@@ -181,7 +146,7 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.21.10",
   "minecraft:item": {
       "description": {
           "identifier": "namespace:your_item",

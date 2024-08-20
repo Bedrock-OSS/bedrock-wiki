@@ -17,7 +17,7 @@ Item IDs (not to be confused with type IDs) are an older system which are mainly
 -   Vanilla items & blocks have IDs from `-847` to `749`.
 -   All custom blocks have _increasingly negative_ IDs, starting from an ID of `-848`. These do not interfere with vanilla IDs in any way. Note that custom blocks do not currently render with their IDs. It is unknown if this is a bug or not.
 -   All non-experimental items (1.10 format) have _increasingly positive_ IDs, starting from an ID of `750`. These do not interfere with vanilla IDs in any way.
--   All experimental items (1.16.100 format) have _increasingly positive_ IDs, starting from an ID of `257`. These **WILL SHIFT VANILLA IDs** that are higher than 256. For example, `'minecraft:apple'` (ID of `257`) will be moved up to an ID of `258` if you have one experimental item.
+-   All experimental items (1.21.10 format) have _increasingly positive_ IDs, starting from an ID of `257`. These **WILL SHIFT VANILLA IDs** that are higher than 256. For example, `'minecraft:apple'` (ID of `257`) will be moved up to an ID of `258` if you have one experimental item.
 
 ## Vanilla ID List
 

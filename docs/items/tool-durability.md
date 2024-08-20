@@ -14,7 +14,7 @@ description: Add vanilla-like durability to custom tools.
 
 ## Introduction
 
-1.16.100+ items have different durability mechanic than 1.10 and 1.16 items.
+1.21.10+ items have different durability mechanic than 1.10 and 1.16 items.
 Now you need to define when will the item get durability damage and also an event that does it.
 What will be discussed on this page:
 

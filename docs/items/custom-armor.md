@@ -32,7 +32,7 @@ Create a chest piece:
 
 ```json
 {
-    "format_version": "1.16.100",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_chest",
@@ -166,7 +166,7 @@ So while the chest piece alone is great, you probably want a whole set, so from 
 
 ```json
 {
-    "format_version": "1.16.100",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_leggings",
@@ -268,7 +268,7 @@ This is just like the chest piece, just we change some of the categories and slo
 
 ```json
 {
-    "format_version": "1.16.100",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_helm",
@@ -368,7 +368,7 @@ You already know the pattern so lets make the item and attachable json files.
 
 ```json
 {
-    "format_version": "1.16.100",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_boots",
