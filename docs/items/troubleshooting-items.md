@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting Items
 category: General
-nav_order: 4
 tags:
     - help
 mentions:
@@ -14,9 +13,6 @@ mentions:
 description: Troubleshooting guide to items.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 :::tip
 This page contains troubleshooting information about _items_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
 :::
@@ -24,37 +20,6 @@ This page contains troubleshooting information about _items_. You should read ou
 ## Start Here
 
 I followed a tutorial or tried to make my own item and something is wrong! Calm down. This page will help debug common issues. Follow the buttons and prompts to learn about possible issues with your item, and tips for fixing.
-
-<Button link="#_1-10-vs-1-16-items">Continue</Button>
-
----
-
-## 1.10 vs 1.16 Items?
-
-Before starting, you need to determine whether you creating an experimental item, or a stable item.
-
-:::tip
-Versions `1.16.0` and prior are currently **stable** (Includes versions `1.16`, `1.14`, `1.13`, `1.12`, `1.10`). These **do not** require `Holiday Creator Features` to be enabled.
-
-🔗 Tutorial on [stable items](/guide/custom-item).
-🔗 Documentation for [stable items](https://bedrock.dev/docs/1.16.0.0/1.16.20.54/Item)
-
-:::
-
-:::tip
-Versions `1.16.100` and onward are **experimental**. These items **will not work unless** `Holiday Creator Features` **is enabled in the world**.
-
-🔗 Our tutorial on [experimental items](/items/item-components).
-🔗 Documentation for [experimental items](https://bedrock.dev/docs/stable/Item)
-:::
-
-### Continue
-
-<Button link="#stable-items">1.10 format (stable)</Button>
-
-<Button link="#experimental-items">1.16.100 format (experimental)</Button>
-
----
 
 ## Stable Items
 
@@ -181,7 +146,7 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
 
 ```json
 {
-  "format_version": "1.16.100",
+  "format_version": "1.21.10",
   "minecraft:item": {
       "description": {
           "identifier": "namespace:your_item",

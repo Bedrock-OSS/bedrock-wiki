@@ -1,7 +1,7 @@
 ---
-title: "Create a custom Item"
+title: Create a Custom Item
 category: Guide
-description: How to create your first custom Item
+description: How to create your first custom item.
 nav_order: 5
 prefix: "5. "
 mentions:
@@ -17,16 +17,14 @@ mentions:
     - Sprunkles317
     - ThomasOrs
     - davedavis
+    - QuazChick
 ---
 
 In Minecraft, we can create custom items, which can be dropped, traded, crafted, and otherwise used like a normal item. There is a lot of power in the system, including the ability to make food, fuel, and tools.
 
 In this tutorial we are going to learn how to create a simple "ectoplasm" item, which we will later use as a loot-table drop for our ghost entity.
 
-<br>
-<img src="/assets/images/guide/custom_item/ectoplasm_view.png" width=150>
-<br>
-<br>
+<WikiImage src="/assets/images/guide/custom_item/ectoplasm_view.png" width="150" />
 
 Conceptually, items are made up of two parts:
 
@@ -34,10 +32,6 @@ Conceptually, items are made up of two parts:
 -   The behaviors (how the item should behave)
 
 First, we will learn how to create a new simple item & define its behaviors. In the next section we will assign a texture to this item, so you can see it in game.
-
-:::warning
-This guide requires experimental features toggled on.
-:::
 
 ## Item Behavior
 
@@ -94,16 +88,16 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 
 ```json
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.10",
 	"minecraft:item": {
-		"description": {...},
-		"components": {...}
+		"description": { ... },
+		"components": { ... }
 	}
 }
 ```
 
 Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
-The format version defines which version of the Add-on system Minecraft will use to read this file. For our item, we will be using `1.16.100` to allow us to use the experimental features. For more information on format version you can check [here](/guide/format-version).
+The format version defines which version of the Add-on system Minecraft will use to read this file. For our item, we will be using `1.21.10` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
 
 The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
 
@@ -114,12 +108,14 @@ Let us look closer at the `"description"`:
 ```json
 "description": {
 	"identifier": "wiki:ectoplasm",
-	"category": "Items"
+	"menu_category": {
+        "category": "items"
+    }
 },
 ```
 
 The description key contains the `identifier` and any other information required. The `identifier` allows the file to know which item to apply the components to.
-The `category` key defines which tab of the creative inventory the item would show up in. There are four tabs to choose from: `"Nature"`, `"Equipment"`, `"Construction"` and `"Items"`. If this key is not included, then the item will not show in the creative inventory, but you can still get the item by using `/give`.
+The `category` key defines which tab of the creative inventory / recipe book the item would show up in. There are four tabs to choose from: `"construction"`, `"equipment"`, `"items"` and `"nature"`. If this key is not included, then the item will not show in the creative inventory, but you can still get the item by using `/give`.
 
 Now we can actually define the behavior of our item, under `components`. Here we simply place any components we want our item to have.
 This will be our `"minecraft:max_stack_size"` component. For other components you can use, check out our more in depth guide on Items [here](/items/item-components).
@@ -138,11 +134,13 @@ With that, we have now fully defined our item's behavior. This is what your file
 
 ```json
 {
-    "format_version": "1.16.100",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:ectoplasm",
-            "category": "Items"
+            "menu_category": {
+                "category": "items"
+            }
         },
         "components": {
             "minecraft:max_stack_size": 16
@@ -177,11 +175,9 @@ It is recommended to have your images in `.png` format and be of size `16x16`, t
 
 Your folder layout should look like this:
 
-<FolderView
-	:paths="[
-		'RP/textures/items/ectoplasm.png'
-	]"
-/>
+<FolderView :paths="[
+    'RP/textures/items/ectoplasm.png'
+]" />
 
 ### Shortname
 
@@ -195,7 +191,7 @@ All item shortnames are stored in one file called `item_texture.json` which is i
 {
 	"resource_pack_name": "Ghostly Guide",
 	"texture_name": "atlas.items",
-	"texture_data": {...}
+	"texture_data": { ... }
 }
 ```
 
@@ -223,11 +219,9 @@ To finally apply our texture to our item, we add the `minecraft:icon` component 
 <CodeHeader>ectoplasm.json/minecraft:item/</CodeHeader>
 
 ```json
-"components":{
+"components": {
 	"minecraft:max_stack_size": 16,
-	"minecraft:icon" : {
-		"texture": "wiki.ectoplasm"
-	}
+	"minecraft:icon": "wiki.ectoplasm"
 }
 ```
 
@@ -265,24 +259,25 @@ Your folder structure should look like this:
 	'BP/texts/languages.json',
 	'BP/manifest.json',
 	'BP/pack_icon.png',
-]"></FolderView>
+]" />
 
 <Spoiler title="Full ectoplasm.json">
+
 <CodeHeader>BP/items/ectoplasm.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.16.100",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:ectoplasm",
-            "category": "Items"
+            "menu_category": {
+                "category": "items"
+            }
         },
         "components": {
             "minecraft:max_stack_size": 16,
-            "minecraft:icon": {
-                "texture": "wiki.ectoplasm"
-            }
+            "minecraft:icon": "wiki.ectoplasm"
         }
     }
 }
@@ -291,6 +286,7 @@ Your folder structure should look like this:
 </Spoiler>
 
 <Spoiler title="Full item_texture.json">
+
 <CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json

@@ -8,19 +8,13 @@ mentions:
     - TheItsNameless
     - QuazChick
     - SmokeyStack
+hidden: true
 description: Re-creation of vanilla trees.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This tutorial assumes an advanced understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
-:::
-
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` for use of block tag Molang queries and to trigger block events.
 :::
 
 Creating your own tree with decaying leaves is complex, but possible! Follow this tutorial and you'll have your own in no time.
@@ -28,15 +22,12 @@ Creating your own tree with decaying leaves is complex, but possible! Follow thi
 -   Features:
 
     -   Decaying leaves
-    -   Tree Feature compatable
-    -   If leaves were broken using shears, they will drop the block
+    -   Tree Feature compatible
+    -   Leaves will drop itself when broken by a shear
     -   Leaves don't decay if placed by player
     -   Logs are strippable and rotatable
     -   Stripping logs is compatible with tools from other add-ons (if they have the `minecraft:is_axe` tag)
-    -   Saplings can be bonemealed and grow the tree (with structures)
-
--   Issues:
-    -   If you make a structure with these blocks, it will crash the game when generated using features.
+    -   Saplings can be bonemealed and grow into a tree
 
 ## Decaying Leaves
 
@@ -50,13 +41,125 @@ You will notice straight away that our custom leaves have a long list to search 
 
 Our custom leaves disables ticking when placed by the player which doesn't make the leaves decay and this removes the requirements for another duplicate leave block.
 
+### Basic JSON
+
+Let's get started. We'll start with the JSON code for the leaf block.
+
+<CodeHeader>BP/blocks/custom_leaves.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_leaves"
+        },
+        "components": {
+            "tag:wiki:custom_leaves": {},
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:geometry": {
+                "identifier": "minecraft:geometry.full_block"
+            },
+            "minecraft:custom_components": [
+                "wiki:leaves_stop_decay",
+                "wiki:leaves_on_destroyed",
+                "wiki:leaves_check"
+            ],
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:map_color": "#DDDDDD",
+            "minecraft:light_dampening": 0,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "custom_leaves",
+                    "render_method": "blend"
+                }
+            }
+        }
+    }
+}
+```
+
+### Block States
+
+We have defined the basics our custom leaf blocks need. Our custom leaf is still missing a few features such as states, permutations and the JS code for the custom components. Let's add the following block states.
+
+<CodeHeader>"minecraft:block" > "description"</CodeHeader>
+
+```json
+"states": {
+    "wiki:decay_tier": [4, 3, 2, 1, 0], // Distance in blocks to find the log
+    "wiki:should_decay": [true, false], // Used when placed by the player or with features
+    "wiki:opaque": [false, true] // Optional; makes the leaves opaque when surrounded
+}
+```
+
+### Permutations
+
+Let's add our permutation code that will help shape our block's behaviour.
+
+<CodeHeader>"minecraft:block" > "description"</CodeHeader>
+
+```json
+"permutations": [
+    {
+        "condition": "q.block_state('wiki:decay_tier') == 0",
+        "components": {
+            "minecraft:custom_components": [
+                "wiki:leaves_decay"
+            ],
+            "tag:decay_tier_0": {}
+        }
+    },
+    {
+        "condition": "q.block_state('wiki:decay_tier') == 1",
+        "components": {
+            "tag:decay_tier_1": {}
+        }
+    },
+    {
+        "condition": "q.block_state('wiki:decay_tier') == 2",
+        "components": {
+            "tag:decay_tier_2": {}
+        }
+    },
+    {
+        "condition": "q.block_state('wiki:decay_tier') == 3",
+        "components": {
+            "tag:decay_tier_3": {}
+        }
+    },
+    {
+    "condition": "q.block_state('wiki:decay_tier') == 4",
+        "components": {
+            "tag:decay_tier_4": {}
+        }
+    },
+    {
+    "condition": "q.block_state('wiki:opaque')",
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "custom_leaves",
+                    "render_method": "opaque"
+                }
+            }
+        }
+    }
+]
+```
+
 <Spoiler title="Code">
 
 <CodeHeader>BP/blocks/custom_leaves.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_leaves",
@@ -67,29 +170,16 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
             }
         },
         "components": {
-            "tag:custom_leaves": {},
+            "tag:wiki:custom_leaves": {},
             "minecraft:loot": "loot_tables/empty.json",
-            "minecraft:unit_cube": {},
-            "minecraft:on_player_placing": {
-                "event": "wiki:stop_decay"
+            "minecraft:geometry": {
+                "identifier": "minecraft:geometry.full_block"
             },
-            // Triggers event that spawns different loot
-            "minecraft:on_player_destroyed": {
-                "event": "wiki:on_destroyed"
-            },
-            // We need both of these to work with world generation
-            "minecraft:queued_ticking": {
-                "looping": true,
-                "interval_range": [0, 0],
-                "on_tick": {
-                    "event": "wiki:check"
-                }
-            },
-            "minecraft:random_ticking": {
-                "on_tick": {
-                    "event": "wiki:check"
-                }
-            },
+            "minecraft:custom_components": [
+                "wiki:leaves_stop_decay",
+                "wiki:leaves_on_destroyed",
+                "wiki:leaves_check"
+            ],
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 1
             },
@@ -215,7 +305,7 @@ Our custom leaves disables ticking when placed by the player which doesn't make 
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_log",
@@ -331,7 +421,7 @@ Here all components are the same
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_stripped_log",
@@ -409,7 +499,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_sapling",
@@ -504,7 +594,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_sapling_placer",
@@ -942,7 +1032,7 @@ Add sounds to blocks
 
 ```json
 {
-    "format_version": [1, 1, 0],
+    "format_version": "1.21.20",
     "wiki:custom_leaves": {
         "sound": "grass"
     },
@@ -967,23 +1057,23 @@ What you have created:
 -   [x] Rotatable and Stripable Logs
 
 <FolderView :paths="[
-'BP/blocks/custom_leaves.json',
-'BP/blocks/custom_log.json',
-'BP/blocks/custom_stripped_log.json',
-'BP/blocks/custom_sapling.json',
-'BP/features/custom_tree_feature.json',
-'BP/feature_rules/custom_tree_feature_rule.json',
-'BP/items/custom_sapling_placer.json',
-'BP/loot_tables/blocks/custom_leaves.json',
-'BP/loot_tables/blocks/custom_leaves_shears.json',
-'BP/loot_tables/blocks/custom_sapling.json',
-'BP/structures/custom_tree.mcstructure',
-'RP/blocks.json',
-'RP/texts/en_US.lang',
-'RP/textures/terrain_texture.json',
-'RP/models/blocks/custom_sapling.geo.json',
-'RP/textures/item_texture.json'
-]"></FolderView>
+    'BP/blocks/custom_leaves.json',
+    'BP/blocks/custom_log.json',
+    'BP/blocks/custom_stripped_log.json',
+    'BP/blocks/custom_sapling.json',
+    'BP/features/custom_tree_feature.json',
+    'BP/feature_rules/custom_tree_feature_rule.json',
+    'BP/items/custom_sapling_placer.json',
+    'BP/loot_tables/blocks/custom_leaves.json',
+    'BP/loot_tables/blocks/custom_leaves_shears.json',
+    'BP/loot_tables/blocks/custom_sapling.json',
+    'BP/structures/custom_tree.mcstructure',
+    'RP/blocks.json',
+    'RP/texts/en_US.lang',
+    'RP/textures/terrain_texture.json',
+    'RP/models/blocks/custom_sapling.geo.json',
+    'RP/textures/item_texture.json'
+]" />
 
 ![](/assets/images/blocks/custom-trees/result.png)
 

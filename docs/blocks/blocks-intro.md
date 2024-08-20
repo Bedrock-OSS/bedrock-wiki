@@ -1,6 +1,6 @@
 ---
 title: Intro to Blocks
-description: A "Hello world" guide in making blocks. Learn the block format and how to create basic custom blocks.
+description: A Hello world guide in making blocks. Learn the block format and how to create basic custom blocks.
 category: General
 nav_order: 1
 tags:
@@ -26,10 +26,7 @@ mentions:
     - QuazChick
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-:::tip FORMAT & MIN ENGINE VERSION `1.20.60`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::
 :::danger NOTE
@@ -52,7 +49,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -85,7 +82,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -137,7 +134,7 @@ If you'd like to apply a custom model, the [geometry](/blocks/block-components#g
 
 ```json
 {
-    "format_version": [1, 1, 0],
+    "format_version": "1.21.20",
     "wiki:custom_block": {
         "textures": "custom_block", // This texture shortname should be defined in `terrain_texture.json`, as shown below
         "sound": "grass"
@@ -201,7 +198,7 @@ The `blocks.json` entry would look like this:
 
 ```json
 {
-    "format_version": [1, 1, 0],
+    "format_version": "1.21.20",
     "wiki:compass_block": {
         "textures": {
             "down": "compass_block_down",

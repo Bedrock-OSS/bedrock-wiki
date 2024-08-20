@@ -1,7 +1,7 @@
 ---
-title: "Create a custom Entity"
+title: Create a Custom Entity
 category: Guide
-description: How to create your first custom Entity
+description: How to create your first custom entity.
 nav_order: 6
 prefix: "6. "
 mentions:

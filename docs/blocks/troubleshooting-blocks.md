@@ -2,20 +2,17 @@
 title: Troubleshooting Blocks
 category: General
 tags:
-  - help
+    - help
 mentions:
-  - SmokeyStack
-  - SirLich
-  - aexer0e
-  - MedicalJewel105
-  - Sprunkles137
-  - QuazChick
+    - SmokeyStack
+    - SirLich
+    - aexer0e
+    - MedicalJewel105
+    - Sprunkles137
+    - QuazChick
 description: Guide for blocks troubleshooting.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 :::tip
 This page contains troubleshooting information about _blocks_. You should read our [global troubleshooting](/guide/troubleshooting) document before continuing here.
 :::
@@ -40,30 +37,30 @@ Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is pro
 
 ```json
 {
-  "texture_name": "atlas.terrain",
-  "resource_pack_name": "wiki",
-  "padding": 8,
-  "num_mip_levels": 4,
-  "texture_data": {
-    "dirt_like": {
-      "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
-    },
-    "log_like_top": {
-      "textures": "textures/blocks/log_like_top" // You can replace this with anything, just remember the name
-    },
-    "log_like_side": {
-      "textures": "textures/blocks/log_like_side" // You can replace this with anything, just remember the name
-    },
-    "custom_grass_top": {
-      "textures": "textures/blocks/custom_grass_top" // You can replace this with anything, just remember the name
-    },
-    "custom_grass_bottom": {
-      "textures": "textures/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
-    },
-    "custom_grass_side": {
-      "textures": "textures/blocks/custom_grass_side" // You can replace this with anything, just remember the name
+    "texture_name": "atlas.terrain",
+    "resource_pack_name": "wiki",
+    "padding": 8,
+    "num_mip_levels": 4,
+    "texture_data": {
+        "dirt_like": {
+            "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
+        },
+        "log_like_top": {
+            "textures": "textures/blocks/log_like_top" // You can replace this with anything, just remember the name
+        },
+        "log_like_side": {
+            "textures": "textures/blocks/log_like_side" // You can replace this with anything, just remember the name
+        },
+        "custom_grass_top": {
+            "textures": "textures/blocks/custom_grass_top" // You can replace this with anything, just remember the name
+        },
+        "custom_grass_bottom": {
+            "textures": "textures/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
+        },
+        "custom_grass_side": {
+            "textures": "textures/blocks/custom_grass_side" // You can replace this with anything, just remember the name
+        }
     }
-  }
 }
 ```
 
@@ -75,19 +72,19 @@ Dirt like block example:
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:dirt_like"
-    },
-    "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "dirt_like",
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:dirt_like"
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "dirt_like"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
@@ -97,24 +94,24 @@ Log like block example:
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:log_like"
-    },
-    "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "log_like_side"
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:log_like"
         },
-        "end": {
-          "texture": "log_like_top"
-        },
-        "up": "end",
-        "down": "end"
-      }
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "log_like_side"
+                },
+                "end": {
+                    "texture": "log_like_top"
+                },
+                "up": "end",
+                "down": "end"
+            }
+        }
     }
-  }
 }
 ```
 
@@ -124,39 +121,44 @@ Grass-like block example:
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_grass"
-    },
-    "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "custom_grass_side"
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_grass"
         },
-        "up": {
-          "texture": "custom_grass_top"
-        },
-        "down": {
-          "texture": "custom_grass_bottom"
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "custom_grass_side"
+                },
+                "up": {
+                    "texture": "custom_grass_top"
+                },
+                "down": {
+                    "texture": "custom_grass_bottom"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
 If you followed this properly, your block should now have correct texture.
 
-## 1.2 - Texture Displays "Update" Written on Dirt
+## 1.2 - Texture Displays "?" on Dirt
 
-Problem: My custom block has turned into a dirt block with green writing on it.
+Problem: My custom block has turned into a dirt block with a question mark on it.
 
-![](/assets/images/blocks/block_tr/tr_update.png)
+<WikiImage
+    src="/assets/images/blocks/block_tr/unknown.png"
+    pixelated="true"
+    width="128"
+    class="my-4"
+/>
 
 This an `unknown` block, which appears when the block identifier is changed or if your block JSON invalid.
 
-Solution: Use a JSON linter and double check that your identifier didn't change. Ensure that you block has `minecraft:unit_cube`/`minecraft:geometry` and `minecraft:material_instances`, or an `RP/blocks.json` textures entry.
+Solution: Use a JSON linter and double check that your identifier didn't change. Ensure that you block has `minecraft:geometry` and `minecraft:material_instances`, or an `RP/blocks.json` textures entry.
 
 ---
 
@@ -174,7 +176,7 @@ Solution: Navigate to your block file. Navigate to your `material_instances` com
 
 ```json
 {
-  "format_version": "1.20.60",
+  "format_version": "1.21.20",
   "minecraft:block": {
     ...
     "components": {
@@ -199,33 +201,6 @@ Solution: Add following component to your block's code:
 ```json
 "minecraft:light_dampening": 0
 ```
-
-## 2.3 - Model Cubes Overlap in Inventory
-
-Problem: You have a block with custom geometry and it renders strange in inventory, like this:
-
-![](/assets/images/blocks/block_tr/inventory_render_cubes.png)
-
-Solution: In the inventory, block geometry is rendered from the bottom to the top, where later cubes overlap earlier cubes. To render your block correctly, you'll need to change the order of the cubes in blockbench.
-
-```
-cube_middle      cube_bottom
-cube_top     ->  cube_middle
-cube_bottom      cube_top
-```
-
-## 2.4 - Block Looks Small in Inventory
-
-Problem: Your custom 16³ block looks smaller than vanilla blocks in inventory.
-
-Solution:
-Blocks can get their visuals in two ways, either by applying textures in the `RP/blocks.json` file _OR_ in the `minecraft:material_instances` component.
-
-Using `blocks.json` causes the block to appear full sized in your inventory, but doesn't allow for custom block models or changing visuals using permutations.
-
-If your block has no model or textures active from components or permutations, it will take the textures from the `blocks.json` causing the normal full sized block model.
-
-If you want to make use of the rotation component you can't just apply it, you need to give it material instances, unit_cube or a custom model and the rotation component. This will make it rotatable, while the default state will use the `blocks.json` and shows normally.
 
 ## 3.0 - Common Content Log Errors
 

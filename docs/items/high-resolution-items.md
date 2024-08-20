@@ -6,9 +6,6 @@ mentions:
 description: Learn how to make items with high resolution texture in a proper way.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 ::: tip
 This tutorial uses attachables. If you do not know what an attachable is, read this page first: [Attachables](/items/attachables)
 :::

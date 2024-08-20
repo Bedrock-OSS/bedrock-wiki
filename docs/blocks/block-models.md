@@ -1,5 +1,6 @@
 ---
 title: Creating Block Models
+description: Learn how to set up a custom model for your block.
 category: Tutorials
 tags:
     - beginner
@@ -7,12 +8,8 @@ tags:
 mentions:
     - QuazChick
     - SmokeyStack
-description: Learn how to setup custom model for your block.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 Although custom blocks are unable to make use of vanilla [block shapes](/blocks/block-shapes), we can create our own models which follow a similar format to entity models. This tutorial will walk you through the process of creating a custom block model for a "paper bag" using [Blockbench](https://blockbench.net). You should learn the main features of Minecraft geometry tailored towards creating custom blocks from this tutorial.
 
 **NOTE:** Custom block models must be within the [model size limits](/blocks/block-components.html#geometry).
@@ -49,9 +46,8 @@ Cubes can be moved, resized and rotated from the top toolbar. Below are the two 
 
 <WikiImage
     src="/assets/images/blocks/block-models/paper_bag_cubes.png"
-    alt
+    alt=""
     width="300"
-    class="my-4"
 />
 
 ## Removing Faces
@@ -62,18 +58,16 @@ To remove a face, click on it in the preview and remove its UV.
 
 <WikiImage
     src="/assets/images/blocks/block-models/paper_bag_top_removed.png"
-    alt
+    alt=""
     width="600"
-    class="my-4"
 />
 
 Additionally, only the north and south faces of the handle should be visible. You can select multiple faces by holding Ctrl while clicking on the face names in the UV panel.
 
 <WikiImage
     src="/assets/images/blocks/block-models/paper_bag_handle_faces_removed.png"
-    alt
+    alt=""
     width="600"
-    class="my-4"
 />
 
 ## Previewing Textures
@@ -87,14 +81,10 @@ The "paper_bag" model has multiple pre-made textures, listed below:
 -   `textures/blocks/paper_bag.png`
 
     <WikiImage src="/assets/images/blocks/block-models/paper_bag.png" style="background-color: rgb(0,0,0,0.15);" pixelated width="128"/>
-<br>
-<br>
 
 -   `textures/blocks/paper_bag_bottom_fold.png`
 
     <WikiImage src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png" style="background-color: rgb(0,0,0,0.15);" pixelated width="128"/>
-<br>
-<br>
 
 -   `textures/blocks/paper_bag_side_gusset.png`
 
@@ -109,9 +99,8 @@ These can be imported into Blockbench and then dragged onto each appropriate blo
 
 <WikiImage
     src="/assets/images/blocks/block-models/preview_textures_applied.png"
-    alt
+    alt=""
     width="300"
-    class="my-4"
 />
 
 ## Rearranging UVs
@@ -119,17 +108,17 @@ These can be imported into Blockbench and then dragged onto each appropriate blo
 To get textures into the right positions, you may need to reposition/resize your faces' UV mapping. This can be done by selecting the affected face and using the UV panel.
 
 <WikiImage
-  src="/assets/images/blocks/block-models/paper_bag_handle_uv.png"
-  alt
-  width="300"
-  class="my-4"
+    src="/assets/images/blocks/block-models/paper_bag_handle_uv.png"
+    alt=""
+    width="300"
 />
+
 <br>
+
 <WikiImage
-  src="/assets/images/blocks/block-models/paper_bag_final.png"
-  alt
-  width="300"
-  class="my-4"
+    src="/assets/images/blocks/block-models/paper_bag_final.png"
+    alt=""
+    width="300"
 />
 
 ## Changing Material Instances
@@ -150,11 +139,17 @@ Once exported from `File > Export > Export Bedrock Geometry` into your `RP/model
 
 Then, textures can be applied by material instances through their `RP/textures/terrian_texture.json` shortname. In this example, the paper_bag shouldn't block light, so its light dampening is set to 0.
 
+:::warning BLOCKS.JSON
+Adding [`minecraft:geometry`](/blocks/block-components#geometry) to your block will cause the game to ignore texture definitions in `RP/blocks.json`.
+
+If you have textures for your block defined in that file, make sure you migrate them to [`minecraft:material_instances`](/blocks/block-components#material-instances) for them to appear.
+:::
+
 <CodeHeader>BP/blocks/paper_bag.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.20.60",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:paper_bag",
@@ -187,3 +182,27 @@ Then, textures can be applied by material instances through their `RP/textures/t
     }
 }
 ```
+
+## What's Next?
+
+<CardGrid>
+<Card
+    title="Create Culling Rules"
+    link="/blocks/block-culling"
+    image="assets/images/homepage/crafting_table_0.png"
+>
+
+Creating culling rules for your model can aid performance by telling the game to unrender
+hidden parts of your model.
+
+</Card>
+<Card
+    title="Conditional Bone Rendering"
+    link="/blocks/block-components#bone-visibility"
+    image="assets/images/homepage/scripting.png"
+>
+
+Use the "bone_visibility" parameter of the [geometry](/blocks/block-components#geometry) component to render different model bones based on your block's current permutation.
+
+</Card>
+</CardGrid>

@@ -12,9 +12,6 @@ mentions:
 description: Vanilla item identifiers effects.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 :::danger
 This method no longer works after 1.18.30.
 :::
