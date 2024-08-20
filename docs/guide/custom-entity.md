@@ -1,9 +1,9 @@
 ---
-title: 'Create a custom Entity'
+title: Create a Custom Entity
 category: Guide
-description: How to create your first custom Entity
+description: How to create your first custom entity.
 nav_order: 6
-prefix: '6. '
+prefix: "6. "
 mentions:
     - ThijsHankelMC
     - TheItsNameless
@@ -254,92 +254,92 @@ In general, important behaviors will have a priority of `0` or `1`.
 
 ```json
 {
-	"format_version": "1.16.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "wiki:ghost",
-			"is_summonable": true,
-			"is_spawnable": true,
-			"is_experimental": false
-		},
-		"components": {
-			"minecraft:type_family": {
-				"family": ["ghost", "monster"]
-			},
-			"minecraft:health": {
-				"value": 20,
-				"max": 20
-			},
-			"minecraft:attack": {
-				"damage": 3
-			},
-			"minecraft:movement": {
-				"value": 0.2
-			},
-			"minecraft:collision_box": {
-				"width": 0.8,
-				"height": 1.8
-			},
-			"minecraft:loot": {
-				"table": "loot_tables/entities/ghost.json"
-			},
-			"minecraft:physics": {},
-			"minecraft:jump.static": {},
-			"minecraft:movement.basic": {},
-			"minecraft:navigation.walk": {
-				"can_walk": true,
-				"avoid_sun": true,
-				"can_pass_doors": true,
-				"can_open_doors": true
-			},
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": ["ghost", "monster"]
+            },
+            "minecraft:health": {
+                "value": 20,
+                "max": 20
+            },
+            "minecraft:attack": {
+                "damage": 3
+            },
+            "minecraft:movement": {
+                "value": 0.2
+            },
+            "minecraft:collision_box": {
+                "width": 0.8,
+                "height": 1.8
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/ghost.json"
+            },
+            "minecraft:physics": {},
+            "minecraft:jump.static": {},
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.walk": {
+                "can_walk": true,
+                "avoid_sun": true,
+                "can_pass_doors": true,
+                "can_open_doors": true
+            },
 
-			"minecraft:behavior.random_stroll": {
-				"priority": 6,
-				"speed_multiplier": 1
-			},
-			"minecraft:behavior.random_look_around": {
-				"priority": 7
-			},
-			"minecraft:behavior.look_at_player": {
-				"priority": 7,
-				"look_distance": 6,
-				"probability": 0.02
-			},
-			"minecraft:behavior.hurt_by_target": {
-				"priority": 1
-			},
-			"minecraft:behavior.nearest_attackable_target": {
-				"priority": 2,
-				"within_radius": 25,
-				"reselect_targets": true,
-				"entity_types": [
-					{
-						"filters": {
-							"any_of": [
-								{
-									"test": "is_family",
-									"subject": "other",
-									"value": "player"
-								}
-							]
-						},
-						"max_dist": 35
-					}
-				]
-			},
-			"minecraft:behavior.delayed_attack": {
-				"priority": 0,
-				"attack_once": false,
-				"track_target": true,
-				"require_complete_path": false,
-				"random_stop_interval": 0,
-				"reach_multiplier": 1.5,
-				"speed_multiplier": 1,
-				"attack_duration": 0.75,
-				"hit_delay_pct": 0.5
-			}
-		}
-	}
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 1
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 7
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 1
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "within_radius": 25,
+                "reselect_targets": true,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                }
+                            ]
+                        },
+                        "max_dist": 35
+                    }
+                ]
+            },
+            "minecraft:behavior.delayed_attack": {
+                "priority": 0,
+                "attack_once": false,
+                "track_target": true,
+                "require_complete_path": false,
+                "random_stop_interval": 0,
+                "reach_multiplier": 1.5,
+                "speed_multiplier": 1,
+                "attack_duration": 0.75,
+                "hit_delay_pct": 0.5
+            }
+        }
+    }
 }
 ```
 
@@ -370,70 +370,70 @@ This file is automatically generated by Blockbench for us, so there is no need t
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:geometry": [
-		{
-			"description": {
-				"identifier": "geometry.ghost",
-				"texture_width": 64,
-				"texture_height": 64,
-				"visible_bounds_width": 3,
-				"visible_bounds_height": 3.5,
-				"visible_bounds_offset": [0, 1.25, 0]
-			},
-			"bones": [
-				{ "name": "root", "pivot": [0, 3, 0] },
-				{
-					"name": "body",
-					"parent": "root",
-					"pivot": [0, 4.625, 0],
-					"cubes": [
-						{
-							"origin": [-4, 3, -4],
-							"size": [8, 13, 8],
-							"uv": [0, 20]
-						}
-					]
-				},
-				{
-					"name": "leftArm",
-					"parent": "body",
-					"pivot": [4.6, 15.5, 0.5],
-					"cubes": [
-						{
-							"origin": [4.1, 7, -1],
-							"size": [3, 9, 3],
-							"uv": [32, 32]
-						}
-					]
-				},
-				{
-					"name": "rightArm",
-					"parent": "body",
-					"pivot": [-4.5, 15.5, 0.5],
-					"cubes": [
-						{
-							"origin": [-7.1, 7, -1],
-							"size": [3, 9, 3],
-							"uv": [32, 20]
-						}
-					]
-				},
-				{
-					"name": "head",
-					"parent": "body",
-					"pivot": [0, 16, 0],
-					"cubes": [
-						{
-							"origin": [-5, 16, -5],
-							"size": [10, 10, 10],
-							"uv": [0, 0]
-						}
-					]
-				}
-			]
-		}
-	]
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.ghost",
+                "texture_width": 64,
+                "texture_height": 64,
+                "visible_bounds_width": 3,
+                "visible_bounds_height": 3.5,
+                "visible_bounds_offset": [0, 1.25, 0]
+            },
+            "bones": [
+                { "name": "root", "pivot": [0, 3, 0] },
+                {
+                    "name": "body",
+                    "parent": "root",
+                    "pivot": [0, 4.625, 0],
+                    "cubes": [
+                        {
+                            "origin": [-4, 3, -4],
+                            "size": [8, 13, 8],
+                            "uv": [0, 20]
+                        }
+                    ]
+                },
+                {
+                    "name": "leftArm",
+                    "parent": "body",
+                    "pivot": [4.6, 15.5, 0.5],
+                    "cubes": [
+                        {
+                            "origin": [4.1, 7, -1],
+                            "size": [3, 9, 3],
+                            "uv": [32, 32]
+                        }
+                    ]
+                },
+                {
+                    "name": "rightArm",
+                    "parent": "body",
+                    "pivot": [-4.5, 15.5, 0.5],
+                    "cubes": [
+                        {
+                            "origin": [-7.1, 7, -1],
+                            "size": [3, 9, 3],
+                            "uv": [32, 20]
+                        }
+                    ]
+                },
+                {
+                    "name": "head",
+                    "parent": "body",
+                    "pivot": [0, 16, 0],
+                    "cubes": [
+                        {
+                            "origin": [-5, 16, -5],
+                            "size": [10, 10, 10],
+                            "uv": [0, 0]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -447,7 +447,9 @@ Our entity now has its shape, but it also needs a texture. This texture can also
 
 ![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png">Download texture here</BButton>
+<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png">
+    Download texture here
+</BButton>
 
 You may recall, when we made our item, we assigned a shortname to our texture to reference later. We will be doing something similar for our entity within our entity file, so make sure you keep the file path to the texture.
 
@@ -485,115 +487,115 @@ If not, ensure that when you are referencing the animation in your entity file, 
 
 ```json
 {
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.ghost.idle": {
-			"loop": true,
-			"animation_length": 3,
-			"bones": {
-				"body": {
-					"rotation": { "0.0": [10, 0, 0], "3.0": [10, 0, 0] },
-					"position": {
-						"0.0": [0, 0, 0],
-						"1.5": [0, 1, 0],
-						"3.0": [0, 0, 0]
-					}
-				},
-				"leftArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"1.5": [-5, 0, 0],
-						"3.0": [-10, 0, 0]
-					}
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"1.5": [-5, 0, 0],
-						"3.0": [-10, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": {
-						"0.0": [-7.5, 0, 0],
-						"1.5": [-2.5, 0, 0],
-						"3.0": [-7.5, 0, 0]
-					}
-				}
-			}
-		},
-		"animation.ghost.attack": {
-			"animation_length": 0.75,
-			"bones": {
-				"body": {
-					"rotation": {
-						"0.0": [10, 0, 0],
-						"0.2917": [10, 15, 0],
-						"0.5": [22.5, -12.5, 0],
-						"0.75": [10, 0, 0]
-					},
-					"position": {
-						"0.0": [0, 0, 0],
-						"0.2917": [0, 0, 3],
-						"0.5": [0, 0, -3],
-						"0.75": [0, 0, 0]
-					}
-				},
-				"leftArm": {
-					"rotation": { "0.0": [-10, 0, 0], "0.75": [-10, 0, 0] }
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"0.2083": [-10, 0, 0],
-						"0.2917": [-10, 62.5, 117.5],
-						"0.5": [-80, -17.5, 22.5],
-						"0.75": [-10, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": { "0.0": [-7.5, 0, 0], "0.75": [-7.5, 0, 0] }
-				}
-			}
-		},
-		"animation.ghost.move": {
-			"loop": true,
-			"animation_length": 1,
-			"bones": {
-				"body": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.25": [15, -2.5, 0],
-						"0.5": [15, 0, 0],
-						"0.75": [15, 2.5, 0],
-						"1.0": [15, 0, 0]
-					},
-					"position": [0, 0, 0]
-				},
-				"leftArm": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.5": [20, 0, 0],
-						"1.0": [15, 0, 0]
-					}
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.5": [20, 0, 0],
-						"1.0": [15, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": {
-						"0.0": [-12.5, 0, 0],
-						"0.5": [-15, 0, 0],
-						"1.0": [-12.5, 0, 0]
-					}
-				}
-			}
-		}
-	}
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.ghost.idle": {
+            "loop": true,
+            "animation_length": 3,
+            "bones": {
+                "body": {
+                    "rotation": { "0.0": [10, 0, 0], "3.0": [10, 0, 0] },
+                    "position": {
+                        "0.0": [0, 0, 0],
+                        "1.5": [0, 1, 0],
+                        "3.0": [0, 0, 0]
+                    }
+                },
+                "leftArm": {
+                    "rotation": {
+                        "0.0": [-10, 0, 0],
+                        "1.5": [-5, 0, 0],
+                        "3.0": [-10, 0, 0]
+                    }
+                },
+                "rightArm": {
+                    "rotation": {
+                        "0.0": [-10, 0, 0],
+                        "1.5": [-5, 0, 0],
+                        "3.0": [-10, 0, 0]
+                    }
+                },
+                "head": {
+                    "rotation": {
+                        "0.0": [-7.5, 0, 0],
+                        "1.5": [-2.5, 0, 0],
+                        "3.0": [-7.5, 0, 0]
+                    }
+                }
+            }
+        },
+        "animation.ghost.attack": {
+            "animation_length": 0.75,
+            "bones": {
+                "body": {
+                    "rotation": {
+                        "0.0": [10, 0, 0],
+                        "0.2917": [10, 15, 0],
+                        "0.5": [22.5, -12.5, 0],
+                        "0.75": [10, 0, 0]
+                    },
+                    "position": {
+                        "0.0": [0, 0, 0],
+                        "0.2917": [0, 0, 3],
+                        "0.5": [0, 0, -3],
+                        "0.75": [0, 0, 0]
+                    }
+                },
+                "leftArm": {
+                    "rotation": { "0.0": [-10, 0, 0], "0.75": [-10, 0, 0] }
+                },
+                "rightArm": {
+                    "rotation": {
+                        "0.0": [-10, 0, 0],
+                        "0.2083": [-10, 0, 0],
+                        "0.2917": [-10, 62.5, 117.5],
+                        "0.5": [-80, -17.5, 22.5],
+                        "0.75": [-10, 0, 0]
+                    }
+                },
+                "head": {
+                    "rotation": { "0.0": [-7.5, 0, 0], "0.75": [-7.5, 0, 0] }
+                }
+            }
+        },
+        "animation.ghost.move": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {
+                "body": {
+                    "rotation": {
+                        "0.0": [15, 0, 0],
+                        "0.25": [15, -2.5, 0],
+                        "0.5": [15, 0, 0],
+                        "0.75": [15, 2.5, 0],
+                        "1.0": [15, 0, 0]
+                    },
+                    "position": [0, 0, 0]
+                },
+                "leftArm": {
+                    "rotation": {
+                        "0.0": [15, 0, 0],
+                        "0.5": [20, 0, 0],
+                        "1.0": [15, 0, 0]
+                    }
+                },
+                "rightArm": {
+                    "rotation": {
+                        "0.0": [15, 0, 0],
+                        "0.5": [20, 0, 0],
+                        "1.0": [15, 0, 0]
+                    }
+                },
+                "head": {
+                    "rotation": {
+                        "0.0": [-12.5, 0, 0],
+                        "0.5": [-15, 0, 0],
+                        "1.0": [-12.5, 0, 0]
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -641,7 +643,7 @@ You can see under `transitions`, we have a condition, which when true will trans
 
 ```json
 {
-	"attacking": "q.is_delayed_attacking"
+    "attacking": "q.is_delayed_attacking"
 }
 ```
 
@@ -695,52 +697,52 @@ Our file will be called `ghost.ac.json` and will be placed in `RP/animation_cont
 
 ```json
 {
-	"format_version": "1.12.0",
-	"animation_controllers": {
-		"controller.animation.ghost.attack": {
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"attacking": "q.is_delayed_attacking"
-						}
-					]
-				},
-				"attacking": {
-					"blend_transition": 0.2,
-					"animations": ["attack"],
-					"transitions": [
-						{
-							"default": "!q.is_delayed_attacking"
-						}
-					]
-				}
-			}
-		},
-		"controller.animation.ghost.walk": {
-			"initial_state": "standing",
-			"states": {
-				"standing": {
-					"blend_transition": 0.2,
-					"animations": ["idle"],
-					"transitions": [
-						{
-							"moving": "q.modified_move_speed > 0.1"
-						}
-					]
-				},
-				"moving": {
-					"blend_transition": 0.2,
-					"animations": ["move"],
-					"transitions": [
-						{
-							"standing": "q.modified_move_speed < 0.1"
-						}
-					]
-				}
-			}
-		}
-	}
+    "format_version": "1.12.0",
+    "animation_controllers": {
+        "controller.animation.ghost.attack": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "attacking": "q.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "attacking": {
+                    "blend_transition": 0.2,
+                    "animations": ["attack"],
+                    "transitions": [
+                        {
+                            "default": "!q.is_delayed_attacking"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.ghost.walk": {
+            "initial_state": "standing",
+            "states": {
+                "standing": {
+                    "blend_transition": 0.2,
+                    "animations": ["idle"],
+                    "transitions": [
+                        {
+                            "moving": "q.modified_move_speed > 0.1"
+                        }
+                    ]
+                },
+                "moving": {
+                    "blend_transition": 0.2,
+                    "animations": ["move"],
+                    "transitions": [
+                        {
+                            "standing": "q.modified_move_speed < 0.1"
+                        }
+                    ]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -755,12 +757,12 @@ Our client file will go in `RP/entity/` and we name this file `ghost.ce.json`. T
 
 ```json
 {
-	"format_version": "1.10.0",
-	"minecraft:client_entity": {
-		"description": {
-			"identifier": "wiki:ghost"
-		}
-	}
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost"
+        }
+    }
 }
 ```
 
@@ -780,21 +782,21 @@ For us to now use these resources, we need to define a reference to them with a 
 
 ```json
 {
-	"format_version": "1.10.0",
-	"minecraft:client_entity": {
-		"description": {
-			"identifier": "wiki:ghost",
-			"materials": {
-				"default": "entity_alphatest"
-			},
-			"textures": {
-				"default": "textures/entity/ghost"
-			},
-			"geometry": {
-				"default": "geometry.ghost"
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/ghost"
+            },
+            "geometry": {
+                "default": "geometry.ghost"
+            }
+        }
+    }
 }
 ```
 
@@ -809,18 +811,18 @@ The file is called `ghost.rc.json` and is under `RP/render_controllers/`:
 
 ```json
 {
-	"format_version": "1.10.0",
-	"render_controllers": {
-		"controller.render.ghost": {
-			"geometry": "geometry.default",
-			"materials": [
-				{
-					"*": "material.default"
-				}
-			],
-			"textures": ["texture.default"]
-		}
-	}
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.ghost": {
+            "geometry": "geometry.default",
+            "materials": [
+                {
+                    "*": "material.default"
+                }
+            ],
+            "textures": ["texture.default"]
+        }
+    }
 }
 ```
 
@@ -845,22 +847,22 @@ With that our entity file should look like this.
 
 ```json
 {
-	"format_version": "1.10.0",
-	"minecraft:client_entity": {
-		"description": {
-			"identifier": "wiki:ghost",
-			"materials": {
-				"default": "entity_alphatest"
-			},
-			"textures": {
-				"default": "textures/entity/ghost"
-			},
-			"geometry": {
-				"default": "geometry.ghost"
-			},
-			"render_controllers": ["controller.render.ghost"]
-		}
-	}
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/ghost"
+            },
+            "geometry": {
+                "default": "geometry.ghost"
+            },
+            "render_controllers": ["controller.render.ghost"]
+        }
+    }
 }
 ```
 
@@ -930,36 +932,36 @@ With that, we have completed our entity client file.
 
 ```json
 {
-	"format_version": "1.10.0",
-	"minecraft:client_entity": {
-		"description": {
-			"identifier": "wiki:ghost",
-			"materials": {
-				"default": "entity_alphatest"
-			},
-			"textures": {
-				"default": "textures/entity/ghost"
-			},
-			"geometry": {
-				"default": "geometry.ghost"
-			},
-			"scripts": {
-				"animate": ["walk_controller", "attack_controller"]
-			},
-			"animations": {
-				"walk_controller": "controller.animation.ghost.walk",
-				"attack_controller": "controller.animation.ghost.attack",
-				"attack": "animation.ghost.attack",
-				"idle": "animation.ghost.idle",
-				"move": "animation.ghost.move"
-			},
-			"spawn_egg": {
-				"overlay_color": "#bdd1d1",
-				"base_color": "#9fb3b3"
-			},
-			"render_controllers": ["controller.render.ghost"]
-		}
-	}
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/ghost"
+            },
+            "geometry": {
+                "default": "geometry.ghost"
+            },
+            "scripts": {
+                "animate": ["walk_controller", "attack_controller"]
+            },
+            "animations": {
+                "walk_controller": "controller.animation.ghost.walk",
+                "attack_controller": "controller.animation.ghost.attack",
+                "attack": "animation.ghost.attack",
+                "idle": "animation.ghost.idle",
+                "move": "animation.ghost.move"
+            },
+            "spawn_egg": {
+                "overlay_color": "#bdd1d1",
+                "base_color": "#9fb3b3"
+            },
+            "render_controllers": ["controller.render.ghost"]
+        }
+    }
 }
 ```
 
@@ -1009,92 +1011,92 @@ Your folder structure should look like this:
 
 ```json
 {
-	"format_version": "1.16.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "wiki:ghost",
-			"is_summonable": true,
-			"is_spawnable": true,
-			"is_experimental": false
-		},
-		"components": {
-			"minecraft:type_family": {
-				"family": ["ghost", "monster"]
-			},
-			"minecraft:health": {
-				"value": 20,
-				"max": 20
-			},
-			"minecraft:attack": {
-				"damage": 3
-			},
-			"minecraft:movement": {
-				"value": 0.2
-			},
-			"minecraft:collision_box": {
-				"width": 0.8,
-				"height": 1.8
-			},
-			"minecraft:loot": {
-				"table": "loot_tables/entities/ghost.json"
-			},
-			"minecraft:physics": {},
-			"minecraft:jump.static": {},
-			"minecraft:movement.basic": {},
-			"minecraft:navigation.walk": {
-				"can_walk": true,
-				"avoid_sun": true,
-				"can_pass_doors": true,
-				"can_open_doors": true
-			},
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": ["ghost", "monster"]
+            },
+            "minecraft:health": {
+                "value": 20,
+                "max": 20
+            },
+            "minecraft:attack": {
+                "damage": 3
+            },
+            "minecraft:movement": {
+                "value": 0.2
+            },
+            "minecraft:collision_box": {
+                "width": 0.8,
+                "height": 1.8
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/ghost.json"
+            },
+            "minecraft:physics": {},
+            "minecraft:jump.static": {},
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.walk": {
+                "can_walk": true,
+                "avoid_sun": true,
+                "can_pass_doors": true,
+                "can_open_doors": true
+            },
 
-			"minecraft:behavior.random_stroll": {
-				"priority": 6,
-				"speed_multiplier": 1
-			},
-			"minecraft:behavior.random_look_around": {
-				"priority": 7
-			},
-			"minecraft:behavior.look_at_player": {
-				"priority": 7,
-				"look_distance": 6,
-				"probability": 0.02
-			},
-			"minecraft:behavior.hurt_by_target": {
-				"priority": 1
-			},
-			"minecraft:behavior.nearest_attackable_target": {
-				"priority": 2,
-				"within_radius": 25,
-				"reselect_targets": true,
-				"entity_types": [
-					{
-						"filters": {
-							"any_of": [
-								{
-									"test": "is_family",
-									"subject": "other",
-									"value": "player"
-								}
-							]
-						},
-						"max_dist": 35
-					}
-				]
-			},
-			"minecraft:behavior.delayed_attack": {
-				"priority": 0,
-				"attack_once": false,
-				"track_target": true,
-				"require_complete_path": false,
-				"random_stop_interval": 0,
-				"reach_multiplier": 1.5,
-				"speed_multiplier": 1,
-				"attack_duration": 0.75,
-				"hit_delay_pct": 0.5
-			}
-		}
-	}
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 1
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 7
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 1
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "within_radius": 25,
+                "reselect_targets": true,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                }
+                            ]
+                        },
+                        "max_dist": 35
+                    }
+                ]
+            },
+            "minecraft:behavior.delayed_attack": {
+                "priority": 0,
+                "attack_once": false,
+                "track_target": true,
+                "require_complete_path": false,
+                "random_stop_interval": 0,
+                "reach_multiplier": 1.5,
+                "speed_multiplier": 1,
+                "attack_duration": 0.75,
+                "hit_delay_pct": 0.5
+            }
+        }
+    }
 }
 ```
 
@@ -1106,36 +1108,36 @@ Your folder structure should look like this:
 
 ```json
 {
-	"format_version": "1.10.0",
-	"minecraft:client_entity": {
-		"description": {
-			"identifier": "wiki:ghost",
-			"materials": {
-				"default": "entity_alphatest"
-			},
-			"textures": {
-				"default": "textures/entity/ghost"
-			},
-			"geometry": {
-				"default": "geometry.ghost"
-			},
-			"scripts": {
-				"animate": ["walk_controller", "attack_controller"]
-			},
-			"animations": {
-				"walk_controller": "controller.animation.ghost.walk",
-				"attack_controller": "controller.animation.ghost.attack",
-				"attack": "animation.ghost.attack",
-				"idle": "animation.ghost.idle",
-				"move": "animation.ghost.move"
-			},
-			"spawn_egg": {
-				"overlay_color": "#bdd1d1",
-				"base_color": "#9fb3b3"
-			},
-			"render_controllers": ["controller.render.ghost"]
-		}
-	}
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/ghost"
+            },
+            "geometry": {
+                "default": "geometry.ghost"
+            },
+            "scripts": {
+                "animate": ["walk_controller", "attack_controller"]
+            },
+            "animations": {
+                "walk_controller": "controller.animation.ghost.walk",
+                "attack_controller": "controller.animation.ghost.attack",
+                "attack": "animation.ghost.attack",
+                "idle": "animation.ghost.idle",
+                "move": "animation.ghost.move"
+            },
+            "spawn_egg": {
+                "overlay_color": "#bdd1d1",
+                "base_color": "#9fb3b3"
+            },
+            "render_controllers": ["controller.render.ghost"]
+        }
+    }
 }
 ```
 
@@ -1147,70 +1149,70 @@ Your folder structure should look like this:
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:geometry": [
-		{
-			"description": {
-				"identifier": "geometry.ghost",
-				"texture_width": 64,
-				"texture_height": 64,
-				"visible_bounds_width": 3,
-				"visible_bounds_height": 3.5,
-				"visible_bounds_offset": [0, 1.25, 0]
-			},
-			"bones": [
-				{ "name": "root", "pivot": [0, 3, 0] },
-				{
-					"name": "body",
-					"parent": "root",
-					"pivot": [0, 4.625, 0],
-					"cubes": [
-						{
-							"origin": [-4, 3, -4],
-							"size": [8, 13, 8],
-							"uv": [0, 20]
-						}
-					]
-				},
-				{
-					"name": "leftArm",
-					"parent": "body",
-					"pivot": [4.6, 15.5, 0.5],
-					"cubes": [
-						{
-							"origin": [4.1, 7, -1],
-							"size": [3, 9, 3],
-							"uv": [32, 32]
-						}
-					]
-				},
-				{
-					"name": "rightArm",
-					"parent": "body",
-					"pivot": [-4.5, 15.5, 0.5],
-					"cubes": [
-						{
-							"origin": [-7.1, 7, -1],
-							"size": [3, 9, 3],
-							"uv": [32, 20]
-						}
-					]
-				},
-				{
-					"name": "head",
-					"parent": "body",
-					"pivot": [0, 16, 0],
-					"cubes": [
-						{
-							"origin": [-5, 16, -5],
-							"size": [10, 10, 10],
-							"uv": [0, 0]
-						}
-					]
-				}
-			]
-		}
-	]
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.ghost",
+                "texture_width": 64,
+                "texture_height": 64,
+                "visible_bounds_width": 3,
+                "visible_bounds_height": 3.5,
+                "visible_bounds_offset": [0, 1.25, 0]
+            },
+            "bones": [
+                { "name": "root", "pivot": [0, 3, 0] },
+                {
+                    "name": "body",
+                    "parent": "root",
+                    "pivot": [0, 4.625, 0],
+                    "cubes": [
+                        {
+                            "origin": [-4, 3, -4],
+                            "size": [8, 13, 8],
+                            "uv": [0, 20]
+                        }
+                    ]
+                },
+                {
+                    "name": "leftArm",
+                    "parent": "body",
+                    "pivot": [4.6, 15.5, 0.5],
+                    "cubes": [
+                        {
+                            "origin": [4.1, 7, -1],
+                            "size": [3, 9, 3],
+                            "uv": [32, 32]
+                        }
+                    ]
+                },
+                {
+                    "name": "rightArm",
+                    "parent": "body",
+                    "pivot": [-4.5, 15.5, 0.5],
+                    "cubes": [
+                        {
+                            "origin": [-7.1, 7, -1],
+                            "size": [3, 9, 3],
+                            "uv": [32, 20]
+                        }
+                    ]
+                },
+                {
+                    "name": "head",
+                    "parent": "body",
+                    "pivot": [0, 16, 0],
+                    "cubes": [
+                        {
+                            "origin": [-5, 16, -5],
+                            "size": [10, 10, 10],
+                            "uv": [0, 0]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -1222,115 +1224,115 @@ Your folder structure should look like this:
 
 ```json
 {
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.ghost.idle": {
-			"loop": true,
-			"animation_length": 3,
-			"bones": {
-				"body": {
-					"rotation": { "0.0": [10, 0, 0], "3.0": [10, 0, 0] },
-					"position": {
-						"0.0": [0, 0, 0],
-						"1.5": [0, 1, 0],
-						"3.0": [0, 0, 0]
-					}
-				},
-				"leftArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"1.5": [-5, 0, 0],
-						"3.0": [-10, 0, 0]
-					}
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"1.5": [-5, 0, 0],
-						"3.0": [-10, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": {
-						"0.0": [-7.5, 0, 0],
-						"1.5": [-2.5, 0, 0],
-						"3.0": [-7.5, 0, 0]
-					}
-				}
-			}
-		},
-		"animation.ghost.attack": {
-			"animation_length": 0.75,
-			"bones": {
-				"body": {
-					"rotation": {
-						"0.0": [10, 0, 0],
-						"0.2917": [10, 15, 0],
-						"0.5": [22.5, -12.5, 0],
-						"0.75": [10, 0, 0]
-					},
-					"position": {
-						"0.0": [0, 0, 0],
-						"0.2917": [0, 0, 3],
-						"0.5": [0, 0, -3],
-						"0.75": [0, 0, 0]
-					}
-				},
-				"leftArm": {
-					"rotation": { "0.0": [-10, 0, 0], "0.75": [-10, 0, 0] }
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [-10, 0, 0],
-						"0.2083": [-10, 0, 0],
-						"0.2917": [-10, 62.5, 117.5],
-						"0.5": [-80, -17.5, 22.5],
-						"0.75": [-10, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": { "0.0": [-7.5, 0, 0], "0.75": [-7.5, 0, 0] }
-				}
-			}
-		},
-		"animation.ghost.move": {
-			"loop": true,
-			"animation_length": 1,
-			"bones": {
-				"body": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.25": [15, -2.5, 0],
-						"0.5": [15, 0, 0],
-						"0.75": [15, 2.5, 0],
-						"1.0": [15, 0, 0]
-					},
-					"position": [0, 0, 0]
-				},
-				"leftArm": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.5": [20, 0, 0],
-						"1.0": [15, 0, 0]
-					}
-				},
-				"rightArm": {
-					"rotation": {
-						"0.0": [15, 0, 0],
-						"0.5": [20, 0, 0],
-						"1.0": [15, 0, 0]
-					}
-				},
-				"head": {
-					"rotation": {
-						"0.0": [-12.5, 0, 0],
-						"0.5": [-15, 0, 0],
-						"1.0": [-12.5, 0, 0]
-					}
-				}
-			}
-		}
-	}
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.ghost.idle": {
+            "loop": true,
+            "animation_length": 3,
+            "bones": {
+                "body": {
+                    "rotation": { "0.0": [10, 0, 0], "3.0": [10, 0, 0] },
+                    "position": {
+                        "0.0": [0, 0, 0],
+                        "1.5": [0, 1, 0],
+                        "3.0": [0, 0, 0]
+                    }
+                },
+                "leftArm": {
+                    "rotation": {
+                        "0.0": [-10, 0, 0],
+                        "1.5": [-5, 0, 0],
+                        "3.0": [-10, 0, 0]
+                    }
+                },
+                "rightArm": {
+                    "rotation": {
+                        "0.0": [-10, 0, 0],
+                        "1.5": [-5, 0, 0],
+                        "3.0": [-10, 0, 0]
+                    }
+                },
+                "head": {
+                    "rotation": {
+                        "0.0": [-7.5, 0, 0],
+                        "1.5": [-2.5, 0, 0],
+                        "3.0": [-7.5, 0, 0]
+                    }
+                }
+            }
+        },
+        "animation.ghost.attack": {
+            "animation_length": 0.75,
+            "bones": {
+                "body": {
+                    "rotation": {
+                        "0.0": [10, 0, 0],
+                        "0.2917": [10, 15, 0],
+                        "0.5": [22.5, -12.5, 0],
+                        "0.75": [10, 0, 0]
+                    },
+                    "position": {
+                        "0.0": [0, 0, 0],
+                        "0.2917": [0, 0, 3],
+                        "0.5": [0, 0, -3],
+                        "0.75": [0, 0, 0]
+                    }
+                },
+                "leftArm": {
+                    "rotation": { "0.0": [-10, 0, 0], "0.75": [-10, 0, 0] }
+                },
+                "rightArm": {
+                    "rotation": {
+                        "0.0": [-10, 0, 0],
+                        "0.2083": [-10, 0, 0],
+                        "0.2917": [-10, 62.5, 117.5],
+                        "0.5": [-80, -17.5, 22.5],
+                        "0.75": [-10, 0, 0]
+                    }
+                },
+                "head": {
+                    "rotation": { "0.0": [-7.5, 0, 0], "0.75": [-7.5, 0, 0] }
+                }
+            }
+        },
+        "animation.ghost.move": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {
+                "body": {
+                    "rotation": {
+                        "0.0": [15, 0, 0],
+                        "0.25": [15, -2.5, 0],
+                        "0.5": [15, 0, 0],
+                        "0.75": [15, 2.5, 0],
+                        "1.0": [15, 0, 0]
+                    },
+                    "position": [0, 0, 0]
+                },
+                "leftArm": {
+                    "rotation": {
+                        "0.0": [15, 0, 0],
+                        "0.5": [20, 0, 0],
+                        "1.0": [15, 0, 0]
+                    }
+                },
+                "rightArm": {
+                    "rotation": {
+                        "0.0": [15, 0, 0],
+                        "0.5": [20, 0, 0],
+                        "1.0": [15, 0, 0]
+                    }
+                },
+                "head": {
+                    "rotation": {
+                        "0.0": [-12.5, 0, 0],
+                        "0.5": [-15, 0, 0],
+                        "1.0": [-12.5, 0, 0]
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -1342,52 +1344,52 @@ Your folder structure should look like this:
 
 ```json
 {
-	"format_version": "1.12.0",
-	"animation_controllers": {
-		"controller.animation.ghost.attack": {
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"attacking": "q.is_delayed_attacking"
-						}
-					]
-				},
-				"attacking": {
-					"blend_transition": 0.2,
-					"animations": ["attack"],
-					"transitions": [
-						{
-							"default": "!q.is_delayed_attacking"
-						}
-					]
-				}
-			}
-		},
-		"controller.animation.ghost.walk": {
-			"initial_state": "standing",
-			"states": {
-				"standing": {
-					"blend_transition": 0.2,
-					"animations": ["idle"],
-					"transitions": [
-						{
-							"moving": "q.modified_move_speed > 0.1"
-						}
-					]
-				},
-				"moving": {
-					"blend_transition": 0.2,
-					"animations": ["move"],
-					"transitions": [
-						{
-							"standing": "q.modified_move_speed < 0.1"
-						}
-					]
-				}
-			}
-		}
-	}
+    "format_version": "1.12.0",
+    "animation_controllers": {
+        "controller.animation.ghost.attack": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "attacking": "q.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "attacking": {
+                    "blend_transition": 0.2,
+                    "animations": ["attack"],
+                    "transitions": [
+                        {
+                            "default": "!q.is_delayed_attacking"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.ghost.walk": {
+            "initial_state": "standing",
+            "states": {
+                "standing": {
+                    "blend_transition": 0.2,
+                    "animations": ["idle"],
+                    "transitions": [
+                        {
+                            "moving": "q.modified_move_speed > 0.1"
+                        }
+                    ]
+                },
+                "moving": {
+                    "blend_transition": 0.2,
+                    "animations": ["move"],
+                    "transitions": [
+                        {
+                            "standing": "q.modified_move_speed < 0.1"
+                        }
+                    ]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -1399,18 +1401,18 @@ Your folder structure should look like this:
 
 ```json
 {
-	"format_version": "1.10.0",
-	"render_controllers": {
-		"controller.render.ghost": {
-			"geometry": "geometry.default",
-			"materials": [
-				{
-					"*": "material.default"
-				}
-			],
-			"textures": ["texture.default"]
-		}
-	}
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.ghost": {
+            "geometry": "geometry.default",
+            "materials": [
+                {
+                    "*": "material.default"
+                }
+            ],
+            "textures": ["texture.default"]
+        }
+    }
 }
 ```
 

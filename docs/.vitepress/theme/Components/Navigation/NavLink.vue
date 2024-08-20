@@ -16,12 +16,12 @@
 		<div class="text-sm">{{ props.item.text }}</div>
 		<ExternalIcon v-if="isExternal" />
 
-    <NavLinkTag
-      v-if="!!props.item.tags?.length"
-      v-for="(tag, i) in props.item.tags"
-      :key="i"
-      :tag="tag"
-    />
+		<NavLinkTag
+			v-for="(tag, i) in props.item.tags"
+			v-if="!!props.item.tags?.length"
+			:key="i"
+			:tag="tag"
+		/>
 	</a>
 </template>
 

@@ -2,18 +2,15 @@
 title: Texture Animation
 category: Tutorials
 tags:
-  - intermediate
+    - intermediate
 mentions:
-  - MedicalJewel105
-  - SquisSloim
-  - SmokeyStack
-  - QuazChick
+    - MedicalJewel105
+    - SquisSloim
+    - SmokeyStack
+    - QuazChick
 description: Flipbook (animated) textures for blocks.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 From this page you will learn:
 
 -   How to apply flipbook textures to a block.
@@ -35,23 +32,23 @@ You can simply apply animated magma's texture to your block by changing `texture
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:flipbook_block",
-      "menu_category": {
-        "category": "construction"
-      }
-    },
-    "components": {
-      "minecraft:unit_cube": {},
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "magma" // Add it here.
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:flipbook_block",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:unit_cube": {},
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "magma" // Add it here.
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
@@ -69,15 +66,15 @@ After making block have animated texture, it is time to figure out how it all wo
 
 ```json
 {
-  "texture_name": "atlas.terrain",
-  "resource_pack_name": "wiki", // ID for your resource pack
-  "padding": 8, // Prevent textures from visually overflowing into each other
-  "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
-  "texture_data": {
-    "magma": {
-      "textures": "textures/blocks/magma"
+    "texture_name": "atlas.terrain",
+    "resource_pack_name": "wiki", // ID for your resource pack
+    "padding": 8, // Prevent textures from visually overflowing into each other
+    "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
+    "texture_data": {
+        "magma": {
+            "textures": "textures/blocks/magma"
+        }
     }
-  }
 }
 ```
 
@@ -87,11 +84,11 @@ After making block have animated texture, it is time to figure out how it all wo
 
 ```json
 [
-  {
-    "atlas_tile": "magma",
-    "flipbook_texture": "textures/blocks/magma",
-    "ticks_per_frame": 10
-  }
+    {
+        "atlas_tile": "magma",
+        "flipbook_texture": "textures/blocks/magma",
+        "ticks_per_frame": 10
+    }
 ]
 ```
 
@@ -104,7 +101,7 @@ After making block have animated texture, it is time to figure out how it all wo
 While looking up for something in vanilla flipbook texture file, you may notice some additional paramters:
 
 | Component          | Type             | Description                                                                                                 |
-|--------------------|------------------|-------------------------------------------------------------------------------------------------------------|
+| ------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
 | flipbook_texture   | string           | Path to texture.                                                                                            |
 | atlas_tile         | string           | The shortname defined in the terrain_textures.json.                                                         |
 | atlas_index        | integer          | The index of the texture array inside the definition of that shortname.                                     |
@@ -158,7 +155,7 @@ Now let's say we wanted path 1 to be animated, now what you'll do here is to put
 Changes size of the peace of used texture. Can only take values that are multiples of two. If frame has smaller amount of pixels, extends them.
 
 | `replicate` value | what it does                              |
-|-------------------|-------------------------------------------|
+| ----------------- | ----------------------------------------- |
 | < 0               | Breaks animation                          |
 | 0                 | Breaks animation & texture                |
 | 2                 | Renders 1 / 4 pixels of frame             |
