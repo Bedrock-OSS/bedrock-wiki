@@ -43,7 +43,7 @@ Creating fluids that are identical to vanilla fluids is not currently possible, 
 <WikiImage
   src="/assets/images/blocks/custom-fluids/fluid_display.png"
   alt=""
-  pixelated="true"
+  pixelated
   width=608
 />
 

@@ -45,7 +45,6 @@ You will notice straight away that our custom leaves have a long list to search 
 <WikiImage
   src="/assets/images/blocks/custom-trees/decaying_leaves_showcase_example.png"
   alt="Decaying Leaves Showcase"
-  pixelated="false"
   width=420
 />
 

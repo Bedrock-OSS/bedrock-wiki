@@ -28,7 +28,6 @@ First let's draw some new texture frames for our entity. In this tutorial it wil
 <WikiImage
 	src="/assets/images/visuals/animated-entity-texture/cow.png"
 	alt="cow"
-	pixelated="false"
 	width=180
 />
 
