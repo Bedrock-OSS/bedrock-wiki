@@ -8,8 +8,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.20`
-Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.20`.
+:::tip FORMAT & MIN ENGINE VERSION `1.21.10`
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.10`.
 :::
 
 ## Applying Components
@@ -20,7 +20,7 @@ Item components are used to change how your item appears and functions in the wo
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -120,7 +120,7 @@ Type: Object
 
 Custom components are a new way of connecting the configuration of Blocks and Items in JSON to the power of scripting in a very direct and targeted manner. This new concept allows for composability and reusability of script functionality across blocks and items, while also ensuring that the script only runs specifically for that specific block and item.
 
-Added in `1.21.20.23`. Requires `format_version: "1.21.20"` or higher.
+Added in `1.21.10.23`. Requires `format_version: "1.21.10"` or higher.
 
 Type: Array
 
