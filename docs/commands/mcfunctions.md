@@ -9,6 +9,7 @@ mentions:
 nav_order: 3
 description: Learn about functions in MCBE.
 ---
+
 ## Introduction
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
@@ -43,20 +44,22 @@ effect @a [tag=atSpawn] regeneration 12 255 true
 effect @a [tag=atSpawn] saturation 12 255 true
 effect @a [tag=atSpawn] weakness 12 255 true
 ```
-- Each new line in a function file represents a new command. You may start a line with # to add comments. Commands in a function do not need to begin with a slash `/`, however doing so will not cause any errors.
 
-- All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible.
-Commands in a function are still run in the same order, however.
+-   Each new line in a function file represents a new command. You may start a line with # to add comments. Commands in a function do not need to begin with a slash `/`, however doing so will not cause any errors.
 
-- Minecraft can **not** run more than 10,000 lines of commands in one function file. This includes any other function files that are executed inside of the original file.
+-   All commands in a function are run in the _same tick_. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible.
+    Commands in a function are still run in the same order, however.
 
-- It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
+-   Minecraft can **not** run more than 10,000 lines of commands in one function file. This includes any other function files that are executed inside of the original file.
 
-- Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](/commands/scoreboard-timers) system to learn how to set it up.
+-   It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
+
+-   Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](/commands/scoreboard-timers) system to learn how to set it up.
 
 ## Creating a Function
 
 1. Locate the `📁 com.mojang` folder and navigate to `📁 development_behavior_packs`
+
     - The development folders are used for quick reloading of packs, as the packs aren't cached to the world files.
 
 2. Create a folder (of any name) for the function pack. This will be referred to as Behavior Pack or BP.
@@ -75,15 +78,15 @@ Commands in a function are still run in the same order, however.
         "description": "Write Your Pack Description Here",
         "name": "Write Your Pack Name Here",
         "uuid": "00000000-0000-0000-0000-000000000000",
-        "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 19, 73 ]
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 19, 73]
     },
     "modules": [
         {
             "description": "§r",
             "type": "data",
             "uuid": "00000000-0000-0000-0000-000000000000",
-            "version": [1, 0, 0 ]
+            "version": [1, 0, 0]
         }
     ]
 }
@@ -95,7 +98,6 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 <Spoiler title="Sample 🖼 pack_icon.png">
 
 Sample A:
-	
 ![pack_icon.png](/assets/images/commands/pack_icon.png)
 
 Sample B:
@@ -105,19 +107,21 @@ Sample B:
 </Spoiler>
 
 4. Create a `📁 functions` folder. Any file within this folder that ends with **.mcfunction** will be registered as a function in-game, which can be run with `/function <function_name>`.
+
     - Nested functions are allowed, simply list the file path in relation to the functions folder as shown in the function pack folder structure.
 
 5. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
 
 :::tip NOTE
 Functions are versioned; therefore, they will run in the version listed in the `📄 manifest.json`, such as:
-- `min_engine_version` 1.19.50 or above will adopt the new execute syntax.
-- `min_engine_version` 1.19.70 or above will require aux values be replaced with block states.
-:::
+
+-   `min_engine_version` 1.19.50 or above will adopt the new execute syntax.
+-   `min_engine_version` 1.19.70 or above will require aux values be replaced with block states.
+    :::
 
 ## Execution
 
-Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick. 
+Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick.
 
 Nested functions, for example `BP/functions/lobby/items/1.mcfunction` can be run using the nested folder path, in this case `/function lobby/items/1`
 
@@ -138,11 +142,9 @@ The final file within a function is the **tick.json** file. This specifies funct
 
 ## Sample Function Pack
 
-<CardLink
-  imgsrcLight="assets/images/commands/BClogo.png"
-	title="Download Sample Function Pack"
-	link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack"
-/>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
+    Download Sample Function Pack
+</Button>
 
 ## Troubleshooting Functions
 
