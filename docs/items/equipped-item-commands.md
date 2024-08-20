@@ -20,8 +20,6 @@ Keep in mind that this requires modifying the player behavior, which is a common
 
 > However some people found a way not to use player.json. They replace it with dummy entity-rider. Try experimenting yourself!
 
-The use of Holiday Creator Features is also required to add item tags and easily equip our item in armor or off-hand slots.
-
 ## Server Animation
 
 The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. You can read a bit more [here](/entities/timers#animation-based-timers). We can start by using the following as a template:

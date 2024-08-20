@@ -10,6 +10,7 @@ mentions:
     - TheDoctor15
     - napstaa967
 description: Add vanilla-like durability to custom tools.
+hidden: true
 ---
 
 ## Introduction
