@@ -4,7 +4,7 @@ category: Extra
 description: Appendix for downloading example Packs
 prefix: "b. "
 nav_order: 2
-show_toc: false
+show_outline: false
 mentions:
     - SirLich
     - Joelant05

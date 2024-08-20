@@ -69,7 +69,8 @@ bridge. includes a regular text editor for experienced add-on creators and a tre
 -   [Read more on why you should use bridge.](https://bridge-core.app/guide/why-bridge)
 -   [Read our guide on getting started with bridge.](https://bridge-core.app/guide/index)
 -   [Try out bridge. online](https://editor.bridge-core.app/)
-    </Spoiler>
+
+</Spoiler>
 
 ### Mobile Editors
 

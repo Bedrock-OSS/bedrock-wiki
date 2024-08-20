@@ -1,6 +1,7 @@
 ---
 title: Molang Queries
-toc_max_level: 2
+description: Some of the MoLang queries explained.
+outline_depth: 2
 mentions:
     - SirLich
     - solvedDev
@@ -15,7 +16,6 @@ mentions:
     - Luthorius
     - TheItsNameless
     - ThomasOrs
-description: Some of the MoLang queries explained.
 ---
 
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, _where possible_. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
@@ -33,7 +33,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 ### X
 
 | Argument | Slot       |
-|----------|------------|
+| -------- | ---------- |
 | 0        | Helmet     |
 | 1        | Chestplace |
 | 2        | Leggings   |
@@ -42,7 +42,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 ### Y
 
 | Argument | Type                  |
-|----------|-----------------------|
+| -------- | --------------------- |
 | -1       | none                  |
 | 0        | Leather armor piece   |
 | 1        | Chain armor piece     |
@@ -56,7 +56,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 ### Y for horses
 
 | Argument | Type                |
-|----------|---------------------|
+| -------- | ------------------- |
 | 1        | Leather armor piece |
 | 2        | Iron armor piece    |
 | 3        | Gold armor piece    |
@@ -75,7 +75,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 ### X
 
 | Argument | Slot       |
-|----------|------------|
+| -------- | ---------- |
 | 0        | Helmet     |
 | 1        | Chestplace |
 | 2        | Leggings   |
@@ -86,7 +86,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 Unknown, possibly:
 
 | Argument | Slot                       |
-|----------|----------------------------|
+| -------- | -------------------------- |
 | 0        | Default armor material     |
 | 1        | Enchanted armor material   |
 | 2        | Leather armor material     |
@@ -103,7 +103,7 @@ Where `slot` and `channel` are both integer arguments, from the following tables
 ### Slot
 
 | Argument | Slot       |
-|----------|------------|
+| -------- | ---------- |
 | 0        | Helmet     |
 | 1        | Chestplace |
 | 2        | Leggings   |
@@ -112,7 +112,7 @@ Where `slot` and `channel` are both integer arguments, from the following tables
 ### Channel
 
 | Argument | Slot          |
-|----------|---------------|
+| -------- | ------------- |
 | 0        | Red channel   |
 | 1        | Green channel |
 | 2        | Blue channel  |
@@ -239,19 +239,19 @@ Formatted like: `query.is_item_name_any('slot.weapon.mainhand', 0, 'namespace:it
 Takes the equipment slot name first, followed by the slot index value, and then the list of item names with namespaces after it.
 
 Possible equipment slot are as follows:
-| Slot Name              | Slot Counts | Description                                                                         |
+| Slot Name | Slot Counts | Description |
 |------------------------|-------------|-------------------------------------------------------------------------------------|
-| `slot.weapon.mainhand` | 0           | Usually any held items are in here                                                  |
-| `slot.weapon.offhand`  | 0           | Offhand slot for things like `Shield`, `Totem of Undying` or a `Map`                |
-| `slot.armor.head`      | 0           | Head armor piece                                                                    |
-| `slot.armor.chest`     | 0           | Chestplate armor piece                                                              |
-| `slot.armor.legs`      | 0           | Leggings armor piece                                                                |
-| `slot.armor.feet`      | 0           | Boots armor piece                                                                   |
-| `slot.armor`           | 0           | Horse armor                                                                         |
-| `slot.saddle`          | 0           | Saddle slot                                                                         |
-| `slot.hotbar`          | 0 to 8      | Player hotbar slots                                                                 |
-| `slot.inventory`       | 0+ (varies) | Entities that has an inventory, like the player, minecart with chests, donkey, etc. |
-| `slot.enderchest`      | 0 to 26     | Ender chest inventory for players only                                              |
+| `slot.weapon.mainhand` | 0 | Usually any held items are in here |
+| `slot.weapon.offhand` | 0 | Offhand slot for things like `Shield`, `Totem of Undying` or a `Map` |
+| `slot.armor.head` | 0 | Head armor piece |
+| `slot.armor.chest` | 0 | Chestplate armor piece |
+| `slot.armor.legs` | 0 | Leggings armor piece |
+| `slot.armor.feet` | 0 | Boots armor piece |
+| `slot.armor` | 0 | Horse armor |
+| `slot.saddle` | 0 | Saddle slot |
+| `slot.hotbar` | 0 to 8 | Player hotbar slots |
+| `slot.inventory` | 0+ (varies) | Entities that has an inventory, like the player, minecart with chests, donkey, etc. |
+| `slot.enderchest` | 0 to 26 | Ender chest inventory for players only |
 
 ### Test for items within the player's inventory
 
@@ -269,9 +269,7 @@ _Currently, can be only used in materials._
 
 ## query.is_eating
 
-This query tracks when certain entities are 'eating'. It's not used for the player. To trigger, use one of the following components:
-    - `minecraft:behavior.eat_carried_item`
-    - `minecraft:behavior.snacking`
+This query tracks when certain entities are 'eating'. It's not used for the player. To trigger, use one of the following components: - `minecraft:behavior.eat_carried_item` - `minecraft:behavior.snacking`
 
 ## query.is_ghost
 
@@ -408,7 +406,7 @@ query.time_of_day - day time table
 <Spoiler title="Show">
 
 | `query.time_of_day` | Day Time |
-|---------------------|----------|
+| ------------------- | -------- |
 | 0.00                | 18000    |
 | 0.01                | 18240    |
 | 0.02                | 18480    |
@@ -545,7 +543,7 @@ variable.zNorm = query.movement_direction(2) / variable.mag;
 For more information on normalized vectors you can play around with this <a href=https://www.desmos.com/calculator/hhoamwgve2>Desmos graph</a>
 
 | Argument | Axis |
-|----------|------|
+| -------- | ---- |
 | 0        | X    |
 | 1        | Y    |
 | 2        | Z    |
@@ -560,8 +558,9 @@ Requires `Experimental Molang Features` to use. From the docs `Takes a relative 
 The syntax for it is `q.block_neighbor_has_any_tag(x,y,z,'tag_name')` and `q.relative_block_has_any_tag(x,y,z,'tag_name')`.
 
 Example:
-- `q.relative_block_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the entity.
-- `q.block_neighbor_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the block.
+
+-   `q.relative_block_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the entity.
+-   `q.block_neighbor_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the block.
 
 To do multiple tags you would use `q.correct_query(0,-1,0,'grass', 'plant')` with `correct_query` being replaced by the right query.
 

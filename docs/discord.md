@@ -1,9 +1,9 @@
 ---
 title: Discord
-hidden: true
-show_toc: false
-show_contributors: false
 description: Bedrock Wiki Discord Communities.
+show_contributors: false
+show_outline: false
+hidden: true
 ---
 
 The Bedrock Wiki is supported by two active discord communities, which you are encouraged to join. Additionally, we maintain an actively updated list of community discords for Bedrock tools, content, or simply socialization.
