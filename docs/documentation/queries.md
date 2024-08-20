@@ -239,19 +239,20 @@ Formatted like: `query.is_item_name_any('slot.weapon.mainhand', 0, 'namespace:it
 Takes the equipment slot name first, followed by the slot index value, and then the list of item names with namespaces after it.
 
 Possible equipment slot are as follows:
-| Slot Name | Slot Counts | Description |
-|------------------------|-------------|-------------------------------------------------------------------------------------|
-| `slot.weapon.mainhand` | 0 | Usually any held items are in here |
-| `slot.weapon.offhand` | 0 | Offhand slot for things like `Shield`, `Totem of Undying` or a `Map` |
-| `slot.armor.head` | 0 | Head armor piece |
-| `slot.armor.chest` | 0 | Chestplate armor piece |
-| `slot.armor.legs` | 0 | Leggings armor piece |
-| `slot.armor.feet` | 0 | Boots armor piece |
-| `slot.armor` | 0 | Horse armor |
-| `slot.saddle` | 0 | Saddle slot |
-| `slot.hotbar` | 0 to 8 | Player hotbar slots |
-| `slot.inventory` | 0+ (varies) | Entities that has an inventory, like the player, minecart with chests, donkey, etc. |
-| `slot.enderchest` | 0 to 26 | Ender chest inventory for players only |
+
+| Slot Name              | Slot Counts | Description                                                                         |
+| ---------------------- | ----------- | ----------------------------------------------------------------------------------- |
+| `slot.weapon.mainhand` | 0           | Usually any held items are in here                                                  |
+| `slot.weapon.offhand`  | 0           | Offhand slot for things like `Shield`, `Totem of Undying` or a `Map`                |
+| `slot.armor.head`      | 0           | Head armor piece                                                                    |
+| `slot.armor.chest`     | 0           | Chestplate armor piece                                                              |
+| `slot.armor.legs`      | 0           | Leggings armor piece                                                                |
+| `slot.armor.feet`      | 0           | Boots armor piece                                                                   |
+| `slot.armor`           | 0           | Horse armor                                                                         |
+| `slot.saddle`          | 0           | Saddle slot                                                                         |
+| `slot.hotbar`          | 0 to 8      | Player hotbar slots                                                                 |
+| `slot.inventory`       | 0+ (varies) | Entities that has an inventory, like the player, minecart with chests, donkey, etc. |
+| `slot.enderchest`      | 0 to 26     | Ender chest inventory for players only                                              |
 
 ### Test for items within the player's inventory
 
