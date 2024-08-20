@@ -40,7 +40,6 @@ export default {
   "/knowledge/addon-programming": "/meta/addon-programming",
   "/knowledge/bedrock-modeling": "/visuals/bedrock-modeling",
   "/knowledge/entity-movement": "/entities/entity-movement",
-  "/knowledge/jq": "/meta/jq",
   "/knowledge/nbt_commands": "/commands/nbt-commands",
   "/knowledge/style-guide": "/meta/style-guide",
   "/knowledge/useful-links": "/meta/useful-links",
