@@ -3,7 +3,7 @@ title: Project Setup
 category: Guide
 description: How to setup your project
 nav_order: 4
-prefix: '4. '
+prefix: "4. "
 mentions:
     - SirLich
     - sovledDev
@@ -28,10 +28,7 @@ mentions:
 
 This page will guide you through the steps required to create your first "working" add-on and view it in game. If you're joining on android, you should follow this alternative guide:
 
-<BButton
-	link="./project-setup-android"
-	color=blue
->Android guide</BButton>
+<Button link="./project-setup-android">Android guide</Button>
 
 ## The com.mojang folder
 
@@ -57,9 +54,9 @@ Android 12 and newer: `Phone > Android > data > com.mojang.minecraftpe > files >
 
 Before you can see the `com.mojang` in your files, make sure to change the `File Storage Location` to `External` in your Minecraft Settings:
 
-- Go to `Minecraft Settings`.
-- Navigate to `Settings > General > Storage`.
-- Change the `File Storage Location` to `External`.
+-   Go to `Minecraft Settings`.
+-   Navigate to `Settings > General > Storage`.
+-   Change the `File Storage Location` to `External`.
 
 After that you can access the `com.mojang` folder in your Android Subsystem:
 
@@ -108,21 +105,21 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "pack.name",
-		"description": "pack.description",
-		"uuid": "...",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 16, 0]
-	},
-	"modules": [
-		{
-			"type": "data",
-			"uuid": "...",
-			"version": [1, 0, 0]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "...",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "...",
+            "version": [1, 0, 0]
+        }
+    ]
 }
 ```
 
@@ -160,21 +157,21 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "pack.name",
-		"description": "pack.description",
-		"uuid": "...",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 16, 0]
-	},
-	"modules": [
-		{
-			"type": "resources",
-			"uuid": "...",
-			"version": [1, 0, 0]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "...",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "...",
+            "version": [1, 0, 0]
+        }
+    ]
 }
 ```
 
@@ -182,12 +179,11 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
 
 The pack icon is an image file which identifies how your add-on will look in-game. If you have a low-resolution square image, you can use it. Otherwise, download and use this example icon:
 
-<WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated/>
+<WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated />
 
-<BButton
-    link="/assets/images/guide/project-setup/pack_icon.png" download
-    color=default
->Download Image</BButton>
+<Button link="/assets/images/guide/project-setup/pack_icon.png" download>
+    Download Image
+</Button>
 
 You should place a copy of your desired image into both the RP and the BP. The image needs to be named `pack_icon.png`
 
@@ -289,6 +285,7 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 ## Your progress so far
 
 :::tip What you have learned
+
 <Checklist>
 
 -   [x] Setup your pack
@@ -299,7 +296,4 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 </Checklist>
 :::
 
-<BButton
-    link="/guide/custom-item"
-    color=blue
->Next: Custom Item</BButton>
+<Button link="/guide/custom-item">Next: Custom Item</Button>

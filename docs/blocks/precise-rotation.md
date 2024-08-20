@@ -2,11 +2,11 @@
 title: Precise Rotation
 category: Tutorials
 tags:
-  - experimental
-  - expert
+    - experimental
+    - expert
 mentions:
-  - QuazChick
-  - SmokeyStack
+    - QuazChick
+    - SmokeyStack
 description: This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a "shell" block with this rotation type.
 ---
 
@@ -24,7 +24,7 @@ Requires `Holiday Creator Features` to trigger events.
 
 This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a "shell" block with this rotation type.
 
-*Looking for regular rotation? Learn about it [here](/blocks/rotatable-blocks)!*
+_Looking for regular rotation? Learn about it [here](/blocks/rotatable-blocks)!_
 
 ![Custom shell blocks oriented randomly](/assets/images/blocks/precise-rotation/showcase.png)
 
@@ -67,124 +67,124 @@ The following model for a "shell" block can be used as a reference:
 
 ```json
 {
-  "format_version": "1.12.0",
-  "minecraft:geometry": [
-    {
-      "description": {
-        "identifier": "geometry.shell",
-        "texture_width": 16,
-        "texture_height": 16,
-        "visible_bounds_width": 3,
-        "visible_bounds_height": 2.5,
-        "visible_bounds_offset": [0, 0.75, 0]
-      },
-      "bones": [
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
         {
-          "name": "shell",
-          "pivot": [0, 0, 0]
-        },
-        {
-          "name": "up_0",
-          "parent": "shell",
-          "pivot": [0, 0, 0],
-          "cubes": [
-            {
-              "origin": [-3, 0, -3],
-              "size": [6, 3, 6],
-              "uv": {
-                "north": { "uv": [0, 6], "uv_size": [6, 3] },
-                "east": { "uv": [0, 6], "uv_size": [6, 3] },
-                "south": { "uv": [0, 6], "uv_size": [6, 3] },
-                "west": { "uv": [0, 6], "uv_size": [6, 3] },
-                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
-                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
-              }
-            }
-          ]
-        },
-        {
-          "name": "up_22_5",
-          "parent": "shell",
-          "pivot": [0, 0, 0],
-          "rotation": [0, 22.5, 0],
-          "cubes": [
-            {
-              "origin": [-3, 0, -3],
-              "size": [6, 3, 6],
-              "uv": {
-                "north": { "uv": [0, 6], "uv_size": [6, 3] },
-                "east": { "uv": [0, 6], "uv_size": [6, 3] },
-                "south": { "uv": [0, 6], "uv_size": [6, 3] },
-                "west": { "uv": [0, 6], "uv_size": [6, 3] },
-                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
-                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
-              }
-            }
-          ]
-        },
-        {
-          "name": "up_45",
-          "parent": "shell",
-          "pivot": [0, 0, 0],
-          "rotation": [0, 45, 0],
-          "cubes": [
-            {
-              "origin": [-3, 0, -3],
-              "size": [6, 3, 6],
-              "uv": {
-                "north": { "uv": [0, 6], "uv_size": [6, 3] },
-                "east": { "uv": [0, 6], "uv_size": [6, 3] },
-                "south": { "uv": [0, 6], "uv_size": [6, 3] },
-                "west": { "uv": [0, 6], "uv_size": [6, 3] },
-                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
-                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
-              }
-            }
-          ]
-        },
-        {
-          "name": "up_67_5",
-          "parent": "shell",
-          "pivot": [0, 0, 0],
-          "rotation": [0, 67.5, 0],
-          "cubes": [
-            {
-              "origin": [-3, 0, -3],
-              "size": [6, 3, 6],
-              "uv": {
-                "north": { "uv": [0, 6], "uv_size": [6, 3] },
-                "east": { "uv": [0, 6], "uv_size": [6, 3] },
-                "south": { "uv": [0, 6], "uv_size": [6, 3] },
-                "west": { "uv": [0, 6], "uv_size": [6, 3] },
-                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
-                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
-              }
-            }
-          ]
-        },
-        {
-          "name": "side",
-          "parent": "shell",
-          "pivot": [0, 5, 8],
-          "rotation": [90, 0, 0],
-          "cubes": [
-            {
-              "origin": [-3, 5, 8],
-              "size": [6, 3, 6],
-              "uv": {
-                "north": { "uv": [0, 6], "uv_size": [6, 3] },
-                "east": { "uv": [0, 6], "uv_size": [6, 3] },
-                "south": { "uv": [0, 6], "uv_size": [6, 3] },
-                "west": { "uv": [0, 6], "uv_size": [6, 3] },
-                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
-                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
-              }
-            }
-          ]
+            "description": {
+                "identifier": "geometry.shell",
+                "texture_width": 16,
+                "texture_height": 16,
+                "visible_bounds_width": 3,
+                "visible_bounds_height": 2.5,
+                "visible_bounds_offset": [0, 0.75, 0]
+            },
+            "bones": [
+                {
+                    "name": "shell",
+                    "pivot": [0, 0, 0]
+                },
+                {
+                    "name": "up_0",
+                    "parent": "shell",
+                    "pivot": [0, 0, 0],
+                    "cubes": [
+                        {
+                            "origin": [-3, 0, -3],
+                            "size": [6, 3, 6],
+                            "uv": {
+                                "north": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "east": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "south": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "west": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
+                                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "up_22_5",
+                    "parent": "shell",
+                    "pivot": [0, 0, 0],
+                    "rotation": [0, 22.5, 0],
+                    "cubes": [
+                        {
+                            "origin": [-3, 0, -3],
+                            "size": [6, 3, 6],
+                            "uv": {
+                                "north": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "east": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "south": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "west": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
+                                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "up_45",
+                    "parent": "shell",
+                    "pivot": [0, 0, 0],
+                    "rotation": [0, 45, 0],
+                    "cubes": [
+                        {
+                            "origin": [-3, 0, -3],
+                            "size": [6, 3, 6],
+                            "uv": {
+                                "north": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "east": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "south": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "west": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
+                                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "up_67_5",
+                    "parent": "shell",
+                    "pivot": [0, 0, 0],
+                    "rotation": [0, 67.5, 0],
+                    "cubes": [
+                        {
+                            "origin": [-3, 0, -3],
+                            "size": [6, 3, 6],
+                            "uv": {
+                                "north": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "east": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "south": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "west": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
+                                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "side",
+                    "parent": "shell",
+                    "pivot": [0, 5, 8],
+                    "rotation": [90, 0, 0],
+                    "cubes": [
+                        {
+                            "origin": [-3, 5, 8],
+                            "size": [6, 3, 6],
+                            "uv": {
+                                "north": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "east": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "south": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "west": { "uv": [0, 6], "uv_size": [6, 3] },
+                                "up": { "uv": [6, 6], "uv_size": [-6, -6] },
+                                "down": { "uv": [6, 6], "uv_size": [-6, -6] }
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
@@ -198,39 +198,39 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:shell",
-      "menu_category": {
-        "category": "nature"
-      }
-    },
-    "components": {
-      // `up` face collision/selection boxes
-      "minecraft:collision_box": {
-        "origin": [-3, 0, -3],
-        "size": [6, 3, 6]
-      },
-      "minecraft:selection_box": {
-        "origin": [-3, 0, -3],
-        "size": [6, 3, 6]
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "shell" // Shortname defined in `RP/textures/terrain_texture.json`
+    "format_version": "1.20.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:shell",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            // `up` face collision/selection boxes
+            "minecraft:collision_box": {
+                "origin": [-3, 0, -3],
+                "size": [6, 3, 6]
+            },
+            "minecraft:selection_box": {
+                "origin": [-3, 0, -3],
+                "size": [6, 3, 6]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "shell" // Shortname defined in `RP/textures/terrain_texture.json`
+                }
+            },
+            // Prevent block from being placed on `down` face
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up", "side"]
+                    }
+                ]
+            }
         }
-      },
-      // Prevent block from being placed on `down` face
-      "minecraft:placement_filter": {
-        "conditions": [
-          {
-             "allowed_faces": ["up", "side"]
-          }
-        ]
-      }
     }
-  }
 }
 ```
 
@@ -368,18 +368,18 @@ If you would like your block to have a different collision/selection box when pl
 
 ```json
 {
-  "condition": "q.block_property('minecraft:block_face') != 'up'",
-  "components": {
-    // Add your collision/selection boxes
-    "minecraft:collision_box": {
-      "origin": [-3, 5, 5],
-      "size": [6, 6, 3]
-    },
-    "minecraft:selection_box": {
-      "origin": [-3, 5, 5],
-      "size": [6, 6, 3]
+    "condition": "q.block_property('minecraft:block_face') != 'up'",
+    "components": {
+        // Add your collision/selection boxes
+        "minecraft:collision_box": {
+            "origin": [-3, 5, 5],
+            "size": [6, 6, 3]
+        },
+        "minecraft:selection_box": {
+            "origin": [-3, 5, 5],
+            "size": [6, 6, 3]
+        }
     }
-  }
 }
 ```
 
@@ -393,101 +393,101 @@ Our block JSON file after the above steps should look similar to the code below:
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:shell",
-      "menu_category": {
-        "category": "nature"
-      },
-      "traits": {
-        "minecraft:placement_position": {
-          "enabled_states": ["minecraft:block_face"]
-        }
-      },
-      "states": {
-        "wiki:rotation": {
-          "values": { "min": 0, "max": 15 }
-        }
-      }
-    },
-    "components": {
-      "minecraft:collision_box": {
-        "origin": [-3, 0, -3],
-        "size": [6, 3, 6]
-      },
-      "minecraft:selection_box": {
-        "origin": [-3, 0, -3],
-        "size": [6, 3, 6]
-      },
-      "minecraft:geometry": {
-        "identifier": "geometry.shell",
-        "bone_visibility": {
-          "up_0": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation'), 4)",
-          "up_22_5": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 1, 4)",
-          "up_45": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 2, 4)",
-          "up_67_5": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 3, 4)",
-          "side": "q.block_state('minecraft:block_face') != 'up'"
-        }
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "shell"
-        }
-      },
-      "minecraft:placement_filter": {
-        "conditions": [
-          {
-            "allowed_faces": ["up", "side"]
-          }
+    "format_version": "1.20.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:shell",
+            "menu_category": {
+                "category": "nature"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": ["minecraft:block_face"]
+                }
+            },
+            "states": {
+                "wiki:rotation": {
+                    "values": { "min": 0, "max": 15 }
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "origin": [-3, 0, -3],
+                "size": [6, 3, 6]
+            },
+            "minecraft:selection_box": {
+                "origin": [-3, 0, -3],
+                "size": [6, 3, 6]
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.shell",
+                "bone_visibility": {
+                    "up_0": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation'), 4)",
+                    "up_22_5": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 1, 4)",
+                    "up_45": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 2, 4)",
+                    "up_67_5": "q.block_state('minecraft:block_face') == 'up' && !math.mod(q.block_state('wiki:rotation') - 3, 4)",
+                    "side": "q.block_state('minecraft:block_face') != 'up'"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "shell"
+                }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up", "side"]
+                    }
+                ]
+            },
+            "minecraft:on_player_placing": {
+                "condition": "q.block_face == 1",
+                "event": "wiki:set_rotation"
+            }
+        },
+        "events": {
+            "wiki:set_rotation": {
+                "set_block_state": {
+                    "wiki:rotation": "t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0))); t.block_rotation = math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation;"
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('wiki:rotation') >= 4 || q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, -90, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('wiki:rotation') >= 8 || q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 180, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('wiki:rotation') >= 12 || q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 90, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') != 'up'",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [-3, 5, 5],
+                        "size": [6, 6, 3]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-3, 5, 5],
+                        "size": [6, 6, 3]
+                    }
+                }
+            }
         ]
-      },
-      "minecraft:on_player_placing": {
-        "condition": "q.block_face == 1",
-        "event": "wiki:set_rotation"
-      }
-    },
-    "events": {
-      "wiki:set_rotation": {
-        "set_block_state": {
-          "wiki:rotation": "t.positive_head_rot = q.head_y_rotation(0) + 360 * (q.head_y_rotation(0) != math.abs(q.head_y_rotation(0))); t.block_rotation = math.round(t.positive_head_rot / 22.5); return t.block_rotation != 16 ? t.block_rotation;"
-        }
-      }
-    },
-    "permutations": [
-      {
-        "condition": "q.block_state('wiki:rotation') >= 4 || q.block_state('minecraft:block_face') == 'east'",
-        "components": {
-          "minecraft:transformation": { "rotation": [0, -90, 0] }
-        }
-      },
-      {
-        "condition": "q.block_state('wiki:rotation') >= 8 || q.block_state('minecraft:block_face') == 'south'",
-        "components": {
-          "minecraft:transformation": { "rotation": [0, 180, 0] }
-        }
-      },
-      {
-        "condition": "q.block_state('wiki:rotation') >= 12 || q.block_state('minecraft:block_face') == 'west'",
-        "components": {
-          "minecraft:transformation": { "rotation": [0, 90, 0] }
-        }
-      },
-      {
-        "condition": "q.block_state('minecraft:block_face') != 'up'",
-        "components": {
-          "minecraft:collision_box": {
-            "origin": [-3, 5, 5],
-            "size": [6, 6, 3]
-          },
-          "minecraft:selection_box": {
-            "origin": [-3, 5, 5],
-            "size": [6, 6, 3]
-          }
-        }
-      }
-    ]
-  }
+    }
 }
 ```
 
@@ -512,7 +512,6 @@ What you have created:
 
 Template pack made according to this tutorial, adding a "shell" block into the `Nature` tab.
 
-<BButton
-  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_rotation.mcaddon"
-  color=blue
->Download MCADDON</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_rotation.mcaddon">
+    Download MCADDON
+</Button>

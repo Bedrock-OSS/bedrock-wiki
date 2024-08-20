@@ -2,7 +2,7 @@
 title: How to contribute to our wiki
 hidden: true
 mentions:
--   TheItsNameless
+    - TheItsNameless
 description: Make your first contribution!
 ---
 
@@ -31,6 +31,7 @@ If you see this the first time, it might look a little overwhelming, but don't w
 ## Setting up the Software
 
 To edit our wiki, you need to download and install the following software:
+
 -   GitHub Desktop
 -   NodeJS
 -   Visual Studio Code
@@ -177,7 +178,7 @@ This process has to be done every time someone else updates our wiki. If you for
 
 ![](/assets/images/contribute/troubleshooting/merge/merge_merge.png)
 
- If this happens, don't worry. You can easily fix this problem.
+If this happens, don't worry. You can easily fix this problem.
 
 #### Fixing it
 
@@ -211,12 +212,8 @@ Otherwise, you can `Accept Incoming Change` to accept the changes someone else m
 
 And now this problem is solved! You can continue safely, commit to your branch and create a PR.
 
-
 ## Conclusion
 
 Now you have all the software installed and learned all the skills you need to edit our wiki! If you wan't to learn more about styling your articles, please read our guide on
 
-<BButton
-    link='/contribute-style'
-    color=blue
-> How to edit pages on our wiki</BButton>
+<Button link="/contribute-style">How to edit pages on our wiki</Button>

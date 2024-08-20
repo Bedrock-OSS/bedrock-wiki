@@ -11,7 +11,7 @@ description: Run commands when player is AFK.
 
 ### AFK Detector Animation Controller
 
-<BButton color="blue" link="animation-controllers-intro">Learn more about Animation Controllers</BButton>
+<Button link="animation-controllers-intro">Learn more about Animation Controllers</Button>
 
 Here's an example that can be used to track AFK players.
 
@@ -19,43 +19,41 @@ Here's an example that can be used to track AFK players.
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.player.afk": {
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"stands_still": "!q.is_moving"
-						}
-					]
-				},
-				"stands_still": {
-					"on_entry": [
-							"v.afk = q.life_time;"
-					],
-					"transitions": [
-						{
-							"afk": "(q.life_time - v.afk) >= 30 && !q.is_moving"
-						},
-						{
-							"default": "q.is_moving"
-						}
-					]
-				},
-				"afk": {
-					"on_entry": ["/tag @s add AFK", "/say I'm now AFK"],
-					"animations": ["afk_animation"],
-					"transitions": [
-						{
-							"default": "q.is_moving"
-						}
-					],
-					"on_exit": ["/tag @s remove AFK", "/say I'm no longer AFK"]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player.afk": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "stands_still": "!q.is_moving"
+                        }
+                    ]
+                },
+                "stands_still": {
+                    "on_entry": ["v.afk = q.life_time;"],
+                    "transitions": [
+                        {
+                            "afk": "(q.life_time - v.afk) >= 30 && !q.is_moving"
+                        },
+                        {
+                            "default": "q.is_moving"
+                        }
+                    ]
+                },
+                "afk": {
+                    "on_entry": ["/tag @s add AFK", "/say I'm now AFK"],
+                    "animations": ["afk_animation"],
+                    "transitions": [
+                        {
+                            "default": "q.is_moving"
+                        }
+                    ],
+                    "on_exit": ["/tag @s remove AFK", "/say I'm no longer AFK"]
+                }
+            }
+        }
+    }
 }
 ```
 

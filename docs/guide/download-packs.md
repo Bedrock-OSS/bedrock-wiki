@@ -2,7 +2,7 @@
 title: Download Example Packs
 category: Extra
 description: Appendix for downloading example Packs
-prefix: 'b. '
+prefix: "b. "
 nav_order: 2
 show_toc: false
 mentions:
@@ -25,9 +25,8 @@ To get the most out of the guide, you should always attempt all guide-exercises 
 
 Download here:
 
-<BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/legacy_guide.mcaddon"
-    color=gray
->Download Add-On</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/legacy_guide.mcaddon">
+    Download Add-On
+</Button>
 
 To install, simply unzip the behavior pack into the Minecraft folder: `com.mojang\development_behavior_packs` or `com.mojang\development_*_packs`, depending on which pack you downloaded.

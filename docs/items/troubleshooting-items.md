@@ -25,7 +25,7 @@ This page contains troubleshooting information about _items_. You should read ou
 
 I followed a tutorial or tried to make my own item and something is wrong! Calm down. This page will help debug common issues. Follow the buttons and prompts to learn about possible issues with your item, and tips for fixing.
 
-<BButton color="blue" link="#_1-10-vs-1-16-items">Continue</BButton>
+<Button link="#_1-10-vs-1-16-items">Continue</Button>
 
 ---
 
@@ -50,7 +50,9 @@ Versions `1.16.100` and onward are **experimental**. These items **will not work
 
 ### Continue
 
-<BButton color="blue" link="#stable-items">1.10 format (stable)</BButton> <BButton color="blue" link="#experimental-items">1.16.100 format (experimental)</BButton>
+<Button link="#stable-items">1.10 format (stable)</Button>
+
+<Button link="#experimental-items">1.16.100 format (experimental)</Button>
 
 ---
 
@@ -86,13 +88,13 @@ Here is an example file to compare against:
 
 ```json
 {
-	"resource_pack_name": "wiki",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"gem": {
-			"textures": "textures/items/gem"
-		}
-	}
+    "resource_pack_name": "wiki",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "gem": {
+            "textures": "textures/items/gem"
+        }
+    }
 }
 ```
 
@@ -106,17 +108,17 @@ An example file, to compare against:
 
 ```json
 {
-	"format_version": "1.10",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:gem",
-			"category": "Nature"
-		},
-		"components": {
-			"minecraft:icon": "gem", //make sure this string matches the string you put in item_texture.json!
-			"minecraft:render_offsets": "tools"
-		}
-	}
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:gem",
+            "category": "Nature"
+        },
+        "components": {
+            "minecraft:icon": "gem", //make sure this string matches the string you put in item_texture.json!
+            "minecraft:render_offsets": "tools"
+        }
+    }
 }
 ```
 
@@ -130,17 +132,17 @@ This section contains troubleshooting information for experimental items. Rememb
 
 Find the issue you have, then read the prompts.
 
-- [Start Here](#start-here)
-- [1.10 vs 1.16 Items?](#110-vs-116-items)
-    - [Continue](#continue)
-- [Stable Items](#stable-items)
-    - [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item)
-    - [My textures are missing!](#my-textures-are-missing)
-- [Experimental Items](#experimental-items)
-    - [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
-    - [My Textures Are Missing!](#my-textures-are-missing-1)
-    - [My item is Huge](#my-item-is-huge)
-- [What now?](#what-now)
+-   [Start Here](#start-here)
+-   [1.10 vs 1.16 Items?](#110-vs-116-items)
+    -   [Continue](#continue)
+-   [Stable Items](#stable-items)
+    -   [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item)
+    -   [My textures are missing!](#my-textures-are-missing)
+-   [Experimental Items](#experimental-items)
+    -   [I cannot /give myself my custom item!](#i-cannot-give-myself-my-custom-item-1)
+    -   [My Textures Are Missing!](#my-textures-are-missing-1)
+    -   [My item is Huge](#my-item-is-huge)
+-   [What now?](#what-now)
 
 ### I cannot /give myself my custom item!
 
@@ -163,13 +165,13 @@ Here is an example file to compare against:
 
 ```json
 {
-	"resource_pack_name": "wiki",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"gem": {
-			"textures": "textures/items/gem"
-		}
-	}
+    "resource_pack_name": "wiki",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "gem": {
+            "textures": "textures/items/gem"
+        }
+    }
 }
 ```
 

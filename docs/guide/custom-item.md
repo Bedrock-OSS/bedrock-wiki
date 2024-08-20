@@ -1,9 +1,9 @@
 ---
-title: 'Create a custom Item'
+title: "Create a custom Item"
 category: Guide
 description: How to create your first custom Item
 nav_order: 5
-prefix: '5. '
+prefix: "5. "
 mentions:
     - KaiFireborn
     - SirLich
@@ -138,16 +138,16 @@ With that, we have now fully defined our item's behavior. This is what your file
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:ectoplasm",
-			"category": "Items"
-		},
-		"components": {
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:ectoplasm",
+            "category": "Items"
+        },
+        "components": {
             "minecraft:max_stack_size": 16
-		}
-	}
+        }
+    }
 }
 ```
 
@@ -167,7 +167,9 @@ To start we need a texture for our item. For our ectoplasm, we will be using thi
 
 ![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png">Download texture here</BButton>
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png">
+    Download texture here
+</Button>
 
 All item textures are stored in `RP/textures/items/`. From here, you can create any subdirectories you wish.
 It's best to name your texture image files with the items' _id_, in our case it will be `ectoplasm.png`.
@@ -270,19 +272,19 @@ Your folder structure should look like this:
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:ectoplasm",
-			"category": "Items"
-		},
-		"components": {
-			"minecraft:max_stack_size": 16,
-			"minecraft:icon": {
-				"texture": "wiki.ectoplasm"
-			}
-		}
-	}
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:ectoplasm",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:max_stack_size": 16,
+            "minecraft:icon": {
+                "texture": "wiki.ectoplasm"
+            }
+        }
+    }
 }
 ```
 
@@ -293,13 +295,13 @@ Your folder structure should look like this:
 
 ```json
 {
-	"resource_pack_name": "Ghostly Guide",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"wiki.ectoplasm": {
-			"textures": "textures/items/ectoplasm"
-		}
-	}
+    "resource_pack_name": "Ghostly Guide",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "wiki.ectoplasm": {
+            "textures": "textures/items/ectoplasm"
+        }
+    }
 }
 ```
 

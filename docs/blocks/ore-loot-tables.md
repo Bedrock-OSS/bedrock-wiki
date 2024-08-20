@@ -2,17 +2,17 @@
 title: Ore Loot Tables
 category: Tutorials
 tags:
-  - easy
+    - easy
 mentions:
-  - SykoUSS
-  - ExDrill
-  - MedicalJewel105
-  - SmokeyStack
-  - Chikorita-Lover
-  - SirLich
-  - TheItsNameless
-  - QuazChick
-  - Keyyard
+    - SykoUSS
+    - ExDrill
+    - MedicalJewel105
+    - SmokeyStack
+    - Chikorita-Lover
+    - SirLich
+    - TheItsNameless
+    - QuazChick
+    - Keyyard
 description: Create vanilla-like loot system for custom ore.
 ---
 
@@ -30,16 +30,16 @@ Requires `Holiday Creator Features` to trigger events.
 
 This tutorial aims to show a new way of creating custom ore blocks with a proper loot table. The `minecraft:loot` component will run the specified loot table regardless of the tool used, but by adding the `match_tool` condition to your loot table you can specify what tools are required per pool.
 
-- Features:
+-   Features:
 
-  -   Can be mined using any given item (this tutorial covers the iron pickaxe)
-  -   Can specify enchantments on items
-  -   Also drops experience reward
+    -   Can be mined using any given item (this tutorial covers the iron pickaxe)
+    -   Can specify enchantments on items
+    -   Also drops experience reward
 
-- Issues:
+-   Issues:
 
-  -   All items must be specified individually
-  -   Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
+    -   All items must be specified individually
+    -   Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
 
 ## Block JSON
 
@@ -87,24 +87,24 @@ The example shown, displays the required components
 
 ```json
 {
-  "pools": [
-    {
-      "rolls": 1,
-      "conditions": [
+    "pools": [
         {
-          "condition": "match_tool",
-          "item": "minecraft:iron_pickaxe",
-          "count": 1
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "match_tool",
+                    "item": "minecraft:iron_pickaxe",
+                    "count": 1
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wiki:raw_silver"
+                }
+            ]
         }
-      ],
-      "entries": [
-        {
-          "type": "item",
-          "name": "wiki:raw_silver"
-        }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
@@ -145,26 +145,26 @@ Please note that you need to download the "ore_xp_reward" structure file, which 
 
 ```json
 {
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
+    "pools": [
         {
-          "type": "item",
-          "name": "minecraft:redstone"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:redstone"
+                }
+            ]
+        },
         {
-          "type": "item",
-          "name": "minecraft:barrier" // Dummy Item
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:barrier" // Dummy Item
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
@@ -185,16 +185,16 @@ This function will execute for any item entity with the name "Barrier" (our dumm
 
 ```json
 {
-  "pools": [
-    {
-      "entries": [
+    "pools": [
         {
-          "type": "item",
-          "name": "wiki:raw_silver"
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wiki:raw_silver"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
@@ -211,7 +211,9 @@ Remember to replace the item IDs, tags, and other specific details according to 
 
 ## Download Structure
 
-<BButton link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download color=blue> Download MCSTRUCTURE</BButton>
+<Button link="/assets/packs/tutorials/blocks/ore-loot-tables/ore_xp_reward.mcstructure" download>
+    Download MCSTRUCTURE
+</Button>
 
 ## Result
 
