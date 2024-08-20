@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { Header } from "vitepress";
 import useData from "../../composables/data";
 
@@ -8,7 +9,7 @@ const { headers } = defineProps<{
 
 const { frontmatter, hash } = useData();
 
-const maxLevel = frontmatter.value.outline_depth ?? 3;
+const maxLevel = computed(() => frontmatter.value.outline_depth ?? 3);
 </script>
 
 <template>
