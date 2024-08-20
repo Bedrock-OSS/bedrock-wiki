@@ -136,10 +136,6 @@ Load the pack into minecraft and try it out if it looks like this you succeeded 
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup Minecraft VR
 -   [x] Setup the pack
 -   [x] Edit the models
-
-</Checklist>

@@ -45,7 +45,7 @@ Below is the **minimum** behavior-side code to get a custom item into the creati
         "description": {
             "identifier": "wiki:custom_item",
             "menu_category": {
-              "category": "construction"
+                "category": "construction"
             }
         },
         "components": {} // Must be here, even if empty!
@@ -55,9 +55,9 @@ Below is the **minimum** behavior-side code to get a custom item into the creati
 
 ### Item Description
 
-- Defines the item's identifier - a unique ID in the format of `namespace:identifier`.
-- Configures which `menu_category` the item is placed into.
-    - Also takes the optional parameters `group` and `is_hidden_in_commands`.
+-   Defines the item's identifier - a unique ID in the format of `namespace:identifier`.
+-   Configures which `menu_category` the item is placed into.
+    -   Also takes the optional parameters `group` and `is_hidden_in_commands`.
 
 ## Adding Components
 
@@ -81,7 +81,7 @@ Let's configure our own functionality!
             "minecraft:damage": {
                 "value": 10
             },
-            "minecraft:durability":{
+            "minecraft:durability": {
                 "max_durability": 36
             },
             "minecraft:hand_equipped": {
@@ -149,11 +149,7 @@ tile.wiki:custom_item.name=Custom Item
 
 In this page, you've learnt about the following:
 
-<Checklist>
-
 -   [x] Basic features of items
 -   [x] How to apply a texture
 -   [x] How to link textures using shortnames in `item_textures.json`
 -   [x] How to define names in the language file
-
-</Checklist>

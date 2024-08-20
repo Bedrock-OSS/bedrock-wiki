@@ -1420,8 +1420,6 @@ Your folder structure should look like this:
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup your pack
 -   [x] Create a custom item
 -   [x] Create a custom entity
@@ -1429,5 +1427,3 @@ Your folder structure should look like this:
 -   [x] -   How to set an entities texture
 -   [x] -   How to use models, animations, and animation controllers to make your entity more exciting
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe
-
-</Checklist>

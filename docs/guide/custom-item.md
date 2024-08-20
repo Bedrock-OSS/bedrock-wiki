@@ -311,8 +311,6 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup your pack
 -   [x] Create a custom item
 -   [x] How to format the behavior and resource files for an item
@@ -320,5 +318,3 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 -   [x] How to set an items texture
 -   [ ] Create a custom entity
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe
-
-</Checklist>

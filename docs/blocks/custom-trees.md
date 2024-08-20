@@ -963,13 +963,9 @@ Add sounds to blocks
 
 What you have created:
 
-<Checklist>
-
 -   [x] Custom Trees with Decaying Leaves
 -   [x] Working Sapling
 -   [x] Rotatable and Stripable Logs
-
-</Checklist>
 
 <FolderView :paths="[
 'BP/blocks/custom_leaves.json',

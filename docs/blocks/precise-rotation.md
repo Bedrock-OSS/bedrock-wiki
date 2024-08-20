@@ -497,12 +497,8 @@ Our block JSON file after the above steps should look similar to the code below:
 
 What you have created:
 
-<Checklist>
-
 -   [x] Block model supporting precise rotation
 -   [x] Block with 16 rotation states, allowing placement on 5 block faces (20 total orientations)
-
-</Checklist>
 
 ---
 

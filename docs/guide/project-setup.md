@@ -286,14 +286,11 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 
 :::tip What you have learned
 
-<Checklist>
-
 -   [x] Setup your pack
 -   [ ] Create a custom item
 -   [ ] Create a custom entity
 -   [ ] Create the entity's loot, spawn rules and a custom recipe
 
-</Checklist>
 :::
 
 <Button link="/guide/custom-item">Next: Custom Item</Button>

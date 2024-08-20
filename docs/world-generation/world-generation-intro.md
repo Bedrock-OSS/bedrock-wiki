@@ -40,38 +40,38 @@ However, bridge. is not required.
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:biome": {
-		"description": {
-			"identifier": "cold_biome"
-		},
-		"components": {
-			"minecraft:climate": {
-				"downfall": 0.7,
-				"snow_accumulation": [0.6, 0.9],
-				"temperature": 15.0
-			},
-			"minecraft:overworld_height": {
-				"noise_params": [0.6, 0.9]
-			},
-			"minecraft:surface_parameters": {
-				"sea_floor_depth": 7,
-				"sea_floor_material": "minecraft:blue_ice",
-				"foundation_material": "minecraft:cobblestone",
-				"mid_material": "minecraft:minecraft:concrete",
-				"top_material": "minecraft:glass",
-				"sea_material": "minecraft:water"
-			},
-			"minecraft:overworld_generation_rules": {
-				"generate_for_climates": [
-					["medium", 100],
-					["warm", 100],
-					["cold", 100]
-				]
-			},
-			"cold_biome": {}
-		}
-	}
+    "format_version": "1.13.0",
+    "minecraft:biome": {
+        "description": {
+            "identifier": "cold_biome"
+        },
+        "components": {
+            "minecraft:climate": {
+                "downfall": 0.7,
+                "snow_accumulation": [0.6, 0.9],
+                "temperature": 15.0
+            },
+            "minecraft:overworld_height": {
+                "noise_params": [0.6, 0.9]
+            },
+            "minecraft:surface_parameters": {
+                "sea_floor_depth": 7,
+                "sea_floor_material": "minecraft:blue_ice",
+                "foundation_material": "minecraft:cobblestone",
+                "mid_material": "minecraft:minecraft:concrete",
+                "top_material": "minecraft:glass",
+                "sea_material": "minecraft:water"
+            },
+            "minecraft:overworld_generation_rules": {
+                "generate_for_climates": [
+                    ["medium", 100],
+                    ["warm", 100],
+                    ["cold", 100]
+                ]
+            },
+            "cold_biome": {}
+        }
+    }
 }
 ```
 
@@ -146,58 +146,58 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:ore_feature": {
-		"description": {
-			"identifier": "blocky_ore_feature"
-		},
-		"count": 8,
-		"places_block": "wiki:blocky",
-		"may_replace": [
-			{
-				"name": "minecraft:stone",
-				"states": {
-					"stone_type": "andesite"
-				}
-			},
-			{
-				"name": "minecraft:stone",
-				"states": {
-					"stone_type": "andesite_smooth"
-				}
-			},
-			{
-				"name": "minecraft:stone",
-				"states": {
-					"stone_type": "diorite"
-				}
-			},
-			{
-				"name": "minecraft:stone",
-				"states": {
-					"stone_type": "diorite_smooth"
-				}
-			},
-			{
-				"name": "minecraft:stone",
-				"states": {
-					"stone_type": "granite"
-				}
-			},
-			{
-				"name": "minecraft:stone",
-				"states": {
-					"stone_type": "granite_smooth"
-				}
-			},
-			{
-				"name": "minecraft:stone",
-				"states": {
-					"stone_type": "stone"
-				}
-			}
-		]
-	}
+    "format_version": "1.13.0",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "blocky_ore_feature"
+        },
+        "count": 8,
+        "places_block": "wiki:blocky",
+        "may_replace": [
+            {
+                "name": "minecraft:stone",
+                "states": {
+                    "stone_type": "andesite"
+                }
+            },
+            {
+                "name": "minecraft:stone",
+                "states": {
+                    "stone_type": "andesite_smooth"
+                }
+            },
+            {
+                "name": "minecraft:stone",
+                "states": {
+                    "stone_type": "diorite"
+                }
+            },
+            {
+                "name": "minecraft:stone",
+                "states": {
+                    "stone_type": "diorite_smooth"
+                }
+            },
+            {
+                "name": "minecraft:stone",
+                "states": {
+                    "stone_type": "granite"
+                }
+            },
+            {
+                "name": "minecraft:stone",
+                "states": {
+                    "stone_type": "granite_smooth"
+                }
+            },
+            {
+                "name": "minecraft:stone",
+                "states": {
+                    "stone_type": "stone"
+                }
+            }
+        ]
+    }
 }
 ```
 
@@ -215,48 +215,48 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:feature_rules": {
-		"description": {
-			"identifier": "overworld_underground_blocky_ore_feature",
-			"places_feature": "blocky_ore_feature"
-		},
-		"conditions": {
-			"placement_pass": "underground_pass",
-			"minecraft:biome_filter": [
-				{
-					"any_of": [
-						{
-							"test": "has_biome_tag",
-							"operator": "==",
-							"value": "overworld"
-						},
-						{
-							"test": "has_biome_tag",
-							"operator": "==",
-							"value": "overworld_generation"
-						}
-					]
-				}
-			]
-		},
-		"distribution": {
-			"iterations": 100,
-			"coordinate_eval_order": "zyx",
-			"x": {
-				"distribution": "uniform",
-				"extent": [0, 16]
-			},
-			"y": {
-				"distribution": "uniform",
-				"extent": [0, 16]
-			},
-			"z": {
-				"distribution": "uniform",
-				"extent": [0, 16]
-			}
-		}
-	}
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "overworld_underground_blocky_ore_feature",
+            "places_feature": "blocky_ore_feature"
+        },
+        "conditions": {
+            "placement_pass": "underground_pass",
+            "minecraft:biome_filter": [
+                {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "overworld"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "overworld_generation"
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 100,
+            "coordinate_eval_order": "zyx",
+            "x": {
+                "distribution": "uniform",
+                "extent": [0, 16]
+            },
+            "y": {
+                "distribution": "uniform",
+                "extent": [0, 16]
+            },
+            "z": {
+                "distribution": "uniform",
+                "extent": [0, 16]
+            }
+        }
+    }
 }
 ```
 
@@ -298,23 +298,21 @@ Here's an code example from the [Features Documentation](https://bedrock.dev/r/F
 
 ```json
 {
-  "format_version": "1.13.0",
-  "minecraft:structure_template_feature": {
-    "description": {
-      "identifier": "wiki:hot_air_balloon_feature"
-    },
-    "structure_name": "wiki:hot_air_balloon",
-    "adjustment_radius": 8,
-    "facing_direction": "random",
-    "constraints": {
-      "unburied": {},
-      "block_intersection": {
-        "block_whitelist": [
-          "minecraft:air"
-        ]
-      }
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "wiki:hot_air_balloon_feature"
+        },
+        "structure_name": "wiki:hot_air_balloon",
+        "adjustment_radius": 8,
+        "facing_direction": "random",
+        "constraints": {
+            "unburied": {},
+            "block_intersection": {
+                "block_whitelist": ["minecraft:air"]
+            }
+        }
     }
-  }
 }
 ```
 
@@ -330,12 +328,8 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 
 **What you've done:**
 
-<Checklist>
-
 -   [x] Created you very first biome.
 -   [x] Made your very first ore generate naturally.
 -   [x] Learned to use bridge. for vanilla files generation and referencing.
 -   [x] Learned about other Custom Generation methods.
 -   [x] Created custom Structures
-
-</Checklist>

@@ -249,11 +249,7 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup your pack
 -   [ ] Create a custom item
 -   [ ] Create a custom entity
 -   [ ] Create a custom block
-
-</Checklist>

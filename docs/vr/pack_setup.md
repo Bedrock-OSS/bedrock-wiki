@@ -48,10 +48,6 @@ If you have 2 of the same files you are ought to combine them.
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup Minecraft VR
 -   [x] Setup the pack
 -   [ ] Edit the models
-
-</Checklist>

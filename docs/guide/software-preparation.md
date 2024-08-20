@@ -181,14 +181,11 @@ There are many good sources of Add-on documentation. Familiarize yourself with a
 
 :::tip What you have learned
 
-<Checklist>
-
 -   [x] Installed the necessary software
 -   [x] Downloaded the Vanilla Example files
 -   [ ] Locate your `com.mojang` folder and create your add-on's workspace.
 -   [ ] Create the manifest and pack icon for your first add-on
 
-</Checklist>
 :::
 
 <Button link="/guide/project-setup">Next: Project Setup</Button>
