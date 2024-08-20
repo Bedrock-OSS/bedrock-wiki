@@ -62,12 +62,12 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 ### Java
 
 -   [Allay](https://github.com/AllayMC/Allay)
+-   [Blocky](https://github.com/JoseLuisHD/Blocky)
 -   [JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
 -   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)
 -   [Sculk](https://github.com/sculkmp/Sculk)
--   [Blocky](https://github.com/JoseLuisHD/Blocky)
 
 ### TypeScript
 
