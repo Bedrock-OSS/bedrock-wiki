@@ -4,7 +4,7 @@
 
   & > header {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto minmax(0, 1fr);
     grid-template-rows: auto auto;
     align-items: center;
     gap: 1em;
@@ -24,7 +24,6 @@
       grid-area: title;
       margin: 0;
       line-height: 1;
-      width: 100%;
     }
 
     & > p {
