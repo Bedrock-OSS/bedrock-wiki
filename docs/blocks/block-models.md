@@ -44,11 +44,7 @@ The "paper bag" model will need two cubes: one for the handle, and one for the m
 
 Cubes can be moved, resized and rotated from the top toolbar. Below are the two cubes my "paper_bag" model will use.
 
-<WikiImage
-    src="/assets/images/blocks/block-models/paper_bag_cubes.png"
-    alt=""
-    width="300"
-/>
+<WikiImage src="/assets/images/blocks/block-models/paper_bag_cubes.png" alt="" width="300" />
 
 ## Removing Faces
 
@@ -56,11 +52,7 @@ Some of the faces of our cubes might not need to be visible. In my example, the 
 
 To remove a face, click on it in the preview and remove its UV.
 
-<WikiImage
-    src="/assets/images/blocks/block-models/paper_bag_top_removed.png"
-    alt=""
-    width="600"
-/>
+<WikiImage src="/assets/images/blocks/block-models/paper_bag_top_removed.png" alt="" width="600" />
 
 Additionally, only the north and south faces of the handle should be visible. You can select multiple faces by holding Ctrl while clicking on the face names in the UV panel.
 
@@ -80,11 +72,21 @@ The "paper_bag" model has multiple pre-made textures, listed below:
 
 -   `textures/blocks/paper_bag.png`
 
-    <WikiImage src="/assets/images/blocks/block-models/paper_bag.png" style="background-color: rgb(0,0,0,0.15);" pixelated width="128"/>
+    <WikiImage
+        src="/assets/images/blocks/block-models/paper_bag.png"
+        style="background-color: rgb(0,0,0,0.15);"
+        pixelated
+        width="128"
+    />
 
 -   `textures/blocks/paper_bag_bottom_fold.png`
 
-    <WikiImage src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png" style="background-color: rgb(0,0,0,0.15);" pixelated width="128"/>
+    <WikiImage
+        src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png"
+        style="background-color: rgb(0,0,0,0.15);"
+        pixelated
+        width="128"
+    />
 
 -   `textures/blocks/paper_bag_side_gusset.png`
 
@@ -107,19 +109,11 @@ These can be imported into Blockbench and then dragged onto each appropriate blo
 
 To get textures into the right positions, you may need to reposition/resize your faces' UV mapping. This can be done by selecting the affected face and using the UV panel.
 
-<WikiImage
-    src="/assets/images/blocks/block-models/paper_bag_handle_uv.png"
-    alt=""
-    width="300"
-/>
+<WikiImage src="/assets/images/blocks/block-models/paper_bag_handle_uv.png" alt="" width="300" />
 
 <br>
 
-<WikiImage
-    src="/assets/images/blocks/block-models/paper_bag_final.png"
-    alt=""
-    width="300"
-/>
+<WikiImage src="/assets/images/blocks/block-models/paper_bag_final.png" alt="" width="300" />
 
 ## Changing Material Instances
 
@@ -189,7 +183,7 @@ If you have textures for your block defined in that file, make sure you migrate 
 <Card
     title="Create Culling Rules"
     link="/blocks/block-culling"
-    image="assets/images/homepage/crafting_table_0.png"
+    image="/assets/images/homepage/crafting_table_0.png"
 >
 
 Creating culling rules for your model can aid performance by telling the game to unrender
@@ -197,9 +191,9 @@ hidden parts of your model.
 
 </Card>
 <Card
-    title="Conditional Bone Rendering"
+    title="Conditional Bones"
     link="/blocks/block-components#bone-visibility"
-    image="assets/images/homepage/scripting.png"
+    image="/assets/images/homepage/scripting.png"
 >
 
 Use the "bone_visibility" parameter of the [geometry](/blocks/block-components#geometry) component to render different model bones based on your block's current permutation.
