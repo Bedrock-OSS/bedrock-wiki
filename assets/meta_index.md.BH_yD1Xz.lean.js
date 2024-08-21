@@ -1,0 +1,1 @@
+import{_ as e,e as t,d as a}from"./chunks/framework.BiiLugT5.js";const _=JSON.parse('{"title":"Meta","description":"","frontmatter":{"title":"Meta"},"headers":[],"relativePath":"meta/index.md","filePath":"meta/index.md"}'),n={name:"meta/index.md"};function r(o,s,d,i,c,m){return a(),t("div")}const f=e(n,[["render",r]]);export{_ as __pageData,f as default};
