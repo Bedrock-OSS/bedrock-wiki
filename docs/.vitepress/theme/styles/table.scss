@@ -1,0 +1,32 @@
+table {
+  margin-block: 0.5em;
+  border-collapse: collapse;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  background-color: var(--light-bg-color);
+}
+
+thead,
+tr:nth-child(2n) {
+  background-color: var(--bg-color);
+}
+
+tr,
+thead {
+  &:not(:last-child) {
+    border-bottom: var(--border);
+  }
+}
+
+th,
+td {
+  padding: 0.5em 1em;
+
+  &:not(:last-child) {
+    border-right: var(--border);
+  }
+}

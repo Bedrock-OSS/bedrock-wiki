@@ -1,11 +1,12 @@
 ---
 title: Block Sounds
+description: Block sounds refers to the sound property in your block entry inside blocks.json.
 category: Documentation
+show_outline: false
 mentions:
     - MedicalJewel105
     - TheItsNameless
     - QuazChick
-description: Block sounds refers to the sound property in your block entry inside blocks.json.
 ---
 
 Block sounds refers to the sound property in your block entry inside `blocks.json`.

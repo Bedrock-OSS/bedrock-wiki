@@ -68,7 +68,9 @@ Like any normal component, custom components can be added and removed based on t
 }
 ```
 
-## Before Player Place
+## List of Events
+
+### Before Player Place
 
 Runs before a player places the block.
 
@@ -85,7 +87,7 @@ beforeOnPlayerPlace(event) {
 }
 ```
 
-## Entity Fall On
+### Entity Fall On
 
 :::tip DEPENDENCIES
 The entity fall on event requires the [`minecraft:entity_fall_on`](/blocks/block-components#entity-fall-on) component to be active on your block to trigger.
@@ -114,7 +116,7 @@ onEntityFallOn(event) {
 }
 ```
 
-## Place
+### Place
 
 Runs when the block is placed.
 
@@ -128,7 +130,7 @@ onPlace(event) {
 }
 ```
 
-## Player Destroy
+### Player Destroy
 
 Runs when the player destroys the block.
 
@@ -143,7 +145,7 @@ onPlayerDestroy(event) {
 }
 ```
 
-## Player Interact
+### Player Interact
 
 Runs when the player interacts with / uses the block.
 
@@ -159,7 +161,7 @@ onPlayerInteract(event) {
 }
 ```
 
-## Random Tick
+### Random Tick
 
 Triggered on every random tick, allowing for behavior like random crop growth.
 
@@ -172,7 +174,7 @@ onRandomTick(event) {
 }
 ```
 
-## Step Off
+### Step Off
 
 :::tip DEPENDENCY
 The step off event requires the the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be 4 or higher on the Y-axis in order to trigger.
@@ -190,7 +192,7 @@ onStepOff(event) {
 }
 ```
 
-## Step On
+### Step On
 
 :::tip DEPENDENCY
 The step on event requires the the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be 4 or higher on the Y-axis in order to trigger.
@@ -208,7 +210,7 @@ onStepOn(event) {
 }
 ```
 
-## Tick
+### Tick
 
 :::tip DEPENDENCY
 The tick event requires the [`minecraft:tick`](/blocks/block-components#tick) component to be active on your block to trigger.

@@ -167,51 +167,27 @@ Textures can also be applied per face. For example, a custom "compass block" cou
 
 `textures/blocks/compass_block_down.png`
 
-<WikiImage
-    src="/assets/images/blocks/blocks-intro/compass_block_down.png"
-    pixelated="true"
-    width="64"
-/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_down.png" pixelated width="64" />
 
 `textures/blocks/compass_block_up.png`
 
-<WikiImage
-    src="/assets/images/blocks/blocks-intro/compass_block_up.png"
-    pixelated="true"
-    width="64"
-/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_up.png" pixelated width="64" />
 
 `textures/blocks/compass_block_north.png`
 
-<WikiImage
-    src="/assets/images/blocks/blocks-intro/compass_block_north.png"
-    pixelated="true"
-    width="64"
-/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_north.png" pixelated width="64" />
 
 `textures/blocks/compass_block_east.png`
 
-<WikiImage
-    src="/assets/images/blocks/blocks-intro/compass_block_east.png"
-    pixelated="true"
-    width="64"
-/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_east.png" pixelated width="64" />
 
 `textures/blocks/compass_block_south.png`
 
-<WikiImage
-    src="/assets/images/blocks/blocks-intro/compass_block_south.png"
-    pixelated="true"
-    width="64"
-/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_south.png" pixelated width="64" />
 
 `textures/blocks/compass_block_west.png`
 
-<WikiImage
-    src="/assets/images/blocks/blocks-intro/compass_block_west.png"
-    pixelated="true"
-    width="64"
-/>
+<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_west.png" pixelated width="64" />
 
 <br>
 <br>
@@ -315,41 +291,35 @@ You can learn more about translation [here](/concepts/text-and-translations).
 
 In this page, you've learnt about the following:
 
-<Checklist>
-
 -   [x] Basic features of blocks
 -   [x] How to apply a texture to all block faces
 -   [x] How to apply textures per face
-
-</Checklist>
 
 ...but it's only the beginning, see what else you could do below!
 
 ## What's Next?
 
-<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 m-0 p-0">
-  <Card
-    title="Expand Functionality"
-    imgsrc-light="assets/images/homepage/crafting_table_0.png"
-    link="/blocks/block-components">
-    Learn about the available block <a href="/blocks/block-components">components</a> to craft unique gameplay.
-    <br><br>
-    Why not give your block a custom model with the <a href="/blocks/block-components#geometry">geometry</a> component?
-    You could also configure your own <a href="/blocks/block-components#collision-box">collision</a> and <a href="/blocks/block-components#selection-box">selection</a> boxes to match!
-  </Card>
-  <Card
-    title="Create Variants"
-    imgsrc-light="assets/images/homepage/scripting.png">
-    Make use of block <a href="/blocks/block-states">states</a> and <a href="/blocks/block-permutations">permutations</a> to conditionally enable components on your blocks.
-    <br><br>
-    For example, you could add liquid depth levels to your custom tank block, with support for multiple liquid types.
-  </Card>
-  <Card 
-    title="Replicate Vanilla"
-    imgsrc-light="assets/images/homepage/diamond_ore_0.png"
-    link="/blocks/block-components">
-    Browse several complete replicas of existing blocks in the <b class="orange px-1 rounded-md">Vanilla Re-Creations</b> category.
-    <br><br>
-    Start simple with <a href="/blocks/custom-glass-blocks">custom glass blocks</a>, making use of <a href="/blocks/block-components#material-instances">material instances</a>!
-  </Card>
-</div>
+<CardGrid>
+<Card title="Add Functionality" image="/assets/images/homepage/crafting_table_0.png">
+
+Learn about the available block [components](/blocks/block-components) to craft unique gameplay.
+
+Why not give your block a custom model with the [geometry](/blocks/block-components#geometry) component?
+You could also configure your own [collision](/blocks/block-components#collision-box) and [selection](/blocks/block-components#selection-box) boxes to match!
+
+</Card>
+<Card title="Create Variants" image="/assets/images/homepage/scripting.png">
+
+Make use of block [states](/blocks/block-states) and [permutations](/blocks/block-permutations) to conditionally enable components on your blocks.
+
+For example, you could add liquid depth levels to your custom tank block, with support for multiple liquid types.
+
+</Card>
+<Card title="Replicate Vanilla" image="/assets/images/homepage/diamond_ore_0.png">
+
+Browse several complete replicas of existing blocks in the **Vanilla Re-Creations** category.
+
+Start simple with [custom glass blocks](/blocks/custom-glass-blocks), making use of [material instances](/blocks/block-components#material-instances)!
+
+</Card>
+</CardGrid>

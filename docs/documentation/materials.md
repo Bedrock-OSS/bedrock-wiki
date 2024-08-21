@@ -1,6 +1,7 @@
 ---
 title: Vanilla Materials
-show_toc: false
+description: Materials documentation.
+show_outline: false
 tags:
     - expert
 mentions:
@@ -9,7 +10,6 @@ mentions:
     - MedicalJewel105
     - SmokeyStack
     - ThomasOrs
-description: Materials documentation.
 ---
 
 :::warning
@@ -23,7 +23,7 @@ You can learn more about creating materials [here](/visuals/materials).
 ## List of Vanilla Materials
 
 | Vanilla_Material                                                                        |
-|-----------------------------------------------------------------------------------------|
+| --------------------------------------------------------------------------------------- |
 | [alpha_block](#alpha-block)                                                             |
 | [alpha_block_color](#alpha-block-color)                                                 |
 | [banner](#banner)                                                                       |
@@ -413,8 +413,6 @@ Inconsistently renders objects with transparency behind.
 -   Completely Opaque
 -   Backface-Culling
 
-
 :::warning
 Please note, that these have also only been tested using a RenderDragon platform. Non-RenderDragon visuals may differ.
 :::
-

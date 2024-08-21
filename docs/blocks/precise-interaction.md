@@ -120,7 +120,7 @@ export default class FaceSelectionPlains {
 
     Creates a new `FaceSelectionPlains` instance.
 
-      <Spoiler title="Parameters">
+    <Spoiler title="Parameters">
 
     -   **plains**: `Object[]`<br>
         Array defining the 2D areas on a block's face which may be selected.<br><br>
@@ -134,7 +134,7 @@ export default class FaceSelectionPlains {
         -   **name**?: `string`<br>
             Custom name to easily identify this plain when it is selected.
 
-      </Spoiler><br>
+    </Spoiler><br>
 
 -   #### getSelected
 
@@ -144,7 +144,7 @@ export default class FaceSelectionPlains {
 
     Returns the involved plain's array index, or name if provided. If no plain is selected, `undefined` is returned.
 
-      <Spoiler title="Parameters">
+    <Spoiler title="Parameters">
 
     -   **selection**: `Object`<br>
         Object containing details about the selection.<br><br>
@@ -163,7 +163,7 @@ export default class FaceSelectionPlains {
         -   **invertV**?: `boolean`<br>
             Vertical axis goes `bottom -> top` rather than `top -> bottom` if true.
 
-      </Spoiler>
+    </Spoiler>
 
 ### Usage
 
@@ -310,7 +310,7 @@ export default class SelectionBoxes {
 
     Creates a new `SelectionBoxes` instance.
 
-      <Spoiler title="Parameters">
+    <Spoiler title="Parameters">
 
     -   **boxes**: `Object[]`<br>
         Array defining the 3D areas within a block which may be selected.<br><br>
@@ -324,7 +324,9 @@ export default class SelectionBoxes {
         -   **name**?: `string`<br>
             Custom name to easily identify this box when it is selected.
 
-      </Spoiler><br>
+    </Spoiler><br>
+
+-   #### getSelected
 
 -   #### getSelected
 
@@ -336,7 +338,7 @@ export default class SelectionBoxes {
 
     Returns the involved box's array index, or name if provided. If no box is selected, `undefined` is returned.
 
-     <Spoiler title="Parameters">
+    <Spoiler title="Parameters">
 
     -   **faceLocation**: [`Vector3`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/vector3)<br>
         Selection location relative to the bottom north-west corner of the block.<br><br>
@@ -352,7 +354,7 @@ export default class SelectionBoxes {
         -   **invertZ**?: `boolean`<br>
             Z axis extends `south -> north` rather than `north -> south` if true.
 
-     </Spoiler>
+    </Spoiler>
 
 ### Usage
 
@@ -394,10 +396,9 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ![Pigeonholes Showcase](/assets/images/blocks/precise-interaction/pigeonholes.png)
 
-<BButton
-  link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-precise_interaction/rp/models/blocks/pigeonholes.geo.json"
-  color=blue
->Download Pigeonholes Model</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-precise_interaction/rp/models/blocks/pigeonholes.geo.json">
+    Download Pigeonholes Model
+</Button>
 
 <Spoiler title="Block JSON">
 
@@ -609,10 +610,9 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ![Double Flower Pot Showcase](/assets/images/blocks/precise-interaction/double_flower_pot.png)
 
-<BButton
-  link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-precise_interaction/rp/models/blocks/double_flower_pot.geo.json"
-  color=blue
->Download Double Flower Pot Model</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-precise_interaction/rp/models/blocks/double_flower_pot.geo.json">
+    Download Double Flower Pot Model
+</Button>
 
 <Spoiler title="Block JSON">
 
@@ -854,9 +854,8 @@ import "./blocks/double_flower_pot";
 
 Template pack made according to this tutorial, adding the Pigeonholes and Double Flower Pot blocks into the `Items` tab.
 
-<BButton
-  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_interaction.mcaddon"
-  color=blue
->Download MCADDON</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_interaction.mcaddon">
+    Download MCADDON
+</Button>
 
 If you require extra assistance with precise interaction, feel free to ask in the [Bedrock Add-Ons Discord](/discord)! Remember to include a link to this page in your question, as the classes provided here are not built into Minecraft.

@@ -110,10 +110,9 @@ With a text editor, take the bones from the provided player skeleton file and co
 
 For convenience, such a model has been prepared here. The cubes from the player's model have already been removed:
 
-<BButton
-  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/steve_head.geo.json?raw=true"
-	color=blue
->📄 Geometry File</BButton>
+<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/steve_head.geo.json?raw=true">
+    📄 Geometry File
+</Button>
 
 ### Display Settings
 
@@ -123,10 +122,9 @@ Create two new animations, one for holding the item in first person and another 
 
 Here is an example of such an animation. This also includes a first-person animation—the means of making one is detailed in the section below.
 
-<BButton
-  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/steve_head.animation.json?raw=true"
-	color=blue
->📄 Animation File</BButton>
+<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/steve_head.animation.json?raw=true">
+    📄 Animation File
+</Button>
 
 ### First-person Animations
 
@@ -138,10 +136,9 @@ To add animation for player's hands, you need to use player's animations, not at
 
 Use the following guide animation and import it into Blockbench. It applies a rotation of (95, -45, 115) and a translation of (13.5, -10, 12) to the right arm bone, perfectly mimicking how the arm is positioned in first-person.
 
-<BButton
-  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/attachable_guide.animation.json?raw=true"
-	color=blue
->📄 Attachable Guide File</BButton>
+<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/attachable_guide.animation.json?raw=true">
+    📄 Attachable Guide File
+</Button>
 
 :::warning NOTE
 This is where things get tricky. Both animations will need to be played simultaneously; your first-person animation, and the guide's first-person animation.
@@ -198,10 +195,9 @@ Apply the model binding to your bone, and save the geometry to your resource pac
 
 An example model with this binding applied is provided here:
 
-<BButton
-  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/skeleton_head.geo.json?raw=true"
-	color=blue
->📄 Geometry File</BButton>
+<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/skeleton_head.geo.json?raw=true">
+    📄 Geometry File
+</Button>
 
 ### Display Settings
 
@@ -212,18 +208,18 @@ Create two new animations, one for holding the item in first person and another 
 To make creating these animations easier, please do the following:
 
 -   Download the following player skeleton model. We will use this as a visual aid for positioning your model.
-    <BButton
-    link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/player_skeleton.geo.json?raw=true"
-    color=blue
-        > 📄 Player Skeleton File</BButton>
+
+    <Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/player_skeleton.geo.json?raw=true">
+        📄 Player Skeleton File
+    </Button>
 
 -   With a text editor, add the bones and cubes from your model to the player skeleton model, then import the player skeleton model into Blockbench.
 -   Set your model's root bone(s) to be a child of the 'rightItem' bone in the player skeleton.
 -   Download the following animation file import the `wiki.third_person_guide` animation. This will be used later to make positioning easier.
-    <BButton
-    link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/attachable_guide.animation.json?raw=true"
-    color=blue
-    > 📄 Attachable Guide File</BButton>
+
+    <Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/attachable_guide.animation.json?raw=true">
+        📄 Attachable Guide File
+    </Button>
 
 These guide animations have one notable feature: they apply a -24 offset to the y-position of the right item bone to counteract a similar -24 y-position offset Minecraft applies to bound bones. We are unsure at this time why this happens.
 
@@ -237,10 +233,9 @@ Play both animations, and position your model however you want. Save the animati
 
 An example animation file for this positioning:
 
-<BButton
-  link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/skeleton_head.animation.json?raw=true"
-	color=blue
->📄 Animation File</BButton>
+<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/skeleton_head.animation.json?raw=true">
+    📄 Animation File
+</Button>
 
 ### First-person Animations
 
@@ -250,7 +245,6 @@ Similar to the third-person animation, look in the Attachable Guide file and imp
 
 Each of these methods have been compiled into an example pack you may reference, for if you are getting stuck or simply want to see a working example.
 
-<BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/attachable-example.mcpack"
-    color=blue
->💾 Example Pack</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/attachable-example.mcpack">
+    💾 Example Pack
+</Button>

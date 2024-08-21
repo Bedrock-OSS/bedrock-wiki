@@ -8,19 +8,21 @@ tags:
 description: NBT reading step by step.
 ---
 
-Before going through this example, it is necessary to first familiarize yourself with NBT in its full beauty. See *[NBT in Depth](/nbt/nbt-in-depth)*.
+Before going through this example, it is necessary to first familiarize yourself with NBT in its full beauty. See _[NBT in Depth](/nbt/nbt-in-depth)_.
 Now we will show you how to read NBT, step by step, the format of what we will read will look something like this:
+
 ```json
 "":{
     "myText":"My NBT text",
     "my Int32 Number":456,
 }
 ```
+
 When we don't know what to read, then we read the next byte.
 
 ![](/assets/images/nbt/VS_Editor_images/step1.png)
 
-What did we read? We read number 10 and that means we will read compoud. We also know that we are at the root element property of this file now, so we need to read the name of our root element property. Name is string, so first we have to read the length of the text in bytes, and that is written by Int16 *(Short)*.
+What did we read? We read number 10 and that means we will read compoud. We also know that we are at the root element property of this file now, so we need to read the name of our root element property. Name is string, so first we have to read the length of the text in bytes, and that is written by Int16 _(Short)_.
 
 ![](/assets/images/nbt/VS_Editor_images/step2.png)
 
@@ -68,18 +70,15 @@ Again You don't know what to do next? Then just read another type of next proper
 
 ![](/assets/images/nbt/VS_Editor_images/step12.png)
 
-We read 0x00 (an empty byte), and that marks the end of the root compound. Then the reading of the compound ends, and since it is the ***root*** compound, we can finish reading it completely and have the entire NBT file read.
+We read 0x00 (an empty byte), and that marks the end of the root compound. Then the reading of the compound ends, and since it is the **_root_** compound, we can finish reading it completely and have the entire NBT file read.
+
 ### NBT Example File
+
 This is file what we use here for this example.
 
-<BButton
-    link="/assets/nbt/nbt_example_file.nbt" download
-    color=green
->Download NBT File</BButton>
+<Button link="/assets/nbt/nbt_example_file.nbt" download>
+    Download NBT File
+</Button>
 
-:::tip Important points to keep in mind
-    - The file may contain an NBT Bedrock Header, so be aware that such a situation may occur. See [NBT in Depth](/nbt/nbt-in-depth)>[NBT Bedrock Headers](/nbt/nbt-in-depth#bedrock-nbt-file-header).
-    - The closing null byte does not terminate the reading of the NBT as such, but merely marks the end of the current compound.
-    - All the numbers you read need to be read with little-endian, See [NBT in Depth](/nbt/nbt-in-depth)>[little-endian](/nbt/nbt-in-depth#little-endian).
-    - The first root NBT element in a file can only be a compound or a list. The root element/property in NBT files also has its own name, even though it is mostly empty, but it still needs to be read and avoid complications.
+:::tip Important points to keep in mind - The file may contain an NBT Bedrock Header, so be aware that such a situation may occur. See [NBT in Depth](/nbt/nbt-in-depth)>[NBT Bedrock Headers](/nbt/nbt-in-depth#bedrock-nbt-file-header). - The closing null byte does not terminate the reading of the NBT as such, but merely marks the end of the current compound. - All the numbers you read need to be read with little-endian, See [NBT in Depth](/nbt/nbt-in-depth)>[little-endian](/nbt/nbt-in-depth#little-endian). - The first root NBT element in a file can only be a compound or a list. The root element/property in NBT files also has its own name, even though it is mostly empty, but it still needs to be read and avoid complications.
 :::

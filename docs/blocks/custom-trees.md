@@ -36,7 +36,6 @@ You will notice straight away that our custom leaves have a long list to search 
 <WikiImage
   src="/assets/images/blocks/custom-trees/decaying_leaves_showcase_example.png"
   alt="Decaying Leaves Showcase"
-  pixelated="false"
   width=420
 />
 
@@ -1053,32 +1052,28 @@ Add sounds to blocks
 
 What you have created:
 
-<Checklist>
-
 -   [x] Custom Trees with Decaying Leaves
 -   [x] Working Sapling
 -   [x] Rotatable and Stripable Logs
 
-</Checklist>
-
 <FolderView :paths="[
-'BP/blocks/custom_leaves.json',
-'BP/blocks/custom_log.json',
-'BP/blocks/custom_stripped_log.json',
-'BP/blocks/custom_sapling.json',
-'BP/features/custom_tree_feature.json',
-'BP/feature_rules/custom_tree_feature_rule.json',
-'BP/items/custom_sapling_placer.json',
-'BP/loot_tables/blocks/custom_leaves.json',
-'BP/loot_tables/blocks/custom_leaves_shears.json',
-'BP/loot_tables/blocks/custom_sapling.json',
-'BP/structures/custom_tree.mcstructure',
-'RP/blocks.json',
-'RP/texts/en_US.lang',
-'RP/textures/terrain_texture.json',
-'RP/models/blocks/custom_sapling.geo.json',
-'RP/textures/item_texture.json'
-]"></FolderView>
+    'BP/blocks/custom_leaves.json',
+    'BP/blocks/custom_log.json',
+    'BP/blocks/custom_stripped_log.json',
+    'BP/blocks/custom_sapling.json',
+    'BP/features/custom_tree_feature.json',
+    'BP/feature_rules/custom_tree_feature_rule.json',
+    'BP/items/custom_sapling_placer.json',
+    'BP/loot_tables/blocks/custom_leaves.json',
+    'BP/loot_tables/blocks/custom_leaves_shears.json',
+    'BP/loot_tables/blocks/custom_sapling.json',
+    'BP/structures/custom_tree.mcstructure',
+    'RP/blocks.json',
+    'RP/texts/en_US.lang',
+    'RP/textures/terrain_texture.json',
+    'RP/models/blocks/custom_sapling.geo.json',
+    'RP/textures/item_texture.json'
+]" />
 
 ![](/assets/images/blocks/custom-trees/result.png)
 
@@ -1086,7 +1081,6 @@ What you have created:
 
 Template Pack to use in-game to get the idea.
 
-<BButton
-  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_trees.mcaddon"
-  color=blue
->Download MCADDON</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_trees.mcaddon">
+    Download MCADDON
+</Button>

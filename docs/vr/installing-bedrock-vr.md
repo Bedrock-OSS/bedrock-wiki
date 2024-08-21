@@ -40,11 +40,7 @@ When your headset is all setup it is time to open the shortcut.
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup Minecraft VR
 -   [ ] Setup your VR resource pack
 -   [ ] Create custom hands
 -   [ ] Create a custom living room
-
-</Checklist>

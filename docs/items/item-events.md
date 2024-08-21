@@ -49,7 +49,9 @@ To bind a custom component to a custom item, simply list them in the [`minecraft
 }
 ```
 
-## Before Durability Damage
+## List of Events
+
+### Before Durability Damage
 
 This event will be called when an item containing this component is hitting an entity and about to take durability damage.
 
@@ -64,7 +66,7 @@ onBeforeDurabilityDamage(event) {
 }
 ```
 
-## Complete Use
+### Complete Use
 
 :::tip DEPENDENCY
 The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) component to be active on your item to trigger.
@@ -89,7 +91,7 @@ onCompleteUse(event) {
 }
 ```
 
-## Consume
+### Consume
 
 This event will be called when an item containing this component is eaten by an entity.
 
@@ -115,7 +117,7 @@ onConsume(event) {
 }
 ```
 
-## Hit Entity
+### Hit Entity
 
 This function will be called when an item containing this component is used to hit another entity.
 
@@ -130,7 +132,7 @@ onHitEntity(event) {
 }
 ```
 
-## Mine Block
+### Mine Block
 
 This function will be called when an item containing this component is used to mine a block.
 
@@ -145,7 +147,7 @@ onMineBlock(event) {
 }
 ```
 
-## Use
+### Use
 
 This function will be called when an item containing this component is used by a player.
 
@@ -158,7 +160,7 @@ onUse(event) {
 }
 ```
 
-## Use On
+### Use On
 
 This function will be called when an item containing this component is used on a block.
 

@@ -41,7 +41,7 @@ Creating fluids that are identical to vanilla fluids is not currently possible, 
 <WikiImage
   src="/assets/images/blocks/custom-fluids/fluid_display.png"
   alt=""
-  pixelated="true"
+  pixelated
   width=608
 />
 
@@ -49,10 +49,9 @@ Creating fluids that are identical to vanilla fluids is not currently possible, 
 
 Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with your fluid's name. When the source block detects air in its surroundings, it replaces it with the outer fluid blocks. If the source block detects air beneath it, it will also place a falling fluid block underneath.
 
-<BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_fluids/rp/models/blocks/fluid.geo.json"
-    color=blue
->Download Custom Fluid Geometry</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_fluids/rp/models/blocks/fluid.geo.json">
+    Download Custom Fluid Geometry
+</Button>
 
 <Spoiler title="Custom Fluid Block JSON">
 
@@ -373,7 +372,6 @@ By the end your BP folder should look like this:
 
 If anything goes wrong, or if you require all of the template files, they are available for download here. The pack includes everything necessary for a functional fluid.
 
-<BButton
-  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_fluids.mcaddon"
-  color=blue
->Download MCADDON</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_fluids.mcaddon">
+    Download MCADDON
+</Button>

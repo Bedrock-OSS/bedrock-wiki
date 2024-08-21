@@ -17,7 +17,6 @@ Most of the time when creating items, the standard 16x16 resolution is enough. S
 <WikiImage
 	src="/assets/images/items/high-resolution-items/large_item_broken_thirdperson.png"
 	alt="alternative text"
-	pixelated="false"
 	width=1080
 />
 
@@ -156,6 +155,5 @@ With all of these files in place, your item should look a lot better! For exampl
 <WikiImage
 	src="/assets/images/items/high-resolution-items/large_item_fixed_thirdperson.png"
 	alt="alternative text"
-	pixelated="false"
 	width=1080
 />

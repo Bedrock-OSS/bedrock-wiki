@@ -37,10 +37,9 @@ By lowering the position down a pixel, it will sit above farmland perfectly maki
 
 ![](/assets/images/blocks/custom-crops/model.png)
 
-<BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_crops/rp/models/blocks/crop.geo.json"
-    color=blue
->Download Custom Crop Geometry</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_crops/rp/models/blocks/crop.geo.json">
+    Download Custom Crop Geometry
+</Button>
 
 ## Initial Block JSON
 
@@ -620,7 +619,6 @@ With the help of this tutorial/template, you now have the knowledge and skills t
 
 If you require further assistance or would like to access the complete template files, please use the download button provided below. Happy designing!
 
-<BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_crops.mcaddon"
-    color=blue
->Download MCADDON</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_crops.mcaddon">
+    Download MCADDON
+</Button>

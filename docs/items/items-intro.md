@@ -141,11 +141,7 @@ tile.wiki:custom_item.name=Custom Item
 
 In this page, you've learnt about the following:
 
-<Checklist>
-
 -   [x] Basic features of items
 -   [x] How to apply a texture
 -   [x] How to link textures using shortnames in `item_textures.json`
 -   [x] How to define names in the language file
-
-</Checklist>

@@ -447,9 +447,9 @@ Our entity now has its shape, but it also needs a texture. This texture can also
 
 ![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png">
     Download texture here
-</BButton>
+</Button>
 
 You may recall, when we made our item, we assigned a shortname to our texture to reference later. We will be doing something similar for our entity within our entity file, so make sure you keep the file path to the texture.
 
@@ -1420,8 +1420,6 @@ Your folder structure should look like this:
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup your pack
 -   [x] Create a custom item
 -   [x] Create a custom entity
@@ -1429,5 +1427,3 @@ Your folder structure should look like this:
 -   [x] -   How to set an entities texture
 -   [x] -   How to use models, animations, and animation controllers to make your entity more exciting
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe
-
-</Checklist>

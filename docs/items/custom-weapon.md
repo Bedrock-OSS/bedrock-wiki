@@ -96,7 +96,9 @@ Here is an example texture if you do not have your own to use, just `Save As` an
     class="my-4 mr-4"
 />
 
-<BButton link="/assets/images/tutorials/custom-weapons/my_sword.png">Download Texture</BButton>
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-weapons/my_sword.png">
+    Download Texture
+</Button>
 
 ## In-game
 

@@ -3,7 +3,7 @@ title: Add-Ons Explained
 category: Guide
 description: The basics of Add-Ons
 nav_order: 2
-prefix: '2. '
+prefix: "2. "
 mentions:
     - SirLich
     - Dreamedc2015
@@ -63,10 +63,6 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 -   Add-ons modify Minecraft content or add their own
 -   Add-ons are written in json
 -   An add-on is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
-:::
+    :::
 
-<BButton
-    link="/guide/software-preparation"
-    color=blue
->Next: Software and preparation</BButton>
-
+<Button link="/guide/software-preparation">Next: Software and preparation</Button>

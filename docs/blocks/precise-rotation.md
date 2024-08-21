@@ -561,13 +561,9 @@ world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
 
 What you have created:
 
-<Checklist>
-
 -   [x] Block model supporting precise rotation
 -   [x] Block with 16 supported rotation values, allowing placement on 5 block faces (20 total orientations)
 -   [x] Custom block component that can be used to set this rotation state
-
-</Checklist>
 
 ---
 
@@ -577,7 +573,6 @@ What you have created:
 
 Template pack made according to this tutorial, adding a "shell" block into the `Nature` tab.
 
-<BButton
-  link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_rotation.mcaddon"
-  color=blue
->Download MCADDON</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_rotation.mcaddon">
+    Download MCADDON
+</Button>

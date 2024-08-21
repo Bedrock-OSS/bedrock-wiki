@@ -91,9 +91,9 @@ At this point you could just go and add an item texture into your `RP/textures/i
 
 ![](/assets/images/tutorials/custom-armor/custom_chestplate.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_chestplate.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_chestplate.png">
     Download texture here
-</BButton>
+</Button>
 
 ## Adding attachables and textures
 
@@ -142,15 +142,15 @@ If you do not feel creative we have provided a recoloured diamond armour skin fo
 
 ![](/assets/images/tutorials/custom-armor/custom_main.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_main.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_main.png">
     Download texture here
-</BButton>
+</Button>
 
 ![](/assets/images/tutorials/custom-armor/custom_legs.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_legs.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_legs.png">
     Download texture here
-</BButton>
+</Button>
 
 > In the real world you would probably want to use `BlockBench` or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the add-on.
 > If you now go into the game and check what you have produced you should be able to wear your chest piece and pat yourself on the back for a job well done.
@@ -218,9 +218,9 @@ This is great and like before you will need to add your own item texture, althou
 
 ![](/assets/images/tutorials/custom-armor/custom_leggings.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_leggings.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_leggings.png">
     Download texture here
-</BButton>
+</Button>
 
 Once we are done here we need to create the attachables file like this:
 
@@ -319,9 +319,9 @@ As you can see not much has changed, we just update the categories/slots to the 
 
 ![](/assets/images/tutorials/custom-armor/custom_helmet.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_helmet.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_helmet.png">
     Download texture here
-</BButton>
+</Button>
 
 <CodeHeader>RP/attachables/my_helm.json</CodeHeader>
 
@@ -419,9 +419,9 @@ The custom boots texture if you need it.
 
 ![](/assets/images/tutorials/custom-armor/custom_boots.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_boots.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_boots.png">
     Download texture here
-</BButton>
+</Button>
 
 <CodeHeader>RP/attachables/my_boots.json</CodeHeader>
 
