@@ -46,26 +46,26 @@ _This example will set the `minecraft:vertical_half` block state when placed to 
 
 **Permutations are still required for this state to make a functional difference, with conditions querying**
 
-```c
+```c :no-line-numbers
 q.block_state('minecraft:vertical_half')
 ```
 
-## Placement Direction
+## List of Traits
+
+### Placement Direction
 
 Contains information about the player's rotation when the block was placed.
 
 _Released from experiment `Upcoming Creator Features` for format versions 1.20.20 and higher._
 
-**May enable the following states:**
+#### Provided States
 
 | State                          | Values                                                                           | Description                                      |
 | ------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | `minecraft:cardinal_direction` | `"south"` _(default)_<br>`"north"`<br>`"west"`<br>`"east"`                       | Cardinal facing direction of player when placed. |
 | `minecraft:facing_direction`   | `"down"` _(default)_<br>`"up"`<br>`"south"`<br>`"north"`<br>`"west"`<br>`"east"` | Overall direction of player when placed.         |
 
-<br>
-
-**Additional parameters:**
+#### Additional Parameters
 
 -   `y_rotation_offset` - This rotation offset only applies to the horizontal state values (north, south, east, west) . Only axis-aligned angles may be specified (e.g. 90, 180, -90).
 
@@ -78,22 +78,18 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.20.2
 }
 ```
 
-## Placement Position
+### Placement Position
 
 Contains information about where the player placed the block.
 
 _Released from experiment `Upcoming Creator Features` for format versions 1.20.20 and higher._
 
-**May enable the following states:**
+#### Provided States
 
 | State                     | Values                                                                           | Description                                   |
 | ------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------- |
 | `minecraft:block_face`    | `"down"` _(default)_<br>`"up"`<br>`"south"`<br>`"north"`<br>`"west"`<br>`"east"` | Face on which the block was placed.           |
 | `minecraft:vertical_half` | `"top"`<br>`"bottom"` _(default)_                                                | The vertical half where the block was placed. |
-
-<br>
-
-**_This trait has no additional parameters._**
 
 <CodeHeader>minecraft:block > description > traits</CodeHeader>
 

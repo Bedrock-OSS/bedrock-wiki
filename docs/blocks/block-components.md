@@ -61,7 +61,9 @@ Block components are used to change how your block appears and functions in the 
 }
 ```
 
-## Collision Box
+## List of Components
+
+### Collision Box
 
 Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.
 
@@ -74,7 +76,7 @@ Type: Boolean/Object
 -   `size`: Vector [a, b, c]
     -   Size of each side of the collision box. Size is specified as `[x, y, z]`. `origin` + `size` must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
 
-### Example using Boolean
+#### Example using Boolean
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -82,7 +84,7 @@ Type: Boolean/Object
 "minecraft:collision_box": true
 ```
 
-### Example using Object
+#### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -93,7 +95,7 @@ Type: Boolean/Object
 }
 ```
 
-## Crafting Table
+### Crafting Table
 
 Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes.
 
@@ -119,7 +121,7 @@ Type: Object
 }
 ```
 
-## Destructible by Explosion
+### Destructible by Explosion
 
 Describes the destructible by explosion properties for this block. If set to true, the block will have the default explosion resistance. If set to false, this block is indestructible by explosion. If the component is omitted, the block will have the default explosion resistance.
 
@@ -128,7 +130,7 @@ Type: Boolean/Object
 -   `explosion_resistance`: Double
     -   Describes how resistant the block is to explosion. Greater values mean the block is less likely to break when near an explosion (or has higher resistance to explosions). The scale will be different for different explosion power levels. A negative value or 0 means it will easily explode; larger numbers increase level of resistance.
 
-### Example using Boolean
+#### Example using Boolean
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -136,7 +138,7 @@ Type: Boolean/Object
 "minecraft:destructible_by_explosion": false
 ```
 
-### Example using Object
+#### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -146,7 +148,7 @@ Type: Boolean/Object
 }
 ```
 
-## Destructible by Mining
+### Destructible by Mining
 
 Describes the destructible by mining properties for this block. If set to true, the block will take the default number of seconds to destroy. If set to false, this block is indestructible by mining. If the component is omitted, the block will take the default number of seconds to destroy.
 
@@ -156,7 +158,7 @@ Type: Boolean/Object
     -   Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.
     -   Note: It actually takes 2x the amount of seconds defined.
 
-### Example using Boolean
+#### Example using Boolean
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -164,7 +166,7 @@ Type: Boolean/Object
 "minecraft:destructible_by_mining": false
 ```
 
-### Example using Object
+#### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -174,7 +176,7 @@ Type: Boolean/Object
 }
 ```
 
-## Display Name
+### Display Name
 
 Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name.
 
@@ -182,7 +184,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.60
 
 Type: String
 
-### Example using String
+#### Example using String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -190,7 +192,7 @@ Type: String
 "minecraft:display_name": "Custom Block"
 ```
 
-### Example using Localization String
+#### Example using Localization String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -204,7 +206,7 @@ Type: String
 tile.wiki:custom_block.name=Custom Block
 ```
 
-## Entity Fall On
+### Entity Fall On
 
 Triggers an event when an entity falls onto this block.
 
@@ -223,7 +225,7 @@ _Released from experiment `Beta APIs` for format versions 1.21.10 and higher._
 }
 ```
 
-## Flammable
+### Flammable
 
 Describes the flammable properties for this block. If set to true, default values are used. If set to false, or if this component is omitted, the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited.
 
@@ -232,7 +234,7 @@ Type: Boolean/Object
 -   `catch_chance_modifier`: Int
     -   A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a `catch_chance_modifier` greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the `destroy_chance_modifier` is 0). If the `catch_chance_modifier` is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if `destroy_chance_modifier` is greater than 0). The default value of 5 is the same as that of Planks.
 
-### Example using Boolean
+#### Example using Boolean
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -240,7 +242,7 @@ Type: Boolean/Object
 "minecraft:flammable": true
 ```
 
-### Example using Object
+#### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -251,7 +253,7 @@ Type: Boolean/Object
 }
 ```
 
-## Friction
+### Friction
 
 Describes the friction for this block in a range of (0.0-0.9). Friction affects an entity's movement speed when it travels on the block. Greater value results in more friction.
 
@@ -263,7 +265,7 @@ Type: Double
 "minecraft:friction": 0.4
 ```
 
-## Geometry
+### Geometry
 
 The description identifier of the geometry to use to render this block. This identifier must match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: `minecraft:geometry.full_block` or `minecraft:geometry.cross`.
 
@@ -287,7 +289,7 @@ Type: String/Object
     -   Optional “array” of Booleans that define the visibility of individual bones in the geometry file. In order to set up bone_visibility the geometry file name must be entered as an identifier. After the identifier has been specified, bone_visibility can be defined based on the names of the bones in the specified geometry file on a true/false basis.
     -   Note that all bones default to true, so bones should only be defined if they are being set to false. Including bones set to true will work the same as the default.
 
-### Example using String
+#### Example using String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -295,7 +297,7 @@ Type: String/Object
 "minecraft:geometry": "geometry.example_block"
 ```
 
-### Example using Object
+#### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -307,7 +309,7 @@ Type: String/Object
 
 ---
 
-### Bone Visibility
+#### Bone Visibility
 
 Hide direct child cubes of bones in your model.
 
@@ -328,7 +330,7 @@ _Molang expressions supported in `bone_visibility` for format versions 1.20.10 a
 }
 ```
 
-## Light Dampening
+### Light Dampening
 
 The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more.
 
@@ -340,7 +342,7 @@ Type: Int
 "minecraft:light_dampening": 7
 ```
 
-## Light Emission
+### Light Emission
 
 The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted.
 
@@ -352,7 +354,7 @@ Type: Int
 "minecraft:light_emission": 10
 ```
 
-## Loot
+### Loot
 
 The path to the loot table, relative to the behavior pack. Silk Touch overrides this.
 
@@ -366,13 +368,13 @@ Type: String
 "minecraft:loot": "loot_tables/blocks/custom_block.json"
 ```
 
-## Map Color
+### Map Color
 
 Sets the color of the block when rendered to a map. The color is represented as a hex value in the format `#RRGGBB`. May also be expressed as an array of [R, G, B] from 0 to 255. If this component is omitted, the block will not show up on the map.
 
 Type: String/Vector [a, b, c]
 
-### Example using String
+#### Example using String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -380,7 +382,7 @@ Type: String/Vector [a, b, c]
 "minecraft:map_color": "#FFFFFF"
 ```
 
-### Example using Vector [a, b, c]
+#### Example using Vector [a, b, c]
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -388,7 +390,7 @@ Type: String/Vector [a, b, c]
 "minecraft:map_color": [255, 255, 255]
 ```
 
-## Material Instances
+### Material Instances
 
 Configuration of your block's rendering, including textures and lighting.
 
@@ -399,7 +401,7 @@ Material instances can be combined with `RP/blocks.json` entries to create block
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.40 and higher._
 
-### Render Methods
+#### Render Methods
 
 Render methods essentially control how a block appears in the world, much like entity materials. Below are the key properties of each type:
 
@@ -435,7 +437,7 @@ Render methods essentially control how a block appears in the world, much like e
 }
 ```
 
-### Custom Instance Names
+#### Custom Instance Names
 
 :::tip
 Custom material instance names can be defined on the faces of cubes within Blockbench by right-clicking ona cube and opening its `Material Instances`.
@@ -466,7 +468,7 @@ Custom instance names can be defined within material instances, and can be refer
 }
 ```
 
-## Placement Filter
+### Placement Filter
 
 Sets rules for under what conditions the block can be placed or survive.
 
@@ -478,7 +480,7 @@ Type: Object
     -   `allowed_faces`: Array - List of any of the following strings describing which face(s) this block can be placed on: `up`, `down`, `north`, `south`, `east`, `west`, `side`, `all`. Limited to 6 faces.
     -   `block_filter`: Array - List of blocks that this block can be placed against in the `allowed_faces` direction. Limited to 64 blocks. Each block in this list can either be specified as a String (block name) or as a BlockDescriptor.
 
-### Block Descriptor
+#### Block Descriptor
 
 A BlockDescriptor is an object that allows you to reference a block (or multiple blocks) based on its tags, or based on its name and states. The fields of a BlockDescriptor are described below.
 
@@ -517,7 +519,7 @@ A BlockDescriptor is an object that allows you to reference a block (or multiple
 
 See [this](/blocks/block-tags) page for a list of vanilla tags and relevant blocks.
 
-## Selection Box
+### Selection Box
 
 Defines the area of the block that is selected by the player's cursor. If set to true, default values are used. If set to false, this block is not selectable by the player's cursor. If this component is omitted, default values are used.
 
@@ -530,7 +532,7 @@ Type: Boolean/Object
 -   `size`: Vector [a, b, c]
     -   Size of each side of the collision box. Size is specified as `[x, y, z]`. `origin` + `size` must be in the range `(-8, 0, -8)` to `(8, 16, 8)`, inclusive.
 
-### Example using Boolean
+#### Example using Boolean
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -538,7 +540,7 @@ Type: Boolean/Object
 "minecraft:selection_box": true
 ```
 
-### Example using Object
+#### Example using Object
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -549,7 +551,7 @@ Type: Boolean/Object
 }
 ```
 
-## Tick
+### Tick
 
 Causes the block to tick after a random delay in the range specified by `interval_range`.
 
@@ -571,7 +573,7 @@ _Released from experiment `Beta APIs` for format versions 1.21.10 and higher._
 }
 ```
 
-## Transformation
+### Transformation
 
 Supports rotation, scaling, and translation. The component can be added to the whole block and/or to individual block permutations. Transformed geometries still have the same restrictions that non-transformed geometries have such as a maximum size of 30/16 units.
 

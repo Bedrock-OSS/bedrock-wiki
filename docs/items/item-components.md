@@ -39,7 +39,9 @@ Item components are used to change how your item appears and functions in the wo
 }
 ```
 
-## Allow Off Hand
+## List of Components
+
+### Allow Off Hand
 
 Determine whether an item can be placed in the off-hand slot of the inventory.
 
@@ -53,7 +55,7 @@ Type: Boolean
 }
 ```
 
-## Block Placer
+### Block Placer
 
 Block Placer item component. Items with this component will place a block when used. Released from experiment in format version 1.20.10.
 
@@ -79,7 +81,7 @@ Type: Object
 }
 ```
 
-## Can Destroy In Creative
+### Can Destroy In Creative
 
 Determines if the item will break blocks in Creative Mode while swinging.
 
@@ -93,7 +95,7 @@ Type: Boolean
 }
 ```
 
-## Cooldown
+### Cooldown
 
 Cool down time for a component. After use, all items in a specified 'cool down category' become unusable for a determined amount of time defined in the component. Released from experiment in format version 1.20.10.
 
@@ -116,7 +118,7 @@ Type: Object
 }
 ```
 
-## Custom Components
+### Custom Components
 
 Custom components are a new way of connecting the configuration of Blocks and Items in JSON to the power of scripting in a very direct and targeted manner. This new concept allows for composability and reusability of script functionality across blocks and items, while also ensuring that the script only runs specifically for that specific block and item.
 
@@ -132,7 +134,7 @@ Type: Array
 ]
 ```
 
-## Damage
+### Damage
 
 Determines how much extra damage the item does on attack. How much extra damage the item does on attack. Note that this must be a positive value.
 
@@ -153,7 +155,7 @@ Type: Int
 }
 ```
 
-## Digger
+### Digger
 
 Determine how quickly an item can dig specific blocks.
 
@@ -186,7 +188,7 @@ Type: Object
 }
 ```
 
-## Display Name
+### Display Name
 
 Defines the text shown when an item name is shown, such as hover text. Released from experiment in format version 1.20.0.
 
@@ -194,7 +196,7 @@ Does not support newline escape character
 
 Type: String
 
-### Example
+#### Example
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -204,7 +206,7 @@ Type: String
 }
 ```
 
-### Example Using Localization Key
+#### Example Using Localization Key
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -214,7 +216,7 @@ Type: String
 }
 ```
 
-## Durability
+### Durability
 
 Determines how much damage the item can take before breaking, and allows the item to be combined in crafting. Released from experiment in format version 1.20.0.
 
@@ -237,7 +239,7 @@ Type: Object
     -   Uses signed 16-bit integer. 2’s complements creates negative range. `[32768-65536]` - gets treated as negative. The values given to the item will be `(-32768-0)`. So the negative ranges are `[256*(256x+128) - 256*(256(x+1)))` where x is an arbitrary number.
     -   https://bugs.mojang.com/browse/MCPE-180112
 
-### Damage Chance
+#### Damage Chance
 
 Used to calculate unbreaking chance.
 
@@ -260,7 +262,7 @@ Max cannot be greater than min
 }
 ```
 
-## Enchantable
+### Enchantable
 
 Determines what enchantments can be applied to the item. Not all enchantments will have an effect on all item components.
 
@@ -276,7 +278,7 @@ Type: Object
     -   Required Field
     -   Value is `value % 256`
 
-### Slot
+#### Slot
 
 -   armor_feet
 -   armor_torso
@@ -297,7 +299,7 @@ Type: Object
 -   sword
 -   all
 
-### Enchantability Value
+#### Enchantability Value
 
 Determines the item's enchantability, influencing the quality and quantity of potential enchantments. Higher values boost the chance of guaranteeing more powerful enchantments. The table below details enchantability scores across different materials, showcasing their ability to get enchantments.
 
@@ -325,7 +327,7 @@ For an in-depth exploration of enchantability and its impact on the game, refer 
 }
 ```
 
-## Entity Placer
+### Entity Placer
 
 Allows the item to place specified entities into the world. Released from experiment in format version 1.20.0.
 
@@ -353,7 +355,7 @@ Type: Object
     }
 ```
 
-## Food
+### Food
 
 When an item has a food component, it becomes edible to the player. Must have the `minecraft:use_modifiers` component in order to function properly.
 
@@ -384,7 +386,7 @@ Type: Object
 }
 ```
 
-## Fuel
+### Fuel
 
 Allows the item to be used as fuel in a furnace to 'cook' other items. Released from experiment in format version 1.20.0.
 
@@ -403,7 +405,7 @@ Type: Object
 }
 ```
 
-## Glint
+### Glint
 
 Determines whether the item has the enchanted glint render effect on it.
 
@@ -417,7 +419,7 @@ Type: Boolean
 }
 ```
 
-## Hand Equipped
+### Hand Equipped
 
 Determines if an item is rendered like a tool while in-hand.
 
@@ -431,7 +433,7 @@ Type: Boolean
 }
 ```
 
-## Hover Text Color
+### Hover Text Color
 
 Determines the color of the item name when hovering over it.
 
@@ -445,7 +447,7 @@ Type: String
 "minecraft:hover_text_color": "minecoin_gold"
 ```
 
-## Icon
+### Icon
 
 Determines the icon to represent the item in the UI and elsewhere. Released from experiment in format version 1.20.10.
 
@@ -468,7 +470,7 @@ Type: Object
 }
 ```
 
-## Interact Button
+### Interact Button
 
 This component is a boolean or string that determines if the interact button is shown in touch controls and what text is displayed on the button. When set to `true`, default "Use Item" text will be used.
 
@@ -488,7 +490,7 @@ Type: Boolean/String
 }
 ```
 
-## Liquid Clipped
+### Liquid Clipped
 
 Determines whether an item interacts with liquid blocks on use.
 
@@ -504,7 +506,7 @@ Type: Boolean
 }
 ```
 
-## Max Stack Size
+### Max Stack Size
 
 Determines how many of an item can be stacked together.
 
@@ -518,7 +520,7 @@ Type: Int
 }
 ```
 
-## Projectile
+### Projectile
 
 Projectile item component. Projectile items shoot out, like an arrow. Released from experiment in format version 1.20.10.
 
@@ -538,7 +540,7 @@ Type: Object
 }
 ```
 
-## Record
+### Record
 
 The record item component allows the item to play a sound when used in a jukebox.
 
@@ -565,11 +567,11 @@ Type: Object
 }
 ```
 
-### Sound Event
+#### Sound Event
 
 Listed [here](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/itemreference/examples/itemcomponents/minecraft_record?view=minecraft-bedrock-stable) are the available sounds
 
-## Repairable
+### Repairable
 
 Repairable item component: Determines which items can be used to repair a defined item, as well as the amount of durability specified items will repair. Released from experiment in format version 1.20.10.
 
@@ -630,7 +632,7 @@ Type: Object
 }
 ```
 
-## Shooter
+### Shooter
 
 Shooter Item Component. Must have the `minecraft:use_modifiers` component in order to function properly. Released from experiment in format version 1.20.10.
 
@@ -649,7 +651,7 @@ Type: Object
 -   `scale_power_by_draw_duration`: Boolean
     -   When set to `true`, the longer the weapon is drawn, the more power it will have when released
 
-### Ammunition
+#### Ammunition
 
 Sets the entity that is used as ammunition. The priority of what item to use is as follows: First, it will check the off hand slot to see if it matches any of the ammunition. If matched, it will see if that object has `use_offhand` set to `true`. If no items match the offhand, it will go through the array in order, regardless of the order in the inventory.
 
@@ -671,7 +673,7 @@ Sets the entity that is used as ammunition. The priority of what item to use is 
 }
 ```
 
-## Should Despawn
+### Should Despawn
 
 Determines whether an item should eventually despawn while floating in the world.
 
@@ -685,7 +687,7 @@ Type: Boolean
 }
 ```
 
-## Stacked By Data
+### Stacked By Data
 
 Determines if the same item with different aux values can stack. Additionally, defines whether the item actors can merge while floating in the world.
 
@@ -697,7 +699,7 @@ Determines if the same item with different aux values can stack. Additionally, d
 }
 ```
 
-## Tags
+### Tags
 
 The `tags` component determines which tags are attached to an item.
 
@@ -716,7 +718,7 @@ Type: Object
 }
 ```
 
-## Throwable
+### Throwable
 
 Throwable item component. Throwable items, such as a snowball. Released from experiment in format version 1.20.10. Item must have the `minecraft:projectile` component.
 
@@ -753,7 +755,7 @@ Type: Object
     }
 ```
 
-## Use Animation
+### Use Animation
 
 Determines which animation plays when using an item.
 
@@ -767,7 +769,7 @@ Type: String
 }
 ```
 
-### Known Animations
+#### Known Animations
 
 -   eat
 -   drink
@@ -780,7 +782,7 @@ Type: String
 -   spear
 -   spyglass
 
-## Use Modifiers
+### Use Modifiers
 
 Modifies use effects, including how long an item takes to use and the player's speed when used in combination with components like Shooter, Throwable or Food.
 
@@ -802,7 +804,7 @@ Type: Object
 }
 ```
 
-## Wearable
+### Wearable
 
 Determines where the item can be worn. If any non-hand slot is chosen, the max stack size is set to 1.
 
@@ -814,13 +816,13 @@ Type: Object
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:wearable":{
-    "protection" : 10,
+"minecraft:wearable": {
+    "protection": 10,
     "slot": "slot.armor.chest"
 }
 ```
 
-### Slots
+#### Slots
 
 | Slot Name           |
 | ------------------- |
