@@ -521,9 +521,19 @@ Button mappings can be applied to any kind of input elements (`button`, `toggle`
 ### Variables Property
 
 | Name       |  Type  | Description |
+<<<<<<< Updated upstream
 | ---------- | :----: | ----------- |
 | `requires` | string | condition   |
 
+=======
+|------------|:------:|-------------|
+| `requires` | string |  condition  |
+
+<br>
+
+Note that `requires` accepts `$variables` but not `#bindings`.
+
+>>>>>>> Stashed changes
 If you only have one variable to use, you should just use `"variables": {}`
 
 <CodeHeader>RP/ui/example_file.json</CodeHeader>
