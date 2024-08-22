@@ -2,6 +2,7 @@
 import { computed } from "vue";
 
 import useSidebarVisibility from "../composables/sidebarVisibility";
+import useIsMobile from "../composables/isMobile";
 import useRedirect from "../composables/redirect";
 import useData from "../composables/data";
 
@@ -14,6 +15,7 @@ import Footer from "./Footer.vue";
 
 const { page, frontmatter } = useData();
 
+const isMobile = useIsMobile();
 const isSidebarVisible = useSidebarVisibility();
 const isOutlineVisible = computed(() => frontmatter.value?.show_outline ?? !page.value.isNotFound);
 
@@ -29,7 +31,7 @@ useRedirect();
   >
     <Header />
     <Sidebar />
-    <main>
+    <main @pointerdown="() => isMobile && (isSidebarVisible = false)">
       <NotFound v-if="page.isNotFound" />
       <Article v-else />
       <Footer />
