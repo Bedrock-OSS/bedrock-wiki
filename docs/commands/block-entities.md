@@ -11,15 +11,15 @@ description: Max's block entity system using commands.
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-This method, developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/) allows you to create near-perfect entity replications of any Minecraft block using armour stands and some sequential `/playanimation` commands.
+This method, developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/) allows you to create near-perfect entity replications of any Minecraft block using armor stands and some sequential `/playanimation` commands.
 
 To preserve credits to the creator, the community termed this method as "Max's Block Entity" or MBE for short.
 
 ### Points to Note
 
-1. This method uses 1 armour stand per block entity. Therefore, too many armour stands (like any entity) can contribute to server lag.
-2. Players will still be able to pass through them as well as interact with them if not restricted.
-3. While the block entity may appear in one spot, it's actual hitbox will have a slight offset.
+1. This method uses 1 armor stand per block entity. Therefore, too many armor stands (like any entity) can contribute to server lag.
+2. Players will still be able to pass through them as well as interact with them (if not restricted).
+4. While the block entity may render in one spot, it's actual hitbox will have a slight offset.
 
 ## Video Demonstration
 
@@ -33,15 +33,15 @@ To preserve credits to the creator, the community termed this method as "Max's B
 1. `/summon armor_stand Grumm`
     - It is necessary to name it 'Grumm' to avoid inverted block textures.
 2. `/execute as @e [type= armor_stand, name=Grumm, c=1] at @s run tp @s ~~~ 260`
-    - This will align the MBE to the normal Minecraft block grid.
+    - This will match the MBE rotation to the normal Minecraft block grid.
 
 :::tip
 - Crouch & right-click (on mcpe: long press) the armor stand 6 times to place it in Pose 7
-    - Doing this negates the need to use the 2nd command in the system.
+    - Doing this negates the need to use the 2nd command in the system below.
     - **Only use this if you wish to reduce one command from the system.**
 :::
 
-3. Lastly, place the desired block item in the armor stand's mainhand.
+3. Lastly, place the desired block item in the armor stand's main-hand.
 
 :::tip
 - `/replaceitem entity @e [name=Grumm] slot.weapon.offhand 0 <itemID>`
@@ -50,7 +50,7 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ## System
 
-> Note: adding a delay of 100-200 ticks is recommended.
+> Note: Adding a delay of 100-200 ticks is recommended.
 
 <CodeHeader>mcfunction</CodeHeader>
 
@@ -65,17 +65,17 @@ To preserve credits to the creator, the community termed this method as "Max's B
 ![commandBlockChain6](/assets/images/commands/commandBlockChain/6.png)
 
 ### Purpose Of Each Command
-1. Hides the armour stand body.
-2. Automatically sets the armour stand pose to 7 for arms alignment. Skip this command you prefer to do it manually.
+1. Hides the armor stand body.
+2. Automatically sets the armor stand pose to 7 for arms alignment. Skip this command you prefer to do it manually.
 3. __Required command__. Increases size to present as mini-block.
 4. *Optional command.* Increases size to present as full-block.
 5. *Optional command.* Aligns the full-block size MBE properly.
     - Skip 4 & 5 if you do not need full-block size MBE.
-6. Locks in place to prevent fall in case block underneath is removed.
+6. Locks in place to prevent fall in case block beneath is removed.
 
 ## Rotations & Alignments
 
-> Note: These rotation commands (when item placed in main hand) are to be executed only once through a command block.
+> Note: These rotation commands (when item placed in main-hand) are to be triggered once through a command block.
 
 <Spoiler title="Full MBE">
 
@@ -170,10 +170,10 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ## Saving & Loading MBE
 
-1. To save run:
+1. To save, run:
     - `/execute as @e [type=armor_stand, name=Grumm, c=1] at @s run structure save MBE ~~~ ~~~`
 
-2. To load run:
+2. To load, run:
     - `/structure load MBE <coordinates>`
 
-> Note: structure name `MBE` can be changed to your preference.
+> Note: Structure name `MBE` can be changed to your preference.
