@@ -4,14 +4,14 @@ category: Techniques
 mention:
   - BedrockCommands
   - zheaEvyline
-description: This technique allows you to confine your camera rotations to an orbit around the player, an entity or position with the height and radius of the orbit being fully adjustable.
+description: This technique allows you to confine your camera rotations to an orbit around the player, an entity, or position, with the height and radius of the orbit being fully adjustable.
 ---
 
 ## Introduction
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-This technique allows you to confine your camera rotations to an orbit around the player, an entity or position with the height and radius of the orbit being fully adjustable.
+This technique allows you to confine your camera rotations to an orbit around the player, an entity, or position, with the height and radius of the orbit being fully adjustable.
 
 ## Video Demonstration
 
