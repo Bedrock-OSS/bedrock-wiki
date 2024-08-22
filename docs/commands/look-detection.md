@@ -3,8 +3,9 @@ title: Look Detection
 category: Techniques
 mention:
   - BedrockCommands
-  - Plagiatus
   - AjaxGb
+  - Plagiatus
+  - zheaEvyline
 description: This command-technique allows you to detect when a target looks at a player/entity/coordinate and subsequently run your desired commands.
 ---
 
