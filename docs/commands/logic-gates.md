@@ -72,7 +72,7 @@ The remaining gates are simply the inverse of the others, which you can change b
 
 ## Example Commands
 
-Here is a list of argument selectors that can be used in the logic gates:
+Here is a list of target selector arguments that can be used in the execute logic gates:
 - `type`
 - `scores`
 - `name`
@@ -92,11 +92,11 @@ Here is a list of argument selectors that can be used in the logic gates:
 - `/execute unless entity @p [hasitem=[{item=diamond_sword,quantity=0},{item=iron_sword,quantity=0}]] run <command>`
   - Run the command if the player has either a diamond sword or an iron sword.
 
-> Note, you may use more than two inputs (selector arguments) for the OR gate, and the command will execute if it meets any one or more of the inputs.
+> Note: You may use more than two inputs (selector arguments) for the OR gate, and the command will execute if it meets any one or more of the inputs.
 
-Mixing any of the different argument selectors will also work:
+Combining any of the different argument selectors will also work. Examples:
 - `/execute unless entity @p[tag=!red, scores={score1=!1..5}] run <command>`
 - `/execute unless entity @p[name=!player, hasitem=[{item=iron_sword, quantity=0}]] run <command>`
 - `/execute unless entity @e[type=!chicken, tag=!green, scores={score1=!5}, family=!mob}] run <command>`
 
-For any doubts or queries, you may join our Discord linked above and any of our community experts will be happy to assist you.
+For any doubts or queries, you may join our Discord linked above and any of our community experts will be glad to assist you.
