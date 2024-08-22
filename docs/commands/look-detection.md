@@ -12,6 +12,8 @@ description: This command-technique allows you to detect when a target looks at 
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
+**Credits:** *@AjaxGb*
+
 This command-technique allows you to detect when a target looks at a player/entity/block and subsequently run your desired commands.
 
 ## Command
