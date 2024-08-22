@@ -39,20 +39,19 @@ Functions are useful in many ways to reduce the time spent going from command bl
 
 ```yaml
 #Spawn Effects
-effect @a [tag=atSpawn] regeneration 12 255 true
-effect @a [tag=atSpawn] saturation 12 255 true
-effect @a [tag=atSpawn] weakness 12 255 true
+/effect @a [tag=atSpawn] regeneration 12 255 true
+/effect @a [tag=atSpawn] saturation 12 255 true
+/effect @a [tag=atSpawn] weakness 12 255 true
 ```
-- Each new line in a function file represents a new command. You may start a line with # to add comments. Commands in a function do not need to begin with a slash `/`, however doing so will not cause any errors.
+- Each new line in a function file represents a new command. You may start a line with # to add comments. Commands in a function do not need to begin with a slash `/`. However, doing so will not cause any errors.
 
-- All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible.
-Commands in a function are still run in the same order, however.
+- All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
 
-- Minecraft can **not** run more than 10,000 lines of commands in one function file. This includes any other function files that are executed inside of the original file.
+- In Minecraft Bedrock, functions cannot run more than 10,000 commands in a function file. This includes any other function files that are executed inside of the original file.
 
 - It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
 
-- Running commands with a specified delay in a function would involve using scoreboard timers to incrementally count up every tick (to a certain point), and executing at certain scores along the file. You may refer to [Scoreboard Timers](/commands/scoreboard-timers) system to learn how to set it up.
+- Running commands with a specified delay in a function involves using scoreboard timers to incrementally count up each tick until a certain point, and executing commands at specific scores within the file. See [Scoreboard Timers](/commands/scoreboard-timers) page to learn it's setup.
 
 ## Creating a Function
 
@@ -89,7 +88,7 @@ Commands in a function are still run in the same order, however.
 }
 ```
 
-Note that the uuid field needs to be replaced with an actual uuid, and the two generated must be different from one another. You can generate a uuid at https://uuidgenerator.net/
+Note that the uuid field needs to be replaced with an actual uuid, and the two generated must be different from one another. You can generate a uuid at **[uuidgenerator.net](https://uuidgenerator.net/)**
 
 </Spoiler>
 <Spoiler title="Sample 🖼 pack_icon.png">
@@ -123,7 +122,7 @@ Nested functions, for example `BP/functions/lobby/items/1.mcfunction` can be run
 
 ## tick.json
 
-The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block.) It is located in the `BP/functions` folder. By default, functions running in this file execute at origin `0, 0, 0` in the overworld.
+The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block). It is located in the `BP/functions` folder. By default, functions running in this file execute at origin `0, 0, 0` in the overworld.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
@@ -134,7 +133,7 @@ The final file within a function is the **tick.json** file. This specifies funct
   ]
 }
 ```
-> Note: functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
+> Note: Functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
 
 ## Sample Function Pack
 
@@ -148,9 +147,9 @@ The final file within a function is the **tick.json** file. This specifies funct
 
 Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands in the function.
 
-Enabling the [Content Log](/guide/troubleshooting#content-log) in creator settings will allow you to see if there are any errors in your function pack, in which function the error is in, at which line and exactly what the syntax error for that command is.
+Enabling the [Content Log](/guide/troubleshooting#content-log) in the creator settings allows you to see if there are any errors in your function pack, which function the error is in, on which line, and exactly what the syntax error is for that command.
 
-The list of errors will be generated every time you load a world or run `/reload` to reflect changes after editing files. The list can be viewed on-screen for a few seconds as well as in the content log history in settings.
+The list of errors will be generated every time you load a world or run `/reload` to reflect changes after editing files. The list can be viewed on-screen for a few seconds, as well as in the content log history in settings.
 
 ![contentLogToggles](/assets/images/commands/contentLogToggles.png)
 
