@@ -20,11 +20,17 @@ This command-technique allows you to detect when a target looks at a player/enti
 
 <CodeHeader>mcfunction</CodeHeader>
 
-```py
+```yaml
 /execute as <target> at @s anchored eyes facing <entity | coordinate> positioned ^^^1 positioned ~~-1.62~ rotated as @s positioned ^^^-1 if entity @s [r=0.2] run <sub-command>
 
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+
+**Visualisation:**
+
+![Alex Looking At A Pig's Head](/assets/images/commands/lookDetectionVisualRep.gif)
+
+> *Note: This is a rough visual representation, not precise measurements.*
 
 **Command Breakdown:**
 
@@ -39,7 +45,8 @@ This command-technique allows you to detect when a target looks at a player/enti
 - `facing <entity | coordinate>`
   - sets the execution rotation facing an entity or coordinate. Example:
       - `facing 0 0 0` facing coordinate: 0,0,0.
-      - `facing entity @e [type=pig, c=1]` (facing closest pig)
+      - `facing entity @e [type=pig, c=1] eyes` (facing eyes of nearest pig)
+      - `facing entity @e [type=zombie, c=1] feet` (facing feet of nearest zombie)
 - `positioned ^^^1`
   - from previous point, pushes the execution position 1 block forward in the direction of the entity/coordinate.
 - `positioned ~~-1.62~`
@@ -61,7 +68,7 @@ Run a `/say` command when looking at the eyes of the nearest cow tagged 'target'
 
 <CodeHeader>mcfunction</CodeHeader>
 
-```py
+```yaml
 /execute as @a at @s anchored eyes facing entity @e [type=cow, tag=target, c=1] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello cow!
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
@@ -70,7 +77,7 @@ Run a `/say` command when looking at the position 10,20,30:
 
 <CodeHeader>mcfunction</CodeHeader>
 
-```py
+```yaml
 /execute as @a at @s anchored eyes facing 10 20 30 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello block!
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
