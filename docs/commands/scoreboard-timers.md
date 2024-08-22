@@ -71,7 +71,7 @@ We will now use this scoreboard data to make our timers function.
 /scoreboard players operation speedEffect events %= 30s ticks
 /execute if score speedEffect events matches 0 run effect @a speed 10 2 true
 ```
-![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
+![Chain Of 8 Command Blocks](/assets/images/commands/commandBlockChain/8.png)
 
 Here, we have taken 3 examples to show how to implement them, but you can add any timer you prefer and as many as you need.
 
@@ -83,89 +83,98 @@ Just make sure to follow the given order and properly apply the `/execute if sco
     - `chatMessage`
     - `lagClear`
     - `speedEffect`
-    - *Note: These 3 are fake-player-names.*
+    - *Note: All 3 are fake-player-names in the objective.*
 - **` ticks `** on this objective we define all the intervals for our events and also run our scoreboard timer.
     - ` 2h` interval (static score: 144000)
     - `10m` interval (static score: 12000)
     - `30s` interval (static score: 600)
     - `timer` clock (variable score: n+1)
-    - *Note: These 4 are fake-player-names.*
+    - *Note: All 4 are fake-player-names in the objective*
 
-- **Command 1:** this command adds +1 score every tick to the fake-player-name 'timer' indicating a tick has passed in the game. This is basically our scoreboard timer/clock which we will use for all the repeating events on our world.
-
-
-- **Command 2:** here we copy `timer` score to all our events using the ` * ` wildcard selector. This will allow us to perform operations to determine if the interval has been reached to run the commands for that particular event. Example:
-    - If `timer` score is 1200 that means 1200 game ticks have passed.
-    - And this command makes it so all our events FakePlayer names: `chatMessage`, `lagClear`, `speedEffect` scores are also 1200.
+- **Command 1:** This command adds +1 score every tick to the fake-player-name 'timer' indicating a tick has passed in the game. This is basically our scoreboard timer/clock which we will use for all the repeating events on our world.
 
 
-- **Command 3:** we will use the ` %= ` modulo operation to check if our event score is divisible by it's corresponding interval. A number is said to be divisible when the remainder is 0.
-    - Chat Message: `1200/144000` Q=0, R=1200, *hence interval not reached.*
-    - Lag Clear: `1200/12000` Q=0, R=1200, *hence interval not reached.*
-    - Speed Effect: `1200/600` Q=2, R=0, *hence interval has reached and event commands can be executed.*
-Here we can note that the first 2 events are yet to happen but the 3rd event is happening for the second time.
+- **Command 2:** Here, we copy 'timer' score to all our events using the ` * ` wildcard selector. This will allow us to perform operations to determine if the interval has been reached to run the commands for that particular event. Example:
+    - If `timer` score is 1200, it means 1200 game-ticks have passed.
+    - And this command makes it so all our events fake-player-names 'chatMessage', 'lagClear', 'speedEffect' scores are also 1200.
+
+
+- **Command 3:** We will use the ` %= ` modulo operation to check if our events scores are divisible by their corresponding interval. ie., if the remainder is equal 0.
+    - Chat Message: `1200/144000`
+        - Q=0, R=1200
+        - *hence, interval not reached.*
+    - Lag Clear: `1200/12000`
+        - Q=0, R=1200
+        - *hence, interval not reached.*
+    - Speed Effect: `1200/600`
+        - Q=2, R=0
+        - *hence, interval reached and event commands can be executed.*
+    - Here, we can note that the first 2 events are yet to happen, but the 3rd event is happening for the second time.
 :::tip
-In Minecraft; scoreboard division is only calculated up to whole numbers and decimal values are ignored.
-![longDivision](/assets/images/commands/longDivision.png)
+In Minecraft, scoreboard division is only calculated up to whole numbers and decimal values are ignored.
+![](/assets/images/commands/longDivision.png)
 :::
 
+- **Command 4:** the remainder obtained from the calculation is applied to the corresponding event's fake-player-name. Based on this knowledge, we can run our commands if the it's score is equal to `0`.
 
-- **Command 4:** the remainder value obtained from the calculation is applied to the corresponding event FakePlayer name. Based on this knowledge we can run our command if it's score is equal to 0.
-
-The rest of the commands are identical in structure and only the event labels and interval values are changed.
+The rest of the commands are identical in structure and only the event labels and interval durations are changed.
 
 ## Defining Events With Limited Intervals
 
-To limit how many times an event occurs, you will need to create a new objective called `intervals` and define how many times the event should occur like so:
+To limit how many times an event occurs, you need to create a new objective called `intervals` and define how many times that event should occur, as shown below.
+
 <CodeHeader></CodeHeader>
 
 ```yaml
-scoreboard objectives set chatMessage intervals 5
-scoreboard objectives set speedEffect intervals 10
+/scoreboard objectives set chatMessage intervals 5
+/scoreboard objectives set speedEffect intervals 10
 ```
 
-Once you have done that, modify your system from above like so:
+Once you have done that, modify your system as shown below.
 
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
-scoreboard players add timer ticks 1
-scoreboard players operation * events = timer ticks
+/scoreboard players add timer ticks 1
+/scoreboard players operation * events = timer ticks
 
 #Chat Message (every 10m)
-scoreboard players operation chatMessage events %= 2h ticks
-execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run say Technoblade never dies!
-execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run scoreboard players remove chatMessage intervals 1
+/scoreboard players operation chatMessage events %= 2h ticks
+/execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run say Technoblade never dies!
+/execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run scoreboard players remove chatMessage intervals 1
 
 #Speed Effect (every 30s)
-scoreboard players operation speedEffect events %= 30s ticks
-execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
-execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
+/scoreboard players operation speedEffect events %= 30s ticks
+/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
+/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
 ```
-![commandBlockChain8](/assets/images/commands/commandBlockChain/8.png)
+![Chain Of 8 Command Blocks](/assets/images/commands/commandBlockChain/8.png)
 
 ## Executing Commands During Timeframe
 
-To run commands during the timeframe between intervals for a particular system you may do something like this:
+To run commands during the timeframe between intervals for a particular system, you may employ the technique shown below.
+
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
 #Speed Effect (every 30s) + Particle (every tick)
-scoreboard players operation speedEffect events %= 30s ticks
-execute if score speedEffect intervals matches 1.. as @a at @s run particle minecraft:shulker_bullet ~~~
-execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
-execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
+/scoreboard players operation speedEffect events %= 30s ticks
+/execute if score speedEffect intervals matches 1.. as @a at @s run particle minecraft:shulker_bullet ~~~
+/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
+/execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
 ```
-As shown in line 3; to run commands while the timer is running, all you need to do is remove the "if score" testing if the interval has been reached. And instead, only test if *any* interval is left, to run our commands.
+![Chain Of 8 Command Blocks](/assets/images/commands/commandBlockChain/8.png)
 
-Let's say we had set the intervals for this event to 10, then that means players would also have particle trails for 300 seconds since `10*30s=300s`
+As shown in line 3, to run commands while the timer is running, all you need to do is remove the "if score" testing if the interval has been reached. And instead, only test if *any* interval remains to run our commands.
+
+Let's say we had set the `intervals` for this event to `10`. Then players would also have had particle trails for 300 seconds as repeating a 30s event 10 times will total 300 seconds.
 
 ## Entity Timers
 
-In some cases such as an entity despawn event you will need to run timers for each entity individually rather than a synchronised timer which could cause the event to trigger too soon. In such cases an Async Timer can be helpful.
+In some cases, such as an entity despawn event, you will need to run timers for each entity separately rather than a synchronised timer which could cause the event to trigger too soon. In such cases, an Async Timer can be helpful.
 
-Let's say we want to:
-- kill all entities named "station" 5 minutes after they've been summoned.
+Let's say we want to perform the following actions:
+1. kill all entities named "station" 5 minutes after they've been summoned.
 - play a shulker particle around them during that timeframe.
 - play a flame particle around them in the first 10 seconds.
 - play a pling sound to nearby players when the timer reaches half way.
@@ -176,26 +185,26 @@ Let's say we want to:
 
 ```yaml
 #Clock
-scoreboard players add @e [name=station, scores={ticks=0..}] ticks 1
+/scoreboard players add @e [name=station, scores={ticks=0..}] ticks 1
 
 #Executing Commands while timer is running
-execute as @e [name=station, scores={ticks=0..}] at @s run particle minecraft:shulker_bullet ~~~
+/execute as @e [name=station, scores={ticks=0..}] at @s run particle minecraft:shulker_bullet ~~~
 
 #Executing commands within a timeframe
-execute as @e [name=station, scores={ticks=0..200}] at @s run particle minecraft:basic_flame_particle ~~~
+/execute as @e [name=station, scores={ticks=0..200}] at @s run particle minecraft:basic_flame_particle ~~~
 
 #Executing commands at specific intervals
-execute as @e [name=station, scores={ticks=3600}] at @s run playsound note.pling @a [r=10]
+/execute as @e [name=station, scores={ticks=3600}] at @s run playsound note.pling @a [r=10]
 
 #Stopping the timer
-execute as @e [name=station] at @s if entity @e [family=pacified, r=10, c=1] run scoreboard players set @s ticks -1
+/execute as @e [name=station] at @s if entity @e [family=pacified, r=10, c=1] run scoreboard players set @s ticks -1
 
 #Looping the timer
-execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
+/execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
 
 #End
-kill @e [name=station, scores={ticks=6000}]
+/kill @e [name=station, scores={ticks=6000}]
 ```
-![commandBlockChain7](/assets/images/commands/commandBlockChain/7.png)
+![Chain Of 7 Command Blocks](/assets/images/commands/commandBlockChain/7.png)
 
-As shown; setting the score to 0 when it completes the timeframe will loop the timer and setting the score to -1 will stop/disable it. You can still set the score to 0 to start the timer again.
+As shown, setting the score to `0` when it completes the timeframe will loop the timer. And setting the score to `-1` will stop/disable it. You can still set the score to `0` to start the timer again.
