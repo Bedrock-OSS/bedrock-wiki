@@ -50,16 +50,16 @@ We are able to define how our custom item will behave by using behavior componen
 
 ```json
 "minecraft:food":
-"minecraft:foil": true,
+"minecraft:glint": true,
 "minecraft:max_stack_size": 16
 ```
 
 </Spoiler>
 
-Components contain information which tells the game what our item should do. For example the component `"minecraft:foil"` determines whether the item should have an enchanted foil to it, so setting it to `true` will apply it.
+Components contain information which tells the game what our item should do. For example the component [`"minecraft:glint"`](/items/item-components#glint) determines whether the item should have an enchanted glint to it, so setting it to `true` will apply it.
 All components have a `value` attached to it which we can edit to get the behaviour we want.
 
-For our ectoplasm, we will set it to have a stack size of 16, similar to eggs. To do this we use the component `"minecraft:max_stack_size"` and set its value to `16`.
+For our ectoplasm, we will set it to have a stack size of 16, similar to eggs. To do this we use the component [`"minecraft:max_stack_size"`](/items/item-components#max-stack-size) and set its value to `16`.
 
 ### Identifier
 
