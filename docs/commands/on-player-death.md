@@ -42,7 +42,7 @@ If you are working with functions and prefer to have the objective added automat
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
 
-Just make sure to follow the given order and properly apply the selector argument `scores={alive=0}` as shown for your desired commands.
+Just make sure to follow the given order and properly apply the ` scores={alive=0} ` selector argument as shown for your desired commands.
 
 ## Explanation
 
@@ -53,12 +53,12 @@ Just make sure to follow the given order and properly apply the selector argumen
 **Purpose Of Each Command:**
 
 1. **Command 1:** All players will be marked as *not* alive (0) by default.
-    - We will ignore score 2, else the commands that we want to run when the player dies will trigger more than once.
+    - We will ignore score `2`, else the commands that we want to run when the player dies will trigger more than once.
 2. **Command 2:** All alive players will be marked as 'alive' (1).
     - `@e` selector allows us to exclusively target players who are alive.
     - `@a` selector will target all players, whether they are alive or not.
 3. **Command 3:** Now that alive players have a score of 1 and non-alive players have a score of 0, we will use this knowledge to run our desired commands when the player becomes dead (0).
-4. **Command 4:** Since we want to execute our desired commands only once when the player dies, we will set their score to 2. Not doing this will cause the commands to execute repeatedly till they respawn.
+4. **Command 4:** Since we want to execute our desired commands only once when the player dies, we will set their score to `2`. As not doing this will cause the commands to repeat till they respawn.
 
 ## Tick JSON
 
@@ -86,7 +86,7 @@ If using functions, your pack folder structure will be be as follows:
 ]"
 ></FolderView>
 
-> **Note:** the scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+> Note: The scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
 > - ` is_alive_0fe678 `
 > - ` on_player_death_0fe678.mcfunction `
 
