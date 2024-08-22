@@ -29,8 +29,8 @@ It is recommended to use this system while working with command blocks, as well 
 <CodeHeader></CodeHeader>
 
 ```yaml
-scoreboard objectives add ticks dummy
-scoreboard objectives add events dummy
+/scoreboard objectives add ticks dummy
+/scoreboard objectives add events dummy
 ```
 
 Once you have created these two objectives, you will need to define the interval for each repeating event you need on your world in the `ticks` objective.
@@ -56,6 +56,7 @@ We will now use this scoreboard data to make our timers function.
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
+#World Timer/Clock
 /scoreboard players add timer ticks 1
 /scoreboard players operation * events = timer ticks
 
@@ -163,7 +164,6 @@ To run commands during the timeframe between intervals for a particular system, 
 /execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
 /execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
 ```
-![Chain Of 8 Command Blocks](/assets/images/commands/commandBlockChain/8.png)
 
 As shown in line 3, to run commands while the timer is running, all you need to do is remove the "if score" testing if the interval has been reached. And instead, only test if *any* interval remains to run our commands.
 
