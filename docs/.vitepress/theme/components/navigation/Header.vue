@@ -35,8 +35,8 @@ function toggleSidebarVisibility() {
       <MenuOpenIcon v-if="isSidebarVisible" />
       <MenuIcon v-else />
     </button>
-    <img src="/favicon.ico" alt="" />
     <a class="header__title" href="/">
+      <img src="/favicon.ico" alt="" />
       <span>{{ isShortTitle ? "Wiki" : site.title }}</span>
     </a>
     <div class="header__content">
@@ -61,10 +61,6 @@ function toggleSidebarVisibility() {
   right: 0;
   z-index: 150;
 
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-
   padding: 0.5em;
   padding-left: 1em;
 
@@ -72,6 +68,15 @@ function toggleSidebarVisibility() {
 
   background-color: var(--nav-bg-color);
   backdrop-filter: var(--nav-bg-blur);
+
+  &,
+  &__title,
+  &__content,
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
 
   &__menu-button {
     cursor: pointer;
@@ -82,29 +87,23 @@ function toggleSidebarVisibility() {
     }
   }
 
-  & > img {
-    width: 30px;
-  }
-
   &__title {
     color: inherit;
     text-decoration: none;
     font-size: 1.2rem;
     line-height: 1;
     font-weight: 600;
+
+    & > img {
+      width: 30px;
+    }
   }
 
   &__content {
-    display: flex;
-    align-items: center;
     margin-left: auto;
-    gap: 0.5em;
   }
 
   &__links {
-    display: flex;
-    gap: 0.5em;
-
     li {
       display: block;
       a {
