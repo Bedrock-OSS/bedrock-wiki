@@ -86,4 +86,8 @@ export default {
   "/visuals/render-controllers": "/entities/render-controllers",
 
   "/world-generation/randomized-structure-loot": "/loot/randomized-structure-loot",
+
+  "/visuals/deferred-qna": "/meta/deferred-qna",
+  "/scripting/gametest-qna": "/meta/gametest-qna",
+  "/scripting/scripting-editor-qna": "/meta/scripting-editor-qna",
 } satisfies Redirects;

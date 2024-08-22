@@ -1,6 +1,6 @@
 ---
 title: GameTest Q&A 2021/08/06
-category: Documentation
+category: Q&A
 mentions:
     - GTB3NW
     - SirLich
@@ -12,7 +12,7 @@ mentions:
 
 This Q&A took place in the [Bedrock Add-Ons discord](https://discord.gg/NGeNhZpvzV). Five Microsoft employees joined us to answer questions about the Gametest framework. Questions were community sourced.
 
-*warning:* Not all messages were copied over, and some were copy-edited. If you want to see everything, join the above discord, and get the "events archive" role.
+_warning:_ Not all messages were copied over, and some were copy-edited. If you want to see everything, join the above discord, and get the "events archive" role.
 
 ## Realms
 
