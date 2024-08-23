@@ -42,9 +42,9 @@ Send a "Hello everyone!" message to all players in chat:
 /tellraw @a {"rawtext":[{"text":"Hello everyone!"}]}
 ```
 
-### Breaks, Line Bteaks, And Unicodes
+### Breaks, Line Breaks, And Unicodes
 
-Breaks are accessed as ` \ ` and are used in order to use quotation marks ` " ` within components. Example:
+1. Breaks are accessed as ` \ ` and are used in order to use quotation marks ` " ` within components. Example:
 
 ```json
 /tellraw @a {"rawtext":[{"text":"He said, \"I like apples\"..."}]}
@@ -52,7 +52,7 @@ Breaks are accessed as ` \ ` and are used in order to use quotation marks ` " ` 
 #    He said, "I like apples"...
 ```
 
-Line breaks are used as ` \n ` to go down a line. Example:
+2. Line breaks are used as ` \n ` to go down a line. Example:
 
 ```json
 /tellraw @a {"rawtext":[{"text":"Hello\nNext line"}]}
@@ -61,7 +61,8 @@ Line breaks are used as ` \n ` to go down a line. Example:
 #    Next line
 ```
 
-Unicodes provides a unique number that displays an icon/emoji. Example:
+3. Unicodes provides a unique number that displays an icon/emoji. Example:
+
 ```json
 /tellraw @a {"rawtext":[{"text":"\u263a"}]}
 ```
