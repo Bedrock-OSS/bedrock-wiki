@@ -5,7 +5,7 @@ mention:
   - BedrockCommands
   - GTB3NW
   - SpacebarNinja
-description: Understanding Rawtext JSON Components used in the `/tellraw`  and `/titleraw` commands.
+description: Understanding Rawtext JSON Components used in the /tellraw  and /titleraw commands.
 ---
 
 ## Introduction
