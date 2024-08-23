@@ -65,7 +65,7 @@ This command-technique allows you to detect when a target looks at a player/enti
 
 **Examples:**
 
-Run a `/say` command when looking at the eyes of the nearest cow tagged 'target':
+1. Run a `/say` command when looking at the eyes of the nearest cow tagged 'target':
 
 <CodeHeader>mcfunction</CodeHeader>
 
@@ -74,7 +74,7 @@ Run a `/say` command when looking at the eyes of the nearest cow tagged 'target'
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
-Run a `/say` command when looking at the position 10,20,30:
+2. Run a `/say` command when looking at the position 10,20,30:
 
 <CodeHeader>mcfunction</CodeHeader>
 
@@ -82,6 +82,17 @@ Run a `/say` command when looking at the position 10,20,30:
 /execute as @a at @s anchored eyes facing 10 20 30 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello block!
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+
+**Alternative Structure:**
+
+<CodeHeader>mcfunction</CodeHeader>
+
+```yaml
+/execute as <target> at <coordinate | entity> facing entity @s eyes positioned as @s positioned ^^^1 rotated as @s positioned ^^^1 if entity @s[r=0.02] run <sub-command>
+```
+![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+
+If you don't need to detect the target looking at the *eyes* of an entity but their feet or a coordinate, you may use this structure which negates the need for the `anchored eyes` condition as the execution position begins from the entity/coordinate rather than the target.
 
 ## Calculate Viewing Angle
 
