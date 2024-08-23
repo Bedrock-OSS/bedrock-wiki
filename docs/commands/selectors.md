@@ -9,6 +9,7 @@ mentions:
     - Sprunkles137
     - Hatchibombotar
     - SpacebarNinja
+    - jeanmajid
 description: Understanding target selectors in commands.
 ---
 
