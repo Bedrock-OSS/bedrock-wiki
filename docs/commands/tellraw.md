@@ -42,7 +42,7 @@ Send a "Hello everyone!" message to all players in chat:
 /tellraw @a {"rawtext":[{"text":"Hello everyone!"}]}
 ```
 
-It also supports breaks, line breaks, and unicodes.
+### Breaks, Line Bteaks, And Unicodes
 
 Breaks are accessed as ` \ ` and are used in order to use quotation marks ` " ` within components. Example:
 
@@ -157,7 +157,7 @@ In the example above, it outputs "`%s joined the game`". For a name to appear in
 ```
 
 
-### Multiple %s
+### Multiple %%s
 
 `%%s` can be used multiple times. They are filled in the order as shown.
 
