@@ -60,7 +60,7 @@ This command-technique allows you to detect when a target looks at a player/enti
 - `if entity @s [r=0.2]`
   - checks if the target is within a 0.2 block radius from the execution position. ie., check if after this back and forth we've arrived roughly back at the target's feet position.
   - To increase or decrease the tolerance for what is considered "close enough", change the `0.2` distance argument.
-      - it needs to be between `0.2` and `2`, as `2` basically means you can look in the opposite direction and it's still "close enough". So, realistically you want to most likely stay well below `1`.
+      - it needs to be between `0.2` and `2`, as `2` basically means you can look in the opposite direction and it's still "close enough". So, realistically, you want to most likely stay well below `1`.
   - To calculate the exact viewing cone angle, see below.
 
 **Examples:**
