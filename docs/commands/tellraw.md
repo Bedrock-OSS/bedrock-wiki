@@ -71,7 +71,7 @@ Unicodes provides a unique number that displays an icon/emoji. Example:
 
 For more info and the full list of unicodes available in Bedrock, refer to the [Emojis & Symbols](/concepts/emojis) page.
 
-### Selector Component
+## Selector Component
 
 Displays the name of a target of your choice. Target Selector arguments are allowed.
 
@@ -92,7 +92,8 @@ Displays the name of a target of your choice. Target Selector arguments are allo
 /tellraw @a {"rawtext":[{"selector":"@a [tag=winner]"}]}
 ```
 
-### Score Component
+## Score Component
+
 Displays a score from a scoreboard objective.
 
 **Syntax:**
@@ -117,7 +118,7 @@ Both are required when using the score component.
 /titleraw @a title {"rawtext":[{"score":{"name":"*","objective":"money"}}]}
 ```
 
-### Translate Component
+## Translate Component
 
 Allows creators to display localized text to users. The list of the strings to translate is inside in the language files. Refer to [Text & Translations](https://wiki.bedrock.dev/concepts/text-and-translations) page for more info.
 
