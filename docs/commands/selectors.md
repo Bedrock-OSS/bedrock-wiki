@@ -106,11 +106,13 @@ Add the "lobby" tag to all players between (-400, 0, -350) and (-150, 256, 50):
 Add the "warp" tag to all entities between (-1.5, 0, -2) and (1, 0, 1.5):
 -   `/tag @a[x=-1.5, y=0, z=-2, dx=2.5, dz=3.5] add warp`
 
-:::tip Note
+:::tip Note:
 
 The target will still be selected even if their hitbox is only partially contained within the volume.
 
 ![](/assets/images/commands/selectors/volume.png)
+
+In this visual representation, we can see that the horse with a larger hitbox is selected, while the player with a smaller hitbox is not selected, despite standing at the same point.
 
 :::
 
