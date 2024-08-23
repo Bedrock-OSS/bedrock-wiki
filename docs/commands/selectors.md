@@ -108,7 +108,7 @@ Add the "warp" tag to all entities between (-1.5, 0, -2) and (1, 0, 1.5):
 :::tip Note
 The target will still be selected even if their hitbox is only partially contained within the volume.
 
-![](assets/images/commands/selectors/volume.png)
+![](/assets/images/commands/selectors/volume.png)
 :::
 
 ### Scores
