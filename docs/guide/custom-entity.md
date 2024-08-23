@@ -26,7 +26,7 @@ Similarly to custom items, we can also make custom entities with many similar me
 
 Here we will make a ghost entity which will float, attack the player and drop our ectoplasm item on death.
 
-<img src="/assets/images/guide/custom_entity/ghost_view.png" width=150>
+<WikiImage src="/assets/images/guide/custom_entity/ghost_view.png" width="150" />
 
 Just like items, entities are made up of two parts:
 
