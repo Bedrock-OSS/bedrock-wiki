@@ -105,6 +105,12 @@ Add the "lobby" tag to all players between (-400, 0, -350) and (-150, 256, 50):
 Add the "warp" tag to all entities between (-1.5, 0, -2) and (1, 0, 1.5):
 -   `/tag @a[x=-1.5, y=0, z=-2, dx=2.5, dz=3.5] add warp`
 
+:::tip Note
+The target will still be selected even if their hitbox is only partially contained within the volume.
+
+![](assets/images/commands/selectors/volume.png)
+:::
+
 ### Scores
 
 Limits the selection of targets by their score value. This argument is represented as an object, with key-value pairs for a scoreboard objective and a value. The value can represent a range of numbers, using the range syntax. The value of a score can be negated to test if the entity does not have a score value within that range.
