@@ -15,7 +15,7 @@ description: This command-technique allows you to detect when a target looks at 
 
 **Credits:** *@AjaxGb*
 
-This command-technique allows you to detect when a target looks at a player/entity/block and subsequently run your desired commands.
+This command-technique allows you to detect when a target looks at a player/entity/coordinate and subsequently run your desired commands.
 
 ## Command
 
