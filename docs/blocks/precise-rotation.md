@@ -256,8 +256,6 @@ Before we start writing our script, make sure you have it linked to your pack ma
 import "./shell.js";
 ```
 
-<br>
-
 Now, in our `shell.js` file, we need to import the `world` object from [`@minecraft/server`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server):
 
 <CodeHeader>BP/scripts/shell.js</CodeHeader>
@@ -327,8 +325,6 @@ world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
     );
 });
 ```
-
-<br>
 
 Now you can apply this custom component to your block!
 

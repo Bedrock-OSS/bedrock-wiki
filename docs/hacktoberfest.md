@@ -30,7 +30,7 @@ Read the official [Hacktoberfest guide](https://hacktoberfest.com/participation/
 
 ## Where to Contribute
 
-Below is a list of organizations and their projects that are participating in Hacktoberfest.<br><br>
+Below is a list of organizations and their projects that are participating in Hacktoberfest.
 
 <CardGrid>
 <Card title="Bedrock-OSS" link="https://github.com/Bedrock-OSS" image="/assets/images/hacktoberfest/bedrockoss.png">

@@ -10,9 +10,7 @@ The Bedrock Wiki is supported by two active discord communities, which you are e
 
 Please feel free to join us to ask questions, get involved in Bedrock Add-Ons, or to contribute to this site!
 
-<br>
-<br>
-<br>
+## Servers
 
 <CardGrid>
 <Card

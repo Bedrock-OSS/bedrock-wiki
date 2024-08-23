@@ -6,6 +6,7 @@ mentions:
     - Ciosciaa
     - SirLich
     - TheItsNameless
+    - QuazChick
 description: Trade tables represent the fundamental data behind trading item transactions for an entity.
 ---
 
@@ -23,140 +24,140 @@ Trade tables don't represent a primary add-on system, like blocks or biomes. The
 It's recommended to follow vanilla convention and place all trade tables within the top-level `trading` directory in a behavior pack. From there, any hierarchy can be employed.
 :::
 
-<FolderView
-	:paths="[
-		'BP/trading/minister.json',
-		'BP/trading/economy_trades/cleric_trades.json'
-	]"
-/>
+<FolderView :paths="[
+    'BP/trading/minister.json',
+    'BP/trading/economy_trades/cleric_trades.json'
+]" />
 
 The following example is referenced and analyzed throughout the document:
 
 <Spoiler title="Trade Table File Example">
 
 <CodeHeader>BP/trading/minister.json</CodeHeader>
+
 ```json
 {
-	"tiers": [
-		{
-			"groups": [
-				{
-					"num_to_select": 1,
-					
-					"trades": [
-						{
-							"wants": [
-								{
-									"item": "wiki:blessing_glyph",
-									"quantity": {
-										"min": 2,
-										"max": 4
-									},
-									
-									"price_multiplier": 0.5
-								},
-								{
-									"item": "minecraft:book"
-								}
-							],
-							"gives": [
-								{
-									"item": "minecraft:enchanted_book",
-									"functions": [
-										{
-											"function": "enchant_book_for_trading",
-											
-											"base_cost": 4,
-											"base_random_cost": 12,
-											"per_level_cost": 4,
-											"per_level_random_cost": 8
-										}
-									]
-								}
-							],
-							"max_uses": 7,
-							
-							"trader_exp": 3
-						},
-						{
-							"wants": [
-								{
-									"item": "wiki:crystalline_spiritite",
-									"quantity": 32,
-									
-									"price_multiplier": 0.125
-								}
-							],
-							"gives": [
-								{
-									"item": "wiki:exalted_blade",
-									"functions": [
-										{
-											"function": "enchant_with_levels",
-											
-											"treasure": true,
-											"levels": {
-												"min": 15,
-												"max": 25
-											}
-										}
-									]
-								}
-							],
-							"max_uses": 2,
-							
-							"reward_exp": false,
-							"trader_exp": 8
-						}
-					]
-				}
-			]
-		},
-		{
-			"total_exp_required": 28,
-			
-			"trades": [
-				{
-					"wants": [
-						{
-							"choice": [
-								{
-									"item": "wiki:sacred_stones",
-									"quantity": {
-										"min": 4,
-										"max": 6
-									},
-									
-									"price_multiplier": 0.5
-								},
-								{
-									"item": "wiki:blessed_beads",
-									"quantity": {
-										"min": 16,
-										"max": 24
-									},
-									
-									"price_multiplier": 0.5
-								}
-							]
-						}
-					],
-					"gives": [
-						{
-							"item": "wiki:aeleon_jewels",
-							"quantity": {
-								"min": 4,
-								"max": 6
-							}
-						}
-					],
-					"max_uses": 2
-				}
-			]
-		}
-	]
+    "tiers": [
+        {
+            "groups": [
+                {
+                    "num_to_select": 1,
+
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "wiki:blessing_glyph",
+                                    "quantity": {
+                                        "min": 2,
+                                        "max": 4
+                                    },
+
+                                    "price_multiplier": 0.5
+                                },
+                                {
+                                    "item": "minecraft:book"
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:enchanted_book",
+                                    "functions": [
+                                        {
+                                            "function": "enchant_book_for_trading",
+
+                                            "base_cost": 4,
+                                            "base_random_cost": 12,
+                                            "per_level_cost": 4,
+                                            "per_level_random_cost": 8
+                                        }
+                                    ]
+                                }
+                            ],
+                            "max_uses": 7,
+
+                            "trader_exp": 3
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "wiki:crystalline_spiritite",
+                                    "quantity": 32,
+
+                                    "price_multiplier": 0.125
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "wiki:exalted_blade",
+                                    "functions": [
+                                        {
+                                            "function": "enchant_with_levels",
+
+                                            "treasure": true,
+                                            "levels": {
+                                                "min": 15,
+                                                "max": 25
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "max_uses": 2,
+
+                            "reward_exp": false,
+                            "trader_exp": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "total_exp_required": 28,
+
+            "trades": [
+                {
+                    "wants": [
+                        {
+                            "choice": [
+                                {
+                                    "item": "wiki:sacred_stones",
+                                    "quantity": {
+                                        "min": 4,
+                                        "max": 6
+                                    },
+
+                                    "price_multiplier": 0.5
+                                },
+                                {
+                                    "item": "wiki:blessed_beads",
+                                    "quantity": {
+                                        "min": 16,
+                                        "max": 24
+                                    },
+
+                                    "price_multiplier": 0.5
+                                }
+                            ]
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "wiki:aeleon_jewels",
+                            "quantity": {
+                                "min": 4,
+                                "max": 6
+                            }
+                        }
+                    ],
+                    "max_uses": 2
+                }
+            ]
+        }
+    ]
 }
 ```
+
 </Spoiler>
 
 ## Structure
@@ -403,13 +404,13 @@ Items are the subjects of a trade. Their definitions are shared between wanted a
 
 ```json
 {
-	"item": "wiki:sacred_stones",
-	"quantity": {
-		"min": 4,
-		"max": 6
-	},
+    "item": "wiki:sacred_stones",
+    "quantity": {
+        "min": 4,
+        "max": 6
+    },
 
-	"price_multiplier": 0.5
+    "price_multiplier": 0.5
 }
 ```
 
@@ -417,18 +418,18 @@ Items are the subjects of a trade. Their definitions are shared between wanted a
 
 ```json
 {
-	"item": "wiki:exalted_blade",
-	"functions": [
-		{
-			"function": "enchant_with_levels",
+    "item": "wiki:exalted_blade",
+    "functions": [
+        {
+            "function": "enchant_with_levels",
 
-			"treasure": true,
-			"levels": {
-				"min": 15,
-				"max": 25
-			}
-		}
-	]
+            "treasure": true,
+            "levels": {
+                "min": 15,
+                "max": 25
+            }
+        }
+    ]
 }
 ```
 
@@ -505,13 +506,12 @@ The price multiplier directly and solely affects cost increases in response to a
 Cost increase due solely to demand is linear, where each increase in demand adds a proportion of the base cost, given by the price multiplier. Assuming the following variables…
 
 | Variable | Meaning                                                                              |
-|----------|--------------------------------------------------------------------------------------|
+| -------- | ------------------------------------------------------------------------------------ |
 | _c_      | Total cost                                                                           |
 | _p_      | Base cost, including [quantity overrides](#quantity-modifying-enchantment-functions) |
 | _m_      | Price multiplier                                                                     |
 | _d_      | Current demand                                                                       |
 
-<br>
 …The following formula can be used to calculate the total cost when no other factors are present:
 
 _c_ = _p_ × (1 + _m_ \* _d_)
@@ -593,13 +593,13 @@ Despite overriding the quantity, all [modified trade prices](#fluctuation-factor
 
 ```json
 {
-	"function": "enchant_with_levels",
+    "function": "enchant_with_levels",
 
-	"treasure": true,
-	"levels": {
-		"min": 5,
-		"max": 25
-	}
+    "treasure": true,
+    "levels": {
+        "min": 5,
+        "max": 25
+    }
 }
 ```
 
@@ -613,12 +613,12 @@ The cost for the first wanted item is determined by adding this function's chose
 
 ```json
 {
-	"function": "enchant_book_for_trading",
+    "function": "enchant_book_for_trading",
 
-	"base_cost": 4,
-	"base_random_cost": 12,
-	"per_level_cost": 4,
-	"per_level_random_cost": 8
+    "base_cost": 4,
+    "base_random_cost": 12,
+    "per_level_cost": 4,
+    "per_level_random_cost": 8
 }
 ```
 
@@ -647,12 +647,12 @@ If the total combined cost would be negative (assuming no negative random cost p
 
 ```json
 {
-	"function": "enchant_book_for_trading",
+    "function": "enchant_book_for_trading",
 
-	"base_cost": -1,
-	"base_random_cost": 0,
-	"per_level_cost": 0,
-	"per_level_random_cost": 0
+    "base_cost": -1,
+    "base_random_cost": 0,
+    "per_level_cost": 0,
+    "per_level_random_cost": 0
 }
 ```
 
@@ -666,7 +666,7 @@ The `"set_actor_id"` function is used to set the data value of a spawn egg based
 
 ```json
 {
-	"function": "set_actor_id"
+    "function": "set_actor_id"
 }
 ```
 
@@ -677,8 +677,9 @@ In trade tables, if no ID is provided, the trader's entity type will be assigned
 Because trade tables do not use in-data identifiers, they are overridden simply by replacing a prior trade table with a new one. You can learn more about [asset overrides here](/concepts/overwriting-assets)
 
 Below are the currently used vanilla trade tables for each trader:
+
 | Trader           | Path                                                     |
-|------------------|----------------------------------------------------------|
+| ---------------- | -------------------------------------------------------- |
 | Stone Mason      | `BP/trading/economy_trades/stone_mason_trades.json`      |
 | Farmer           | `BP/trading/economy_trades/farmer_trades.json`           |
 | Fisherman        | `BP/trading/economy_trades/fisherman_trades.json`        |

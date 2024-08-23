@@ -111,8 +111,6 @@ To get textures into the right positions, you may need to reposition/resize your
 
 <WikiImage src="/assets/images/blocks/block-models/paper_bag_handle_uv.png" alt="" width="300" />
 
-<br>
-
 <WikiImage src="/assets/images/blocks/block-models/paper_bag_final.png" alt="" width="300" />
 
 ## Changing Material Instances
