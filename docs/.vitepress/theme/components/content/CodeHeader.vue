@@ -5,7 +5,9 @@ import FileIcon from "../icons/FileIcon.vue";
 <template>
   <header class="code-header">
     <FileIcon />
-    <div><slot /></div>
+    <div class="code-header__content">
+      <slot />
+    </div>
   </header>
 </template>
 
@@ -32,9 +34,8 @@ import FileIcon from "../icons/FileIcon.vue";
     font-size: 1.5em;
   }
 
-  div {
-    overflow: hidden;
-    text-overflow: ellipsis;
+  &__content {
+    overflow: auto;
     white-space: nowrap;
   }
 }
