@@ -67,7 +67,7 @@ If you are using functions instead of command blocks, the ` on_player_join ` fun
 }
 ```
 
-If using functions, your pack folder structure will be be as follows:
+If using functions, your pack folder structure will be as follows:
 
 <FolderView
 	:paths="[
