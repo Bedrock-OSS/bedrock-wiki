@@ -13,11 +13,11 @@ description: Learn how to use block states in commands.
 
 [Sourced by Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-Block States or Block Properties are additional data that defines how the block appears or behaves. Such as the direction it's facing, it's color, it's variant, whether it is powered or unpowered, and so on.
+Block States or Block Properties are additional data that defines how the block appears or behaves. Such as the direction it is facing, it's color, it's variant, whether it is powered or unpowered and so on.
 
-This is used in a multitude of commands. Such as `/clone`, `/execute`, `/fill`, `/setblock` and `/testforblock`
+This is used in a multitude of commands such as `/clone`, `/execute`, `/fill`, `/setblock` and `/testforblock`
 
-In Bedrock Edition, we used Aux values (also known as Metadata) to define a block. However, as of 1.19.70 and beyond, this is no longer supported and have been fully replaced with Block States instead.
+In Bedrock Edition we used Aux values (also known as Metadata) to define a block. However; as of 1.19.70 and beyond this is no longer supported and have been fully replaced with Block States instead.
 
 <CodeHeader>example</CodeHeader>
 
@@ -28,8 +28,8 @@ In Bedrock Edition, we used Aux values (also known as Metadata) to define a bloc
 /setblock ~ ~ ~ wool ["color"="orange"]
 ```
 
-- Any command block using Aux Values will continue to function as it is. However, Block States will need to be adopted when updating them.
-- Similarly, any commands using Aux Values in behavior/function packs with `min_engine_version` 1.19.63 or below will also continue to function. However, they must be replaced with Block States once the `min_engine_version` is updated to 1.19.70 or above.
+-   Any command block using aux values will continue to function as it is however block states will need to be adopted when updating them.
+-   Similarly any commands using aux values in behaviour or function packs with `min_engine_version` 1.19.63 or below will also continue to function however block states must be adopted if the `min_engine_version` is updated to 1.19.70 or above.
 
 ## Block State Examples & Syntax
 
@@ -42,76 +42,80 @@ In Bedrock Edition, we used Aux values (also known as Metadata) to define a bloc
 /setblock ~ ~ ~ wool []
 ```
 
-- Block states are enclosed in square brackets ` [ ] `
-- When specifying multiple block states, a comma ` , ` is used to separate them.
-- Quotation marks ` " " ` are used around strings. Such as `"birch"`, `"spruce"`, etc..
-- Integer values `0, 1, 2..` and boolean values `true/false` should not use quotation marks.
-- Leaving the brackets empty will default to 0.
-    - Example: `wool 0` is white wool. Hence, you may simply write it as `wool []` or `wool` instead of `wool ["color"="white"]`
+-   Block states are enclosed in square brackets `[ ]`
+-   When specifying multiple block states a comma `,` is used to separate them.
+-   Quotation marks `" "` are used around strings such as `"birch", "spruce" etc..`
+-   Integer values `0, 1, 2..` and boolean values `true/false` do not use quotation marks.
+-   Leaving the brackets blank is also a correct syntax, it will simply default to 0.
+-   `wool 0` is white wool hence you may simply write it as `wool []` instead of `wool ["color"="white"]`
 
 ### Notes For Beginners
 
-- **Integers** are whole numbers. They are used to define a block from a 'range' of values.
-    - Example: Redstone power 1 to 15
-    - `["redstone_power"=10]`
+-   **Integers** are whole numbers. They are used to define a block from a 'range' of values.
 
-- **Boolean** is a programming term which refers to `true/false` values. You can understand them like yes/no questions.
-    - Is this piston powered? `yes/no`
-    - Is this button pressed? `yes/no`
-    - Is this log stripped? `yes/no`
-    - Example: `["stripped_bit"=true]`
+    -   Example: Redstone power 1 to 15
+    -   `["redstone_power"=10]`
 
-- **Strings** are unique 'text' inputs. You can understand them like multiple-choice questions.
-    - What color is this wool? `"white"`, `"orange"`, `"brown"`, etc..
-    - What wood type is this log? `"spruce"`, `"birch"`, `"acacia"`, etc..
-    - Example: `["wood_type"="spruce"]`
- 
- 
+-   **Boolean** is a programming term which refers to `true/false` values. You can simply understand it as yes or no questions.
+
+    -   Is this piston powered? `yes/no`
+    -   Is this button pressed? `yes/no`
+    -   Is this log stripped? `yes/no`
+    -   `["stripped_bit"=true]`
+
+-   **Strings** are unique 'text' inputs. You can simply understand it as multiple choice questions.
+    -   What color is this wool? `"white"`, `"orange"`, `"brown"` etc..
+    -   What wood type is this log? `"spruce"`, `"birch"`, `"acacia"` etc..
+    -   `["wood_type"="spruce"]`
+
 ## Block States List
 
-A list of all the Block States currently available in Bedrock can be found at:
+A list of all the block states currently available within Bedrock can be found at:
 https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/examples/blockstateslist
 
-- Note: In the site, Block States may be listed in `camelCase`, but in commands, only enter them in `snake_case`
-    - Example: `buttonPressedBit` → `"button_pressed_bit"`
+Note: In the site block states may be written as one word but make sure to separate them with underscores `_` when typing in commands.
+
+Example: `buttonPressedBit` → `"button_pressed_bit"`
 
 ## Converting Aux Values to Block States
 
-For your convenience, you may use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) by *@SmokeyStack* to get the up-to-date list of all the Block IDs, their Aux Values and Block State equivalents.
+For your convenience; download any of the excel sheet below to find the full list of block IDs, their aux values and equivalent block states in Bedrock. _Shared by kayla@Mojang_
+
+<Button link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/10987839/Aux-Value_to_Block-States_Map.xlsx">
+    Download Sheet 1
+</Button>
+
+Note: the above sheet was quickly generated and contains some minor errors. Boolean values `0` should be replaced with `false` and `1` should be replaced with `true` since the game doesn't recognize the syntax otherwise.
+
+Alternate sheet: _Shared by @ItsRichHeart_
+
+<Button link="https://github.com/BedrockCommands/bedrockcommands.github.io/files/11069804/All.Block-Item.List.Bedrock.pdf">
+    Download Sheet 2
+</Button>
+
+You may also use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) instead not needing to download any files.
 
 ## Known Issue
 
-Commands specifying blocks must either leave the Block States field blank, or include **all** of it's corresponding Block States. Else, the command will not work.
+Detecting blocks using commands such as `/execute` or `/testforblock` requires **all** or **none** of the block states specified else the command returns an error.
 
-For example, the following commands will work:
+Example; detecting a pressed stone button on ground facing up:
+
 <CodeHeader></CodeHeader>
 
 ```yaml
-#Testing for a Stone Button. (aux value 0)
+#✅ Accepted:
+/execute if block ~~~ stone_button [“button_pressed_bit”=true,”facing_direction”=1] run say success
 /execute if block ~~~ stone_button run say success
 
-#Testing for a non-pressed Stone Button facing west. (aux value 1)
-/execute if block ~~~ stone_button [“button_pressed_bit”=false,”facing_direction”=1] run say success
-```
-
-- Reason the first command works is because the Block States field was left blank.
-- Reason the second command works is because it included all Block States of the Stone Button. Which are:
-    - `button_pressed_bit` (if the button was pressed/unpressed)
-    - `facing_direction` (whether the button was facing up/down/north/south/east/west)
-    - Buttons do not have any other Block State.
-
-Now, if we want to test for a pressed Stone Button that may face *any* direction, we would use a command like this:
-<CodeHeader></CodeHeader>
-
-```yaml
+# ❌ Not Accepted:
 /execute if block ~~~ stone_button [“button_pressed_bit”=true] run say success
+/execute if block ~~~ stone_button [“facing_direction”=1] run say success
 ```
 
-However, this command will not work as the `facing_direction` Block State is missing.
+From the above code, we can see that, though block states have replaced aux values, we still cannot detect blocks based on only the specific block states needed to test like we do in the case of entities using selector arguments.
 
-In conclusion: Though Block States have replaced Aux Values, we still cannot test for blocks based on select few conditions/filters like we do with entities using Selector Arguments.
+### Related Bug Reports
 
-**Related Bug Reports:**
-- [MCPE-133360](https://bugs.mojang.com/browse/MCPE-133360)
-- [MCPE-168391](https://bugs.mojang.com/browse/MCPE-168391)
-
+-   [MCPE-133360](https://bugs.mojang.com/browse/MCPE-133360)
+-   [MCPE-168391](https://bugs.mojang.com/browse/MCPE-168391)
