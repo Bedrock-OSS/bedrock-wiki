@@ -14,7 +14,7 @@ description: This system allows you to track the total number of players/entitie
 
 This system allows you to track the total number of players/entities on your world and subsequently execute your desired commands based on the values obtained.
 
-> Note: Entities in unloaded chunks will not he tracked. However, players can still be tracked regardless.
+> Note: Entities in unloaded chunks will not be tracked. However, players can still be tracked regardless.
 
 ## Setup
 
