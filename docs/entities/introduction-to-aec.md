@@ -1,11 +1,11 @@
 ---
 title: Introduction to AOE Clouds
 category: Tutorials
-tags:	
-  - intermediate
+tags:
+    - intermediate
 mentions:
-  - Sprunkles137
-  - MedicalJewel105
+    - Sprunkles137
+    - MedicalJewel105
 description: Introduction to area-of-effect clouds.
 ---
 
@@ -15,16 +15,16 @@ description: Introduction to area-of-effect clouds.
 
 Area-of-effect clouds have several special features we can take advantage of:
 
-- As [dummy entities](/entities/dummy-entities), they are highly performant and barely affect framerate, and they are also completely static and have no collision with the world. This makes them perfect for situations around players or where precise positioning is important.
-- It does not send the client updates. Once it spawns in, it will visually appear to be frozen in place until it despawns. However, it can still be moved around through commands just fine.
-- It can apply any potion effect in highly configurable ways. The duration can be set down to the tick, as well as whether or not the effect is ambient, or displays on the screen, if it emits particles, etc.
-- Entities with a runtime identifier of `minecraft:area_effect_cloud` inherit these same properties.
+-   As [dummy entities](/entities/dummy-entities), they are highly performant and barely affect framerate, and they are also completely static and have no collision with the world. This makes them perfect for situations around players or where precise positioning is important.
+-   It does not send the client updates. Once it spawns in, it will visually appear to be frozen in place until it despawns. However, it can still be moved around through commands just fine.
+-   It can apply any potion effect in highly configurable ways. The duration can be set down to the tick, as well as whether or not the effect is ambient, or displays on the screen, if it emits particles, etc.
+-   Entities with a runtime identifier of `minecraft:area_effect_cloud` inherit these same properties.
 
 ## Method 1: Projectile Component
 
 The projectile component supports spawning in area-of-effect clouds on hit. Minecraft uses this to spawn in AOE clouds from lingering potions.
 
-[Projectiles Documentation](/documentation/projectiles#spawn-aoe-cloud)
+[Projectiles Documentation](/entities/projectiles#spawn-aoe-cloud)
 
 ## Method 2: NBT Editing
 
@@ -41,17 +41,16 @@ One of the following NBT editors are recommended:
 
 For convenience, this article contains a premade structure file you can download and use. Inside is an AOE cloud that exists for the maximum possible time.
 
-<BButton
-  link="/assets/packs/entities/aec/aec.mcstructure" download
-  color=blue
->Download MCSTRUCTURE</BButton>
+<Button link="/assets/packs/entities/aec/aec.mcstructure" download>
+    Download MCSTRUCTURE
+</Button>
 
 Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructure)
 
 ### NBT Format
 
 | Tag                  | Type    | Description                                                   |
-|----------------------|---------|---------------------------------------------------------------|
+| -------------------- | ------- | ------------------------------------------------------------- |
 | Duration             | Integer | How long the cloud exists for before expiring, in ticks.      |
 | DurationOnUse        | Integer | How much the duration should change when effects are applied. |
 | InitialRadius        | Float   | The size of this cloud's radius when created.                 |
@@ -67,7 +66,7 @@ Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructu
 Below are the parameters for the `mobEffects` tag.
 
 | Tag                             | Type    | Description                                                           |
-|---------------------------------|---------|-----------------------------------------------------------------------|
+| ------------------------------- | ------- | --------------------------------------------------------------------- |
 | Ambient                         | Byte    | Defines whether this effect's particles should be translucent or not. |
 | Amplifier                       | Byte    | The strength of this potion effect.                                   |
 | DisplayOnScreenTextureAnimation | Byte    | Unknown.                                                              |

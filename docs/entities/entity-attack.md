@@ -232,7 +232,7 @@ Both the mob effect and duration timer are optional, but when they are used, the
 
 ### Ranged
 
-Fires specified [projectiles](/documentation/projectiles) towards target at set intervals.
+Fires specified [projectiles](/entities/projectiles) towards target at set intervals.
 
 <CodeHeader></CodeHeader>
 

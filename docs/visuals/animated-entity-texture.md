@@ -7,8 +7,7 @@ mentions:
     - SmokeyStack
 tags:
     - intermediate
-category:
-    - Tutorials
+category: Tutorials
 description: Animate texture of your entity.
 ---
 
@@ -20,9 +19,7 @@ From this page you will learn how to make an animated texture for an entity. Ani
 
 This page is based on content by [AgentMindStorm](https://www.youtube.com/channel/UC-ljddYkFdTQl-MVEaVvbuQ).
 
-<YouTubeEmbed
-    id="F6e-w1rCEi4"
-/>
+<YouTubeEmbed id="F6e-w1rCEi4" />
 
 ## Textures
 
@@ -31,7 +28,6 @@ First let's draw some new texture frames for our entity. In this tutorial it wil
 <WikiImage
 	src="/assets/images/visuals/animated-entity-texture/cow.png"
 	alt="cow"
-	pixelated="false"
 	width=180
 />
 
@@ -49,12 +45,10 @@ Let's simply add a new material:
 
 ```json
 {
-    "materials":{
-        "version":"1.0.0",
-        "custom_animated:entity":{
-            "+defines":[
-                "USE_UV_ANIM"
-            ]
+    "materials": {
+        "version": "1.0.0",
+        "custom_animated:entity": {
+            "+defines": ["USE_UV_ANIM"]
         }
     }
 }
@@ -70,10 +64,9 @@ Or you can add this to existing ones, check default material file.
 ]
 ```
 
-<BButton
-    link="/assets/packs/visuals/animated-entity-texture/entity.material" download
-    color=default
->Download default entity.material file</BButton>
+<Button link="/assets/packs/visuals/animated-entity-texture/entity.material" download>
+    Download default entity.material file
+</Button>
 
 :::warning
 It is not that easy for every entity!
@@ -118,7 +111,6 @@ Now, it is time to test your creation!
 
 ## Download Example
 
-<BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/animated_entity_texture.mcpack"
-    color=blue
->Download</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/animated_entity_texture.mcpack">
+    Download
+</Button>

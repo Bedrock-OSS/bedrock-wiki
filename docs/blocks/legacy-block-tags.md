@@ -2,20 +2,20 @@
 hidden: true
 title: Legacy Block Tags
 mentions:
-  - ThijsHankelMC
-  - yanasakana
-  - aexer0e
-  - SirLich
-  - SmokeyStack
-  - MedicalJewel105
-  - Luthorius
+    - ThijsHankelMC
+    - yanasakana
+    - aexer0e
+    - SirLich
+    - SmokeyStack
+    - MedicalJewel105
+    - Luthorius
 description: Legacy block tags.
 ---
 
 These are block tags that where present in older versions of the game, but are not in current versions, so have no uses.
 
 | BlockTags                  | Description                                                                                                |
-|----------------------------|------------------------------------------------------------------------------------------------------------|
+| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | can_be_broken_from_falling |                                                                                                            |
 | can_hurt_and_break_item    |                                                                                                            |
 | air                        | Air is a special block. It is an unbreakable transparent block, as a substitute for the absence of blocks. |

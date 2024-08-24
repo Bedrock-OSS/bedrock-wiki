@@ -2,7 +2,6 @@
 title: Flying Entities
 category: Tutorials
 tags:
-    - recipe
     - intermediate
 mentions:
     - SirLich

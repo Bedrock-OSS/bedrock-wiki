@@ -1,7 +1,5 @@
 ---
 title: Death Commands
-tags:
-    - recipe
 mentions:
     - SirLich
     - BlueFrog130
@@ -13,7 +11,7 @@ mentions:
 description: Run command when entity dies.
 ---
 
-<BButton color="blue" link="animation-controllers-intro">Learn more about Animation Controllers</BButton>
+<Button link="animation-controllers-intro">Learn more about Animation Controllers</Button>
 
 I define `Death Effects` as "Doing something when an Entity dies". There are a few wrong ways to achieve this that should be avoided, including:
 
@@ -32,24 +30,24 @@ Here is a sample animation controller:
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.death": {
-		"initial_state":"default",
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"dead": "!q.is_alive"
-						}
-					]
-				},
-				"dead": {
-					"on_entry": ["/say I am dead!"]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.death": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "!q.is_alive"
+                        }
+                    ]
+                },
+                "dead": {
+                    "on_entry": ["/say I am dead!"]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -61,29 +59,29 @@ In the case of player entities, an additional transition must be added to the se
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.death": {
-		"initial_state":"default",
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"dead": "!q.is_alive"
-						}
-					]
-				},
-				"dead": {
-					"on_entry": ["/say I am dead!"],
-					"transitions": [
-						{
-							"default": "q.is_alive"
-						}
-					]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.death": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "!q.is_alive"
+                        }
+                    ]
+                },
+                "dead": {
+                    "on_entry": ["/say I am dead!"],
+                    "transitions": [
+                        {
+                            "default": "q.is_alive"
+                        }
+                    ]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -96,6 +94,7 @@ Requires Experimental
 You can also use the `minecraft:on_death` component in your `entity.json` file in the Behavior Pack, which is a fairly easy way to accomplish a command on death.
 
 You first add it to your components and make it run an event on self;
+
 ```json
 "minecraft:on_death" : {
 	"event" : "wiki:on_death",

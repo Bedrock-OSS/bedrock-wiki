@@ -3,7 +3,6 @@ title: Heightmap Noise
 category: Tutorials
 tags:
     - experimental
-    - tutorial
 mentions:
     - Apex360
     - SirLich

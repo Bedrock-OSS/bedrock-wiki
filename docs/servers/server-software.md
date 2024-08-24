@@ -23,6 +23,7 @@ mentions:
     - wu-vincent
     - smartcmd
     - Adrian8115
+    - sculkmp
 description: Software for Bedrock servers.
 ---
 
@@ -34,8 +35,8 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 
 | Language   | Status                                                               |
 |------------|----------------------------------------------------------------------|
-| PHP        | [Still Active](#php)        : 4 < [Discontinued](#php-1)        : 39 |
-| Java       | [Still Active](#java)       : 5 < [Discontinued](#java-1)       : 14 |
+| PHP        | [Still Active](#php)        : 3 < [Discontinued](#php-1)        : 40 |
+| Java       | [Still Active](#java)       : 6 < [Discontinued](#java-1)       : 14 |
 | C++        | [Still Active](#c)          : 2 < [Discontinued](#c-1)          : 5  |
 | TypeScript | [Still Active](#typescript) : 3 < [Discontinued](#typescript-1) : 2  |
 | Go         | [Still Active](#go)         : 1 < [Discontinued](#go-1)         : 5  |
@@ -64,6 +65,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [NukkitX-version](https://github.com/NukkitX/Nukkit)
 -   [Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)
 -   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)
+-   [Sculk](https://github.com/sculkmp/Sculk)
 
 ### TypeScript
 
@@ -76,7 +78,6 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [BetterAltay](https://github.com/Benedikt05/BetterAltay)
 -   [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 -   [NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)
--   [Symply](https://github.com/SymplyX/Symply)
 
 ### Python
 
@@ -195,6 +196,7 @@ Alongside the Vanilla BDS offering, many community projects exist, in a variety 
 -   [T-STAR](https://github.com/TaleStar/T-STAR)
 -   [Turanic](https://github.com/TuranicTeam/Turanic)
 -   [WolfMC](https://github.com/Wolf-MC/WolfMC)
+-   [Symply](https://github.com/SymplyX/Symply)
 
 ### Python
 

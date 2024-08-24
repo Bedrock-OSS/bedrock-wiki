@@ -2,16 +2,12 @@
 title: Convert Points Between Any Space (World, Entity, Bones)
 category: Tutorials
 tags:
-    - guide
-    - info
     - intermediate
 mentions:
     - Johnb003
     - SmokeyStack
 description: In this page we'll discuss how to convert between different coordinate frames in Minecraft.
 ---
-
-# Entity Transforms
 
 ## Overview
 

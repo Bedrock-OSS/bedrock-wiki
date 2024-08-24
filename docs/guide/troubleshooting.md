@@ -2,7 +2,7 @@
 title: Troubleshooting
 category: Extra
 description: A simple troubleshooting guide
-prefix: 'c. '
+prefix: "c. "
 nav_order: 3
 tags:
     - help
@@ -40,23 +40,18 @@ Content log is the best tool you have for debugging your add-ons. Please don't s
 Errors are not cleared between runs, so the errors you see in the content log may be _old_ errors from prior runs.
 :::
 
-The 'Content Log' is a list of issues found in your pack. Minecraft will generate this list every time your load your world. It can catch issues such as:
-    - Wrong texture path
-    - Wrong spelled component
-    - Incorrect json structure
+The 'Content Log' is a list of issues found in your pack. Minecraft will generate this list every time your load your world. It can catch issues such as: - Wrong texture path - Wrong spelled component - Incorrect json structure
 
 Content log can be turned on in in `Settings > Creator`. The content log will show in-game on load up, and if more errors occur during gameplay.
 
 ![](/assets/images/guide/content_log.png)
 
-
 ### Content Log File
 
 The content log is saved in `.txt` format inside your files:
 
-    - *Windows*: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
-    - *Android:* `/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`
-
+-   _Windows_: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\logs`
+-   _Android:_ `/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`
 
 ## Using Vanilla Resources
 
@@ -66,16 +61,16 @@ You should download the vanilla resource and behavior pack. You can find the van
 
 JSON-Schemas are a valuable tool for file validation. You can learn more about JSON-Schemas [here](/meta/using-schemas).
 
-# Troubleshooting your add-on!
+## Troubleshooting your add-on!
 
-## Entities
+### Entities
 
-<BButton link="/entities/troubleshooting-entities"> Troubleshoot your entities.</BButton>
+<Button link="/entities/troubleshooting-entities">Troubleshoot your entities.</Button>
 
-## Items
+### Items
 
-<BButton link="/items/troubleshooting-items"> Troubleshoot your items.</BButton>
+<Button link="/items/troubleshooting-items">Troubleshoot your items.</Button>
 
-## Blocks
+### Blocks
 
-<BButton link="/blocks/troubleshooting-blocks"> Troubleshoot your blocks.</BButton>
+<Button link="/blocks/troubleshooting-blocks">Troubleshoot your blocks.</Button>

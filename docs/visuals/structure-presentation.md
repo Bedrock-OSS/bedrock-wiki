@@ -16,9 +16,9 @@ Presenting features of an add-on clearly has same importance in showcasing quali
 
 There are lots ways of you could showcase structures to people. You can:
 
--	Take in-game screenshots of the structure.
--	Take a screenshot inside of a structure block.
--	Create a 3D object of your structure.
+-   Take in-game screenshots of the structure.
+-   Take a screenshot inside of a structure block.
+-   Create a 3D object of your structure.
 
 Below all three methods will be shown using the Pillager outpost structure as an example.
 
@@ -42,15 +42,13 @@ By making [JSON UI](/json-ui/json-ui-intro) edits you can change the background 
 
 Structures can be exported as a 3d model. If 3D export button is not working for you, you can try applying a 3d-export-fix pack.
 
-<BButton
-  link="/assets/packs/visuals/structure-presentation/3d-export-fix-v2.mcpack" download
-	color=blue
->Download Pack</BButton>
+<Button link="/assets/packs/visuals/structure-presentation/3d-export-fix-v2.mcpack" download>
+    Download Pack
+</Button>
 
-<BButton
-	link="/assets/packs/visuals/structure-presentation/3d-export-fix.mcpack" download
-	color=blue
->Download Pack (prior 1.19.30)</BButton>
+<Button link="/assets/packs/visuals/structure-presentation/3d-export-fix.mcpack" download>
+    Download Pack (prior 1.19.30)
+</Button>
 
 ![](/assets/images/visuals/structure-presentation/model-render.png)
 

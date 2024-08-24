@@ -78,21 +78,21 @@ Create a new text file in your add-on's behaviour pack folder called `manifest.j
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "pack.name",
-		"description": "pack.description",
-		"uuid": "...",
-		"version": [0, 0, 1],
-		"min_engine_version": [1, 16, 0]
-	},
-	"modules": [
-		{
-			"type": "data",
-			"uuid": "...",
-			"version": [0, 0, 1]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "...",
+        "version": [0, 0, 1],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "...",
+            "version": [0, 0, 1]
+        }
+    ]
 }
 ```
 
@@ -140,12 +140,11 @@ You should **NEVER** use the same UUID twice! Use the [Online UUID Generator Too
 
 Notice how other packs have a icon? It's a image file which can quickly identify how your add-on will appear in-game. Got a low-resolution square image as a PNG? You can use it! Otherwise, you can use this example icon.
 
-<WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated/>
+<WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated />
 
-<BButton
-    link="/assets/images/guide/project-setup/pack_icon.png" download
-    color=default
->Download Image</BButton>
+<Button link="/assets/images/guide/project-setup/pack_icon.png" download>
+    Download Image
+</Button>
 
 You must place a copy of your desired image in both the behaviour and resource packs. In order for the image to be read correctly, the name must be `pack_icon.png`.
 
@@ -250,11 +249,7 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup your pack
 -   [ ] Create a custom item
 -   [ ] Create a custom entity
 -   [ ] Create a custom block
-
-</Checklist>

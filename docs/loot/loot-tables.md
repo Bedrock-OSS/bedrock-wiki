@@ -2,9 +2,6 @@
 title: Loot Tables
 category: Documentation
 nav_order: 1
-tags:
-    - Stable
-    - Last updated for Version 1.18.10
 mentions:
     - Ciosciaa
     - Etanarvazac

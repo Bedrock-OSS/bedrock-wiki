@@ -5,8 +5,7 @@ mentions:
     - SirLich
     - Joelant05
     - TheItsNameless
-category:
-    - General
+category: General
 description: Create your own skin pack.
 ---
 
@@ -39,21 +38,13 @@ Here is what is needed:
     "header": {
         "name": "Tutorial Skin Pack",
         "uuid": "bb9616eb-327c-4a81-9f00-064cae820cd5",
-        "version": [
-            1,
-            0,
-            0
-        ]
+        "version": [1, 0, 0]
     },
     "modules": [
         {
             "type": "skin_pack",
             "uuid": "e4bc71b6-8f9b-4094-9d47-dc3824f8a3dc",
-            "version": [
-                1,
-                0,
-                0
-            ]
+            "version": [1, 0, 0]
         }
     ]
 }
@@ -130,9 +121,8 @@ If you play on MC version lower than 1.18.30, you might experience a bug when "E
 
 ![](/assets/images/visuals/skin-packs/troubleshooting-1.png)
 
-<BButton
-    link="/assets/packs/visuals/skin-packs/equip_button_fix.mcpack" download
-    color=default
->Download Equip Button Fix</BButton>
+<Button link="/assets/packs/visuals/skin-packs/equip_button_fix.mcpack" download>
+    Download Equip Button Fix
+</Button>
 
 ![](/assets/images/visuals/skin-packs/troubleshooting-2.png)

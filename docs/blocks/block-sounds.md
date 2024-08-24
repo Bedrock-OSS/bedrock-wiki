@@ -1,16 +1,14 @@
 ---
 title: Block Sounds
-category: Documentation
-mentions:
-  - MedicalJewel105
-  - TheItsNameless
-  - QuazChick
 description: Block sounds refers to the sound property in your block entry inside blocks.json.
+category: Documentation
+show_outline: false
+mentions:
+    - MedicalJewel105
+    - TheItsNameless
+    - QuazChick
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 Block sounds refers to the sound property in your block entry inside `blocks.json`.
 This property is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound. You can apply sound to your block this way:
 
@@ -18,17 +16,18 @@ This property is used to determine general block sounds, such as the mining soun
 
 ```json
 {
-  "format_version": [1, 1, 0],
-  "wiki:custom_log": {
-    "sound": "wood" // Define sound here
-  }
+    "format_version": "1.21.20",
+    "wiki:custom_log": {
+        "sound": "wood" // Define sound here
+    }
 }
 ```
 
 The following are valid values for the sound property:
 
 <!-- page_dumper_start -->
-| *Last updated for 1.21.0* |
+
+| _Last updated for 1.21.0_ |
 | ------------------------- |
 | amethyst_block            |
 | amethyst_cluster          |
@@ -127,4 +126,5 @@ The following are valid values for the sound property:
 | vines                     |
 | web                       |
 | wood                      |
+
 <!-- page_dumper_end -->

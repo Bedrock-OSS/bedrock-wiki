@@ -1,20 +1,8 @@
 {
-	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-	"eslint.format.enable": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll": "explicit"
-	},
-	"[vue]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-		"editor.formatOnSave": true
-	},
-	"editor.formatOnSave": true,
-	"eslint.validate": [
-		"javascript",
-		"typescript",
-		"vue"
-	],
-	"[markdown]": {
-		"editor.defaultFormatter": "darkriszty.markdown-table-prettify"
-	}
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  }
 }

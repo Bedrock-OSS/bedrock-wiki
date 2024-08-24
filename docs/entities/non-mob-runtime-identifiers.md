@@ -459,7 +459,7 @@ Most core behaviors of projectiles are handled via the `minecraft:projectile` co
 | Step sounds           | ❌     |
 
 ### `minecraft:splash_potion` & `minecraft:lingering_potion`
-* `minecraft:variant` is overloaded for entities using this runtime identifier. While the `is_variant` entity filter will reflect the correct variant as normal, `q.variant` will return a different value (on both the server and the client) based on the `potionId` top-level NBT field on the entity. The type of effect `potionId` [represents](/documentation/projectiles#potion-ids), regardless of effect strength, determines the value:
+* `minecraft:variant` is overloaded for entities using this runtime identifier. While the `is_variant` entity filter will reflect the correct variant as normal, `q.variant` will return a different value (on both the server and the client) based on the `potionId` top-level NBT field on the entity. The type of effect `potionId` [represents](/entities/projectiles#potion-ids), regardless of effect strength, determines the value:
 
 | Effect          | `q.variant` Value |
 |-----------------|-----------------------|

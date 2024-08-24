@@ -2,8 +2,7 @@
 title: Remove Entity Shadows
 tags:
     - intermediate
-category:
-    - Tutorials
+category: Tutorials
 mentions:
     - SirLich
     - solvedDev

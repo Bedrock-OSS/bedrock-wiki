@@ -18,11 +18,8 @@ mentions:
 description: Learn how to make custom armor.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 ::: tip
-It is highly recommended that you look over [the BlockBench modelling and texturing](/guide/blockbench) section in the beginners guides before tackling these sections.
+It is highly recommended that you look over [the BlockBench modelling and texturing](/guide/blockbench) section in the beginner's guides before tackling these sections.
 :::
 
 Making custom armors is surprisingly easy to do, you need to do a bit of fiddling around as there are a few files that need to be added and there can be a little bit of texturing involved but you can do as much or as little as you want here.
@@ -35,58 +32,58 @@ Create a chest piece:
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:my_chest",
-			// Notice we give it the equipment category
-			"category": "equipment"
-		},
-		"components": {
-			// Make sure it appears within the chestplate category
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.chestplate"
-			},
-			// The icon we want to use in our INVENTORY
-			"minecraft:icon": {
-				"texture": "my_chest"
-			},
-			// We give it a name
-			"minecraft:display_name": {
-				"value": "My Custom Armor"
-			},
-			// We dont want it to stack
-			"minecraft:max_stack_size": 1,
-			// We make sure it can only receive enchantments for chest pieces
-			"minecraft:enchantable": {
-				"value": 10,
-				"slot": "armor_torso"
-			},
-			// This tells it how much protection it should give
-			"minecraft:armor": {
-				"protection": 5
-			},
-			// We want it to be repairable, and what to use to repair it
-			"minecraft:repairable": {
-				"repair_items": [
-					{
-						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
-						// Some complicated molang; just copy it
-					}
-				]
-			},
-			// Mark it as a wearable and that it goes in the chest slot
-			"minecraft:wearable": {
-				"dispensable": true,
-				"slot": "slot.armor.chest"
-			},
-			// Provide its durability
-			"minecraft:durability": {
-				"max_durability": 200
-			}
-		}
-	}
+    "format_version": "1.21.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:my_chest",
+            // Notice we give it the equipment category
+            "category": "equipment"
+        },
+        "components": {
+            // Make sure it appears within the chestplate category
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.chestplate"
+            },
+            // The icon we want to use in our INVENTORY
+            "minecraft:icon": {
+                "texture": "my_chest"
+            },
+            // We give it a name
+            "minecraft:display_name": {
+                "value": "My Custom Armor"
+            },
+            // We dont want it to stack
+            "minecraft:max_stack_size": 1,
+            // We make sure it can only receive enchantments for chest pieces
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "armor_torso"
+            },
+            // This tells it how much protection it should give
+            "minecraft:armor": {
+                "protection": 5
+            },
+            // We want it to be repairable, and what to use to repair it
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minecraft:stick"],
+                        "repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
+                        // Some complicated molang; just copy it
+                    }
+                ]
+            },
+            // Mark it as a wearable and that it goes in the chest slot
+            "minecraft:wearable": {
+                "dispensable": true,
+                "slot": "slot.armor.chest"
+            },
+            // Provide its durability
+            "minecraft:durability": {
+                "max_durability": 200
+            }
+        }
+    }
 }
 ```
 
@@ -94,7 +91,9 @@ At this point you could just go and add an item texture into your `RP/textures/i
 
 ![](/assets/images/tutorials/custom-armor/custom_chestplate.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_chestplate.png">Download texture here</BButton>
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_chestplate.png">
+    Download texture here
+</Button>
 
 ## Adding attachables and textures
 
@@ -106,34 +105,34 @@ To start with you need to create an `attachables` folder in your RP (you may alr
 
 ```json
 {
-	"format_version": "1.8.0",
-	"minecraft:attachable": {
-		"description": {
-			"identifier": "wiki:my_chest",
-			// These 2 are default and are required
-			"materials": {
-				"default": "armor",
-				"enchanted": "armor_enchanted"
-			},
-			"textures": {
-				// This is our CUSTOM armor texture we need to make next
-				"default": "textures/models/armor/custom_main",
-				// This texture doesn't actually exist in our RP
-				// but it will blow up without it so leave it in
-				"enchanted": "textures/misc/enchanted_item_glint"
-			},
-			// We tell it what geometry to use for the chestplate
-			"geometry": {
-				"default": "geometry.player.armor.chestplate"
-			},
-			// We tell it to hide the chest layer as we will be showing our armor on top
-			"scripts": {
-				"parent_setup": "v.chest_layer_visible = 0.0;"
-			},
-			// We tell it what controller to use (default armor one)
-			"render_controllers": ["controller.render.armor"]
-		}
-	}
+    "format_version": "1.8.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "wiki:my_chest",
+            // These 2 are default and are required
+            "materials": {
+                "default": "armor",
+                "enchanted": "armor_enchanted"
+            },
+            "textures": {
+                // This is our CUSTOM armor texture we need to make next
+                "default": "textures/models/armor/custom_main",
+                // This texture doesn't actually exist in our RP
+                // but it will blow up without it so leave it in
+                "enchanted": "textures/misc/enchanted_item_glint"
+            },
+            // We tell it what geometry to use for the chestplate
+            "geometry": {
+                "default": "geometry.player.armor.chestplate"
+            },
+            // We tell it to hide the chest layer as we will be showing our armor on top
+            "scripts": {
+                "parent_setup": "v.chest_layer_visible = 0.0;"
+            },
+            // We tell it what controller to use (default armor one)
+            "render_controllers": ["controller.render.armor"]
+        }
+    }
 }
 ```
 
@@ -143,11 +142,15 @@ If you do not feel creative we have provided a recoloured diamond armour skin fo
 
 ![](/assets/images/tutorials/custom-armor/custom_main.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_main.png">Download texture here</BButton>
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_main.png">
+    Download texture here
+</Button>
 
 ![](/assets/images/tutorials/custom-armor/custom_legs.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_legs.png">Download texture here</BButton>
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_legs.png">
+    Download texture here
+</Button>
 
 > In the real world you would probably want to use `BlockBench` or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the add-on.
 > If you now go into the game and check what you have produced you should be able to wear your chest piece and pat yourself on the back for a job well done.
@@ -163,51 +166,51 @@ So while the chest piece alone is great, you probably want a whole set, so from 
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:my_leggings",
-			"category": "equipment"
-		},
-		"components": {
-			// We give it the leggings category this time
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.leggings"
-			},
-			// Give it an applicable ITEM texture
-			"minecraft:icon": {
-				"texture": "my_leggings"
-			},
-			"minecraft:display_name": {
-				"value": "My Custom Leggings"
-			},
-			"minecraft:max_stack_size": 1,
-			// Make sure the enchantments are for legs
-			"minecraft:enchantable": {
-				"value": 10,
-				"slot": "armor_legs"
-			},
-			"minecraft:armor": {
-				"protection": 3
-			},
-			"minecraft:repairable": {
-				"repair_items": [
-					{
-						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
-					}
-				]
-			},
-			// Make sure the wearable slot is legs
-			"minecraft:wearable": {
-				"dispensable": true,
-				"slot": "slot.armor.legs"
-			},
-			"minecraft:durability": {
-				"max_durability": 200
-			}
-		}
-	}
+    "format_version": "1.21.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:my_leggings",
+            "category": "equipment"
+        },
+        "components": {
+            // We give it the leggings category this time
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.leggings"
+            },
+            // Give it an applicable ITEM texture
+            "minecraft:icon": {
+                "texture": "my_leggings"
+            },
+            "minecraft:display_name": {
+                "value": "My Custom Leggings"
+            },
+            "minecraft:max_stack_size": 1,
+            // Make sure the enchantments are for legs
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "armor_legs"
+            },
+            "minecraft:armor": {
+                "protection": 3
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minecraft:stick"],
+                        "repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
+                    }
+                ]
+            },
+            // Make sure the wearable slot is legs
+            "minecraft:wearable": {
+                "dispensable": true,
+                "slot": "slot.armor.legs"
+            },
+            "minecraft:durability": {
+                "max_durability": 200
+            }
+        }
+    }
 }
 ```
 
@@ -215,7 +218,9 @@ This is great and like before you will need to add your own item texture, althou
 
 ![](/assets/images/tutorials/custom-armor/custom_leggings.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_leggings.png">Download texture here</BButton>
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_leggings.png">
+    Download texture here
+</Button>
 
 Once we are done here we need to create the attachables file like this:
 
@@ -223,33 +228,33 @@ Once we are done here we need to create the attachables file like this:
 
 ```json
 {
-	"format_version": "1.8.0",
-	"minecraft:attachable": {
-		"description": {
-			"identifier": "wiki:my_leggings",
-			// Notice this is the same as before
-			"materials": {
-				"default": "armor",
-				"enchanted": "armor_enchanted"
-			},
-			"textures": {
-				// Same as before
-				"enchanted": "textures/misc/enchanted_item_glint",
-				// This one is different as we are using the legging specific texture
-				"default": "textures/models/armor/custom_legs"
-			},
-			// Tell it to use leggings geom
-			"geometry": {
-				"default": "geometry.humanoid.armor.leggings"
-			},
-			// Hide legs layer as we will be rendering over it
-			"scripts": {
-				"parent_setup": "v.leg_layer_visible = 0.0;"
-			},
-			// Same as before
-			"render_controllers": ["controller.render.armor"]
-		}
-	}
+    "format_version": "1.8.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "wiki:my_leggings",
+            // Notice this is the same as before
+            "materials": {
+                "default": "armor",
+                "enchanted": "armor_enchanted"
+            },
+            "textures": {
+                // Same as before
+                "enchanted": "textures/misc/enchanted_item_glint",
+                // This one is different as we are using the legging specific texture
+                "default": "textures/models/armor/custom_legs"
+            },
+            // Tell it to use leggings geom
+            "geometry": {
+                "default": "geometry.humanoid.armor.leggings"
+            },
+            // Hide legs layer as we will be rendering over it
+            "scripts": {
+                "parent_setup": "v.leg_layer_visible = 0.0;"
+            },
+            // Same as before
+            "render_controllers": ["controller.render.armor"]
+        }
+    }
 }
 ```
 
@@ -263,50 +268,50 @@ This is just like the chest piece, just we change some of the categories and slo
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:my_helm",
-			"category": "equipment"
-		},
-		"components": {
-			// Helmet category
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.helmet"
-			},
-			"minecraft:icon": {
-				"texture": "my_helm"
-			},
-			"minecraft:display_name": {
-				"value": "My Custom Helmet"
-			},
-			"minecraft:max_stack_size": 1,
-			// Helm enchantment slot
-			"minecraft:enchantable": {
-				"value": 10,
-				"slot": "armor_head"
-			},
-			"minecraft:armor": {
-				"protection": 3
-			},
-			"minecraft:repairable": {
-				"repair_items": [
-					{
-						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
-					}
-				]
-			},
-			// Wearable head slot
-			"minecraft:wearable": {
-				"dispensable": true,
-				"slot": "slot.armor.head"
-			},
-			"minecraft:durability": {
-				"max_durability": 200
-			}
-		}
-	}
+    "format_version": "1.21.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:my_helm",
+            "category": "equipment"
+        },
+        "components": {
+            // Helmet category
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.helmet"
+            },
+            "minecraft:icon": {
+                "texture": "my_helm"
+            },
+            "minecraft:display_name": {
+                "value": "My Custom Helmet"
+            },
+            "minecraft:max_stack_size": 1,
+            // Helm enchantment slot
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "armor_head"
+            },
+            "minecraft:armor": {
+                "protection": 3
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minecraft:stick"],
+                        "repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
+                    }
+                ]
+            },
+            // Wearable head slot
+            "minecraft:wearable": {
+                "dispensable": true,
+                "slot": "slot.armor.head"
+            },
+            "minecraft:durability": {
+                "max_durability": 200
+            }
+        }
+    }
 }
 ```
 
@@ -314,40 +319,42 @@ As you can see not much has changed, we just update the categories/slots to the 
 
 ![](/assets/images/tutorials/custom-armor/custom_helmet.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_helmet.png">Download texture here</BButton>
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_helmet.png">
+    Download texture here
+</Button>
 
 <CodeHeader>RP/attachables/my_helm.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.8.0",
-	"minecraft:attachable": {
-		"description": {
-			"identifier": "wiki:my_helm",
-			// These 2 are default and are required
-			"materials": {
-				"default": "armor",
-				"enchanted": "armor_enchanted"
-			},
-			"textures": {
-				// This is our CUSTOM armor texture we need to make next
-				"default": "textures/models/armor/custom_main",
-				// This texture doesn't actually exist in our RP
-				// but it will blow up without it so leave it in
-				"enchanted": "textures/misc/enchanted_item_glint"
-			},
-			// We tell it what geometry to use for the helmet
-			"geometry": {
-				"default": "geometry.player.armor.helmet"
-			},
-			// We tell it to hide the helmet layer as we will be showing our armor on top
-			"scripts": {
-				"parent_setup": "v.chest_layer_visible = 0.0;"
-			},
-			// We tell it what controller to use (default armor one)
-			"render_controllers": ["controller.render.armor"]
-		}
-	}
+    "format_version": "1.8.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "wiki:my_helm",
+            // These 2 are default and are required
+            "materials": {
+                "default": "armor",
+                "enchanted": "armor_enchanted"
+            },
+            "textures": {
+                // This is our CUSTOM armor texture we need to make next
+                "default": "textures/models/armor/custom_main",
+                // This texture doesn't actually exist in our RP
+                // but it will blow up without it so leave it in
+                "enchanted": "textures/misc/enchanted_item_glint"
+            },
+            // We tell it what geometry to use for the helmet
+            "geometry": {
+                "default": "geometry.player.armor.helmet"
+            },
+            // We tell it to hide the helmet layer as we will be showing our armor on top
+            "scripts": {
+                "parent_setup": "v.chest_layer_visible = 0.0;"
+            },
+            // We tell it what controller to use (default armor one)
+            "render_controllers": ["controller.render.armor"]
+        }
+    }
 }
 ```
 
@@ -361,50 +368,50 @@ You already know the pattern so lets make the item and attachable json files.
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:my_boots",
-			"category": "equipment"
-		},
-		"components": {
-			// Boots category
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.boots"
-			},
-			"minecraft:icon": {
-				"texture": "my_boots"
-			},
-			"minecraft:display_name": {
-				"value": "My Custom Boots"
-			},
-			"minecraft:max_stack_size": 1,
-			// Enchantable Feet
-			"minecraft:enchantable": {
-				"value": 10,
-				"slot": "armor_feet"
-			},
-			"minecraft:armor": {
-				"protection": 3
-			},
-			"minecraft:repairable": {
-				"repair_items": [
-					{
-						"items": ["minecraft:stick"],
-						"repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
-					}
-				]
-			},
-			// Feet slot
-			"minecraft:wearable": {
-				"dispensable": true,
-				"slot": "slot.armor.feet"
-			},
-			"minecraft:durability": {
-				"max_durability": 200
-			}
-		}
-	}
+    "format_version": "1.21.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:my_boots",
+            "category": "equipment"
+        },
+        "components": {
+            // Boots category
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.boots"
+            },
+            "minecraft:icon": {
+                "texture": "my_boots"
+            },
+            "minecraft:display_name": {
+                "value": "My Custom Boots"
+            },
+            "minecraft:max_stack_size": 1,
+            // Enchantable Feet
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "armor_feet"
+            },
+            "minecraft:armor": {
+                "protection": 3
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minecraft:stick"],
+                        "repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
+                    }
+                ]
+            },
+            // Feet slot
+            "minecraft:wearable": {
+                "dispensable": true,
+                "slot": "slot.armor.feet"
+            },
+            "minecraft:durability": {
+                "max_durability": 200
+            }
+        }
+    }
 }
 ```
 
@@ -412,40 +419,42 @@ The custom boots texture if you need it.
 
 ![](/assets/images/tutorials/custom-armor/custom_boots.png)
 
-<BButton link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_boots.png">Download texture here</BButton>
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/public/assets/images/tutorials/custom-armor/custom_boots.png">
+    Download texture here
+</Button>
 
 <CodeHeader>RP/attachables/my_boots.json</CodeHeader>
 
 ```json
 {
-	"format_version": "1.8.0",
-	"minecraft:attachable": {
-		"description": {
-			"identifier": "wiki:my_boots",
-			// These 2 are default and are required
-			"materials": {
-				"default": "armor",
-				"enchanted": "armor_enchanted"
-			},
-			"textures": {
-				// This is our CUSTOM armor texture we need to make next
-				"default": "textures/models/armor/custom_main",
-				// This texture doesn't actually exist in our RP
-				// but it will blow up without it so leave it in
-				"enchanted": "textures/misc/enchanted_item_glint"
-			},
-			// We tell it what geometry to use for the boots
-			"geometry": {
-				"default": "geometry.player.armor.boots"
-			},
-			// We tell it to hide the boots layer as we will be showing our armor on top
-			"scripts": {
-				"parent_setup": "v.chest_layer_visible = 0.0;"
-			},
-			// We tell it what controller to use (default armor one)
-			"render_controllers": ["controller.render.armor"]
-		}
-	}
+    "format_version": "1.8.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "wiki:my_boots",
+            // These 2 are default and are required
+            "materials": {
+                "default": "armor",
+                "enchanted": "armor_enchanted"
+            },
+            "textures": {
+                // This is our CUSTOM armor texture we need to make next
+                "default": "textures/models/armor/custom_main",
+                // This texture doesn't actually exist in our RP
+                // but it will blow up without it so leave it in
+                "enchanted": "textures/misc/enchanted_item_glint"
+            },
+            // We tell it what geometry to use for the boots
+            "geometry": {
+                "default": "geometry.player.armor.boots"
+            },
+            // We tell it to hide the boots layer as we will be showing our armor on top
+            "scripts": {
+                "parent_setup": "v.chest_layer_visible = 0.0;"
+            },
+            // We tell it what controller to use (default armor one)
+            "render_controllers": ["controller.render.armor"]
+        }
+    }
 }
 ```
 

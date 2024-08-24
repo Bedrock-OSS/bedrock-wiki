@@ -12,6 +12,7 @@ mentions:
     - omuhu
     - Sprunkles137
     - ThomasOrs
+    - QuazChick
 ---
 
 Non-Player Characters, or NPCs are villager-like entities that can be given a dialogue with a message and multiple buttons. They were originally designed for use in adventure maps, but with the introduction of the `/dialogue` command, they can now be used in the context of a normal add-on.
@@ -24,16 +25,16 @@ NPC dialogue data is stored in dialogue files, which are stored in the `dialogue
 
 ```json
 {
-	"format_version": "1.17",
-	"minecraft:npc_dialogue": {
-		"scenes": [
-			{
-				"scene_tag": "example",
-				"npc_name": "Steve",
-				"text": "Hello"
-			}
-		]
-	}
+    "format_version": "1.17",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "example",
+                "npc_name": "Steve",
+                "text": "Hello"
+            }
+        ]
+    }
 }
 ```
 
@@ -182,10 +183,13 @@ summon npc "§r" 0 1 0
 This function will create a ticking area at 0, 0, and spawn an NPC with no name in the bedrock layer in that ticking area. You will need to run this function once, either manually, or making use of `player.json` or `tick.json`.
 
 :::tip
+
 You can trigger an NPC dialogue from within the player using the /dialogue command, without having to summon an NPC beforehand.
+
 1. Within the player's behavior, add the minecraft:npc component.
 2. Specify a scene from the BP/dialogue folder.
 3. Run the `/dialogue` command from the player, provided with the scene_tag:
+
 :::
 
 ```
@@ -194,10 +198,11 @@ You can trigger an NPC dialogue from within the player using the /dialogue comma
 
 #### Pros and Cons:
 
-`+` You don't need to worry about hiding away an NPC, if you're just going to run  NPC dialogues provided using scene_tags. <br />
-`+` No NPC means you also don't need to make sure it is in a 'ticking area'. <br />
-`-` Since the dialogue is being triggered from the player, in which it is not intended to, it may become unstable in some cases. <br />
-`-` Other players can click on player and they will see this dialogue. <br />
+-   `+` You don't need to worry about hiding away an NPC, if you're just going to run NPC dialogues provided using scene_tags.
+-   `+` No NPC means you also don't need to make sure it is in a 'ticking area'.
+-   `-` Since the dialogue is being triggered from the player, in which it is not intended to, it may become unstable in some cases.
+-   `-` Other players can click on player and they will see this dialogue.
+
 To avoid this add the `minecraft:interaction` to the entity which will replace the npc interaction. The npc stuff will still work, but if a player clicks on another player, then the npc won't come up
 
 <CodeHeader></CodeHeader>
@@ -230,56 +235,48 @@ This dialogue file features two dialogues, each with two teleport buttons, and a
 
 ```json
 {
-    "format_version":"1.17",
-    "minecraft:npc_dialogue":{
-        "scenes":[
+    "format_version": "1.17",
+    "minecraft:npc_dialogue": {
+        "scenes": [
             {
-                "scene_tag":"main_teleport_menu",
-                "npc_name":"Teleport",
-                "text":"Where would you like to teleport?",
-                "buttons":[
+                "scene_tag": "main_teleport_menu",
+                "npc_name": "Teleport",
+                "text": "Where would you like to teleport?",
+                "buttons": [
                     {
-                        "name":"Districts",
-                        "commands":[
+                        "name": "Districts",
+                        "commands": [
                             "/dialogue open @e[type=npc,c=1] @initiator districts_teleport_menu"
                         ]
                     },
                     {
-                        "name":"My Base",
-                        "commands":[
-                            "/tp @initiator -20 4 -20"
-                        ]
+                        "name": "My Base",
+                        "commands": ["/tp @initiator -20 4 -20"]
                     },
                     {
-                        "name":"World Spawn",
-                        "commands":[
-                            "/tp @initiator 0 4 0"
-                        ]
+                        "name": "World Spawn",
+                        "commands": ["/tp @initiator 0 4 0"]
                     }
                 ]
             },
             {
-                "scene_tag":"districts_teleport_menu",
-                "npc_name":"District Teleport",
-                "text":"What district would you like to teleport to?",
-                "buttons":[
+                "scene_tag": "districts_teleport_menu",
+                "npc_name": "District Teleport",
+                "text": "What district would you like to teleport to?",
+                "buttons": [
                     {
-                        "name":"< Back",
-                        "commands":[
+                        "name": "< Back",
+                        "commands": [
                             "/dialogue open @e[type=npc,c=1] @initiator main_teleport_menu"
                         ]
                     },
                     {
-                        "name":"Shop District",
-                        "commands":[
-                            "/tp @initiator 20 4 20"
-                        ]
+                        "name": "Shop District",
+                        "commands": ["/tp @initiator 20 4 20"]
                     },
                     {
-                        "name":"Gaming District",
-                        "commands":[
-                            "/tp @initiator 20 4 -20"
-                        ]
+                        "name": "Gaming District",
+                        "commands": ["/tp @initiator 20 4 -20"]
                     }
                 ]
             }
@@ -296,38 +293,36 @@ Lastly, create an item that will open the dialogue when right-clicked/interacted
 
 ```json
 {
-	"format_version": "1.16.100",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:teleport_menu",
-			"category": "items"
-		},
-		"components": {
-			"minecraft:on_use": {
-				"on_use": {
-					"event": "open_menu",
-					"target": "self"
-				}
-			},
-			"minecraft:foil": true,
-			"minecraft:icon": {
-				"texture": "ender_pearl"
-			},
-			"minecraft:display_name": {
-				"value": "Teleport Menu"
-			}
-		},
-		"events": {
-			"open_menu": {
-				"run_command": {
-					"command": [
-						"dialogue open @e[type=npc,c=1] @s main_teleport_menu"
-					],
-					"target": "player"
-				}
-			}
-		}
-	}
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:teleport_menu",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "open_menu",
+                    "target": "self"
+                }
+            },
+            "minecraft:foil": true,
+            "minecraft:icon": {
+                "texture": "ender_pearl"
+            },
+            "minecraft:display_name": {
+                "value": "Teleport Menu"
+            }
+        },
+        "events": {
+            "open_menu": {
+                "run_command": {
+                    "command": ["dialogue open @e[type=npc,c=1] @s main_teleport_menu"],
+                    "target": "player"
+                }
+            }
+        }
+    }
 }
 ```
 

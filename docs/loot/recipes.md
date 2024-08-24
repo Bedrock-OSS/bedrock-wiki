@@ -2,9 +2,6 @@
 title: Recipes
 category: Documentation
 nav_order: 3
-tags:
-    - Stable
-    - Last updated for Version 1.20.30
 mentions:
     - Ciosciaa
     - SirLich

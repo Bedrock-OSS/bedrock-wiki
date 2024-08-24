@@ -2,8 +2,7 @@
 title: Custom Death Animations
 tags:
     - intermediate
-category:
-    - General
+category: General
 mentions:
     - SirLich
     - Joelant05
@@ -83,29 +82,29 @@ Animation Controller:
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.player.cancel_death_animaton": {
-			"initial_state": "default",
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"cancel_animation": "!q.is_alive"
-						}
-					]
-				},
-				"cancel_animation": {
-					"animations": ["my.animation"],
-					"transitions": [
-						{
-							"default": "q.is_alive && q.all_animations_finished"
-						}
-					]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player.cancel_death_animaton": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "cancel_animation": "!q.is_alive"
+                        }
+                    ]
+                },
+                "cancel_animation": {
+                    "animations": ["my.animation"],
+                    "transitions": [
+                        {
+                            "default": "q.is_alive && q.all_animations_finished"
+                        }
+                    ]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -129,16 +128,16 @@ Here's the example of removing the damage and fire overlay color.
 
 ```json
 {
-	"format_version": "1.8.0",
-	"render_controllers": {
-		"controller.render.sample": {
-			"geometry": "Geometry.default",
-			"materials": [{ "*": "Material.default" }],
-			"textures": ["Texture.default"],
-			"is_hurt_color": {},
-			"on_fire_color": {}
-		}
-	}
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.sample": {
+            "geometry": "Geometry.default",
+            "materials": [{ "*": "Material.default" }],
+            "textures": ["Texture.default"],
+            "is_hurt_color": {},
+            "on_fire_color": {}
+        }
+    }
 }
 ```
 
@@ -151,26 +150,26 @@ Here's another example in which the damage color overlay becomes pink.
 
 ```json
 {
-	"format_version": "1.8.0",
-	"render_controllers": {
-		"controller.render.kbg": {
-			"geometry": "Geometry.default",
-			"materials": [{ "*": "Material.default" }],
-			"textures": ["Texture.default"],
-			"is_hurt_color": {
-				"r": "1.0",
-				"g": "0.4",
-				"b": "0.7",
-				"a": "0.5"
-			},
-			"on_fire_color": {
-				"r": "1.0",
-				"g": "0.4",
-				"b": "0.7",
-				"a": "0.5"
-			}
-		}
-	}
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.kbg": {
+            "geometry": "Geometry.default",
+            "materials": [{ "*": "Material.default" }],
+            "textures": ["Texture.default"],
+            "is_hurt_color": {
+                "r": "1.0",
+                "g": "0.4",
+                "b": "0.7",
+                "a": "0.5"
+            },
+            "on_fire_color": {
+                "r": "1.0",
+                "g": "0.4",
+                "b": "0.7",
+                "a": "0.5"
+            }
+        }
+    }
 }
 ```
 
@@ -188,90 +187,80 @@ Here an example file in the BP
 
 ```json
 {
-    "format_version":"1.14.0",
-    "min_engine_version":"1.16.100",
-    "minecraft:entity":{
-        "description":{
-            "identifier":"wiki:entity",
-            "is_spawnable":true,
-            "is_summonable":true,
-            "is_experimental":true
+    "format_version": "1.14.0",
+    "min_engine_version": "1.16.100",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:entity",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": true
         },
-        "component_groups":{
-            "wiki:death":{
-                "minecraft:spawn_entity":{
-                    "max_wait_time":0,
-                    "min_wait_time":0,
-                    "spawn_item":"egg",
-                    "single_use":true
+        "component_groups": {
+            "wiki:death": {
+                "minecraft:spawn_entity": {
+                    "max_wait_time": 0,
+                    "min_wait_time": 0,
+                    "spawn_item": "egg",
+                    "single_use": true
                 },
-                "minecraft:is_sheared":{},
-                "minecraft:timer":{
-                    "looping":true,
-                    "time":[
-                        2.56,
-                        2.56
-                    ], // Change this to match your animation's time
-                    "time_down_event":{
-                        "event":"wiki:despawn"
+                "minecraft:is_sheared": {},
+                "minecraft:timer": {
+                    "looping": true,
+                    "time": [2.56, 2.56], // Change this to match your animation's time
+                    "time_down_event": {
+                        "event": "wiki:despawn"
                     }
                 }
             },
-            "wiki:despawn":{
-                "minecraft:instant_despawn":{}
+            "wiki:despawn": {
+                "minecraft:instant_despawn": {}
             }
         },
-        "components":{
-            "minecraft:type_family":{
-                "family":[
-                    "cart",
-                    "inanimate"
-                ]
+        "components": {
+            "minecraft:type_family": {
+                "family": ["cart", "inanimate"]
             },
-            "minecraft:collision_box":{
-                "width":0.8,
-                "height":0.5
+            "minecraft:collision_box": {
+                "width": 0.8,
+                "height": 0.5
             },
-            "minecraft:health":{
-                "value":8,
-                "max":8
+            "minecraft:health": {
+                "value": 8,
+                "max": 8
             },
-            "minecraft:physics":{},
-            "minecraft:pushable":{
-                "is_pushable":true,
-                "is_pushable_by_piston":true
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
             },
-            "minecraft:damage_sensor":{
-                "triggers":{
-                    "on_damage":{
-                        "filters":{
-                            "all_of":[
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "filters": {
+                            "all_of": [
                                 {
-                                    "test":"has_damage",
-                                    "value":"fatal"
+                                    "test": "has_damage",
+                                    "value": "fatal"
                                 }
                             ]
                         },
-                        "target":"self",
-                        "event":"wiki:death",
-                        "deals_damage":false,
-                        "cause":"fatal"
+                        "target": "self",
+                        "event": "wiki:death",
+                        "deals_damage": false,
+                        "cause": "fatal"
                     }
                 }
             }
         },
-        "events":{
-            "wiki:death":{
-                "add":{
-                    "component_groups":[
-                        "wiki:death"
-                    ]
+        "events": {
+            "wiki:death": {
+                "add": {
+                    "component_groups": ["wiki:death"]
                 },
-                "wiki:despawn":{
-                    "add":{
-                        "component_groups":[
-                            "wiki:despawn"
-                        ]
+                "wiki:despawn": {
+                    "add": {
+                        "component_groups": ["wiki:despawn"]
                     }
                 }
             }
@@ -286,27 +275,25 @@ Here an example file for the animation controller.
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.entity": {
-			"states": {
-				"default": {
-					"blend_transition": 0.2,
-					"transitions": [
-						{
-							"dead": "q.is_sheared"
-						}
-					]
-				},
-				"death": {
-					"blend_transition": 0.2,
-					"animations": [
-						"death"
-					]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.entity": {
+            "states": {
+                "default": {
+                    "blend_transition": 0.2,
+                    "transitions": [
+                        {
+                            "dead": "q.is_sheared"
+                        }
+                    ]
+                },
+                "death": {
+                    "blend_transition": 0.2,
+                    "animations": ["death"]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -317,14 +304,14 @@ to be your entity's id and an affix of `spawn_egg`, and it will look something l
 
 ```json
 {
-	"minecraft:spawn_entity": [
-		{
-			"min_wait_time": 0,
-			"max_wait_time": 0,
-			"spawn_item": "wiki:custom_zombie_spawn_egg",
-			"single_use": true
-		}
-	]
+    "minecraft:spawn_entity": [
+        {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_item": "wiki:custom_zombie_spawn_egg",
+            "single_use": true
+        }
+    ]
 }
 ```
 
@@ -334,50 +321,39 @@ If you want to drop a loot table, you can trigger an event (as shown below) and 
 
 ```json
 {
-	"minecraft:behavior.drop_item_for":{
-		"seconds_before_pickup":0.0,
-		"cooldown":5,
-		"drop_item_chance":1,
-		"offering_distance":0.0,
-		"minimum_teleport_distance":1024.0,
-		"target_range":[
-			64.0,
-			64.0,
-			64.0
-		],
-		"teleport_offset":[
-			0.0,
-			1.0,
-			0.0
-		],
-		"speed_multiplier":1.0,
-		"search_range":64,
-		"search_height":64,
-		"search_count":0,
-		"goal_radius":64.0,
-		"entity_types":[
-			{
-				"filters":{
-					"test":"is_family",
-					"subject":"other",
-					"value":"player"
-				},
-				"max_dist":64
-			}
-		],
-		"priority":1,
-		"loot_table":"loot_tables/entities/example.loot_table.json",
-		"time_of_day_range":[
-			0.0,
-			1.0
-		]
-	},
-	"minecraft:timer": {
-		"time": 2,
-		"time_down_event": {
-			"event": "wiki:my_despawn_event"
-		}
-	}
+    "minecraft:behavior.drop_item_for": {
+        "seconds_before_pickup": 0.0,
+        "cooldown": 5,
+        "drop_item_chance": 1,
+        "offering_distance": 0.0,
+        "minimum_teleport_distance": 1024.0,
+        "target_range": [64.0, 64.0, 64.0],
+        "teleport_offset": [0.0, 1.0, 0.0],
+        "speed_multiplier": 1.0,
+        "search_range": 64,
+        "search_height": 64,
+        "search_count": 0,
+        "goal_radius": 64.0,
+        "entity_types": [
+            {
+                "filters": {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                },
+                "max_dist": 64
+            }
+        ],
+        "priority": 1,
+        "loot_table": "loot_tables/entities/example.loot_table.json",
+        "time_of_day_range": [0.0, 1.0]
+    },
+    "minecraft:timer": {
+        "time": 2,
+        "time_down_event": {
+            "event": "wiki:my_despawn_event"
+        }
+    }
 }
 ```
 
@@ -385,7 +361,4 @@ And then despawn it through adding component group with instant_despawn through 
 
 ### Detecting Death with Commands
 
-<BButton
-	link="/commands/tick_json-creations#death-detection"
-	color=blue
->View</BButton>
+<Button link="/commands/tick_json-creations#death-detection">View</Button>
