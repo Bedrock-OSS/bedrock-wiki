@@ -171,6 +171,10 @@ A warning here
 :::danger
 A dangerous place
 :::
+
+:::details
+Some necessary details here
+:::
 ```
 
 :::info
@@ -188,6 +192,13 @@ A warning here
 :::danger
 A dangerous place
 :::
+
+:::details
+Some necessary details here
+:::
+
+IT IS NOT RECOMMENDED TO USE `details` CONTAINER.
+This container is not styled properly and not really needed.
 
 You also can add headers for containers:
 
@@ -577,7 +588,10 @@ If you'd like to manually include a tag at a certain point in your page, using t
 
 ### WikiImage
 
-An alternative way to add an image in your article, providing more parameters than a regular markdown image, including pixelated rendering.
+Default method to add an image is as following:
+`![](/assets/images/...)`
+WikiImage is a alternative way to add an image in your article, providing more parameters than a regular markdown image, including pixelated rendering.
+Note that images go to `docs/public/assets/images/` folder, but their path in components defined without `docs/public`.
 
 ```md
 <WikiImage
