@@ -4,8 +4,6 @@ category: Commands
 mentions:
     - BedrockCommands
     - cda94581
-    - jordanparki7
-    - zheaEvyline
 description: /damage command explained.
 ---
 
