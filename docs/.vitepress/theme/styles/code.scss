@@ -45,6 +45,10 @@
     color: #6a737d;
   }
 
+  .line-number {
+    white-space: nowrap;
+  }
+
   & > .shiki {
     grid-area: code;
     overflow-x: auto;
