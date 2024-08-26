@@ -57,6 +57,7 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 ## Damage Cause List
 
 Listed below are all the 'damage sources' in MCBE for the `/damage` command currently available:
+
 ```
 all	
 anvil	
@@ -96,4 +97,4 @@ void
 wither
 ```
 
-For an up-to-date list, visit the [official add-on documentation page here](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonentities?view=minecraft-bedrock-stable#entity-damage-source)
+For an up-to-date list, visit the official add-on documentation page **[here](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonentities?view=minecraft-bedrock-stable#entity-damage-source)**.
