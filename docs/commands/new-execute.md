@@ -9,7 +9,6 @@ mentions:
     - Hatchibombotar
     - TheItsNameless
     - SmokeyStack
-    - zheaEvyline
 description: Learn new /execute command.
 ---
 
