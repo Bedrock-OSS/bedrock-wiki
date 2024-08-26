@@ -1,6 +1,6 @@
 ---
-title: Tellraw & Titleraw Rawtext JSON Components
-category: Commands
+title: Rawtext
+category: Concepts
 mention:
   - BedrockCommands
   - GTB3NW
