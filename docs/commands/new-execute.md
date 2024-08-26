@@ -132,6 +132,8 @@ When the anchor is set to `eyes`, the command's local position is offset by some
 
 This offset should only apply to local coordinates, but it currently affects relative coordinates due to a bug: [MCPE-162681](https://bugs.mojang.com/browse/MCPE-162681).
 
+Also, the `anchored` subcommand can only be instructed once within the same `/execute` command. A second `anchored` instruction will have no effect. This is due to another bug: [MCPE-165051](https://bugs.mojang.com/browse/MCPE-165051)
+
 ### `/execute rotated`
 
 Directly sets the rotation context of the command.
