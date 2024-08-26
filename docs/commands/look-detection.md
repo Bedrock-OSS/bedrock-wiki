@@ -22,7 +22,7 @@ This command-technique allows you to detect when a target looks at a player/enti
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
-/execute as <target> at @s anchored eyes facing <entity | coordinate> positioned ^^^1 positioned ~~-1.62~ rotated as @s positioned ^^^-1 if entity @s [r=0.2] run <sub-command>
+/execute as <target> at @s anchored eyes facing <entity | coordinate> positioned ^^^1 positioned ~~-1.62~ rotated as @s positioned ^^^-1 if entity @s [r=0.2] run <command>
 
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
