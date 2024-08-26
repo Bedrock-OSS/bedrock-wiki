@@ -133,7 +133,7 @@ If nothing seems to work, simply break and replace that command block.
 
 To put what you have learned into practice, try making this simple [Entity Counter](/commands/entity-counter) system.
 
-> When setting up command block systems, always keep in mind that the first command block will be ![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **`Unconditional Always Active`** and the rest of the command blocks will be ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **`Unconditional Always Active`**. All set to 0 ticks delay, unless specified otherwise.
+> When setting up command block systems, always keep in mind that the first command block in the codeblock / mcfunction will be ![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **`Unconditional Always Active`** and the rest of the command blocks will be ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **`Unconditional Always Active`**. All set to 0 ticks delay, unless specified otherwise.
 > 
 > ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
