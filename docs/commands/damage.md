@@ -56,7 +56,7 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 Listed below are all the 'damage sources' in MCBE for the `/damage` command currently available:
 
-```
+```yaml
 all	
 anvil	
 block_explosion	
