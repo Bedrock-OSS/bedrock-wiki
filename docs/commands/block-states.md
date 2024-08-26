@@ -79,7 +79,7 @@ https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockrefer
 
 For your convenience, you may use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) by *@SmokeyStack* to get the up-to-date list of all the Block IDs, their Aux Values and Block State equivalents.
 
-## Known Issue
+## Known Issues
 
 Commands specifying blocks must either leave the Block States field blank, or include **all** of it's corresponding Block States. Else, the command will not work.
 
