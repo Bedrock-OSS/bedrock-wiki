@@ -24,7 +24,7 @@
   padding-block: 1em;
 
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: max-content 1fr;
   grid-template-areas: "line-numbers code";
 
   & > .lang {
@@ -38,7 +38,6 @@
   & > .line-numbers-wrapper {
     grid-area: line-numbers;
     border-right: var(--border);
-    height: max-content;
     padding-inline: 1em;
     text-align: end;
     user-select: none;
