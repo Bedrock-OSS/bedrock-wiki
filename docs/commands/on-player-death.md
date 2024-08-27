@@ -27,15 +27,15 @@ If you are working with functions and prefer to have the objective added automat
 <CodeHeader>BP/functions/events/on_player_death.mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players set @a [scores={is_alive=!2}] is_alive 0
-/scoreboard players set @e [type=player] is_alive 1
+scoreboard players set @a [scores={is_alive=!2}] is_alive 0
+scoreboard players set @e [type=player] is_alive 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_alive=0}] run say I died
+execute as @a [scores={is_alive=0}] run say I died
 
 
-/scoreboard players set @a [scores={is_alive=0}] is_alive 2
+scoreboard players set @a [scores={is_alive=0}] is_alive 2
 ```
 
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
