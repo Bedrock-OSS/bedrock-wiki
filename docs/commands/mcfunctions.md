@@ -35,7 +35,7 @@ Functions are useful in many ways to reduce the time spent going from command bl
 
 ## Notes For Beginners
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>effects.mcfunction</CodeHeader>
 
 ```yaml
 #Spawn Effects
