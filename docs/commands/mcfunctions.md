@@ -108,7 +108,7 @@ Sample B:
 
 5. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
 
-:::tip NOTE
+:::tip NOTE:
 Functions are versioned; therefore, they will run in the version listed in the `📄 manifest.json`, such as:
 - `min_engine_version` 1.19.50 or above will adopt the new execute syntax.
 - `min_engine_version` 1.19.70 or above will require aux values be replaced with block states.
