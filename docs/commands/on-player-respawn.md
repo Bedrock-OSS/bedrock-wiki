@@ -24,7 +24,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>on_player_respawn.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/on_player_respawn.mcfunction</CodeHeader>
 
 ```yaml
 #Your Commands Here (example)
@@ -75,7 +75,8 @@ If using functions, your pack folder structure will be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_player_respawn.mcfunction',
+    'BP/functions/events',
+    'BP/functions/events/on_player_respawn.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
