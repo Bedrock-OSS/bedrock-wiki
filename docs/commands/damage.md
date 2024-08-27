@@ -40,7 +40,6 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 ## Examples
 
-<CodeHeader>mcfunction</CodeHeader>
 ```yaml
 #Deal 4 damage to all players
 /damage @a 4
