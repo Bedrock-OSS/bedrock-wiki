@@ -26,7 +26,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/on_player_leave.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/on_player_leave.mcfunction</CodeHeader>
 
 ```yaml
 /scoreboard players reset newPlayerCount total
@@ -96,7 +96,8 @@ If using functions, your pack folder structure will be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_player_leave.mcfunction',
+    'BP/functions/events',
+    'BP/functions/events/on_player_leave.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
