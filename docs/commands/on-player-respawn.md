@@ -28,11 +28,11 @@ If you are working with functions and prefer to have the objective added automat
 
 ```yaml
 #Your Commands Here (example)
-/execute as @e [scores={respawn=1}] run say I died and respawned.
+execute as @e [scores={respawn=1}] run say I died and respawned.
 
 
-/scoreboard players set @a respawn 1
-/scoreboard players set @e [type=player] respawn 0
+scoreboard players set @a respawn 1
+scoreboard players set @e [type=player] respawn 0
 ```
 ![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
 
@@ -81,6 +81,10 @@ If using functions, your pack folder structure will be as follows:
 ]"
 ></FolderView>
 
-> Note: The scoreboard names (in this case: 'respawn') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-> - ` respawn_0fe678 `
-> - ` on_player_respawn_0fe678.mcfunction `
+:::info NOTE:
+
+The scoreboard names (in this case: 'respawn') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+- ` respawn_0fe678 `
+- ` on_player_respawn_0fe678.mcfunction `
+
+:::
