@@ -33,15 +33,15 @@ This system will run your desired commands on the event that the world is loaded
 
 <CodeHeader>BP/functions/events/on_world_initialise.mcfunction</CodeHeader>
 ```yaml
-/scoreboard objectives add world dummy
-/scoreboard players add initialised world 0
+scoreboard objectives add world dummy
+scoreboard players add initialised world 0
 
 
 #Your Commands Here (example)
-/execute if score initialised world matches 0 run say New world created!
+execute if score initialised world matches 0 run say New world created!
 
 
-/scoreboard players set initialised world 1
+scoreboard players set initialised world 1
 ```
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
