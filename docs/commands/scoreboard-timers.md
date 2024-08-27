@@ -92,15 +92,15 @@ Just make sure to follow the given order and properly apply the `/execute if sco
     - `timer` clock (variable score: n+1)
     - *Note: All 4 are fake-player-names in the objective*
 
-- **Command 1:** This command adds +1 score every tick to the fake-player-name 'timer' indicating a tick has passed in the game. This is basically our scoreboard timer/clock which we will use for all the repeating events on our world.
+1. **Command 1:** This command adds +1 score every tick to the fake-player-name 'timer' indicating a tick has passed in the game. This is basically our scoreboard timer/clock which we will use for all the repeating events on our world.
 
 
-- **Command 2:** Here, we copy 'timer' score to all our events using the ` * ` wildcard selector. This will allow us to perform operations to determine if the interval has been reached to run the commands for that particular event. Example:
+2. **Command 2:** Here, we copy 'timer' score to all our events using the ` * ` wildcard selector. This will allow us to perform operations to determine if the interval has been reached to run the commands for that particular event. Example:
     - If `timer` score is 1200, it means 1200 game-ticks have passed.
     - And this command makes it so all our events fake-player-names 'chatMessage', 'lagClear', 'speedEffect' scores are also 1200.
 
 
-- **Command 3:** We will use the ` %= ` modulo operation to check if our events scores are divisible by their corresponding interval. ie., if the remainder is equal 0.
+3. **Command 3:** We will use the ` %= ` modulo operation to check if our events scores are divisible by their corresponding interval. ie., if the remainder is equal 0.
     - Chat Message: `1200/144000`
         - Q=0, R=1200
         - *hence, interval not reached.*
