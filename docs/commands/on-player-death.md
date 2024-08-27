@@ -109,13 +109,13 @@ If two or more players are teleported to the same point and one of them dies but
 <CodeHeader>BP/functions/states/is_dead.mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players set @e [type=player] is_dead 0
-/execute as @a at @s unless entity @e [type=player, r=0.01] run scoreboard players add @s is_dead 1
+scoreboard players set @e [type=player] is_dead 0
+execute as @a at @s unless entity @e [type=player, r=0.01] run scoreboard players add @s is_dead 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_dead=1}] at @s run summon armor_stand "Dead Player" ~~~
-/execute as @a [scores={is_dead=1..}] run say I died and haven't respawned yet.. 
+execute as @a [scores={is_dead=1}] at @s run summon armor_stand "Dead Player" ~~~
+execute as @a [scores={is_dead=1..}] run say I died and haven't respawned yet.. 
 ```
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
