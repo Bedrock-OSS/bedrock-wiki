@@ -24,14 +24,14 @@ This system will run your desired commands on the event that the world is loaded
 ```json
 {
   "values": [
-    "initialise"
+    "on_world_initialise"
   ]
 }
 ```
 
 ## System
 
-<CodeHeader>BP/functions/events/initialise_world.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/on_world_initialise.mcfunction</CodeHeader>
 ```yaml
 /scoreboard objectives add world dummy
 /scoreboard players add initialised world 0
@@ -68,11 +68,15 @@ Finally, the score for fake-player-name 'initialised' is set to `1` after all th
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/events',
-    'BP/functions/events/initialise_world.mcfunction',
+    'BP/functions/events/on_world_initialise.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
 
-> Note: The scoreboard names (in this case: 'world') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-> - ` world_0fe678 `
-> - ` initialise_world_0fe678.mcfunction `
+:::info Note:
+
+The scoreboard names (in this case: 'world') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+- ` world_0fe678 `
+- ` on_world_initialise_0fe678.mcfunction `
+
+:::
