@@ -29,17 +29,17 @@ If you are working with functions and prefer to have the objective added automat
 <CodeHeader>BP/functions/events/on_player_leave.mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players reset newPlayerCount total
-/execute as @a run scoreboard players add newPlayerCount total 1
-/scoreboard players operation newPlayerCount total -= playerCount total
+scoreboard players reset newPlayerCount total
+execute as @a run scoreboard players add newPlayerCount total 1
+scoreboard players operation newPlayerCount total -= playerCount total
 
 
 #Your Commands Here (example)
-/execute if score newPlayerCount total matches ..-1 run say a player has left the world
+execute if score newPlayerCount total matches ..-1 run say a player has left the world
 
 
-/scoreboard players reset playerCount total
-/execute as @a run scoreboard players add playerCount total 1
+scoreboard players reset playerCount total
+execute as @a run scoreboard players add playerCount total 1
 ```
 
 ![Chain of 6 Command Blocks](/assets/images/commands/commandBlockChain/6.png)
@@ -102,6 +102,10 @@ If using functions, your pack folder structure will be as follows:
 ]"
 ></FolderView>
 
-> Note: The scoreboard names (in this case: 'total') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-> - ` total_0fe678 `
-> - ` on_player_leave_0fe678.mcfunction `
+:::info NOTE:
+
+The scoreboard names (in this case: 'total') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+- ` total_0fe678 `
+- ` on_player_leave_0fe678.mcfunction `
+
+:::
