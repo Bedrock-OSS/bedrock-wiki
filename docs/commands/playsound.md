@@ -63,7 +63,6 @@ You can use the `/playsound` command to play sound effects to players present an
 
 ## Examples
 
-<CodeHeader>mcfunction</CodeHeader>
 ```yaml
 #Play a random explosion sound effect to closest player.
 /playsound random.explode @p
