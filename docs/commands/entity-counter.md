@@ -87,6 +87,10 @@ If using functions, your pack folder structure will be as follows:
 ]"
 ></FolderView>
 
-> Note: The scoreboard names (in this case: 'count') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-> - ` count_0fe678 `
-> - ` entity_counter_0fe678.mcfunction `
+:::info NOTE:
+
+The scoreboard names (in this case: 'count') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+- ` count_0fe678 `
+- ` entity_counter_0fe678.mcfunction `
+
+:::
