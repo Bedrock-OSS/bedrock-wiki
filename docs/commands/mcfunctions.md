@@ -53,7 +53,7 @@ Functions are useful in many ways to reduce the time spent going from command bl
 
 - Running commands with a specified delay in a function involves using scoreboard timers to incrementally count up each tick until a certain point, and executing commands at specific scores within the file. See [Scoreboard Timers](/commands/scoreboard-timers) page to learn it's setup.
 
-## Creating a Function
+## Creating A Function
 
 1. Locate the `📁 com.mojang` folder and navigate to `📁 development_behavior_packs`
     - The development folders are used for quick reloading of packs, as the packs aren't cached to the world files.
@@ -137,11 +137,7 @@ The final file within a function is the **tick.json** file. This specifies funct
 
 ## Sample Function Pack
 
-<CardLink
-  imgsrcLight="assets/images/commands/BClogo.png"
-	title="Download Sample Function Pack"
-	link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack"
-/>
+<Card image="assets/images/commands/BClogo.png" title="Download Sample Function Pack" link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
 
 ## Troubleshooting Functions
 
