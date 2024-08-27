@@ -16,6 +16,7 @@ mentions:
     - profeplaysminecraft
     - retr0cube
     - SmokeyStack
+    - QuazChick
 ---
 
 ## What are add-ons?
@@ -60,9 +61,12 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 
 ## Next
 
--   Add-ons modify Minecraft content or add their own
--   Add-ons are written in json
--   An add-on is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
-    :::
+:::tip What you have learned
+
+-   [x] Add-ons modify Minecraft content or add their own
+-   [x] Add-ons are written in json
+-   [x] An add-on is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
+
+:::
 
 <Button link="/guide/software-preparation">Next: Software and preparation</Button>
