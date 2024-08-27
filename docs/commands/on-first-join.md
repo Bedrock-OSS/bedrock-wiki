@@ -16,7 +16,7 @@ description: This system will run your desired commands on the event that a play
 This system will run your desired commands on the event that a player joins the world for the first time.
 
 ## System
-<CodeHeader>BP/functions/on_first_join.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/on_first_join.mcfunction</CodeHeader>
 
 ```yaml
 #Your Commands Here (examples)
@@ -63,7 +63,8 @@ If using functions, your pack folder structure will be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_first_join.mcfunction',
+    'BP/functions/events',
+    'BP/functions/events/on_first_join.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
