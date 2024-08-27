@@ -24,7 +24,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/on_player_death.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/on_player_death.mcfunction</CodeHeader>
 
 ```yaml
 /scoreboard players set @a [scores={is_alive=!2}] is_alive 0
@@ -81,7 +81,8 @@ If using functions, your pack folder structure will be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_player_death.mcfunction',
+    'BP/functions/events',
+    'BP/functions/events/on_player_death.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
