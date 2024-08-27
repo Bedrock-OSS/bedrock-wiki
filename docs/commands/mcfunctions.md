@@ -39,11 +39,11 @@ Functions are useful in many ways to reduce the time spent going from command bl
 
 ```yaml
 #Spawn Effects
-/effect @a [tag=atSpawn] regeneration 12 255 true
-/effect @a [tag=atSpawn] saturation 12 255 true
-/effect @a [tag=atSpawn] weakness 12 255 true
+effect @a [tag=atSpawn] regeneration 12 255 true
+effect @a [tag=atSpawn] saturation 12 255 true
+effect @a [tag=atSpawn] weakness 12 255 true
 ```
-- Each new line in a function file represents a new command. You may start a line with # to add comments. Commands in a function do not need to begin with a slash `/`. However, doing so will not cause any errors.
+- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with `#` to add comments.
 
 - All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
 
