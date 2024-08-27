@@ -40,6 +40,8 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 ## Examples
 
+<CodeHeader></CodeHeader>
+
 ```yaml
 #Deal 4 damage to all players
 /damage @a 4
@@ -55,7 +57,9 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 Listed below are all the 'damage sources' in MCBE for the `/damage` command currently available:
 
-```yaml
+<CodeHeader></CodeHeader>
+
+```
 all
 anvil
 block_explosion
