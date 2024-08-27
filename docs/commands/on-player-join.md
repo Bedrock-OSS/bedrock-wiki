@@ -81,7 +81,7 @@ If using functions, your pack folder structure will be as follows:
 ]"
 ></FolderView>
 
-:::info Note:
+:::info NOTE:
 
 The scoreboard names (in this case: 'joined') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
 - ` joined_0fe678 `
