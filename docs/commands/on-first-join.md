@@ -20,12 +20,11 @@ This system will run your desired commands on the event that a player joins the 
 
 ```yaml
 #Your Commands Here (examples)
-/give @a [tag=!joined] stone_pickaxe
-/give @a [tag=!joined] bread 16 1
+give @a [tag=!joined] stone_pickaxe
+give @a [tag=!joined] bread 16 1
 
 
-
-/tag @a [tag=!joined] add joined
+tag @a [tag=!joined] add joined
 ```
 
 ![Chain Of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
