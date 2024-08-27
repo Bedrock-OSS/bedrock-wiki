@@ -18,7 +18,7 @@ This system will run your desired commands on the event that the world is loaded
 > Note: A [Function](/commands/mcfunctions) Pack is required to achieve this system, since it is the `tick.json` file which allows us to run commands as soon as the world is initialised.
 
 
-## Tick Json
+## Tick JSON
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
