@@ -137,7 +137,7 @@ The final file within a function is the **tick.json** file. This specifies funct
 
 ## Sample Function Pack
 
-<Card image="assets/images/commands/BClogo.png" title="Download Sample Function Pack" link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
+<Card image="assets/images/homepage/wikilogo.png" title="Download Sample Function Pack" link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
 
 </Card>
 
