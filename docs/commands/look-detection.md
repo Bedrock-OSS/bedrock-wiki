@@ -19,10 +19,10 @@ This command-technique allows you to detect when a target looks at a player/enti
 
 ## Command
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/look_detector</CodeHeader>
 
 ```yaml
-/execute as <target> at @s anchored eyes facing <entity | coordinate> positioned ^^^1 positioned ~~-1.62~ rotated as @s positioned ^^^-1 if entity @s [r=0.2] run <command>
+execute as <target> at @s anchored eyes facing <entity | coordinate> positioned ^^^1 positioned ~~-1.62~ rotated as @s positioned ^^^-1 if entity @s [r=0.2] run <command>
 
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
@@ -67,28 +67,28 @@ This command-technique allows you to detect when a target looks at a player/enti
 
 1. Run a `/say` command when looking at the eyes of the nearest cow tagged 'target':
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/look_detector</CodeHeader>
 
 ```yaml
-/execute as @a at @s anchored eyes facing entity @e [type=cow, tag=target, c=1] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello cow!
+execute as @a at @s anchored eyes facing entity @e [type=cow, tag=target, c=1] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello cow!
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
 2. Run a `/say` command when looking at the position 10,20,30:
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/look_detector</CodeHeader>
 
 ```yaml
-/execute as @a at @s anchored eyes facing 10 20 30 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello block!
+execute as @a at @s anchored eyes facing 10 20 30 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello block!
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
 **Alternative Structure:**
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/look_detector</CodeHeader>
 
 ```yaml
-/execute as <target> at <coordinate | entity> facing entity @s eyes positioned as @s positioned ^^^1 rotated as @s positioned ^^^1 if entity @s[r=0.02] run <command>
+execute as <target> at <coordinate | entity> facing entity @s eyes positioned as @s positioned ^^^1 rotated as @s positioned ^^^1 if entity @s[r=0.02] run <command>
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
