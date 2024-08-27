@@ -139,6 +139,8 @@ The final file within a function is the **tick.json** file. This specifies funct
 
 <Card image="assets/images/commands/BClogo.png" title="Download Sample Function Pack" link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
 
+</Card>
+
 ## Troubleshooting Functions
 
 Your functions may not appear within the command suggestions when using `/function`. This is normally due to an error with one or more commands in the function.
