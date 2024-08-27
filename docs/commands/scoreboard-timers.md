@@ -175,11 +175,11 @@ In some cases, such as an entity despawn event, you will need to run timers for 
 
 Let's say we want to perform the following actions:
 1. kill all entities named "station" 5 minutes after they've been summoned.
-- play a shulker particle around them during that timeframe.
-- play a flame particle around them in the first 10 seconds.
-- play a pling sound to nearby players when the timer reaches half way.
-- stop the timer if a passive mob is nearby.
-- loop the timer if a hostile mob is nearby.
+2. play a shulker particle around them during that timeframe.
+3. play a flame particle around them in the first 10 seconds.
+4. play a pling sound to nearby players when the timer reaches half way.
+5. stop the timer if a passive mob is nearby.
+6. loop the timer if a hostile mob is nearby.
 
 <CodeHeader>BP/functions/entity_timer.mcfunction</CodeHeader>
 
