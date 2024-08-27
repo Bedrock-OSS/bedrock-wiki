@@ -27,15 +27,15 @@ If you are working with functions and prefer to have the objective added automat
 <CodeHeader>BP/functions/events/on_player_join.mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players add @a joined 0
+scoreboard players add @a joined 0
 
 
 #Your Commands Here (example)
-/tp @a[scores={joined=0}] 0 65 0
+tp @a[scores={joined=0}] 0 65 0
 
 
-/scoreboard players reset * joined
-/scoreboard players set @a joined 1
+scoreboard players reset * joined
+scoreboard players set @a joined 1
 ```
 
 ![Chain Of 4 Command Blocks](/assets/images/commands/commandBlockChain/4.png)
