@@ -139,8 +139,6 @@ The final file within a function is the **tick.json** file. This specifies funct
 
 <Card image="assets/images/commands/BClogo.png" title="Download" link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
 
-Sample Function Pack: `min_engine_version` 1.21.22
-
 </Card>
 
 ## Troubleshooting Functions
