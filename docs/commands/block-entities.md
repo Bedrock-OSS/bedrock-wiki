@@ -4,7 +4,7 @@ category: Techniques
 mention:
     - BedrockCommands
     - zheaEvyline
-description: Max's block entity system using commands.
+description: Max's Block Entity system using commands.
 ---
 
 ## Introduction
@@ -55,12 +55,12 @@ To preserve credits to the creator, the community termed this method as "Max's B
 <CodeHeader>mcfunction</CodeHeader>
 
 ```yaml
-/effect @e [type= armor_stand, name=Grumm] invisibility 999999 1 true
-/playanimation @e [type= armor_stand, name=Grumm] animation.armor_stand.entertain_pose null 0 "0" align.arms
-/playanimation @e [type= armor_stand, name=Grumm] animation.player.move.arms.zombie null 0 "0" size.mini_block
-/playanimation @e [type= armor_stand, name=Grumm] animation.ghast.scale null 0 "0" size.full_block
-/playanimation @e [type= armor_stand, name=Grumm] animation.fireworks_rocket.move null 0 "0" align.full_block
-/execute as @e [type= armor_stand, name=Grumm] at @s run tp ~~~
+effect @e [type= armor_stand, name=Grumm] invisibility 999999 1 true
+playanimation @e [type= armor_stand, name=Grumm] animation.armor_stand.entertain_pose null 0 "0" align.arms
+playanimation @e [type= armor_stand, name=Grumm] animation.player.move.arms.zombie null 0 "0" size.mini_block
+playanimation @e [type= armor_stand, name=Grumm] animation.ghast.scale null 0 "0" size.full_block
+playanimation @e [type= armor_stand, name=Grumm] animation.fireworks_rocket.move null 0 "0" align.full_block
+execute as @e [type= armor_stand, name=Grumm] at @s run tp ~~~
 ```
 ![commandBlockChain6](/assets/images/commands/commandBlockChain/6.png)
 
@@ -81,16 +81,16 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ```yaml
 # Face North
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.2260 ~-0.097 81
+tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.2260 ~-0.097 81
 
 # Face South
-/tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2260 ~0.097 260
+tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2260 ~0.097 260
 
 # Face East
-/tp @e [type=armor_stand, name=Grumm, c=1] ~0.097 ~0.2260 ~-1.1245 171
+tp @e [type=armor_stand, name=Grumm, c=1] ~0.097 ~0.2260 ~-1.1245 171
 
 # Face West
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2260 ~1.1245 350
+tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2260 ~1.1245 350
 ```
 
 </Spoiler>
@@ -100,16 +100,16 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ```yaml
 # Face North
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-0.417~-0.5 ~-0.035 81
+tp @e [type=armor_stand, name=Grumm, c=1] ~-0.417~-0.5 ~-0.035 81
 
 # Face South
-/tp @e [type=armor_stand, name=Grumm, c=1] ~0.417 ~-0.5 ~0.035 260
+tp @e [type=armor_stand, name=Grumm, c=1] ~0.417 ~-0.5 ~0.035 260
 
 # Face East
-/tp @e [type=armor_stand, name=Grumm, c=1] ~0.035 ~-0.5 ~-0.417 171
+tp @e [type=armor_stand, name=Grumm, c=1] ~0.035 ~-0.5 ~-0.417 171
 
 # Face West
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-0.035 ~-0.5 ~0.417 350
+tp @e [type=armor_stand, name=Grumm, c=1] ~-0.035 ~-0.5 ~0.417 350
 ```
 
 </Spoiler>
@@ -118,16 +118,16 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ```yaml
 # Face North
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2325 ~1.1245 350
+tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2325 ~1.1245 350
 
 # Face South
-/tp @e [type=armor_stand, name=Grumm, c=1] ~0.097 ~0.2325 ~-1.1245 171
+tp @e [type=armor_stand, name=Grumm, c=1] ~0.097 ~0.2325 ~-1.1245 171
 
 # Face East
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.2325 ~-0.097 81
+tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.2325 ~-0.097 81
 
 # Face West
-/tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2325 ~0.097 260
+tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2325 ~0.097 260
 ```
 
 </Spoiler>
@@ -136,16 +136,16 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ```yaml
 # Face North
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2325 ~1.1245 350
+tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2325 ~1.1245 350
 
 # Face South
-/tp @e [type=armor_stand, name=Grumm, c=1] ~0.097 ~0.2325 ~-1.1245 171
+tp @e [type=armor_stand, name=Grumm, c=1] ~0.097 ~0.2325 ~-1.1245 171
 
 # Face East
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.2325 ~-0.097 81
+tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.2325 ~-0.097 81
 
 # Face West
-/tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2325 ~0.097 260
+tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2325 ~0.097 260
 ```
 
 </Spoiler>
@@ -154,16 +154,16 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ```yaml
 # Face North
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.484 ~-0.097 81
+tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.484 ~-0.097 81
 
 # Face South
-/tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.484 ~0.097 260
+tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.484 ~0.097 260
 
 # Face East
-/tp @e [type=armor_stand, name=Grumm, c=1] ~0.097 ~0.484 ~-1.1245 171
+tp @e [type=armor_stand, name=Grumm, c=1] ~0.097 ~0.484 ~-1.1245 171
 
 # Face West
-/tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.484 ~1.1245 350
+tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.484 ~1.1245 350
 ```
 
 </Spoiler>
