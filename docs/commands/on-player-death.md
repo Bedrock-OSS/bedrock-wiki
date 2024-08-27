@@ -87,9 +87,13 @@ If using functions, your pack folder structure will be as follows:
 ]"
 ></FolderView>
 
-> Note: The scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-> - ` is_alive_0fe678 `
-> - ` on_player_death_0fe678.mcfunction `
+:::info Note:
+
+The scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+- ` is_alive_0fe678 `
+- ` on_player_death_0fe678.mcfunction `
+
+:::
 
 ## Alternative Method
 
