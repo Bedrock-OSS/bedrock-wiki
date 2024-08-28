@@ -52,7 +52,7 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 > Note: Adding a delay of 100-200 ticks is recommended.
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/MBE/render.mcfunction</CodeHeader>
 
 ```yaml
 effect @e [type= armor_stand, name=Grumm] invisibility 999999 1 true
@@ -79,6 +79,8 @@ execute as @e [type= armor_stand, name=Grumm] at @s run tp ~~~
 
 <Spoiler title="Full MBE">
 
+<CodeHeader></CodeHeader>
+
 ```yaml
 # Face North
 tp @e [type=armor_stand, name=Grumm, c=1] ~-1.1245 ~0.2260 ~-0.097 81
@@ -98,6 +100,8 @@ tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2260 ~1.1245 350
 
 <Spoiler title="Mini MBE">
 
+<CodeHeader></CodeHeader>
+
 ```yaml
 # Face North
 tp @e [type=armor_stand, name=Grumm, c=1] ~-0.417~-0.5 ~-0.035 81
@@ -115,6 +119,8 @@ tp @e [type=armor_stand, name=Grumm, c=1] ~-0.035 ~-0.5 ~0.417 350
 </Spoiler>
 
 <Spoiler title="Stair MBE">
+
+<CodeHeader></CodeHeader>
 
 ```yaml
 # Face North
@@ -134,6 +140,8 @@ tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2325 ~0.097 260
 
 <Spoiler title="Bottom Slab MBE">
 
+<CodeHeader></CodeHeader>
+
 ```yaml
 # Face North
 tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2325 ~1.1245 350
@@ -151,6 +159,8 @@ tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2325 ~0.097 260
 </Spoiler>
 
 <Spoiler title="Top Slab MBE">
+
+<CodeHeader></CodeHeader>
 
 ```yaml
 # Face North
