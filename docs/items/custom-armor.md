@@ -1,8 +1,6 @@
 ---
 title: Custom Armor
 category: Tutorials
-tags:
-    - experimental
 mentions:
     - SirLich
     - Dreamedc2015
@@ -20,7 +18,7 @@ description: Learn how to make custom armor.
 ---
 
 ::: tip
-It is highly recommended that you look over [the BlockBench modelling and texturing](/guide/blockbench) section in the beginner's guides before tackling these sections.
+It is highly recommended that you look over the [Blockbench modelling and texturing](/guide/blockbench) section in the beginner's guide before tackling these sections.
 :::
 
 Making custom armors is surprisingly easy to do, you need to do a bit of fiddling around as there are a few files that need to be added and there can be a little bit of texturing involved but you can do as much or as little as you want here.
@@ -38,31 +36,24 @@ Create a chest piece:
         "description": {
             "identifier": "wiki:my_chest",
             // Notice we give it the equipment category
-            "category": "equipment"
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.chestplate"
+            }
         },
         "components": {
-            // Make sure it appears within the chestplate category
-            "minecraft:creative_category": {
-                "parent": "itemGroup.name.chestplate"
-            },
             // The icon we want to use in our INVENTORY
-            "minecraft:icon": {
-                "texture": "my_chest"
-            },
+            "minecraft:icon": "my_chest",
             // We give it a name
             "minecraft:display_name": {
                 "value": "My Custom Armor"
             },
-            // We dont want it to stack
+            // We don't want it to stack
             "minecraft:max_stack_size": 1,
             // We make sure it can only receive enchantments for chest pieces
             "minecraft:enchantable": {
                 "value": 10,
                 "slot": "armor_torso"
-            },
-            // This tells it how much protection it should give
-            "minecraft:armor": {
-                "protection": 5
             },
             // We want it to be repairable, and what to use to repair it
             "minecraft:repairable": {
@@ -76,8 +67,8 @@ Create a chest piece:
             },
             // Mark it as a wearable and that it goes in the chest slot
             "minecraft:wearable": {
-                "dispensable": true,
-                "slot": "slot.armor.chest"
+                "slot": "slot.armor.chest",
+                "protection": 5
             },
             // Provide its durability
             "minecraft:durability": {
@@ -118,9 +109,8 @@ To start with you need to create an `attachables` folder in your RP (you may alr
             "textures": {
                 // This is our CUSTOM armor texture we need to make next
                 "default": "textures/models/armor/custom_main",
-                // This texture doesn't actually exist in our RP
-                // but it will blow up without it so leave it in
-                "enchanted": "textures/misc/enchanted_item_glint"
+                // This texture is included in the vanilla RP and is used for the enchantment glint
+                "enchanted": "textures/misc/enchanted_actor_glint"
             },
             // We tell it what geometry to use for the chestplate
             "geometry": {
@@ -153,7 +143,7 @@ If you do not feel creative we have provided a recoloured diamond armour skin fo
     Download texture here
 </Button>
 
-> In the real world you would probably want to use `BlockBench` or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the add-on.
+> In the real world you would probably want to use `Blockbench` or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the add-on.
 > If you now go into the game and check what you have produced you should be able to wear your chest piece and pat yourself on the back for a job well done.
 
 ![](/assets/images/tutorials/custom-armor/armor-item-image.jpg)
@@ -171,17 +161,14 @@ So while the chest piece alone is great, you probably want a whole set, so from 
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_leggings",
-            "category": "equipment"
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.leggings"
+            }
         },
         "components": {
-            // We give it the leggings category this time
-            "minecraft:creative_category": {
-                "parent": "itemGroup.name.leggings"
-            },
             // Give it an applicable ITEM texture
-            "minecraft:icon": {
-                "texture": "my_leggings"
-            },
+            "minecraft:icon": "my_leggings",
             "minecraft:display_name": {
                 "value": "My Custom Leggings"
             },
@@ -190,9 +177,6 @@ So while the chest piece alone is great, you probably want a whole set, so from 
             "minecraft:enchantable": {
                 "value": 10,
                 "slot": "armor_legs"
-            },
-            "minecraft:armor": {
-                "protection": 3
             },
             "minecraft:repairable": {
                 "repair_items": [
@@ -204,8 +188,8 @@ So while the chest piece alone is great, you probably want a whole set, so from 
             },
             // Make sure the wearable slot is legs
             "minecraft:wearable": {
-                "dispensable": true,
-                "slot": "slot.armor.legs"
+                "slot": "slot.armor.legs",
+                "protection": 3
             },
             "minecraft:durability": {
                 "max_durability": 200
@@ -240,7 +224,7 @@ Once we are done here we need to create the attachables file like this:
             },
             "textures": {
                 // Same as before
-                "enchanted": "textures/misc/enchanted_item_glint",
+                "enchanted": "textures/misc/enchanted_actor_glint",
                 // This one is different as we are using the legging specific texture
                 "default": "textures/models/armor/custom_legs"
             },
@@ -273,16 +257,13 @@ This is just like the chest piece, just we change some of the categories and slo
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_helm",
-            "category": "equipment"
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.helmet"
+            }
         },
         "components": {
-            // Helmet category
-            "minecraft:creative_category": {
-                "parent": "itemGroup.name.helmet"
-            },
-            "minecraft:icon": {
-                "texture": "my_helm"
-            },
+            "minecraft:icon": "my_helm",
             "minecraft:display_name": {
                 "value": "My Custom Helmet"
             },
@@ -291,9 +272,6 @@ This is just like the chest piece, just we change some of the categories and slo
             "minecraft:enchantable": {
                 "value": 10,
                 "slot": "armor_head"
-            },
-            "minecraft:armor": {
-                "protection": 3
             },
             "minecraft:repairable": {
                 "repair_items": [
@@ -305,8 +283,8 @@ This is just like the chest piece, just we change some of the categories and slo
             },
             // Wearable head slot
             "minecraft:wearable": {
-                "dispensable": true,
-                "slot": "slot.armor.head"
+                "slot": "slot.armor.head",
+                "protection": 3
             },
             "minecraft:durability": {
                 "max_durability": 200
@@ -342,7 +320,7 @@ As you can see not much has changed, we just update the categories/slots to the 
                 "default": "textures/models/armor/custom_main",
                 // This texture doesn't actually exist in our RP
                 // but it will blow up without it so leave it in
-                "enchanted": "textures/misc/enchanted_item_glint"
+                "enchanted": "textures/misc/enchanted_actor_glint"
             },
             // We tell it what geometry to use for the helmet
             "geometry": {
@@ -373,16 +351,13 @@ You already know the pattern so lets make the item and attachable json files.
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_boots",
-            "category": "equipment"
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.boots"
+            }
         },
         "components": {
-            // Boots category
-            "minecraft:creative_category": {
-                "parent": "itemGroup.name.boots"
-            },
-            "minecraft:icon": {
-                "texture": "my_boots"
-            },
+            "minecraft:icon": "my_boots",
             "minecraft:display_name": {
                 "value": "My Custom Boots"
             },
@@ -391,9 +366,6 @@ You already know the pattern so lets make the item and attachable json files.
             "minecraft:enchantable": {
                 "value": 10,
                 "slot": "armor_feet"
-            },
-            "minecraft:armor": {
-                "protection": 3
             },
             "minecraft:repairable": {
                 "repair_items": [
@@ -405,8 +377,8 @@ You already know the pattern so lets make the item and attachable json files.
             },
             // Feet slot
             "minecraft:wearable": {
-                "dispensable": true,
-                "slot": "slot.armor.feet"
+                "slot": "slot.armor.feet",
+                "protection": 3
             },
             "minecraft:durability": {
                 "max_durability": 200
@@ -442,7 +414,7 @@ The custom boots texture if you need it.
                 "default": "textures/models/armor/custom_main",
                 // This texture doesn't actually exist in our RP
                 // but it will blow up without it so leave it in
-                "enchanted": "textures/misc/enchanted_item_glint"
+                "enchanted": "textures/misc/enchanted_actor_glint"
             },
             // We tell it what geometry to use for the boots
             "geometry": {
