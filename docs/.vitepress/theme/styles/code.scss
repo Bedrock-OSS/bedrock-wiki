@@ -43,6 +43,10 @@
     user-select: none;
 
     color: #6a737d;
+
+    &:has(> .line-number:only-of-type) {
+      display: none;
+    }
   }
 
   .line-number {
