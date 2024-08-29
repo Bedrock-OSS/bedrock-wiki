@@ -9,6 +9,7 @@ mentions:
     - TheItsNamless
     - ThomasOrs
     - kumja1
+    - QuazChick
 hidden: true
 description: Make custom spear.
 ---
@@ -198,7 +199,7 @@ Here we got our simple projectile entity. We are missing one part to make this a
                 {
                     "randomize": [
                         {
-                            "run_command": {
+                            "queue_command": {
                                 "command": ["playsound random.pop @p", "tag @p add iron_spear"]
                             },
                             "weight": 90

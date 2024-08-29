@@ -76,22 +76,20 @@ The reason why is because this will change the Target Y Rotation, causing it to 
 
 To align the position of the entity this will be more tricky.
 
-First, in the `minecraft:entity_spawned` event, make a custom block with a run_command, and make a new dummy-entity with a transformation event to transform the dummy entity to the original entity, so we avoid triggering the `minecraft:entity_spawned` again.
+First, in the `minecraft:entity_spawned` event, make a custom block with a queue_command, and make a new dummy-entity with a transformation event to transform the dummy entity to the original entity, so we avoid triggering the `minecraft:entity_spawned` again.
 
 <CodeHeader>BP/entities/your_entity.json#minecraft:entity/events</CodeHeader>
 
 ```json
-{
-    // Event in the original entity.
-    "minecraft:entity_spawned": {
-        "add": {
-            "components_groups": [
-                "despawn" // We will also need to despawn the first entity.
-            ]
-        },
-        "run_command": {
-            "command": ["setblock ~~~ wiki:align"]
-        }
+// Event in the original entity.
+"minecraft:entity_spawned": {
+    "add": {
+        "components_groups": [
+            "despawn" // We will also need to despawn the first entity.
+        ]
+    },
+    "queue_command": {
+        "command": ["setblock ~~~ wiki:align"]
     }
 }
 ```
@@ -99,12 +97,10 @@ First, in the `minecraft:entity_spawned` event, make a custom block with a run_c
 <CodeHeader>BP/entities/your_entity.json#minecraft:entity/component_groups</CodeHeader>
 
 ```json
-{
-    // Component group in the original entity.
-    "component_groups": {
-        "despawn": {
-            "minecraft:despawn": {}
-        }
+// Component group in the original entity.
+"component_groups": {
+    "despawn": {
+        "minecraft:despawn": {}
     }
 }
 ```
@@ -134,7 +130,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 2
             },
-            "minecraft:custom_components": ["wiki:on_placed_align"]
+            "minecraft:custom_components": ["wiki:align_entity"]
         }
     }
 }
@@ -142,19 +138,21 @@ Block used to summon the dummy entity right on the block, and as the block is ce
 
 For our custom component script, we'll utilize the `beforeOnPlayerPlace` event. We use this event to prevent the block from being placed and just summon our entity instead.
 
-```ts
+```js
 import { world } from "@minecraft/server";
 
-const wikiOnPlacedAlign = {
+/** @type {import("@minecraft/server").BlockCustomComponent} */
+const AlignEntityBlockComponent = {
     beforeOnPlayerPlace(event) {
         event.cancel = true;
-        let blockLocation = event.block.location;
-        event.player.dimension.spawnEntity("wiki:dummy_align", blockLocation);
+
+        const location = event.block.center();
+        event.dimension.spawnEntity("wiki:dummy_align", location);
     },
 };
 
 world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent("wiki:on_placed_align", wikiOnPlacedAlign);
+    blockComponentRegistry.registerCustomComponent("wiki:align_entity", AlignEntityBlockComponent);
 });
 ```
 

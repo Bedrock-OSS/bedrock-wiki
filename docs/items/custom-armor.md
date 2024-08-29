@@ -15,6 +15,7 @@ mentions:
     - XxPoggyisLitxX
     - LeGend077
     - SmokeyStack
+    - QuazChick
 description: Learn how to make custom armor.
 ---
 
@@ -548,7 +549,7 @@ As you can see from the comments, there is a lot there but really all we are doi
 				{
 					// This will take the attacker/other because it was in context
 					// at time of raising the event in the damage_sensor
-					"run_command": {
+					"queue_command": {
 						// Teleport the entity away from us
 						"command": "spreadplayers ~~ 5 20 @s",
 						// Run the command on the attacker not us
@@ -556,7 +557,7 @@ As you can see from the comments, there is a lot there but really all we are doi
 					}
 				},
 				{
-					"run_command": {
+					"queue_command": {
 						"command": "tellraw @s{\"rawtext\":[{\"text\":\"§aYour Armor Glows And The Enemy Vanishes\"}]}"
 					}
 				}
