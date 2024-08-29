@@ -23,7 +23,7 @@ It is highly recommended that you look over the [Blockbench modelling and textur
 
 Making custom armors is surprisingly easy to do, you need to do a bit of fiddling around as there are a few files that need to be added and there can be a little bit of texturing involved but you can do as much or as little as you want here.
 
-## Chest Piece
+## Chestplate
 
 Create a chest piece:
 
@@ -87,7 +87,7 @@ At this point you could just go and add an item texture into your `RP/textures/i
     Download texture here
 </Button>
 
-## Adding attachables and textures
+## Adding the Attachable
 
 At this point your item would appear in game and would be wearable but it would not have any appearance. This is because we need to tell it how to handle the attachable equipment and give it a texture to show.
 
@@ -143,10 +143,11 @@ If you do not feel creative we have provided a recoloured diamond armour skin fo
     Download texture here
 </Button>
 
-> In the real world you would probably want to use `Blockbench` or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the add-on.
-> If you now go into the game and check what you have produced you should be able to wear your chest piece and pat yourself on the back for a job well done.
+In the real world you would probably want to use Blockbench or some photo editing program to edit the textures and ideally see how they look on a model before you add them into the add-on.
+If you now go into the game and check what you have produced you should be able to wear your chest piece and pat yourself on the back for a job well done.
 
 ![](/assets/images/tutorials/custom-armor/armor-item-image.jpg)
+
 ![](/assets/images/tutorials/custom-armor/armor-model-image.jpg)
 
 ## Leggings
