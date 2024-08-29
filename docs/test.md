@@ -59,7 +59,7 @@ Indentation works like `code`:
 
 ### No Line Numbers
 
-```json :no-line-numbers
+```json
 {
     "var": "a very very very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong value"
 }

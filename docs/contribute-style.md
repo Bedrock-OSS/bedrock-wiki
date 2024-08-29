@@ -228,7 +228,7 @@ Or show some other text instead of the link:
 
 To link to another source, just copy the whole link url (including the https part in front of it) and paste it between the round brackets:
 
-```md :no-line-numbers
+```md
 [Official Creator Docs](https://learn.microsoft.com/minecraft/creator/)
 ```
 
@@ -240,7 +240,7 @@ To link to another source, just copy the whole link url (including the https par
 
 You can create links that redirect you to other pages in the wiki. These are called "relative" links.
 
-```md :no-line-numbers
+```md
 [Redirect to the contribute page](/contribute)
 ```
 
@@ -248,7 +248,7 @@ You can create links that redirect you to other pages in the wiki. These are cal
 
 ---
 
-```md :no-line-numbers
+```md
 [JSON Arrays](/guide/understanding-json#arrays)
 ```
 
@@ -256,7 +256,7 @@ You can create links that redirect you to other pages in the wiki. These are cal
 
 ---
 
-```md :no-line-numbers
+```md
 [Go to Working with Markdown heading](#working-with-markdown)
 ```
 
@@ -621,7 +621,7 @@ Note that images go to `docs/public/assets/images/` folder, but their path in co
 
 Embeds a YouTube video into thepage based on a video ID.
 
-```md :no-line-numbers
+```md
 <YouTubeEmbed id="dQw4w9WgXcQ" />
 ```
 
@@ -792,17 +792,17 @@ The above steps will be done automatically if you install the [Prettier](https:/
 
 ✔️
 
-```md :no-line-numbers
+```md
 ![Alternate text](/my/image.png)
 ```
 
-```md :no-line-numbers
+```md
 <WikiImage src="/my/image.png" alt="Alternate text" />
 ```
 
 ❌
 
-```md :no-line-numbers
+```md
 <img src="/my/image.png" alt="Alternate text" />
 ```
 
@@ -810,19 +810,19 @@ The above steps will be done automatically if you install the [Prettier](https:/
 
 ✔️
 
-```md :no-line-numbers
+```md
 `code`
 ```
 
 ❌
 
-```md :no-line-numbers
+```md
     code
 ```
 
 You can do space before text this way:
 
-```md :no-line-numbers
+```md
 > text
 ```
 
@@ -832,7 +832,7 @@ You can do space before text this way:
 
 Sometimes you need to comment something in your markdown for other contributors to see.
 
-```md :no-line-numbers
+```md
 <!-- Comment! 👀 --> ‹- It is here!
 ```
 
