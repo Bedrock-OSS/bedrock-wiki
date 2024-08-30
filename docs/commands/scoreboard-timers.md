@@ -43,10 +43,10 @@ To do that, first, you must know that 1 second is approximately 20 game-ticks in
 # 2h = 20(t) × 60(s) × 60(m) × 2(h) = 144000t
 /scoreboard players set 2h ticks 144000
 
-#10m = 20(t) × 60(s) × 10(m) = 12000t
+# 10m = 20(t) × 60(s) × 10(m) = 12000t
 /scoreboard players set 10m ticks 12000
 
-#30s = 20(t) × 30(s) = 600t
+# 30s = 20(t) × 30(s) = 600t
 /scoreboard players set 30s ticks 600
 ```
 We will now use this scoreboard data to make our timers function.
@@ -56,19 +56,19 @@ We will now use this scoreboard data to make our timers function.
 <CodeHeader>BP/functions/world_timer.mcfunction</CodeHeader>
 
 ```yaml
-#World Timer/Clock
+# World Timer/Clock
 scoreboard players add timer ticks 1
 scoreboard players operation * events = timer ticks
 
-#Chat Message (every 2h)
+# Chat Message (every 2h)
 scoreboard players operation chatMessage events %= 2h ticks
 execute if score chatMessage events matches 0 run say Technoblade never dies!
 
-#Lag Clear (every 10m)
+# Lag Clear (every 10m)
 scoreboard players operation lagClear events %= 10m ticks
 execute if score lagClear events matches 0 run function clear_lag
 
-#Speed Effect (every 30s)
+# Speed Effect (every 30s)
 scoreboard players operation speedEffect events %= 30s ticks
 execute if score speedEffect events matches 0 run effect @a speed 10 2 true
 ```
@@ -139,12 +139,12 @@ Once you have done that, modify your system as shown below.
 scoreboard players add timer ticks 1
 scoreboard players operation * events = timer ticks
 
-#Chat Message (every 10m)
+# Chat Message (every 10m)
 scoreboard players operation chatMessage events %= 2h ticks
 execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run say Technoblade never dies!
 execute if score chatMessage events matches 0 if score chatMessage intervals matches 1.. run scoreboard players remove chatMessage intervals 1
 
-#Speed Effect (every 30s)
+# Speed Effect (every 30s)
 scoreboard players operation speedEffect events %= 30s ticks
 execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
 execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run scoreboard players remove speedEffect intervals 1
@@ -158,7 +158,7 @@ To run commands during the timeframe between intervals for a particular system, 
 <CodeHeader></CodeHeader>
 
 ```yaml
-#Speed Effect (every 30s) + Particle (every tick)
+# Speed Effect (every 30s) + Particle (every tick)
 scoreboard players operation speedEffect events %= 30s ticks
 execute if score speedEffect intervals matches 1.. as @a at @s run particle minecraft:shulker_bullet ~~~
 execute if score speedEffect events matches 0 if score speedEffect intervals matches 1.. run effect @a speed 10 2 true
@@ -184,25 +184,25 @@ Let's say we want to perform the following actions:
 <CodeHeader>BP/functions/entity_timer.mcfunction</CodeHeader>
 
 ```yaml
-#Clock
+# Clock
 scoreboard players add @e [name=station, scores={ticks=0..}] ticks 1
 
-#Executing Commands while timer is running
+# Executing Commands while timer is running
 execute as @e [name=station, scores={ticks=0..}] at @s run particle minecraft:shulker_bullet ~~~
 
-#Executing commands within a timeframe
+# Executing commands within a timeframe
 execute as @e [name=station, scores={ticks=0..200}] at @s run particle minecraft:basic_flame_particle ~~~
 
-#Executing commands at specific intervals
+# Executing commands at specific intervals
 execute as @e [name=station, scores={ticks=3600}] at @s run playsound note.pling @a [r=10]
 
-#Stopping the timer
+# Stopping the timer
 execute as @e [name=station] at @s if entity @e [family=pacified, r=10, c=1] run scoreboard players set @s ticks -1
 
-#Looping the timer
+# Looping the timer
 execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
 
-#End
+# End
 /kill @e [name=station, scores={ticks=6000}]
 ```
 ![Chain Of 7 Command Blocks](/assets/images/commands/commandBlockChain/7.png)
