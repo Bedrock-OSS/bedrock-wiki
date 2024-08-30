@@ -24,25 +24,25 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/on_player_death.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/on_player_death.mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players set @a [scores={is_alive=!2}] is_alive 0
-/scoreboard players set @e [type=player] is_alive 1
+scoreboard players set @a [scores={is_alive=!2}] is_alive 0
+scoreboard players set @e [type=player] is_alive 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_alive=0}] run say I died
+execute as @a [scores={is_alive=0}] run say I died
 
 
-/scoreboard players set @a [scores={is_alive=0}] is_alive 2
+scoreboard players set @a [scores={is_alive=0}] is_alive 2
 ```
 
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
 
-Just make sure to follow the given order and properly apply the selector argument `scores={alive=0}` as shown for your desired commands.
+Just make sure to follow the given order and properly apply the ` scores={alive=0} ` selector argument as shown for your desired commands.
 
 ## Explanation
 
@@ -53,12 +53,12 @@ Just make sure to follow the given order and properly apply the selector argumen
 **Purpose Of Each Command:**
 
 1. **Command 1:** All players will be marked as *not* alive (0) by default.
-    - We will ignore score 2, else the commands that we want to run when the player dies will trigger more than once.
+    - We will ignore score `2`, else the commands that we want to run when the player dies will trigger more than once.
 2. **Command 2:** All alive players will be marked as 'alive' (1).
     - `@e` selector allows us to exclusively target players who are alive.
     - `@a` selector will target all players, whether they are alive or not.
 3. **Command 3:** Now that alive players have a score of 1 and non-alive players have a score of 0, we will use this knowledge to run our desired commands when the player becomes dead (0).
-4. **Command 4:** Since we want to execute our desired commands only once when the player dies, we will set their score to 2. Not doing this will cause the commands to execute repeatedly till they respawn.
+4. **Command 4:** Since we want to execute our desired commands only once when the player dies, we will set their score to `2`. As not doing this will cause the commands to repeat till they respawn.
 
 ## Tick JSON
 
@@ -73,7 +73,7 @@ If you are using functions instead of command blocks, the ` on_player_death ` fu
 }
 ```
 
-If using functions, your pack folder structure will be be as follows:
+If using functions, your pack folder structure will be as follows:
 
 <FolderView
 	:paths="[
@@ -81,14 +81,19 @@ If using functions, your pack folder structure will be be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_player_death.mcfunction',
+    'BP/functions/events',
+    'BP/functions/events/on_player_death.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
 
-> **Note:** the scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-> - ` is_alive_0fe678 `
-> - ` on_player_death_0fe678.mcfunction `
+:::info NOTE:
+
+The scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+- ` is_alive_0fe678 `
+- ` on_player_death_0fe678.mcfunction `
+
+:::
 
 ## Alternative Method
 
@@ -104,20 +109,20 @@ If two or more players are teleported to the same point and one of them dies but
 <CodeHeader>BP/functions/states/is_dead.mcfunction</CodeHeader>
 
 ```yaml
-/scoreboard players set @e [type=player] is_dead 0
-/execute as @a at @s unless entity @e [type=player, r=0.01] run scoreboard players add @s is_dead 1
+scoreboard players set @e [type=player] is_dead 0
+execute as @a at @s unless entity @e [type=player, r=0.01] run scoreboard players add @s is_dead 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_dead=1}] at @s run summon armor_stand "Dead Player" ~~~
-/execute as @a [scores={is_dead=1..}] run say I died and haven't respawned yet.. 
+execute as @a [scores={is_dead=1}] at @s run summon armor_stand "Dead Player" ~~~
+execute as @a [scores={is_dead=1..}] run say I died and haven't respawned yet.. 
 ```
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
 **States:**
 
 - **` is_dead=0 `** player is *not* dead (alive).
-- **` is_dead=1 `** player is dead. (used for 'trigger' actions)
+- **` is_dead=1 `** player just died. (used for 'trigger' actions)
 - **` is_dead=1.. `** player is still dead. (used for repeating actions)
 
 **Purpose Of Each Command:**

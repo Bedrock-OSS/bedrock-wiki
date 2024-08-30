@@ -14,7 +14,7 @@ description: This system will run your desired commands on the event that a play
 
 This system will run your desired commands on the event that a player leaves the world.
 
-> **Note:** you cannot execute commands on the *players* that leave using selectors. However; you may use the [On Player Join](/commands/on-player-join) system to execute when they join back.
+> Note: You cannot execute commands on the *players* that leave using target selectors. However, you may use the [On Player Join](/commands/on-player-join) system to execute when they join back.
 
 ## Setup
 
@@ -22,11 +22,11 @@ This system will run your desired commands on the event that a player leaves the
 
 `/scoreboard objectives add total dummy`
 
-If you prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
+If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
 
 ## System
 
-<CodeHeader>BP/functions/on_player_leave.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/on_player_leave.mcfunction</CodeHeader>
 
 ```yaml
 scoreboard players reset newPlayerCount total
@@ -42,18 +42,18 @@ scoreboard players reset playerCount total
 execute as @a run scoreboard players add playerCount total 1
 ```
 
-![commandBlockChain6](/assets/images/commands/commandBlockChain/6.png)
+![Chain of 6 Command Blocks](/assets/images/commands/commandBlockChain/6.png)
 
-Here we have used a **`/say`** command as an example but you can use any command you prefer and as many as you require.
+Here, we have used a `/say` command as an example, but you can use any command you prefer and as many as you need.
 
-Just make sure to follow the given order and properly use the `/execute if score` command as shown to run the commands you need.
+Just make sure to follow the given order and properly apply the `/execute if score` condition as shown for your desired commands.
 
 ## Explanation
 
-- **` newPlayerCount `** this FakePlayer name means the total number of players on the world in the current game tick.
-- **` playerCount `** this FakePlayer name means the total number of players that were on the world in the previous game tick but also saves the total count to be used in the *next* game tick.
+- **` newPlayerCount `** this fake-player-name means the total number of players on the world in the current game-tick.
+- **` playerCount `** this fake-player-name means the total number of players that were on the world in the previous game-tick, but also saves the total count to be used in the *next* game-tick.
 
-The count is obtained using the [Entity Counter](/commands/entity-counter) system. It may be beneficial to refer to that doc for better understanding this one.
+The count is obtained using the [Entity Counter](/commands/entity-counter) system. It may be beneficial to refer to that page to better understand this one.
 
 By subtracting 'playerCount' total from 'newPlayerCount' total, we will be able to identify if the player count has:
 - decreased ` ..-1 `
@@ -61,13 +61,13 @@ By subtracting 'playerCount' total from 'newPlayerCount' total, we will be able 
 - or if it's unchanged ` 0 `
 
 If it has decreased, we know that 1 or more players have left the game.
-Using this knowledge we can run our desired commands from 'newPlayerCount' if it's score is -1 or less.
+Using this knowledge, we can run our desired commands from 'newPlayerCount' if it's score is `-1` or less.
 - ie, if there were 10 players and someone leaves:
     - that is ` newPlayerCount - playerCount `
-    - which is ` 9 - 10 = -1 `
+    - which results ` 9 - 10 = -1 `
     - hence, we will detect by ` ..-1 `
 
-- The 'newPlayerCount' total is obtained first, subtraction is performed after that to run your desired commands and lastly the 'playerCount' total is obtained to be used in the next game tick.
+- The 'newPlayerCount' total is obtained first, subtraction is performed after that to run your desired commands, and lastly, the 'playerCount' total is obtained to be used in the next game-tick.
 
 :::tip
 All commands involved in a command-block-chain or function will only run in a sequence one after the other but it all still happens in the same tick regardless of the number of commands involved. We are able to achieve this system due to the fact that commands run along the end of a game tick after all events such as player log in, log out, death, etc.. occur.
@@ -88,7 +88,7 @@ If you are using functions instead of command blocks, the ` on_player_leave ` fu
 }
 ```
 
-If using functions, your pack folder structure will be be as follows:
+If using functions, your pack folder structure will be as follows:
 
 <FolderView
 	:paths="[
@@ -96,11 +96,16 @@ If using functions, your pack folder structure will be be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/on_player_leave.mcfunction',
+    'BP/functions/events',
+    'BP/functions/events/on_player_leave.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
 
-> **Note:** the scoreboard names (in this case: 'total') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-> - ` total_0fe678 `
-> - ` on_player_leave_0fe678.mcfunction `
+:::info NOTE:
+
+The scoreboard names (in this case: 'total') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
+- ` total_0fe678 `
+- ` on_player_leave_0fe678.mcfunction `
+
+:::

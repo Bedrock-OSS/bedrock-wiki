@@ -4,14 +4,14 @@ category: Techniques
 mention:
   - BedrockCommands
   - zheaEvyline
-description: This technique allows you to confine your camera rotations to an orbit around the player, an entity or position with the height and radius of the orbit being fully adjustable.
+description: This technique allows you to confine your camera rotations to an orbit around the player, an entity, or position, with the height and radius of the orbit being fully adjustable.
 ---
 
 ## Introduction
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-This technique allows you to confine your camera rotations to an orbit around the player, an entity or position with the height and radius of the orbit being fully adjustable.
+This technique allows you to confine your camera rotations to an orbit around the player, an entity, or position, with the height and radius of the orbit being fully adjustable.
 
 ## Video Demonstration
 
@@ -21,10 +21,10 @@ This technique allows you to confine your camera rotations to an orbit around th
 
 ## Command
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/orbital_camera.mcfunction</CodeHeader>
 
 ```yaml
-/execute as @p at @s anchored eyes rotated ~ 0 positioned ^^1^-2 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @s
+execute as @p at @s anchored eyes rotated ~ 0 positioned ^^1^-2 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @s
 ```
 ![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
 
@@ -37,7 +37,7 @@ This technique allows you to confine your camera rotations to an orbit around th
 - `as @p`
   - sets the execution target to closest player.
 - `at @s`
-  - sets the execution position to the target player.
+  - sets the execution position to the target player's self.
 - `anchored eyes`
   - brings the execution position up to the target player's eye level.
 - `rotated ~ 0`
@@ -59,22 +59,22 @@ This technique allows you to confine your camera rotations to an orbit around th
      - [Introduction to Camera Command](https://learn.microsoft.com/en-us/minecraft/creator/documents/cameracommandintroduction)
      - [Camera Command Video Tutorial](https://youtu.be/GnYrZlBCyWg)
 - `facing @s`
-  - shifts the camera view direction to face the target player.
+  - shifts the camera view direction to face the target player's self.
 
 **Similar Examples:**
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/orbital_camera.mcfunction</CodeHeader>
 
 ```yaml
 #To orbit camera around entity tagged with 'orbit_center'
-/execute as @p at @e [tag=orbit_center] anchored eyes rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @e [tag=orbit_center]
+execute as @p at @e [tag=orbit_center] anchored eyes rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @e [tag=orbit_center]
 ```
-![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
+![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader>BP/functions/orbital_camera.mcfunction</CodeHeader>
 
 ```yaml
 #To orbit camera around position 6 7 8
-/execute as @p positioned 6 7 8 rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing 6 7 8
+execute as @p positioned 6 7 8 rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing 6 7 8
 ```
-![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
+![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
