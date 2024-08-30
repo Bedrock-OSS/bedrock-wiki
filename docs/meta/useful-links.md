@@ -50,17 +50,17 @@ Important links have a ⭐.
 -   ⭐ [bridge. Add-on Editor](https://bridge-core.github.io/)
 -   ⭐ [VSCode Editor](https://code.visualstudio.com/)
 -   ⭐ [Regolith](https://github.com/Bedrock-OSS/regolith)
--   [Add-on JSON Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
--   [BedrockConnect [App]](https://bedrockconnect.bedrockhub.io)
--   [BedrockLauncher (Bedrock version switcher)](https://bedrocklauncher.github.io/)
+-   [Add-on JSON Generator (Paid)](https://kaifireborn.itch.io/add-on-json-generator)
+-   [BedrockConnect (App)](https://bedrockconnect.bedrockhub.io)
+-   [BedrockLauncher (Bedrock Version Switcher)](https://bedrocklauncher.github.io/)
 -   [Chunker (World Converter)](https://chunker.app/)
--   [CoreCoder [Code Editor]](https://hanprog.itch.io/core-coder)
--   [Feature Rule Generator v2 (free version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
--   [Feature Rule Generator v2 (paid version)](https://machine-builder.itch.io/frg-v2)
+-   [CoreCoder (Code Editor)](https://hanprog.itch.io/core-coder)
+-   [Feature Rule Generator v2 (Free Version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
+-   [Feature Rule Generator v2 (Paid Version)](https://machine-builder.itch.io/frg-v2)
 -   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
--   [ResourcePack Converter [App]](https://converter.bedrockhub.io)
--   [World Converter (paid)](https://www.universalminecraftconverter.com/download)
+-   [ResourcePack Converter (App)](https://converter.bedrockhub.io)
+-   [World Converter (Paid)](https://www.universalminecraftconverter.com/download)
 
 ## Bedrock Tools Websites
 
@@ -93,7 +93,7 @@ Important links have a ⭐.
 -   ⭐ [Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
 -   ⭐ [Minecraft Community Wiki](https://minecraft.wiki)
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
--   [Documentation Graveyard (removed components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
+-   [Documentation Graveyard (Removed Components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 -   [Mcbehub](https://mcbehub.com/category/realmdocs)
 
 ### Getting Started With Your First Add-On
@@ -139,7 +139,7 @@ These packs are published by the open-source community
 
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
--   ⭐ [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
+-   ⭐ [Bucket of Crabs (Marketplace Joblist)](https://www.bucketofcrabs.net/)
 -   [CubitosMC](https://www.cubitosmc.com/)
 -   [MCDLHub](https://mcdlhub.com/)
 -   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
@@ -157,5 +157,5 @@ These packs are published by the open-source community
 -   [Minecraft.net Official Add-ons Page](https://www.minecraft.net/en-us/addons)
 -   [Run Bedrock on Linux](https://github.com/Element-0/ElementZero)
 -   [Skin Pack Generator](https://github.com/MedicalJewel105/bedrock-skin-pack-generator)
--   [UUID v4 Generator (online)](https://www.uuidgenerator.net/version4)
+-   [UUID v4 Generator (Online)](https://www.uuidgenerator.net/version4)
 -   [Windows 10 Non-Renderdragon Install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
