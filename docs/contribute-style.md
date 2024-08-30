@@ -387,14 +387,14 @@ With cards you can make fancy boxes with an image and text which contains a link
 Cards may also have content which is defined between two `Card` tags.
 
 ```md
-<Card image="assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
 
 This is some _content_.
 
 </Card>
 ```
 
-<Card image="assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
 
 This is some _content_.
 
@@ -414,17 +414,17 @@ Used to display multiple cards in a grid layout.
 
 ```md
 <CardGrid>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
 
 This is some _content_.
 
@@ -433,17 +433,17 @@ This is some _content_.
 ```
 
 <CardGrid>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
 
 This is some _content_.
 
