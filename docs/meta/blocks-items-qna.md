@@ -5,7 +5,7 @@ mentions:
     - SmokeyStack
 ---
 
-This Q&A took place in the [Bedrock Add-Ons discord](https://discord.gg/uZF75ZxcJq). Nince Mojang/Microsoft employees joined us to answer questions about the custom blocks and items API. Questions were community sourced.
+This Q&A took place in the [Bedrock Add-Ons discord](https://discord.gg/uZF75ZxcJq). Nine Mojang/Microsoft employees joined us to answer questions about the custom blocks and items API. Questions were community sourced.
 
 :::warning
 Not all messages were copied over, and some were copy-edited. If you want to see everything, join the above discord, and get the "events archive" role.
@@ -345,3 +345,13 @@ Are there any vanilla geos you think would be particularly useful to focus on?
     Like how stairs have a different collision box than a normal blocks
 
 -   **A**: We know the interest in being able to do stairs that require more than the current collision (and selection) box component is capable of, so we're looking at some options that will allow us to bring that functionality to you! It's on our longterm roadmap
+
+## Disabling Silk Touch
+
+-   **Q**: We can already do this with scripts, but it doesn't feel "vanilla"
+    It would be nice if we had a way to disable a block dropping on silk touch, or changing the loot for silk touch
+-   **A**: On a custom block this can be done in the loot table by adding a match_tool condition that includes the silk touch enchantment.
+    https://learn.microsoft.com/en-us/minecraft/creator/documents/loottableconditions?view=minecraft-bedrock-stable#match_tool
+
+    On our short term roadmap is a way to change a vanilla block's loot table on destroy.
+
